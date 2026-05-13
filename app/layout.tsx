@@ -5,6 +5,7 @@ import './globals.css';
 const notoSerif = Noto_Serif({
   variable: '--font-noto-serif',
   weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
   subsets: ['latin'],
   display: 'swap',
 });

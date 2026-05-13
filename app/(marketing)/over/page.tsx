@@ -55,9 +55,9 @@ export default function OverPage() {
         >
           De gids achter Agentic Mindshift
         </p>
-        <h1 className="text-4xl sm:text-5xl mb-8">Over Wouter Dijkman</h1>
+        <h1 className="h-1 mb-8">Over Wouter Dijkman</h1>
         <div
-          className="flex flex-col gap-5 text-lg"
+          className="flex flex-col gap-5 text-lg measure"
           style={{ color: 'var(--text-tertiary)' }}
         >
           <p>
@@ -93,7 +93,7 @@ export default function OverPage() {
 
       {/* Timeline */}
       <section className="container-medium py-12">
-        <h2 className="text-2xl sm:text-3xl mb-8">Loopbaan</h2>
+        <h2 className="h-2 mb-8">Loopbaan</h2>
         <ul className="flex flex-col gap-5">
           {[
             { year: '2017 — 2020', label: 'Rabobank Restructuring (3 jaar) — MKB-restructuring, intensive care' },
@@ -125,8 +125,8 @@ export default function OverPage() {
         style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border-subtle)' }}
       >
         <div className="container-medium">
-          <h2 className="text-2xl sm:text-3xl mb-8">Hoe ik werk</h2>
-          <p className="text-lg mb-8" style={{ color: 'var(--text-tertiary)' }}>
+          <h2 className="h-2 mb-8">Hoe ik werk</h2>
+          <p className="text-lg mb-8 measure" style={{ color: 'var(--text-tertiary)' }}>
             Ik werk in vier vormen, afhankelijk van wat uw situatie vraagt. Geen retainer-
             constructies zonder concreet doel; elk traject begint met meetbare nulmeting.
           </p>
@@ -174,8 +174,8 @@ export default function OverPage() {
 
       {/* Contact */}
       <section className="container-medium py-20 text-center">
-        <h2 className="text-2xl sm:text-3xl mb-5">Direct contact</h2>
-        <p className="mb-8" style={{ color: 'var(--text-tertiary)' }}>
+        <h2 className="h-2 mb-5">Direct contact</h2>
+        <p className="mb-8 hint-italic" style={{ color: 'var(--text-tertiary)' }}>
           Een sparring-sessie van twintig minuten is gangbaar als eerste contact.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">

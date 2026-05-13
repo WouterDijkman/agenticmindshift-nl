@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
+import ScrollIndicator from '@/components/ScrollIndicator';
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || 'https://www.agenticmindshift.nl';
@@ -106,135 +107,163 @@ export default function HomePage() {
       />
 
       {/* 1. HERO */}
-      <section className="container-wide pt-20 pb-24 sm:pt-28 sm:pb-32">
-        <div className="max-w-3xl">
-          <p
-            className="text-xs uppercase mb-5"
-            style={{ color: 'var(--accent-primary)', letterSpacing: '0.2em' }}
-          >
-            Portfolio Intelligence Scorecard
-          </p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl leading-tight mb-6">
-            Hoeveel rendement laat uw portefeuille deze maand liggen?
-          </h1>
-          <p
-            className="text-lg sm:text-xl mb-10 leading-relaxed"
+      <section className="grain-overlay hero-min relative flex items-center">
+        <div className="container-wide pt-16 pb-24 sm:pt-24 sm:pb-32 w-full">
+          <div className="max-w-3xl">
+            <p
+              className="text-xs uppercase mb-5 anim-fade-up delay-0"
+              style={{ color: 'var(--accent-primary)', letterSpacing: '0.2em' }}
+            >
+              Portfolio Intelligence Scorecard
+            </p>
+            <h1 className="h-1 mb-6 anim-fade-up delay-1">
+              Hoeveel rendement laat uw portefeuille deze maand liggen?
+            </h1>
+            <p
+              className="text-lg sm:text-xl mb-10 leading-relaxed measure anim-fade-up delay-2"
+              style={{ color: 'var(--text-tertiary)' }}
+            >
+              Niet door slecht beheer. Wel door blinde vlekken in uw deal-cyclus, uw
+              MBR-ritme en uw bias-toetsing die zelden expliciet worden gemaakt. De
+              Portfolio Intelligence Scorecard maakt ze meetbaar, op zes dimensies, in
+              twaalf minuten.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center anim-fade-up delay-3">
+              <Button href="/scorecard" variant="primary" size="lg">
+                Start de Scorecard
+              </Button>
+              <span
+                className="text-sm hint-italic"
+                style={{ color: 'var(--text-muted)' }}
+              >
+                12 minuten &middot; vertrouwelijk &middot; zonder vervolg verplicht
+              </span>
+            </div>
+          </div>
+        </div>
+        <ScrollIndicator />
+      </section>
+
+      <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
+
+      {/* 2. HET PROBLEEM */}
+      <section className="container-medium py-20 relative">
+        <span aria-hidden="true" className="quote-anchor">
+          &ldquo;
+        </span>
+        <div className="relative">
+          <h2 className="h-2 mb-8">
+            U doet niets fout. U meet alleen niet wat u zou moeten meten.
+          </h2>
+          <div
+            className="flex flex-col gap-5 text-lg measure"
             style={{ color: 'var(--text-tertiary)' }}
           >
-            Niet door slecht beheer. Wel door blinde vlekken in uw deal-cyclus, uw
-            MBR-ritme en uw bias-toetsing die zelden expliciet worden gemaakt. De
-            Portfolio Intelligence Scorecard maakt ze meetbaar, op zes dimensies, in
-            twaalf minuten.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-            <Button href="/scorecard" variant="primary" size="lg">
-              Start de Scorecard
-            </Button>
-            <span className="text-sm" style={{ color: 'var(--text-muted)' }}>
-              12 minuten &middot; vertrouwelijk &middot; zonder vervolg verplicht
-            </span>
+            <p>
+              De gemiddelde MBR-cyclus van een Nederlandse PE-firma toetst op
+              EBITDA-ontwikkeling, schuldratio en convenanten. Dat dekt het zichtbare risico.
+              Wat niet wordt gemeten zijn de stille verliezen: trage doorlooptijden tussen
+              Information Memorandum en IC-oordeel, structureel ongetoetste managementaannames,
+              en AI-substitutierisico dat zelden een plek krijgt in de entry-multiple.
+            </p>
+            <p>
+              In de praktijk lekt hier per portfoliobedrijf gemiddeld een half exit-multiple
+              weg. Niet door een falende manager, niet door een verkeerde sector. Door een
+              instrumentatie-gat: u kunt niet sturen op wat u niet meet, en wat u niet meet
+              verschijnt pas in de jaarcijfers &mdash; meestal te laat om nog iets te kunnen
+              doen.
+            </p>
+            <p>
+              De Portfolio Intelligence Scorecard maakt dit instrumentatie-gat zichtbaar.
+              Vijftien gerichte vragen, zes dimensies, een rapport van vier pagina&apos;s. Geen
+              advies tot u dat zelf wenst.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* 2. HET PROBLEEM */}
-      <section className="container-medium py-20" style={{ borderTop: '1px solid var(--border-subtle)' }}>
-        <h2 className="text-3xl sm:text-4xl mb-8 leading-tight">
-          U doet niets fout. U meet alleen niet wat u zou moeten meten.
-        </h2>
-        <div className="flex flex-col gap-5 text-lg" style={{ color: 'var(--text-tertiary)' }}>
-          <p>
-            De gemiddelde MBR-cyclus van een Nederlandse PE-firma toetst op
-            EBITDA-ontwikkeling, schuldratio en convenanten. Dat dekt het zichtbare risico.
-            Wat niet wordt gemeten zijn de stille verliezen: trage doorlooptijden tussen
-            Information Memorandum en IC-oordeel, structureel ongetoetste managementaannames,
-            en AI-substitutierisico dat zelden een plek krijgt in de entry-multiple.
-          </p>
-          <p>
-            In de praktijk lekt hier per portfoliobedrijf gemiddeld een half exit-multiple
-            weg. Niet door een falende manager, niet door een verkeerde sector. Door een
-            instrumentatie-gat: u kunt niet sturen op wat u niet meet, en wat u niet meet
-            verschijnt pas in de jaarcijfers &mdash; meestal te laat om nog iets te kunnen
-            doen.
-          </p>
-          <p>
-            De Portfolio Intelligence Scorecard maakt dit instrumentatie-gat zichtbaar.
-            Vijftien gerichte vragen, zes dimensies, een rapport van vier pagina&apos;s. Geen
-            advies tot u dat zelf wenst.
-          </p>
-        </div>
-      </section>
+      <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
       {/* 3. DE GIDS */}
       <section
-        className="py-20"
-        style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border-subtle)' }}
+        className="py-20 md:clip-diagonal-both"
+        style={{ background: 'var(--bg-secondary)' }}
       >
-        <div className="container-medium">
-          <p
-            className="text-xs uppercase mb-3"
-            style={{ color: 'var(--accent-primary)', letterSpacing: '0.18em' }}
-          >
-            De gids
-          </p>
-          <h2 className="text-3xl sm:text-4xl mb-6">Wouter Dijkman</h2>
-          <p className="text-lg mb-10" style={{ color: 'var(--text-tertiary)' }}>
-            Vijfeneenhalf jaar binnen de Nederlandse bancaire wereld, eerst aan de
-            restructuring-kant, daarna in acquisition finance. Daar zag ik welke
-            instrumentatie-keuzes het verschil maken tussen een geslaagde en een
-            tegenvallende deal. Agentic Mindshift maakt die kennis beschikbaar voor het deal-
-            en bestuursteam.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div
-              style={{
-                background: 'var(--bg-elevated)',
-                border: '1px solid var(--border-subtle)',
-                borderRadius: '4px',
-                padding: '28px',
-              }}
+        <div className="container-medium relative">
+          <span aria-hidden="true" className="quote-anchor">
+            &ldquo;
+          </span>
+          <div className="relative">
+            <p
+              className="text-xs uppercase mb-3"
+              style={{ color: 'var(--accent-primary)', letterSpacing: '0.18em' }}
             >
-              <p
-                className="text-xs uppercase mb-2"
-                style={{ color: 'var(--accent-primary)', letterSpacing: '0.16em' }}
-              >
-                2017 &mdash; 2020
-              </p>
-              <h3 className="text-xl mb-3">Rabobank Restructuring (3 jaar)</h3>
-              <p style={{ color: 'var(--text-tertiary)' }}>
-                MKB-restructuring en intensive-care dossiers. Hier leerde ik welke vroege
-                signalen onderprestatie aankondigen &mdash; en hoe vaak die signalen door
-                management worden gemist, niet uit onwil, maar door gebrek aan ritme.
-              </p>
-            </div>
-            <div
-              style={{
-                background: 'var(--bg-elevated)',
-                border: '1px solid var(--border-subtle)',
-                borderRadius: '4px',
-                padding: '28px',
-              }}
+              De gids
+            </p>
+            <h2 className="h-2 mb-6">Wouter Dijkman</h2>
+            <p
+              className="text-lg mb-10 measure"
+              style={{ color: 'var(--text-tertiary)' }}
             >
-              <p
-                className="text-xs uppercase mb-2"
-                style={{ color: 'var(--accent-primary)', letterSpacing: '0.16em' }}
+              Vijfeneenhalf jaar binnen de Nederlandse bancaire wereld, eerst aan de
+              restructuring-kant, daarna in acquisition finance. Daar zag ik welke
+              instrumentatie-keuzes het verschil maken tussen een geslaagde en een
+              tegenvallende deal. Agentic Mindshift maakt die kennis beschikbaar voor het deal-
+              en bestuursteam.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div
+                style={{
+                  background: 'var(--bg-elevated)',
+                  border: '1px solid var(--border-subtle)',
+                  borderRadius: '4px',
+                  padding: '28px',
+                }}
               >
-                2020 &mdash; 2023
-              </p>
-              <h3 className="text-xl mb-3">ING Acquisition Finance (2,5 jaar)</h3>
-              <p style={{ color: 'var(--text-tertiary)' }}>
-                LBO-financiering voor PE-deals in het Nederlandse mid-market. Vanaf de
-                bancaire kant leerde ik welke deal-structuren in IC-besluiten stand houden,
-                en welke aannames bij DD doorgaans niet expliciet worden gemaakt.
-              </p>
+                <p
+                  className="text-xs uppercase mb-2"
+                  style={{ color: 'var(--accent-primary)', letterSpacing: '0.16em' }}
+                >
+                  2017 &mdash; 2020
+                </p>
+                <h3 className="h-3 mb-3">Rabobank Restructuring (3 jaar)</h3>
+                <p style={{ color: 'var(--text-tertiary)' }}>
+                  MKB-restructuring en intensive-care dossiers. Hier leerde ik welke vroege
+                  signalen onderprestatie aankondigen &mdash; en hoe vaak die signalen door
+                  management worden gemist, niet uit onwil, maar door gebrek aan ritme.
+                </p>
+              </div>
+              <div
+                style={{
+                  background: 'var(--bg-elevated)',
+                  border: '1px solid var(--border-subtle)',
+                  borderRadius: '4px',
+                  padding: '28px',
+                }}
+              >
+                <p
+                  className="text-xs uppercase mb-2"
+                  style={{ color: 'var(--accent-primary)', letterSpacing: '0.16em' }}
+                >
+                  2020 &mdash; 2023
+                </p>
+                <h3 className="h-3 mb-3">ING Acquisition Finance (2,5 jaar)</h3>
+                <p style={{ color: 'var(--text-tertiary)' }}>
+                  LBO-financiering voor PE-deals in het Nederlandse mid-market. Vanaf de
+                  bancaire kant leerde ik welke deal-structuren in IC-besluiten stand houden,
+                  en welke aannames bij DD doorgaans niet expliciet worden gemaakt.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
+
       {/* 4. 3 STAPPEN */}
       <section className="container-medium py-20">
-        <h2 className="text-3xl sm:text-4xl mb-12">Drie stappen, twaalf minuten</h2>
+        <h2 className="h-2 mb-12">Drie stappen, twaalf minuten</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {[
             {
@@ -257,23 +286,26 @@ export default function HomePage() {
             },
           ].map((s) => (
             <div key={s.n}>
-              <p style={{ color: 'var(--accent-primary)', fontSize: '96px', lineHeight: 1, fontWeight: 600 }}>
-                {s.n}
-              </p>
-              <h3 className="text-xl mt-3 mb-3">{s.title}</h3>
+              <span className="monu-num-wrap" aria-hidden="true">
+                <span className="monu-num">{s.n}</span>
+              </span>
+              <span className="sr-only">{s.n}</span>
+              <h3 className="h-3 mt-3 mb-3">{s.title}</h3>
               <p style={{ color: 'var(--text-tertiary)' }}>{s.body}</p>
             </div>
           ))}
         </div>
       </section>
 
+      <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
+
       {/* 5. STAKES */}
       <section
-        className="py-20"
-        style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border-subtle)' }}
+        className="py-20 md:clip-diagonal-both"
+        style={{ background: 'var(--bg-secondary)' }}
       >
         <div className="container-medium">
-          <h2 className="text-3xl sm:text-4xl mb-10">Wat het kost om dit niet te meten</h2>
+          <h2 className="h-2 mb-10">Wat het kost om dit niet te meten</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div
               style={{
@@ -284,7 +316,7 @@ export default function HomePage() {
               }}
             >
               <p
-                className="text-3xl mb-4"
+                className="h-3 mb-4"
                 style={{ color: 'var(--accent-cta)', fontWeight: 600 }}
               >
                 Half exit-multiple weg
@@ -304,7 +336,7 @@ export default function HomePage() {
               }}
             >
               <p
-                className="text-3xl mb-4"
+                className="h-3 mb-4"
                 style={{ color: 'var(--accent-cta)', fontWeight: 600 }}
               >
                 3 extra werkdagen per MBR
@@ -319,9 +351,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
+
       {/* 6. SUCCESS */}
       <section className="container-medium py-20">
-        <h2 className="text-3xl sm:text-4xl mb-10">Wat verandert wanneer u dit wel meet</h2>
+        <h2 className="h-2 mb-10">Wat verandert wanneer u dit wel meet</h2>
         <div className="flex flex-col gap-6">
           {[
             {
@@ -347,20 +381,24 @@ export default function HomePage() {
                 paddingLeft: '24px',
               }}
             >
-              <h3 className="text-xl mb-2">{b.title}</h3>
-              <p style={{ color: 'var(--text-tertiary)' }}>{b.body}</p>
+              <h3 className="h-3 mb-2">{b.title}</h3>
+              <p className="measure" style={{ color: 'var(--text-tertiary)' }}>
+                {b.body}
+              </p>
             </div>
           ))}
         </div>
       </section>
 
+      <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
+
       {/* 7. VOOR WIE */}
       <section
-        className="py-20"
-        style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border-subtle)' }}
+        className="py-20 md:clip-diagonal-both"
+        style={{ background: 'var(--bg-secondary)' }}
       >
         <div className="container-medium">
-          <h2 className="text-3xl sm:text-4xl mb-10">Voor wie is dit?</h2>
+          <h2 className="h-2 mb-10">Voor wie is dit?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div
               style={{
@@ -413,10 +451,15 @@ export default function HomePage() {
         </div>
       </section>
 
+      <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
+
       {/* 8. 6 DIMENSIES */}
       <section className="container-medium py-20">
-        <h2 className="text-3xl sm:text-4xl mb-3">Zes dimensies, &eacute;&eacute;n score</h2>
-        <p className="mb-10 text-lg" style={{ color: 'var(--text-tertiary)' }}>
+        <h2 className="h-2 mb-3">Zes dimensies, &eacute;&eacute;n score</h2>
+        <p
+          className="mb-10 text-lg hint-italic measure"
+          style={{ color: 'var(--text-tertiary)' }}
+        >
           Elke dimensie is gekozen op basis van waar in de praktijk rendement weglekt.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -449,24 +492,28 @@ export default function HomePage() {
         </div>
       </section>
 
+      <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
+
       {/* 9. FAQ */}
       <section
         className="py-20"
-        style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border-subtle)' }}
+        style={{ background: 'var(--bg-secondary)' }}
       >
         <div className="container-narrow">
-          <h2 className="text-3xl sm:text-4xl mb-10">Veelgestelde vragen</h2>
+          <h2 className="h-2 mb-10">Veelgestelde vragen</h2>
           <Accordion items={faqItems} />
         </div>
       </section>
 
+      <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
+
       {/* 10. SLOT CTA */}
       <section className="container-medium py-24 text-center">
-        <h2 className="text-3xl sm:text-4xl mb-5 leading-tight">
+        <h2 className="h-2 mb-5">
           Twaalf minuten. Vier pagina&apos;s rapport. Geen vervolg verplicht.
         </h2>
         <p
-          className="text-lg mb-10 max-w-2xl mx-auto"
+          className="text-lg mb-10 max-w-2xl mx-auto hint-italic"
           style={{ color: 'var(--text-tertiary)' }}
         >
           De scorecard is bewust kort. U bepaalt zelf wat u met het rapport doet.
@@ -475,7 +522,7 @@ export default function HomePage() {
           Start de Scorecard
         </Button>
         <div className="mt-6">
-          <Link href="/over" className="text-sm" style={{ color: 'var(--text-muted)' }}>
+          <Link href="/over" className="text-sm nav-link" style={{ color: 'var(--text-muted)' }}>
             Eerst meer lezen over Wouter
           </Link>
         </div>

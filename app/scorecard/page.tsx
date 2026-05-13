@@ -39,11 +39,11 @@ export default function ScorecardWelcomePage() {
         >
           Portfolio Intelligence Scorecard
         </p>
-        <h1 className="text-4xl sm:text-5xl mb-6 leading-tight">
+        <h1 className="h-1 mb-6">
           Vijftien vragen. Vier secties. Een rapport van vier pagina&apos;s.
         </h1>
         <p
-          className="text-lg mb-10"
+          className="text-lg mb-10 hint-italic"
           style={{ color: 'var(--text-tertiary)' }}
         >
           Het rapport ontvangt u direct in uw inbox, plus een persoonlijke link naar de
@@ -62,7 +62,7 @@ export default function ScorecardWelcomePage() {
             padding: '28px',
           }}
         >
-          <h2 className="text-xl mb-5">Wat u kunt verwachten</h2>
+          <h2 className="h-3 mb-5">Wat u kunt verwachten</h2>
           <ul
             className="flex flex-col gap-3 text-base"
             style={{ color: 'var(--text-tertiary)' }}

@@ -34,28 +34,31 @@ export default function QuestionCard({
   }, [question, onSelect]);
 
   return (
+    // key={question.id} on the wrapper triggers slideInRight on each new card.
     <div
+      key={question.id}
+      className="anim-slide-in"
       style={{
         background: 'var(--bg-secondary)',
         border: '1px solid var(--border-subtle)',
         borderRadius: '4px',
-        padding: '32px',
+        padding: '24px',
       }}
     >
       <p
-        className="text-xs uppercase tracking-wider mb-3"
-        style={{ color: 'var(--accent-primary)', letterSpacing: '0.12em' }}
+        className="text-xs uppercase tracking-wider mb-3 hint-italic"
+        style={{ color: 'var(--accent-primary)', letterSpacing: '0.12em', fontStyle: 'normal' }}
       >
         Vraag {index} / 15
       </p>
       <h2
-        className="text-xl sm:text-2xl mb-7 leading-snug"
+        className="h-3 mb-7 leading-snug"
         style={{ color: 'var(--text-primary)' }}
       >
         {question.text}
       </h2>
 
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-4">
         {question.options.map((opt) => {
           const isSelected = selected === opt.letter;
           return (
@@ -64,7 +67,7 @@ export default function QuestionCard({
               type="button"
               onClick={() => onSelect(opt.letter)}
               aria-pressed={isSelected}
-              className="w-full text-left flex items-start gap-4 transition-colors duration-150"
+              className="w-full text-left flex items-start gap-4 transition-colors duration-150 min-h-[44px]"
               style={{
                 background: isSelected
                   ? 'var(--accent-primary-soft)'
@@ -97,7 +100,10 @@ export default function QuestionCard({
         })}
       </div>
 
-      <p className="mt-5 text-xs" style={{ color: 'var(--text-muted)' }}>
+      <p
+        className="mt-5 text-xs hint-italic"
+        style={{ color: 'var(--text-muted)' }}
+      >
         Tip: u kunt ook de toetsen A, B, C, D of E gebruiken.
       </p>
     </div>

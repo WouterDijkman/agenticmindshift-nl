@@ -27,9 +27,9 @@ export default function Sectie2Page() {
       <div className="mb-8">
         <ProgressBar current={answered} total={15} />
       </div>
-      <h1 className="text-2xl sm:text-3xl mb-3">Sectie 2 &mdash; Deal-cyclus en bias</h1>
+      <h1 className="h-2 mb-3">Sectie 2 &mdash; Deal-cyclus en bias</h1>
       <p
-        className="mb-10 text-base"
+        className="mb-10 text-base measure"
         style={{ color: 'var(--text-tertiary)' }}
       >
         Drie vragen over uw entry-multiple, IC-doorlooptijd en hoe management buiten

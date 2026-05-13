@@ -34,7 +34,7 @@ export default function Accordion({ items }: AccordionProps) {
               aria-controls={`accordion-panel-${item.id}`}
               id={`accordion-trigger-${item.id}`}
               onClick={() => setOpenId(isOpen ? null : item.id)}
-              className="w-full flex items-center justify-between text-left px-5 py-4"
+              className="w-full flex items-center justify-between text-left px-5 py-4 min-h-[44px]"
               style={{ color: 'var(--text-primary)' }}
             >
               <span className="text-base sm:text-lg font-semibold">{item.question}</span>
@@ -52,17 +52,20 @@ export default function Accordion({ items }: AccordionProps) {
                 +
               </span>
             </button>
-            {isOpen && (
+            <div
+              id={`accordion-panel-${item.id}`}
+              role="region"
+              aria-labelledby={`accordion-trigger-${item.id}`}
+              aria-hidden={!isOpen}
+              className={`accordion-panel ${isOpen ? 'open' : ''}`}
+            >
               <div
-                id={`accordion-panel-${item.id}`}
-                role="region"
-                aria-labelledby={`accordion-trigger-${item.id}`}
                 className="px-5 pb-5 pt-1"
                 style={{ color: 'var(--text-tertiary)' }}
               >
                 {item.answer}
               </div>
-            )}
+            </div>
           </div>
         );
       })}

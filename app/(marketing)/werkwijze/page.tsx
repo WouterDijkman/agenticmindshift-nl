@@ -77,9 +77,9 @@ export default function WerkwijzePage() {
         >
           Werkwijze
         </p>
-        <h1 className="text-4xl sm:text-5xl mb-6">Vier manieren waarop ik werk</h1>
+        <h1 className="h-1 mb-6">Vier manieren waarop ik werk</h1>
         <p
-          className="text-lg max-w-2xl"
+          className="text-lg measure"
           style={{ color: 'var(--text-tertiary)' }}
         >
           Geen retainer-constructies zonder concreet doel. Elk traject begint met een
@@ -112,7 +112,7 @@ export default function WerkwijzePage() {
                 </p>
               </div>
               <div>
-                <h2 className="text-2xl sm:text-3xl mb-3">{o.title}</h2>
+                <h2 className="h-2 mb-3">{o.title}</h2>
                 <div
                   className="flex flex-wrap gap-x-6 gap-y-2 mb-5 text-sm"
                   style={{ color: 'var(--text-secondary)' }}
@@ -145,11 +145,11 @@ export default function WerkwijzePage() {
       </section>
 
       <section className="container-medium pb-20 text-center">
-        <h2 className="text-2xl sm:text-3xl mb-5">
+        <h2 className="h-2 mb-5">
           Welk traject past het beste? Begin bij de scorecard.
         </h2>
         <p
-          className="mb-8 max-w-2xl mx-auto"
+          className="mb-8 max-w-2xl mx-auto hint-italic"
           style={{ color: 'var(--text-tertiary)' }}
         >
           De Portfolio Intelligence Scorecard adviseert op basis van uw antwoorden welke van

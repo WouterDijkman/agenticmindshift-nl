@@ -27,9 +27,9 @@ export default function Sectie3Page() {
       <div className="mb-8">
         <ProgressBar current={answered} total={15} />
       </div>
-      <h1 className="text-2xl sm:text-3xl mb-3">Sectie 3 &mdash; MBR-ritme en portfolio-intelligence</h1>
+      <h1 className="h-2 mb-3">Sectie 3 &mdash; MBR-ritme en portfolio-intelligence</h1>
       <p
-        className="mb-10 text-base"
+        className="mb-10 text-base measure"
         style={{ color: 'var(--text-tertiary)' }}
       >
         Vier vragen over uw maandelijkse rapportagecyclus en hoe snel u onderprestatie

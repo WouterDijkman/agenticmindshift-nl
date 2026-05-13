@@ -17,16 +17,17 @@ export default function FactumCapitalPage() {
         >
           Lancering 1 juli 2026
         </p>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl mb-6 leading-tight">
-          Factum Capital
-        </h1>
+        <h1 className="h-display mb-6">Factum Capital</h1>
         <p
-          className="text-xl sm:text-2xl mb-10"
+          className="text-xl sm:text-2xl mb-10 measure"
           style={{ color: 'var(--text-secondary)' }}
         >
           Het Agentic M&amp;A- en Restructuring Operating System.
         </p>
-        <div className="flex flex-col gap-5 text-lg max-w-3xl" style={{ color: 'var(--text-tertiary)' }}>
+        <div
+          className="flex flex-col gap-5 text-lg measure"
+          style={{ color: 'var(--text-tertiary)' }}
+        >
           <p>
             Factum Capital is een operating system, geen tool. Drieentwintig modules die
             samen de M&amp;A- en restructuring-praktijk van een Nederlandse PE-firma
@@ -54,8 +55,8 @@ export default function FactumCapitalPage() {
         style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border-subtle)' }}
       >
         <div className="container-narrow">
-          <h2 className="text-2xl sm:text-3xl mb-3">Vroege toegang</h2>
-          <p className="mb-8" style={{ color: 'var(--text-tertiary)' }}>
+          <h2 className="h-2 mb-3">Vroege toegang</h2>
+          <p className="mb-8 measure" style={{ color: 'var(--text-tertiary)' }}>
             Vul onderstaande gegevens in als u op de hoogte wilt worden gehouden of in
             aanmerking wilt komen voor het early-access-traject. Geen vervolgmails buiten
             de Factum Capital-roadmap om.

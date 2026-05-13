@@ -9,8 +9,8 @@ export default function Footer() {
         marginTop: '120px',
       }}
     >
-      <div className="container-extra py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="container-extra py-12 sm:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
           <div>
             <p
               className="text-lg font-semibold mb-3"
@@ -18,7 +18,10 @@ export default function Footer() {
             >
               Agentic Mindshift
             </p>
-            <p className="text-sm leading-relaxed" style={{ color: 'var(--text-tertiary)' }}>
+            <p
+              className="text-sm leading-relaxed measure"
+              style={{ color: 'var(--text-tertiary)' }}
+            >
               AI-advies voor Nederlandse PE- en M&amp;A-firma&apos;s. Concreet, vertrouwelijk,
               meetbaar.
             </p>
@@ -31,21 +34,49 @@ export default function Footer() {
             >
               Navigatie
             </p>
-            <ul className="flex flex-col gap-2.5 text-sm" style={{ color: 'var(--text-tertiary)' }}>
+            <ul
+              className="flex flex-col gap-3 text-sm"
+              style={{ color: 'var(--text-tertiary)' }}
+            >
               <li>
-                <Link href="/scorecard">Portfolio Intelligence Scorecard</Link>
+                <Link
+                  href="/scorecard"
+                  className="nav-link inline-flex items-center min-h-[44px]"
+                >
+                  Portfolio Intelligence Scorecard
+                </Link>
               </li>
               <li>
-                <Link href="/werkwijze">Werkwijze</Link>
+                <Link
+                  href="/werkwijze"
+                  className="nav-link inline-flex items-center min-h-[44px]"
+                >
+                  Werkwijze
+                </Link>
               </li>
               <li>
-                <Link href="/over">Over Wouter</Link>
+                <Link
+                  href="/over"
+                  className="nav-link inline-flex items-center min-h-[44px]"
+                >
+                  Over Wouter
+                </Link>
               </li>
               <li>
-                <Link href="/factum-capital">Factum Capital</Link>
+                <Link
+                  href="/factum-capital"
+                  className="nav-link inline-flex items-center min-h-[44px]"
+                >
+                  Factum Capital
+                </Link>
               </li>
               <li>
-                <Link href="/contact">Contact</Link>
+                <Link
+                  href="/contact"
+                  className="nav-link inline-flex items-center min-h-[44px]"
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
@@ -57,12 +88,25 @@ export default function Footer() {
             >
               Juridisch
             </p>
-            <ul className="flex flex-col gap-2.5 text-sm" style={{ color: 'var(--text-tertiary)' }}>
+            <ul
+              className="flex flex-col gap-3 text-sm"
+              style={{ color: 'var(--text-tertiary)' }}
+            >
               <li>
-                <Link href="/privacy">Privacy</Link>
+                <Link
+                  href="/privacy"
+                  className="nav-link inline-flex items-center min-h-[44px]"
+                >
+                  Privacy
+                </Link>
               </li>
               <li>
-                <Link href="/voorwaarden">Voorwaarden</Link>
+                <Link
+                  href="/voorwaarden"
+                  className="nav-link inline-flex items-center min-h-[44px]"
+                >
+                  Voorwaarden
+                </Link>
               </li>
             </ul>
           </div>

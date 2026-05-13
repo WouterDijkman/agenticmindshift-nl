@@ -15,13 +15,13 @@ export default function PrivacyPage() {
       >
         Juridisch
       </p>
-      <h1 className="text-4xl sm:text-5xl mb-3">Privacystatement</h1>
-      <p className="mb-10 text-sm" style={{ color: 'var(--text-muted)' }}>
+      <h1 className="h-1 mb-3">Privacystatement</h1>
+      <p className="mb-10 text-sm hint-italic" style={{ color: 'var(--text-muted)' }}>
         Laatste wijziging: 13 mei 2026
       </p>
 
       <div
-        className="flex flex-col gap-6 text-base"
+        className="flex flex-col gap-6 text-base measure"
         style={{ color: 'var(--text-tertiary)', lineHeight: 1.7 }}
       >
         <p>

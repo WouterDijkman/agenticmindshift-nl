@@ -25,9 +25,10 @@ interface LinkButtonProps extends CommonProps {
 const baseClasses =
   'inline-flex items-center justify-center font-semibold transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary disabled:opacity-50 disabled:cursor-not-allowed';
 
+// min-h-[44px] enforces a 44px touch target on every Button instance.
 const sizeClasses: Record<Size, string> = {
-  md: 'px-5 py-2.5 text-base',
-  lg: 'px-7 py-3.5 text-lg',
+  md: 'px-5 py-2.5 text-base min-h-[44px]',
+  lg: 'px-7 py-3.5 text-lg min-h-[48px]',
 };
 
 function variantStyle(variant: Variant): React.CSSProperties {
@@ -50,7 +51,9 @@ function variantStyle(variant: Variant): React.CSSProperties {
 export function Button(props: ButtonProps | LinkButtonProps) {
   const { variant = 'primary', size = 'md', children, className = '' } = props;
   const style = variantStyle(variant);
-  const classes = `${baseClasses} ${sizeClasses[size]} ${className}`;
+  // btn-primary class (in globals.css) adds the hover-lift + shadow.
+  const variantClass = variant === 'primary' ? 'btn-primary' : 'btn-secondary';
+  const classes = `${baseClasses} ${sizeClasses[size]} ${variantClass} ${className}`;
 
   if ('href' in props && props.href) {
     const isExternal = props.external || /^https?:\/\//.test(props.href);

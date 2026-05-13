@@ -44,7 +44,7 @@ export default function Header() {
       <div className="container-extra flex items-center justify-between py-4">
         <Link
           href="/"
-          className="text-lg sm:text-xl font-semibold"
+          className="text-lg sm:text-xl font-semibold min-h-[44px] inline-flex items-center"
           style={{ color: 'var(--text-primary)' }}
         >
           Agentic Mindshift
@@ -55,7 +55,7 @@ export default function Header() {
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm hover:opacity-80 transition-opacity"
+              className="nav-link text-sm min-h-[44px] inline-flex items-center"
               style={{ color: 'var(--text-tertiary)' }}
             >
               {l.label}
@@ -74,7 +74,7 @@ export default function Header() {
           aria-label={mobileOpen ? 'Sluit menu' : 'Open menu'}
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((v) => !v)}
-          className="lg:hidden p-2"
+          className="lg:hidden p-2 min-h-[44px] min-w-[44px] flex flex-col items-center justify-center"
           style={{
             color: 'var(--text-primary)',
             border: '1px solid var(--border-medium)',
@@ -88,60 +88,59 @@ export default function Header() {
         </button>
       </div>
 
-      {mobileOpen && (
-        <div
-          className="lg:hidden fixed inset-0 z-40"
-          style={{ background: 'rgba(8,25,48,0.85)', backdropFilter: 'blur(8px)' }}
-          onClick={() => setMobileOpen(false)}
-        >
-          <div
-            className="absolute right-0 top-0 h-full w-80 max-w-full p-6 flex flex-col gap-5"
-            style={{
-              background: 'var(--bg-secondary)',
-              borderLeft: '1px solid var(--border-subtle)',
-            }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-center justify-between">
-              <span className="font-semibold" style={{ color: 'var(--text-primary)' }}>
-                Menu
-              </span>
-              <button
-                type="button"
-                aria-label="Sluit menu"
+      {/* Mobile drawer: persistent in DOM, animated via translateX + opacity. */}
+      <div
+        className={`lg:hidden drawer-backdrop ${mobileOpen ? 'open' : ''}`}
+        onClick={() => setMobileOpen(false)}
+        aria-hidden={!mobileOpen}
+      />
+      <aside
+        className={`lg:hidden drawer-panel ${mobileOpen ? 'open' : ''}`}
+        aria-hidden={!mobileOpen}
+        role="dialog"
+        aria-label="Hoofdmenu"
+      >
+        <div className="p-6 flex flex-col gap-5 h-full">
+          <div className="flex items-center justify-between">
+            <span className="font-semibold" style={{ color: 'var(--text-primary)' }}>
+              Menu
+            </span>
+            <button
+              type="button"
+              aria-label="Sluit menu"
+              onClick={() => setMobileOpen(false)}
+              className="min-h-[44px] min-w-[44px]"
+              style={{
+                color: 'var(--text-primary)',
+                border: '1px solid var(--border-medium)',
+                borderRadius: '4px',
+                padding: '6px 10px',
+                background: 'transparent',
+              }}
+            >
+              Sluit
+            </button>
+          </div>
+          <nav className="flex flex-col gap-2 mt-4">
+            {navLinks.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
                 onClick={() => setMobileOpen(false)}
-                style={{
-                  color: 'var(--text-primary)',
-                  border: '1px solid var(--border-medium)',
-                  borderRadius: '4px',
-                  padding: '6px 10px',
-                  background: 'transparent',
-                }}
+                className="text-base nav-link min-h-[44px] inline-flex items-center"
+                style={{ color: 'var(--text-secondary)' }}
               >
-                Sluit
-              </button>
-            </div>
-            <nav className="flex flex-col gap-4 mt-4">
-              {navLinks.map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-base"
-                  style={{ color: 'var(--text-secondary)' }}
-                >
-                  {l.label}
-                </Link>
-              ))}
-            </nav>
-            <div className="mt-auto">
-              <Button href="/scorecard" variant="primary" size="lg" className="w-full">
-                Start de Scorecard
-              </Button>
-            </div>
+                {l.label}
+              </Link>
+            ))}
+          </nav>
+          <div className="mt-auto">
+            <Button href="/scorecard" variant="primary" size="lg" className="w-full">
+              Start de Scorecard
+            </Button>
           </div>
         </div>
-      )}
+      </aside>
     </header>
   );
 }

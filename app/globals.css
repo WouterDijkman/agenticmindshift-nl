@@ -81,6 +81,7 @@ body {
   background: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-noto-serif), 'Noto Serif', Georgia, serif;
+  font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -157,4 +158,391 @@ select {
 ::selection {
   background: var(--accent-primary);
   color: var(--text-primary);
+}
+
+/* ------------------------------------------------------------------ */
+/* Focus-visible (global accent outline)                              */
+/* ------------------------------------------------------------------ */
+:focus-visible {
+  outline: 2px solid var(--accent-cta);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Fluid typography utility classes                                   */
+/* ------------------------------------------------------------------ */
+.h-display {
+  font-size: clamp(36px, 6vw, 72px);
+  line-height: 1.1;
+}
+.h-1 {
+  font-size: clamp(28px, 5vw, 52px);
+  line-height: 1.15;
+}
+.h-2 {
+  font-size: clamp(24px, 4vw, 40px);
+  line-height: 1.2;
+}
+.h-3 {
+  font-size: clamp(20px, 3vw, 28px);
+  line-height: 1.3;
+}
+.h-stat {
+  font-size: clamp(48px, 7vw, 80px);
+  line-height: 1;
+  font-weight: 600;
+}
+
+/* Body line-measure */
+.measure {
+  max-width: 65ch;
+}
+
+/* Italic hint/subtitle */
+.hint-italic {
+  font-style: italic;
+  color: var(--text-tertiary);
+}
+
+/* ------------------------------------------------------------------ */
+/* Hero min-height with svh + vh fallback                              */
+/* ------------------------------------------------------------------ */
+.hero-min {
+  min-height: 90vh;
+}
+@supports (height: 100svh) {
+  .hero-min {
+    min-height: 90svh;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Touch target safety: minimum 44x44                                 */
+/* ------------------------------------------------------------------ */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Animations                                                         */
+/* ------------------------------------------------------------------ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceDown {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 8px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.anim-fade-up {
+  opacity: 0;
+  animation: fadeInUp 600ms ease-out forwards;
+}
+.anim-fade-up.delay-0 {
+  animation-delay: 0ms;
+}
+.anim-fade-up.delay-1 {
+  animation-delay: 150ms;
+}
+.anim-fade-up.delay-2 {
+  animation-delay: 300ms;
+}
+.anim-fade-up.delay-3 {
+  animation-delay: 450ms;
+}
+
+.anim-slide-in {
+  animation: slideInRight 300ms ease-out;
+}
+
+.anim-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* ------------------------------------------------------------------ */
+/* Page transition (used by components/PageTransition.tsx)             */
+/* ------------------------------------------------------------------ */
+.page-transition {
+  animation: fadeIn 250ms ease-out;
+}
+
+/* ------------------------------------------------------------------ */
+/* Hero grain overlay                                                  */
+/* ------------------------------------------------------------------ */
+.grain-overlay {
+  position: relative;
+}
+.grain-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size: 200px 200px;
+  z-index: 0;
+}
+.grain-overlay > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ------------------------------------------------------------------ */
+/* Decorative big quote anchor                                         */
+/* ------------------------------------------------------------------ */
+.quote-anchor {
+  position: absolute;
+  top: -24px;
+  left: -12px;
+  color: var(--accent-cta);
+  font-family: var(--font-noto-serif), 'Noto Serif', Georgia, serif;
+  font-size: clamp(120px, 16vw, 200px);
+  line-height: 0.85;
+  font-weight: 700;
+  opacity: 0.5;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* Monumental clipped numeral — wrapper hides top half so only the bottom
+   portion of the giant numeral peeks out, acting as a typographic anchor. */
+.monu-num-wrap {
+  overflow: hidden;
+  display: block;
+  font-size: clamp(80px, 12vw, 160px);
+  /* Height ~0.6em of the glyph (final visible band) */
+  height: 0.6em;
+  line-height: 1;
+}
+.monu-num {
+  display: block;
+  font-size: 1em;
+  line-height: 1;
+  color: var(--accent-primary);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  /* Shift the glyph up so its top portion is clipped away. */
+  margin-top: -0.4em;
+}
+
+/* ------------------------------------------------------------------ */
+/* Section clip-paths (desktop only)                                  */
+/* ------------------------------------------------------------------ */
+@media (min-width: 768px) {
+  .clip-diagonal-both {
+    clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+  }
+  .clip-diagonal-top {
+    clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 100%);
+  }
+  .clip-diagonal-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% 97%, 0 100%);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Nav-link hover underline                                           */
+/* ------------------------------------------------------------------ */
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background: var(--accent-cta);
+  transition: width 200ms ease-out;
+}
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  width: 100%;
+}
+
+/* ------------------------------------------------------------------ */
+/* Primary CTA hover lift                                             */
+/* ------------------------------------------------------------------ */
+.btn-primary {
+  transition: background-color 150ms ease, transform 200ms ease-out,
+    box-shadow 200ms ease-out;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(241, 76, 29, 0.25);
+}
+
+/* ------------------------------------------------------------------ */
+/* Accordion panel transition                                          */
+/* ------------------------------------------------------------------ */
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 250ms ease-out;
+}
+.accordion-panel.open {
+  max-height: 1200px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Score-circle stroke animation                                       */
+/* ------------------------------------------------------------------ */
+.score-stroke {
+  transition: stroke-dashoffset 1000ms ease-out;
+}
+
+/* ------------------------------------------------------------------ */
+/* Dimension bar width animation                                       */
+/* ------------------------------------------------------------------ */
+.dim-bar {
+  width: 0;
+  transition: width 800ms ease-out;
+}
+
+/* ------------------------------------------------------------------ */
+/* Scroll indicator (hero)                                             */
+/* ------------------------------------------------------------------ */
+.scroll-indicator {
+  animation: bounceDown 2s ease-in-out infinite;
+}
+
+/* ------------------------------------------------------------------ */
+/* Skeleton                                                            */
+/* ------------------------------------------------------------------ */
+.skeleton {
+  background: var(--bg-elevated);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* ------------------------------------------------------------------ */
+/* Mobile drawer slide                                                 */
+/* ------------------------------------------------------------------ */
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 25, 48, 0.85);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease-out;
+  z-index: 40;
+}
+.drawer-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.drawer-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 320px;
+  max-width: 100%;
+  background: var(--bg-secondary);
+  border-left: 1px solid var(--border-subtle);
+  transform: translateX(100%);
+  transition: transform 250ms ease-out;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+}
+.drawer-panel.open {
+  transform: translateX(0);
+}
+
+/* ------------------------------------------------------------------ */
+/* Reduced motion                                                      */
+/* ------------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Print styles                                                        */
+/* ------------------------------------------------------------------ */
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  header,
+  footer,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  section,
+  div,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: inherit !important;
+  }
 }

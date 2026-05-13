@@ -33,9 +33,9 @@ export default function ContactPage() {
         >
           Contact
         </p>
-        <h1 className="text-4xl sm:text-5xl mb-6">Drie manieren om te beginnen</h1>
+        <h1 className="h-1 mb-6">Drie manieren om te beginnen</h1>
         <p
-          className="text-lg max-w-2xl"
+          className="text-lg measure"
           style={{ color: 'var(--text-tertiary)' }}
         >
           Welke route u kiest hangt af van wat u zoekt. Geen van deze drie verplicht u tot

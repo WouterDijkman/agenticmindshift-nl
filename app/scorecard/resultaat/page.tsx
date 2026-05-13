@@ -87,8 +87,8 @@ export default function ResultaatPage() {
       >
         Scorecard voltooid
       </p>
-      <h1 className="text-3xl sm:text-4xl mb-4">Uw voorlopige score</h1>
-      <p className="mb-10 max-w-2xl" style={{ color: 'var(--text-tertiary)' }}>
+      <h1 className="h-1 mb-4">Uw voorlopige score</h1>
+      <p className="mb-10 measure" style={{ color: 'var(--text-tertiary)' }}>
         Hieronder ziet u uw totaalscore. Vul uw zakelijke gegevens in om het volledige
         rapport van vier pagina&apos;s te ontgrendelen en als PDF te ontvangen.
       </p>
@@ -98,7 +98,7 @@ export default function ResultaatPage() {
           <TotalScoreCircle score={scores.total} max={75} size={240} />
         </div>
         <div>
-          <h2 className="text-2xl mb-4">Wat zit er in uw rapport?</h2>
+          <h2 className="h-2 mb-4">Wat zit er in uw rapport?</h2>
           <ul
             className="flex flex-col gap-3 text-base"
             style={{ color: 'var(--text-tertiary)' }}
@@ -120,9 +120,9 @@ export default function ResultaatPage() {
           padding: '36px',
         }}
       >
-        <h2 className="text-2xl mb-3">Ontgrendel uw rapport</h2>
+        <h2 className="h-2 mb-3">Ontgrendel uw rapport</h2>
         <p
-          className="mb-6 text-sm"
+          className="mb-6 text-sm hint-italic"
           style={{ color: 'var(--text-tertiary)' }}
         >
           Alleen zakelijke e-mailadressen. Wij sturen u na drie en zeven dagen een
