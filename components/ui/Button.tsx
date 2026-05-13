@@ -1,0 +1,91 @@
+import Link from 'next/link';
+import { ButtonHTMLAttributes, ReactNode } from 'react';
+
+type Variant = 'primary' | 'secondary';
+type Size = 'md' | 'lg';
+
+interface CommonProps {
+  variant?: Variant;
+  size?: Size;
+  children: ReactNode;
+  className?: string;
+}
+
+interface ButtonProps
+  extends CommonProps,
+    Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children' | 'className'> {
+  href?: undefined;
+}
+
+interface LinkButtonProps extends CommonProps {
+  href: string;
+  external?: boolean;
+}
+
+const baseClasses =
+  'inline-flex items-center justify-center font-semibold transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary disabled:opacity-50 disabled:cursor-not-allowed';
+
+const sizeClasses: Record<Size, string> = {
+  md: 'px-5 py-2.5 text-base',
+  lg: 'px-7 py-3.5 text-lg',
+};
+
+function variantStyle(variant: Variant): React.CSSProperties {
+  if (variant === 'primary') {
+    return {
+      background: 'var(--accent-cta)',
+      color: '#ffffff',
+      border: '1px solid var(--accent-cta)',
+      borderRadius: '4px',
+    };
+  }
+  return {
+    background: 'transparent',
+    color: 'var(--text-primary)',
+    border: '1px solid var(--border-strong)',
+    borderRadius: '4px',
+  };
+}
+
+export function Button(props: ButtonProps | LinkButtonProps) {
+  const { variant = 'primary', size = 'md', children, className = '' } = props;
+  const style = variantStyle(variant);
+  const classes = `${baseClasses} ${sizeClasses[size]} ${className}`;
+
+  if ('href' in props && props.href) {
+    const isExternal = props.external || /^https?:\/\//.test(props.href);
+    if (isExternal) {
+      return (
+        <a
+          href={props.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes}
+          style={style}
+        >
+          {children}
+        </a>
+      );
+    }
+    return (
+      <Link href={props.href} className={classes} style={style}>
+        {children}
+      </Link>
+    );
+  }
+
+  const { variant: _v, size: _s, children: _c, className: _cn, ...rest } =
+    props as ButtonProps;
+  void _v;
+  void _s;
+  void _c;
+  void _cn;
+
+  return (
+    <button className={classes} style={style} {...rest}>
+      {children}
+    </button>
+  );
+}
+
+export default Button;

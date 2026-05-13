@@ -1,0 +1,78 @@
+'use client';
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAssessmentStore } from '@/store/assessmentStore';
+import { questionsBySection, questions } from '@/lib/questions';
+import QuestionCard from '@/components/scorecard/QuestionCard';
+import ProgressBar from '@/components/scorecard/ProgressBar';
+import Button from '@/components/ui/Button';
+
+export default function Sectie2Page() {
+  const router = useRouter();
+  const answers = useAssessmentStore((s) => s.answers);
+  const setAnswer = useAssessmentStore((s) => s.setAnswer);
+  const setCurrentSection = useAssessmentStore((s) => s.setCurrentSection);
+
+  useEffect(() => {
+    setCurrentSection(2);
+  }, [setCurrentSection]);
+
+  const section = questionsBySection(2);
+  const sectionDone = section.every((q) => answers[q.id]);
+  const answered = questions.filter((q) => answers[q.id]).length;
+
+  return (
+    <section className="container-medium py-10">
+      <div className="mb-8">
+        <ProgressBar current={answered} total={15} />
+      </div>
+      <h1 className="text-2xl sm:text-3xl mb-3">Sectie 2 &mdash; Deal-cyclus en bias</h1>
+      <p
+        className="mb-10 text-base"
+        style={{ color: 'var(--text-tertiary)' }}
+      >
+        Drie vragen over uw entry-multiple, IC-doorlooptijd en hoe management buiten
+        het deal-team om wordt gevalideerd.
+      </p>
+
+      <div className="flex flex-col gap-6">
+        {section.map((q, idx) => (
+          <QuestionCard
+            key={q.id}
+            question={q}
+            index={4 + idx + 1}
+            selected={answers[q.id]}
+            onSelect={(letter) => setAnswer(q.id, letter)}
+          />
+        ))}
+      </div>
+
+      <div className="flex justify-between items-center mt-10">
+        <Button
+          variant="secondary"
+          size="md"
+          onClick={() => router.push('/scorecard/sectie-1')}
+        >
+          Vorige sectie
+        </Button>
+        <Button
+          variant="primary"
+          size="lg"
+          onClick={() => router.push('/scorecard/sectie-3')}
+          disabled={!sectionDone}
+        >
+          Verder naar sectie 3
+        </Button>
+      </div>
+      {!sectionDone && (
+        <p
+          className="mt-3 text-right text-xs"
+          style={{ color: 'var(--text-muted)' }}
+        >
+          Beantwoord alle drie de vragen om verder te kunnen.
+        </p>
+      )}
+    </section>
+  );
+}
