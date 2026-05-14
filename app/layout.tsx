@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Noto_Serif } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 
 const notoSerif = Noto_Serif({
@@ -10,44 +11,24 @@ const notoSerif = Noto_Serif({
   display: 'swap',
 });
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.agenticmindshift.nl';
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
   title: {
-    default: 'Agentic Mindshift — AI-advies voor Nederlandse PE en M&A',
+    default: 'Agentic Mindshift — Portfolio Intelligence voor Nederlandse PE en M&A',
     template: '%s | Agentic Mindshift',
   },
   description:
-    "AI-advies voor Nederlandse PE- en M&A-firma's. Maak rendementslekken meetbaar via de Portfolio Intelligence Scorecard.",
-  applicationName: 'Agentic Mindshift',
-  authors: [{ name: 'Wouter Dijkman' }],
-  keywords: [
-    'AI advies',
-    'private equity',
-    'M&A',
-    'restructuring',
-    'portfolio intelligence',
-    'Nederland',
-    'Agentic Mindshift',
-    'Factum Capital',
-  ],
+    'Strategisch AI-partnerschap voor regionale Private Equity, M&A-boutiques en familiebedrijven in de Nederlandse lower-mid market. Start de Portfolio Intelligence Scorecard.',
+  metadataBase: new URL('https://www.agenticmindshift.nl'),
   openGraph: {
     type: 'website',
     locale: 'nl_NL',
-    url: siteUrl,
+    url: 'https://www.agenticmindshift.nl',
     siteName: 'Agentic Mindshift',
-    title: 'Agentic Mindshift — Portfolio Intelligence voor PE en M&A',
-    description:
-      "Maak blinde vlekken in uw deal-cyclus en MBR-ritme meetbaar. Twaalf minuten, vier pagina's rapport.",
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Agentic Mindshift',
-    description: 'Portfolio Intelligence Scorecard voor Nederlandse PE en M&A.',
-  },
+  twitter: { card: 'summary_large_image', creator: '@wwdijkman' },
   robots: { index: true, follow: true },
+  alternates: { canonical: 'https://www.agenticmindshift.nl' },
 };
 
 export default function RootLayout({
@@ -57,7 +38,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl" className={`${notoSerif.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <Script
+          defer
+          data-domain="agenticmindshift.nl"
+          src="https://plausible.io/js/script.js"
+          strategy="afterInteractive"
+        />
+      </body>
     </html>
   );
 }

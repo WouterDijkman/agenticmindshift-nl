@@ -106,18 +106,9 @@ export const offerMap: Record<OfferType, { name: string; description: string }> 
 };
 
 export function determineOffer(q4Answer: OptionLetter | undefined): OfferType {
-  switch (q4Answer) {
-    case 'A':
-      return 'none';
-    case 'B':
-      return 'D';
-    case 'C':
-      return 'B';
-    case 'D':
-      return 'C';
-    case 'E':
-      return 'A';
-    default:
-      return 'none';
-  }
+  if (!q4Answer) return 'none';
+  const q4 = getQuestion('Q4');
+  if (!q4) return 'none';
+  const opt = q4.options.find((o) => o.letter === q4Answer);
+  return (opt?.segmentTo ?? 'none') as OfferType;
 }

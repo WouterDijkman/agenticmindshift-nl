@@ -2,109 +2,23 @@ import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
 import ScrollIndicator from '@/components/ScrollIndicator';
+import JsonLd from '@/components/JsonLd';
+import { faqItems } from '@/lib/faq';
+import { organizationLd, personLd, serviceLd, faqLd } from '@/lib/jsonld';
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.agenticmindshift.nl';
-
-const faqItems: AccordionItem[] = [
-  {
-    id: 'duur',
-    question: 'Hoe lang duurt de scorecard?',
-    answer:
-      'Gemiddeld twaalf minuten. Vijftien meerkeuzevragen verdeeld over vier korte secties, geen open velden tot het einde. U kunt onderbreken en later verder gaan; uw antwoorden worden lokaal bewaard.',
-  },
-  {
-    id: 'wat-krijg',
-    question: 'Wat krijg ik na afloop?',
-    answer:
-      'Een rapport van vier pagina’s: totaalscore, zes-dimensies-overzicht, twee aandachtspunten met toelichting en een concrete vervolgstap. U ontvangt een directe link en een PDF per e-mail.',
-  },
-  {
-    id: 'vertrouwelijk',
-    question: 'Is dit vertrouwelijk?',
-    answer:
-      'Ja. Uw antwoorden en rapport zijn alleen toegankelijk via uw persoonlijke link. Er wordt niets openbaar gemaakt of met derden gedeeld. Tijdens een vervolggesprek wordt niets uit uw rapport breder besproken dan met u afgesproken.',
-  },
-  {
-    id: 'data',
-    question: 'Wordt mijn data gedeeld?',
-    answer:
-      'Nee. Uw gegevens worden opgeslagen bij een Europese hostingpartij, niet doorverkocht en niet aan andere klanten getoond. Geaggregeerde, niet-herleidbare benchmarks kunnen worden gebruikt om peer-vergelijking te verbeteren.',
-  },
-  {
-    id: 'geen-tijd',
-    question: 'Wat als ik geen tijd heb voor 15 vragen?',
-    answer:
-      'De scorecard is bewust kort. De vijftien vragen zijn de minimum-set om zinvol een score te genereren op zes dimensies. Onder de twaalf minuten wordt het rapport diagnostisch minder waardevol. U kunt onderbreken en later afronden.',
-  },
-  {
-    id: 'vervolgmails',
-    question: 'Krijg ik vervolgmails?',
-    answer:
-      'Twee vervolgmails: na drie dagen een korte reflectie op uw twee zwakste dimensies, na zeven dagen een uitnodiging voor een sparring-sessie. Daarna hoort u niets meer. U kunt zich op elk moment afmelden.',
-  },
-  {
-    id: 'onderscheid',
-    question: 'Wat is het onderscheid met andere assessments?',
-    answer:
-      'De meeste AI-assessments meten technologische adoptie. Deze scorecard meet hoe uw deal-cyclus, MBR-ritme en bias-toetsing rendementslekken veroorzaken. De zes dimensies zijn ontworpen vanuit acquisition-finance en restructuring-praktijk, niet vanuit IT-volwassenheid.',
-  },
-];
+const accordionItems: AccordionItem[] = faqItems.map((f) => ({
+  id: f.id,
+  question: f.question,
+  answer: f.answer,
+}));
 
 export default function HomePage() {
-  const organizationLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Agentic Mindshift',
-    url: siteUrl,
-    founder: {
-      '@type': 'Person',
-      name: 'Wouter Dijkman',
-    },
-    foundingDate: '2025-10',
-    description:
-      "AI-advies voor Nederlandse PE- en M&A-firma's. Portfolio Intelligence Scorecard.",
-  };
-
-  const personLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: 'Wouter Dijkman',
-    jobTitle: 'Founder',
-    worksFor: {
-      '@type': 'Organization',
-      name: 'Agentic Mindshift',
-    },
-    url: `${siteUrl}/over`,
-  };
-
-  const faqLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqItems.map((q) => ({
-      '@type': 'Question',
-      name: q.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: typeof q.answer === 'string' ? q.answer : '',
-      },
-    })),
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
-      />
+      <JsonLd data={organizationLd} />
+      <JsonLd data={personLd} />
+      <JsonLd data={serviceLd} />
+      <JsonLd data={faqLd} />
 
       {/* 1. HERO */}
       <section className="grain-overlay hero-min relative flex items-center">
@@ -134,7 +48,7 @@ export default function HomePage() {
               </Button>
               <span
                 className="text-sm hint-italic"
-                style={{ color: 'var(--text-muted)' }}
+                style={{ color: 'var(--text-muted)', fontStyle: 'italic' }}
               >
                 12 minuten &middot; vertrouwelijk &middot; zonder vervolg verplicht
               </span>
@@ -200,17 +114,9 @@ export default function HomePage() {
             >
               De gids
             </p>
-            <h2 className="h-2 mb-6">Wouter Dijkman</h2>
-            <p
-              className="text-lg mb-10 measure"
-              style={{ color: 'var(--text-tertiary)' }}
-            >
-              Vijfeneenhalf jaar binnen de Nederlandse bancaire wereld, eerst aan de
-              restructuring-kant, daarna in acquisition finance. Daar zag ik welke
-              instrumentatie-keuzes het verschil maken tussen een geslaagde en een
-              tegenvallende deal. Agentic Mindshift maakt die kennis beschikbaar voor het deal-
-              en bestuursteam.
-            </p>
+            <h2 className="h-2 mb-10">
+              Ik ken die blinde vlekken omdat ik er aan beide kanten van heb gezeten.
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div
                 style={{
@@ -220,17 +126,13 @@ export default function HomePage() {
                   padding: '28px',
                 }}
               >
-                <p
-                  className="text-xs uppercase mb-2"
-                  style={{ color: 'var(--accent-primary)', letterSpacing: '0.16em' }}
-                >
-                  2017 &mdash; 2020
-                </p>
-                <h3 className="h-3 mb-3">Rabobank Restructuring (3 jaar)</h3>
                 <p style={{ color: 'var(--text-tertiary)' }}>
-                  MKB-restructuring en intensive-care dossiers. Hier leerde ik welke vroege
-                  signalen onderprestatie aankondigen &mdash; en hoe vaak die signalen door
-                  management worden gemist, niet uit onwil, maar door gebrek aan ritme.
+                  Bijna drie jaar bij ING Acquisition Finance &amp; Leveraged Lending heb ik
+                  mid-market deals tussen 1 en 25 miljoen euro mee gestructureerd. Ik zag waar
+                  IC-memo&apos;s standaard sterk zijn &mdash; multiples, cash conversion, debt
+                  service coverage &mdash; en waar ze structureel een blinde vlek hebben: hoe
+                  AI-substitutierisico de hold-period waardering raakt, en hoe bias in
+                  management-validatie het oordeel kleurt voordat de cijfers spreken.
                 </p>
               </div>
               <div
@@ -241,17 +143,13 @@ export default function HomePage() {
                   padding: '28px',
                 }}
               >
-                <p
-                  className="text-xs uppercase mb-2"
-                  style={{ color: 'var(--accent-primary)', letterSpacing: '0.16em' }}
-                >
-                  2020 &mdash; 2023
-                </p>
-                <h3 className="h-3 mb-3">ING Acquisition Finance (2,5 jaar)</h3>
                 <p style={{ color: 'var(--text-tertiary)' }}>
-                  LBO-financiering voor PE-deals in het Nederlandse mid-market. Vanaf de
-                  bancaire kant leerde ik welke deal-structuren in IC-besluiten stand houden,
-                  en welke aannames bij DD doorgaans niet expliciet worden gemaakt.
+                  Daarvoor zat ik drie jaar bij Rabobank in een specialistische rol binnen
+                  Financial Restructuring, met een SME- en mid-market portefeuille. Daar leerde
+                  ik wat er gebeurt wanneer de variantie-analyse in de MBR-cyclus te ondiep is:
+                  de signalen waren er, maar ze werden pas zichtbaar toen het kwartaal al
+                  verloren was. Beide ervaringen vormen de basis voor hoe ik nu naar dealflow,
+                  portfoliobeheer en bias-toetsing kijk.
                 </p>
               </div>
             </div>
@@ -276,7 +174,7 @@ export default function HomePage() {
               n: '02',
               title: "Ontvang een rapport van 4 pagina's",
               body:
-                "Direct na afronding: totaalscore, zes-dimensies-overzicht, twee aandachtspunten met toelichting en een concreet voorstel.",
+                'Direct na afronding: totaalscore, zes-dimensies-overzicht, twee aandachtspunten met toelichting en een concreet voorstel.',
             },
             {
               n: '03',
@@ -455,7 +353,7 @@ export default function HomePage() {
 
       {/* 8. 6 DIMENSIES */}
       <section className="container-medium py-20">
-        <h2 className="h-2 mb-3">Zes dimensies, &eacute;&eacute;n score</h2>
+        <h2 className="h-2 mb-3">De zes dimensies</h2>
         <p
           className="mb-10 text-lg hint-italic measure"
           style={{ color: 'var(--text-tertiary)' }}
@@ -464,12 +362,42 @@ export default function HomePage() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {[
-            { n: '01', title: 'Deal Velocity', body: 'Doorlooptijd tussen Information Memorandum en een IC-ready oordeel.' },
-            { n: '02', title: 'Portfolio Intelligence', body: 'Hoe snel en hoe gestructureerd onderprestatie in uw portfolio zichtbaar wordt.' },
-            { n: '03', title: 'Bias Detection', body: 'In hoeverre managementaannames buiten het deal-team om worden gevalideerd.' },
-            { n: '04', title: 'AI Readiness', body: 'Modellering van AI-substitutierisico in entry-multiple en bestuursagenda.' },
-            { n: '05', title: 'Capacity Engineering', body: 'Welk deel van het werk van uw associates al door AI overgenomen kan worden.' },
-            { n: '06', title: 'Knowledge Retention', body: 'In welke mate DD-kennis intern wordt vastgelegd in plaats van bij personen blijft.' },
+            {
+              n: '01',
+              title: 'Deal Velocity',
+              body:
+                'Hoe snel u van Information Memorandum naar IC-ready oordeel komt, en waar in de cyclus werkdagen verloren gaan.',
+            },
+            {
+              n: '02',
+              title: 'Portfolio Intelligence',
+              body:
+                'De accuraatheid en doorlooptijd van uw maandelijkse Management Business Reviews, plus de herleidbaarheid van uw variantie-analyse.',
+            },
+            {
+              n: '03',
+              title: 'Bias Detection',
+              body:
+                'Het aandeel van uw oordeelsvorming dat rust op feitelijke afwijking tegenover budget en peer-benchmark, versus persoonlijke relatie met het CEO-team.',
+            },
+            {
+              n: '04',
+              title: 'AI Readiness',
+              body:
+                'De weerbaarheid van uw portefeuille en uw acquisitie-targets tegen substitutie door AI-native concurrenten in de hold period.',
+            },
+            {
+              n: '05',
+              title: 'Capacity Engineering',
+              body:
+                'Hoeveel mandaten uw team laat liggen door operationele frictie in zoekwerk, screening en memo-onderbouwing.',
+            },
+            {
+              n: '06',
+              title: 'Knowledge Retention',
+              body:
+                'De mate waarin kennis uit DD-trajecten en portfoliobeheer in-house blijft, versus weggaat met externe rapporten en advieskantoren.',
+            },
           ].map((d) => (
             <div
               key={d.n}
@@ -500,8 +428,8 @@ export default function HomePage() {
         style={{ background: 'var(--bg-secondary)' }}
       >
         <div className="container-narrow">
-          <h2 className="h-2 mb-10">Veelgestelde vragen</h2>
-          <Accordion items={faqItems} />
+          <h2 className="h-2 mb-10">Wat partners doorgaans vooraf willen weten</h2>
+          <Accordion items={accordionItems} />
         </div>
       </section>
 

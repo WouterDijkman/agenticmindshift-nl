@@ -27,7 +27,25 @@ export default function Sectie3Page() {
       <div className="mb-8">
         <ProgressBar current={answered} total={15} />
       </div>
-      <h1 className="h-2 mb-3">Sectie 3 &mdash; MBR-ritme en portfolio-intelligence</h1>
+      <div
+        className="mb-8 p-5"
+        style={{
+          background: 'var(--bg-elevated)',
+          border: '1px solid var(--border-subtle)',
+          borderRadius: '4px',
+        }}
+      >
+        <p
+          className="text-xs uppercase mb-2"
+          style={{ color: 'var(--accent-primary)', letterSpacing: '0.18em' }}
+        >
+          Sectie 2 voltooid
+        </p>
+        <p style={{ color: 'var(--text-tertiary)' }}>
+          Goed. We gaan nu naar uw portefeuille en MBR-cyclus.
+        </p>
+      </div>
+      <h1 className="h-2 mb-3">Sectie 3 &mdash; Uw portefeuille en MBR-cyclus</h1>
       <p
         className="mb-10 text-base measure"
         style={{ color: 'var(--text-tertiary)' }}

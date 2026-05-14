@@ -3,7 +3,15 @@
 import { useMemo, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useAssessmentStore } from '@/store/assessmentStore';
-import { calculateScores, determineOffer, offerMap } from '@/lib/scoring';
+import { calculateScores, determineOffer } from '@/lib/scoring';
+import {
+  variantForOffer,
+  rawScoreForVariant,
+  weakestNormalizedForVariant,
+  HIGH_SCORER_THRESHOLD,
+  TOTAL_MAX,
+  OFFER_GATE_PERCENT,
+} from '@/lib/reportVariants';
 import TotalScoreCircle from '@/components/scorecard/TotalScoreCircle';
 import DimensionBars from '@/components/scorecard/DimensionBars';
 import PeerBenchmarkChart from '@/components/scorecard/PeerBenchmarkChart';
@@ -36,14 +44,18 @@ function approxPercentile(total: number): number {
 
 export default function RapportPage() {
   const answers = useAssessmentStore((s) => s.answers);
+  const leadName = useAssessmentStore((s) => s.leadName);
 
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => setHydrated(true), []);
 
   const scores = useMemo(() => calculateScores(answers), [answers]);
   const offer = useMemo(() => determineOffer(answers['Q4']), [answers]);
-  const offerInfo = offerMap[offer];
+  const variant = useMemo(() => variantForOffer(offer), [offer]);
   const percentile = approxPercentile(scores.total);
+
+  // High-scorer override: total > 60/75.
+  const isHighScorer = scores.total > HIGH_SCORER_THRESHOLD;
 
   // Skeleton placeholder shown before zustand-persist hydrates.
   if (!hydrated) {
@@ -71,35 +83,6 @@ export default function RapportPage() {
             <div className="skeleton" style={{ height: '14px', width: '70%' }} />
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          <div
-            className="flex flex-col gap-5"
-            style={{
-              background: 'var(--bg-secondary)',
-              border: '1px solid var(--border-subtle)',
-              borderRadius: '4px',
-              padding: '28px',
-            }}
-          >
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i}>
-                <div className="skeleton" style={{ height: '14px', width: '50%', marginBottom: '6px' }} />
-                <div className="skeleton" style={{ height: '8px', width: '100%' }} />
-              </div>
-            ))}
-          </div>
-          <div
-            style={{
-              background: 'var(--bg-secondary)',
-              border: '1px solid var(--border-subtle)',
-              borderRadius: '4px',
-              padding: '28px',
-            }}
-          >
-            <div className="skeleton" style={{ height: '24px', width: '50%', marginBottom: '16px' }} />
-            <div className="skeleton" style={{ height: '320px', width: '100%' }} />
-          </div>
-        </div>
       </section>
     );
   }
@@ -120,6 +103,101 @@ export default function RapportPage() {
       </section>
     );
   }
+
+  // === HIGH-SCORER VARIANT (total > 60/75) — overrides everything else ===
+  if (isHighScorer) {
+    const firstName = leadName ? leadName.split(' ')[0] : 'partner';
+    return (
+      <section className="container-wide py-12">
+        <p
+          className="text-xs uppercase mb-4"
+          style={{ color: 'var(--accent-primary)', letterSpacing: '0.22em' }}
+        >
+          Persoonlijk rapport
+        </p>
+        <h1 className="h-1 mb-6">Beste {firstName}, een korte erkenning.</h1>
+
+        <div
+          className="grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-10 mb-10"
+          style={{
+            background: 'var(--bg-secondary)',
+            border: '1px solid var(--border-subtle)',
+            borderRadius: '4px',
+            padding: '32px',
+          }}
+        >
+          <div className="flex flex-col items-center justify-center">
+            <TotalScoreCircle score={scores.total} max={TOTAL_MAX} size={220} />
+          </div>
+          <div>
+            <p className="mb-4 measure" style={{ color: 'var(--text-tertiary)' }}>
+              Uw score op de Portfolio Intelligence Scorecard is{' '}
+              <strong style={{ color: 'var(--text-primary)' }}>
+                {scores.total} van 75
+              </strong>
+              . Dat is significant boven het gemiddelde van vergelijkbare Nederlandse
+              partijen, en plaatst u in de top 10% van invullers.
+            </p>
+            <p className="mb-4 measure" style={{ color: 'var(--text-tertiary)' }}>
+              Een specifieke interventie-aanbeveling is op basis van uw score niet zinvol.
+              U doet wat u zou moeten doen.
+            </p>
+            <p className="measure" style={{ color: 'var(--text-tertiary)' }}>
+              Wat ik wel zou willen aanbieden, indien u dat interessant vindt, is een
+              vertrouwelijk gesprek over wat u doet dat anderen niet doen. Niet als
+              verkoopgesprek, wel als peer-uitwisseling. Vrijwillig, geen agenda. Stuur
+              bij interesse een bericht via LinkedIn.
+            </p>
+          </div>
+        </div>
+
+        <div
+          className="mb-12"
+          style={{
+            background: 'var(--bg-elevated)',
+            border: '1px solid var(--accent-primary)',
+            borderRadius: '4px',
+            padding: '32px',
+          }}
+        >
+          <div className="flex flex-col sm:flex-row gap-3 no-print">
+            <Button
+              href="https://www.linkedin.com/in/wwdijkman/"
+              variant="primary"
+              size="lg"
+              external
+            >
+              Connecteer op LinkedIn
+            </Button>
+          </div>
+        </div>
+
+        <div
+          className="text-center pt-8 no-print"
+          style={{ borderTop: '1px solid var(--border-subtle)' }}
+        >
+          <p className="text-sm hint-italic" style={{ color: 'var(--text-muted)' }}>
+            U ontvangt dit rapport ook als PDF in uw inbox. Geen vervolg verplicht.
+          </p>
+          <div className="mt-4 flex gap-4 justify-center">
+            <Link href="/" className="nav-link" style={{ color: 'var(--text-tertiary)' }}>
+              Terug naar homepage
+            </Link>
+            <Link href="/over" className="nav-link" style={{ color: 'var(--text-tertiary)' }}>
+              Over Wouter
+            </Link>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // === STANDARD REPORT (A/B/C/D/none) ===
+  const variantRawScore = variant ? rawScoreForVariant(answers, variant.id) : 0;
+  const weakestNormalized = variant
+    ? weakestNormalizedForVariant(scores.byDimension, variant.id)
+    : 100;
+  const showOfferBlock = variant !== null && weakestNormalized <= OFFER_GATE_PERCENT;
 
   return (
     <section className="container-wide py-12">
@@ -155,7 +233,7 @@ export default function RapportPage() {
         }}
       >
         <div className="flex flex-col items-center justify-center">
-          <TotalScoreCircle score={scores.total} max={75} size={220} />
+          <TotalScoreCircle score={scores.total} max={TOTAL_MAX} size={220} />
         </div>
         <div>
           <h2 className="h-2 mb-3">Totaalscore</h2>
@@ -193,7 +271,6 @@ export default function RapportPage() {
           }}
         >
           <h2 className="h-2 mb-5">Peer-vergelijking</h2>
-          {/* Display-stat: percentile of total score vs synthetic peer distribution. */}
           <p className="h-stat mb-2" style={{ color: 'var(--text-primary)' }}>
             {percentile}%
           </p>
@@ -204,76 +281,82 @@ export default function RapportPage() {
         </div>
       </div>
 
-      <div
-        className="mb-14"
-        style={{
-          background: 'var(--bg-secondary)',
-          border: '1px solid var(--border-subtle)',
-          borderRadius: '4px',
-          padding: '32px',
-        }}
-      >
-        <h2 className="h-2 mb-5">Aandachtspunten</h2>
-        <p className="mb-5 measure" style={{ color: 'var(--text-tertiary)' }}>
-          Op basis van uw antwoorden vallen twee dimensies op als grootste rendementlek:
-        </p>
-        <ul className="flex flex-col gap-3 mb-5">
-          {scores.weakest.map((w) => (
-            <li
-              key={w}
-              className="px-4 py-3"
-              style={{
-                background: 'var(--bg-elevated)',
-                borderLeft: '3px solid var(--status-warning)',
-                color: 'var(--text-secondary)',
-                borderRadius: '4px',
-              }}
-            >
-              {w}
-            </li>
-          ))}
-        </ul>
-        <p className="measure" style={{ color: 'var(--text-tertiary)' }}>
-          In de meeste portefeuilles wordt verlies op deze dimensies pas zichtbaar bij
-          jaarrapportage of exit. De eerste stap is niet directe actie, maar het meetbaar
-          maken: KPI&apos;s definieren, frequentie vaststellen en de uitkomst expliciet op de
-          bestuursagenda zetten.
-        </p>
-      </div>
-
-      <div
-        className="mb-12"
-        style={{
-          background: 'var(--bg-elevated)',
-          border: '1px solid var(--accent-primary)',
-          borderRadius: '4px',
-          padding: '32px',
-        }}
-      >
-        <p
-          className="text-xs uppercase mb-3"
-          style={{ color: 'var(--accent-primary)', letterSpacing: '0.18em' }}
+      {/* Interpretation + interventions (variant-specific) */}
+      {variant && (
+        <div
+          className="mb-14"
+          style={{
+            background: 'var(--bg-secondary)',
+            border: '1px solid var(--border-subtle)',
+            borderRadius: '4px',
+            padding: '32px',
+          }}
         >
-          Aanbevolen vervolgstap
-        </p>
-        <h2 className="h-2 mb-3">{offerInfo.name}</h2>
-        <p className="mb-6 measure" style={{ color: 'var(--text-tertiary)' }}>
-          {offerInfo.description}
-        </p>
-        <div className="flex flex-col sm:flex-row gap-3 no-print">
-          <Button
-            href="https://cal.com/wwdijkman/intake-call"
-            variant="primary"
-            size="lg"
-            external
+          <h2 className="h-2 mb-5">Interpretatie</h2>
+          <p className="mb-8 measure" style={{ color: 'var(--text-tertiary)' }}>
+            {variant.interpretation(variantRawScore)}
+          </p>
+
+          <h3 className="h-3 mb-5">Drie interventies</h3>
+          <ol
+            className="flex flex-col gap-5"
+            style={{ listStyle: 'decimal', paddingLeft: '1.5rem' }}
           >
-            Plan een sparring-sessie
-          </Button>
-          <Button href="/werkwijze" variant="secondary" size="lg">
-            Bekijk alle trajecten
-          </Button>
+            {variant.interventions.map((iv) => (
+              <li key={iv.title} style={{ color: 'var(--text-tertiary)' }}>
+                <p>
+                  <strong style={{ color: 'var(--text-primary)' }}>{iv.title}</strong>
+                  {' '}&mdash;{' '}
+                  <span>{iv.body}</span>
+                </p>
+              </li>
+            ))}
+          </ol>
         </div>
-      </div>
+      )}
+
+      {/* Offer block: only when weakest normalized <= 40% */}
+      {showOfferBlock && variant && (
+        <div
+          className="mb-12"
+          style={{
+            background: 'var(--bg-elevated)',
+            border: '1px solid var(--accent-primary)',
+            borderRadius: '4px',
+            padding: '32px',
+          }}
+        >
+          <p
+            className="text-xs uppercase mb-3"
+            style={{ color: 'var(--accent-primary)', letterSpacing: '0.18em' }}
+          >
+            Aanbevolen vervolgstap
+          </p>
+          <h2 className="h-2 mb-3">{variant.offerName}</h2>
+          <p className="mb-3 measure" style={{ color: 'var(--text-tertiary)' }}>
+            Op basis van uw scoreprofiel past dit traject het beste bij uw situatie.
+          </p>
+          <p
+            className="mb-6 measure"
+            style={{ color: 'var(--text-secondary)', fontWeight: 500 }}
+          >
+            Prijs: {variant.price}.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 no-print">
+            <Button
+              href="https://cal.com/wwdijkman/intake-call"
+              variant="primary"
+              size="lg"
+              external
+            >
+              Plan een sparring-sessie
+            </Button>
+            <Button href="/werkwijze" variant="secondary" size="lg">
+              Bekijk alle trajecten
+            </Button>
+          </div>
+        </div>
+      )}
 
       <div
         className="text-center pt-8 no-print"

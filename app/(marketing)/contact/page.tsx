@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Button from '@/components/ui/Button';
+import JsonLd from '@/components/JsonLd';
+import { personLd } from '@/lib/jsonld';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -7,25 +9,10 @@ export const metadata: Metadata = {
     'Drie manieren om in contact te komen met Wouter Dijkman van Agentic Mindshift.',
 };
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.agenticmindshift.nl';
-
 export default function ContactPage() {
-  const personLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: 'Wouter Dijkman',
-    url: `${siteUrl}/contact`,
-    email: 'wouter@agenticmindshift.nl',
-    sameAs: ['https://www.linkedin.com/in/wwdijkman'],
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
-      />
+      <JsonLd data={personLd} />
       <section className="container-medium pt-20 pb-12">
         <p
           className="text-xs uppercase mb-4"

@@ -10,9 +10,11 @@ interface AssessmentState {
   answers: Answers;
   currentSection: 1 | 2 | 3 | 4;
   leadId: string | null;
+  leadName: string | null;
   setAnswer: (questionId: string, letter: OptionLetter) => void;
   setCurrentSection: (section: 1 | 2 | 3 | 4) => void;
   setLeadId: (id: string | null) => void;
+  setLeadName: (name: string | null) => void;
   reset: () => void;
 }
 
@@ -22,13 +24,15 @@ export const useAssessmentStore = create<AssessmentState>()(
       answers: {},
       currentSection: 1,
       leadId: null,
+      leadName: null,
       setAnswer: (questionId, letter) =>
         set((state) => ({
           answers: { ...state.answers, [questionId]: letter },
         })),
       setCurrentSection: (section) => set({ currentSection: section }),
       setLeadId: (id) => set({ leadId: id }),
-      reset: () => set({ answers: {}, currentSection: 1, leadId: null }),
+      setLeadName: (name) => set({ leadName: name }),
+      reset: () => set({ answers: {}, currentSection: 1, leadId: null, leadName: null }),
     }),
     {
       name: 'agentic-mindshift-assessment',

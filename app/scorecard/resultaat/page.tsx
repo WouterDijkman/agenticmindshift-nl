@@ -19,6 +19,7 @@ export default function ResultaatPage() {
   const router = useRouter();
   const answers = useAssessmentStore((s) => s.answers);
   const setLeadId = useAssessmentStore((s) => s.setLeadId);
+  const setLeadName = useAssessmentStore((s) => s.setLeadName);
 
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
@@ -66,6 +67,7 @@ export default function ResultaatPage() {
       const res = await submitScorecard({ ...data, answers });
       if (res.ok && res.leadId) {
         setLeadId(res.leadId);
+        setLeadName(data.name);
         router.push(`/scorecard/rapport/${res.leadId}`);
       } else {
         setServerError(

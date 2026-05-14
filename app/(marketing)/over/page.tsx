@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Button from '@/components/ui/Button';
+import JsonLd from '@/components/JsonLd';
+import { organizationLd, personLd } from '@/lib/jsonld';
 
 export const metadata: Metadata = {
   title: 'Over Wouter Dijkman',
@@ -7,46 +9,11 @@ export const metadata: Metadata = {
     'Founder Agentic Mindshift en Factum Capital. Achtergrond in Rabobank Restructuring en ING Acquisition Finance.',
 };
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.agenticmindshift.nl';
-
 export default function OverPage() {
-  const orgLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Agentic Mindshift',
-    url: siteUrl,
-  };
-  const personLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: 'Wouter Dijkman',
-    jobTitle: 'Founder Agentic Mindshift',
-    alumniOf: [
-      { '@type': 'Organization', name: 'Rabobank' },
-      { '@type': 'Organization', name: 'ING' },
-      { '@type': 'Organization', name: 'Nyenrode Business Universiteit' },
-    ],
-    knowsAbout: [
-      'Private Equity',
-      'M&A',
-      'AI advisory',
-      'Restructuring',
-      'Acquisition Finance',
-    ],
-    url: `${siteUrl}/over`,
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
-      />
+      <JsonLd data={organizationLd} />
+      <JsonLd data={personLd} />
 
       <section className="container-medium pt-20 pb-12">
         <p

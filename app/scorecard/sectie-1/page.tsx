@@ -27,7 +27,7 @@ export default function Sectie1Page() {
       <div className="mb-8">
         <ProgressBar current={section.filter((q) => answers[q.id]).length} total={15} />
       </div>
-      <h1 className="h-2 mb-3">Sectie 1 &mdash; AI-readiness</h1>
+      <h1 className="h-2 mb-3">Sectie 1 &mdash; Uw AI-realiteit vandaag</h1>
       <p
         className="mb-10 text-base measure"
         style={{ color: 'var(--text-tertiary)' }}

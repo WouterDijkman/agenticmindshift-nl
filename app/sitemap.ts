@@ -1,0 +1,15 @@
+import { MetadataRoute } from 'next';
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const base = 'https://www.agenticmindshift.nl';
+  return [
+    { url: base, lastModified: new Date(), priority: 1.0 },
+    { url: `${base}/scorecard`, lastModified: new Date(), priority: 0.9 },
+    { url: `${base}/over`, lastModified: new Date(), priority: 0.7 },
+    { url: `${base}/werkwijze`, lastModified: new Date(), priority: 0.7 },
+    { url: `${base}/factum-capital`, lastModified: new Date(), priority: 0.6 },
+    { url: `${base}/contact`, lastModified: new Date(), priority: 0.5 },
+    { url: `${base}/privacy`, lastModified: new Date(), priority: 0.3 },
+    { url: `${base}/voorwaarden`, lastModified: new Date(), priority: 0.3 },
+  ];
+}

@@ -27,7 +27,26 @@ export default function Sectie2Page() {
       <div className="mb-8">
         <ProgressBar current={answered} total={15} />
       </div>
-      <h1 className="h-2 mb-3">Sectie 2 &mdash; Deal-cyclus en bias</h1>
+      <div
+        className="mb-8 p-5"
+        style={{
+          background: 'var(--bg-elevated)',
+          border: '1px solid var(--border-subtle)',
+          borderRadius: '4px',
+        }}
+      >
+        <p
+          className="text-xs uppercase mb-2"
+          style={{ color: 'var(--accent-primary)', letterSpacing: '0.18em' }}
+        >
+          Sectie 1 voltooid
+        </p>
+        <p style={{ color: 'var(--text-tertiary)' }}>
+          Goed. We gaan nu naar uw deal-cyclus. In deze sectie drie korte vragen over hoe
+          u acquisitie-werk doet.
+        </p>
+      </div>
+      <h1 className="h-2 mb-3">Sectie 2 &mdash; Uw deal-cyclus</h1>
       <p
         className="mb-10 text-base measure"
         style={{ color: 'var(--text-tertiary)' }}
