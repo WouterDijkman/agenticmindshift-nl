@@ -35,7 +35,7 @@ export default function Header() {
     <header
       className="sticky top-0 z-50"
       style={{
-        background: scrolled ? 'rgba(8, 25, 48, 0.85)' : 'transparent',
+        background: scrolled ? 'rgba(245, 232, 213, 0.92)' : 'transparent',
         backdropFilter: scrolled ? 'blur(12px)' : 'none',
         borderBottom: scrolled ? '1px solid var(--border-subtle)' : '1px solid transparent',
         transition: 'all 200ms ease',

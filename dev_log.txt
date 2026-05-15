@@ -1,0 +1,22 @@
+Starting... 
+PATH: C:\Python313\Scripts\;C:\Python313\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;%NVM_HOME%;%NVM_SYMLINK%;C:\Program Files\cursor\resources\app\bin;C:\Program Files\GitHub CLI\;C:\Program Files\Docker\Docker\resources\bin;c:\Users\annik\AppData\Local\Programs\cursor\resources\app\codeBin;C:\Users\annik\AppData\Local\pnpm;C:\Users\annik\AppData\Local\Microsoft\WindowsApps;C:\Users\annik\AppData\Local\GitHubDesktop\bin;C:\Users\annik\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\annik\AppData\Local\nvm;C:\nvm4w\nodejs;;C:\Users\annik\.lmstudio\bin;C:\Users\annik\AppData\Local\Programs\Antigravity\bin;C:\Users\annik\.bun\bin;C:\Users\annik\.bun\bin;C:\Users\annik\.bun\bin;C:\Users\annik\.bun\bin;C:\Users\annik\.bun\bin;C:\Users\annik\AppData\Local\Programs\cursor\resources\app\bin 
+C:\nvm4w\nodejs\npm
+C:\nvm4w\nodejs\npm.cmd
+
+> agenticmindshift-nl@0.1.0 dev
+> next dev
+
+⚠ Port 3000 is in use by process 12396, using available port 3001 instead.
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.178.29:3001
+✓ Ready in 1124ms
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          12396
+- Dir:          C:\Users\annik\Downloads\agenticmindshift-nl
+- Log:          .next\dev\logs\next-development.log
+
+Run taskkill /PID 12396 /F to stop it.
+[?25h

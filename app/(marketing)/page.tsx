@@ -21,20 +21,20 @@ export default function HomePage() {
       <JsonLd data={faqLd} />
 
       {/* 1. HERO */}
-      <section className="grain-overlay hero-min relative flex items-center">
+      <section className="grain-overlay hero-min relative flex items-center" style={{ background: 'var(--bg-primary)' }}>
         <div className="container-wide pt-16 pb-24 sm:pt-24 sm:pb-32 w-full">
           <div className="max-w-3xl">
             <p
-              className="text-xs uppercase mb-5 anim-fade-up delay-0"
-              style={{ color: 'var(--accent-primary)', letterSpacing: '0.2em' }}
+              className="text-xs uppercase mb-5"
+              style={{ color: 'var(--accent-cta)', letterSpacing: '0.2em' }}
             >
               Portfolio Intelligence Scorecard
             </p>
-            <h1 className="h-1 mb-6 anim-fade-up delay-1">
+            <h1 className="h-1 mb-6">
               Hoeveel rendement laat uw portefeuille deze maand liggen?
             </h1>
             <p
-              className="text-lg sm:text-xl mb-10 leading-relaxed measure anim-fade-up delay-2"
+              className="text-lg sm:text-xl mb-10 leading-relaxed measure"
               style={{ color: 'var(--text-tertiary)' }}
             >
               Niet door slecht beheer. Wel door blinde vlekken in uw deal-cyclus, uw
@@ -42,8 +42,8 @@ export default function HomePage() {
               Portfolio Intelligence Scorecard maakt ze meetbaar, op zes dimensies, in
               twaalf minuten.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center anim-fade-up delay-3">
-              <Button href="/scorecard" variant="primary" size="lg">
+            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+              <Button href="/scorecard" variant="primary" size="lg" className="w-full sm:w-auto">
                 Start de Scorecard
               </Button>
               <span
@@ -61,37 +61,39 @@ export default function HomePage() {
       <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
       {/* 2. HET PROBLEEM */}
-      <section className="container-medium py-20 relative">
-        <span aria-hidden="true" className="quote-anchor">
-          &ldquo;
-        </span>
-        <div className="relative">
-          <h2 className="h-2 mb-8">
-            U doet niets fout. U meet alleen niet wat u zou moeten meten.
-          </h2>
-          <div
-            className="flex flex-col gap-5 text-lg measure"
-            style={{ color: 'var(--text-tertiary)' }}
-          >
-            <p>
-              De gemiddelde MBR-cyclus van een Nederlandse PE-firma toetst op
-              EBITDA-ontwikkeling, schuldratio en convenanten. Dat dekt het zichtbare risico.
-              Wat niet wordt gemeten zijn de stille verliezen: trage doorlooptijden tussen
-              Information Memorandum en IC-oordeel, structureel ongetoetste managementaannames,
-              en AI-substitutierisico dat zelden een plek krijgt in de entry-multiple.
-            </p>
-            <p>
-              In de praktijk lekt hier per portfoliobedrijf gemiddeld een half exit-multiple
-              weg. Niet door een falende manager, niet door een verkeerde sector. Door een
-              instrumentatie-gat: u kunt niet sturen op wat u niet meet, en wat u niet meet
-              verschijnt pas in de jaarcijfers &mdash; meestal te laat om nog iets te kunnen
-              doen.
-            </p>
-            <p>
-              De Portfolio Intelligence Scorecard maakt dit instrumentatie-gat zichtbaar.
-              Vijftien gerichte vragen, zes dimensies, een rapport van vier pagina&apos;s. Geen
-              advies tot u dat zelf wenst.
-            </p>
+      <section className="py-20" style={{ background: 'var(--bg-primary)' }}>
+        <div className="container-medium relative">
+          <span aria-hidden="true" className="quote-anchor">
+            &ldquo;
+          </span>
+          <div className="relative">
+            <h2 className="h-2 mb-8">
+              U doet niets fout. U meet alleen niet wat u zou moeten meten.
+            </h2>
+            <div
+              className="flex flex-col gap-5 text-lg measure"
+              style={{ color: 'var(--text-tertiary)' }}
+            >
+              <p>
+                De gemiddelde MBR-cyclus van een Nederlandse PE-firma toetst op
+                EBITDA-ontwikkeling, schuldratio en convenanten. Dat dekt het zichtbare risico.
+                Wat niet wordt gemeten zijn de stille verliezen: trage doorlooptijden tussen
+                Information Memorandum en IC-oordeel, structureel ongetoetste managementaannames,
+                en AI-substitutierisico dat zelden een plek krijgt in de entry-multiple.
+              </p>
+              <p>
+                In de praktijk lekt hier per portfoliobedrijf gemiddeld een half exit-multiple
+                weg. Niet door een falende manager, niet door een verkeerde sector. Door een
+                instrumentatie-gat: u kunt niet sturen op wat u niet meet, en wat u niet meet
+                verschijnt pas in de jaarcijfers &mdash; meestal te laat om nog iets te kunnen
+                doen.
+              </p>
+              <p>
+                De Portfolio Intelligence Scorecard maakt dit instrumentatie-gat zichtbaar.
+                Vijftien gerichte vragen, zes dimensies, een rapport van vier pagina&apos;s. Geen
+                advies tot u dat zelf wenst.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -100,7 +102,7 @@ export default function HomePage() {
 
       {/* 3. DE GIDS */}
       <section
-        className="py-20 md:clip-diagonal-both"
+        className="py-20"
         style={{ background: 'var(--bg-secondary)' }}
       >
         <div className="container-medium relative">
@@ -160,7 +162,8 @@ export default function HomePage() {
       <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
       {/* 4. 3 STAPPEN */}
-      <section className="container-medium py-20">
+      <section className="py-20" style={{ background: 'var(--bg-primary)' }}>
+        <div className="container-medium">
         <h2 className="h-2 mb-12">Drie stappen, twaalf minuten</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {[
@@ -193,13 +196,14 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+        </div>
       </section>
 
       <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
       {/* 5. STAKES */}
       <section
-        className="py-20 md:clip-diagonal-both"
+        className="py-20"
         style={{ background: 'var(--bg-secondary)' }}
       >
         <div className="container-medium">
@@ -252,7 +256,8 @@ export default function HomePage() {
       <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
       {/* 6. SUCCESS */}
-      <section className="container-medium py-20">
+      <section className="py-20" style={{ background: 'var(--bg-primary)' }}>
+        <div className="container-medium">
         <h2 className="h-2 mb-10">Wat verandert wanneer u dit wel meet</h2>
         <div className="flex flex-col gap-6">
           {[
@@ -286,13 +291,14 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+        </div>
       </section>
 
       <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
       {/* 7. VOOR WIE */}
       <section
-        className="py-20 md:clip-diagonal-both"
+        className="py-20"
         style={{ background: 'var(--bg-secondary)' }}
       >
         <div className="container-medium">
@@ -352,7 +358,8 @@ export default function HomePage() {
       <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
       {/* 8. 6 DIMENSIES */}
-      <section className="container-medium py-20">
+      <section className="py-20" style={{ background: 'var(--bg-primary)' }}>
+        <div className="container-medium">
         <h2 className="h-2 mb-3">De zes dimensies</h2>
         <p
           className="mb-10 text-lg hint-italic measure"
@@ -418,6 +425,7 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+        </div>
       </section>
 
       <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
@@ -436,23 +444,25 @@ export default function HomePage() {
       <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
       {/* 10. SLOT CTA */}
-      <section className="container-medium py-24 text-center">
-        <h2 className="h-2 mb-5">
-          Twaalf minuten. Vier pagina&apos;s rapport. Geen vervolg verplicht.
-        </h2>
-        <p
-          className="text-lg mb-10 max-w-2xl mx-auto hint-italic"
-          style={{ color: 'var(--text-tertiary)' }}
-        >
-          De scorecard is bewust kort. U bepaalt zelf wat u met het rapport doet.
-        </p>
-        <Button href="/scorecard" variant="primary" size="lg">
-          Start de Scorecard
-        </Button>
-        <div className="mt-6">
-          <Link href="/over" className="text-sm nav-link" style={{ color: 'var(--text-muted)' }}>
-            Eerst meer lezen over Wouter
-          </Link>
+      <section className="py-24" style={{ background: 'var(--bg-primary)' }}>
+        <div className="container-medium text-center">
+          <h2 className="h-2 mb-5">
+            Twaalf minuten. Vier pagina&apos;s rapport. Geen vervolg verplicht.
+          </h2>
+          <p
+            className="text-lg mb-10 max-w-2xl mx-auto hint-italic"
+            style={{ color: 'var(--text-tertiary)' }}
+          >
+            De scorecard is bewust kort. U bepaalt zelf wat u met het rapport doet.
+          </p>
+          <Button href="/scorecard" variant="primary" size="lg" className="w-full sm:w-auto">
+            Start de Scorecard
+          </Button>
+          <div className="mt-6">
+            <Link href="/over" className="text-sm nav-link" style={{ color: 'var(--text-muted)' }}>
+              Eerst meer lezen over Wouter
+            </Link>
+          </div>
         </div>
       </section>
     </>
