@@ -6,15 +6,14 @@ export default function Footer() {
       style={{
         background: 'var(--bg-elevated)',
         borderTop: '1px solid var(--border-subtle)',
-        marginTop: '120px',
-      }}
+        }}
     >
       <div className="container-extra py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
           <div>
             <p
               className="text-lg font-semibold mb-3"
-              style={{ color: 'var(--text-primary)' }}
+              style={{ color: 'var(--text-primary)', fontFamily: "var(--font-inter), 'Inter', system-ui, sans-serif" }}
             >
               Agentic Mindshift
             </p>
@@ -25,12 +24,30 @@ export default function Footer() {
               AI-advies voor Nederlandse PE- en M&amp;A-firma&apos;s. Concreet, vertrouwelijk,
               meetbaar.
             </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '16px' }}>
+              <a
+                href="mailto:wouter@agenticmindshift.nl"
+                className="footer-link"
+                style={{ fontSize: '0.8125rem', color: 'var(--text-tertiary)' }}
+              >
+                wouter@agenticmindshift.nl
+              </a>
+              <a
+                href="https://www.linkedin.com/in/wwdijkman"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-link"
+                style={{ fontSize: '0.8125rem', color: 'var(--text-tertiary)' }}
+              >
+                linkedin.com/in/wwdijkman →
+              </a>
+            </div>
           </div>
 
           <div>
             <p
               className="text-sm font-semibold mb-4 uppercase tracking-wide"
-              style={{ color: 'var(--text-secondary)' }}
+              style={{ color: 'var(--text-secondary)', fontFamily: "var(--font-inter), 'Inter', system-ui, sans-serif" }}
             >
               Navigatie
             </p>
@@ -84,7 +101,7 @@ export default function Footer() {
           <div>
             <p
               className="text-sm font-semibold mb-4 uppercase tracking-wide"
-              style={{ color: 'var(--text-secondary)' }}
+              style={{ color: 'var(--text-secondary)', fontFamily: "var(--font-inter), 'Inter', system-ui, sans-serif" }}
             >
               Juridisch
             </p>

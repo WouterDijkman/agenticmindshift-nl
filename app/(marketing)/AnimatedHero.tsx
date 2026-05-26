@@ -1,0 +1,204 @@
+'use client';
+
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import { useRef } from 'react';
+import Button from '@/components/ui/Button';
+import SketchCrosshair from '@/components/icons/SketchCrosshair';
+
+const ease = [0.22, 1, 0.36, 1] as const;
+
+const WORDS = 'Hoeveel rendement verliest uw portefeuille zonder dat u het ziet?'.split(' ');
+
+export default function AnimatedHero() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end start'],
+  });
+  const rawY = useTransform(scrollYProgress, [0, 1], [0, -90]);
+  const parallaxY = useSpring(rawY, { stiffness: 60, damping: 20, mass: 0.6 });
+
+  return (
+    <section
+      ref={sectionRef}
+      className="grain-overlay"
+      style={{
+        background: 'var(--bg-primary)',
+        minHeight: '100svh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
+      {/* Achtergrond glyph — parallax */}
+      <motion.div
+        aria-hidden="true"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.025 }}
+        transition={{ duration: 1.8, delay: 0.1, ease: 'easeOut' }}
+        style={{
+          position: 'absolute',
+          right: '-60px',
+          top: '50%',
+          y: parallaxY,
+          marginTop: '-0.5em',
+          fontSize: 'clamp(320px, 38vw, 560px)',
+          fontWeight: 900,
+          lineHeight: 1,
+          color: 'var(--text-primary)',
+          letterSpacing: '-0.06em',
+          pointerEvents: 'none',
+          userSelect: 'none',
+          fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+        }}
+      >
+        PE
+      </motion.div>
+
+      {/* Sketch crosshair — decoratief rechtsonder */}
+      <motion.div
+        aria-hidden="true"
+        className="hero-crosshair-deco"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.045 }}
+        transition={{ duration: 2.2, ease: 'easeOut', delay: 0.8 }}
+        style={{
+          position: 'absolute',
+          right: '80px',
+          bottom: '90px',
+          pointerEvents: 'none',
+        }}
+      >
+        <SketchCrosshair size={88} color="var(--text-primary)" strokeWidth={0.8} />
+      </motion.div>
+
+      {/* Content */}
+      <div
+        className="container-wide"
+        style={{
+          paddingTop: 'clamp(120px, 20vh, 200px)',
+          paddingBottom: 'clamp(80px, 10vh, 120px)',
+        }}
+      >
+        {/* Eyebrow */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '32px' }}>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.45, ease: 'easeOut' }}
+            style={{
+              width: '32px',
+              height: '1.5px',
+              background: 'var(--accent-cta)',
+              flexShrink: 0,
+              transformOrigin: 'left center',
+            }}
+          />
+          <motion.p
+            className="eyebrow"
+            style={{ margin: 0 }}
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, delay: 0.38, ease }}
+          >
+            Gratis analyse — 12 minuten
+          </motion.p>
+        </div>
+
+        {/* H1 */}
+        <motion.h1
+          className="type-display"
+          style={{
+            marginBottom: '32px',
+            color: 'var(--text-primary)',
+            maxWidth: '1000px',
+          }}
+          initial="hidden"
+          animate="visible"
+          variants={{
+            visible: { transition: { staggerChildren: 0.065, delayChildren: 0.5 } },
+          }}
+        >
+          {WORDS.map((word, i) => (
+            <motion.span
+              key={i}
+              variants={{
+                hidden: { opacity: 0, y: 22 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease } },
+              }}
+              style={{ display: 'inline-block', marginRight: '0.27em' }}
+            >
+              {word}
+            </motion.span>
+          ))}
+        </motion.h1>
+
+        {/* Subkop — groot, Cormorant, leesbaargewicht */}
+        <motion.p
+          style={{
+            fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
+            fontSize: 'clamp(1.375rem, 2.6vw, 2rem)',
+            fontWeight: 400,
+            lineHeight: 1.55,
+            color: 'var(--text-secondary)',
+            maxWidth: '780px',
+            marginBottom: '48px',
+            letterSpacing: '-0.005em',
+          }}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.68, delay: 1.05, ease }}
+        >
+          U doet alles goed — en toch de vraag of u het volgende
+          rendementsprobleem ziet voordat het te laat is. Dat gevoel
+          is geen paranoia. Het is een informatieprobleem dat oplosbaar is.
+        </motion.p>
+
+        {/* CTA */}
+        <motion.div
+          style={{ display: 'flex', flexDirection: 'column', gap: '14px', alignItems: 'flex-start' }}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.25, ease }}
+        >
+          <Button href="/scorecard" variant="primary" size="lg">
+            Start de Scorecard
+          </Button>
+          <p
+            style={{
+              fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
+              fontSize: '1rem',
+              fontStyle: 'italic',
+              fontWeight: 400,
+              color: 'var(--text-muted)',
+              margin: 0,
+              lineHeight: 1.2,
+            }}
+          >
+            12 minuten · 6 dimensies · 100% vertrouwelijk
+          </p>
+        </motion.div>
+      </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        aria-hidden="true"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.65, duration: 0.6 }}
+        style={{
+          position: 'absolute',
+          bottom: '28px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          pointerEvents: 'none',
+        }}
+        className="scroll-indicator"
+      >
+        <SketchCrosshair size={34} color="var(--text-muted)" opacity={0.35} strokeWidth={1} />
+      </motion.div>
+    </section>
+  );
+}

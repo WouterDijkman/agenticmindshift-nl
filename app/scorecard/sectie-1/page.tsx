@@ -27,14 +27,35 @@ export default function Sectie1Page() {
       <div className="mb-8">
         <ProgressBar current={section.filter((q) => answers[q.id]).length} total={15} />
       </div>
-      <h1 className="h-2 mb-3">Sectie 1 &mdash; Uw AI-realiteit vandaag</h1>
-      <p
-        className="mb-10 text-base measure"
-        style={{ color: 'var(--text-tertiary)' }}
+      <div
+        style={{
+          marginBottom: '40px',
+          paddingBottom: '32px',
+          borderBottom: '1px solid var(--border-subtle)',
+        }}
       >
-        Vier korte vragen over uw huidige AI-initiatieven en welke begeleiding aansluit
-        op uw situatie.
-      </p>
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: '16px', marginBottom: '16px' }}>
+          <p className="eyebrow" style={{ marginBottom: 0 }}>Sectie 1 van 4</p>
+          <span style={{ fontSize: '0.8125rem', color: 'var(--accent-cta)', fontWeight: 500, letterSpacing: '0.01em' }}>Start. Twaalf minuten.</span>
+        </div>
+        <h1 className="type-h2" style={{ marginBottom: '16px' }}>Uw analytische aanpak vandaag</h1>
+        <p
+          style={{
+            fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
+            fontSize: '1.0625rem',
+            color: 'var(--text-secondary)',
+            lineHeight: 1.75,
+            maxWidth: '560px',
+          }}
+        >
+          Structuur ontbreekt op vrijwel elk moment in de deal- en financieringspraktijk — bij
+          een acquisitie, een financieringsaanvraag, een portefeuillereview of de eerste
+          signalen van financiële stress. Het onderscheid tussen ad-hoc en systematisch
+          bepaalt hoe snel u kunt handelen en hoe sterk uw positie is. Deze sectie brengt
+          uw huidige analytische positie in kaart, inclusief welk moment voor u het meest
+          urgent is.
+        </p>
+      </div>
 
       <div className="flex flex-col gap-6">
         {section.map((q, idx) => (
@@ -49,8 +70,15 @@ export default function Sectie1Page() {
       </div>
 
       <div className="flex justify-between items-center mt-10">
-        <Link href="/scorecard" style={{ color: 'var(--text-muted)' }} className="text-sm">
-          Terug naar overzicht
+        <Link
+          href="/scorecard"
+          style={{
+            fontSize: '0.875rem',
+            color: 'var(--text-muted)',
+            textDecoration: 'none',
+          }}
+        >
+          \u2190 Terug naar start
         </Link>
         <Button
           variant="primary"

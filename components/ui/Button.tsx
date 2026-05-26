@@ -1,5 +1,13 @@
+'use client';
+
 import Link from 'next/link';
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import {
+  ButtonHTMLAttributes,
+  ReactNode,
+  useRef,
+  MouseEvent,
+} from 'react';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 type Variant = 'primary' | 'secondary';
 type Size = 'md' | 'lg';
@@ -25,7 +33,6 @@ interface LinkButtonProps extends CommonProps {
 const baseClasses =
   'inline-flex items-center justify-center font-semibold transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary disabled:opacity-50 disabled:cursor-not-allowed';
 
-// min-h-[44px] enforces a 44px touch target on every Button instance.
 const sizeClasses: Record<Size, string> = {
   md: 'px-5 py-2.5 text-base min-h-[44px]',
   lg: 'px-7 py-3.5 text-lg min-h-[48px]',
@@ -48,47 +55,87 @@ function variantStyle(variant: Variant): React.CSSProperties {
   };
 }
 
+const SPRING = { stiffness: 280, damping: 18 };
+const STRENGTH = 0.32;
+
+/** Magnetic wrapper — only on primary variant, pointer:fine, no-reduced-motion */
+function MagneticWrapper({
+  children,
+  fullWidth = false,
+}: {
+  children: ReactNode;
+  fullWidth?: boolean;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const mx = useMotionValue(0);
+  const my = useMotionValue(0);
+  const x = useSpring(mx, SPRING);
+  const y = useSpring(my, SPRING);
+
+  const move = (e: MouseEvent<HTMLDivElement>) => {
+    if (!ref.current) return;
+    if (!window.matchMedia('(pointer: fine)').matches) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const rect = ref.current.getBoundingClientRect();
+    mx.set((e.clientX - rect.left - rect.width / 2) * STRENGTH);
+    my.set((e.clientY - rect.top - rect.height / 2) * STRENGTH);
+  };
+
+  const reset = () => {
+    mx.set(0);
+    my.set(0);
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      style={{
+        x,
+        y,
+        display: fullWidth ? 'block' : 'inline-flex',
+        width: fullWidth ? '100%' : undefined,
+      }}
+      onMouseMove={move}
+      onMouseLeave={reset}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
 export function Button(props: ButtonProps | LinkButtonProps) {
   const { variant = 'primary', size = 'md', children, className = '' } = props;
   const style = variantStyle(variant);
-  // btn-primary class (in globals.css) adds the hover-lift + shadow.
   const variantClass = variant === 'primary' ? 'btn-primary' : 'btn-secondary';
   const classes = `${baseClasses} ${sizeClasses[size]} ${variantClass} ${className}`;
+  const isPrimary = variant === 'primary';
 
   if ('href' in props && props.href) {
     const isExternal = props.external || /^https?:\/\//.test(props.href);
-    if (isExternal) {
-      return (
-        <a
-          href={props.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={classes}
-          style={style}
-        >
-          {children}
-        </a>
-      );
-    }
-    return (
+    const inner = isExternal ? (
+      <a href={props.href} target="_blank" rel="noopener noreferrer" className={classes} style={style}>
+        {children}
+      </a>
+    ) : (
       <Link href={props.href} className={classes} style={style}>
         {children}
       </Link>
     );
+    const isFullWidth = className.includes('w-full');
+    return isPrimary ? <MagneticWrapper fullWidth={isFullWidth}>{inner}</MagneticWrapper> : inner;
   }
 
   const { variant: _v, size: _s, children: _c, className: _cn, ...rest } =
     props as ButtonProps;
-  void _v;
-  void _s;
-  void _c;
-  void _cn;
+  void _v; void _s; void _c; void _cn;
 
-  return (
+  const isFullWidth = className.includes('w-full');
+  const inner = (
     <button className={classes} style={style} {...rest}>
       {children}
     </button>
   );
+  return isPrimary ? <MagneticWrapper fullWidth={isFullWidth}>{inner}</MagneticWrapper> : inner;
 }
 
 export default Button;

@@ -1,15 +1,16 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Button from '@/components/ui/Button';
 
 const navLinks = [
-  { href: '/scorecard', label: 'Scorecard' },
-  { href: '/werkwijze', label: 'Werkwijze' },
-  { href: '/over', label: 'Over' },
-  { href: '/factum-capital', label: 'Factum Capital' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/scorecard', label: 'Scorecard', badge: null },
+  { href: '/werkwijze', label: 'Werkwijze', badge: null },
+  { href: '/over', label: 'Over', badge: null },
+  { href: '/factum-capital', label: 'Factum Capital', badge: 'juli' },
+  { href: '/contact', label: 'Contact', badge: null },
 ];
 
 export default function Header() {
@@ -35,19 +36,28 @@ export default function Header() {
     <header
       className="sticky top-0 z-50"
       style={{
-        background: scrolled ? 'rgba(245, 232, 213, 0.92)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(12px)' : 'none',
+        background: scrolled ? 'rgba(247, 242, 235, 0.95)' : 'transparent',
+        backdropFilter: scrolled ? 'blur(16px)' : 'none',
         borderBottom: scrolled ? '1px solid var(--border-subtle)' : '1px solid transparent',
-        transition: 'all 200ms ease',
+        transition: 'all 220ms ease',
       }}
     >
-      <div className="container-extra flex items-center justify-between py-4">
+      <div className="container-extra flex items-center justify-between" style={{ paddingBlock: '14px' }}>
+        {/* Logo */}
         <Link
           href="/"
-          className="text-lg sm:text-xl font-semibold min-h-[44px] inline-flex items-center"
-          style={{ color: 'var(--text-primary)' }}
+          aria-label="Agentic Mindshift — home"
+          className="inline-flex items-center min-h-[44px]"
+          style={{ flexShrink: 0 }}
         >
-          Agentic Mindshift
+          <Image
+            src="/logo.png"
+            alt="Agentic Mindshift"
+            width={2448}
+            height={1632}
+            priority
+            style={{ height: '44px', width: 'auto' }}
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-7">
@@ -55,10 +65,32 @@ export default function Header() {
             <Link
               key={l.href}
               href={l.href}
-              className="nav-link text-sm min-h-[44px] inline-flex items-center"
-              style={{ color: 'var(--text-tertiary)' }}
+              className="nav-link min-h-[44px] inline-flex items-center gap-2"
+              style={{
+                fontSize: '0.875rem',
+                fontWeight: 500,
+                color: 'var(--text-secondary)',
+                letterSpacing: '0.01em',
+              }}
             >
               {l.label}
+              {l.badge && (
+                <span
+                  style={{
+                    fontSize: '8px',
+                    fontWeight: 700,
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                    color: 'var(--accent-cta)',
+                    border: '1px solid var(--accent-cta)',
+                    padding: '2px 5px',
+                    lineHeight: 1,
+                    opacity: 0.75,
+                  }}
+                >
+                  {l.badge}
+                </span>
+              )}
             </Link>
           ))}
         </nav>
@@ -78,17 +110,49 @@ export default function Header() {
           style={{
             color: 'var(--text-primary)',
             border: '1px solid var(--border-medium)',
-            borderRadius: '4px',
+            borderRadius: '2px',
             background: 'transparent',
           }}
         >
-          <span className="block w-6 h-0.5 mb-1.5" style={{ background: 'currentColor' }} />
-          <span className="block w-6 h-0.5 mb-1.5" style={{ background: 'currentColor' }} />
-          <span className="block w-6 h-0.5" style={{ background: 'currentColor' }} />
+          <span
+            style={{
+              display: 'block',
+              width: '20px',
+              height: '1.5px',
+              background: 'currentColor',
+              marginBottom: '5px',
+              transition: 'transform 200ms ease, opacity 200ms ease',
+              transformOrigin: 'center',
+              transform: mobileOpen ? 'rotate(45deg) translateY(6.5px)' : 'none',
+            }}
+          />
+          <span
+            style={{
+              display: 'block',
+              width: '20px',
+              height: '1.5px',
+              background: 'currentColor',
+              marginBottom: '5px',
+              transition: 'transform 200ms ease, opacity 200ms ease',
+              opacity: mobileOpen ? 0 : 1,
+              transform: mobileOpen ? 'scaleX(0)' : 'none',
+            }}
+          />
+          <span
+            style={{
+              display: 'block',
+              width: '20px',
+              height: '1.5px',
+              background: 'currentColor',
+              transition: 'transform 200ms ease, opacity 200ms ease',
+              transformOrigin: 'center',
+              transform: mobileOpen ? 'rotate(-45deg) translateY(-6.5px)' : 'none',
+            }}
+          />
         </button>
       </div>
 
-      {/* Mobile drawer: persistent in DOM, animated via translateX + opacity. */}
+      {/* Mobile drawer */}
       <div
         className={`lg:hidden drawer-backdrop ${mobileOpen ? 'open' : ''}`}
         onClick={() => setMobileOpen(false)}
@@ -102,9 +166,7 @@ export default function Header() {
       >
         <div className="p-6 flex flex-col gap-5 h-full">
           <div className="flex items-center justify-between">
-            <span className="font-semibold" style={{ color: 'var(--text-primary)' }}>
-              Menu
-            </span>
+            <Image src="/logo.png" alt="Agentic Mindshift" width={2448} height={1632} style={{ height: '32px', width: 'auto' }} />
             <button
               type="button"
               aria-label="Sluit menu"
@@ -113,22 +175,23 @@ export default function Header() {
               style={{
                 color: 'var(--text-primary)',
                 border: '1px solid var(--border-medium)',
-                borderRadius: '4px',
-                padding: '6px 10px',
+                borderRadius: '2px',
+                padding: '6px 12px',
                 background: 'transparent',
+                fontSize: '0.875rem',
               }}
             >
               Sluit
             </button>
           </div>
-          <nav className="flex flex-col gap-2 mt-4">
+          <nav className="flex flex-col gap-1 mt-4">
             {navLinks.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-base nav-link min-h-[44px] inline-flex items-center"
-                style={{ color: 'var(--text-secondary)' }}
+                className="nav-link min-h-[44px] inline-flex items-center"
+                style={{ fontSize: '1rem', color: 'var(--text-secondary)' }}
               >
                 {l.label}
               </Link>

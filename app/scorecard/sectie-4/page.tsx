@@ -28,31 +28,32 @@ export default function Sectie4Page() {
         <ProgressBar current={answered} total={15} />
       </div>
       <div
-        className="mb-8 p-5"
         style={{
-          background: 'var(--bg-elevated)',
-          border: '1px solid var(--border-subtle)',
-          borderRadius: '4px',
+          marginBottom: '40px',
+          paddingBottom: '32px',
+          borderBottom: '1px solid var(--border-subtle)',
         }}
       >
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: '16px', marginBottom: '16px' }}>
+          <p className="eyebrow" style={{ marginBottom: 0 }}>Sectie 4 van 4</p>
+          <span style={{ fontSize: '0.8125rem', color: 'var(--accent-cta)', fontWeight: 500, letterSpacing: '0.01em' }}>Laatste sectie. Bijna uw rapport.</span>
+        </div>
+        <h1 className="type-h2" style={{ marginBottom: '16px' }}>Uw team en kennis</h1>
         <p
-          className="text-xs uppercase mb-2"
-          style={{ color: 'var(--accent-primary)', letterSpacing: '0.18em' }}
+          style={{
+            fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
+            fontSize: '1.0625rem',
+            color: 'var(--text-secondary)',
+            lineHeight: 1.75,
+            maxWidth: '560px',
+          }}
         >
-          Sectie 3 voltooid
-        </p>
-        <p style={{ color: 'var(--text-tertiary)' }}>
-          Goed. We gaan nu naar uw team en kennis.
+          Capaciteitsdruk en kennisverloop zijn de stille rendementskiller in kleinere
+          deal-firma\u2019s. Wanneer een associate vertrekt, vertrekt ook het institutionele
+          geheugen van drie tot vijf dossiers. Deze sectie brengt in kaart of uw
+          organisatie structureel bestand is tegen die verborgen kwetsbaarheid.
         </p>
       </div>
-      <h1 className="h-2 mb-3">Sectie 4 &mdash; Uw team en kennis</h1>
-      <p
-        className="mb-10 text-base measure"
-        style={{ color: 'var(--text-tertiary)' }}
-      >
-        Vier vragen over capaciteit van uw associates en hoe DD-kennis binnen uw
-        organisatie wordt vastgehouden.
-      </p>
 
       <div className="flex flex-col gap-6">
         {section.map((q, idx) => (

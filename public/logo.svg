@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 128" fill="none">
+  <!-- Diamond / brain icon centred at (77, 64) in a 128×128 bounding box -->
+  <g>
+    <!-- Hexagonal diamond outline -->
+    <path d="M17 64 L46 16 L90 4 L116 22 L116 106 L90 124 L46 112 Z"
+          fill="none" stroke="#F14C1D" stroke-width="7.5" stroke-linejoin="round"/>
+    <!-- Outer (right) left-pointing chevron -->
+    <path d="M98 36 L57 64 L98 92"
+          fill="none" stroke="#F14C1D" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Inner (left) left-pointing chevron -->
+    <path d="M77 36 L36 64 L77 92"
+          fill="none" stroke="#F14C1D" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Wordmark: stacked AGENTIC / MINDSHIFT, Inter 900, navy -->
+  <text x="144" y="54"
+        font-family="'Inter', 'Arial', sans-serif"
+        font-weight="900"
+        font-size="44"
+        fill="#102C54"
+        letter-spacing="4">AGENTIC</text>
+  <text x="144" y="106"
+        font-family="'Inter', 'Arial', sans-serif"
+        font-weight="900"
+        font-size="44"
+        fill="#102C54"
+        letter-spacing="4">MINDSHIFT</text>
+</svg>

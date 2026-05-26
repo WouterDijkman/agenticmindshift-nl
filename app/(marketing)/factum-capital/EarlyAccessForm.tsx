@@ -67,12 +67,11 @@ export default function EarlyAccessForm() {
         error={errors.name?.message}
       />
       <Input
-        label="Zakelijk e-mailadres"
+        label="E-mailadres"
         type="email"
         autoComplete="email"
         {...register('email')}
         error={errors.email?.message}
-        hint="Geen Gmail/Outlook/Hotmail: gebruik uw zakelijke adres."
       />
       <Input
         label="Bedrijf"
@@ -82,7 +81,7 @@ export default function EarlyAccessForm() {
         error={errors.company?.message}
       />
       <Input
-        label="Functietitel"
+        label="Functietitel (optioneel)"
         type="text"
         autoComplete="organization-title"
         {...register('jobTitle')}

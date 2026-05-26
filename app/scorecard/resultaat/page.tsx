@@ -48,10 +48,13 @@ export default function ResultaatPage() {
   if (hydrated && !allAnswered) {
     return (
       <section className="container-narrow py-16 text-center">
-        <h1 className="text-3xl mb-4">Nog niet alle vragen beantwoord</h1>
-        <p className="mb-8" style={{ color: 'var(--text-tertiary)' }}>
+        <p className="eyebrow" style={{ marginBottom: '16px' }}>Scorecard onvolledig</p>
+        <h1 className="type-h2" style={{ marginBottom: '16px' }}>
+          Nog {totalQuestions - answeredCount} {totalQuestions - answeredCount === 1 ? 'vraag' : 'vragen'} te gaan
+        </h1>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '36px', lineHeight: 1.75 }}>
           U heeft {answeredCount} van {totalQuestions} vragen beantwoord. Vul de scorecard
-          eerst af om uw rapport te genereren.
+          eerst volledig af om uw persoonlijke rapport te genereren.
         </p>
         <Button href="/scorecard/sectie-1" variant="primary" size="lg">
           Terug naar de scorecard
@@ -83,53 +86,105 @@ export default function ResultaatPage() {
 
   return (
     <section className="container-medium py-12">
-      <p
-        className="text-xs uppercase mb-4"
-        style={{ color: 'var(--accent-primary)', letterSpacing: '0.22em' }}
-      >
-        Scorecard voltooid
-      </p>
-      <h1 className="h-1 mb-4">Uw voorlopige score</h1>
-      <p className="mb-10 measure" style={{ color: 'var(--text-tertiary)' }}>
-        Hieronder ziet u uw totaalscore. Vul uw zakelijke gegevens in om het volledige
-        rapport van vier pagina&apos;s te ontgrendelen en als PDF te ontvangen.
-      </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-12">
-        <div className="flex justify-center">
+      {/* Header */}
+      <div
+        style={{
+          marginBottom: '48px',
+          paddingBottom: '40px',
+          borderBottom: '1px solid var(--border-subtle)',
+        }}
+      >
+        <p className="eyebrow" style={{ marginBottom: '16px' }}>Scorecard voltooid</p>
+        <h1 className="type-h2" style={{ marginBottom: '12px' }}>
+          U ziet nu wat de meeste partners pas bij de jaarrapportage zien.
+        </h1>
+        <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, maxWidth: '520px' }}>
+          Vul uw gegevens in om het volledige rapport te ontvangen — direct in uw browser
+          én als PDF in uw inbox.
+        </p>
+      </div>
+
+      {/* Score + rapport-inhoud */}
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: 'clamp(32px, 5vw, 64px)',
+          alignItems: 'center',
+          marginBottom: '48px',
+        }}
+      >
+        {/* Score cirkel */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
           <TotalScoreCircle score={scores.total} max={75} size={240} />
-        </div>
-        <div>
-          <h2 className="h-2 mb-4">Wat zit er in uw rapport?</h2>
-          <ul
-            className="flex flex-col gap-3 text-base"
-            style={{ color: 'var(--text-tertiary)' }}
+          <p
+            style={{
+              fontSize: '0.8125rem',
+              color: 'var(--text-muted)',
+              letterSpacing: '0.04em',
+              textAlign: 'center',
+              maxWidth: '200px',
+              lineHeight: 1.6,
+            }}
           >
-            <li>Totaalscore (zichtbaar) plus uitleg.</li>
-            <li>Zes-dimensies-overzicht met peer-vergelijking.</li>
-            <li>Uw twee zwakste dimensies met toelichting.</li>
-            <li>Concrete aanbevolen vervolgstap, gebaseerd op uw antwoorden.</li>
-            <li>Persoonlijke link plus PDF in uw inbox.</li>
-          </ul>
+            Het volledige rapport toont uw score per dimensie met peer-vergelijking.
+          </p>
+        </div>
+
+        {/* Rapport inhoud */}
+        <div>
+          <p className="eyebrow" style={{ marginBottom: '20px' }}>Wat zit er in uw rapport?</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+            {[
+              { num: '01', text: 'Totaalscore met toelichting per dimensie' },
+              { num: '02', text: 'Zes-dimensies-overzicht met peer-benchmark' },
+              { num: '03', text: 'Uw twee zwakste dimensies en concrete duiding' },
+              { num: '04', text: 'Aanbevolen vervolgstap op basis van uw antwoorden' },
+              { num: '05', text: 'Persoonlijke link + PDF in uw inbox' },
+            ].map((item) => (
+              <div
+                key={item.num}
+                style={{
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: '16px',
+                  paddingBlock: '14px',
+                  borderBottom: '1px solid var(--border-subtle)',
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+                    fontSize: '0.75rem',
+                    fontWeight: 800,
+                    color: 'var(--accent-cta)',
+                    letterSpacing: '0.06em',
+                    flexShrink: 0,
+                    paddingTop: '1px',
+                  }}
+                >
+                  {item.num}
+                </span>
+                <span style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                  {item.text}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
+      {/* Formulier */}
       <div
         style={{
           background: 'var(--bg-secondary)',
-          border: '1px solid var(--border-subtle)',
-          borderRadius: '4px',
-          padding: '36px',
+          border: '1px solid var(--border-medium)',
+          padding: 'clamp(28px, 4vw, 44px)',
         }}
       >
-        <h2 className="h-2 mb-3">Ontgrendel uw rapport</h2>
-        <p
-          className="mb-6 text-sm hint-italic"
-          style={{ color: 'var(--text-tertiary)' }}
-        >
-          Alleen zakelijke e-mailadressen. Wij sturen u na drie en zeven dagen een
-          inhoudelijke opvolg-mail; daarna hoort u niets meer.
-        </p>
+        <h2 className="type-h3" style={{ marginBottom: '8px' }}>Waar stuur ik uw rapport naartoe?</h2>
+
         <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-2 gap-5" noValidate>
           <Input
             label="Naam"
@@ -153,7 +208,7 @@ export default function ResultaatPage() {
             error={errors.company?.message}
           />
           <Input
-            label="Functietitel"
+            label="Functietitel (optioneel)"
             type="text"
             autoComplete="organization-title"
             {...register('jobTitle')}
@@ -176,11 +231,11 @@ export default function ResultaatPage() {
               {submitting ? 'Rapport genereren...' : 'Toon mijn rapport'}
             </Button>
             <p className="text-xs" style={{ color: 'var(--text-muted)' }}>
-              Door op de knop te klikken gaat u akkoord met ons{' '}
+              Door te klikken gaat u akkoord met ons{' '}
               <a href="/privacy" style={{ color: 'var(--text-tertiary)', textDecoration: 'underline' }}>
                 privacystatement
               </a>
-              .
+              . U ontvangt twee opvolg-mails (dag&nbsp;3 en&nbsp;7). Daarna niets meer.
             </p>
           </div>
         </form>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Button from '@/components/ui/Button';
+import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
 import JsonLd from '@/components/JsonLd';
 import { personLd } from '@/lib/jsonld';
 
@@ -13,126 +14,139 @@ export default function ContactPage() {
   return (
     <>
       <JsonLd data={personLd} />
-      <section className="container-medium pt-20 pb-12">
-        <p
-          className="text-xs uppercase mb-4"
-          style={{ color: 'var(--accent-primary)', letterSpacing: '0.18em' }}
-        >
-          Contact
-        </p>
-        <h1 className="h-1 mb-6">Drie manieren om te beginnen</h1>
-        <p
-          className="text-lg measure"
-          style={{ color: 'var(--text-tertiary)' }}
-        >
-          Welke route u kiest hangt af van wat u zoekt. Geen van deze drie verplicht u tot
-          een vervolg.
-        </p>
-      </section>
 
-      <section className="container-medium pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <article
+      <AnimatedHeroShell
+        bgChar="C"
+        eyebrow="Contact"
+        heading="Begin met een vraag. Niet met een commitment."
+        subtext="Start met de scorecard voor direct inzicht, of plant een gesprek als u liever eerst even sparrt. U stelt de agenda."
+        headingMaxWidth="720px"
+      />
+
+            {/* Contact cards */}
+      <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(64px, 9vw, 112px)' }}>
+        <div className="container-medium">
+          <div
             style={{
-              background: 'var(--bg-secondary)',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+              gap: '1px',
+              background: 'var(--border-subtle)',
               border: '1px solid var(--border-subtle)',
-              borderRadius: '4px',
-              padding: '28px',
             }}
           >
-            <p
-              style={{
-                color: 'var(--accent-primary)',
-                fontSize: '60px',
-                fontWeight: 600,
-                lineHeight: 1,
-              }}
-            >
-              01
-            </p>
-            <h2 className="text-xl mt-4 mb-3">Scorecard</h2>
-            <p className="mb-5 text-sm" style={{ color: 'var(--text-tertiary)' }}>
-              Twaalf minuten. Vier pagina&apos;s rapport. Het meest gestructureerde
-              startpunt om uw portefeuille meetbaar te maken.
-            </p>
-            <Button href="/scorecard" variant="primary" size="md">
-              Start de Scorecard
-            </Button>
-          </article>
-
-          <article
-            style={{
-              background: 'var(--bg-secondary)',
-              border: '1px solid var(--border-subtle)',
-              borderRadius: '4px',
-              padding: '28px',
-            }}
-          >
-            <p
-              style={{
-                color: 'var(--accent-primary)',
-                fontSize: '60px',
-                fontWeight: 600,
-                lineHeight: 1,
-              }}
-            >
-              02
-            </p>
-            <h2 className="text-xl mt-4 mb-3">Sparring-sessie</h2>
-            <p className="mb-5 text-sm" style={{ color: 'var(--text-tertiary)' }}>
-              Twintig minuten op de telefoon, geen verkoopgesprek. Geschikt als u eerst
-              wil sparren of de scorecard relevant is voor uw situatie.
-            </p>
-            <Button
-              href="https://cal.com/wwdijkman/intake-call"
-              variant="secondary"
-              size="md"
-              external
-            >
-              Plan via cal.com
-            </Button>
-          </article>
-
-          <article
-            style={{
-              background: 'var(--bg-secondary)',
-              border: '1px solid var(--border-subtle)',
-              borderRadius: '4px',
-              padding: '28px',
-            }}
-          >
-            <p
-              style={{
-                color: 'var(--accent-primary)',
-                fontSize: '60px',
-                fontWeight: 600,
-                lineHeight: 1,
-              }}
-            >
-              03
-            </p>
-            <h2 className="text-xl mt-4 mb-3">Direct e-mail of LinkedIn</h2>
-            <p className="mb-5 text-sm" style={{ color: 'var(--text-tertiary)' }}>
-              Voor specifieke vragen of wanneer u liever schriftelijk begint. Reactie
-              binnen twee werkdagen.
-            </p>
-            <div className="flex flex-col gap-2 text-sm">
-              <a
-                href="mailto:wouter@agenticmindshift.nl"
-                style={{ color: 'var(--text-secondary)' }}
+            {[
+              {
+                n: '01',
+                title: 'Scorecard',
+                body: "Twaalf minuten. Vier pagina's rapport. Het meest gestructureerde startpunt om uw portefeuille meetbaar te maken.",
+                cta: <Button href="/scorecard" variant="primary" size="md">Start de Scorecard</Button>,
+                delay: 0,
+              },
+              {
+                n: '02',
+                title: 'Sparring-sessie',
+                body: 'Twintig minuten om te kijken of er een match is. U stelt de agenda.',
+                cta: (
+                  <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="md" external>
+                    Plan via cal.com
+                  </Button>
+                ),
+                delay: 80,
+              },
+              {
+                n: '03',
+                title: 'Direct bericht',
+                body: 'Voor specifieke vragen of wanneer u liever schriftelijk begint. Reactie binnen twee werkdagen.',
+                cta: (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <a
+                        href="mailto:wouter@agenticmindshift.nl"
+                        style={{
+                          fontSize: '0.875rem',
+                          color: 'var(--accent-cta)',
+                          fontWeight: 500,
+                          transition: 'opacity 180ms ease',
+                        }}
+                        className="contact-email-link"
+                      >
+                        wouter@agenticmindshift.nl
+                      </a>
+                    </div>
+                    <a
+                      href="https://www.linkedin.com/in/wwdijkman"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        fontSize: '0.875rem',
+                        color: 'var(--text-muted)',
+                        transition: 'color 180ms ease',
+                      }}
+                      className="footer-link"
+                    >
+                      linkedin.com/in/wwdijkman →
+                    </a>
+                  </div>
+                ),
+                delay: 160,
+              },
+            ].map((card) => (
+              <div
+                key={card.n}
+                className="reveal contact-card"
+                style={{
+                  background: 'var(--bg-secondary)',
+                  padding: '32px 28px 40px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  transitionDelay: `${card.delay}ms`,
+                  borderTop: '3px solid transparent',
+                  transition: 'border-top-color 200ms ease',
+                }}
               >
-                wouter@agenticmindshift.nl
-              </a>
-              <a
-                href="https://www.linkedin.com/in/wwdijkman"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: 'var(--text-secondary)' }}
-              >
-                linkedin.com/in/wwdijkman
-              </a>
-            </div>
-          </article>
+                <p
+                  style={{
+                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+                    fontSize: 'clamp(48px, 6vw, 68px)',
+                    fontWeight: 800,
+                    letterSpacing: '-0.04em',
+                    lineHeight: 0.9,
+                    color: 'var(--accent-cta)',
+                    marginBottom: '28px',
+                    opacity: 0.9,
+                  }}
+                >
+                  {card.n}
+                </p>
+                <p
+                  style={{
+                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+                    fontSize: '1.0625rem',
+                    fontWeight: 700,
+                    color: 'var(--text-primary)',
+                    marginBottom: '12px',
+                    letterSpacing: '-0.01em',
+                  }}
+                >
+                  {card.title}
+                </p>
+                <p
+                  style={{
+                    fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
+                    fontSize: 'clamp(1rem, 1.6vw, 1.125rem)',
+                    color: 'var(--text-secondary)',
+                    lineHeight: 1.75,
+                    flex: 1,
+                    marginBottom: '24px',
+                  }}
+                >
+                  {card.body}
+                </p>
+                {card.cta}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </>

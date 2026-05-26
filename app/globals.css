@@ -1,29 +1,30 @@
 @import "tailwindcss";
-
 :root {
-  --bg-primary: #F5E8D5;
-  --bg-secondary: #EEE0CB;
-  --bg-elevated: #FDF6EC;
-  --bg-input: #FAF4EA;
-  --text-primary: #102C54;
-  --text-secondary: #1A3C6A;
-  --text-tertiary: #2D527E;
-  --text-muted: #567296;
-  --text-inverse: #F5E8D5;
-  --accent-primary: #102C54;
-  --accent-primary-soft: rgba(16, 44, 84, 0.1);
+  --bg-primary: #F7F2EB;
+  --bg-secondary: #EFE7D9;
+  --bg-elevated: #FDFAF5;
+  --bg-input: #FDFBF7;
+  --text-primary: #0B1F3A;
+  --text-secondary: #0F2B4A;
+  --text-tertiary: #1A3A5C;
+  --text-muted: #3A5470;
+  --text-inverse: #F7F2EB;
+  --accent-primary: #0B1F3A;
+  --accent-primary-soft: rgba(11, 31, 58, 0.1);
   --accent-cta: #F14C1D;
   --accent-cta-hover: #d63a0e;
   --accent-cta-soft: rgba(241, 76, 29, 0.08);
-  --border-subtle: rgba(16, 44, 84, 0.1);
-  --border-medium: rgba(16, 44, 84, 0.22);
-  --border-strong: rgba(16, 44, 84, 0.4);
+  --border-subtle: rgba(11, 31, 58, 0.1);
+  --border-medium: rgba(11, 31, 58, 0.22);
+  --border-strong: rgba(11, 31, 58, 0.4);
   --status-success: #1a7a3c;
   --status-warning: #b45309;
   --status-error: #c0392b;
-  --shadow-sm: 0 1px 3px rgba(16, 44, 84, 0.12);
-  --shadow-md: 0 4px 12px rgba(16, 44, 84, 0.15);
-  --font-family: 'Noto Serif', Georgia, serif;
+  --shadow-sm: 0 1px 3px rgba(11, 31, 58, 0.12);
+  --shadow-md: 0 4px 12px rgba(11, 31, 58, 0.15);
+  --font-display: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  --font-body: var(--font-cormorant), 'Cormorant Garamond', 'Cormorant', Georgia, serif;
+  --font-ui: var(--font-inter), 'Inter', system-ui, -apple-system, sans-serif;
   --space-3xs: 4px;
   --space-2xs: 8px;
   --space-xs: 12px;
@@ -61,7 +62,7 @@
   --color-status-success: var(--status-success);
   --color-status-warning: var(--status-warning);
   --color-status-error: var(--status-error);
-  --font-serif: var(--font-noto-serif), 'Noto Serif', Georgia, serif;
+  --font-serif: var(--font-playfair), 'Playfair Display', Georgia, serif;
   --radius-none: 0;
   --radius-sm: 2px;
   --radius-md: 4px;
@@ -82,16 +83,17 @@ html {
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
-  font-family: var(--font-noto-serif), 'Noto Serif', Georgia, serif;
+  font-family: var(--font-body);
+  font-size: 1.1875rem;  /* Cormorant runs optically smaller than Inter — needs ~19px base */
   font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
-  line-height: 1.6;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* belt-and-suspenders: no horizontal scroll on mobile */
+  overflow-x: hidden;
   max-width: 100vw;
-  overflow-wrap: break-word; /* long Dutch words wrap instead of overflowing */
+  overflow-wrap: break-word;
 }
 
 h1,
@@ -100,14 +102,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-noto-serif), 'Noto Serif', Georgia, serif;
+  font-family: var(--font-display);
   color: var(--text-primary);
-  font-weight: 600;
-  line-height: 1.2;
+  font-weight: 700;
+  line-height: 1.15;
   margin: 0;
-  word-break: break-word; /* prevent long words from overflowing on mobile */
+  word-break: break-word;
   overflow-wrap: break-word;
-  max-width: 100%; /* never wider than parent */
+  max-width: 100%;
 }
 
 p {
@@ -121,14 +123,14 @@ a {
 }
 
 button {
-  font-family: inherit;
+  font-family: var(--font-ui);
   cursor: pointer;
 }
 
 input,
 textarea,
 select {
-  font-family: inherit;
+  font-family: var(--font-ui);
 }
 
 * {
@@ -199,36 +201,67 @@ select {
 /* ------------------------------------------------------------------ */
 /* Fluid typography utility classes                                   */
 /* ------------------------------------------------------------------ */
-.h-display {
-  font-size: clamp(36px, 6vw, 72px);
-  line-height: 1.1;
+.type-display {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 8.5vw, 112px);
+  line-height: 0.97;
+  letter-spacing: -0.035em;
+  font-weight: 800;
 }
-.h-1 {
-  font-size: clamp(28px, 5vw, 52px);
-  line-height: 1.15;
+.type-h1 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5.5vw, 72px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  font-weight: 700;
 }
-.h-2 {
-  font-size: clamp(24px, 4vw, 40px);
-  line-height: 1.2;
+.type-h2 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 60px);
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  font-weight: 700;
 }
-.h-3 {
-  font-size: clamp(20px, 3vw, 28px);
-  line-height: 1.3;
-}
-.h-stat {
-  font-size: clamp(48px, 7vw, 80px);
-  line-height: 1;
+.type-h3 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.8vw, 32px);
+  line-height: 1.18;
+  letter-spacing: -0.015em;
   font-weight: 600;
+}
+.eyebrow {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent-cta);
+}
+.type-stat {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 8vw, 96px);
+  line-height: 0.95;
+  font-weight: 800;
 }
 
 /* Body line-measure */
 .measure {
-  max-width: 65ch;
+  max-width: 72ch;
 }
 
-/* Italic hint/subtitle */
+/* Werkwijze / Over body paragraphs — explicit Cormorant for pages that use inline styles */
+.editorial-body {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.85;
+  color: var(--text-secondary);
+}
+
+/* Italic hint/subtitle — Cormorant for editorial feel */
 .hint-italic {
+  font-family: var(--font-body);
   font-style: italic;
+  font-size: 1.0625rem;
   color: var(--text-tertiary);
 }
 
@@ -258,19 +291,23 @@ select {
 @keyframes fadeInUp {
   from {
     opacity: 0;
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Scroll-indicator gentle bounce */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.55; }
+  50%       { transform: translateX(-50%) translateY(6px); opacity: 1; }
 }
 
 @keyframes slideInRight {
@@ -377,19 +414,7 @@ section {
 /* Decorative big quote anchor                                         */
 /* ------------------------------------------------------------------ */
 .quote-anchor {
-  position: absolute;
-  top: -24px;
-  left: -12px;
-  color: var(--accent-cta);
-  font-family: var(--font-noto-serif), 'Noto Serif', Georgia, serif;
-  font-size: clamp(120px, 16vw, 200px);
-  line-height: 0.85;
-  font-weight: 700;
-  opacity: 0.5;
-  pointer-events: none;
-  user-select: none;
-  z-index: 0;
-  /* aria-hidden="true" is set in JSX — no CSS needed here */
+  display: none; /* removed from design — was causing visual overlap */
 }
 
 /* On mobile the quote-anchor at left:-12px bleeds outside the viewport
@@ -403,23 +428,10 @@ section {
 /* Monumental clipped numeral — wrapper hides top half so only the bottom
    portion of the giant numeral peeks out, acting as a typographic anchor. */
 .monu-num-wrap {
-  overflow: hidden;
-  display: block;
-  /* Reduced min from 80px → 48px so the numeral doesn't dominate on narrow screens */
-  font-size: clamp(48px, 12vw, 160px);
-  /* Height ~0.6em of the glyph (final visible band) */
-  height: 0.6em;
-  line-height: 1;
+  display: none; /* removed from design — replaced with small inline step labels */
 }
 .monu-num {
-  display: block;
-  font-size: 1em;
-  line-height: 1;
-  color: var(--accent-primary);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  /* Shift the glyph up so its top portion is clipped away. */
-  margin-top: -0.4em;
+  display: none;
 }
 
 /* clip-diagonal classes removed — clip-path: polygon() on sections caused
@@ -429,6 +441,11 @@ section {
 /* ------------------------------------------------------------------ */
 /* Nav-link hover underline                                           */
 /* ------------------------------------------------------------------ */
+/* UI elements keep Inter for legibility at small sizes */
+nav, header, .nav-link, .eyebrow-ui {
+  font-family: var(--font-ui);
+}
+
 .nav-link {
   position: relative;
   padding-bottom: 4px;
@@ -449,7 +466,7 @@ section {
 }
 
 /* ------------------------------------------------------------------ */
-/* Primary CTA hover lift                                             */
+/* Primary & secondary CTA hover lift                                  */
 /* ------------------------------------------------------------------ */
 .btn-primary {
   transition: background-color 150ms ease, transform 200ms ease-out,
@@ -459,129 +476,385 @@ section {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(241, 76, 29, 0.25);
 }
-
-/* ------------------------------------------------------------------ */
-/* Accordion panel transition                                          */
-/* ------------------------------------------------------------------ */
-.accordion-panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 250ms ease-out;
+.btn-secondary {
+  transition: background-color 200ms ease, border-color 200ms ease,
+    transform 200ms ease-out, box-shadow 200ms ease-out;
 }
-.accordion-panel.open {
-  max-height: 1200px;
+.btn-secondary:hover {
+  background: var(--bg-elevated) !important;
+  border-color: var(--border-strong) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(11, 31, 58, 0.12);
 }
 
 /* ------------------------------------------------------------------ */
-/* Score-circle stroke animation                                       */
+/* Scroll-reveal                                                       */
 /* ------------------------------------------------------------------ */
-.score-stroke {
-  transition: stroke-dashoffset 1000ms ease-out;
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 680ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 680ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Ensure pre-reduced-motion users see content */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* ------------------------------------------------------------------ */
-/* Dimension bar width animation                                       */
+/* Step-card & dimension-card hover                                   */
 /* ------------------------------------------------------------------ */
-.dim-bar {
-  width: 0;
-  transition: width 800ms ease-out;
+.step-card {
+  transition: border-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              background 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.step-card:hover {
+  border-top-color: var(--accent-cta) !important;
+  background: var(--bg-elevated) !important;
+  transform: translateY(-2px);
+}
+
+.dim-card {
+  transition: background 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dim-card:hover {
+  background: var(--bg-elevated) !important;
+  border-left-color: var(--accent-cta) !important;
+  transform: translateY(-2px);
+}
+.dim-card .dim-card-cta {
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+.dim-card:hover .dim-card-cta {
+  opacity: 1 !important;
 }
 
 /* ------------------------------------------------------------------ */
-/* Scroll indicator (hero)                                             */
+/* Voor-wie column hover                                               */
+/* ------------------------------------------------------------------ */
+.voor-wie-col {
+  transition: background 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.voor-wie-col:hover {
+  background: var(--bg-elevated) !important;
+}
+
+/* ------------------------------------------------------------------ */
+/* FAQ 2-col sticky layout                                            */
+/* ------------------------------------------------------------------ */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: clamp(48px, 7vw, 96px);
+  align-items: start;
+}
+.faq-sticky {
+  position: sticky;
+  top: 96px;
+}
+@media (max-width: 768px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+  .faq-sticky {
+    position: static;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Responsive stats grid (3-col → 1-col on mobile)                   */
+/* ------------------------------------------------------------------ */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 640px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-grid > * {
+    border-right: none !important;
+    border-top: 3px solid var(--border-subtle) !important;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Scroll indicator — animated bounce                                 */
 /* ------------------------------------------------------------------ */
 .scroll-indicator {
-  animation: bounceDown 2s ease-in-out infinite;
+  animation: scrollBounce 2.2s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-indicator {
+    animation: none;
+    opacity: 0.5;
+  }
 }
 
 /* ------------------------------------------------------------------ */
-/* Skeleton                                                            */
+/* Custom cursor — hide native cursor on pointer:fine devices         */
+/* Re-enable text cursor for inputs so typing UX is preserved         */
 /* ------------------------------------------------------------------ */
-.skeleton {
-  background: var(--bg-elevated);
-  animation: pulse 1.5s ease-in-out infinite;
+@media (pointer: fine) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+  input, textarea, select, [contenteditable] {
+    cursor: text !important;
+  }
+}
+
+
+/* ------------------------------------------------------------------ */
+/* Contact cards                                                        */
+/* ------------------------------------------------------------------ */
+.contact-card {
+  transition: border-top-color 200ms ease, background 200ms ease;
+}
+.contact-card:hover {
+  border-top-color: var(--accent-cta) !important;
 }
 
 /* ------------------------------------------------------------------ */
-/* Mobile drawer slide                                                 */
+/* Over page — timeline responsive                                     */
 /* ------------------------------------------------------------------ */
+@media (max-width: 480px) {
+  .timeline-dot {
+    display: none;
+  }
+  .timeline-year {
+    font-size: 0.75rem !important;
+  }
+}
+
+/* ================================================================== */
+/* MOBILE DRAWER NAV                                                   */
+/* ================================================================== */
 .drawer-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(16, 44, 84, 0.80);
-  backdrop-filter: blur(8px);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 250ms ease-out;
+  background: rgba(11, 31, 58, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   z-index: 40;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 260ms ease, visibility 260ms ease;
 }
 .drawer-backdrop.open {
   opacity: 1;
-  pointer-events: auto;
+  visibility: visible;
 }
 .drawer-panel {
   position: fixed;
   top: 0;
   right: 0;
-  height: 100%;
-  width: 320px;
-  max-width: 100%;
-  background: var(--bg-secondary);
-  border-left: 1px solid var(--border-subtle);
-  transform: translateX(100%);
-  transition: transform 250ms ease-out;
+  bottom: 0;
+  width: min(340px, 88vw);
+  background: var(--bg-primary);
+  border-left: 1px solid var(--border-medium);
   z-index: 50;
-  display: flex;
-  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: -8px 0 32px rgba(11, 31, 58, 0.12);
 }
 .drawer-panel.open {
   transform: translateX(0);
 }
 
-/* ------------------------------------------------------------------ */
-/* Reduced motion                                                      */
-/* ------------------------------------------------------------------ */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+/* ================================================================== */
+/* FOOTER LINK HOVER                                                   */
+/* ================================================================== */
+.footer-link {
+  font-family: var(--font-ui);
+  transition: color 150ms ease;
+}
+.footer-link:hover {
+  color: var(--text-primary) !important;
+}
+
+/* ================================================================== */
+/* HERO DECORATIVE CROSSHAIR — hide on mobile                         */
+/* ================================================================== */
+@media (max-width: 767px) {
+  .hero-crosshair-deco {
+    display: none !important;
   }
 }
 
-/* ------------------------------------------------------------------ */
-/* Print styles                                                        */
-/* ------------------------------------------------------------------ */
-@media print {
-  html,
-  body {
-    background: #ffffff !important;
-    color: #000000 !important;
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
+/* ================================================================== */
+/* OFFERING LAYOUT (Werkwijze) — responsive                           */
+/* ================================================================== */
+@media (max-width: 640px) {
+  .offering-layout {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
   }
-  header,
-  footer,
-  nav,
+  .offering-number {
+    font-size: clamp(48px, 14vw, 64px) !important;
+    margin-bottom: 16px !important;
+    line-height: 1 !important;
+  }
+}
+
+/* ================================================================== */
+/* RESPONSIVE BODY FONT & GLOBAL MOBILE SCALE                         */
+/* ================================================================== */
+@media (max-width: 767px) {
+  body {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+
+  /* Reduce all section paddingBlock via overriding clamp minimums */
+  /* (sections use inline clamp() — we can't override inline, but we
+     set a CSS custom property that inline styles can reference if needed) */
+  :root {
+    --section-pad-min: 48px;
+  }
+
+  /* Eyebrow stays legible */
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+  }
+
+  /* type-display: smaller minimum on small phones */
+  .type-display {
+    font-size: clamp(38px, 11vw, 72px);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .type-h1 {
+    font-size: clamp(30px, 9vw, 56px);
+  }
+
+  .type-h2 {
+    font-size: clamp(26px, 7vw, 48px);
+  }
+
+  .type-h3 {
+    font-size: clamp(18px, 5vw, 26px);
+  }
+
+  .type-stat {
+    font-size: clamp(44px, 12vw, 72px);
+  }
+}
+
+/* ================================================================== */
+/* STATS GRID — override inline border styles on mobile               */
+/* ================================================================== */
+@media (max-width: 640px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-grid > * {
+    border-right: none !important;
+  }
+  .stats-grid > *:first-child {
+    border-top: 3px solid var(--accent-cta) !important;
+  }
+  .stats-grid > *:not(:first-child) {
+    border-top: 1px solid var(--border-medium) !important;
+  }
+}
+
+/* ================================================================== */
+/* EXPERTISE STRIP — scroll on mobile                                  */
+/* ================================================================== */
+.expertise-strip {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.expertise-strip::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================================================================== */
+/* VOOR WIE — fix grid on narrow tablets                              */
+/* ================================================================== */
+@media (max-width: 560px) {
+  .voor-wie-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ================================================================== */
+/* DIMENSION CARDS — single column on narrow mobile                   */
+/* ================================================================== */
+@media (max-width: 480px) {
+  .dim-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ================================================================== */
+/* SOCIAL PROOF GRID — single column on mobile                        */
+/* ================================================================== */
+@media (max-width: 560px) {
+  .social-proof-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ================================================================== */
+/* MID-PAGE CTA — stack on mobile                                     */
+/* ================================================================== */
+@media (max-width: 560px) {
+  .mid-cta-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+/* ================================================================== */
+/* FINAL CTA BUTTONS — full-width stack on mobile                     */
+/* ================================================================== */
+@media (max-width: 480px) {
+  .cta-button-row {
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .cta-button-row > * {
+    width: 100% !important;
+    justify-content: center;
+  }
+}
+
+/* ================================================================== */
+/* ACCORDION — better mobile padding                                   */
+/* ================================================================== */
+@media (max-width: 640px) {
+  .accordion-item {
+    padding-inline: 0 !important;
+  }
+}
+
+/* ================================================================== */
+/* PRINT — hide decorative elements                                   */
+/* ================================================================== */
+@media print {
+  .hero-crosshair-deco,
+  .grain-overlay::before,
+  .scroll-indicator,
   .no-print {
     display: none !important;
-  }
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  section,
-  div,
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: inherit !important;
   }
 }

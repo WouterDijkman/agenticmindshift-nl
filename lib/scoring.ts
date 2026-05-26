@@ -18,9 +18,9 @@ export interface ScoreResult {
 
 const dimensionMap: Record<Dimension, string[]> = {
   DealVelocity: ['Q6'],
-  PortfolioIntelligence: ['Q8', 'Q9', 'Q11'],
+  PortfolioIntelligence: ['Q8', 'Q9', 'Q10', 'Q11'],
   BiasDetection: ['Q7'],
-  AIReadiness: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q10'],
+  AIReadiness: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5'],
   CapacityEngineering: ['Q12', 'Q15'],
   KnowledgeRetention: ['Q13', 'Q14'],
 };
@@ -75,33 +75,38 @@ export function calculateScores(answers: Answers): ScoreResult {
   };
 }
 
-export type OfferType = 'A' | 'B' | 'C' | 'D' | 'none';
+export type OfferType = 'A' | 'B' | 'C' | 'D' | 'E' | 'none';
 
 export const offerMap: Record<OfferType, { name: string; description: string }> = {
   A: {
     name: 'Portfolio Intelligence',
     description:
-      'Doorlopende portfolio-intelligence over uw deelnemingen, met maandelijkse MBR-rapportage en AI-substitutiemonitoring.',
+      'Doorlopende portfolio-intelligence over uw deelnemingen, met maandelijkse rapportage en vroegtijdige signalering van onderprestatie en AI-substitutierisico. Factum Capital M3.',
   },
   B: {
     name: 'AI Due Diligence',
     description:
-      'Een afgebakend AI-due-diligence-traject per acquisitie, met expliciete modellering van AI-substitutierisico in uw entry-multiple.',
+      'Een uitgebreid analytisch fundament voor uw volgende acquisitie — van IM-screening tot closing. Gecertificeerde adviseurs voor formele sign-off. Factum Capital M1.',
   },
   C: {
     name: 'Fractional AI Officer',
     description:
-      'Een fractional AI-officer, 2-3 dagen per maand, die portfoliobedrijven begeleidt bij AI-adoptie en bias-toetsing.',
+      'Een fractional AI-officer, 2–3 dagen per maand, voor vroegtijdige interventie bij portfoliobedrijven. Bij signalen van financiële stress: koppeling met restructuring consultants via Factum Capital M4.',
   },
   D: {
     name: 'Strategic Enablement Masterclasses',
     description:
-      'Eenmalige masterclasses voor uw deal-team over AI-substitutierisico, bias-detectie en MBR-discipline.',
+      'Eenmalige masterclasses voor uw team over analytische structuur, AI-substitutierisico en bias-detectie. Direct toepasbaar op uw volgende deal of dossier.',
+  },
+  E: {
+    name: 'Factum Capital — Financieringsmemo',
+    description:
+      'Analytisch onderbouwde financieringsmemo voor bankgesprekken, leningen of investeerderspresentaties. Ook voor kleinere financieringsaanvragen. Gecertificeerde adviseurs voor formele ondertekening. Factum Capital M2.',
   },
   none: {
-    name: 'Geen begeleiding',
+    name: 'Geen aanbeveling',
     description:
-      'Op basis van uw antwoord heeft u op dit moment geen externe begeleiding nodig. U kunt de scorecard later opnieuw doen.',
+      'Op basis van uw antwoorden is er op dit moment geen specifiek traject van toepassing. U kunt de quickscan later opnieuw doen.',
   },
 };
 

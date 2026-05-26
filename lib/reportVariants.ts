@@ -2,7 +2,7 @@ import type { OfferType } from './scoring';
 import type { Answers } from '../store/assessmentStore';
 import { getQuestion } from './questions';
 
-export type VariantId = 'A' | 'B' | 'C' | 'D';
+export type VariantId = 'A' | 'B' | 'C' | 'D' | 'E';
 
 export interface Intervention {
   title: string;
@@ -26,10 +26,10 @@ export const variants: Record<VariantId, VariantContent> = {
     id: 'A',
     offerName: 'Portfolio Intelligence',
     interpretation: (raw) =>
-      `Uw score op Portfolio Intelligence is ${raw} van 15 punten. Dit is de dimensie waar de meeste partijen in de Nederlandse lower-mid market significant rendement verliezen, doorgaans onbewust. Wat we zien is dat uw MBR-cyclus draait, maar dat variantie-analyse niet diep genoeg wordt herleid om operationele bijsturing mogelijk te maken voordat een kwartaal verloren is. Concreet: een portefeuille van vijf bedrijven met dit profiel laat in onze inschatting tussen 80 en 200 basispunten IRR per jaar onbenut.`,
+      `Uw score op Analytische Kwaliteit is ${raw} van 20 punten. Dit is de dimensie waar de meeste partijen in de Nederlandse lower-mid market structureel rendement verliezen — doorgaans onbewust. Uw MBR-cyclus draait, maar vroegtijdige signalering ontbreekt: variantie-analyse gaat niet diep genoeg om bij te sturen voordat een kwartaal verloren is. Concreet: een portefeuille van vijf bedrijven met dit profiel laat tussen 80 en 200 basispunten IRR per jaar onbenut. Factum Capital M3 (Portfolio review) is specifiek gebouwd voor dit scenario — met gedeeld dossier en koppeling naar gecertificeerde adviseurs waar nodig.`,
     interventions: [
       {
-        title: 'Herontwerp van uw MBR-rapportagestructuur',
+        title: 'Herontwerp uw MBR-rapportagestructuur',
         body: 'Definieer per portfoliobedrijf de drie tot vijf leading indicators die als waarschuwingssignaal werken, los van de standaard P&L-variantie.',
       },
       {
@@ -37,7 +37,7 @@ export const variants: Record<VariantId, VariantContent> = {
         body: 'Tot welk operationeel niveau is de oorzaak herleidbaar? Twee maanden werk, blijvende impact.',
       },
       {
-        title: 'Maandelijkse peer-benchmark, ook handmatig',
+        title: 'Maandelijkse peer-benchmark — ook handmatig',
         body: 'Tien minuten per portfoliobedrijf per maand. Het ritme is belangrijker dan de techniek.',
       },
     ],
@@ -47,7 +47,7 @@ export const variants: Record<VariantId, VariantContent> = {
     id: 'B',
     offerName: 'AI Due Diligence',
     interpretation: (raw) =>
-      `Uw score op AI Readiness is ${raw} van 30 punten. Wat opvalt is dat AI-substitutierisico nog niet systematisch in uw entry-multiple wordt gemodelleerd, en in board-meetings van uw portfoliobedrijven niet expliciet wordt geagendeerd. Concreet: bij uw drie meest recente acquisities is de kans dat één van hen de komende 24 maanden materiële marge-erosie door AI-substitutie ondervindt, hoger dan u nu inschat.`,
+      `Uw score op AI Readiness is ${raw} van 25 punten. Wat opvalt is dat AI-substitutierisico nog niet systematisch in uw deal-analyse wordt gemodelleerd, en dat uw analytisch fundament per dossier verschilt. Concreet: bij uw drie meest recente acquisities is de kans dat één ervan de komende 24 maanden materiële marge-erosie ondervindt, hoger dan u nu inschat. Factum Capital M1 (Acquisitie) levert het uitgebreide analytisch fundament voor uw volgende deal — inclusief gecertificeerde adviseurs (RA/RB/advocaten) voor formele sign-off.`,
     interventions: [
       {
         title: 'AI-substitutie-framework per functiegroep',
@@ -58,29 +58,29 @@ export const variants: Record<VariantId, VariantContent> = {
         body: "Drie scenario's: 5%, 15%, 30% erosie. Reken door naar entry-multiple-aanpassing.",
       },
       {
-        title: 'DD-vragenlijst uitbreiden met AI-readiness van het target',
-        body: 'Welke AI-tools gebruikt het target al? Welk percentage van het personeel werkt actief met AI?',
+        title: 'DD-vragenlijst uitbreiden met analytische structuur',
+        body: 'Welke data levert het target aan? Welk percentage van de rapportage is geautomatiseerd? Dit bepaalt mee de kwaliteit van het Factum-dossier.',
       },
     ],
-    price: 'vanaf 12.500 euro per deal, doorlooptijd 2-3 weken',
+    price: 'vanaf 12.500 euro per deal, doorlooptijd 2–3 weken',
   },
   C: {
     id: 'C',
     offerName: 'Fractional AI Officer',
     interpretation: (raw) =>
-      `Uw score op Knowledge Retention is ${raw} van 10 punten. Wat we zien is dat kennis uit DD-trajecten en portfoliobeheer grotendeels weglekt: weg met externe rapporten die niet structureel worden verwerkt, weg met dealmakers die uw organisatie verlaten. Concreet: in onze inschatting verliest u tussen 15 en 25 werkdagen per jaar aan herontdekking van wat u al wist.`,
+      `Uw score op Knowledge Retention is ${raw} van 10 punten. Kennis weglekt op twee manieren: via externe rapporten die niet structureel worden verwerkt, en via medewerkers die uw organisatie verlaten. Bij signalen van financiële stress bij een deelneming is die kennislekkage extra kostbaar — de window voor tijdige bijsturing is klein. Factum Capital M4 (Pre-IBR/WHOA) koppelt gespecialiseerde restructuring consultants op het moment dat een indicatieve doorlichting aangeeft dat een formeel traject nodig is.`,
     interventions: [
       {
-        title: 'Centraal kennis-repository met DD-output',
-        body: 'Niet als opslag, maar als doorzoekbare en gestructureerde kennisbasis.',
+        title: 'Centraal kennis-repository met dossier-output',
+        body: 'Niet als opslag, maar als doorzoekbare kennisbasis die bij de volgende situatie direct inzetbaar is.',
       },
       {
-        title: 'Sector-specifieke playbooks per type deal',
-        body: 'Voor uw vijf meest voorkomende deal-types: een levend document met aannames, modellen en leerpunten.',
+        title: 'Sector-specifieke playbooks per type situatie',
+        body: 'Voor uw vijf meest voorkomende scenario\'s: een levend document met aannames, modellen en leerpunten.',
       },
       {
-        title: 'Onboarding-proces voor nieuwe dealmakers',
-        body: 'Onboarding-tijd zakt van zes maanden naar zes weken.',
+        title: 'Vroege stresstesten per deelneming',
+        body: 'Twee leading indicators per bedrijf die signaleren of een diepere doorlichting nodig is — vóór het te laat is.',
       },
     ],
     price: 'vanaf 6.500 euro per maand, looptijd minimaal 6 maanden',
@@ -89,27 +89,48 @@ export const variants: Record<VariantId, VariantContent> = {
     id: 'D',
     offerName: 'Strategic Enablement Masterclasses',
     interpretation: () =>
-      `Uw scores op Capacity Engineering en Deal Velocity wijzen op een structureel patroon: uw team is gekwalificeerd, maar wordt belemmerd door operationele frictie. Vergelijkbare partijen die wel met AI werken zien hun screening-capaciteit verdubbelen zonder team-uitbreiding.`,
+      `Uw scores op Capacity Engineering en Deal Velocity wijzen op een structureel patroon: uw team is gekwalificeerd, maar wordt belemmerd door operationele frictie. Vergelijkbare partijen die analytische processen gestructureerder aanpakken, zien hun screening- en analysecapaciteit verdubbelen zonder team-uitbreiding — relevant voor elk van de vier Factum Capital momenten.`,
     interventions: [
       {
-        title: 'AI-augmented screening-protocol',
-        body: 'U verviervoudigt uw screening-capaciteit zonder kwaliteitsverlies.',
+        title: 'AI-augmented analyse-protocol',
+        body: 'U verviervoudigt uw analysecapaciteit zonder kwaliteitsverlies — van deal-screening tot financieringsmemo.',
       },
       {
-        title: "Template-bibliotheek voor IC-memo's",
-        body: 'Modulaire bouwstenen die per deal worden samengesteld. Vermindert schrijftijd met 60%.',
+        title: 'Template-bibliotheek voor dossiers en memo\'s',
+        body: 'Modulaire bouwstenen die per situatie worden samengesteld. Vermindert voorbereidingstijd met 60%.',
       },
       {
         title: 'Maandelijkse capaciteit-audit',
-        body: 'Welk werk had AI kunnen overnemen?',
+        body: 'Welk analytisch werk had AI of structuur kunnen overnemen? Tien minuten, blijvend inzicht.',
       },
     ],
     price: 'vanaf 4.500 euro per workshop, voor een team van maximaal 8 personen',
   },
+  E: {
+    id: 'E',
+    offerName: 'Factum Capital — Financieringsmemo',
+    interpretation: (raw) =>
+      `Uw score op Analytische Kwaliteit is ${raw} van 20 punten. Wat opvalt is dat uw financierings- of deal-dossiers nog niet consequent op alle relevante dimensies zijn opgebouwd. Dit leidt tot langere doorlooptijden, onnodige herzieningsronden met de bank of investeerder, en een minder sterke onderhandelingspositie. Een goed gefinancierd financieringsmemo is niet alleen een document — het is uw analytisch fundament. Factum Capital M2 (Financiering) levert dat fundament en koppelt de gecertificeerde adviseurs die formeel ondertekenen waar vereist.`,
+    interventions: [
+      {
+        title: 'Structureer uw financieringsmemo op vaste dimensies',
+        body: 'Een bankklaar memo heeft minimaal vijf lagen: historische performance, forward-looking aannames, marktpositie, risicoprofiel en managementkwaliteit.',
+      },
+      {
+        title: 'Bouw een sectorvergelijking in — ook handmatig',
+        body: "Tien vergelijkbare bedrijven op drie ratio's. Twee uur werk. Het verschil tussen 'wij geloven in deze onderneming' en 'de markt bevestigt dit profiel'.",
+      },
+      {
+        title: 'Koppel uw analytisch dossier aan gecertificeerde adviseurs',
+        body: 'Een bank-proof presentatie vereist een formele financieel adviseur of accountant. Bouw het dossier zo op dat die adviseur in twee uur kan instappen — niet in twee weken.',
+      },
+    ],
+    price: 'op maat per financieringsaanvraag · via Factum Capital M2 deal intelligence dienst',
+  },
 };
 
 /**
- * Map the assigned offer (A/B/C/D/none) to its variant content.
+ * Map the assigned offer (A/B/C/D/E/none) to its variant content.
  * Returns null if no variant applies (offer === 'none').
  */
 export function variantForOffer(offer: OfferType): VariantContent | null {
@@ -118,16 +139,15 @@ export function variantForOffer(offer: OfferType): VariantContent | null {
 }
 
 /**
- * Raw point total for a given variant's "headline" dimension. The numbers in
- * the [X] interpretation are denominated against the variant-specific max
- * (Portfolio Intelligence = 15, AI Readiness = 30, Knowledge Retention = 10).
+ * Raw point total for a given variant's "headline" dimension.
  */
 export function rawScoreForVariant(answers: Answers, variant: VariantId): number {
   const qIds: Record<VariantId, string[]> = {
-    A: ['Q8', 'Q9', 'Q11'],
-    B: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q10'],
+    A: ['Q8', 'Q9', 'Q10', 'Q11'],
+    B: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5'],
     C: ['Q13', 'Q14'],
     D: ['Q12', 'Q15', 'Q6'],
+    E: ['Q8', 'Q10', 'Q6'],
   };
   return qIds[variant].reduce((sum, id) => {
     const letter = answers[id];
@@ -151,6 +171,7 @@ export function weakestNormalizedForVariant(
     B: 'AIReadiness',
     C: 'KnowledgeRetention',
     D: 'CapacityEngineering',
+    E: 'PortfolioIntelligence',
   };
   return byDimension[dimByVariant[variant]] ?? 0;
 }

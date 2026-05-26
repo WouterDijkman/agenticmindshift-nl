@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, ReactNode } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export interface AccordionItem {
   id: string;
@@ -11,6 +12,8 @@ export interface AccordionItem {
 interface AccordionProps {
   items: AccordionItem[];
 }
+
+const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function Accordion({ items }: AccordionProps) {
   const [openId, setOpenId] = useState<string | null>(null);
@@ -24,8 +27,10 @@ export default function Accordion({ items }: AccordionProps) {
             key={item.id}
             style={{
               background: 'var(--bg-elevated)',
-              border: '1px solid var(--border-subtle)',
+              border: '1px solid',
+              borderColor: isOpen ? 'var(--border-medium)' : 'var(--border-subtle)',
               borderRadius: '4px',
+              transition: 'border-color 200ms ease',
             }}
           >
             <button
@@ -38,34 +43,48 @@ export default function Accordion({ items }: AccordionProps) {
               style={{ color: 'var(--text-primary)' }}
             >
               <span className="text-base sm:text-lg font-semibold">{item.question}</span>
-              <span
+              <motion.span
                 aria-hidden="true"
-                className="ml-4 text-xl"
+                animate={{ rotate: isOpen ? 45 : 0 }}
+                transition={{ duration: 0.22, ease }}
                 style={{
-                  color: 'var(--accent-primary)',
-                  transition: 'transform 0.2s ease',
-                  transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)',
+                  color: isOpen ? 'var(--accent-cta)' : 'var(--accent-primary)',
                   display: 'inline-block',
                   lineHeight: 1,
+                  fontSize: '1.25rem',
+                  marginLeft: '16px',
+                  flexShrink: 0,
                 }}
               >
                 +
-              </span>
+              </motion.span>
             </button>
-            <div
-              id={`accordion-panel-${item.id}`}
-              role="region"
-              aria-labelledby={`accordion-trigger-${item.id}`}
-              aria-hidden={!isOpen}
-              className={`accordion-panel ${isOpen ? 'open' : ''}`}
-            >
-              <div
-                className="px-5 pb-5 pt-1"
-                style={{ color: 'var(--text-tertiary)' }}
-              >
-                {item.answer}
-              </div>
-            </div>
+
+            <AnimatePresence initial={false}>
+              {isOpen && (
+                <motion.div
+                  id={`accordion-panel-${item.id}`}
+                  role="region"
+                  aria-labelledby={`accordion-trigger-${item.id}`}
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.32, ease }}
+                  style={{ overflow: 'hidden' }}
+                >
+                  <div
+                    className="px-5 pb-5 pt-1"
+                    style={{
+                      fontSize: '0.9375rem',
+                      lineHeight: 1.75,
+                      color: 'var(--text-tertiary)',
+                    }}
+                  >
+                    {item.answer}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         );
       })}
