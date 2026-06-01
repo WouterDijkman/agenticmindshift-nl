@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import SketchDivider from '@/components/icons/SketchDivider';
 import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
@@ -7,187 +8,90 @@ import WerkwijzeOnboardingSteps from './WerkwijzeOnboardingSteps';
 export const metadata: Metadata = {
   title: 'Werkwijze & Investering',
   description:
-    'Zes manieren waarop u met Agentic Mindshift werkt: van laagdrempelige Sparring Sessie en Masterclass tot Fractional AI Officer, AI Due Diligence, Portfolio Intelligence en volledig maatwerk.',
+    'Vier helder gedifferentieerde manieren waarop u met Agentic Mindshift werkt — van een laagdrempelige Sparring Sessie tot een Fractional AI Officer en AI Due Diligence per deal of in volume.',
 };
 
-type Tier = 'Instap' | 'Embedded' | 'Kern' | 'Doorlopend' | 'Maatwerk';
+interface DealVariant {
+  label: string;
+  price: string;
+  unit: string;
+  discount?: string;
+}
+
+interface MethodologyNote {
+  prefix: string;
+  linkLabel: string;
+  href: string;
+  suffix?: string;
+}
 
 interface Offering {
-  number: string;
-  tier: Tier;
+  badge: string;
   title: string;
+  situation: string;
   price: string;
-  outcome: string;
-  roi: string;
-  duration: string;
-  target: string;
-  paragraphs: string[];
+  priceNote: string;
   ctaLabel: string;
+  ctaHref: string;
   featured?: boolean;
+  variants?: DealVariant[];
+  variantsCaption?: string;
+  methodology?: MethodologyNote;
 }
 
 const offerings: Offering[] = [
   {
-    number: '00',
-    tier: 'Instap',
+    badge: 'Instap · eenmalig',
     title: 'AI Sparring Sessie',
-    price: 'Vanaf €395 per sessie',
-    outcome:
-      'Na deze sessie: een korte schriftelijke samenvatting met drie concrete vervolgstappen — direct toepasbaar op uw eerstvolgende dossier of beslissing.',
-    roi: 'Eén heldere blinde vlek geadresseerd vóór de volgende stap. Laagdrempelig, geen vervolgverplichting.',
-    duration: '60 minuten · online of op locatie',
-    target: 'PE-partners, M&A-directors en bestuurders die eerst willen toetsen',
-    paragraphs: [
-      'Een geconcentreerd gesprek van 60 minuten over één concrete vraag — een aanstaande deal, een onderpresterend portfoliobedrijf, een AI-keuze in uw organisatie, of een twijfel die op de IC- of MT-agenda blijft staan. Geen pitch, geen tooling-demonstratie.',
-      'U krijgt binnen drie werkdagen een korte schriftelijke samenvatting met de drie meest urgente vervolgstappen, gekoppeld aan uw eigen situatie. Als u na de samenvatting wilt opschalen naar een Masterclass, Fractional AI Officer-traject, AI Due Diligence of Portfolio Intelligence, wordt de investering verrekend.',
-    ],
-    ctaLabel: 'Boek een Sparring Sessie →',
-  },
-  {
-    number: '01',
-    tier: 'Instap',
-    title: 'Strategic Enablement Masterclass',
-    price: '€4.500 per workshop',
-    outcome:
-      'Na deze dag: uw dealteam of MT past de drie technieken direct toe op het eerstvolgende dossier — zonder transitiefase.',
-    roi: 'Direct toepasbaar op uw meest recente deal of dossier. Geen voorbereiding nodig — geen abstracte theorie.',
-    duration: 'Eendaags, max 8 personen',
-    target: 'Dealteams, investmentcommittees en MT-teams',
-    paragraphs: [
-      'Eendaagse masterclasses voor een dealteam, investmentcommittee of managementteam, met maximaal acht deelnemers. Drie modules: AI-substitutierisico in entry-multiples of bedrijfsmodellen, bias-detectie in management-aannames, en MBR-discipline voor portfolio- of organisatie-intelligence.',
-      'De masterclass is bewust kort en gericht. Geen brede AI-introductie, geen tooling-demonstraties. Wel concrete oefeningen op uw eigen recente deal of dossier, zodat de werkwijze meteen in uw bestaande proces past.',
-      'Aanvullend op de workshop ontvangt elke deelnemer drie maanden lang een korte maandelijkse update over toepasselijke ontwikkelingen, gevolgd door een optionele follow-up sessie na zes maanden.',
-    ],
-    ctaLabel: 'Reserveer een masterclass-datum →',
-  },
-  {
-    number: '02',
-    tier: 'Embedded',
-    title: 'Fractional AI Officer',
-    price: '€3.500 – €5.500 per maand',
-    outcome:
-      'Na drie maanden: een organisatie met een eigenaar voor AI-strategie en -adoptie op MT-niveau — zonder fulltime aanstelling, inwerktraject of overhead.',
-    roi: 'Gelijkwaardig aan meerdere dagen senior AI-leiderschap per maand. Voorkomt foute leveranciers-keuzes en versnelt structurele adoptie — beide bewegingen waarvan de waarde de investering ruimschoots overschrijdt.',
-    duration: 'Minimum 3 maanden · 2 MT-vergaderingen + 2–3 dagen per maand',
-    target: 'Scale-ups en middelgrote bedrijven (50–500 FTE)',
-    paragraphs: [
-      'Een embedded rol op MT-niveau voor organisaties die AI structureel willen inbedden, maar geen fulltime CTO of AI-directeur kunnen of willen aanstellen. Niet als externe adviseur in een advies-rol, maar als operationeel verantwoordelijke voor de AI-agenda binnen uw bedrijf.',
-      'Concreet ontvangt u: deelname aan MT-vergaderingen (2× per maand), eigenaarschap over AI-strategie en roadmap, leveranciersselectie en contractonderhandeling, team coaching en AI-enablement, plus een maandelijkse board update over AI-voortgang. Investering tussen €3.500 en €5.500 per maand, afhankelijk van intensiteit en organisatiegrootte.',
-      'Minimum drie maanden, omdat ritme zich pas zet na enkele maandcycli. Wij werken met een beperkt aantal opdrachtgevers tegelijk om de kwaliteit van begeleiding te waarborgen.',
-    ],
-    ctaLabel: 'Bespreek de fit voor uw organisatie →',
-    featured: true,
-  },
-  {
-    number: '03',
-    tier: 'Kern',
-    title: 'AI Due Diligence',
-    price: '€12.500 per deal',
-    outcome:
-      'Na dit traject: een uitgebreid analytisch fundament onder uw IC-stuk — inclusief AI-substitutierisico en entry-multiple-correctie.',
-    roi: 'Een correct gecalibreerde entry-multiple op een €5M EBITDA-target levert bij 0,5× correctie €2,5M op. Het analytisch fundament maakt formele adviseurs sneller en gerichter.',
-    duration: '2–3 weken doorlooptijd',
-    target: 'NL MKB-deals €5M–€50M',
-    paragraphs: [
-      'Een uitgebreid buy-side analytisch rapport voor NL MKB-deals van €5M–€50M. Doorlooptijd 2–3 weken. Aangedreven door het Factum Capital-platform dat alle relevante dimensies systematisch doorlicht: financial, operational, commercial én AI-substitutierisico.',
-      'De output is een uitgebreid analytisch fundament dat naast uw IC-stuk wordt gelegd. Dit is geen bank-proof due diligence met formele handtekening — dat is de rol van gecertificeerde adviseurs (RA/RB/advocaten) die Factum inschakelt waar sign-off vereist is. Het Factum-rapport fungeert als gedeeld dossier: adviseurs kunnen gerichter en sneller werken omdat het analytische grondwerk al gedaan is.',
-      'Dit traject fungeert tevens als pilot voor het Factum Capital-platform: elke opdracht levert u niet alleen een rapport op, maar ook direct inzicht in hoe het systeem werkt — zonder onboarding of abonnement. Een correctie van 0,5× entry-multiple op een €5M EBITDA-target dekt de kosten van de analyse ruimschoots.',
-    ],
-    ctaLabel: 'Start mijn AI Due Diligence →',
-  },
-  {
-    number: '04',
-    tier: 'Doorlopend',
-    title: 'Portfolio Intelligence voor PE',
-    price: '€6.500 – €8.500 per maand',
-    outcome:
-      'Na zes maanden: een maandelijks ritme waarin onderprestatie binnen 30 dagen zichtbaar is in plaats van bij jaarrapportage — plus optioneel een fractional rol in uw dealteam.',
-    roi: 'Eén tijdig gesignaleerde variantie-afwijking dekt bij de meeste portefeuilles de jaarkosten.',
-    duration: 'Minimum 6 maanden',
-    target: "PE-firma's en buy-and-build platformen met 50–500M AUM",
-    paragraphs: [
-      'Een doorlopende intelligence-laag bovenop uw bestaande MBR-cyclus. Maandelijks ontvangt u een gestructureerd portfolio-rapport dat de zes-dimensies-baseline van de scorecard bijhoudt over al uw deelnemingen, plus peer-benchmark en AI-substitutiemonitoring per portfoliobedrijf.',
-      'Het rapport is niet bedoeld om de MBR te vervangen, maar om de blinde vlekken zichtbaar te maken die in een reguliere MBR-cyclus niet aan bod komen. Onderprestatie wordt binnen een maand zichtbaar in plaats van pas bij jaarrapportage; AI-substitutierisico komt expliciet op de bestuursagenda; peer-vergelijking gaat automatisch.',
-      'Investering tussen €6.500 en €8.500 per maand, afhankelijk van portefeuilleomvang en of u aanvullend een fractional rol in uw dealteam wenst (2–3 dagen per maand aanwezig bij IC en MBR). Minimum zes maanden — het maandritme heeft tijd nodig om zich te zetten. Geen exclusiviteit per fonds; wel discretie binnen uw portefeuille.',
-    ],
-    ctaLabel: 'Plan een kennismaking →',
-  },
-  {
-    number: '05',
-    tier: 'Maatwerk',
-    title: 'Maatwerk-traject',
-    price: 'Op aanvraag',
-    outcome:
-      'Een traject dat aansluit op een vraagstuk dat zich niet in een standaardpakket laat vangen — opgebouwd uit dezelfde bouwstenen, in een ritme dat bij u past.',
-    roi: 'Geen abonnement zonder doel. Scope, doorlooptijd en investering worden vooraf vastgelegd in één heldere offerte.',
-    duration: 'In overleg',
-    target: 'Organisaties met een afwijkende scope, sector of governance-structuur',
-    paragraphs: [
-      'Niet elke vraag past in een standaardpakket. Een private investor die zowel zijn deal-flow als zijn family office wil professionaliseren. Een MT dat een AI-transformatie wil combineren met een carve-out. Een PE-fonds dat een specifieke sector wil doorlichten op AI-disruptie binnen één kwartaal.',
-      'In die gevallen bouwen wij een traject op uit de bestaande bouwstenen — Sparring, Masterclass, Fractional, Due Diligence en Portfolio Intelligence — in een combinatie en ritme dat bij uw situatie past. U ontvangt vooraf één heldere offerte met scope, doorlooptijd, deliverables en investering. Geen open einden, geen abonnement zonder doel.',
-    ],
-    ctaLabel: 'Bespreek uw maatwerk-vraag →',
-  },
-];
-
-// Tier-card data for the top-of-page pricing ladder
-const tierCards: {
-  tier: Tier;
-  badge: string;
-  title: string;
-  price: string;
-  scope: string;
-  bullets: string[];
-  ctaLabel: string;
-  ctaHref: string;
-  anchor: string;
-  featured?: boolean;
-}[] = [
-  {
-    tier: 'Instap',
-    badge: 'Instap · laagdrempelig',
-    title: 'AI Sparring Sessie',
+    situation:
+      'U wilt snel weten wat AI betekent voor uw bedrijf, uw deal of uw eerstvolgende beslissing.',
     price: 'Vanaf €395',
-    scope: '60 minuten · schriftelijke samenvatting',
-    bullets: [
-      'Eén concrete vraag bespreken',
-      'Korte schriftelijke samenvatting binnen 3 werkdagen',
-      'Vervolg-investering wordt verrekend',
-    ],
-    ctaLabel: 'Boek een Sparring Sessie →',
+    priceNote: '60–90 minuten · korte schriftelijke samenvatting',
+    ctaLabel: 'Boek een sessie →',
     ctaHref: 'https://cal.com/wwdijkman/intake-call',
-    anchor: '#sparring',
   },
   {
-    tier: 'Embedded',
-    badge: 'Meest gekozen · embedded',
-    title: 'Fractional AI Officer',
-    price: '€3.500 – €5.500 per maand',
-    scope: 'Min. 3 maanden · embedded op MT-niveau',
-    bullets: [
-      'Deelname MT-vergaderingen (2× per maand)',
-      'Eigenaarschap AI-strategie en roadmap',
-      'Voor scale-ups en mid-market (50–500 FTE)',
-    ],
-    ctaLabel: 'Bespreek de fit voor uw organisatie →',
+    badge: 'Projectmatig of retainer',
+    title: 'Consultancy, Workflow & Strategic Enablement',
+    situation:
+      'U wilt AI concreet inzetten in uw processen, workflows of organisatie — met implementatie, masterclasses en team-enablement.',
+    price: 'Vanaf €4.500',
+    priceNote: 'Per traject of doorlopend in retainer',
+    ctaLabel: 'Bespreek uw vraagstuk →',
     ctaHref: 'https://cal.com/wwdijkman/intake-call',
-    anchor: '#fractional',
+  },
+  {
+    badge: 'Embedded · doorlopend',
+    title: 'Fractional AI Officer',
+    situation:
+      'U wilt een AI-leider op MT-niveau zonder fulltime aanstelling — strategie, leveranciersselectie en team-enablement geborgd.',
+    price: '€3.500 – €5.500 / maand',
+    priceNote: 'Minimaal 3 maanden · MT-deelname en operationele eigenaarschap',
+    ctaLabel: 'Bespreek de fit →',
+    ctaHref: 'https://cal.com/wwdijkman/intake-call',
     featured: true,
   },
   {
-    tier: 'Maatwerk',
-    badge: 'Projectmatig & doorlopend',
-    title: 'Due Diligence & Portfolio',
-    price: '€6.500 – €12.500',
-    scope: 'Per deal of doorlopend per maand',
-    bullets: [
-      'AI Due Diligence — €12.500 per deal',
-      'Portfolio Intelligence — vanaf €6.500/mnd',
-      'Voor PE-firma’s en buy-and-build platformen',
-    ],
-    ctaLabel: 'Plan een vrijblijvende kennismaking →',
+    badge: 'Per deal of doorlopend',
+    title: 'AI Due Diligence & Portfolio',
+    situation:
+      'U doet M&A-deals of beheert een portfolio en wilt AI-substitutierisico structureel borgen in entry-multiples en MBR-cyclus.',
+    price: 'Vanaf €10.000 per deal',
+    priceNote: 'Of €6.500 – €8.500 / maand voor doorlopende portfolio-intelligence',
+    ctaLabel: 'Plan een kennismaking →',
     ctaHref: 'https://cal.com/wwdijkman/intake-call',
-    anchor: '#due-diligence',
+    variantsCaption: 'Meerdere deals? Volumetarieven:',
+    variants: [
+      { label: '1 deal', price: '€10.000', unit: 'losse deal' },
+      { label: '5 deals', price: '€42.500', unit: '€8.500 / deal', discount: '–15%' },
+      { label: '10 deals', price: '€80.000', unit: '€8.000 / deal', discount: '–20%' },
+    ],
+    methodology: {
+      prefix: 'Uitgevoerd via',
+      linkLabel: 'Factum Capital',
+      href: '/factum-capital',
+      suffix: ', ons gespecialiseerde M&A AI-platform.',
+    },
   },
 ];
 
@@ -198,8 +102,8 @@ export default function WerkwijzePage() {
         bgChar="03"
         bgCharSize="clamp(240px, 30vw, 460px)"
         eyebrow="Werkwijze & Investering"
-        heading="Zes manieren om samen te werken — u kiest het tempo"
-        subtext="Begin laagdrempelig met een Sparring Sessie of Masterclass. Bouw door naar een Fractional AI Officer-rol, een AI Due Diligence per deal, doorlopende Portfolio Intelligence — of een volledig maatwerk-traject. Elk traject begint met een heldere beginsituatie en eindigt met aantoonbaar resultaat."
+        heading="Vier manieren om samen te werken — u kiest het tempo"
+        subtext="Vier helder gedifferentieerde routes, gekozen op basis van uw situatie. Van een laagdrempelige Sparring Sessie tot een Fractional AI Officer of een AI Due Diligence — per deal of in volume."
         headingMaxWidth="800px"
       />
 
@@ -208,22 +112,24 @@ export default function WerkwijzePage() {
       <SketchDivider />
 
       {/* ═══════════════════════════════════════════
-          TIER LADDER — 3 pricing cards
+          OFFERING CARDS — 4 situational routes
       ═══════════════════════════════════════════ */}
       <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(64px, 9vw, 112px)' }}>
         <div className="container-medium">
           <div className="reveal" style={{ marginBottom: 'clamp(32px, 5vw, 56px)', maxWidth: '720px' }}>
             <p className="eyebrow" style={{ marginBottom: '16px' }}>Investering</p>
             <h2 className="type-h2" style={{ marginBottom: '16px' }}>
-              Welk traject past bij waar u nu staat?
+              Welke situatie past bij u?
             </h2>
-            <p style={{
-              fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-              fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
-              color: 'var(--text-secondary)',
-              lineHeight: 1.75,
-            }}>
-              Geen retainer-constructies zonder concreet doel. U start klein als dat past, of meteen op de hoofdroute — de investering rendeert per dossier of per maandcyclus, niet pas na jaren.
+            <p
+              style={{
+                fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
+                fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
+                color: 'var(--text-secondary)',
+                lineHeight: 1.75,
+              }}
+            >
+              Geen ellenlange productlijsten. Vier situaties, vier routes — u herkent uw vraag of u herkent hem niet. In beide gevallen volstaat één kennismakingsgesprek om de juiste route te bevestigen.
             </p>
           </div>
 
@@ -231,19 +137,19 @@ export default function WerkwijzePage() {
             className="tier-grid"
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))',
               gap: '1px',
               background: 'var(--border-medium)',
               border: '1px solid var(--border-medium)',
             }}
           >
-            {tierCards.map((card, i) => (
+            {offerings.map((o, i) => (
               <article
-                key={card.title}
+                key={o.title}
                 className="reveal tier-card"
                 style={{
-                  background: card.featured ? 'var(--accent-primary)' : 'var(--bg-primary)',
-                  color: card.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
+                  background: o.featured ? 'var(--accent-primary)' : 'var(--bg-primary)',
+                  color: o.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
                   padding: 'clamp(32px, 4vw, 44px)',
                   display: 'flex',
                   flexDirection: 'column',
@@ -252,82 +158,177 @@ export default function WerkwijzePage() {
                   transitionDelay: `${i * 80}ms`,
                 }}
               >
-                <span
-                  style={{
-                    fontSize: '10px',
-                    fontWeight: 800,
-                    letterSpacing: '0.18em',
-                    textTransform: 'uppercase',
-                    color: card.featured ? 'var(--accent-cta)' : 'var(--accent-cta)',
-                    lineHeight: 1,
-                  }}
-                >
-                  {card.badge}
-                </span>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px' }}>
+                  <span
+                    style={{
+                      fontSize: '10px',
+                      fontWeight: 800,
+                      letterSpacing: '0.18em',
+                      textTransform: 'uppercase',
+                      color: 'var(--accent-cta)',
+                      lineHeight: 1,
+                    }}
+                  >
+                    {o.badge}
+                  </span>
+                  {o.featured && (
+                    <span
+                      style={{
+                        fontSize: '9px',
+                        fontWeight: 800,
+                        letterSpacing: '0.14em',
+                        textTransform: 'uppercase',
+                        color: 'var(--accent-primary)',
+                        background: 'var(--accent-cta)',
+                        padding: '4px 8px',
+                        lineHeight: 1,
+                        flexShrink: 0,
+                      }}
+                    >
+                      Meest gekozen
+                    </span>
+                  )}
+                </div>
 
                 <h3
                   className="type-h3"
                   style={{
                     margin: 0,
-                    color: card.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
+                    color: o.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
                   }}
                 >
-                  {card.title}
+                  {o.title}
                 </h3>
 
                 <p
                   style={{
                     fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                    fontSize: '1rem',
-                    lineHeight: 1.6,
-                    color: card.featured ? 'rgba(247,242,235,0.78)' : 'var(--text-secondary)',
+                    fontSize: '1.0625rem',
+                    lineHeight: 1.65,
+                    color: o.featured ? 'rgba(247,242,235,0.86)' : 'var(--text-secondary)',
                     margin: 0,
-                    minHeight: '3em',
-                  }}
-                >
-                  {card.scope}
-                </p>
-
-                <ul
-                  style={{
-                    listStyle: 'none',
-                    padding: 0,
-                    margin: 0,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '10px',
                     flexGrow: 1,
                   }}
                 >
-                  {card.bullets.map((b) => (
-                    <li
-                      key={b}
-                      style={{
-                        display: 'flex',
-                        gap: '10px',
-                        fontSize: '0.9375rem',
-                        lineHeight: 1.55,
-                        color: card.featured ? 'rgba(247,242,235,0.86)' : 'var(--text-secondary)',
-                      }}
-                    >
-                      <span
+                  {o.situation}
+                </p>
+
+                {o.variants && (
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '6px',
+                      paddingTop: '4px',
+                    }}
+                  >
+                    {o.variantsCaption && (
+                      <p
                         style={{
-                          color: 'var(--accent-cta)',
-                          fontWeight: 800,
-                          flexShrink: 0,
+                          fontSize: '10px',
+                          fontWeight: 700,
+                          letterSpacing: '0.15em',
+                          textTransform: 'uppercase',
+                          color: o.featured ? 'rgba(247,242,235,0.6)' : 'var(--text-muted)',
+                          margin: 0,
+                          marginBottom: '4px',
                         }}
                       >
-                        ✓
-                      </span>
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
+                        {o.variantsCaption}
+                      </p>
+                    )}
+                    {o.variants.map((v) => (
+                      <div
+                        key={v.label}
+                        style={{
+                          display: 'grid',
+                          gridTemplateColumns: '70px 1fr auto',
+                          alignItems: 'baseline',
+                          gap: '12px',
+                          padding: '8px 10px',
+                          background: o.featured ? 'rgba(247,242,235,0.06)' : 'var(--bg-secondary)',
+                          border: `1px solid ${o.featured ? 'rgba(247,242,235,0.12)' : 'var(--border-subtle)'}`,
+                          fontSize: '0.8125rem',
+                        }}
+                      >
+                        <span
+                          style={{
+                            fontWeight: 700,
+                            color: o.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
+                            letterSpacing: '-0.005em',
+                          }}
+                        >
+                          {v.label}
+                        </span>
+                        <span
+                          style={{
+                            color: o.featured ? 'rgba(247,242,235,0.7)' : 'var(--text-muted)',
+                            fontSize: '0.75rem',
+                          }}
+                        >
+                          {v.unit}
+                        </span>
+                        <span
+                          style={{
+                            fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+                            fontWeight: 700,
+                            color: o.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
+                            fontSize: '0.9375rem',
+                            letterSpacing: '-0.01em',
+                          }}
+                        >
+                          {v.price}
+                          {v.discount && (
+                            <span
+                              style={{
+                                marginLeft: '6px',
+                                color: 'var(--accent-cta)',
+                                fontSize: '0.6875rem',
+                                fontWeight: 800,
+                                letterSpacing: '0.04em',
+                                fontFamily: 'inherit',
+                              }}
+                            >
+                              {v.discount}
+                            </span>
+                          )}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {o.methodology && (
+                  <p
+                    style={{
+                      fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
+                      fontSize: '0.875rem',
+                      lineHeight: 1.6,
+                      color: o.featured ? 'rgba(247,242,235,0.7)' : 'var(--text-muted)',
+                      margin: 0,
+                      fontStyle: 'italic',
+                    }}
+                  >
+                    {o.methodology.prefix}{' '}
+                    <Link
+                      href={o.methodology.href}
+                      style={{
+                        color: 'var(--accent-cta)',
+                        textDecoration: 'underline',
+                        textUnderlineOffset: '2px',
+                        fontStyle: 'normal',
+                      }}
+                    >
+                      {o.methodology.linkLabel}
+                    </Link>
+                    {o.methodology.suffix}
+                  </p>
+                )}
 
                 <div
                   style={{
                     paddingTop: '20px',
-                    borderTop: `1px solid ${card.featured ? 'rgba(247,242,235,0.18)' : 'var(--border-subtle)'}`,
+                    borderTop: `1px solid ${o.featured ? 'rgba(247,242,235,0.18)' : 'var(--border-subtle)'}`,
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '6px',
@@ -339,7 +340,7 @@ export default function WerkwijzePage() {
                       fontWeight: 700,
                       letterSpacing: '0.15em',
                       textTransform: 'uppercase',
-                      color: card.featured ? 'rgba(247,242,235,0.6)' : 'var(--text-muted)',
+                      color: o.featured ? 'rgba(247,242,235,0.6)' : 'var(--text-muted)',
                       margin: 0,
                     }}
                   >
@@ -352,22 +353,33 @@ export default function WerkwijzePage() {
                       fontWeight: 700,
                       letterSpacing: '-0.02em',
                       lineHeight: 1.1,
-                      color: card.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
+                      color: o.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
                       margin: 0,
                     }}
                   >
-                    {card.price}
+                    {o.price}
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
+                      fontSize: '0.875rem',
+                      color: o.featured ? 'rgba(247,242,235,0.7)' : 'var(--text-muted)',
+                      margin: 0,
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    {o.priceNote}
                   </p>
                 </div>
 
                 <div style={{ marginTop: '4px' }}>
                   <Button
-                    href={card.ctaHref}
-                    variant={card.featured ? 'primary' : 'secondary'}
+                    href={o.ctaHref}
+                    variant={o.featured ? 'primary' : 'secondary'}
                     size="md"
                     external
                   >
-                    {card.ctaLabel}
+                    {o.ctaLabel}
                   </Button>
                 </div>
               </article>
@@ -383,7 +395,7 @@ export default function WerkwijzePage() {
               letterSpacing: '0.04em',
             }}
           >
-            * Alle bedragen exclusief btw. Eerste sessie altijd vrijblijvend.
+            * Alle bedragen exclusief btw. Eerste kennismaking altijd vrijblijvend.
           </p>
         </div>
       </section>
@@ -428,11 +440,11 @@ export default function WerkwijzePage() {
               },
               {
                 q: 'Zitten we vast aan een lange looptijd?',
-                a: 'Sparring Sessie, Masterclass en Due Diligence zijn per opdracht. Fractional AI Officer kent een minimum van drie maanden; Portfolio Intelligence zes maanden — niet om u vast te zetten, maar omdat het ritme tijd nodig heeft om zich te zetten.',
+                a: 'Sparring Sessie, Consultancy-traject en Due Diligence zijn per opdracht. Fractional AI Officer kent een minimum van drie maanden — niet om u vast te zetten, maar omdat het ritme tijd nodig heeft om zich te zetten.',
               },
               {
-                q: 'Wat als wij intern al expertise hebben?',
-                a: 'Dan wordt het traject korter en gerichter. De scorecard maakt vooraf zichtbaar waar uw fundament al sterk is — daar betaalt u niet voor.',
+                q: 'Doen jullie ook meerdere deals tegelijk?',
+                a: 'Ja — voor M&A-spelers met dealflow zijn er volumetarieven: vijf deals voor €42.500 (15% korting) of tien deals voor €80.000 (20% korting). De kortingen reflecteren het schaalvoordeel in inwerktijd en platform-onboarding.',
               },
             ].map((item) => (
               <div
@@ -477,185 +489,6 @@ export default function WerkwijzePage() {
 
       <SketchDivider />
 
-      {/* ═══════════════════════════════════════════
-          ALLE TRAJECTEN IN DETAIL
-      ═══════════════════════════════════════════ */}
-      <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(64px, 9vw, 112px)' }}>
-        <div className="container-medium">
-          <div className="reveal" style={{ marginBottom: 'clamp(32px, 4vw, 52px)', maxWidth: '640px' }}>
-            <p className="eyebrow" style={{ marginBottom: '16px' }}>Alle trajecten in detail</p>
-            <h2 className="type-h2" style={{ margin: 0 }}>
-              Wat u per traject ontvangt — en wat het oplevert
-            </h2>
-          </div>
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-            {offerings.map((o, i) => (
-              <article
-                key={o.number}
-                className="reveal"
-                style={{
-                  background: 'var(--bg-primary)',
-                  borderTop: i === 0 ? '1px solid var(--border-medium)' : 'none',
-                  borderBottom: '1px solid var(--border-medium)',
-                  padding: 'clamp(36px, 5vw, 60px) 0',
-                  transitionDelay: `${i * 60}ms`,
-                }}
-              >
-                <div
-                  className="offering-layout"
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: '140px 1fr',
-                    gap: 'clamp(24px, 5vw, 64px)',
-                    alignItems: 'start',
-                  }}
-                >
-                  <p
-                    className="offering-number"
-                    style={{
-                      fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                      fontSize: 'clamp(52px, 7vw, 80px)',
-                      fontWeight: 800,
-                      letterSpacing: '-0.04em',
-                      lineHeight: 0.9,
-                      color: 'var(--accent-cta)',
-                      opacity: 0.9,
-                      margin: 0,
-                    }}
-                  >
-                    {o.number}
-                  </p>
-
-                  <div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
-                      <h3 className="type-h2" style={{ margin: 0 }}>{o.title}</h3>
-                      <span style={{
-                        fontSize: '9px',
-                        fontWeight: 800,
-                        letterSpacing: '0.14em',
-                        textTransform: 'uppercase',
-                        color: o.featured ? 'var(--text-inverse)' : 'var(--accent-cta)',
-                        background: o.featured ? 'var(--accent-cta)' : 'transparent',
-                        border: o.featured ? '1px solid var(--accent-cta)' : '1px solid var(--accent-cta)',
-                        padding: '3px 8px',
-                        lineHeight: 1,
-                        flexShrink: 0,
-                      }}>
-                        {o.featured ? 'Meest gekozen · ' : ''}{o.tier}
-                      </span>
-                    </div>
-
-                    <div
-                      style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        gap: '24px',
-                        marginBottom: '28px',
-                        paddingBottom: '28px',
-                        borderBottom: '1px solid var(--border-subtle)',
-                      }}
-                    >
-                      {[
-                        { label: 'Investering', value: o.price },
-                        { label: 'Duur', value: o.duration },
-                        { label: 'Voor wie', value: o.target },
-                      ].map((m) => (
-                        <div key={m.label}>
-                          <p
-                            style={{
-                              fontSize: '10px',
-                              fontWeight: 700,
-                              letterSpacing: '0.15em',
-                              textTransform: 'uppercase',
-                              color: 'var(--accent-cta)',
-                              marginBottom: '4px',
-                            }}
-                          >
-                            {m.label}
-                          </p>
-                          <p style={{ fontSize: '0.9375rem', color: 'var(--text-primary)', fontWeight: 500 }}>
-                            {m.value}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Outcome — concrete uitkomst */}
-                    <p
-                      style={{
-                        fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                        fontSize: 'clamp(1.0625rem, 1.7vw, 1.1875rem)',
-                        fontWeight: 700,
-                        color: 'var(--text-primary)',
-                        lineHeight: 1.45,
-                        letterSpacing: '-0.01em',
-                        marginBottom: '20px',
-                      }}
-                    >
-                      {o.outcome}
-                    </p>
-
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '24px' }}>
-                      {o.paragraphs.map((p, idx) => (
-                        <p
-                          key={idx}
-                          style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: '1.0625rem', color: 'var(--text-secondary)', lineHeight: 1.75, fontWeight: 400 }}
-                        >
-                          {p}
-                        </p>
-                      ))}
-                    </div>
-
-                    <div
-                      style={{
-                        display: 'flex',
-                        alignItems: 'flex-start',
-                        gap: '14px',
-                        padding: '16px 20px',
-                        background: 'var(--accent-cta-soft)',
-                        borderLeft: '2px solid var(--accent-cta)',
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontSize: '10px',
-                          fontWeight: 800,
-                          letterSpacing: '0.18em',
-                          textTransform: 'uppercase',
-                          color: 'var(--accent-cta)',
-                          flexShrink: 0,
-                          paddingTop: '2px',
-                          lineHeight: 1,
-                        }}
-                      >
-                        Rendement
-                      </span>
-                      <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: '1rem', color: 'var(--text-secondary)', lineHeight: 1.65, margin: 0 }}>
-                        {o.roi}
-                      </p>
-                    </div>
-
-                    <div style={{ marginTop: '28px' }}>
-                      <Button
-                        href="https://cal.com/wwdijkman/intake-call"
-                        variant="secondary"
-                        size="md"
-                        external
-                      >
-                        {o.ctaLabel}
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <SketchDivider />
-
       {/* SLOT CTA */}
       <section
         className="grain-overlay"
@@ -675,7 +508,7 @@ export default function WerkwijzePage() {
               className="type-h2"
               style={{ color: 'var(--text-inverse)', marginBottom: '16px', maxWidth: '600px', marginInline: 'auto' }}
             >
-              Twijfelt u welk traject past? Begin bij de scorecard.
+              Twijfelt u welke route past? Begin bij de scorecard.
             </h2>
             <p
               style={{
@@ -688,7 +521,7 @@ export default function WerkwijzePage() {
                 lineHeight: 1.75,
               }}
             >
-              De scorecard adviseert op basis van uw antwoorden welk traject het beste
+              De scorecard adviseert op basis van uw antwoorden welke route het beste
               past. Geen verplichting; alleen een gefundeerd voorstel.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>

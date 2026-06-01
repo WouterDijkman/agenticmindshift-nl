@@ -37,38 +37,26 @@ const hoeIkWerk = [
   {
     n: '01',
     title: 'AI Sparring Sessie',
-    body: 'Een geconcentreerd gesprek van 60 minuten over één concrete vraag — een aanstaande deal, een AI-keuze, een twijfel op de IC- of MT-agenda.',
+    body: 'U wilt snel weten wat AI betekent voor uw bedrijf, uw deal of uw eerstvolgende beslissing. Eén gesprek, één samenvatting, geen vervolgverplichting.',
     price: 'Vanaf €395',
   },
   {
     n: '02',
-    title: 'Strategic Enablement Masterclass',
-    body: 'Eendaagse masterclasses voor dealteams of MT-teams van maximaal acht personen — AI-substitutierisico, bias-detectie en MBR-discipline.',
-    price: '€4.500 / workshop',
+    title: 'Consultancy, Workflow & Enablement',
+    body: 'U wilt AI concreet inzetten in uw processen, workflows of organisatie — met implementatie-begeleiding, masterclasses en team-enablement.',
+    price: 'Vanaf €4.500',
   },
   {
     n: '03',
     title: 'Fractional AI Officer',
-    body: 'Embedded op MT-niveau voor scale-ups en mid-market (50–500 FTE). Strategie, leveranciersselectie, team-enablement en board updates.',
+    body: 'U wilt een AI-leider op MT-niveau zonder fulltime aanstelling. Strategie, leveranciersselectie en team-enablement geborgd in een embedded rol.',
     price: '€3.500 – €5.500 / maand',
   },
   {
     n: '04',
-    title: 'AI Due Diligence',
-    body: 'Een afgebakend AI-DD-traject per acquisitie, met expliciete modellering van AI-substitutierisico in uw entry-multiple.',
-    price: '€12.500 / deal',
-  },
-  {
-    n: '05',
-    title: 'Portfolio Intelligence voor PE',
-    body: 'Doorlopende intelligence-laag over uw deelnemingen, met maandelijkse MBR-rapportage, AI-substitutiemonitoring en optioneel fractional dealteam-rol.',
-    price: '€6.500 – €8.500 / maand',
-  },
-  {
-    n: '06',
-    title: 'Maatwerk-traject',
-    body: 'Een traject opgebouwd uit dezelfde bouwstenen, voor vraagstukken die zich niet in een standaardpakket laten vangen.',
-    price: 'Op aanvraag',
+    title: 'AI Due Diligence & Portfolio',
+    body: 'U doet M&A-deals of beheert een portfolio en wilt AI-substitutierisico structureel borgen — losse deal vanaf €10.000, of volumetarieven en portfolio-retainer.',
+    price: 'Vanaf €10.000 / deal',
   },
 ];
 
@@ -133,7 +121,7 @@ export function HoeIkWerkGrid() {
           viewport={{ once: true, amount: 0.5 }}
         >
           <p className="eyebrow" style={{ marginBottom: '16px' }}>Werkwijze</p>
-          <h2 className="type-h2" style={{ marginBottom: '16px' }}>Zes manieren om samen te werken</h2>
+          <h2 className="type-h2" style={{ marginBottom: '16px' }}>Vier manieren om samen te werken</h2>
           <p style={{ fontSize: '1rem', color: 'var(--text-muted)', maxWidth: '440px', lineHeight: 1.65 }}>
             Geen retainer-constructies zonder concreet doel. Elk traject begint met een meetbare nulmeting.
           </p>
