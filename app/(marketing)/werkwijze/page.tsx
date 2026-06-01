@@ -7,10 +7,10 @@ import WerkwijzeOnboardingSteps from './WerkwijzeOnboardingSteps';
 export const metadata: Metadata = {
   title: 'Werkwijze & Investering',
   description:
-    'Drie manieren waarop u met Agentic Mindshift werkt: laagdrempelige Sparring Sessie, AI Due Diligence per deal, of doorlopende Portfolio Intelligence en Fractional AI Officer.',
+    'Zes manieren waarop u met Agentic Mindshift werkt: van laagdrempelige Sparring Sessie en Masterclass tot Fractional AI Officer, AI Due Diligence, Portfolio Intelligence en volledig maatwerk.',
 };
 
-type Tier = 'Instap' | 'Kern' | 'Maatwerk';
+type Tier = 'Instap' | 'Embedded' | 'Kern' | 'Doorlopend' | 'Maatwerk';
 
 interface Offering {
   number: string;
@@ -31,20 +31,55 @@ const offerings: Offering[] = [
     number: '00',
     tier: 'Instap',
     title: 'AI Sparring Sessie',
-    price: '€1.500 per sessie',
+    price: 'Vanaf €395 per sessie',
     outcome:
-      'Na deze sessie: een schriftelijke read-out met drie concrete vervolgstappen — toepasbaar op uw eerstvolgende dossier.',
-    roi: 'Eén heldere blinde vlek geadresseerd vóór uw volgende IC. Geen vervolgverplichting.',
-    duration: '90 minuten · online of op locatie',
-    target: 'PE-partners en M&A-directors die eerst willen toetsen',
+      'Na deze sessie: een korte schriftelijke samenvatting met drie concrete vervolgstappen — direct toepasbaar op uw eerstvolgende dossier of beslissing.',
+    roi: 'Eén heldere blinde vlek geadresseerd vóór de volgende stap. Laagdrempelig, geen vervolgverplichting.',
+    duration: '60 minuten · online of op locatie',
+    target: 'PE-partners, M&A-directors en bestuurders die eerst willen toetsen',
     paragraphs: [
-      'Een geconcentreerd gesprek van 90 minuten over één concrete vraag — een aanstaande deal, een onderpresterend portfoliobedrijf, of een twijfel die op de IC-agenda blijft staan. Geen pitch, geen tooling-demonstratie.',
-      'U krijgt binnen drie werkdagen een schriftelijke read-out met de drie meest urgente vervolgstappen, gekoppeld aan uw eigen situatie. Als u na de read-out wilt opschalen naar een AI Due Diligence of een doorlopend traject, wordt de investering verrekend.',
+      'Een geconcentreerd gesprek van 60 minuten over één concrete vraag — een aanstaande deal, een onderpresterend portfoliobedrijf, een AI-keuze in uw organisatie, of een twijfel die op de IC- of MT-agenda blijft staan. Geen pitch, geen tooling-demonstratie.',
+      'U krijgt binnen drie werkdagen een korte schriftelijke samenvatting met de drie meest urgente vervolgstappen, gekoppeld aan uw eigen situatie. Als u na de samenvatting wilt opschalen naar een Masterclass, Fractional AI Officer-traject, AI Due Diligence of Portfolio Intelligence, wordt de investering verrekend.',
     ],
     ctaLabel: 'Boek een Sparring Sessie →',
   },
   {
     number: '01',
+    tier: 'Instap',
+    title: 'Strategic Enablement Masterclass',
+    price: '€4.500 per workshop',
+    outcome:
+      'Na deze dag: uw dealteam of MT past de drie technieken direct toe op het eerstvolgende dossier — zonder transitiefase.',
+    roi: 'Direct toepasbaar op uw meest recente deal of dossier. Geen voorbereiding nodig — geen abstracte theorie.',
+    duration: 'Eendaags, max 8 personen',
+    target: 'Dealteams, investmentcommittees en MT-teams',
+    paragraphs: [
+      'Eendaagse masterclasses voor een dealteam, investmentcommittee of managementteam, met maximaal acht deelnemers. Drie modules: AI-substitutierisico in entry-multiples of bedrijfsmodellen, bias-detectie in management-aannames, en MBR-discipline voor portfolio- of organisatie-intelligence.',
+      'De masterclass is bewust kort en gericht. Geen brede AI-introductie, geen tooling-demonstraties. Wel concrete oefeningen op uw eigen recente deal of dossier, zodat de werkwijze meteen in uw bestaande proces past.',
+      'Aanvullend op de workshop ontvangt elke deelnemer drie maanden lang een korte maandelijkse update over toepasselijke ontwikkelingen, gevolgd door een optionele follow-up sessie na zes maanden.',
+    ],
+    ctaLabel: 'Reserveer een masterclass-datum →',
+  },
+  {
+    number: '02',
+    tier: 'Embedded',
+    title: 'Fractional AI Officer',
+    price: '€3.500 – €5.500 per maand',
+    outcome:
+      'Na drie maanden: een organisatie met een eigenaar voor AI-strategie en -adoptie op MT-niveau — zonder fulltime aanstelling, inwerktraject of overhead.',
+    roi: 'Gelijkwaardig aan meerdere dagen senior AI-leiderschap per maand. Voorkomt foute leveranciers-keuzes en versnelt structurele adoptie — beide bewegingen waarvan de waarde de investering ruimschoots overschrijdt.',
+    duration: 'Minimum 3 maanden · 2 MT-vergaderingen + 2–3 dagen per maand',
+    target: 'Scale-ups en middelgrote bedrijven (50–500 FTE)',
+    paragraphs: [
+      'Een embedded rol op MT-niveau voor organisaties die AI structureel willen inbedden, maar geen fulltime CTO of AI-directeur kunnen of willen aanstellen. Niet als externe adviseur in een advies-rol, maar als operationeel verantwoordelijke voor de AI-agenda binnen uw bedrijf.',
+      'Concreet ontvangt u: deelname aan MT-vergaderingen (2× per maand), eigenaarschap over AI-strategie en roadmap, leveranciersselectie en contractonderhandeling, team coaching en AI-enablement, plus een maandelijkse board update over AI-voortgang. Investering tussen €3.500 en €5.500 per maand, afhankelijk van intensiteit en organisatiegrootte.',
+      'Minimum drie maanden, omdat ritme zich pas zet na enkele maandcycli. Wij werken met een beperkt aantal opdrachtgevers tegelijk om de kwaliteit van begeleiding te waarborgen.',
+    ],
+    ctaLabel: 'Bespreek de fit voor uw organisatie →',
+    featured: true,
+  },
+  {
+    number: '03',
     tier: 'Kern',
     title: 'AI Due Diligence',
     price: '€12.500 per deal',
@@ -59,58 +94,39 @@ const offerings: Offering[] = [
       'Dit traject fungeert tevens als pilot voor het Factum Capital-platform: elke opdracht levert u niet alleen een rapport op, maar ook direct inzicht in hoe het systeem werkt — zonder onboarding of abonnement. Een correctie van 0,5× entry-multiple op een €5M EBITDA-target dekt de kosten van de analyse ruimschoots.',
     ],
     ctaLabel: 'Start mijn AI Due Diligence →',
-    featured: true,
   },
   {
-    number: '02',
-    tier: 'Kern',
-    title: 'Portfolio Intelligence',
-    price: '€8.500 per maand',
+    number: '04',
+    tier: 'Doorlopend',
+    title: 'Portfolio Intelligence voor PE',
+    price: '€6.500 – €8.500 per maand',
     outcome:
-      'Na zes maanden: een maandelijks ritme waarin onderprestatie binnen 30 dagen zichtbaar is in plaats van bij jaarrapportage.',
+      'Na zes maanden: een maandelijks ritme waarin onderprestatie binnen 30 dagen zichtbaar is in plaats van bij jaarrapportage — plus optioneel een fractional rol in uw dealteam.',
     roi: 'Eén tijdig gesignaleerde variantie-afwijking dekt bij de meeste portefeuilles de jaarkosten.',
     duration: 'Minimum 6 maanden',
-    target: "PE-firma's met 50–500M AUM",
+    target: "PE-firma's en buy-and-build platformen met 50–500M AUM",
     paragraphs: [
       'Een doorlopende intelligence-laag bovenop uw bestaande MBR-cyclus. Maandelijks ontvangt u een gestructureerd portfolio-rapport dat de zes-dimensies-baseline van de scorecard bijhoudt over al uw deelnemingen, plus peer-benchmark en AI-substitutiemonitoring per portfoliobedrijf.',
       'Het rapport is niet bedoeld om de MBR te vervangen, maar om de blinde vlekken zichtbaar te maken die in een reguliere MBR-cyclus niet aan bod komen. Onderprestatie wordt binnen een maand zichtbaar in plaats van pas bij jaarrapportage; AI-substitutierisico komt expliciet op de bestuursagenda; peer-vergelijking gaat automatisch.',
-      'Minimum zes maanden omdat het maandritme tijd nodig heeft om zich te zetten. Geen exclusiviteit per fonds; wel discretie binnen uw portefeuille.',
+      'Investering tussen €6.500 en €8.500 per maand, afhankelijk van portefeuilleomvang en of u aanvullend een fractional rol in uw dealteam wenst (2–3 dagen per maand aanwezig bij IC en MBR). Minimum zes maanden — het maandritme heeft tijd nodig om zich te zetten. Geen exclusiviteit per fonds; wel discretie binnen uw portefeuille.',
     ],
     ctaLabel: 'Plan een kennismaking →',
   },
   {
-    number: '03',
+    number: '05',
     tier: 'Maatwerk',
-    title: 'Fractional AI Officer',
-    price: '€6.500 per maand',
+    title: 'Maatwerk-traject',
+    price: 'Op aanvraag',
     outcome:
-      'Na zes maanden: een organisatie die zonder eigen AI-capaciteit toch structureel ritme krijgt — pilots, MBR-aanwezigheid, kwartaal-rapportages.',
-    roi: 'Gelijkwaardig aan meerdere dagen AI-expertise per maand — zonder vaste aanstelling, inwerktraject of overhead.',
-    duration: 'Minimum 6 maanden, 2–3 dagen per maand',
-    target: 'PE-portfoliobedrijven of dealteams',
+      'Een traject dat aansluit op een vraagstuk dat zich niet in een standaardpakket laat vangen — opgebouwd uit dezelfde bouwstenen, in een ritme dat bij u past.',
+    roi: 'Geen abonnement zonder doel. Scope, doorlooptijd en investering worden vooraf vastgelegd in één heldere offerte.',
+    duration: 'In overleg',
+    target: 'Organisaties met een afwijkende scope, sector of governance-structuur',
     paragraphs: [
-      'Twee tot drie dagen per maand onderdeel van uw dealteam of van het managementteam van een portfoliobedrijf. Niet als externe adviseur in een advies-rol, maar als operationeel verantwoordelijke voor AI-adoptie en bias-toetsing binnen de organisatie waar wij aansluiten.',
-      "Concreet: aanwezig bij MBR's en bestuursvergaderingen, begeleiden van pilots, toetsen van management-aannames buiten het reguliere ritme om, opstellen van kwartaal-rapportages die direct naar de bestuursagenda gaan. Het resultaat: een organisatie zonder eigen AI-capaciteit die toch structureel ritme krijgt.",
-      'Minimum zes maanden, omdat ritme zich pas zet na drie tot vier maandcycli. Wij werken met een beperkt aantal opdrachtgevers tegelijk om de kwaliteit van begeleiding te kunnen waarborgen.',
+      'Niet elke vraag past in een standaardpakket. Een private investor die zowel zijn deal-flow als zijn family office wil professionaliseren. Een MT dat een AI-transformatie wil combineren met een carve-out. Een PE-fonds dat een specifieke sector wil doorlichten op AI-disruptie binnen één kwartaal.',
+      'In die gevallen bouwen wij een traject op uit de bestaande bouwstenen — Sparring, Masterclass, Fractional, Due Diligence en Portfolio Intelligence — in een combinatie en ritme dat bij uw situatie past. U ontvangt vooraf één heldere offerte met scope, doorlooptijd, deliverables en investering. Geen open einden, geen abonnement zonder doel.',
     ],
-    ctaLabel: 'Bespreek de fit voor uw organisatie →',
-  },
-  {
-    number: '04',
-    tier: 'Instap',
-    title: 'Strategic Enablement Masterclass',
-    price: '€4.500 per workshop',
-    outcome:
-      'Na deze dag: uw dealteam past de drie technieken direct toe op het eerstvolgende dossier — zonder transitiefase.',
-    roi: 'Direct toepasbaar op uw meest recente deal of dossier. Geen voorbereiding nodig — geen abstracte theorie.',
-    duration: 'Eendaags, max 8 personen',
-    target: 'Dealteams en investmentcommittees',
-    paragraphs: [
-      'Eendaagse masterclasses voor een dealteam of investmentcommittee, met maximaal acht deelnemers. Drie modules: AI-substitutierisico in entry-multiples, bias-detectie in management-aannames, en MBR-discipline voor portfolio-intelligence.',
-      'De masterclass is bewust kort en gericht. Geen brede AI-introductie, geen tooling-demonstraties. Wel concrete oefeningen op uw eigen recente deal of dossier, zodat de werkwijze meteen in uw bestaande proces past.',
-      'Aanvullend op de workshop ontvangt elke deelnemer drie maanden lang een korte maandelijkse update over toepasselijke ontwikkelingen, gevolgd door een optionele follow-up sessie na zes maanden.',
-    ],
-    ctaLabel: 'Reserveer een masterclass-datum →',
+    ctaLabel: 'Bespreek uw maatwerk-vraag →',
   },
 ];
 
@@ -131,11 +147,11 @@ const tierCards: {
     tier: 'Instap',
     badge: 'Instap · laagdrempelig',
     title: 'AI Sparring Sessie',
-    price: 'Vanaf €1.500',
-    scope: '90 minuten · 1 schriftelijke read-out',
+    price: 'Vanaf €395',
+    scope: '60 minuten · schriftelijke samenvatting',
     bullets: [
-      'Eén concrete dossier-vraag bespreken',
-      'Schriftelijke read-out binnen 3 werkdagen',
+      'Eén concrete vraag bespreken',
+      'Korte schriftelijke samenvatting binnen 3 werkdagen',
       'Vervolg-investering wordt verrekend',
     ],
     ctaLabel: 'Boek een Sparring Sessie →',
@@ -143,35 +159,35 @@ const tierCards: {
     anchor: '#sparring',
   },
   {
-    tier: 'Kern',
-    badge: 'Meest gekozen',
-    title: 'AI Due Diligence',
-    price: 'Vanaf €12.500 per deal',
-    scope: '2–3 weken · uitgebreid analytisch fundament',
+    tier: 'Embedded',
+    badge: 'Meest gekozen · embedded',
+    title: 'Fractional AI Officer',
+    price: '€3.500 – €5.500 per maand',
+    scope: 'Min. 3 maanden · embedded op MT-niveau',
     bullets: [
-      'AI-substitutierisico in entry-multiple',
-      'Inclusief peer-benchmark op uw target',
-      'Gedeeld dossier — adviseurs starten sneller',
+      'Deelname MT-vergaderingen (2× per maand)',
+      'Eigenaarschap AI-strategie en roadmap',
+      'Voor scale-ups en mid-market (50–500 FTE)',
     ],
-    ctaLabel: 'Start mijn AI Due Diligence →',
+    ctaLabel: 'Bespreek de fit voor uw organisatie →',
     ctaHref: 'https://cal.com/wwdijkman/intake-call',
-    anchor: '#due-diligence',
+    anchor: '#fractional',
     featured: true,
   },
   {
     tier: 'Maatwerk',
-    badge: 'Maatwerk · doorlopend',
-    title: 'Portfolio & Fractional',
-    price: '€6.500 – €8.500 per maand',
-    scope: 'Minimaal 6 maanden · maandritme of embedded',
+    badge: 'Projectmatig & doorlopend',
+    title: 'Due Diligence & Portfolio',
+    price: '€6.500 – €12.500',
+    scope: 'Per deal of doorlopend per maand',
     bullets: [
-      'Portfolio Intelligence over uw deelnemingen',
-      "Of Fractional AI Officer in uw dealteam",
-      'Eerste maand altijd vrijblijvend evalueerbaar',
+      'AI Due Diligence — €12.500 per deal',
+      'Portfolio Intelligence — vanaf €6.500/mnd',
+      'Voor PE-firma’s en buy-and-build platformen',
     ],
     ctaLabel: 'Plan een vrijblijvende kennismaking →',
     ctaHref: 'https://cal.com/wwdijkman/intake-call',
-    anchor: '#portfolio',
+    anchor: '#due-diligence',
   },
 ];
 
@@ -182,8 +198,8 @@ export default function WerkwijzePage() {
         bgChar="03"
         bgCharSize="clamp(240px, 30vw, 460px)"
         eyebrow="Werkwijze & Investering"
-        heading="Drie manieren om samen te werken — u kiest het tempo"
-        subtext="Begin met een Sparring Sessie, scale up naar een AI Due Diligence, of bouw een doorlopend ritme. Elk traject begint met een heldere beginsituatie en eindigt met aantoonbaar resultaat — u weet vooraf wat u kunt verwachten."
+        heading="Zes manieren om samen te werken — u kiest het tempo"
+        subtext="Begin laagdrempelig met een Sparring Sessie of Masterclass. Bouw door naar een Fractional AI Officer-rol, een AI Due Diligence per deal, doorlopende Portfolio Intelligence — of een volledig maatwerk-traject. Elk traject begint met een heldere beginsituatie en eindigt met aantoonbaar resultaat."
         headingMaxWidth="800px"
       />
 
@@ -404,15 +420,15 @@ export default function WerkwijzePage() {
             {[
               {
                 q: 'Wat als het niets voor ons blijkt?',
-                a: 'Start met de Sparring Sessie. Eén concrete vraag, één read-out, geen vervolg-verplichting. Past het niet, dan is dat de uitkomst — niet het probleem.',
+                a: 'Start met de Sparring Sessie vanaf €395. Eén concrete vraag, één schriftelijke samenvatting, geen vervolg-verplichting. Past het niet, dan is dat de uitkomst — niet het probleem.',
               },
               {
                 q: 'Hoe weet ik vooraf of de investering rendeert?',
-                a: 'Bij AI Due Diligence dekt één goed gecalibreerde entry-multiple-correctie van 0,5× op een €5M EBITDA-target de kosten ruim 200×. Bij Portfolio Intelligence: één tijdig gesignaleerde variantie-afwijking dekt doorgaans de jaarkosten.',
+                a: 'Bij AI Due Diligence dekt één goed gecalibreerde entry-multiple-correctie van 0,5× op een €5M EBITDA-target de kosten ruim 200×. Bij Portfolio Intelligence: één tijdig gesignaleerde variantie-afwijking dekt doorgaans de jaarkosten. Bij Fractional AI Officer: één vermeden foute leveranciers-keuze betaalt het traject ruimschoots terug.',
               },
               {
                 q: 'Zitten we vast aan een lange looptijd?',
-                a: 'Sparring Sessie en Due Diligence zijn per opdracht. Bij doorlopende trajecten geldt zes maanden minimum — niet om u vast te zetten, maar omdat het maandritme tijd nodig heeft om zich te zetten.',
+                a: 'Sparring Sessie, Masterclass en Due Diligence zijn per opdracht. Fractional AI Officer kent een minimum van drie maanden; Portfolio Intelligence zes maanden — niet om u vast te zetten, maar omdat het ritme tijd nodig heeft om zich te zetten.',
               },
               {
                 q: 'Wat als wij intern al expertise hebben?',
