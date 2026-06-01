@@ -319,7 +319,7 @@ export default function HomePage() {
               Start de Scorecard
             </Button>
             <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
-              Plan een sparring-sessie
+              Plan een vrijblijvende kennismaking
             </Button>
           </div>
         </div>

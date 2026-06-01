@@ -39,9 +39,8 @@ export const metadata: Metadata = {
     locale: 'nl_NL',
     url: 'https://www.agenticmindshift.nl',
     siteName: 'Agentic Mindshift',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
   },
-  twitter: { card: 'summary_large_image', creator: '@wwdijkman' },
+  twitter: { card: 'summary', creator: '@wwdijkman' },
   robots: { index: true, follow: true },
   alternates: { canonical: 'https://www.agenticmindshift.nl' },
 };

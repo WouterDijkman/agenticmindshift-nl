@@ -252,7 +252,7 @@ export default function OverPage() {
               style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}
             >
               <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external>
-                Plan een sparring-sessie
+                Plan een vrijblijvende kennismaking
               </Button>
               <Button href="https://www.linkedin.com/in/wwdijkman" variant="secondary" size="lg" external>
                 Verbind via LinkedIn

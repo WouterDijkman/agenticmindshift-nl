@@ -179,10 +179,10 @@ export default function RapportPage() {
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link href="/werkwijze" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
-              Alle trajecten \u2192
+              Bekijk alle trajecten →
             </Link>
-            <Link href="/contact" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
-              Neem contact op \u2192
+            <Link href="https://www.linkedin.com/in/wwdijkman/" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }} target="_blank" rel="noopener noreferrer">
+              Verbind op LinkedIn →
             </Link>
           </div>
           <div className="mt-6 flex justify-center no-print">
@@ -334,6 +334,7 @@ export default function RapportPage() {
           <h2 className="type-h2 mb-3">{variant.offerName}</h2>
           <p className="mb-4 measure" style={{ color: 'var(--text-secondary)', lineHeight: 1.75 }}>
             Op basis van uw scoreprofiel past dit traject het beste bij uw situatie.
+            U start vrijblijvend met een Sparring Sessie als u eerst wilt toetsen.
           </p>
           <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', marginBottom: '8px' }}>
             <p style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--text-primary)' }}>
@@ -348,10 +349,10 @@ export default function RapportPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 no-print">
             <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external>
-              Plan een sparring-sessie
+              Plan een vrijblijvende kennismaking
             </Button>
             <Button href="/werkwijze" variant="secondary" size="lg">
-              Alle trajecten &amp; tarieven
+              Bekijk alle trajecten & investering
             </Button>
           </div>
         </div>
@@ -367,25 +368,17 @@ export default function RapportPage() {
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
           <Link href="/werkwijze" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
-            Alle trajecten \u2192
+            Bekijk alle trajecten →
           </Link>
           <Link href="https://cal.com/wwdijkman/intake-call" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
-            Plan een gesprek \u2192
+            Plan een vrijblijvende kennismaking →
           </Link>
           <Link href="/contact" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
-            Stuur een bericht \u2192
+            Bespreek uw situatie →
           </Link>
         </div>
         <div className="mt-6 flex justify-center no-print">
           <Button variant="secondary" size="md" onClick={() => window.print()}>
-            Print / sla op als PDF
-          </Button>
-        </div>
-      </div>
-    </section>
-  );
-}
-()}>
             Print / sla op als PDF
           </Button>
         </div>

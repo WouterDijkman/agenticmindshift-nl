@@ -78,7 +78,7 @@ export default function Sectie1Page() {
             textDecoration: 'none',
           }}
         >
-          \u2190 Terug naar start
+          ← Terug naar start
         </Link>
         <Button
           variant="primary"

@@ -626,7 +626,7 @@ export default function FactumCapitalPage() {
               Start de Scorecard
             </Button>
             <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
-              Plan een gesprek
+              Plan een vrijblijvende kennismaking
             </Button>
           </div>
         </div>
