@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
 import EarlyAccessForm from './EarlyAccessForm';
@@ -6,9 +7,9 @@ import CountdownTimer from './CountdownTimer';
 import FactumModulesGrid from './FactumModulesGrid';
 
 export const metadata: Metadata = {
-  title: 'Factum Capital — Lancering 1 juli 2026',
+  title: 'Factum Capital — AI-platform achter de AI Due Diligence-dienst',
   description:
-    'Het integrale deal- en portfolio-intelligence systeem voor acquisitie, financiering, portfolio review en pre-IBR/WHOA. Gecertificeerde adviseurs op elk moment. Lancering 1 juli 2026.',
+    'Factum Capital is het AI-platform achter de AI Due Diligence & Portfolio-dienstverlening van Agentic Mindshift. SaaS-toegang voor PE-fondsen en M&A-teams die zelf willen werken (lancering 1 juli 2026); volledige uitbesteding via Agentic Mindshift voor wie het analytisch fundament + gecertificeerde adviseur-regie wil afnemen.',
 };
 
 const MOMENTEN = [
@@ -48,9 +49,9 @@ export default function FactumCapitalPage() {
       <AnimatedHeroShell
         bgChar="FC"
         bgCharSize="clamp(240px, 32vw, 480px)"
-        eyebrow="Lancering 1 juli 2026"
-        heading="Het operating system voor elke fase van uw deal- en financieringspraktijk"
-        subtext="Acquisitie, financiering, portfolio review of pre-IBR/WHOA — Factum Capital levert op elk moment het analytisch fundament en koppelt de gecertificeerde adviseurs die formeel tekenen waar dat vereist is."
+        eyebrow="Het platform achter onze AI Due Diligence-dienst"
+        heading="Het analytisch fundament voor elke fase van uw deal- en portfoliopraktijk"
+        subtext="Factum Capital is het AI-platform achter de AI Due Diligence & Portfolio-dienstverlening van Agentic Mindshift. Vanaf 1 juli 2026 ook beschikbaar als SaaS voor PE-fondsen en M&A-teams die zelf willen werken — vier momenten: acquisitie, financiering, portfolio review en pre-IBR/WHOA."
         headingMaxWidth="900px"
       >
         {/* Launch stats strip */}
@@ -191,7 +192,7 @@ export default function FactumCapitalPage() {
                     margin: 0,
                   }}
                 >
-                  &ldquo;Eén platform, vier momenten. Factum levert het analytisch fundament — op elk moment in de deal- en financieringslevenscyclus. Gecertificeerde adviseurs tekenen waar dat vereist is.&rdquo;
+                  &ldquo;Eén platform, vier momenten. Factum levert het analytisch fundament — Agentic Mindshift levert de dienst, met koppeling naar gecertificeerde adviseurs die formeel tekenen waar vereist.&rdquo;
                 </p>
               </blockquote>
             </div>
@@ -207,15 +208,20 @@ export default function FactumCapitalPage() {
                 <p>
                   Het <strong>platform</strong> &mdash; 23 modules van IM-screening tot
                   exit-readiness &mdash; geeft uw team een consistente structuur op elk van
-                  die momenten. De <strong>dienst</strong> &mdash; Factum als regisseur &mdash;
-                  levert het analytisch fundament en koppelt de juiste gecertificeerde
-                  adviseurs: RA/RB/advocaten voor acquisities, financieel adviseurs voor
-                  bankgesprekken, en restructuring consultants bij pre-IBR of WHOA-situaties.
+                  die momenten. Vanaf 1 juli 2026 beschikbaar als SaaS voor wie zelf wil werken.
                 </p>
                 <p>
-                  Het Factum-dossier fungeert als gedeeld werkdocument: adviseurs bouwen voort
-                  op wat er al staat. Minder dubbel werk. Kortere doorlooptijd. Kennisopbouw
-                  die met uw organisatie meegroeit.
+                  De <strong>dienstverlening</strong> &mdash; uitgevoerd door Agentic Mindshift
+                  als de M&amp;A-praktijk achter Factum &mdash; levert het volledige analytisch
+                  fundament op uw dossier en koppelt de juiste gecertificeerde adviseurs:
+                  RA/RB/advocaten voor acquisities, financieel adviseurs voor bankgesprekken,
+                  restructuring consultants bij pre-IBR of WHOA. Per deal of in volume,
+                  zichtbaar op de werkwijze-pagina.
+                </p>
+                <p>
+                  Het Factum-dossier fungeert in beide gevallen als gedeeld werkdocument:
+                  adviseurs bouwen voort op wat er al staat. Minder dubbel werk. Kortere
+                  doorlooptijd. Kennisopbouw die met uw organisatie meegroeit.
                 </p>
               </div>
             </div>
@@ -309,7 +315,7 @@ export default function FactumCapitalPage() {
 
           {/* Platform vs Dienst */}
           <div className="reveal" style={{ marginBottom: '56px' }}>
-            <p className="eyebrow" style={{ marginBottom: '24px' }}>Platform of dienst</p>
+            <p className="eyebrow" style={{ marginBottom: '24px' }}>Twee manieren om Factum in te zetten</p>
             <div
               style={{
                 display: 'grid',
@@ -319,22 +325,24 @@ export default function FactumCapitalPage() {
                 border: '1px solid var(--border-subtle)',
               }}
             >
-              {[
+              {([
                 {
                   n: '01',
                   title: 'Het Platform',
                   label: 'SaaS — zelf in handen',
                   body: '23 modules die uw deal-team de structuur geven om alle vier momenten consistent uit te voeren. Van IM-screening tot exit-readiness tot pre-IBR signalering. Kennisopbouw die meegroeit.',
                   detail: 'Lancering 1 juli 2026 · Maandabonnement · Wachtlijst open',
+                  link: null,
                 },
                 {
                   n: '02',
-                  title: 'De Dienst',
-                  label: 'Deal intelligence + adviseur-regie',
-                  body: 'Factum levert het analytisch fundament en regisseert het adviesproces. Op elk moment koppelt Factum de juiste gecertificeerde professionals die op het gedeelde dossier verder bouwen en waar nodig formeel tekenen.',
-                  detail: 'Pilot Q3 2026 · Op maat per opdracht · Beperkte plaatsen',
+                  title: 'De Dienstverlening',
+                  label: 'Via Agentic Mindshift — AI Due Diligence & Portfolio',
+                  body: 'Agentic Mindshift voert het volledige traject voor u uit, met Factum als analytisch platform. Op elk moment koppelt Agentic Mindshift de juiste gecertificeerde professionals die op het gedeelde dossier verder bouwen en waar nodig formeel tekenen.',
+                  detail: 'Vanaf €10.000 investering per deal · Of €6.500 – €8.500 / maand portfolio-intelligence · Excl. btw',
+                  link: { href: '/werkwijze', label: 'Bekijk werkwijze & investering →' },
                 },
-              ].map((item) => (
+              ] as const).map((item) => (
                 <div
                   key={item.n}
                   style={{ background: 'var(--bg-primary)', padding: 'clamp(36px, 4vw, 52px)' }}
@@ -387,9 +395,25 @@ export default function FactumCapitalPage() {
                     letterSpacing: '0.03em',
                     borderTop: '1px solid var(--border-subtle)',
                     paddingTop: '16px',
+                    marginBottom: item.link ? '14px' : 0,
                   }}>
                     {item.detail}
                   </p>
+                  {item.link && (
+                    <Link
+                      href={item.link.href}
+                      style={{
+                        fontSize: '0.8125rem',
+                        fontWeight: 700,
+                        color: 'var(--accent-cta)',
+                        textDecoration: 'underline',
+                        textUnderlineOffset: '3px',
+                        letterSpacing: '0.02em',
+                      }}
+                    >
+                      {item.link.label}
+                    </Link>
+                  )}
                 </div>
               ))}
             </div>
@@ -397,7 +421,7 @@ export default function FactumCapitalPage() {
 
           {/* Hoe de dienst werkt */}
           <div className="reveal">
-            <p className="eyebrow" style={{ marginBottom: '24px' }}>Hoe de dienst werkt</p>
+            <p className="eyebrow" style={{ marginBottom: '24px' }}>Hoe de dienstverlening werkt</p>
             <div style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
@@ -409,17 +433,17 @@ export default function FactumCapitalPage() {
                 {
                   step: '1',
                   title: 'Analytisch fundament',
-                  body: 'Factum doorlicht de situatie systematisch op alle relevante dimensies — afhankelijk van het moment: acquisitie, financiering, portfolio of herstructurering.',
+                  body: 'Agentic Mindshift doorlicht de situatie systematisch op alle relevante dimensies, met Factum als platform — afhankelijk van het moment: acquisitie, financiering, portfolio of herstructurering.',
                 },
                 {
                   step: '2',
                   title: 'Juiste adviseur gekoppeld',
-                  body: 'Factum koppelt de gecertificeerde professional die past bij het moment: RA/RB voor acquisitie-sign-off, financieel adviseur voor bankgesprekken, restructuring consultant voor pre-IBR/WHOA.',
+                  body: 'Agentic Mindshift koppelt de gecertificeerde professional die past bij het moment: RA/RB voor acquisitie-sign-off, financieel adviseur voor bankgesprekken, restructuring consultant voor pre-IBR/WHOA.',
                 },
                 {
                   step: '3',
                   title: 'Gedeeld dossier',
-                  body: 'Alle betrokken partijen werken op één dossier. Minder dubbel werk, kortere doorlooptijd, kennisretentie na afronding.',
+                  body: 'Alle betrokken partijen werken op één Factum-dossier. Minder dubbel werk, kortere doorlooptijd, kennisretentie na afronding.',
                 },
               ].map((s) => (
                 <div
@@ -469,7 +493,7 @@ export default function FactumCapitalPage() {
               marginTop: '10px',
               lineHeight: 1.5,
             }}>
-              Factum Capital is geen registeraccountant en treedt niet op als formeel opdrachtnemer voor bank-proof due diligence of wettelijk verplichte rapportages. De gecertificeerde adviseurs en consultants met wie Factum samenwerkt zijn zelfstandige professionals met eigen beroepskwalificaties en aansprakelijkheid.
+              Noch Factum Capital noch Agentic Mindshift is een registeraccountant; geen van beide treedt op als formeel opdrachtnemer voor bank-proof due diligence of wettelijk verplichte rapportages. De gecertificeerde adviseurs en consultants met wie Agentic Mindshift samenwerkt zijn zelfstandige professionals met eigen beroepskwalificaties en aansprakelijkheid.
             </p>
           </div>
         </div>
@@ -614,19 +638,22 @@ export default function FactumCapitalPage() {
               fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
               color: 'rgba(247,242,235,0.5)',
               marginBottom: '40px',
-              maxWidth: '420px',
+              maxWidth: '460px',
               marginInline: 'auto',
               lineHeight: 1.75,
             }}
           >
-            Twaalf minuten. Direct inzicht in uw deal-aanpak, kennisretentie en AI-gereedheid — én welke Factum-modules of dienst-momenten het meest relevant zijn voor uw situatie.
+            Twaalf minuten. Direct inzicht in uw deal-aanpak, kennisretentie en AI-gereedheid — én of het platform (vanaf 1 juli 2026) of de dienstverlening via Agentic Mindshift het beste bij u past.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>
             <Button href="/scorecard" variant="primary" size="lg">
               Start de Scorecard
             </Button>
+            <Button href="/werkwijze" variant="secondary" size="lg">
+              Werkwijze & investering
+            </Button>
             <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
-              Plan een vrijblijvende kennismaking
+              Plan een kennismaking
             </Button>
           </div>
         </div>
