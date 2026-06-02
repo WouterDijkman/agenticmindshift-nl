@@ -1,0 +1,125 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
+const PAINS = [
+  {
+    code: '01',
+    label: 'Onzichtbaar risico',
+    title: 'U neemt beslissingen op basis van wat u ziet.',
+    body: 'AI-substitutierisico, managementafhankelijkheid en operationele concentratie zijn zelden zichtbaar in een IM of jaarrapportage. Ze worden zichtbaar als de deal al getekend is — of de portefeuille al in stress zit.',
+  },
+  {
+    code: '02',
+    label: 'Kennisretentie',
+    title: 'Elke acquisitie begint opnieuw bij nul.',
+    body: 'De inzichten van de vorige deal verdwijnen met de dealmaker of verdwijnen in een gedeelde map die niemand meer opent. Uw praktijk accumuleert deals — maar leert er niet structureel van.',
+  },
+  {
+    code: '03',
+    label: 'Te late signalering',
+    title: 'Portfolio-problemen zijn maanden eerder zichtbaar.',
+    body: 'Onderprestatie, cashflow-stress en exit-obstakels sluimeren kwartalen voordat de jaarrapportage het bevestigt. Vroegtijdige signalering vereist een structuur die er in de praktijk zelden is.',
+  },
+];
+
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1, delayChildren: 0.05 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
+  },
+};
+
+export default function HomepagePainSection() {
+  return (
+    <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(64px, 9vw, 112px)' }}>
+      <div className="container-medium">
+        <motion.div
+          style={{ marginBottom: '52px' }}
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <p className="eyebrow" style={{ marginBottom: '16px' }}>Herkenbaar?</p>
+          <h2 className="type-h2" style={{ maxWidth: '520px', margin: 0 }}>
+            Drie situaties die stiller zijn dan u denkt.
+          </h2>
+        </motion.div>
+
+        <motion.div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+            gap: '1px',
+            background: 'var(--border-subtle)',
+            border: '1px solid var(--border-subtle)',
+          }}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.15 }}
+        >
+          {PAINS.map((p) => (
+            <motion.div
+              key={p.code}
+              variants={itemVariants}
+              style={{
+                background: 'var(--bg-primary)',
+                padding: 'clamp(32px, 4vw, 48px)',
+                borderTop: '3px solid transparent',
+                transition: 'border-top-color 180ms ease',
+              }}
+              whileHover={{ borderTopColor: 'var(--accent-cta)' }}
+            >
+              <p
+                style={{
+                  fontSize: '0.6875rem',
+                  fontWeight: 700,
+                  letterSpacing: '0.14em',
+                  textTransform: 'uppercase',
+                  color: 'var(--accent-cta)',
+                  marginBottom: '20px',
+                  opacity: 0.75,
+                }}
+              >
+                {p.label}
+              </p>
+              <h3
+                style={{
+                  fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+                  fontSize: 'clamp(1.0625rem, 1.6vw, 1.25rem)',
+                  fontWeight: 700,
+                  color: 'var(--text-primary)',
+                  letterSpacing: '-0.015em',
+                  lineHeight: 1.3,
+                  marginBottom: '16px',
+                }}
+              >
+                {p.title}
+              </h3>
+              <p
+                style={{
+                  fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
+                  fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
+                  color: 'var(--text-secondary)',
+                  lineHeight: 1.75,
+                  margin: 0,
+                }}
+              >
+                {p.body}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}

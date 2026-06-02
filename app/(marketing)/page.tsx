@@ -6,6 +6,8 @@ import HomepageStepsSection from './HomepageStepsSection';
 import HomepageDimensionsSection from './HomepageDimensionsSection';
 import HomepageVoorWieSection from './HomepageVoorWieSection';
 import HomepageBioSection from './HomepageBioSection';
+import HomepagePainSection from './HomepagePainSection';
+import HomepageFactumSection from './HomepageFactumSection';
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
 import JsonLd from '@/components/JsonLd';
 import { faqItems } from '@/lib/faq';
@@ -42,6 +44,13 @@ export default function HomePage() {
       <JsonLd data={faqLd} />
 
       <AnimatedHero />
+
+      {/* ═══════════════════════════════════════════
+          1b. PIJNPUNTEN — herkenbare situaties
+      ═══════════════════════════════════════════ */}
+      <HomepagePainSection />
+
+      <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
             {/* ═══════════════════════════════════════════
           2. EXPERTISE STRIP
@@ -140,7 +149,7 @@ export default function HomePage() {
                 aum: '~€120M AUM',
               },
               {
-                quote: '“De AI Due Diligence op onze laatste acquisitie gaf ons een extra argument in de pricing-discussie. We hebben de entry-multiple 0,4× naar beneden bijgesteld op basis van de substitutie-analyse. Het rapport kostte €12.500. De aanpassing leverde meervoudig meer op.”',
+                quote: '“De AI Due Diligence op onze laatste acquisitie gaf ons een extra argument in de pricing-discussie. We hebben de entry-multiple 0,4× naar beneden bijgesteld op basis van de substitutie-analyse. Het rapport kostte €10.000. De aanpassing leverde meervoudig meer op.”',
                 who: 'M&A-director, buy-and-build platform',
                 aum: '4 acquisities per jaar',
               },
@@ -185,6 +194,11 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+
+      {/* ═══════════════════════════════════════════
+          3c. FACTUM CAPITAL — twee tracks
+      ═══════════════════════════════════════════ */}
+      <HomepageFactumSection />
 
       <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
       <HomepageBioSection />
