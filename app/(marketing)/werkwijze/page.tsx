@@ -18,11 +18,10 @@ interface DealVariant {
   discount?: string;
 }
 
-interface MethodologyNote {
-  prefix: string;
-  linkLabel: string;
+interface PoweredBy {
+  label: string;
   href: string;
-  suffix?: string;
+  tagline: string;
 }
 
 interface Offering {
@@ -36,7 +35,7 @@ interface Offering {
   featured?: boolean;
   variants?: DealVariant[];
   variantsCaption?: string;
-  methodology?: MethodologyNote;
+  poweredBy?: PoweredBy;
 }
 
 const offerings: Offering[] = [
@@ -86,11 +85,10 @@ const offerings: Offering[] = [
       { label: '5 deals', price: '€42.500', unit: '€8.500 / deal', discount: '–15%' },
       { label: '10 deals', price: '€80.000', unit: '€8.000 / deal', discount: '–20%' },
     ],
-    methodology: {
-      prefix: 'Uitgevoerd via',
-      linkLabel: 'Factum Capital',
+    poweredBy: {
+      label: 'Factum Capital',
       href: '/factum-capital',
-      suffix: ', ons gespecialiseerde M&A AI-platform.',
+      tagline: 'Ons AI-platform voor M&A & portfolio-intelligence',
     },
   },
 ];
@@ -200,6 +198,64 @@ export default function WerkwijzePage() {
                   {o.title}
                 </h3>
 
+                {o.poweredBy && (
+                  <Link
+                    href={o.poweredBy.href}
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '4px',
+                      padding: '12px 14px',
+                      background: o.featured ? 'rgba(247,242,235,0.08)' : 'var(--bg-secondary)',
+                      borderLeft: '3px solid var(--accent-cta)',
+                      border: `1px solid ${o.featured ? 'rgba(247,242,235,0.14)' : 'var(--border-subtle)'}`,
+                      borderLeftWidth: '3px',
+                      borderLeftColor: 'var(--accent-cta)',
+                      textDecoration: 'none',
+                      width: '100%',
+                    }}
+                  >
+                    <span
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        fontSize: '10px',
+                        fontWeight: 800,
+                        letterSpacing: '0.18em',
+                        textTransform: 'uppercase',
+                        color: 'var(--accent-cta)',
+                        lineHeight: 1,
+                      }}
+                    >
+                      <span>Powered by</span>
+                      <span
+                        style={{
+                          fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+                          fontSize: '0.9375rem',
+                          fontWeight: 700,
+                          letterSpacing: '-0.01em',
+                          color: o.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
+                          textTransform: 'none',
+                        }}
+                      >
+                        {o.poweredBy.label}
+                      </span>
+                      <span style={{ color: 'var(--accent-cta)' }}>→</span>
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
+                        fontSize: '0.875rem',
+                        color: o.featured ? 'rgba(247,242,235,0.7)' : 'var(--text-muted)',
+                        lineHeight: 1.4,
+                      }}
+                    >
+                      {o.poweredBy.tagline}
+                    </span>
+                  </Link>
+                )}
+
                 <p
                   style={{
                     fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
@@ -296,33 +352,6 @@ export default function WerkwijzePage() {
                       </div>
                     ))}
                   </div>
-                )}
-
-                {o.methodology && (
-                  <p
-                    style={{
-                      fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                      fontSize: '0.875rem',
-                      lineHeight: 1.6,
-                      color: o.featured ? 'rgba(247,242,235,0.7)' : 'var(--text-muted)',
-                      margin: 0,
-                      fontStyle: 'italic',
-                    }}
-                  >
-                    {o.methodology.prefix}{' '}
-                    <Link
-                      href={o.methodology.href}
-                      style={{
-                        color: 'var(--accent-cta)',
-                        textDecoration: 'underline',
-                        textUnderlineOffset: '2px',
-                        fontStyle: 'normal',
-                      }}
-                    >
-                      {o.methodology.linkLabel}
-                    </Link>
-                    {o.methodology.suffix}
-                  </p>
                 )}
 
                 <div
