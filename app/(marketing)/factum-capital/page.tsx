@@ -7,9 +7,9 @@ import CountdownTimer from './CountdownTimer';
 import FactumModulesGrid from './FactumModulesGrid';
 
 export const metadata: Metadata = {
-  title: 'Factum Capital — AI-platform achter de AI Due Diligence-dienst',
+  title: 'Factum Capital — AI-platform achter de AI Due Diligence & Portfolio-dienstverlening',
   description:
-    'Factum Capital is het AI-platform achter de AI Due Diligence & Portfolio-dienstverlening van Agentic Mindshift. SaaS-toegang voor PE-fondsen en M&A-teams die zelf willen werken (lancering 1 juli 2026); volledige uitbesteding via Agentic Mindshift voor wie het analytisch fundament + gecertificeerde adviseur-regie wil afnemen.',
+    'Factum Capital is het AI-platform achter de AI Due Diligence & Portfolio-dienstverlening van Agentic Mindshift. Vier momenten: acquisitie, financiering, portfolio review en pre-IBR/WHOA. SaaS-toegang (lancering 1 juli 2026) of volledig uitbesteden via Agentic Mindshift.',
 };
 
 const MOMENTEN = [
@@ -583,7 +583,7 @@ export default function FactumCapitalPage() {
                   'Directe input op de module-roadmap',
                   'Voorrang op platform-onboarding per 1 juli 2026',
                   'Vroeg-toegangstarief bij lancering',
-                  'Prioriteit voor pilot deal intelligence-opdrachten in Q3 2026',
+                  'Prioriteit voor pilot deal intelligence-opdrachten in het eerste kwartaal na lancering (juli–september 2026)',
                 ].map((t) => (
                   <div key={t} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                     <span

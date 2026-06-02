@@ -11,7 +11,7 @@ const steps = [
   {
     n: '02',
     title: 'Gepersonaliseerd rapport',
-    body: 'Totaalscore per dimensie, twee prioritaire aandachtspunten en een concreet vervolgvoorstel.',
+    body: 'Totaalscore op zes dimensies, twee prioritaire aandachtspunten en een concreet vervolgvoorstel.',
   },
   {
     n: '03',

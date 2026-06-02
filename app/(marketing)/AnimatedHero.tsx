@@ -103,7 +103,7 @@ export default function AnimatedHero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: 0.38, ease }}
           >
-            Gratis analyse — 12 minuten
+            Deal & Portfolio Intelligence Quickscan
           </motion.p>
         </div>
 

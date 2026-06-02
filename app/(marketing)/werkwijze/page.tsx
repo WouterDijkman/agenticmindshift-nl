@@ -464,6 +464,10 @@ export default function WerkwijzePage() {
                 a: 'Start met de Sparring Sessie vanaf €395. Eén concrete vraag, één schriftelijke samenvatting, geen vervolg-verplichting. Past het niet, dan is dat de uitkomst — niet het probleem.',
               },
               {
+                q: 'Wat maakt Agentic Mindshift anders dan andere AI-consultants?',
+                a: 'Zes jaar deal-ervaring aan beide kanten van de transactietafel: acquisition finance op LBO\'s én financial restructuring op portefeuilles in stress. Dat is geen AI-generalist die toevallig PE-klanten heeft — het is iemand die de aannames in uw dossier herkent omdat hij ze zelf heeft moeten onderbouwen. De AI-kennis versterkt die praktijk; het vervangt haar niet.',
+              },
+              {
                 q: 'Hoe weet ik vooraf of de investering rendeert?',
                 a: 'Bij AI Due Diligence dekt één goed gecalibreerde entry-multiple-correctie van 0,5× op een €5M EBITDA-target de kosten ruim 200×. Bij Portfolio Intelligence: één tijdig gesignaleerde variantie-afwijking dekt doorgaans de jaarkosten. Bij Fractional AI Officer: één vermeden foute leveranciers-keuze betaalt het traject ruimschoots terug.',
               },
