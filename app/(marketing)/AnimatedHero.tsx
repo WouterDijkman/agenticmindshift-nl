@@ -78,12 +78,12 @@ export default function AnimatedHero() {
       <div
         className="container-wide"
         style={{
-          paddingTop: 'clamp(120px, 20vh, 200px)',
-          paddingBottom: 'clamp(80px, 10vh, 120px)',
+          paddingTop: 'clamp(96px, 11vh, 128px)',
+          paddingBottom: 'clamp(48px, 6vh, 72px)',
         }}
       >
         {/* Eyebrow */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '32px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '20px' }}>
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
@@ -111,22 +111,23 @@ export default function AnimatedHero() {
         <motion.h1
           className="type-display"
           style={{
-            marginBottom: '32px',
+            fontSize: 'clamp(44px, 6.2vw, 88px)',
+            marginBottom: '16px',
             color: 'var(--text-primary)',
             maxWidth: '1000px',
           }}
           initial="hidden"
           animate="visible"
           variants={{
-            visible: { transition: { staggerChildren: 0.065, delayChildren: 0.5 } },
+            visible: { transition: { staggerChildren: 0.055, delayChildren: 0.45 } },
           }}
         >
           {WORDS.map((word, i) => (
             <motion.span
               key={i}
               variants={{
-                hidden: { opacity: 0, y: 22 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease } },
+                hidden: { opacity: 0, y: 18 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease } },
               }}
               style={{ display: 'inline-block', marginRight: '0.27em' }}
             >
@@ -135,41 +136,60 @@ export default function AnimatedHero() {
           ))}
         </motion.h1>
 
-        {/* Subkop — groot, Cormorant, leesbaargewicht */}
+        {/* Subkop */}
         <motion.p
           style={{
             fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-            fontSize: 'clamp(1.375rem, 2.6vw, 2rem)',
+            fontSize: 'clamp(1.125rem, 1.8vw, 1.5rem)',
             fontWeight: 400,
             lineHeight: 1.55,
             color: 'var(--text-secondary)',
-            maxWidth: '780px',
-            marginBottom: '48px',
+            maxWidth: '680px',
+            marginBottom: '32px',
             letterSpacing: '-0.005em',
           }}
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.68, delay: 1.05, ease }}
+          transition={{ duration: 0.65, delay: 0.95, ease }}
         >
-          U doet alles goed — en toch de vraag of u het volgende
-          rendementsprobleem ziet voordat het te laat is. Dat gevoel
-          is geen paranoia. Het is een informatieprobleem dat oplosbaar is.
+          U beheert deals en portefeuilles — en toch de vraag of u het volgende
+          probleem ziet voordat het te laat is. Dat gevoel is geen paranoia.
+          Het is een informatieprobleem dat oplosbaar is.
         </motion.p>
 
         {/* CTA */}
         <motion.div
-          style={{ display: 'flex', flexDirection: 'column', gap: '14px', alignItems: 'flex-start' }}
-          initial={{ opacity: 0, y: 16 }}
+          style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'flex-start' }}
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.25, ease }}
+          transition={{ duration: 0.55, delay: 1.15, ease }}
         >
-          <Button href="/scorecard" variant="primary" size="lg">
-            Start de Scorecard
-          </Button>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
+            <Button href="/scorecard" variant="primary" size="lg">
+              Start de Scorecard
+            </Button>
+            <a
+              href="/werkwijze"
+              style={{
+                fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
+                fontSize: '1.0625rem',
+                fontWeight: 500,
+                color: 'var(--text-secondary)',
+                textDecoration: 'none',
+                letterSpacing: '0.01em',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '4px',
+                paddingBlock: '8px',
+              }}
+            >
+              Bekijk de werkwijze <span style={{ color: 'var(--accent-cta)' }}>→</span>
+            </a>
+          </div>
           <p
             style={{
               fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-              fontSize: '1rem',
+              fontSize: '0.9375rem',
               fontStyle: 'italic',
               fontWeight: 400,
               color: 'var(--text-muted)',
