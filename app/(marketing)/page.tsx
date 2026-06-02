@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import AnimatedHero from './AnimatedHero';
 import HomepageStatsSection from './HomepageStatsSection';
@@ -58,47 +59,55 @@ export default function HomePage() {
               borderTop: '1px solid rgba(247,242,235,0.06)',
             }}
           >
-            {[
-              { label: '6 jaar', sub: 'deal-ervaring NL mid-market' },
-              { label: 'Acquisition finance', sub: 'LBO-structurering' },
-              { label: 'Financial restructuring', sub: 'Portefeuilles in stress' },
-              { label: 'AI Due Diligence', sub: '2–3 weken · NL MKB €5M–€50M' },
-              { label: 'Factum Capital', sub: 'lancering 1 juli 2026' },
-            ].map((item, i) => (
-              <div
-                key={item.label}
-                style={{
-                  padding: '8px 24px',
-                  borderLeft: i > 0 ? '1px solid rgba(247,242,235,0.1)' : 'none',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '2px',
-                }}
-              >
-                <span
-                  style={{
-                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                    fontSize: '0.9375rem',
-                    fontWeight: 700,
-                    color: 'rgba(247,242,235,0.88)',
-                    letterSpacing: '-0.01em',
-                    lineHeight: 1,
-                  }}
-                >
-                  {item.label}
-                </span>
-                <span
-                  style={{
-                    fontSize: '0.6875rem',
-                    color: 'rgba(247,242,235,0.58)',
-                    letterSpacing: '0.06em',
-                    lineHeight: 1,
-                  }}
-                >
-                  {item.sub}
-                </span>
-              </div>
-            ))}
+            {([
+              { label: '6 jaar', sub: 'deal-ervaring NL mid-market', href: null },
+              { label: 'Acquisition finance', sub: 'LBO-structurering', href: null },
+              { label: 'Financial restructuring', sub: 'Portefeuilles in stress', href: null },
+              { label: 'AI Due Diligence', sub: '2–3 weken · NL MKB €5M–€50M', href: '/werkwijze' },
+              { label: 'Factum Capital', sub: 'lancering 1 juli 2026', href: '/factum-capital' },
+            ] as const).map((item, i) => {
+              const inner = (
+                <>
+                  <span
+                    style={{
+                      fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+                      fontSize: '0.9375rem',
+                      fontWeight: 700,
+                      color: 'rgba(247,242,235,0.88)',
+                      letterSpacing: '-0.01em',
+                      lineHeight: 1,
+                    }}
+                  >
+                    {item.label}
+                  </span>
+                  <span
+                    style={{
+                      fontSize: '0.6875rem',
+                      color: 'rgba(247,242,235,0.58)',
+                      letterSpacing: '0.06em',
+                      lineHeight: 1,
+                    }}
+                  >
+                    {item.sub}
+                  </span>
+                </>
+              );
+              const wrapStyle = {
+                padding: '8px 24px',
+                borderLeft: i > 0 ? '1px solid rgba(247,242,235,0.1)' : 'none',
+                display: 'flex' as const,
+                flexDirection: 'column' as const,
+                gap: '2px',
+                textDecoration: 'none',
+              };
+              return item.href ? (
+                <Link key={item.label} href={item.href} style={wrapStyle}>
+                  {inner}
+                </Link>
+              ) : (
+                <div key={item.label} style={wrapStyle}>{inner}</div>
+              );
+            })}
           </div>
         </div>
       </section>

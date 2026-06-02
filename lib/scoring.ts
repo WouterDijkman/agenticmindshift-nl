@@ -75,33 +75,38 @@ export function calculateScores(answers: Answers): ScoreResult {
   };
 }
 
-export type OfferType = 'A' | 'B' | 'C' | 'D' | 'E' | 'none';
+export type OfferType = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'none';
 
 export const offerMap: Record<OfferType, { name: string; description: string }> = {
   A: {
-    name: 'Portfolio Intelligence',
+    name: 'AI Due Diligence & Portfolio',
     description:
-      'Doorlopende portfolio-intelligence over uw deelnemingen, met maandelijkse rapportage en vroegtijdige signalering van onderprestatie en AI-substitutierisico. Factum Capital M3.',
+      'Doorlopende portfolio-intelligence over uw deelnemingen, met maandelijkse rapportage en vroegtijdige signalering van onderprestatie en AI-substitutierisico. Uitgevoerd via Factum Capital (ons AI-platform).',
   },
   B: {
-    name: 'AI Due Diligence',
+    name: 'AI Due Diligence & Portfolio',
     description:
-      'Een uitgebreid analytisch fundament voor uw volgende acquisitie — van IM-screening tot closing. Gecertificeerde adviseurs voor formele sign-off. Factum Capital M1.',
+      'Een uitgebreid analytisch fundament voor uw volgende acquisitie — van IM-screening tot closing. Gecertificeerde adviseurs voor formele sign-off. Uitgevoerd via Factum Capital (ons AI-platform).',
   },
   C: {
     name: 'Fractional AI Officer',
     description:
-      'Een fractional AI-officer, 2–3 dagen per maand, voor vroegtijdige interventie bij portfoliobedrijven. Bij signalen van financiële stress: koppeling met restructuring consultants via Factum Capital M4.',
+      'Een fractional AI-officer, 2–3 dagen per maand, voor vroegtijdige interventie bij portfoliobedrijven. Bij signalen van financiële stress: koppeling met restructuring consultants via Factum Capital.',
   },
   D: {
-    name: 'Strategic Enablement Masterclasses',
+    name: 'Consultancy, Workflow & Strategic Enablement',
     description:
-      'Eenmalige masterclasses voor uw team over analytische structuur, AI-substitutierisico en bias-detectie. Direct toepasbaar op uw volgende deal of dossier.',
+      'Projectmatig of in retainer: AI concreet inzetten in uw processen, workflows of organisatie — met implementatie, masterclasses en team-enablement.',
   },
   E: {
-    name: 'Factum Capital — Financieringsmemo',
+    name: 'AI Due Diligence & Portfolio',
     description:
-      'Analytisch onderbouwde financieringsmemo voor bankgesprekken, leningen of investeerderspresentaties. Ook voor kleinere financieringsaanvragen. Gecertificeerde adviseurs voor formele ondertekening. Factum Capital M2.',
+      'Analytisch onderbouwde financieringsmemo voor bankgesprekken, leningen of investeerderspresentaties. Ook voor kleinere financieringsaanvragen. Gecertificeerde adviseurs voor formele ondertekening. Via Factum Capital (ons AI-platform).',
+  },
+  F: {
+    name: 'AI Sparring Sessie',
+    description:
+      'Een laagdrempelige eerste stap: 60–90 minuten om snel te bepalen wat AI concreet betekent voor uw volgende deal, uw portfolio of uw eerstvolgende beslissing.',
   },
   none: {
     name: 'Geen aanbeveling',

@@ -2,7 +2,7 @@ import type { OfferType } from './scoring';
 import type { Answers } from '../store/assessmentStore';
 import { getQuestion } from './questions';
 
-export type VariantId = 'A' | 'B' | 'C' | 'D' | 'E';
+export type VariantId = 'A' | 'B' | 'C' | 'D' | 'E' | 'F';
 
 export interface Intervention {
   title: string;
@@ -24,9 +24,9 @@ export interface VariantContent {
 export const variants: Record<VariantId, VariantContent> = {
   A: {
     id: 'A',
-    offerName: 'Portfolio Intelligence',
+    offerName: 'AI Due Diligence & Portfolio',
     interpretation: (raw) =>
-      `Uw score op Analytische Kwaliteit is ${raw} van 20 punten. Dit is de dimensie waar de meeste partijen in de Nederlandse lower-mid market structureel rendement verliezen — doorgaans onbewust. Uw MBR-cyclus draait, maar vroegtijdige signalering ontbreekt: variantie-analyse gaat niet diep genoeg om bij te sturen voordat een kwartaal verloren is. Concreet: een portefeuille van vijf bedrijven met dit profiel laat tussen 80 en 200 basispunten IRR per jaar onbenut. Factum Capital M3 (Portfolio review) is specifiek gebouwd voor dit scenario — met gedeeld dossier en koppeling naar gecertificeerde adviseurs waar nodig.`,
+      `Uw score op Analytische Kwaliteit is ${raw} van 20 punten. Dit is de dimensie waar de meeste partijen in de Nederlandse lower-mid market structureel rendement verliezen — doorgaans onbewust. Uw MBR-cyclus draait, maar vroegtijdige signalering ontbreekt: variantie-analyse gaat niet diep genoeg om bij te sturen voordat een kwartaal verloren is. Concreet: een portefeuille van vijf bedrijven met dit profiel laat tussen 80 en 200 basispunten IRR per jaar onbenut. De portfolio-intelligence dienst — uitgevoerd via Factum Capital (ons AI-platform) — is specifiek gebouwd voor dit scenario, met gedeeld dossier en koppeling naar gecertificeerde adviseurs waar nodig.`,
     interventions: [
       {
         title: 'Herontwerp uw MBR-rapportagestructuur',
@@ -41,13 +41,13 @@ export const variants: Record<VariantId, VariantContent> = {
         body: 'Tien minuten per portfoliobedrijf per maand. Het ritme is belangrijker dan de techniek.',
       },
     ],
-    price: 'vanaf 8.500 euro per maand, looptijd minimaal 6 maanden',
+    price: '€6.500 – €8.500 investering per maand · minimaal 3 maanden · excl. btw',
   },
   B: {
     id: 'B',
-    offerName: 'AI Due Diligence',
+    offerName: 'AI Due Diligence & Portfolio',
     interpretation: (raw) =>
-      `Uw score op AI Readiness is ${raw} van 25 punten. Wat opvalt is dat AI-substitutierisico nog niet systematisch in uw deal-analyse wordt gemodelleerd, en dat uw analytisch fundament per dossier verschilt. Concreet: bij uw drie meest recente acquisities is de kans dat één ervan de komende 24 maanden materiële marge-erosie ondervindt, hoger dan u nu inschat. Factum Capital M1 (Acquisitie) levert het uitgebreide analytisch fundament voor uw volgende deal — inclusief gecertificeerde adviseurs (RA/RB/advocaten) voor formele sign-off.`,
+      `Uw score op AI Readiness is ${raw} van 25 punten. Wat opvalt is dat AI-substitutierisico nog niet systematisch in uw deal-analyse wordt gemodelleerd, en dat uw analytisch fundament per dossier verschilt. Concreet: bij uw drie meest recente acquisities is de kans dat één ervan de komende 24 maanden materiële marge-erosie ondervindt, hoger dan u nu inschat. De AI Due Diligence dienst — uitgevoerd via Factum Capital (ons AI-platform) — levert het uitgebreide analytisch fundament voor uw volgende deal, inclusief gecertificeerde adviseurs (RA/RB/advocaten) voor formele sign-off.`,
     interventions: [
       {
         title: 'AI-substitutie-framework per functiegroep',
@@ -62,13 +62,13 @@ export const variants: Record<VariantId, VariantContent> = {
         body: 'Welke data levert het target aan? Welk percentage van de rapportage is geautomatiseerd? Dit bepaalt mee de kwaliteit van het Factum-dossier.',
       },
     ],
-    price: 'vanaf 12.500 euro per deal, doorlooptijd 2–3 weken',
+    price: 'Vanaf €10.000 investering per deal · doorlooptijd 2–3 weken · excl. btw',
   },
   C: {
     id: 'C',
     offerName: 'Fractional AI Officer',
     interpretation: (raw) =>
-      `Uw score op Knowledge Retention is ${raw} van 10 punten. Kennis weglekt op twee manieren: via externe rapporten die niet structureel worden verwerkt, en via medewerkers die uw organisatie verlaten. Bij signalen van financiële stress bij een deelneming is die kennislekkage extra kostbaar — de window voor tijdige bijsturing is klein. Factum Capital M4 (Pre-IBR/WHOA) koppelt gespecialiseerde restructuring consultants op het moment dat een indicatieve doorlichting aangeeft dat een formeel traject nodig is.`,
+      `Uw score op Knowledge Retention is ${raw} van 10 punten. Kennis weglekt op twee manieren: via externe rapporten die niet structureel worden verwerkt, en via medewerkers die uw organisatie verlaten. Bij signalen van financiële stress bij een deelneming is die kennislekkage extra kostbaar — de window voor tijdige bijsturing is klein. Als Fractional AI Officer signaleert Agentic Mindshift vroegtijdig wanneer een indicatieve doorlichting nodig is, en koppelt zo nodig gespecialiseerde restructuring consultants.`,
     interventions: [
       {
         title: 'Centraal kennis-repository met dossier-output',
@@ -83,13 +83,13 @@ export const variants: Record<VariantId, VariantContent> = {
         body: 'Twee leading indicators per bedrijf die signaleren of een diepere doorlichting nodig is — vóór het te laat is.',
       },
     ],
-    price: 'vanaf 6.500 euro per maand, looptijd minimaal 6 maanden',
+    price: '€3.500 – €5.500 investering per maand · minimaal 3 maanden · excl. btw',
   },
   D: {
     id: 'D',
-    offerName: 'Strategic Enablement Masterclasses',
+    offerName: 'Consultancy, Workflow & Strategic Enablement',
     interpretation: () =>
-      `Uw scores op Capacity Engineering en Deal Velocity wijzen op een structureel patroon: uw team is gekwalificeerd, maar wordt belemmerd door operationele frictie. Vergelijkbare partijen die analytische processen gestructureerder aanpakken, zien hun screening- en analysecapaciteit verdubbelen zonder team-uitbreiding — relevant voor elk van de vier Factum Capital momenten.`,
+      `Uw scores op Capacity Engineering en Deal Velocity wijzen op een structureel patroon: uw team is gekwalificeerd, maar wordt belemmerd door operationele frictie. Vergelijkbare partijen die analytische processen gestructureerder aanpakken, zien hun screening- en analysecapaciteit verdubbelen zonder team-uitbreiding. Met een gerichte consultancy- of enablement-aanpak lost u dit op.`,
     interventions: [
       {
         title: 'AI-augmented analyse-protocol',
@@ -104,13 +104,13 @@ export const variants: Record<VariantId, VariantContent> = {
         body: 'Welk analytisch werk had AI of structuur kunnen overnemen? Tien minuten, blijvend inzicht.',
       },
     ],
-    price: 'vanaf 4.500 euro per workshop, voor een team van maximaal 8 personen',
+    price: 'Vanaf €4.500 investering per traject of doorlopend in retainer · excl. btw',
   },
   E: {
     id: 'E',
-    offerName: 'Factum Capital — Financieringsmemo',
+    offerName: 'AI Due Diligence & Portfolio',
     interpretation: (raw) =>
-      `Uw score op Analytische Kwaliteit is ${raw} van 20 punten. Wat opvalt is dat uw financierings- of deal-dossiers nog niet consequent op alle relevante dimensies zijn opgebouwd. Dit leidt tot langere doorlooptijden, onnodige herzieningsronden met de bank of investeerder, en een minder sterke onderhandelingspositie. Een goed gefinancierd financieringsmemo is niet alleen een document — het is uw analytisch fundament. Factum Capital M2 (Financiering) levert dat fundament en koppelt de gecertificeerde adviseurs die formeel ondertekenen waar vereist.`,
+      `Uw score op Analytische Kwaliteit is ${raw} van 20 punten. Wat opvalt is dat uw financierings- of deal-dossiers nog niet consequent op alle relevante dimensies zijn opgebouwd. Dit leidt tot langere doorlooptijden, onnodige herzieningsronden met de bank of investeerder, en een minder sterke onderhandelingspositie. Een bankklaar financieringsmemo is niet alleen een document — het is uw analytisch fundament. De financieringsmemo-dienst — uitgevoerd via Factum Capital (ons AI-platform) — levert dat fundament en koppelt de gecertificeerde adviseurs die formeel ondertekenen waar vereist.`,
     interventions: [
       {
         title: 'Structureer uw financieringsmemo op vaste dimensies',
@@ -125,17 +125,38 @@ export const variants: Record<VariantId, VariantContent> = {
         body: 'Een bank-proof presentatie vereist een formele financieel adviseur of accountant. Bouw het dossier zo op dat die adviseur in twee uur kan instappen — niet in twee weken.',
       },
     ],
-    price: 'op maat per financieringsaanvraag · via Factum Capital M2 deal intelligence dienst',
+    price: 'Vanaf €10.000 investering per deal · of €6.500 – €8.500 per maand portfolio-intelligence · excl. btw',
+  },
+  F: {
+    id: 'F',
+    offerName: 'AI Sparring Sessie',
+    interpretation: () =>
+      `Uw scorecard laat zien dat u aan het begin staat van het structureren van uw analytische aanpak — en dat is precies het juiste moment voor een concrete, gerichte eerste stap. Een AI Sparring Sessie is geen verkoopgesprek: het is 60–90 minuten gericht op uw specifieke vraag, met een schriftelijke samenvatting als uitkomst. U bepaalt het onderwerp; de sessie levert u concreet inzicht op waar u direct iets mee kunt.`,
+    interventions: [
+      {
+        title: 'Definieer uw meest urgente blinde vlek',
+        body: 'Welke beslissing staat er aan — en welke informatie ontbreekt om die beslissing gefundeerd te nemen? Dat is het startpunt van een sparring-sessie.',
+      },
+      {
+        title: 'Toets uw aannames voordat u handelt',
+        body: 'De sessie is bedoeld om aannames expliciet te maken — niet om ze te bevestigen. Eén sessie kan een kostbare fout voorkomen.',
+      },
+      {
+        title: 'Kies daarna het juiste vervolgtraject',
+        body: 'Na één sessie weet u welke structurele aanpak het beste past: portfolio-intelligence, due diligence, fractional of consultancy.',
+      },
+    ],
+    price: 'Vanaf €395 investering · 60–90 minuten · schriftelijke samenvatting · excl. btw',
   },
 };
 
 /**
- * Map the assigned offer (A/B/C/D/E/none) to its variant content.
+ * Map the assigned offer (A/B/C/D/E/F/none) to its variant content.
  * Returns null if no variant applies (offer === 'none').
  */
 export function variantForOffer(offer: OfferType): VariantContent | null {
   if (offer === 'none') return null;
-  return variants[offer];
+  return variants[offer as VariantId] ?? null;
 }
 
 /**
@@ -148,6 +169,7 @@ export function rawScoreForVariant(answers: Answers, variant: VariantId): number
     C: ['Q13', 'Q14'],
     D: ['Q12', 'Q15', 'Q6'],
     E: ['Q8', 'Q10', 'Q6'],
+    F: ['Q1', 'Q2', 'Q3'],
   };
   return qIds[variant].reduce((sum, id) => {
     const letter = answers[id];
@@ -172,6 +194,7 @@ export function weakestNormalizedForVariant(
     C: 'KnowledgeRetention',
     D: 'CapacityEngineering',
     E: 'PortfolioIntelligence',
+    F: 'AIReadiness',
   };
   return byDimension[dimByVariant[variant]] ?? 0;
 }

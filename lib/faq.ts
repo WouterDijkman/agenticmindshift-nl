@@ -42,6 +42,12 @@ export const faqItems: FaqItem[] = [
       'Nee. U ontvangt een concreet rapport met scores en aanbevelingen. Als wij iets willen voorstellen, doen wij dat expliciet \u2014 en alleen als uw scoreprofiel daarvoor aanleiding geeft.',
   },
   {
+    id: 'investering',
+    question: 'Wat zijn de investeringsniveaus voor de verschillende trajecten?',
+    answer:
+      'Er zijn vier routes: een AI Sparring Sessie vanaf €395 (eenmalig, 60–90 minuten), Consultancy & Strategic Enablement vanaf €4.500 per traject of retainer, een Fractional AI Officer voor €3.500–€5.500 per maand (min. 3 maanden), en AI Due Diligence & Portfolio vanaf €10.000 per deal of €6.500–€8.500 per maand voor doorlopende portfolio-intelligence. Alle bedragen exclusief btw. Zie /werkwijze voor de volledige toelichting en volumetarieven.',
+  },
+  {
     id: 'voorbeeld',
     question: 'Wat als ik de Scorecard niet wil invullen, maar wel het rapport-format wil zien?',
     answer:

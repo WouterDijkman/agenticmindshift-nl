@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import SketchCrosshair from '@/components/icons/SketchCrosshair';
 import HeroAnimated from './HeroAnimated';
@@ -94,9 +95,16 @@ export default function OverPage() {
                   M&amp;A-firma&apos;s die hun portfolio-intelligence structureel willen versterken.
                 </p>
                 <p>
-                  Op 1 juli 2026 lanceert Factum Capital: het Agentic M&amp;A- en
-                  Restructuring Operating System. Drie&euml;ntwintig modules waarmee deal-teams
-                  hun MBR-cyclus, DD-proces en bias-toetsing structureel kunnen instrumenteren.
+                  Op 1 juli 2026 lanceert{' '}
+                  <Link
+                    href="/factum-capital"
+                    style={{ color: 'var(--accent-cta)', textDecoration: 'underline', textUnderlineOffset: '3px' }}
+                  >
+                    Factum Capital
+                  </Link>
+                  : het Agentic M&amp;A- en Restructuring Operating System. Drie&euml;ntwintig
+                  modules waarmee deal-teams hun MBR-cyclus, DD-proces en bias-toetsing
+                  structureel kunnen instrumenteren.
                 </p>
               </div>
             </div>
@@ -251,7 +259,10 @@ export default function OverPage() {
             <div
               style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}
             >
-              <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external>
+              <Button href="/scorecard" variant="primary" size="lg">
+                Start de Scorecard
+              </Button>
+              <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
                 Plan een vrijblijvende kennismaking
               </Button>
               <Button href="https://www.linkedin.com/in/wwdijkman" variant="secondary" size="lg" external>
