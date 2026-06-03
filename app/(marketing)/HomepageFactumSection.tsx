@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Button from '@/components/ui/Button';
+import FactumModulesMockup from '@/components/FactumModulesMockup';
 
 const TRACKS = [
   {
@@ -164,6 +165,17 @@ export default function HomepageFactumSection() {
             </motion.div>
           ))}
         </div>
+
+        {/* Platform module-grid mockup */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          style={{ marginBottom: '48px' }}
+        >
+          <FactumModulesMockup />
+        </motion.div>
 
         {/* Factum platform attribution */}
         <motion.div
