@@ -7,14 +7,14 @@ const ease = [0.22, 1, 0.36, 1] as const;
 const launchModules = [
   { n: '01', title: 'IM-Screener', body: 'Gestructureerde analyse van het Information Memorandum op consistentie, aannames en rode vlaggen.' },
   { n: '02', title: 'Management Bias Checker', body: 'Toetsing van managementpresentaties op selectieve framing, ontbrekende tegenargumenten en wishful-thinking-patronen.' },
-  { n: '03', title: 'AI-Substitutie Modeller', body: 'Kwantificeert AI-substitutierisico per functiegroep en omzetstroom — vertaald naar entry-multiple impact.' },
-  { n: '04', title: 'LBO-Sensitiviteitsmatrix', body: "Geautomatiseerde sensitivity-analyse op EBITDA-marge, omzetgroei en leverage-scenario's voor de IC-beslissing." },
-  { n: '05', title: 'MBR Intelligence Layer', body: 'Structureert de maandelijkse bestuursrapportage op zes dimensies; signaleert variantie automatisch.' },
+  { n: '03', title: 'AI-Kwetsbaarheidsmodel', body: 'Kwantificeert het risico dat AI de kernactiviteit overneemt — per functiegroep en omzetstroom, vertaald naar impact op de overnameprijs.' },
+  { n: '04', title: 'Sensitiviteitsmatrix', body: "Geautomatiseerde gevoeligheidsanalyse op EBITDA-marge, omzetgroei en financieringsscenario's voor de IC-beslissing." },
+  { n: '05', title: 'Maandrapportage-laag', body: 'Structureert de maandelijkse bestuursrapportage op zes dimensies; signaleert afwijkingen automatisch.' },
   { n: '06', title: 'DD-Kennisbank', body: 'Centraliseert DD-bevindingen per portfolio-bedrijf zodat institutionele kennis in-house blijft na personele wisseling.' },
   { n: '07', title: 'Restructuring Triage', body: 'Diagnostisch framework voor portefeuilles in stress: urgent/niet-urgent, financieel/operationeel, inside/outside court.' },
   { n: '08', title: 'IC-Rapportage Generator', body: 'Brengt deal-data naar een consistent IC-rapportageformat met gestandaardiseerde risicoparagraaf.' },
   { n: '09', title: 'Portfolio Health Monitor', body: 'Doorlopend dashboard over alle deelnemingen met peer-benchmark per sector en automatische trend-detectie.' },
-  { n: '10', title: 'Capacity Planner', body: 'Inzicht in mandaten die blijven liggen door operationele frictie — prioriteert dealteam-inzet op rendement.' },
+  { n: '10', title: 'Capaciteitsplanner', body: 'Inzicht in deals die blijven liggen door handmatig zoekwerk — prioriteert de inzet van uw team op rendement.' },
   { n: '11', title: 'Exit Readiness Checker', body: 'Toetst een portfoliobedrijf op de zes meest kritische exit-obstakels: governance, data-room, management-continuïteit.' },
   { n: '12', title: 'Compliance Radar', body: 'Monitort relevante Nederlandse en EU-regelgeving op impact voor M&A-transacties en bestaande portefeuille.' },
 ];

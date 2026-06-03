@@ -11,7 +11,7 @@ const PAINS: { code: string; label: string; title: string; body: string; feeling
     code: '01',
     label: 'Onzichtbaar risico',
     title: 'U neemt beslissingen op basis van wat u ziet.',
-    body: 'AI-substitutierisico en operationele concentratie staan niet in het IM. Ze worden pas zichtbaar als de deal getekend is — of de portefeuille in stress zit.',
+    body: 'Het risico dat AI de kernactiviteit van uw target overneemt en klantconcentratie staan niet in het IM. Ze worden pas zichtbaar als de deal getekend is — of de portefeuille in stress zit.',
     feeling: 'Dat nagende gevoel bij een IC-beslissing? Het klopt. Er is meer dan u ziet.',
     Icon: SketchEyeHidden,
   },
@@ -63,7 +63,7 @@ export default function HomepagePainSection() {
             Drie problemen die uw rendement kosten — zonder dat iemand ze benoemt.
           </h2>
           <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', color: 'var(--text-muted)', margin: 0, marginTop: '16px', maxWidth: '460px', lineHeight: 1.65, fontStyle: 'italic' }}>
-            Partners zouden geen IC-beslissingen moeten nemen op basis van incompleet beeld. Toch is dat de norm.
+            U zou geen investeringsbeslissing moeten nemen op basis van een incompleet beeld. Toch is dat de norm.
           </p>
         </motion.div>
 

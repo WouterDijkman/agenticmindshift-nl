@@ -10,7 +10,7 @@ const steps: { n: string; title: string; body: string; Icon: SketchIconComponent
   {
     n: '01',
     title: 'Beantwoord 15 vragen',
-    body: 'Multiple choice over uw deal-cyclus, MBR-discipline, AI-readiness en kennisretentie. Twaalf minuten. Geen open velden.',
+    body: 'Multiple choice over uw dealproces, maandrapportage, AI-bestendigheid en kennisborging. Twaalf minuten. Geen open velden.',
     Icon: SketchClipboard,
   },
   {

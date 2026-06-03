@@ -74,7 +74,7 @@ export default function OverPage() {
                 <p>
                   Drie jaar financial restructuring, twee&euml;neenhalf jaar acquisition finance.
                   Beide kanten van de deal-tafel, Nederlandse mid-market. Die combinatie leert
-                  u precies waar de aannames niet uitkomen &mdash; en waar de MBR-cyclus
+                  u precies waar de aannames niet uitkomen &mdash; en waar de maandrapportage
                   onderprestatie maskeert in plaats van signaleert.
                 </p>
                 <p>
@@ -86,13 +86,13 @@ export default function OverPage() {
                   >
                     Factum Capital
                   </Link>
-                  : 23 modules waarmee deal-teams hun DD-proces, MBR-cyclus en bias-toetsing
+                  : 23 modules waarmee deal-teams hun DD-proces, maandrapportage en oordeelsvorming
                   structureel instrumenteren.
                 </p>
                 <p style={{ fontStyle: 'italic', color: 'var(--text-muted)' }}>
-                  Eerste resultaat uit de praktijk: een entry-multiple-correctie van 0,4&times;
-                  op een buy-and-build deal — de investering in het rapport verdient zichzelf
-                  meervoudig terug.
+                  Eerste resultaat uit de praktijk: een overnameprijs-correctie van 0,4&times;
+                  op een buy-and-build deal &mdash; de investering in het rapport verdiende
+                  zichzelf meervoudig terug.
                 </p>
               </div>
             </div>

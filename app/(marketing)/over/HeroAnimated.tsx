@@ -122,7 +122,7 @@ export default function HeroAnimated() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.85, ease }}
         >
-          Portfolio Intelligence Adviseur — Agentic Mindshift
+          Founder Agentic Mindshift &amp; Factum Capital
         </motion.p>
 
         {/* Subtext */}
@@ -139,7 +139,7 @@ export default function HeroAnimated() {
           transition={{ duration: 0.68, delay: 1.05, ease }}
         >
           Zes jaar aan beide kanten van de Nederlandse deal-tafel. Die praktijkervaring
-          vertaalt zich naar meetbare portfolio-intelligence voor PE-partners die rendement
+          vertaalt zich naar meetbaar portefeuille-inzicht voor PE-partners die rendement
           willen borgen vóórdat de jaarcijfers het bevestigen.
         </motion.p>
       </div>

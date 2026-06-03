@@ -15,7 +15,7 @@ export const faqItems: FaqItem[] = [
     id: 'voor-wie',
     question: 'Voor welk type partij is de Scorecard ontworpen?',
     answer:
-      "Specifiek voor Nederlandse regionale PE-huizen, M&A-boutiques en DGA's in de lower-mid market. Niet voor startups, niet voor grote corporates, niet voor partijen buiten dit segment.",
+      "Specifiek voor Nederlandse regionale PE-fondsen, M&A-kantoren en ondernemers in de lower-mid market (deals €1M–€25M). Niet voor startups, niet voor grote corporates, niet voor partijen buiten dit segment.",
   },
   {
     id: 'vertrouwelijk',

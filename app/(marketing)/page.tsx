@@ -80,17 +80,17 @@ export default function HomePage() {
           >
             {[
               {
-                quote: '"Twee van de zes dimensies lagen significant onder het peer-gemiddelde — dat was ons nooit eerder expliciet gemaakt."',
+                quote: '"Twee van de zes dimensies lagen ver onder het niveau van vergelijkbare partijen — dat was ons nooit eerder zo expliciet gemaakt."',
                 who: 'PE-partner, Nederlandse lower-mid market fund',
                 aum: '~€120M AUM',
               },
               {
-                quote: '"Entry-multiple 0,4× naar beneden bijgesteld op basis van de substitutie-analyse. Het rapport kostte €10.000 — de aanpassing leverde meervoudig meer op."',
+                quote: '"Overnameprijs 0,4× naar beneden bijgesteld op basis van de AI-analyse. Het rapport kostte €10.000 — die aanpassing bespaarde ons een veelvoud."',
                 who: 'M&A-director, buy-and-build platform',
                 aum: '4 acquisities per jaar',
               },
               {
-                quote: '"We dachten dat onze MBR-cyclus op orde was. De Scorecard liet in twaalf minuten zien dat drie van de zes dimensies onder peer-niveau lagen. Dat gesprek hadden we intern nooit gevoerd."',
+                quote: '"We dachten dat onze maandrapportage op orde was. De Scorecard liet in twaalf minuten zien dat drie van de zes dimensies onder het niveau van vergelijkbare fondsen lagen. Dat gesprek hadden we intern nooit gevoerd."',
                 who: 'CFO, familiekantoor met 8 deelnemingen',
                 aum: '€40M–€60M onder beheer',
               },
@@ -219,9 +219,9 @@ export default function HomePage() {
               </p>
               <div style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <p style={{ margin: 0 }}>IC-beslissingen op basis van gevoel en ervaring.</p>
-                <p style={{ margin: 0 }}>MBR-cyclus als rapportageritueel — geen sturingsinstrument.</p>
+                <p style={{ margin: 0 }}>Maandrapportage als ritueel — geen sturingsinstrument.</p>
                 <p style={{ margin: 0 }}>Deal-lessen verdwijnen bij elke teamwissel.</p>
-                <p style={{ margin: 0 }}>AI-substitutierisico staat nergens op papier.</p>
+                <p style={{ margin: 0 }}>Het risico dat AI de kernactiviteit overneemt staat nergens op papier.</p>
               </div>
             </div>
             <div style={{ background: 'var(--bg-primary)', padding: 'clamp(28px, 4vw, 44px)', borderLeft: '3px solid var(--accent-cta)' }}>
@@ -229,7 +229,7 @@ export default function HomePage() {
                 Na de Scorecard
               </p>
               <div style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <p style={{ margin: 0 }}>Zes dimensies gekwantificeerd, gebenchmarkt tegen peers.</p>
+                <p style={{ margin: 0 }}>Zes dimensies gekwantificeerd, vergeleken met vergelijkbare partijen.</p>
                 <p style={{ margin: 0 }}>Twee concrete aandachtspunten met de hoogste impact.</p>
                 <p style={{ margin: 0 }}>Een rapport dat u intern kunt delen zonder extra uitleg.</p>
                 <p style={{ margin: 0 }}>U gaat naar uw volgende IC met data — niet met een vermoeden.</p>
@@ -301,12 +301,12 @@ export default function HomePage() {
               }}
             >
               <p style={{ margin: 0 }}>
-                Zonder structurele meting blijft AI-substitutierisico een blinde vlek in uw entry-multiple.
-                Blijven MBR&apos;s een rapportage-ritueel in plaats van een sturingsinstrument.
+                Zonder structurele meting blijft het risico dat AI de kernactiviteit overneemt een blinde vlek in uw overnameprijs.
+                Blijft uw maandrapportage een ritueel in plaats van een sturingsinstrument.
                 Verdwijnt elke deal-les met de volgende teamwissel.
               </p>
               <p style={{ margin: 0, fontStyle: 'italic', color: 'var(--text-muted)' }}>
-                Het verschil tussen een gecalibreerde en een ongecalibreerde entry-multiple?
+                Het verschil tussen een onderbouwde en een ongecalibreerde overnameprijs?
                 Op een &euro;5M EBITDA-target al snel 0,5&times; &mdash; dat is &euro;2,5M.
               </p>
               <p style={{ margin: 0, marginTop: '8px' }}>

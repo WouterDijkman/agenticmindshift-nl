@@ -60,7 +60,7 @@ export default function Footer() {
                   href="/scorecard"
                   className="nav-link inline-flex items-center min-h-[44px]"
                 >
-                  Portfolio Intelligence Scorecard
+                  Scorecard
                 </Link>
               </li>
               <li>

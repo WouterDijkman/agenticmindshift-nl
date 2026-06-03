@@ -14,12 +14,12 @@ import {
 type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
 
 const dimensions: { n: string; title: string; body: string; Icon: SketchIconComponent }[] = [
-  { n: '01', title: 'Deal Velocity', body: 'Hoeveel werkdagen verliest uw team tussen IM-ontvangst en IC-ready oordeel?', Icon: SketchSpeed },
-  { n: '02', title: 'Portfolio Intelligence', body: 'Stuurt uw MBR-cyclus bij — of bevestigt hij achteraf wat u al vermoedde?', Icon: SketchPortfolio },
-  { n: '03', title: 'Bias Detection', body: 'Hoeveel van uw oordeelsvorming is data — en hoeveel is relatie met management?', Icon: SketchScale },
-  { n: '04', title: 'AI Readiness', body: 'Kan een AI-native concurrent de kernactiviteit van uw portfoliobedrijf overnemen?', Icon: SketchChip },
-  { n: '05', title: 'Capacity Engineering', body: 'Hoeveel mandaten laat uw team liggen door operationele frictie in zoekwerk?', Icon: SketchGear },
-  { n: '06', title: 'Knowledge Retention', body: 'Vertrekt uw associate — verdwijnt dan ook het geheugen van drie tot vijf dossiers?', Icon: SketchKnowledge },
+  { n: '01', title: 'Doorlooptijd', body: 'Hoeveel werkdagen verliest uw team tussen IM-ontvangst en een beslissingsrijp oordeel?', Icon: SketchSpeed },
+  { n: '02', title: 'Portefeuille-inzicht', body: 'Stuurt uw maandrapportage bij — of bevestigt ze achteraf wat u al vermoedde?', Icon: SketchPortfolio },
+  { n: '03', title: 'Oordeelsvorming', body: 'Hoeveel van uw analyse is data — en hoeveel is de relatie met management?', Icon: SketchScale },
+  { n: '04', title: 'AI-bestendigheid', body: 'Kan een AI-gedreven concurrent de kernactiviteit van uw deelneming overnemen?', Icon: SketchChip },
+  { n: '05', title: 'Teamcapaciteit', body: 'Hoeveel deals laat uw team liggen door handmatig zoekwerk en rapportage?', Icon: SketchGear },
+  { n: '06', title: 'Kennisborging', body: 'Vertrekt uw associate — verdwijnt dan ook het geheugen van drie tot vijf dossiers?', Icon: SketchKnowledge },
 ];
 
 const containerVariants = {
@@ -55,7 +55,7 @@ export default function HomepageDimensionsSection() {
           <p className="eyebrow" style={{ marginBottom: '16px' }}>Zes dimensies</p>
           <h2 className="type-h2" style={{ marginBottom: '16px' }}>De zes plekken waar rendement weglekt.</h2>
           <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1.0625rem, 1.6vw, 1.125rem)', color: 'var(--text-muted)', margin: 0, maxWidth: '440px', lineHeight: 1.65 }}>
-            De Scorecard meet elk van deze dimensies en vergelijkt uw profiel met peers.
+            De Scorecard meet elk van deze dimensies en vergelijkt uw profiel met vergelijkbare partijen.
           </p>
         </motion.div>
 

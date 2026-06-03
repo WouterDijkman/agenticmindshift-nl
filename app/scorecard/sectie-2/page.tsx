@@ -48,7 +48,7 @@ export default function Sectie2Page() {
             maxWidth: '560px',
           }}
         >
-          IC-doorlooptijd, AI-substitutierisico en management-bias — drie punten waar rendement weglekt. Deze sectie meet ze.
+          Doorlooptijd tot aan het IC, het risico dat AI de kernactiviteit overneemt, en uw oordeelsvorming — drie punten waar rendement weglekt. Deze sectie meet ze.
         </p>
       </div>
 

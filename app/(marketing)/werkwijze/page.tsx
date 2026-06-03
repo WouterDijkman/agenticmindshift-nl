@@ -88,7 +88,7 @@ const offerings: Offering[] = [
     badge: 'Per deal of doorlopend',
     title: 'AI Due Diligence & Portfolio',
     situation:
-      'U doet M&A-deals of beheert een portfolio en wilt AI-substitutierisico structureel borgen in entry-multiples en MBR-cyclus.',
+      'U doet M&A-deals of beheert een portefeuille en wilt het risico dat AI de kernactiviteit overneemt structureel borgen in uw overnameprijs en maandrapportage.',
     price: 'Vanaf €10.000 per deal',
     priceNote: 'Of €6.500 – €8.500 / maand voor doorlopende portfolio-intelligence',
     ctaLabel: 'Plan een kennismaking →',
@@ -530,7 +530,7 @@ export default function WerkwijzePage() {
                 {
                   id: 'rendement',
                   question: 'Hoe weet ik of de investering rendeert?',
-                  answer: 'Eén gecalibreerde entry-multiple-correctie van 0,5× op een €5M EBITDA-target dekt de DD-kosten 200×. Eén tijdig gesignaleerde variantie-afwijking dekt de jaarkosten portfolio-intelligence.',
+                  answer: 'Eén correctie van 0,5× op de overnameprijs bij een €5M EBITDA-target dekt de DD-kosten 200×. Eén tijdig gesignaleerde afwijking in de maandrapportage dekt de jaarkosten van doorlopend portefeuille-inzicht.',
                 },
                 {
                   id: 'looptijd',

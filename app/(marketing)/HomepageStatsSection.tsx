@@ -17,7 +17,7 @@ const stats = [
     decimals: 0,
     suffix: '',
     label: 'werkdagen',
-    sub: 'per MBR-cyclus kwijt aan handmatige dataconsolidatie — tijd die niet naar deals gaat',
+    sub: 'per maandrapportage kwijt aan handmatige dataconsolidatie — tijd die niet naar deals gaat',
   },
   {
     value: 12,

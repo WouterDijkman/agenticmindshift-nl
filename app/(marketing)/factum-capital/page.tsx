@@ -33,7 +33,7 @@ const MOMENTEN: {
     code: 'M1',
     title: 'Acquisitie',
     label: 'Buy-side deal intelligence',
-    body: 'Van IM-screening tot closing: een uitgebreid analytisch fundament op alle relevante dimensies. Gecertificeerde adviseurs (RA/RB/advocaten) voor formele sign-off waar vereist.',
+    body: 'Van eerste beoordeling van het informatiememorandum tot closing: een uitgebreid analytisch fundament op alle relevante dimensies. Gecertificeerde adviseurs (RA/RB/advocaten) voor formele sign-off waar vereist.',
     advisors: 'RA · RB · Advocaten',
     Icon: SketchDueDiligence,
   },
@@ -49,7 +49,7 @@ const MOMENTEN: {
     code: 'M3',
     title: 'Portfolio review',
     label: 'Doorlopende intelligence',
-    body: 'Periodieke doorlichting van uw bestaande deelnemingen op de zes dimensies. Vroegtijdige signalering van onderprestatie, AI-substitutierisico en exit-obstakels — lang voor de jaarrapportage.',
+    body: 'Periodieke doorlichting van uw bestaande deelnemingen op de zes dimensies. Vroegtijdige signalering van onderprestatie, AI-kwetsbaarheid en exit-obstakels — lang voor de jaarrapportage.',
     advisors: 'Portfolio management · Bestuurders',
     Icon: SketchPortfolio,
   },
@@ -220,7 +220,7 @@ export default function FactumCapitalPage() {
             <div className="reveal" style={{ transitionDelay: '80ms' }}>
               <div style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", display: 'flex', flexDirection: 'column', gap: '20px', fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', lineHeight: 1.8, color: 'var(--text-secondary)' }}>
                 <p>
-                  Het <strong>platform</strong> &mdash; 23 modules van IM-screening tot
+                  Het <strong>platform</strong> &mdash; 23 modules van eerste IM-beoordeling tot
                   exit-readiness &mdash; geeft uw team consistente structuur op elk moment.
                   Vanaf 1 juli 2026 beschikbaar als SaaS.
                 </p>
@@ -349,7 +349,7 @@ export default function FactumCapitalPage() {
                   n: '01',
                   title: 'Het Platform',
                   label: 'SaaS — zelf in handen',
-                  body: '23 modules die uw deal-team de structuur geven om alle vier momenten consistent uit te voeren. Van IM-screening tot exit-readiness tot pre-IBR signalering. Kennisopbouw die meegroeit.',
+                  body: '23 modules die uw deal-team de structuur geven om alle vier momenten consistent uit te voeren. Van eerste IM-beoordeling tot exit-readiness tot vroegtijdige herstructureringssignalering. Kennisopbouw die meegroeit.',
                   detail: 'Lancering 1 juli 2026 · Maandabonnement · Wachtlijst open',
                   link: null,
                 },

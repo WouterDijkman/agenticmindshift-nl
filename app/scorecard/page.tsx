@@ -6,9 +6,9 @@ import { serviceLd } from '@/lib/jsonld';
 import ScorecardSectionCards from './ScorecardSectionCards';
 
 export const metadata: Metadata = {
-  title: 'Deal & Portfolio Intelligence Quickscan',
+  title: 'Scorecard — Zes dimensies, twaalf minuten',
   description:
-    'Vier secties, 15 vragen, twaalf minuten. Inzicht in uw analytisch fundament — voor acquisitie, financiering, portefeuillereview of herstructurering.',
+    'Vier secties, 15 vragen, twaalf minuten. Inzicht in uw dealproces, maandrapportage, AI-bestendigheid en kennisborging — vergeleken met vergelijkbare partijen.',
 };
 
 export default function ScorecardWelcomePage() {
@@ -19,9 +19,9 @@ export default function ScorecardWelcomePage() {
       <AnimatedHeroShell
         bgChar="15"
         bgCharSize="clamp(240px, 30vw, 440px)"
-        eyebrow="Deal & Portfolio Intelligence Quickscan"
+        eyebrow="Scorecard · Zes dimensies · Twaalf minuten"
         heading="Waar lekt rendement weg — en wat ziet u over het hoofd?"
-        subtext="Vijftien vragen. Twaalf minuten. Een rapport dat uw blinde vlekken meetbaar maakt en vergelijkt met peers."
+        subtext="Vijftien vragen. Twaalf minuten. Een rapport dat uw blinde vlekken meetbaar maakt en vergelijkt met vergelijkbare partijen."
         containerClass="container-narrow"
         centered={true}
       >
