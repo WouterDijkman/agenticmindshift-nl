@@ -4,6 +4,7 @@ import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
 import JsonLd from '@/components/JsonLd';
 import { serviceLd } from '@/lib/jsonld';
 import ScorecardSectionCards from './ScorecardSectionCards';
+import ScorecardReportMockup from '@/components/ScorecardReportMockup';
 
 export const metadata: Metadata = {
   title: 'Scorecard — Zes dimensies, twaalf minuten',
@@ -107,6 +108,41 @@ export default function ScorecardWelcomePage() {
                 Uw antwoorden worden alleen gebruikt om uw rapport te genereren.
                 U kunt anoniem invullen indien u dat wenst.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Rapport-preview */}
+      <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(64px, 9vw, 112px)' }}>
+        <div className="container-medium">
+          <div className="showcase-grid">
+            <div>
+              <p className="eyebrow" style={{ marginBottom: '16px' }}>Wat u ontvangt</p>
+              <h2 className="type-h2" style={{ marginBottom: '20px', maxWidth: '440px' }}>
+                Dit is uw rapport — direct na de laatste vraag.
+              </h2>
+              <p
+                style={{
+                  fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
+                  fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
+                  color: 'var(--text-secondary)',
+                  lineHeight: 1.75,
+                  maxWidth: '430px',
+                  marginBottom: '28px',
+                }}
+              >
+                Zes dimensies, elk gescoord en afgezet tegen vergelijkbare partijen.
+                De twee punten met de hoogste impact worden uitgelicht — zodat u
+                weet waar u als eerste op moet sturen.
+              </p>
+              <Button href="/scorecard/sectie-1" variant="primary" size="lg">
+                Start de Scorecard
+              </Button>
+            </div>
+
+            <div className="showcase-mockup-wrap">
+              <ScorecardReportMockup />
             </div>
           </div>
         </div>
