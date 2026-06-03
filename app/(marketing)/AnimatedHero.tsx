@@ -7,7 +7,7 @@ import SketchCrosshair from '@/components/icons/SketchCrosshair';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-const WORDS = 'Hoeveel rendement verliest uw portefeuille zonder dat u het ziet?'.split(' ');
+const HEADING = 'Hoeveel rendement verliest uw portefeuille zonder dat u het ziet?';
 
 export default function AnimatedHero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -107,7 +107,8 @@ export default function AnimatedHero() {
           </motion.p>
         </div>
 
-        {/* H1 */}
+        {/* H1 — single fade-up (per-word stagger removed: caused glued-words
+            on this Next 16 / React 19 / framer 12 combo) */}
         <motion.h1
           className="type-display"
           style={{
@@ -116,24 +117,11 @@ export default function AnimatedHero() {
             color: 'var(--text-primary)',
             maxWidth: '1000px',
           }}
-          initial="hidden"
-          animate="visible"
-          variants={{
-            visible: { transition: { staggerChildren: 0.055, delayChildren: 0.45 } },
-          }}
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.65, delay: 0.5, ease }}
         >
-          {WORDS.map((word, i) => (
-            <motion.span
-              key={i}
-              variants={{
-                hidden: { opacity: 0, y: 18 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease } },
-              }}
-              style={{ display: 'inline-block', marginRight: '0.27em' }}
-            >
-              {word}
-            </motion.span>
-          ))}
+          {HEADING}
         </motion.h1>
 
         {/* Subkop */}

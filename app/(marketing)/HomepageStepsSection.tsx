@@ -1,22 +1,29 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import type { ComponentType } from 'react';
+import { SketchClipboard, SketchReport, SketchArrow } from '@/components/icons/SketchIcons';
 
-const steps = [
+type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
+
+const steps: { n: string; title: string; body: string; Icon: SketchIconComponent }[] = [
   {
     n: '01',
     title: 'Beantwoord 15 vragen',
     body: 'AI-readiness, deal-cyclus, MBR-discipline en kennisretentie. Multiple choice — geen open velden.',
+    Icon: SketchClipboard,
   },
   {
     n: '02',
     title: 'Gepersonaliseerd rapport',
     body: 'Totaalscore op zes dimensies, twee prioritaire aandachtspunten en een concreet vervolgvoorstel.',
+    Icon: SketchReport,
   },
   {
     n: '03',
     title: 'Kies uw volgende stap',
     body: 'Intern delen, een sparring-sessie inplannen of direct een traject starten. U bepaalt het tempo.',
+    Icon: SketchArrow,
   },
 ];
 
@@ -84,20 +91,32 @@ export default function HomepageStepsSection() {
                 transition: { duration: 0.2 },
               }}
             >
-              <p
+              <div
                 style={{
-                  fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                  fontSize: 'clamp(56px, 7vw, 80px)',
-                  fontWeight: 800,
-                  letterSpacing: '-0.04em',
-                  lineHeight: 0.9,
-                  color: 'var(--accent-cta)',
+                  display: 'flex',
+                  alignItems: 'baseline',
+                  gap: '20px',
                   marginBottom: '32px',
-                  opacity: 0.9,
                 }}
               >
-                {s.n}
-              </p>
+                <div style={{ color: 'var(--accent-cta)', opacity: 0.78, flexShrink: 0 }}>
+                  <s.Icon size={56} strokeWidth={1.4} />
+                </div>
+                <p
+                  style={{
+                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+                    fontSize: 'clamp(40px, 5vw, 56px)',
+                    fontWeight: 800,
+                    letterSpacing: '-0.04em',
+                    lineHeight: 0.9,
+                    color: 'var(--accent-cta)',
+                    margin: 0,
+                    opacity: 0.6,
+                  }}
+                >
+                  {s.n}
+                </p>
+              </div>
               <h3
                 style={{
                   fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",

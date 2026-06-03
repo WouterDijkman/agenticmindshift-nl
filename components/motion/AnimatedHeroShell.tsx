@@ -2,15 +2,21 @@
 
 /**
  * Generic animated hero shell.
- * 100svh, grain overlay, animated bg char + staggered content entrance.
- * Imported by server-component pages; content passed as children.
+ * 100svh, grain overlay, parallax bg char, CSS-driven content entrance.
+ *
+ * Note: entrance animations use plain CSS keyframes instead of framer-motion.
+ * The framer-motion `initial`+`animate`/`whileInView` pattern proved
+ * unreliable on the scorecard layout (Next 16 / React 19 / framer 12 combo) —
+ * content stayed at the hidden initial state. CSS animations on mount are
+ * bulletproof across layouts.
+ *
+ * Parallax bg glyph still uses framer-motion because it needs a live scroll
+ * motion-value; that path works because it doesn't gate on initial state.
  */
 
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import SketchCrosshair from '@/components/icons/SketchCrosshair';
 import { ReactNode, useRef } from 'react';
-
-const ease = [0.22, 1, 0.36, 1] as const;
 
 interface Props {
   /** Decorative background glyph (e.g. "04", "W", "FC") */
@@ -26,10 +32,36 @@ interface Props {
   centered?: boolean;
 }
 
-const WORD_VARIANTS = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease } },
-};
+const HERO_ANIM_CSS = `
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes hero-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.hero-anim {
+  opacity: 0;
+  animation: hero-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.hero-anim-fade {
+  opacity: 0;
+  animation: hero-fade-in 1.6s ease-out forwards;
+}
+.hero-anim--eyebrow { animation-delay: 0.05s; }
+.hero-anim--h1      { animation-delay: 0.15s; }
+.hero-anim--subtext { animation-delay: 0.35s; }
+.hero-anim--cta     { animation-delay: 0.55s; }
+.hero-anim--bg      { animation-delay: 0.15s; animation-duration: 1.8s; }
+.hero-anim--scroll  { animation-delay: 0.9s; animation-duration: 0.6s; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-anim, .hero-anim-fade {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+  }
+}
+`;
 
 export default function AnimatedHeroShell({
   bgChar,
@@ -42,7 +74,6 @@ export default function AnimatedHeroShell({
   headingMaxWidth = '800px',
   centered = false,
 }: Props) {
-  const words = heading.split(' ');
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -65,30 +96,31 @@ export default function AnimatedHeroShell({
         overflow: 'hidden',
       }}
     >
+      <style>{HERO_ANIM_CSS}</style>
+
       {/* Decorative sketch crosshair — bottom right, very faint */}
-      <motion.div
+      <div
         aria-hidden="true"
-        className="hero-crosshair-deco"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.04 }}
-        transition={{ duration: 2.2, ease: 'easeOut', delay: 0.6 }}
+        className="hero-crosshair-deco hero-anim-fade hero-anim--bg"
         style={{
           position: 'absolute',
           right: '60px',
           bottom: '80px',
           pointerEvents: 'none',
           userSelect: 'none',
+          // final opacity baked into keyframe via CSS var? simpler: lower the
+          // strokeWidth/color already gives a faint look; the keyframe goes
+          // 0 → 1, so we set the icon's own opacity attr to its target.
+          opacity: 0.04,
         }}
       >
         <SketchCrosshair size={96} color="var(--text-primary)" strokeWidth={0.8} />
-      </motion.div>
+      </div>
 
-      {/* Decorative background glyph — parallax */}
+      {/* Decorative background glyph — parallax (kept as motion.div for the
+          scroll-linked y value; opacity is static so it always shows) */}
       <motion.div
         aria-hidden="true"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.022 }}
-        transition={{ duration: 1.8, ease: 'easeOut' }}
         style={{
           position: 'absolute',
           right: '-60px',
@@ -100,6 +132,7 @@ export default function AnimatedHeroShell({
           lineHeight: 1,
           color: 'var(--text-primary)',
           letterSpacing: '-0.06em',
+          opacity: 0.022,
           pointerEvents: 'none',
           userSelect: 'none',
           fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
@@ -119,6 +152,7 @@ export default function AnimatedHeroShell({
       >
         {/* Eyebrow */}
         <div
+          className="hero-anim hero-anim--eyebrow"
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -128,58 +162,38 @@ export default function AnimatedHeroShell({
           }}
         >
           {!centered && (
-            <motion.div
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 0.45, ease: 'easeOut' }}
+            <div
               style={{
                 width: '32px',
                 height: '1.5px',
                 background: 'var(--accent-cta)',
                 flexShrink: 0,
-                transformOrigin: 'left center',
               }}
             />
           )}
-          <motion.p
-            className="eyebrow"
-            style={{ margin: 0 }}
-            initial={{ opacity: 0, x: centered ? 0 : -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4, delay: centered ? 0.15 : 0.38, ease }}
-          >
+          <p className="eyebrow" style={{ margin: 0 }}>
             {eyebrow}
-          </motion.p>
+          </p>
         </div>
 
-        {/* H1 — word-by-word stagger */}
-        <motion.h1
-          className="type-display"
+        {/* H1 — single fade-up via CSS animation. Per-word stagger was
+            removed because it caused glued/overlapping words on this stack
+            and CSS animations are bulletproof across layouts. */}
+        <h1
+          className="type-display hero-anim hero-anim--h1"
           style={{
             marginBottom: '28px',
             color: 'var(--text-primary)',
             maxWidth: centered ? undefined : headingMaxWidth,
             marginInline: centered ? 'auto' : undefined,
           }}
-          initial="hidden"
-          animate="visible"
-          variants={{
-            visible: { transition: { staggerChildren: 0.065, delayChildren: 0.5 } },
-          }}
         >
-          {words.map((word, i) => (
-            <motion.span
-              key={i}
-              variants={WORD_VARIANTS}
-              style={{ display: 'inline-block', marginRight: '0.27em' }}
-            >
-              {word}
-            </motion.span>
-          ))}
-        </motion.h1>
+          {heading}
+        </h1>
 
         {/* Subtext */}
-        <motion.p
+        <p
+          className="hero-anim hero-anim--subtext"
           style={{
             fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
             fontSize: 'clamp(1.375rem, 2.6vw, 2rem)',
@@ -191,32 +205,20 @@ export default function AnimatedHeroShell({
             letterSpacing: '-0.005em',
             marginInline: centered ? 'auto' : undefined,
           }}
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.68, delay: 1.05, ease }}
         >
           {subtext}
-        </motion.p>
+        </p>
 
         {/* Optional extra CTA / stats / badge area */}
         {children && (
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.25, ease }}
-          >
-            {children}
-          </motion.div>
+          <div className="hero-anim hero-anim--cta">{children}</div>
         )}
       </div>
 
       {/* Scroll indicator */}
-      <motion.div
+      <div
         aria-hidden="true"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.6, duration: 0.6 }}
-        className="scroll-indicator"
+        className="scroll-indicator hero-anim-fade hero-anim--scroll"
         style={{
           position: 'absolute',
           bottom: '32px',
@@ -225,8 +227,8 @@ export default function AnimatedHeroShell({
           pointerEvents: 'none',
         }}
       >
-        <SketchCrosshair size={40} color="var(--text-muted)" opacity={0.40} strokeWidth={1.1} />
-      </motion.div>
+        <SketchCrosshair size={40} color="var(--text-muted)" opacity={0.4} strokeWidth={1.1} />
+      </div>
     </section>
   );
 }

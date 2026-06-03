@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
+import type { ComponentType } from 'react';
 import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import SketchDivider from '@/components/icons/SketchDivider';
+import {
+  SketchSparring,
+  SketchConsultancy,
+  SketchFractional,
+  SketchDueDiligence,
+} from '@/components/icons/SketchIcons';
 import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
 import WerkwijzeOnboardingSteps from './WerkwijzeOnboardingSteps';
+
+type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
 
 export const metadata: Metadata = {
   title: 'Werkwijze & Investering',
@@ -36,6 +45,7 @@ interface Offering {
   variants?: DealVariant[];
   variantsCaption?: string;
   poweredBy?: PoweredBy;
+  Icon: SketchIconComponent;
 }
 
 const offerings: Offering[] = [
@@ -48,6 +58,7 @@ const offerings: Offering[] = [
     priceNote: '60–90 minuten · korte schriftelijke samenvatting',
     ctaLabel: 'Boek een sessie →',
     ctaHref: 'https://cal.com/wwdijkman/intake-call',
+    Icon: SketchSparring,
   },
   {
     badge: 'Projectmatig of retainer',
@@ -58,6 +69,7 @@ const offerings: Offering[] = [
     priceNote: 'Per traject of doorlopend in retainer',
     ctaLabel: 'Bespreek uw vraagstuk →',
     ctaHref: 'https://cal.com/wwdijkman/intake-call',
+    Icon: SketchConsultancy,
   },
   {
     badge: 'Embedded · doorlopend',
@@ -69,6 +81,7 @@ const offerings: Offering[] = [
     ctaLabel: 'Bespreek de fit →',
     ctaHref: 'https://cal.com/wwdijkman/intake-call',
     featured: true,
+    Icon: SketchFractional,
   },
   {
     badge: 'Per deal of doorlopend',
@@ -90,6 +103,7 @@ const offerings: Offering[] = [
       href: '/factum-capital',
       tagline: 'Ons AI-platform voor M&A & portfolio-intelligence',
     },
+    Icon: SketchDueDiligence,
   },
 ];
 
@@ -156,6 +170,16 @@ export default function WerkwijzePage() {
                   transitionDelay: `${i * 80}ms`,
                 }}
               >
+                {/* Sketch-icon header — anchors the card visually */}
+                <div
+                  style={{
+                    color: o.featured ? 'rgba(247,242,235,0.92)' : 'var(--accent-cta)',
+                    marginBottom: '-4px',
+                  }}
+                >
+                  <o.Icon size={52} strokeWidth={1.4} />
+                </div>
+
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px' }}>
                   <span
                     style={{

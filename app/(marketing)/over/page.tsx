@@ -88,11 +88,12 @@ export default function OverPage() {
                   te signaleren.
                 </p>
                 <p>
-                  In 2024 volgde ik het executive AI-programma aan Nyenrode Business
-                  Universiteit. De verbinding tussen deal-praktijk en AI-toepassingen werd
-                  daar concreet. In oktober 2025 is Agentic Mindshift gestart om die
-                  combinatie beschikbaar te maken voor Nederlandse PE- en
-                  M&amp;A-firma&apos;s die hun portfolio-intelligence structureel willen versterken.
+                  In oktober 2025 is Agentic Mindshift gestart om die combinatie
+                  beschikbaar te maken voor Nederlandse PE- en M&amp;A-firma&apos;s die hun
+                  portfolio-intelligence structureel willen versterken. In november 2025
+                  volgde ik AI for Business aan Nyenrode Business Universiteit, om de
+                  verbinding tussen deal-praktijk en AI-toepassingen verder te
+                  formaliseren.
                 </p>
                 <p>
                   Op 1 juli 2026 lanceert{' '}
@@ -144,8 +145,8 @@ export default function OverPage() {
             {[
               { year: '2017 — 2020', label: 'Financial Restructuring', sub: 'MKB- en mid-market portefeuilles in stress — intensive care & herstructurering', delay: 0, future: false },
               { year: '2020 — 2023', label: 'Acquisition Finance', sub: 'LBO-financiering op Nederlandse PE-deals, mid-market 1–25M', delay: 60, future: false },
-              { year: '2024', label: 'Executive AI-programma', sub: 'Nyenrode Business Universiteit — AI-toepassingen in financiële praktijk', delay: 120, future: false },
-              { year: 'Oktober 2025', label: 'Oprichting Agentic Mindshift', sub: "Portfolio intelligence voor Nederlandse PE- en M&A-firma's", delay: 180, future: false },
+              { year: 'Oktober 2025', label: 'Oprichting Agentic Mindshift', sub: "Portfolio intelligence voor Nederlandse PE- en M&A-firma's", delay: 120, future: false },
+              { year: 'November 2025', label: 'AI for Business', sub: 'Nyenrode Business Universiteit — AI-toepassingen in financiële praktijk', delay: 180, future: false },
               { year: '1 juli 2026', label: 'Lancering Factum Capital', sub: 'Agentic M&A & Restructuring Operating System — 23 modules', delay: 240, future: true },
             ].map((row) => (
               <div
