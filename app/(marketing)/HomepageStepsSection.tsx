@@ -29,16 +29,15 @@ const steps: { n: string; title: string; body: string; Icon: SketchIconComponent
 
 const containerVariants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.13, delayChildren: 0.1 } },
+  visible: { transition: { staggerChildren: 0.16, delayChildren: 0.1 } },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 28, scale: 0.98 },
+  hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
-    transition: { duration: 0.58, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
+    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
   },
 };
 
@@ -65,74 +64,49 @@ export default function HomepageStepsSection() {
         </motion.div>
 
         <motion.div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-            gap: '1px',
-            background: 'var(--border-subtle)',
-          }}
+          className="steps-timeline"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
+          {/* connector line behind the nodes */}
+          <div className="steps-connector" aria-hidden="true" />
+
           {steps.map((s) => (
-            <motion.div
-              key={s.n}
-              className="step-card"
-              variants={itemVariants}
-              style={{
-                background: 'var(--bg-secondary)',
-                padding: 'clamp(36px, 4vw, 52px)',
-                borderTop: '3px solid transparent',
-              }}
-              whileHover={{
-                borderTopColor: 'var(--accent-cta)',
-                transition: { duration: 0.2 },
-              }}
-            >
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'baseline',
-                  gap: '20px',
-                  marginBottom: '32px',
-                }}
-              >
-                <div style={{ color: 'var(--accent-cta)', opacity: 0.78, flexShrink: 0 }}>
-                  <s.Icon size={56} strokeWidth={1.4} />
+            <motion.div key={s.n} className="step-item" variants={itemVariants}>
+              <div className="step-node">
+                <span className="step-node-num">{s.n}</span>
+              </div>
+              <div className="step-item-body">
+                <div style={{ color: 'var(--accent-cta)', opacity: 0.82, marginBottom: '16px' }}>
+                  <s.Icon size={40} strokeWidth={1.4} />
                 </div>
-                <p
+                <h3
                   style={{
                     fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                    fontSize: 'clamp(40px, 5vw, 56px)',
-                    fontWeight: 800,
-                    letterSpacing: '-0.04em',
-                    lineHeight: 0.9,
-                    color: 'var(--accent-cta)',
-                    margin: 0,
-                    opacity: 0.6,
+                    fontSize: '1.1875rem',
+                    fontWeight: 700,
+                    color: 'var(--text-primary)',
+                    letterSpacing: '-0.01em',
+                    marginBottom: '12px',
+                    lineHeight: 1.2,
                   }}
                 >
-                  {s.n}
+                  {s.title}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
+                    fontSize: 'clamp(1rem, 1.6vw, 1.125rem)',
+                    color: 'var(--text-tertiary)',
+                    lineHeight: 1.7,
+                    margin: 0,
+                  }}
+                >
+                  {s.body}
                 </p>
               </div>
-              <h3
-                style={{
-                  fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                  fontSize: '1.125rem',
-                  fontWeight: 700,
-                  color: 'var(--text-primary)',
-                  letterSpacing: '-0.01em',
-                  marginBottom: '14px',
-                  lineHeight: 1.2,
-                }}
-              >
-                {s.title}
-              </h3>
-              <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', color: 'var(--text-tertiary)', lineHeight: 1.7, margin: 0 }}>
-                {s.body}
-              </p>
             </motion.div>
           ))}
         </motion.div>
