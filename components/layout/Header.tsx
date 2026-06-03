@@ -56,7 +56,7 @@ export default function Header() {
             width={2448}
             height={1632}
             priority
-            style={{ height: '44px', width: 'auto' }}
+            style={{ height: '66px', width: 'auto' }}
           />
         </Link>
 
@@ -166,7 +166,7 @@ export default function Header() {
       >
         <div className="p-6 flex flex-col gap-5 h-full">
           <div className="flex items-center justify-between">
-            <Image src="/logo.png" alt="Agentic Mindshift" width={2448} height={1632} style={{ height: '32px', width: 'auto' }} />
+            <Image src="/logo.png" alt="Agentic Mindshift" width={2448} height={1632} style={{ height: '48px', width: 'auto' }} />
             <button
               type="button"
               aria-label="Sluit menu"
