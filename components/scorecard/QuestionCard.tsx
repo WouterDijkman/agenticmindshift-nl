@@ -52,8 +52,8 @@ export default function QuestionCard({
         Vraag {index} / 15
       </p>
       <h2
-        className="h-3 mb-7 leading-snug"
-        style={{ color: 'var(--text-primary)' }}
+        className="type-h3 mb-7"
+        style={{ color: 'var(--text-primary)', lineHeight: 1.35 }}
       >
         {question.text}
       </h2>
