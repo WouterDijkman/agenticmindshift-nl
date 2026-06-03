@@ -1,14 +1,25 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import type { ComponentType } from 'react';
+import {
+  SketchSpeed,
+  SketchPortfolio,
+  SketchScale,
+  SketchChip,
+  SketchGear,
+  SketchKnowledge,
+} from '@/components/icons/SketchIcons';
 
-const dimensions = [
-  { n: '01', title: 'Deal Velocity', body: 'Van IM naar IC-ready oordeel — en waar werkdagen verloren gaan in de deal-cyclus.' },
-  { n: '02', title: 'Portfolio Intelligence', body: 'Doorlooptijd van uw MBR-cyclus en herleidbaarheid van variantie-analyses.' },
-  { n: '03', title: 'Bias Detection', body: 'Aandeel oordeelsvorming op data versus persoonlijke relatie met management.' },
-  { n: '04', title: 'AI Readiness', body: 'Weerbaarheid van uw portefeuille tegen AI-native concurrentie tijdens hold.' },
-  { n: '05', title: 'Capacity Engineering', body: 'Mandaten die uw team laat liggen door operationele frictie in zoekwerk.' },
-  { n: '06', title: 'Knowledge Retention', body: 'Mate waarin DD-kennis in-house blijft versus weggaat met externe rapporten.' },
+type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
+
+const dimensions: { n: string; title: string; body: string; Icon: SketchIconComponent }[] = [
+  { n: '01', title: 'Deal Velocity', body: 'Van IM naar IC-ready oordeel — en waar werkdagen verloren gaan in de deal-cyclus.', Icon: SketchSpeed },
+  { n: '02', title: 'Portfolio Intelligence', body: 'Doorlooptijd van uw MBR-cyclus en herleidbaarheid van variantie-analyses.', Icon: SketchPortfolio },
+  { n: '03', title: 'Bias Detection', body: 'Aandeel oordeelsvorming op data versus persoonlijke relatie met management.', Icon: SketchScale },
+  { n: '04', title: 'AI Readiness', body: 'Weerbaarheid van uw portefeuille tegen AI-native concurrentie tijdens hold.', Icon: SketchChip },
+  { n: '05', title: 'Capacity Engineering', body: 'Mandaten die uw team laat liggen door operationele frictie in zoekwerk.', Icon: SketchGear },
+  { n: '06', title: 'Knowledge Retention', body: 'Mate waarin DD-kennis in-house blijft versus weggaat met externe rapporten.', Icon: SketchKnowledge },
 ];
 
 const containerVariants = {
@@ -83,17 +94,30 @@ export default function HomepageDimensionsSection() {
                 transition: { duration: 0.2 },
               }}
             >
-              <p
+              <div
                 style={{
-                  fontSize: '10px',
-                  fontWeight: 800,
-                  letterSpacing: '0.15em',
-                  color: 'var(--accent-cta)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '12px',
                   margin: '0 0 14px',
+                  color: 'var(--accent-cta)',
                 }}
               >
-                {d.n}
-              </p>
+                <div style={{ opacity: 0.82 }}>
+                  <d.Icon size={36} strokeWidth={1.4} />
+                </div>
+                <p
+                  style={{
+                    fontSize: '10px',
+                    fontWeight: 800,
+                    letterSpacing: '0.15em',
+                    color: 'var(--accent-cta)',
+                    margin: 0,
+                  }}
+                >
+                  {d.n}
+                </p>
+              </div>
               <p
                 style={{
                   fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",

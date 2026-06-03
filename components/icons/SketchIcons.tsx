@@ -410,3 +410,169 @@ export function SketchWarning({ strokeWidth = 1.5, ...rest }: Props) {
     </IconShell>
   );
 }
+
+// ─── 13. Speedometer — "deal velocity" ──────────────────────────────────
+export function SketchSpeed({ strokeWidth = 1.4, ...rest }: Props) {
+  return (
+    <IconShell {...rest}>
+      {/* Outer arc — half-circle dial */}
+      <path
+        d="M 9.0,44.0 C 9.0,30.0 19.0,17.0 32.0,17.0 C 45.0,17.0 55.0,30.0 55.0,44.0"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+      {/* Inner arc — gauge groove */}
+      <path
+        d="M 14.0,44.0 C 14.5,33.0 22.0,23.0 32.0,23.0 C 42.0,23.0 49.5,33.0 50.0,44.0"
+        strokeWidth={strokeWidth * 0.8}
+        opacity="0.55"
+        {...baseStroke}
+      />
+      {/* Tick — left */}
+      <path d="M 11.5,38.0 L 15.0,39.0" strokeWidth={strokeWidth * 0.9} {...baseStroke} />
+      {/* Tick — middle-left */}
+      <path d="M 18.5,26.0 L 21.0,28.5" strokeWidth={strokeWidth * 0.9} {...baseStroke} />
+      {/* Tick — top */}
+      <path d="M 32.0,18.0 L 32.0,21.5" strokeWidth={strokeWidth * 0.9} {...baseStroke} />
+      {/* Tick — middle-right */}
+      <path d="M 45.5,26.0 L 43.0,28.5" strokeWidth={strokeWidth * 0.9} {...baseStroke} />
+      {/* Tick — right */}
+      <path d="M 52.5,38.0 L 49.0,39.0" strokeWidth={strokeWidth * 0.9} {...baseStroke} />
+      {/* Needle — pointing to upper-right (fast) */}
+      <path
+        d="M 32.0,44.0 L 45.5,26.5"
+        strokeWidth={strokeWidth * 1.4}
+        stroke="currentColor"
+        strokeLinecap="round"
+        fill="none"
+      />
+      {/* Hub */}
+      <circle cx="32.0" cy="44.0" r="2.5" fill="currentColor" stroke="none" />
+    </IconShell>
+  );
+}
+
+// ─── 14. Balance scale — "bias detection" ───────────────────────────────
+export function SketchScale({ strokeWidth = 1.4, ...rest }: Props) {
+  return (
+    <IconShell {...rest}>
+      {/* Center pole */}
+      <path
+        d="M 32.0,13.0 L 32.0,52.0"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+      {/* Base */}
+      <path
+        d="M 22.0,52.5 C 26.0,52.0 38.0,52.0 42.0,52.5"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+      {/* Top knob */}
+      <circle cx="32.0" cy="12.0" r="2.2" fill="currentColor" stroke="none" />
+      {/* Horizontal beam — slightly tilted (bias visible) */}
+      <path
+        d="M 11.0,19.5 C 21.0,19.0 43.0,19.8 53.0,21.0"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+      {/* Left chain */}
+      <path d="M 13.5,20.0 L 13.5,27.0" strokeWidth={strokeWidth * 0.85} {...baseStroke} />
+      {/* Right chain */}
+      <path d="M 50.5,20.5 L 50.5,27.5" strokeWidth={strokeWidth * 0.85} {...baseStroke} />
+      {/* Left pan — lower (heavier) */}
+      <path
+        d="M 6.5,28.0 C 9.5,32.0 17.5,32.0 20.5,28.0"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+      <path d="M 6.5,28.0 C 9.5,29.5 17.5,29.5 20.5,28.0" strokeWidth={strokeWidth * 0.7} opacity="0.5" {...baseStroke} />
+      {/* Right pan — higher (lighter) */}
+      <path
+        d="M 43.5,28.5 C 46.5,32.5 54.5,32.5 57.5,28.5"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+      <path d="M 43.5,28.5 C 46.5,30.0 54.5,30.0 57.5,28.5" strokeWidth={strokeWidth * 0.7} opacity="0.5" {...baseStroke} />
+    </IconShell>
+  );
+}
+
+// ─── 15. Chip — "AI readiness" (microprocessor) ─────────────────────────
+export function SketchChip({ strokeWidth = 1.4, ...rest }: Props) {
+  return (
+    <IconShell {...rest}>
+      {/* Outer chip body */}
+      <path
+        d="M 18.0,18.5 C 18.0,17.6 18.7,16.8 19.7,16.8 L 44.3,16.8 C 45.3,16.8 46.0,17.6 46.0,18.5 L 46.0,45.5 C 46.0,46.4 45.3,47.2 44.3,47.2 L 19.7,47.2 C 18.7,47.2 18.0,46.4 18.0,45.5 Z"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+      {/* Inner core */}
+      <path
+        d="M 24.5,25.0 L 39.5,25.0 L 39.5,39.0 L 24.5,39.0 Z"
+        strokeWidth={strokeWidth * 0.9}
+        {...baseStroke}
+      />
+      {/* AI dot pattern inside core */}
+      <circle cx="29.0" cy="29.5" r="1.3" fill="currentColor" stroke="none" />
+      <circle cx="35.0" cy="29.5" r="1.3" fill="currentColor" stroke="none" />
+      <circle cx="29.0" cy="34.5" r="1.3" fill="currentColor" stroke="none" />
+      <circle cx="35.0" cy="34.5" r="1.3" fill="currentColor" stroke="none" />
+      {/* Connecting line — diagonal node link */}
+      <path d="M 29.0,29.5 L 35.0,34.5" strokeWidth={strokeWidth * 0.7} opacity="0.55" {...baseStroke} />
+      {/* Pins — top */}
+      <path d="M 24.0,16.5 L 24.0,12.5" strokeWidth={strokeWidth * 0.9} {...baseStroke} />
+      <path d="M 32.0,16.5 L 32.0,12.5" strokeWidth={strokeWidth * 0.9} {...baseStroke} />
+      <path d="M 40.0,16.5 L 40.0,12.5" strokeWidth={strokeWidth * 0.9} {...baseStroke} />
+      {/* Pins — bottom */}
+      <path d="M 24.0,47.5 L 24.0,51.5" strokeWidth={strokeWidth * 0.9} {...baseStroke} />
+      <path d="M 32.0,47.5 L 32.0,51.5" strokeWidth={strokeWidth * 0.9} {...baseStroke} />
+      <path d="M 40.0,47.5 L 40.0,51.5" strokeWidth={strokeWidth * 0.9} {...baseStroke} />
+      {/* Pins — left */}
+      <path d="M 17.5,24.0 L 13.5,24.0" strokeWidth={strokeWidth * 0.9} {...baseStroke} />
+      <path d="M 17.5,32.0 L 13.5,32.0" strokeWidth={strokeWidth * 0.9} {...baseStroke} />
+      <path d="M 17.5,40.0 L 13.5,40.0" strokeWidth={strokeWidth * 0.9} {...baseStroke} />
+      {/* Pins — right */}
+      <path d="M 46.5,24.0 L 50.5,24.0" strokeWidth={strokeWidth * 0.9} {...baseStroke} />
+      <path d="M 46.5,32.0 L 50.5,32.0" strokeWidth={strokeWidth * 0.9} {...baseStroke} />
+      <path d="M 46.5,40.0 L 50.5,40.0" strokeWidth={strokeWidth * 0.9} {...baseStroke} />
+    </IconShell>
+  );
+}
+
+// ─── 16. Gear — "capacity engineering" ──────────────────────────────────
+export function SketchGear({ strokeWidth = 1.4, ...rest }: Props) {
+  return (
+    <IconShell {...rest}>
+      {/* Outer gear shape — 8 teeth via inset polygon (hand-sketched curves) */}
+      <path
+        d="
+          M 32.0,8.0
+          L 35.5,8.5 L 36.5,14.5
+          C 38.5,15.0 40.5,15.8 42.2,16.8
+          L 47.0,13.0 L 51.5,17.5
+          L 47.7,22.3 C 48.7,24.0 49.5,25.9 50.0,27.9
+          L 56.0,28.9 L 56.0,35.1 L 50.0,36.1
+          C 49.5,38.1 48.7,40.0 47.7,41.7
+          L 51.5,46.5 L 47.0,51.0
+          L 42.2,47.2 C 40.5,48.2 38.5,49.0 36.5,49.5
+          L 35.5,55.5 L 28.5,55.5 L 27.5,49.5
+          C 25.5,49.0 23.5,48.2 21.8,47.2
+          L 17.0,51.0 L 12.5,46.5
+          L 16.3,41.7 C 15.3,40.0 14.5,38.1 14.0,36.1
+          L 8.0,35.1 L 8.0,28.9 L 14.0,27.9
+          C 14.5,25.9 15.3,24.0 16.3,22.3
+          L 12.5,17.5 L 17.0,13.0
+          L 21.8,16.8 C 23.5,15.8 25.5,15.0 27.5,14.5
+          L 28.5,8.5 Z"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+      {/* Inner ring */}
+      <circle cx="32.0" cy="32.0" r="9.5" strokeWidth={strokeWidth} {...baseStroke} />
+      {/* Center dot */}
+      <circle cx="32.0" cy="32.0" r="2.2" fill="currentColor" stroke="none" />
+    </IconShell>
+  );
+}
