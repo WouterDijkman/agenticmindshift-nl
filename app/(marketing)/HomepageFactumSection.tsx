@@ -39,7 +39,7 @@ export default function HomepageFactumSection() {
         >
           <p className="eyebrow" style={{ marginBottom: '16px' }}>Twee routes</p>
           <h2 className="type-h2" style={{ maxWidth: '560px', margin: 0 }}>
-            Kies hoe u het probleem oplost.
+            Uitbesteden of zelf doen — in beide gevallen heeft u het fundament.
           </h2>
         </motion.div>
 

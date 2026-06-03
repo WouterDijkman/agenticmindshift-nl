@@ -451,6 +451,47 @@ export default function WerkwijzePage() {
           >
             * Alle bedragen exclusief btw. Eerste kennismaking altijd vrijblijvend.
           </p>
+
+          {/* Risk reversal */}
+          <div
+            className="reveal"
+            style={{
+              marginTop: '32px',
+              padding: '20px 24px',
+              background: 'var(--bg-secondary)',
+              border: '1px solid var(--border-subtle)',
+              display: 'flex',
+              gap: '16px',
+              alignItems: 'flex-start',
+            }}
+          >
+            <div
+              style={{
+                width: '4px',
+                alignSelf: 'stretch',
+                background: 'var(--accent-cta)',
+                flexShrink: 0,
+              }}
+            />
+            <div>
+              <p
+                style={{
+                  fontSize: '0.75rem',
+                  fontWeight: 700,
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  color: 'var(--accent-cta)',
+                  marginBottom: '6px',
+                }}
+              >
+                Geen risico
+              </p>
+              <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.7 }}>
+                De Scorecard is gratis. Elk kennismakingsgesprek is vrijblijvend. En bij de Sparring Sessie geldt:
+                levert het gesprek geen enkel bruikbaar inzicht, dan factureert Wouter niet. Zo simpel is het.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -62,6 +62,9 @@ export default function HomepagePainSection() {
           <h2 className="type-h2" style={{ maxWidth: '560px', margin: 0 }}>
             Drie problemen die uw rendement kosten — zonder dat iemand ze benoemt.
           </h2>
+          <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', color: 'var(--text-muted)', margin: 0, marginTop: '16px', maxWidth: '460px', lineHeight: 1.65, fontStyle: 'italic' }}>
+            Partners zouden geen IC-beslissingen moeten nemen op basis van incompleet beeld. Toch is dat de norm.
+          </p>
         </motion.div>
 
         <motion.div

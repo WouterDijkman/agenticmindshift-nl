@@ -140,9 +140,9 @@ export default function AnimatedHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.95, ease }}
         >
-          De ongemakkelijke waarheid: uw deal-team herhaalt vermijdbare fouten,
-          uw MBR-cyclus maskeert onderprestatie, en AI-substitutierisico staat
-          in geen enkel IC-memo. Wij maken het zichtbaar — in twaalf minuten.
+          Uw deal-team herhaalt vermijdbare fouten, uw MBR-cyclus maskeert
+          onderprestatie, en AI-substitutierisico staat in geen enkel IC-memo.
+          De Scorecard maakt het zichtbaar — in twaalf minuten.
         </motion.p>
 
         {/* CTA */}

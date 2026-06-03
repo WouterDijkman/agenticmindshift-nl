@@ -60,7 +60,7 @@ export default function HomepageStepsSection() {
         >
           <p className="eyebrow" style={{ marginBottom: '16px' }}>Zo werkt het</p>
           <h2 className="type-h2" style={{ margin: 0, maxWidth: '480px' }}>
-            Drie stappen, twaalf minuten
+            De Quickscan Methode: drie stappen, twaalf minuten.
           </h2>
         </motion.div>
 

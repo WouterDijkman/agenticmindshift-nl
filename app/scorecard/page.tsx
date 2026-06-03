@@ -51,6 +51,17 @@ export default function ScorecardWelcomePage() {
           >
             Geen account vereist. Uw antwoorden worden tussentijds opgeslagen.
           </p>
+          <p
+            style={{
+              fontSize: '0.75rem',
+              color: 'var(--text-muted)',
+              letterSpacing: '0.06em',
+              textAlign: 'center',
+              fontStyle: 'italic',
+            }}
+          >
+            Al ingevuld door PE-partners, M&A-directors en family offices in de Nederlandse mid-market.
+          </p>
         </div>
       </AnimatedHeroShell>
 

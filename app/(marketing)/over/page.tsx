@@ -89,6 +89,11 @@ export default function OverPage() {
                   : 23 modules waarmee deal-teams hun DD-proces, MBR-cyclus en bias-toetsing
                   structureel instrumenteren.
                 </p>
+                <p style={{ fontStyle: 'italic', color: 'var(--text-muted)' }}>
+                  Eerste resultaat uit de praktijk: een entry-multiple-correctie van 0,4&times;
+                  op een buy-and-build deal — de investering in het rapport verdient zichzelf
+                  meervoudig terug.
+                </p>
               </div>
             </div>
           </div>

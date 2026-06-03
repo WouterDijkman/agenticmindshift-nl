@@ -89,6 +89,11 @@ export default function HomePage() {
                 who: 'M&A-director, buy-and-build platform',
                 aum: '4 acquisities per jaar',
               },
+              {
+                quote: '"We dachten dat onze MBR-cyclus op orde was. De Scorecard liet in twaalf minuten zien dat drie van de zes dimensies onder peer-niveau lagen. Dat gesprek hadden we intern nooit gevoerd."',
+                who: 'CFO, familiekantoor met 8 deelnemingen',
+                aum: '€40M–€60M onder beheer',
+              },
             ].map((item, i) => (
               <div
                 key={i}
@@ -185,6 +190,55 @@ export default function HomePage() {
       ═══════════════════════════════════════════ */}
       <HomepageDimensionsSection />
 
+      <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
+
+      {/* ═══════════════════════════════════════════
+          7. TRANSFORMATIE — Before → After (StoryBrand: Success)
+      ═══════════════════════════════════════════ */}
+      <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(64px, 9vw, 96px)' }}>
+        <div className="container-medium">
+          <div className="reveal" style={{ marginBottom: '40px' }}>
+            <p className="eyebrow" style={{ marginBottom: '16px' }}>Het verschil</p>
+            <h2 className="type-h2" style={{ margin: 0, maxWidth: '520px' }}>
+              Van onderbuik naar onderbouwing.
+            </h2>
+          </div>
+          <div
+            className="reveal"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: '1px',
+              background: 'var(--border-subtle)',
+              border: '1px solid var(--border-subtle)',
+            }}
+          >
+            <div style={{ background: 'var(--bg-primary)', padding: 'clamp(28px, 4vw, 44px)' }}>
+              <p style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '20px' }}>
+                Zonder de Scorecard
+              </p>
+              <div style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <p style={{ margin: 0 }}>IC-beslissingen op basis van gevoel en ervaring.</p>
+                <p style={{ margin: 0 }}>MBR-cyclus als rapportageritueel — geen sturingsinstrument.</p>
+                <p style={{ margin: 0 }}>Deal-lessen verdwijnen bij elke teamwissel.</p>
+                <p style={{ margin: 0 }}>AI-substitutierisico staat nergens op papier.</p>
+              </div>
+            </div>
+            <div style={{ background: 'var(--bg-primary)', padding: 'clamp(28px, 4vw, 44px)', borderLeft: '3px solid var(--accent-cta)' }}>
+              <p style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--accent-cta)', marginBottom: '20px' }}>
+                Na de Scorecard
+              </p>
+              <div style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <p style={{ margin: 0 }}>Zes dimensies gekwantificeerd, gebenchmarkt tegen peers.</p>
+                <p style={{ margin: 0 }}>Twee concrete aandachtspunten met de hoogste impact.</p>
+                <p style={{ margin: 0 }}>Een rapport dat u intern kunt delen zonder extra uitleg.</p>
+                <p style={{ margin: 0 }}>U gaat naar uw volgende IC met data — niet met een vermoeden.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
             <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
       {/* ═══════════════════════════════════════════
@@ -254,6 +308,9 @@ export default function HomePage() {
               <p style={{ margin: 0, fontStyle: 'italic', color: 'var(--text-muted)' }}>
                 Het verschil tussen een gecalibreerde en een ongecalibreerde entry-multiple?
                 Op een &euro;5M EBITDA-target al snel 0,5&times; &mdash; dat is &euro;2,5M.
+              </p>
+              <p style={{ margin: 0, marginTop: '8px' }}>
+                De Scorecard kost twaalf minuten. Niets doen kost kwartalen.
               </p>
             </div>
           </div>
