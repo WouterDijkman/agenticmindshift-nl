@@ -90,7 +90,7 @@ export default function EarlyAccessForm() {
       <Select label="Type partij" {...register('partyType')} error={errors.partyType?.message}>
         <option value="PE-partner">PE-partner</option>
         <option value="M&A-director">M&amp;A-director</option>
-        <option value="DGA">DGA</option>
+        <option value="Ondernemer">Ondernemer</option>
         <option value="Restructuring-specialist">Restructuring-specialist</option>
         <option value="Anders">Anders</option>
       </Select>

@@ -15,7 +15,7 @@ export const organizationLd = {
     'Private Equity',
     'M&A',
     'AI',
-    'Portfolio Intelligence',
+    'Portefeuille-inzicht',
     'Financial Restructuring',
   ],
   sameAs: ['https://www.linkedin.com/in/wwdijkman/'],
@@ -40,11 +40,11 @@ export const personLd = {
 export const serviceLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Portfolio Intelligence Scorecard',
+  name: 'Scorecard',
   provider: { '@type': 'Organization', name: 'Agentic Mindshift' },
   areaServed: 'NL',
   description:
-    "Een 12-minuten assessment op zes dimensies voor Nederlandse PE-huizen, M&A-boutiques en DGA's in de lower-mid market.",
+    "Een 12-minuten assessment op zes dimensies voor Nederlandse PE-fondsen, M&A-kantoren en ondernemers in de mid-market.",
 };
 
 export const faqLd = {

@@ -32,7 +32,7 @@ const MOMENTEN: {
   {
     code: 'M1',
     title: 'Acquisitie',
-    label: 'Buy-side deal intelligence',
+    label: 'Buy-side deal-analyse',
     body: 'Van eerste beoordeling van het informatiememorandum tot closing: een uitgebreid analytisch fundament op alle relevante dimensies. Gecertificeerde adviseurs (RA/RB/advocaten) voor formele sign-off waar vereist.',
     advisors: 'RA · RB · Advocaten',
     Icon: SketchDueDiligence,
@@ -47,8 +47,8 @@ const MOMENTEN: {
   },
   {
     code: 'M3',
-    title: 'Portfolio review',
-    label: 'Doorlopende intelligence',
+    title: 'Portefeuille-doorlichting',
+    label: 'Doorlopend inzicht',
     body: 'Periodieke doorlichting van uw bestaande deelnemingen op de zes dimensies. Vroegtijdige signalering van onderprestatie, AI-kwetsbaarheid en exit-obstakels — lang voor de jaarrapportage.',
     advisors: 'Portfolio management · Bestuurders',
     Icon: SketchPortfolio,
@@ -221,7 +221,7 @@ export default function FactumCapitalPage() {
               <div style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", display: 'flex', flexDirection: 'column', gap: '20px', fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', lineHeight: 1.8, color: 'var(--text-secondary)' }}>
                 <p>
                   Het <strong>platform</strong> &mdash; 23 modules van eerste IM-beoordeling tot
-                  exit-readiness &mdash; geeft uw team consistente structuur op elk moment.
+                  verkoopgereedheid &mdash; geeft uw team consistente structuur op elk moment.
                   Vanaf 1 juli 2026 beschikbaar als SaaS.
                 </p>
                 <p>
@@ -349,7 +349,7 @@ export default function FactumCapitalPage() {
                   n: '01',
                   title: 'Het Platform',
                   label: 'SaaS — zelf in handen',
-                  body: '23 modules die uw deal-team de structuur geven om alle vier momenten consistent uit te voeren. Van eerste IM-beoordeling tot exit-readiness tot vroegtijdige herstructureringssignalering. Kennisopbouw die meegroeit.',
+                  body: '23 modules die uw deal-team de structuur geven om alle vier momenten consistent uit te voeren. Van eerste IM-beoordeling tot verkoopgereedheid tot vroegtijdige herstructureringssignalering. Kennisopbouw die meegroeit.',
                   detail: 'Lancering 1 juli 2026 · Maandabonnement · Wachtlijst open',
                   link: null,
                 },
@@ -358,7 +358,7 @@ export default function FactumCapitalPage() {
                   title: 'De Dienstverlening',
                   label: 'Via Agentic Mindshift — AI Due Diligence & Portfolio',
                   body: 'Agentic Mindshift voert het volledige traject voor u uit, met Factum als analytisch platform. Op elk moment koppelt Agentic Mindshift de juiste gecertificeerde professionals die op het gedeelde dossier verder bouwen en waar nodig formeel tekenen.',
-                  detail: 'Vanaf €10.000 investering per deal · Of €6.500 – €8.500 / maand portfolio-intelligence · Excl. btw',
+                  detail: 'Vanaf €10.000 investering per deal · Of €6.500 – €8.500 / maand portefeuille-inzicht · Excl. btw',
                   link: { href: '/werkwijze', label: 'Bekijk werkwijze & investering →' },
                 },
               ] as const).map((item) => (
@@ -544,7 +544,7 @@ export default function FactumCapitalPage() {
               { label: 'Tier-2 PE-fondsen', body: 'Deals €5M–€50M. Structuur op acquisitie, portfolio review en exit.' },
               { label: 'Family offices', body: 'DD-kwaliteit en bankpresentaties zonder een groot intern team.' },
               { label: 'MKB-ondernemers', body: 'Financieringsaanvragen professioneel onderbouwd — ook bij kleinere bedragen.' },
-              { label: "Buy-and-build DGA's", body: 'De discipline van een professioneel deal-team, met adviseurs op afroep.' },
+              { label: "Buy-and-build ondernemers", body: 'De discipline van een professioneel deal-team, met adviseurs op afroep.' },
               { label: 'M&A-directors', body: 'Kennisretentie over meerdere deals — elk dossier bouwt voort op het vorige.' },
               { label: 'Financiers & herstructurering', body: 'Vroege signalering bij stress. Directe koppeling met restructuring consultants.' },
             ].map((item, i) => (
@@ -602,7 +602,7 @@ export default function FactumCapitalPage() {
                   'Directe input op de module-roadmap',
                   'Voorrang op platform-onboarding per 1 juli 2026',
                   'Vroeg-toegangstarief bij lancering',
-                  'Prioriteit voor pilot deal intelligence-opdrachten in het eerste kwartaal na lancering (juli–september 2026)',
+                  'Prioriteit voor pilot deal-analyse-opdrachten in het eerste kwartaal na lancering (juli–september 2026)',
                 ].map((t) => (
                   <div key={t} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                     <span

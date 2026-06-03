@@ -28,11 +28,11 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Agentic Mindshift — Portfolio Intelligence voor Nederlandse PE en M&A',
+    default: 'Agentic Mindshift — AI-advies voor Nederlandse PE en M&A',
     template: '%s | Agentic Mindshift',
   },
   description:
-    'Strategisch AI-partnerschap voor regionale Private Equity, M&A-boutiques en familiebedrijven in de Nederlandse lower-mid market. Start de Portfolio Intelligence Scorecard.',
+    'Strategisch AI-partnerschap voor regionale Private Equity, M&A-kantoren en familiebedrijven in de Nederlandse mid-market. Start de Scorecard.',
   metadataBase: new URL('https://www.agenticmindshift.nl'),
   openGraph: {
     type: 'website',

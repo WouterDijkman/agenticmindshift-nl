@@ -63,9 +63,9 @@ const offerings: Offering[] = [
   },
   {
     badge: 'Projectmatig of retainer',
-    title: 'Consultancy, Workflow & Strategic Enablement',
+    title: 'AI-advies & Implementatie',
     situation:
-      'U wilt AI concreet inzetten in uw processen, workflows of organisatie — met implementatie, masterclasses en team-enablement.',
+      'U wilt AI concreet inzetten in uw processen, workflows of organisatie — met implementatie, masterclasses en teamtraining.',
     price: 'Vanaf €4.500',
     priceNote: 'Per traject of doorlopend in retainer',
     ctaLabel: 'Bespreek uw vraagstuk →',
@@ -76,7 +76,7 @@ const offerings: Offering[] = [
     badge: 'Embedded · doorlopend',
     title: 'Fractional AI Officer',
     situation:
-      'U wilt een AI-leider op MT-niveau zonder fulltime aanstelling — strategie, leveranciersselectie en team-enablement geborgd.',
+      'U wilt een AI-leider op MT-niveau zonder fulltime aanstelling — strategie, leveranciersselectie en teamtraining geborgd.',
     price: '€3.500 – €5.500 / maand',
     priceNote: 'Minimaal 3 maanden · MT-deelname en operationele eigenaarschap',
     ctaLabel: 'Bespreek de fit →',
@@ -90,7 +90,7 @@ const offerings: Offering[] = [
     situation:
       'U doet M&A-deals of beheert een portefeuille en wilt het risico dat AI de kernactiviteit overneemt structureel borgen in uw overnameprijs en maandrapportage.',
     price: 'Vanaf €10.000 per deal',
-    priceNote: 'Of €6.500 – €8.500 / maand voor doorlopende portfolio-intelligence',
+    priceNote: 'Of €6.500 – €8.500 / maand voor doorlopend portefeuille-inzicht',
     ctaLabel: 'Plan een kennismaking →',
     ctaHref: 'https://cal.com/wwdijkman/intake-call',
     variantsCaption: 'Meerdere deals? Volumetarieven:',
@@ -102,7 +102,7 @@ const offerings: Offering[] = [
     poweredBy: {
       label: 'Factum Capital',
       href: '/factum-capital',
-      tagline: 'Ons AI-platform voor M&A & portfolio-intelligence',
+      tagline: 'Ons AI-platform voor M&A & portefeuille-inzicht',
     },
     Icon: SketchDueDiligence,
   },

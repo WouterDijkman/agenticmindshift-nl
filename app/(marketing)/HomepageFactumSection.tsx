@@ -6,11 +6,11 @@ import Button from '@/components/ui/Button';
 
 const TRACKS = [
   {
-    tag: 'Deal-doer · PE / Family office / DGA',
+    tag: 'Deal-doer · PE / Family office / Ondernemer',
     n: '01',
     title: 'Laat het voor u doen.',
     body: 'Wij leveren het volledige AI Due Diligence & Portfolio-traject op uw dossier. De scorecard bepaalt welk moment als eerste relevant is.',
-    detail: 'Vanaf €10.000 per deal · of €6.500–€8.500/mnd portfolio-intelligence · excl. btw',
+    detail: 'Vanaf €10.000 per deal · of €6.500–€8.500/mnd portefeuille-inzicht · excl. btw',
     cta: { label: 'Start de Scorecard', href: '/scorecard', variant: 'primary' as const },
     ctaSub: '12 minuten · direct uw profiel',
   },
@@ -18,7 +18,7 @@ const TRACKS = [
     tag: 'Adviseur · RA / RB / M&A-professional',
     n: '02',
     title: 'Werk zelf met het platform.',
-    body: 'Factum Capital: 23 modules voor uw eigen deal-team. Van eerste IM-beoordeling tot exit-readiness. SaaS vanaf 1 juli 2026 — vroege toegang is nu open.',
+    body: 'Factum Capital: 23 modules voor uw eigen deal-team. Van eerste IM-beoordeling tot verkoopklaar maken. SaaS vanaf 1 juli 2026 — vroege toegang is nu open.',
     detail: 'SaaS · maandabonnement · vroeg-toegangstarief bij lancering',
     cta: { label: 'Factum Capital vroege toegang', href: '/factum-capital', variant: 'secondary' as const },
     ctaSub: 'Lancering 1 juli 2026',

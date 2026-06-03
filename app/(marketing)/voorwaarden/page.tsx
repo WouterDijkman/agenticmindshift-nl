@@ -35,7 +35,7 @@ export default function VoorwaardenPage() {
         <h2 className="text-xl mt-4">2. Toepasselijkheid</h2>
         <p>
           Deze voorwaarden zijn van toepassing op elk gebruik van de website
-          agenticmindshift.nl, op de Portfolio Intelligence Scorecard, en op alle
+          agenticmindshift.nl, op de Scorecard, en op alle
           opdrachten waarbij Agentic Mindshift als opdrachtnemer optreedt. Afwijkingen
           gelden alleen indien schriftelijk overeengekomen.
         </p>
