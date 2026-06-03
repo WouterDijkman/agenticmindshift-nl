@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import SketchCrosshair from '@/components/icons/SketchCrosshair';
 import HeroAnimated from './HeroAnimated';
+import OverCredentials from './OverCredentials';
 import JsonLd from '@/components/JsonLd';
 import { organizationLd, personLd } from '@/lib/jsonld';
 
@@ -99,6 +100,11 @@ export default function OverPage() {
           </div>
         </div>
       </section>
+
+      <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
+
+      {/* ═══ CREDENTIALS ═══ */}
+      <OverCredentials />
 
       <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
