@@ -10,6 +10,7 @@ import {
   SketchDueDiligence,
 } from '@/components/icons/SketchIcons';
 import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
+import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
 import WerkwijzeOnboardingSteps from './WerkwijzeOnboardingSteps';
 
 type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
@@ -115,7 +116,7 @@ export default function WerkwijzePage() {
         bgCharSize="clamp(240px, 30vw, 460px)"
         eyebrow="Werkwijze & Investering"
         heading="Vier manieren om samen te werken — u kiest het tempo"
-        subtext="Vier helder gedifferentieerde routes, gekozen op basis van uw situatie. Van een laagdrempelige Sparring Sessie tot een Fractional AI Officer of een AI Due Diligence — per deal of in volume."
+        subtext="Van een laagdrempelige Sparring Sessie tot een Fractional AI Officer of AI Due Diligence — u kiest op basis van uw situatie."
         headingMaxWidth="800px"
       />
 
@@ -141,7 +142,7 @@ export default function WerkwijzePage() {
                 lineHeight: 1.75,
               }}
             >
-              Geen ellenlange productlijsten. Vier situaties, vier routes — u herkent uw vraag of u herkent hem niet. In beide gevallen volstaat één kennismakingsgesprek om de juiste route te bevestigen.
+              Vier situaties, vier routes. U herkent uw vraag — of één gesprek volstaat om de juiste route te bevestigen.
             </p>
           </div>
 
@@ -456,7 +457,7 @@ export default function WerkwijzePage() {
       <SketchDivider />
 
       {/* ═══════════════════════════════════════════
-          OBJECTION HANDLING
+          OBJECTION HANDLING — collapsible accordion
       ═══════════════════════════════════════════ */}
       <section
         style={{
@@ -472,74 +473,36 @@ export default function WerkwijzePage() {
             </h2>
           </div>
 
-          <div
-            className="objection-grid"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '1px',
-              background: 'var(--border-subtle)',
-              border: '1px solid var(--border-subtle)',
-            }}
-          >
-            {[
-              {
-                q: 'Wat als het niets voor ons blijkt?',
-                a: 'Start met de Sparring Sessie vanaf €395. Eén concrete vraag, één schriftelijke samenvatting, geen vervolg-verplichting. Past het niet, dan is dat de uitkomst — niet het probleem.',
-              },
-              {
-                q: 'Wat maakt Agentic Mindshift anders dan andere AI-consultants?',
-                a: 'Zes jaar deal-ervaring aan beide kanten van de transactietafel: acquisition finance op LBO\'s én financial restructuring op portefeuilles in stress. Dat is geen AI-generalist die toevallig PE-klanten heeft — het is iemand die de aannames in uw dossier herkent omdat hij ze zelf heeft moeten onderbouwen. De AI-kennis versterkt die praktijk; het vervangt haar niet.',
-              },
-              {
-                q: 'Hoe weet ik vooraf of de investering rendeert?',
-                a: 'Bij AI Due Diligence dekt één goed gecalibreerde entry-multiple-correctie van 0,5× op een €5M EBITDA-target de kosten ruim 200×. Bij Portfolio Intelligence: één tijdig gesignaleerde variantie-afwijking dekt doorgaans de jaarkosten. Bij Fractional AI Officer: één vermeden foute leveranciers-keuze betaalt het traject ruimschoots terug.',
-              },
-              {
-                q: 'Zitten we vast aan een lange looptijd?',
-                a: 'Sparring Sessie, Consultancy-traject en Due Diligence zijn per opdracht. Fractional AI Officer kent een minimum van drie maanden — niet om u vast te zetten, maar omdat het ritme tijd nodig heeft om zich te zetten.',
-              },
-              {
-                q: 'Doen jullie ook meerdere deals tegelijk?',
-                a: 'Ja — voor M&A-spelers met dealflow zijn er volumetarieven: vijf deals voor €42.500 (15% korting) of tien deals voor €80.000 (20% korting). De kortingen reflecteren het schaalvoordeel in inwerktijd en platform-onboarding.',
-              },
-            ].map((item) => (
-              <div
-                key={item.q}
-                style={{
-                  background: 'var(--bg-primary)',
-                  padding: 'clamp(28px, 3.5vw, 36px)',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '12px',
-                }}
-              >
-                <p
-                  style={{
-                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                    fontSize: 'clamp(1.0625rem, 1.7vw, 1.1875rem)',
-                    fontWeight: 700,
-                    letterSpacing: '-0.01em',
-                    color: 'var(--text-primary)',
-                    lineHeight: 1.3,
-                    margin: 0,
-                  }}
-                >
-                  {item.q}
-                </p>
-                <p
-                  style={{
-                    fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                    fontSize: '1rem',
-                    lineHeight: 1.7,
-                    color: 'var(--text-secondary)',
-                    margin: 0,
-                  }}
-                >
-                  {item.a}
-                </p>
-              </div>
-            ))}
+          <div className="reveal">
+            <Accordion
+              items={[
+                {
+                  id: 'niets',
+                  question: 'Wat als het niets voor ons blijkt?',
+                  answer: 'Start met de Sparring Sessie (€395). Eén vraag, één samenvatting, geen vervolgverplichting.',
+                },
+                {
+                  id: 'anders',
+                  question: 'Wat maakt Agentic Mindshift anders?',
+                  answer: 'Deal-ervaring in acquisition finance én financial restructuring — niet een AI-generalist die toevallig PE-klanten heeft. De AI versterkt die praktijk; ze vervangt haar niet.',
+                },
+                {
+                  id: 'rendement',
+                  question: 'Hoe weet ik of de investering rendeert?',
+                  answer: 'Eén gecalibreerde entry-multiple-correctie van 0,5× op een €5M EBITDA-target dekt de DD-kosten 200×. Eén tijdig gesignaleerde variantie-afwijking dekt de jaarkosten portfolio-intelligence.',
+                },
+                {
+                  id: 'looptijd',
+                  question: 'Zitten we vast aan een lange looptijd?',
+                  answer: 'Sparring, Consultancy en DD zijn per opdracht. Fractional AI Officer: minimaal 3 maanden — omdat het ritme tijd nodig heeft.',
+                },
+                {
+                  id: 'volume',
+                  question: 'Meerdere deals tegelijk?',
+                  answer: 'Volumetarieven: 5 deals €42.500 (–15%), 10 deals €80.000 (–20%). Schaalvoordeel in inwerktijd en platform-onboarding.',
+                },
+              ] satisfies AccordionItem[]}
+            />
           </div>
         </div>
       </section>

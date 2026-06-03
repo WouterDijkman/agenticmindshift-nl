@@ -1,11 +1,8 @@
-import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import AnimatedHero from './AnimatedHero';
 import HomepageStatsSection from './HomepageStatsSection';
 import HomepageStepsSection from './HomepageStepsSection';
 import HomepageDimensionsSection from './HomepageDimensionsSection';
-import HomepageVoorWieSection from './HomepageVoorWieSection';
-import HomepageBioSection from './HomepageBioSection';
 import HomepagePainSection from './HomepagePainSection';
 import HomepageFactumSection from './HomepageFactumSection';
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
@@ -52,80 +49,15 @@ export default function HomePage() {
 
       <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
-            {/* ═══════════════════════════════════════════
-          2. EXPERTISE STRIP
+      {/* ═══════════════════════════════════════════
+          2. ZO WERKT HET — direct na pijnpunten
       ═══════════════════════════════════════════ */}
-      <section style={{ background: 'var(--accent-primary)' }}>
-        <div className="container-wide">
-          <div
-            className="reveal expertise-strip"
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              alignItems: 'center',
-              gap: '0',
-              paddingBlock: '16px',
-              borderTop: '1px solid rgba(247,242,235,0.06)',
-            }}
-          >
-            {([
-              { label: '6 jaar', sub: 'deal-ervaring NL mid-market', href: null },
-              { label: 'Acquisition finance', sub: 'LBO-structurering', href: null },
-              { label: 'Financial restructuring', sub: 'Portefeuilles in stress', href: null },
-              { label: 'AI Due Diligence', sub: '2–3 weken · NL MKB €5M–€50M', href: '/werkwijze' },
-              { label: 'Factum Capital', sub: 'lancering 1 juli 2026', href: '/factum-capital' },
-            ] as const).map((item, i) => {
-              const inner = (
-                <>
-                  <span
-                    style={{
-                      fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                      fontSize: '0.9375rem',
-                      fontWeight: 700,
-                      color: 'rgba(247,242,235,0.88)',
-                      letterSpacing: '-0.01em',
-                      lineHeight: 1,
-                    }}
-                  >
-                    {item.label}
-                  </span>
-                  <span
-                    style={{
-                      fontSize: '0.6875rem',
-                      color: 'rgba(247,242,235,0.58)',
-                      letterSpacing: '0.06em',
-                      lineHeight: 1,
-                    }}
-                  >
-                    {item.sub}
-                  </span>
-                </>
-              );
-              const wrapStyle = {
-                padding: '8px 24px',
-                borderLeft: i > 0 ? '1px solid rgba(247,242,235,0.1)' : 'none',
-                display: 'flex' as const,
-                flexDirection: 'column' as const,
-                gap: '2px',
-                textDecoration: 'none',
-              };
-              return item.href ? (
-                <Link key={item.label} href={item.href} style={wrapStyle}>
-                  {inner}
-                </Link>
-              ) : (
-                <div key={item.label} style={wrapStyle}>{inner}</div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <HomepageStepsSection />
 
       {/* ═══════════════════════════════════════════
           3. STATISTIEKEN — animated count-up
       ═══════════════════════════════════════════ */}
       <HomepageStatsSection />
-
 
       {/* ═══════════════════════════════════════════
           3b. SOCIAL PROOF
@@ -144,12 +76,12 @@ export default function HomePage() {
           >
             {[
               {
-                quote: '“We hadden al jaren hetzelfde MBR-format. Na de scorecard zagen we in één oogopslag waar de echte blinde vlekken zaten. Twee van de zes dimensies lagen significant onder het peer-gemiddelde — dat was ons nooit eerder expliciet gemaakt.”',
+                quote: '”Twee van de zes dimensies lagen significant onder het peer-gemiddelde — dat was ons nooit eerder expliciet gemaakt.”',
                 who: 'PE-partner, Nederlandse lower-mid market fund',
                 aum: '~€120M AUM',
               },
               {
-                quote: '“De AI Due Diligence op onze laatste acquisitie gaf ons een extra argument in de pricing-discussie. We hebben de entry-multiple 0,4× naar beneden bijgesteld op basis van de substitutie-analyse. Het rapport kostte €10.000. De aanpassing leverde meervoudig meer op.”',
+                quote: '”Entry-multiple 0,4× naar beneden bijgesteld op basis van de substitutie-analyse. Het rapport kostte €10.000 — de aanpassing leverde meervoudig meer op.”',
                 who: 'M&A-director, buy-and-build platform',
                 aum: '4 acquisities per jaar',
               },
@@ -201,14 +133,6 @@ export default function HomePage() {
       <HomepageFactumSection />
 
       <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
-      <HomepageBioSection />
-
-      <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
-
-      {/* ═══════════════════════════════════════════
-          5. ZO WERKT HET
-      ═══════════════════════════════════════════ */}
-      <HomepageStepsSection />
 
       {/* ═══════════════════════════════════════════
           5b. MID-PAGE CTA
@@ -253,13 +177,7 @@ export default function HomePage() {
       <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
       {/* ═══════════════════════════════════════════
-          6. VOOR WIE
-      ═══════════════════════════════════════════ */}
-      <HomepageVoorWieSection />
-      <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
-
-      {/* ═══════════════════════════════════════════
-          7. ZES DIMENSIES
+          6. ZES DIMENSIES
       ═══════════════════════════════════════════ */}
       <HomepageDimensionsSection />
 

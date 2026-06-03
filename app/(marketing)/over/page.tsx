@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import SketchCrosshair from '@/components/icons/SketchCrosshair';
 import HeroAnimated from './HeroAnimated';
-import { TweeKantenGrid, HoeIkWerkGrid } from './OverGridSections';
 import JsonLd from '@/components/JsonLd';
 import { organizationLd, personLd } from '@/lib/jsonld';
 
@@ -73,39 +72,22 @@ export default function OverPage() {
                 }}
               >
                 <p>
-                  Zes jaar lang aan beide kanten van de Nederlandse transactietafel. Drie jaar
-                  financial restructuring op MKB- en mid-market portefeuilles in stress &mdash;
-                  een context waar elke aanname expliciet moet worden gemaakt, want als u een
-                  aanname laat staan is de schade doorgaans al geleden. Vervolgens twee&euml;neenhalf
-                  jaar acquisition finance op LBO-financieringen voor Nederlandse PE-deals in
-                  het mid-market segment van 1 tot 25 miljoen.
+                  Drie jaar financial restructuring, twee&euml;neenhalf jaar acquisition finance.
+                  Beide kanten van de deal-tafel, Nederlandse mid-market. Die combinatie leert
+                  u precies waar de aannames niet uitkomen &mdash; en waar de MBR-cyclus
+                  onderprestatie maskeert in plaats van signaleert.
                 </p>
                 <p>
-                  Die combinatie is zeldzaam. Wie de deal-structurering aan de bancaire kant
-                  kent, weet ook precies waar in de post-closing praktijk de aannames niet
-                  uitkomen. Welke IC-besluiten in retrospect op drijfzand stonden. Hoe een
-                  MBR-cyclus eruitziet als de instrumentatie ontbreekt om onderprestatie vroeg
-                  te signaleren.
-                </p>
-                <p>
-                  In oktober 2025 is Agentic Mindshift gestart om die combinatie
-                  beschikbaar te maken voor Nederlandse PE- en M&amp;A-firma&apos;s die hun
-                  portfolio-intelligence structureel willen versterken. In november 2025
-                  volgde ik AI for Business aan Nyenrode Business Universiteit, om de
-                  verbinding tussen deal-praktijk en AI-toepassingen verder te
-                  formaliseren.
-                </p>
-                <p>
-                  Op 1 juli 2026 lanceert{' '}
+                  In oktober 2025 is Agentic Mindshift gestart. In november 2025 volgde{' '}
+                  <em>AI for Business</em> aan Nyenrode. Op 1 juli 2026 lanceert{' '}
                   <Link
                     href="/factum-capital"
                     style={{ color: 'var(--accent-cta)', textDecoration: 'underline', textUnderlineOffset: '3px' }}
                   >
                     Factum Capital
                   </Link>
-                  : het Agentic M&amp;A- en Restructuring Operating System. Drie&euml;ntwintig
-                  modules waarmee deal-teams hun MBR-cyclus, DD-proces en bias-toetsing
-                  structureel kunnen instrumenteren.
+                  : 23 modules waarmee deal-teams hun DD-proces, MBR-cyclus en bias-toetsing
+                  structureel instrumenteren.
                 </p>
               </div>
             </div>
@@ -114,10 +96,6 @@ export default function OverPage() {
       </section>
 
       <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
-
-      <TweeKantenGrid />
-
-            <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
       {/* ═══ TIMELINE ═══ */}
       <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(64px, 9vw, 112px)' }}>
@@ -220,9 +198,28 @@ export default function OverPage() {
         </div>
       </section>
 
-      <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
+      {/* ═══ WERKWIJZE LINK ═══ */}
+      <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(48px, 6vw, 72px)', textAlign: 'center' }}>
+        <div className="container-medium reveal">
+          <p className="eyebrow" style={{ marginBottom: '12px' }}>Werkwijze</p>
+          <p
+            style={{
+              fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
+              fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
+              color: 'var(--text-secondary)',
+              lineHeight: 1.65,
+              marginBottom: '24px',
+            }}
+          >
+            Vier manieren om samen te werken — van een eenmalige sessie tot een embedded AI-rol.
+          </p>
+          <Button href="/werkwijze" variant="secondary" size="md">
+            Bekijk werkwijze &amp; investering →
+          </Button>
+        </div>
+      </section>
 
-      <HoeIkWerkGrid />
+      <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
       {/* ═══ CONTACT CTA ═══ */}
       <section

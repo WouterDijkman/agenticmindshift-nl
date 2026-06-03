@@ -27,13 +27,13 @@ export const faqItems: FaqItem[] = [
     id: 'onderbouwing',
     question: 'Wat is de onderbouwing van de zes dimensies?',
     answer:
-      'De dimensies zijn opgebouwd vanuit zes jaar praktijkervaring aan beide kanten van de transactietafel \u2014 acquisition finance op leveraged buy-outs en financial restructuring op portefeuilles in stress \u2014 en gebenchmarkt tegen anonieme indicatoren van vergelijkbare partijen in de Nederlandse lower-mid market.',
+      'De dimensies zijn gebaseerd op praktijkervaring in acquisition finance en financial restructuring, en gebenchmarkt tegen anonieme indicatoren van vergelijkbare partijen in de Nederlandse lower-mid market.',
   },
   {
     id: 'wie',
     question: 'Wie staat er achter Agentic Mindshift?',
     answer:
-      'Wouter Dijkman, founder van Agentic Mindshift. Zes jaar deal-ervaring aan beide kanten van de transactietafel: acquisition finance op leveraged buy-outs en financial restructuring op portefeuilles in stress, Dutch mid-market 1\u201325M. Meer op de Over-pagina.',
+      'Wouter Dijkman, founder. Acquisition finance en financial restructuring, Nederlandse mid-market. Meer op de Over-pagina.',
   },
   {
     id: 'sales-pitch',

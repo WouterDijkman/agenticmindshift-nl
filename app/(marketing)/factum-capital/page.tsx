@@ -71,7 +71,7 @@ export default function FactumCapitalPage() {
         bgCharSize="clamp(240px, 32vw, 480px)"
         eyebrow="Het platform achter onze AI Due Diligence-dienst"
         heading="Het analytisch fundament voor elke fase van uw deal- en portfoliopraktijk"
-        subtext="Factum Capital is het AI-platform achter de AI Due Diligence & Portfolio-dienstverlening van Agentic Mindshift. Vanaf 1 juli 2026 ook beschikbaar als SaaS voor PE-fondsen en M&A-teams die zelf willen werken — vier momenten: acquisitie, financiering, portfolio review en pre-IBR/WHOA."
+        subtext="Het AI-platform achter onze dienstverlening. Vier momenten: acquisitie, financiering, portfolio review en pre-IBR/WHOA. Vanaf 1 juli 2026 ook als SaaS."
         headingMaxWidth="900px"
       >
         {/* Launch stats strip */}
@@ -148,9 +148,9 @@ export default function FactumCapitalPage() {
             }}
           >
             {[
-              { label: 'Elke situatie opnieuw', body: 'Acquisitie, financieringsaanvraag of portfolioprobleem — elk moment begint bij nul. Geen gedeelde structuur, geen kennisopbouw, geen hergebruik van het vorige dossier.' },
-              { label: 'Adviseurs te laat', body: 'Gecertificeerde adviseurs worden pas ingevlogen als het dossier al vol zit met aannames. Dubbel werk, hogere kosten, kortere doorlooptijd zonder kwaliteitswinst.' },
-              { label: 'Stress te laat zichtbaar', body: 'IBR- of WHOA-signalen die al maanden sluimerden worden pas zichtbaar als de opties beperkt zijn. Vroege signalering vereist structuur die er meestal niet is.' },
+              { label: 'Elke situatie opnieuw', body: 'Elk moment begint bij nul. Geen gedeelde structuur, geen hergebruik van het vorige dossier.' },
+              { label: 'Adviseurs te laat', body: 'Gecertificeerde adviseurs komen pas als het dossier al vol aannames zit. Dubbel werk, hogere kosten.' },
+              { label: 'Stress te laat zichtbaar', body: 'IBR- of WHOA-signalen worden pas zichtbaar als de opties beperkt zijn.' },
             ].map((item, i) => (
               <div
                 key={item.label}
@@ -220,28 +220,15 @@ export default function FactumCapitalPage() {
             <div className="reveal" style={{ transitionDelay: '80ms' }}>
               <div style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", display: 'flex', flexDirection: 'column', gap: '20px', fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', lineHeight: 1.8, color: 'var(--text-secondary)' }}>
                 <p>
-                  Factum Capital is gebouwd rond één observatie: structuur ontbreekt op vrijwel
-                  elk moment in de deal- en financieringspraktijk. Bij een acquisitie, bij een
-                  financieringsaanvraag, bij de periodieke beoordeling van bestaande
-                  deelnemingen — en bij de eerste signalen van financiële stress.
-                </p>
-                <p>
                   Het <strong>platform</strong> &mdash; 23 modules van IM-screening tot
-                  exit-readiness &mdash; geeft uw team een consistente structuur op elk van
-                  die momenten. Vanaf 1 juli 2026 beschikbaar als SaaS voor wie zelf wil werken.
+                  exit-readiness &mdash; geeft uw team consistente structuur op elk moment.
+                  Vanaf 1 juli 2026 beschikbaar als SaaS.
                 </p>
                 <p>
-                  De <strong>dienstverlening</strong> &mdash; uitgevoerd door Agentic Mindshift
-                  als de M&amp;A-praktijk achter Factum &mdash; levert het volledige analytisch
-                  fundament op uw dossier en koppelt de juiste gecertificeerde adviseurs:
-                  RA/RB/advocaten voor acquisities, financieel adviseurs voor bankgesprekken,
-                  restructuring consultants bij pre-IBR of WHOA. Per deal of in volume,
-                  zichtbaar op de werkwijze-pagina.
-                </p>
-                <p>
-                  Het Factum-dossier fungeert in beide gevallen als gedeeld werkdocument:
-                  adviseurs bouwen voort op wat er al staat. Minder dubbel werk. Kortere
-                  doorlooptijd. Kennisopbouw die met uw organisatie meegroeit.
+                  De <strong>dienstverlening</strong> via Agentic Mindshift levert het volledige
+                  analytisch fundament en koppelt gecertificeerde adviseurs: RA/RB/advocaten,
+                  financieel adviseurs, restructuring consultants. Eén gedeeld dossier &mdash;
+                  minder dubbel werk, kortere doorlooptijd.
                 </p>
               </div>
             </div>
@@ -554,12 +541,12 @@ export default function FactumCapitalPage() {
             }}
           >
             {[
-              { label: 'Tier-2 PE-fondsen', body: 'Actief in NL MKB, deals €5M–€50M. Structureel analytisch fundament op elke fase — acquisitie, portfolio review en exitvoorbereiding.' },
-              { label: 'Family offices', body: 'Met een buy-side of financieringsmandaat. DD-kwaliteit en bankpresentaties zonder een intern team van tien analisten.' },
-              { label: 'MKB-ondernemers', body: 'Die een financieringsaanvraag professioneel willen onderbouwen — ook bij kleinere bedragen waarbij een goed financieringsmemo het verschil maakt.' },
-              { label: "Buy-and-build DGA's", body: 'Die op elke acquisitie de discipline van een professioneel deal-team willen hanteren, met gecertificeerde adviseurs op afroep.' },
-              { label: 'M&A-directors', body: 'Die structurele kennisretentie willen over meerdere deals — zodat elk nieuw dossier voortbouwt op het vorige.' },
-              { label: 'Financiers & herstructurering', body: 'Bij vroege signalen van financiële stress: indicatieve doorlichting en directe koppeling met gespecialiseerde restructuring consultants voor pre-IBR of WHOA.' },
+              { label: 'Tier-2 PE-fondsen', body: 'Deals €5M–€50M. Structuur op acquisitie, portfolio review en exit.' },
+              { label: 'Family offices', body: 'DD-kwaliteit en bankpresentaties zonder een groot intern team.' },
+              { label: 'MKB-ondernemers', body: 'Financieringsaanvragen professioneel onderbouwd — ook bij kleinere bedragen.' },
+              { label: "Buy-and-build DGA's", body: 'De discipline van een professioneel deal-team, met adviseurs op afroep.' },
+              { label: 'M&A-directors', body: 'Kennisretentie over meerdere deals — elk dossier bouwt voort op het vorige.' },
+              { label: 'Financiers & herstructurering', body: 'Vroege signalering bij stress. Directe koppeling met restructuring consultants.' },
             ].map((item, i) => (
               <div
                 key={item.label}
@@ -675,7 +662,7 @@ export default function FactumCapitalPage() {
               lineHeight: 1.75,
             }}
           >
-            Twaalf minuten. Direct inzicht in uw deal-aanpak, kennisretentie en AI-gereedheid — én of het platform (vanaf 1 juli 2026) of de dienstverlening via Agentic Mindshift het beste bij u past.
+            Twaalf minuten. Direct inzicht in uw deal-aanpak, kennisretentie en AI-gereedheid.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>
             <Button href="/scorecard" variant="primary" size="lg">
