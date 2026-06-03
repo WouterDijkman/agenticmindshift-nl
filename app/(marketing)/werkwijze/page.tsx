@@ -115,8 +115,8 @@ export default function WerkwijzePage() {
         bgChar="03"
         bgCharSize="clamp(240px, 30vw, 460px)"
         eyebrow="Werkwijze & Investering"
-        heading="Vier manieren om samen te werken — u kiest het tempo"
-        subtext="Van een laagdrempelige Sparring Sessie tot een Fractional AI Officer of AI Due Diligence — u kiest op basis van uw situatie."
+        heading="Vier routes — u kiest op basis van uw situatie"
+        subtext="Van een eenmalige Sparring Sessie (€395) tot embedded AI-leiderschap. Elke route begint met een duidelijk moment en een concreet resultaat."
         headingMaxWidth="800px"
       />
 
@@ -528,7 +528,7 @@ export default function WerkwijzePage() {
               className="type-h2"
               style={{ color: 'var(--text-inverse)', marginBottom: '16px', maxWidth: '600px', marginInline: 'auto' }}
             >
-              Twijfelt u welke route past? Begin bij de scorecard.
+              Niet zeker welke route past? De Scorecard wijst de weg.
             </h2>
             <p
               style={{
@@ -541,8 +541,8 @@ export default function WerkwijzePage() {
                 lineHeight: 1.75,
               }}
             >
-              De scorecard adviseert op basis van uw antwoorden welke route het beste
-              past. Geen verplichting; alleen een gefundeerd voorstel.
+              Twaalf minuten. Uw profiel bepaalt welke route het meest oplevert.
+              Geen verplichting, geen vervolg tenzij u dat zelf initieert.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>
               <Button href="/scorecard" variant="primary" size="lg">

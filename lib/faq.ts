@@ -39,7 +39,7 @@ export const faqItems: FaqItem[] = [
     id: 'sales-pitch',
     question: 'Is dit weer een verkapte sales pitch?',
     answer:
-      'Nee. U ontvangt een concreet rapport met scores en aanbevelingen. Als wij iets willen voorstellen, doen wij dat expliciet \u2014 en alleen als uw scoreprofiel daarvoor aanleiding geeft.',
+      'Nee. U ontvangt scores op zes dimensies, twee prioritaire aandachtspunten en een concreet vervolgvoorstel. Pas daarna beslist u of u verdergaat. Geen druk, geen follow-up tenzij u dat zelf initieert.',
   },
   {
     id: 'investering',

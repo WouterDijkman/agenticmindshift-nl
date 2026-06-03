@@ -37,9 +37,9 @@ export default function HomepageFactumSection() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="eyebrow" style={{ marginBottom: '16px' }}>Hoe u Factum inzet</p>
+          <p className="eyebrow" style={{ marginBottom: '16px' }}>Twee routes</p>
           <h2 className="type-h2" style={{ maxWidth: '560px', margin: 0 }}>
-            Eén platform. Twee manieren om het te gebruiken.
+            Kies hoe u het probleem oplost.
           </h2>
         </motion.div>
 

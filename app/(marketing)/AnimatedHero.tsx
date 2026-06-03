@@ -7,7 +7,7 @@ import SketchCrosshair from '@/components/icons/SketchCrosshair';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-const HEADING = 'Hoeveel rendement verliest uw portefeuille zonder dat u het ziet?';
+const HEADING = 'U mist rendement dat er al is — en het kost u meer dan u denkt.';
 
 export default function AnimatedHero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -103,7 +103,7 @@ export default function AnimatedHero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: 0.38, ease }}
           >
-            Deal & Portfolio Intelligence Quickscan · PE · Family offices · M&A
+            Voor PE-partners, M&A-directors en family offices
           </motion.p>
         </div>
 
@@ -140,9 +140,9 @@ export default function AnimatedHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.95, ease }}
         >
-          U beheert deals en portefeuilles — en toch de vraag of u het volgende
-          probleem ziet voordat het te laat is. Dat gevoel is geen paranoia.
-          Het is een informatieprobleem dat oplosbaar is.
+          De ongemakkelijke waarheid: uw deal-team herhaalt vermijdbare fouten,
+          uw MBR-cyclus maskeert onderprestatie, en AI-substitutierisico staat
+          in geen enkel IC-memo. Wij maken het zichtbaar — in twaalf minuten.
         </motion.p>
 
         {/* CTA */}
@@ -185,7 +185,7 @@ export default function AnimatedHero() {
               lineHeight: 1.2,
             }}
           >
-            12 minuten · 6 dimensies · 100% vertrouwelijk
+            12 minuten · 6 dimensies · geen account nodig · 100% vertrouwelijk
           </p>
         </motion.div>
       </div>

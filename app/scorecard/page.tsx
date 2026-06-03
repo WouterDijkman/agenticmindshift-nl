@@ -20,8 +20,8 @@ export default function ScorecardWelcomePage() {
         bgChar="15"
         bgCharSize="clamp(240px, 30vw, 440px)"
         eyebrow="Deal & Portfolio Intelligence Quickscan"
-        heading="Hoe sterk is uw analytisch fundament op het moment dat het telt?"
-        subtext="Vijftien vragen. Twaalf minuten. Een rapport dat uw blinde vlekken meetbaar maakt."
+        heading="Waar lekt rendement weg — en wat ziet u over het hoofd?"
+        subtext="Vijftien vragen. Twaalf minuten. Een rapport dat uw blinde vlekken meetbaar maakt en vergelijkt met peers."
         containerClass="container-narrow"
         centered={true}
       >
@@ -35,7 +35,7 @@ export default function ScorecardWelcomePage() {
               textAlign: 'center',
             }}
           >
-            Inzicht dat u anders pas krijgt op het moment dat het al te laat is.
+            De meeste PE-partners ontdekken hun blinde vlekken pas als het te laat is.
             Uw investering: twaalf minuten.
           </p>
           <Button href="/scorecard/sectie-1" variant="primary" size="lg">

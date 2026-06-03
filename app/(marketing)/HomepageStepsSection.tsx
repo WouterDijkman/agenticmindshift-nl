@@ -10,19 +10,19 @@ const steps: { n: string; title: string; body: string; Icon: SketchIconComponent
   {
     n: '01',
     title: 'Beantwoord 15 vragen',
-    body: 'AI-readiness, deal-cyclus, MBR-discipline en kennisretentie. Multiple choice — geen open velden.',
+    body: 'Multiple choice over uw deal-cyclus, MBR-discipline, AI-readiness en kennisretentie. Twaalf minuten. Geen open velden.',
     Icon: SketchClipboard,
   },
   {
     n: '02',
-    title: 'Gepersonaliseerd rapport',
-    body: 'Totaalscore op zes dimensies, twee prioritaire aandachtspunten en een concreet vervolgvoorstel.',
+    title: 'Ontvang uw rapport',
+    body: 'Score op zes dimensies, twee prioritaire aandachtspunten en een concreet vervolgvoorstel — direct na afronding.',
     Icon: SketchReport,
   },
   {
     n: '03',
-    title: 'Kies uw volgende stap',
-    body: 'Intern delen, een sparring-sessie inplannen of direct een traject starten. U bepaalt het tempo.',
+    title: 'Bepaal uw volgende stap',
+    body: 'Intern delen, een sparring-sessie inplannen of direct een traject starten. Geen verplichtingen. U bepaalt het tempo.',
     Icon: SketchArrow,
   },
 ];

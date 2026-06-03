@@ -64,6 +64,10 @@ export default function HomePage() {
       ═══════════════════════════════════════════ */}
       <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(64px, 8vw, 96px)' }}>
         <div className="container-medium">
+          <div className="reveal" style={{ marginBottom: '32px' }}>
+            <p className="eyebrow" style={{ marginBottom: '16px' }}>Resultaten</p>
+            <h2 className="type-h2" style={{ margin: 0, maxWidth: '480px' }}>Wat anderen al ontdekten.</h2>
+          </div>
           <div
             className="reveal social-proof-grid"
             style={{
@@ -76,12 +80,12 @@ export default function HomePage() {
           >
             {[
               {
-                quote: '”Twee van de zes dimensies lagen significant onder het peer-gemiddelde — dat was ons nooit eerder expliciet gemaakt.”',
+                quote: '"Twee van de zes dimensies lagen significant onder het peer-gemiddelde — dat was ons nooit eerder expliciet gemaakt."',
                 who: 'PE-partner, Nederlandse lower-mid market fund',
                 aum: '~€120M AUM',
               },
               {
-                quote: '”Entry-multiple 0,4× naar beneden bijgesteld op basis van de substitutie-analyse. Het rapport kostte €10.000 — de aanpassing leverde meervoudig meer op.”',
+                quote: '"Entry-multiple 0,4× naar beneden bijgesteld op basis van de substitutie-analyse. Het rapport kostte €10.000 — de aanpassing leverde meervoudig meer op."',
                 who: 'M&A-director, buy-and-build platform',
                 aum: '4 acquisities per jaar',
               },
@@ -161,10 +165,10 @@ export default function HomePage() {
                   lineHeight: 1.2,
                 }}
               >
-                Klaar om te beginnen?
+                Twaalf minuten. Zes dimensies. Direct inzicht.
               </p>
               <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)', color: 'var(--text-muted)', margin: 0 }}>
-                Twaalf minuten. Geen account. Direct uw rapport.
+                Multiple choice. Geen account. Rapport direct na afronding.
               </p>
             </div>
             <Button href="/scorecard" variant="primary" size="lg">
@@ -193,7 +197,7 @@ export default function HomePage() {
             <div className="reveal faq-sticky">
               <p className="eyebrow" style={{ marginBottom: '20px' }}>Vragen</p>
               <h2 className="type-h2" style={{ marginBottom: '20px' }}>
-                Wat partners vooraf willen weten
+                Eerlijk antwoord op de vragen die u nu hebt.
               </h2>
               <p style={{
                 fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
@@ -203,7 +207,7 @@ export default function HomePage() {
                 maxWidth: '280px',
                 marginBottom: '36px',
               }}>
-                Veelgestelde vragen, eerlijk beantwoord.
+                Geen verkooppraatjes. Directe antwoorden.
               </p>
               <Button href="/scorecard" variant="primary" size="md">
                 Start de Scorecard
@@ -220,7 +224,46 @@ export default function HomePage() {
       <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
       {/* ═══════════════════════════════════════════
-          9. Final CTA
+          8b. STAKES — wat er gebeurt als u niets doet (StoryBrand: Failure)
+      ═══════════════════════════════════════════ */}
+      <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(56px, 7vw, 80px)' }}>
+        <div className="container-medium">
+          <div className="reveal" style={{ maxWidth: '640px' }}>
+            <p className="eyebrow" style={{ marginBottom: '16px', color: 'var(--text-muted)' }}>
+              De kosten van niets doen
+            </p>
+            <h2 className="type-h2" style={{ marginBottom: '20px' }}>
+              Elk kwartaal zonder meting kost u meer dan de meting zelf.
+            </h2>
+            <div
+              style={{
+                fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
+                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
+                color: 'var(--text-secondary)',
+                lineHeight: 1.75,
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '12px',
+              }}
+            >
+              <p style={{ margin: 0 }}>
+                Zonder structurele meting blijft AI-substitutierisico een blinde vlek in uw entry-multiple.
+                Blijven MBR&apos;s een rapportage-ritueel in plaats van een sturingsinstrument.
+                Verdwijnt elke deal-les met de volgende teamwissel.
+              </p>
+              <p style={{ margin: 0, fontStyle: 'italic', color: 'var(--text-muted)' }}>
+                Het verschil tussen een gecalibreerde en een ongecalibreerde entry-multiple?
+                Op een &euro;5M EBITDA-target al snel 0,5&times; &mdash; dat is &euro;2,5M.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
+
+      {/* ═══════════════════════════════════════════
+          9. Final CTA (StoryBrand: Success + Cialdini urgency)
       ═══════════════════════════════════════════ */}
       <section
         className="grain-overlay"
@@ -233,13 +276,13 @@ export default function HomePage() {
       >
         <div className="container-medium reveal" style={{ textAlign: 'center', position: 'relative' }}>
           <p className="eyebrow" style={{ marginBottom: '28px', color: 'rgba(247,242,235,0.5)' }}>
-            Direct resultaat
+            Uw volgende stap
           </p>
           <h2
             className="type-h2"
             style={{ color: 'var(--text-inverse)', marginBottom: '16px', maxWidth: '600px', marginInline: 'auto' }}
           >
-            U ziet wat anderen missen. V&oacute;&oacute;rdat de jaarcijfers het bevestigen.
+            Over twaalf minuten weet u exact waar uw portefeuille kwetsbaar is.
           </h2>
           <p
             style={{
@@ -247,13 +290,13 @@ export default function HomePage() {
               fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
               color: 'rgba(247,242,235,0.5)',
               marginBottom: '48px',
-              maxWidth: '440px',
+              maxWidth: '460px',
               marginInline: 'auto',
               lineHeight: 1.75,
             }}
           >
-            Na twaalf minuten weet u exact welke dimensies van uw portefeuille kwetsbaar zijn.
             U gaat naar uw volgende IC-vergadering met data &mdash; niet met een gevoel.
+            Geen account. Geen verplichtingen. Uw rapport is direct beschikbaar.
           </p>
           <div className="cta-button-row" style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>
             <Button href="/scorecard" variant="primary" size="lg">

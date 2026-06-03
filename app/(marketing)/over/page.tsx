@@ -239,7 +239,7 @@ export default function OverPage() {
               className="type-h2"
               style={{ color: 'var(--text-inverse)', marginBottom: '16px', maxWidth: '560px', marginInline: 'auto' }}
             >
-              Twintig minuten. Geen agenda, geen verplichtingen. U bepaalt het onderwerp.
+              Eén gesprek. Twintig minuten. U bepaalt het onderwerp.
             </h2>
             <p
               style={{
@@ -252,7 +252,7 @@ export default function OverPage() {
                 lineHeight: 1.75,
               }}
             >
-              U stelt de agenda. Ik stel de vragen.
+              Geen agenda. Geen verplichtingen. Geen vervolg tenzij u dat zelf initieert.
             </p>
             <div
               style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}

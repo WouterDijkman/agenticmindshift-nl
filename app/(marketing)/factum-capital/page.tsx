@@ -70,8 +70,8 @@ export default function FactumCapitalPage() {
         bgChar="FC"
         bgCharSize="clamp(240px, 32vw, 480px)"
         eyebrow="Het platform achter onze AI Due Diligence-dienst"
-        heading="Het analytisch fundament voor elke fase van uw deal- en portfoliopraktijk"
-        subtext="Het AI-platform achter onze dienstverlening. Vier momenten: acquisitie, financiering, portfolio review en pre-IBR/WHOA. Vanaf 1 juli 2026 ook als SaaS."
+        heading="Eén platform. Elke fase van uw deal- en portfoliopraktijk. Structureel."
+        subtext="Vier momenten — acquisitie, financiering, portfolio review en pre-IBR/WHOA — op één gedeeld dossier. Vanaf 1 juli 2026 ook als SaaS voor uw eigen team."
         headingMaxWidth="900px"
       >
         {/* Launch stats strip */}
@@ -643,13 +643,13 @@ export default function FactumCapitalPage() {
       >
         <div className="container-medium reveal" style={{ textAlign: 'center', position: 'relative' }}>
           <p className="eyebrow" style={{ marginBottom: '20px', color: 'rgba(247,242,235,0.5)' }}>
-            Nog niet zeker?
+            Begin hier
           </p>
           <h2
             className="type-h2"
             style={{ color: 'var(--text-inverse)', marginBottom: '16px', maxWidth: '520px', marginInline: 'auto' }}
           >
-            Begin met de Scorecard. Uw profiel bepaalt welk moment als eerste relevant is.
+            Uw Scorecard-profiel bepaalt welk moment als eerste relevant is.
           </h2>
           <p
             style={{
@@ -662,7 +662,8 @@ export default function FactumCapitalPage() {
               lineHeight: 1.75,
             }}
           >
-            Twaalf minuten. Direct inzicht in uw deal-aanpak, kennisretentie en AI-gereedheid.
+            Twaalf minuten. Zes dimensies. Een rapport dat laat zien waar u staat
+            en wat als eerste aandacht verdient.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>
             <Button href="/scorecard" variant="primary" size="lg">
