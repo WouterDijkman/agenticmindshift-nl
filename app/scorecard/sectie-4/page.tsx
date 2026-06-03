@@ -48,10 +48,7 @@ export default function Sectie4Page() {
             maxWidth: '560px',
           }}
         >
-          Capaciteitsdruk en kennisverloop zijn de stille rendementskiller in kleinere
-          deal-firma’s. Wanneer een associate vertrekt, vertrekt ook het institutionele
-          geheugen van drie tot vijf dossiers. Deze sectie brengt in kaart of uw
-          organisatie structureel bestand is tegen die verborgen kwetsbaarheid.
+          Als een associate vertrekt, verdwijnt het geheugen van drie tot vijf dossiers. Deze sectie meet of uw organisatie daar bestand tegen is.
         </p>
       </div>
 

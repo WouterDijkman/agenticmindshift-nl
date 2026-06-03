@@ -10,14 +10,14 @@ const stats = [
     decimals: 1,
     suffix: '×',
     label: 'EBITDA-multiple',
-    sub: 'potentieel rendementsverlies per portfoliobedrijf — structureel onzichtbaar zonder gerichte meting',
+    sub: 'potentieel rendementsverlies per portfoliobedrijf — onzichtbaar zonder gerichte meting',
   },
   {
     value: 3,
     decimals: 0,
     suffix: '',
     label: 'werkdagen',
-    sub: 'die een gemiddeld dealteam kwijt is per MBR-cyclus aan handmatige dataconsolidatie',
+    sub: 'die een dealteam per MBR-cyclus kwijt is aan handmatige dataconsolidatie',
   },
   {
     value: 12,

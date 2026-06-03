@@ -48,11 +48,7 @@ export default function Sectie3Page() {
             maxWidth: '560px',
           }}
         >
-          Of het nu gaat om uw maandelijkse portefeuillerapportage, het voorbereiden van een
-          financieringsmemo voor een bank of het vroegtijdig signaleren van tegenwind bij een
-          deelneming: de kwaliteit van uw analytisch dossier bepaalt of u op tijd kunt
-          bijsturen. Deze sectie meet de structuur achter uw informatie &mdash; voor elk van
-          de vier Factum Capital momenten.
+          Portefeuillerapportage, financieringsmemo&apos;s, vroegsignalering — kunt u op tijd bijsturen? Deze sectie meet de structuur achter uw informatie.
         </p>
       </div>
 

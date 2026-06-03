@@ -21,7 +21,7 @@ export default function ScorecardWelcomePage() {
         bgCharSize="clamp(240px, 30vw, 440px)"
         eyebrow="Deal & Portfolio Intelligence Quickscan"
         heading="Hoe sterk is uw analytisch fundament op het moment dat het telt?"
-        subtext="Vier secties. Vijftien vragen. Twaalf minuten. Een persoonlijk rapport dat uw blinde vlekken meetbaar maakt — of u nu een acquisitie, financieringsaanvraag, portefeuillereview of herstructureringssituatie voorbereidt."
+        subtext="Vijftien vragen. Twaalf minuten. Een rapport dat uw blinde vlekken meetbaar maakt."
         containerClass="container-narrow"
         centered={true}
       >

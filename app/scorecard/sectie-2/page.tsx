@@ -48,10 +48,7 @@ export default function Sectie2Page() {
             maxWidth: '560px',
           }}
         >
-          In deal-trajecten concentreert de meeste rendements-erosie zich op drie momenten:
-          te lang wachten met een IC-oordeel, AI-substitutierisico niet meenemen in de
-          entry-multiple, en management-aannames die het deal-team zelf niet kritisch
-          genoeg toetst. Deze sectie meet precies die drie punten.
+          IC-doorlooptijd, AI-substitutierisico en management-bias — drie punten waar rendement weglekt. Deze sectie meet ze.
         </p>
       </div>
 

@@ -48,12 +48,8 @@ export default function Sectie1Page() {
             maxWidth: '560px',
           }}
         >
-          Structuur ontbreekt op vrijwel elk moment in de deal- en financieringspraktijk — bij
-          een acquisitie, een financieringsaanvraag, een portefeuillereview of de eerste
-          signalen van financiële stress. Het onderscheid tussen ad-hoc en systematisch
-          bepaalt hoe snel u kunt handelen en hoe sterk uw positie is. Deze sectie brengt
-          uw huidige analytische positie in kaart, inclusief welk moment voor u het meest
-          urgent is.
+          Hoe systematisch is uw analytische aanpak — bij deals, financiering en portfolio review?
+          Deze sectie brengt uw huidige positie in kaart.
         </p>
       </div>
 
