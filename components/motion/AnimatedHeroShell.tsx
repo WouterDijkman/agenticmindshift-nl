@@ -180,7 +180,7 @@ export default function AnimatedHeroShell({
             removed because it caused glued/overlapping words on this stack
             and CSS animations are bulletproof across layouts. */}
         <h1
-          className="type-display hero-anim hero-anim--h1"
+          className="type-display-sub hero-anim hero-anim--h1"
           style={{
             marginBottom: '28px',
             color: 'var(--text-primary)',

@@ -208,6 +208,16 @@ select {
   letter-spacing: -0.035em;
   font-weight: 800;
 }
+/* Subpage hero heading — large and elegant, but sized so long Dutch
+   headings still fit above the fold (the 112px display size is reserved
+   for the homepage showcase hero). */
+.type-display-sub {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5.4vw, 68px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
 .type-h1 {
   font-family: var(--font-display);
   font-size: clamp(40px, 5.5vw, 72px);
@@ -805,6 +815,165 @@ nav, header, .nav-link, .eyebrow-ui {
 }
 
 /* ================================================================== */
+/* HOMEPAGE SHOWCASE — product report mockup                          */
+/* ================================================================== */
+.showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: clamp(40px, 6vw, 88px);
+  align-items: center;
+}
+
+.showcase-checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.showcase-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: var(--font-ui);
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.showcase-check {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--accent-cta-soft);
+  color: var(--accent-cta);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.showcase-mockup-wrap {
+  position: relative;
+}
+
+.showcase-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  box-shadow: 0 24px 60px -28px rgba(11, 31, 58, 0.4), 0 4px 12px -6px rgba(11, 31, 58, 0.12);
+  overflow: hidden;
+}
+.showcase-card-bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: rgba(11, 31, 58, 0.025);
+}
+.showcase-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+}
+.showcase-card-bar-label {
+  margin-left: 10px;
+  font-family: var(--font-ui);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+.showcase-card-body {
+  padding: 24px 26px 26px;
+}
+
+.showcase-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+.showcase-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-ui);
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+.showcase-legend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.showcase-legend-tick {
+  width: 2px;
+  height: 12px;
+  background: var(--text-muted);
+  opacity: 0.6;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.showcase-callout {
+  position: absolute;
+  top: -26px;
+  left: -26px;
+  z-index: 2;
+  background: var(--bg-elevated);
+  border: 1px solid var(--accent-cta);
+  border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: 0 16px 36px -18px rgba(241, 76, 29, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 200px;
+}
+.showcase-callout-num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent-cta);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.showcase-callout-label {
+  font-family: var(--font-ui);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+@media (max-width: 860px) {
+  .showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .showcase-mockup-wrap {
+    margin-top: 8px;
+  }
+  .showcase-callout {
+    top: -20px;
+    left: auto;
+    right: 8px;
+    padding: 11px 14px;
+  }
+  .showcase-callout-num { font-size: 1.25rem; }
+}
+
+/* ================================================================== */
 /* HERO DECORATIVE CROSSHAIR — hide on mobile                         */
 /* ================================================================== */
 @media (max-width: 767px) {
@@ -855,6 +1024,11 @@ nav, header, .nav-link, .eyebrow-ui {
     font-size: clamp(38px, 11vw, 72px);
     line-height: 1;
     letter-spacing: -0.03em;
+  }
+
+  .type-display-sub {
+    font-size: clamp(32px, 8.5vw, 48px);
+    line-height: 1.06;
   }
 
   .type-h1 {

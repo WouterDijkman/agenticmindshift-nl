@@ -4,6 +4,7 @@ import HomepageStatsSection from './HomepageStatsSection';
 import HomepageStepsSection from './HomepageStepsSection';
 import HomepageDimensionsSection from './HomepageDimensionsSection';
 import HomepagePainSection from './HomepagePainSection';
+import HomepageShowcaseSection from './HomepageShowcaseSection';
 import HomepageFactumSection from './HomepageFactumSection';
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
 import JsonLd from '@/components/JsonLd';
@@ -53,6 +54,11 @@ export default function HomePage() {
           2. ZO WERKT HET — direct na pijnpunten
       ═══════════════════════════════════════════ */}
       <HomepageStepsSection />
+
+      {/* ═══════════════════════════════════════════
+          2b. PRODUCT-SHOWCASE — hoe het rapport eruitziet
+      ═══════════════════════════════════════════ */}
+      <HomepageShowcaseSection />
 
       {/* ═══════════════════════════════════════════
           3. STATISTIEKEN — animated count-up
