@@ -974,6 +974,82 @@ nav, header, .nav-link, .eyebrow-ui {
 }
 
 /* ================================================================== */
+/* COST ANCHOR VISUAL                                                  */
+/* ================================================================== */
+.cost-anchor {
+  margin-top: 40px;
+  max-width: 640px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: clamp(24px, 3.5vw, 36px);
+}
+.cost-anchor-title {
+  font-family: var(--font-ui);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-cta);
+  margin: 0 0 24px;
+}
+.cost-anchor-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.cost-anchor-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 9px;
+}
+.cost-anchor-label {
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.cost-anchor-amount {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.cost-anchor-track {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(11, 31, 58, 0.07);
+  overflow: hidden;
+}
+.cost-anchor-fill {
+  height: 100%;
+  border-radius: 999px;
+  min-width: 4px;
+}
+.cost-anchor-note {
+  display: inline-block;
+  margin-top: 7px;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+.cost-anchor-foot {
+  margin: 24px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+  font-family: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif";
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ================================================================== */
 /* FACTUM MODULES MOCKUP                                               */
 /* ================================================================== */
 .factum-modules-card {

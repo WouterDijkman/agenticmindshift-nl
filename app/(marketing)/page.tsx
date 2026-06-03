@@ -6,6 +6,7 @@ import HomepageDimensionsSection from './HomepageDimensionsSection';
 import HomepagePainSection from './HomepagePainSection';
 import HomepageShowcaseSection from './HomepageShowcaseSection';
 import HomepageFactumSection from './HomepageFactumSection';
+import CostAnchorVisual from './CostAnchorVisual';
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
 import JsonLd from '@/components/JsonLd';
 import { faqItems } from '@/lib/faq';
@@ -319,6 +320,7 @@ export default function HomePage() {
                 De Scorecard kost twaalf minuten. Niets doen kost kwartalen.
               </p>
             </div>
+            <CostAnchorVisual />
           </div>
         </div>
       </section>
