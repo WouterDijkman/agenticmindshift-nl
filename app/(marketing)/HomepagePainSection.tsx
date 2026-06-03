@@ -1,25 +1,32 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import type { ComponentType } from 'react';
+import { SketchEyeHidden, SketchKnowledge, SketchHourglass } from '@/components/icons/SketchIcons';
 
-const PAINS = [
+type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
+
+const PAINS: { code: string; label: string; title: string; body: string; Icon: SketchIconComponent }[] = [
   {
     code: '01',
     label: 'Onzichtbaar risico',
     title: 'U neemt beslissingen op basis van wat u ziet.',
     body: 'AI-substitutierisico, managementafhankelijkheid en operationele concentratie zijn zelden zichtbaar in een IM of jaarrapportage. Ze worden zichtbaar als de deal al getekend is — of de portefeuille al in stress zit.',
+    Icon: SketchEyeHidden,
   },
   {
     code: '02',
     label: 'Kennisretentie',
     title: 'Elke acquisitie begint opnieuw bij nul.',
     body: 'De inzichten van de vorige deal verdwijnen met de dealmaker of verdwijnen in een gedeelde map die niemand meer opent. Uw praktijk accumuleert deals — maar leert er niet structureel van.',
+    Icon: SketchKnowledge,
   },
   {
     code: '03',
     label: 'Te late signalering',
     title: 'Portfolio-problemen zijn maanden eerder zichtbaar.',
     body: 'Onderprestatie, cashflow-stress en exit-obstakels sluimeren kwartalen voordat de jaarrapportage het bevestigt. Vroegtijdige signalering vereist een structuur die er in de praktijk zelden is.',
+    Icon: SketchHourglass,
   },
 ];
 
@@ -79,6 +86,15 @@ export default function HomepagePainSection() {
               }}
               whileHover={{ borderTopColor: 'var(--accent-cta)' }}
             >
+              <div
+                style={{
+                  color: 'var(--accent-cta)',
+                  opacity: 0.82,
+                  marginBottom: '20px',
+                }}
+              >
+                <p.Icon size={48} strokeWidth={1.4} />
+              </div>
               <p
                 style={{
                   fontSize: '0.6875rem',
@@ -86,7 +102,7 @@ export default function HomepagePainSection() {
                   letterSpacing: '0.14em',
                   textTransform: 'uppercase',
                   color: 'var(--accent-cta)',
-                  marginBottom: '20px',
+                  marginBottom: '14px',
                   opacity: 0.75,
                 }}
               >

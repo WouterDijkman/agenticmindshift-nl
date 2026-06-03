@@ -262,3 +262,151 @@ export function SketchArrow({ strokeWidth = 1.6, ...rest }: Props) {
     </IconShell>
   );
 }
+
+// ─── 9. Eye hidden — "onzichtbaar risico" (eye with slash) ───────────────
+export function SketchEyeHidden({ strokeWidth = 1.4, ...rest }: Props) {
+  return (
+    <IconShell {...rest}>
+      {/* Eye outline — almond shape */}
+      <path
+        d="M 5.5,32.4 C 11.4,21.7 21.0,16.0 32.1,16.0 C 43.2,16.0 52.7,21.7 58.6,32.4 C 52.7,43.1 43.2,48.8 32.1,48.8 C 21.0,48.8 11.4,43.1 5.5,32.4 Z"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+      {/* Iris */}
+      <path
+        d="M 32.1,23.6 C 36.9,23.5 40.8,27.4 40.9,32.2 C 41.0,37.1 37.1,41.0 32.3,41.1 C 27.4,41.2 23.4,37.3 23.3,32.5 C 23.2,27.7 27.2,23.7 32.1,23.6 Z"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+      {/* Pupil */}
+      <circle cx="32.1" cy="32.4" r="2.3" fill="currentColor" stroke="none" />
+      {/* Slash through — top-left to bottom-right */}
+      <path
+        d="M 8.5,55.0 C 22.0,42.0 42.0,22.0 55.6,9.4"
+        strokeWidth={strokeWidth * 1.4}
+        stroke="var(--bg-primary, #f7f2eb)"
+        fill="none"
+        strokeLinecap="round"
+      />
+      <path
+        d="M 8.5,55.0 C 22.0,42.0 42.0,22.0 55.6,9.4"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+    </IconShell>
+  );
+}
+
+// ─── 10. Knowledge stack — "kennisretentie" (stacked documents) ─────────
+export function SketchKnowledge({ strokeWidth = 1.4, ...rest }: Props) {
+  return (
+    <IconShell {...rest}>
+      {/* Bottom doc (faintest, behind) */}
+      <path
+        d="M 11.0,18.5 L 39.5,18.0 L 51.3,29.5 L 51.0,49.0 C 51.0,49.9 50.3,50.7 49.4,50.7 L 11.8,50.8 C 10.9,50.8 10.2,50.1 10.2,49.2 L 10.3,19.9 C 10.3,19.0 10.5,18.7 11.0,18.5 Z"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+      <path
+        d="M 39.4,18.1 L 39.3,29.0 C 39.3,29.7 39.8,30.2 40.5,30.2 L 51.2,30.1"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+      {/* Middle doc (offset up-right) */}
+      <path
+        d="M 17.0,11.5 L 45.5,11.0 L 57.3,22.5 L 57.0,42.5 C 57.0,43.4 56.3,44.2 55.4,44.2 L 17.8,44.3 C 16.9,44.3 16.2,43.6 16.2,42.7 L 16.3,12.9 C 16.3,12.0 16.5,11.7 17.0,11.5 Z"
+        strokeWidth={strokeWidth}
+        stroke="currentColor"
+        fill="var(--bg-primary, #f7f2eb)"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M 45.4,11.1 L 45.3,22.0 C 45.3,22.7 45.8,23.2 46.5,23.2 L 57.2,23.1"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+      {/* Text lines on middle doc */}
+      <path d="M 22.5,29.5 C 28.5,29.0 36.0,29.2 42.0,29.6" strokeWidth={strokeWidth * 0.85} {...baseStroke} />
+      <path d="M 22.5,34.7 C 28.5,34.2 36.0,34.4 41.0,34.8" strokeWidth={strokeWidth * 0.85} {...baseStroke} />
+      <path d="M 22.5,39.9 C 27.0,39.4 32.0,39.6 36.5,40.0" strokeWidth={strokeWidth * 0.85} {...baseStroke} />
+    </IconShell>
+  );
+}
+
+// ─── 11. Hourglass — "te late signalering" (time running out) ────────────
+export function SketchHourglass({ strokeWidth = 1.4, ...rest }: Props) {
+  return (
+    <IconShell {...rest}>
+      {/* Top cap */}
+      <path
+        d="M 14.0,8.5 C 21.0,7.8 43.0,7.8 50.0,8.5"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+      {/* Bottom cap */}
+      <path
+        d="M 14.0,55.5 C 21.0,56.2 43.0,56.2 50.0,55.5"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+      {/* Left side — top bulb curving to neck */}
+      <path
+        d="M 15.8,8.7 C 16.0,18.0 22.0,26.0 31.0,32.0 C 22.0,38.0 16.0,46.0 15.8,55.3"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+      {/* Right side — top bulb curving to neck */}
+      <path
+        d="M 48.2,8.7 C 48.0,18.0 42.0,26.0 33.0,32.0 C 42.0,38.0 48.0,46.0 48.2,55.3"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+      {/* Sand in top bulb (small) */}
+      <path
+        d="M 21.0,14.0 C 25.0,18.0 39.0,18.0 43.0,14.0 L 36.5,22.0 L 27.5,22.0 Z"
+        fill="currentColor"
+        stroke="none"
+        opacity="0.7"
+      />
+      {/* Sand in bottom bulb (larger pile) */}
+      <path
+        d="M 19.0,50.0 C 20.0,44.0 26.0,40.0 32.0,40.0 C 38.0,40.0 44.0,44.0 45.0,50.0 Z"
+        fill="currentColor"
+        stroke="none"
+        opacity="0.7"
+      />
+      {/* Falling grain */}
+      <path
+        d="M 32.0,32.5 L 32.0,38.0"
+        strokeWidth={strokeWidth * 0.8}
+        {...baseStroke}
+      />
+    </IconShell>
+  );
+}
+
+// ─── 12. Warning triangle — "financiële stress / restructuring" ──────────
+export function SketchWarning({ strokeWidth = 1.5, ...rest }: Props) {
+  return (
+    <IconShell {...rest}>
+      {/* Triangle outline */}
+      <path
+        d="M 32.0,8.4 C 33.1,8.4 34.0,9.0 34.6,10.0 L 56.8,49.0 C 57.4,50.0 57.4,51.3 56.7,52.4 C 56.1,53.4 55.0,54.0 53.8,54.0 L 10.2,54.0 C 9.0,54.0 7.9,53.4 7.3,52.4 C 6.6,51.3 6.6,50.0 7.2,49.0 L 29.4,10.0 C 30.0,9.0 30.9,8.4 32.0,8.4 Z"
+        strokeWidth={strokeWidth}
+        {...baseStroke}
+      />
+      {/* Exclamation mark — bar */}
+      <path
+        d="M 32.0,23.0 L 32.0,40.0"
+        strokeWidth={strokeWidth * 1.8}
+        stroke="currentColor"
+        strokeLinecap="round"
+        fill="none"
+      />
+      {/* Exclamation dot */}
+      <circle cx="32.0" cy="46.5" r="2.0" fill="currentColor" stroke="none" />
+    </IconShell>
+  );
+}

@@ -1,10 +1,19 @@
 import type { Metadata } from 'next';
+import type { ComponentType } from 'react';
 import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
+import {
+  SketchDueDiligence,
+  SketchReport,
+  SketchPortfolio,
+  SketchWarning,
+} from '@/components/icons/SketchIcons';
 import EarlyAccessForm from './EarlyAccessForm';
 import CountdownTimer from './CountdownTimer';
 import FactumModulesGrid from './FactumModulesGrid';
+
+type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
 
 export const metadata: Metadata = {
   title: 'Factum Capital — AI-platform achter de AI Due Diligence & Portfolio-dienstverlening',
@@ -12,13 +21,21 @@ export const metadata: Metadata = {
     'Factum Capital is het AI-platform achter de AI Due Diligence & Portfolio-dienstverlening van Agentic Mindshift. Vier momenten: acquisitie, financiering, portfolio review en pre-IBR/WHOA. SaaS-toegang (lancering 1 juli 2026) of volledig uitbesteden via Agentic Mindshift.',
 };
 
-const MOMENTEN = [
+const MOMENTEN: {
+  code: string;
+  title: string;
+  label: string;
+  body: string;
+  advisors: string;
+  Icon: SketchIconComponent;
+}[] = [
   {
     code: 'M1',
     title: 'Acquisitie',
     label: 'Buy-side deal intelligence',
     body: 'Van IM-screening tot closing: een uitgebreid analytisch fundament op alle relevante dimensies. Gecertificeerde adviseurs (RA/RB/advocaten) voor formele sign-off waar vereist.',
     advisors: 'RA · RB · Advocaten',
+    Icon: SketchDueDiligence,
   },
   {
     code: 'M2',
@@ -26,6 +43,7 @@ const MOMENTEN = [
     label: 'Financieringsmemo & onderbouwing',
     body: 'Analytische onderbouwing voor bankgesprekken en investeerderspresentaties — ook voor kleinere financieringsaanvragen waarbij structuur het verschil maakt tussen toewijzing en afwijzing.',
     advisors: 'Financieel adviseurs · Accountants',
+    Icon: SketchReport,
   },
   {
     code: 'M3',
@@ -33,6 +51,7 @@ const MOMENTEN = [
     label: 'Doorlopende intelligence',
     body: 'Periodieke doorlichting van uw bestaande deelnemingen op de zes dimensies. Vroegtijdige signalering van onderprestatie, AI-substitutierisico en exit-obstakels — lang voor de jaarrapportage.',
     advisors: 'Portfolio management · Bestuurders',
+    Icon: SketchPortfolio,
   },
   {
     code: 'M4',
@@ -40,6 +59,7 @@ const MOMENTEN = [
     label: 'Indicatief · Herstructurering',
     body: 'Bij eerste signalen van financiële stress: een indicatieve doorlichting die bepaalt of een IBR- of WHOA-traject aan de orde is — met directe koppeling naar gespecialiseerde restructuring consultants.',
     advisors: 'Restructuring consultants · Advocaten',
+    Icon: SketchWarning,
   },
 ];
 
@@ -257,18 +277,30 @@ export default function FactumCapitalPage() {
                 className="reveal"
                 style={{ background: 'var(--bg-primary)', padding: 'clamp(28px, 3.5vw, 44px)' }}
               >
-                <p style={{
-                  fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                  fontSize: 'clamp(36px, 5vw, 52px)',
-                  fontWeight: 800,
-                  letterSpacing: '-0.04em',
-                  lineHeight: 0.9,
-                  color: 'var(--accent-cta)',
-                  marginBottom: '20px',
-                  opacity: 0.85,
-                }}>
-                  {m.code}
-                </p>
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'baseline',
+                    gap: '16px',
+                    marginBottom: '20px',
+                  }}
+                >
+                  <div style={{ color: 'var(--accent-cta)', opacity: 0.82, flexShrink: 0 }}>
+                    <m.Icon size={44} strokeWidth={1.4} />
+                  </div>
+                  <p style={{
+                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+                    fontSize: 'clamp(28px, 4vw, 40px)',
+                    fontWeight: 800,
+                    letterSpacing: '-0.04em',
+                    lineHeight: 0.9,
+                    color: 'var(--accent-cta)',
+                    margin: 0,
+                    opacity: 0.6,
+                  }}>
+                    {m.code}
+                  </p>
+                </div>
                 <p style={{
                   fontSize: '10px',
                   fontWeight: 700,
