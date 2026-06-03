@@ -974,6 +974,56 @@ nav, header, .nav-link, .eyebrow-ui {
 }
 
 /* ================================================================== */
+/* DIMENSIONS RADAR                                                    */
+/* ================================================================== */
+.dim-header-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+.dim-radar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.dim-radar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.dim-radar-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.dim-radar-swatch {
+  width: 14px;
+  height: 10px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.dim-radar-swatch--peer {
+  background: transparent;
+  border: 1.5px dashed rgba(11, 31, 58, 0.45);
+}
+
+@media (max-width: 820px) {
+  .dim-header-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .dim-radar-wrap {
+    order: -1;
+  }
+}
+
+/* ================================================================== */
 /* HERO DECORATIVE CROSSHAIR — hide on mobile                         */
 /* ================================================================== */
 @media (max-width: 767px) {

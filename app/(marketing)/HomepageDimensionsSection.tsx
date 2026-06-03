@@ -10,6 +10,7 @@ import {
   SketchGear,
   SketchKnowledge,
 } from '@/components/icons/SketchIcons';
+import DimensionRadar from '@/components/DimensionRadar';
 
 type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
 
@@ -46,17 +47,33 @@ export default function HomepageDimensionsSection() {
     <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(80px, 11vw, 136px)' }}>
       <div className="container-medium">
         <motion.div
+          className="dim-header-grid"
           style={{ marginBottom: '64px' }}
           variants={headingVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.4 }}
         >
-          <p className="eyebrow" style={{ marginBottom: '16px' }}>Zes dimensies</p>
-          <h2 className="type-h2" style={{ marginBottom: '16px' }}>De zes plekken waar rendement weglekt.</h2>
-          <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1.0625rem, 1.6vw, 1.125rem)', color: 'var(--text-muted)', margin: 0, maxWidth: '440px', lineHeight: 1.65 }}>
-            De Scorecard meet elk van deze dimensies en vergelijkt uw profiel met vergelijkbare partijen.
-          </p>
+          <div>
+            <p className="eyebrow" style={{ marginBottom: '16px' }}>Zes dimensies</p>
+            <h2 className="type-h2" style={{ marginBottom: '16px' }}>De zes plekken waar rendement weglekt.</h2>
+            <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1.0625rem, 1.6vw, 1.125rem)', color: 'var(--text-muted)', margin: 0, maxWidth: '440px', lineHeight: 1.65 }}>
+              De Scorecard meet elk van deze dimensies en vergelijkt uw profiel met vergelijkbare partijen.
+            </p>
+          </div>
+          <div className="dim-radar-wrap">
+            <DimensionRadar />
+            <div className="dim-radar-legend">
+              <span className="dim-radar-legend-item">
+                <span className="dim-radar-swatch" style={{ background: 'var(--accent-cta)' }} />
+                Voorbeeldprofiel
+              </span>
+              <span className="dim-radar-legend-item">
+                <span className="dim-radar-swatch dim-radar-swatch--peer" />
+                Vergelijkbare partijen
+              </span>
+            </div>
+          </div>
         </motion.div>
 
         <motion.div
