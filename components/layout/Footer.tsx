@@ -35,8 +35,7 @@ export default function Footer() {
             />
             <p
               style={{
-                fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                fontSize: '1.0625rem',
+                                fontSize: '1.0625rem',
                 color: 'var(--text-muted)',
                 lineHeight: 1.65,
                 margin: 0,

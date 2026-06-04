@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "scorecard": "Scorecard",
+    "werkwijze": "How We Work",
+    "over": "About",
+    "factum_capital": "Factum Capital",
+    "contact": "Contact",
+    "start_scorecard": "Start the Scorecard",
+    "open_menu": "Open menu",
+    "close_menu": "Close menu",
+    "badge_july": "july"
+  },
+  "footer": {
+    "tagline": "AI advisory for Dutch PE and M&A firms. Concrete, confidential, measurable.",
+    "email_wouter": "Email Wouter",
+    "linkedin": "LinkedIn →",
+    "navigation": "Navigation",
+    "legal": "Legal",
+    "over_wouter": "About Wouter",
+    "privacy": "Privacy",
+    "voorwaarden": "Terms",
+    "cta_title": "Ready to see your blind spots?",
+    "cta_sub": "Fifteen questions. Twelve minutes. No account needed.",
+    "start_scorecard": "Start the Scorecard",
+    "copyright": "© 2026 Agentic Mindshift — founded October 2025.",
+    "tagline_bottom": "Founder Factum Capital · launch 1 July 2026"
+  },
+  "homepage": {
+    "hero": {
+      "eyebrow": "For PE partners, M&A directors and family offices",
+      "heading": "One blind spot in your portfolio costs you an average of €2.5M. The Scorecard finds it in twelve minutes.",
+      "subtext": "Your monthly reporting masks underperformance. Your deal team repeats avoidable mistakes. And the risk that AI takes over core activities isn't in any IC proposal. The Scorecard maps all six dimensions. In twelve minutes.",
+      "cta_primary": "Start the Scorecard",
+      "cta_secondary": "How we work & fees",
+      "trust": "12 minutes · 6 dimensions · no account needed · 100% confidential"
+    },
+    "social_proof": {
+      "eyebrow": "Results",
+      "heading": "What others have already discovered.",
+      "disclaimer": "Based on actual engagements · names anonymised at client request.",
+      "quote_1": "“Two of the six dimensions were well below the level of comparable firms — we had never had that made so explicit to us.”",
+      "who_1": "PE partner, Dutch lower mid-market fund",
+      "aum_1": "~€120M AUM",
+      "quote_2": "“Acquisition price adjusted down by 0.4× based on the AI analysis. The report cost €10,000 — that adjustment saved us a multiple.”",
+      "who_2": "M&A director, buy-and-build platform",
+      "aum_2": "4 acquisitions per year",
+      "quote_3": "“We thought our monthly reporting was solid. The Scorecard showed in twelve minutes that three of the six dimensions were below the level of comparable funds. That conversation had never happened internally.”",
+      "who_3": "CFO, family office with 8 portfolio companies",
+      "aum_3": "€40M–€60M under management"
+    },
+    "transformation": {
+      "eyebrow": "The difference",
+      "heading": "From gut feeling to substantiation.",
+      "without_label": "Without the Scorecard",
+      "with_label": "After the Scorecard",
+      "without_1": "IC decisions based on intuition and experience.",
+      "without_2": "Monthly reporting as a ritual, not a management tool.",
+      "without_3": "Deal lessons lost with every team change.",
+      "without_4": "The risk of AI taking over core activities is nowhere on paper.",
+      "with_1": "Six dimensions quantified, benchmarked against comparable firms.",
+      "with_2": "Two concrete priorities with the highest impact.",
+      "with_3": "A report you can share internally without extra explanation.",
+      "with_4": "You go to your next IC with data, not a hunch."
+    },
+    "faq": {
+      "eyebrow": "Questions",
+      "heading": "Honest answers to the questions you have right now.",
+      "subtext": "No sales pitch. Direct answers.",
+      "cta": "Start the Scorecard"
+    },
+    "stakes": {
+      "eyebrow": "The cost of inaction",
+      "heading": "Every quarter without measurement costs you more than the measurement itself.",
+      "body_1": "Without structural measurement, the risk of AI taking over core activities remains a blind spot in your acquisition price. Your monthly reporting stays a ritual instead of a management tool. Every deal lesson disappears with the next team change.",
+      "body_2": "The difference between a substantiated and an uncalibrated acquisition price? On a €5M EBITDA target, easily 0.5×: that’s €2.5M.",
+      "body_3": "The Scorecard takes twelve minutes. Inaction costs quarters."
+    },
+    "final_cta": {
+      "eyebrow": "Your next step",
+      "heading": "In twelve minutes you’ll know exactly where your portfolio is vulnerable.",
+      "subtext": "You go to your next IC meeting with data, not a feeling. No account. No obligations. Your report is immediately available.",
+      "cta_primary": "Start the Scorecard",
+      "cta_secondary": "Schedule a no-obligation call"
+    },
+    "mid_cta": {
+      "heading": "Twelve minutes. Six dimensions. Immediate insight.",
+      "subtext": "Multiple choice. No account. Report available immediately upon completion.",
+      "cta": "Start the Scorecard"
+    }
+  },
+  "common": {
+    "start_scorecard": "Start the Scorecard",
+    "cta_conversation": "Prefer a conversation?",
+    "no_account": "No account required",
+    "minutes_12": "twelve minutes"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "heading": "Start with a question. Not a commitment.",
+    "subtext": "Start with the Scorecard for immediate insight, or schedule a no-obligation twenty-minute call. You set the agenda.",
+    "card_01_title": "Scorecard",
+    "card_01_body": "Twelve minutes. Four-page report. The most structured starting point to make your portfolio measurable.",
+    "card_01_cta": "Start the Scorecard",
+    "card_02_title": "Sparring session",
+    "card_02_body": "Twenty minutes to see if there's a fit. You set the agenda.",
+    "card_02_cta": "Schedule a session",
+    "card_03_title": "Email directly",
+    "card_03_body": "Prefer written? Send an email to wouter@agenticmindshift.nl.",
+    "card_03_cta": "Send an email"
+  },
+  "over": {
+    "title": "About Wouter Dijkman",
+    "description": "Founder of Agentic Mindshift and Factum Capital. Six years of deal experience in acquisition finance and financial restructuring, Dutch mid-market."
+  },
+  "werkwijze": {
+    "title": "How We Work & Investment",
+    "description": "Four clearly differentiated ways to work with Agentic Mindshift."
+  },
+  "factum_capital": {
+    "title": "Factum Capital",
+    "description": "AI-driven due diligence for Dutch PE."
+  }
+}

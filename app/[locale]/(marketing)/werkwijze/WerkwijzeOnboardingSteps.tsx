@@ -50,7 +50,7 @@ export default function WerkwijzeOnboardingSteps() {
         >
           <p className="eyebrow" style={{ marginBottom: '12px' }}>Van interesse naar samenwerking</p>
           <h2 className="type-h2" style={{ marginBottom: '12px' }}>Drie stappen</h2>
-          <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)', color: 'var(--text-muted)', lineHeight: 1.7, maxWidth: '400px' }}>
+          <p style={{ fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)', color: 'var(--text-muted)', lineHeight: 1.7, maxWidth: '400px' }}>
             Geen langdurige selectietrajecten. Van eerste contact tot lopende samenwerking duurt doorgaans twee weken.
           </p>
         </motion.div>
@@ -81,8 +81,7 @@ export default function WerkwijzeOnboardingSteps() {
               whileHover={{ borderTopColor: 'var(--accent-cta)', transition: { duration: 0.2 } }}
             >
               <p style={{
-                fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                fontSize: 'clamp(44px, 6vw, 64px)',
+                                fontSize: 'clamp(44px, 6vw, 64px)',
                 fontWeight: 800,
                 letterSpacing: '-0.04em',
                 lineHeight: 0.9,
@@ -93,8 +92,7 @@ export default function WerkwijzeOnboardingSteps() {
                 {s.n}
               </p>
               <p style={{
-                fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                fontSize: '1.0625rem',
+                                fontSize: '1.0625rem',
                 fontWeight: 700,
                 color: 'var(--text-primary)',
                 marginBottom: '12px',
@@ -103,7 +101,7 @@ export default function WerkwijzeOnboardingSteps() {
               }}>
                 {s.title}
               </p>
-              <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, margin: 0 }}>
+              <p style={{ fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, margin: 0 }}>
                 {s.body}
               </p>
             </motion.div>

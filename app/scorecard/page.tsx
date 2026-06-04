@@ -124,8 +124,7 @@ export default function ScorecardWelcomePage() {
               </h2>
               <p
                 style={{
-                  fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                  fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
+                                    fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
                   color: 'var(--text-secondary)',
                   lineHeight: 1.75,
                   maxWidth: '430px',
@@ -162,8 +161,7 @@ export default function ScorecardWelcomePage() {
             </h2>
             <p
               style={{
-                fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
+                                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
                 color: 'var(--text-secondary)',
                 lineHeight: 1.75,
                 marginBottom: '8px',
@@ -174,8 +172,7 @@ export default function ScorecardWelcomePage() {
             </p>
             <p
               style={{
-                fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
+                                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
                 color: 'var(--text-muted)',
                 lineHeight: 1.75,
                 fontStyle: 'italic',
@@ -209,8 +206,7 @@ export default function ScorecardWelcomePage() {
           </h2>
           <p
             style={{
-              fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-              fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
+                            fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
               color: 'rgba(247,242,235,0.55)',
               marginBottom: '44px',
               maxWidth: '420px',

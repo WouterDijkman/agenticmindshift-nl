@@ -103,8 +103,7 @@ export default function FactumCapitalPage() {
             >
               <span
                 style={{
-                  fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                  fontWeight: 700,
+                                    fontWeight: 700,
                   color: 'var(--text-primary)',
                   lineHeight: 1,
                 }}
@@ -161,8 +160,7 @@ export default function FactumCapitalPage() {
               >
                 <p
                   style={{
-                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                    fontSize: '1rem',
+                                        fontSize: '1rem',
                     fontWeight: 700,
                     color: 'var(--accent-cta)',
                     marginBottom: '8px',
@@ -171,7 +169,7 @@ export default function FactumCapitalPage() {
                 >
                   {item.label}
                 </p>
-                <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: '1.0625rem', color: 'rgba(247,242,235,0.65)', lineHeight: 1.65, margin: 0 }}>
+                <p style={{ fontSize: '1.0625rem', color: 'rgba(247,242,235,0.65)', lineHeight: 1.65, margin: 0 }}>
                   {item.body}
                 </p>
               </div>
@@ -202,8 +200,7 @@ export default function FactumCapitalPage() {
               >
                 <p
                   style={{
-                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                    fontSize: 'clamp(1.25rem, 2.5vw, 1.875rem)',
+                                        fontSize: 'clamp(1.25rem, 2.5vw, 1.875rem)',
                     fontWeight: 400,
                     fontStyle: 'italic',
                     lineHeight: 1.4,
@@ -218,7 +215,7 @@ export default function FactumCapitalPage() {
             </div>
 
             <div className="reveal" style={{ transitionDelay: '80ms' }}>
-              <div style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", display: 'flex', flexDirection: 'column', gap: '20px', fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', lineHeight: 1.8, color: 'var(--text-secondary)' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', lineHeight: 1.8, color: 'var(--text-secondary)' }}>
                 <p>
                   Het <strong>platform</strong>, 29 modules van Financial DD en AI Due Diligence tot LBO-modellering en exit readiness, geeft uw team consistente structuur op elk moment.
                   Vanaf 1 juli 2026 beschikbaar als SaaS.
@@ -275,8 +272,7 @@ export default function FactumCapitalPage() {
                     <m.Icon size={44} strokeWidth={1.4} />
                   </div>
                   <p style={{
-                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                    fontSize: 'clamp(28px, 4vw, 40px)',
+                                        fontSize: 'clamp(28px, 4vw, 40px)',
                     fontWeight: 800,
                     letterSpacing: '-0.04em',
                     lineHeight: 0.9,
@@ -298,8 +294,7 @@ export default function FactumCapitalPage() {
                   {m.label}
                 </p>
                 <p style={{
-                  fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                  fontSize: '1.125rem',
+                                    fontSize: '1.125rem',
                   fontWeight: 700,
                   color: 'var(--text-primary)',
                   marginBottom: '14px',
@@ -308,8 +303,7 @@ export default function FactumCapitalPage() {
                   {m.title}
                 </p>
                 <p style={{
-                  fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                  fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)',
+                                    fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)',
                   color: 'var(--text-secondary)',
                   lineHeight: 1.75,
                   marginBottom: '20px',
@@ -366,8 +360,7 @@ export default function FactumCapitalPage() {
                   style={{ background: 'var(--bg-primary)', padding: 'clamp(36px, 4vw, 52px)' }}
                 >
                   <p style={{
-                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                    fontSize: 'clamp(44px, 6vw, 64px)',
+                                        fontSize: 'clamp(44px, 6vw, 64px)',
                     fontWeight: 800,
                     letterSpacing: '-0.04em',
                     lineHeight: 0.9,
@@ -388,8 +381,7 @@ export default function FactumCapitalPage() {
                     {item.label}
                   </p>
                   <p style={{
-                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                    fontSize: '1.25rem',
+                                        fontSize: '1.25rem',
                     fontWeight: 700,
                     color: 'var(--text-primary)',
                     marginBottom: '16px',
@@ -398,8 +390,7 @@ export default function FactumCapitalPage() {
                     {item.title}
                   </p>
                   <p style={{
-                    fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                    fontSize: 'clamp(1rem, 1.6vw, 1.125rem)',
+                                        fontSize: 'clamp(1rem, 1.6vw, 1.125rem)',
                     color: 'var(--text-secondary)',
                     lineHeight: 1.75,
                     marginBottom: '24px',
@@ -472,8 +463,7 @@ export default function FactumCapitalPage() {
                   }}
                 >
                   <p style={{
-                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                    fontSize: 'clamp(36px, 5vw, 52px)',
+                                        fontSize: 'clamp(36px, 5vw, 52px)',
                     fontWeight: 800,
                     letterSpacing: '-0.04em',
                     lineHeight: 0.9,
@@ -484,8 +474,7 @@ export default function FactumCapitalPage() {
                     {s.step}
                   </p>
                   <p style={{
-                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                    fontSize: '1rem',
+                                        fontSize: '1rem',
                     fontWeight: 700,
                     color: 'var(--text-primary)',
                     marginBottom: '10px',
@@ -494,8 +483,7 @@ export default function FactumCapitalPage() {
                     {s.title}
                   </p>
                   <p style={{
-                    fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                    fontSize: 'clamp(0.9375rem, 1.5vw, 1.0625rem)',
+                                        fontSize: 'clamp(0.9375rem, 1.5vw, 1.0625rem)',
                     color: 'var(--text-secondary)',
                     lineHeight: 1.7,
                     margin: 0,
@@ -558,8 +546,7 @@ export default function FactumCapitalPage() {
               >
                 <p
                   style={{
-                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                    fontSize: '1rem',
+                                        fontSize: '1rem',
                     fontWeight: 700,
                     color: 'var(--text-primary)',
                     marginBottom: '10px',
@@ -568,7 +555,7 @@ export default function FactumCapitalPage() {
                 >
                   {item.label}
                 </p>
-                <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(0.9375rem, 1.5vw, 1.0625rem)', color: 'var(--text-secondary)', lineHeight: 1.7, margin: 0 }}>
+                <p style={{ fontSize: 'clamp(0.9375rem, 1.5vw, 1.0625rem)', color: 'var(--text-secondary)', lineHeight: 1.7, margin: 0 }}>
                   {item.body}
                 </p>
               </div>
@@ -593,7 +580,7 @@ export default function FactumCapitalPage() {
               <h2 className="type-h2" style={{ marginBottom: '20px' }}>
                 Schrijf u in voor early access.
               </h2>
-              <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: '1.0625rem', color: 'var(--text-secondary)', lineHeight: 1.75, maxWidth: '320px', marginBottom: '32px' }}>
+              <p style={{ fontSize: '1.0625rem', color: 'var(--text-secondary)', lineHeight: 1.75, maxWidth: '320px', marginBottom: '32px' }}>
                 De wachtlijst is bewust beperkt. Vroege deelnemers krijgen directe input op de module-roadmap en gaan als eerste door onboarding. Geen vervolgmails buiten de Factum Capital-roadmap om.
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -615,7 +602,7 @@ export default function FactumCapitalPage() {
                         marginTop: '7px',
                       }}
                     />
-                    <span style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)', color: 'var(--text-secondary)', lineHeight: 1.6 }}>{t}</span>
+                    <span style={{ fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)', color: 'var(--text-secondary)', lineHeight: 1.6 }}>{t}</span>
                   </div>
                 ))}
               </div>
@@ -652,8 +639,7 @@ export default function FactumCapitalPage() {
           </h2>
           <p
             style={{
-              fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-              fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
+                            fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
               color: 'rgba(247,242,235,0.5)',
               marginBottom: '40px',
               maxWidth: '460px',

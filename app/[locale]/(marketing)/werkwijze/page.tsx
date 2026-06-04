@@ -136,8 +136,7 @@ export default function WerkwijzePage() {
             </h2>
             <p
               style={{
-                fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
+                                fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
                 color: 'var(--text-secondary)',
                 lineHeight: 1.75,
                 marginBottom: '24px',
@@ -264,8 +263,7 @@ export default function WerkwijzePage() {
                       <span>Powered by</span>
                       <span
                         style={{
-                          fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                          fontSize: '0.9375rem',
+                                                    fontSize: '0.9375rem',
                           fontWeight: 700,
                           letterSpacing: '-0.01em',
                           color: o.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
@@ -278,8 +276,7 @@ export default function WerkwijzePage() {
                     </span>
                     <span
                       style={{
-                        fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                        fontSize: '0.875rem',
+                                                fontSize: '0.875rem',
                         color: o.featured ? 'rgba(247,242,235,0.7)' : 'var(--text-muted)',
                         lineHeight: 1.4,
                       }}
@@ -291,8 +288,7 @@ export default function WerkwijzePage() {
 
                 <p
                   style={{
-                    fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                    fontSize: '1.0625rem',
+                                        fontSize: '1.0625rem',
                     lineHeight: 1.65,
                     color: o.featured ? 'rgba(247,242,235,0.86)' : 'var(--text-secondary)',
                     margin: 0,
@@ -359,8 +355,7 @@ export default function WerkwijzePage() {
                         </span>
                         <span
                           style={{
-                            fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                            fontWeight: 700,
+                                                        fontWeight: 700,
                             color: o.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
                             fontSize: '0.9375rem',
                             letterSpacing: '-0.01em',
@@ -410,8 +405,7 @@ export default function WerkwijzePage() {
                   </p>
                   <p
                     style={{
-                      fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                      fontSize: 'clamp(1.5rem, 2.5vw, 1.875rem)',
+                                            fontSize: 'clamp(1.5rem, 2.5vw, 1.875rem)',
                       fontWeight: 700,
                       letterSpacing: '-0.02em',
                       lineHeight: 1.1,
@@ -423,8 +417,7 @@ export default function WerkwijzePage() {
                   </p>
                   <p
                     style={{
-                      fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                      fontSize: '0.875rem',
+                                            fontSize: '0.875rem',
                       color: o.featured ? 'rgba(247,242,235,0.7)' : 'var(--text-muted)',
                       margin: 0,
                       lineHeight: 1.5,
@@ -581,8 +574,7 @@ export default function WerkwijzePage() {
             </h2>
             <p
               style={{
-                fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
+                                fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
                 color: 'rgba(247,242,235,0.5)',
                 marginBottom: '44px',
                 maxWidth: '440px',

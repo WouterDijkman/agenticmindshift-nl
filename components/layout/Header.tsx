@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Button from '@/components/ui/Button';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const navLinks = [
   { href: '/scorecard', label: 'Scorecard', badge: null },
@@ -95,7 +96,8 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex items-center gap-4">
+          <LanguageSwitcher />
           <Button href="/scorecard" variant="primary" size="md">
             Start de Scorecard
           </Button>

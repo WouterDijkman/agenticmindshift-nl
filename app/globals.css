@@ -22,9 +22,9 @@
   --status-error: #c0392b;
   --shadow-sm: 0 1px 3px rgba(11, 31, 58, 0.12);
   --shadow-md: 0 4px 12px rgba(11, 31, 58, 0.15);
-  --font-display: var(--font-playfair), 'Playfair Display', Georgia, serif;
-  --font-body: var(--font-cormorant), 'Cormorant Garamond', 'Cormorant', Georgia, serif;
-  --font-ui: var(--font-inter), 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-suse), 'SUSE', sans-serif;
+  --font-body: var(--font-suse), 'SUSE', sans-serif;
+  --font-ui: var(--font-suse), 'SUSE', sans-serif;
   --space-3xs: 4px;
   --space-2xs: 8px;
   --space-xs: 12px;
@@ -62,7 +62,7 @@
   --color-status-success: var(--status-success);
   --color-status-warning: var(--status-warning);
   --color-status-error: var(--status-error);
-  --font-serif: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  --font-serif: var(--font-suse), 'SUSE', sans-serif;
   --radius-none: 0;
   --radius-sm: 2px;
   --radius-md: 4px;
@@ -84,8 +84,7 @@ body {
   background: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-body);
-  font-size: 1.1875rem;  /* Cormorant runs optically smaller than Inter — needs ~19px base */
-  font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
+  font-size: 1rem;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1024,7 +1023,7 @@ nav, header, .nav-link, .eyebrow-ui {
   margin: 0 0 8px;
 }
 .cred-sub {
-  font-family: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif";
+  font-family: var(--font-body);
   font-size: 0.9375rem;
   font-style: italic;
   color: var(--text-muted);
@@ -1112,7 +1111,7 @@ nav, header, .nav-link, .eyebrow-ui {
   margin: 24px 0 0;
   padding-top: 16px;
   border-top: 1px solid var(--border-subtle);
-  font-family: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif";
+  font-family: var(--font-body);
   font-size: 0.9375rem;
   font-style: italic;
   color: var(--text-muted);

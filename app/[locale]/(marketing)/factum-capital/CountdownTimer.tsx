@@ -59,8 +59,7 @@ export default function CountdownTimer() {
         >
           <span
             style={{
-              fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-              fontSize: '1.25rem',
+                            fontSize: '1.25rem',
               fontWeight: 700,
               color: 'var(--text-primary)',
               lineHeight: 1,

@@ -84,8 +84,7 @@ export default function HomepageStepsSection() {
                 </div>
                 <h3
                   style={{
-                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                    fontSize: '1.1875rem',
+                                        fontSize: '1.1875rem',
                     fontWeight: 700,
                     color: 'var(--text-primary)',
                     letterSpacing: '-0.01em',
@@ -97,8 +96,7 @@ export default function HomepageStepsSection() {
                 </h3>
                 <p
                   style={{
-                    fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                    fontSize: 'clamp(1rem, 1.6vw, 1.125rem)',
+                                        fontSize: 'clamp(1rem, 1.6vw, 1.125rem)',
                     color: 'var(--text-tertiary)',
                     lineHeight: 1.7,
                     margin: 0,

@@ -110,7 +110,7 @@ export default function RapportPage() {
       <section className="container-wide py-12">
         <p className="eyebrow" style={{ marginBottom: '16px' }}>Persoonlijk rapport</p>
         <h1 className="type-h1 mb-3">Beste {firstName}: uw aanpak valt op. Laten we het hebben over wat u doet dat anderen niet doen.</h1>
-        <p className="mb-10 measure" style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", color: 'var(--text-secondary)', fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', lineHeight: 1.75 }}>
+        <p className="mb-10 measure" style={{ color: 'var(--text-secondary)', fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', lineHeight: 1.75 }}>
           U behoort tot de kleine groep PE-partners die al structureel meet wat de meesten
           pas achteraf zien. Dat is geen kleinigheid.
         </p>
@@ -157,7 +157,7 @@ export default function RapportPage() {
           }}
         >
           <p className="eyebrow" style={{ marginBottom: '12px' }}>Volgende stap</p>
-          <p className="mb-6 measure" style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", color: 'var(--text-secondary)', fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', lineHeight: 1.75 }}>
+          <p className="mb-6 measure" style={{ color: 'var(--text-secondary)', fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', lineHeight: 1.75 }}>
             Stuur een bericht via LinkedIn als u wilt sparren over uw aanpak, als peer-uitwisseling, op uw initiatief.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 no-print">
@@ -208,7 +208,7 @@ export default function RapportPage() {
     <section className="container-wide py-12">
       <p className="eyebrow" style={{ marginBottom: '16px' }}>Persoonlijk rapport</p>
       <h1 className="type-h1 mb-3">Uw Deal & Portfolio Intelligence Rapport</h1>
-      <p className="mb-2 measure" style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", color: 'var(--text-secondary)', fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', lineHeight: 1.75 }}>
+      <p className="mb-2 measure" style={{ color: 'var(--text-secondary)', fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', lineHeight: 1.75 }}>
         U beschikt nu over inzicht dat de meeste partijen pas krijgen op het moment dat
         het al te laat is: bij de jaarrapportage, de afwijzing van de bank, of
         de deal die net niet doorging. Hieronder leest u waar uw analytisch fundament
@@ -289,7 +289,7 @@ export default function RapportPage() {
           }}
         >
           <h2 className="type-h2 mb-5">Interpretatie</h2>
-          <p className="mb-8 measure" style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', color: 'var(--text-secondary)', lineHeight: 1.75 }}>
+          <p className="mb-8 measure" style={{ fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', color: 'var(--text-secondary)', lineHeight: 1.75 }}>
             {variant.interpretation(variantRawScore)}
           </p>
 
@@ -298,8 +298,7 @@ export default function RapportPage() {
             {variant.interventions.map((iv, idx) => (
               <li key={iv.title} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
                 <span style={{
-                  fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                  fontSize: '0.75rem',
+                                    fontSize: '0.75rem',
                   fontWeight: 800,
                   color: 'var(--accent-cta)',
                   letterSpacing: '0.06em',
@@ -308,7 +307,7 @@ export default function RapportPage() {
                 }}>
                   {String(idx + 1).padStart(2, '0')}
                 </span>
-                <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", color: 'var(--text-secondary)', fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', lineHeight: 1.7, margin: 0 }}>
+                <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', lineHeight: 1.7, margin: 0 }}>
                   <strong style={{ color: 'var(--text-primary)' }}>{iv.title}</strong>
                   {': '}
                   <span>{iv.body}</span>

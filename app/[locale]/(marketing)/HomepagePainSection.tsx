@@ -62,7 +62,7 @@ export default function HomepagePainSection() {
           <h2 className="type-h2" style={{ maxWidth: '560px', margin: 0 }}>
             Drie problemen die uw rendement kosten. Niemand benoemt ze.
           </h2>
-          <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', color: 'var(--text-muted)', margin: 0, marginTop: '16px', maxWidth: '460px', lineHeight: 1.65, fontStyle: 'italic' }}>
+          <p style={{ fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', color: 'var(--text-muted)', margin: 0, marginTop: '16px', maxWidth: '460px', lineHeight: 1.65, fontStyle: 'italic' }}>
             U zou geen investeringsbeslissing moeten nemen op basis van een incompleet beeld. Toch is dat de norm.
           </p>
         </motion.div>
@@ -116,8 +116,7 @@ export default function HomepagePainSection() {
               </p>
               <h3
                 style={{
-                  fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                  fontSize: 'clamp(1.0625rem, 1.6vw, 1.25rem)',
+                                    fontSize: 'clamp(1.0625rem, 1.6vw, 1.25rem)',
                   fontWeight: 700,
                   color: 'var(--text-primary)',
                   letterSpacing: '-0.015em',
@@ -129,8 +128,7 @@ export default function HomepagePainSection() {
               </h3>
               <p
                 style={{
-                  fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                  fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
+                                    fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
                   color: 'var(--text-secondary)',
                   lineHeight: 1.75,
                   marginBottom: '14px',
@@ -140,8 +138,7 @@ export default function HomepagePainSection() {
               </p>
               <p
                 style={{
-                  fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                  fontSize: 'clamp(0.9375rem, 1.4vw, 1.0625rem)',
+                                    fontSize: 'clamp(0.9375rem, 1.4vw, 1.0625rem)',
                   fontStyle: 'italic',
                   color: 'var(--text-muted)',
                   lineHeight: 1.65,

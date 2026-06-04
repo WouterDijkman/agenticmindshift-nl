@@ -52,8 +52,7 @@ export default function ScorecardSectionCards() {
         >
           <p
             style={{
-              fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-              fontSize: 'clamp(40px, 5vw, 56px)',
+                            fontSize: 'clamp(40px, 5vw, 56px)',
               fontWeight: 800,
               letterSpacing: '-0.04em',
               lineHeight: 0.9,

@@ -86,10 +86,10 @@ export default function FactumModulesGrid() {
               <p style={{ fontSize: '10px', fontWeight: 800, letterSpacing: '0.15em', color: 'var(--accent-cta)', margin: '0 0 12px' }}>
                 {m.n}
               </p>
-              <p style={{ fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif", fontSize: '1rem', fontWeight: 700, color: 'var(--text-primary)', margin: '0 0 10px', letterSpacing: '-0.01em', lineHeight: 1.2 }}>
+              <p style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--text-primary)', margin: '0 0 10px', letterSpacing: '-0.01em', lineHeight: 1.2 }}>
                 {m.title}
               </p>
-              <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(0.9375rem, 1.5vw, 1.0625rem)', color: 'var(--text-tertiary)', lineHeight: 1.7, margin: 0, flex: 1 }}>
+              <p style={{ fontSize: 'clamp(0.9375rem, 1.5vw, 1.0625rem)', color: 'var(--text-tertiary)', lineHeight: 1.7, margin: 0, flex: 1 }}>
                 {m.body}
               </p>
             </motion.div>

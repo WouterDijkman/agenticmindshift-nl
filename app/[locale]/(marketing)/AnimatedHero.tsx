@@ -51,8 +51,7 @@ export default function AnimatedHero() {
           letterSpacing: '-0.06em',
           pointerEvents: 'none',
           userSelect: 'none',
-          fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-        }}
+                  }}
       >
         PE
       </motion.div>
@@ -127,8 +126,7 @@ export default function AnimatedHero() {
         {/* Subkop */}
         <motion.p
           style={{
-            fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-            fontSize: 'clamp(1.125rem, 1.8vw, 1.5rem)',
+                        fontSize: 'clamp(1.125rem, 1.8vw, 1.5rem)',
             fontWeight: 400,
             lineHeight: 1.55,
             color: 'var(--text-secondary)',
@@ -159,8 +157,7 @@ export default function AnimatedHero() {
             <a
               href="/werkwijze"
               style={{
-                fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                fontSize: '1.0625rem',
+                                fontSize: '1.0625rem',
                 fontWeight: 500,
                 color: 'var(--text-secondary)',
                 textDecoration: 'none',
@@ -176,8 +173,7 @@ export default function AnimatedHero() {
           </div>
           <p
             style={{
-              fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-              fontSize: '0.9375rem',
+                            fontSize: '0.9375rem',
               fontStyle: 'italic',
               fontWeight: 400,
               color: 'var(--text-muted)',
