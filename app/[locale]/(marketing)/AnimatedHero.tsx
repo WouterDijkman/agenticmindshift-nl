@@ -111,10 +111,10 @@ export default function AnimatedHero() {
         <motion.h1
           className="type-display"
           style={{
-            fontSize: 'clamp(44px, 6.2vw, 88px)',
-            marginBottom: '16px',
+            fontSize: 'clamp(32px, 4.4vw, 56px)',
+            marginBottom: '20px',
             color: 'var(--text-primary)',
-            maxWidth: '1000px',
+            maxWidth: '900px',
           }}
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
