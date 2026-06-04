@@ -70,7 +70,7 @@ export default function FactumCapitalPage() {
         bgChar="FC"
         bgCharSize="clamp(240px, 32vw, 480px)"
         eyebrow="Het platform achter onze AI Due Diligence-dienst"
-        heading="Eén platform. Elke fase van uw deal- en portfoliopraktijk. Structureel."
+        heading="Eén platform voor elke fase van uw deal‑ en portfoliopraktijk."
         subtext="Vier momenten (acquisitie, financiering, portfolio review en pre-IBR/WHOA) op één gedeeld dossier. Vanaf 1 juli 2026 ook als SaaS voor uw eigen team."
         headingMaxWidth="900px"
       >
@@ -220,8 +220,7 @@ export default function FactumCapitalPage() {
             <div className="reveal" style={{ transitionDelay: '80ms' }}>
               <div style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", display: 'flex', flexDirection: 'column', gap: '20px', fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', lineHeight: 1.8, color: 'var(--text-secondary)' }}>
                 <p>
-                  Het <strong>platform</strong>, 23 modules van eerste IM-beoordeling tot
-                  verkoopgereedheid, geeft uw team consistente structuur op elk moment.
+                  Het <strong>platform</strong>, 29 modules van Financial DD en AI Due Diligence tot LBO-modellering en exit readiness, geeft uw team consistente structuur op elk moment.
                   Vanaf 1 juli 2026 beschikbaar als SaaS.
                 </p>
                 <p>
@@ -349,7 +348,7 @@ export default function FactumCapitalPage() {
                   n: '01',
                   title: 'Het Platform',
                   label: 'SaaS: zelf in handen',
-                  body: '23 modules die uw deal-team de structuur geven om alle vier momenten consistent uit te voeren. Van eerste IM-beoordeling tot verkoopgereedheid tot vroegtijdige herstructureringssignalering. Kennisopbouw die meegroeit.',
+                  body: '29 modules die uw deal-team de structuur geven om alle vier momenten consistent uit te voeren. Van Financial DD en AI Due Diligence tot LBO-modellering, IBR/WHOA en exit readiness. Kennisopbouw die meegroeit.',
                   detail: 'Lancering 1 juli 2026 · Maandabonnement · Wachtlijst open',
                   link: null,
                 },

@@ -87,7 +87,7 @@ export default function OverPage() {
                   >
                     Factum Capital
                   </Link>
-                  : 23 modules waarmee deal-teams hun DD-proces, maandrapportage en oordeelsvorming
+                  : 29 modules waarmee deal-teams hun DD-proces, maandrapportage en oordeelsvorming
                   structureel instrumenteren.
                 </p>
                 <p style={{ fontStyle: 'italic', color: 'var(--text-muted)' }}>
@@ -134,9 +134,9 @@ export default function OverPage() {
             {[
               { year: '2017–2020', label: 'Financial Restructuring', sub: 'MKB- en mid-market portefeuilles in stress: intensive care & herstructurering', delay: 0, future: false },
               { year: '2020–2023', label: 'Acquisition Finance', sub: 'LBO-financiering op Nederlandse PE-deals, mid-market 1–25M', delay: 60, future: false },
-              { year: 'Oktober 2025', label: 'Oprichting Agentic Mindshift', sub: "AI-advies voor Nederlandse PE- en M&A-firma's", delay: 120, future: false },
+              { year: 'Oktober 2025', label: 'Oprichting Agentic Mindshift', sub: "AI‑advies voor Nederlandse PE‑ en M&A‑firma's", delay: 120, future: false },
               { year: 'November 2025', label: 'AI for Business', sub: 'Nyenrode Business Universiteit · AI-toepassingen in financiële praktijk', delay: 180, future: false },
-              { year: '1 juli 2026', label: 'Lancering Factum Capital', sub: 'AI-platform voor M&A en herstructurering · 23 modules', delay: 240, future: true },
+              { year: '1 juli 2026', label: 'Lancering Factum Capital', sub: 'AI-platform voor M&A en herstructurering', delay: 240, future: true },
             ].map((row) => (
               <div
                 key={row.year}

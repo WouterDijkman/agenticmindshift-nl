@@ -5,18 +5,18 @@ import { motion } from 'framer-motion';
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const launchModules = [
-  { n: '01', title: 'IM-Screener', body: 'Gestructureerde analyse van het Information Memorandum op consistentie, aannames en rode vlaggen.' },
-  { n: '02', title: 'Management Bias Checker', body: 'Toetsing van managementpresentaties op selectieve framing, ontbrekende tegenargumenten en wishful-thinking-patronen.' },
-  { n: '03', title: 'AI-Kwetsbaarheidsmodel', body: 'Kwantificeert het risico dat AI de kernactiviteit overneemt, per functiegroep en omzetstroom, vertaald naar impact op de overnameprijs.' },
-  { n: '04', title: 'Sensitiviteitsmatrix', body: "Geautomatiseerde gevoeligheidsanalyse op EBITDA-marge, omzetgroei en financieringsscenario's voor de IC-beslissing." },
-  { n: '05', title: 'Maandrapportage-laag', body: 'Structureert de maandelijkse bestuursrapportage op zes dimensies; signaleert afwijkingen automatisch.' },
-  { n: '06', title: 'DD-Kennisbank', body: 'Centraliseert DD-bevindingen per portfolio-bedrijf zodat institutionele kennis in-house blijft na personele wisseling.' },
-  { n: '07', title: 'Restructuring Triage', body: 'Diagnostisch framework voor portefeuilles in stress: urgent/niet-urgent, financieel/operationeel, inside/outside court.' },
-  { n: '08', title: 'IC-Rapportage Generator', body: 'Brengt deal-data naar een consistent IC-rapportageformat met gestandaardiseerde risicoparagraaf.' },
-  { n: '09', title: 'Portfolio Health Monitor', body: 'Doorlopend dashboard over alle deelnemingen met peer-benchmark per sector en automatische trend-detectie.' },
-  { n: '10', title: 'Capaciteitsplanner', body: 'Inzicht in deals die blijven liggen door handmatig zoekwerk. Prioriteert de inzet van uw team op rendement.' },
-  { n: '11', title: 'Exit Readiness Checker', body: 'Toetst een portfoliobedrijf op de zes meest kritische exit-obstakels: governance, data-room, management-continuïteit.' },
-  { n: '12', title: 'Compliance Radar', body: 'Monitort relevante Nederlandse en EU-regelgeving op impact voor M&A-transacties en bestaande portefeuille.' },
+  { n: '01', title: 'Financial DD', body: 'Quality of Earnings, werkkapitaalanalyse, netto schuld, cashflow en balansanalyse. De feitelijke basis voor elke overnameprijs.' },
+  { n: '02', title: 'Commercial DD', body: 'Marktanalyse, klantanalyse, concurrentiepositie en business case. Toetst of de omzetaannames houdbaar zijn.' },
+  { n: '03', title: 'AI Due Diligence', body: 'Kwantificeert het risico dat AI de kernactiviteit overneemt, per functiegroep en omzetstroom — vertaald naar impact op de overnameprijs.' },
+  { n: '04', title: 'Legal', body: 'Corporate governance, contracten, geschillen, IP/data, arbeidsrecht en vastgoed. Vroegtijdige signalering van juridische dealbreakers.' },
+  { n: '05', title: 'Tax', body: 'VPB, BTW, loonheffing, transfer pricing en fiscale structuur. Toetst historische compliance en structureert de transactie fiscaal.' },
+  { n: '06', title: 'Valuation', body: 'DCF, trading multiples, transaction comps en synergie-waardering in een consistent football field. Onderbouwt de IC-beslissing.' },
+  { n: '07', title: 'IC-Memo', body: 'Investment thesis, company & market, financial analysis, valuation en transaction structure. Klaar voor presentatie aan het Investment Committee.' },
+  { n: '08', title: 'LBO-Model', body: 'Entry assumptions, capital structure, financial projections, debt schedule en returns analyse met sensitivity tabel.' },
+  { n: '09', title: 'IBR', body: 'Cashflow reality check, liquiditeitsanalyse, business plan review, covenant analyse en going concern beoordeling.' },
+  { n: '10', title: 'WHOA', body: 'Diagnose, crediteurenclassificatie, akkoordontwerp, waardering op recovery basis en homologatieprocedure.' },
+  { n: '11', title: 'Vigil', body: 'Doorlopend portfolio monitoring: financiële prestaties, covenant monitoring, synergie-tracking en exit readiness per deelneming.' },
+  { n: '12', title: 'Exit Readiness', body: 'Equity story, QoE readiness, governance, dataroom voorbereiding en CSRD/SFDR compliance voor een optimale verkoopklare positie.' },
 ];
 
 const containerVariants = {
@@ -46,9 +46,9 @@ export default function FactumModulesGrid() {
           viewport={{ once: true, amount: 0.5 }}
         >
           <p className="eyebrow" style={{ marginBottom: '16px' }}>Lancering 1 juli 2026</p>
-          <h2 className="type-h2" style={{ marginBottom: '16px' }}>De twaalf modules bij livegang</h2>
+          <h2 className="type-h2" style={{ marginBottom: '16px' }}>De modules bij livegang</h2>
           <p style={{ fontSize: '1rem', color: 'var(--text-muted)', maxWidth: '480px', lineHeight: 1.65 }}>
-            Modules 13 t/m 23 volgen in H2 2026. Vroege deelnemers brengen mede de volgorde.
+            De eerste reeks modules. Verdere uitbreiding volgt in H2 2026. Vroege deelnemers brengen mede de volgorde.
           </p>
         </motion.div>
 

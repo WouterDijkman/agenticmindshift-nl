@@ -4,38 +4,38 @@ const COLUMNS: Col[] = [
   {
     phase: 'Acquisitie',
     modules: [
-      { label: 'IM-screener' },
       { label: 'Financial DD' },
       { label: 'Commercial DD' },
       { label: 'AI Due Diligence', hot: true },
-      { label: 'IC Memorandum' },
+      { label: 'Legal' },
+      { label: 'IC-Memo' },
     ],
   },
   {
     phase: 'Financiering',
     modules: [
-      { label: 'LBO Modeler' },
-      { label: 'Financing Memo' },
-      { label: 'Capital Structuring' },
+      { label: 'LBO-Model' },
+      { label: 'Fin-Memo' },
+      { label: 'Structuring' },
       { label: 'Deal Economics' },
     ],
   },
   {
     phase: 'Portfolio review',
     modules: [
+      { label: 'Vigil', hot: true },
+      { label: 'MBR' },
       { label: 'Portfolio Health' },
-      { label: 'Monthly Business Review', hot: true },
-      { label: 'Value Creation Engine' },
-      { label: 'Post-Merger Integration' },
+      { label: 'PMI' },
     ],
   },
   {
     phase: 'Pre-IBR/WHOA',
     modules: [
-      { label: 'Independent Business Review' },
-      { label: 'WHOA Restructuring' },
+      { label: 'IBR' },
+      { label: 'WHOA' },
       { label: 'Boedelonderzoek' },
-      { label: 'Restructuring Triage', hot: true },
+      { label: 'Tax' },
     ],
   },
 ];
@@ -69,9 +69,7 @@ export default function FactumModulesMockup() {
         </div>
 
         <div className="factum-modules-foot">
-          <span>
-            <strong style={{ color: 'var(--accent-cta)' }}>23 modules</strong> · 4 dealfasen
-          </span>
+          <span>4 dealfasen · 29 modules</span>
           <span>SaaS · lancering 1 juli 2026</span>
         </div>
       </div>

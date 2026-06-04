@@ -49,7 +49,7 @@ export default function ContactPage() {
                 body: 'Twintig minuten om te kijken of er een match is. U stelt de agenda.',
                 cta: (
                   <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="md" external>
-                    Plan een vrijblijvende kennismaking
+                    Vrijblijvende kennismaking plannen
                   </Button>
                 ),
                 delay: 80,

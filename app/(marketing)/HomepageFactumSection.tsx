@@ -19,7 +19,7 @@ const TRACKS = [
     tag: 'Adviseur · RA / RB / M&A-professional',
     n: '02',
     title: 'Werk zelf met het platform.',
-    body: 'Factum Capital: 23 modules voor uw eigen deal-team. Van eerste IM-beoordeling tot verkoopklaar maken. SaaS vanaf 1 juli 2026. Vroege toegang is nu open.',
+    body: 'Factum Capital: 29 modules voor uw eigen deal-team. Van Financial DD en AI Due Diligence tot LBO-modellering en exit readiness. SaaS vanaf 1 juli 2026. Vroege toegang is nu open.',
     detail: 'SaaS · maandabonnement · vroeg-toegangstarief bij lancering',
     cta: { label: 'Factum Capital vroege toegang', href: '/factum-capital', variant: 'secondary' as const },
     ctaSub: 'Lancering 1 juli 2026',

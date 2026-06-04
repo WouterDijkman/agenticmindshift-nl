@@ -115,7 +115,7 @@ export default function WerkwijzePage() {
         bgChar="03"
         bgCharSize="clamp(240px, 30vw, 460px)"
         eyebrow="Werkwijze & Investering"
-        heading="Van €395 tot embedded AI-leiderschap: u kiest op basis van uw vraag."
+        heading="Van €395 tot embedded AI‑leiderschap: u kiest op basis van uw vraag."
         subtext="Vier routes, vier situaties. Elke route begint met een vrijblijvend gesprek en eindigt met een concreet resultaat."
         headingMaxWidth="800px"
       />

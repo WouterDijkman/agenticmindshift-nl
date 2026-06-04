@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 const CREDS: { value: string; label: string; sub: string }[] = [
   { value: '6 jaar', label: 'Deal-ervaring', sub: 'Acquisition finance & financial restructuring' },
   { value: 'Twee kanten', label: 'Van de deal-tafel', sub: 'Financiering én herstructurering meegemaakt' },
-  { value: '€1–25M', label: 'Mid-market focus', sub: 'Nederlandse PE- en M&A-dealgrootte' },
-  { value: '23 modules', label: 'Eigen AI-platform', sub: 'Factum Capital · lancering 1 juli 2026' },
+  { value: '€1–25M', label: 'Mid-market focus', sub: 'Nederlandse PE‑ en M&A‑dealgrootte' },
+  { value: '29 modules', label: 'Eigen AI-platform', sub: 'Factum Capital · lancering 1 juli 2026' },
 ];
 
 const container = {
@@ -35,7 +35,7 @@ export default function OverCredentials() {
         >
           <p className="eyebrow" style={{ marginBottom: '16px' }}>Waarom Wouter</p>
           <h2 className="type-h2" style={{ margin: 0, maxWidth: '520px' }}>
-            Geen AI-generalist met toevallig PE-klanten.
+            Geen AI‑generalist met toevallig PE‑klanten.
           </h2>
         </motion.div>
 

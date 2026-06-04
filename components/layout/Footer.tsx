@@ -43,8 +43,7 @@ export default function Footer() {
                 maxWidth: '320px',
               }}
             >
-              AI-advies voor Nederlandse PE- en M&amp;A-firma&apos;s. Concreet, vertrouwelijk,
-              meetbaar.
+              AI‑advies voor Nederlandse PE‑ en M&amp;A‑firma&apos;s. Concreet, vertrouwelijk, meetbaar.
             </p>
             <div style={{ display: 'flex', gap: '10px', marginTop: '22px', flexWrap: 'wrap' }}>
               <a
