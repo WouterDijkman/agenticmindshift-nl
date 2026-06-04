@@ -90,10 +90,10 @@ export default function HomepageFactumSection() {
               <h3
                 style={{
                                     fontSize: 'clamp(1.25rem, 2.2vw, 1.625rem)',
-                  fontWeight: 700,
+                  fontWeight: 600,
                   color: 'var(--text-primary)',
                   letterSpacing: '-0.02em',
-                  lineHeight: 1.2,
+                  lineHeight: 1.25,
                   marginBottom: '20px',
                 }}
               >
@@ -196,7 +196,7 @@ export default function HomepageFactumSection() {
             </span>
             <span
               style={{
-                                fontWeight: 700,
+                                fontWeight: 600,
                 color: 'var(--text-primary)',
                 fontSize: '0.9375rem',
               }}

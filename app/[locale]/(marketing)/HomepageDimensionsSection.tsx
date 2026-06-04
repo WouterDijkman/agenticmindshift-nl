@@ -99,7 +99,7 @@ export default function HomepageDimensionsSection() {
               variants={itemVariants}
               style={{
                 background: 'var(--bg-secondary)',
-                padding: '32px 28px 36px',
+                padding: '40px 32px 44px',
                 display: 'flex',
                 flexDirection: 'column',
                 borderLeft: '3px solid transparent',
@@ -140,11 +140,11 @@ export default function HomepageDimensionsSection() {
               <p
                 style={{
                                     fontSize: '1.0625rem',
-                  fontWeight: 700,
+                  fontWeight: 600,
                   color: 'var(--text-primary)',
-                  margin: '0 0 12px',
+                  margin: '0 0 14px',
                   letterSpacing: '-0.01em',
-                  lineHeight: 1.2,
+                  lineHeight: 1.25,
                 }}
               >
                 {t(`title_${d.i}`)}

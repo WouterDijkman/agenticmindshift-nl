@@ -51,7 +51,7 @@ export default function HomepageStatsSection() {
                 borderTop: idx === 0 ? '3px solid var(--accent-cta)' : '3px solid var(--border-medium)',
               }}
             >
-              <div style={{ position: 'relative', display: 'inline-block', marginBottom: '16px' }}>
+              <div style={{ position: 'relative', display: 'inline-block', marginBottom: '20px' }}>
                 <div style={{
                   position: 'absolute',
                   right: '-20px',

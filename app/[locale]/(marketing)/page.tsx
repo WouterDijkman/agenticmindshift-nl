@@ -175,11 +175,11 @@ export default async function HomePage() {
               <p
                 style={{
                                     fontSize: 'clamp(1.125rem, 2vw, 1.5rem)',
-                  fontWeight: 700,
+                  fontWeight: 600,
                   color: 'var(--text-primary)',
                   letterSpacing: '-0.015em',
                   marginBottom: '6px',
-                  lineHeight: 1.2,
+                  lineHeight: 1.25,
                 }}
               >
                 {t('mid_cta.heading')}
@@ -312,9 +312,6 @@ export default async function HomePage() {
             >
               <p style={{ margin: 0 }}>
                 {t('stakes.body_1')}
-              </p>
-              <p style={{ margin: 0, fontStyle: 'italic', color: 'var(--text-muted)' }}>
-                {t('stakes.body_2')}
               </p>
               <p style={{ margin: 0, marginTop: '8px' }}>
                 {t('stakes.body_3')}
