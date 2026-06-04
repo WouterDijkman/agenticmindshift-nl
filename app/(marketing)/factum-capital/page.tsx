@@ -41,7 +41,7 @@ const MOMENTEN: {
     code: 'M2',
     title: 'Financiering',
     label: 'Financieringsmemo & onderbouwing',
-    body: 'Analytische onderbouwing voor bankgesprekken en investeerderspresentaties — ook voor kleinere financieringsaanvragen waarbij structuur het verschil maakt tussen toewijzing en afwijzing.',
+    body: 'Analytische onderbouwing voor bankgesprekken en investeerderspresentaties. Ook voor kleinere financieringsaanvragen waarbij structuur het verschil maakt tussen toewijzing en afwijzing.',
     advisors: 'Financieel adviseurs · Accountants',
     Icon: SketchReport,
   },
@@ -49,7 +49,7 @@ const MOMENTEN: {
     code: 'M3',
     title: 'Portefeuille-doorlichting',
     label: 'Doorlopend inzicht',
-    body: 'Periodieke doorlichting van uw bestaande deelnemingen op de zes dimensies. Vroegtijdige signalering van onderprestatie, AI-kwetsbaarheid en exit-obstakels — lang voor de jaarrapportage.',
+    body: 'Periodieke doorlichting van uw bestaande deelnemingen op de zes dimensies. Vroegtijdige signalering van onderprestatie, AI-kwetsbaarheid en exit-obstakels, lang voor de jaarrapportage.',
     advisors: 'Portfolio management · Bestuurders',
     Icon: SketchPortfolio,
   },
@@ -57,7 +57,7 @@ const MOMENTEN: {
     code: 'M4',
     title: 'Pre-IBR / WHOA',
     label: 'Indicatief · Herstructurering',
-    body: 'Bij eerste signalen van financiële stress: een indicatieve doorlichting die bepaalt of een IBR- of WHOA-traject aan de orde is — met directe koppeling naar gespecialiseerde restructuring consultants.',
+    body: 'Bij eerste signalen van financiële stress: een indicatieve doorlichting die bepaalt of een IBR- of WHOA-traject aan de orde is, met directe koppeling naar gespecialiseerde restructuring consultants.',
     advisors: 'Restructuring consultants · Advocaten',
     Icon: SketchWarning,
   },
@@ -71,7 +71,7 @@ export default function FactumCapitalPage() {
         bgCharSize="clamp(240px, 32vw, 480px)"
         eyebrow="Het platform achter onze AI Due Diligence-dienst"
         heading="Eén platform. Elke fase van uw deal- en portfoliopraktijk. Structureel."
-        subtext="Vier momenten — acquisitie, financiering, portfolio review en pre-IBR/WHOA — op één gedeeld dossier. Vanaf 1 juli 2026 ook als SaaS voor uw eigen team."
+        subtext="Vier momenten (acquisitie, financiering, portfolio review en pre-IBR/WHOA) op één gedeeld dossier. Vanaf 1 juli 2026 ook als SaaS voor uw eigen team."
         headingMaxWidth="900px"
       >
         {/* Launch stats strip */}
@@ -220,14 +220,14 @@ export default function FactumCapitalPage() {
             <div className="reveal" style={{ transitionDelay: '80ms' }}>
               <div style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", display: 'flex', flexDirection: 'column', gap: '20px', fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', lineHeight: 1.8, color: 'var(--text-secondary)' }}>
                 <p>
-                  Het <strong>platform</strong> &mdash; 23 modules van eerste IM-beoordeling tot
-                  verkoopgereedheid &mdash; geeft uw team consistente structuur op elk moment.
+                  Het <strong>platform</strong>, 23 modules van eerste IM-beoordeling tot
+                  verkoopgereedheid, geeft uw team consistente structuur op elk moment.
                   Vanaf 1 juli 2026 beschikbaar als SaaS.
                 </p>
                 <p>
                   De <strong>dienstverlening</strong> via Agentic Mindshift levert het volledige
                   analytisch fundament en koppelt gecertificeerde adviseurs: RA/RB/advocaten,
-                  financieel adviseurs, restructuring consultants. Eén gedeeld dossier &mdash;
+                  financieel adviseurs, restructuring consultants. Eén gedeeld dossier:
                   minder dubbel werk, kortere doorlooptijd.
                 </p>
               </div>
@@ -348,7 +348,7 @@ export default function FactumCapitalPage() {
                 {
                   n: '01',
                   title: 'Het Platform',
-                  label: 'SaaS — zelf in handen',
+                  label: 'SaaS: zelf in handen',
                   body: '23 modules die uw deal-team de structuur geven om alle vier momenten consistent uit te voeren. Van eerste IM-beoordeling tot verkoopgereedheid tot vroegtijdige herstructureringssignalering. Kennisopbouw die meegroeit.',
                   detail: 'Lancering 1 juli 2026 · Maandabonnement · Wachtlijst open',
                   link: null,
@@ -356,7 +356,7 @@ export default function FactumCapitalPage() {
                 {
                   n: '02',
                   title: 'De Dienstverlening',
-                  label: 'Via Agentic Mindshift — AI Due Diligence & Portfolio',
+                  label: 'Via Agentic Mindshift: AI Due Diligence & Portfolio',
                   body: 'Agentic Mindshift voert het volledige traject voor u uit, met Factum als analytisch platform. Op elk moment koppelt Agentic Mindshift de juiste gecertificeerde professionals die op het gedeelde dossier verder bouwen en waar nodig formeel tekenen.',
                   detail: 'Vanaf €10.000 investering per deal · Of €6.500 – €8.500 / maand portefeuille-inzicht · Excl. btw',
                   link: { href: '/werkwijze', label: 'Bekijk werkwijze & investering →' },
@@ -452,7 +452,7 @@ export default function FactumCapitalPage() {
                 {
                   step: '1',
                   title: 'Analytisch fundament',
-                  body: 'Agentic Mindshift doorlicht de situatie systematisch op alle relevante dimensies, met Factum als platform — afhankelijk van het moment: acquisitie, financiering, portfolio of herstructurering.',
+                  body: 'Agentic Mindshift doorlicht de situatie systematisch op alle relevante dimensies, met Factum als platform, afhankelijk van het moment: acquisitie, financiering, portfolio of herstructurering.',
                 },
                 {
                   step: '2',
@@ -543,9 +543,9 @@ export default function FactumCapitalPage() {
             {[
               { label: 'Tier-2 PE-fondsen', body: 'Deals €5M–€50M. Structuur op acquisitie, portfolio review en exit.' },
               { label: 'Family offices', body: 'DD-kwaliteit en bankpresentaties zonder een groot intern team.' },
-              { label: 'MKB-ondernemers', body: 'Financieringsaanvragen professioneel onderbouwd — ook bij kleinere bedragen.' },
+              { label: 'MKB-ondernemers', body: 'Financieringsaanvragen professioneel onderbouwd, ook bij kleinere bedragen.' },
               { label: "Buy-and-build ondernemers", body: 'De discipline van een professioneel deal-team, met adviseurs op afroep.' },
-              { label: 'M&A-directors', body: 'Kennisretentie over meerdere deals — elk dossier bouwt voort op het vorige.' },
+              { label: 'M&A-directors', body: 'Kennisretentie over meerdere deals: elk dossier bouwt voort op het vorige.' },
               { label: 'Financiers & herstructurering', body: 'Vroege signalering bij stress. Directe koppeling met restructuring consultants.' },
             ].map((item, i) => (
               <div

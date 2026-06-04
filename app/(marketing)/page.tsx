@@ -226,7 +226,7 @@ export default function HomePage() {
               </p>
               <div style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <p style={{ margin: 0 }}>IC-beslissingen op basis van gevoel en ervaring.</p>
-                <p style={{ margin: 0 }}>Maandrapportage als ritueel — geen sturingsinstrument.</p>
+                <p style={{ margin: 0 }}>Maandrapportage als ritueel, geen sturingsinstrument.</p>
                 <p style={{ margin: 0 }}>Deal-lessen verdwijnen bij elke teamwissel.</p>
                 <p style={{ margin: 0 }}>Het risico dat AI de kernactiviteit overneemt staat nergens op papier.</p>
               </div>
@@ -239,7 +239,7 @@ export default function HomePage() {
                 <p style={{ margin: 0 }}>Zes dimensies gekwantificeerd, vergeleken met vergelijkbare partijen.</p>
                 <p style={{ margin: 0 }}>Twee concrete aandachtspunten met de hoogste impact.</p>
                 <p style={{ margin: 0 }}>Een rapport dat u intern kunt delen zonder extra uitleg.</p>
-                <p style={{ margin: 0 }}>U gaat naar uw volgende IC met data — niet met een vermoeden.</p>
+                <p style={{ margin: 0 }}>U gaat naar uw volgende IC met data, niet met een vermoeden.</p>
               </div>
             </div>
           </div>
@@ -314,7 +314,7 @@ export default function HomePage() {
               </p>
               <p style={{ margin: 0, fontStyle: 'italic', color: 'var(--text-muted)' }}>
                 Het verschil tussen een onderbouwde en een ongecalibreerde overnameprijs?
-                Op een &euro;5M EBITDA-target al snel 0,5&times; &mdash; dat is &euro;2,5M.
+                Op een &euro;5M EBITDA-target al snel 0,5&times;: dat is &euro;2,5M.
               </p>
               <p style={{ margin: 0, marginTop: '8px' }}>
                 De Scorecard kost twaalf minuten. Niets doen kost kwartalen.
@@ -360,7 +360,7 @@ export default function HomePage() {
               lineHeight: 1.75,
             }}
           >
-            U gaat naar uw volgende IC-vergadering met data &mdash; niet met een gevoel.
+            U gaat naar uw volgende IC-vergadering met data, niet met een gevoel.
             Geen account. Geen verplichtingen. Uw rapport is direct beschikbaar.
           </p>
           <div className="cta-button-row" style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>

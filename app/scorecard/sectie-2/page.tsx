@@ -36,7 +36,7 @@ export default function Sectie2Page() {
       >
         <div style={{ display: 'flex', alignItems: 'baseline', gap: '16px', marginBottom: '16px' }}>
           <p className="eyebrow" style={{ marginBottom: 0 }}>Sectie 2 van 4</p>
-          <span style={{ fontSize: '0.8125rem', color: 'var(--accent-cta)', fontWeight: 500, letterSpacing: '0.01em' }}>Goed bezig — een kwart klaar.</span>
+          <span style={{ fontSize: '0.8125rem', color: 'var(--accent-cta)', fontWeight: 500, letterSpacing: '0.01em' }}>Goed bezig, een kwart klaar.</span>
         </div>
         <h1 className="type-h2" style={{ marginBottom: '16px' }}>Uw deal-cyclus</h1>
         <p
@@ -48,7 +48,7 @@ export default function Sectie2Page() {
             maxWidth: '560px',
           }}
         >
-          Doorlooptijd tot aan het IC, het risico dat AI de kernactiviteit overneemt, en uw oordeelsvorming — drie punten waar rendement weglekt. Deze sectie meet ze.
+          Doorlooptijd tot aan het IC, het risico dat AI de kernactiviteit overneemt, en uw oordeelsvorming: drie punten waar rendement weglekt. Deze sectie meet ze.
         </p>
       </div>
 

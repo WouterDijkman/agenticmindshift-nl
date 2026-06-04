@@ -31,7 +31,7 @@ export default function HomepageShowcaseSection() {
               }}
             >
               Elke dimensie krijgt een score, afgezet tegen het niveau van vergelijkbare
-              partijen. U ziet in één oogopslag waar u voorloopt — en welke twee punten
+              partijen. U ziet in één oogopslag waar u voorloopt en welke twee punten
               de meeste aandacht verdienen.
             </p>
 
@@ -39,7 +39,7 @@ export default function HomepageShowcaseSection() {
               {[
                 'Zes dimensies, elk gebenchmarkt tegen vergelijkbare fondsen',
                 'De twee aandachtspunten met de hoogste impact, uitgelicht',
-                'Direct deelbaar in uw IC — zonder extra toelichting',
+                'Direct deelbaar in uw IC, zonder extra toelichting',
               ].map((t) => (
                 <li key={t}>
                   <span aria-hidden="true" className="showcase-check">✓</span>

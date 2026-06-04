@@ -11,7 +11,7 @@ const PAINS: { code: string; label: string; title: string; body: string; feeling
     code: '01',
     label: 'Onzichtbaar risico',
     title: 'U neemt beslissingen op basis van wat u ziet.',
-    body: 'Het risico dat AI de kernactiviteit van uw target overneemt en klantconcentratie staan niet in het IM. Ze worden pas zichtbaar als de deal getekend is — of de portefeuille in stress zit.',
+    body: 'Het risico dat AI de kernactiviteit van uw target overneemt en klantconcentratie staan niet in het IM. Ze worden pas zichtbaar als de deal getekend is, of de portefeuille al in stress zit.',
     feeling: 'Dat nagende gevoel bij een IC-beslissing? Het klopt. Er is meer dan u ziet.',
     Icon: SketchEyeHidden,
   },
@@ -19,7 +19,7 @@ const PAINS: { code: string; label: string; title: string; body: string; feeling
     code: '02',
     label: 'Kennisretentie',
     title: 'Elke acquisitie begint opnieuw bij nul.',
-    body: 'De inzichten van de vorige deal verdwijnen met de dealmaker of in een map die niemand opent. Uw praktijk accumuleert deals — maar leert er niet van.',
+    body: 'De inzichten van de vorige deal verdwijnen met de dealmaker of in een map die niemand opent. Uw praktijk accumuleert deals maar leert er niet van.',
     feeling: 'U weet dat u dit eerder hebt uitgezocht. Maar niemand weet waar het staat.',
     Icon: SketchKnowledge,
   },
@@ -60,7 +60,7 @@ export default function HomepagePainSection() {
         >
           <p className="eyebrow" style={{ marginBottom: '16px' }}>Herkenbaar?</p>
           <h2 className="type-h2" style={{ maxWidth: '560px', margin: 0 }}>
-            Drie problemen die uw rendement kosten — zonder dat iemand ze benoemt.
+            Drie problemen die uw rendement kosten. Niemand benoemt ze.
           </h2>
           <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', color: 'var(--text-muted)', margin: 0, marginTop: '16px', maxWidth: '460px', lineHeight: 1.65, fontStyle: 'italic' }}>
             U zou geen investeringsbeslissing moeten nemen op basis van een incompleet beeld. Toch is dat de norm.

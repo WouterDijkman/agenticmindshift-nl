@@ -21,7 +21,7 @@ export default function ScorecardWelcomePage() {
         bgChar="15"
         bgCharSize="clamp(240px, 30vw, 440px)"
         eyebrow="Scorecard · Zes dimensies · Twaalf minuten"
-        heading="Waar lekt rendement weg — en wat ziet u over het hoofd?"
+        heading="Waar lekt rendement weg, en wat ziet u over het hoofd?"
         subtext="Vijftien vragen. Twaalf minuten. Een rapport dat uw blinde vlekken meetbaar maakt en vergelijkt met vergelijkbare partijen."
         containerClass="container-narrow"
         centered={true}
@@ -120,7 +120,7 @@ export default function ScorecardWelcomePage() {
             <div>
               <p className="eyebrow" style={{ marginBottom: '16px' }}>Wat u ontvangt</p>
               <h2 className="type-h2" style={{ marginBottom: '20px', maxWidth: '440px' }}>
-                Dit is uw rapport — direct na de laatste vraag.
+                Dit is uw rapport, direct na de laatste vraag.
               </h2>
               <p
                 style={{
@@ -133,7 +133,7 @@ export default function ScorecardWelcomePage() {
                 }}
               >
                 Zes dimensies, elk gescoord en afgezet tegen vergelijkbare partijen.
-                De twee punten met de hoogste impact worden uitgelicht — zodat u
+                De twee punten met de hoogste impact worden uitgelicht, zodat u
                 weet waar u als eerste op moet sturen.
               </p>
               <Button href="/scorecard/sectie-1" variant="primary" size="lg">
@@ -158,7 +158,7 @@ export default function ScorecardWelcomePage() {
               De kosten van uitstellen
             </p>
             <h2 className="type-h2" style={{ marginBottom: '20px' }}>
-              Twaalf minuten nu — of kwartalen onzekerheid later.
+              Twaalf minuten nu of kwartalen onzekerheid later.
             </h2>
             <p
               style={{
@@ -170,7 +170,7 @@ export default function ScorecardWelcomePage() {
               }}
             >
               Het verschil tussen een onderbouwde en een ongecalibreerde overnameprijs?
-              Op een €5M EBITDA-target al snel 0,5× — dat is <strong style={{ color: 'var(--text-primary)' }}>€2,5M</strong>.
+              Op een €5M EBITDA-target al snel 0,5×: dat is <strong style={{ color: 'var(--text-primary)' }}>€2,5M</strong>.
             </p>
             <p
               style={{

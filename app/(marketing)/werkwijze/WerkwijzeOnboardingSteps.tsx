@@ -8,7 +8,7 @@ const steps = [
   {
     n: '01',
     title: 'Scorecard of sparring',
-    body: 'U vult de Scorecard in (12 min) of plant een sparring-sessie van twintig minuten. Geen voorbereiding nodig — het gesprek of rapport brengt de relevante punten vanzelf naar boven.',
+    body: 'U vult de Scorecard in (12 min) of plant een sparring-sessie van twintig minuten. Geen voorbereiding nodig: het gesprek of rapport brengt de relevante punten vanzelf naar boven.',
   },
   {
     n: '02',
@@ -18,7 +18,7 @@ const steps = [
   {
     n: '03',
     title: 'Start binnen een week',
-    body: 'Na akkoord starten wij binnen zeven dagen. U ontvangt direct de eerste deliverable of wordt ingepland voor de eerste sessie — geen wachttijd.',
+    body: 'Na akkoord starten wij binnen zeven dagen. U ontvangt direct de eerste deliverable of wordt ingepland voor de eerste sessie. Geen wachttijd.',
   },
 ];
 

@@ -19,7 +19,7 @@ const TRACKS = [
     tag: 'Adviseur · RA / RB / M&A-professional',
     n: '02',
     title: 'Werk zelf met het platform.',
-    body: 'Factum Capital: 23 modules voor uw eigen deal-team. Van eerste IM-beoordeling tot verkoopklaar maken. SaaS vanaf 1 juli 2026 — vroege toegang is nu open.',
+    body: 'Factum Capital: 23 modules voor uw eigen deal-team. Van eerste IM-beoordeling tot verkoopklaar maken. SaaS vanaf 1 juli 2026. Vroege toegang is nu open.',
     detail: 'SaaS · maandabonnement · vroeg-toegangstarief bij lancering',
     cta: { label: 'Factum Capital vroege toegang', href: '/factum-capital', variant: 'secondary' as const },
     ctaSub: 'Lancering 1 juli 2026',
@@ -40,7 +40,7 @@ export default function HomepageFactumSection() {
         >
           <p className="eyebrow" style={{ marginBottom: '16px' }}>Twee routes</p>
           <h2 className="type-h2" style={{ maxWidth: '560px', margin: 0 }}>
-            Uitbesteden of zelf doen — in beide gevallen heeft u het fundament.
+            Uitbesteden of zelf doen: in beide gevallen heeft u het fundament.
           </h2>
         </motion.div>
 

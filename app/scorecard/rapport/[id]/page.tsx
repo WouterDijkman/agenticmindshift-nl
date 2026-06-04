@@ -109,7 +109,7 @@ export default function RapportPage() {
     return (
       <section className="container-wide py-12">
         <p className="eyebrow" style={{ marginBottom: '16px' }}>Persoonlijk rapport</p>
-        <h1 className="type-h1 mb-3">Beste {firstName} — uw aanpak valt op. Laten we het hebben over wat u doet dat anderen niet doen.</h1>
+        <h1 className="type-h1 mb-3">Beste {firstName}: uw aanpak valt op. Laten we het hebben over wat u doet dat anderen niet doen.</h1>
         <p className="mb-10 measure" style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", color: 'var(--text-secondary)', fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', lineHeight: 1.75 }}>
           U behoort tot de kleine groep PE-partners die al structureel meet wat de meesten
           pas achteraf zien. Dat is geen kleinigheid.
@@ -142,7 +142,7 @@ export default function RapportPage() {
             <p className="measure" style={{ color: 'var(--text-secondary)', lineHeight: 1.75 }}>
               Wat ik zou willen aanbieden, indien u dat interessant vindt, is een
               vertrouwelijk gesprek over wat u doet dat anderen niet doen. Niet als
-              verkoopgesprek &mdash; als peer-uitwisseling. Vrijwillig, geen agenda.
+              verkoopgesprek, als peer-uitwisseling. Vrijwillig, geen agenda.
             </p>
           </div>
         </div>
@@ -158,7 +158,7 @@ export default function RapportPage() {
         >
           <p className="eyebrow" style={{ marginBottom: '12px' }}>Volgende stap</p>
           <p className="mb-6 measure" style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", color: 'var(--text-secondary)', fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', lineHeight: 1.75 }}>
-            Stuur een bericht via LinkedIn als u wilt sparren over uw aanpak — als peer-uitwisseling, op uw initiatief.
+            Stuur een bericht via LinkedIn als u wilt sparren over uw aanpak, als peer-uitwisseling, op uw initiatief.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 no-print">
             <Button href="https://www.linkedin.com/in/wwdijkman/" variant="primary" size="lg" external>
@@ -210,7 +210,7 @@ export default function RapportPage() {
       <h1 className="type-h1 mb-3">Uw Deal & Portfolio Intelligence Rapport</h1>
       <p className="mb-2 measure" style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", color: 'var(--text-secondary)', fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', lineHeight: 1.75 }}>
         U beschikt nu over inzicht dat de meeste partijen pas krijgen op het moment dat
-        het al te laat is &mdash; bij de jaarrapportage, de afwijzing van de bank, of
+        het al te laat is: bij de jaarrapportage, de afwijzing van de bank, of
         de deal die net niet doorging. Hieronder leest u waar uw analytisch fundament
         sterk is, waar het weglekt, en welk Factum Capital moment het meest relevant is.
       </p>
@@ -242,7 +242,7 @@ export default function RapportPage() {
           </p>
           <p className="measure" style={{ color: 'var(--text-secondary)', lineHeight: 1.75 }}>
             Uw twee zwakste dimensies, hieronder gemarkeerd, zijn de meest waarschijnlijke
-            plekken waar rendement weglekt &mdash; niet door slecht beheer, maar door
+            plekken waar rendement weglekt, niet door slecht beheer, maar door
             ontbrekende instrumentatie.
           </p>
         </div>
@@ -310,7 +310,7 @@ export default function RapportPage() {
                 </span>
                 <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", color: 'var(--text-secondary)', fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', lineHeight: 1.7, margin: 0 }}>
                   <strong style={{ color: 'var(--text-primary)' }}>{iv.title}</strong>
-                  {' '}&mdash;{' '}
+                  {': '}
                   <span>{iv.body}</span>
                 </p>
               </li>

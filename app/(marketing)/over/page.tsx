@@ -75,7 +75,7 @@ export default function OverPage() {
                 <p>
                   Drie jaar financial restructuring, twee&euml;neenhalf jaar acquisition finance.
                   Beide kanten van de deal-tafel, Nederlandse mid-market. Die combinatie leert
-                  u precies waar de aannames niet uitkomen &mdash; en waar de maandrapportage
+                  u precies waar de aannames niet uitkomen, en waar de maandrapportage
                   onderprestatie maskeert in plaats van signaleert.
                 </p>
                 <p>
@@ -92,7 +92,7 @@ export default function OverPage() {
                 </p>
                 <p style={{ fontStyle: 'italic', color: 'var(--text-muted)' }}>
                   Eerste resultaat uit de praktijk: een overnameprijs-correctie van 0,4&times;
-                  op een buy-and-build deal &mdash; de investering in het rapport verdiende
+                  op een buy-and-build deal. De investering in het rapport verdiende
                   zichzelf meervoudig terug.
                 </p>
               </div>
@@ -132,11 +132,11 @@ export default function OverPage() {
             />
 
             {[
-              { year: '2017 — 2020', label: 'Financial Restructuring', sub: 'MKB- en mid-market portefeuilles in stress — intensive care & herstructurering', delay: 0, future: false },
-              { year: '2020 — 2023', label: 'Acquisition Finance', sub: 'LBO-financiering op Nederlandse PE-deals, mid-market 1–25M', delay: 60, future: false },
+              { year: '2017–2020', label: 'Financial Restructuring', sub: 'MKB- en mid-market portefeuilles in stress: intensive care & herstructurering', delay: 0, future: false },
+              { year: '2020–2023', label: 'Acquisition Finance', sub: 'LBO-financiering op Nederlandse PE-deals, mid-market 1–25M', delay: 60, future: false },
               { year: 'Oktober 2025', label: 'Oprichting Agentic Mindshift', sub: "AI-advies voor Nederlandse PE- en M&A-firma's", delay: 120, future: false },
-              { year: 'November 2025', label: 'AI for Business', sub: 'Nyenrode Business Universiteit — AI-toepassingen in financiële praktijk', delay: 180, future: false },
-              { year: '1 juli 2026', label: 'Lancering Factum Capital', sub: 'AI-platform voor M&A en herstructurering — 23 modules', delay: 240, future: true },
+              { year: 'November 2025', label: 'AI for Business', sub: 'Nyenrode Business Universiteit · AI-toepassingen in financiële praktijk', delay: 180, future: false },
+              { year: '1 juli 2026', label: 'Lancering Factum Capital', sub: 'AI-platform voor M&A en herstructurering · 23 modules', delay: 240, future: true },
             ].map((row) => (
               <div
                 key={row.year}
@@ -222,7 +222,7 @@ export default function OverPage() {
               marginBottom: '24px',
             }}
           >
-            Vier manieren om samen te werken — van een eenmalige sessie tot een embedded AI-rol.
+            Vier manieren om samen te werken, van een eenmalige sessie tot een embedded AI-rol.
           </p>
           <Button href="/werkwijze" variant="secondary" size="md">
             Bekijk werkwijze &amp; investering →

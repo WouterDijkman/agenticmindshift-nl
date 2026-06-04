@@ -16,11 +16,11 @@ type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacit
 
 const dimensions: { n: string; title: string; body: string; Icon: SketchIconComponent }[] = [
   { n: '01', title: 'Doorlooptijd', body: 'Hoeveel werkdagen verliest uw team tussen IM-ontvangst en een beslissingsrijp oordeel?', Icon: SketchSpeed },
-  { n: '02', title: 'Portefeuille-inzicht', body: 'Stuurt uw maandrapportage bij — of bevestigt ze achteraf wat u al vermoedde?', Icon: SketchPortfolio },
-  { n: '03', title: 'Oordeelsvorming', body: 'Hoeveel van uw analyse is data — en hoeveel is de relatie met management?', Icon: SketchScale },
+  { n: '02', title: 'Portefeuille-inzicht', body: 'Stuurt uw maandrapportage bij, of bevestigt ze achteraf wat u al vermoedde?', Icon: SketchPortfolio },
+  { n: '03', title: 'Oordeelsvorming', body: 'Hoeveel van uw analyse is data en hoeveel is de relatie met management?', Icon: SketchScale },
   { n: '04', title: 'AI-bestendigheid', body: 'Kan een AI-gedreven concurrent de kernactiviteit van uw deelneming overnemen?', Icon: SketchChip },
   { n: '05', title: 'Teamcapaciteit', body: 'Hoeveel deals laat uw team liggen door handmatig zoekwerk en rapportage?', Icon: SketchGear },
-  { n: '06', title: 'Kennisborging', body: 'Vertrekt uw associate — verdwijnt dan ook het geheugen van drie tot vijf dossiers?', Icon: SketchKnowledge },
+  { n: '06', title: 'Kennisborging', body: 'Vertrekt uw associate? Verdwijnt dan ook het geheugen van drie tot vijf dossiers?', Icon: SketchKnowledge },
 ];
 
 const containerVariants = {

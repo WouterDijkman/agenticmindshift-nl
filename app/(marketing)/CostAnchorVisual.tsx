@@ -19,7 +19,7 @@ const ROWS: Row[] = [
     note: '0,5× op een €5M EBITDA-target',
   },
   {
-    label: 'AI Due Diligence — per deal',
+    label: 'AI Due Diligence · per deal',
     amount: '€10.000',
     value: 0.04,
     tone: 'rust',

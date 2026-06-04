@@ -65,7 +65,7 @@ const offerings: Offering[] = [
     badge: 'Projectmatig of retainer',
     title: 'AI-advies & Implementatie',
     situation:
-      'U wilt AI concreet inzetten in uw processen, workflows of organisatie — met implementatie, masterclasses en teamtraining.',
+      'U wilt AI concreet inzetten in uw processen, workflows of organisatie, met implementatie, masterclasses en teamtraining.',
     price: 'Vanaf €4.500',
     priceNote: 'Per traject of doorlopend in retainer',
     ctaLabel: 'Bespreek uw vraagstuk →',
@@ -76,7 +76,7 @@ const offerings: Offering[] = [
     badge: 'Embedded · doorlopend',
     title: 'Fractional AI Officer',
     situation:
-      'U wilt een AI-leider op MT-niveau zonder fulltime aanstelling — strategie, leveranciersselectie en teamtraining geborgd.',
+      'U wilt een AI-leider op MT-niveau zonder fulltime aanstelling: strategie, leveranciersselectie en teamtraining geborgd.',
     price: '€3.500 – €5.500 / maand',
     priceNote: 'Minimaal 3 maanden · MT-deelname en operationele eigenaarschap',
     ctaLabel: 'Bespreek de fit →',
@@ -115,7 +115,7 @@ export default function WerkwijzePage() {
         bgChar="03"
         bgCharSize="clamp(240px, 30vw, 460px)"
         eyebrow="Werkwijze & Investering"
-        heading="Van €395 tot embedded AI-leiderschap — u kiest op basis van uw vraag."
+        heading="Van €395 tot embedded AI-leiderschap: u kiest op basis van uw vraag."
         subtext="Vier routes, vier situaties. Elke route begint met een vrijblijvend gesprek en eindigt met een concreet resultaat."
         headingMaxWidth="800px"
       />
@@ -143,7 +143,7 @@ export default function WerkwijzePage() {
                 marginBottom: '24px',
               }}
             >
-              Vier situaties, vier routes. U herkent uw vraag — of één gesprek volstaat om de juiste route te bevestigen.
+              Vier situaties, vier routes. U herkent uw vraag, of één gesprek volstaat om de juiste route te bevestigen.
             </p>
             {/* Guarantee strip */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 16px', background: 'var(--bg-secondary)', border: '1px solid var(--border-subtle)', borderLeft: '3px solid var(--accent-cta)' }}>
@@ -533,7 +533,7 @@ export default function WerkwijzePage() {
                 {
                   id: 'anders',
                   question: 'Wat maakt Agentic Mindshift anders?',
-                  answer: 'Deal-ervaring in acquisition finance én financial restructuring — niet een AI-generalist die toevallig PE-klanten heeft. De AI versterkt die praktijk; ze vervangt haar niet.',
+                  answer: 'Deal-ervaring in acquisition finance én financial restructuring: niet een AI-generalist die toevallig PE-klanten heeft. De AI versterkt die praktijk; ze vervangt haar niet.',
                 },
                 {
                   id: 'rendement',
@@ -543,7 +543,7 @@ export default function WerkwijzePage() {
                 {
                   id: 'looptijd',
                   question: 'Zitten we vast aan een lange looptijd?',
-                  answer: 'Sparring, Consultancy en DD zijn per opdracht. Fractional AI Officer: minimaal 3 maanden — omdat het ritme tijd nodig heeft.',
+                  answer: 'Sparring, Consultancy en DD zijn per opdracht. Fractional AI Officer: minimaal 3 maanden, omdat het ritme tijd nodig heeft.',
                 },
                 {
                   id: 'volume',

@@ -48,7 +48,7 @@ export default function Sectie1Page() {
             maxWidth: '560px',
           }}
         >
-          Hoe systematisch is uw analytische aanpak — bij deals, financiering en portfolio review?
+          Hoe systematisch is uw analytische aanpak, bij deals, financiering en portfolio review?
           Deze sectie brengt uw huidige positie in kaart.
         </p>
       </div>

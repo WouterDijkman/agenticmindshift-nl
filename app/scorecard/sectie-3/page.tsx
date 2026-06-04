@@ -48,7 +48,7 @@ export default function Sectie3Page() {
             maxWidth: '560px',
           }}
         >
-          Portefeuillerapportage, financieringsmemo&apos;s, vroegsignalering — kunt u op tijd bijsturen? Deze sectie meet de structuur achter uw informatie.
+          Portefeuillerapportage, financieringsmemo&apos;s, vroegsignalering: kunt u op tijd bijsturen? Deze sectie meet de structuur achter uw informatie.
         </p>
       </div>
 

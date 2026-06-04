@@ -6,7 +6,7 @@ const CREDS: { value: string; label: string; sub: string }[] = [
   { value: '6 jaar', label: 'Deal-ervaring', sub: 'Acquisition finance & financial restructuring' },
   { value: 'Twee kanten', label: 'Van de deal-tafel', sub: 'Financiering én herstructurering meegemaakt' },
   { value: '€1–25M', label: 'Mid-market focus', sub: 'Nederlandse PE- en M&A-dealgrootte' },
-  { value: '23 modules', label: 'Eigen AI-platform', sub: 'Factum Capital — lancering 1 juli 2026' },
+  { value: '23 modules', label: 'Eigen AI-platform', sub: 'Factum Capital · lancering 1 juli 2026' },
 ];
 
 const container = {

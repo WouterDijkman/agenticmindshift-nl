@@ -142,7 +142,7 @@ export default function AnimatedHero() {
         >
           Uw maandrapportage maskeert onderprestatie. Uw deal-team herhaalt vermijdbare fouten.
           En het risico dat AI de kernactiviteit overneemt staat in geen enkel IC-voorstel.
-          De Scorecard brengt alle zes dimensies in kaart — in twaalf minuten.
+          De Scorecard brengt alle zes dimensies in kaart. In twaalf minuten.
         </motion.p>
 
         {/* CTA */}

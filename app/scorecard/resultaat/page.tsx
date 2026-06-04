@@ -100,7 +100,7 @@ export default function ResultaatPage() {
           U ziet nu wat de meeste partners pas bij de jaarrapportage zien.
         </h1>
         <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, maxWidth: '520px' }}>
-          Vul uw gegevens in om het volledige rapport te ontvangen — direct in uw browser
+          Vul uw gegevens in om het volledige rapport te ontvangen, direct in uw browser
           én als PDF in uw inbox.
         </p>
       </div>

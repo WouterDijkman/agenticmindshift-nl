@@ -16,7 +16,7 @@ const steps: { n: string; title: string; body: string; Icon: SketchIconComponent
   {
     n: '02',
     title: 'Ontvang uw rapport',
-    body: 'Score op zes dimensies, twee prioritaire aandachtspunten en een concreet vervolgvoorstel — direct na afronding.',
+    body: 'Score op zes dimensies, twee prioritaire aandachtspunten en een concreet vervolgvoorstel. Direct na afronding.',
     Icon: SketchReport,
   },
   {

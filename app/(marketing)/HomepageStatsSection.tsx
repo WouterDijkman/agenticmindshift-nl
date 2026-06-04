@@ -10,14 +10,14 @@ const stats = [
     decimals: 1,
     suffix: '×',
     label: 'EBITDA-multiple',
-    sub: 'potentieel rendementsverlies per portfoliobedrijf — op een €5M EBITDA-target is dat €2,5M',
+    sub: 'potentieel rendementsverlies per portfoliobedrijf. Op een €5M EBITDA-target is dat €2,5M',
   },
   {
     value: 3,
     decimals: 0,
     suffix: '',
     label: 'werkdagen',
-    sub: 'per maandrapportage kwijt aan handmatige dataconsolidatie — tijd die niet naar deals gaat',
+    sub: 'per maandrapportage kwijt aan handmatige dataconsolidatie. Tijd die niet naar deals gaat',
   },
   {
     value: 12,
