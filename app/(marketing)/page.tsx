@@ -138,7 +138,7 @@ export default function HomePage() {
             ))}
           </div>
           <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '12px', textAlign: 'right', letterSpacing: '0.04em' }}>
-            * Resultaten zijn geanonimiseerd weergegeven.
+            Betreffen daadwerkelijke opdrachten · namen geanonimiseerd op verzoek van cliënt.
           </p>
         </div>
       </section>

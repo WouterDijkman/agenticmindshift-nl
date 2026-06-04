@@ -19,7 +19,7 @@ export default function ContactPage() {
         bgChar="C"
         eyebrow="Contact"
         heading="Begin met een vraag. Niet met een commitment."
-        subtext="Start met de scorecard voor direct inzicht, of plant een gesprek als u liever eerst even sparrt. U stelt de agenda."
+        subtext="Start met de Scorecard voor direct inzicht, of plan een vrijblijvend gesprek van twintig minuten. U stelt de agenda."
         headingMaxWidth="720px"
       />
 

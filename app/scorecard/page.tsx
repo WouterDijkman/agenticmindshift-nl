@@ -147,6 +147,89 @@ export default function ScorecardWelcomePage() {
           </div>
         </div>
       </section>
+
+      <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
+
+      {/* Kosten van niets doen — stakes */}
+      <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(56px, 7vw, 80px)' }}>
+        <div className="container-medium">
+          <div className="reveal" style={{ maxWidth: '640px' }}>
+            <p className="eyebrow" style={{ marginBottom: '16px', color: 'var(--text-muted)' }}>
+              De kosten van uitstellen
+            </p>
+            <h2 className="type-h2" style={{ marginBottom: '20px' }}>
+              Twaalf minuten nu — of kwartalen onzekerheid later.
+            </h2>
+            <p
+              style={{
+                fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
+                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
+                color: 'var(--text-secondary)',
+                lineHeight: 1.75,
+                marginBottom: '8px',
+              }}
+            >
+              Het verschil tussen een onderbouwde en een ongecalibreerde overnameprijs?
+              Op een €5M EBITDA-target al snel 0,5× — dat is <strong style={{ color: 'var(--text-primary)' }}>€2,5M</strong>.
+            </p>
+            <p
+              style={{
+                fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
+                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
+                color: 'var(--text-muted)',
+                lineHeight: 1.75,
+                fontStyle: 'italic',
+              }}
+            >
+              De Scorecard is gratis. Geen account. Uw rapport is direct beschikbaar.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section
+        className="grain-overlay"
+        style={{
+          background: 'var(--accent-primary)',
+          paddingBlock: 'clamp(64px, 9vw, 112px)',
+          position: 'relative',
+          overflow: 'hidden',
+        }}
+      >
+        <div className="container-medium reveal" style={{ textAlign: 'center', position: 'relative' }}>
+          <p className="eyebrow" style={{ marginBottom: '24px', color: 'rgba(247,242,235,0.5)' }}>
+            Uw volgende stap
+          </p>
+          <h2
+            className="type-h2"
+            style={{ color: 'var(--text-inverse)', marginBottom: '16px', maxWidth: '560px', marginInline: 'auto' }}
+          >
+            Over twaalf minuten weet u exact waar uw portefeuille kwetsbaar is.
+          </h2>
+          <p
+            style={{
+              fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
+              fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
+              color: 'rgba(247,242,235,0.55)',
+              marginBottom: '44px',
+              maxWidth: '420px',
+              marginInline: 'auto',
+              lineHeight: 1.75,
+            }}
+          >
+            Geen account. Geen verplichtingen. Rapport direct na afronding.
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>
+            <Button href="/scorecard/sectie-1" variant="primary" size="lg">
+              Start de Scorecard
+            </Button>
+            <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
+              Liever een gesprek?
+            </Button>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

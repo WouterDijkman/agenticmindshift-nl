@@ -115,8 +115,8 @@ export default function WerkwijzePage() {
         bgChar="03"
         bgCharSize="clamp(240px, 30vw, 460px)"
         eyebrow="Werkwijze & Investering"
-        heading="Vier routes — u kiest op basis van uw situatie"
-        subtext="Van een eenmalige Sparring Sessie (€395) tot embedded AI-leiderschap. Elke route begint met een duidelijk moment en een concreet resultaat."
+        heading="Van €395 tot embedded AI-leiderschap — u kiest op basis van uw vraag."
+        subtext="Vier routes, vier situaties. Elke route begint met een vrijblijvend gesprek en eindigt met een concreet resultaat."
         headingMaxWidth="800px"
       />
 
@@ -140,10 +140,18 @@ export default function WerkwijzePage() {
                 fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
                 color: 'var(--text-secondary)',
                 lineHeight: 1.75,
+                marginBottom: '24px',
               }}
             >
               Vier situaties, vier routes. U herkent uw vraag — of één gesprek volstaat om de juiste route te bevestigen.
             </p>
+            {/* Guarantee strip */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 16px', background: 'var(--bg-secondary)', border: '1px solid var(--border-subtle)', borderLeft: '3px solid var(--accent-cta)' }}>
+              <span style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: 'var(--accent-cta)', flexShrink: 0 }}>Garantie</span>
+              <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.55, margin: 0 }}>
+                De Scorecard is gratis. Elk kennismakingsgesprek is vrijblijvend. Bij de Sparring Sessie: geen bruikbaar inzicht? Geen factuur.
+              </p>
+            </div>
           </div>
 
           <div

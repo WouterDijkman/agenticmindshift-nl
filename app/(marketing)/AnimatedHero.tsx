@@ -7,7 +7,7 @@ import SketchCrosshair from '@/components/icons/SketchCrosshair';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-const HEADING = 'U mist rendement dat er al is — en het kost u meer dan u denkt.';
+const HEADING = 'Eén blinde vlek in uw portfolio kost u gemiddeld €2,5M. De Scorecard vindt hem in twaalf minuten.';
 
 export default function AnimatedHero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -140,9 +140,9 @@ export default function AnimatedHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.95, ease }}
         >
-          Uw deal-team herhaalt vermijdbare fouten, uw maandrapportage maskeert
-          onderprestatie, en het risico dat AI de kernactiviteit overneemt staat
-          in geen enkel IC-voorstel. De Scorecard maakt het zichtbaar — in twaalf minuten.
+          Uw maandrapportage maskeert onderprestatie. Uw deal-team herhaalt vermijdbare fouten.
+          En het risico dat AI de kernactiviteit overneemt staat in geen enkel IC-voorstel.
+          De Scorecard brengt alle zes dimensies in kaart — in twaalf minuten.
         </motion.p>
 
         {/* CTA */}
@@ -171,7 +171,7 @@ export default function AnimatedHero() {
                 paddingBlock: '8px',
               }}
             >
-              Bekijk de werkwijze <span style={{ color: 'var(--accent-cta)' }}>→</span>
+              Werkwijze & tarieven <span style={{ color: 'var(--accent-cta)' }}>→</span>
             </a>
           </div>
           <p
