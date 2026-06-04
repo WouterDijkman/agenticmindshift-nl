@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import Button from '@/components/ui/Button';
+import { Link } from '@/i18n/navigation';
 import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
 import JsonLd from '@/components/JsonLd';
 import { serviceLd } from '@/lib/jsonld';
 import ScorecardSectionCards from './ScorecardSectionCards';
 import ScorecardReportMockup from '@/components/ScorecardReportMockup';
+import Button from '@/components/ui/Button';
 
 export const metadata: Metadata = {
   title: 'Scorecard — Zes dimensies, twaalf minuten',

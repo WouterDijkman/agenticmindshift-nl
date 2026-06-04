@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { Link } from '@/i18n/navigation';
+import { useRouter } from '@/i18n/navigation';
 import { useAssessmentStore } from '@/store/assessmentStore';
 import { questionsBySection } from '@/lib/questions';
 import QuestionCard from '@/components/scorecard/QuestionCard';

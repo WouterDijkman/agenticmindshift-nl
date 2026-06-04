@@ -119,5 +119,53 @@
   "factum_capital": {
     "title": "Factum Capital",
     "description": "KI-gestützte Due Diligence für niederländische PE."
+  },
+  "scorecard": {
+    "landing": {
+      "eyebrow": "Scorecard · Sechs Dimensionen · Zwölf Minuten",
+      "heading": "Wo geht Rendite verloren, und was übersehen Sie?",
+      "subtext": "Fünfzehn Fragen. Zwölf Minuten. Ein Bericht, der Ihre blinden Flecken messbar macht und mit vergleichbaren Unternehmen benchmarkt.",
+      "start_cta": "Scorecard starten",
+      "no_account": "Kein Konto erforderlich. Ihre Antworten werden zwischenzeitlich gespeichert.",
+      "trust": "Bereits ausgefüllt von PE-Partnern, M&A-Direktoren und Family Offices im niederländischen Mid-Market.",
+      "confidentiality_title": "Vertraulichkeit",
+      "confidentiality_body": "Ihre Antworten werden ausschließlich zur Erstellung Ihres Berichts verwendet. Sie können anonym ausfüllen, falls Sie das wünschen."
+    },
+    "navigation": {
+      "back_to_start": "← Zurück zum Start",
+      "next_section_2": "Weiter zu Abschnitt 2",
+      "next_section_3": "Weiter zu Abschnitt 3",
+      "next_section_4": "Weiter zu Abschnitt 4",
+      "to_results": "Zu meinen Ergebnissen",
+      "answer_all": "Beantworten Sie alle vier Fragen, um fortzufahren."
+    },
+    "resultaat": {
+      "eyebrow": "Scorecard abgeschlossen",
+      "heading": "Sie sehen jetzt, was die meisten Partner erst beim Jahresbericht sehen.",
+      "subtext": "Geben Sie Ihre Daten ein, um den vollständigen Bericht zu erhalten — direkt in Ihrem Browser und als PDF in Ihrem Posteingang.",
+      "incomplete_eyebrow": "Scorecard unvollständig",
+      "incomplete_heading": "Noch {remaining} {questions} verbleibend",
+      "incomplete_body": "Sie haben {answered} von {total} Fragen beantwortet. Füllen Sie die Scorecard vollständig aus, um Ihren persönlichen Bericht zu erstellen.",
+      "back_to_scorecard": "Zurück zur Scorecard",
+      "report_contents_eyebrow": "Was enthält Ihr Bericht?",
+      "report_item_1": "Gesamtpunktzahl mit Kommentar je Dimension",
+      "report_item_2": "Sechs-Dimensionen-Übersicht mit Peer-Benchmark",
+      "report_item_3": "Ihre zwei schwächsten Dimensionen mit konkreter Analyse",
+      "report_item_4": "Empfohlener nächster Schritt auf Basis Ihrer Antworten",
+      "report_item_5": "Persönlicher Link + PDF in Ihrem Posteingang",
+      "form_heading": "Wohin soll ich Ihren Bericht senden?",
+      "field_name": "Name",
+      "field_email": "Geschäftliche E-Mail-Adresse",
+      "field_company": "Unternehmen",
+      "field_jobtitle": "Berufsbezeichnung (optional)",
+      "field_phone": "Telefon (optional)",
+      "submit_button": "Meinen Bericht anzeigen",
+      "submit_loading": "Bericht wird erstellt...",
+      "privacy_notice": "Mit dem Klicken stimmen Sie unserer Datenschutzerklärung zu. Sie erhalten zwei Folge-E-Mails (Tag 3 und 7). Danach nichts mehr.",
+      "privacy_link": "Datenschutzerklärung",
+      "error_generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut.",
+      "error_create": "Wir konnten Ihren Bericht nicht erstellen. Bitte überprüfen Sie die Felder und versuchen Sie es erneut.",
+      "score_caption": "Der vollständige Bericht zeigt Ihre Punktzahl je Dimension mit Peer-Vergleich."
+    }
   }
 }

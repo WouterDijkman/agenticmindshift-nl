@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useEffect, useState } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useAssessmentStore } from '@/store/assessmentStore';
 import { calculateScores, determineOffer } from '@/lib/scoring';
 import {
@@ -181,9 +181,9 @@ export default function RapportPage() {
             <Link href="/werkwijze" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
               Bekijk alle trajecten →
             </Link>
-            <Link href="https://www.linkedin.com/in/wwdijkman/" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }} target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/wwdijkman/" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }} target="_blank" rel="noopener noreferrer">
               Verbind op LinkedIn →
-            </Link>
+            </a>
           </div>
           <div className="mt-6 flex justify-center no-print">
             <Button variant="secondary" size="md" onClick={() => window.print()}>
@@ -369,9 +369,9 @@ export default function RapportPage() {
           <Link href="/werkwijze" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
             Bekijk alle trajecten →
           </Link>
-          <Link href="https://cal.com/wwdijkman/intake-call" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
+          <a href="https://cal.com/wwdijkman/intake-call" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
             Plan een vrijblijvende kennismaking →
-          </Link>
+          </a>
           <Link href="/contact" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
             Bespreek uw situatie →
           </Link>

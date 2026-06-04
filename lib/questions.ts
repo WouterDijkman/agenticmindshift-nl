@@ -264,3 +264,23 @@ export const getQuestion = (id: string): Question | undefined =>
   questions.find((q) => q.id === id);
 
 export const totalQuestions = questions.length;
+
+// ── Localised helpers ──────────────────────────────────────────────────────────
+
+import { questionTranslations } from './questions.locales';
+
+export function getLocalizedQuestions(locale: string): Question[] {
+  const translations = questionTranslations[locale] ?? questionTranslations['nl'];
+  return questions.map((q) => ({
+    ...q,
+    text: translations[q.id]?.text ?? q.text,
+    options: q.options.map((opt) => ({
+      ...opt,
+      label: translations[q.id]?.options[opt.letter] ?? opt.label,
+    })),
+  }));
+}
+
+export function getLocalizedQuestionsBySection(locale: string, section: 1 | 2 | 3 | 4): Question[] {
+  return getLocalizedQuestions(locale).filter((q) => q.section === section);
+}
