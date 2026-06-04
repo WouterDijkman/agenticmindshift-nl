@@ -72,11 +72,11 @@ export default function HomepageStepsSection() {
                 <h3
                   style={{
                                         fontSize: '1.1875rem',
-                    fontWeight: 700,
+                    fontWeight: 600,
                     color: 'var(--text-primary)',
                     letterSpacing: '-0.01em',
-                    marginBottom: '12px',
-                    lineHeight: 1.2,
+                    marginBottom: '14px',
+                    lineHeight: 1.25,
                   }}
                 >
                   {t(`title_${s.i}`)}
