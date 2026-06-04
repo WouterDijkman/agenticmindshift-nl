@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server';
 import Button from '@/components/ui/Button';
 import AnimatedHero from './AnimatedHero';
 import HomepageStatsSection from './HomepageStatsSection';
@@ -9,32 +10,38 @@ import HomepageFactumSection from './HomepageFactumSection';
 import CostAnchorVisual from './CostAnchorVisual';
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
 import JsonLd from '@/components/JsonLd';
-import { faqItems } from '@/lib/faq';
-import { organizationLd, personLd, serviceLd, faqLd } from '@/lib/jsonld';
+import { getLocalizedFaqItems } from '@/lib/faq';
+import { organizationLd, personLd, serviceLd, getFaqLd } from '@/lib/jsonld';
 
-const accordionItems: AccordionItem[] = faqItems.map((f) => {
-  // Override 'wie' answer to include a link to /over
-  if (f.id === 'wie') {
-    return {
-      id: f.id,
-      question: f.question,
-      answer: (
-        <>
-          {f.answer.replace(' Meer op de Over-pagina.', ' ')}
-          <a
-            href="/over"
-            style={{ color: 'var(--accent-cta)', fontWeight: 500, whiteSpace: 'nowrap' }}
-          >
-            Meer op de Over-pagina →
-          </a>
-        </>
-      ),
-    };
-  }
-  return { id: f.id, question: f.question, answer: f.answer };
-});
+export default async function HomePage() {
+  const t = await getTranslations('homepage');
+  const tFaq = await getTranslations('homepage.faqItems');
 
-export default function HomePage() {
+  const faqItems = getLocalizedFaqItems(tFaq);
+  const faqLd = getFaqLd(faqItems);
+
+  const accordionItems: AccordionItem[] = faqItems.map((f) => {
+    // Override 'wie' answer to include a link to /over
+    if (f.id === 'wie') {
+      return {
+        id: f.id,
+        question: f.question,
+        answer: (
+          <>
+            {f.answer}{' '}
+            <a
+              href="/over"
+              style={{ color: 'var(--accent-cta)', fontWeight: 500, whiteSpace: 'nowrap' }}
+            >
+              {tFaq('wie_link')}
+            </a>
+          </>
+        ),
+      };
+    }
+    return { id: f.id, question: f.question, answer: f.answer };
+  });
+
   return (
     <>
       <JsonLd data={organizationLd} />
@@ -72,8 +79,8 @@ export default function HomePage() {
       <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(64px, 8vw, 96px)' }}>
         <div className="container-medium">
           <div className="reveal" style={{ marginBottom: '32px' }}>
-            <p className="eyebrow" style={{ marginBottom: '16px' }}>Resultaten</p>
-            <h2 className="type-h2" style={{ margin: 0, maxWidth: '480px' }}>Wat anderen al ontdekten.</h2>
+            <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('social_proof.eyebrow')}</p>
+            <h2 className="type-h2" style={{ margin: 0, maxWidth: '480px' }}>{t('social_proof.heading')}</h2>
           </div>
           <div
             className="reveal social-proof-grid"
@@ -87,19 +94,19 @@ export default function HomePage() {
           >
             {[
               {
-                quote: '"Twee van de zes dimensies lagen ver onder het niveau van vergelijkbare partijen — dat was ons nooit eerder zo expliciet gemaakt."',
-                who: 'PE-partner, Nederlandse lower-mid market fund',
-                aum: '~€120M AUM',
+                quote: t('social_proof.quote_1'),
+                who: t('social_proof.who_1'),
+                aum: t('social_proof.aum_1'),
               },
               {
-                quote: '"Overnameprijs 0,4× naar beneden bijgesteld op basis van de AI-analyse. Het rapport kostte €10.000 — die aanpassing bespaarde ons een veelvoud."',
-                who: 'M&A-director, buy-and-build platform',
-                aum: '4 acquisities per jaar',
+                quote: t('social_proof.quote_2'),
+                who: t('social_proof.who_2'),
+                aum: t('social_proof.aum_2'),
               },
               {
-                quote: '"We dachten dat onze maandrapportage op orde was. De Scorecard liet in twaalf minuten zien dat drie van de zes dimensies onder het niveau van vergelijkbare fondsen lagen. Dat gesprek hadden we intern nooit gevoerd."',
-                who: 'CFO, familiekantoor met 8 deelnemingen',
-                aum: '€40M–€60M onder beheer',
+                quote: t('social_proof.quote_3'),
+                who: t('social_proof.who_3'),
+                aum: t('social_proof.aum_3'),
               },
             ].map((item, i) => (
               <div
@@ -137,7 +144,7 @@ export default function HomePage() {
             ))}
           </div>
           <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '12px', textAlign: 'right', letterSpacing: '0.04em' }}>
-            Betreffen daadwerkelijke opdrachten · namen geanonimiseerd op verzoek van cliënt.
+            {t('social_proof.disclaimer')}
           </p>
         </div>
       </section>
@@ -175,14 +182,14 @@ export default function HomePage() {
                   lineHeight: 1.2,
                 }}
               >
-                Twaalf minuten. Zes dimensies. Direct inzicht.
+                {t('mid_cta.heading')}
               </p>
               <p style={{ fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)', color: 'var(--text-muted)', margin: 0 }}>
-                Multiple choice. Geen account. Rapport direct na afronding.
+                {t('mid_cta.subtext')}
               </p>
             </div>
             <Button href="/scorecard" variant="primary" size="lg">
-              Start de Scorecard
+              {t('mid_cta.cta')}
             </Button>
           </div>
         </div>
@@ -203,9 +210,9 @@ export default function HomePage() {
       <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(64px, 9vw, 96px)' }}>
         <div className="container-medium">
           <div className="reveal" style={{ marginBottom: '40px' }}>
-            <p className="eyebrow" style={{ marginBottom: '16px' }}>Het verschil</p>
+            <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('transformation.eyebrow')}</p>
             <h2 className="type-h2" style={{ margin: 0, maxWidth: '520px' }}>
-              Van onderbuik naar onderbouwing.
+              {t('transformation.heading')}
             </h2>
           </div>
           <div
@@ -220,24 +227,24 @@ export default function HomePage() {
           >
             <div style={{ background: 'var(--bg-primary)', padding: 'clamp(28px, 4vw, 44px)' }}>
               <p style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '20px' }}>
-                Zonder de Scorecard
+                {t('transformation.without_label')}
               </p>
               <div style={{ fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <p style={{ margin: 0 }}>IC-beslissingen op basis van gevoel en ervaring.</p>
-                <p style={{ margin: 0 }}>Maandrapportage als ritueel, geen sturingsinstrument.</p>
-                <p style={{ margin: 0 }}>Deal-lessen verdwijnen bij elke teamwissel.</p>
-                <p style={{ margin: 0 }}>Het risico dat AI de kernactiviteit overneemt staat nergens op papier.</p>
+                <p style={{ margin: 0 }}>{t('transformation.without_1')}</p>
+                <p style={{ margin: 0 }}>{t('transformation.without_2')}</p>
+                <p style={{ margin: 0 }}>{t('transformation.without_3')}</p>
+                <p style={{ margin: 0 }}>{t('transformation.without_4')}</p>
               </div>
             </div>
             <div style={{ background: 'var(--bg-primary)', padding: 'clamp(28px, 4vw, 44px)', borderLeft: '3px solid var(--accent-cta)' }}>
               <p style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--accent-cta)', marginBottom: '20px' }}>
-                Na de Scorecard
+                {t('transformation.with_label')}
               </p>
               <div style={{ fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <p style={{ margin: 0 }}>Zes dimensies gekwantificeerd, vergeleken met vergelijkbare partijen.</p>
-                <p style={{ margin: 0 }}>Twee concrete aandachtspunten met de hoogste impact.</p>
-                <p style={{ margin: 0 }}>Een rapport dat u intern kunt delen zonder extra uitleg.</p>
-                <p style={{ margin: 0 }}>U gaat naar uw volgende IC met data, niet met een vermoeden.</p>
+                <p style={{ margin: 0 }}>{t('transformation.with_1')}</p>
+                <p style={{ margin: 0 }}>{t('transformation.with_2')}</p>
+                <p style={{ margin: 0 }}>{t('transformation.with_3')}</p>
+                <p style={{ margin: 0 }}>{t('transformation.with_4')}</p>
               </div>
             </div>
           </div>
@@ -254,9 +261,9 @@ export default function HomePage() {
           <div className="faq-grid">
             {/* Left: sticky heading */}
             <div className="reveal faq-sticky">
-              <p className="eyebrow" style={{ marginBottom: '20px' }}>Vragen</p>
+              <p className="eyebrow" style={{ marginBottom: '20px' }}>{t('faq.eyebrow')}</p>
               <h2 className="type-h2" style={{ marginBottom: '20px' }}>
-                Eerlijk antwoord op de vragen die u nu hebt.
+                {t('faq.heading')}
               </h2>
               <p style={{
                                 fontSize: 'clamp(1rem, 1.6vw, 1.125rem)',
@@ -265,10 +272,10 @@ export default function HomePage() {
                 maxWidth: '280px',
                 marginBottom: '36px',
               }}>
-                Geen verkooppraatjes. Directe antwoorden.
+                {t('faq.subtext')}
               </p>
               <Button href="/scorecard" variant="primary" size="md">
-                Start de Scorecard
+                {t('faq.cta')}
               </Button>
             </div>
             {/* Right: accordion */}
@@ -288,10 +295,10 @@ export default function HomePage() {
         <div className="container-medium">
           <div className="reveal" style={{ maxWidth: '640px' }}>
             <p className="eyebrow" style={{ marginBottom: '16px', color: 'var(--text-muted)' }}>
-              De kosten van niets doen
+              {t('stakes.eyebrow')}
             </p>
             <h2 className="type-h2" style={{ marginBottom: '20px' }}>
-              Elk kwartaal zonder meting kost u meer dan de meting zelf.
+              {t('stakes.heading')}
             </h2>
             <div
               style={{
@@ -304,16 +311,13 @@ export default function HomePage() {
               }}
             >
               <p style={{ margin: 0 }}>
-                Zonder structurele meting blijft het risico dat AI de kernactiviteit overneemt een blinde vlek in uw overnameprijs.
-                Blijft uw maandrapportage een ritueel in plaats van een sturingsinstrument.
-                Verdwijnt elke deal-les met de volgende teamwissel.
+                {t('stakes.body_1')}
               </p>
               <p style={{ margin: 0, fontStyle: 'italic', color: 'var(--text-muted)' }}>
-                Het verschil tussen een onderbouwde en een ongecalibreerde overnameprijs?
-                Op een &euro;5M EBITDA-target al snel 0,5&times;: dat is &euro;2,5M.
+                {t('stakes.body_2')}
               </p>
               <p style={{ margin: 0, marginTop: '8px' }}>
-                De Scorecard kost twaalf minuten. Niets doen kost kwartalen.
+                {t('stakes.body_3')}
               </p>
             </div>
             <CostAnchorVisual />
@@ -337,13 +341,13 @@ export default function HomePage() {
       >
         <div className="container-medium reveal" style={{ textAlign: 'center', position: 'relative' }}>
           <p className="eyebrow" style={{ marginBottom: '28px', color: 'rgba(247,242,235,0.5)' }}>
-            Uw volgende stap
+            {t('final_cta.eyebrow')}
           </p>
           <h2
             className="type-h2"
             style={{ color: 'var(--text-inverse)', marginBottom: '16px', maxWidth: '600px', marginInline: 'auto' }}
           >
-            Over twaalf minuten weet u exact waar uw portefeuille kwetsbaar is.
+            {t('final_cta.heading')}
           </h2>
           <p
             style={{
@@ -355,15 +359,14 @@ export default function HomePage() {
               lineHeight: 1.75,
             }}
           >
-            U gaat naar uw volgende IC-vergadering met data, niet met een gevoel.
-            Geen account. Geen verplichtingen. Uw rapport is direct beschikbaar.
+            {t('final_cta.subtext')}
           </p>
           <div className="cta-button-row" style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>
             <Button href="/scorecard" variant="primary" size="lg">
-              Start de Scorecard
+              {t('final_cta.cta_primary')}
             </Button>
             <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
-              Plan een vrijblijvende kennismaking
+              {t('final_cta.cta_secondary')}
             </Button>
           </div>
         </div>

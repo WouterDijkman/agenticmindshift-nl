@@ -1,4 +1,4 @@
-import { faqItems } from './faq';
+import type { FaqItem } from './faq';
 
 const SITE_URL = 'https://www.agenticmindshift.nl';
 
@@ -47,10 +47,10 @@ export const serviceLd = {
     "Een 12-minuten assessment op zes dimensies voor Nederlandse PE-fondsen, M&A-kantoren en ondernemers in de mid-market.",
 };
 
-export const faqLd = {
+export const getFaqLd = (items: FaqItem[]) => ({
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: faqItems.map((item) => ({
+  mainEntity: items.map((item) => ({
     '@type': 'Question',
     name: item.question,
     acceptedAnswer: {
@@ -58,4 +58,4 @@ export const faqLd = {
       text: item.answer,
     },
   })),
-};
+});

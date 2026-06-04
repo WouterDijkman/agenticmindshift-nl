@@ -3,18 +3,20 @@
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import Button from '@/components/ui/Button';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const navLinks = [
-  { href: '/scorecard', label: 'Scorecard', badge: null },
-  { href: '/werkwijze', label: 'Werkwijze', badge: null },
-  { href: '/over', label: 'Over', badge: null },
-  { href: '/factum-capital', label: 'Factum Capital', badge: 'juli' },
-  { href: '/contact', label: 'Contact', badge: null },
-];
+  { href: '/scorecard', labelKey: 'scorecard', badged: false },
+  { href: '/werkwijze', labelKey: 'werkwijze', badged: false },
+  { href: '/over', labelKey: 'over', badged: false },
+  { href: '/factum-capital', labelKey: 'factum_capital', badged: true },
+  { href: '/contact', labelKey: 'contact', badged: false },
+] as const;
 
 export default function Header() {
+  const t = useTranslations('nav');
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -74,8 +76,8 @@ export default function Header() {
                 letterSpacing: '0.01em',
               }}
             >
-              {l.label}
-              {l.badge && (
+              {t(l.labelKey)}
+              {l.badged && (
                 <span
                   style={{
                     fontSize: '8px',
@@ -89,7 +91,7 @@ export default function Header() {
                     opacity: 0.75,
                   }}
                 >
-                  {l.badge}
+                  {t('badge_july')}
                 </span>
               )}
             </Link>
@@ -99,13 +101,13 @@ export default function Header() {
         <div className="hidden lg:flex items-center gap-4">
           <LanguageSwitcher />
           <Button href="/scorecard" variant="primary" size="md">
-            Start de Scorecard
+            {t('start_scorecard')}
           </Button>
         </div>
 
         <button
           type="button"
-          aria-label={mobileOpen ? 'Sluit menu' : 'Open menu'}
+          aria-label={mobileOpen ? t('close_menu') : t('open_menu')}
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((v) => !v)}
           className="lg:hidden p-2 min-h-[44px] min-w-[44px] flex flex-col items-center justify-center"
@@ -164,14 +166,14 @@ export default function Header() {
         className={`lg:hidden drawer-panel ${mobileOpen ? 'open' : ''}`}
         aria-hidden={!mobileOpen}
         role="dialog"
-        aria-label="Hoofdmenu"
+        aria-label={t('main_menu')}
       >
         <div className="p-6 flex flex-col gap-5 h-full">
           <div className="flex items-center justify-between">
             <Image src="/logo.png" alt="Agentic Mindshift" width={2448} height={1632} style={{ height: '48px', width: 'auto' }} />
             <button
               type="button"
-              aria-label="Sluit menu"
+              aria-label={t('close_menu')}
               onClick={() => setMobileOpen(false)}
               className="min-h-[44px] min-w-[44px]"
               style={{
@@ -183,7 +185,7 @@ export default function Header() {
                 fontSize: '0.875rem',
               }}
             >
-              Sluit
+              {t('close')}
             </button>
           </div>
           <nav className="flex flex-col gap-1 mt-4">
@@ -195,14 +197,14 @@ export default function Header() {
                 className="nav-link min-h-[44px] inline-flex items-center"
                 style={{ fontSize: '1rem', color: 'var(--text-secondary)' }}
               >
-                {l.label}
+                {t(l.labelKey)}
               </Link>
             ))}
           </nav>
           <div className="mt-auto flex flex-col gap-4">
             <LanguageSwitcher />
             <Button href="/scorecard" variant="primary" size="lg" className="w-full">
-              Start de Scorecard
+              {t('start_scorecard')}
             </Button>
           </div>
         </div>

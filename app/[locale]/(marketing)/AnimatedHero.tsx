@@ -2,14 +2,14 @@
 
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import Button from '@/components/ui/Button';
 import SketchCrosshair from '@/components/icons/SketchCrosshair';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-const HEADING = 'Eén blinde vlek in uw portfolio kost u gemiddeld €2,5M. De Scorecard vindt hem in twaalf minuten.';
-
 export default function AnimatedHero() {
+  const t = useTranslations('homepage.hero');
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -102,7 +102,7 @@ export default function AnimatedHero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: 0.38, ease }}
           >
-            Voor PE-partners, M&A-directors en family offices
+            {t('eyebrow')}
           </motion.p>
         </div>
 
@@ -120,7 +120,7 @@ export default function AnimatedHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.5, ease }}
         >
-          {HEADING}
+          {t('heading')}
         </motion.h1>
 
         {/* Subkop */}
@@ -138,9 +138,7 @@ export default function AnimatedHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.95, ease }}
         >
-          Uw maandrapportage maskeert onderprestatie. Uw deal-team herhaalt vermijdbare fouten.
-          En het risico dat AI de kernactiviteit overneemt staat in geen enkel IC-voorstel.
-          De Scorecard brengt alle zes dimensies in kaart. In twaalf minuten.
+          {t('subtext')}
         </motion.p>
 
         {/* CTA */}
@@ -152,7 +150,7 @@ export default function AnimatedHero() {
         >
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
             <Button href="/scorecard" variant="primary" size="lg">
-              Start de Scorecard
+              {t('cta_primary')}
             </Button>
             <a
               href="/werkwijze"
@@ -168,7 +166,7 @@ export default function AnimatedHero() {
                 paddingBlock: '8px',
               }}
             >
-              Werkwijze & tarieven <span style={{ color: 'var(--accent-cta)' }}>→</span>
+              {t('cta_secondary')} <span style={{ color: 'var(--accent-cta)' }}>→</span>
             </a>
           </div>
           <p
@@ -181,7 +179,7 @@ export default function AnimatedHero() {
               lineHeight: 1.2,
             }}
           >
-            12 minuten · 6 dimensies · geen account nodig · 100% vertrouwelijk
+            {t('trust')}
           </p>
         </motion.div>
       </div>

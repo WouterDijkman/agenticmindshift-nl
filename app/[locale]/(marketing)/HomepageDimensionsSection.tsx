@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import type { ComponentType } from 'react';
+import { useTranslations } from 'next-intl';
 import {
   SketchSpeed,
   SketchPortfolio,
@@ -14,13 +15,13 @@ import DimensionRadar from '@/components/DimensionRadar';
 
 type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
 
-const dimensions: { n: string; title: string; body: string; Icon: SketchIconComponent }[] = [
-  { n: '01', title: 'Doorlooptijd', body: 'Hoeveel werkdagen verliest uw team tussen IM-ontvangst en een beslissingsrijp oordeel?', Icon: SketchSpeed },
-  { n: '02', title: 'Portefeuille-inzicht', body: 'Stuurt uw maandrapportage bij, of bevestigt ze achteraf wat u al vermoedde?', Icon: SketchPortfolio },
-  { n: '03', title: 'Oordeelsvorming', body: 'Hoeveel van uw analyse is data en hoeveel is de relatie met management?', Icon: SketchScale },
-  { n: '04', title: 'AI-bestendigheid', body: 'Kan een AI-gedreven concurrent de kernactiviteit van uw deelneming overnemen?', Icon: SketchChip },
-  { n: '05', title: 'Teamcapaciteit', body: 'Hoeveel deals laat uw team liggen door handmatig zoekwerk en rapportage?', Icon: SketchGear },
-  { n: '06', title: 'Kennisborging', body: 'Vertrekt uw associate? Verdwijnt dan ook het geheugen van drie tot vijf dossiers?', Icon: SketchKnowledge },
+const DIMENSION_META: { n: string; i: 1 | 2 | 3 | 4 | 5 | 6; Icon: SketchIconComponent }[] = [
+  { n: '01', i: 1, Icon: SketchSpeed },
+  { n: '02', i: 2, Icon: SketchPortfolio },
+  { n: '03', i: 3, Icon: SketchScale },
+  { n: '04', i: 4, Icon: SketchChip },
+  { n: '05', i: 5, Icon: SketchGear },
+  { n: '06', i: 6, Icon: SketchKnowledge },
 ];
 
 const containerVariants = {
@@ -43,6 +44,7 @@ const headingVariants = {
 };
 
 export default function HomepageDimensionsSection() {
+  const t = useTranslations('homepage.dimensions');
   return (
     <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(80px, 11vw, 136px)' }}>
       <div className="container-medium">
@@ -55,10 +57,10 @@ export default function HomepageDimensionsSection() {
           viewport={{ once: true, amount: 0.4 }}
         >
           <div>
-            <p className="eyebrow" style={{ marginBottom: '16px' }}>Zes dimensies</p>
-            <h2 className="type-h2" style={{ marginBottom: '16px' }}>De zes plekken waar rendement weglekt.</h2>
+            <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('eyebrow')}</p>
+            <h2 className="type-h2" style={{ marginBottom: '16px' }}>{t('heading')}</h2>
             <p style={{ fontSize: 'clamp(1.0625rem, 1.6vw, 1.125rem)', color: 'var(--text-muted)', margin: 0, maxWidth: '440px', lineHeight: 1.65 }}>
-              De Scorecard meet elk van deze dimensies en vergelijkt uw profiel met vergelijkbare partijen.
+              {t('subheading')}
             </p>
           </div>
           <div className="dim-radar-wrap">
@@ -66,11 +68,11 @@ export default function HomepageDimensionsSection() {
             <div className="dim-radar-legend">
               <span className="dim-radar-legend-item">
                 <span className="dim-radar-swatch" style={{ background: 'var(--accent-cta)' }} />
-                Voorbeeldprofiel
+                {t('legend_example')}
               </span>
               <span className="dim-radar-legend-item">
                 <span className="dim-radar-swatch dim-radar-swatch--peer" />
-                Vergelijkbare partijen
+                {t('legend_peer')}
               </span>
             </div>
           </div>
@@ -90,7 +92,7 @@ export default function HomepageDimensionsSection() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
         >
-          {dimensions.map((d) => (
+          {DIMENSION_META.map((d) => (
             <motion.div
               key={d.n}
               className="dim-card"
@@ -145,7 +147,7 @@ export default function HomepageDimensionsSection() {
                   lineHeight: 1.2,
                 }}
               >
-                {d.title}
+                {t(`title_${d.i}`)}
               </p>
               <p
                 style={{
@@ -156,7 +158,7 @@ export default function HomepageDimensionsSection() {
                   flex: 1,
                 }}
               >
-                {d.body}
+                {t(`body_${d.i}`)}
               </p>
               <p
                 className="dim-card-cta"
@@ -170,7 +172,7 @@ export default function HomepageDimensionsSection() {
                   letterSpacing: '0.02em',
                 }}
               >
-                Meet deze dimensie →
+                {t('card_cta')}
               </p>
             </motion.div>
           ))}

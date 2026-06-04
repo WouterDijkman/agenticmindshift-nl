@@ -2,31 +2,17 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import Button from '@/components/ui/Button';
 import FactumModulesMockup from '@/components/FactumModulesMockup';
 
-const TRACKS = [
-  {
-    tag: 'Deal-doer · PE / Family office / Ondernemer',
-    n: '01',
-    title: 'Laat het voor u doen.',
-    body: 'Wij leveren het volledige AI Due Diligence & Portfolio-traject op uw dossier. De scorecard bepaalt welk moment als eerste relevant is.',
-    detail: 'Vanaf €10.000 per deal · of €6.500–€8.500/mnd portefeuille-inzicht · excl. btw',
-    cta: { label: 'Start de Scorecard', href: '/scorecard', variant: 'primary' as const },
-    ctaSub: '12 minuten · direct uw profiel',
-  },
-  {
-    tag: 'Adviseur · RA / RB / M&A-professional',
-    n: '02',
-    title: 'Werk zelf met het platform.',
-    body: 'Factum Capital: 29 modules voor uw eigen deal-team. Van Financial DD en AI Due Diligence tot LBO-modellering en exit readiness. SaaS vanaf 1 juli 2026. Vroege toegang is nu open.',
-    detail: 'SaaS · maandabonnement · vroeg-toegangstarief bij lancering',
-    cta: { label: 'Factum Capital vroege toegang', href: '/factum-capital', variant: 'secondary' as const },
-    ctaSub: 'Lancering 1 juli 2026',
-  },
-];
+const TRACK_META = [
+  { n: '01', key: 'track_1', href: '/scorecard', variant: 'primary' as const },
+  { n: '02', key: 'track_2', href: '/factum-capital', variant: 'secondary' as const },
+] as const;
 
 export default function HomepageFactumSection() {
+  const t = useTranslations('homepage.factum');
   return (
     <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(80px, 11vw, 136px)' }}>
       <div className="container-medium">
@@ -38,9 +24,9 @@ export default function HomepageFactumSection() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="eyebrow" style={{ marginBottom: '16px' }}>Twee routes</p>
+          <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('eyebrow')}</p>
           <h2 className="type-h2" style={{ maxWidth: '560px', margin: 0 }}>
-            Uitbesteden of zelf doen: in beide gevallen heeft u het fundament.
+            {t('heading')}
           </h2>
         </motion.div>
 
@@ -55,9 +41,9 @@ export default function HomepageFactumSection() {
             marginBottom: '48px',
           }}
         >
-          {TRACKS.map((t, i) => (
+          {TRACK_META.map((track, i) => (
             <motion.div
-              key={t.n}
+              key={track.n}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
@@ -82,7 +68,7 @@ export default function HomepageFactumSection() {
                   opacity: 0.8,
                 }}
               >
-                {t.tag}
+                {t(`${track.key}_tag`)}
               </p>
 
               {/* Number */}
@@ -97,7 +83,7 @@ export default function HomepageFactumSection() {
                   opacity: 0.9,
                 }}
               >
-                {t.n}
+                {track.n}
               </p>
 
               {/* Title */}
@@ -111,7 +97,7 @@ export default function HomepageFactumSection() {
                   marginBottom: '20px',
                 }}
               >
-                {t.title}
+                {t(`${track.key}_title`)}
               </h3>
 
               {/* Body */}
@@ -124,7 +110,7 @@ export default function HomepageFactumSection() {
                   flexGrow: 1,
                 }}
               >
-                {t.body}
+                {t(`${track.key}_body`)}
               </p>
 
               {/* Detail */}
@@ -139,13 +125,13 @@ export default function HomepageFactumSection() {
                   marginBottom: '24px',
                 }}
               >
-                {t.detail}
+                {t(`${track.key}_detail`)}
               </p>
 
               {/* CTA */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'flex-start' }}>
-                <Button href={t.cta.href} variant={t.cta.variant} size="md">
-                  {t.cta.label}
+                <Button href={track.href} variant={track.variant} size="md">
+                  {t(`${track.key}_cta`)}
                 </Button>
                 <p
                   style={{
@@ -155,7 +141,7 @@ export default function HomepageFactumSection() {
                     margin: 0,
                   }}
                 >
-                  {t.ctaSub}
+                  {t(`${track.key}_cta_sub`)}
                 </p>
               </div>
             </motion.div>
@@ -206,7 +192,7 @@ export default function HomepageFactumSection() {
                 color: 'var(--accent-cta)',
               }}
             >
-              POWERED BY
+              {t('powered_by')}
             </span>
             <span
               style={{
@@ -227,7 +213,7 @@ export default function HomepageFactumSection() {
               marginTop: '10px',
             }}
           >
-            Het AI-platform achter de AI Due Diligence &amp; Portfolio-dienstverlening · lancering 1 juli 2026
+            {t('attribution')}
           </p>
         </motion.div>
       </div>
