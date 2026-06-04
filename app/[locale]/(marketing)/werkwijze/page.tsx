@@ -531,7 +531,7 @@ export default function WerkwijzePage() {
                 {
                   id: 'rendement',
                   question: 'Hoe weet ik of de investering rendeert?',
-                  answer: 'Eén correctie van 0,5× op de overnameprijs bij een €5M EBITDA-target dekt de DD-kosten 200×. Eén tijdig gesignaleerde afwijking in de maandrapportage dekt de jaarkosten van doorlopend portefeuille-inzicht.',
+                  answer: 'Eén correctie van 0,5× op de overnameprijs bij een €5M EBITDA-target is €2,5M: dat dekt de DD-kosten 250×. Eén tijdig gesignaleerde afwijking in de maandrapportage dekt de jaarkosten van doorlopend portefeuille-inzicht.',
                 },
                 {
                   id: 'looptijd',

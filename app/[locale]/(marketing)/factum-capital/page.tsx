@@ -86,7 +86,7 @@ export default function FactumCapitalPage() {
           }}
         >
           {[
-            { label: '23', sub: 'modules totaal' },
+            { label: '29', sub: 'modules totaal' },
             { label: '4', sub: 'dienst-momenten' },
             { label: '1 juli', sub: 'livegang' },
           ].map((c, i) => (

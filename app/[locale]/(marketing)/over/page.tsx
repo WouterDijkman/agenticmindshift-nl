@@ -71,7 +71,7 @@ export default function OverPage() {
                 }}
               >
                 <p>
-                  Drie jaar financial restructuring, twee&euml;neenhalf jaar acquisition finance.
+                  Drie jaar financial restructuring, drie jaar acquisition finance.
                   Beide kanten van de deal-tafel, Nederlandse mid-market. Die combinatie leert
                   u precies waar de aannames niet uitkomen, en waar de maandrapportage
                   onderprestatie maskeert in plaats van signaleert.
