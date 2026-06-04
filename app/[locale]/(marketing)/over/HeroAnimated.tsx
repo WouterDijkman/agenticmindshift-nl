@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 const WORDS = 'Wouter Dijkman'.split(' ');
@@ -14,6 +15,7 @@ export default function HeroAnimated() {
   });
   const rawY = useTransform(scrollYProgress, [0, 1], [0, -90]);
   const parallaxY = useSpring(rawY, { stiffness: 60, damping: 20, mass: 0.6 });
+  const t = useTranslations('over');
 
   return (
     <section
@@ -81,7 +83,7 @@ export default function HeroAnimated() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: 0.38, ease }}
           >
-            De adviseur
+            {t('hero.eyebrow')}
           </motion.p>
         </div>
 
@@ -121,7 +123,7 @@ export default function HeroAnimated() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.85, ease }}
         >
-          Founder Agentic Mindshift &amp; Factum Capital
+          {t('hero.role')}
         </motion.p>
 
         {/* Subtext */}
@@ -137,9 +139,7 @@ export default function HeroAnimated() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.68, delay: 1.05, ease }}
         >
-          Zes jaar aan beide kanten van de Nederlandse deal-tafel. Die praktijkervaring
-          vertaalt zich naar meetbaar portefeuille-inzicht voor PE-partners die rendement
-          willen borgen vóórdat de jaarcijfers het bevestigen.
+          {t('hero.subtext')}
         </motion.p>
       </div>
 

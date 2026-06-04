@@ -3,12 +3,14 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useTranslations } from 'next-intl';
 import { earlyAccessSchema, type EarlyAccessInput } from '@/lib/schemas';
 import { Input, Select, Textarea } from '@/components/ui/Input';
 import Button from '@/components/ui/Button';
 import { submitEarlyAccess } from '@/app/actions/submitEarlyAccess';
 
 export default function EarlyAccessForm() {
+  const t = useTranslations('factum_capital');
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
@@ -30,10 +32,10 @@ export default function EarlyAccessForm() {
       if (res.ok) {
         setSubmitted(true);
       } else {
-        setServerError('Niet alle gegevens zijn geldig. Controleer de velden.');
+        setServerError(t('form.error_invalid'));
       }
     } catch {
-      setServerError('Er ging iets mis. Probeer het later nog eens.');
+      setServerError(t('form.error_generic'));
     } finally {
       setSubmitting(false);
     }
@@ -50,8 +52,7 @@ export default function EarlyAccessForm() {
         }}
       >
         <p className="text-lg" style={{ color: 'var(--text-primary)' }}>
-          Bedankt. Uw gegevens zijn ontvangen. U hoort van ons zodra het early-access-
-          traject opent.
+          {t('form.success')}
         </p>
       </div>
     );
@@ -60,43 +61,43 @@ export default function EarlyAccessForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5" noValidate>
       <Input
-        label="Naam"
+        label={t('form.field_name')}
         type="text"
         autoComplete="name"
         {...register('name')}
         error={errors.name?.message}
       />
       <Input
-        label="E-mailadres"
+        label={t('form.field_email')}
         type="email"
         autoComplete="email"
         {...register('email')}
         error={errors.email?.message}
       />
       <Input
-        label="Bedrijf"
+        label={t('form.field_company')}
         type="text"
         autoComplete="organization"
         {...register('company')}
         error={errors.company?.message}
       />
       <Input
-        label="Functietitel (optioneel)"
+        label={t('form.field_jobtitle')}
         type="text"
         autoComplete="organization-title"
         {...register('jobTitle')}
         error={errors.jobTitle?.message}
       />
-      <Select label="Type partij" {...register('partyType')} error={errors.partyType?.message}>
-        <option value="PE-partner">PE-partner</option>
-        <option value="M&A-director">M&amp;A-director</option>
-        <option value="Ondernemer">Ondernemer</option>
-        <option value="Restructuring-specialist">Restructuring-specialist</option>
-        <option value="Anders">Anders</option>
+      <Select label={t('form.field_partytype')} {...register('partyType')} error={errors.partyType?.message}>
+        <option value="PE-partner">{t('form.option_pe')}</option>
+        <option value="M&A-director">{t('form.option_ma')}</option>
+        <option value="Ondernemer">{t('form.option_entrepreneur')}</option>
+        <option value="Restructuring-specialist">{t('form.option_restructuring')}</option>
+        <option value="Anders">{t('form.option_other')}</option>
       </Select>
       <Textarea
-        label="Toelichting (optioneel)"
-        placeholder="Wat is voor u de belangrijkste reden om vroeg toegang te willen?"
+        label={t('form.field_notes')}
+        placeholder={t('form.notes_placeholder')}
         {...register('notes')}
         error={errors.notes?.message}
       />
@@ -106,10 +107,10 @@ export default function EarlyAccessForm() {
         </p>
       )}
       <Button type="submit" variant="primary" size="lg" disabled={submitting}>
-        {submitting ? 'Versturen...' : 'Vraag vroege toegang aan'}
+        {submitting ? t('form.submitting') : t('form.submit')}
       </Button>
       <p className="text-xs" style={{ color: 'var(--text-muted)' }}>
-        Uw gegevens worden alleen gebruikt voor het Factum Capital early-access-traject.
+        {t('form.privacy_note')}
       </p>
     </form>
   );

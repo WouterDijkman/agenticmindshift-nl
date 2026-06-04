@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import type { ComponentType } from 'react';
-import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import Button from '@/components/ui/Button';
 import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
 import {
@@ -15,63 +16,114 @@ import FactumModulesGrid from './FactumModulesGrid';
 
 type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
 
-export const metadata: Metadata = {
-  title: 'Factum Capital — AI-platform achter de AI Due Diligence & Portfolio-dienstverlening',
-  description:
-    'Factum Capital is het AI-platform achter de AI Due Diligence & Portfolio-dienstverlening van Agentic Mindshift. Vier momenten: acquisitie, financiering, portfolio review en pre-IBR/WHOA. SaaS-toegang (lancering 1 juli 2026) of volledig uitbesteden via Agentic Mindshift.',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('factum_capital');
+  return {
+    title: t('meta_title'),
+    description: t('meta_description'),
+  };
+}
 
-const MOMENTEN: {
-  code: string;
-  title: string;
-  label: string;
-  body: string;
-  advisors: string;
-  Icon: SketchIconComponent;
-}[] = [
-  {
-    code: 'M1',
-    title: 'Acquisitie',
-    label: 'Buy-side deal-analyse',
-    body: 'Van eerste beoordeling van het informatiememorandum tot closing: een uitgebreid analytisch fundament op alle relevante dimensies. Gecertificeerde adviseurs (RA/RB/advocaten) voor formele sign-off waar vereist.',
-    advisors: 'RA · RB · Advocaten',
-    Icon: SketchDueDiligence,
-  },
-  {
-    code: 'M2',
-    title: 'Financiering',
-    label: 'Financieringsmemo & onderbouwing',
-    body: 'Analytische onderbouwing voor bankgesprekken en investeerderspresentaties. Ook voor kleinere financieringsaanvragen waarbij structuur het verschil maakt tussen toewijzing en afwijzing.',
-    advisors: 'Financieel adviseurs · Accountants',
-    Icon: SketchReport,
-  },
-  {
-    code: 'M3',
-    title: 'Portefeuille-doorlichting',
-    label: 'Doorlopend inzicht',
-    body: 'Periodieke doorlichting van uw bestaande deelnemingen op de zes dimensies. Vroegtijdige signalering van onderprestatie, AI-kwetsbaarheid en exit-obstakels, lang voor de jaarrapportage.',
-    advisors: 'Portfolio management · Bestuurders',
-    Icon: SketchPortfolio,
-  },
-  {
-    code: 'M4',
-    title: 'Pre-IBR / WHOA',
-    label: 'Indicatief · Herstructurering',
-    body: 'Bij eerste signalen van financiële stress: een indicatieve doorlichting die bepaalt of een IBR- of WHOA-traject aan de orde is, met directe koppeling naar gespecialiseerde restructuring consultants.',
-    advisors: 'Restructuring consultants · Advocaten',
-    Icon: SketchWarning,
-  },
-];
+export default async function FactumCapitalPage() {
+  const t = await getTranslations('factum_capital');
 
-export default function FactumCapitalPage() {
+  const MOMENTEN: {
+    code: string;
+    title: string;
+    label: string;
+    body: string;
+    advisors: string;
+    Icon: SketchIconComponent;
+  }[] = [
+    {
+      code: 'M1',
+      title: t('momenten.m1_title'),
+      label: t('momenten.m1_label'),
+      body: t('momenten.m1_body'),
+      advisors: t('momenten.m1_advisors'),
+      Icon: SketchDueDiligence,
+    },
+    {
+      code: 'M2',
+      title: t('momenten.m2_title'),
+      label: t('momenten.m2_label'),
+      body: t('momenten.m2_body'),
+      advisors: t('momenten.m2_advisors'),
+      Icon: SketchReport,
+    },
+    {
+      code: 'M3',
+      title: t('momenten.m3_title'),
+      label: t('momenten.m3_label'),
+      body: t('momenten.m3_body'),
+      advisors: t('momenten.m3_advisors'),
+      Icon: SketchPortfolio,
+    },
+    {
+      code: 'M4',
+      title: t('momenten.m4_title'),
+      label: t('momenten.m4_label'),
+      body: t('momenten.m4_body'),
+      advisors: t('momenten.m4_advisors'),
+      Icon: SketchWarning,
+    },
+  ];
+
+  const problemItems = [
+    { label: t('problem.item_1_label'), body: t('problem.item_1_body') },
+    { label: t('problem.item_2_label'), body: t('problem.item_2_body') },
+    { label: t('problem.item_3_label'), body: t('problem.item_3_body') },
+  ];
+
+  const twoRoutes = [
+    {
+      n: '01',
+      title: t('two_routes.route_1_title'),
+      label: t('two_routes.route_1_label'),
+      body: t('two_routes.route_1_body'),
+      detail: t('two_routes.route_1_detail'),
+      link: null,
+    },
+    {
+      n: '02',
+      title: t('two_routes.route_2_title'),
+      label: t('two_routes.route_2_label'),
+      body: t('two_routes.route_2_body'),
+      detail: t('two_routes.route_2_detail'),
+      link: { href: '/werkwijze', label: t('two_routes.route_2_link') },
+    },
+  ] as const;
+
+  const howItWorksSteps = [
+    { step: '1', title: t('how_it_works.step_1_title'), body: t('how_it_works.step_1_body') },
+    { step: '2', title: t('how_it_works.step_2_title'), body: t('how_it_works.step_2_body') },
+    { step: '3', title: t('how_it_works.step_3_title'), body: t('how_it_works.step_3_body') },
+  ];
+
+  const voorWieItems = [
+    { label: t('voor_wie.item_1_label'), body: t('voor_wie.item_1_body') },
+    { label: t('voor_wie.item_2_label'), body: t('voor_wie.item_2_body') },
+    { label: t('voor_wie.item_3_label'), body: t('voor_wie.item_3_body') },
+    { label: t('voor_wie.item_4_label'), body: t('voor_wie.item_4_body') },
+    { label: t('voor_wie.item_5_label'), body: t('voor_wie.item_5_body') },
+    { label: t('voor_wie.item_6_label'), body: t('voor_wie.item_6_body') },
+  ];
+
+  const earlyAccessBenefits = [
+    t('early_access.benefit_1'),
+    t('early_access.benefit_2'),
+    t('early_access.benefit_3'),
+    t('early_access.benefit_4'),
+  ];
+
   return (
     <>
       <AnimatedHeroShell
         bgChar="FC"
         bgCharSize="clamp(240px, 32vw, 480px)"
-        eyebrow="Het platform achter onze AI Due Diligence-dienst"
-        heading="Eén platform voor elke fase van uw deal‑ en portfoliopraktijk."
-        subtext="Vier momenten (acquisitie, financiering, portfolio review en pre-IBR/WHOA) op één gedeeld dossier. Vanaf 1 juli 2026 ook als SaaS voor uw eigen team."
+        eyebrow={t('hero.eyebrow')}
+        heading={t('hero.heading')}
+        subtext={t('hero.subtext')}
         headingMaxWidth="900px"
       >
         {/* Launch stats strip */}
@@ -86,9 +138,9 @@ export default function FactumCapitalPage() {
           }}
         >
           {[
-            { label: '29', sub: 'modules totaal' },
-            { label: '4', sub: 'dienst-momenten' },
-            { label: '1 juli', sub: 'livegang' },
+            { label: '29', sub: t('hero.stat_1_sub') },
+            { label: '4', sub: t('hero.stat_2_sub') },
+            { label: '1 juli', sub: t('hero.stat_3_sub') },
           ].map((c, i) => (
             <div
               key={c.label}
@@ -103,7 +155,7 @@ export default function FactumCapitalPage() {
             >
               <span
                 style={{
-                                    fontWeight: 700,
+                  fontWeight: 700,
                   color: 'var(--text-primary)',
                   lineHeight: 1,
                 }}
@@ -128,7 +180,7 @@ export default function FactumCapitalPage() {
 
         <div style={{ marginTop: '8px' }}>
           <p style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '8px' }}>
-            Lancering over
+            {t('hero.countdown_label')}
           </p>
           <CountdownTimer />
         </div>
@@ -146,11 +198,7 @@ export default function FactumCapitalPage() {
               background: 'rgba(247,242,235,0.06)',
             }}
           >
-            {[
-              { label: 'Elke situatie opnieuw', body: 'Elk moment begint bij nul. Geen gedeelde structuur, geen hergebruik van het vorige dossier.' },
-              { label: 'Adviseurs te laat', body: 'Gecertificeerde adviseurs komen pas als het dossier al vol aannames zit. Dubbel werk, hogere kosten.' },
-              { label: 'Stress te laat zichtbaar', body: 'IBR- of WHOA-signalen worden pas zichtbaar als de opties beperkt zijn.' },
-            ].map((item, i) => (
+            {problemItems.map((item, i) => (
               <div
                 key={item.label}
                 style={{
@@ -160,7 +208,7 @@ export default function FactumCapitalPage() {
               >
                 <p
                   style={{
-                                        fontSize: '1rem',
+                    fontSize: '1rem',
                     fontWeight: 700,
                     color: 'var(--accent-cta)',
                     marginBottom: '8px',
@@ -190,7 +238,7 @@ export default function FactumCapitalPage() {
             }}
           >
             <div className="reveal">
-              <p className="eyebrow" style={{ marginBottom: '28px' }}>Het systeem</p>
+              <p className="eyebrow" style={{ marginBottom: '28px' }}>{t('description.eyebrow')}</p>
               <blockquote
                 style={{
                   margin: 0,
@@ -200,7 +248,7 @@ export default function FactumCapitalPage() {
               >
                 <p
                   style={{
-                                        fontSize: 'clamp(1.25rem, 2.5vw, 1.875rem)',
+                    fontSize: 'clamp(1.25rem, 2.5vw, 1.875rem)',
                     fontWeight: 400,
                     fontStyle: 'italic',
                     lineHeight: 1.4,
@@ -209,23 +257,15 @@ export default function FactumCapitalPage() {
                     margin: 0,
                   }}
                 >
-                  &ldquo;Eén platform, vier momenten. Factum levert het analytisch fundament — Agentic Mindshift levert de dienst, met koppeling naar gecertificeerde adviseurs die formeel tekenen waar vereist.&rdquo;
+                  &ldquo;{t('description.quote')}&rdquo;
                 </p>
               </blockquote>
             </div>
 
             <div className="reveal" style={{ transitionDelay: '80ms' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', lineHeight: 1.8, color: 'var(--text-secondary)' }}>
-                <p>
-                  Het <strong>platform</strong>, 29 modules van Financial DD en AI Due Diligence tot LBO-modellering en exit readiness, geeft uw team consistente structuur op elk moment.
-                  Vanaf 1 juli 2026 beschikbaar als SaaS.
-                </p>
-                <p>
-                  De <strong>dienstverlening</strong> via Agentic Mindshift levert het volledige
-                  analytisch fundament en koppelt gecertificeerde adviseurs: RA/RB/advocaten,
-                  financieel adviseurs, restructuring consultants. Eén gedeeld dossier:
-                  minder dubbel werk, kortere doorlooptijd.
-                </p>
+                <p>{t('description.para1')}</p>
+                <p>{t('description.para2')}</p>
               </div>
             </div>
           </div>
@@ -238,9 +278,9 @@ export default function FactumCapitalPage() {
       <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(64px, 9vw, 112px)' }}>
         <div className="container-medium">
           <div className="reveal" style={{ marginBottom: '56px' }}>
-            <p className="eyebrow" style={{ marginBottom: '16px' }}>Vier momenten</p>
+            <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('momenten.eyebrow')}</p>
             <h2 className="type-h2" style={{ maxWidth: '640px' }}>
-              Eén systeem. Elk moment in uw praktijk.
+              {t('momenten.heading')}
             </h2>
           </div>
 
@@ -272,7 +312,7 @@ export default function FactumCapitalPage() {
                     <m.Icon size={44} strokeWidth={1.4} />
                   </div>
                   <p style={{
-                                        fontSize: 'clamp(28px, 4vw, 40px)',
+                    fontSize: 'clamp(28px, 4vw, 40px)',
                     fontWeight: 800,
                     letterSpacing: '-0.04em',
                     lineHeight: 0.9,
@@ -294,7 +334,7 @@ export default function FactumCapitalPage() {
                   {m.label}
                 </p>
                 <p style={{
-                                    fontSize: '1.125rem',
+                  fontSize: '1.125rem',
                   fontWeight: 700,
                   color: 'var(--text-primary)',
                   marginBottom: '14px',
@@ -303,7 +343,7 @@ export default function FactumCapitalPage() {
                   {m.title}
                 </p>
                 <p style={{
-                                    fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)',
+                  fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)',
                   color: 'var(--text-secondary)',
                   lineHeight: 1.75,
                   marginBottom: '20px',
@@ -327,7 +367,7 @@ export default function FactumCapitalPage() {
 
           {/* Platform vs Dienst */}
           <div className="reveal" style={{ marginBottom: '56px' }}>
-            <p className="eyebrow" style={{ marginBottom: '24px' }}>Twee manieren om Factum in te zetten</p>
+            <p className="eyebrow" style={{ marginBottom: '24px' }}>{t('two_routes.eyebrow')}</p>
             <div
               style={{
                 display: 'grid',
@@ -337,30 +377,13 @@ export default function FactumCapitalPage() {
                 border: '1px solid var(--border-subtle)',
               }}
             >
-              {([
-                {
-                  n: '01',
-                  title: 'Het Platform',
-                  label: 'SaaS: zelf in handen',
-                  body: '29 modules die uw deal-team de structuur geven om alle vier momenten consistent uit te voeren. Van Financial DD en AI Due Diligence tot LBO-modellering, IBR/WHOA en exit readiness. Kennisopbouw die meegroeit.',
-                  detail: 'Lancering 1 juli 2026 · Maandabonnement · Wachtlijst open',
-                  link: null,
-                },
-                {
-                  n: '02',
-                  title: 'De Dienstverlening',
-                  label: 'Via Agentic Mindshift: AI Due Diligence & Portfolio',
-                  body: 'Agentic Mindshift voert het volledige traject voor u uit, met Factum als analytisch platform. Op elk moment koppelt Agentic Mindshift de juiste gecertificeerde professionals die op het gedeelde dossier verder bouwen en waar nodig formeel tekenen.',
-                  detail: 'Vanaf €10.000 investering per deal · Of €6.500 – €8.500 / maand portefeuille-inzicht · Excl. btw',
-                  link: { href: '/werkwijze', label: 'Bekijk werkwijze & investering →' },
-                },
-              ] as const).map((item) => (
+              {twoRoutes.map((item) => (
                 <div
                   key={item.n}
                   style={{ background: 'var(--bg-primary)', padding: 'clamp(36px, 4vw, 52px)' }}
                 >
                   <p style={{
-                                        fontSize: 'clamp(44px, 6vw, 64px)',
+                    fontSize: 'clamp(44px, 6vw, 64px)',
                     fontWeight: 800,
                     letterSpacing: '-0.04em',
                     lineHeight: 0.9,
@@ -381,7 +404,7 @@ export default function FactumCapitalPage() {
                     {item.label}
                   </p>
                   <p style={{
-                                        fontSize: '1.25rem',
+                    fontSize: '1.25rem',
                     fontWeight: 700,
                     color: 'var(--text-primary)',
                     marginBottom: '16px',
@@ -390,7 +413,7 @@ export default function FactumCapitalPage() {
                     {item.title}
                   </p>
                   <p style={{
-                                        fontSize: 'clamp(1rem, 1.6vw, 1.125rem)',
+                    fontSize: 'clamp(1rem, 1.6vw, 1.125rem)',
                     color: 'var(--text-secondary)',
                     lineHeight: 1.75,
                     marginBottom: '24px',
@@ -430,7 +453,7 @@ export default function FactumCapitalPage() {
 
           {/* Hoe de dienst werkt */}
           <div className="reveal">
-            <p className="eyebrow" style={{ marginBottom: '24px' }}>Hoe de dienstverlening werkt</p>
+            <p className="eyebrow" style={{ marginBottom: '24px' }}>{t('how_it_works.eyebrow')}</p>
             <div style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
@@ -438,23 +461,7 @@ export default function FactumCapitalPage() {
               background: 'var(--border-subtle)',
               border: '1px solid var(--border-subtle)',
             }}>
-              {[
-                {
-                  step: '1',
-                  title: 'Analytisch fundament',
-                  body: 'Agentic Mindshift doorlicht de situatie systematisch op alle relevante dimensies, met Factum als platform, afhankelijk van het moment: acquisitie, financiering, portfolio of herstructurering.',
-                },
-                {
-                  step: '2',
-                  title: 'Juiste adviseur gekoppeld',
-                  body: 'Agentic Mindshift koppelt de gecertificeerde professional die past bij het moment: RA/RB voor acquisitie-sign-off, financieel adviseur voor bankgesprekken, restructuring consultant voor pre-IBR/WHOA.',
-                },
-                {
-                  step: '3',
-                  title: 'Gedeeld dossier',
-                  body: 'Alle betrokken partijen werken op één Factum-dossier. Minder dubbel werk, kortere doorlooptijd, kennisretentie na afronding.',
-                },
-              ].map((s) => (
+              {howItWorksSteps.map((s) => (
                 <div
                   key={s.step}
                   style={{
@@ -463,7 +470,7 @@ export default function FactumCapitalPage() {
                   }}
                 >
                   <p style={{
-                                        fontSize: 'clamp(36px, 5vw, 52px)',
+                    fontSize: 'clamp(36px, 5vw, 52px)',
                     fontWeight: 800,
                     letterSpacing: '-0.04em',
                     lineHeight: 0.9,
@@ -474,7 +481,7 @@ export default function FactumCapitalPage() {
                     {s.step}
                   </p>
                   <p style={{
-                                        fontSize: '1rem',
+                    fontSize: '1rem',
                     fontWeight: 700,
                     color: 'var(--text-primary)',
                     marginBottom: '10px',
@@ -483,7 +490,7 @@ export default function FactumCapitalPage() {
                     {s.title}
                   </p>
                   <p style={{
-                                        fontSize: 'clamp(0.9375rem, 1.5vw, 1.0625rem)',
+                    fontSize: 'clamp(0.9375rem, 1.5vw, 1.0625rem)',
                     color: 'var(--text-secondary)',
                     lineHeight: 1.7,
                     margin: 0,
@@ -499,7 +506,7 @@ export default function FactumCapitalPage() {
               marginTop: '10px',
               lineHeight: 1.5,
             }}>
-              Noch Factum Capital noch Agentic Mindshift is een registeraccountant; geen van beide treedt op als formeel opdrachtnemer voor bank-proof due diligence of wettelijk verplichte rapportages. De gecertificeerde adviseurs en consultants met wie Agentic Mindshift samenwerkt zijn zelfstandige professionals met eigen beroepskwalificaties en aansprakelijkheid.
+              {t('how_it_works.disclaimer')}
             </p>
           </div>
         </div>
@@ -515,8 +522,8 @@ export default function FactumCapitalPage() {
       <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(48px, 6vw, 80px)' }}>
         <div className="container-medium">
           <div className="reveal" style={{ marginBottom: '40px' }}>
-            <p className="eyebrow" style={{ marginBottom: '12px' }}>Voor wie</p>
-            <h2 className="type-h2" style={{ margin: 0 }}>Gebouwd voor de Nederlandse deal- en financieringspraktijk</h2>
+            <p className="eyebrow" style={{ marginBottom: '12px' }}>{t('voor_wie.eyebrow')}</p>
+            <h2 className="type-h2" style={{ margin: 0 }}>{t('voor_wie.heading')}</h2>
           </div>
           <div
             style={{
@@ -527,14 +534,7 @@ export default function FactumCapitalPage() {
               border: '1px solid var(--border-subtle)',
             }}
           >
-            {[
-              { label: 'Tier-2 PE-fondsen', body: 'Deals €5M–€50M. Structuur op acquisitie, portfolio review en exit.' },
-              { label: 'Family offices', body: 'DD-kwaliteit en bankpresentaties zonder een groot intern team.' },
-              { label: 'MKB-ondernemers', body: 'Financieringsaanvragen professioneel onderbouwd, ook bij kleinere bedragen.' },
-              { label: "Buy-and-build ondernemers", body: 'De discipline van een professioneel deal-team, met adviseurs op afroep.' },
-              { label: 'M&A-directors', body: 'Kennisretentie over meerdere deals: elk dossier bouwt voort op het vorige.' },
-              { label: 'Financiers & herstructurering', body: 'Vroege signalering bij stress. Directe koppeling met restructuring consultants.' },
-            ].map((item, i) => (
+            {voorWieItems.map((item, i) => (
               <div
                 key={item.label}
                 className="reveal"
@@ -546,7 +546,7 @@ export default function FactumCapitalPage() {
               >
                 <p
                   style={{
-                                        fontSize: '1rem',
+                    fontSize: '1rem',
                     fontWeight: 700,
                     color: 'var(--text-primary)',
                     marginBottom: '10px',
@@ -576,21 +576,16 @@ export default function FactumCapitalPage() {
             }}
           >
             <div className="reveal">
-              <p className="eyebrow" style={{ marginBottom: '20px' }}>Vroege toegang</p>
+              <p className="eyebrow" style={{ marginBottom: '20px' }}>{t('early_access.eyebrow')}</p>
               <h2 className="type-h2" style={{ marginBottom: '20px' }}>
-                Schrijf u in voor early access.
+                {t('early_access.heading')}
               </h2>
               <p style={{ fontSize: '1.0625rem', color: 'var(--text-secondary)', lineHeight: 1.75, maxWidth: '320px', marginBottom: '32px' }}>
-                De wachtlijst is bewust beperkt. Vroege deelnemers krijgen directe input op de module-roadmap en gaan als eerste door onboarding. Geen vervolgmails buiten de Factum Capital-roadmap om.
+                {t('early_access.body')}
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                {[
-                  'Directe input op de module-roadmap',
-                  'Voorrang op platform-onboarding per 1 juli 2026',
-                  'Vroeg-toegangstarief bij lancering',
-                  'Prioriteit voor pilot deal-analyse-opdrachten in het eerste kwartaal na lancering (juli–september 2026)',
-                ].map((t) => (
-                  <div key={t} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                {earlyAccessBenefits.map((benefit) => (
+                  <div key={benefit} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                     <span
                       style={{
                         width: '6px',
@@ -602,7 +597,7 @@ export default function FactumCapitalPage() {
                         marginTop: '7px',
                       }}
                     />
-                    <span style={{ fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)', color: 'var(--text-secondary)', lineHeight: 1.6 }}>{t}</span>
+                    <span style={{ fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)', color: 'var(--text-secondary)', lineHeight: 1.6 }}>{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -629,17 +624,17 @@ export default function FactumCapitalPage() {
       >
         <div className="container-medium reveal" style={{ textAlign: 'center', position: 'relative' }}>
           <p className="eyebrow" style={{ marginBottom: '20px', color: 'rgba(247,242,235,0.5)' }}>
-            Begin hier
+            {t('cta.eyebrow')}
           </p>
           <h2
             className="type-h2"
             style={{ color: 'var(--text-inverse)', marginBottom: '16px', maxWidth: '520px', marginInline: 'auto' }}
           >
-            Uw Scorecard-profiel bepaalt welk moment als eerste relevant is.
+            {t('cta.heading')}
           </h2>
           <p
             style={{
-                            fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
+              fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
               color: 'rgba(247,242,235,0.5)',
               marginBottom: '40px',
               maxWidth: '460px',
@@ -647,18 +642,17 @@ export default function FactumCapitalPage() {
               lineHeight: 1.75,
             }}
           >
-            Twaalf minuten. Zes dimensies. Een rapport dat laat zien waar u staat
-            en wat als eerste aandacht verdient.
+            {t('cta.subtext')}
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>
             <Button href="/scorecard" variant="primary" size="lg">
-              Start de Scorecard
+              {t('cta.primary')}
             </Button>
             <Button href="/werkwijze" variant="secondary" size="lg">
-              Werkwijze & investering
+              {t('cta.secondary_1')}
             </Button>
             <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
-              Plan een kennismaking
+              {t('cta.secondary_2')}
             </Button>
           </div>
         </div>

@@ -1,19 +1,31 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import Button from '@/components/ui/Button';
-import SketchCrosshair from '@/components/icons/SketchCrosshair';
 import HeroAnimated from './HeroAnimated';
 import OverCredentials from './OverCredentials';
 import JsonLd from '@/components/JsonLd';
 import { organizationLd, personLd } from '@/lib/jsonld';
 
-export const metadata: Metadata = {
-  title: 'Over Wouter Dijkman',
-  description:
-    'Founder Agentic Mindshift en Factum Capital. Zes jaar deal-ervaring in acquisition finance en financial restructuring, Nederlandse mid-market.',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('over');
+  return {
+    title: t('meta_title'),
+    description: t('meta_description'),
+  };
+}
 
-export default function OverPage() {
+export default async function OverPage() {
+  const t = await getTranslations('over');
+
+  const timelineItems = [
+    { year: t('timeline.item_1_year'), label: t('timeline.item_1_label'), sub: t('timeline.item_1_sub'), delay: 0, future: false },
+    { year: t('timeline.item_2_year'), label: t('timeline.item_2_label'), sub: t('timeline.item_2_sub'), delay: 60, future: false },
+    { year: t('timeline.item_3_year'), label: t('timeline.item_3_label'), sub: t('timeline.item_3_sub'), delay: 120, future: false },
+    { year: t('timeline.item_4_year'), label: t('timeline.item_4_label'), sub: t('timeline.item_4_sub'), delay: 180, future: false },
+    { year: t('timeline.item_5_year'), label: t('timeline.item_5_label'), sub: t('timeline.item_5_sub'), delay: 240, future: true },
+  ];
+
   return (
     <>
       <JsonLd data={organizationLd} />
@@ -21,7 +33,7 @@ export default function OverPage() {
 
       <HeroAnimated />
 
-            {/* ═══ BIO ═══ */}
+      {/* ═══ BIO ═══ */}
       <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(64px, 9vw, 112px)' }}>
         <div className="container-medium">
           <div
@@ -34,7 +46,7 @@ export default function OverPage() {
           >
             {/* Pullquote */}
             <div className="reveal">
-              <p className="eyebrow" style={{ marginBottom: '28px' }}>Achtergrond</p>
+              <p className="eyebrow" style={{ marginBottom: '28px' }}>{t('bio.eyebrow')}</p>
               <blockquote
                 style={{
                   margin: 0,
@@ -44,7 +56,7 @@ export default function OverPage() {
               >
                 <p
                   style={{
-                                        fontSize: 'clamp(1.25rem, 2.5vw, 1.875rem)',
+                    fontSize: 'clamp(1.25rem, 2.5vw, 1.875rem)',
                     fontWeight: 400,
                     fontStyle: 'italic',
                     lineHeight: 1.4,
@@ -53,7 +65,7 @@ export default function OverPage() {
                     margin: 0,
                   }}
                 >
-                  &ldquo;Ik heb deals gezien die technisch perfect waren &mdash; en toch mislukten omdat niemand bereid was de ongemakkelijke aanname uit te dagen. Dat is het probleem dat ik oplos. Niet met meer data. Met betere vragen.&rdquo;
+                  &ldquo;{t('bio.quote')}&rdquo;
                 </p>
               </blockquote>
             </div>
@@ -62,7 +74,7 @@ export default function OverPage() {
             <div className="reveal" style={{ transitionDelay: '80ms' }}>
               <div
                 style={{
-                                    display: 'flex',
+                  display: 'flex',
                   flexDirection: 'column',
                   gap: '20px',
                   fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
@@ -70,28 +82,19 @@ export default function OverPage() {
                   color: 'var(--text-secondary)',
                 }}
               >
+                <p>{t('bio.para1')}</p>
                 <p>
-                  Drie jaar financial restructuring, drie jaar acquisition finance.
-                  Beide kanten van de deal-tafel, Nederlandse mid-market. Die combinatie leert
-                  u precies waar de aannames niet uitkomen, en waar de maandrapportage
-                  onderprestatie maskeert in plaats van signaleert.
-                </p>
-                <p>
-                  In oktober 2025 is Agentic Mindshift gestart. In november 2025 volgde{' '}
-                  <em>AI for Business</em> aan Nyenrode. Op 1 juli 2026 lanceert{' '}
+                  {t('bio.para2_prefix')}{' '}
                   <Link
                     href="/factum-capital"
                     style={{ color: 'var(--accent-cta)', textDecoration: 'underline', textUnderlineOffset: '3px' }}
                   >
                     Factum Capital
                   </Link>
-                  : 29 modules waarmee deal-teams hun DD-proces, maandrapportage en oordeelsvorming
-                  structureel instrumenteren.
+                  {t('bio.para2_suffix')}
                 </p>
                 <p style={{ fontStyle: 'italic', color: 'var(--text-muted)' }}>
-                  Eerste resultaat uit de praktijk: een overnameprijs-correctie van 0,4&times;
-                  op een buy-and-build deal. De investering in het rapport verdiende
-                  zichzelf meervoudig terug.
+                  {t('bio.para3')}
                 </p>
               </div>
             </div>
@@ -110,8 +113,8 @@ export default function OverPage() {
       <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(64px, 9vw, 112px)' }}>
         <div className="container-medium">
           <div className="reveal" style={{ marginBottom: '48px' }}>
-            <p className="eyebrow" style={{ marginBottom: '16px' }}>Loopbaan</p>
-            <h2 className="type-h2" style={{ margin: 0 }}>Tijdlijn</h2>
+            <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('timeline.eyebrow')}</p>
+            <h2 className="type-h2" style={{ margin: 0 }}>{t('timeline.heading')}</h2>
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', position: 'relative' }}>
@@ -129,13 +132,7 @@ export default function OverPage() {
               }}
             />
 
-            {[
-              { year: '2017–2020', label: 'Financial Restructuring', sub: 'MKB- en mid-market portefeuilles in stress: intensive care & herstructurering', delay: 0, future: false },
-              { year: '2020–2023', label: 'Acquisition Finance', sub: 'LBO-financiering op Nederlandse PE-deals, mid-market 1–25M', delay: 60, future: false },
-              { year: 'Oktober 2025', label: 'Oprichting Agentic Mindshift', sub: "AI‑advies voor Nederlandse PE‑ en M&A‑firma's", delay: 120, future: false },
-              { year: 'November 2025', label: 'AI for Business', sub: 'Nyenrode Business Universiteit · AI-toepassingen in financiële praktijk', delay: 180, future: false },
-              { year: '1 juli 2026', label: 'Lancering Factum Capital', sub: 'AI-platform voor M&A en herstructurering', delay: 240, future: true },
-            ].map((row) => (
+            {timelineItems.map((row) => (
               <div
                 key={row.year}
                 className="reveal"
@@ -147,7 +144,6 @@ export default function OverPage() {
                   paddingBlock: '24px',
                   borderBottom: '1px solid var(--border-subtle)',
                   transitionDelay: `${row.delay}ms`,
-                  opacity: row.future ? undefined : undefined,
                 }}
               >
                 {/* Dot op de verticale lijn */}
@@ -166,7 +162,7 @@ export default function OverPage() {
 
                 <span
                   style={{
-                                        fontSize: '0.875rem',
+                    fontSize: '0.875rem',
                     fontWeight: 700,
                     color: row.future ? 'var(--text-muted)' : 'var(--accent-cta)',
                     letterSpacing: '-0.01em',
@@ -192,7 +188,7 @@ export default function OverPage() {
                         lineHeight: 1,
                         opacity: 0.7,
                       }}>
-                        verwacht
+                        {t('timeline.future_badge')}
                       </span>
                     )}
                   </div>
@@ -209,19 +205,19 @@ export default function OverPage() {
       {/* ═══ WERKWIJZE LINK ═══ */}
       <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(48px, 6vw, 72px)', textAlign: 'center' }}>
         <div className="container-medium reveal">
-          <p className="eyebrow" style={{ marginBottom: '12px' }}>Werkwijze</p>
+          <p className="eyebrow" style={{ marginBottom: '12px' }}>{t('werkwijze_link.eyebrow')}</p>
           <p
             style={{
-                            fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
+              fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
               color: 'var(--text-secondary)',
               lineHeight: 1.65,
               marginBottom: '24px',
             }}
           >
-            Vier manieren om samen te werken, van een eenmalige sessie tot een embedded AI-rol.
+            {t('werkwijze_link.body')}
           </p>
           <Button href="/werkwijze" variant="secondary" size="md">
-            Bekijk werkwijze &amp; investering →
+            {t('werkwijze_link.cta')}
           </Button>
         </div>
       </section>
@@ -239,18 +235,19 @@ export default function OverPage() {
         }}
       >
         <div className="container-medium" style={{ textAlign: 'center', position: 'relative' }}>
-          <div className="reveal" style={{ position: 'relative' }}>       <p className="eyebrow" style={{ marginBottom: '28px', color: 'rgba(247,242,235,0.5)' }}>
-              Direct contact
+          <div className="reveal" style={{ position: 'relative' }}>
+            <p className="eyebrow" style={{ marginBottom: '28px', color: 'rgba(247,242,235,0.5)' }}>
+              {t('contact_cta.eyebrow')}
             </p>
             <h2
               className="type-h2"
               style={{ color: 'var(--text-inverse)', marginBottom: '16px', maxWidth: '560px', marginInline: 'auto' }}
             >
-              Eén gesprek. Twintig minuten. U bepaalt het onderwerp.
+              {t('contact_cta.heading')}
             </h2>
             <p
               style={{
-                                fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
+                fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
                 color: 'rgba(247,242,235,0.5)',
                 marginBottom: '44px',
                 maxWidth: '400px',
@@ -258,19 +255,19 @@ export default function OverPage() {
                 lineHeight: 1.75,
               }}
             >
-              Geen agenda. Geen verplichtingen. Geen vervolg tenzij u dat zelf initieert.
+              {t('contact_cta.subtext')}
             </p>
             <div
               style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}
             >
               <Button href="/scorecard" variant="primary" size="lg">
-                Start de Scorecard
+                {t('contact_cta.cta1')}
               </Button>
               <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
-                Plan een vrijblijvende kennismaking
+                {t('contact_cta.cta2')}
               </Button>
               <Button href="https://www.linkedin.com/in/wwdijkman" variant="secondary" size="lg" external>
-                Verbind via LinkedIn
+                {t('contact_cta.cta3')}
               </Button>
             </div>
           </div>

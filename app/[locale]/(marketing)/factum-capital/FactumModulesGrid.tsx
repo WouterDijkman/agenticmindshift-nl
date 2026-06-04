@@ -1,23 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 const ease = [0.22, 1, 0.36, 1] as const;
-
-const launchModules = [
-  { n: '01', title: 'Financial DD', body: 'Quality of Earnings, werkkapitaalanalyse, netto schuld, cashflow en balansanalyse. De feitelijke basis voor elke overnameprijs.' },
-  { n: '02', title: 'Commercial DD', body: 'Marktanalyse, klantanalyse, concurrentiepositie en business case. Toetst of de omzetaannames houdbaar zijn.' },
-  { n: '03', title: 'AI Due Diligence', body: 'Kwantificeert het risico dat AI de kernactiviteit overneemt, per functiegroep en omzetstroom — vertaald naar impact op de overnameprijs.' },
-  { n: '04', title: 'Legal', body: 'Corporate governance, contracten, geschillen, IP/data, arbeidsrecht en vastgoed. Vroegtijdige signalering van juridische dealbreakers.' },
-  { n: '05', title: 'Tax', body: 'VPB, BTW, loonheffing, transfer pricing en fiscale structuur. Toetst historische compliance en structureert de transactie fiscaal.' },
-  { n: '06', title: 'Valuation', body: 'DCF, trading multiples, transaction comps en synergie-waardering in een consistent football field. Onderbouwt de IC-beslissing.' },
-  { n: '07', title: 'IC-Memo', body: 'Investment thesis, company & market, financial analysis, valuation en transaction structure. Klaar voor presentatie aan het Investment Committee.' },
-  { n: '08', title: 'LBO-Model', body: 'Entry assumptions, capital structure, financial projections, debt schedule en returns analyse met sensitivity tabel.' },
-  { n: '09', title: 'IBR', body: 'Cashflow reality check, liquiditeitsanalyse, business plan review, covenant analyse en going concern beoordeling.' },
-  { n: '10', title: 'WHOA', body: 'Diagnose, crediteurenclassificatie, akkoordontwerp, waardering op recovery basis en homologatieprocedure.' },
-  { n: '11', title: 'Vigil', body: 'Doorlopend portfolio monitoring: financiële prestaties, covenant monitoring, synergie-tracking en exit readiness per deelneming.' },
-  { n: '12', title: 'Exit Readiness', body: 'Equity story, QoE readiness, governance, dataroom voorbereiding en CSRD/SFDR compliance voor een optimale verkoopklare positie.' },
-];
 
 const containerVariants = {
   hidden: {},
@@ -35,6 +21,22 @@ const headingVariants = {
 };
 
 export default function FactumModulesGrid() {
+  const t = useTranslations('factum_capital');
+  const launchModules = [
+    { n: '01', title: t('modules.m01_title'), body: t('modules.m01_body') },
+    { n: '02', title: t('modules.m02_title'), body: t('modules.m02_body') },
+    { n: '03', title: t('modules.m03_title'), body: t('modules.m03_body') },
+    { n: '04', title: t('modules.m04_title'), body: t('modules.m04_body') },
+    { n: '05', title: t('modules.m05_title'), body: t('modules.m05_body') },
+    { n: '06', title: t('modules.m06_title'), body: t('modules.m06_body') },
+    { n: '07', title: t('modules.m07_title'), body: t('modules.m07_body') },
+    { n: '08', title: t('modules.m08_title'), body: t('modules.m08_body') },
+    { n: '09', title: t('modules.m09_title'), body: t('modules.m09_body') },
+    { n: '10', title: t('modules.m10_title'), body: t('modules.m10_body') },
+    { n: '11', title: t('modules.m11_title'), body: t('modules.m11_body') },
+    { n: '12', title: t('modules.m12_title'), body: t('modules.m12_body') },
+  ];
+
   return (
     <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(64px, 9vw, 112px)' }}>
       <div className="container-medium">
@@ -45,10 +47,10 @@ export default function FactumModulesGrid() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
         >
-          <p className="eyebrow" style={{ marginBottom: '16px' }}>Lancering 1 juli 2026</p>
-          <h2 className="type-h2" style={{ marginBottom: '16px' }}>De modules bij livegang</h2>
+          <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('modules.eyebrow')}</p>
+          <h2 className="type-h2" style={{ marginBottom: '16px' }}>{t('modules.heading')}</h2>
           <p style={{ fontSize: '1rem', color: 'var(--text-muted)', maxWidth: '480px', lineHeight: 1.65 }}>
-            De eerste reeks modules. Verdere uitbreiding volgt in H2 2026. Vroege deelnemers brengen mede de volgorde.
+            {t('modules.subtext')}
           </p>
         </motion.div>
 

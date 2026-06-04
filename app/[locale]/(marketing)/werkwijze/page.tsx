@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import type { ComponentType } from 'react';
-import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import Button from '@/components/ui/Button';
 import SketchDivider from '@/components/icons/SketchDivider';
 import {
@@ -15,11 +16,13 @@ import WerkwijzeOnboardingSteps from './WerkwijzeOnboardingSteps';
 
 type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
 
-export const metadata: Metadata = {
-  title: 'Werkwijze & Investering',
-  description:
-    'Vier helder gedifferentieerde manieren waarop u met Agentic Mindshift werkt — van een laagdrempelige Sparring Sessie tot een Fractional AI Officer en AI Due Diligence per deal of in volume.',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('werkwijze');
+  return {
+    title: t('meta_title'),
+    description: t('meta_description'),
+  };
+}
 
 interface DealVariant {
   label: string;
@@ -49,74 +52,80 @@ interface Offering {
   Icon: SketchIconComponent;
 }
 
-const offerings: Offering[] = [
-  {
-    badge: 'Instap · eenmalig',
-    title: 'AI Sparring Sessie',
-    situation:
-      'U wilt snel weten wat AI betekent voor uw bedrijf, uw deal of uw eerstvolgende beslissing.',
-    price: 'Vanaf €395',
-    priceNote: '60–90 minuten · korte schriftelijke samenvatting',
-    ctaLabel: 'Boek een sessie →',
-    ctaHref: 'https://cal.com/wwdijkman/intake-call',
-    Icon: SketchSparring,
-  },
-  {
-    badge: 'Projectmatig of retainer',
-    title: 'AI-advies & Implementatie',
-    situation:
-      'U wilt AI concreet inzetten in uw processen, workflows of organisatie, met implementatie, masterclasses en teamtraining.',
-    price: 'Vanaf €4.500',
-    priceNote: 'Per traject of doorlopend in retainer',
-    ctaLabel: 'Bespreek uw vraagstuk →',
-    ctaHref: 'https://cal.com/wwdijkman/intake-call',
-    Icon: SketchConsultancy,
-  },
-  {
-    badge: 'Embedded · doorlopend',
-    title: 'Fractional AI Officer',
-    situation:
-      'U wilt een AI-leider op MT-niveau zonder fulltime aanstelling: strategie, leveranciersselectie en teamtraining geborgd.',
-    price: '€3.500 – €5.500 / maand',
-    priceNote: 'Minimaal 3 maanden · MT-deelname en operationele eigenaarschap',
-    ctaLabel: 'Bespreek de fit →',
-    ctaHref: 'https://cal.com/wwdijkman/intake-call',
-    featured: true,
-    Icon: SketchFractional,
-  },
-  {
-    badge: 'Per deal of doorlopend',
-    title: 'AI Due Diligence & Portfolio',
-    situation:
-      'U doet M&A-deals of beheert een portefeuille en wilt het risico dat AI de kernactiviteit overneemt structureel borgen in uw overnameprijs en maandrapportage.',
-    price: 'Vanaf €10.000 per deal',
-    priceNote: 'Of €6.500 – €8.500 / maand voor doorlopend portefeuille-inzicht',
-    ctaLabel: 'Plan een kennismaking →',
-    ctaHref: 'https://cal.com/wwdijkman/intake-call',
-    variantsCaption: 'Meerdere deals? Volumetarieven:',
-    variants: [
-      { label: '1 deal', price: '€10.000', unit: 'losse deal' },
-      { label: '5 deals', price: '€42.500', unit: '€8.500 / deal', discount: '–15%' },
-      { label: '10 deals', price: '€80.000', unit: '€8.000 / deal', discount: '–20%' },
-    ],
-    poweredBy: {
-      label: 'Factum Capital',
-      href: '/factum-capital',
-      tagline: 'Ons AI-platform voor M&A & portefeuille-inzicht',
-    },
-    Icon: SketchDueDiligence,
-  },
-];
+export default async function WerkwijzePage() {
+  const t = await getTranslations('werkwijze');
 
-export default function WerkwijzePage() {
+  const offerings: Offering[] = [
+    {
+      badge: t('offering_1.badge'),
+      title: t('offering_1.title'),
+      situation: t('offering_1.situation'),
+      price: 'Vanaf €395',
+      priceNote: t('offering_1.price_note'),
+      ctaLabel: t('offering_1.cta'),
+      ctaHref: 'https://cal.com/wwdijkman/intake-call',
+      Icon: SketchSparring,
+    },
+    {
+      badge: t('offering_2.badge'),
+      title: t('offering_2.title'),
+      situation: t('offering_2.situation'),
+      price: 'Vanaf €4.500',
+      priceNote: t('offering_2.price_note'),
+      ctaLabel: t('offering_2.cta'),
+      ctaHref: 'https://cal.com/wwdijkman/intake-call',
+      Icon: SketchConsultancy,
+    },
+    {
+      badge: t('offering_3.badge'),
+      title: t('offering_3.title'),
+      situation: t('offering_3.situation'),
+      price: '€3.500 – €5.500 / maand',
+      priceNote: t('offering_3.price_note'),
+      ctaLabel: t('offering_3.cta'),
+      ctaHref: 'https://cal.com/wwdijkman/intake-call',
+      featured: true,
+      Icon: SketchFractional,
+    },
+    {
+      badge: t('offering_4.badge'),
+      title: t('offering_4.title'),
+      situation: t('offering_4.situation'),
+      price: 'Vanaf €10.000 per deal',
+      priceNote: t('offering_4.price_note'),
+      ctaLabel: t('offering_4.cta'),
+      ctaHref: 'https://cal.com/wwdijkman/intake-call',
+      variantsCaption: t('offering_4.variants_caption'),
+      variants: [
+        { label: t('offering_4.variant_1_label'), price: '€10.000', unit: t('offering_4.variant_1_unit') },
+        { label: t('offering_4.variant_2_label'), price: '€42.500', unit: t('offering_4.variant_2_unit'), discount: '–15%' },
+        { label: t('offering_4.variant_3_label'), price: '€80.000', unit: t('offering_4.variant_3_unit'), discount: '–20%' },
+      ],
+      poweredBy: {
+        label: 'Factum Capital',
+        href: '/factum-capital',
+        tagline: t('offering_4.powered_by_tagline'),
+      },
+      Icon: SketchDueDiligence,
+    },
+  ];
+
+  const faqItems: AccordionItem[] = [
+    { id: 'q1', question: t('faq.q1'), answer: t('faq.a1') },
+    { id: 'q2', question: t('faq.q2'), answer: t('faq.a2') },
+    { id: 'q3', question: t('faq.q3'), answer: t('faq.a3') },
+    { id: 'q4', question: t('faq.q4'), answer: t('faq.a4') },
+    { id: 'q5', question: t('faq.q5'), answer: t('faq.a5') },
+  ];
+
   return (
     <>
       <AnimatedHeroShell
         bgChar="03"
         bgCharSize="clamp(240px, 30vw, 460px)"
-        eyebrow="Werkwijze & Investering"
-        heading="Van €395 tot embedded AI‑leiderschap: u kiest op basis van uw vraag."
-        subtext="Vier routes, vier situaties. Elke route begint met een vrijblijvend gesprek en eindigt met een concreet resultaat."
+        eyebrow={t('hero.eyebrow')}
+        heading={t('hero.heading')}
+        subtext={t('hero.subtext')}
         headingMaxWidth="800px"
       />
 
@@ -130,25 +139,25 @@ export default function WerkwijzePage() {
       <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(64px, 9vw, 112px)' }}>
         <div className="container-medium">
           <div className="reveal" style={{ marginBottom: 'clamp(32px, 5vw, 56px)', maxWidth: '720px' }}>
-            <p className="eyebrow" style={{ marginBottom: '16px' }}>Investering</p>
+            <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('offerings.eyebrow')}</p>
             <h2 className="type-h2" style={{ marginBottom: '16px' }}>
-              Welke situatie past bij u?
+              {t('offerings.heading')}
             </h2>
             <p
               style={{
-                                fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
+                fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
                 color: 'var(--text-secondary)',
                 lineHeight: 1.75,
                 marginBottom: '24px',
               }}
             >
-              Vier situaties, vier routes. U herkent uw vraag, of één gesprek volstaat om de juiste route te bevestigen.
+              {t('offerings.subtext')}
             </p>
             {/* Guarantee strip */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 16px', background: 'var(--bg-secondary)', border: '1px solid var(--border-subtle)', borderLeft: '3px solid var(--accent-cta)' }}>
-              <span style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: 'var(--accent-cta)', flexShrink: 0 }}>Garantie</span>
+              <span style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: 'var(--accent-cta)', flexShrink: 0 }}>{t('offerings.guarantee_title')}</span>
               <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.55, margin: 0 }}>
-                De Scorecard is gratis. Elk kennismakingsgesprek is vrijblijvend. Bij de Sparring Sessie: geen bruikbaar inzicht? Geen factuur.
+                {t('offerings.guarantee_body')}
               </p>
             </div>
           </div>
@@ -178,7 +187,7 @@ export default function WerkwijzePage() {
                   transitionDelay: `${i * 80}ms`,
                 }}
               >
-                {/* Sketch-icon header — anchors the card visually */}
+                {/* Sketch-icon header */}
                 <div
                   style={{
                     color: o.featured ? 'rgba(247,242,235,0.92)' : 'var(--accent-cta)',
@@ -215,7 +224,7 @@ export default function WerkwijzePage() {
                         flexShrink: 0,
                       }}
                     >
-                      Meest gekozen
+                      {t('offerings.most_chosen')}
                     </span>
                   )}
                 </div>
@@ -232,7 +241,7 @@ export default function WerkwijzePage() {
 
                 {o.poweredBy && (
                   <Link
-                    href={o.poweredBy.href}
+                    href={o.poweredBy.href as '/factum-capital'}
                     style={{
                       display: 'flex',
                       flexDirection: 'column',
@@ -263,7 +272,7 @@ export default function WerkwijzePage() {
                       <span>Powered by</span>
                       <span
                         style={{
-                                                    fontSize: '0.9375rem',
+                          fontSize: '0.9375rem',
                           fontWeight: 700,
                           letterSpacing: '-0.01em',
                           color: o.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
@@ -276,7 +285,7 @@ export default function WerkwijzePage() {
                     </span>
                     <span
                       style={{
-                                                fontSize: '0.875rem',
+                        fontSize: '0.875rem',
                         color: o.featured ? 'rgba(247,242,235,0.7)' : 'var(--text-muted)',
                         lineHeight: 1.4,
                       }}
@@ -288,7 +297,7 @@ export default function WerkwijzePage() {
 
                 <p
                   style={{
-                                        fontSize: '1.0625rem',
+                    fontSize: '1.0625rem',
                     lineHeight: 1.65,
                     color: o.featured ? 'rgba(247,242,235,0.86)' : 'var(--text-secondary)',
                     margin: 0,
@@ -355,7 +364,7 @@ export default function WerkwijzePage() {
                         </span>
                         <span
                           style={{
-                                                        fontWeight: 700,
+                            fontWeight: 700,
                             color: o.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
                             fontSize: '0.9375rem',
                             letterSpacing: '-0.01em',
@@ -401,11 +410,11 @@ export default function WerkwijzePage() {
                       margin: 0,
                     }}
                   >
-                    Investering
+                    {t('offerings.investment_label')}
                   </p>
                   <p
                     style={{
-                                            fontSize: 'clamp(1.5rem, 2.5vw, 1.875rem)',
+                      fontSize: 'clamp(1.5rem, 2.5vw, 1.875rem)',
                       fontWeight: 700,
                       letterSpacing: '-0.02em',
                       lineHeight: 1.1,
@@ -417,7 +426,7 @@ export default function WerkwijzePage() {
                   </p>
                   <p
                     style={{
-                                            fontSize: '0.875rem',
+                      fontSize: '0.875rem',
                       color: o.featured ? 'rgba(247,242,235,0.7)' : 'var(--text-muted)',
                       margin: 0,
                       lineHeight: 1.5,
@@ -450,7 +459,7 @@ export default function WerkwijzePage() {
               letterSpacing: '0.04em',
             }}
           >
-            * Alle bedragen exclusief btw. Eerste kennismaking altijd vrijblijvend.
+            {t('pricing_note')}
           </p>
 
           {/* Risk reversal */}
@@ -485,11 +494,10 @@ export default function WerkwijzePage() {
                   marginBottom: '6px',
                 }}
               >
-                Geen risico
+                {t('risk.title')}
               </p>
               <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.7 }}>
-                De Scorecard is gratis. Elk kennismakingsgesprek is vrijblijvend. En bij de Sparring Sessie geldt:
-                levert het gesprek geen enkel bruikbaar inzicht, dan factureert Wouter niet. Zo simpel is het.
+                {t('risk.body')}
               </p>
             </div>
           </div>
@@ -509,42 +517,14 @@ export default function WerkwijzePage() {
       >
         <div className="container-medium">
           <div className="reveal" style={{ marginBottom: 'clamp(28px, 4vw, 44px)', maxWidth: '640px' }}>
-            <p className="eyebrow" style={{ marginBottom: '16px' }}>Eerlijk over de investering</p>
+            <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('faq.eyebrow')}</p>
             <h2 className="type-h2" style={{ margin: 0 }}>
-              Wat partners doorgaans eerst willen weten
+              {t('faq.heading')}
             </h2>
           </div>
 
           <div className="reveal">
-            <Accordion
-              items={[
-                {
-                  id: 'niets',
-                  question: 'Wat als het niets voor ons blijkt?',
-                  answer: 'Start met de Sparring Sessie (€395). Eén vraag, één samenvatting, geen vervolgverplichting.',
-                },
-                {
-                  id: 'anders',
-                  question: 'Wat maakt Agentic Mindshift anders?',
-                  answer: 'Deal-ervaring in acquisition finance én financial restructuring: niet een AI-generalist die toevallig PE-klanten heeft. De AI versterkt die praktijk; ze vervangt haar niet.',
-                },
-                {
-                  id: 'rendement',
-                  question: 'Hoe weet ik of de investering rendeert?',
-                  answer: 'Eén correctie van 0,5× op de overnameprijs bij een €5M EBITDA-target is €2,5M: dat dekt de DD-kosten 250×. Eén tijdig gesignaleerde afwijking in de maandrapportage dekt de jaarkosten van doorlopend portefeuille-inzicht.',
-                },
-                {
-                  id: 'looptijd',
-                  question: 'Zitten we vast aan een lange looptijd?',
-                  answer: 'Sparring, Consultancy en DD zijn per opdracht. Fractional AI Officer: minimaal 3 maanden, omdat het ritme tijd nodig heeft.',
-                },
-                {
-                  id: 'volume',
-                  question: 'Meerdere deals tegelijk?',
-                  answer: 'Volumetarieven: 5 deals €42.500 (–15%), 10 deals €80.000 (–20%). Schaalvoordeel in inwerktijd en platform-onboarding.',
-                },
-              ] satisfies AccordionItem[]}
-            />
+            <Accordion items={faqItems} />
           </div>
         </div>
       </section>
@@ -564,17 +544,17 @@ export default function WerkwijzePage() {
         <div className="container-medium" style={{ textAlign: 'center', position: 'relative' }}>
           <div className="reveal">
             <p className="eyebrow" style={{ marginBottom: '28px', color: 'rgba(247,242,235,0.5)' }}>
-              Begin hier
+              {t('cta.eyebrow')}
             </p>
             <h2
               className="type-h2"
               style={{ color: 'var(--text-inverse)', marginBottom: '16px', maxWidth: '600px', marginInline: 'auto' }}
             >
-              Niet zeker welke route past? De Scorecard wijst de weg.
+              {t('cta.heading')}
             </h2>
             <p
               style={{
-                                fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
+                fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
                 color: 'rgba(247,242,235,0.5)',
                 marginBottom: '44px',
                 maxWidth: '440px',
@@ -582,15 +562,14 @@ export default function WerkwijzePage() {
                 lineHeight: 1.75,
               }}
             >
-              Twaalf minuten. Uw profiel bepaalt welke route het meest oplevert.
-              Geen verplichting, geen vervolg tenzij u dat zelf initieert.
+              {t('cta.subtext')}
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>
               <Button href="/scorecard" variant="primary" size="lg">
-                Start de Scorecard
+                {t('cta.primary')}
               </Button>
               <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
-                Plan een vrijblijvende kennismaking
+                {t('cta.secondary')}
               </Button>
             </div>
           </div>

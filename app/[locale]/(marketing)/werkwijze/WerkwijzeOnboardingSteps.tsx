@@ -1,26 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 const ease = [0.22, 1, 0.36, 1] as const;
-
-const steps = [
-  {
-    n: '01',
-    title: 'Scorecard of sparring',
-    body: 'U vult de Scorecard in (12 min) of plant een sparring-sessie van twintig minuten. Geen voorbereiding nodig: het gesprek of rapport brengt de relevante punten vanzelf naar boven.',
-  },
-  {
-    n: '02',
-    title: 'Intake en voorstel',
-    body: 'Op basis van uw scoreprofiel of het gesprek ontvangt u binnen twee werkdagen een concreet trajectvoorstel: scope, doorlooptijd, tarief en beoogd resultaat. Geen open einden.',
-  },
-  {
-    n: '03',
-    title: 'Start binnen een week',
-    body: 'Na akkoord starten wij binnen zeven dagen. U ontvangt direct de eerste deliverable of wordt ingepland voor de eerste sessie. Geen wachttijd.',
-  },
-];
 
 const containerVariants = {
   hidden: {},
@@ -38,6 +21,13 @@ const headingVariants = {
 };
 
 export default function WerkwijzeOnboardingSteps() {
+  const t = useTranslations('werkwijze');
+  const steps = [
+    { n: '01', title: t('steps.step_1_title'), body: t('steps.step_1_body') },
+    { n: '02', title: t('steps.step_2_title'), body: t('steps.step_2_body') },
+    { n: '03', title: t('steps.step_3_title'), body: t('steps.step_3_body') },
+  ];
+
   return (
     <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(56px, 7vw, 88px)' }}>
       <div className="container-medium">
@@ -48,10 +38,10 @@ export default function WerkwijzeOnboardingSteps() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
         >
-          <p className="eyebrow" style={{ marginBottom: '12px' }}>Van interesse naar samenwerking</p>
-          <h2 className="type-h2" style={{ marginBottom: '12px' }}>Drie stappen</h2>
+          <p className="eyebrow" style={{ marginBottom: '12px' }}>{t('steps.eyebrow')}</p>
+          <h2 className="type-h2" style={{ marginBottom: '12px' }}>{t('steps.heading')}</h2>
           <p style={{ fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)', color: 'var(--text-muted)', lineHeight: 1.7, maxWidth: '400px' }}>
-            Geen langdurige selectietrajecten. Van eerste contact tot lopende samenwerking duurt doorgaans twee weken.
+            {t('steps.subtext')}
           </p>
         </motion.div>
 

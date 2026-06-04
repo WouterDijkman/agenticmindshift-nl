@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 const LAUNCH_DATE = new Date('2026-07-01T00:00:00+02:00');
 
@@ -16,6 +17,7 @@ function getTimeLeft() {
 }
 
 export default function CountdownTimer() {
+  const t = useTranslations('factum_capital');
   const [timeLeft, setTimeLeft] = useState<ReturnType<typeof getTimeLeft>>(null);
 
   useEffect(() => {
@@ -27,10 +29,10 @@ export default function CountdownTimer() {
   if (!timeLeft) return null;
 
   const units = [
-    { value: timeLeft.days, label: 'dagen' },
-    { value: timeLeft.hours, label: 'uur' },
-    { value: timeLeft.minutes, label: 'min' },
-    { value: timeLeft.seconds, label: 'sec' },
+    { value: timeLeft.days, label: t('countdown.days') },
+    { value: timeLeft.hours, label: t('countdown.hours') },
+    { value: timeLeft.minutes, label: t('countdown.minutes') },
+    { value: timeLeft.seconds, label: t('countdown.seconds') },
   ];
 
   return (
