@@ -41,8 +41,7 @@ export default function Sectie2Page() {
         <h1 className="type-h2" style={{ marginBottom: '16px' }}>Uw deal-cyclus</h1>
         <p
           style={{
-            fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-            fontSize: '1.0625rem',
+                        fontSize: '1.0625rem',
             color: 'var(--text-secondary)',
             lineHeight: 1.75,
             maxWidth: '560px',

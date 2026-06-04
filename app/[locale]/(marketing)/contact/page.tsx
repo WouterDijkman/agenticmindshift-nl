@@ -107,8 +107,7 @@ export default function ContactPage() {
               >
                 <p
                   style={{
-                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                    fontSize: 'clamp(48px, 6vw, 68px)',
+                                        fontSize: 'clamp(48px, 6vw, 68px)',
                     fontWeight: 800,
                     letterSpacing: '-0.04em',
                     lineHeight: 0.9,
@@ -121,8 +120,7 @@ export default function ContactPage() {
                 </p>
                 <p
                   style={{
-                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                    fontSize: '1.0625rem',
+                                        fontSize: '1.0625rem',
                     fontWeight: 700,
                     color: 'var(--text-primary)',
                     marginBottom: '12px',
@@ -133,8 +131,7 @@ export default function ContactPage() {
                 </p>
                 <p
                   style={{
-                    fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                    fontSize: 'clamp(1rem, 1.6vw, 1.125rem)',
+                                        fontSize: 'clamp(1rem, 1.6vw, 1.125rem)',
                     color: 'var(--text-secondary)',
                     lineHeight: 1.75,
                     flex: 1,

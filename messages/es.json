@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "scorecard": "Scorecard",
+    "werkwijze": "Metodología",
+    "over": "Acerca de",
+    "factum_capital": "Factum Capital",
+    "contact": "Contacto",
+    "start_scorecard": "Iniciar el Scorecard",
+    "open_menu": "Abrir menú",
+    "close_menu": "Cerrar menú",
+    "badge_july": "julio"
+  },
+  "footer": {
+    "tagline": "Asesoría de IA para firmas neerlandesas de PE y M&A. Concreto, confidencial, medible.",
+    "email_wouter": "Email a Wouter",
+    "linkedin": "LinkedIn →",
+    "navigation": "Navegación",
+    "legal": "Legal",
+    "over_wouter": "Sobre Wouter",
+    "privacy": "Privacidad",
+    "voorwaarden": "Términos",
+    "cta_title": "¿Listo para ver sus puntos ciegos?",
+    "cta_sub": "Quince preguntas. Doce minutos. Sin cuenta.",
+    "start_scorecard": "Iniciar el Scorecard",
+    "copyright": "© 2026 Agentic Mindshift — fundada en octubre de 2025.",
+    "tagline_bottom": "Fundador de Factum Capital · lanzamiento 1 de julio de 2026"
+  },
+  "homepage": {
+    "hero": {
+      "eyebrow": "Para socios de PE, directores de M&A y family offices",
+      "heading": "Un punto ciego en su cartera le cuesta en promedio €2,5M. El Scorecard lo encuentra en doce minutos.",
+      "subtext": "Su informe mensual enmascara el bajo rendimiento. Su equipo de deals repite errores evitables. Y el riesgo de que la IA tome el control de las actividades principales no figura en ninguna propuesta al IC. El Scorecard mapea las seis dimensiones. En doce minutos.",
+      "cta_primary": "Iniciar el Scorecard",
+      "cta_secondary": "Metodología y honorarios",
+      "trust": "12 minutos · 6 dimensiones · sin cuenta · 100% confidencial"
+    },
+    "social_proof": {
+      "eyebrow": "Resultados",
+      "heading": "Lo que otros ya han descubierto.",
+      "disclaimer": "Basado en encargos reales · nombres anonimizados a petición del cliente.",
+      "quote_1": "\"Dos de las seis dimensiones estaban muy por debajo del nivel de empresas comparables — nunca nos lo habían hecho tan explícito.\"",
+      "who_1": "Socio de PE, fondo neerlandés lower mid-market",
+      "aum_1": "~€120M AUM",
+      "quote_2": "\"El precio de adquisición se ajustó a la baja en 0,4× basándose en el análisis de IA. El informe costó €10.000 — ese ajuste nos ahorró un múltiplo.\"",
+      "who_2": "Director de M&A, plataforma buy-and-build",
+      "aum_2": "4 adquisiciones al año",
+      "quote_3": "\"Pensábamos que nuestro informe mensual estaba en orden. El Scorecard mostró en doce minutos que tres de las seis dimensiones estaban por debajo del nivel de fondos comparables. Esa conversación nunca había ocurrido internamente.\"",
+      "who_3": "CFO, family office con 8 empresas de cartera",
+      "aum_3": "€40M–€60M bajo gestión"
+    },
+    "transformation": {
+      "eyebrow": "La diferencia",
+      "heading": "Del instinto a la fundamentación.",
+      "without_label": "Sin el Scorecard",
+      "with_label": "Después del Scorecard",
+      "without_1": "Decisiones del IC basadas en intuición y experiencia.",
+      "without_2": "Informe mensual como ritual, no como herramienta de gestión.",
+      "without_3": "Las lecciones de deals se pierden con cada cambio de equipo.",
+      "without_4": "El riesgo de que la IA tome las actividades principales no está en ningún papel.",
+      "with_1": "Seis dimensiones cuantificadas, comparadas con empresas similares.",
+      "with_2": "Dos prioridades concretas con mayor impacto.",
+      "with_3": "Un informe que puede compartir internamente sin explicación adicional.",
+      "with_4": "Va a su próximo IC con datos, no con una corazonada."
+    },
+    "faq": {
+      "eyebrow": "Preguntas",
+      "heading": "Respuestas honestas a las preguntas que tiene ahora.",
+      "subtext": "Sin discurso de ventas. Respuestas directas.",
+      "cta": "Iniciar el Scorecard"
+    },
+    "stakes": {
+      "eyebrow": "El coste de la inacción",
+      "heading": "Cada trimestre sin medición le cuesta más que la propia medición.",
+      "body_1": "Sin medición estructural, el riesgo de que la IA tome las actividades principales sigue siendo un punto ciego en su precio de adquisición. Su informe mensual sigue siendo un ritual en lugar de una herramienta de gestión. Cada lección de deal desaparece con el siguiente cambio de equipo.",
+      "body_2": "¿La diferencia entre un precio de adquisición fundamentado y uno sin calibrar? En un objetivo de EBITDA de €5M, fácilmente 0,5×: eso son €2,5M.",
+      "body_3": "El Scorecard tarda doce minutos. La inacción cuesta trimestres."
+    },
+    "final_cta": {
+      "eyebrow": "Su próximo paso",
+      "heading": "En doce minutos sabrá exactamente dónde es vulnerable su cartera.",
+      "subtext": "Va a su próxima reunión del IC con datos, no con un presentimiento. Sin cuenta. Sin compromisos. Su informe está disponible de inmediato.",
+      "cta_primary": "Iniciar el Scorecard",
+      "cta_secondary": "Programar una llamada sin compromiso"
+    },
+    "mid_cta": {
+      "heading": "Doce minutos. Seis dimensiones. Información inmediata.",
+      "subtext": "Opción múltiple. Sin cuenta. Informe disponible inmediatamente al terminar.",
+      "cta": "Iniciar el Scorecard"
+    }
+  },
+  "common": {
+    "start_scorecard": "Iniciar el Scorecard",
+    "cta_conversation": "¿Prefiere una conversación?",
+    "no_account": "Sin cuenta requerida",
+    "minutes_12": "doce minutos"
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "heading": "Empiece con una pregunta. No con un compromiso.",
+    "subtext": "Comience con el Scorecard para obtener información inmediata, o programe una llamada de veinte minutos sin compromiso. Usted establece la agenda.",
+    "card_01_title": "Scorecard",
+    "card_01_body": "Doce minutos. Informe de cuatro páginas. El punto de partida más estructurado para hacer medible su cartera.",
+    "card_01_cta": "Iniciar el Scorecard",
+    "card_02_title": "Sesión de sparring",
+    "card_02_body": "Veinte minutos para ver si hay compatibilidad. Usted establece la agenda.",
+    "card_02_cta": "Programar una sesión",
+    "card_03_title": "Email directo",
+    "card_03_body": "¿Prefiere por escrito? Envíe un email a wouter@agenticmindshift.nl.",
+    "card_03_cta": "Enviar un email"
+  },
+  "over": {
+    "title": "Sobre Wouter Dijkman",
+    "description": "Fundador de Agentic Mindshift y Factum Capital. Seis años de experiencia en deals de acquisition finance y financial restructuring, mid-market neerlandés."
+  },
+  "werkwijze": {
+    "title": "Metodología e Inversión",
+    "description": "Cuatro formas claramente diferenciadas de trabajar con Agentic Mindshift."
+  },
+  "factum_capital": {
+    "title": "Factum Capital",
+    "description": "Due diligence impulsada por IA para PE neerlandés."
+  }
+}

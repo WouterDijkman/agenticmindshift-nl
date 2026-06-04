@@ -114,8 +114,7 @@ export default function HomePage() {
               >
                 <p
                   style={{
-                    fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                    fontSize: 'clamp(1.125rem, 1.8vw, 1.375rem)',
+                                        fontSize: 'clamp(1.125rem, 1.8vw, 1.375rem)',
                     fontStyle: 'italic',
                     fontWeight: 300,
                     color: 'var(--text-primary)',
@@ -168,8 +167,7 @@ export default function HomePage() {
             <div>
               <p
                 style={{
-                  fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                  fontSize: 'clamp(1.125rem, 2vw, 1.5rem)',
+                                    fontSize: 'clamp(1.125rem, 2vw, 1.5rem)',
                   fontWeight: 700,
                   color: 'var(--text-primary)',
                   letterSpacing: '-0.015em',
@@ -179,7 +177,7 @@ export default function HomePage() {
               >
                 Twaalf minuten. Zes dimensies. Direct inzicht.
               </p>
-              <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)', color: 'var(--text-muted)', margin: 0 }}>
+              <p style={{ fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)', color: 'var(--text-muted)', margin: 0 }}>
                 Multiple choice. Geen account. Rapport direct na afronding.
               </p>
             </div>
@@ -224,7 +222,7 @@ export default function HomePage() {
               <p style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '20px' }}>
                 Zonder de Scorecard
               </p>
-              <div style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <div style={{ fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <p style={{ margin: 0 }}>IC-beslissingen op basis van gevoel en ervaring.</p>
                 <p style={{ margin: 0 }}>Maandrapportage als ritueel, geen sturingsinstrument.</p>
                 <p style={{ margin: 0 }}>Deal-lessen verdwijnen bij elke teamwissel.</p>
@@ -235,7 +233,7 @@ export default function HomePage() {
               <p style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--accent-cta)', marginBottom: '20px' }}>
                 Na de Scorecard
               </p>
-              <div style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <div style={{ fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <p style={{ margin: 0 }}>Zes dimensies gekwantificeerd, vergeleken met vergelijkbare partijen.</p>
                 <p style={{ margin: 0 }}>Twee concrete aandachtspunten met de hoogste impact.</p>
                 <p style={{ margin: 0 }}>Een rapport dat u intern kunt delen zonder extra uitleg.</p>
@@ -261,8 +259,7 @@ export default function HomePage() {
                 Eerlijk antwoord op de vragen die u nu hebt.
               </h2>
               <p style={{
-                fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                fontSize: 'clamp(1rem, 1.6vw, 1.125rem)',
+                                fontSize: 'clamp(1rem, 1.6vw, 1.125rem)',
                 color: 'var(--text-muted)',
                 lineHeight: 1.75,
                 maxWidth: '280px',
@@ -298,8 +295,7 @@ export default function HomePage() {
             </h2>
             <div
               style={{
-                fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
+                                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
                 color: 'var(--text-secondary)',
                 lineHeight: 1.75,
                 display: 'flex',
@@ -351,8 +347,7 @@ export default function HomePage() {
           </h2>
           <p
             style={{
-              fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-              fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
+                            fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
               color: 'rgba(247,242,235,0.5)',
               marginBottom: '48px',
               maxWidth: '460px',

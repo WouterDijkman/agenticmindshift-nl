@@ -22,8 +22,7 @@ export default function HomepageShowcaseSection() {
             </h2>
             <p
               style={{
-                fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
+                                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
                 color: 'var(--text-secondary)',
                 lineHeight: 1.75,
                 maxWidth: '440px',

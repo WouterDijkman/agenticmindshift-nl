@@ -1,27 +1,11 @@
 import type { Metadata } from 'next';
-import { Playfair_Display, Inter, Cormorant_Garamond } from 'next/font/google';
+import { SUSE } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 
-const playfair = Playfair_Display({
-  variable: '--font-playfair',
-  weight: ['400', '500', '600', '700', '800', '900'],
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-const inter = Inter({
-  variable: '--font-inter',
-  weight: ['300', '400', '500', '600', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-const cormorant = Cormorant_Garamond({
-  variable: '--font-cormorant',
-  weight: ['300', '400', '500', '600', '700'],
-  style: ['normal', 'italic'],
+const suse = SUSE({
+  variable: '--font-suse',
+  weight: ['300', '400', '500', '600', '700', '800'],
   subsets: ['latin'],
   display: 'swap',
 });
@@ -51,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl" className={`${playfair.variable} ${inter.variable} ${cormorant.variable} h-full antialiased`}>
+    <html lang="nl" className={`${suse.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         {children}
         <Script

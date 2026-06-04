@@ -99,7 +99,7 @@ export default function ResultaatPage() {
         <h1 className="type-h2" style={{ marginBottom: '12px' }}>
           U ziet nu wat de meeste partners pas bij de jaarrapportage zien.
         </h1>
-        <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, maxWidth: '520px' }}>
+        <p style={{ fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, maxWidth: '520px' }}>
           Vul uw gegevens in om het volledige rapport te ontvangen, direct in uw browser
           én als PDF in uw inbox.
         </p>
@@ -155,8 +155,7 @@ export default function ResultaatPage() {
               >
                 <span
                   style={{
-                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                    fontSize: '0.75rem',
+                                        fontSize: '0.75rem',
                     fontWeight: 800,
                     color: 'var(--accent-cta)',
                     letterSpacing: '0.06em',
@@ -166,7 +165,7 @@ export default function ResultaatPage() {
                 >
                   {item.num}
                 </span>
-                <span style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                <span style={{ fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
                   {item.text}
                 </span>
               </div>

@@ -44,8 +44,7 @@ export default function OverPage() {
               >
                 <p
                   style={{
-                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                    fontSize: 'clamp(1.25rem, 2.5vw, 1.875rem)',
+                                        fontSize: 'clamp(1.25rem, 2.5vw, 1.875rem)',
                     fontWeight: 400,
                     fontStyle: 'italic',
                     lineHeight: 1.4,
@@ -63,8 +62,7 @@ export default function OverPage() {
             <div className="reveal" style={{ transitionDelay: '80ms' }}>
               <div
                 style={{
-                  fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                  display: 'flex',
+                                    display: 'flex',
                   flexDirection: 'column',
                   gap: '20px',
                   fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
@@ -168,8 +166,7 @@ export default function OverPage() {
 
                 <span
                   style={{
-                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                    fontSize: '0.875rem',
+                                        fontSize: '0.875rem',
                     fontWeight: 700,
                     color: row.future ? 'var(--text-muted)' : 'var(--accent-cta)',
                     letterSpacing: '-0.01em',
@@ -199,7 +196,7 @@ export default function OverPage() {
                       </span>
                     )}
                   </div>
-                  <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(0.9375rem, 1.5vw, 1.0625rem)', color: 'var(--text-muted)', lineHeight: 1.6 }}>
+                  <p style={{ fontSize: 'clamp(0.9375rem, 1.5vw, 1.0625rem)', color: 'var(--text-muted)', lineHeight: 1.6 }}>
                     {row.sub}
                   </p>
                 </div>
@@ -215,8 +212,7 @@ export default function OverPage() {
           <p className="eyebrow" style={{ marginBottom: '12px' }}>Werkwijze</p>
           <p
             style={{
-              fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-              fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
+                            fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
               color: 'var(--text-secondary)',
               lineHeight: 1.65,
               marginBottom: '24px',
@@ -254,8 +250,7 @@ export default function OverPage() {
             </h2>
             <p
               style={{
-                fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
+                                fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
                 color: 'rgba(247,242,235,0.5)',
                 marginBottom: '44px',
                 maxWidth: '400px',

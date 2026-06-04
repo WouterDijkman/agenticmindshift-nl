@@ -79,8 +79,7 @@ export default function HomepageStatsSection() {
                 </div>
                 <p
                   style={{
-                    fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                    fontSize: 'clamp(56px, 8vw, 100px)',
+                                        fontSize: 'clamp(56px, 8vw, 100px)',
                     fontWeight: 800,
                     letterSpacing: '-0.04em',
                     lineHeight: 0.9,
@@ -111,8 +110,7 @@ export default function HomepageStatsSection() {
               </p>
               <p
                 style={{
-                  fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                  fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
+                                    fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
                   fontStyle: 'italic',
                   color: 'var(--text-muted)',
                   lineHeight: 1.65,

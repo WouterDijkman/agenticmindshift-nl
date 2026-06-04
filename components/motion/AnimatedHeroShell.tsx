@@ -135,8 +135,7 @@ export default function AnimatedHeroShell({
           opacity: 0.022,
           pointerEvents: 'none',
           userSelect: 'none',
-          fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-        }}
+                  }}
       >
         {bgChar}
       </motion.div>
@@ -195,8 +194,7 @@ export default function AnimatedHeroShell({
         <p
           className="hero-anim hero-anim--subtext"
           style={{
-            fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-            fontSize: 'clamp(1.125rem, 2vw, 1.5rem)',
+                        fontSize: 'clamp(1.125rem, 2vw, 1.5rem)',
             fontWeight: 400,
             lineHeight: 1.55,
             color: 'var(--text-secondary)',

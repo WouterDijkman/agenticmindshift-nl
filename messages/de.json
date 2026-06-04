@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "scorecard": "Scorecard",
+    "werkwijze": "Arbeitsweise",
+    "over": "Über uns",
+    "factum_capital": "Factum Capital",
+    "contact": "Kontakt",
+    "start_scorecard": "Scorecard starten",
+    "open_menu": "Menü öffnen",
+    "close_menu": "Menü schließen",
+    "badge_july": "juli"
+  },
+  "footer": {
+    "tagline": "KI-Beratung für niederländische PE- und M&A-Unternehmen. Konkret, vertraulich, messbar.",
+    "email_wouter": "Wouter per E-Mail",
+    "linkedin": "LinkedIn →",
+    "navigation": "Navigation",
+    "legal": "Rechtliches",
+    "over_wouter": "Über Wouter",
+    "privacy": "Datenschutz",
+    "voorwaarden": "AGB",
+    "cta_title": "Bereit, Ihre blinden Flecken zu sehen?",
+    "cta_sub": "Fünfzehn Fragen. Zwölf Minuten. Kein Konto erforderlich.",
+    "start_scorecard": "Scorecard starten",
+    "copyright": "© 2026 Agentic Mindshift — gegründet Oktober 2025.",
+    "tagline_bottom": "Gründer Factum Capital · Start 1. Juli 2026"
+  },
+  "homepage": {
+    "hero": {
+      "eyebrow": "Für PE-Partner, M&A-Direktoren und Family Offices",
+      "heading": "Ein blinder Fleck in Ihrem Portfolio kostet Sie durchschnittlich €2,5M. Die Scorecard findet ihn in zwölf Minuten.",
+      "subtext": "Ihr Monatsbericht verschleiert Minderleistung. Ihr Deal-Team wiederholt vermeidbare Fehler. Und das Risiko, dass KI die Kernaktivität übernimmt, steht in keinem IC-Vorschlag. Die Scorecard kartiert alle sechs Dimensionen. In zwölf Minuten.",
+      "cta_primary": "Scorecard starten",
+      "cta_secondary": "Arbeitsweise & Honorare",
+      "trust": "12 Minuten · 6 Dimensionen · kein Konto · 100% vertraulich"
+    },
+    "social_proof": {
+      "eyebrow": "Ergebnisse",
+      "heading": "Was andere bereits entdeckt haben.",
+      "disclaimer": "Basierend auf tatsächlichen Mandaten · Namen auf Kundenwunsch anonymisiert.",
+      "quote_1": "Zwei der sechs Dimensionen lagen weit unter dem Niveau vergleichbarer Unternehmen — das war uns so explizit noch nie gemacht worden.",
+      "who_1": "PE-Partner, niederländischer Lower-Mid-Market-Fonds",
+      "aum_1": "~€120M AUM",
+      "quote_2": "Erwerbspreis um 0,4× nach unten angepasst auf Basis der KI-Analyse. Der Bericht kostete €10.000 — diese Anpassung ersparte uns ein Vielfaches.",
+      "who_2": "M&A-Direktor, Buy-and-Build-Plattform",
+      "aum_2": "4 Akquisitionen pro Jahr",
+      "quote_3": "Wir dachten, unser Monatsbericht sei in Ordnung. Die Scorecard zeigte in zwölf Minuten, dass drei der sechs Dimensionen unter dem Niveau vergleichbarer Fonds lagen. Dieses Gespräch hatten wir intern nie geführt.",
+      "who_3": "CFO, Family Office mit 8 Portfoliounternehmen",
+      "aum_3": "€40M–€60M unter Verwaltung"
+    },
+    "transformation": {
+      "eyebrow": "Der Unterschied",
+      "heading": "Vom Bauchgefühl zur Fundierung.",
+      "without_label": "Ohne die Scorecard",
+      "with_label": "Nach der Scorecard",
+      "without_1": "IC-Entscheidungen basierend auf Intuition und Erfahrung.",
+      "without_2": "Monatsbericht als Ritual, kein Steuerungsinstrument.",
+      "without_3": "Deal-Lektionen gehen bei jedem Teamwechsel verloren.",
+      "without_4": "Das Risiko, dass KI die Kernaktivität übernimmt, steht nirgends auf Papier.",
+      "with_1": "Sechs Dimensionen quantifiziert, verglichen mit vergleichbaren Unternehmen.",
+      "with_2": "Zwei konkrete Schwerpunkte mit dem höchsten Impact.",
+      "with_3": "Ein Bericht, den Sie intern ohne weitere Erläuterung teilen können.",
+      "with_4": "Sie gehen mit Daten in Ihr nächstes IC — nicht mit einem Verdacht."
+    },
+    "faq": {
+      "eyebrow": "Fragen",
+      "heading": "Ehrliche Antworten auf Ihre aktuellen Fragen.",
+      "subtext": "Kein Verkaufsgespräch. Direkte Antworten.",
+      "cta": "Scorecard starten"
+    },
+    "stakes": {
+      "eyebrow": "Die Kosten der Untätigkeit",
+      "heading": "Jedes Quartal ohne Messung kostet Sie mehr als die Messung selbst.",
+      "body_1": "Ohne strukturierte Messung bleibt das Risiko, dass KI die Kernaktivität übernimmt, ein blinder Fleck in Ihrem Erwerbspreis. Ihr Monatsbericht bleibt ein Ritual statt ein Steuerungsinstrument. Jede Deal-Lektion verschwindet mit dem nächsten Teamwechsel.",
+      "body_2": "Der Unterschied zwischen einem fundierten und einem unkalibriertem Erwerbspreis? Bei einem €5M-EBITDA-Ziel schnell 0,5×: das sind €2,5M.",
+      "body_3": "Die Scorecard dauert zwölf Minuten. Untätigkeit kostet Quartale."
+    },
+    "final_cta": {
+      "eyebrow": "Ihr nächster Schritt",
+      "heading": "In zwölf Minuten wissen Sie genau, wo Ihr Portfolio verwundbar ist.",
+      "subtext": "Sie gehen mit Daten in Ihr nächstes IC-Meeting — nicht mit einem Gefühl. Kein Konto. Keine Verpflichtungen. Ihr Bericht ist sofort verfügbar.",
+      "cta_primary": "Scorecard starten",
+      "cta_secondary": "Unverbindliches Gespräch planen"
+    },
+    "mid_cta": {
+      "heading": "Zwölf Minuten. Sechs Dimensionen. Sofortige Erkenntnisse.",
+      "subtext": "Multiple Choice. Kein Konto. Bericht sofort nach Abschluss verfügbar.",
+      "cta": "Scorecard starten"
+    }
+  },
+  "common": {
+    "start_scorecard": "Scorecard starten",
+    "cta_conversation": "Lieber ein Gespräch?",
+    "no_account": "Kein Konto erforderlich",
+    "minutes_12": "zwölf Minuten"
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "heading": "Beginnen Sie mit einer Frage. Nicht mit einer Verpflichtung.",
+    "subtext": "Starten Sie mit der Scorecard für sofortige Erkenntnisse oder vereinbaren Sie ein unverbindliches zwanzig-minütiges Gespräch. Sie bestimmen die Agenda.",
+    "card_01_title": "Scorecard",
+    "card_01_body": "Zwölf Minuten. Vierseitiger Bericht. Der strukturierteste Ausgangspunkt, um Ihr Portfolio messbar zu machen.",
+    "card_01_cta": "Scorecard starten",
+    "card_02_title": "Sparring-Session",
+    "card_02_body": "Zwanzig Minuten, um zu sehen, ob es passt. Sie bestimmen die Agenda.",
+    "card_02_cta": "Session planen",
+    "card_03_title": "Direkt per E-Mail",
+    "card_03_body": "Lieber schriftlich? Senden Sie eine E-Mail an wouter@agenticmindshift.nl.",
+    "card_03_cta": "E-Mail senden"
+  },
+  "over": {
+    "title": "Über Wouter Dijkman",
+    "description": "Gründer von Agentic Mindshift und Factum Capital. Sechs Jahre Deal-Erfahrung in Acquisition Finance und Financial Restructuring, niederländischer Mid-Market."
+  },
+  "werkwijze": {
+    "title": "Arbeitsweise & Investition",
+    "description": "Vier klar differenzierte Wege, mit Agentic Mindshift zu arbeiten."
+  },
+  "factum_capital": {
+    "title": "Factum Capital",
+    "description": "KI-gestützte Due Diligence für niederländische PE."
+  }
+}

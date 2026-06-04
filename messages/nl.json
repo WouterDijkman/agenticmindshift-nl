@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "scorecard": "Scorecard",
+    "werkwijze": "Werkwijze",
+    "over": "Over",
+    "factum_capital": "Factum Capital",
+    "contact": "Contact",
+    "start_scorecard": "Start de Scorecard",
+    "open_menu": "Open menu",
+    "close_menu": "Sluit menu",
+    "badge_july": "juli"
+  },
+  "footer": {
+    "tagline": "AI‑advies voor Nederlandse PE‑ en M&A‑firma’s. Concreet, vertrouwelijk, meetbaar.",
+    "email_wouter": "E-mail Wouter",
+    "linkedin": "LinkedIn →",
+    "navigation": "Navigatie",
+    "legal": "Juridisch",
+    "over_wouter": "Over Wouter",
+    "privacy": "Privacy",
+    "voorwaarden": "Voorwaarden",
+    "cta_title": "Klaar om uw blinde vlekken te zien?",
+    "cta_sub": "Vijftien vragen. Twaalf minuten. Geen account.",
+    "start_scorecard": "Start de Scorecard",
+    "copyright": "© 2026 Agentic Mindshift — opgericht oktober 2025.",
+    "tagline_bottom": "Founder Factum Capital · lancering 1 juli 2026"
+  },
+  "homepage": {
+    "hero": {
+      "eyebrow": "Voor PE-partners, M&A-directors en family offices",
+      "heading": "Eén blinde vlek in uw portfolio kost u gemiddeld €2,5M. De Scorecard vindt hem in twaalf minuten.",
+      "subtext": "Uw maandrapportage maskeert onderprestatie. Uw deal-team herhaalt vermijdbare fouten. En het risico dat AI de kernactiviteit overneemt staat in geen enkel IC-voorstel. De Scorecard brengt alle zes dimensies in kaart. In twaalf minuten.",
+      "cta_primary": "Start de Scorecard",
+      "cta_secondary": "Werkwijze & tarieven",
+      "trust": "12 minuten · 6 dimensies · geen account nodig · 100% vertrouwelijk"
+    },
+    "social_proof": {
+      "eyebrow": "Resultaten",
+      "heading": "Wat anderen al ontdekten.",
+      "disclaimer": "Betreffen daadwerkelijke opdrachten · namen geanonimiseerd op verzoek van cliënt.",
+      "quote_1": "“Twee van de zes dimensies lagen ver onder het niveau van vergelijkbare partijen — dat was ons nooit eerder zo expliciet gemaakt.”",
+      "who_1": "PE-partner, Nederlandse lower-mid market fund",
+      "aum_1": "~€120M AUM",
+      "quote_2": "“Overnameprijs 0,4× naar beneden bijgesteld op basis van de AI-analyse. Het rapport kostte €10.000 — die aanpassing bespaarde ons een veelvoud.”",
+      "who_2": "M&A-director, buy-and-build platform",
+      "aum_2": "4 acquisities per jaar",
+      "quote_3": "“We dachten dat onze maandrapportage op orde was. De Scorecard liet in twaalf minuten zien dat drie van de zes dimensies onder het niveau van vergelijkbare fondsen lagen. Dat gesprek hadden we intern nooit gevoerd.”",
+      "who_3": "CFO, familiekantoor met 8 deelnemingen",
+      "aum_3": "€40M–€60M onder beheer"
+    },
+    "transformation": {
+      "eyebrow": "Het verschil",
+      "heading": "Van onderbuik naar onderbouwing.",
+      "without_label": "Zonder de Scorecard",
+      "with_label": "Na de Scorecard",
+      "without_1": "IC-beslissingen op basis van gevoel en ervaring.",
+      "without_2": "Maandrapportage als ritueel, geen sturingsinstrument.",
+      "without_3": "Deal-lessen verdwijnen bij elke teamwissel.",
+      "without_4": "Het risico dat AI de kernactiviteit overneemt staat nergens op papier.",
+      "with_1": "Zes dimensies gekwantificeerd, vergeleken met vergelijkbare partijen.",
+      "with_2": "Twee concrete aandachtspunten met de hoogste impact.",
+      "with_3": "Een rapport dat u intern kunt delen zonder extra uitleg.",
+      "with_4": "U gaat naar uw volgende IC met data, niet met een vermoeden."
+    },
+    "faq": {
+      "eyebrow": "Vragen",
+      "heading": "Eerlijk antwoord op de vragen die u nu hebt.",
+      "subtext": "Geen verkooppraatjes. Directe antwoorden.",
+      "cta": "Start de Scorecard"
+    },
+    "stakes": {
+      "eyebrow": "De kosten van niets doen",
+      "heading": "Elk kwartaal zonder meting kost u meer dan de meting zelf.",
+      "body_1": "Zonder structurele meting blijft het risico dat AI de kernactiviteit overneemt een blinde vlek in uw overnameprijs. Blijft uw maandrapportage een ritueel in plaats van een sturingsinstrument. Verdwijnt elke deal-les met de volgende teamwissel.",
+      "body_2": "Het verschil tussen een onderbouwde en een ongecalibreerde overnameprijs? Op een €5M EBITDA-target al snel 0,5×: dat is €2,5M.",
+      "body_3": "De Scorecard kost twaalf minuten. Niets doen kost kwartalen."
+    },
+    "final_cta": {
+      "eyebrow": "Uw volgende stap",
+      "heading": "Over twaalf minuten weet u exact waar uw portefeuille kwetsbaar is.",
+      "subtext": "U gaat naar uw volgende IC-vergadering met data, niet met een gevoel. Geen account. Geen verplichtingen. Uw rapport is direct beschikbaar.",
+      "cta_primary": "Start de Scorecard",
+      "cta_secondary": "Plan een vrijblijvende kennismaking"
+    },
+    "mid_cta": {
+      "heading": "Twaalf minuten. Zes dimensies. Direct inzicht.",
+      "subtext": "Multiple choice. Geen account. Rapport direct na afronding.",
+      "cta": "Start de Scorecard"
+    }
+  },
+  "common": {
+    "start_scorecard": "Start de Scorecard",
+    "cta_conversation": "Liever een gesprek?",
+    "no_account": "Geen account vereist",
+    "minutes_12": "twaalf minuten"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "heading": "Begin met een vraag. Niet met een commitment.",
+    "subtext": "Start met de Scorecard voor direct inzicht, of plan een vrijblijvend gesprek van twintig minuten. U stelt de agenda.",
+    "card_01_title": "Scorecard",
+    "card_01_body": "Twaalf minuten. Vier pagina’s rapport. Het meest gestructureerde startpunt om uw portefeuille meetbaar te maken.",
+    "card_01_cta": "Start de Scorecard",
+    "card_02_title": "Sparring-sessie",
+    "card_02_body": "Twintig minuten om te kijken of er een match is. U stelt de agenda.",
+    "card_02_cta": "Plan een sessie",
+    "card_03_title": "Direct e-mailen",
+    "card_03_body": "Liever schriftelijk? Stuur een e-mail naar wouter@agenticmindshift.nl.",
+    "card_03_cta": "Stuur een e-mail"
+  },
+  "over": {
+    "title": "Over Wouter Dijkman",
+    "description": "Founder Agentic Mindshift en Factum Capital. Zes jaar deal-ervaring in acquisition finance en financial restructuring, Nederlandse mid-market."
+  },
+  "werkwijze": {
+    "title": "Werkwijze & Investering",
+    "description": "Vier helder gedifferentieerde manieren waarop u met Agentic Mindshift werkt."
+  },
+  "factum_capital": {
+    "title": "Factum Capital",
+    "description": "AI-gestuurde due diligence voor Nederlandse PE."
+  }
+}

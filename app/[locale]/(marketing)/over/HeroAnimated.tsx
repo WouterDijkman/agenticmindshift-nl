@@ -47,8 +47,7 @@ export default function HeroAnimated() {
           letterSpacing: '-0.06em',
           pointerEvents: 'none',
           userSelect: 'none',
-          fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-        }}
+                  }}
       >
         W
       </motion.div>

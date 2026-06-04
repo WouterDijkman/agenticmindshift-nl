@@ -57,7 +57,7 @@ export default function HomepageDimensionsSection() {
           <div>
             <p className="eyebrow" style={{ marginBottom: '16px' }}>Zes dimensies</p>
             <h2 className="type-h2" style={{ marginBottom: '16px' }}>De zes plekken waar rendement weglekt.</h2>
-            <p style={{ fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(1.0625rem, 1.6vw, 1.125rem)', color: 'var(--text-muted)', margin: 0, maxWidth: '440px', lineHeight: 1.65 }}>
+            <p style={{ fontSize: 'clamp(1.0625rem, 1.6vw, 1.125rem)', color: 'var(--text-muted)', margin: 0, maxWidth: '440px', lineHeight: 1.65 }}>
               De Scorecard meet elk van deze dimensies en vergelijkt uw profiel met vergelijkbare partijen.
             </p>
           </div>
@@ -137,8 +137,7 @@ export default function HomepageDimensionsSection() {
               </div>
               <p
                 style={{
-                  fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                  fontSize: '1.0625rem',
+                                    fontSize: '1.0625rem',
                   fontWeight: 700,
                   color: 'var(--text-primary)',
                   margin: '0 0 12px',
@@ -150,8 +149,7 @@ export default function HomepageDimensionsSection() {
               </p>
               <p
                 style={{
-                  fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                  fontSize: 'clamp(0.9375rem, 1.5vw, 1.0625rem)',
+                                    fontSize: 'clamp(0.9375rem, 1.5vw, 1.0625rem)',
                   color: 'var(--text-tertiary)',
                   lineHeight: 1.7,
                   margin: 0,

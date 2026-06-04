@@ -88,8 +88,7 @@ export default function HomepageFactumSection() {
               {/* Number */}
               <p
                 style={{
-                  fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                  fontSize: 'clamp(52px, 6vw, 72px)',
+                                    fontSize: 'clamp(52px, 6vw, 72px)',
                   fontWeight: 800,
                   letterSpacing: '-0.04em',
                   lineHeight: 0.9,
@@ -104,8 +103,7 @@ export default function HomepageFactumSection() {
               {/* Title */}
               <h3
                 style={{
-                  fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                  fontSize: 'clamp(1.25rem, 2.2vw, 1.625rem)',
+                                    fontSize: 'clamp(1.25rem, 2.2vw, 1.625rem)',
                   fontWeight: 700,
                   color: 'var(--text-primary)',
                   letterSpacing: '-0.02em',
@@ -119,8 +117,7 @@ export default function HomepageFactumSection() {
               {/* Body */}
               <p
                 style={{
-                  fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                  fontSize: 'clamp(1rem, 1.6vw, 1.125rem)',
+                                    fontSize: 'clamp(1rem, 1.6vw, 1.125rem)',
                   color: 'var(--text-secondary)',
                   lineHeight: 1.75,
                   marginBottom: '28px',
@@ -152,8 +149,7 @@ export default function HomepageFactumSection() {
                 </Button>
                 <p
                   style={{
-                    fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-                    fontSize: '0.9375rem',
+                                        fontSize: '0.9375rem',
                     fontStyle: 'italic',
                     color: 'var(--text-muted)',
                     margin: 0,
@@ -214,8 +210,7 @@ export default function HomepageFactumSection() {
             </span>
             <span
               style={{
-                fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
-                fontWeight: 700,
+                                fontWeight: 700,
                 color: 'var(--text-primary)',
                 fontSize: '0.9375rem',
               }}
@@ -226,8 +221,7 @@ export default function HomepageFactumSection() {
           </Link>
           <p
             style={{
-              fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-              fontSize: '0.9375rem',
+                            fontSize: '0.9375rem',
               fontStyle: 'italic',
               color: 'var(--text-muted)',
               marginTop: '10px',

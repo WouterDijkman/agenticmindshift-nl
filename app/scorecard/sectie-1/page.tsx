@@ -41,8 +41,7 @@ export default function Sectie1Page() {
         <h1 className="type-h2" style={{ marginBottom: '16px' }}>Uw analytische aanpak vandaag</h1>
         <p
           style={{
-            fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
-            fontSize: '1.0625rem',
+                        fontSize: '1.0625rem',
             color: 'var(--text-secondary)',
             lineHeight: 1.75,
             maxWidth: '560px',
