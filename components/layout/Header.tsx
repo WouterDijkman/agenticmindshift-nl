@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Button from '@/components/ui/Button';
@@ -199,7 +199,8 @@ export default function Header() {
               </Link>
             ))}
           </nav>
-          <div className="mt-auto">
+          <div className="mt-auto flex flex-col gap-4">
+            <LanguageSwitcher />
             <Button href="/scorecard" variant="primary" size="lg" className="w-full">
               Start de Scorecard
             </Button>

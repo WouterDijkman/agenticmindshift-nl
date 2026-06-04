@@ -1,24 +1,24 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter } from '@/i18n/navigation';
 import { useAssessmentStore } from '@/store/assessmentStore';
 import { questionsBySection, questions } from '@/lib/questions';
 import QuestionCard from '@/components/scorecard/QuestionCard';
 import ProgressBar from '@/components/scorecard/ProgressBar';
 import Button from '@/components/ui/Button';
 
-export default function Sectie3Page() {
+export default function Sectie2Page() {
   const router = useRouter();
   const answers = useAssessmentStore((s) => s.answers);
   const setAnswer = useAssessmentStore((s) => s.setAnswer);
   const setCurrentSection = useAssessmentStore((s) => s.setCurrentSection);
 
   useEffect(() => {
-    setCurrentSection(3);
+    setCurrentSection(2);
   }, [setCurrentSection]);
 
-  const section = questionsBySection(3);
+  const section = questionsBySection(2);
   const sectionDone = section.every((q) => answers[q.id]);
   const answered = questions.filter((q) => answers[q.id]).length;
 
@@ -35,10 +35,10 @@ export default function Sectie3Page() {
         }}
       >
         <div style={{ display: 'flex', alignItems: 'baseline', gap: '16px', marginBottom: '16px' }}>
-          <p className="eyebrow" style={{ marginBottom: 0 }}>Sectie 3 van 4</p>
-          <span style={{ fontSize: '0.8125rem', color: 'var(--accent-cta)', fontWeight: 500, letterSpacing: '0.01em' }}>Halverwege. Het interessantste deel.</span>
+          <p className="eyebrow" style={{ marginBottom: 0 }}>Sectie 2 van 4</p>
+          <span style={{ fontSize: '0.8125rem', color: 'var(--accent-cta)', fontWeight: 500, letterSpacing: '0.01em' }}>Goed bezig, een kwart klaar.</span>
         </div>
-        <h1 className="type-h2" style={{ marginBottom: '16px' }}>Portefeuille, financiering en monitoring</h1>
+        <h1 className="type-h2" style={{ marginBottom: '16px' }}>Uw deal-cyclus</h1>
         <p
           style={{
                         fontSize: '1.0625rem',
@@ -47,7 +47,7 @@ export default function Sectie3Page() {
             maxWidth: '560px',
           }}
         >
-          Portefeuillerapportage, financieringsmemo&apos;s, vroegsignalering: kunt u op tijd bijsturen? Deze sectie meet de structuur achter uw informatie.
+          Doorlooptijd tot aan het IC, het risico dat AI de kernactiviteit overneemt, en uw oordeelsvorming: drie punten waar rendement weglekt. Deze sectie meet ze.
         </p>
       </div>
 
@@ -56,7 +56,7 @@ export default function Sectie3Page() {
           <QuestionCard
             key={q.id}
             question={q}
-            index={7 + idx + 1}
+            index={4 + idx + 1}
             selected={answers[q.id]}
             onSelect={(letter) => setAnswer(q.id, letter)}
           />
@@ -67,17 +67,17 @@ export default function Sectie3Page() {
         <Button
           variant="secondary"
           size="md"
-          onClick={() => router.push('/scorecard/sectie-2')}
+          onClick={() => router.push('/scorecard/sectie-1')}
         >
           Vorige sectie
         </Button>
         <Button
           variant="primary"
           size="lg"
-          onClick={() => router.push('/scorecard/sectie-4')}
+          onClick={() => router.push('/scorecard/sectie-3')}
           disabled={!sectionDone}
         >
-          Verder naar sectie 4
+          Verder naar sectie 3
         </Button>
       </div>
       {!sectionDone && (
@@ -85,7 +85,7 @@ export default function Sectie3Page() {
           className="mt-3 text-right text-xs"
           style={{ color: 'var(--text-muted)' }}
         >
-          Beantwoord alle vier de vragen om verder te kunnen.
+          Beantwoord alle drie de vragen om verder te kunnen.
         </p>
       )}
     </section>

@@ -119,5 +119,53 @@
   "factum_capital": {
     "title": "Factum Capital",
     "description": "AI-driven due diligence for Dutch PE."
+  },
+  "scorecard": {
+    "landing": {
+      "eyebrow": "Scorecard · Six dimensions · Twelve minutes",
+      "heading": "Where is yield leaking, and what are you overlooking?",
+      "subtext": "Fifteen questions. Twelve minutes. A report that makes your blind spots measurable and benchmarks them against comparable firms.",
+      "start_cta": "Start the Scorecard",
+      "no_account": "No account required. Your answers are saved as you go.",
+      "trust": "Already completed by PE partners, M&A directors and family offices in the Dutch mid-market.",
+      "confidentiality_title": "Confidentiality",
+      "confidentiality_body": "Your answers are used solely to generate your report. You may fill it in anonymously if you prefer."
+    },
+    "navigation": {
+      "back_to_start": "← Back to start",
+      "next_section_2": "Continue to section 2",
+      "next_section_3": "Continue to section 3",
+      "next_section_4": "Continue to section 4",
+      "to_results": "To my results",
+      "answer_all": "Answer all four questions to proceed."
+    },
+    "resultaat": {
+      "eyebrow": "Scorecard completed",
+      "heading": "You now see what most partners only see at the annual review.",
+      "subtext": "Fill in your details to receive the full report, directly in your browser and as a PDF in your inbox.",
+      "incomplete_eyebrow": "Scorecard incomplete",
+      "incomplete_heading": "{remaining} {questions} remaining",
+      "incomplete_body": "You have answered {answered} of {total} questions. Complete the scorecard fully to generate your personal report.",
+      "back_to_scorecard": "Back to the scorecard",
+      "report_contents_eyebrow": "What is in your report?",
+      "report_item_1": "Total score with commentary per dimension",
+      "report_item_2": "Six-dimension overview with peer benchmark",
+      "report_item_3": "Your two weakest dimensions with concrete analysis",
+      "report_item_4": "Recommended next step based on your answers",
+      "report_item_5": "Personal link + PDF in your inbox",
+      "form_heading": "Where should I send your report?",
+      "field_name": "Name",
+      "field_email": "Business email address",
+      "field_company": "Company",
+      "field_jobtitle": "Job title (optional)",
+      "field_phone": "Phone (optional)",
+      "submit_button": "Show my report",
+      "submit_loading": "Generating report...",
+      "privacy_notice": "By clicking you agree to our privacy statement. You will receive two follow-up emails (day 3 and 7). Nothing after that.",
+      "privacy_link": "privacy statement",
+      "error_generic": "Something went wrong. Please try again later.",
+      "error_create": "We could not create your report. Please check the fields and try again.",
+      "score_caption": "The full report shows your score per dimension with peer comparison."
+    }
   }
 }

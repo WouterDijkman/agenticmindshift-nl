@@ -119,5 +119,53 @@
   "factum_capital": {
     "title": "Factum Capital",
     "description": "Due diligence impulsada por IA para PE neerlandés."
+  },
+  "scorecard": {
+    "landing": {
+      "eyebrow": "Scorecard · Seis dimensiones · Doce minutos",
+      "heading": "¿Dónde se escapa la rentabilidad y qué está pasando por alto?",
+      "subtext": "Quince preguntas. Doce minutos. Un informe que hace medibles sus puntos ciegos y los compara con empresas similares.",
+      "start_cta": "Iniciar el Scorecard",
+      "no_account": "Sin cuenta requerida. Sus respuestas se guardan automáticamente.",
+      "trust": "Ya completado por socios de PE, directores de M&A y family offices en el mid-market neerlandés.",
+      "confidentiality_title": "Confidencialidad",
+      "confidentiality_body": "Sus respuestas se utilizan únicamente para generar su informe. Puede rellenarlo de forma anónima si lo prefiere."
+    },
+    "navigation": {
+      "back_to_start": "← Volver al inicio",
+      "next_section_2": "Continuar a la sección 2",
+      "next_section_3": "Continuar a la sección 3",
+      "next_section_4": "Continuar a la sección 4",
+      "to_results": "A mis resultados",
+      "answer_all": "Responda las cuatro preguntas para continuar."
+    },
+    "resultaat": {
+      "eyebrow": "Scorecard completado",
+      "heading": "Ahora ve lo que la mayoría de socios solo ven en la revisión anual.",
+      "subtext": "Rellene sus datos para recibir el informe completo, directamente en su navegador y como PDF en su bandeja de entrada.",
+      "incomplete_eyebrow": "Scorecard incompleto",
+      "incomplete_heading": "{remaining} {questions} restantes",
+      "incomplete_body": "Ha respondido {answered} de {total} preguntas. Complete el scorecard para generar su informe personal.",
+      "back_to_scorecard": "Volver al scorecard",
+      "report_contents_eyebrow": "¿Qué contiene su informe?",
+      "report_item_1": "Puntuación total con comentario por dimensión",
+      "report_item_2": "Resumen de seis dimensiones con peer benchmark",
+      "report_item_3": "Sus dos dimensiones más débiles con análisis concreto",
+      "report_item_4": "Próximo paso recomendado basado en sus respuestas",
+      "report_item_5": "Enlace personal + PDF en su bandeja de entrada",
+      "form_heading": "¿Dónde debo enviar su informe?",
+      "field_name": "Nombre",
+      "field_email": "Correo electrónico corporativo",
+      "field_company": "Empresa",
+      "field_jobtitle": "Cargo (opcional)",
+      "field_phone": "Teléfono (opcional)",
+      "submit_button": "Ver mi informe",
+      "submit_loading": "Generando informe...",
+      "privacy_notice": "Al hacer clic acepta nuestra declaración de privacidad. Recibirá dos emails de seguimiento (día 3 y 7). Después, nada más.",
+      "privacy_link": "declaración de privacidad",
+      "error_generic": "Algo salió mal. Por favor, inténtelo de nuevo más tarde.",
+      "error_create": "No pudimos crear su informe. Compruebe los campos e inténtelo de nuevo.",
+      "score_caption": "El informe completo muestra su puntuación por dimensión con comparación entre pares."
+    }
   }
 }
