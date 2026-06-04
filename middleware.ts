@@ -17,7 +17,7 @@ function getLocaleFromCountry(country: string): string {
   return 'en';
 }
 
-export function proxy(request: NextRequest) {
+export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Only apply geo-redirect on root path and if no locale cookie set
