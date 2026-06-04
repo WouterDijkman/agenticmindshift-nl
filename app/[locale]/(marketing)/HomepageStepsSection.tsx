@@ -2,29 +2,15 @@
 
 import { motion } from 'framer-motion';
 import type { ComponentType } from 'react';
+import { useTranslations } from 'next-intl';
 import { SketchClipboard, SketchReport, SketchArrow } from '@/components/icons/SketchIcons';
 
 type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
 
-const steps: { n: string; title: string; body: string; Icon: SketchIconComponent }[] = [
-  {
-    n: '01',
-    title: 'Beantwoord 15 vragen',
-    body: 'Multiple choice over uw dealproces, maandrapportage, AI-bestendigheid en kennisborging. Twaalf minuten. Geen open velden.',
-    Icon: SketchClipboard,
-  },
-  {
-    n: '02',
-    title: 'Ontvang uw rapport',
-    body: 'Score op zes dimensies, twee prioritaire aandachtspunten en een concreet vervolgvoorstel. Direct na afronding.',
-    Icon: SketchReport,
-  },
-  {
-    n: '03',
-    title: 'Bepaal uw volgende stap',
-    body: 'Intern delen, een sparring-sessie inplannen of direct een traject starten. Geen verplichtingen. U bepaalt het tempo.',
-    Icon: SketchArrow,
-  },
+const STEP_META: { n: '01' | '02' | '03'; i: 1 | 2 | 3; Icon: SketchIconComponent }[] = [
+  { n: '01', i: 1, Icon: SketchClipboard },
+  { n: '02', i: 2, Icon: SketchReport },
+  { n: '03', i: 3, Icon: SketchArrow },
 ];
 
 const containerVariants = {
@@ -47,6 +33,7 @@ const headingVariants = {
 };
 
 export default function HomepageStepsSection() {
+  const t = useTranslations('homepage.steps');
   return (
     <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(80px, 11vw, 136px)' }}>
       <div className="container-medium">
@@ -57,9 +44,9 @@ export default function HomepageStepsSection() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
         >
-          <p className="eyebrow" style={{ marginBottom: '16px' }}>Zo werkt het</p>
+          <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('eyebrow')}</p>
           <h2 className="type-h2" style={{ margin: 0, maxWidth: '480px' }}>
-            De Quickscan Methode: drie stappen, twaalf minuten.
+            {t('heading')}
           </h2>
         </motion.div>
 
@@ -73,7 +60,7 @@ export default function HomepageStepsSection() {
           {/* connector line behind the nodes */}
           <div className="steps-connector" aria-hidden="true" />
 
-          {steps.map((s) => (
+          {STEP_META.map((s) => (
             <motion.div key={s.n} className="step-item" variants={itemVariants}>
               <div className="step-node">
                 <span className="step-node-num">{s.n}</span>
@@ -92,7 +79,7 @@ export default function HomepageStepsSection() {
                     lineHeight: 1.2,
                   }}
                 >
-                  {s.title}
+                  {t(`title_${s.i}`)}
                 </h3>
                 <p
                   style={{
@@ -102,7 +89,7 @@ export default function HomepageStepsSection() {
                     margin: 0,
                   }}
                 >
-                  {s.body}
+                  {t(`body_${s.i}`)}
                 </p>
               </div>
             </motion.div>

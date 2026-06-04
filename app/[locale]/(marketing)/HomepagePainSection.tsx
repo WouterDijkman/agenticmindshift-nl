@@ -2,35 +2,15 @@
 
 import { motion } from 'framer-motion';
 import type { ComponentType } from 'react';
+import { useTranslations } from 'next-intl';
 import { SketchEyeHidden, SketchKnowledge, SketchHourglass } from '@/components/icons/SketchIcons';
 
 type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
 
-const PAINS: { code: string; label: string; title: string; body: string; feeling: string; Icon: SketchIconComponent }[] = [
-  {
-    code: '01',
-    label: 'Onzichtbaar risico',
-    title: 'U neemt beslissingen op basis van wat u ziet.',
-    body: 'Het risico dat AI de kernactiviteit van uw target overneemt en klantconcentratie staan niet in het IM. Ze worden pas zichtbaar als de deal getekend is, of de portefeuille al in stress zit.',
-    feeling: 'Dat nagende gevoel bij een IC-beslissing? Het klopt. Er is meer dan u ziet.',
-    Icon: SketchEyeHidden,
-  },
-  {
-    code: '02',
-    label: 'Kennisretentie',
-    title: 'Elke acquisitie begint opnieuw bij nul.',
-    body: 'De inzichten van de vorige deal verdwijnen met de dealmaker of in een map die niemand opent. Uw praktijk accumuleert deals maar leert er niet van.',
-    feeling: 'U weet dat u dit eerder hebt uitgezocht. Maar niemand weet waar het staat.',
-    Icon: SketchKnowledge,
-  },
-  {
-    code: '03',
-    label: 'Te late signalering',
-    title: 'Portfolio-problemen zijn maanden eerder zichtbaar.',
-    body: 'Onderprestatie en exit-obstakels sluimeren kwartalen voordat de jaarrapportage het bevestigt. Zonder structuur bent u altijd te laat.',
-    feeling: 'De jaarrapportage bevestigt wat u drie kwartalen geleden al vermoedde.',
-    Icon: SketchHourglass,
-  },
+const PAIN_META: { code: string; n: 1 | 2 | 3; Icon: SketchIconComponent }[] = [
+  { code: '01', n: 1, Icon: SketchEyeHidden },
+  { code: '02', n: 2, Icon: SketchKnowledge },
+  { code: '03', n: 3, Icon: SketchHourglass },
 ];
 
 const containerVariants = {
@@ -48,6 +28,7 @@ const itemVariants = {
 };
 
 export default function HomepagePainSection() {
+  const t = useTranslations('homepage.pain');
   return (
     <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(64px, 9vw, 112px)' }}>
       <div className="container-medium">
@@ -58,12 +39,12 @@ export default function HomepagePainSection() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="eyebrow" style={{ marginBottom: '16px' }}>Herkenbaar?</p>
+          <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('eyebrow')}</p>
           <h2 className="type-h2" style={{ maxWidth: '560px', margin: 0 }}>
-            Drie problemen die uw rendement kosten. Niemand benoemt ze.
+            {t('heading')}
           </h2>
           <p style={{ fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', color: 'var(--text-muted)', margin: 0, marginTop: '16px', maxWidth: '460px', lineHeight: 1.65, fontStyle: 'italic' }}>
-            U zou geen investeringsbeslissing moeten nemen op basis van een incompleet beeld. Toch is dat de norm.
+            {t('subheading')}
           </p>
         </motion.div>
 
@@ -80,7 +61,7 @@ export default function HomepagePainSection() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
         >
-          {PAINS.map((p) => (
+          {PAIN_META.map((p) => (
             <motion.div
               key={p.code}
               variants={itemVariants}
@@ -112,7 +93,7 @@ export default function HomepagePainSection() {
                   opacity: 0.75,
                 }}
               >
-                {p.label}
+                {t(`label_${p.n}`)}
               </p>
               <h3
                 style={{
@@ -124,7 +105,7 @@ export default function HomepagePainSection() {
                   marginBottom: '16px',
                 }}
               >
-                {p.title}
+                {t(`title_${p.n}`)}
               </h3>
               <p
                 style={{
@@ -134,7 +115,7 @@ export default function HomepagePainSection() {
                   marginBottom: '14px',
                 }}
               >
-                {p.body}
+                {t(`body_${p.n}`)}
               </p>
               <p
                 style={{
@@ -147,7 +128,7 @@ export default function HomepagePainSection() {
                   paddingTop: '14px',
                 }}
               >
-                {p.feeling}
+                {t(`feeling_${p.n}`)}
               </p>
             </motion.div>
           ))}

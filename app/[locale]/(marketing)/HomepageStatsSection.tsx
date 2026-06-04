@@ -2,30 +2,13 @@
 
 import CountUpNumber from '@/components/motion/CountUpNumber';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import SketchCrosshair from '@/components/icons/SketchCrosshair';
 
-const stats = [
-  {
-    value: 0.5,
-    decimals: 1,
-    suffix: '×',
-    label: 'EBITDA-multiple',
-    sub: 'potentieel rendementsverlies per portfoliobedrijf. Op een €5M EBITDA-target is dat €2,5M',
-  },
-  {
-    value: 3,
-    decimals: 0,
-    suffix: '',
-    label: 'werkdagen',
-    sub: 'per maandrapportage kwijt aan handmatige dataconsolidatie. Tijd die niet naar deals gaat',
-  },
-  {
-    value: 12,
-    decimals: 0,
-    suffix: '',
-    label: 'minuten',
-    sub: 'om zes dimensies van uw portefeuille te meten, scoren en te benchmarken',
-  },
+const STAT_META: { value: number; decimals: number; suffix: string; i: 1 | 2 | 3 }[] = [
+  { value: 0.5, decimals: 1, suffix: '×', i: 1 },
+  { value: 3, decimals: 0, suffix: '', i: 2 },
+  { value: 12, decimals: 0, suffix: '', i: 3 },
 ];
 
 const containerVariants = {
@@ -47,6 +30,7 @@ const itemVariants = {
 };
 
 export default function HomepageStatsSection() {
+  const t = useTranslations('homepage.stats');
   return (
     <section style={{ background: 'var(--bg-secondary)' }}>
       <div className="container-wide">
@@ -57,14 +41,14 @@ export default function HomepageStatsSection() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}
         >
-          {stats.map((s, i) => (
+          {STAT_META.map((s, idx) => (
             <motion.div
-              key={i}
+              key={idx}
               variants={itemVariants}
               style={{
                 padding: 'clamp(40px, 5vw, 72px) clamp(28px, 4vw, 56px)',
-                borderRight: i < 2 ? '1px solid var(--border-subtle)' : 'none',
-                borderTop: i === 0 ? '3px solid var(--accent-cta)' : '3px solid var(--border-medium)',
+                borderRight: idx < 2 ? '1px solid var(--border-subtle)' : 'none',
+                borderTop: idx === 0 ? '3px solid var(--accent-cta)' : '3px solid var(--border-medium)',
               }}
             >
               <div style={{ position: 'relative', display: 'inline-block', marginBottom: '16px' }}>
@@ -106,7 +90,7 @@ export default function HomepageStatsSection() {
                   textTransform: 'uppercase',
                 }}
               >
-                {s.label}
+                {t(`label_${s.i}`)}
               </p>
               <p
                 style={{
@@ -118,7 +102,7 @@ export default function HomepageStatsSection() {
                   margin: 0,
                 }}
               >
-                {s.sub}
+                {t(`sub_${s.i}`)}
               </p>
             </motion.div>
           ))}

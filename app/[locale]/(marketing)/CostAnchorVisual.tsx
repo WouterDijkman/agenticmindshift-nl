@@ -1,37 +1,18 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 type Row = {
-  label: string;
-  amount: string;
+  key: 'row_1' | 'row_2' | 'row_3';
   value: number; // relative width 0–1
   tone: 'navy' | 'rust' | 'muted';
-  note?: string;
 };
 
 const ROWS: Row[] = [
-  {
-    label: 'Eén gemiste correctie op de overnameprijs',
-    amount: '€2.500.000',
-    value: 1,
-    tone: 'navy',
-    note: '0,5× op een €5M EBITDA-target',
-  },
-  {
-    label: 'AI Due Diligence · per deal',
-    amount: '€10.000',
-    value: 0.04,
-    tone: 'rust',
-    note: 'dekt de correctie 250×',
-  },
-  {
-    label: 'De Scorecard',
-    amount: 'Gratis',
-    value: 0.012,
-    tone: 'muted',
-    note: '12 minuten · geen account',
-  },
+  { key: 'row_1', value: 1, tone: 'navy' },
+  { key: 'row_2', value: 0.04, tone: 'rust' },
+  { key: 'row_3', value: 0.012, tone: 'muted' },
 ];
 
 const fillFor = (tone: Row['tone']) =>
@@ -42,6 +23,7 @@ const fillFor = (tone: Row['tone']) =>
       : 'var(--text-muted)';
 
 export default function CostAnchorVisual() {
+  const t = useTranslations('homepage.costAnchor');
   return (
     <motion.div
       className="cost-anchor"
@@ -50,17 +32,17 @@ export default function CostAnchorVisual() {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
-      <p className="cost-anchor-title">De rekensom</p>
+      <p className="cost-anchor-title">{t('title')}</p>
       <div className="cost-anchor-rows">
         {ROWS.map((r, i) => (
-          <div key={r.label} className="cost-anchor-row">
+          <div key={r.key} className="cost-anchor-row">
             <div className="cost-anchor-head">
-              <span className="cost-anchor-label">{r.label}</span>
+              <span className="cost-anchor-label">{t(`${r.key}_label`)}</span>
               <span
                 className="cost-anchor-amount"
                 style={{ color: r.tone === 'rust' ? 'var(--accent-cta)' : 'var(--text-primary)' }}
               >
-                {r.amount}
+                {t(`${r.key}_amount`)}
               </span>
             </div>
             <div className="cost-anchor-track">
@@ -73,12 +55,12 @@ export default function CostAnchorVisual() {
                 transition={{ duration: 0.9, delay: 0.15 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
               />
             </div>
-            {r.note && <span className="cost-anchor-note">{r.note}</span>}
+            <span className="cost-anchor-note">{t(`${r.key}_note`)}</span>
           </div>
         ))}
       </div>
       <p className="cost-anchor-foot">
-        Bedragen op schaal weergegeven. De meting kost een fractie van wat één blinde vlek kost.
+        {t('foot')}
       </p>
     </motion.div>
   );

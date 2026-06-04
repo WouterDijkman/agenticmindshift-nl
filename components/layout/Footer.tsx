@@ -1,20 +1,24 @@
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
 
-const navLinks = [
-  { href: '/scorecard', label: 'Scorecard' },
-  { href: '/werkwijze', label: 'Werkwijze' },
-  { href: '/over', label: 'Over Wouter' },
-  { href: '/factum-capital', label: 'Factum Capital' },
-  { href: '/contact', label: 'Contact' },
-];
+export default async function Footer() {
+  const t = await getTranslations('footer');
+  const tNav = await getTranslations('nav');
 
-const legalLinks = [
-  { href: '/privacy', label: 'Privacy' },
-  { href: '/voorwaarden', label: 'Voorwaarden' },
-];
+  const navLinks = [
+    { href: '/scorecard', label: tNav('scorecard') },
+    { href: '/werkwijze', label: tNav('werkwijze') },
+    { href: '/over', label: t('over_wouter') },
+    { href: '/factum-capital', label: tNav('factum_capital') },
+    { href: '/contact', label: tNav('contact') },
+  ];
 
-export default function Footer() {
+  const legalLinks = [
+    { href: '/privacy', label: t('privacy') },
+    { href: '/voorwaarden', label: t('voorwaarden') },
+  ];
+
   return (
     <footer
       style={{
@@ -42,14 +46,14 @@ export default function Footer() {
                 maxWidth: '320px',
               }}
             >
-              AI‑advies voor Nederlandse PE‑ en M&amp;A‑firma&apos;s. Concreet, vertrouwelijk, meetbaar.
+              {t('tagline')}
             </p>
             <div style={{ display: 'flex', gap: '10px', marginTop: '22px', flexWrap: 'wrap' }}>
               <a
                 href="mailto:wouter@agenticmindshift.nl"
                 className="footer-pill"
               >
-                E-mail Wouter
+                {t('email_wouter')}
               </a>
               <a
                 href="https://www.linkedin.com/in/wwdijkman"
@@ -57,14 +61,14 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="footer-pill"
               >
-                LinkedIn →
+                {t('linkedin')}
               </a>
             </div>
           </div>
 
           {/* Navigatie */}
           <div>
-            <p className="footer-heading">Navigatie</p>
+            <p className="footer-heading">{t('navigation')}</p>
             <ul className="footer-list">
               {navLinks.map((l) => (
                 <li key={l.href}>
@@ -78,7 +82,7 @@ export default function Footer() {
 
           {/* Juridisch */}
           <div>
-            <p className="footer-heading">Juridisch</p>
+            <p className="footer-heading">{t('legal')}</p>
             <ul className="footer-list">
               {legalLinks.map((l) => (
                 <li key={l.href}>
@@ -92,10 +96,10 @@ export default function Footer() {
 
           {/* CTA card */}
           <div className="footer-cta-card">
-            <p className="footer-cta-title">Klaar om uw blinde vlekken te zien?</p>
-            <p className="footer-cta-sub">Vijftien vragen. Twaalf minuten. Geen account.</p>
+            <p className="footer-cta-title">{t('cta_title')}</p>
+            <p className="footer-cta-sub">{t('cta_sub')}</p>
             <Link href="/scorecard" className="footer-cta-button">
-              Start de Scorecard
+              {t('start_scorecard')}
               <span aria-hidden="true">&nbsp;→</span>
             </Link>
           </div>
@@ -103,8 +107,8 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="footer-bottom">
-          <p style={{ margin: 0 }}>&copy; 2026 Agentic Mindshift — opgericht oktober 2025.</p>
-          <p style={{ margin: 0 }}>Founder Factum Capital · lancering 1 juli 2026</p>
+          <p style={{ margin: 0 }}>{t('copyright')}</p>
+          <p style={{ margin: 0 }}>{t('tagline_bottom')}</p>
         </div>
       </div>
     </footer>

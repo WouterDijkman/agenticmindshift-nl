@@ -1,10 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import Button from '@/components/ui/Button';
 import ScorecardReportMockup from '@/components/ScorecardReportMockup';
 
 export default function HomepageShowcaseSection() {
+  const t = useTranslations('homepage.showcase');
   return (
     <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(72px, 10vw, 120px)' }}>
       <div className="container-medium">
@@ -16,9 +18,9 @@ export default function HomepageShowcaseSection() {
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="eyebrow" style={{ marginBottom: '16px' }}>Het rapport</p>
+            <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('eyebrow')}</p>
             <h2 className="type-h2" style={{ marginBottom: '20px', maxWidth: '460px' }}>
-              Geen losse score. Een rapport dat u intern kunt delen.
+              {t('heading')}
             </h2>
             <p
               style={{
@@ -29,27 +31,21 @@ export default function HomepageShowcaseSection() {
                 marginBottom: '28px',
               }}
             >
-              Elke dimensie krijgt een score, afgezet tegen het niveau van vergelijkbare
-              partijen. U ziet in één oogopslag waar u voorloopt en welke twee punten
-              de meeste aandacht verdienen.
+              {t('body')}
             </p>
 
             <ul className="showcase-checklist">
-              {[
-                'Zes dimensies, elk gebenchmarkt tegen vergelijkbare fondsen',
-                'De twee aandachtspunten met de hoogste impact, uitgelicht',
-                'Direct deelbaar in uw IC, zonder extra toelichting',
-              ].map((t) => (
-                <li key={t}>
+              {[t('check_1'), t('check_2'), t('check_3')].map((item) => (
+                <li key={item}>
                   <span aria-hidden="true" className="showcase-check">✓</span>
-                  {t}
+                  {item}
                 </li>
               ))}
             </ul>
 
             <div style={{ marginTop: '32px' }}>
               <Button href="/scorecard" variant="primary" size="lg">
-                Start de Scorecard
+                {t('cta')}
               </Button>
             </div>
           </motion.div>
