@@ -73,14 +73,31 @@ export default function HomepagePainSection() {
               }}
               whileHover={{ borderTopColor: 'var(--accent-cta)' }}
             >
+              {/* Icon + big number anchor — visual-first */}
               <div
                 style={{
-                  color: 'var(--accent-cta)',
-                  opacity: 0.82,
-                  marginBottom: '20px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  marginBottom: '28px',
                 }}
               >
-                <p.Icon size={48} strokeWidth={1.4} />
+                <div style={{ color: 'var(--accent-cta)', opacity: 0.85 }}>
+                  <p.Icon size={52} strokeWidth={1.4} />
+                </div>
+                <span
+                  aria-hidden="true"
+                  style={{
+                    fontSize: 'clamp(40px, 5vw, 56px)',
+                    fontWeight: 600,
+                    lineHeight: 1,
+                    color: 'var(--accent-cta)',
+                    opacity: 0.16,
+                    letterSpacing: '-0.04em',
+                  }}
+                >
+                  {p.code}
+                </span>
               </div>
               <p
                 style={{
@@ -89,7 +106,7 @@ export default function HomepagePainSection() {
                   letterSpacing: '0.14em',
                   textTransform: 'uppercase',
                   color: 'var(--accent-cta)',
-                  marginBottom: '14px',
+                  marginBottom: '12px',
                   opacity: 0.75,
                 }}
               >
@@ -97,38 +114,25 @@ export default function HomepagePainSection() {
               </p>
               <h3
                 style={{
-                                    fontSize: 'clamp(1.0625rem, 1.6vw, 1.25rem)',
-                  fontWeight: 700,
+                  fontSize: 'clamp(1.125rem, 1.7vw, 1.375rem)',
+                  fontWeight: 600,
                   color: 'var(--text-primary)',
                   letterSpacing: '-0.015em',
-                  lineHeight: 1.3,
-                  marginBottom: '16px',
+                  lineHeight: 1.25,
+                  marginBottom: '14px',
                 }}
               >
                 {t(`title_${p.n}`)}
               </h3>
               <p
                 style={{
-                                    fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
+                  fontSize: '1rem',
                   color: 'var(--text-secondary)',
-                  lineHeight: 1.75,
-                  marginBottom: '14px',
+                  lineHeight: 1.7,
+                  margin: 0,
                 }}
               >
                 {t(`body_${p.n}`)}
-              </p>
-              <p
-                style={{
-                                    fontSize: 'clamp(0.9375rem, 1.4vw, 1.0625rem)',
-                  fontStyle: 'italic',
-                  color: 'var(--text-muted)',
-                  lineHeight: 1.65,
-                  margin: 0,
-                  borderTop: '1px solid var(--border-subtle)',
-                  paddingTop: '14px',
-                }}
-              >
-                {t(`feeling_${p.n}`)}
               </p>
             </motion.div>
           ))}
