@@ -75,7 +75,7 @@ export default function AnimatedHero() {
 
       {/* Content */}
       <div
-        className="container-extra"
+        className="container-medium"
         style={{
           paddingTop: 'clamp(96px, 11vh, 128px)',
           paddingBottom: 'clamp(48px, 6vh, 72px)',
