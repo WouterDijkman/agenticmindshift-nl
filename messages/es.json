@@ -34,7 +34,7 @@
       "subtext": "Su informe mensual enmascara el bajo rendimiento. Su equipo de deals repite errores evitables. Y el riesgo de que la IA tome el control de las actividades principales no figura en ninguna propuesta al IC. El Scorecard mapea las seis dimensiones. En doce minutos.",
       "cta_primary": "Iniciar el Scorecard",
       "cta_secondary": "Metodología y honorarios",
-      "trust": "12 minutos · 6 dimensiones · sin cuenta · 100% confidencial"
+      "trust": "12 minutos · 6 dimensiones · sin cuenta · 100% confidencial"
     },
     "social_proof": {
       "eyebrow": "Resultados",
@@ -340,14 +340,16 @@
       "title": "Asesoría e Implementación de IA",
       "situation": "Quiere implementar la IA de forma concreta en sus procesos, flujos de trabajo u organización, con implementación, masterclasses y formación del equipo.",
       "price_note": "Por proyecto o en retainer continuo",
-      "cta": "Hable sobre su proyecto →"
+      "cta": "Hable sobre su proyecto →",
+      "price": "Desde €4.500"
     },
     "offering_3": {
       "badge": "Integrado · continuo",
       "title": "Fractional AI Officer",
       "situation": "Quiere un líder de IA a nivel de dirección sin contratación a jornada completa: estrategia, selección de proveedores y formación del equipo garantizados.",
       "price_note": "Mínimo 3 meses · participación en dirección y responsabilidad operativa",
-      "cta": "Hable sobre el encaje →"
+      "cta": "Hable sobre el encaje →",
+      "price": "€3.500 – €5.500 / mes"
     },
     "offering_4": {
       "badge": "Por operación o continuo",
@@ -362,7 +364,11 @@
       "variant_2_unit": "€8.500 / operación",
       "variant_3_label": "10 operaciones",
       "variant_3_unit": "€8.000 / operación",
-      "powered_by_tagline": "Nuestra plataforma de IA para M&A e inteligencia de cartera"
+      "powered_by_tagline": "Nuestra plataforma de IA para M&A e inteligencia de cartera",
+      "price": "Desde €10.000 por deal",
+      "variant_1_price": "€10.000",
+      "variant_2_price": "€42.500",
+      "variant_3_price": "€80.000"
     },
     "pricing_note": "* Todos los importes sin IVA. Primera llamada siempre sin compromiso.",
     "risk": {
@@ -402,6 +408,7 @@
       "stat_1_sub": "módulos en total",
       "stat_2_sub": "momentos de servicio",
       "stat_3_sub": "lanzamiento",
+      "stat_3_label": "1 julio",
       "countdown_label": "Lanzamiento en"
     },
     "problem": {
@@ -866,6 +873,7 @@
           }
         }
       }
-    }
+    },
+    "close_scorecard": "Cerrar scorecard"
   }
 }

@@ -140,7 +140,7 @@ export default async function FactumCapitalPage() {
           {[
             { label: '29', sub: t('hero.stat_1_sub') },
             { label: '4', sub: t('hero.stat_2_sub') },
-            { label: '1 juli', sub: t('hero.stat_3_sub') },
+            { label: t('hero.stat_3_label'), sub: t('hero.stat_3_sub') },
           ].map((c, i) => (
             <div
               key={c.label}

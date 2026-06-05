@@ -34,7 +34,7 @@
       "subtext": "Ihr Monatsbericht verschleiert Minderleistung. Ihr Deal-Team wiederholt vermeidbare Fehler. Und das Risiko, dass KI die Kernaktivität übernimmt, steht in keinem IC-Vorschlag. Die Scorecard kartiert alle sechs Dimensionen. In zwölf Minuten.",
       "cta_primary": "Scorecard starten",
       "cta_secondary": "Arbeitsweise & Honorare",
-      "trust": "12 Minuten · 6 Dimensionen · kein Konto · 100% vertraulich"
+      "trust": "12 Minuten · 6 Dimensionen · kein Konto · 100% vertraulich"
     },
     "social_proof": {
       "eyebrow": "Ergebnisse",
@@ -340,14 +340,16 @@
       "title": "KI-Beratung & Implementierung",
       "situation": "Sie möchten KI konkret in Ihren Prozessen, Workflows oder Ihrer Organisation einsetzen, mit Implementierung, Masterclasses und Teamtraining.",
       "price_note": "Pro Auftrag oder fortlaufend als Retainer",
-      "cta": "Ihre Frage besprechen →"
+      "cta": "Ihre Frage besprechen →",
+      "price": "Ab €4.500"
     },
     "offering_3": {
       "badge": "Eingebettet · fortlaufend",
       "title": "Fractional AI Officer",
       "situation": "Sie möchten eine KI-Führungskraft auf Vorstandsebene ohne Vollzeitanstellung: Strategie, Lieferantenauswahl und Teamtraining gesichert.",
       "price_note": "Mindestens 3 Monate · Vorstandsteilnahme und operative Verantwortung",
-      "cta": "Die Eignung besprechen →"
+      "cta": "Die Eignung besprechen →",
+      "price": "€3.500 – €5.500 / Monat"
     },
     "offering_4": {
       "badge": "Pro Deal oder fortlaufend",
@@ -362,7 +364,11 @@
       "variant_2_unit": "€8.500 / Deal",
       "variant_3_label": "10 Deals",
       "variant_3_unit": "€8.000 / Deal",
-      "powered_by_tagline": "Unsere KI-Plattform für M&A & Portfolio-Einblick"
+      "powered_by_tagline": "Unsere KI-Plattform für M&A & Portfolio-Einblick",
+      "price": "Ab €10.000 pro Deal",
+      "variant_1_price": "€10.000",
+      "variant_2_price": "€42.500",
+      "variant_3_price": "€80.000"
     },
     "pricing_note": "* Alle Beträge zzgl. MwSt. Erstes Kennenlerngespräch stets unverbindlich.",
     "risk": {
@@ -402,6 +408,7 @@
       "stat_1_sub": "Module gesamt",
       "stat_2_sub": "Service-Momente",
       "stat_3_sub": "Live-Start",
+      "stat_3_label": "1. Juli",
       "countdown_label": "Start in"
     },
     "problem": {
@@ -866,6 +873,7 @@
           }
         }
       }
-    }
+    },
+    "close_scorecard": "Scorecard schließen"
   }
 }

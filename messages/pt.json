@@ -30,11 +30,11 @@
   "homepage": {
     "hero": {
       "eyebrow": "Para sócios de PE, diretores de M&A e family offices",
-      "heading": "Um ponto cego na sua carteira custa-lhe em média €2,5M. O Scorecard encontra-o em doze minutos.",
+      "heading": "Um ponto cego na sua carteira custa‑lhe em média €2,5M. O Scorecard encontra‑o em doze minutos.",
       "subtext": "O seu relatório mensal mascara a subperformance. A sua equipa de deals repete erros evitáveis. E o risco de a IA assumir as atividades principais não consta em nenhuma proposta ao IC. O Scorecard mapeia as seis dimensões. Em doze minutos.",
       "cta_primary": "Iniciar o Scorecard",
       "cta_secondary": "Metodologia e honorários",
-      "trust": "12 minutos · 6 dimensões · sem conta · 100% confidencial"
+      "trust": "12 minutos · 6 dimensões · sem conta · 100% confidencial"
     },
     "social_proof": {
       "eyebrow": "Resultados",
@@ -340,14 +340,16 @@
       "title": "Assessoria e Implementação de IA",
       "situation": "Quer implementar a IA de forma concreta nos seus processos, fluxos de trabalho ou organização, com implementação, masterclasses e formação da equipa.",
       "price_note": "Por projeto ou em retainer contínuo",
-      "cta": "Fale sobre o seu projeto →"
+      "cta": "Fale sobre o seu projeto →",
+      "price": "A partir de €4.500"
     },
     "offering_3": {
       "badge": "Integrado · contínuo",
       "title": "Fractional AI Officer",
       "situation": "Quer um líder de IA ao nível da direção sem contratação a tempo inteiro: estratégia, seleção de fornecedores e formação da equipa garantidas.",
       "price_note": "Mínimo 3 meses · participação na direção e responsabilidade operacional",
-      "cta": "Fale sobre o encaixe →"
+      "cta": "Fale sobre o encaixe →",
+      "price": "€3.500 – €5.500 / mês"
     },
     "offering_4": {
       "badge": "Por operação ou contínuo",
@@ -362,7 +364,11 @@
       "variant_2_unit": "€8.500 / operação",
       "variant_3_label": "10 operações",
       "variant_3_unit": "€8.000 / operação",
-      "powered_by_tagline": "A nossa plataforma de IA para M&A e inteligência de carteira"
+      "powered_by_tagline": "A nossa plataforma de IA para M&A e inteligência de carteira",
+      "price": "A partir de €10.000 por deal",
+      "variant_1_price": "€10.000",
+      "variant_2_price": "€42.500",
+      "variant_3_price": "€80.000"
     },
     "pricing_note": "* Todos os valores sem IVA. Primeira chamada sempre sem compromisso.",
     "risk": {
@@ -402,6 +408,7 @@
       "stat_1_sub": "módulos no total",
       "stat_2_sub": "momentos de serviço",
       "stat_3_sub": "lançamento",
+      "stat_3_label": "1 julho",
       "countdown_label": "Lançamento em"
     },
     "problem": {
@@ -866,6 +873,7 @@
           }
         }
       }
-    }
+    },
+    "close_scorecard": "Fechar scorecard"
   }
 }

@@ -1,11 +1,13 @@
 import { Link } from '@/i18n/navigation';
 import { ReactNode } from 'react';
+import { getTranslations } from 'next-intl/server';
 
 interface ScorecardLayoutProps {
   children: ReactNode;
 }
 
-export default function ScorecardLayout({ children }: ScorecardLayoutProps) {
+export default async function ScorecardLayout({ children }: ScorecardLayoutProps) {
+  const t = await getTranslations('scorecard');
   return (
     <div className="min-h-screen flex flex-col" style={{ background: 'var(--bg-primary)' }}>
       <header
@@ -29,7 +31,7 @@ export default function ScorecardLayout({ children }: ScorecardLayoutProps) {
             className="text-sm"
             style={{ color: 'var(--text-tertiary)' }}
           >
-            Sluit scorecard
+            {t('close_scorecard')}
           </Link>
         </div>
       </header>
