@@ -10,7 +10,12 @@ import {
   SketchReport,
   SketchPortfolio,
   SketchWarning,
+  SketchScale,
+  SketchSpeed,
+  SketchChip,
+  SketchKnowledge,
 } from '@/components/icons/SketchIcons';
+import CardVisual from '@/components/CardVisual';
 import EarlyAccessForm from './EarlyAccessForm';
 import CountdownTimer from './CountdownTimer';
 import FactumModulesGrid from './FactumModulesGrid';
@@ -112,12 +117,12 @@ export default async function FactumCapitalPage(
   ];
 
   const voorWieItems = [
-    { label: t('voor_wie.item_1_label'), body: t('voor_wie.item_1_body') },
-    { label: t('voor_wie.item_2_label'), body: t('voor_wie.item_2_body') },
-    { label: t('voor_wie.item_3_label'), body: t('voor_wie.item_3_body') },
-    { label: t('voor_wie.item_4_label'), body: t('voor_wie.item_4_body') },
-    { label: t('voor_wie.item_5_label'), body: t('voor_wie.item_5_body') },
-    { label: t('voor_wie.item_6_label'), body: t('voor_wie.item_6_body') },
+    { n: '01', label: t('voor_wie.item_1_label'), body: t('voor_wie.item_1_body'), Icon: SketchPortfolio },
+    { n: '02', label: t('voor_wie.item_2_label'), body: t('voor_wie.item_2_body'), Icon: SketchScale },
+    { n: '03', label: t('voor_wie.item_3_label'), body: t('voor_wie.item_3_body'), Icon: SketchSpeed },
+    { n: '04', label: t('voor_wie.item_4_label'), body: t('voor_wie.item_4_body'), Icon: SketchChip },
+    { n: '05', label: t('voor_wie.item_5_label'), body: t('voor_wie.item_5_body'), Icon: SketchKnowledge },
+    { n: '06', label: t('voor_wie.item_6_label'), body: t('voor_wie.item_6_body'), Icon: SketchWarning },
   ];
 
   const earlyAccessBenefits = [
@@ -541,40 +546,14 @@ export default async function FactumCapitalPage(
             <p className="eyebrow" style={{ marginBottom: '12px' }}>{t('voor_wie.eyebrow')}</p>
             <h2 className="type-h2" style={{ margin: 0 }}>{t('voor_wie.heading')}</h2>
           </div>
-          <div
-            className="divider-grid"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-              gap: '1px',
-              background: 'var(--border-subtle)',
-              border: '1px solid var(--border-subtle)',
-            }}
-          >
+          <div className="voor-wie-grid">
             {voorWieItems.map((item, i) => (
-              <div
-                key={item.label}
-                className="reveal"
-                style={{
-                  background: 'var(--bg-secondary)',
-                  padding: '28px 24px',
-                  transitionDelay: `${i * 60}ms`,
-                }}
-              >
-                <p
-                  style={{
-                    fontSize: '1rem',
-                    fontWeight: 700,
-                    color: 'var(--text-primary)',
-                    marginBottom: '10px',
-                    letterSpacing: '-0.01em',
-                  }}
-                >
-                  {item.label}
-                </p>
-                <p style={{ fontSize: 'clamp(0.9375rem, 1.5vw, 1.0625rem)', color: 'var(--text-secondary)', lineHeight: 1.7, margin: 0 }}>
-                  {item.body}
-                </p>
+              <div key={item.label} className="reveal wb-card" style={{ transitionDelay: `${i * 60}ms` }}>
+                <CardVisual index={40 + i} Icon={item.Icon} chip={item.n} />
+                <div className="wb-card-body">
+                  <h3 className="wb-card-title">{item.label}</h3>
+                  <p className="wb-card-text">{item.body}</p>
+                </div>
               </div>
             ))}
           </div>

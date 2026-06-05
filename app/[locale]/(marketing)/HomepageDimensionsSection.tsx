@@ -12,6 +12,7 @@ import {
   SketchKnowledge,
 } from '@/components/icons/SketchIcons';
 import DimensionRadar from '@/components/DimensionRadar';
+import CardVisual from '@/components/CardVisual';
 
 type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
 
@@ -79,13 +80,11 @@ export default function HomepageDimensionsSection() {
         </motion.div>
 
         <motion.div
-          className="dim-grid divider-grid"
+          className="wb-card-grid"
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-            gap: '1px',
-            background: 'var(--border-subtle)',
-            border: '1px solid var(--border-subtle)',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: 'clamp(20px, 2.4vw, 28px)',
           }}
           variants={containerVariants}
           initial="hidden"
@@ -93,88 +92,24 @@ export default function HomepageDimensionsSection() {
           viewport={{ once: true, amount: 0.15 }}
         >
           {DIMENSION_META.map((d) => (
-            <motion.div
+            <motion.a
               key={d.n}
-              className="dim-card"
+              href="/scorecard"
+              className="wb-card"
               variants={itemVariants}
-              style={{
-                background: 'var(--bg-secondary)',
-                padding: '40px 32px 44px',
-                display: 'flex',
-                flexDirection: 'column',
-                borderLeft: '3px solid transparent',
-                cursor: 'pointer',
-              }}
-              onClick={() => { window.location.href = '/scorecard'; }}
-              whileHover={{
-                borderLeftColor: 'var(--accent-cta)',
-                backgroundColor: 'var(--bg-primary)',
-                x: 2,
-                transition: { duration: 0.2 },
-              }}
+              whileHover={{ y: -6, boxShadow: '0 22px 44px rgba(11, 31, 58, 0.16)' }}
+              transition={{ type: 'spring', stiffness: 300, damping: 26 }}
             >
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '12px',
-                  margin: '0 0 14px',
-                  color: 'var(--accent-cta)',
-                }}
-              >
-                <div style={{ opacity: 0.82 }}>
-                  <d.Icon size={36} strokeWidth={1.4} />
-                </div>
-                <p
-                  style={{
-                    fontSize: '10px',
-                    fontWeight: 800,
-                    letterSpacing: '0.15em',
-                    color: 'var(--accent-cta)',
-                    margin: 0,
-                  }}
-                >
-                  {d.n}
-                </p>
+              <CardVisual index={d.i} Icon={d.Icon} chip={d.n} />
+
+              <div className="wb-card-body">
+                <p className="wb-card-title">{t(`title_${d.i}`)}</p>
+                <p className="wb-card-text">{t(`body_${d.i}`)}</p>
+                <span className="wb-card-cta">
+                  {t('card_cta')} <span aria-hidden="true">→</span>
+                </span>
               </div>
-              <p
-                style={{
-                                    fontSize: '1.0625rem',
-                  fontWeight: 600,
-                  color: 'var(--text-primary)',
-                  margin: '0 0 14px',
-                  letterSpacing: '-0.01em',
-                  lineHeight: 1.25,
-                }}
-              >
-                {t(`title_${d.i}`)}
-              </p>
-              <p
-                style={{
-                                    fontSize: 'clamp(0.9375rem, 1.5vw, 1.0625rem)',
-                  color: 'var(--text-tertiary)',
-                  lineHeight: 1.7,
-                  margin: 0,
-                  flex: 1,
-                }}
-              >
-                {t(`body_${d.i}`)}
-              </p>
-              <p
-                className="dim-card-cta"
-                style={{
-                  fontSize: '0.8125rem',
-                  color: 'var(--accent-cta)',
-                  margin: '16px 0 0',
-                  fontWeight: 600,
-                  opacity: 0,
-                  transition: 'opacity 200ms ease',
-                  letterSpacing: '0.02em',
-                }}
-              >
-                {t('card_cta')}
-              </p>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
       </div>

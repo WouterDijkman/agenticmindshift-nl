@@ -2,8 +2,12 @@
 
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import { SketchClipboard, SketchReport, SketchArrow } from '@/components/icons/SketchIcons';
+import CardVisual from '@/components/CardVisual';
 
 const ease = [0.22, 1, 0.36, 1] as const;
+
+const STEP_ICONS = [SketchClipboard, SketchReport, SketchArrow];
 
 const containerVariants = {
   hidden: {},
@@ -23,9 +27,9 @@ const headingVariants = {
 export default function WerkwijzeOnboardingSteps() {
   const t = useTranslations('werkwijze');
   const steps = [
-    { n: '01', title: t('steps.step_1_title'), body: t('steps.step_1_body') },
-    { n: '02', title: t('steps.step_2_title'), body: t('steps.step_2_body') },
-    { n: '03', title: t('steps.step_3_title'), body: t('steps.step_3_body') },
+    { n: '01', i: 1, Icon: STEP_ICONS[0], title: t('steps.step_1_title'), body: t('steps.step_1_body') },
+    { n: '02', i: 2, Icon: STEP_ICONS[1], title: t('steps.step_2_title'), body: t('steps.step_2_body') },
+    { n: '03', i: 3, Icon: STEP_ICONS[2], title: t('steps.step_3_title'), body: t('steps.step_3_body') },
   ];
 
   return (
@@ -46,55 +50,19 @@ export default function WerkwijzeOnboardingSteps() {
         </motion.div>
 
         <motion.div
-          className="divider-grid"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-            gap: '1px',
-            background: 'var(--border-subtle)',
-            border: '1px solid var(--border-subtle)',
-          }}
+          className="feature-grid"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
           {steps.map((s) => (
-            <motion.div
-              key={s.n}
-              className="step-card"
-              variants={itemVariants}
-              style={{
-                background: 'var(--bg-secondary)',
-                padding: 'clamp(32px, 4vw, 48px)',
-                borderTop: '3px solid transparent',
-              }}
-              whileHover={{ borderTopColor: 'var(--accent-cta)', transition: { duration: 0.2 } }}
-            >
-              <p style={{
-                                fontSize: 'clamp(44px, 6vw, 64px)',
-                fontWeight: 800,
-                letterSpacing: '-0.04em',
-                lineHeight: 0.9,
-                color: 'var(--accent-cta)',
-                marginBottom: '24px',
-                opacity: 0.9,
-              }}>
-                {s.n}
-              </p>
-              <p style={{
-                                fontSize: '1.0625rem',
-                fontWeight: 700,
-                color: 'var(--text-primary)',
-                marginBottom: '12px',
-                letterSpacing: '-0.01em',
-                lineHeight: 1.2,
-              }}>
-                {s.title}
-              </p>
-              <p style={{ fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, margin: 0 }}>
-                {s.body}
-              </p>
+            <motion.div key={s.n} className="wb-card" variants={itemVariants}>
+              <CardVisual index={s.i + 30} Icon={s.Icon} chip={s.n} />
+              <div className="wb-card-body">
+                <h3 className="wb-card-title">{s.title}</h3>
+                <p className="wb-card-text">{s.body}</p>
+              </div>
             </motion.div>
           ))}
         </motion.div>

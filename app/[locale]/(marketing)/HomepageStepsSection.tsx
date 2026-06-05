@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import type { ComponentType } from 'react';
 import { useTranslations } from 'next-intl';
 import { SketchClipboard, SketchReport, SketchArrow } from '@/components/icons/SketchIcons';
+import CardVisual from '@/components/CardVisual';
 
 type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
 
@@ -51,46 +52,18 @@ export default function HomepageStepsSection() {
         </motion.div>
 
         <motion.div
-          className="steps-timeline"
+          className="feature-grid"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {/* connector line behind the nodes */}
-          <div className="steps-connector" aria-hidden="true" />
-
           {STEP_META.map((s) => (
-            <motion.div key={s.n} className="step-item" variants={itemVariants}>
-              <div className="step-node">
-                <span className="step-node-num">{s.n}</span>
-              </div>
-              <div className="step-item-body">
-                <div style={{ color: 'var(--accent-cta)', opacity: 0.82, marginBottom: '16px' }}>
-                  <s.Icon size={40} strokeWidth={1.4} />
-                </div>
-                <h3
-                  style={{
-                                        fontSize: '1.1875rem',
-                    fontWeight: 600,
-                    color: 'var(--text-primary)',
-                    letterSpacing: '-0.01em',
-                    marginBottom: '14px',
-                    lineHeight: 1.25,
-                  }}
-                >
-                  {t(`title_${s.i}`)}
-                </h3>
-                <p
-                  style={{
-                                        fontSize: 'clamp(1rem, 1.6vw, 1.125rem)',
-                    color: 'var(--text-tertiary)',
-                    lineHeight: 1.7,
-                    margin: 0,
-                  }}
-                >
-                  {t(`body_${s.i}`)}
-                </p>
+            <motion.div key={s.n} className="wb-card" variants={itemVariants}>
+              <CardVisual index={s.i + 22} Icon={s.Icon} chip={s.n} scene="chart" />
+              <div className="wb-card-body">
+                <h3 className="wb-card-title">{t(`title_${s.i}`)}</h3>
+                <p className="wb-card-text">{t(`body_${s.i}`)}</p>
               </div>
             </motion.div>
           ))}

@@ -3,7 +3,6 @@
 import CountUpNumber from '@/components/motion/CountUpNumber';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import SketchCrosshair from '@/components/icons/SketchCrosshair';
 
 const STAT_META: { value: number; decimals: number; suffix: string; i: 1 | 2 | 3 }[] = [
   { value: 0.5, decimals: 1, suffix: '×', i: 1 },
@@ -32,10 +31,10 @@ const itemVariants = {
 export default function HomepageStatsSection() {
   const t = useTranslations('homepage.stats');
   return (
-    <section style={{ background: 'var(--bg-secondary)' }}>
-      <div className="container-wide">
+    <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(64px, 8vw, 104px)' }}>
+      <div className="container-medium">
         <motion.div
-          className="stats-grid"
+          className="feature-grid"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -44,66 +43,20 @@ export default function HomepageStatsSection() {
           {STAT_META.map((s, idx) => (
             <motion.div
               key={idx}
+              className="feature-card stat-card"
               variants={itemVariants}
-              style={{
-                padding: 'clamp(40px, 5vw, 72px) clamp(28px, 4vw, 56px)',
-                borderRight: idx < 2 ? '1px solid var(--border-subtle)' : 'none',
-                borderTop: idx === 0 ? '3px solid var(--accent-cta)' : '3px solid var(--border-medium)',
-              }}
             >
-              <div style={{ position: 'relative', display: 'inline-block', marginBottom: '20px' }}>
-                <div style={{
-                  position: 'absolute',
-                  right: '-20px',
-                  top: '-16px',
-                  pointerEvents: 'none',
-                  opacity: 0.04,
-                }}>
-                  <SketchCrosshair size={72} color="var(--text-primary)" strokeWidth={1} />
-                </div>
-                <p
-                  style={{
-                                        fontSize: 'clamp(56px, 8vw, 100px)',
-                    fontWeight: 800,
-                    letterSpacing: '-0.04em',
-                    lineHeight: 0.9,
-                    color: 'var(--accent-cta)',
-                    position: 'relative',
-                  }}
-                >
-                  <CountUpNumber
-                    value={s.value}
-                    decimals={s.decimals}
-                    suffix={s.suffix}
-                    duration={1100}
-                  />
-                </p>
-              </div>
-              <p
-                style={{
-                  fontFamily: "var(--font-ui, 'Inter', system-ui, sans-serif)",
-                  fontSize: '0.75rem',
-                  fontWeight: 700,
-                  color: 'var(--text-primary)',
-                  marginBottom: '10px',
-                  letterSpacing: '0.14em',
-                  textTransform: 'uppercase',
-                }}
-              >
-                {t(`label_${s.i}`)}
+              <p className="stat-number">
+                <CountUpNumber
+                  value={s.value}
+                  decimals={s.decimals}
+                  suffix={s.suffix}
+                  duration={1100}
+                />
               </p>
-              <p
-                style={{
-                                    fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
-                  fontStyle: 'italic',
-                  color: 'var(--text-muted)',
-                  lineHeight: 1.65,
-                  maxWidth: '260px',
-                  margin: 0,
-                }}
-              >
-                {t(`sub_${s.i}`)}
-              </p>
+              <span className="stat-accent" aria-hidden="true" />
+              <p className="feature-kicker stat-label">{t(`label_${s.i}`)}</p>
+              <p className="stat-sub">{t(`sub_${s.i}`)}</p>
             </motion.div>
           ))}
         </motion.div>

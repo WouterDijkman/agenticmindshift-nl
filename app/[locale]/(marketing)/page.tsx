@@ -98,14 +98,8 @@ export default async function HomePage() {
             <h2 className="type-h2" style={{ margin: 0, maxWidth: '480px' }}>{t('social_proof.heading')}</h2>
           </div>
           <div
-            className="reveal social-proof-grid divider-grid"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-              gap: '1px',
-              background: 'var(--border-subtle)',
-              border: '1px solid var(--border-subtle)',
-            }}
+            className="reveal social-proof-grid feature-grid"
+            style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}
           >
             {[
               {
@@ -124,25 +118,29 @@ export default async function HomePage() {
                 aum: t('social_proof.aum_3'),
               },
             ].map((item, i) => (
-              <div
-                key={i}
-                style={{
-                  background: 'var(--bg-primary)',
-                  padding: 'clamp(32px, 4vw, 52px)',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '24px',
-                }}
-              >
+              <div key={i} className="feature-card" style={{ gap: '24px' }}>
+                <span
+                  aria-hidden="true"
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: '40px',
+                    lineHeight: 0.6,
+                    color: 'var(--accent-cta)',
+                    opacity: 0.35,
+                  }}
+                >
+                  &ldquo;
+                </span>
                 <p
                   style={{
-                                        fontSize: 'clamp(1.125rem, 1.8vw, 1.375rem)',
+                    fontSize: 'clamp(1.125rem, 1.8vw, 1.375rem)',
                     fontStyle: 'italic',
                     fontWeight: 300,
                     color: 'var(--text-primary)',
                     lineHeight: 1.6,
                     letterSpacing: '0em',
                     margin: 0,
+                    flex: 1,
                   }}
                 >
                   {item.quote}
@@ -231,16 +229,10 @@ export default async function HomePage() {
             </h2>
           </div>
           <div
-            className="reveal divider-grid"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '1px',
-              background: 'var(--border-subtle)',
-              border: '1px solid var(--border-subtle)',
-            }}
+            className="reveal feature-grid"
+            style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}
           >
-            <div style={{ background: 'var(--bg-primary)', padding: 'clamp(28px, 4vw, 44px)' }}>
+            <div className="feature-card">
               <p style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '20px' }}>
                 {t('transformation.without_label')}
               </p>
@@ -251,7 +243,7 @@ export default async function HomePage() {
                 <p style={{ margin: 0 }}>{t('transformation.without_4')}</p>
               </div>
             </div>
-            <div style={{ background: 'var(--bg-primary)', padding: 'clamp(28px, 4vw, 44px)', borderLeft: '3px solid var(--accent-cta)' }}>
+            <div className="feature-card feature-card--accent">
               <p style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--accent-cta)', marginBottom: '20px' }}>
                 {t('transformation.with_label')}
               </p>
