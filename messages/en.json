@@ -373,7 +373,7 @@
       "eyebrow": "Honest about the investment",
       "heading": "What partners typically want to know first",
       "q1": "What if it turns out not to be right for us?",
-      "a1": "Start with the Sparring Session (€395). One question, one summary, no follow-up obligation.",
+      "a1": "Start with an AI Sparring Session: one question, one summary, no follow-up obligation.",
       "q2": "What makes Agentic Mindshift different?",
       "a2": "Deal experience in acquisition finance and financial restructuring: not an AI generalist who happens to have PE clients. AI strengthens that practice; it does not replace it.",
       "q3": "How do I know whether the investment delivers a return?",
@@ -381,7 +381,8 @@
       "q4": "Are we locked in to a long duration?",
       "a4": "Sparring, Consultancy and DD are per engagement. Fractional AI Officer: minimum 3 months, because the rhythm needs time.",
       "q5": "Multiple deals simultaneously?",
-      "a5": "Volume rates: 5 deals €42,500 (–15%), 10 deals €80,000 (–20%). Economies of scale in onboarding time and platform onboarding."
+      "a5": "Volume rates: 5 deals €42,500 (–15%), 10 deals €80,000 (–20%). Economies of scale in onboarding time and platform onboarding.",
+      "investering_a": "There are four routes: an AI Sparring Session (one-off, 60–90 minutes), Consultancy & Strategic Enablement from €4,500 per track or retainer, a Fractional AI Officer for €3,500–€5,500 per month (min. 3 months), and AI Due Diligence & Portfolio from €10,000 per deal or €6,500–€8,500 per month for ongoing portfolio intelligence. All amounts excluding VAT. See /werkwijze for the full explanation."
     },
     "cta": {
       "eyebrow": "Start here",
@@ -749,6 +750,122 @@
       "below_median": "Below median",
       "above_median": "At/above median",
       "peer_median": "Peer median"
+    },
+    "variants": {
+      "A": {
+        "offerName": "AI Due Diligence & Portfolio",
+        "interpretation": "Your score on Analytical Quality is {score} out of 20 points. This is the dimension where most firms in the Dutch lower-mid market lose returns structurally — usually without noticing. Your MBR cycle runs, but early warning is missing: variance analysis does not go deep enough to course-correct before a quarter is lost. The portfolio intelligence service — delivered via Factum Capital (our AI platform) — is built specifically for this scenario.",
+        "price": "€6,500 – €8,500 / month · min. 3 months · excl. VAT",
+        "interventions": {
+          "0": {
+            "title": "Redesign your MBR reporting structure",
+            "body": "Define per portfolio company the three to five leading indicators that serve as warning signals, independent of standard P&L variance."
+          },
+          "1": {
+            "title": "Variance analysis at operational source, not reporting level",
+            "body": "To what operational level can the cause be traced? Two months of work, lasting impact."
+          },
+          "2": {
+            "title": "Monthly peer benchmark — even manual",
+            "body": "Ten minutes per portfolio company per month. The rhythm matters more than the technique."
+          }
+        }
+      },
+      "B": {
+        "offerName": "AI Due Diligence & Portfolio",
+        "interpretation": "Your score on AI Readiness is {score} out of 25 points. AI substitution risk is not yet systematically modelled in your deal analysis, and your analytical foundation varies from file to file. Of your three most recent acquisitions, the chance that one experiences material margin erosion in the next 24 months is higher than you currently estimate. The AI Due Diligence service — via Factum Capital — provides the comprehensive analytical foundation for your next deal.",
+        "price": "From €10,000 per deal · 2–3 weeks · excl. VAT",
+        "interventions": {
+          "0": {
+            "title": "AI substitution framework per job function",
+            "body": "Per role type: estimate the percentage of work that can be replaced by AI within 24 months."
+          },
+          "1": {
+            "title": "Sensitivity analysis on margin erosion",
+            "body": "Three scenarios: 5%, 15%, 30% erosion. Work through to entry multiple adjustment."
+          },
+          "2": {
+            "title": "Extend DD questionnaire with analytical structure",
+            "body": "What data does the target provide? What percentage of reporting is automated? This co-determines the quality of the Factum file."
+          }
+        }
+      },
+      "C": {
+        "offerName": "Fractional AI Officer",
+        "interpretation": "Your score on Knowledge Retention is {score} out of 10 points. Knowledge leaks in two ways: via external reports not structurally processed, and via employees leaving your organisation. When there are signs of financial stress in a portfolio company, that knowledge leakage is especially costly. As Fractional AI Officer, Agentic Mindshift signals early when an indicative review is needed.",
+        "price": "€3,500 – €5,500 / month · min. 3 months · excl. VAT",
+        "interventions": {
+          "0": {
+            "title": "Central knowledge repository with file output",
+            "body": "Not as storage, but as a searchable knowledge base ready for the next situation."
+          },
+          "1": {
+            "title": "Sector-specific playbooks per scenario type",
+            "body": "For your five most common scenarios: a living document with assumptions, models and learnings."
+          },
+          "2": {
+            "title": "Early stress tests per portfolio company",
+            "body": "Two leading indicators per company that signal whether a deeper review is needed — before it is too late."
+          }
+        }
+      },
+      "D": {
+        "offerName": "Consultancy & Strategic Enablement",
+        "interpretation": "Your scores on Capacity Engineering and Deal Velocity point to a structural pattern: your team is qualified but held back by operational friction. Comparable firms that take a more structured approach to analytical processes see their screening and analysis capacity double without team expansion. A targeted consultancy or enablement approach resolves this.",
+        "price": "From €4,500 per track or retainer · excl. VAT",
+        "interventions": {
+          "0": {
+            "title": "AI-augmented analysis protocol",
+            "body": "You quadruple your analysis capacity without quality loss — from deal screening to financing memo."
+          },
+          "1": {
+            "title": "Template library for files and memos",
+            "body": "Modular building blocks assembled per situation. Reduces preparation time by 60%."
+          },
+          "2": {
+            "title": "Monthly capacity audit",
+            "body": "What analytical work could AI or structure have taken over? Ten minutes, lasting insight."
+          }
+        }
+      },
+      "E": {
+        "offerName": "AI Due Diligence & Portfolio",
+        "interpretation": "Your score on Analytical Quality is {score} out of 20 points. Your financing or deal files are not yet consistently structured across all relevant dimensions. This leads to longer timelines, unnecessary revision rounds and a weaker negotiating position. The financing memo service — delivered via Factum Capital — provides the analytical foundation and connects the certified advisors who formally sign off where required.",
+        "price": "From €10,000 per deal · or €6,500–€8,500/month portfolio intelligence · excl. VAT",
+        "interventions": {
+          "0": {
+            "title": "Structure your financing memo on fixed dimensions",
+            "body": "A bank-ready memo has at least five layers: historical performance, forward-looking assumptions, market position, risk profile and management quality."
+          },
+          "1": {
+            "title": "Build in a sector comparison — even manual",
+            "body": "Ten comparable companies on three ratios. Two hours of work. The difference between 'we believe in this business' and 'the market confirms this profile'."
+          },
+          "2": {
+            "title": "Link your analytical file to certified advisors",
+            "body": "A bank-proof presentation requires a formal financial advisor or accountant. Structure the file so that advisor can get up to speed in two hours — not two weeks."
+          }
+        }
+      },
+      "F": {
+        "offerName": "AI Sparring Session",
+        "interpretation": "Your scorecard shows that you are at the start of structuring your analytical approach — and that is precisely the right moment for a concrete, targeted first step. An AI Sparring Session is not a sales call: it is 60–90 minutes focused on your specific question, with a written summary as the outcome.",
+        "price": "",
+        "interventions": {
+          "0": {
+            "title": "Define your most urgent blind spot",
+            "body": "What decision is coming up — and what information is missing to make that decision soundly? That is the starting point."
+          },
+          "1": {
+            "title": "Test your assumptions before you act",
+            "body": "The session makes assumptions explicit — not to confirm them. One session can prevent a costly mistake."
+          },
+          "2": {
+            "title": "Then choose the right follow-up track",
+            "body": "After one session you will know which structural approach fits best: portfolio intelligence, due diligence, fractional or consultancy."
+          }
+        }
+      }
     }
   }
 }

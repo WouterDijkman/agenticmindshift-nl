@@ -44,6 +44,7 @@ function approxPercentile(total: number): number {
 
 export default function RapportPage() {
   const t = useTranslations('scorecard.rapport');
+  const tV = useTranslations('scorecard.variants');
   const answers = useAssessmentStore((s) => s.answers);
   const leadName = useAssessmentStore((s) => s.leadName);
 
@@ -275,13 +276,13 @@ export default function RapportPage() {
         >
           <h2 className="type-h2 mb-5">{t('interpretation_heading')}</h2>
           <p className="mb-8 measure" style={{ fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', color: 'var(--text-secondary)', lineHeight: 1.75 }}>
-            {variant.interpretation(variantRawScore)}
+            {tV(`${variant.id}.interpretation`, { score: variantRawScore })}
           </p>
 
           <h3 className="type-h3 mb-5">{t('interventions_heading')}</h3>
           <ol className="flex flex-col gap-5" style={{ listStyle: 'none', padding: 0 }}>
-            {variant.interventions.map((iv, idx) => (
-              <li key={iv.title} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+            {[0, 1, 2].map((idx) => (
+              <li key={idx} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
                 <span style={{
                   fontSize: '0.75rem',
                   fontWeight: 800,
@@ -293,9 +294,9 @@ export default function RapportPage() {
                   {String(idx + 1).padStart(2, '0')}
                 </span>
                 <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', lineHeight: 1.7, margin: 0 }}>
-                  <strong style={{ color: 'var(--text-primary)' }}>{iv.title}</strong>
+                  <strong style={{ color: 'var(--text-primary)' }}>{tV(`${variant.id}.interventions.${idx}.title`)}</strong>
                   {': '}
-                  <span>{iv.body}</span>
+                  <span>{tV(`${variant.id}.interventions.${idx}.body`)}</span>
                 </p>
               </li>
             ))}
@@ -315,21 +316,25 @@ export default function RapportPage() {
           }}
         >
           <p className="eyebrow" style={{ marginBottom: '12px' }}>{t('offer_eyebrow')}</p>
-          <h2 className="type-h2 mb-3">{variant.offerName}</h2>
+          <h2 className="type-h2 mb-3">{tV(`${variant.id}.offerName`)}</h2>
           <p className="mb-4 measure" style={{ color: 'var(--text-secondary)', lineHeight: 1.75 }}>
             {t('offer_match_body')}
           </p>
-          <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', marginBottom: '8px' }}>
-            <p style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--text-primary)' }}>
-              {t('offer_investment')}
-            </p>
-            <p style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--accent-cta)' }}>
-              {variant.price}
-            </p>
-          </div>
-          <p className="mb-8" style={{ fontSize: '0.8125rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>
-            {t('offer_excl_vat')}
-          </p>
+          {tV(`${variant.id}.price`) && (
+            <>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', marginBottom: '8px' }}>
+                <p style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--text-primary)' }}>
+                  {t('offer_investment')}
+                </p>
+                <p style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--accent-cta)' }}>
+                  {tV(`${variant.id}.price`)}
+                </p>
+              </div>
+              <p className="mb-8" style={{ fontSize: '0.8125rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>
+                {t('offer_excl_vat')}
+              </p>
+            </>
+          )}
           <div className="flex flex-col sm:flex-row gap-3 no-print">
             <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external>
               {t('offer_cta_1')}

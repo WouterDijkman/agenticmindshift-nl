@@ -41,7 +41,7 @@ interface Offering {
   badge: string;
   title: string;
   situation: string;
-  price: string;
+  price?: string;
   priceNote: string;
   ctaLabel: string;
   ctaHref: string;
@@ -60,7 +60,6 @@ export default async function WerkwijzePage() {
       badge: t('offering_1.badge'),
       title: t('offering_1.title'),
       situation: t('offering_1.situation'),
-      price: 'Vanaf €395',
       priceNote: t('offering_1.price_note'),
       ctaLabel: t('offering_1.cta'),
       ctaHref: 'https://cal.com/wwdijkman/intake-call',
@@ -412,18 +411,20 @@ export default async function WerkwijzePage() {
                   >
                     {t('offerings.investment_label')}
                   </p>
-                  <p
-                    style={{
-                      fontSize: 'clamp(1.5rem, 2.5vw, 1.875rem)',
-                      fontWeight: 700,
-                      letterSpacing: '-0.02em',
-                      lineHeight: 1.1,
-                      color: o.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
-                      margin: 0,
-                    }}
-                  >
-                    {o.price}
-                  </p>
+                  {o.price && (
+                    <p
+                      style={{
+                        fontSize: 'clamp(1.5rem, 2.5vw, 1.875rem)',
+                        fontWeight: 700,
+                        letterSpacing: '-0.02em',
+                        lineHeight: 1.1,
+                        color: o.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
+                        margin: 0,
+                      }}
+                    >
+                      {o.price}
+                    </p>
+                  )}
                   <p
                     style={{
                       fontSize: '0.875rem',

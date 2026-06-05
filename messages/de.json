@@ -373,7 +373,7 @@
       "eyebrow": "Ehrlich über die Investition",
       "heading": "Was Partner üblicherweise zuerst wissen möchten",
       "q1": "Was, wenn es sich als nicht das Richtige für uns herausstellt?",
-      "a1": "Beginnen Sie mit der Sparring-Sitzung (€395). Eine Frage, eine Zusammenfassung, keine Folgepflicht.",
+      "a1": "Beginnen Sie mit einer KI-Sparring-Sitzung: eine Frage, eine Zusammenfassung, keine Folgepflicht.",
       "q2": "Was macht Agentic Mindshift anders?",
       "a2": "Deal-Erfahrung in acquisition finance und financial restructuring: kein KI-Generalist, der zufällig PE-Kunden hat. KI stärkt diese Praxis; sie ersetzt sie nicht.",
       "q3": "Woher weiß ich, ob die Investition rentabel ist?",
@@ -381,7 +381,8 @@
       "q4": "Sind wir an eine lange Laufzeit gebunden?",
       "a4": "Sparring, Consultancy und DD sind pro Auftrag. Fractional AI Officer: mindestens 3 Monate, weil der Rhythmus Zeit braucht.",
       "q5": "Mehrere Deals gleichzeitig?",
-      "a5": "Volumentarife: 5 Deals €42.500 (–15%), 10 Deals €80.000 (–20%). Skaleneffekte bei Einarbeitungszeit und Plattform-Onboarding."
+      "a5": "Volumentarife: 5 Deals €42.500 (–15%), 10 Deals €80.000 (–20%). Skaleneffekte bei Einarbeitungszeit und Plattform-Onboarding.",
+      "investering_a": "Es gibt vier Wege: eine KI-Sparring-Sitzung (einmalig, 60–90 Minuten), Consultancy & Strategic Enablement ab €4.500 pro Auftrag oder Retainer, einen Fractional AI Officer für €3.500–€5.500 pro Monat (mind. 3 Monate) und AI Due Diligence & Portfolio ab €10.000 pro Deal oder €6.500–€8.500 pro Monat. Alle Beträge zzgl. MwSt. Siehe /werkwijze für die vollständige Erläuterung."
     },
     "cta": {
       "eyebrow": "Hier beginnen",
@@ -749,6 +750,122 @@
       "below_median": "Unter dem Median",
       "above_median": "Am/über dem Median",
       "peer_median": "Peer-Median"
+    },
+    "variants": {
+      "A": {
+        "offerName": "AI Due Diligence & Portfolio",
+        "interpretation": "Ihre Punktzahl bei Analytischer Qualität beträgt {score} von 20 Punkten. Dies ist die Dimension, in der die meisten Unternehmen im niederländischen Lower-Mid-Market strukturell Rendite verlieren — in der Regel unbewusst. Ihr MBR-Zyklus läuft, aber Frühwarnungen fehlen: Die Varianzanalyse ist nicht tief genug, um gegenzusteuern, bevor ein Quartal verloren geht. Der Portfolio-Intelligence-Dienst — über Factum Capital (unsere KI-Plattform) — ist speziell für dieses Szenario entwickelt.",
+        "price": "€6.500 – €8.500 / Monat · mind. 3 Monate · zzgl. MwSt.",
+        "interventions": {
+          "0": {
+            "title": "Neugestaltung Ihrer MBR-Berichtsstruktur",
+            "body": "Definieren Sie pro Portfoliounternehmen drei bis fünf Leading Indicators, die als Warnsignale dienen, unabhängig von der Standard-GuV-Varianz."
+          },
+          "1": {
+            "title": "Varianzanalyse auf operativer Quellebene, nicht Berichtsebene",
+            "body": "Bis zu welchem operativen Level ist die Ursache zurückzuverfolgen? Zwei Monate Arbeit, bleibender Effekt."
+          },
+          "2": {
+            "title": "Monatlicher Peer-Vergleich — auch manuell",
+            "body": "Zehn Minuten pro Portfoliounternehmen pro Monat. Der Rhythmus ist wichtiger als die Technik."
+          }
+        }
+      },
+      "B": {
+        "offerName": "AI Due Diligence & Portfolio",
+        "interpretation": "Ihre Punktzahl bei KI-Bereitschaft beträgt {score} von 25 Punkten. KI-Substitutionsrisiken werden noch nicht systematisch in Ihre Deal-Analyse einbezogen, und Ihr analytisches Fundament variiert von Akte zu Akte. Bei Ihren drei jüngsten Akquisitionen ist die Wahrscheinlichkeit, dass eine davon in den nächsten 24 Monaten materielle Margerosion erleidet, höher als Sie einschätzen. Der KI-Due-Diligence-Dienst — über Factum Capital — liefert das umfassende analytische Fundament für Ihren nächsten Deal.",
+        "price": "Ab €10.000 pro Deal · 2–3 Wochen · zzgl. MwSt.",
+        "interventions": {
+          "0": {
+            "title": "KI-Substitutions-Framework pro Funktionsgruppe",
+            "body": "Pro Rollentyp: Schätzen Sie den Anteil der Arbeit, der innerhalb von 24 Monaten durch KI ersetzbar ist."
+          },
+          "1": {
+            "title": "Sensitivitätsanalyse zur Margerosion",
+            "body": "Drei Szenarien: 5%, 15%, 30% Erosion. Durchrechnen bis zur Entry-Multiple-Anpassung."
+          },
+          "2": {
+            "title": "DD-Fragebogen um analytische Struktur erweitern",
+            "body": "Welche Daten liefert das Target? Welcher Anteil der Berichterstattung ist automatisiert? Dies bestimmt die Qualität der Factum-Akte."
+          }
+        }
+      },
+      "C": {
+        "offerName": "Fractional AI Officer",
+        "interpretation": "Ihre Punktzahl bei Wissenserhalt beträgt {score} von 10 Punkten. Wissen entweicht auf zwei Wegen: über externe Berichte, die nicht strukturell verarbeitet werden, und über Mitarbeiter, die das Unternehmen verlassen. Bei Anzeichen finanzieller Belastung bei einer Beteiligung ist Wissensverlust besonders kostspielig. Als Fractional AI Officer signalisiert Agentic Mindshift frühzeitig, wenn eine indikative Überprüfung erforderlich ist.",
+        "price": "€3.500 – €5.500 / Monat · mind. 3 Monate · zzgl. MwSt.",
+        "interventions": {
+          "0": {
+            "title": "Zentrales Wissens-Repository mit Dokumenten-Output",
+            "body": "Nicht als Speicher, sondern als durchsuchbare Wissensbasis, die bei der nächsten Situation sofort einsatzbereit ist."
+          },
+          "1": {
+            "title": "Branchenspezifische Playbooks pro Situationstyp",
+            "body": "Für Ihre fünf häufigsten Szenarien: ein lebendiges Dokument mit Annahmen, Modellen und Erkenntnissen."
+          },
+          "2": {
+            "title": "Frühe Stresstests pro Beteiligung",
+            "body": "Zwei Leading Indicators pro Unternehmen, die signalisieren, ob eine tiefere Überprüfung nötig ist — bevor es zu spät ist."
+          }
+        }
+      },
+      "D": {
+        "offerName": "Consultancy & Strategic Enablement",
+        "interpretation": "Ihre Punktzahlen bei Kapazitätsmanagement und Deal Velocity weisen auf ein strukturelles Muster hin: Ihr Team ist qualifiziert, wird aber durch operationelle Reibungsverluste behindert. Vergleichbare Unternehmen, die analytische Prozesse strukturierter angehen, verdoppeln ihre Analysekapazität ohne Teamaufstockung. Ein gezielter Beratungs- oder Enablement-Ansatz löst das.",
+        "price": "Ab €4.500 pro Auftrag oder Retainer · zzgl. MwSt.",
+        "interventions": {
+          "0": {
+            "title": "KI-gestütztes Analyseprotokoll",
+            "body": "Sie vervierfachen Ihre Analysekapazität ohne Qualitätsverlust — von der Deal-Screening bis zum Finanzierungsmemo."
+          },
+          "1": {
+            "title": "Template-Bibliothek für Akten und Memos",
+            "body": "Modulare Bausteine, je nach Situation zusammengesetzt. Reduziert die Vorbereitungszeit um 60%."
+          },
+          "2": {
+            "title": "Monatliches Kapazitäts-Audit",
+            "body": "Welche analytische Arbeit hätte KI oder Struktur übernehmen können? Zehn Minuten, bleibende Erkenntnisse."
+          }
+        }
+      },
+      "E": {
+        "offerName": "AI Due Diligence & Portfolio",
+        "interpretation": "Ihre Punktzahl bei Analytischer Qualität beträgt {score} von 20 Punkten. Ihre Finanzierungs- oder Deal-Unterlagen sind noch nicht konsequent auf allen relevanten Dimensionen aufgebaut. Dies führt zu längeren Laufzeiten, unnötigen Überarbeitungsrunden und einer schwächeren Verhandlungsposition. Der Finanzierungsmemo-Dienst — über Factum Capital — liefert das analytische Fundament und koppelt zertifizierte Berater für die formelle Genehmigung.",
+        "price": "Ab €10.000 pro Deal · oder €6.500–€8.500/Monat Portfolio-Intelligence · zzgl. MwSt.",
+        "interventions": {
+          "0": {
+            "title": "Finanzierungsmemo auf festen Dimensionen strukturieren",
+            "body": "Ein bankfähiges Memo hat mindestens fünf Schichten: historische Performance, zukunftsgerichtete Annahmen, Marktposition, Risikoprofil und Managementqualität."
+          },
+          "1": {
+            "title": "Branchenvergleich einbauen — auch manuell",
+            "body": "Zehn vergleichbare Unternehmen auf drei Kennzahlen. Zwei Stunden Arbeit. Der Unterschied zwischen 'Wir glauben an dieses Unternehmen' und 'Der Markt bestätigt dieses Profil'."
+          },
+          "2": {
+            "title": "Analytische Akte mit zertifizierten Beratern verknüpfen",
+            "body": "Eine bankfähige Präsentation erfordert einen formellen Finanzberater. Bauen Sie die Akte so auf, dass dieser Berater in zwei Stunden einsteigen kann — nicht in zwei Wochen."
+          }
+        }
+      },
+      "F": {
+        "offerName": "KI-Sparring-Sitzung",
+        "interpretation": "Ihre Scorecard zeigt, dass Sie am Beginn der Strukturierung Ihres analytischen Ansatzes stehen — und das ist genau der richtige Moment für einen gezielten ersten Schritt. Eine KI-Sparring-Sitzung ist kein Verkaufsgespräch: Es sind 60–90 Minuten, die auf Ihre spezifische Frage ausgerichtet sind, mit einer schriftlichen Zusammenfassung als Ergebnis.",
+        "price": "",
+        "interventions": {
+          "0": {
+            "title": "Definieren Sie Ihren dringendsten blinden Fleck",
+            "body": "Welche Entscheidung steht an — und welche Informationen fehlen, um diese fundiert zu treffen? Das ist der Ausgangspunkt."
+          },
+          "1": {
+            "title": "Testen Sie Ihre Annahmen, bevor Sie handeln",
+            "body": "Die Sitzung macht Annahmen explizit — nicht um sie zu bestätigen. Eine Sitzung kann einen kostspieligen Fehler verhindern."
+          },
+          "2": {
+            "title": "Wählen Sie dann den richtigen Folgeweg",
+            "body": "Nach einer Sitzung wissen Sie, welcher strukturelle Ansatz am besten passt: Portfolio-Intelligence, Due Diligence, Fractional oder Beratung."
+          }
+        }
+      }
     }
   }
 }

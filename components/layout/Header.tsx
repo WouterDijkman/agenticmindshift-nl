@@ -105,6 +105,11 @@ export default function Header() {
           </Button>
         </div>
 
+        {/* Language switcher always visible on mobile, next to hamburger */}
+        <div className="lg:hidden">
+          <LanguageSwitcher />
+        </div>
+
         <button
           type="button"
           aria-label={mobileOpen ? t('close_menu') : t('open_menu')}
@@ -202,7 +207,6 @@ export default function Header() {
             ))}
           </nav>
           <div className="mt-auto flex flex-col gap-4">
-            <LanguageSwitcher />
             <Button href="/scorecard" variant="primary" size="lg" className="w-full">
               {t('start_scorecard')}
             </Button>
