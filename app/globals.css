@@ -1549,6 +1549,40 @@ nav, header, .nav-link, .eyebrow-ui {
 }
 
 /* ================================================================== */
+/* HERO TWO-COLUMN GRID — copy left, animated data visual right        */
+/* ================================================================== */
+.hero-home-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+  width: 100%;
+}
+.hero-home-copy {
+  min-width: 0;
+}
+.hero-home-visual {
+  min-width: 0;
+  justify-self: center;
+  width: 100%;
+  max-width: 520px;
+  filter: drop-shadow(0 24px 48px rgba(11, 31, 58, 0.1));
+}
+.hero-viz {
+  width: 100%;
+}
+@media (max-width: 900px) {
+  .hero-home-grid {
+    grid-template-columns: 1fr;
+    gap: clamp(32px, 7vw, 48px);
+  }
+  .hero-home-visual {
+    max-width: 440px;
+    justify-self: start;
+  }
+}
+
+/* ================================================================== */
 /* LANGUAGE-AWARE HYPHENS                                             */
 /* German and Portuguese have long compound words. Hyphens: auto      */
 /* inserts soft hyphens at correct syllable breaks.                   */

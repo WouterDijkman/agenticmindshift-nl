@@ -15,8 +15,8 @@ export const organizationLd = {
   logo: {
     '@type': 'ImageObject',
     url: `${SITE_URL}/logo.svg`,
-    width: 620,
-    height: 128,
+    width: 1500,
+    height: 487,
   },
   email: 'wouter@agenticmindshift.nl',
   foundingDate: '2025-10',

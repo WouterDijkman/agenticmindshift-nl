@@ -39,7 +39,7 @@ export default async function OverPage(
     <>
       <JsonLd data={organizationLd} />
       <JsonLd data={personLd} />
-      <JsonLd data={getBreadcrumbLd('/over', t('heading'), locale)} />
+      <JsonLd data={getBreadcrumbLd('/over', 'Wouter Dijkman', locale)} />
 
       <HeroAnimated />
 

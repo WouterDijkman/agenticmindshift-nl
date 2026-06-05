@@ -1,26 +1,18 @@
 'use client';
 
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Button from '@/components/ui/Button';
 import SketchCrosshair from '@/components/icons/SketchCrosshair';
+import HeroDataViz from '@/components/HeroDataViz';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function AnimatedHero() {
   const t = useTranslations('homepage.hero');
-  const sectionRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ['start start', 'end start'],
-  });
-  const rawY = useTransform(scrollYProgress, [0, 1], [0, -90]);
-  const parallaxY = useSpring(rawY, { stiffness: 60, damping: 20, mass: 0.6 });
 
   return (
     <section
-      ref={sectionRef}
       className="hero-home grain-overlay"
       style={{
         background: 'var(--bg-primary)',
@@ -32,55 +24,15 @@ export default function AnimatedHero() {
         overflow: 'hidden',
       }}
     >
-      {/* Achtergrond glyph — parallax */}
-      <motion.div
-        aria-hidden="true"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.025 }}
-        transition={{ duration: 1.8, delay: 0.1, ease: 'easeOut' }}
-        style={{
-          position: 'absolute',
-          right: '-60px',
-          top: '50%',
-          y: parallaxY,
-          marginTop: '-0.5em',
-          fontSize: 'clamp(320px, 38vw, 560px)',
-          fontWeight: 900,
-          lineHeight: 1,
-          color: 'var(--text-primary)',
-          letterSpacing: '-0.06em',
-          pointerEvents: 'none',
-          userSelect: 'none',
-                  }}
-      >
-        PE
-      </motion.div>
-
-      {/* Sketch crosshair — decoratief rechtsonder */}
-      <motion.div
-        aria-hidden="true"
-        className="hero-crosshair-deco"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.045 }}
-        transition={{ duration: 2.2, ease: 'easeOut', delay: 0.8 }}
-        style={{
-          position: 'absolute',
-          right: '80px',
-          bottom: '90px',
-          pointerEvents: 'none',
-        }}
-      >
-        <SketchCrosshair size={88} color="var(--text-primary)" strokeWidth={0.8} />
-      </motion.div>
-
       {/* Content */}
       <div
-        className="hero-home-content container-medium"
+        className="hero-home-content container-medium hero-home-grid"
         style={{
           paddingTop: 'clamp(96px, 11vh, 128px)',
           paddingBottom: 'clamp(48px, 6vh, 72px)',
         }}
       >
+       <div className="hero-home-copy">
         {/* Eyebrow */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '20px' }}>
           <motion.div
@@ -182,6 +134,17 @@ export default function AnimatedHero() {
             {t('trust')}
           </p>
         </motion.div>
+       </div>
+
+       {/* Data visual */}
+       <motion.div
+         className="hero-home-visual"
+         initial={{ opacity: 0, y: 24 }}
+         animate={{ opacity: 1, y: 0 }}
+         transition={{ duration: 0.8, delay: 0.35, ease }}
+       >
+         <HeroDataViz />
+       </motion.div>
       </div>
 
       {/* Scroll indicator */}

@@ -1,11 +1,14 @@
 'use client';
 
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+
+const ease = [0.22, 1, 0.36, 1] as const;
 
 const navLinks = [
   { href: '/scorecard', labelKey: 'scorecard', badged: false },
@@ -17,8 +20,10 @@ const navLinks = [
 
 export default function Header() {
   const t = useTranslations('nav');
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [hovered, setHovered] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -47,55 +52,90 @@ export default function Header() {
     >
       <div className="container-extra flex items-center justify-between" style={{ paddingBlock: '14px' }}>
         {/* Logo */}
-        <Link
-          href="/"
-          aria-label="Agentic Mindshift — home"
-          className="inline-flex items-center min-h-[44px]"
+        <motion.div
+          initial={{ opacity: 0, x: -12 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, ease }}
           style={{ flexShrink: 0 }}
         >
-          <Image
-            src="/logo.svg"
-            alt="Agentic Mindshift"
-            width={620}
-            height={128}
-            priority
-            className="h-9 sm:h-10 w-auto"
-          />
-        </Link>
+          <Link
+            href="/"
+            aria-label="Agentic Mindshift — home"
+            className="inline-flex items-center min-h-[44px]"
+          >
+            <Image
+              src="/logo.svg"
+              alt="Agentic Mindshift"
+              width={1500}
+              height={487}
+              priority
+              className="h-9 sm:h-10 w-auto"
+            />
+          </Link>
+        </motion.div>
 
-        <nav className="hidden lg:flex items-center gap-7">
-          {navLinks.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="nav-link min-h-[44px] inline-flex items-center gap-2"
-              style={{
-                fontSize: '0.875rem',
-                fontWeight: 500,
-                color: 'var(--text-secondary)',
-                letterSpacing: '0.01em',
-              }}
-            >
-              {t(l.labelKey)}
-              {l.badged && (
-                <span
+        <nav
+          className="hidden lg:flex items-center gap-1"
+          onMouseLeave={() => setHovered(null)}
+        >
+          {navLinks.map((l) => {
+            const active = pathname === l.href;
+            const showUnderline = hovered ? hovered === l.href : active;
+            return (
+              <div
+                key={l.href}
+                style={{ position: 'relative' }}
+                onMouseEnter={() => setHovered(l.href)}
+              >
+                <Link
+                  href={l.href}
+                  className="min-h-[44px] inline-flex items-center gap-2 px-3"
                   style={{
-                    fontSize: '8px',
-                    fontWeight: 700,
-                    letterSpacing: '0.12em',
-                    textTransform: 'uppercase',
-                    color: 'var(--accent-cta)',
-                    border: '1px solid var(--accent-cta)',
-                    padding: '2px 5px',
-                    lineHeight: 1,
-                    opacity: 0.75,
+                    fontSize: '0.875rem',
+                    fontWeight: 500,
+                    color: active ? 'var(--text-primary)' : 'var(--text-secondary)',
+                    letterSpacing: '0.01em',
+                    transition: 'color 200ms ease',
                   }}
                 >
-                  {t('badge_july')}
-                </span>
-              )}
-            </Link>
-          ))}
+                  {t(l.labelKey)}
+                  {l.badged && (
+                    <motion.span
+                      animate={{ opacity: [0.55, 0.9, 0.55] }}
+                      transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut' }}
+                      style={{
+                        fontSize: '8px',
+                        fontWeight: 700,
+                        letterSpacing: '0.12em',
+                        textTransform: 'uppercase',
+                        color: 'var(--accent-cta)',
+                        border: '1px solid var(--accent-cta)',
+                        padding: '2px 5px',
+                        lineHeight: 1,
+                      }}
+                    >
+                      {t('badge_july')}
+                    </motion.span>
+                  )}
+                </Link>
+                {showUnderline && (
+                  <motion.span
+                    layoutId="nav-underline"
+                    style={{
+                      position: 'absolute',
+                      left: 12,
+                      right: 12,
+                      bottom: 6,
+                      height: '1.5px',
+                      background: 'var(--accent-cta)',
+                      borderRadius: '1px',
+                    }}
+                    transition={{ type: 'spring', stiffness: 420, damping: 34 }}
+                  />
+                )}
+              </div>
+            );
+          })}
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
@@ -175,7 +215,7 @@ export default function Header() {
       >
         <div className="p-6 flex flex-col gap-5 h-full">
           <div className="flex items-center justify-between">
-            <Image src="/logo.svg" alt="Agentic Mindshift" width={620} height={128} className="h-9 w-auto" />
+            <Image src="/logo.svg" alt="Agentic Mindshift" width={1500} height={487} className="h-9 w-auto" />
             <button
               type="button"
               aria-label={t('close_menu')}
