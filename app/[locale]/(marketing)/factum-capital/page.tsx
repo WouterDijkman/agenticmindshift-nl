@@ -14,6 +14,7 @@ import {
 import EarlyAccessForm from './EarlyAccessForm';
 import CountdownTimer from './CountdownTimer';
 import FactumModulesGrid from './FactumModulesGrid';
+import AnswerFirst from '@/components/AnswerFirst';
 import JsonLd from '@/components/JsonLd';
 import { getBreadcrumbLd } from '@/lib/jsonld';
 
@@ -197,6 +198,8 @@ export default async function FactumCapitalPage(
           <CountdownTimer />
         </div>
       </AnimatedHeroShell>
+
+      <AnswerFirst text={t('answer_first')} />
 
       {/* PROBLEEM */}
       <section style={{ background: 'var(--accent-primary)', paddingBlock: 'clamp(48px, 6vw, 80px)' }}>

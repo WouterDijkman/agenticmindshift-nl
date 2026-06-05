@@ -10,7 +10,7 @@
     "close_menu": "Menü schließen",
     "close": "Schließen",
     "main_menu": "Hauptmenü",
-    "badge_july": "juli"
+    "badge_july": "Juli"
   },
   "footer": {
     "tagline": "KI-Beratung für niederländische PE- und M&A-Unternehmen. Konkret, vertraulich, messbar.",
@@ -28,10 +28,12 @@
     "tagline_bottom": "Gründer Factum Capital · Start 1. Juli 2026"
   },
   "homepage": {
+    "meta_title": "KI-Beratung für Private Equity & M&A",
+    "meta_description": "Strategische KI-Partnerschaft für Mid-Market-PE-Fonds, M&A-Kanzleien und Familienunternehmen. Messen Sie Ihre KI-Rendite mit der kostenlosen Scorecard in 12 Minuten.",
     "hero": {
       "eyebrow": "Für PE-Partner, M&A-Direktoren und Family Offices",
       "heading": "Wie viel Rendite lässt Ihr Portfolio diesen Monat liegen?",
-      "subtext": "Ihr Monatsbericht verschleiert Minderleistung. Ihr Deal-Team wiederholt vermeidbare Fehler. Und das Risiko, dass KI die Kernaktivität übernimmt, steht in keinem IC-Vorschlag. Die Scorecard kartiert alle sechs Dimensionen. In zwölf Minuten.",
+      "subtext": "Ihr Monatsbericht verschleiert Minderleistung. Ihr Deal-Team wiederholt vermeidbare Fehler. Und KI-gestützte Due Diligence über alle Dimensionen fehlt in jedem IC-Vorschlag. Die Scorecard kartiert alle sechs Dimensionen. In zwölf Minuten.",
       "cta_primary": "Scorecard starten",
       "cta_secondary": "Arbeitsweise & Honorare",
       "trust": "12 Minuten · 6 Dimensionen · kein Konto · 100% vertraulich"
@@ -207,7 +209,7 @@
       "sales-pitch_q": "Ist das wieder nur ein verkappter Verkaufsgespräch?",
       "sales-pitch_a": "Nein. Sie erhalten Bewertungen über sechs Dimensionen, zwei vorrangige Schwerpunkte und einen konkreten Vorschlag für die nächsten Schritte. Erst danach entscheiden Sie, ob Sie weitermachen. Kein Druck, kein Follow-up, es sei denn, Sie initiieren es selbst.",
       "investering_q": "Wie hoch sind die Investitionsstufen für die verschiedenen Aufträge?",
-      "investering_a": "Es gibt vier Wege: eine kostenlose AI Sparring-Sitzung (30 Minuten, unverbindlich), Consultancy & Strategic Enablement ab €4.500 pro Auftrag oder Retainer, einen Fractional AI Officer für €1.099 pro Tag (mind. 3 Monate) und KI-gestützte Due Diligence & Portfolio ab €10.000 pro Deal oder €6.500–€8.500 pro Monat für laufende Portfolio-Intelligenz. Alle Beträge zzgl. MwSt. Siehe /werkwijze für die vollständige Erläuterung und Volumentarife.",
+      "investering_a": "Es gibt vier Wege: eine kostenlose AI Sparring-Sitzung (30 Minuten, unverbindlich), KI-Beratung & Implementierung ab €4.500 pro Auftrag oder Retainer, einen Fractional AI Officer für €1.099 pro Tag (mind. 3 Monate) und KI-gestützte Due Diligence & Portfolio ab €10.000 pro Deal oder €6.500–€8.500 pro Monat für laufende Portfolio-Intelligenz. Alle Beträge zzgl. MwSt. Siehe /werkwijze für die vollständige Erläuterung und Volumentarife.",
       "voorbeeld_q": "Was, wenn ich die Scorecard nicht ausfüllen, aber das Berichtsformat sehen möchte?",
       "voorbeeld_a": "Senden Sie eine Nachricht über LinkedIn oder E-Mail. Wir senden Ihnen dann einen anonymisierten Musterbericht."
     }
@@ -242,6 +244,7 @@
       "role": "Gründer Agentic Mindshift & Factum Capital",
       "subtext": "Sechs Jahre auf beiden Seiten des niederländischen Deal-Tisches. Diese Praxiserfahrung übersetzt sich in messbaren Portfolio-Einblick für PE-Partner, die Rendite sichern wollen, bevor die Jahreszahlen es bestätigen."
     },
+    "answer_first": "Agentic Mindshift wurde von Wouter Dijkman gegründet, einem ehemaligen Private-Equity- und M&A-Profi mit Erfahrung bei Rabobank, ING und Alter Domus. Die Firma berät niederländische Mid-Market-Fonds, M&A-Kanzleien und Familienunternehmen zu KI-Strategie und KI-gestützter Due Diligence — mit dem Blick eines Dealmakers, nicht eines Technologieanbieters.",
     "bio": {
       "eyebrow": "Hintergrund",
       "quote": "Ich habe Deals gesehen, die technisch perfekt waren — und trotzdem scheiterten, weil niemand bereit war, die unbequeme Annahme zu hinterfragen. Das ist das Problem, das ich löse. Nicht mit mehr Daten. Mit besseren Fragen.",
@@ -308,6 +311,7 @@
       "heading": "Vom ersten Gespräch bis zum eingebetteten KI-Leadership: Sie wählen basierend auf Ihrer Frage.",
       "subtext": "Vier Wege, vier Situationen. Jeder Weg beginnt mit einem unverbindlichen Gespräch und endet mit einem konkreten Ergebnis."
     },
+    "answer_first": "Agentic Mindshift bietet KI-Beratung und KI-gestützte Due Diligence für Private-Equity-Fonds, M&A-Kanzleien und Familienunternehmen im niederländischen Mid-Market. Sie wählen aus vier Wegen — von einer kostenlosen Sparring-Sitzung bis zum eingebetteten Fractional AI Officer — je nach Ausgangslage. Jeder Weg beginnt unverbindlich und endet mit einem konkreten Ergebnis.",
     "steps": {
       "eyebrow": "Von Interesse zur Zusammenarbeit",
       "heading": "Drei Schritte",
@@ -388,7 +392,7 @@
       "a4": "Sparring, Consultancy und DD sind pro Auftrag. Fractional AI Officer: mindestens 3 Monate, weil der Rhythmus Zeit braucht.",
       "q5": "Mehrere Deals gleichzeitig?",
       "a5": "Volumentarife: 5 Deals €42.500 (–15%), 10 Deals €80.000 (–20%). Skaleneffekte bei Einarbeitungszeit und Plattform-Onboarding.",
-      "investering_a": "Es gibt vier Wege: eine kostenlose AI Sparring-Sitzung (30 Minuten, unverbindlich), Consultancy & Strategic Enablement ab €4.500 pro Auftrag oder Retainer, einen Fractional AI Officer für €1.099 pro Tag (mind. 3 Monate) und KI-gestützte Due Diligence & Portfolio ab €10.000 pro Deal oder €6.500–€8.500 pro Monat. Alle Beträge zzgl. MwSt. Siehe /werkwijze für die vollständige Erläuterung."
+      "investering_a": "Es gibt vier Wege: eine kostenlose AI Sparring-Sitzung (30 Minuten, unverbindlich), KI-Beratung & Implementierung ab €4.500 pro Auftrag oder Retainer, einen Fractional AI Officer für €1.099 pro Tag (mind. 3 Monate) und KI-gestützte Due Diligence & Portfolio ab €10.000 pro Deal oder €6.500–€8.500 pro Monat. Alle Beträge zzgl. MwSt. Siehe /werkwijze für die vollständige Erläuterung."
     },
     "cta": {
       "eyebrow": "Hier beginnen",
@@ -411,6 +415,7 @@
       "stat_3_label": "1. Juli",
       "countdown_label": "Start in"
     },
+    "answer_first": "Factum Capital ist die KI-gestützte Due-Diligence- und Portfolio-Plattform von Agentic Mindshift: 29 Module, die finanzielle, kommerzielle, rechtliche und KI-Due-Diligence für Private-Equity-Fonds und M&A-Kanzleien beschleunigen. Von der ersten Prüfung bis pre-IBR/WHOA liefert die Plattform fundierte Erkenntnisse in Tagen statt Wochen.",
     "problem": {
       "item_1_label": "Jede Situation von vorn",
       "item_1_body": "Jeder Moment beginnt bei null. Keine gemeinsame Struktur, keine Wiederverwendung der vorherigen Akte.",
@@ -817,7 +822,7 @@
         }
       },
       "D": {
-        "offerName": "Consultancy & Strategic Enablement",
+        "offerName": "KI-Beratung & Implementierung",
         "interpretation": "Ihre Punktzahlen bei Kapazitätsmanagement und Deal Velocity weisen auf ein strukturelles Muster hin: Ihr Team ist qualifiziert, wird aber durch operationelle Reibungsverluste behindert. Vergleichbare Unternehmen, die analytische Prozesse strukturierter angehen, verdoppeln ihre Analysekapazität ohne Teamaufstockung. Ein gezielter Beratungs- oder Enablement-Ansatz löst das.",
         "price": "Ab €4.500 pro Auftrag oder Retainer · zzgl. MwSt.",
         "interventions": {

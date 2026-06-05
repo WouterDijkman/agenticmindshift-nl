@@ -21,8 +21,8 @@ export async function generateMetadata(
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'homepage' });
   return {
-    title: t('hero.heading'),
-    description: t('hero.subtext').slice(0, 160),
+    title: t('meta_title'),
+    description: t('meta_description'),
     alternates: getAlternates('', locale),
   };
 }

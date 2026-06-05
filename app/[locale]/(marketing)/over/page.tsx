@@ -5,6 +5,7 @@ import { Link } from '@/i18n/navigation';
 import Button from '@/components/ui/Button';
 import HeroAnimated from './HeroAnimated';
 import OverCredentials from './OverCredentials';
+import AnswerFirst from '@/components/AnswerFirst';
 import JsonLd from '@/components/JsonLd';
 import { organizationLd, personLd, getBreadcrumbLd } from '@/lib/jsonld';
 
@@ -41,6 +42,8 @@ export default async function OverPage(
       <JsonLd data={getBreadcrumbLd('/over', t('heading'), locale)} />
 
       <HeroAnimated />
+
+      <AnswerFirst text={t('answer_first')} />
 
       {/* ═══ BIO ═══ */}
       <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(64px, 9vw, 112px)' }}>

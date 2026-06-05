@@ -54,12 +54,12 @@ export default function Header() {
           style={{ flexShrink: 0 }}
         >
           <Image
-            src="/logo.png"
+            src="/logo.svg"
             alt="Agentic Mindshift"
-            width={2448}
-            height={1632}
+            width={620}
+            height={128}
             priority
-            style={{ height: '66px', width: 'auto' }}
+            className="h-9 sm:h-10 w-auto"
           />
         </Link>
 
@@ -175,7 +175,7 @@ export default function Header() {
       >
         <div className="p-6 flex flex-col gap-5 h-full">
           <div className="flex items-center justify-between">
-            <Image src="/logo.png" alt="Agentic Mindshift" width={2448} height={1632} style={{ height: '48px', width: 'auto' }} />
+            <Image src="/logo.svg" alt="Agentic Mindshift" width={620} height={128} className="h-9 w-auto" />
             <button
               type="button"
               aria-label={t('close_menu')}

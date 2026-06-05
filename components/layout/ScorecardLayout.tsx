@@ -1,6 +1,7 @@
 import { Link } from '@/i18n/navigation';
 import { ReactNode } from 'react';
 import { getTranslations } from 'next-intl/server';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 interface ScorecardLayoutProps {
   children: ReactNode;
@@ -22,17 +23,20 @@ export default async function ScorecardLayout({ children }: ScorecardLayoutProps
           <Link
             href="/"
             className="text-base sm:text-lg font-semibold"
-            style={{ color: 'var(--text-primary)' }}
+            style={{ color: 'var(--text-inverse)' }}
           >
             Agentic Mindshift
           </Link>
-          <Link
-            href="/"
-            className="text-sm"
-            style={{ color: 'var(--text-tertiary)' }}
-          >
-            {t('close_scorecard')}
-          </Link>
+          <div className="flex items-center gap-4">
+            <LanguageSwitcher tone="onDark" />
+            <Link
+              href="/"
+              className="text-sm"
+              style={{ color: 'rgba(247, 242, 235, 0.7)' }}
+            >
+              {t('close_scorecard')}
+            </Link>
+          </div>
         </div>
       </header>
       <main className="flex-1">{children}</main>

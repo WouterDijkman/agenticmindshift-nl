@@ -28,10 +28,12 @@
     "tagline_bottom": "Fundador de Factum Capital · lanzamiento 1 de julio de 2026"
   },
   "homepage": {
+    "meta_title": "Asesoría de IA para Private Equity y M&A",
+    "meta_description": "Alianza estratégica de IA para fondos de PE, firmas de M&A y empresas familiares del mid-market. Mida su retorno de IA con la Scorecard gratuita en 12 minutos.",
     "hero": {
       "eyebrow": "Para socios de PE, directores de M&A y family offices",
       "heading": "¿Cuánto rendimiento está dejando su cartera sobre la mesa este mes?",
-      "subtext": "Su informe mensual enmascara el bajo rendimiento. Su equipo de deals repite errores evitables. Y el riesgo de que la IA tome el control de las actividades principales no figura en ninguna propuesta al IC. El Scorecard mapea las seis dimensiones. En doce minutos.",
+      "subtext": "Su informe mensual enmascara el bajo rendimiento. Su equipo de deals repite errores evitables. Y la due diligence impulsada por IA en todas las dimensiones falta en cada propuesta al IC. El Scorecard mapea las seis dimensiones. En doce minutos.",
       "cta_primary": "Iniciar el Scorecard",
       "cta_secondary": "Metodología y honorarios",
       "trust": "12 minutos · 6 dimensiones · sin cuenta · 100% confidencial"
@@ -207,7 +209,7 @@
       "sales-pitch_q": "¿Es esto otro discurso de venta encubierto?",
       "sales-pitch_a": "No. Recibe puntuaciones en seis dimensiones, dos puntos prioritarios y una propuesta concreta de siguiente paso. Solo después decide si continúa. Sin presión, sin seguimiento salvo que usted lo inicie.",
       "investering_q": "¿Cuáles son los niveles de inversión para los distintos proyectos?",
-      "investering_a": "Hay cuatro rutas: una AI Sparring Session gratuita (30 minutos, sin compromiso), Consultancy & Strategic Enablement desde €4.500 por proyecto o retainer, un Fractional AI Officer por €1.099 al día (mín. 3 meses), y Due Diligence & Portfolio impulsada por IA desde €10.000 por operación o €6.500–€8.500 al mes para inteligencia de cartera continua. Todos los importes sin IVA. Consulte /werkwijze para la explicación completa y las tarifas por volumen.",
+      "investering_a": "Hay cuatro rutas: una AI Sparring Session gratuita (30 minutos, sin compromiso), Asesoría e Implementación de IA desde €4.500 por proyecto o retainer, un Fractional AI Officer por €1.099 al día (mín. 3 meses), y Due Diligence & Portfolio impulsada por IA desde €10.000 por operación o €6.500–€8.500 al mes para inteligencia de cartera continua. Todos los importes sin IVA. Consulte /werkwijze para la explicación completa y las tarifas por volumen.",
       "voorbeeld_q": "¿Y si no quiero rellenar el Scorecard pero sí ver el formato del informe?",
       "voorbeeld_a": "Envíe un mensaje por LinkedIn o correo. Le enviaremos entonces un informe de muestra anonimizado."
     }
@@ -242,6 +244,7 @@
       "role": "Fundador Agentic Mindshift & Factum Capital",
       "subtext": "Seis años en ambos lados de la mesa de deals neerlandesa. Esa experiencia práctica se traduce en información de cartera medible para socios de PE que quieren asegurar rentabilidad antes de que las cifras anuales la confirmen."
     },
+    "answer_first": "Agentic Mindshift fue fundada por Wouter Dijkman, exprofesional de private equity y M&A con experiencia en Rabobank, ING y Alter Domus. La firma asesora a fondos mid-market, firmas de M&A y empresas familiares neerlandeses sobre estrategia de IA y due diligence impulsada por IA — con la mirada de un dealmaker, no de un proveedor de tecnología.",
     "bio": {
       "eyebrow": "Antecedentes",
       "quote": "He visto operaciones que eran técnicamente perfectas — y que fracasaron porque nadie estaba dispuesto a cuestionar el supuesto incómodo. Ese es el problema que resuelvo. No con más datos. Con mejores preguntas.",
@@ -308,6 +311,7 @@
       "heading": "Desde la primera conversación hasta el liderazgo de IA integrado: usted elige según su necesidad.",
       "subtext": "Cuatro rutas, cuatro situaciones. Cada ruta comienza con una conversación sin compromiso y termina con un resultado concreto."
     },
+    "answer_first": "Agentic Mindshift ofrece asesoría de IA y due diligence impulsada por IA para fondos de private equity, firmas de M&A y empresas familiares del mid-market neerlandés. Elige entre cuatro rutas —desde una sesión de sparring gratuita hasta un Fractional AI Officer integrado— según su punto de partida. Cada ruta empieza sin compromiso y termina con un resultado concreto.",
     "steps": {
       "eyebrow": "Del interés a la colaboración",
       "heading": "Tres pasos",
@@ -388,7 +392,7 @@
       "a4": "Sparring, Consultancy y DD son por encargo. Fractional AI Officer: mínimo 3 meses, porque el ritmo necesita tiempo.",
       "q5": "¿Varias operaciones a la vez?",
       "a5": "Tarifas por volumen: 5 operaciones €42.500 (–15%), 10 operaciones €80.000 (–20%). Ahorro de escala en tiempo de onboarding y plataforma.",
-      "investering_a": "Hay cuatro rutas: una AI Sparring Session gratuita (30 minutos, sin compromiso), Consultancy & Strategic Enablement desde €4.500 por proyecto o retainer, un Fractional AI Officer por €1.099 al día (mín. 3 meses), y Due Diligence & Portfolio impulsada por IA desde €10.000 por deal o €6.500–€8.500 al mes. Todos los importes sin IVA. Consulte /werkwijze para la explicación completa."
+      "investering_a": "Hay cuatro rutas: una AI Sparring Session gratuita (30 minutos, sin compromiso), Asesoría e Implementación de IA desde €4.500 por proyecto o retainer, un Fractional AI Officer por €1.099 al día (mín. 3 meses), y Due Diligence & Portfolio impulsada por IA desde €10.000 por deal o €6.500–€8.500 al mes. Todos los importes sin IVA. Consulte /werkwijze para la explicación completa."
     },
     "cta": {
       "eyebrow": "Empiece aquí",
@@ -411,6 +415,7 @@
       "stat_3_label": "1 julio",
       "countdown_label": "Lanzamiento en"
     },
+    "answer_first": "Factum Capital es la plataforma de due diligence y portfolio impulsada por IA de Agentic Mindshift: 29 módulos que aceleran la due diligence financiera, comercial, legal y de IA para fondos de private equity y firmas de M&A. Desde el primer cribado hasta pre-IBR/WHOA, la plataforma aporta información fundamentada en días en lugar de semanas.",
     "problem": {
       "item_1_label": "Cada situación desde cero",
       "item_1_body": "Cada momento empieza de cero. Sin estructura compartida, sin reutilización del expediente anterior.",
@@ -817,7 +822,7 @@
         }
       },
       "D": {
-        "offerName": "Consultancy & Strategic Enablement",
+        "offerName": "Asesoría e Implementación de IA",
         "interpretation": "Sus puntuaciones en Ingeniería de Capacidad y Velocidad de Deal apuntan a un patrón estructural: su equipo está cualificado pero se ve frenado por la fricción operativa. Firmas comparables que adoptan un enfoque más estructurado en los procesos analíticos ven duplicada su capacidad de análisis sin ampliar el equipo. Un enfoque de consultoría o habilitación dirigido resuelve esto.",
         "price": "Desde €4.500 por proyecto o retainer · excl. IVA",
         "interventions": {

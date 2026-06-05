@@ -10,7 +10,7 @@
     "close_menu": "Close menu",
     "close": "Close",
     "main_menu": "Main menu",
-    "badge_july": "july"
+    "badge_july": "July"
   },
   "footer": {
     "tagline": "AI advisory for Dutch PE and M&A firms. Concrete, confidential, measurable.",
@@ -28,10 +28,12 @@
     "tagline_bottom": "Founder Factum Capital · launch 1 July 2026"
   },
   "homepage": {
+    "meta_title": "AI Advisory for Private Equity & M&A",
+    "meta_description": "Strategic AI partnership for mid-market PE funds, M&A firms and family businesses. Measure your AI return with the free 12-minute Scorecard.",
     "hero": {
       "eyebrow": "For PE partners, M&A directors and family offices",
       "heading": "How much return is your portfolio leaving on the table this month?",
-      "subtext": "Your monthly reporting masks underperformance. Your deal team repeats avoidable mistakes. And the risk that AI takes over core activities isn't in any IC proposal. The Scorecard maps all six dimensions. In twelve minutes.",
+      "subtext": "Your monthly reporting masks underperformance. Your deal team repeats avoidable mistakes. And AI-driven due diligence across every dimension is missing from every IC proposal. The Scorecard maps all six dimensions. In twelve minutes.",
       "cta_primary": "Start the Scorecard",
       "cta_secondary": "How we work & fees",
       "trust": "12 minutes · 6 dimensions · no account needed · 100% confidential"
@@ -242,6 +244,7 @@
       "role": "Founder Agentic Mindshift & Factum Capital",
       "subtext": "Six years on both sides of the Dutch deal table. That hands-on experience translates into measurable portfolio insight for PE partners who want to secure returns before the year-end figures confirm them."
     },
+    "answer_first": "Agentic Mindshift was founded by Wouter Dijkman, a former private equity and M&A professional with experience at Rabobank, ING and Alter Domus. The firm advises Dutch mid-market funds, M&A firms and family businesses on AI strategy and AI-driven due diligence — with the eye of a dealmaker, not a technology vendor.",
     "bio": {
       "eyebrow": "Background",
       "quote": "I have seen deals that were technically perfect — and still failed because nobody was willing to challenge the uncomfortable assumption. That is the problem I solve. Not with more data. With better questions.",
@@ -308,6 +311,7 @@
       "heading": "From first conversation to embedded AI leadership: you choose based on your question.",
       "subtext": "Four routes, four situations. Every route begins with a no-obligation conversation and ends with a concrete result."
     },
+    "answer_first": "Agentic Mindshift delivers AI advisory and AI-driven due diligence for private equity funds, M&A firms and family businesses in the Dutch mid-market. You choose from four routes — from a free sparring session to an embedded Fractional AI Officer — depending on where you stand. Every route starts with no obligation and ends with a concrete result.",
     "steps": {
       "eyebrow": "From interest to collaboration",
       "heading": "Three steps",
@@ -411,6 +415,7 @@
       "stat_3_label": "1 July",
       "countdown_label": "Launch in"
     },
+    "answer_first": "Factum Capital is Agentic Mindshift's AI-driven due diligence and portfolio platform: 29 modules that accelerate financial, commercial, legal and AI due diligence for private equity funds and M&A firms. From first screening to pre-IBR/WHOA, the platform delivers substantiated insight in days instead of weeks.",
     "problem": {
       "item_1_label": "Every situation from scratch",
       "item_1_body": "Every moment starts from zero. No shared structure, no reuse of the previous file.",
@@ -817,7 +822,7 @@
         }
       },
       "D": {
-        "offerName": "Consultancy & Strategic Enablement",
+        "offerName": "AI Advisory & Implementation",
         "interpretation": "Your scores on Capacity Engineering and Deal Velocity point to a structural pattern: your team is qualified but held back by operational friction. Comparable firms that take a more structured approach to analytical processes see their screening and analysis capacity double without team expansion. A targeted consultancy or enablement approach resolves this.",
         "price": "From €4,500 per track or retainer · excl. VAT",
         "interventions": {

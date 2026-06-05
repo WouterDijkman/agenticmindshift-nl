@@ -28,10 +28,12 @@
     "tagline_bottom": "Founder Factum Capital · lancering 1 juli 2026"
   },
   "homepage": {
+    "meta_title": "AI-advies voor Private Equity & M&A",
+    "meta_description": "Strategisch AI-partnerschap voor PE-fondsen, M&A-kantoren en familiebedrijven in de mid-market. Meet uw AI-rendement met de gratis Scorecard in 12 minuten.",
     "hero": {
       "eyebrow": "Voor PE-partners, M&A-directors en family offices",
       "heading": "Hoeveel rendement laat uw portefeuille deze maand liggen?",
-      "subtext": "Uw maandrapportage maskeert onderprestatie. Uw deal-team herhaalt vermijdbare fouten. En het risico dat AI de kernactiviteit overneemt staat in geen enkel IC-voorstel. De Scorecard brengt alle zes dimensies in kaart. In twaalf minuten.",
+      "subtext": "Uw maandrapportage maskeert onderprestatie. Uw deal-team herhaalt vermijdbare fouten. En AI-gedreven due diligence over alle dimensies ontbreekt in elk IC-voorstel. De Scorecard brengt alle zes dimensies in kaart. In twaalf minuten.",
       "cta_primary": "Start de Scorecard",
       "cta_secondary": "Werkwijze & tarieven",
       "trust": "12 minuten · 6 dimensies · geen account nodig · 100% vertrouwelijk"
@@ -242,6 +244,7 @@
       "role": "Founder Agentic Mindshift & Factum Capital",
       "subtext": "Zes jaar aan beide kanten van de Nederlandse deal-tafel. Die praktijkervaring vertaalt zich naar meetbaar portefeuille-inzicht voor PE-partners die rendement willen borgen vóórdat de jaarcijfers het bevestigen."
     },
+    "answer_first": "Agentic Mindshift is opgericht door Wouter Dijkman, voormalig private-equity- en M&A-professional met ervaring bij Rabobank, ING en Alter Domus. De firma adviseert Nederlandse mid-market fondsen, M&A-kantoren en familiebedrijven over AI-strategie en AI-gedreven due diligence — met de blik van een dealmaker, niet die van een techleverancier.",
     "bio": {
       "eyebrow": "Achtergrond",
       "quote": "Ik heb deals gezien die technisch perfect waren — en toch mislukten omdat niemand bereid was de ongemakkelijke aanname uit te dagen. Dat is het probleem dat ik oplos. Niet met meer data. Met betere vragen.",
@@ -308,6 +311,7 @@
       "heading": "Van eerste kennismaking tot embedded AI-leiderschap: u kiest op basis van uw vraag.",
       "subtext": "Vier routes, vier situaties. Elke route begint met een vrijblijvend gesprek en eindigt met een concreet resultaat."
     },
+    "answer_first": "Agentic Mindshift levert AI-advies en AI-gedreven due diligence voor private-equityfondsen, M&A-kantoren en familiebedrijven in de Nederlandse mid-market. U kiest uit vier routes — van een gratis sparringsessie tot een embedded Fractional AI Officer — afhankelijk van waar u staat. Elke route begint vrijblijvend en eindigt met een concreet resultaat.",
     "steps": {
       "eyebrow": "Van interesse naar samenwerking",
       "heading": "Drie stappen",
@@ -409,9 +413,9 @@
       "stat_2_sub": "dienst-momenten",
       "stat_3_sub": "livegang",
       "stat_3_label": "1 juli",
-      "stat_3_label": "1 juli",
       "countdown_label": "Lancering over"
     },
+    "answer_first": "Factum Capital is het AI-gedreven due-diligence- en portfolioplatform van Agentic Mindshift: 29 modules die financiële, commerciële, juridische en AI-due-diligence versnellen voor private-equityfondsen en M&A-kantoren. Van eerste screening tot pre-IBR/WHOA levert het platform onderbouwde inzichten in dagen in plaats van weken.",
     "problem": {
       "item_1_label": "Elke situatie opnieuw",
       "item_1_body": "Elk moment begint bij nul. Geen gedeelde structuur, geen hergebruik van het vorige dossier.",
@@ -818,7 +822,7 @@
         }
       },
       "D": {
-        "offerName": "Consultancy & Strategic Enablement",
+        "offerName": "AI-advies & Implementatie",
         "interpretation": "Uw scores op Capacity Engineering en Deal Velocity wijzen op een structureel patroon: uw team is gekwalificeerd, maar wordt belemmerd door operationele frictie. Vergelijkbare partijen die analytische processen gestructureerder aanpakken, zien hun screening- en analysecapaciteit verdubbelen zonder team-uitbreiding. Met een gerichte consultancy- of enablement-aanpak lost u dit op.",
         "price": "Vanaf €4.500 per traject of retainer · excl. btw",
         "interventions": {

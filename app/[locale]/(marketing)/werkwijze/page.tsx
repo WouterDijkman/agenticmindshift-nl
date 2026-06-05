@@ -16,6 +16,7 @@ import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
 import JsonLd from '@/components/JsonLd';
 import { professionalServiceLd, getBreadcrumbLd } from '@/lib/jsonld';
 import WerkwijzeOnboardingSteps from './WerkwijzeOnboardingSteps';
+import AnswerFirst from '@/components/AnswerFirst';
 
 type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
 
@@ -140,6 +141,8 @@ export default async function WerkwijzePage(
         subtext={t('hero.subtext')}
         headingMaxWidth="800px"
       />
+
+      <AnswerFirst text={t('answer_first')} />
 
       <WerkwijzeOnboardingSteps />
 

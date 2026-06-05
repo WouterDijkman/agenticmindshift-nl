@@ -17,7 +17,7 @@ function getLocaleFromCountry(country: string): string {
   return 'en';
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Only apply geo-redirect on root path and if no locale cookie set
@@ -38,5 +38,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)']
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
 };

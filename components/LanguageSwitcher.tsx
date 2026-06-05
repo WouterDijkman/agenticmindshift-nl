@@ -8,7 +8,8 @@ const LANG_LABELS: Record<string, string> = {
   nl: 'NL', en: 'EN', de: 'DE', es: 'ES', pt: 'PT',
 };
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({ tone = 'default' }: { tone?: 'default' | 'onDark' }) {
+  const triggerColor = tone === 'onDark' ? 'var(--text-inverse)' : 'var(--text-secondary)';
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname(); // path WITHOUT locale prefix
@@ -51,7 +52,7 @@ export default function LanguageSwitcher() {
           fontSize: '0.75rem',
           fontWeight: 500,
           letterSpacing: '0.08em',
-          color: 'var(--text-secondary)',
+          color: triggerColor,
           background: 'none',
           border: 'none',
           cursor: 'pointer',
