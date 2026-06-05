@@ -20,7 +20,7 @@ export default function HeroAnimated() {
   return (
     <section
       ref={sectionRef}
-      className="grain-overlay"
+      className="hero-full grain-overlay"
       style={{
         background: 'var(--bg-primary)',
         minHeight: '100svh',
@@ -55,7 +55,7 @@ export default function HeroAnimated() {
       </motion.div>
 
       <div
-        className="container-medium"
+        className="hero-full-content container-medium"
         style={{
           paddingTop: 'clamp(90px, 14vh, 150px)',
           paddingBottom: 'clamp(70px, 10vh, 120px)',

@@ -105,17 +105,16 @@ export default function Header() {
           </Button>
         </div>
 
-        {/* Language switcher always visible on mobile, next to hamburger */}
-        <div className="lg:hidden">
+        {/* Language switcher + hamburger grouped on the right on mobile */}
+        <div className="lg:hidden flex items-center gap-2">
           <LanguageSwitcher />
-        </div>
 
         <button
           type="button"
           aria-label={mobileOpen ? t('close_menu') : t('open_menu')}
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((v) => !v)}
-          className="lg:hidden p-2 min-h-[44px] min-w-[44px] flex flex-col items-center justify-center"
+          className="p-2 min-h-[44px] min-w-[44px] flex flex-col items-center justify-center"
           style={{
             color: 'var(--text-primary)',
             border: '1px solid var(--border-medium)',
@@ -159,7 +158,8 @@ export default function Header() {
             }}
           />
         </button>
-      </div>
+        </div>{/* end mobile group */}
+      </div>{/* end container-extra */}
 
       {/* Mobile drawer */}
       <div

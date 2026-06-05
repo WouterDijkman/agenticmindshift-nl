@@ -85,7 +85,7 @@ export default function AnimatedHeroShell({
   return (
     <section
       ref={sectionRef}
-      className="grain-overlay"
+      className="hero-full grain-overlay"
       style={{
         background: 'var(--bg-primary)',
         minHeight: '100svh',
@@ -141,7 +141,7 @@ export default function AnimatedHeroShell({
       </motion.div>
 
       <div
-        className={containerClass}
+        className={`hero-full-content ${containerClass}`}
         style={{
           paddingTop: 'clamp(120px, 20vh, 200px)',
           paddingBottom: 'clamp(80px, 10vh, 120px)',

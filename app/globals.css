@@ -1496,7 +1496,8 @@ nav, header, .nav-link, .eyebrow-ui {
 /* so "main section" safely targets only marketing page sections.       */
 /* ================================================================== */
 @media (max-width: 640px) {
-  main section {
+  /* Hero sections have their own padding via .hero-full-content / .hero-home-content */
+  main section:not(.hero-full):not(.hero-home) {
     padding-block: 80px !important;
   }
 
@@ -1509,6 +1510,55 @@ nav, header, .nav-link, .eyebrow-ui {
   .dense-grid > * {
     border: 1px solid var(--border-subtle) !important;
   }
+}
+
+/* ================================================================== */
+/* MOBILE HERO — remove fullscreen constraint, tighten padding        */
+/* All hero sections (.hero-full, .hero-home) carry 100svh min-height */
+/* on desktop. On mobile that creates ~300px of blank space above the  */
+/* fold content. Override to auto height + tighter padding.           */
+/* !important beats the React inline-style source.                    */
+/* ================================================================== */
+@media (max-width: 640px) {
+  /* Remove full-viewport constraint so the hero is as tall as needed */
+  .hero-full,
+  .hero-home {
+    min-height: auto !important;
+    justify-content: flex-start !important;
+  }
+  /* Tighten the top/bottom padding of the content container */
+  .hero-full-content,
+  .hero-home-content {
+    padding-top: 56px !important;
+    padding-bottom: 48px !important;
+  }
+}
+
+/* ================================================================== */
+/* LANGUAGE-AWARE HYPHENS                                             */
+/* German and Portuguese have long compound words. Hyphens: auto      */
+/* inserts soft hyphens at correct syllable breaks.                   */
+/* Requires the <html lang="de"> / <html lang="pt"> attribute, which  */
+/* next-intl sets automatically via the [locale] layout.              */
+/* ================================================================== */
+:lang(de) p,
+:lang(de) li,
+:lang(de) .type-h2,
+:lang(de) .type-h3,
+:lang(pt) p,
+:lang(pt) li,
+:lang(pt) .type-h2,
+:lang(pt) .type-h3 {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+/* Eyebrow labels must never hyphenate (they're all-caps, short) */
+:lang(de) .eyebrow,
+:lang(pt) .eyebrow {
+  hyphens: none;
+  -webkit-hyphens: none;
 }
 
 /* ================================================================== */

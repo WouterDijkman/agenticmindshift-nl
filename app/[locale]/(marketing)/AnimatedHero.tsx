@@ -21,7 +21,7 @@ export default function AnimatedHero() {
   return (
     <section
       ref={sectionRef}
-      className="grain-overlay"
+      className="hero-home grain-overlay"
       style={{
         background: 'var(--bg-primary)',
         minHeight: '100svh',
@@ -75,7 +75,7 @@ export default function AnimatedHero() {
 
       {/* Content */}
       <div
-        className="container-medium"
+        className="hero-home-content container-medium"
         style={{
           paddingTop: 'clamp(96px, 11vh, 128px)',
           paddingBottom: 'clamp(48px, 6vh, 72px)',
