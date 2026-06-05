@@ -49,6 +49,7 @@ export default function HomepagePainSection() {
         </motion.div>
 
         <motion.div
+          className="divider-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',

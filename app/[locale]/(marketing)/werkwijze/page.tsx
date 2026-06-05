@@ -162,7 +162,7 @@ export default async function WerkwijzePage() {
           </div>
 
           <div
-            className="tier-grid"
+            className="tier-grid divider-grid"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))',

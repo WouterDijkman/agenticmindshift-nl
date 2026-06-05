@@ -987,6 +987,13 @@ nav, header, .nav-link, .eyebrow-ui {
   .momenten-grid {
     grid-template-columns: 1fr;
   }
+  /* cred-grid: 4 cols → 2 cols on mobile, with real gutters */
+  .cred-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    background: transparent;
+    border: none;
+  }
 }
 
 /* ================================================================== */
@@ -1498,17 +1505,24 @@ nav, header, .nav-link, .eyebrow-ui {
 @media (max-width: 640px) {
   /* Hero sections have their own padding via .hero-full-content / .hero-home-content */
   main section:not(.hero-full):not(.hero-home) {
-    padding-block: 80px !important;
+    padding-block: 96px !important;
   }
 
   /* Dense card grids (gap:1px hairline pattern) → real gutters         */
   .dense-grid {
-    gap: 12px !important;
+    gap: 16px !important;
     background: transparent !important;
     border: none !important;
   }
   .dense-grid > * {
     border: 1px solid var(--border-subtle) !important;
+  }
+
+  /* General divider-grid: all hairline-gap content grids on marketing pages */
+  .divider-grid {
+    gap: 24px !important;
+    background: transparent !important;
+    border: none !important;
   }
 }
 

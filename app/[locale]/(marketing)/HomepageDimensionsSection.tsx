@@ -79,7 +79,7 @@ export default function HomepageDimensionsSection() {
         </motion.div>
 
         <motion.div
-          className="dim-grid"
+          className="dim-grid divider-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',

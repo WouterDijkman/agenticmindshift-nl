@@ -190,7 +190,7 @@ export default async function FactumCapitalPage() {
       <section style={{ background: 'var(--accent-primary)', paddingBlock: 'clamp(48px, 6vw, 80px)' }}>
         <div className="container-medium">
           <div
-            className="reveal"
+            className="reveal divider-grid"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
@@ -285,7 +285,7 @@ export default async function FactumCapitalPage() {
           </div>
 
           <div
-            className="momenten-grid"
+            className="momenten-grid divider-grid"
             style={{
               display: 'grid',
               gap: '1px',
@@ -369,6 +369,7 @@ export default async function FactumCapitalPage() {
           <div className="reveal" style={{ marginBottom: '56px' }}>
             <p className="eyebrow" style={{ marginBottom: '24px' }}>{t('two_routes.eyebrow')}</p>
             <div
+              className="divider-grid"
               style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
@@ -454,7 +455,7 @@ export default async function FactumCapitalPage() {
           {/* Hoe de dienst werkt */}
           <div className="reveal">
             <p className="eyebrow" style={{ marginBottom: '24px' }}>{t('how_it_works.eyebrow')}</p>
-            <div style={{
+            <div className="divider-grid" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
               gap: '1px',
@@ -526,6 +527,7 @@ export default async function FactumCapitalPage() {
             <h2 className="type-h2" style={{ margin: 0 }}>{t('voor_wie.heading')}</h2>
           </div>
           <div
+            className="divider-grid"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',

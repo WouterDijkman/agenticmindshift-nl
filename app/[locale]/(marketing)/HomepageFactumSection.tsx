@@ -32,6 +32,7 @@ export default function HomepageFactumSection() {
 
         {/* Two-track grid */}
         <div
+          className="divider-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',

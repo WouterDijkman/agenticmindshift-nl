@@ -32,6 +32,7 @@ export default async function ContactPage() {
       <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(64px, 9vw, 112px)' }}>
         <div className="container-medium">
           <div
+            className="divider-grid"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',

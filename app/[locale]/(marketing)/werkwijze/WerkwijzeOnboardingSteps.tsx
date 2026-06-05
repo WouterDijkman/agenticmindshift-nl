@@ -46,6 +46,7 @@ export default function WerkwijzeOnboardingSteps() {
         </motion.div>
 
         <motion.div
+          className="divider-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',

@@ -83,7 +83,7 @@ export default async function HomePage() {
             <h2 className="type-h2" style={{ margin: 0, maxWidth: '480px' }}>{t('social_proof.heading')}</h2>
           </div>
           <div
-            className="reveal social-proof-grid"
+            className="reveal social-proof-grid divider-grid"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
@@ -216,7 +216,7 @@ export default async function HomePage() {
             </h2>
           </div>
           <div
-            className="reveal"
+            className="reveal divider-grid"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
