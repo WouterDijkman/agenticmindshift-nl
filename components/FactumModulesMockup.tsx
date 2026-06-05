@@ -1,46 +1,50 @@
-type Col = { phase: string; modules: { label: string; hot?: boolean }[] };
+'use client';
 
-const COLUMNS: Col[] = [
-  {
-    phase: 'Acquisitie',
-    modules: [
-      { label: 'Financial DD' },
-      { label: 'Commercial DD' },
-      { label: 'AI Due Diligence', hot: true },
-      { label: 'Legal' },
-      { label: 'IC-Memo' },
-    ],
-  },
-  {
-    phase: 'Financiering',
-    modules: [
-      { label: 'LBO-Model' },
-      { label: 'Fin-Memo' },
-      { label: 'Structuring' },
-      { label: 'Deal Economics' },
-    ],
-  },
-  {
-    phase: 'Portfolio review',
-    modules: [
-      { label: 'Vigil', hot: true },
-      { label: 'MBR' },
-      { label: 'Portfolio Health' },
-      { label: 'PMI' },
-    ],
-  },
-  {
-    phase: 'Pre-IBR/WHOA',
-    modules: [
-      { label: 'IBR' },
-      { label: 'WHOA' },
-      { label: 'Boedelonderzoek' },
-      { label: 'Tax' },
-    ],
-  },
-];
+import { useTranslations } from 'next-intl';
 
 export default function FactumModulesMockup() {
+  const t = useTranslations('homepage.factum');
+
+  const COLUMNS = [
+    {
+      phase: t('mockup_phase_acquisition'),
+      modules: [
+        { label: 'Financial DD' },
+        { label: 'Commercial DD' },
+        { label: 'AI Due Diligence', hot: true },
+        { label: 'Legal' },
+        { label: 'IC-Memo' },
+      ],
+    },
+    {
+      phase: t('mockup_phase_financing'),
+      modules: [
+        { label: 'LBO-Model' },
+        { label: 'Fin-Memo' },
+        { label: 'Structuring' },
+        { label: 'Deal Economics' },
+      ],
+    },
+    {
+      phase: t('mockup_phase_portfolio'),
+      modules: [
+        { label: 'Vigil', hot: true },
+        { label: 'MBR' },
+        { label: 'Portfolio Health' },
+        { label: 'PMI' },
+      ],
+    },
+    {
+      phase: t('mockup_phase_ibr'),
+      modules: [
+        { label: 'IBR' },
+        { label: 'WHOA' },
+        { label: t('mockup_module_boedelonderzoek') },
+        { label: 'Tax' },
+      ],
+    },
+  ];
+
   return (
     <div className="factum-modules-card">
       {/* window bar */}
@@ -69,8 +73,8 @@ export default function FactumModulesMockup() {
         </div>
 
         <div className="factum-modules-foot">
-          <span>4 dealfasen · 29 modules</span>
-          <span>SaaS · lancering 1 juli 2026</span>
+          <span>{t('mockup_footer_left')}</span>
+          <span>{t('mockup_footer_right')}</span>
         </div>
       </div>
     </div>

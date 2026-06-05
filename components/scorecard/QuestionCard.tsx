@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import type { Question, OptionLetter } from '@/lib/questions';
 
 interface QuestionCardProps {
@@ -18,6 +19,8 @@ export default function QuestionCard({
   selected,
   onSelect,
 }: QuestionCardProps) {
+  const t = useTranslations('scorecard.navigation');
+
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
@@ -49,7 +52,7 @@ export default function QuestionCard({
         className="text-xs uppercase tracking-wider mb-3 hint-italic"
         style={{ color: 'var(--accent-primary)', letterSpacing: '0.12em', fontStyle: 'normal' }}
       >
-        Vraag {index} / 15
+        {t('question_counter', { index })}
       </p>
       <h2
         className="type-h3 mb-7"
@@ -104,7 +107,7 @@ export default function QuestionCard({
         className="mt-5 text-xs hint-italic"
         style={{ color: 'var(--text-muted)' }}
       >
-        Tip: u kunt ook de toetsen A, B, C, D of E gebruiken.
+        {t('keyboard_tip')}
       </p>
     </div>
   );

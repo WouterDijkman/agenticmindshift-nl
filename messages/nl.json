@@ -149,7 +149,14 @@
       "track_2_cta": "Factum Capital vroege toegang",
       "track_2_cta_sub": "Lancering 1 juli 2026",
       "powered_by": "POWERED BY",
-      "attribution": "Het AI-platform achter de AI Due Diligence & Portfolio-dienstverlening · lancering 1 juli 2026"
+      "attribution": "Het AI-platform achter de AI Due Diligence & Portfolio-dienstverlening · lancering 1 juli 2026",
+      "mockup_phase_acquisition": "Acquisitie",
+      "mockup_phase_financing": "Financiering",
+      "mockup_phase_portfolio": "Portfolio review",
+      "mockup_phase_ibr": "Pre-IBR/WHOA",
+      "mockup_module_boedelonderzoek": "Boedelonderzoek",
+      "mockup_footer_left": "4 dealfasen · 29 modules",
+      "mockup_footer_right": "SaaS · lancering 1 juli 2026"
     },
     "dimensions": {
       "eyebrow": "Zes dimensies",
@@ -169,7 +176,8 @@
       "title_5": "Teamcapaciteit",
       "body_5": "Hoeveel deals laat uw team liggen door handmatig zoekwerk en rapportage?",
       "title_6": "Kennisborging",
-      "body_6": "Vertrekt uw associate? Verdwijnt dan ook het geheugen van drie tot vijf dossiers?"
+      "body_6": "Vertrekt uw associate? Verdwijnt dan ook het geheugen van drie tot vijf dossiers?",
+      "radar_aria_label": "Radar-grafiek van uw profiel over zes dimensies, vergeleken met vergelijkbare partijen"
     },
     "costAnchor": {
       "title": "De rekensom",
@@ -630,7 +638,10 @@
       "answer_all_s1": "Beantwoord alle vier de vragen om verder te kunnen.",
       "answer_all_s2": "Beantwoord alle drie de vragen om verder te kunnen.",
       "answer_all_s3": "Beantwoord alle vier de vragen om verder te kunnen.",
-      "answer_all_s4": "Beantwoord alle vier de vragen om uw resultaat te zien."
+      "answer_all_s4": "Beantwoord alle vier de vragen om uw resultaat te zien.",
+      "question_counter": "Vraag {index} / 15",
+      "keyboard_tip": "Tip: u kunt ook de toetsen A, B, C, D of E gebruiken.",
+      "progress_label": "Vraag {current} van {total}"
     },
     "resultaat": {
       "eyebrow": "Scorecard voltooid",
@@ -725,7 +736,19 @@
       "high_next_eyebrow": "Volgende stap",
       "high_next_body": "Stuur een bericht via LinkedIn als u wilt sparren over uw aanpak, als peer-uitwisseling, op uw initiatief.",
       "high_cta_1": "Verbind op LinkedIn",
-      "high_cta_2": "Bekijk de trajecten"
+      "high_cta_2": "Bekijk de trajecten",
+      "attention_point": "(aandachtspunt)",
+      "peer_tooltip_label": "Verschil t.o.v. peer-mediaan",
+      "peer_benchmark_footer": "Vergelijking met synthetische peer-mediaan (op basis van Nederlandse PE/M&A-data)."
+    },
+    "mockup": {
+      "window_label": "Scorecard-rapport · Vertrouwelijk",
+      "title": "Uw profiel vs. vergelijkbare partijen",
+      "subtitle": "Mid-market PE · 12 vergelijkbare fondsen",
+      "callout_label": "dimensies onder\nvergelijkbare partijen",
+      "below_median": "Onder mediaan",
+      "above_median": "Op/boven mediaan",
+      "peer_median": "Peer-mediaan"
     }
   }
 }

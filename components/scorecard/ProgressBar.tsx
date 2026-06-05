@@ -1,14 +1,19 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+
 interface ProgressBarProps {
   current: number; // 1..15
   total: number;
 }
 
 export default function ProgressBar({ current, total }: ProgressBarProps) {
+  const t = useTranslations('scorecard.navigation');
   const pct = Math.min(100, Math.max(0, (current / total) * 100));
   return (
     <div className="w-full">
       <div className="flex justify-between items-center mb-2 text-sm" style={{ color: 'var(--text-tertiary)' }}>
-        <span>Vraag {current} van {total}</span>
+        <span>{t('progress_label', { current, total })}</span>
         <span>{Math.round(pct)}%</span>
       </div>
       <div

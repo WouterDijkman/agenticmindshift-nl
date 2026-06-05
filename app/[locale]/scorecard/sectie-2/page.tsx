@@ -2,15 +2,16 @@
 
 import { useEffect } from 'react';
 import { useRouter } from '@/i18n/navigation';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { useAssessmentStore } from '@/store/assessmentStore';
-import { questionsBySection, questions } from '@/lib/questions';
+import { getLocalizedQuestionsBySection, questions } from '@/lib/questions';
 import QuestionCard from '@/components/scorecard/QuestionCard';
 import ProgressBar from '@/components/scorecard/ProgressBar';
 import Button from '@/components/ui/Button';
 
 export default function Sectie2Page() {
   const t = useTranslations('scorecard');
+  const locale = useLocale();
   const router = useRouter();
   const answers = useAssessmentStore((s) => s.answers);
   const setAnswer = useAssessmentStore((s) => s.setAnswer);
@@ -20,7 +21,7 @@ export default function Sectie2Page() {
     setCurrentSection(2);
   }, [setCurrentSection]);
 
-  const section = questionsBySection(2);
+  const section = getLocalizedQuestionsBySection(locale, 2);
   const sectionDone = section.every((q) => answers[q.id]);
   const answered = questions.filter((q) => answers[q.id]).length;
 

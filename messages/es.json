@@ -149,7 +149,14 @@
       "track_2_cta": "Acceso anticipado a Factum Capital",
       "track_2_cta_sub": "Lanzamiento 1 de julio de 2026",
       "powered_by": "POWERED BY",
-      "attribution": "La plataforma de IA detrás de los servicios de AI Due Diligence & Portfolio · lanzamiento 1 de julio de 2026"
+      "attribution": "La plataforma de IA detrás de los servicios de AI Due Diligence & Portfolio · lanzamiento 1 de julio de 2026",
+      "mockup_phase_acquisition": "Adquisición",
+      "mockup_phase_financing": "Financiación",
+      "mockup_phase_portfolio": "Portfolio review",
+      "mockup_phase_ibr": "Pre-IBR/WHOA",
+      "mockup_module_boedelonderzoek": "Investigación de activos",
+      "mockup_footer_left": "4 fases de deal · 29 módulos",
+      "mockup_footer_right": "SaaS · lanzamiento 1 julio 2026"
     },
     "dimensions": {
       "eyebrow": "Seis dimensiones",
@@ -169,7 +176,8 @@
       "title_5": "Capacidad del equipo",
       "body_5": "¿Cuántas operaciones deja pasar su equipo por la búsqueda y el reporte manuales?",
       "title_6": "Retención del conocimiento",
-      "body_6": "¿Se va su associate? ¿Desaparece también la memoria de tres a cinco expedientes?"
+      "body_6": "¿Se va su associate? ¿Desaparece también la memoria de tres a cinco expedientes?",
+      "radar_aria_label": "Gráfico de radar de su perfil en seis dimensiones, comparado con fondos comparables"
     },
     "costAnchor": {
       "title": "El cálculo",
@@ -630,7 +638,10 @@
       "answer_all_s1": "Responda las cuatro preguntas para continuar.",
       "answer_all_s2": "Responda las tres preguntas para continuar.",
       "answer_all_s3": "Responda las cuatro preguntas para continuar.",
-      "answer_all_s4": "Responda las cuatro preguntas para ver su resultado."
+      "answer_all_s4": "Responda las cuatro preguntas para ver su resultado.",
+      "question_counter": "Pregunta {index} / 15",
+      "keyboard_tip": "Consejo: también puede usar las teclas A, B, C, D o E.",
+      "progress_label": "Pregunta {current} de {total}"
     },
     "resultaat": {
       "eyebrow": "Scorecard completado",
@@ -725,7 +736,19 @@
       "high_next_eyebrow": "Próximo paso",
       "high_next_body": "Envíe un mensaje por LinkedIn para un intercambio entre pares.",
       "high_cta_1": "Conectar en LinkedIn",
-      "high_cta_2": "Ver los programas"
+      "high_cta_2": "Ver los programas",
+      "attention_point": "(punto de atención)",
+      "peer_tooltip_label": "Diferencia vs. mediana de peers",
+      "peer_benchmark_footer": "Comparación con la mediana sintética de peers (basada en datos de PE/M&A holandeses)."
+    },
+    "mockup": {
+      "window_label": "Informe de scorecard · Confidencial",
+      "title": "Su perfil vs. fondos comparables",
+      "subtitle": "Mid-market PE · 12 fondos comparables",
+      "callout_label": "dimensiones por debajo\nde fondos comparables",
+      "below_median": "Por debajo de la mediana",
+      "above_median": "En/sobre la mediana",
+      "peer_median": "Mediana de peers"
     }
   }
 }

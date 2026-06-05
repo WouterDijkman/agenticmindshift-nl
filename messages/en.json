@@ -149,7 +149,14 @@
       "track_2_cta": "Factum Capital early access",
       "track_2_cta_sub": "Launch 1 July 2026",
       "powered_by": "POWERED BY",
-      "attribution": "The AI platform behind the AI Due Diligence & Portfolio services · launch 1 July 2026"
+      "attribution": "The AI platform behind the AI Due Diligence & Portfolio services · launch 1 July 2026",
+      "mockup_phase_acquisition": "Acquisition",
+      "mockup_phase_financing": "Financing",
+      "mockup_phase_portfolio": "Portfolio review",
+      "mockup_phase_ibr": "Pre-IBR/WHOA",
+      "mockup_module_boedelonderzoek": "Asset Investigation",
+      "mockup_footer_left": "4 deal phases · 29 modules",
+      "mockup_footer_right": "SaaS · launch 1 July 2026"
     },
     "dimensions": {
       "eyebrow": "Six dimensions",
@@ -169,7 +176,8 @@
       "title_5": "Team capacity",
       "body_5": "How many deals does your team leave on the table due to manual research and reporting?",
       "title_6": "Knowledge retention",
-      "body_6": "Your associate leaves? Does the memory of three to five files leave with them?"
+      "body_6": "Your associate leaves? Does the memory of three to five files leave with them?",
+      "radar_aria_label": "Radar chart of your profile across six dimensions, compared to comparable funds"
     },
     "costAnchor": {
       "title": "The calculation",
@@ -630,7 +638,10 @@
       "answer_all_s1": "Answer all four questions to proceed.",
       "answer_all_s2": "Answer all three questions to proceed.",
       "answer_all_s3": "Answer all four questions to proceed.",
-      "answer_all_s4": "Answer all four questions to see your result."
+      "answer_all_s4": "Answer all four questions to see your result.",
+      "question_counter": "Question {index} / 15",
+      "keyboard_tip": "Tip: you can also use the keys A, B, C, D or E.",
+      "progress_label": "Question {current} of {total}"
     },
     "resultaat": {
       "eyebrow": "Scorecard completed",
@@ -725,7 +736,19 @@
       "high_next_eyebrow": "Next step",
       "high_next_body": "Send a message on LinkedIn if you want to exchange thoughts on your approach, as peer exchange, at your initiative.",
       "high_cta_1": "Connect on LinkedIn",
-      "high_cta_2": "View the tracks"
+      "high_cta_2": "View the tracks",
+      "attention_point": "(attention point)",
+      "peer_tooltip_label": "Difference vs. peer median",
+      "peer_benchmark_footer": "Comparison with synthetic peer median (based on Dutch PE/M&A data)."
+    },
+    "mockup": {
+      "window_label": "Scorecard report · Confidential",
+      "title": "Your profile vs. comparable funds",
+      "subtitle": "Mid-market PE · 12 comparable funds",
+      "callout_label": "dimensions below\ncomparable funds",
+      "below_median": "Below median",
+      "above_median": "At/above median",
+      "peer_median": "Peer median"
     }
   }
 }

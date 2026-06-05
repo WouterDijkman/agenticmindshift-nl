@@ -149,7 +149,14 @@
       "track_2_cta": "Factum Capital Frühzugang",
       "track_2_cta_sub": "Start 1. Juli 2026",
       "powered_by": "POWERED BY",
-      "attribution": "Die KI-Plattform hinter den AI Due Diligence & Portfolio-Leistungen · Start 1. Juli 2026"
+      "attribution": "Die KI-Plattform hinter den AI Due Diligence & Portfolio-Leistungen · Start 1. Juli 2026",
+      "mockup_phase_acquisition": "Akquisition",
+      "mockup_phase_financing": "Finanzierung",
+      "mockup_phase_portfolio": "Portfolio-Review",
+      "mockup_phase_ibr": "Pre-IBR/WHOA",
+      "mockup_module_boedelonderzoek": "Vermögensprüfung",
+      "mockup_footer_left": "4 Deal-Phasen · 29 Module",
+      "mockup_footer_right": "SaaS · Launch 1. Juli 2026"
     },
     "dimensions": {
       "eyebrow": "Sechs Dimensionen",
@@ -169,7 +176,8 @@
       "title_5": "Teamkapazität",
       "body_5": "Wie viele Deals lässt Ihr Team durch manuelle Recherche und Berichterstattung liegen?",
       "title_6": "Wissenssicherung",
-      "body_6": "Ihr Associate geht? Verschwindet damit auch das Gedächtnis von drei bis fünf Dossiers?"
+      "body_6": "Ihr Associate geht? Verschwindet damit auch das Gedächtnis von drei bis fünf Dossiers?",
+      "radar_aria_label": "Radar-Diagramm Ihres Profils über sechs Dimensionen, verglichen mit vergleichbaren Fonds"
     },
     "costAnchor": {
       "title": "Die Rechnung",
@@ -630,7 +638,10 @@
       "answer_all_s1": "Beantworten Sie alle vier Fragen, um fortzufahren.",
       "answer_all_s2": "Beantworten Sie alle drei Fragen, um fortzufahren.",
       "answer_all_s3": "Beantworten Sie alle vier Fragen, um fortzufahren.",
-      "answer_all_s4": "Beantworten Sie alle vier Fragen, um Ihr Ergebnis zu sehen."
+      "answer_all_s4": "Beantworten Sie alle vier Fragen, um Ihr Ergebnis zu sehen.",
+      "question_counter": "Frage {index} / 15",
+      "keyboard_tip": "Tipp: Sie können auch die Tasten A, B, C, D oder E verwenden.",
+      "progress_label": "Frage {current} von {total}"
     },
     "resultaat": {
       "eyebrow": "Scorecard abgeschlossen",
@@ -725,7 +736,19 @@
       "high_next_eyebrow": "Nächster Schritt",
       "high_next_body": "Senden Sie eine Nachricht über LinkedIn für einen Peer-Austausch.",
       "high_cta_1": "Auf LinkedIn verbinden",
-      "high_cta_2": "Die Angebote ansehen"
+      "high_cta_2": "Die Angebote ansehen",
+      "attention_point": "(Verbesserungspunkt)",
+      "peer_tooltip_label": "Abweichung vs. Peer-Median",
+      "peer_benchmark_footer": "Vergleich mit synthetischem Peer-Median (auf Basis niederländischer PE/M&A-Daten)."
+    },
+    "mockup": {
+      "window_label": "Scorecard-Bericht · Vertraulich",
+      "title": "Ihr Profil vs. vergleichbare Fonds",
+      "subtitle": "Mid-market PE · 12 vergleichbare Fonds",
+      "callout_label": "Dimensionen unter\nvergleichbaren Fonds",
+      "below_median": "Unter dem Median",
+      "above_median": "Am/über dem Median",
+      "peer_median": "Peer-Median"
     }
   }
 }

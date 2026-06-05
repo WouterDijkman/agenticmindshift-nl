@@ -1,13 +1,16 @@
-type Axis = { label: string; value: number; peer: number };
+'use client';
+
+import { useLocale, useTranslations } from 'next-intl';
+import { sectionTranslations } from '@/lib/questions.locales';
 
 // Six dimensions, values 0–1. Matches the illustrative report mockup.
-const AXES: Axis[] = [
-  { label: 'Doorlooptijd', value: 0.58, peer: 0.7 },
-  { label: 'Portefeuille-inzicht', value: 0.74, peer: 0.68 },
-  { label: 'Oordeelsvorming', value: 0.63, peer: 0.66 },
-  { label: 'AI-bestendigheid', value: 0.39, peer: 0.64 },
-  { label: 'Teamcapaciteit', value: 0.71, peer: 0.67 },
-  { label: 'Kennisborging', value: 0.46, peer: 0.65 },
+const AXES: { key: string; value: number; peer: number }[] = [
+  { key: 'DealVelocity', value: 0.58, peer: 0.7 },
+  { key: 'PortfolioIntelligence', value: 0.74, peer: 0.68 },
+  { key: 'BiasDetection', value: 0.63, peer: 0.66 },
+  { key: 'AIReadiness', value: 0.39, peer: 0.64 },
+  { key: 'CapacityEngineering', value: 0.71, peer: 0.67 },
+  { key: 'KnowledgeRetention', value: 0.46, peer: 0.65 },
 ];
 
 const CX = 180;
@@ -33,13 +36,16 @@ function polygon(values: number[]) {
 }
 
 export default function DimensionRadar() {
+  const locale = useLocale();
+  const t = useTranslations('homepage.dimensions');
+  const dims = (sectionTranslations[locale] ?? sectionTranslations['nl']).dimensions;
   const rings = [0.25, 0.5, 0.75, 1];
 
   return (
     <svg
       viewBox="-72 -8 504 376"
       role="img"
-      aria-label="Radar-grafiek van uw profiel over zes dimensies, vergeleken met vergelijkbare partijen"
+      aria-label={t('radar_aria_label')}
       style={{ width: '100%', height: 'auto', maxWidth: '460px' }}
     >
       {/* concentric grid rings */}
@@ -113,7 +119,7 @@ export default function DimensionRadar() {
             fontFamily="var(--font-ui)"
             fill="var(--text-muted)"
           >
-            {a.label}
+            {dims[a.key] ?? a.key}
           </text>
         );
       })}

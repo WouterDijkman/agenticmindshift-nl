@@ -1,20 +1,40 @@
-type Dim = { label: string; score: number; peer: number };
+'use client';
 
-// Six dimensions with an illustrative score (0–100) and the peer-median marker.
-const DIMENSIONS: Dim[] = [
-  { label: 'Doorlooptijd', score: 58, peer: 70 },
-  { label: 'Portefeuille-inzicht', score: 74, peer: 68 },
-  { label: 'Oordeelsvorming', score: 63, peer: 66 },
-  { label: 'AI-bestendigheid', score: 39, peer: 64 },
-  { label: 'Teamcapaciteit', score: 71, peer: 67 },
-  { label: 'Kennisborging', score: 46, peer: 65 },
+import { useLocale, useTranslations } from 'next-intl';
+import { sectionTranslations } from '@/lib/questions.locales';
+
+type DimKey =
+  | 'DealVelocity'
+  | 'PortfolioIntelligence'
+  | 'BiasDetection'
+  | 'AIReadiness'
+  | 'CapacityEngineering'
+  | 'KnowledgeRetention';
+
+const DIMENSION_SCORES: { key: DimKey; score: number; peer: number }[] = [
+  { key: 'DealVelocity', score: 58, peer: 70 },
+  { key: 'PortfolioIntelligence', score: 74, peer: 68 },
+  { key: 'BiasDetection', score: 63, peer: 66 },
+  { key: 'AIReadiness', score: 39, peer: 64 },
+  { key: 'CapacityEngineering', score: 71, peer: 67 },
+  { key: 'KnowledgeRetention', score: 46, peer: 65 },
 ];
 
 const NAVY = 'var(--text-primary)';
 const RUST = 'var(--accent-cta)';
 
-function ScoreRow({ d, highlight }: { d: Dim; highlight: boolean }) {
-  const below = d.score < d.peer;
+function ScoreRow({
+  label,
+  score,
+  peer,
+  highlight,
+}: {
+  label: string;
+  score: number;
+  peer: number;
+  highlight: boolean;
+}) {
+  const below = score < peer;
   const fill = below ? RUST : NAVY;
   return (
     <div
@@ -36,7 +56,7 @@ function ScoreRow({ d, highlight }: { d: Dim; highlight: boolean }) {
             letterSpacing: '-0.005em',
           }}
         >
-          {d.label}
+          {label}
         </span>
         <span
           style={{
@@ -47,7 +67,7 @@ function ScoreRow({ d, highlight }: { d: Dim; highlight: boolean }) {
             fontVariantNumeric: 'tabular-nums',
           }}
         >
-          {d.score}
+          {score}
           <span style={{ color: 'var(--text-muted)', fontWeight: 500 }}> / 100</span>
         </span>
       </div>
@@ -66,7 +86,7 @@ function ScoreRow({ d, highlight }: { d: Dim; highlight: boolean }) {
           style={{
             position: 'absolute',
             inset: 0,
-            width: `${d.score}%`,
+            width: `${score}%`,
             background: fill,
             borderRadius: '999px',
           }}
@@ -78,7 +98,7 @@ function ScoreRow({ d, highlight }: { d: Dim; highlight: boolean }) {
             position: 'absolute',
             top: '-3px',
             bottom: '-3px',
-            left: `${d.peer}%`,
+            left: `${peer}%`,
             width: '2px',
             background: 'var(--text-muted)',
             opacity: 0.55,
@@ -96,13 +116,17 @@ function ScoreRow({ d, highlight }: { d: Dim; highlight: boolean }) {
  * floating callout is positioned by the parent's `.showcase-mockup-wrap`.
  */
 export default function ScorecardReportMockup({ callout = true }: { callout?: boolean }) {
+  const locale = useLocale();
+  const t = useTranslations('scorecard.mockup');
+  const dims = (sectionTranslations[locale] ?? sectionTranslations['nl']).dimensions;
+
   return (
     <>
       {callout && (
         <div className="showcase-callout" aria-hidden="true">
-          <span className="showcase-callout-num">2 van 6</span>
+          <span className="showcase-callout-num">2 / 6</span>
           <span className="showcase-callout-label">
-            dimensies onder<br />vergelijkbare partijen
+            {t('callout_label')}
           </span>
         </div>
       )}
@@ -113,7 +137,7 @@ export default function ScorecardReportMockup({ callout = true }: { callout?: bo
           <span className="showcase-dot" style={{ background: '#E0654B' }} />
           <span className="showcase-dot" style={{ background: '#E8B23E' }} />
           <span className="showcase-dot" style={{ background: '#5BA06B' }} />
-          <span className="showcase-card-bar-label">Scorecard-rapport · Vertrouwelijk</span>
+          <span className="showcase-card-bar-label">{t('window_label')}</span>
         </div>
 
         {/* card body */}
@@ -129,7 +153,7 @@ export default function ScorecardReportMockup({ callout = true }: { callout?: bo
                 letterSpacing: '-0.01em',
               }}
             >
-              Uw profiel vs. vergelijkbare partijen
+              {t('title')}
             </p>
             <p
               style={{
@@ -140,13 +164,19 @@ export default function ScorecardReportMockup({ callout = true }: { callout?: bo
                 letterSpacing: '0.02em',
               }}
             >
-              Mid-market PE · 12 vergelijkbare fondsen
+              {t('subtitle')}
             </p>
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', marginTop: '18px' }}>
-            {DIMENSIONS.map((d) => (
-              <ScoreRow key={d.label} d={d} highlight={d.label === 'AI-bestendigheid'} />
+            {DIMENSION_SCORES.map((d) => (
+              <ScoreRow
+                key={d.key}
+                label={dims[d.key] ?? d.key}
+                score={d.score}
+                peer={d.peer}
+                highlight={d.key === 'AIReadiness'}
+              />
             ))}
           </div>
 
@@ -154,15 +184,15 @@ export default function ScorecardReportMockup({ callout = true }: { callout?: bo
           <div className="showcase-legend">
             <span className="showcase-legend-item">
               <span className="showcase-legend-swatch" style={{ background: RUST }} />
-              Onder mediaan
+              {t('below_median')}
             </span>
             <span className="showcase-legend-item">
               <span className="showcase-legend-swatch" style={{ background: NAVY }} />
-              Op/boven mediaan
+              {t('above_median')}
             </span>
             <span className="showcase-legend-item">
               <span className="showcase-legend-tick" />
-              Peer-mediaan
+              {t('peer_median')}
             </span>
           </div>
         </div>

@@ -1,7 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useLocale, useTranslations } from 'next-intl';
 import { Dimension, dimensionLabels } from '@/lib/questions';
+import { sectionTranslations } from '@/lib/questions.locales';
 
 interface DimensionBarsProps {
   scores: Record<Dimension, number>; // 0..100
@@ -18,6 +20,10 @@ const order: Dimension[] = [
 ];
 
 export default function DimensionBars({ scores, weakest = [] }: DimensionBarsProps) {
+  const locale = useLocale();
+  const tR = useTranslations('scorecard.rapport');
+  const dims = (sectionTranslations[locale] ?? sectionTranslations['nl']).dimensions;
+
   // After mount, the .dim-bar elements transition from width 0 to their
   // final pct over 800ms with a 100ms stagger via inline animation-delay.
   const [mounted, setMounted] = useState(false);
@@ -29,9 +35,9 @@ export default function DimensionBars({ scores, weakest = [] }: DimensionBarsPro
   return (
     <div className="flex flex-col gap-5">
       {order.map((dim, idx) => {
-        const label = dimensionLabels[dim];
+        const label = dims[dim] ?? dim;
         const val = scores[dim] ?? 0;
-        const isWeak = weakest.includes(label);
+        const isWeak = weakest.includes(dimensionLabels[dim]);
         const targetPct = `${Math.max(0, Math.min(100, val))}%`;
         return (
           <div key={dim}>
@@ -46,7 +52,7 @@ export default function DimensionBars({ scores, weakest = [] }: DimensionBarsPro
                 className="text-sm"
                 style={{ color: isWeak ? 'var(--status-warning)' : 'var(--text-tertiary)' }}
               >
-                {val} / 100{isWeak ? ' (aandachtspunt)' : ''}
+                {val} / 100{isWeak ? ` ${tR('attention_point')}` : ''}
               </span>
             </div>
             <div

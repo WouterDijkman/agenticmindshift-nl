@@ -1,7 +1,9 @@
 'use client';
 
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, LabelList } from 'recharts';
-import { Dimension, dimensionLabels } from '@/lib/questions';
+import { useLocale, useTranslations } from 'next-intl';
+import { Dimension } from '@/lib/questions';
+import { sectionTranslations } from '@/lib/questions.locales';
 
 interface PeerBenchmarkChartProps {
   scores: Record<Dimension, number>; // 0..100
@@ -27,8 +29,12 @@ const order: Dimension[] = [
 ];
 
 export default function PeerBenchmarkChart({ scores }: PeerBenchmarkChartProps) {
+  const locale = useLocale();
+  const tR = useTranslations('scorecard.rapport');
+  const dims = (sectionTranslations[locale] ?? sectionTranslations['nl']).dimensions;
+
   const data = order.map((dim) => ({
-    dimension: dimensionLabels[dim],
+    dimension: dims[dim] ?? dim,
     delta: (scores[dim] ?? 0) - peerMedians[dim],
     self: scores[dim] ?? 0,
     peer: peerMedians[dim],
@@ -68,7 +74,7 @@ export default function PeerBenchmarkChart({ scores }: PeerBenchmarkChartProps) 
               if (!p || Number.isNaN(n)) return [String(value), 'Delta'];
               return [
                 `${n > 0 ? '+' : ''}${n} (u: ${p.self}, peers: ${p.peer})`,
-                'Verschil t.o.v. peer-mediaan',
+                tR('peer_tooltip_label'),
               ];
             }}
           />
@@ -93,7 +99,7 @@ export default function PeerBenchmarkChart({ scores }: PeerBenchmarkChartProps) 
         </BarChart>
       </ResponsiveContainer>
       <p className="text-xs mt-3" style={{ color: 'var(--text-muted)' }}>
-        Vergelijking met synthetische peer-mediaan (op basis van Nederlandse PE/M&amp;A-data).
+        {tR('peer_benchmark_footer')}
       </p>
     </div>
   );
