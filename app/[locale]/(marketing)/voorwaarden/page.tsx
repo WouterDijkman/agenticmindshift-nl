@@ -1,11 +1,16 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { getAlternates } from '@/lib/hreflang';
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('voorwaarden');
+export async function generateMetadata(
+  { params }: { params: Promise<{ locale: string }> }
+): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'voorwaarden' });
   return {
     title: t('meta_title'),
     description: t('meta_description'),
+    alternates: getAlternates('/voorwaarden', locale),
   };
 }
 

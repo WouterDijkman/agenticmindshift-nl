@@ -1,21 +1,29 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { getAlternates } from '@/lib/hreflang';
 import { Link } from '@/i18n/navigation';
 import Button from '@/components/ui/Button';
 import HeroAnimated from './HeroAnimated';
 import OverCredentials from './OverCredentials';
 import JsonLd from '@/components/JsonLd';
-import { organizationLd, personLd } from '@/lib/jsonld';
+import { organizationLd, personLd, getBreadcrumbLd } from '@/lib/jsonld';
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('over');
+export async function generateMetadata(
+  { params }: { params: Promise<{ locale: string }> }
+): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'over' });
   return {
     title: t('meta_title'),
     description: t('meta_description'),
+    alternates: getAlternates('/over', locale),
   };
 }
 
-export default async function OverPage() {
+export default async function OverPage(
+  { params }: { params: Promise<{ locale: string }> }
+) {
+  const { locale } = await params;
   const t = await getTranslations('over');
 
   const timelineItems = [
@@ -30,6 +38,7 @@ export default async function OverPage() {
     <>
       <JsonLd data={organizationLd} />
       <JsonLd data={personLd} />
+      <JsonLd data={getBreadcrumbLd('/over', t('heading'), locale)} />
 
       <HeroAnimated />
 

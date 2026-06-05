@@ -1,4 +1,6 @@
+import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { getAlternates } from '@/lib/hreflang';
 import Button from '@/components/ui/Button';
 import AnimatedHero from './AnimatedHero';
 import HomepageStatsSection from './HomepageStatsSection';
@@ -11,7 +13,19 @@ import CostAnchorVisual from './CostAnchorVisual';
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
 import JsonLd from '@/components/JsonLd';
 import { getLocalizedFaqItems } from '@/lib/faq';
-import { organizationLd, personLd, serviceLd, getFaqLd } from '@/lib/jsonld';
+import { organizationLd, personLd, serviceLd, websiteLd, getFaqLd } from '@/lib/jsonld';
+
+export async function generateMetadata(
+  { params }: { params: Promise<{ locale: string }> }
+): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'homepage' });
+  return {
+    title: t('hero.heading'),
+    description: t('hero.subtext').slice(0, 160),
+    alternates: getAlternates('', locale),
+  };
+}
 
 export default async function HomePage() {
   const t = await getTranslations('homepage');
@@ -47,6 +61,7 @@ export default async function HomePage() {
       <JsonLd data={organizationLd} />
       <JsonLd data={personLd} />
       <JsonLd data={serviceLd} />
+      <JsonLd data={websiteLd} />
       <JsonLd data={faqLd} />
 
       <AnimatedHero />

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import type { ComponentType } from 'react';
 import { getTranslations } from 'next-intl/server';
+import { getAlternates } from '@/lib/hreflang';
 import { Link } from '@/i18n/navigation';
 import Button from '@/components/ui/Button';
 import SketchDivider from '@/components/icons/SketchDivider';
@@ -12,15 +13,21 @@ import {
 } from '@/components/icons/SketchIcons';
 import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
+import JsonLd from '@/components/JsonLd';
+import { professionalServiceLd, getBreadcrumbLd } from '@/lib/jsonld';
 import WerkwijzeOnboardingSteps from './WerkwijzeOnboardingSteps';
 
 type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('werkwijze');
+export async function generateMetadata(
+  { params }: { params: Promise<{ locale: string }> }
+): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'werkwijze' });
   return {
     title: t('meta_title'),
     description: t('meta_description'),
+    alternates: getAlternates('/werkwijze', locale),
   };
 }
 
@@ -52,7 +59,10 @@ interface Offering {
   Icon: SketchIconComponent;
 }
 
-export default async function WerkwijzePage() {
+export default async function WerkwijzePage(
+  { params }: { params: Promise<{ locale: string }> }
+) {
+  const { locale } = await params;
   const t = await getTranslations('werkwijze');
 
   const offerings: Offering[] = [
@@ -119,6 +129,9 @@ export default async function WerkwijzePage() {
 
   return (
     <>
+      <JsonLd data={professionalServiceLd} />
+      <JsonLd data={getBreadcrumbLd('/werkwijze', t('hero.heading'), locale)} />
+
       <AnimatedHeroShell
         bgChar="03"
         bgCharSize="clamp(240px, 30vw, 460px)"

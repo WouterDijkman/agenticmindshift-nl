@@ -1,0 +1,29 @@
+# Agentic Mindshift
+
+AI-advies voor Nederlandse Private Equity-fondsen, M&A-kantoren en familiebedrijven in de mid-market.
+Founder: Wouter Dijkman — voormalig portefeuillemanager bij Rabobank, ING en Alter Domus.
+
+Agentic Mindshift uses AI as a method to deliver comprehensive due diligence and portfolio intelligence across all M&A dimensions — financial, tax, deal economics, IBR/WHOA, and portfolio health — via the Factum Capital platform (29 modules, SaaS launch 1 July 2026).
+
+## Core pages
+
+- [Homepage](https://www.agenticmindshift.nl/nl/): Overzicht diensten en AI Scorecard
+- [Werkwijze & Tarieven](https://www.agenticmindshift.nl/nl/werkwijze): Vier routes — Sparring Sessie, AI-advies, Fractional AI Officer, AI-gedreven Due Diligence & Portfolio
+- [Over Wouter Dijkman](https://www.agenticmindshift.nl/nl/over): Achtergrond, ervaring en credentials
+- [AI Scorecard](https://www.agenticmindshift.nl/nl/scorecard): Gratis 12-minuten assessment op zes AI-dimensies voor PE-fondsen en M&A-kantoren
+- [Factum Capital](https://www.agenticmindshift.nl/nl/factum-capital): AI-platform met 29 modules voor M&A due diligence, IBR/WHOA, portfolio health en PMI
+- [Contact](https://www.agenticmindshift.nl/nl/contact): Directe kennismaking
+
+## English
+
+- [Homepage EN](https://www.agenticmindshift.nl/en/)
+- [How we work EN](https://www.agenticmindshift.nl/en/werkwijze)
+- [About EN](https://www.agenticmindshift.nl/en/over)
+
+## Key facts
+
+- Service area: Netherlands (primary), DACH, Belgium
+- Target clients: PE partners, M&A directors, family offices — Dutch lower mid-market
+- Pricing: Free AI Sparring Session (30 min) · AI Advisory from €4,500 · Fractional AI Officer €1,099/day · AI-driven DD from €10,000/deal
+- Founded: October 2025 · KvK registration: Netherlands
+- Contact: wouter@agenticmindshift.nl

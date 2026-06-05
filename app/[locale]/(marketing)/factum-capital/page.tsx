@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import type { ComponentType } from 'react';
 import { getTranslations } from 'next-intl/server';
+import { getAlternates } from '@/lib/hreflang';
 import { Link } from '@/i18n/navigation';
 import Button from '@/components/ui/Button';
 import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
@@ -13,18 +14,27 @@ import {
 import EarlyAccessForm from './EarlyAccessForm';
 import CountdownTimer from './CountdownTimer';
 import FactumModulesGrid from './FactumModulesGrid';
+import JsonLd from '@/components/JsonLd';
+import { getBreadcrumbLd } from '@/lib/jsonld';
 
 type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('factum_capital');
+export async function generateMetadata(
+  { params }: { params: Promise<{ locale: string }> }
+): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'factum_capital' });
   return {
     title: t('meta_title'),
     description: t('meta_description'),
+    alternates: getAlternates('/factum-capital', locale),
   };
 }
 
-export default async function FactumCapitalPage() {
+export default async function FactumCapitalPage(
+  { params }: { params: Promise<{ locale: string }> }
+) {
+  const { locale } = await params;
   const t = await getTranslations('factum_capital');
 
   const MOMENTEN: {
@@ -118,6 +128,8 @@ export default async function FactumCapitalPage() {
 
   return (
     <>
+      <JsonLd data={getBreadcrumbLd('/factum-capital', t('hero.heading'), locale)} />
+
       <AnimatedHeroShell
         bgChar="FC"
         bgCharSize="clamp(240px, 32vw, 480px)"
