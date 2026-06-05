@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Navy background with slight rounding for PWA/Apple icon contexts -->
+  <rect width="128" height="128" rx="20" fill="#102C54"/>
+  <!--
+    Brand mark: hexagonal diamond + double left-pointing chevron
+    Original paths from logo.svg normalised to fit in ~104×104
+    within a 128×128 canvas (12px padding on each side).
+    Original icon spans x:[17,116] y:[4,124]  (99 × 120 units)
+    Scale = 104 / 120 = 0.8667
+    Translate so top-left (17,4) maps to (14, 12):
+      tx = 14 - 17×0.8667 = 14 - 14.73 = -0.73 → round to 0
+      ty = 12 -  4×0.8667 = 12 -  3.47 =  8.53
+    Combined: translate(0, 8.53) scale(0.8667) translate(-17, -4)
+  -->
+  <g transform="translate(0 8.53) scale(0.8667) translate(-17 -4)"
+     fill="none"
+     stroke="#F14C1D"
+     stroke-width="9"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <!-- Hexagonal diamond outline -->
+    <path d="M17 64 L46 16 L90 4 L116 22 L116 106 L90 124 L46 112 Z"/>
+    <!-- Outer left-pointing chevron -->
+    <path d="M98 36 L57 64 L98 92"/>
+    <!-- Inner left-pointing chevron -->
+    <path d="M77 36 L36 64 L77 92"/>
+  </g>
+</svg>
