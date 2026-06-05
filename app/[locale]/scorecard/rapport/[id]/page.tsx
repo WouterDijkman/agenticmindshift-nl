@@ -2,6 +2,7 @@
 
 import { useMemo, useEffect, useState } from 'react';
 import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import { useAssessmentStore } from '@/store/assessmentStore';
 import { calculateScores, determineOffer } from '@/lib/scoring';
 import {
@@ -42,6 +43,7 @@ function approxPercentile(total: number): number {
 }
 
 export default function RapportPage() {
+  const t = useTranslations('scorecard.rapport');
   const answers = useAssessmentStore((s) => s.answers);
   const leadName = useAssessmentStore((s) => s.leadName);
 
@@ -89,13 +91,12 @@ export default function RapportPage() {
   if (!hasAnswers) {
     return (
       <section className="container-narrow py-16 text-center">
-        <h1 className="type-h1 mb-4">Geen rapport gevonden</h1>
+        <h1 className="type-h1 mb-4">{t('no_answers_heading')}</h1>
         <p className="mb-8" style={{ color: 'var(--text-secondary)' }}>
-          We konden geen scorecard-antwoorden in deze browser vinden. Vul de scorecard
-          opnieuw in om uw rapport te genereren.
+          {t('no_answers_body')}
         </p>
         <Button href="/scorecard" variant="primary" size="lg">
-          Start de Scorecard
+          {t('offer_cta_2')}
         </Button>
       </section>
     );
@@ -108,11 +109,10 @@ export default function RapportPage() {
     const firstName = leadName ? leadName.split(' ')[0] : 'partner';
     return (
       <section className="container-wide py-12">
-        <p className="eyebrow" style={{ marginBottom: '16px' }}>Persoonlijk rapport</p>
-        <h1 className="type-h1 mb-3">Beste {firstName}: uw aanpak valt op. Laten we het hebben over wat u doet dat anderen niet doen.</h1>
+        <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('eyebrow')}</p>
+        <h1 className="type-h1 mb-3">{t('high_heading', { name: firstName })}</h1>
         <p className="mb-10 measure" style={{ color: 'var(--text-secondary)', fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', lineHeight: 1.75 }}>
-          U behoort tot de kleine groep PE-partners die al structureel meet wat de meesten
-          pas achteraf zien. Dat is geen kleinigheid.
+          {t('high_body_1')}
         </p>
 
         <div
@@ -128,21 +128,13 @@ export default function RapportPage() {
           </div>
           <div>
             <p className="mb-4 measure" style={{ color: 'var(--text-secondary)', lineHeight: 1.75 }}>
-              Uw score op de Portfolio Intelligence Scorecard is{' '}
-              <strong style={{ color: 'var(--text-primary)' }}>
-                {scores.total} van 75
-              </strong>
-              . Dat is significant boven het gemiddelde van vergelijkbare Nederlandse
-              partijen, en plaatst u in de top 10% van invullers.
+              {t('high_score_body', { score: scores.total })}
             </p>
             <p className="mb-4 measure" style={{ color: 'var(--text-secondary)', lineHeight: 1.75 }}>
-              Een specifieke interventie-aanbeveling is op basis van uw score niet zinvol.
-              U doet wat u zou moeten doen.
+              {t('high_body_3')}
             </p>
             <p className="measure" style={{ color: 'var(--text-secondary)', lineHeight: 1.75 }}>
-              Wat ik zou willen aanbieden, indien u dat interessant vindt, is een
-              vertrouwelijk gesprek over wat u doet dat anderen niet doen. Niet als
-              verkoopgesprek, als peer-uitwisseling. Vrijwillig, geen agenda.
+              {t('high_body_4')}
             </p>
           </div>
         </div>
@@ -156,16 +148,16 @@ export default function RapportPage() {
             padding: '32px',
           }}
         >
-          <p className="eyebrow" style={{ marginBottom: '12px' }}>Volgende stap</p>
+          <p className="eyebrow" style={{ marginBottom: '12px' }}>{t('high_next_eyebrow')}</p>
           <p className="mb-6 measure" style={{ color: 'var(--text-secondary)', fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', lineHeight: 1.75 }}>
-            Stuur een bericht via LinkedIn als u wilt sparren over uw aanpak, als peer-uitwisseling, op uw initiatief.
+            {t('high_next_body')}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 no-print">
             <Button href="https://www.linkedin.com/in/wwdijkman/" variant="primary" size="lg" external>
-              Verbind op LinkedIn
+              {t('high_cta_1')}
             </Button>
             <Button href="/werkwijze" variant="secondary" size="lg">
-              Bekijk de trajecten
+              {t('high_cta_2')}
             </Button>
           </div>
         </div>
@@ -175,19 +167,19 @@ export default function RapportPage() {
           style={{ borderTop: '1px solid var(--border-subtle)' }}
         >
           <p className="text-sm" style={{ color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: '16px' }}>
-            U ontvangt dit rapport ook als PDF in uw inbox.
+            {t('pdf_note')}
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link href="/werkwijze" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
-              Bekijk alle trajecten →
+              {t('link_trajecten')}
             </Link>
             <a href="https://www.linkedin.com/in/wwdijkman/" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }} target="_blank" rel="noopener noreferrer">
-              Verbind op LinkedIn →
+              {t('high_cta_1')} →
             </a>
           </div>
           <div className="mt-6 flex justify-center no-print">
             <Button variant="secondary" size="md" onClick={() => window.print()}>
-              Print / sla op als PDF
+              {t('print_btn')}
             </Button>
           </div>
         </div>
@@ -206,16 +198,13 @@ export default function RapportPage() {
 
   return (
     <section className="container-wide py-12">
-      <p className="eyebrow" style={{ marginBottom: '16px' }}>Persoonlijk rapport</p>
-      <h1 className="type-h1 mb-3">Uw Deal & Portfolio Intelligence Rapport</h1>
+      <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('eyebrow')}</p>
+      <h1 className="type-h1 mb-3">{t('heading')}</h1>
       <p className="mb-2 measure" style={{ color: 'var(--text-secondary)', fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', lineHeight: 1.75 }}>
-        U beschikt nu over inzicht dat de meeste partijen pas krijgen op het moment dat
-        het al te laat is: bij de jaarrapportage, de afwijzing van de bank, of
-        de deal die net niet doorging. Hieronder leest u waar uw analytisch fundament
-        sterk is, waar het weglekt, en welk Factum Capital moment het meest relevant is.
+        {t('subtext')}
       </p>
       <p className="mb-8 measure" style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>
-        Totaalscore &middot; dimensies &middot; peer-vergelijking &middot; aanbevolen vervolgstap
+        {t('hint')}
       </p>
 
       {/* Score + totaal */}
@@ -230,20 +219,16 @@ export default function RapportPage() {
         <div className="flex flex-col items-center justify-center">
           <TotalScoreCircle score={scores.total} max={TOTAL_MAX} size={220} />
           <p style={{ fontSize: '0.8125rem', color: 'var(--text-muted)', marginTop: '12px', textAlign: 'center', maxWidth: '180px', lineHeight: 1.5 }}>
-            Beter dan {percentile}% van vergelijkbare partijen
+            {t('better_than', { pct: percentile })}
           </p>
         </div>
         <div>
-          <h2 className="type-h2 mb-3">Totaalscore</h2>
+          <h2 className="type-h2 mb-3">{t('total_heading')}</h2>
           <p className="mb-3 measure" style={{ color: 'var(--text-secondary)', lineHeight: 1.75 }}>
-            Uw totaalscore is gebaseerd op de optelsom van uw 15 antwoorden, met een
-            maximum van 75 punten. De score is een algemene indicator; de werkelijke
-            informatie zit in de zes dimensies.
+            {t('total_body_1')}
           </p>
           <p className="measure" style={{ color: 'var(--text-secondary)', lineHeight: 1.75 }}>
-            Uw twee zwakste dimensies, hieronder gemarkeerd, zijn de meest waarschijnlijke
-            plekken waar rendement weglekt, niet door slecht beheer, maar door
-            ontbrekende instrumentatie.
+            {t('total_body_2')}
           </p>
         </div>
       </div>
@@ -257,7 +242,7 @@ export default function RapportPage() {
             padding: '28px',
           }}
         >
-          <h2 className="type-h2 mb-5">Per dimensie</h2>
+          <h2 className="type-h2 mb-5">{t('dimensions_heading')}</h2>
           <DimensionBars scores={scores.byDimension} weakest={scores.weakest} />
         </div>
         <div
@@ -267,12 +252,12 @@ export default function RapportPage() {
             padding: '28px',
           }}
         >
-          <h2 className="type-h2 mb-5">Peer-vergelijking</h2>
+          <h2 className="type-h2 mb-5">{t('peer_heading')}</h2>
           <p className="type-stat mb-2" style={{ color: 'var(--text-primary)' }}>
             {percentile}%
           </p>
           <p className="hint-italic mb-6" style={{ color: 'var(--text-secondary)' }}>
-            U scoort beter dan {percentile}% van vergelijkbare Nederlandse partijen.
+            {t('peer_stat', { pct: percentile })}
           </p>
           <PeerBenchmarkChart scores={scores.byDimension} />
         </div>
@@ -288,17 +273,17 @@ export default function RapportPage() {
             padding: '32px',
           }}
         >
-          <h2 className="type-h2 mb-5">Interpretatie</h2>
+          <h2 className="type-h2 mb-5">{t('interpretation_heading')}</h2>
           <p className="mb-8 measure" style={{ fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', color: 'var(--text-secondary)', lineHeight: 1.75 }}>
             {variant.interpretation(variantRawScore)}
           </p>
 
-          <h3 className="type-h3 mb-5">Drie concrete interventies</h3>
+          <h3 className="type-h3 mb-5">{t('interventions_heading')}</h3>
           <ol className="flex flex-col gap-5" style={{ listStyle: 'none', padding: 0 }}>
             {variant.interventions.map((iv, idx) => (
               <li key={iv.title} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
                 <span style={{
-                                    fontSize: '0.75rem',
+                  fontSize: '0.75rem',
                   fontWeight: 800,
                   color: 'var(--accent-cta)',
                   letterSpacing: '0.06em',
@@ -329,29 +314,28 @@ export default function RapportPage() {
             padding: '32px',
           }}
         >
-          <p className="eyebrow" style={{ marginBottom: '12px' }}>Aanbevolen vervolgstap</p>
+          <p className="eyebrow" style={{ marginBottom: '12px' }}>{t('offer_eyebrow')}</p>
           <h2 className="type-h2 mb-3">{variant.offerName}</h2>
           <p className="mb-4 measure" style={{ color: 'var(--text-secondary)', lineHeight: 1.75 }}>
-            Op basis van uw scoreprofiel past dit traject het beste bij uw situatie.
-            U start vrijblijvend met een Sparring Sessie als u eerst wilt toetsen.
+            {t('offer_match_body')}
           </p>
           <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', marginBottom: '8px' }}>
             <p style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--text-primary)' }}>
-              Investering:
+              {t('offer_investment')}
             </p>
             <p style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--accent-cta)' }}>
               {variant.price}
             </p>
           </div>
           <p className="mb-8" style={{ fontSize: '0.8125rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>
-            Exclusief btw. Eerste sessie altijd vrijblijvend.
+            {t('offer_excl_vat')}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 no-print">
             <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external>
-              Plan een vrijblijvende kennismaking
+              {t('offer_cta_1')}
             </Button>
             <Button href="/werkwijze" variant="secondary" size="lg">
-              Bekijk alle trajecten & investering
+              {t('offer_cta_2')}
             </Button>
           </div>
         </div>
@@ -363,22 +347,22 @@ export default function RapportPage() {
         style={{ borderTop: '1px solid var(--border-subtle)' }}
       >
         <p className="text-sm" style={{ color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: '16px' }}>
-          U ontvangt dit rapport ook als PDF in uw inbox.
+          {t('pdf_note')}
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
           <Link href="/werkwijze" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
-            Bekijk alle trajecten →
+            {t('link_trajecten')}
           </Link>
           <a href="https://cal.com/wwdijkman/intake-call" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
-            Plan een vrijblijvende kennismaking →
+            {t('link_kennismaking')}
           </a>
           <Link href="/contact" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
-            Bespreek uw situatie →
+            {t('link_contact')}
           </Link>
         </div>
         <div className="mt-6 flex justify-center no-print">
           <Button variant="secondary" size="md" onClick={() => window.print()}>
-            Print / sla op als PDF
+            {t('print_btn')}
           </Button>
         </div>
       </div>

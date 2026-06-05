@@ -297,7 +297,7 @@
     "meta_description": "Four clearly differentiated ways to work with Agentic Mindshift — from a low-threshold Sparring Session to a Fractional AI Officer and AI Due Diligence per deal or in volume.",
     "hero": {
       "eyebrow": "How We Work & Investment",
-      "heading": "From €395 to embedded AI leadership: you choose based on your question.",
+      "heading": "From first conversation to embedded AI leadership: you choose based on your question.",
       "subtext": "Four routes, four situations. Every route begins with a no-obligation conversation and ends with a concrete result."
     },
     "steps": {
@@ -603,7 +603,21 @@
       "no_account": "No account required. Your answers are saved as you go.",
       "trust": "Already completed by PE partners, M&A directors and family offices in the Dutch mid-market.",
       "confidentiality_title": "Confidentiality",
-      "confidentiality_body": "Your answers are used solely to generate your report. You may fill it in anonymously if you prefer."
+      "confidentiality_body": "Your answers are used solely to generate your report. You may fill it in anonymously if you prefer.",
+      "blind_spots_note": "Most PE partners only discover their blind spots when it’s already too late. Your investment: twelve minutes.",
+      "preview_eyebrow": "What you receive",
+      "preview_heading": "This is your report, immediately after the last question.",
+      "preview_body": "Six dimensions, each scored and benchmarked against comparable firms. The two highest-impact points are highlighted so you know exactly where to focus first.",
+      "stakes_eyebrow": "The cost of waiting",
+      "stakes_heading": "Twelve minutes now or quarters of uncertainty later.",
+      "stakes_body_1a": "The difference between a supported and an uncalibrated acquisition price? On a €5M EBITDA target easily 0.5×: that is ",
+      "stakes_highlight": "€2.5M",
+      "stakes_body_1b": ".",
+      "stakes_body_2": "The Scorecard is free. No account. Your report is available immediately.",
+      "final_eyebrow": "Your next step",
+      "final_heading": "In twelve minutes you’ll know exactly where your portfolio is vulnerable.",
+      "final_body": "No account. No commitments. Report available immediately after completion.",
+      "final_cta_2": "Prefer a conversation?"
     },
     "navigation": {
       "back_to_start": "← Back to start",
@@ -611,7 +625,12 @@
       "next_section_3": "Continue to section 3",
       "next_section_4": "Continue to section 4",
       "to_results": "To my results",
-      "answer_all": "Answer all four questions to proceed."
+      "answer_all": "Answer all four questions to proceed.",
+      "prev_section": "Previous section",
+      "answer_all_s1": "Answer all four questions to proceed.",
+      "answer_all_s2": "Answer all three questions to proceed.",
+      "answer_all_s3": "Answer all four questions to proceed.",
+      "answer_all_s4": "Answer all four questions to see your result."
     },
     "resultaat": {
       "eyebrow": "Scorecard completed",
@@ -639,7 +658,74 @@
       "privacy_link": "privacy statement",
       "error_generic": "Something went wrong. Please try again later.",
       "error_create": "We could not create your report. Please check the fields and try again.",
-      "score_caption": "The full report shows your score per dimension with peer comparison."
+      "score_caption": "The full report shows your score per dimension with peer comparison.",
+      "question_singular": "question",
+      "question_plural": "questions"
+    },
+    "section_cards": {
+      "s1_title": "Your analytical approach today",
+      "s1_q": "4 questions",
+      "s2_title": "Your deal and analysis cycle",
+      "s2_q": "3 questions",
+      "s3_title": "Portfolio, financing and monitoring",
+      "s3_q": "4 questions",
+      "s4_title": "Your team and knowledge",
+      "s4_q": "4 questions"
+    },
+    "sections": {
+      "s1_label": "Section 1 of 4",
+      "s1_tagline": "Start. Twelve minutes.",
+      "s1_title": "Your analytical approach today",
+      "s1_desc": "How systematic is your analytical approach in deals, financing and portfolio review? This section maps your current position.",
+      "s2_label": "Section 2 of 4",
+      "s2_tagline": "Good progress, one quarter done.",
+      "s2_title": "Your deal cycle",
+      "s2_desc": "Time to IC, the risk of AI taking over the core activity, and your judgement: three points where returns leak. This section measures them.",
+      "s3_label": "Section 3 of 4",
+      "s3_tagline": "Halfway. The most interesting part.",
+      "s3_title": "Portfolio, financing and monitoring",
+      "s3_desc": "Portfolio reporting, financing memos, early warning: can you course-correct in time? This section measures the structure behind your information.",
+      "s4_label": "Section 4 of 4",
+      "s4_tagline": "Last section. Almost your report.",
+      "s4_title": "Your team and knowledge",
+      "s4_desc": "When an associate leaves, the memory of three to five files disappears. This section measures whether your organisation can withstand that."
+    },
+    "rapport": {
+      "eyebrow": "Personal report",
+      "no_answers_heading": "No report found",
+      "no_answers_body": "We could not find any scorecard answers in this browser. Please complete the scorecard again to generate your report.",
+      "heading": "Your Deal & Portfolio Intelligence Report",
+      "subtext": "You now have insight that most firms only get when it is already too late: at the annual report, the bank rejection, or the deal that just didn’t close. Below you will read where your analytical foundation is strong, where it leaks, and which Factum Capital moment is most relevant.",
+      "hint": "Total score · dimensions · peer comparison · recommended next step",
+      "total_heading": "Total score",
+      "total_body_1": "Your total score is based on the sum of your 15 answers, with a maximum of 75 points. The score is a general indicator; the real information is in the six dimensions.",
+      "total_body_2": "Your two weakest dimensions, highlighted below, are the most likely places where returns are leaking — not through poor management, but through missing instrumentation.",
+      "better_than": "Better than {pct}% of comparable firms",
+      "dimensions_heading": "By dimension",
+      "peer_heading": "Peer comparison",
+      "peer_stat": "You score better than {pct}% of comparable Dutch firms.",
+      "interpretation_heading": "Interpretation",
+      "interventions_heading": "Three concrete interventions",
+      "offer_eyebrow": "Recommended next step",
+      "offer_match_body": "Based on your score profile, this track fits your situation best. You start with a no-commitment Sparring Session if you want to test the fit first.",
+      "offer_investment": "Investment:",
+      "offer_excl_vat": "Excl. VAT. First session always without obligation.",
+      "offer_cta_1": "Schedule a no-commitment conversation",
+      "offer_cta_2": "View all tracks & investment",
+      "pdf_note": "You will also receive this report as a PDF in your inbox.",
+      "link_trajecten": "View all tracks →",
+      "link_kennismaking": "Schedule a no-commitment conversation →",
+      "link_contact": "Discuss your situation →",
+      "print_btn": "Print / save as PDF",
+      "high_heading": "Dear {name}: your approach stands out. Let’s talk about what you do that others don’t.",
+      "high_body_1": "You belong to the small group of PE partners who already systematically measure what most only see in retrospect. That is no small thing.",
+      "high_score_body": "Your score on the Portfolio Intelligence Scorecard is {score} out of 75. That is significantly above the average of comparable Dutch firms, placing you in the top 10% of respondents.",
+      "high_body_3": "A specific intervention recommendation is not meaningful based on your score. You’re doing what you should be doing.",
+      "high_body_4": "What I would like to offer, if you find it interesting, is a confidential conversation about what you do that others don’t. Not as a sales conversation, but as peer exchange. Voluntary, no agenda.",
+      "high_next_eyebrow": "Next step",
+      "high_next_body": "Send a message on LinkedIn if you want to exchange thoughts on your approach, as peer exchange, at your initiative.",
+      "high_cta_1": "Connect on LinkedIn",
+      "high_cta_2": "View the tracks"
     }
   }
 }

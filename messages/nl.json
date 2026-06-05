@@ -297,7 +297,7 @@
     "meta_description": "Vier helder gedifferentieerde manieren waarop u met Agentic Mindshift werkt — van een laagdrempelige Sparring Sessie tot een Fractional AI Officer en AI Due Diligence per deal of in volume.",
     "hero": {
       "eyebrow": "Werkwijze & Investering",
-      "heading": "Van €395 tot embedded AI‑leiderschap: u kiest op basis van uw vraag.",
+      "heading": "Van eerste kennismaking tot embedded AI-leiderschap: u kiest op basis van uw vraag.",
       "subtext": "Vier routes, vier situaties. Elke route begint met een vrijblijvend gesprek en eindigt met een concreet resultaat."
     },
     "steps": {
@@ -603,7 +603,21 @@
       "no_account": "Geen account vereist. Uw antwoorden worden tussentijds opgeslagen.",
       "trust": "Al ingevuld door PE-partners, M&A-directors en family offices in de Nederlandse mid-market.",
       "confidentiality_title": "Vertrouwelijkheid",
-      "confidentiality_body": "Uw antwoorden worden alleen gebruikt om uw rapport te genereren. U kunt anoniem invullen indien u dat wenst."
+      "confidentiality_body": "Uw antwoorden worden alleen gebruikt om uw rapport te genereren. U kunt anoniem invullen indien u dat wenst.",
+      "blind_spots_note": "De meeste PE-partners ontdekken hun blinde vlekken pas als het te laat is. Uw investering: twaalf minuten.",
+      "preview_eyebrow": "Wat u ontvangt",
+      "preview_heading": "Dit is uw rapport, direct na de laatste vraag.",
+      "preview_body": "Zes dimensies, elk gescoord en afgezet tegen vergelijkbare partijen. De twee punten met de hoogste impact worden uitgelicht, zodat u weet waar u als eerste op moet sturen.",
+      "stakes_eyebrow": "De kosten van uitstellen",
+      "stakes_heading": "Twaalf minuten nu of kwartalen onzekerheid later.",
+      "stakes_body_1a": "Het verschil tussen een onderbouwde en een ongecalibreerde overnameprijs? Op een €5M EBITDA-target al snel 0,5×: dat is ",
+      "stakes_highlight": "€2,5M",
+      "stakes_body_1b": ".",
+      "stakes_body_2": "De Scorecard is gratis. Geen account. Uw rapport is direct beschikbaar.",
+      "final_eyebrow": "Uw volgende stap",
+      "final_heading": "Over twaalf minuten weet u exact waar uw portefeuille kwetsbaar is.",
+      "final_body": "Geen account. Geen verplichtingen. Rapport direct na afronding.",
+      "final_cta_2": "Liever een gesprek?"
     },
     "navigation": {
       "back_to_start": "← Terug naar start",
@@ -611,7 +625,12 @@
       "next_section_3": "Verder naar sectie 3",
       "next_section_4": "Verder naar sectie 4",
       "to_results": "Naar mijn resultaten",
-      "answer_all": "Beantwoord alle vier de vragen om verder te kunnen."
+      "answer_all": "Beantwoord alle vier de vragen om verder te kunnen.",
+      "prev_section": "Vorige sectie",
+      "answer_all_s1": "Beantwoord alle vier de vragen om verder te kunnen.",
+      "answer_all_s2": "Beantwoord alle drie de vragen om verder te kunnen.",
+      "answer_all_s3": "Beantwoord alle vier de vragen om verder te kunnen.",
+      "answer_all_s4": "Beantwoord alle vier de vragen om uw resultaat te zien."
     },
     "resultaat": {
       "eyebrow": "Scorecard voltooid",
@@ -639,7 +658,74 @@
       "privacy_link": "privacystatement",
       "error_generic": "Er ging iets mis. Probeer het later nog eens.",
       "error_create": "We konden uw rapport niet aanmaken. Controleer de velden en probeer opnieuw.",
-      "score_caption": "Het volledige rapport toont uw score per dimensie met peer-vergelijking."
+      "score_caption": "Het volledige rapport toont uw score per dimensie met peer-vergelijking.",
+      "question_singular": "vraag",
+      "question_plural": "vragen"
+    },
+    "section_cards": {
+      "s1_title": "Uw analytische aanpak vandaag",
+      "s1_q": "4 vragen",
+      "s2_title": "Uw deal- en analysecyclus",
+      "s2_q": "3 vragen",
+      "s3_title": "Portefeuille, financiering en monitoring",
+      "s3_q": "4 vragen",
+      "s4_title": "Uw team en kennis",
+      "s4_q": "4 vragen"
+    },
+    "sections": {
+      "s1_label": "Sectie 1 van 4",
+      "s1_tagline": "Start. Twaalf minuten.",
+      "s1_title": "Uw analytische aanpak vandaag",
+      "s1_desc": "Hoe systematisch is uw analytische aanpak, bij deals, financiering en portfolio review? Deze sectie brengt uw huidige positie in kaart.",
+      "s2_label": "Sectie 2 van 4",
+      "s2_tagline": "Goed bezig, een kwart klaar.",
+      "s2_title": "Uw deal-cyclus",
+      "s2_desc": "Doorlooptijd tot aan het IC, het risico dat AI de kernactiviteit overneemt, en uw oordeelsvorming: drie punten waar rendement weglekt. Deze sectie meet ze.",
+      "s3_label": "Sectie 3 van 4",
+      "s3_tagline": "Halverwege. Het interessantste deel.",
+      "s3_title": "Portefeuille, financiering en monitoring",
+      "s3_desc": "Portefeuillerapportage, financieringsmemo’s, vroegsignalering: kunt u op tijd bijsturen? Deze sectie meet de structuur achter uw informatie.",
+      "s4_label": "Sectie 4 van 4",
+      "s4_tagline": "Laatste sectie. Bijna uw rapport.",
+      "s4_title": "Uw team en kennis",
+      "s4_desc": "Als een associate vertrekt, verdwijnt het geheugen van drie tot vijf dossiers. Deze sectie meet of uw organisatie daar bestand tegen is."
+    },
+    "rapport": {
+      "eyebrow": "Persoonlijk rapport",
+      "no_answers_heading": "Geen rapport gevonden",
+      "no_answers_body": "We konden geen scorecard-antwoorden in deze browser vinden. Vul de scorecard opnieuw in om uw rapport te genereren.",
+      "heading": "Uw Deal & Portfolio Intelligence Rapport",
+      "subtext": "U beschikt nu over inzicht dat de meeste partijen pas krijgen op het moment dat het al te laat is: bij de jaarrapportage, de afwijzing van de bank, of de deal die net niet doorging. Hieronder leest u waar uw analytisch fundament sterk is, waar het weglekt, en welk Factum Capital moment het meest relevant is.",
+      "hint": "Totaalscore · dimensies · peer-vergelijking · aanbevolen vervolgstap",
+      "total_heading": "Totaalscore",
+      "total_body_1": "Uw totaalscore is gebaseerd op de optelsom van uw 15 antwoorden, met een maximum van 75 punten. De score is een algemene indicator; de werkelijke informatie zit in de zes dimensies.",
+      "total_body_2": "Uw twee zwakste dimensies, hieronder gemarkeerd, zijn de meest waarschijnlijke plekken waar rendement weglekt, niet door slecht beheer, maar door ontbrekende instrumentatie.",
+      "better_than": "Beter dan {pct}% van vergelijkbare partijen",
+      "dimensions_heading": "Per dimensie",
+      "peer_heading": "Peer-vergelijking",
+      "peer_stat": "U scoort beter dan {pct}% van vergelijkbare Nederlandse partijen.",
+      "interpretation_heading": "Interpretatie",
+      "interventions_heading": "Drie concrete interventies",
+      "offer_eyebrow": "Aanbevolen vervolgstap",
+      "offer_match_body": "Op basis van uw scoreprofiel past dit traject het beste bij uw situatie. U start vrijblijvend met een Sparring Sessie als u eerst wilt toetsen.",
+      "offer_investment": "Investering:",
+      "offer_excl_vat": "Exclusief btw. Eerste sessie altijd vrijblijvend.",
+      "offer_cta_1": "Plan een vrijblijvende kennismaking",
+      "offer_cta_2": "Bekijk alle trajecten & investering",
+      "pdf_note": "U ontvangt dit rapport ook als PDF in uw inbox.",
+      "link_trajecten": "Bekijk alle trajecten →",
+      "link_kennismaking": "Plan een vrijblijvende kennismaking →",
+      "link_contact": "Bespreek uw situatie →",
+      "print_btn": "Print / sla op als PDF",
+      "high_heading": "Beste {name}: uw aanpak valt op. Laten we het hebben over wat u doet dat anderen niet doen.",
+      "high_body_1": "U behoort tot de kleine groep PE-partners die al structureel meet wat de meesten pas achteraf zien. Dat is geen kleinigheid.",
+      "high_score_body": "Uw score op de Portfolio Intelligence Scorecard is {score} van 75. Dat is significant boven het gemiddelde van vergelijkbare Nederlandse partijen, en plaatst u in de top 10% van invullers.",
+      "high_body_3": "Een specifieke interventie-aanbeveling is op basis van uw score niet zinvol. U doet wat u zou moeten doen.",
+      "high_body_4": "Wat ik zou willen aanbieden, indien u dat interessant vindt, is een vertrouwelijk gesprek over wat u doet dat anderen niet doen. Niet als verkoopgesprek, als peer-uitwisseling. Vrijwillig, geen agenda.",
+      "high_next_eyebrow": "Volgende stap",
+      "high_next_body": "Stuur een bericht via LinkedIn als u wilt sparren over uw aanpak, als peer-uitwisseling, op uw initiatief.",
+      "high_cta_1": "Verbind op LinkedIn",
+      "high_cta_2": "Bekijk de trajecten"
     }
   }
 }

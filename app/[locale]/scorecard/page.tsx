@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Link } from '@/i18n/navigation';
+import { getTranslations } from 'next-intl/server';
 import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
 import JsonLd from '@/components/JsonLd';
 import { serviceLd } from '@/lib/jsonld';
@@ -13,7 +13,9 @@ export const metadata: Metadata = {
     'Vier secties, 15 vragen, twaalf minuten. Inzicht in uw dealproces, maandrapportage, AI-bestendigheid en kennisborging — vergeleken met vergelijkbare partijen.',
 };
 
-export default function ScorecardWelcomePage() {
+export default async function ScorecardWelcomePage() {
+  const t = await getTranslations('scorecard');
+
   return (
     <>
       <JsonLd data={serviceLd} />
@@ -21,9 +23,9 @@ export default function ScorecardWelcomePage() {
       <AnimatedHeroShell
         bgChar="15"
         bgCharSize="clamp(240px, 30vw, 440px)"
-        eyebrow="Scorecard · Zes dimensies · Twaalf minuten"
-        heading="Waar lekt rendement weg, en wat ziet u over het hoofd?"
-        subtext="Vijftien vragen. Twaalf minuten. Een rapport dat uw blinde vlekken meetbaar maakt en vergelijkt met vergelijkbare partijen."
+        eyebrow={t('landing.eyebrow')}
+        heading={t('landing.heading')}
+        subtext={t('landing.subtext')}
         containerClass="container-narrow"
         centered={true}
       >
@@ -37,11 +39,10 @@ export default function ScorecardWelcomePage() {
               textAlign: 'center',
             }}
           >
-            De meeste PE-partners ontdekken hun blinde vlekken pas als het te laat is.
-            Uw investering: twaalf minuten.
+            {t('landing.blind_spots_note')}
           </p>
           <Button href="/scorecard/sectie-1" variant="primary" size="lg">
-            Start de Scorecard
+            {t('landing.start_cta')}
           </Button>
           <p
             style={{
@@ -51,7 +52,7 @@ export default function ScorecardWelcomePage() {
               textAlign: 'center',
             }}
           >
-            Geen account vereist. Uw antwoorden worden tussentijds opgeslagen.
+            {t('landing.no_account')}
           </p>
           <p
             style={{
@@ -62,12 +63,12 @@ export default function ScorecardWelcomePage() {
               fontStyle: 'italic',
             }}
           >
-            Al ingevuld door PE-partners, M&A-directors en family offices in de Nederlandse mid-market.
+            {t('landing.trust')}
           </p>
         </div>
       </AnimatedHeroShell>
 
-            {/* Secties overzicht */}
+      {/* Secties overzicht */}
       <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(56px, 8vw, 96px)' }}>
         <div className="container-medium">
           <ScorecardSectionCards />
@@ -103,11 +104,10 @@ export default function ScorecardWelcomePage() {
                   marginBottom: '6px',
                 }}
               >
-                Vertrouwelijkheid
+                {t('landing.confidentiality_title')}
               </p>
               <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.7 }}>
-                Uw antwoorden worden alleen gebruikt om uw rapport te genereren.
-                U kunt anoniem invullen indien u dat wenst.
+                {t('landing.confidentiality_body')}
               </p>
             </div>
           </div>
@@ -119,25 +119,23 @@ export default function ScorecardWelcomePage() {
         <div className="container-medium">
           <div className="showcase-grid">
             <div>
-              <p className="eyebrow" style={{ marginBottom: '16px' }}>Wat u ontvangt</p>
+              <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('landing.preview_eyebrow')}</p>
               <h2 className="type-h2" style={{ marginBottom: '20px', maxWidth: '440px' }}>
-                Dit is uw rapport, direct na de laatste vraag.
+                {t('landing.preview_heading')}
               </h2>
               <p
                 style={{
-                                    fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
+                  fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
                   color: 'var(--text-secondary)',
                   lineHeight: 1.75,
                   maxWidth: '430px',
                   marginBottom: '28px',
                 }}
               >
-                Zes dimensies, elk gescoord en afgezet tegen vergelijkbare partijen.
-                De twee punten met de hoogste impact worden uitgelicht, zodat u
-                weet waar u als eerste op moet sturen.
+                {t('landing.preview_body')}
               </p>
               <Button href="/scorecard/sectie-1" variant="primary" size="lg">
-                Start de Scorecard
+                {t('landing.start_cta')}
               </Button>
             </div>
 
@@ -155,31 +153,32 @@ export default function ScorecardWelcomePage() {
         <div className="container-medium">
           <div className="reveal" style={{ maxWidth: '640px' }}>
             <p className="eyebrow" style={{ marginBottom: '16px', color: 'var(--text-muted)' }}>
-              De kosten van uitstellen
+              {t('landing.stakes_eyebrow')}
             </p>
             <h2 className="type-h2" style={{ marginBottom: '20px' }}>
-              Twaalf minuten nu of kwartalen onzekerheid later.
+              {t('landing.stakes_heading')}
             </h2>
             <p
               style={{
-                                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
+                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
                 color: 'var(--text-secondary)',
                 lineHeight: 1.75,
                 marginBottom: '8px',
               }}
             >
-              Het verschil tussen een onderbouwde en een ongecalibreerde overnameprijs?
-              Op een €5M EBITDA-target al snel 0,5×: dat is <strong style={{ color: 'var(--text-primary)' }}>€2,5M</strong>.
+              {t('landing.stakes_body_1a')}
+              <strong style={{ color: 'var(--text-primary)' }}>{t('landing.stakes_highlight')}</strong>
+              {t('landing.stakes_body_1b')}
             </p>
             <p
               style={{
-                                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
+                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
                 color: 'var(--text-muted)',
                 lineHeight: 1.75,
                 fontStyle: 'italic',
               }}
             >
-              De Scorecard is gratis. Geen account. Uw rapport is direct beschikbaar.
+              {t('landing.stakes_body_2')}
             </p>
           </div>
         </div>
@@ -197,17 +196,17 @@ export default function ScorecardWelcomePage() {
       >
         <div className="container-medium reveal" style={{ textAlign: 'center', position: 'relative' }}>
           <p className="eyebrow" style={{ marginBottom: '24px', color: 'rgba(247,242,235,0.5)' }}>
-            Uw volgende stap
+            {t('landing.final_eyebrow')}
           </p>
           <h2
             className="type-h2"
             style={{ color: 'var(--text-inverse)', marginBottom: '16px', maxWidth: '560px', marginInline: 'auto' }}
           >
-            Over twaalf minuten weet u exact waar uw portefeuille kwetsbaar is.
+            {t('landing.final_heading')}
           </h2>
           <p
             style={{
-                            fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
+              fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
               color: 'rgba(247,242,235,0.55)',
               marginBottom: '44px',
               maxWidth: '420px',
@@ -215,14 +214,14 @@ export default function ScorecardWelcomePage() {
               lineHeight: 1.75,
             }}
           >
-            Geen account. Geen verplichtingen. Rapport direct na afronding.
+            {t('landing.final_body')}
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>
             <Button href="/scorecard/sectie-1" variant="primary" size="lg">
-              Start de Scorecard
+              {t('landing.start_cta')}
             </Button>
             <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
-              Liever een gesprek?
+              {t('landing.final_cta_2')}
             </Button>
           </div>
         </div>

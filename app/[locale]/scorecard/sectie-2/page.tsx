@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { useRouter } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import { useAssessmentStore } from '@/store/assessmentStore';
 import { questionsBySection, questions } from '@/lib/questions';
 import QuestionCard from '@/components/scorecard/QuestionCard';
@@ -9,6 +10,7 @@ import ProgressBar from '@/components/scorecard/ProgressBar';
 import Button from '@/components/ui/Button';
 
 export default function Sectie2Page() {
+  const t = useTranslations('scorecard');
   const router = useRouter();
   const answers = useAssessmentStore((s) => s.answers);
   const setAnswer = useAssessmentStore((s) => s.setAnswer);
@@ -35,19 +37,21 @@ export default function Sectie2Page() {
         }}
       >
         <div style={{ display: 'flex', alignItems: 'baseline', gap: '16px', marginBottom: '16px' }}>
-          <p className="eyebrow" style={{ marginBottom: 0 }}>Sectie 2 van 4</p>
-          <span style={{ fontSize: '0.8125rem', color: 'var(--accent-cta)', fontWeight: 500, letterSpacing: '0.01em' }}>Goed bezig, een kwart klaar.</span>
+          <p className="eyebrow" style={{ marginBottom: 0 }}>{t('sections.s2_label')}</p>
+          <span style={{ fontSize: '0.8125rem', color: 'var(--accent-cta)', fontWeight: 500, letterSpacing: '0.01em' }}>
+            {t('sections.s2_tagline')}
+          </span>
         </div>
-        <h1 className="type-h2" style={{ marginBottom: '16px' }}>Uw deal-cyclus</h1>
+        <h1 className="type-h2" style={{ marginBottom: '16px' }}>{t('sections.s2_title')}</h1>
         <p
           style={{
-                        fontSize: '1.0625rem',
+            fontSize: '1.0625rem',
             color: 'var(--text-secondary)',
             lineHeight: 1.75,
             maxWidth: '560px',
           }}
         >
-          Doorlooptijd tot aan het IC, het risico dat AI de kernactiviteit overneemt, en uw oordeelsvorming: drie punten waar rendement weglekt. Deze sectie meet ze.
+          {t('sections.s2_desc')}
         </p>
       </div>
 
@@ -69,7 +73,7 @@ export default function Sectie2Page() {
           size="md"
           onClick={() => router.push('/scorecard/sectie-1')}
         >
-          Vorige sectie
+          {t('navigation.prev_section')}
         </Button>
         <Button
           variant="primary"
@@ -77,7 +81,7 @@ export default function Sectie2Page() {
           onClick={() => router.push('/scorecard/sectie-3')}
           disabled={!sectionDone}
         >
-          Verder naar sectie 3
+          {t('navigation.next_section_3')}
         </Button>
       </div>
       {!sectionDone && (
@@ -85,7 +89,7 @@ export default function Sectie2Page() {
           className="mt-3 text-right text-xs"
           style={{ color: 'var(--text-muted)' }}
         >
-          Beantwoord alle drie de vragen om verder te kunnen.
+          {t('navigation.answer_all_s2')}
         </p>
       )}
     </section>

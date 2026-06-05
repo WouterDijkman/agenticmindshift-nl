@@ -297,7 +297,7 @@
     "meta_description": "Quatro formas claramente diferenciadas de trabalhar com a Agentic Mindshift — desde uma Sparring Session acessível até um Fractional AI Officer e AI Due Diligence por operação ou em volume.",
     "hero": {
       "eyebrow": "Metodologia e Investimento",
-      "heading": "Desde €395 até liderança de IA integrada: você escolhe com base na sua necessidade.",
+      "heading": "Da primeira conversa até liderança de IA integrada: você escolhe com base na sua necessidade.",
       "subtext": "Quatro vias, quatro situações. Cada via começa com uma conversa sem compromisso e termina com um resultado concreto."
     },
     "steps": {
@@ -603,7 +603,21 @@
       "no_account": "Sem conta necessária. As suas respostas são guardadas automaticamente.",
       "trust": "Já preenchido por sócios de PE, diretores de M&A e family offices no mid-market neerlandês.",
       "confidentiality_title": "Confidencialidade",
-      "confidentiality_body": "As suas respostas são utilizadas apenas para gerar o seu relatório. Pode preenchê-lo anonimamente se preferir."
+      "confidentiality_body": "As suas respostas são utilizadas apenas para gerar o seu relatório. Pode preenchê-lo anonimamente se preferir.",
+      "blind_spots_note": "A maioria dos sócios de PE descobre os seus pontos cegos quando já é tarde demais. O seu investimento: doze minutos.",
+      "preview_eyebrow": "O que você recebe",
+      "preview_heading": "Este é o seu relatório, imediatamente após a última pergunta.",
+      "preview_body": "Seis dimensões, cada uma pontuada e comparada com empresas semelhantes. Os dois pontos de maior impacto são destacados.",
+      "stakes_eyebrow": "O custo de esperar",
+      "stakes_heading": "Doze minutos agora ou trimestres de incerteza depois.",
+      "stakes_body_1a": "A diferença entre um preço de aquisição fundamentado e um não calibrado? Em um alvo de EBITDA de €5M facilmente 0,5×: isso são ",
+      "stakes_highlight": "€2,5M",
+      "stakes_body_1b": ".",
+      "stakes_body_2": "O Scorecard é gratuito. Sem conta. O seu relatório está disponível imediatamente.",
+      "final_eyebrow": "Seu próximo passo",
+      "final_heading": "Em doze minutos você saberá exatamente onde sua carteira é vulnerável.",
+      "final_body": "Sem conta. Sem compromissos. Relatório disponível imediatamente após a conclusão.",
+      "final_cta_2": "Prefere uma conversa?"
     },
     "navigation": {
       "back_to_start": "← Voltar ao início",
@@ -611,7 +625,12 @@
       "next_section_3": "Continuar para a seção 3",
       "next_section_4": "Continuar para a seção 4",
       "to_results": "Para os meus resultados",
-      "answer_all": "Responda às quatro perguntas para continuar."
+      "answer_all": "Responda às quatro perguntas para continuar.",
+      "prev_section": "Seção anterior",
+      "answer_all_s1": "Responda todas as quatro perguntas para continuar.",
+      "answer_all_s2": "Responda todas as três perguntas para continuar.",
+      "answer_all_s3": "Responda todas as quatro perguntas para continuar.",
+      "answer_all_s4": "Responda todas as quatro perguntas para ver o seu resultado."
     },
     "resultaat": {
       "eyebrow": "Scorecard concluído",
@@ -639,7 +658,74 @@
       "privacy_link": "declaração de privacidade",
       "error_generic": "Algo correu mal. Por favor, tente novamente mais tarde.",
       "error_create": "Não conseguimos criar o seu relatório. Verifique os campos e tente novamente.",
-      "score_caption": "O relatório completo mostra a sua pontuação por dimensão com comparação entre pares."
+      "score_caption": "O relatório completo mostra a sua pontuação por dimensão com comparação entre pares.",
+      "question_singular": "pergunta",
+      "question_plural": "perguntas"
+    },
+    "section_cards": {
+      "s1_title": "Sua abordagem analítica hoje",
+      "s1_q": "4 perguntas",
+      "s2_title": "Seu ciclo de deals e análise",
+      "s2_q": "3 perguntas",
+      "s3_title": "Carteira, financiamento e monitorização",
+      "s3_q": "4 perguntas",
+      "s4_title": "Sua equipe e conhecimento",
+      "s4_q": "4 perguntas"
+    },
+    "sections": {
+      "s1_label": "Seção 1 de 4",
+      "s1_tagline": "Início. Doze minutos.",
+      "s1_title": "Sua abordagem analítica hoje",
+      "s1_desc": "Quão sistemática é a sua abordagem analítica em deals, financiamento e revisão de carteira? Esta seção mapeia a sua posição atual.",
+      "s2_label": "Seção 2 de 4",
+      "s2_tagline": "Bom progresso, um quarto concluído.",
+      "s2_title": "Seu ciclo de deal",
+      "s2_desc": "Tempo até o IC e a sua formação de julgamento: pontos onde os retornos vazam. Esta seção os mede.",
+      "s3_label": "Seção 3 de 4",
+      "s3_tagline": "Na metade. A parte mais interessante.",
+      "s3_title": "Carteira, financiamento e monitorização",
+      "s3_desc": "Relatórios de carteira, memorandos de financiamento, alertas antecipados: você consegue corrigir o rumo a tempo?",
+      "s4_label": "Seção 4 de 4",
+      "s4_tagline": "Última seção. Quase o seu relatório.",
+      "s4_title": "Sua equipe e conhecimento",
+      "s4_desc": "Quando um associado sai, a memória de três a cinco dossiês desaparece. Esta seção mede se a sua organização consegue resistir a isso."
+    },
+    "rapport": {
+      "eyebrow": "Relatório pessoal",
+      "no_answers_heading": "Nenhum relatório encontrado",
+      "no_answers_body": "Não foram encontradas respostas do scorecard neste navegador. Por favor, complete o scorecard novamente.",
+      "heading": "Seu Relatório de Deal & Portfolio Intelligence",
+      "subtext": "Você agora dispõe de informações que a maioria das empresas só obtém quando já é tarde demais.",
+      "hint": "Pontuação total · dimensões · comparação de pares · próximo passo recomendado",
+      "total_heading": "Pontuação total",
+      "total_body_1": "Sua pontuação total é baseada na soma das suas 15 respostas, com um máximo de 75 pontos.",
+      "total_body_2": "Suas duas dimensões mais fracas são os lugares mais prováveis onde os retornos estão vazando.",
+      "better_than": "Melhor que {pct}% das empresas comparáveis",
+      "dimensions_heading": "Por dimensão",
+      "peer_heading": "Comparação de pares",
+      "peer_stat": "Você pontua melhor que {pct}% das empresas comparáveis.",
+      "interpretation_heading": "Interpretação",
+      "interventions_heading": "Três intervenções concretas",
+      "offer_eyebrow": "Próximo passo recomendado",
+      "offer_match_body": "Com base no seu perfil, este programa se adapta melhor à sua situação.",
+      "offer_investment": "Investimento:",
+      "offer_excl_vat": "Excl. IVA. Primeira sessão sempre sem compromisso.",
+      "offer_cta_1": "Agendar uma conversa sem compromisso",
+      "offer_cta_2": "Ver todos os programas e investimento",
+      "pdf_note": "Você também receberá este relatório em PDF na sua caixa de entrada.",
+      "link_trajecten": "Ver todos os programas →",
+      "link_kennismaking": "Agendar uma conversa sem compromisso →",
+      "link_contact": "Discuta a sua situação →",
+      "print_btn": "Imprimir / salvar como PDF",
+      "high_heading": "Caro {name}: a sua abordagem se destaca. Vamos conversar.",
+      "high_body_1": "Você pertence ao pequeno grupo de sócios de PE que já mede sistematicamente o que a maioria só vê retrospectivamente.",
+      "high_score_body": "A sua pontuação é {score} de 75, significativamente acima da média.",
+      "high_body_3": "Uma recomendação específica não é significativa. Você está fazendo o que deve fazer.",
+      "high_body_4": "O que gostaria de oferecer é uma conversa confidencial sobre o seu enfoque, como troca entre pares, voluntário, sem agenda.",
+      "high_next_eyebrow": "Próximo passo",
+      "high_next_body": "Envie uma mensagem pelo LinkedIn para uma troca entre pares.",
+      "high_cta_1": "Conectar no LinkedIn",
+      "high_cta_2": "Ver os programas"
     }
   }
 }

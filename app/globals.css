@@ -1491,6 +1491,27 @@ nav, header, .nav-link, .eyebrow-ui {
 }
 
 /* ================================================================== */
+/* MOBILE SECTION BREATHING ROOM                                       */
+/* Marketing pages sit inside <main>; scorecard uses a <div> wrapper,  */
+/* so "main section" safely targets only marketing page sections.       */
+/* ================================================================== */
+@media (max-width: 640px) {
+  main section {
+    padding-block: 80px !important;
+  }
+
+  /* Dense card grids (gap:1px hairline pattern) → real gutters         */
+  .dense-grid {
+    gap: 12px !important;
+    background: transparent !important;
+    border: none !important;
+  }
+  .dense-grid > * {
+    border: 1px solid var(--border-subtle) !important;
+  }
+}
+
+/* ================================================================== */
 /* PRINT — hide decorative elements                                   */
 /* ================================================================== */
 @media print {

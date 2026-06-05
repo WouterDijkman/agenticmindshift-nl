@@ -297,7 +297,7 @@
     "meta_description": "Vier klar differenzierte Wege, mit Agentic Mindshift zu arbeiten — von einer niedrigschwelligen Sparring-Sitzung bis hin zu einem Fractional AI Officer und AI Due Diligence pro Deal oder in Volumen.",
     "hero": {
       "eyebrow": "Arbeitsweise & Investition",
-      "heading": "Von €395 bis eingebettetes KI-Leadership: Sie wählen basierend auf Ihrer Frage.",
+      "heading": "Vom ersten Gespräch bis zum eingebetteten KI-Leadership: Sie wählen basierend auf Ihrer Frage.",
       "subtext": "Vier Wege, vier Situationen. Jeder Weg beginnt mit einem unverbindlichen Gespräch und endet mit einem konkreten Ergebnis."
     },
     "steps": {
@@ -603,7 +603,21 @@
       "no_account": "Kein Konto erforderlich. Ihre Antworten werden zwischenzeitlich gespeichert.",
       "trust": "Bereits ausgefüllt von PE-Partnern, M&A-Direktoren und Family Offices im niederländischen Mid-Market.",
       "confidentiality_title": "Vertraulichkeit",
-      "confidentiality_body": "Ihre Antworten werden ausschließlich zur Erstellung Ihres Berichts verwendet. Sie können anonym ausfüllen, falls Sie das wünschen."
+      "confidentiality_body": "Ihre Antworten werden ausschließlich zur Erstellung Ihres Berichts verwendet. Sie können anonym ausfüllen, falls Sie das wünschen.",
+      "blind_spots_note": "Die meisten PE-Partner entdecken ihre blinden Flecken erst, wenn es bereits zu spät ist. Ihre Investition: zwölf Minuten.",
+      "preview_eyebrow": "Was Sie erhalten",
+      "preview_heading": "Das ist Ihr Bericht, direkt nach der letzten Frage.",
+      "preview_body": "Sechs Dimensionen, jede bewertet und mit vergleichbaren Unternehmen verglichen. Die zwei wirkungsstärksten Punkte werden hervorgehoben, damit Sie wissen, wo Sie als Erstes ansetzen müssen.",
+      "stakes_eyebrow": "Die Kosten des Zögerns",
+      "stakes_heading": "Zwölf Minuten jetzt oder Quartale der Unsicherheit später.",
+      "stakes_body_1a": "Der Unterschied zwischen einem fundierten und einem nicht kalibrierten Übernahmepreis? Bei einem €5M EBITDA-Ziel leicht 0,5×: das sind ",
+      "stakes_highlight": "€2,5M",
+      "stakes_body_1b": ".",
+      "stakes_body_2": "Der Scorecard ist kostenlos. Kein Konto. Ihr Bericht ist sofort verfügbar.",
+      "final_eyebrow": "Ihr nächster Schritt",
+      "final_heading": "In zwölf Minuten wissen Sie genau, wo Ihr Portfolio verwundbar ist.",
+      "final_body": "Kein Konto. Keine Verpflichtungen. Bericht direkt nach Abschluss verfügbar.",
+      "final_cta_2": "Lieber ein Gespräch?"
     },
     "navigation": {
       "back_to_start": "← Zurück zum Start",
@@ -611,7 +625,12 @@
       "next_section_3": "Weiter zu Abschnitt 3",
       "next_section_4": "Weiter zu Abschnitt 4",
       "to_results": "Zu meinen Ergebnissen",
-      "answer_all": "Beantworten Sie alle vier Fragen, um fortzufahren."
+      "answer_all": "Beantworten Sie alle vier Fragen, um fortzufahren.",
+      "prev_section": "Vorheriger Abschnitt",
+      "answer_all_s1": "Beantworten Sie alle vier Fragen, um fortzufahren.",
+      "answer_all_s2": "Beantworten Sie alle drei Fragen, um fortzufahren.",
+      "answer_all_s3": "Beantworten Sie alle vier Fragen, um fortzufahren.",
+      "answer_all_s4": "Beantworten Sie alle vier Fragen, um Ihr Ergebnis zu sehen."
     },
     "resultaat": {
       "eyebrow": "Scorecard abgeschlossen",
@@ -639,7 +658,74 @@
       "privacy_link": "Datenschutzerklärung",
       "error_generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut.",
       "error_create": "Wir konnten Ihren Bericht nicht erstellen. Bitte überprüfen Sie die Felder und versuchen Sie es erneut.",
-      "score_caption": "Der vollständige Bericht zeigt Ihre Punktzahl je Dimension mit Peer-Vergleich."
+      "score_caption": "Der vollständige Bericht zeigt Ihre Punktzahl je Dimension mit Peer-Vergleich.",
+      "question_singular": "Frage",
+      "question_plural": "Fragen"
+    },
+    "section_cards": {
+      "s1_title": "Ihr analytischer Ansatz heute",
+      "s1_q": "4 Fragen",
+      "s2_title": "Ihr Deal- und Analysezyklus",
+      "s2_q": "3 Fragen",
+      "s3_title": "Portfolio, Finanzierung und Monitoring",
+      "s3_q": "4 Fragen",
+      "s4_title": "Ihr Team und Wissen",
+      "s4_q": "4 Fragen"
+    },
+    "sections": {
+      "s1_label": "Abschnitt 1 von 4",
+      "s1_tagline": "Start. Zwölf Minuten.",
+      "s1_title": "Ihr analytischer Ansatz heute",
+      "s1_desc": "Wie systematisch ist Ihr analytischer Ansatz bei Deals, Finanzierung und Portfolio-Review? Dieser Abschnitt kartiert Ihre aktuelle Position.",
+      "s2_label": "Abschnitt 2 von 4",
+      "s2_tagline": "Gut gemacht, ein Viertel geschafft.",
+      "s2_title": "Ihr Deal-Zyklus",
+      "s2_desc": "Durchlaufzeit bis zum IC, das Risiko, dass KI die Kernaktivität übernimmt, und Ihre Urteilsbildung: drei Punkte, an denen Rendite verloren geht. Dieser Abschnitt misst sie.",
+      "s3_label": "Abschnitt 3 von 4",
+      "s3_tagline": "Halbzeit. Der interessanteste Teil.",
+      "s3_title": "Portfolio, Finanzierung und Monitoring",
+      "s3_desc": "Portfolio-Reporting, Finanzierungsmemoranden, Frühwarnung: Können Sie rechtzeitig gegensteuern? Dieser Abschnitt misst die Struktur hinter Ihren Informationen.",
+      "s4_label": "Abschnitt 4 von 4",
+      "s4_tagline": "Letzter Abschnitt. Fast Ihr Bericht.",
+      "s4_title": "Ihr Team und Wissen",
+      "s4_desc": "Wenn ein Associate ausscheidet, geht das Gedächtnis von drei bis fünf Akten verloren. Dieser Abschnitt misst, ob Ihre Organisation dem standhalten kann."
+    },
+    "rapport": {
+      "eyebrow": "Persönlicher Bericht",
+      "no_answers_heading": "Kein Bericht gefunden",
+      "no_answers_body": "In diesem Browser konnten keine Scorecard-Antworten gefunden werden. Bitte füllen Sie den Scorecard erneut aus, um Ihren Bericht zu erstellen.",
+      "heading": "Ihr Deal & Portfolio Intelligence Bericht",
+      "subtext": "Sie verfügen jetzt über Einblicke, die die meisten Unternehmen erst erhalten, wenn es bereits zu spät ist. Unten erfahren Sie, wo Ihr analytisches Fundament stark ist, wo es leckt und welcher Factum Capital-Moment am relevantesten ist.",
+      "hint": "Gesamtpunktzahl · Dimensionen · Peer-Vergleich · empfohlener nächster Schritt",
+      "total_heading": "Gesamtpunktzahl",
+      "total_body_1": "Ihre Gesamtpunktzahl basiert auf der Summe Ihrer 15 Antworten mit einem Maximum von 75 Punkten.",
+      "total_body_2": "Ihre zwei schwächsten Dimensionen sind die wahrscheinlichsten Stellen, an denen Rendite verloren geht.",
+      "better_than": "Besser als {pct}% der vergleichbaren Unternehmen",
+      "dimensions_heading": "Nach Dimension",
+      "peer_heading": "Peer-Vergleich",
+      "peer_stat": "Sie schneiden besser ab als {pct}% vergleichbarer Unternehmen.",
+      "interpretation_heading": "Interpretation",
+      "interventions_heading": "Drei konkrete Interventionen",
+      "offer_eyebrow": "Empfohlener nächster Schritt",
+      "offer_match_body": "Basierend auf Ihrem Score-Profil passt dieser Pfad am besten zu Ihrer Situation.",
+      "offer_investment": "Investition:",
+      "offer_excl_vat": "Zzgl. MwSt. Erste Sitzung immer unverbindlich.",
+      "offer_cta_1": "Unverbindliches Kennenlerngespräch planen",
+      "offer_cta_2": "Alle Angebote & Investitionen ansehen",
+      "pdf_note": "Sie erhalten diesen Bericht auch als PDF in Ihrem Posteingang.",
+      "link_trajecten": "Alle Angebote ansehen →",
+      "link_kennismaking": "Unverbindliches Kennenlerngespräch planen →",
+      "link_contact": "Ihre Situation besprechen →",
+      "print_btn": "Drucken / als PDF speichern",
+      "high_heading": "Lieber {name}: Ihr Ansatz fällt auf. Lassen Sie uns darüber sprechen.",
+      "high_body_1": "Sie gehören zu der kleinen Gruppe von PE-Partnern, die bereits systematisch messen, was die meisten erst im Nachhinein sehen.",
+      "high_score_body": "Ihre Punktzahl ist {score} von 75. Das liegt deutlich über dem Durchschnitt.",
+      "high_body_3": "Eine spezifische Interventionsempfehlung ist nicht sinnvoll. Sie tun, was Sie tun sollten.",
+      "high_body_4": "Was ich anbieten möchte, ist ein vertrauliches Gespräch über Ihren Ansatz. Als Peer-Austausch, freiwillig, keine Agenda.",
+      "high_next_eyebrow": "Nächster Schritt",
+      "high_next_body": "Senden Sie eine Nachricht über LinkedIn für einen Peer-Austausch.",
+      "high_cta_1": "Auf LinkedIn verbinden",
+      "high_cta_2": "Die Angebote ansehen"
     }
   }
 }

@@ -1,13 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-
-const sections = [
-  { n: '01', title: 'Uw analytische aanpak vandaag', q: '4 vragen' },
-  { n: '02', title: 'Uw deal- en analysecyclus', q: '3 vragen' },
-  { n: '03', title: 'Portefeuille, financiering en monitoring', q: '4 vragen' },
-  { n: '04', title: 'Uw team en kennis', q: '4 vragen' },
-];
+import { useTranslations } from 'next-intl';
 
 const containerVariants = {
   hidden: {},
@@ -24,8 +18,18 @@ const itemVariants = {
 };
 
 export default function ScorecardSectionCards() {
+  const t = useTranslations('scorecard.section_cards');
+
+  const sections = [
+    { n: '01', title: t('s1_title'), q: t('s1_q') },
+    { n: '02', title: t('s2_title'), q: t('s2_q') },
+    { n: '03', title: t('s3_title'), q: t('s3_q') },
+    { n: '04', title: t('s4_title'), q: t('s4_q') },
+  ];
+
   return (
     <motion.div
+      className="dense-grid"
       style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
@@ -52,7 +56,7 @@ export default function ScorecardSectionCards() {
         >
           <p
             style={{
-                            fontSize: 'clamp(40px, 5vw, 56px)',
+              fontSize: 'clamp(40px, 5vw, 56px)',
               fontWeight: 800,
               letterSpacing: '-0.04em',
               lineHeight: 0.9,

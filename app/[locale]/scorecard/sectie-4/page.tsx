@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { useRouter } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import { useAssessmentStore } from '@/store/assessmentStore';
 import { questionsBySection, questions } from '@/lib/questions';
 import QuestionCard from '@/components/scorecard/QuestionCard';
@@ -9,6 +10,7 @@ import ProgressBar from '@/components/scorecard/ProgressBar';
 import Button from '@/components/ui/Button';
 
 export default function Sectie4Page() {
+  const t = useTranslations('scorecard');
   const router = useRouter();
   const answers = useAssessmentStore((s) => s.answers);
   const setAnswer = useAssessmentStore((s) => s.setAnswer);
@@ -35,19 +37,21 @@ export default function Sectie4Page() {
         }}
       >
         <div style={{ display: 'flex', alignItems: 'baseline', gap: '16px', marginBottom: '16px' }}>
-          <p className="eyebrow" style={{ marginBottom: 0 }}>Sectie 4 van 4</p>
-          <span style={{ fontSize: '0.8125rem', color: 'var(--accent-cta)', fontWeight: 500, letterSpacing: '0.01em' }}>Laatste sectie. Bijna uw rapport.</span>
+          <p className="eyebrow" style={{ marginBottom: 0 }}>{t('sections.s4_label')}</p>
+          <span style={{ fontSize: '0.8125rem', color: 'var(--accent-cta)', fontWeight: 500, letterSpacing: '0.01em' }}>
+            {t('sections.s4_tagline')}
+          </span>
         </div>
-        <h1 className="type-h2" style={{ marginBottom: '16px' }}>Uw team en kennis</h1>
+        <h1 className="type-h2" style={{ marginBottom: '16px' }}>{t('sections.s4_title')}</h1>
         <p
           style={{
-                        fontSize: '1.0625rem',
+            fontSize: '1.0625rem',
             color: 'var(--text-secondary)',
             lineHeight: 1.75,
             maxWidth: '560px',
           }}
         >
-          Als een associate vertrekt, verdwijnt het geheugen van drie tot vijf dossiers. Deze sectie meet of uw organisatie daar bestand tegen is.
+          {t('sections.s4_desc')}
         </p>
       </div>
 
@@ -69,7 +73,7 @@ export default function Sectie4Page() {
           size="md"
           onClick={() => router.push('/scorecard/sectie-3')}
         >
-          Vorige sectie
+          {t('navigation.prev_section')}
         </Button>
         <Button
           variant="primary"
@@ -77,7 +81,7 @@ export default function Sectie4Page() {
           onClick={() => router.push('/scorecard/resultaat')}
           disabled={!sectionDone}
         >
-          Naar uw resultaat
+          {t('navigation.to_results')}
         </Button>
       </div>
       {!sectionDone && (
@@ -85,7 +89,7 @@ export default function Sectie4Page() {
           className="mt-3 text-right text-xs"
           style={{ color: 'var(--text-muted)' }}
         >
-          Beantwoord alle vier de vragen om uw resultaat te zien.
+          {t('navigation.answer_all_s4')}
         </p>
       )}
     </section>

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
@@ -16,6 +17,7 @@ import { Input } from '@/components/ui/Input';
 import Button from '@/components/ui/Button';
 
 export default function ResultaatPage() {
+  const t = useTranslations('scorecard.resultaat');
   const router = useRouter();
   const answers = useAssessmentStore((s) => s.answers);
   const setLeadId = useAssessmentStore((s) => s.setLeadId);
@@ -46,18 +48,19 @@ export default function ResultaatPage() {
   });
 
   if (hydrated && !allAnswered) {
+    const remaining = totalQuestions - answeredCount;
+    const questionsWord = remaining === 1 ? t('question_singular') : t('question_plural');
     return (
       <section className="container-narrow py-16 text-center">
-        <p className="eyebrow" style={{ marginBottom: '16px' }}>Scorecard onvolledig</p>
+        <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('incomplete_eyebrow')}</p>
         <h1 className="type-h2" style={{ marginBottom: '16px' }}>
-          Nog {totalQuestions - answeredCount} {totalQuestions - answeredCount === 1 ? 'vraag' : 'vragen'} te gaan
+          {t('incomplete_heading', { remaining, questions: questionsWord })}
         </h1>
         <p style={{ color: 'var(--text-secondary)', marginBottom: '36px', lineHeight: 1.75 }}>
-          U heeft {answeredCount} van {totalQuestions} vragen beantwoord. Vul de scorecard
-          eerst volledig af om uw persoonlijke rapport te genereren.
+          {t('incomplete_body', { answered: answeredCount, total: totalQuestions })}
         </p>
         <Button href="/scorecard/sectie-1" variant="primary" size="lg">
-          Terug naar de scorecard
+          {t('back_to_scorecard')}
         </Button>
       </section>
     );
@@ -73,12 +76,10 @@ export default function ResultaatPage() {
         setLeadName(data.name);
         router.push(`/scorecard/rapport/${res.leadId}`);
       } else {
-        setServerError(
-          'We konden uw rapport niet aanmaken. Controleer de velden en probeer opnieuw.',
-        );
+        setServerError(t('error_create'));
       }
     } catch {
-      setServerError('Er ging iets mis. Probeer het later nog eens.');
+      setServerError(t('error_generic'));
     } finally {
       setSubmitting(false);
     }
@@ -95,13 +96,12 @@ export default function ResultaatPage() {
           borderBottom: '1px solid var(--border-subtle)',
         }}
       >
-        <p className="eyebrow" style={{ marginBottom: '16px' }}>Scorecard voltooid</p>
+        <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('eyebrow')}</p>
         <h1 className="type-h2" style={{ marginBottom: '12px' }}>
-          U ziet nu wat de meeste partners pas bij de jaarrapportage zien.
+          {t('heading')}
         </h1>
         <p style={{ fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, maxWidth: '520px' }}>
-          Vul uw gegevens in om het volledige rapport te ontvangen, direct in uw browser
-          én als PDF in uw inbox.
+          {t('subtext')}
         </p>
       </div>
 
@@ -128,23 +128,17 @@ export default function ResultaatPage() {
               lineHeight: 1.6,
             }}
           >
-            Het volledige rapport toont uw score per dimensie met peer-vergelijking.
+            {t('score_caption')}
           </p>
         </div>
 
         {/* Rapport inhoud */}
         <div>
-          <p className="eyebrow" style={{ marginBottom: '20px' }}>Wat zit er in uw rapport?</p>
+          <p className="eyebrow" style={{ marginBottom: '20px' }}>{t('report_contents_eyebrow')}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
-            {[
-              { num: '01', text: 'Totaalscore met toelichting per dimensie' },
-              { num: '02', text: 'Zes-dimensies-overzicht met peer-benchmark' },
-              { num: '03', text: 'Uw twee zwakste dimensies en concrete duiding' },
-              { num: '04', text: 'Aanbevolen vervolgstap op basis van uw antwoorden' },
-              { num: '05', text: 'Persoonlijke link + PDF in uw inbox' },
-            ].map((item) => (
+            {(['report_item_1', 'report_item_2', 'report_item_3', 'report_item_4', 'report_item_5'] as const).map((key, i) => (
               <div
-                key={item.num}
+                key={key}
                 style={{
                   display: 'flex',
                   alignItems: 'flex-start',
@@ -155,7 +149,7 @@ export default function ResultaatPage() {
               >
                 <span
                   style={{
-                                        fontSize: '0.75rem',
+                    fontSize: '0.75rem',
                     fontWeight: 800,
                     color: 'var(--accent-cta)',
                     letterSpacing: '0.06em',
@@ -163,10 +157,10 @@ export default function ResultaatPage() {
                     paddingTop: '1px',
                   }}
                 >
-                  {item.num}
+                  {String(i + 1).padStart(2, '0')}
                 </span>
                 <span style={{ fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                  {item.text}
+                  {t(key)}
                 </span>
               </div>
             ))}
@@ -182,39 +176,39 @@ export default function ResultaatPage() {
           padding: 'clamp(28px, 4vw, 44px)',
         }}
       >
-        <h2 className="type-h3" style={{ marginBottom: '8px' }}>Waar stuur ik uw rapport naartoe?</h2>
+        <h2 className="type-h3" style={{ marginBottom: '8px' }}>{t('form_heading')}</h2>
 
         <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-2 gap-5" noValidate>
           <Input
-            label="Naam"
+            label={t('field_name')}
             type="text"
             autoComplete="name"
             {...register('name')}
             error={errors.name?.message}
           />
           <Input
-            label="Zakelijk e-mailadres"
+            label={t('field_email')}
             type="email"
             autoComplete="email"
             {...register('email')}
             error={errors.email?.message}
           />
           <Input
-            label="Bedrijf"
+            label={t('field_company')}
             type="text"
             autoComplete="organization"
             {...register('company')}
             error={errors.company?.message}
           />
           <Input
-            label="Functietitel (optioneel)"
+            label={t('field_jobtitle')}
             type="text"
             autoComplete="organization-title"
             {...register('jobTitle')}
             error={errors.jobTitle?.message}
           />
           <Input
-            label="Telefoon (optioneel)"
+            label={t('field_phone')}
             type="tel"
             autoComplete="tel"
             {...register('phone')}
@@ -227,14 +221,10 @@ export default function ResultaatPage() {
               </p>
             )}
             <Button type="submit" variant="primary" size="lg" disabled={submitting}>
-              {submitting ? 'Rapport genereren...' : 'Toon mijn rapport'}
+              {submitting ? t('submit_loading') : t('submit_button')}
             </Button>
             <p className="text-xs" style={{ color: 'var(--text-muted)' }}>
-              Door te klikken gaat u akkoord met ons{' '}
-              <a href="/privacy" style={{ color: 'var(--text-tertiary)', textDecoration: 'underline' }}>
-                privacystatement
-              </a>
-              . U ontvangt twee opvolg-mails (dag&nbsp;3 en&nbsp;7). Daarna niets meer.
+              {t('privacy_notice')}
             </p>
           </div>
         </form>

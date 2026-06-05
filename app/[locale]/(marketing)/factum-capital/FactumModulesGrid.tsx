@@ -55,6 +55,7 @@ export default function FactumModulesGrid() {
         </motion.div>
 
         <motion.div
+          className="dense-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
