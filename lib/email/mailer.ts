@@ -41,6 +41,13 @@ function getTransporter(): Transporter {
   return cachedTransporter;
 }
 
+export interface MailAttachment {
+  filename: string;
+  /** Buffer of base64 string */
+  content: Buffer | string;
+  contentType?: string;
+}
+
 export interface SendMailOptions {
   to: string;
   subject: string;
@@ -49,6 +56,8 @@ export interface SendMailOptions {
   replyTo?: string;
   /** Optioneel: BCC voor archivering */
   bcc?: string;
+  /** Optioneel: bijlagen (PDF, etc.) */
+  attachments?: MailAttachment[];
 }
 
 export interface SendMailResult {
@@ -78,6 +87,7 @@ export async function sendMail(options: SendMailOptions): Promise<SendMailResult
       html: options.html,
       replyTo: options.replyTo ?? fromAddress,
       bcc: options.bcc,
+      attachments: options.attachments,
     });
     return { sent: true, messageId: info.messageId };
   } catch (err) {

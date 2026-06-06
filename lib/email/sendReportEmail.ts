@@ -6,10 +6,14 @@
 
 import { createElement } from 'react';
 import { render } from '@react-email/components';
+import { renderToBuffer } from '@react-pdf/renderer';
 import { type GeneratedReport } from '@/lib/report/types';
 import ScorecardReportEmail from './templates/ScorecardReportEmail';
+import ReportDocument from '@/lib/pdf/reportTemplate';
 import { isSupabaseConfigured, getSupabaseClient } from '@/lib/supabase';
 import { sendMail, isGmailConfigured } from './mailer';
+import { type Answers, calculateScores, determineOffer, type OfferType } from '@/lib/scoring';
+import { type Dimension } from '@/lib/questions';
 
 interface SendReportEmailOptions {
   name: string;
@@ -27,16 +31,18 @@ export async function sendReportEmail(options: SendReportEmailOptions): Promise<
   }
 
   let emailAddress = options.email;
+  let answers: Answers | undefined;
 
-  // Haal email op uit Supabase als niet meegegeven
-  if (!emailAddress && isSupabaseConfigured()) {
+  // Haal email + answers op uit Supabase als niet meegegeven (voor PDF generatie)
+  if (isSupabaseConfigured()) {
     const client = getSupabaseClient();
     const { data } = await client
       .from('leads')
-      .select('email')
+      .select('email, answers')
       .eq('id', options.leadId)
       .single();
-    emailAddress = data?.email ?? '';
+    if (!emailAddress) emailAddress = data?.email ?? '';
+    answers = data?.answers as Answers | undefined;
   }
 
   if (!emailAddress) {
@@ -60,13 +66,44 @@ export async function sendReportEmail(options: SendReportEmailOptions): Promise<
 
   const subject = buildEmailSubject(options.name, options.report);
 
+  // Genereer PDF als attachment (cream editorial template)
+  let pdfAttachment: { filename: string; content: Buffer; contentType: string } | undefined;
+  if (answers) {
+    try {
+      const scores = calculateScores(answers);
+      const offer = determineOffer(answers['Q4']) as OfferType;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const pdfElement = createElement(ReportDocument as any, {
+        name: options.name,
+        company: options.company,
+        totalScore: scores.total,
+        byDimension: scores.byDimension as Record<Dimension, number>,
+        weakest: scores.weakest,
+        offer,
+        generatedAt: new Date().toLocaleDateString('nl-NL'),
+        report: options.report,
+      });
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const buffer = await renderToBuffer(pdfElement as any);
+      const safeCompany = options.company.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
+      pdfAttachment = {
+        filename: `ai-readiness-rapport-${safeCompany}.pdf`,
+        content: buffer as Buffer,
+        contentType: 'application/pdf',
+      };
+      console.log(`[sendReportEmail] PDF gegenereerd (${(buffer as Buffer).length} bytes)`);
+    } catch (err) {
+      console.error('[sendReportEmail] PDF-generatie mislukt (mail gaat zonder bijlage)', err instanceof Error ? err.message : err);
+    }
+  }
+
   const result = await sendMail({
     to: emailAddress,
     subject,
     html,
     // BCC naar je eigen adres zodat de mail in je Gmail Sent + Inbox staat
-    // voor archivering. Comment out als niet gewenst.
     bcc: process.env.GMAIL_USER,
+    attachments: pdfAttachment ? [pdfAttachment] : undefined,
   });
 
   if (result.sent) {
