@@ -94,8 +94,11 @@ export default function RapportPage() {
   }
 
   const hasAnswers = Object.keys(answers).length > 0;
+  // If there's a leadId in the URL but no answers in the store (e.g. direct link,
+  // shared URL, or test lead), show only the deep analysis — it loads from Supabase.
+  const showOnlyDeepAnalysis = !hasAnswers && !!leadId;
 
-  if (!hasAnswers) {
+  if (!hasAnswers && !leadId) {
     return (
       <section className="container-narrow py-16 text-center">
         <h1 className="type-h1 mb-4">{t('no_answers_heading')}</h1>
@@ -105,6 +108,39 @@ export default function RapportPage() {
         <Button href="/scorecard" variant="primary" size="lg">
           {t('offer_cta_2')}
         </Button>
+      </section>
+    );
+  }
+
+  if (showOnlyDeepAnalysis) {
+    return (
+      <section className="container-wide py-12">
+        <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('eyebrow')}</p>
+        <h1 className="type-h1 mb-3">{t('heading')}</h1>
+        <p className="mb-8 measure" style={{ color: 'var(--text-secondary)', fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)', lineHeight: 1.75 }}>
+          {t('subtext')}
+        </p>
+        <ReportDeepAnalysis leadId={leadId} />
+        <div className="pt-8 no-print" style={{ borderTop: '1px solid var(--border-subtle)' }}>
+          <div className="flex flex-col sm:flex-row gap-3 mb-6">
+            <a
+              href={`/api/download-report/${leadId}`}
+              download
+              className="btn btn-secondary"
+              style={{ fontSize: '0.9375rem', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+            >
+              <span>↓</span> PDF downloaden
+            </a>
+            <Button variant="secondary" size="md" onClick={() => window.print()}>
+              {t('print_btn')}
+            </Button>
+          </div>
+          <div className="flex gap-4 flex-wrap">
+            <a href="https://cal.com/wwdijkman/intake-call" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
+              {t('link_kennismaking')}
+            </a>
+          </div>
+        </div>
       </section>
     );
   }
