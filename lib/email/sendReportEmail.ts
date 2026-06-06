@@ -1,15 +1,15 @@
 /**
- * Verstuurt het scorecard-rapport per email via Resend.
+ * Verstuurt het scorecard-rapport per email via Gmail SMTP (nodemailer).
  * Bevat de executive summary + link naar het volledige online rapport.
- * Graceful no-op als Resend niet geconfigureerd is.
+ * Graceful no-op als Gmail niet geconfigureerd is.
  */
 
-import { Resend } from 'resend';
 import { createElement } from 'react';
 import { render } from '@react-email/components';
 import { type GeneratedReport } from '@/lib/report/types';
 import ScorecardReportEmail from './templates/ScorecardReportEmail';
 import { isSupabaseConfigured, getSupabaseClient } from '@/lib/supabase';
+import { sendMail, isGmailConfigured } from './mailer';
 
 interface SendReportEmailOptions {
   name: string;
@@ -21,9 +21,8 @@ interface SendReportEmailOptions {
 }
 
 export async function sendReportEmail(options: SendReportEmailOptions): Promise<void> {
-  const resendKey = process.env.RESEND_API_KEY;
-  if (!resendKey) {
-    console.log('[sendReportEmail] RESEND_API_KEY not set — skipping email');
+  if (!isGmailConfigured()) {
+    console.log('[sendReportEmail] Gmail niet geconfigureerd — mail overgeslagen');
     return;
   }
 
@@ -41,14 +40,11 @@ export async function sendReportEmail(options: SendReportEmailOptions): Promise<
   }
 
   if (!emailAddress) {
-    console.warn('[sendReportEmail] No email address found for lead', options.leadId);
+    console.warn('[sendReportEmail] Geen email-adres gevonden voor lead', options.leadId);
     return;
   }
 
-  const resend = new Resend(resendKey);
-  const fromAddress = process.env.RESEND_FROM ?? 'Wouter Dijkman <wouter@agenticmindshift.nl>';
-
-  // Rendert de React email template naar HTML
+  // Render React Email template naar HTML
   const html = await render(
     createElement(ScorecardReportEmail, {
       name: options.name,
@@ -64,33 +60,31 @@ export async function sendReportEmail(options: SendReportEmailOptions): Promise<
 
   const subject = buildEmailSubject(options.name, options.report);
 
-  try {
-    const { data, error } = await resend.emails.send({
-      from: fromAddress,
-      to: emailAddress,
-      subject,
-      html,
-    });
+  const result = await sendMail({
+    to: emailAddress,
+    subject,
+    html,
+    // BCC naar je eigen adres zodat de mail in je Gmail Sent + Inbox staat
+    // voor archivering. Comment out als niet gewenst.
+    bcc: process.env.GMAIL_USER,
+  });
 
-    if (error) {
-      console.error('[sendReportEmail] Resend error', error);
-    } else {
-      console.log(`[sendReportEmail] Email sent to ${emailAddress}`, data?.id);
+  if (result.sent) {
+    console.log(`[sendReportEmail] Mail verstuurd naar ${emailAddress} (id: ${result.messageId})`);
 
-      // Update email_sequence_step: rapport-mail is stap 0 (vóór de 3/7-daagse follow-up)
-      if (isSupabaseConfigured()) {
-        const client = getSupabaseClient();
-        await client
-          .from('leads')
-          .update({
-            email_sequence_step: 1,
-            last_email_sent_at: new Date().toISOString(),
-          })
-          .eq('id', options.leadId);
-      }
+    // Update lead row: email-sequence stap 1 actief
+    if (isSupabaseConfigured()) {
+      const client = getSupabaseClient();
+      await client
+        .from('leads')
+        .update({
+          email_sequence_step: 1,
+          last_email_sent_at: new Date().toISOString(),
+        })
+        .eq('id', options.leadId);
     }
-  } catch (err) {
-    console.error('[sendReportEmail] Unexpected error', err);
+  } else {
+    console.error('[sendReportEmail] Verzenden mislukt', result.error);
   }
 }
 

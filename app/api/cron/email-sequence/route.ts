@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
 import { render } from '@react-email/components';
 import { createElement } from 'react';
 import { getSupabaseClient, isSupabaseConfigured } from '@/lib/supabase';
 import Followup3DayEmail from '@/lib/email/templates/Followup3DayEmail';
 import Followup7DayEmail from '@/lib/email/templates/Followup7DayEmail';
+import { sendMail, isGmailConfigured } from '@/lib/email/mailer';
 import { offerMap, type OfferType } from '@/lib/scoring';
 
 export const dynamic = 'force-dynamic';
@@ -36,14 +36,10 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
   }
 
-  if (!isSupabaseConfigured() || !process.env.RESEND_API_KEY) {
-    console.log('[cron] skipped — env missing');
+  if (!isSupabaseConfigured() || !isGmailConfigured()) {
+    console.log('[cron] skipped — env missing (Supabase of Gmail)');
     return NextResponse.json({ skipped: true });
   }
-
-  const resend = new Resend(process.env.RESEND_API_KEY);
-  const fromAddress =
-    process.env.RESEND_FROM || 'Wouter Dijkman <wouter@agenticmindshift.nl>';
 
   let processed = 0;
 
@@ -81,8 +77,7 @@ export async function GET(request: Request) {
               weakestDimensions: weakest,
             }),
           );
-          await resend.emails.send({
-            from: fromAddress,
+          await sendMail({
             to: lead.email,
             subject: 'Drie dagen later — wat valt op in uw rapport?',
             html,
@@ -104,8 +99,7 @@ export async function GET(request: Request) {
               offerName,
             }),
           );
-          await resend.emails.send({
-            from: fromAddress,
+          await sendMail({
             to: lead.email,
             subject: 'Een week later — concrete vervolgstap',
             html,
@@ -132,8 +126,7 @@ export async function GET(request: Request) {
               offerName,
             }),
           );
-          await resend.emails.send({
-            from: fromAddress,
+          await sendMail({
             to: lead.email,
             subject: 'Opvolging — wanneer past het?',
             html,
