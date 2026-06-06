@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useEffect, useState } from 'react';
+import { useParams } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { useAssessmentStore } from '@/store/assessmentStore';
@@ -17,6 +18,7 @@ import TotalScoreCircle from '@/components/scorecard/TotalScoreCircle';
 import DimensionBars from '@/components/scorecard/DimensionBars';
 import PeerBenchmarkChart from '@/components/scorecard/PeerBenchmarkChart';
 import Button from '@/components/ui/Button';
+import ReportDeepAnalysis from './ReportDeepAnalysis';
 
 export const dynamic = 'force-dynamic';
 
@@ -47,6 +49,10 @@ export default function RapportPage() {
   const tV = useTranslations('scorecard.variants');
   const answers = useAssessmentStore((s) => s.answers);
   const leadName = useAssessmentStore((s) => s.leadName);
+  const storedLeadId = useAssessmentStore((s) => s.leadId);
+  const params = useParams();
+  // Gebruik de [id] param (UUID van Supabase lead row)
+  const leadId = (params?.id as string) || storedLeadId || '';
 
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => setHydrated(true), []);
@@ -140,6 +146,8 @@ export default function RapportPage() {
           </div>
         </div>
 
+        {leadId && <ReportDeepAnalysis leadId={leadId} />}
+
         <div
           className="mb-12"
           style={{
@@ -164,24 +172,31 @@ export default function RapportPage() {
         </div>
 
         <div
-          className="text-center pt-8 no-print"
+          className="pt-8 no-print"
           style={{ borderTop: '1px solid var(--border-subtle)' }}
         >
-          <p className="text-sm" style={{ color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: '16px' }}>
-            {t('pdf_note')}
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
+          <div className="flex flex-col sm:flex-row gap-3 mb-6">
+            {leadId && (
+              <a
+                href={`/api/download-report/${leadId}`}
+                download
+                className="btn btn-secondary"
+                style={{ fontSize: '0.9375rem', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+              >
+                <span>↓</span> PDF downloaden
+              </a>
+            )}
+            <Button variant="secondary" size="md" onClick={() => window.print()}>
+              {t('print_btn')}
+            </Button>
+          </div>
+          <div className="flex gap-4 flex-wrap">
             <Link href="/werkwijze" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
               {t('link_trajecten')}
             </Link>
             <a href="https://www.linkedin.com/in/wwdijkman/" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }} target="_blank" rel="noopener noreferrer">
               {t('high_cta_1')} →
             </a>
-          </div>
-          <div className="mt-6 flex justify-center no-print">
-            <Button variant="secondary" size="md" onClick={() => window.print()}>
-              {t('print_btn')}
-            </Button>
           </div>
         </div>
       </section>
@@ -263,6 +278,9 @@ export default function RapportPage() {
           <PeerBenchmarkChart scores={scores.byDimension} />
         </div>
       </div>
+
+      {/* AI diepteanalyse — haalt rapport op via DeepSeek (of cache) */}
+      {leadId && <ReportDeepAnalysis leadId={leadId} />}
 
       {/* Interpretatie + interventies */}
       {variant && (
@@ -348,13 +366,25 @@ export default function RapportPage() {
 
       {/* Footer nav */}
       <div
-        className="text-center pt-8 no-print"
+        className="pt-8 no-print"
         style={{ borderTop: '1px solid var(--border-subtle)' }}
       >
-        <p className="text-sm" style={{ color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: '16px' }}>
-          {t('pdf_note')}
-        </p>
-        <div className="flex gap-4 justify-center flex-wrap">
+        <div className="flex flex-col sm:flex-row gap-3 mb-6">
+          {leadId && (
+            <a
+              href={`/api/download-report/${leadId}`}
+              download
+              className="btn btn-secondary"
+              style={{ fontSize: '0.9375rem', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+            >
+              <span>↓</span> PDF downloaden
+            </a>
+          )}
+          <Button variant="secondary" size="md" onClick={() => window.print()}>
+            {t('print_btn')}
+          </Button>
+        </div>
+        <div className="flex gap-4 flex-wrap">
           <Link href="/werkwijze" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
             {t('link_trajecten')}
           </Link>
@@ -364,11 +394,6 @@ export default function RapportPage() {
           <Link href="/contact" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
             {t('link_contact')}
           </Link>
-        </div>
-        <div className="mt-6 flex justify-center no-print">
-          <Button variant="secondary" size="md" onClick={() => window.print()}>
-            {t('print_btn')}
-          </Button>
         </div>
       </div>
     </section>

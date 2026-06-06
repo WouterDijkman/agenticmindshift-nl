@@ -1,5 +1,13 @@
 {
   "crons": [
     { "path": "/api/cron/email-sequence", "schedule": "0 8 * * *" }
-  ]
+  ],
+  "functions": {
+    "app/api/generate-report/route.ts": {
+      "maxDuration": 120
+    },
+    "app/api/download-report/[id]/route.ts": {
+      "maxDuration": 60
+    }
+  }
 }
