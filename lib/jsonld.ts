@@ -11,6 +11,7 @@ export const organizationLd = {
   '@type': 'Organization',
   '@id': `${SITE_URL}/#organization`,
   name: 'Agentic Mindshift',
+  legalName: 'Agentic Mindshift Consultancy',
   url: SITE_URL,
   logo: {
     '@type': 'ImageObject',
@@ -20,6 +21,20 @@ export const organizationLd = {
   },
   email: 'wouter@agenticmindshift.nl',
   foundingDate: '2025-10',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Marius Bauerstraat 235 A 5',
+    postalCode: '1062 AL',
+    addressLocality: 'Amsterdam',
+    addressCountry: 'NL',
+  },
+  /** KvK Handelsregister (Dutch Chamber of Commerce) — used by Google as taxID */
+  taxID: 'NL 99495945',
+  identifier: {
+    '@type': 'PropertyValue',
+    propertyID: 'KvK',
+    value: '99495945',
+  },
   description:
     'AI-advies voor Nederlandse Private Equity-fondsen, M&A-kantoren en familiebedrijven in de mid-market. Founder: Wouter Dijkman.',
   founder: {

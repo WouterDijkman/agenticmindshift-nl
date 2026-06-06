@@ -15,6 +15,8 @@ interface LeadData {
   name: string;
   company: string;
   jobTitle?: string;
+  website?: string;
+  companyContext?: string;
   answers: Answers;
   totalScore: number;
   byDimension: DimensionScores;
@@ -31,13 +33,18 @@ export function buildReportPrompt(
   // ── System prompt ──────────────────────────────────────────────────────────
   const system = `Je bent een senior adviseur bij Agentic Mindshift, een Nederlandse adviespartner gespecialiseerd in AI-toepassing voor private equity, M&A-adviseurs en directeur-grootaandeelhouders in het Nederlandse mid-market segment.
 
-Je taak: genereer een diepgaand, substantieel en persoonlijk adviesrapport in het Nederlands op basis van scorecard-resultaten. Het rapport moet direct bruikbare inzichten en concrete aanbevelingen bevatten — geen generieke tekst.
+Je taak: genereer een diepgaand, substantieel en persoonlijk adviesrapport in het Nederlands op basis van (1) de scorecard-antwoorden, (2) de gescrapte inhoud van de bedrijfswebsite, en (3) eventuele aanvullende externe signalen. Het rapport moet specifiek zijn voor déze organisatie — geen generieke teksten.
+
+Werkwijze:
+- LEES eerst de gescrapte website-inhoud volledig door en haal hieruit: welke sector/sub-sector, kernactiviteiten, kerncijfers indien zichtbaar, portfoliobedrijven indien PE/holding, governance-structuur, eventuele AI- of digitaliseringssignalen.
+- KOPPEL deze observaties expliciet aan de scorecard-antwoorden. Bv: als de website een sterke nadruk legt op due diligence en de score op AI Readiness is laag, benoem dat als concrete tegenstelling.
+- VERZIN NOOIT feiten die niet in de antwoorden of de scrape staan. Als iets onbekend is, schrijf: "op basis van uw antwoorden vermoeden wij..." of laat het weg.
 
 Schrijfstijl:
 - Directe, professionele Nederlandse adviestoon (peer-to-peer, niet bureaucratisch)
-- Specifiek voor de organisatie en sector, niet generiek
+- Specifiek voor de organisatie en sector — gebruik bedrijfsnaam en concrete observaties uit de website
 - Analytisch en feitelijk, geen marketing-taal
-- Elk inzicht moet verankerd zijn in de specifieke antwoorden van de lead
+- Elk inzicht moet verankerd zijn in (a) de specifieke antwoorden, OF (b) de website-content
 - Gebruik concrete percentages, tijdlijnen en vergelijkingen waar relevant
 
 Je output is uitsluitend geldig JSON passend bij het opgegeven schema. Geen proza buiten het JSON-object.`;
@@ -71,7 +78,8 @@ Je output is uitsluitend geldig JSON passend bij het opgegeven schema. Geen proz
 BEDRIJF: ${lead.company}
 NAAM: ${lead.name}
 FUNCTIE: ${lead.jobTitle ?? 'niet opgegeven'}
-LEAD ID: ${lead.leadId}
+WEBSITE: ${lead.website ?? 'niet opgegeven'}
+${lead.companyContext ? `EIGEN TOELICHTING DOOR LEAD: ${lead.companyContext}\n` : ''}LEAD ID: ${lead.leadId}
 
 TOTAALSCORE: ${lead.totalScore}/75 (top ${100 - percentile}% van respondenten — beter dan ${percentile}% van vergelijkbare organisaties)
 

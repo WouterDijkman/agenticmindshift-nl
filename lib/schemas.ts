@@ -6,6 +6,24 @@ export const emailCaptureSchema = z.object({
   company: z.string().min(2, 'Voer een bedrijfsnaam in'),
   jobTitle: z.string().optional(),
   phone: z.string().optional(),
+  /**
+   * Bedrijfs- of fondswebsite (optioneel) — voor diepgaande
+   * company research via Jina Reader scraping in het rapport.
+   * Accepteert URL met of zonder protocol.
+   */
+  website: z
+    .string()
+    .trim()
+    .optional()
+    .refine(
+      (v) => !v || /^([a-z]+:\/\/)?[^\s.]+\.[^\s]{2,}$/i.test(v),
+      'Voer een geldige URL in (bv. www.uwbedrijf.nl)',
+    ),
+  /**
+   * Korte vrije omschrijving van het bedrijf/fonds (optioneel).
+   * Voor extra context in het rapport — bv. "PE-fonds, mid-market, 3 portfolio".
+   */
+  companyContext: z.string().trim().max(500, 'Maximaal 500 tekens').optional(),
 });
 
 export type EmailCaptureInput = z.infer<typeof emailCaptureSchema>;

@@ -110,6 +110,27 @@ export default async function Footer() {
           <p style={{ margin: 0 }}>{t('copyright')}</p>
           <p style={{ margin: 0 }}>{t('tagline_bottom')}</p>
         </div>
+
+        {/* Registratie­details (KvK + bezoekadres) */}
+        <div
+          style={{
+            marginTop: '14px',
+            paddingTop: '14px',
+            borderTop: '1px solid var(--border-subtle)',
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '4px 18px',
+            fontSize: '0.75rem',
+            color: 'var(--text-muted)',
+            letterSpacing: '0.01em',
+          }}
+        >
+          <span>Agentic Mindshift Consultancy</span>
+          <span aria-hidden="true">·</span>
+          <span>Marius Bauerstraat 235 A 5, 1062 AL Amsterdam</span>
+          <span aria-hidden="true">·</span>
+          <span>KvK 99495945</span>
+        </div>
       </div>
     </footer>
   );

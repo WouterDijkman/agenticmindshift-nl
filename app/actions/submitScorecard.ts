@@ -54,6 +54,8 @@ export async function submitScorecard(
       company: lead.company,
       job_title: lead.jobTitle,
       phone: lead.phone ?? null,
+      website: lead.website ?? null,
+      company_context: lead.companyContext ?? null,
       answers,
       total_score: scores.total,
       dimension_scores: scores.byDimension,

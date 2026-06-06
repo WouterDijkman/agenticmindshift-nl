@@ -73,6 +73,10 @@ export interface GenerateReportOptions {
   name: string;
   company: string;
   jobTitle?: string;
+  /** Bedrijfswebsite — voor diepe scrape via Jina Reader */
+  website?: string;
+  /** Korte vrije toelichting over het bedrijf van de lead */
+  companyContext?: string;
   answers: Answers;
 }
 
@@ -84,7 +88,7 @@ export interface GenerateReportOptions {
 export async function generateAndStoreReport(
   options: GenerateReportOptions,
 ): Promise<GeneratedReport> {
-  const { leadId, name, company, jobTitle, answers } = options;
+  const { leadId, name, company, jobTitle, website, companyContext, answers } = options;
 
   if (!isDeepSeekConfigured()) {
     throw new Error('DeepSeek niet geconfigureerd (DEEPSEEK_API_KEY missing)');
@@ -94,8 +98,8 @@ export async function generateAndStoreReport(
   const scores = calculateScores(answers);
   const offerType = determineOffer(answers['Q4']) as OfferType;
 
-  // Websearch (graceful no-op als geen SERPER_API_KEY)
-  const research = await researchCompany(company, jobTitle);
+  // Bedrijfsonderzoek: Jina Reader scraping + Serper search (beide graceful)
+  const research = await researchCompany(company, jobTitle, website);
 
   // Bouw prompt
   const { system, user } = buildReportPrompt({
@@ -103,6 +107,8 @@ export async function generateAndStoreReport(
     name,
     company,
     jobTitle,
+    website,
+    companyContext,
     answers,
     totalScore: scores.total,
     byDimension: scores.byDimension as DimensionScores,
@@ -172,7 +178,7 @@ export async function getLeadForReport(leadId: string): Promise<GenerateReportOp
   const client = getSupabaseClient();
   const { data, error } = await client
     .from('leads')
-    .select('id, name, company, job_title, answers')
+    .select('id, name, company, job_title, website, company_context, answers')
     .eq('id', leadId)
     .single();
 
@@ -182,6 +188,8 @@ export async function getLeadForReport(leadId: string): Promise<GenerateReportOp
     name: data.name,
     company: data.company,
     jobTitle: data.job_title ?? undefined,
+    website: data.website ?? undefined,
+    companyContext: data.company_context ?? undefined,
     answers: data.answers as Answers,
   };
 }

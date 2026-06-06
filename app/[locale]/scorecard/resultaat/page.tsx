@@ -214,6 +214,60 @@ export default function ResultaatPage() {
             {...register('phone')}
             error={errors.phone?.message}
           />
+          <Input
+            label={t('field_website')}
+            type="text"
+            autoComplete="url"
+            placeholder="www.uwbedrijf.nl"
+            {...register('website')}
+            error={errors.website?.message}
+          />
+          <div className="md:col-span-2">
+            <label
+              style={{
+                display: 'block',
+                fontSize: '0.8125rem',
+                color: 'var(--text-secondary)',
+                fontWeight: 600,
+                letterSpacing: '0.01em',
+                marginBottom: '6px',
+              }}
+            >
+              {t('field_company_context')}
+            </label>
+            <textarea
+              {...register('companyContext')}
+              rows={3}
+              placeholder={t('field_company_context_placeholder')}
+              style={{
+                width: '100%',
+                padding: '12px 14px',
+                background: 'var(--bg-primary)',
+                border: '1px solid var(--border-medium)',
+                color: 'var(--text-primary)',
+                fontFamily: 'inherit',
+                fontSize: '0.9375rem',
+                lineHeight: 1.5,
+                resize: 'vertical',
+                borderRadius: '2px',
+              }}
+            />
+            {errors.companyContext?.message && (
+              <p className="text-sm mt-1" style={{ color: 'var(--status-error)' }}>
+                {errors.companyContext.message}
+              </p>
+            )}
+            <p
+              style={{
+                fontSize: '0.75rem',
+                color: 'var(--text-muted)',
+                marginTop: '6px',
+                lineHeight: 1.5,
+              }}
+            >
+              {t('field_company_context_hint')}
+            </p>
+          </div>
           <div className="md:col-span-2 flex flex-col gap-3 mt-2">
             {serverError && (
               <p className="text-sm" style={{ color: 'var(--status-error)' }} role="alert">
