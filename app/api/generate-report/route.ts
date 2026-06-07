@@ -58,19 +58,21 @@ export async function POST(request: Request) {
     // 3. Genereer rapport via DeepSeek
     const report = await generateAndStoreReport(leadData);
 
-    // 4. Stuur rapport-email (fire-and-forget: fout hier mag niet de response blokkeren)
+    // 4. Stuur rapport-email (await: PDF genereren kost 10-15s, fire-and-forget haalt de deadline niet)
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.agenticmindshift.nl';
     const reportUrl = `${siteUrl}/nl/scorecard/rapport/${leadId}`;
-    sendReportEmail({
-      name: leadData.name,
-      email: '', // wordt opgehaald via aparte query
-      company: leadData.company,
-      reportUrl,
-      report,
-      leadId,
-    }).catch((err) => {
+    try {
+      await sendReportEmail({
+        name: leadData.name,
+        email: '', // wordt opgehaald via aparte query in sendReportEmail
+        company: leadData.company,
+        reportUrl,
+        report,
+        leadId,
+      });
+    } catch (err) {
       console.error('[generate-report] Email send failed (non-fatal)', err);
-    });
+    }
 
     return NextResponse.json({ report, cached: false });
   } catch (err) {

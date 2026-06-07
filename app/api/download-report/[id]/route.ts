@@ -58,6 +58,7 @@ export async function GET(
       offer,
       generatedAt: new Date().toLocaleDateString('nl-NL'),
       report: storedReport ?? undefined,
+      answers: data.answers as Answers | undefined, // voor de Q&A-pagina
     });
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

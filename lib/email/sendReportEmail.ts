@@ -82,6 +82,7 @@ export async function sendReportEmail(options: SendReportEmailOptions): Promise<
         offer,
         generatedAt: new Date().toLocaleDateString('nl-NL'),
         report: options.report,
+        answers, // voor de Q&A-pagina in het rapport
       });
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const buffer = await renderToBuffer(pdfElement as any);
