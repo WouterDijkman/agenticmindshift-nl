@@ -8,9 +8,14 @@
 import { NextResponse } from 'next/server';
 import { getSupabaseClient, isSupabaseConfigured } from '@/lib/supabase';
 import { type GeneratedReport } from '@/lib/report/types';
+import { corsHeaders, corsPreflight } from '@/lib/cors';
 
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
+
+export async function OPTIONS() {
+  return corsPreflight();
+}
 
 function isAuthorized(req: Request): boolean {
   const token = process.env.LEADS_EXPORT_TOKEN;
@@ -32,11 +37,11 @@ function csvEscape(value: unknown): string {
 
 export async function GET(req: Request) {
   if (!isAuthorized(req)) {
-    return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
+    return NextResponse.json({ error: 'unauthorized' }, { status: 401, headers: corsHeaders() });
   }
 
   if (!isSupabaseConfigured()) {
-    return NextResponse.json({ error: 'supabase_not_configured' }, { status: 503 });
+    return NextResponse.json({ error: 'supabase_not_configured' }, { status: 503, headers: corsHeaders() });
   }
 
   const url = new URL(req.url);
@@ -52,7 +57,7 @@ export async function GET(req: Request) {
     .limit(limit);
 
   if (error) {
-    return NextResponse.json({ error: 'query_failed', detail: error.message }, { status: 500 });
+    return NextResponse.json({ error: 'query_failed', detail: error.message }, { status: 500, headers: corsHeaders() });
   }
 
   const headers = [
@@ -106,10 +111,10 @@ export async function GET(req: Request) {
   const today = new Date().toISOString().split('T')[0];
   return new Response(csv, {
     status: 200,
-    headers: {
+    headers: corsHeaders({
       'Content-Type': 'text/csv; charset=utf-8',
       'Content-Disposition': `attachment; filename="agentic-mindshift-leads-${today}.csv"`,
       'Cache-Control': 'private, no-store',
-    },
+    }),
   });
 }

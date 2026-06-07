@@ -20,9 +20,14 @@
 import { NextResponse } from 'next/server';
 import { getSupabaseClient, isSupabaseConfigured } from '@/lib/supabase';
 import { type GeneratedReport } from '@/lib/report/types';
+import { corsHeaders, corsPreflight } from '@/lib/cors';
 
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
+
+export async function OPTIONS() {
+  return corsPreflight();
+}
 
 interface LeadRow {
   id: string;
@@ -56,11 +61,11 @@ function isAuthorized(req: Request): boolean {
 
 export async function GET(req: Request) {
   if (!isAuthorized(req)) {
-    return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
+    return NextResponse.json({ error: 'unauthorized' }, { status: 401, headers: corsHeaders() });
   }
 
   if (!isSupabaseConfigured()) {
-    return NextResponse.json({ error: 'supabase_not_configured' }, { status: 503 });
+    return NextResponse.json({ error: 'supabase_not_configured' }, { status: 503, headers: corsHeaders() });
   }
 
   const url = new URL(req.url);
@@ -83,27 +88,27 @@ export async function GET(req: Request) {
     const { data, error } = await query;
     if (error) {
       console.error('[leads-export] supabase error', error);
-      return NextResponse.json({ error: 'query_failed', detail: error.message }, { status: 500 });
+      return NextResponse.json({ error: 'query_failed', detail: error.message }, { status: 500, headers: corsHeaders() });
     }
 
     const leads: LeadRow[] = data ?? [];
 
     if (format === 'json') {
-      return NextResponse.json({ count: leads.length, leads });
+      return NextResponse.json({ count: leads.length, leads }, { headers: corsHeaders() });
     }
 
     // Default: markdown geoptimaliseerd voor LLM consumptie
     const markdown = renderLeadsAsMarkdown(leads);
     return new Response(markdown, {
       status: 200,
-      headers: {
+      headers: corsHeaders({
         'Content-Type': 'text/markdown; charset=utf-8',
         'Cache-Control': 'private, no-store',
-      },
+      }),
     });
   } catch (err) {
     console.error('[leads-export] unexpected', err);
-    return NextResponse.json({ error: 'unexpected' }, { status: 500 });
+    return NextResponse.json({ error: 'unexpected' }, { status: 500, headers: corsHeaders() });
   }
 }
 
