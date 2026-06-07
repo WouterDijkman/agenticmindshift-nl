@@ -13,7 +13,7 @@
     "badge_july": "Juli"
   },
   "footer": {
-    "tagline": "KI-Beratung für niederländische PE- und M&A-Unternehmen. Konkret, vertraulich, messbar.",
+    "tagline": "KI-Beratung für europäische PE- und M&A-Unternehmen. Konkret, vertraulich, messbar.",
     "email_wouter": "Wouter per E-Mail",
     "linkedin": "LinkedIn →",
     "navigation": "Navigation",
@@ -40,10 +40,10 @@
     },
     "founder": {
       "eyebrow": "Wer dahintersteht",
-      "heading": "Ein Berater. Sechs Jahre auf der Finanzierungs- und Restrukturierungsseite niederländischer Deals.",
+      "heading": "Ein Berater. Sechs Jahre auf der Finanzierungs- und Restrukturierungsseite europäischer Deals.",
       "body": "Agentic Mindshift wurde von Wouter Dijkman gegründet, einem ehemaligen Professional in acquisition finance und financial restructuring (Rabobank, ING, Alter Domus). Kein KI-Generalist mit zufällig PE-Kunden, sondern jemand, der aus nächster Nähe sah, warum technisch perfekte Deals dennoch scheitern. Ich baue dies bewusst selektiv auf: eine Handvoll Partner zur gleichen Zeit, damit die Arbeit hands-on bleibt.",
       "point_1_label": "6 Jahre",
-      "point_1_body": "Acquisition finance und financial restructuring im niederländischen Mid-Market.",
+      "point_1_body": "Acquisition finance und financial restructuring im europäischen Mid-Market.",
       "point_2_label": "Founder-led",
       "point_2_body": "Sie arbeiten direkt mit dem Berater. Selektiv, persönlich, ohne Zwischenebenen.",
       "point_3_label": "€1–25M",
@@ -197,13 +197,13 @@
       "duur_q": "Wie lange dauert die Scorecard wirklich?",
       "duur_a": "Zwölf Minuten im Durchschnitt. Vier Abschnitte, fünfzehn Fragen. Sie können zwischendurch pausieren — Ihre Antworten werden lokal gespeichert und bleiben verfügbar, sobald Sie die Seite erneut öffnen.",
       "voor-wie_q": "Für welche Art von Unternehmen ist die Scorecard konzipiert?",
-      "voor-wie_a": "Speziell für niederländische regionale PE-Fonds, M&A-Kanzleien und Unternehmer im Lower-Mid-Market (Deals €1M–€25M). Nicht für Start-ups, nicht für große Konzerne, nicht für Unternehmen außerhalb dieses Segments.",
+      "voor-wie_a": "Speziell für europäische regionale PE-Fonds, M&A-Kanzleien und Unternehmer im Lower-Mid-Market (Deals €1M–€25M). Nicht für Start-ups, nicht für große Konzerne, nicht für Unternehmen außerhalb dieses Segments.",
       "vertrouwelijk_q": "Wie vertraulich ist das?",
       "vertrouwelijk_a": "Vollständig. Ihre Antworten werden nicht geteilt, nicht verkauft, nicht ohne Anonymisierung für Benchmarks verwendet. Sie können anonym ausfüllen, wenn Sie möchten — Ihr Name wird erst beim Erhalt des Berichts abgefragt.",
       "onderbouwing_q": "Worauf basieren die sechs Dimensionen?",
-      "onderbouwing_a": "Die Dimensionen basieren auf Praxiserfahrung in acquisition finance und financial restructuring und sind gegen anonyme Indikatoren vergleichbarer Unternehmen im niederländischen Lower-Mid-Market gebenchmarkt.",
+      "onderbouwing_a": "Die Dimensionen basieren auf Praxiserfahrung in acquisition finance und financial restructuring und sind gegen anonyme Indikatoren vergleichbarer Unternehmen im europäischen Lower-Mid-Market gebenchmarkt.",
       "wie_q": "Wer steht hinter Agentic Mindshift?",
-      "wie_a": "Wouter Dijkman, Gründer. Acquisition finance und financial restructuring, niederländischer Mid-Market.",
+      "wie_a": "Wouter Dijkman, Gründer. Acquisition finance und financial restructuring, europäischer Mid-Market.",
       "wie_link": "Mehr auf der Über-uns-Seite →",
       "sales-pitch_q": "Ist das wieder nur ein verkappter Verkaufsgespräch?",
       "sales-pitch_a": "Nein. Sie erhalten Bewertungen über sechs Dimensionen, zwei vorrangige Schwerpunkte und einen konkreten Vorschlag für die nächsten Schritte. Erst danach entscheiden Sie, ob Sie weitermachen. Kein Druck, kein Follow-up, es sei denn, Sie initiieren es selbst.",
@@ -237,17 +237,17 @@
   },
   "over": {
     "meta_title": "Über Wouter Dijkman",
-    "meta_description": "Gründer von Agentic Mindshift. Sechs Jahre Erfahrung in acquisition finance und financial restructuring im niederländischen Mid-Market.",
+    "meta_description": "Gründer von Agentic Mindshift. Sechs Jahre Erfahrung in acquisition finance und financial restructuring im europäischen Mid-Market.",
     "hero": {
       "eyebrow": "Der Berater",
       "role": "Gründer Agentic Mindshift",
-      "subtext": "Sechs Jahre auf der Finanzierungs- und Restrukturierungsseite niederländischer Deals. Diese Praxiserfahrung übersetzt sich in messbaren Portfolio-Einblick für PE-Partner, die Rendite sichern wollen, bevor die Jahreszahlen es bestätigen."
+      "subtext": "Sechs Jahre auf der Finanzierungs- und Restrukturierungsseite europäischer Deals. Diese Praxiserfahrung übersetzt sich in messbaren Portfolio-Einblick für PE-Partner, die Rendite sichern wollen, bevor die Jahreszahlen es bestätigen."
     },
-    "answer_first": "Agentic Mindshift wurde von Wouter Dijkman gegründet, einem ehemaligen Professional in acquisition finance und financial restructuring mit Erfahrung bei Rabobank, ING und Alter Domus. Die Firma berät niederländische Mid-Market-Fonds, M&A-Kanzleien und Familienunternehmen zu KI-Strategie und KI-gestützter Due Diligence — mit dem Blick von jemandem, der neben dem Deal stand, nicht dem eines Technologieanbieters.",
+    "answer_first": "Agentic Mindshift wurde von Wouter Dijkman gegründet, einem ehemaligen Professional in acquisition finance und financial restructuring mit Erfahrung bei Rabobank, ING und Alter Domus. Die Firma berät europäische Mid-Market-Fonds, M&A-Kanzleien und Familienunternehmen zu KI-Strategie und KI-gestützter Due Diligence — mit dem Blick von jemandem, der neben dem Deal stand, nicht dem eines Technologieanbieters.",
     "bio": {
       "eyebrow": "Hintergrund",
       "quote": "Ich habe Deals gesehen, die technisch perfekt waren — und trotzdem scheiterten, weil niemand bereit war, die unbequeme Annahme zu hinterfragen. Das ist das Problem, das ich löse. Nicht mit mehr Daten. Mit besseren Fragen.",
-      "para1": "Drei Jahre financial restructuring, drei Jahre acquisition finance — die Finanzierungs- und Restrukturierungsseite des niederländischen Mid-Market. Diese Kombination zeigt Ihnen genau, wo Annahmen nicht aufgehen, und wo der Monatsbericht Minderleistung verschleiert statt sie zu signalisieren.",
+      "para1": "Drei Jahre financial restructuring, drei Jahre acquisition finance — die Finanzierungs- und Restrukturierungsseite des europäischen Mid-Market. Diese Kombination zeigt Ihnen genau, wo Annahmen nicht aufgehen, und wo der Monatsbericht Minderleistung verschleiert statt sie zu signalisieren.",
       "para2_prefix": "Agentic Mindshift wurde im Oktober 2025 gegründet. Im November 2025 folgte AI for Business an der Nyenrode. In Entwicklung ist",
       "para2_suffix": ": eine KI-Plattform mit Modulen, mit denen Deal-Teams ihren DD-Prozess, ihre Monatsberichterstattung und ihre Urteilsbildung systematisch instrumentieren.",
       "para3": "Ich baue dies bewusst selektiv auf: eine Handvoll Partner zur gleichen Zeit, damit jeder Auftrag hands-on bleibt und die Arbeit die Aufmerksamkeit erhält, die ein Deal verdient."
@@ -277,10 +277,10 @@
       "item_1_sub": "KMU- und Mid-Market-Portfolios unter Stress: Intensivbetreuung & Restrukturierung",
       "item_2_year": "2020–2023",
       "item_2_label": "Acquisition Finance",
-      "item_2_sub": "LBO-Finanzierung bei niederländischen PE-Deals, Mid-Market 1–25M",
+      "item_2_sub": "LBO-Finanzierung bei europäischen PE-Deals, Mid-Market 1–25M",
       "item_3_year": "Oktober 2025",
       "item_3_label": "Gründung Agentic Mindshift",
-      "item_3_sub": "KI-Beratung für niederländische PE- und M&A-Firmen",
+      "item_3_sub": "KI-Beratung für europäische PE- und M&A-Firmen",
       "item_4_year": "November 2025",
       "item_4_label": "AI for Business",
       "item_4_sub": "Nyenrode Business Universiteit · KI-Anwendungen in der Finanzpraxis",
@@ -310,7 +310,7 @@
       "heading": "Vom ersten Gespräch bis zum eingebetteten KI-Leadership: Sie wählen basierend auf Ihrer Frage.",
       "subtext": "Vier Wege, vier Situationen. Jeder Weg beginnt mit einem unverbindlichen Gespräch und endet mit einem konkreten Ergebnis."
     },
-    "answer_first": "Agentic Mindshift bietet KI-Beratung und KI-gestützte Due Diligence für Private-Equity-Fonds, M&A-Kanzleien und Familienunternehmen im niederländischen Mid-Market. Sie wählen aus vier Wegen — von einer kostenlosen Sparring-Sitzung bis zum eingebetteten Fractional AI Officer — je nach Ausgangslage. Jeder Weg beginnt unverbindlich und endet mit einem konkreten Ergebnis.",
+    "answer_first": "Agentic Mindshift bietet KI-Beratung und KI-gestützte Due Diligence für Private-Equity-Fonds, M&A-Kanzleien und Familienunternehmen im europäischen Mid-Market. Sie wählen aus vier Wegen — von einer kostenlosen Sparring-Sitzung bis zum eingebetteten Fractional AI Officer — je nach Ausgangslage. Jeder Weg beginnt unverbindlich und endet mit einem konkreten Ergebnis.",
     "steps": {
       "eyebrow": "Von Interesse zur Zusammenarbeit",
       "heading": "Drei Schritte",
@@ -473,7 +473,7 @@
     },
     "voor_wie": {
       "eyebrow": "Für wen",
-      "heading": "Gebaut für die niederländische Deal- und Finanzierungspraxis",
+      "heading": "Gebaut für die europäische Deal- und Finanzierungspraxis",
       "item_1_label": "Tier-2 PE-Fonds",
       "item_1_body": "Deals €5M–€50M. Struktur bei Akquisition, Portfolio-Review und Exit.",
       "item_2_label": "Family Offices",
@@ -621,7 +621,7 @@
       "subtext": "Fünfzehn Fragen. Zwölf Minuten. Ein Bericht, der Ihre blinden Flecken messbar macht und mit vergleichbaren Unternehmen benchmarkt.",
       "start_cta": "Scorecard starten",
       "no_account": "Kein Konto erforderlich. Ihre Antworten werden zwischenzeitlich gespeichert.",
-      "trust": "Konzipiert für PE-Partner, M&A-Direktoren und Family Offices im niederländischen Mid-Market.",
+      "trust": "Konzipiert für PE-Partner, M&A-Direktoren und Family Offices im europäischen Mid-Market.",
       "confidentiality_title": "Vertraulichkeit",
       "confidentiality_body": "Ihre Antworten werden ausschließlich zur Erstellung Ihres Berichts verwendet. Sie können anonym ausfüllen, falls Sie das wünschen.",
       "blind_spots_note": "Die meisten PE-Partner entdecken ihre blinden Flecken erst, wenn es bereits zu spät ist. Ihre Investition: zwölf Minuten.",
@@ -755,7 +755,7 @@
       "high_cta_2": "Die Angebote ansehen",
       "attention_point": "(Verbesserungspunkt)",
       "peer_tooltip_label": "Abweichung vs. Peer-Median",
-      "peer_benchmark_footer": "Vergleich mit synthetischem Peer-Median (auf Basis niederländischer PE/M&A-Daten)."
+      "peer_benchmark_footer": "Vergleich mit synthetischem Peer-Median (auf Basis europäischer PE/M&A-Daten)."
     },
     "mockup": {
       "window_label": "Scorecard-Bericht · Vertraulich",
@@ -769,7 +769,7 @@
     "variants": {
       "A": {
         "offerName": "KI-gestützte Due Diligence & Portfolio",
-        "interpretation": "Ihre Punktzahl bei Analytical Quality beträgt {score} von 20 Punkten. Dies ist die Dimension, in der die meisten Unternehmen im niederländischen Lower-Mid-Market strukturell Rendite verlieren — in der Regel unbewusst. Ihr MBR-Zyklus läuft, aber Frühwarnungen fehlen: Die Varianzanalyse ist nicht tief genug, um gegenzusteuern, bevor ein Quartal verloren geht. Der Portfolio-Intelligence-Dienst — über Factum Capital (unsere KI-Plattform) — ist speziell für dieses Szenario entwickelt.",
+        "interpretation": "Ihre Punktzahl bei Analytical Quality beträgt {score} von 20 Punkten. Dies ist die Dimension, in der die meisten Unternehmen im europäischen Lower-Mid-Market strukturell Rendite verlieren — in der Regel unbewusst. Ihr MBR-Zyklus läuft, aber Frühwarnungen fehlen: Die Varianzanalyse ist nicht tief genug, um gegenzusteuern, bevor ein Quartal verloren geht. Der Portfolio-Intelligence-Dienst — über Factum Capital (unsere KI-Plattform) — ist speziell für dieses Szenario entwickelt.",
         "price": "€6.500 – €8.500 / Monat · mind. 3 Monate · zzgl. MwSt.",
         "interventions": {
           "0": {

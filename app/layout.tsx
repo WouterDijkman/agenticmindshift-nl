@@ -12,11 +12,11 @@ const suse = SUSE({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Agentic Mindshift — AI-advies voor Nederlandse PE en M&A',
+    default: 'Agentic Mindshift — AI-advies voor Europese PE en M&A',
     template: '%s | Agentic Mindshift',
   },
   description:
-    'Strategisch AI-partnerschap voor regionale Private Equity, M&A-kantoren en familiebedrijven in de Nederlandse mid-market. Start de Scorecard.',
+    'Strategisch AI-partnerschap voor regionale Private Equity, M&A-kantoren en familiebedrijven in de Europese mid-market. Start de Scorecard.',
   metadataBase: new URL('https://www.agenticmindshift.nl'),
   openGraph: {
     type: 'website',

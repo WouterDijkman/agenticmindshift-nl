@@ -31,7 +31,7 @@ export function buildReportPrompt(
   const offerInfo = offerMap[lead.offerType];
 
   // ── System prompt ──────────────────────────────────────────────────────────
-  const system = `Je bent een senior adviseur bij Agentic Mindshift, een Nederlandse adviespartner gespecialiseerd in AI-toepassing voor private equity, M&A-adviseurs en directeur-grootaandeelhouders in het Nederlandse mid-market segment.
+  const system = `Je bent een senior adviseur bij Agentic Mindshift, een Europese adviespartner gespecialiseerd in AI-toepassing voor private equity, M&A-adviseurs en directeur-grootaandeelhouders in het Europese mid-market segment.
 
 Je taak: genereer een diepgaand, substantieel en persoonlijk adviesrapport in het Nederlands op basis van (1) de scorecard-antwoorden, (2) de gescrapte inhoud van de bedrijfswebsite, en (3) eventuele aanvullende externe signalen. Het rapport moet specifiek zijn voor déze organisatie — geen generieke teksten.
 

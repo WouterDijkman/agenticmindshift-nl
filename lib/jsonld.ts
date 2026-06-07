@@ -36,15 +36,18 @@ export const organizationLd = {
     value: '99495945',
   },
   description:
-    'AI-advies voor Nederlandse Private Equity-fondsen, M&A-kantoren en familiebedrijven in de mid-market. Founder: Wouter Dijkman.',
+    'AI-advies voor Europese Private Equity-fondsen, M&A-kantoren en familiebedrijven in de mid-market. Founder: Wouter Dijkman.',
   founder: {
     '@type': 'Person',
     '@id': `${SITE_URL}/#wouter-dijkman`,
   },
   areaServed: [
+    { '@type': 'Place', name: 'Europe' },
     { '@type': 'Country', name: 'Netherlands' },
     { '@type': 'Country', name: 'Belgium' },
     { '@type': 'Country', name: 'Germany' },
+    { '@type': 'Country', name: 'Spain' },
+    { '@type': 'Country', name: 'Portugal' },
   ],
   knowsAbout: [
     'Private Equity',
@@ -58,8 +61,8 @@ export const organizationLd = {
     '@type': 'ContactPoint',
     contactType: 'customer service',
     email: 'wouter@agenticmindshift.nl',
-    areaServed: 'NL',
-    availableLanguage: ['Dutch', 'English', 'German'],
+    areaServed: 'Europe',
+    availableLanguage: ['Dutch', 'English', 'German', 'Spanish', 'Portuguese'],
   },
   sameAs: ['https://www.linkedin.com/in/wwdijkman/'],
 };
@@ -79,13 +82,13 @@ export const personLd = {
     '@id': `${SITE_URL}/#organization`,
   },
   description:
-    'Voormalig PE- en M&A-professional met ervaring bij Rabobank, ING en Alter Domus. Adviseert Nederlandse mid-market fondsen en M&A-kantoren op AI-strategie en AI-gedreven due diligence.',
+    'Voormalig PE- en M&A-professional met ervaring bij Rabobank, ING en Alter Domus. Adviseert Europese mid-market fondsen en M&A-kantoren op AI-strategie en AI-gedreven due diligence.',
   knowsAbout: [
     'Private Equity',
     'M&A transaction advisory',
     'AI due diligence',
     'Portfolio monitoring',
-    'Financial restructuring Netherlands',
+    'Financial restructuring Europe',
     'IBR/WHOA',
   ],
   alumniOf: [
@@ -110,9 +113,9 @@ export const serviceLd = {
     '@type': 'Organization',
     '@id': `${SITE_URL}/#organization`,
   },
-  areaServed: { '@type': 'Country', name: 'Netherlands' },
+  areaServed: { '@type': 'Place', name: 'Europe' },
   description:
-    'Een gratis 12-minuten assessment op zes AI-dimensies voor Nederlandse PE-fondsen, M&A-kantoren en family offices.',
+    'Een gratis 12-minuten assessment op zes AI-dimensies voor Europese PE-fondsen, M&A-kantoren en family offices.',
   offers: {
     '@type': 'Offer',
     price: '0',
@@ -135,13 +138,16 @@ export const professionalServiceLd = {
     '@id': `${SITE_URL}/#organization`,
   },
   areaServed: [
+    { '@type': 'Place', name: 'Europe' },
     { '@type': 'Country', name: 'Netherlands' },
     { '@type': 'Country', name: 'Belgium' },
     { '@type': 'Country', name: 'Germany' },
+    { '@type': 'Country', name: 'Spain' },
+    { '@type': 'Country', name: 'Portugal' },
   ],
   serviceType: 'AI Advisory & Due Diligence',
   description:
-    'AI-gedreven due diligence en portfolio-intelligence voor Nederlandse PE-fondsen en M&A-kantoren. Vier routes: gratis Sparring Sessie, AI-advies & Implementatie, Fractional AI Officer, en AI-gedreven Due Diligence & Portfolio via Factum Capital (29 modules).',
+    'AI-gedreven due diligence en portfolio-intelligence voor Europese PE-fondsen en M&A-kantoren. Vier routes: gratis Sparring Sessie, AI-advies & Implementatie, Fractional AI Officer, en AI-gedreven Due Diligence & Portfolio via Factum Capital (29 modules).',
   offers: [
     {
       '@type': 'Offer',

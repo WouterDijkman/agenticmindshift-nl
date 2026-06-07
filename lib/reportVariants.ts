@@ -26,7 +26,7 @@ export const variants: Record<VariantId, VariantContent> = {
     id: 'A',
     offerName: 'AI Due Diligence & Portfolio',
     interpretation: (raw) =>
-      `Uw score op Analytical Quality is ${raw} van 20 punten. Dit is de dimensie waar de meeste partijen in de Nederlandse lower-mid market structureel rendement verliezen — doorgaans onbewust. Uw MBR-cyclus draait, maar vroegtijdige signalering ontbreekt: variantie-analyse gaat niet diep genoeg om bij te sturen voordat een kwartaal verloren is. Concreet: een portefeuille van vijf bedrijven met dit profiel laat tussen 80 en 200 basispunten IRR per jaar onbenut. De portfolio-intelligence dienst — uitgevoerd via Factum Capital (ons AI-platform) — is specifiek gebouwd voor dit scenario, met gedeeld dossier en koppeling naar gecertificeerde adviseurs waar nodig.`,
+      `Uw score op Analytical Quality is ${raw} van 20 punten. Dit is de dimensie waar de meeste partijen in de Europese lower-mid market structureel rendement verliezen — doorgaans onbewust. Uw MBR-cyclus draait, maar vroegtijdige signalering ontbreekt: variantie-analyse gaat niet diep genoeg om bij te sturen voordat een kwartaal verloren is. Concreet: een portefeuille van vijf bedrijven met dit profiel laat tussen 80 en 200 basispunten IRR per jaar onbenut. De portfolio-intelligence dienst — uitgevoerd via Factum Capital (ons AI-platform) — is specifiek gebouwd voor dit scenario, met gedeeld dossier en koppeling naar gecertificeerde adviseurs waar nodig.`,
     interventions: [
       {
         title: 'Herontwerp uw MBR-rapportagestructuur',

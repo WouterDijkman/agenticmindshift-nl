@@ -462,7 +462,7 @@ export function ReportDocument(props: ReportProps) {
         <Text style={s.h1}>Uw profiel vs. peer-mediaan</Text>
         <Text style={[s.body, { marginBottom: 16 }]}>
           Elke dimensie afgezet tegen de mediaan van vergelijkbare partijen in
-          het Nederlandse mid-market (private equity, M&A, corporate finance).
+          het Europese mid-market (private equity, M&A, corporate finance).
           De peer-mediaan staat op {PEER}/100. Rood = onder mediaan.
         </Text>
 

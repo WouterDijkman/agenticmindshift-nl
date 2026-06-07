@@ -13,7 +13,7 @@
     "badge_july": "julio"
   },
   "footer": {
-    "tagline": "Asesoría de IA para firmas neerlandesas de PE y M&A. Concreto, confidencial, medible.",
+    "tagline": "Asesoría de IA para firmas europeas de PE y M&A. Concreto, confidencial, medible.",
     "email_wouter": "Email a Wouter",
     "linkedin": "LinkedIn →",
     "navigation": "Navegación",
@@ -40,10 +40,10 @@
     },
     "founder": {
       "eyebrow": "Quién está detrás de esto",
-      "heading": "Un asesor. Seis años en el lado de la financiación y la reestructuración de los deals neerlandeses.",
+      "heading": "Un asesor. Seis años en el lado de la financiación y la reestructuración de los deals europeos.",
       "body": "Agentic Mindshift fue fundada por Wouter Dijkman, antiguo profesional de acquisition finance y financial restructuring (Rabobank, ING, Alter Domus). No un generalista de IA con clientes de PE por casualidad, sino alguien que vio de cerca por qué los deals técnicamente perfectos fracasan igualmente. Lo construyo de forma deliberadamente selectiva: un puñado de socios a la vez, para que el trabajo siga siendo hands-on.",
       "point_1_label": "6 años",
-      "point_1_body": "Acquisition finance y financial restructuring en el mid-market neerlandés.",
+      "point_1_body": "Acquisition finance y financial restructuring en el mid-market europeo.",
       "point_2_label": "Founder-led",
       "point_2_body": "Trabaja directamente con el asesor. Selectivo, personal, sin capas intermedias.",
       "point_3_label": "€1–25M",
@@ -197,13 +197,13 @@
       "duur_q": "¿Cuánto dura realmente el Scorecard?",
       "duur_a": "Doce minutos de media. Cuatro secciones, quince preguntas. Puede pausar a mitad — sus respuestas se guardan localmente y siguen disponibles en cuanto vuelve a abrir la página.",
       "voor-wie_q": "¿Para qué tipo de firma está diseñado el Scorecard?",
-      "voor-wie_a": "Específicamente para fondos de PE regionales neerlandeses, firmas de M&A y empresarios del lower mid-market (operaciones de €1M–€25M). No para startups, ni para grandes corporaciones, ni para firmas fuera de este segmento.",
+      "voor-wie_a": "Específicamente para fondos de PE regionales europeos, firmas de M&A y empresarios del lower mid-market (operaciones de €1M–€25M). No para startups, ni para grandes corporaciones, ni para firmas fuera de este segmento.",
       "vertrouwelijk_q": "¿Qué grado de confidencialidad tiene esto?",
       "vertrouwelijk_a": "Total. Sus respuestas no se comparten, no se venden, no se usan para benchmarks sin anonimización. Puede rellenarlo de forma anónima si lo desea — su nombre solo se solicita al recibir el informe.",
       "onderbouwing_q": "¿En qué se basan las seis dimensiones?",
-      "onderbouwing_a": "Las dimensiones se basan en la experiencia práctica en acquisition finance y financial restructuring, y están comparadas con indicadores anónimos de firmas comparables del lower mid-market neerlandés.",
+      "onderbouwing_a": "Las dimensiones se basan en la experiencia práctica en acquisition finance y financial restructuring, y están comparadas con indicadores anónimos de firmas comparables del lower mid-market europeo.",
       "wie_q": "¿Quién está detrás de Agentic Mindshift?",
-      "wie_a": "Wouter Dijkman, founder. Acquisition finance y financial restructuring, mid-market neerlandés.",
+      "wie_a": "Wouter Dijkman, founder. Acquisition finance y financial restructuring, mid-market europeo.",
       "wie_link": "Más en la página Sobre nosotros →",
       "sales-pitch_q": "¿Es esto otro discurso de venta encubierto?",
       "sales-pitch_a": "No. Recibe puntuaciones en seis dimensiones, dos puntos prioritarios y una propuesta concreta de siguiente paso. Solo después decide si continúa. Sin presión, sin seguimiento salvo que usted lo inicie.",
@@ -237,17 +237,17 @@
   },
   "over": {
     "meta_title": "Sobre Wouter Dijkman",
-    "meta_description": "Fundador de Agentic Mindshift. Seis años de experiencia en acquisition finance y financial restructuring en el mid-market neerlandés.",
+    "meta_description": "Fundador de Agentic Mindshift. Seis años de experiencia en acquisition finance y financial restructuring en el mid-market europeo.",
     "hero": {
       "eyebrow": "El asesor",
       "role": "Fundador Agentic Mindshift",
-      "subtext": "Seis años en el lado de la financiación y la reestructuración de los deals neerlandeses. Esa experiencia práctica se traduce en información de cartera medible para socios de PE que quieren asegurar rentabilidad antes de que las cifras anuales la confirmen."
+      "subtext": "Seis años en el lado de la financiación y la reestructuración de los deals europeos. Esa experiencia práctica se traduce en información de cartera medible para socios de PE que quieren asegurar rentabilidad antes de que las cifras anuales la confirmen."
     },
-    "answer_first": "Agentic Mindshift fue fundada por Wouter Dijkman, antiguo profesional de acquisition finance y financial restructuring con experiencia en Rabobank, ING y Alter Domus. La firma asesora a fondos mid-market, firmas de M&A y empresas familiares neerlandeses sobre estrategia de IA y due diligence impulsada por IA — con la mirada de alguien que estuvo junto al deal, no la de un proveedor de tecnología.",
+    "answer_first": "Agentic Mindshift fue fundada por Wouter Dijkman, antiguo profesional de acquisition finance y financial restructuring con experiencia en Rabobank, ING y Alter Domus. La firma asesora a fondos mid-market, firmas de M&A y empresas familiares europeos sobre estrategia de IA y due diligence impulsada por IA — con la mirada de alguien que estuvo junto al deal, no la de un proveedor de tecnología.",
     "bio": {
       "eyebrow": "Antecedentes",
       "quote": "He visto operaciones que eran técnicamente perfectas — y que fracasaron porque nadie estaba dispuesto a cuestionar el supuesto incómodo. Ese es el problema que resuelvo. No con más datos. Con mejores preguntas.",
-      "para1": "Tres años de financial restructuring, tres años de acquisition finance — el lado de la financiación y la reestructuración del mid-market neerlandés. Esa combinación enseña exactamente dónde los supuestos no se cumplen y dónde el informe mensual enmascara el bajo rendimiento en lugar de señalarlo.",
+      "para1": "Tres años de financial restructuring, tres años de acquisition finance — el lado de la financiación y la reestructuración del mid-market europeo. Esa combinación enseña exactamente dónde los supuestos no se cumplen y dónde el informe mensual enmascara el bajo rendimiento en lugar de señalarlo.",
       "para2_prefix": "En octubre de 2025 se fundó Agentic Mindshift. En noviembre de 2025 siguió AI for Business en Nyenrode. En desarrollo está",
       "para2_suffix": ": una plataforma de IA con módulos con los que los equipos de deals instrumentan estructuralmente su proceso de DD, informe mensual y formación del juicio.",
       "para3": "Lo construyo de forma deliberadamente selectiva: un puñado de socios a la vez, para que cada proyecto siga siendo hands-on y el trabajo reciba la atención que merece un deal."
@@ -263,7 +263,7 @@
       "cred_2_sub": "El ciclo completo de la financiación al stress",
       "cred_3_value": "€1–25M",
       "cred_3_label": "Enfoque mid-market",
-      "cred_3_sub": "Tamaño de deals PE y M&A neerlandés",
+      "cred_3_sub": "Tamaño de deals PE y M&A europeo",
       "cred_4_value": "Founder-led",
       "cred_4_label": "Selectivo y hands-on",
       "cred_4_sub": "Un puñado de socios a la vez, sin capas intermedias"
@@ -277,10 +277,10 @@
       "item_1_sub": "Carteras pyme y mid-market en stress: cuidados intensivos y reestructuración",
       "item_2_year": "2020–2023",
       "item_2_label": "Acquisition Finance",
-      "item_2_sub": "Financiación LBO en deals de PE neerlandés, mid-market 1–25M",
+      "item_2_sub": "Financiación LBO en deals de PE europeo, mid-market 1–25M",
       "item_3_year": "Octubre 2025",
       "item_3_label": "Fundación de Agentic Mindshift",
-      "item_3_sub": "Asesoría de IA para firmas neerlandesas de PE y M&A",
+      "item_3_sub": "Asesoría de IA para firmas europeas de PE y M&A",
       "item_4_year": "Noviembre 2025",
       "item_4_label": "AI for Business",
       "item_4_sub": "Nyenrode Business Universiteit · aplicaciones de IA en la práctica financiera",
@@ -310,7 +310,7 @@
       "heading": "Desde la primera conversación hasta el liderazgo de IA integrado: usted elige según su necesidad.",
       "subtext": "Cuatro rutas, cuatro situaciones. Cada ruta comienza con una conversación sin compromiso y termina con un resultado concreto."
     },
-    "answer_first": "Agentic Mindshift ofrece asesoría de IA y due diligence impulsada por IA para fondos de private equity, firmas de M&A y empresas familiares del mid-market neerlandés. Elige entre cuatro rutas —desde una sesión de sparring gratuita hasta un Fractional AI Officer integrado— según su punto de partida. Cada ruta empieza sin compromiso y termina con un resultado concreto.",
+    "answer_first": "Agentic Mindshift ofrece asesoría de IA y due diligence impulsada por IA para fondos de private equity, firmas de M&A y empresas familiares del mid-market europeo. Elige entre cuatro rutas —desde una sesión de sparring gratuita hasta un Fractional AI Officer integrado— según su punto de partida. Cada ruta empieza sin compromiso y termina con un resultado concreto.",
     "steps": {
       "eyebrow": "Del interés a la colaboración",
       "heading": "Tres pasos",
@@ -473,7 +473,7 @@
     },
     "voor_wie": {
       "eyebrow": "Para quién",
-      "heading": "Construido para la práctica neerlandesa de deals y financiación",
+      "heading": "Construido para la práctica europea de deals y financiación",
       "item_1_label": "Fondos de PE tier-2",
       "item_1_body": "Deals €5M–€50M. Estructura en adquisición, portfolio review y salida.",
       "item_2_label": "Family offices",
@@ -621,7 +621,7 @@
       "subtext": "Quince preguntas. Doce minutos. Un informe que hace medibles sus puntos ciegos y los compara con empresas similares.",
       "start_cta": "Iniciar el Scorecard",
       "no_account": "Sin cuenta requerida. Sus respuestas se guardan automáticamente.",
-      "trust": "Diseñado para socios de PE, directores de M&A y family offices en el mid-market neerlandés.",
+      "trust": "Diseñado para socios de PE, directores de M&A y family offices en el mid-market europeo.",
       "confidentiality_title": "Confidencialidad",
       "confidentiality_body": "Sus respuestas se utilizan únicamente para generar su informe. Puede rellenarlo de forma anónima si lo prefiere.",
       "blind_spots_note": "La mayoría de los socios de PE descubren sus puntos ciegos cuando ya es demasiado tarde. Su inversión: doce minutos.",

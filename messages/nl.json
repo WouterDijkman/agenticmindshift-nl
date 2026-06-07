@@ -13,7 +13,7 @@
     "badge_july": "juli"
   },
   "footer": {
-    "tagline": "AI‑advies voor Nederlandse PE‑ en M&A‑firma's. Concreet, vertrouwelijk, meetbaar.",
+    "tagline": "AI‑advies voor Europese PE‑ en M&A‑firma's. Concreet, vertrouwelijk, meetbaar.",
     "email_wouter": "E-mail Wouter",
     "linkedin": "LinkedIn →",
     "navigation": "Navigatie",
@@ -40,10 +40,10 @@
     },
     "founder": {
       "eyebrow": "Wie hierachter staat",
-      "heading": "Eén adviseur. Zes jaar aan de financierings- en herstructureringskant van Nederlandse deals.",
+      "heading": "Eén adviseur. Zes jaar aan de financierings- en herstructureringskant van Europese deals.",
       "body": "Agentic Mindshift is opgericht door Wouter Dijkman, voormalig professional in acquisition finance en financial restructuring (Rabobank, ING, Alter Domus). Geen AI-generalist met toevallig PE-klanten, maar iemand die van dichtbij zag waarom technisch perfecte deals alsnog mislukken. Ik bouw dit bewust selectief op: een handvol partners tegelijk, zodat het werk hands-on blijft.",
       "point_1_label": "6 jaar",
-      "point_1_body": "Acquisition finance en financial restructuring in de Nederlandse mid-market.",
+      "point_1_body": "Acquisition finance en financial restructuring in de Europese mid-market.",
       "point_2_label": "Founder-led",
       "point_2_body": "U werkt rechtstreeks met de adviseur. Selectief, persoonlijk, zonder tussenlagen.",
       "point_3_label": "€1–25M",
@@ -197,13 +197,13 @@
       "duur_q": "Hoe lang duurt de Scorecard echt?",
       "duur_a": "Twaalf minuten gemiddeld. Vier secties, vijftien vragen. U kunt tussentijds pauzeren — uw antwoorden worden lokaal opgeslagen en blijven beschikbaar zodra u de pagina opnieuw opent.",
       "voor-wie_q": "Voor welk type partij is de Scorecard ontworpen?",
-      "voor-wie_a": "Specifiek voor Nederlandse regionale PE-fondsen, M&A-kantoren en ondernemers in de lower-mid market (deals €1M–€25M). Niet voor startups, niet voor grote corporates, niet voor partijen buiten dit segment.",
+      "voor-wie_a": "Specifiek voor Europese regionale PE-fondsen, M&A-kantoren en ondernemers in de lower-mid market (deals €1M–€25M). Niet voor startups, niet voor grote corporates, niet voor partijen buiten dit segment.",
       "vertrouwelijk_q": "Hoe vertrouwelijk is dit?",
       "vertrouwelijk_a": "Volledig. Uw antwoorden worden niet gedeeld, niet verkocht, niet gebruikt voor benchmarks zonder anonimisering. U kunt anoniem invullen als u dat wenst — uw naam wordt pas gevraagd bij het ontvangen van het rapport.",
       "onderbouwing_q": "Wat is de onderbouwing van de zes dimensies?",
-      "onderbouwing_a": "De dimensies zijn gebaseerd op praktijkervaring in acquisition finance en financial restructuring, en gebenchmarkt tegen anonieme indicatoren van vergelijkbare partijen in de Nederlandse lower-mid market.",
+      "onderbouwing_a": "De dimensies zijn gebaseerd op praktijkervaring in acquisition finance en financial restructuring, en gebenchmarkt tegen anonieme indicatoren van vergelijkbare partijen in de Europese lower-mid market.",
       "wie_q": "Wie staat er achter Agentic Mindshift?",
-      "wie_a": "Wouter Dijkman, founder. Acquisition finance en financial restructuring, Nederlandse mid-market.",
+      "wie_a": "Wouter Dijkman, founder. Acquisition finance en financial restructuring, Europese mid-market.",
       "wie_link": "Meer op de Over-pagina →",
       "sales-pitch_q": "Is dit weer een verkapte sales pitch?",
       "sales-pitch_a": "Nee. U ontvangt scores op zes dimensies, twee prioritaire aandachtspunten en een concreet vervolgvoorstel. Pas daarna beslist u of u verdergaat. Geen druk, geen follow-up tenzij u dat zelf initieert.",
@@ -237,17 +237,17 @@
   },
   "over": {
     "meta_title": "Over Wouter Dijkman",
-    "meta_description": "Founder Agentic Mindshift. Zes jaar ervaring in acquisition finance en financial restructuring in de Nederlandse mid-market.",
+    "meta_description": "Founder Agentic Mindshift. Zes jaar ervaring in acquisition finance en financial restructuring in de Europese mid-market.",
     "hero": {
       "eyebrow": "De adviseur",
       "role": "Founder Agentic Mindshift",
-      "subtext": "Zes jaar aan de financierings- en herstructureringskant van Nederlandse deals. Die praktijkervaring vertaalt zich naar meetbaar portefeuille-inzicht voor PE-partners die rendement willen borgen vóórdat de jaarcijfers het bevestigen."
+      "subtext": "Zes jaar aan de financierings- en herstructureringskant van Europese deals. Die praktijkervaring vertaalt zich naar meetbaar portefeuille-inzicht voor PE-partners die rendement willen borgen vóórdat de jaarcijfers het bevestigen."
     },
-    "answer_first": "Agentic Mindshift is opgericht door Wouter Dijkman, voormalig professional in acquisition finance en financial restructuring met ervaring bij Rabobank, ING en Alter Domus. De firma adviseert Nederlandse mid-market fondsen, M&A-kantoren en familiebedrijven over AI-strategie en AI-gedreven due diligence — met de blik van iemand die naast de deal stond, niet die van een techleverancier.",
+    "answer_first": "Agentic Mindshift is opgericht door Wouter Dijkman, voormalig professional in acquisition finance en financial restructuring met ervaring bij Rabobank, ING en Alter Domus. De firma adviseert Europese mid-market fondsen, M&A-kantoren en familiebedrijven over AI-strategie en AI-gedreven due diligence — met de blik van iemand die naast de deal stond, niet die van een techleverancier.",
     "bio": {
       "eyebrow": "Achtergrond",
       "quote": "Ik heb deals gezien die technisch perfect waren — en toch mislukten omdat niemand bereid was de ongemakkelijke aanname uit te dagen. Dat is het probleem dat ik oplos. Niet met meer data. Met betere vragen.",
-      "para1": "Drie jaar financial restructuring, drie jaar acquisition finance — de financierings- en herstructureringskant van de Nederlandse mid-market. Die combinatie leert u precies waar de aannames niet uitkomen, en waar de maandrapportage onderprestatie maskeert in plaats van signaleert.",
+      "para1": "Drie jaar financial restructuring, drie jaar acquisition finance — de financierings- en herstructureringskant van de Europese mid-market. Die combinatie leert u precies waar de aannames niet uitkomen, en waar de maandrapportage onderprestatie maskeert in plaats van signaleert.",
       "para2_prefix": "In oktober 2025 is Agentic Mindshift gestart. In november 2025 volgde AI for Business aan Nyenrode. In ontwikkeling is",
       "para2_suffix": ": een AI-platform met modules waarmee deal-teams hun DD-proces, maandrapportage en oordeelsvorming structureel instrumenteren.",
       "para3": "Ik bouw dit bewust selectief op: een handvol partners tegelijk, zodat elk traject hands-on blijft en het werk de aandacht krijgt die een deal verdient."
@@ -263,7 +263,7 @@
       "cred_2_sub": "De volledige cyclus van financiering tot stress",
       "cred_3_value": "€1–25M",
       "cred_3_label": "Mid-market focus",
-      "cred_3_sub": "Nederlandse PE‑ en M&A‑dealgrootte",
+      "cred_3_sub": "Europese PE‑ en M&A‑dealgrootte",
       "cred_4_value": "Founder-led",
       "cred_4_label": "Selectief & hands-on",
       "cred_4_sub": "Een handvol partners tegelijk, geen tussenlagen"
@@ -277,10 +277,10 @@
       "item_1_sub": "MKB- en mid-market portefeuilles in stress: intensive care & herstructurering",
       "item_2_year": "2020–2023",
       "item_2_label": "Acquisition Finance",
-      "item_2_sub": "LBO-financiering op Nederlandse PE-deals, mid-market 1–25M",
+      "item_2_sub": "LBO-financiering op Europese PE-deals, mid-market 1–25M",
       "item_3_year": "Oktober 2025",
       "item_3_label": "Oprichting Agentic Mindshift",
-      "item_3_sub": "AI‑advies voor Nederlandse PE‑ en M&A‑firma's",
+      "item_3_sub": "AI‑advies voor Europese PE‑ en M&A‑firma's",
       "item_4_year": "November 2025",
       "item_4_label": "AI for Business",
       "item_4_sub": "Nyenrode Business Universiteit · AI-toepassingen in financiële praktijk",
@@ -310,7 +310,7 @@
       "heading": "Van eerste kennismaking tot embedded AI-leiderschap: u kiest op basis van uw vraag.",
       "subtext": "Vier routes, vier situaties. Elke route begint met een vrijblijvend gesprek en eindigt met een concreet resultaat."
     },
-    "answer_first": "Agentic Mindshift levert AI-advies en AI-gedreven due diligence voor private-equityfondsen, M&A-kantoren en familiebedrijven in de Nederlandse mid-market. U kiest uit vier routes — van een gratis sparringsessie tot een embedded Fractional AI Officer — afhankelijk van waar u staat. Elke route begint vrijblijvend en eindigt met een concreet resultaat.",
+    "answer_first": "Agentic Mindshift levert AI-advies en AI-gedreven due diligence voor private-equityfondsen, M&A-kantoren en familiebedrijven in de Europese mid-market. U kiest uit vier routes — van een gratis sparringsessie tot een embedded Fractional AI Officer — afhankelijk van waar u staat. Elke route begint vrijblijvend en eindigt met een concreet resultaat.",
     "steps": {
       "eyebrow": "Van interesse naar samenwerking",
       "heading": "Drie stappen",
@@ -473,7 +473,7 @@
     },
     "voor_wie": {
       "eyebrow": "Voor wie",
-      "heading": "Gebouwd voor de Nederlandse deal- en financieringspraktijk",
+      "heading": "Gebouwd voor de Europese deal- en financieringspraktijk",
       "item_1_label": "Tier-2 PE-fondsen",
       "item_1_body": "Deals €5M–€50M. Structuur op acquisitie, portfolio review en exit.",
       "item_2_label": "Family offices",
@@ -621,7 +621,7 @@
       "subtext": "Vijftien vragen. Twaalf minuten. Een rapport dat uw blinde vlekken meetbaar maakt en vergelijkt met vergelijkbare partijen.",
       "start_cta": "Start de Scorecard",
       "no_account": "Geen account vereist. Uw antwoorden worden tussentijds opgeslagen.",
-      "trust": "Ontworpen voor PE-partners, M&A-directors en family offices in de Nederlandse mid-market.",
+      "trust": "Ontworpen voor PE-partners, M&A-directors en family offices in de Europese mid-market.",
       "confidentiality_title": "Vertrouwelijkheid",
       "confidentiality_body": "Uw antwoorden worden alleen gebruikt om uw rapport te genereren. U kunt anoniem invullen indien u dat wenst.",
       "blind_spots_note": "De meeste PE-partners ontdekken hun blinde vlekken pas als het te laat is. Uw investering: twaalf minuten.",
@@ -730,7 +730,7 @@
       "better_than": "Beter dan {pct}% van vergelijkbare partijen",
       "dimensions_heading": "Per dimensie",
       "peer_heading": "Peer-vergelijking",
-      "peer_stat": "U scoort beter dan {pct}% van vergelijkbare Nederlandse partijen.",
+      "peer_stat": "U scoort beter dan {pct}% van vergelijkbare Europese partijen.",
       "interpretation_heading": "Interpretatie",
       "interventions_heading": "Drie concrete interventies",
       "offer_eyebrow": "Aanbevolen vervolgstap",
@@ -746,7 +746,7 @@
       "print_btn": "Print / sla op als PDF",
       "high_heading": "Beste {name}: uw aanpak valt op. Laten we het hebben over wat u doet dat anderen niet doen.",
       "high_body_1": "U behoort tot de kleine groep PE-partners die al structureel meet wat de meesten pas achteraf zien. Dat is geen kleinigheid.",
-      "high_score_body": "Uw score op de Portfolio Intelligence Scorecard is {score} van 75. Dat is significant boven het gemiddelde van vergelijkbare Nederlandse partijen, en plaatst u in de top 10% van invullers.",
+      "high_score_body": "Uw score op de Portfolio Intelligence Scorecard is {score} van 75. Dat is significant boven het gemiddelde van vergelijkbare Europese partijen, en plaatst u in de top 10% van invullers.",
       "high_body_3": "Een specifieke interventie-aanbeveling is op basis van uw score niet zinvol. U doet wat u zou moeten doen.",
       "high_body_4": "Wat ik zou willen aanbieden, indien u dat interessant vindt, is een vertrouwelijk gesprek over wat u doet dat anderen niet doen. Niet als verkoopgesprek, als peer-uitwisseling. Vrijwillig, geen agenda.",
       "high_next_eyebrow": "Volgende stap",
@@ -755,7 +755,7 @@
       "high_cta_2": "Bekijk de trajecten",
       "attention_point": "(aandachtspunt)",
       "peer_tooltip_label": "Verschil t.o.v. peer-mediaan",
-      "peer_benchmark_footer": "Vergelijking met synthetische peer-mediaan (op basis van Nederlandse PE/M&A-data)."
+      "peer_benchmark_footer": "Vergelijking met synthetische peer-mediaan (op basis van Europese PE/M&A-data)."
     },
     "mockup": {
       "window_label": "Scorecard-rapport · Vertrouwelijk",
@@ -769,7 +769,7 @@
     "variants": {
       "A": {
         "offerName": "AI-gedreven Due Diligence & Portfolio",
-        "interpretation": "Uw score op Analytical Quality is {score} van 20 punten. Dit is de dimensie waar de meeste partijen in de Nederlandse lower-mid market structureel rendement verliezen — doorgaans onbewust. Uw MBR-cyclus draait, maar vroegtijdige signalering ontbreekt: variantie-analyse gaat niet diep genoeg om bij te sturen voordat een kwartaal verloren is. De portfolio-intelligence dienst — uitgevoerd via Factum Capital (ons AI-platform) — is specifiek gebouwd voor dit scenario.",
+        "interpretation": "Uw score op Analytical Quality is {score} van 20 punten. Dit is de dimensie waar de meeste partijen in de Europese lower-mid market structureel rendement verliezen — doorgaans onbewust. Uw MBR-cyclus draait, maar vroegtijdige signalering ontbreekt: variantie-analyse gaat niet diep genoeg om bij te sturen voordat een kwartaal verloren is. De portfolio-intelligence dienst — uitgevoerd via Factum Capital (ons AI-platform) — is specifiek gebouwd voor dit scenario.",
         "price": "€6.500 – €8.500 / maand · min. 3 maanden · excl. btw",
         "interventions": {
           "0": {
