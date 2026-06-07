@@ -21,6 +21,8 @@ import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
 import { dimensionLabels, questions, type Dimension } from '../questions';
 import { offerMap, type OfferType, type Answers } from '../scoring';
 import { type GeneratedReport } from '../report/types';
+import { type ReportLocale } from '../report/locale';
+import { getPdfStrings, type PdfStrings } from './strings';
 
 const SERIF = 'Times-Roman';
 const SERIF_BOLD = 'Times-Bold';
@@ -279,18 +281,18 @@ function priorityPillStyle(p?: string) {
   return s.cardSoft;
 }
 
-function priorityLabel(p?: string): string {
-  if (p === 'critical') return '⚑ Kritiek';
-  if (p === 'attention') return '◆ Aandacht';
-  if (p === 'adequate') return '○ Voldoende';
-  if (p === 'strong') return '✓ Sterk';
+function priorityLabel(p: string | undefined, t: PdfStrings): string {
+  if (p === 'critical') return t.priorityCritical;
+  if (p === 'attention') return t.priorityAttention;
+  if (p === 'adequate') return t.priorityAdequate;
+  if (p === 'strong') return t.priorityStrong;
   return '–';
 }
 
-function urgencyLabel(u?: string): string {
-  if (u === 'high') return 'Hoog';
-  if (u === 'medium') return 'Gemiddeld';
-  if (u === 'low') return 'Laag';
+function urgencyLabel(u: string | undefined, t: PdfStrings): string {
+  if (u === 'high') return t.urgencyHigh;
+  if (u === 'medium') return t.urgencyMedium;
+  if (u === 'low') return t.urgencyLow;
   return '—';
 }
 
@@ -300,11 +302,11 @@ function urgencyColor(u?: string): string {
   return brand.green;
 }
 
-function footerEl(page: number, total: number) {
+function footerEl(page: number, total: number, t: PdfStrings) {
   return (
     <View style={s.footer}>
-      <Text style={s.footerText}>Agentic Mindshift · Vertrouwelijk</Text>
-      <Text style={s.footerText}>{`agenticmindshift.nl · ${page} van ${total}`}</Text>
+      <Text style={s.footerText}>{t.footerConfidential}</Text>
+      <Text style={s.footerText}>{t.footerPage(page, total)}</Text>
     </View>
   );
 }
@@ -329,6 +331,7 @@ export interface ReportProps {
   generatedAt?: string;
   report?: GeneratedReport;
   answers?: Answers;
+  locale?: ReportLocale;
 }
 
 // ── Document ─────────────────────────────────────────────────────────────────
@@ -344,8 +347,10 @@ export function ReportDocument(props: ReportProps) {
     generatedAt = new Date().toLocaleDateString('nl-NL'),
     report,
     answers,
+    locale = 'nl',
   } = props;
 
+  const t = getPdfStrings(locale);
   const offerInfo = offerMap[offer];
   const firstName = name.split(' ')[0] || name;
   const dimensionEntries = Object.entries(byDimension) as [Dimension, number][];
@@ -363,17 +368,12 @@ export function ReportDocument(props: ReportProps) {
   const insights = report?.keyInsights ? report.keyInsights.slice(0, 5) : [];
 
   // Q&A for summary page — group by section
-  const sectionTitles: Record<number, string> = {
-    1: 'Uw analytische aanpak vandaag',
-    2: 'Deal- en analysecyclus',
-    3: 'Portefeuille, financiering en monitoring',
-    4: 'Team en kennisbeheer',
-  };
+  const sectionTitles = t.sectionTitles;
 
   const TOTAL_PAGES = 11;
 
   return (
-    <Document title={`AI Readiness Rapport — ${company}`} author="Agentic Mindshift">
+    <Document title={`AI Readiness Report — ${company}`} author="Agentic Mindshift">
 
       {/* ══════════════════════════════════════════════════════════════════════
           PAGINA 1 — COVER
@@ -382,21 +382,21 @@ export function ReportDocument(props: ReportProps) {
         {/* Top rule */}
         <View style={{ height: 3, backgroundColor: brand.rust, marginBottom: 36 }} />
 
-        <Text style={s.eyebrow}>AI Readiness Scorecard · {generatedAt}</Text>
+        <Text style={s.eyebrow}>{t.coverEyebrow} · {generatedAt}</Text>
         <Text style={s.h1}>
-          {report?.scoreProfile?.profileLabel || 'AI Readiness Profiel'}
+          {report?.scoreProfile?.profileLabel || t.profileFallback}
         </Text>
         <Text style={{ fontFamily: SERIF_BOLD, fontSize: 15, color: brand.navySoft, marginBottom: 4 }}>
           {company}
         </Text>
         <Text style={{ fontSize: 10, color: brand.textMuted, marginBottom: 32 }}>
-          Opgesteld voor {name}
+          {t.preparedFor(name)}
         </Text>
 
         {/* Executive Summary */}
         {report?.executiveSummary ? (
           <View style={s.cardAccent}>
-            <Text style={s.smallLabel}>Executive Summary</Text>
+            <Text style={s.smallLabel}>{t.execSummary}</Text>
             <Text style={s.bodyLarge}>{report.executiveSummary}</Text>
           </View>
         ) : null}
@@ -404,27 +404,27 @@ export function ReportDocument(props: ReportProps) {
         {/* 4 stat boxes */}
         <View style={{ flexDirection: 'row', gap: 8, marginTop: 8 }}>
           <View style={s.statBox}>
-            <Text style={s.smallLabelMuted}>Totaalscore</Text>
+            <Text style={s.smallLabelMuted}>{t.totalScore}</Text>
             <Text style={[s.statNumber, { color: brand.navy }]}>
               {totalScore}
             </Text>
-            <Text style={{ fontSize: 9, color: brand.textMuted }}>van 75 punten</Text>
+            <Text style={{ fontSize: 9, color: brand.textMuted }}>{t.outOf75}</Text>
           </View>
           <View style={s.statBox}>
-            <Text style={s.smallLabelMuted}>Onder mediaan</Text>
+            <Text style={s.smallLabelMuted}>{t.belowMedian}</Text>
             <Text style={[s.statNumber, { color: brand.rust }]}>
               {belowPeer}/{totalDims}
             </Text>
-            <Text style={{ fontSize: 9, color: brand.textMuted }}>dimensies</Text>
+            <Text style={{ fontSize: 9, color: brand.textMuted }}>{t.dimensions}</Text>
           </View>
           <View style={s.statBox}>
-            <Text style={s.smallLabelMuted}>Urgentie</Text>
+            <Text style={s.smallLabelMuted}>{t.urgency}</Text>
             <Text style={[s.statNumber, { fontSize: 20, color: urgencyColor(report?.urgency), marginTop: 6 }]}>
-              {urgencyLabel(report?.urgency)}
+              {urgencyLabel(report?.urgency, t)}
             </Text>
           </View>
           <View style={s.statBox}>
-            <Text style={s.smallLabelMuted}>Traject</Text>
+            <Text style={s.smallLabelMuted}>{t.track}</Text>
             <Text style={{ fontFamily: SANS_BOLD, fontSize: 9.5, color: brand.navy, marginTop: 4, lineHeight: 1.4 }}>
               {report?.recommendedTrajectory?.offerName || offerInfo?.name || '–'}
             </Text>
@@ -433,13 +433,13 @@ export function ReportDocument(props: ReportProps) {
 
         <View style={{ flexDirection: 'row', gap: 8, marginTop: 8 }}>
           <View style={{ flex: 2, backgroundColor: brand.bgCardSoft, border: `1pt solid ${brand.border}`, padding: 12 }}>
-            <Text style={s.smallLabelMuted}>Zwakste dimensies</Text>
+            <Text style={s.smallLabelMuted}>{t.weakestDims}</Text>
             {weakest.map((w, i) => (
               <Text key={i} style={{ fontSize: 10, color: brand.rust, marginTop: 2 }}>· {w}</Text>
             ))}
           </View>
           <View style={{ flex: 3, backgroundColor: brand.bgCardSoft, border: `1pt solid ${brand.border}`, padding: 12 }}>
-            <Text style={s.smallLabelMuted}>Sterkste dimensies</Text>
+            <Text style={s.smallLabelMuted}>{t.strongestDims}</Text>
             {dimensionEntries
               .sort((a, b) => b[1] - a[1])
               .slice(0, 2)
@@ -451,19 +451,17 @@ export function ReportDocument(props: ReportProps) {
           </View>
         </View>
 
-        {footerEl(1, TOTAL_PAGES)}
+        {footerEl(1, TOTAL_PAGES, t)}
       </Page>
 
       {/* ══════════════════════════════════════════════════════════════════════
           PAGINA 2 — SCOREOVERZICHT (6 dimensies vs peer)
           ══════════════════════════════════════════════════════════════════════ */}
       <Page size="A4" style={s.page}>
-        <Text style={s.eyebrow}>Scoreoverzicht</Text>
-        <Text style={s.h1}>Uw profiel vs. peer-mediaan</Text>
+        <Text style={s.eyebrow}>{t.scoreOverview}</Text>
+        <Text style={s.h1}>{t.scoreOverviewTitle}</Text>
         <Text style={[s.body, { marginBottom: 16 }]}>
-          Elke dimensie afgezet tegen de mediaan van vergelijkbare partijen in
-          het Europese mid-market (private equity, M&A, corporate finance).
-          De peer-mediaan staat op {PEER}/100. Rood = onder mediaan.
+          {t.scoreOverviewIntro(PEER)}
         </Text>
 
         <View style={s.card}>
@@ -479,7 +477,7 @@ export function ReportDocument(props: ReportProps) {
                   <View style={s.barLabelRow}>
                     <Text style={s.barLabel}>{dimensionLabels[dim]}</Text>
                     <Text style={[s.barScore, { color: isBelow ? brand.rust : brand.navySoft }]}>
-                      {score} / 100{dimReport?.priority ? `  · ${priorityLabel(dimReport.priority)}` : ''}
+                      {score} / 100{dimReport?.priority ? `  · ${priorityLabel(dimReport.priority, t)}` : ''}
                     </Text>
                   </View>
                   <View style={s.barTrack}>
@@ -497,38 +495,37 @@ export function ReportDocument(props: ReportProps) {
           <View style={s.legend}>
             <View style={s.legendItem}>
               <View style={[s.legendDot, { backgroundColor: brand.rust }]} />
-              <Text style={s.legendText}>Onder peer-mediaan</Text>
+              <Text style={s.legendText}>{t.belowPeerMedian}</Text>
             </View>
             <View style={s.legendItem}>
               <View style={[s.legendDot, { backgroundColor: brand.navySoft }]} />
-              <Text style={s.legendText}>Op / boven mediaan</Text>
+              <Text style={s.legendText}>{t.atOrAboveMedian}</Text>
             </View>
             <View style={s.legendItem}>
               <View style={{ width: 1, height: 10, backgroundColor: brand.peerLine }} />
-              <Text style={s.legendText}>Peer-mediaan (60)</Text>
+              <Text style={s.legendText}>{t.peerMedianLegend(PEER)}</Text>
             </View>
           </View>
         </View>
 
         {report?.scoreProfile?.profileExplanation ? (
           <View style={s.cardSoft}>
-            <Text style={s.smallLabel}>Profielduidering</Text>
+            <Text style={s.smallLabel}>{t.profileExplanation}</Text>
             <Text style={s.body}>{report.scoreProfile.profileExplanation}</Text>
           </View>
         ) : null}
 
-        {footerEl(2, TOTAL_PAGES)}
+        {footerEl(2, TOTAL_PAGES, t)}
       </Page>
 
       {/* ══════════════════════════════════════════════════════════════════════
           PAGINA 3 — KRITIEKE DIMENSIES (critical priority)
           ══════════════════════════════════════════════════════════════════════ */}
       <Page size="A4" style={s.page}>
-        <Text style={s.eyebrow}>Diepteanalyse · Kritieke aandachtspunten</Text>
-        <Text style={s.h1}>Waar actie het meest urgent is</Text>
+        <Text style={s.eyebrow}>{t.criticalEyebrow}</Text>
+        <Text style={s.h1}>{t.criticalTitle}</Text>
         <Text style={[s.body, { marginBottom: 16 }]}>
-          De dimensies met prioriteit 'Kritiek' vragen directe aandacht. Ze liggen het
-          verst onder de peer-mediaan en vormen de grootste rem op uw analytische kwaliteit.
+          {t.criticalIntro}
         </Text>
 
         {criticalDims.length > 0 ? (
@@ -537,7 +534,7 @@ export function ReportDocument(props: ReportProps) {
               <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
                 <View style={{ flex: 1 }}>
                   <Text style={{ fontFamily: SANS_BOLD, fontSize: 7.5, color: brand.rust, letterSpacing: 1.6, textTransform: 'uppercase', marginBottom: 3 }}>
-                    ⚑  Kritiek
+                    {t.criticalPill}
                   </Text>
                   <Text style={{ fontFamily: SERIF_BOLD, fontSize: 16, color: brand.navy }}>{dim.label}</Text>
                 </View>
@@ -555,29 +552,28 @@ export function ReportDocument(props: ReportProps) {
               <Text style={s.body}>{dim.assessment}</Text>
 
               <View style={[s.cardSoft, { marginTop: 10, marginBottom: 0 }]}>
-                <Text style={s.smallLabel}>Direct uitvoerbare quick win</Text>
+                <Text style={s.smallLabel}>{t.quickWinActionable}</Text>
                 <Text style={[s.body, { color: brand.navy }]}>{dim.quickWin}</Text>
               </View>
             </View>
           ))
         ) : (
           <View style={s.cardSoft}>
-            <Text style={s.body}>Geen dimensies met kritieke prioriteit gevonden op basis van uw scorecard.</Text>
+            <Text style={s.body}>{t.noCritical}</Text>
           </View>
         )}
 
-        {footerEl(3, TOTAL_PAGES)}
+        {footerEl(3, TOTAL_PAGES, t)}
       </Page>
 
       {/* ══════════════════════════════════════════════════════════════════════
           PAGINA 4 — AANDACHTSDIMENSIES (attention priority)
           ══════════════════════════════════════════════════════════════════════ */}
       <Page size="A4" style={s.page}>
-        <Text style={s.eyebrow}>Diepteanalyse · Verbeterpotentieel</Text>
-        <Text style={s.h1}>Dimensies met ruimte voor verbetering</Text>
+        <Text style={s.eyebrow}>{t.attentionEyebrow}</Text>
+        <Text style={s.h1}>{t.attentionTitle}</Text>
         <Text style={[s.body, { marginBottom: 16 }]}>
-          De dimensies met prioriteit 'Aandacht' liggen onder de peer-mediaan maar
-          zijn niet acuut. Met gerichte actie kunnen zij snel op niveau worden gebracht.
+          {t.attentionIntro}
         </Text>
 
         {attentionDims.length > 0 ? (
@@ -586,7 +582,7 @@ export function ReportDocument(props: ReportProps) {
               <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
                 <View style={{ flex: 1 }}>
                   <Text style={{ fontFamily: SANS_BOLD, fontSize: 7.5, color: brand.amber, letterSpacing: 1.6, textTransform: 'uppercase', marginBottom: 3 }}>
-                    ◆  Aandacht
+                    {t.attentionPill}
                   </Text>
                   <Text style={{ fontFamily: SERIF_BOLD, fontSize: 16, color: brand.navy }}>{dim.label}</Text>
                 </View>
@@ -603,30 +599,28 @@ export function ReportDocument(props: ReportProps) {
               <Text style={s.body}>{dim.assessment}</Text>
 
               <View style={[s.cardSoft, { marginTop: 10, marginBottom: 0 }]}>
-                <Text style={[s.smallLabel, { color: brand.amber }]}>Quick win</Text>
+                <Text style={[s.smallLabel, { color: brand.amber }]}>{t.quickWin}</Text>
                 <Text style={[s.body, { color: brand.navy }]}>{dim.quickWin}</Text>
               </View>
             </View>
           ))
         ) : (
           <View style={s.cardSoft}>
-            <Text style={s.body}>Geen dimensies met aandachtsprioriteit gevonden.</Text>
+            <Text style={s.body}>{t.noAttention}</Text>
           </View>
         )}
 
-        {footerEl(4, TOTAL_PAGES)}
+        {footerEl(4, TOTAL_PAGES, t)}
       </Page>
 
       {/* ══════════════════════════════════════════════════════════════════════
           PAGINA 5 — VOLDOENDE / STERKE DIMENSIES
           ══════════════════════════════════════════════════════════════════════ */}
       <Page size="A4" style={s.page}>
-        <Text style={s.eyebrow}>Diepteanalyse · Sterke punten</Text>
-        <Text style={s.h1}>Wat u goed doet</Text>
+        <Text style={s.eyebrow}>{t.strongEyebrow}</Text>
+        <Text style={s.h1}>{t.strongTitle}</Text>
         <Text style={[s.body, { marginBottom: 16 }]}>
-          Deze dimensies scoren voldoende of sterk. Ze vormen uw operationele fundament
-          en moeten worden geborgd bij AI-implementatie. Bouwen op sterkte is minstens
-          zo strategisch als het repareren van zwaktes.
+          {t.strongIntro}
         </Text>
 
         {adequateDims.length > 0 ? (
@@ -635,7 +629,7 @@ export function ReportDocument(props: ReportProps) {
               <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 6 }}>
                 <View style={{ flex: 1 }}>
                   <Text style={{ fontFamily: SANS_BOLD, fontSize: 7.5, color: dim.priority === 'strong' ? brand.green : brand.textMuted, letterSpacing: 1.6, textTransform: 'uppercase', marginBottom: 3 }}>
-                    {priorityLabel(dim.priority)}
+                    {priorityLabel(dim.priority, t)}
                   </Text>
                   <Text style={{ fontFamily: SERIF_BOLD, fontSize: 15, color: brand.navy }}>{dim.label}</Text>
                 </View>
@@ -653,7 +647,7 @@ export function ReportDocument(props: ReportProps) {
 
               {dim.quickWin ? (
                 <View style={[s.cardSoft, { marginTop: 8, marginBottom: 0 }]}>
-                  <Text style={[s.smallLabel, { color: brand.textMuted }]}>Verankering</Text>
+                  <Text style={[s.smallLabel, { color: brand.textMuted }]}>{t.anchoring}</Text>
                   <Text style={[s.body, { color: brand.navy }]}>{dim.quickWin}</Text>
                 </View>
               ) : null}
@@ -662,38 +656,35 @@ export function ReportDocument(props: ReportProps) {
         ) : (
           <View style={s.card}>
             <Text style={s.body}>
-              Elke dimensie valt in de categorie 'Aandacht' of 'Kritiek' — zie vorige
-              pagina's voor de aanbevelingen.
+              {t.noStrong}
             </Text>
           </View>
         )}
 
-        {footerEl(5, TOTAL_PAGES)}
+        {footerEl(5, TOTAL_PAGES, t)}
       </Page>
 
       {/* ══════════════════════════════════════════════════════════════════════
           PAGINA 6 — BEDRIJFSPROFIEL (web research)
           ══════════════════════════════════════════════════════════════════════ */}
       <Page size="A4" style={s.page}>
-        <Text style={s.eyebrow}>Bedrijfsprofiel</Text>
-        <Text style={s.h1}>Onze kijk op {company}</Text>
+        <Text style={s.eyebrow}>{t.companyEyebrow}</Text>
+        <Text style={s.h1}>{t.companyTitle(company)}</Text>
         <Text style={[s.body, { marginBottom: 16 }]}>
-          Dit profiel is opgesteld op basis van publiek beschikbare informatie (website, persberichten,
-          sectordata) en uw eigen context. Het vormt de basis voor de bedrijfsspecifieke
-          duiding in dit rapport.
+          {t.companyIntro}
         </Text>
 
         {report?.companyContext ? (
           <>
             <View style={{ flexDirection: 'row', gap: 10, marginBottom: 12 }}>
               <View style={[s.statBox, { flex: 1 }]}>
-                <Text style={s.smallLabelMuted}>Sector</Text>
+                <Text style={s.smallLabelMuted}>{t.sector}</Text>
                 <Text style={{ fontFamily: SANS_BOLD, fontSize: 11, color: brand.navy, marginTop: 4 }}>
                   {report.companyContext.sector || '–'}
                 </Text>
               </View>
               <View style={[s.statBox, { flex: 2 }]}>
-                <Text style={s.smallLabelMuted}>Profiel</Text>
+                <Text style={s.smallLabelMuted}>{t.profile}</Text>
                 <Text style={{ fontSize: 10.5, color: brand.navySoft, marginTop: 4, lineHeight: 1.5 }}>
                   {report.companyContext.estimatedProfile || '–'}
                 </Text>
@@ -702,7 +693,7 @@ export function ReportDocument(props: ReportProps) {
 
             {report.companyContext.keyActivities ? (
               <View style={s.card}>
-                <Text style={s.smallLabel}>Kernactiviteiten</Text>
+                <Text style={s.smallLabel}>{t.keyActivities}</Text>
                 <Text style={s.body}>{report.companyContext.keyActivities}</Text>
               </View>
             ) : null}
@@ -710,7 +701,7 @@ export function ReportDocument(props: ReportProps) {
             {Array.isArray(report.companyContext.researchSignals) &&
             report.companyContext.researchSignals.length > 0 ? (
               <View style={s.card}>
-                <Text style={s.smallLabel}>Bevindingen uit online onderzoek</Text>
+                <Text style={s.smallLabel}>{t.researchFindings}</Text>
                 {report.companyContext.researchSignals.map((sig, i) => (
                   <View key={i} style={{ flexDirection: 'row', gap: 8, marginTop: 6 }}>
                     <Text style={{ fontSize: 9, color: brand.rust, marginTop: 2 }}>→</Text>
@@ -723,31 +714,29 @@ export function ReportDocument(props: ReportProps) {
         ) : (
           <View style={s.cardSoft}>
             <Text style={s.body}>
-              Geen website opgegeven. Vul bij een volgend traject de bedrijfswebsite in
-              voor een specifiek bedrijfsprofiel gebaseerd op actuele online informatie.
+              {t.noWebsite}
             </Text>
           </View>
         )}
 
         {report?.urgencyExplanation ? (
           <View style={s.cardAccent}>
-            <Text style={s.smallLabel}>Urgentieverklaring</Text>
+            <Text style={s.smallLabel}>{t.urgencyExplanation}</Text>
             <Text style={s.body}>{report.urgencyExplanation}</Text>
           </View>
         ) : null}
 
-        {footerEl(6, TOTAL_PAGES)}
+        {footerEl(6, TOTAL_PAGES, t)}
       </Page>
 
       {/* ══════════════════════════════════════════════════════════════════════
           PAGINA 7 — KERNOBSERVATIES
           ══════════════════════════════════════════════════════════════════════ */}
       <Page size="A4" style={s.page}>
-        <Text style={s.eyebrow}>Kernobservaties</Text>
-        <Text style={s.h1}>Wat dit rapport ziet dat anderen missen</Text>
+        <Text style={s.eyebrow}>{t.insightsEyebrow}</Text>
+        <Text style={s.h1}>{t.insightsTitle}</Text>
         <Text style={[s.body, { marginBottom: 18 }]}>
-          De vijf strategisch meest relevante observaties, specifiek voor uw situatie en sector.
-          Elk inzicht is direct gekoppeld aan uw scorecard-antwoorden en online bedrijfsprofiel.
+          {t.insightsIntro}
         </Text>
 
         {insights.length > 0 ? (
@@ -768,18 +757,17 @@ export function ReportDocument(props: ReportProps) {
           ))
         ) : null}
 
-        {footerEl(7, TOTAL_PAGES)}
+        {footerEl(7, TOTAL_PAGES, t)}
       </Page>
 
       {/* ══════════════════════════════════════════════════════════════════════
           PAGINA 8 — VRAAG & ANTWOORD SAMENVATTING
           ══════════════════════════════════════════════════════════════════════ */}
       <Page size="A4" style={s.page}>
-        <Text style={s.eyebrow}>Scorecard resultaten</Text>
-        <Text style={s.h1}>Vraag & Antwoord overzicht</Text>
+        <Text style={s.eyebrow}>{t.qaEyebrow}</Text>
+        <Text style={s.h1}>{t.qaTitle}</Text>
         <Text style={[s.body, { marginBottom: 16 }]}>
-          Uw antwoorden op de 15 scorecard-vragen. De analyse in dit rapport is volledig
-          op deze input gebaseerd — aangevuld met extern onderzoek per bedrijf.
+          {t.qaIntro}
         </Text>
 
         {([1, 2, 3, 4] as const).map((section) => {
@@ -787,7 +775,7 @@ export function ReportDocument(props: ReportProps) {
           return (
             <View key={section} style={{ marginBottom: 12 }}>
               <Text style={[s.smallLabel, { color: brand.navy, marginBottom: 6 }]}>
-                {`Sectie ${section}: ${sectionTitles[section]}`}
+                {t.sectionLabel(section, sectionTitles[section])}
               </Text>
               {sectionQs.map((q) => {
                 const letter = answers?.[q.id];
@@ -821,18 +809,18 @@ export function ReportDocument(props: ReportProps) {
           );
         })}
 
-        {footerEl(8, TOTAL_PAGES)}
+        {footerEl(8, TOTAL_PAGES, t)}
       </Page>
 
       {/* ══════════════════════════════════════════════════════════════════════
           PAGINA 9 — AANBEVOLEN TRAJECT
           ══════════════════════════════════════════════════════════════════════ */}
       <Page size="A4" style={s.page}>
-        <Text style={s.eyebrow}>Aanbeveling</Text>
-        <Text style={s.h1}>Het meest passende traject voor {firstName}</Text>
+        <Text style={s.eyebrow}>{t.recEyebrow}</Text>
+        <Text style={s.h1}>{t.recTitle(firstName)}</Text>
 
         <View style={s.cardAccent}>
-          <Text style={s.smallLabel}>Aanbevolen traject</Text>
+          <Text style={s.smallLabel}>{t.recommendedTrack}</Text>
           <Text style={{ fontFamily: SERIF_BOLD, fontSize: 22, color: brand.navy, marginBottom: 8 }}>
             {report?.recommendedTrajectory?.offerName || offerInfo?.name || '–'}
           </Text>
@@ -842,34 +830,34 @@ export function ReportDocument(props: ReportProps) {
 
           {report?.recommendedTrajectory?.expectedOutcome ? (
             <View style={[s.cardSoft, { marginBottom: 8 }]}>
-              <Text style={s.smallLabel}>Verwacht resultaat</Text>
+              <Text style={s.smallLabel}>{t.expectedOutcome}</Text>
               <Text style={s.body}>{report.recommendedTrajectory.expectedOutcome}</Text>
             </View>
           ) : null}
 
           {report?.recommendedTrajectory?.firstStep ? (
             <View style={[s.cardSoft, { borderLeft: `2pt solid ${brand.rust}`, marginBottom: 0 }]}>
-              <Text style={s.smallLabel}>Eerste concrete stap</Text>
+              <Text style={s.smallLabel}>{t.firstStep}</Text>
               <Text style={[s.body, { color: brand.navy }]}>{report.recommendedTrajectory.firstStep}</Text>
             </View>
           ) : null}
         </View>
 
         {/* Why this offer fits */}
-        <Text style={[s.h3, { marginTop: 10 }]}>Waarom dit traject</Text>
+        <Text style={[s.h3, { marginTop: 10 }]}>{t.whyTrack}</Text>
         <View style={{ flexDirection: 'row', gap: 8, marginTop: 8 }}>
           <View style={[s.statBox, { flex: 1, borderLeft: `2pt solid ${brand.rust}` }]}>
-            <Text style={s.smallLabelMuted}>Uw score</Text>
+            <Text style={s.smallLabelMuted}>{t.yourScore}</Text>
             <Text style={[s.statNumber, { fontSize: 20 }]}>{totalScore}/75</Text>
           </View>
           <View style={[s.statBox, { flex: 1 }]}>
-            <Text style={s.smallLabelMuted}>Aandacht vereist</Text>
-            <Text style={[s.statNumber, { fontSize: 20, color: brand.rust }]}>{belowPeer} dim.</Text>
+            <Text style={s.smallLabelMuted}>{t.attentionRequired}</Text>
+            <Text style={[s.statNumber, { fontSize: 20, color: brand.rust }]}>{belowPeer} {t.dimAbbrev}</Text>
           </View>
           <View style={[s.statBox, { flex: 2 }]}>
-            <Text style={s.smallLabelMuted}>Urgentie</Text>
+            <Text style={s.smallLabelMuted}>{t.urgency}</Text>
             <Text style={[s.statNumber, { fontSize: 18, color: urgencyColor(report?.urgency), marginTop: 4 }]}>
-              {urgencyLabel(report?.urgency)}
+              {urgencyLabel(report?.urgency, t)}
             </Text>
             {report?.urgencyExplanation ? (
               <Text style={[s.muted, { marginTop: 4 }]}>
@@ -880,38 +868,37 @@ export function ReportDocument(props: ReportProps) {
         </View>
 
         <View style={s.ctaBox}>
-          <Text style={s.ctaTitle}>Volgende stap: 20 minuten sparring</Text>
+          <Text style={s.ctaTitle}>{t.ctaTitle}</Text>
           <Text style={s.ctaBody}>
-            cal.com/wwdijkman/intake-call · wouter@agenticmindshift.nl
+            {t.ctaContact}
           </Text>
           <Text style={[s.ctaBody, { marginTop: 4 }]}>
-            Geen verkoopgesprek — een concrete toets of dit traject aansluit op uw situatie.
+            {t.ctaBody}
           </Text>
         </View>
 
-        {footerEl(9, TOTAL_PAGES)}
+        {footerEl(9, TOTAL_PAGES, t)}
       </Page>
 
       {/* ══════════════════════════════════════════════════════════════════════
           PAGINA 10 — 90-DAGEN ROADMAP
           ══════════════════════════════════════════════════════════════════════ */}
       <Page size="A4" style={s.page}>
-        <Text style={s.eyebrow}>Implementatieplan</Text>
-        <Text style={s.h1}>90-dagen roadmap voor {firstName}</Text>
+        <Text style={s.eyebrow}>{t.roadmapEyebrow}</Text>
+        <Text style={s.h1}>{t.roadmapTitle(firstName)}</Text>
         <Text style={[s.body, { marginBottom: 18 }]}>
-          Een concrete roadmap op basis van uw scorecard-profiel. Gefaseerd, zodat
-          elke stap voortbouwt op de vorige — zonder de organisatie te overbelasten.
+          {t.roadmapIntro}
         </Text>
 
         {/* Fase 1 */}
         <View style={s.card}>
           <View style={{ flexDirection: 'row', gap: 10, marginBottom: 10 }}>
             <View style={{ backgroundColor: brand.rust, paddingHorizontal: 8, paddingVertical: 4, alignSelf: 'flex-start' }}>
-              <Text style={{ fontFamily: SANS_BOLD, fontSize: 9, color: '#FFFFFF' }}>FASE 1</Text>
-              <Text style={{ fontSize: 7.5, color: '#FFD4C7' }}>Dag 1–30</Text>
+              <Text style={{ fontFamily: SANS_BOLD, fontSize: 9, color: '#FFFFFF' }}>{t.phase} 1</Text>
+              <Text style={{ fontSize: 7.5, color: '#FFD4C7' }}>{t.phase1Days}</Text>
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={s.h3}>Fundering leggen</Text>
+              <Text style={s.h3}>{t.phase1Title}</Text>
             </View>
           </View>
 
@@ -937,11 +924,11 @@ export function ReportDocument(props: ReportProps) {
         <View style={s.card}>
           <View style={{ flexDirection: 'row', gap: 10, marginBottom: 10 }}>
             <View style={{ backgroundColor: brand.amber, paddingHorizontal: 8, paddingVertical: 4, alignSelf: 'flex-start' }}>
-              <Text style={{ fontFamily: SANS_BOLD, fontSize: 9, color: '#FFFFFF' }}>FASE 2</Text>
-              <Text style={{ fontSize: 7.5, color: '#FFF0CC' }}>Dag 31–60</Text>
+              <Text style={{ fontFamily: SANS_BOLD, fontSize: 9, color: '#FFFFFF' }}>{t.phase} 2</Text>
+              <Text style={{ fontSize: 7.5, color: '#FFF0CC' }}>{t.phase2Days}</Text>
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={s.h3}>Processen optimaliseren</Text>
+              <Text style={s.h3}>{t.phase2Title}</Text>
             </View>
           </View>
 
@@ -958,8 +945,7 @@ export function ReportDocument(props: ReportProps) {
           <View style={{ flexDirection: 'row', gap: 8, marginBottom: 6 }}>
             <Text style={{ fontSize: 9, color: brand.amber }}>→</Text>
             <Text style={s.body}>
-              Pilot-evaluatie na 60 dagen: meten wat werkt en bijsturen op basis van
-              eerste resultaten in de praktijk.
+              {t.pilotEval}
             </Text>
           </View>
         </View>
@@ -968,38 +954,35 @@ export function ReportDocument(props: ReportProps) {
         <View style={s.card}>
           <View style={{ flexDirection: 'row', gap: 10, marginBottom: 10 }}>
             <View style={{ backgroundColor: brand.green, paddingHorizontal: 8, paddingVertical: 4, alignSelf: 'flex-start' }}>
-              <Text style={{ fontFamily: SANS_BOLD, fontSize: 9, color: '#FFFFFF' }}>FASE 3</Text>
-              <Text style={{ fontSize: 7.5, color: '#D4EDCE' }}>Dag 61–90</Text>
+              <Text style={{ fontFamily: SANS_BOLD, fontSize: 9, color: '#FFFFFF' }}>{t.phase} 3</Text>
+              <Text style={{ fontSize: 7.5, color: '#D4EDCE' }}>{t.phase3Days}</Text>
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={s.h3}>Structureel verankeren</Text>
+              <Text style={s.h3}>{t.phase3Title}</Text>
             </View>
           </View>
 
           <View style={{ flexDirection: 'row', gap: 8, marginBottom: 6 }}>
             <Text style={{ fontSize: 9, color: brand.green }}>→</Text>
             <Text style={s.body}>
-              Sterke dimensies ({adequateDims.map((d) => d.label).join(', ')}) als
-              fundament borgen en documenteren voor het volledige team.
+              {t.phase3Anchor(adequateDims.map((d) => d.label).join(', '))}
             </Text>
           </View>
           <View style={{ flexDirection: 'row', gap: 8, marginBottom: 6 }}>
             <Text style={{ fontSize: 9, color: brand.green }}>→</Text>
             <Text style={s.body}>
-              AI-workflow geïntegreerd in de dagelijkse dossiervoorbereiding — niet
-              als experiment, maar als standaard werkwijze.
+              {t.phase3Workflow}
             </Text>
           </View>
           <View style={{ flexDirection: 'row', gap: 8 }}>
             <Text style={{ fontSize: 9, color: brand.green }}>→</Text>
             <Text style={s.body}>
-              Opnieuw meten: herhaal de AI Readiness Scorecard na 90 dagen en
-              vergelijk met dit rapport.
+              {t.phase3Remeasure}
             </Text>
           </View>
         </View>
 
-        {footerEl(10, TOTAL_PAGES)}
+        {footerEl(10, TOTAL_PAGES, t)}
       </Page>
 
       {/* ══════════════════════════════════════════════════════════════════════
@@ -1008,56 +991,39 @@ export function ReportDocument(props: ReportProps) {
       <Page size="A4" style={s.page}>
         <View style={{ height: 3, backgroundColor: brand.navy, marginBottom: 36 }} />
 
-        <Text style={s.eyebrow}>Over de opsteller</Text>
-        <Text style={s.h1}>Agentic Mindshift Consultancy</Text>
+        <Text style={s.eyebrow}>{t.colophonEyebrow}</Text>
+        <Text style={s.h1}>{t.colophonTitle}</Text>
 
         <View style={[s.card, { marginBottom: 14 }]}>
-          <Text style={[s.body, { marginBottom: 10 }]}>
-            Agentic Mindshift helpt mid-market private equity fondsen, M&A-adviseurs en
-            corporate financiers om AI structureel te benutten in hun analytische processen —
-            van deal-screening tot portefeuillemonitoring.
-          </Text>
-          <Text style={[s.body, { marginBottom: 10 }]}>
-            We werken uitsluitend in het segment waar het ertoe doet: complexe
-            dossiers, hoge stakes, en een team dat al excellent is maar meer wil
-            bereiken met dezelfde capaciteit.
-          </Text>
-          <Text style={s.body}>
-            Onze aanpak is pragmatisch: geen frameworks, geen PowerPoint-trajecten.
-            Wij implementeren AI daar waar het direct resultaat geeft — in uw dossiers,
-            uw modellen, uw processen.
-          </Text>
+          <Text style={[s.body, { marginBottom: 10 }]}>{t.about1}</Text>
+          <Text style={[s.body, { marginBottom: 10 }]}>{t.about2}</Text>
+          <Text style={s.body}>{t.about3}</Text>
         </View>
 
         <View style={{ flexDirection: 'row', gap: 10, marginBottom: 14 }}>
           <View style={[s.statBox, { flex: 1 }]}>
-            <Text style={s.smallLabelMuted}>Oprichter</Text>
+            <Text style={s.smallLabelMuted}>{t.founder}</Text>
             <Text style={{ fontFamily: SANS_BOLD, fontSize: 11, color: brand.navy, marginTop: 4 }}>Wouter Dijkman</Text>
-            <Text style={s.muted}>Fractional AI Officer</Text>
+            <Text style={s.muted}>{t.founderRole}</Text>
             <Text style={[s.muted, { marginTop: 2 }]}>linkedin.com/in/wwdijkman</Text>
           </View>
           <View style={[s.statBox, { flex: 1 }]}>
-            <Text style={s.smallLabelMuted}>Contact</Text>
+            <Text style={s.smallLabelMuted}>{t.contact}</Text>
             <Text style={{ fontSize: 10, color: brand.navy, marginTop: 4 }}>wouter@agenticmindshift.nl</Text>
             <Text style={[s.muted, { marginTop: 2 }]}>agenticmindshift.nl</Text>
             <Text style={[s.muted, { marginTop: 2 }]}>cal.com/wwdijkman/intake-call</Text>
           </View>
           <View style={[s.statBox, { flex: 1 }]}>
-            <Text style={s.smallLabelMuted}>Registratie</Text>
+            <Text style={s.smallLabelMuted}>{t.registration}</Text>
             <Text style={{ fontSize: 10, color: brand.navy, marginTop: 4 }}>KvK 99495945</Text>
-            <Text style={[s.muted, { marginTop: 2 }]}>Amsterdam</Text>
+            <Text style={[s.muted, { marginTop: 2 }]}>{t.city}</Text>
             <Text style={[s.muted, { marginTop: 2 }]}>Marius Bauerstraat 235 A 5{'\n'}1062 AL Amsterdam</Text>
           </View>
         </View>
 
         <View style={s.ctaBox}>
-          <Text style={s.ctaTitle}>
-            Dit rapport is uw startpunt — geen eindpunt
-          </Text>
-          <Text style={s.ctaBody}>
-            Plan een gratis 20-minuten sessie om te bepalen of en hoe dit traject
-            concreet voor uw organisatie werkt.
-          </Text>
+          <Text style={s.ctaTitle}>{t.finalCtaTitle}</Text>
+          <Text style={s.ctaBody}>{t.finalCtaBody}</Text>
           <Text style={[s.ctaBody, { marginTop: 6, fontFamily: SANS_BOLD }]}>
             cal.com/wwdijkman/intake-call
           </Text>
@@ -1066,17 +1032,14 @@ export function ReportDocument(props: ReportProps) {
         <View style={{ marginTop: 24 }}>
           <View style={s.divider} />
           <Text style={[s.small, { marginBottom: 4 }]}>
-            Dit rapport is vertrouwelijk en uitsluitend bestemd voor {name} bij {company}.
-            Niet voor verdere verspreiding zonder schriftelijke toestemming van Agentic Mindshift Consultancy.
+            {t.confidential(name, company)}
           </Text>
           <Text style={s.small}>
-            Gegenereerd door {report?.model || 'DeepSeek'} op {generatedAt}, op basis van scorecard-antwoorden
-            en publiek beschikbare bedrijfsinformatie. Agentic Mindshift Consultancy · KvK 99495945 ·
-            agenticmindshift.nl
+            {t.generatedBy(report?.model || 'DeepSeek', generatedAt)}
           </Text>
         </View>
 
-        {footerEl(11, TOTAL_PAGES)}
+        {footerEl(11, TOTAL_PAGES, t)}
       </Page>
 
     </Document>

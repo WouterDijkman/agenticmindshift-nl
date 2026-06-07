@@ -60,7 +60,7 @@ export async function POST(request: Request) {
 
     // 4. Stuur rapport-email (await: PDF genereren kost 10-15s, fire-and-forget haalt de deadline niet)
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.agenticmindshift.nl';
-    const reportUrl = `${siteUrl}/nl/scorecard/rapport/${leadId}`;
+    const reportUrl = `${siteUrl}/${leadData.locale}/scorecard/rapport/${leadId}`;
     try {
       await sendReportEmail({
         name: leadData.name,
@@ -69,6 +69,7 @@ export async function POST(request: Request) {
         reportUrl,
         report,
         leadId,
+        locale: leadData.locale,
       });
     } catch (err) {
       console.error('[generate-report] Email send failed (non-fatal)', err);

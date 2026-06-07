@@ -52,8 +52,13 @@ export const answersSchema = z.record(
   z.enum(['A', 'B', 'C', 'D', 'E']),
 );
 
+export const reportLocaleEnum = z.enum(['nl', 'en', 'de', 'es', 'pt']);
+export type ReportLocale = z.infer<typeof reportLocaleEnum>;
+
 export const scorecardSubmissionSchema = emailCaptureSchema.extend({
   answers: answersSchema,
+  /** UI-taal van de prospect — bepaalt de taal van het gegenereerde rapport + e-mail. */
+  locale: reportLocaleEnum.optional().default('nl'),
 });
 
 export type ScorecardSubmission = z.infer<typeof scorecardSubmissionSchema>;

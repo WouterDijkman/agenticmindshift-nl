@@ -27,7 +27,7 @@ export async function submitScorecard(
     return { ok: false, errors };
   }
 
-  const { answers, ...lead } = parsed.data;
+  const { answers, locale, ...lead } = parsed.data;
   const scores = calculateScores(answers);
   const offer = determineOffer(answers['Q4']);
 
@@ -47,7 +47,7 @@ export async function submitScorecard(
 
   try {
     const client = getSupabaseClient();
-    const { error } = await client.from('leads').insert({
+    const baseRow = {
       id: leadId,
       name: lead.name,
       email: lead.email,
@@ -61,7 +61,15 @@ export async function submitScorecard(
       dimension_scores: scores.byDimension,
       assigned_offer: offer,
       weakest_dimensions: scores.weakest,
-    });
+    };
+
+    let { error } = await client.from('leads').insert({ ...baseRow, locale });
+    // Defensief: als de `locale`-kolom nog niet bestaat (migratie 0004 niet
+    // toegepast), val terug op een insert zonder locale i.p.v. de lead te verliezen.
+    if (error && /locale/i.test(`${error.message} ${error.details ?? ''}`)) {
+      console.warn('[submitScorecard] locale-kolom ontbreekt — insert zonder locale (run migratie 0004)');
+      ({ error } = await client.from('leads').insert(baseRow));
+    }
     if (error) {
       console.error('[submitScorecard] Supabase insert error', error);
       // Still return a leadId so the user can see their report; data may have been written partially.

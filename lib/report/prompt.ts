@@ -9,6 +9,7 @@ import { type Answers } from '@/lib/scoring';
 import { offerMap, type OfferType } from '@/lib/scoring';
 import { REPORT_JSON_SCHEMA } from './types';
 import { type ResearchFindings, formatResearchForPrompt } from './webResearch';
+import { type ReportLocale, LANGUAGE_NAME } from './locale';
 
 interface LeadData {
   leadId: string;
@@ -27,13 +28,17 @@ interface LeadData {
 export function buildReportPrompt(
   lead: LeadData,
   research: ResearchFindings,
+  locale: ReportLocale = 'nl',
 ): { system: string; user: string } {
   const offerInfo = offerMap[lead.offerType];
+  const targetLanguage = LANGUAGE_NAME[locale];
 
   // ── System prompt ──────────────────────────────────────────────────────────
   const system = `Je bent een senior adviseur bij Agentic Mindshift, een Europese adviespartner gespecialiseerd in AI-toepassing voor private equity, M&A-adviseurs en directeur-grootaandeelhouders in het Europese mid-market segment.
 
-Je taak: genereer een diepgaand, substantieel en persoonlijk adviesrapport in het Nederlands op basis van (1) de scorecard-antwoorden, (2) de gescrapte inhoud van de bedrijfswebsite, en (3) eventuele aanvullende externe signalen. Het rapport moet specifiek zijn voor déze organisatie — geen generieke teksten.
+TAAL — ZEER BELANGRIJK: schrijf ALLE tekstvelden van het rapport (executiveSummary, companyContext, dimensionAnalysis.assessment, dimensionAnalysis.label, dimensionAnalysis.quickWin, keyInsights, recommendedTrajectory, scoreProfile.profileLabel, profileExplanation, urgencyExplanation, researchNote) volledig in ${targetLanguage}. Vertaal vloeiend en professioneel — geen letterlijke vertaling. Behoud Engelse vakjargon-termen (zoals AI Readiness, due diligence, mid-market, IRR) waar dat in de doeltaal gangbaar is. De JSON-sleutels en enum-waarden (priority, urgency, offerType) blijven exact zoals in het schema; alleen de waarden van vrije-tekstvelden zijn in ${targetLanguage}.
+
+Je taak: genereer een diepgaand, substantieel en persoonlijk adviesrapport in ${targetLanguage} op basis van (1) de scorecard-antwoorden, (2) de gescrapte inhoud van de bedrijfswebsite, en (3) eventuele aanvullende externe signalen. Het rapport moet specifiek zijn voor déze organisatie — geen generieke teksten.
 
 Werkwijze:
 - LEES eerst de gescrapte website-inhoud volledig door en haal hieruit: welke sector/sub-sector, kernactiviteiten, kerncijfers indien zichtbaar, portfoliobedrijven indien PE/holding, governance-structuur, eventuele AI- of digitaliseringssignalen.
@@ -41,7 +46,7 @@ Werkwijze:
 - VERZIN NOOIT feiten die niet in de antwoorden of de scrape staan. Als iets onbekend is, schrijf: "op basis van uw antwoorden vermoeden wij..." of laat het weg.
 
 Schrijfstijl:
-- Directe, professionele Nederlandse adviestoon (peer-to-peer, niet bureaucratisch)
+- Directe, professionele adviestoon in ${targetLanguage} (peer-to-peer, niet bureaucratisch)
 - Specifiek voor de organisatie en sector — gebruik bedrijfsnaam en concrete observaties uit de website
 - Analytisch en feitelijk, geen marketing-taal
 - Elk inzicht moet verankerd zijn in (a) de specifieke antwoorden, OF (b) de website-content
@@ -109,7 +114,8 @@ Vereisten:
 4. keyInsights: 4 inzichten die direct relevant zijn voor de beslissingen van ${lead.name}
 5. recommendedTrajectory: leg uit WAAROM ${offerInfo.name} aansluit op de specifieke situatie
 6. urgency: 'high' als 2+ dimensies < 40, 'medium' als weakest dimension < 50, anders 'low'
-7. Geen placeholder-tekst of generieke formuleringen — elk woord moet specifiek zijn voor deze lead`;
+7. Geen placeholder-tekst of generieke formuleringen — elk woord moet specifiek zijn voor deze lead
+8. TAAL: schrijf alle vrije-tekstvelden volledig in ${targetLanguage}. Dit is een harde eis.`;
 
   return { system, user };
 }

@@ -10,6 +10,7 @@ import { NextResponse } from 'next/server';
 import { getSupabaseClient, isSupabaseConfigured } from '@/lib/supabase';
 import { sendReportEmail } from '@/lib/email/sendReportEmail';
 import { type GeneratedReport } from '@/lib/report/types';
+import { normalizeReportLocale } from '@/lib/report/locale';
 
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
@@ -40,11 +41,20 @@ export async function POST(req: Request) {
   }
 
   const client = getSupabaseClient();
-  const { data, error } = await client
+  let { data, error } = await client
     .from('leads')
-    .select('id, name, email, company, report')
+    .select('id, name, email, company, report, locale')
     .eq('id', leadId)
     .single();
+
+  // Defensief: locale-kolom kan ontbreken (migratie 0004 niet toegepast)
+  if (error && /locale/i.test(`${error.message} ${error.details ?? ''}`)) {
+    ({ data, error } = await client
+      .from('leads')
+      .select('id, name, email, company, report')
+      .eq('id', leadId)
+      .single());
+  }
 
   if (error || !data) {
     return NextResponse.json({ error: 'lead_not_found' }, { status: 404 });
@@ -54,8 +64,9 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'no_report_yet', message: 'Rapport nog niet gegenereerd voor deze lead' }, { status: 422 });
   }
 
+  const locale = normalizeReportLocale((data as { locale?: unknown }).locale);
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.agenticmindshift.nl';
-  const reportUrl = `${siteUrl}/nl/scorecard/rapport/${leadId}`;
+  const reportUrl = `${siteUrl}/${locale}/scorecard/rapport/${leadId}`;
 
   try {
     await sendReportEmail({
@@ -65,6 +76,7 @@ export async function POST(req: Request) {
       reportUrl,
       report: data.report as GeneratedReport,
       leadId,
+      locale,
     });
     return NextResponse.json({ sent: true });
   } catch (err) {

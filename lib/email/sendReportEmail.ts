@@ -14,6 +14,12 @@ import { isSupabaseConfigured, getSupabaseClient } from '@/lib/supabase';
 import { sendMail, isGmailConfigured } from './mailer';
 import { type Answers, calculateScores, determineOffer, type OfferType } from '@/lib/scoring';
 import { type Dimension } from '@/lib/questions';
+import {
+  type ReportLocale,
+  normalizeReportLocale,
+  EMAIL_STRINGS,
+  HTML_LANG,
+} from '@/lib/report/locale';
 
 interface SendReportEmailOptions {
   name: string;
@@ -22,6 +28,8 @@ interface SendReportEmailOptions {
   reportUrl: string;
   report: GeneratedReport;
   leadId: string;
+  /** Taal van de e-mail + PDF. Default 'nl'. */
+  locale?: ReportLocale;
 }
 
 export async function sendReportEmail(options: SendReportEmailOptions): Promise<void> {
@@ -32,18 +40,32 @@ export async function sendReportEmail(options: SendReportEmailOptions): Promise<
 
   let emailAddress = options.email;
   let answers: Answers | undefined;
+  let locale: ReportLocale = options.locale ?? 'nl';
 
   // Haal email + answers op uit Supabase als niet meegegeven (voor PDF generatie)
   if (isSupabaseConfigured()) {
     const client = getSupabaseClient();
-    const { data } = await client
+    let { data } = await client
       .from('leads')
-      .select('email, answers')
+      .select('email, answers, locale')
       .eq('id', options.leadId)
       .single();
+    // Defensief: locale-kolom kan ontbreken (migratie 0004 niet toegepast)
+    if (!data) {
+      ({ data } = await client
+        .from('leads')
+        .select('email, answers')
+        .eq('id', options.leadId)
+        .single());
+    }
     if (!emailAddress) emailAddress = data?.email ?? '';
     answers = data?.answers as Answers | undefined;
+    if (!options.locale) {
+      locale = normalizeReportLocale((data as { locale?: unknown } | null)?.locale);
+    }
   }
+
+  const strings = EMAIL_STRINGS[locale];
 
   if (!emailAddress) {
     console.warn('[sendReportEmail] Geen email-adres gevonden voor lead', options.leadId);
@@ -61,10 +83,11 @@ export async function sendReportEmail(options: SendReportEmailOptions): Promise<
       profileLabel: options.report.scoreProfile?.profileLabel ?? '',
       recommendedTrajectoryName: options.report.recommendedTrajectory?.offerName ?? '',
       urgency: options.report.urgency,
+      locale,
     }),
   );
 
-  const subject = buildEmailSubject(options.name, options.report);
+  const subject = buildEmailSubject(options.name, options.report, locale);
 
   // Genereer PDF als attachment (cream editorial template)
   let pdfAttachment: { filename: string; content: Buffer; contentType: string } | undefined;
@@ -80,7 +103,8 @@ export async function sendReportEmail(options: SendReportEmailOptions): Promise<
         byDimension: scores.byDimension as Record<Dimension, number>,
         weakest: scores.weakest,
         offer,
-        generatedAt: new Date().toLocaleDateString('nl-NL'),
+        generatedAt: new Date().toLocaleDateString(HTML_LANG[locale]),
+        locale,
         report: options.report,
         answers, // voor de Q&A-pagina in het rapport
       });
@@ -126,9 +150,8 @@ export async function sendReportEmail(options: SendReportEmailOptions): Promise<
   }
 }
 
-function buildEmailSubject(name: string, report: GeneratedReport): string {
+function buildEmailSubject(name: string, report: GeneratedReport, locale: ReportLocale): string {
   const firstName = name.split(' ')[0];
-  const urgencyPrefix = report.urgency === 'high' ? '⚡ ' : '';
-  const profileLabel = report.scoreProfile?.profileLabel ?? 'Uw rapport';
-  return `${urgencyPrefix}${firstName}, uw AI Readiness rapport is klaar — ${profileLabel}`;
+  const profileLabel = report.scoreProfile?.profileLabel ?? '';
+  return EMAIL_STRINGS[locale].subject(firstName, profileLabel, report.urgency === 'high');
 }

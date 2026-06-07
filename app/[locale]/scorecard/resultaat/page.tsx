@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from '@/i18n/navigation';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
@@ -18,6 +18,7 @@ import Button from '@/components/ui/Button';
 
 export default function ResultaatPage() {
   const t = useTranslations('scorecard.resultaat');
+  const locale = useLocale();
   const router = useRouter();
   const answers = useAssessmentStore((s) => s.answers);
   const setLeadId = useAssessmentStore((s) => s.setLeadId);
@@ -70,7 +71,11 @@ export default function ResultaatPage() {
     setSubmitting(true);
     setServerError(null);
     try {
-      const res = await submitScorecard({ ...data, answers });
+      const res = await submitScorecard({
+        ...data,
+        answers,
+        locale: locale as 'nl' | 'en' | 'de' | 'es' | 'pt',
+      });
       if (res.ok && res.leadId) {
         setLeadId(res.leadId);
         setLeadName(data.name);

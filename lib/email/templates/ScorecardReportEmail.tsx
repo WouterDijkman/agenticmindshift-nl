@@ -9,6 +9,12 @@ import {
   Section,
   Hr,
 } from '@react-email/components';
+import {
+  type ReportLocale,
+  EMAIL_STRINGS,
+  HTML_LANG,
+  calLink,
+} from '@/lib/report/locale';
 
 interface ScorecardReportEmailProps {
   name: string;
@@ -19,6 +25,7 @@ interface ScorecardReportEmailProps {
   profileLabel: string;
   recommendedTrajectoryName: string;
   urgency: 'high' | 'medium' | 'low';
+  locale?: ReportLocale;
 }
 
 const wrap: React.CSSProperties = {
@@ -54,24 +61,34 @@ export default function ScorecardReportEmail({
   profileLabel,
   recommendedTrajectoryName,
   urgency,
+  locale = 'nl',
 }: ScorecardReportEmailProps) {
   const firstName = name.split(' ')[0];
-  const urgencyLabel = urgency === 'high' ? '⚡ Directe aandacht gewenst' : urgency === 'medium' ? 'Verbeterpotentieel aanwezig' : 'Sterke basis';
+  const s = EMAIL_STRINGS[locale];
+  const urgencyLabel =
+    urgency === 'high' ? s.urgencyHigh : urgency === 'medium' ? s.urgencyMedium : s.urgencyLow;
+  const link = calLink();
+  // De aanbeveling-zin bevat de trajectnaam vetgedrukt; we splitsen op de naam.
+  const recommendation = s.recommendation(recommendedTrajectoryName);
+  const [recBefore, recAfter] = recommendation.split(recommendedTrajectoryName);
+  // De 'vragen'-zin bevat de cal-link die we klikbaar maken.
+  const questionsLine = s.questions(link);
+  const [qBefore, qAfter] = questionsLine.split(link);
 
   return (
-    <Html lang="nl">
+    <Html lang={HTML_LANG[locale]}>
       <Head />
       <Body style={wrap}>
         <Container style={card}>
           <Text style={{ color: '#F14C1D', fontSize: '11px', letterSpacing: '1.5px', textTransform: 'uppercase' as const, marginBottom: '8px' }}>
-            AI Readiness Rapport — {company}
+            {s.eyebrow(company)}
           </Text>
           <Heading style={{ color: '#e4ecf5', fontSize: '22px', marginBottom: '8px', fontWeight: 700 }}>
-            {firstName}, uw rapport staat klaar
+            {s.heading(firstName)}
           </Heading>
           <Text style={{ color: '#a8b8cc', fontSize: '14px', marginBottom: '20px' }}>
-            Profiel: <strong style={{ color: '#e4ecf5' }}>{profileLabel}</strong> &nbsp;·&nbsp;
-            Score: <strong style={{ color: '#e4ecf5' }}>{totalScore}/75</strong> &nbsp;·&nbsp;
+            {s.profileLabel}: <strong style={{ color: '#e4ecf5' }}>{profileLabel}</strong> &nbsp;·&nbsp;
+            {s.scoreLabel}: <strong style={{ color: '#e4ecf5' }}>{totalScore}/75</strong> &nbsp;·&nbsp;
             <span style={{ color: urgency === 'high' ? '#F14C1D' : '#a8b8cc' }}>{urgencyLabel}</span>
           </Text>
 
@@ -82,10 +99,9 @@ export default function ScorecardReportEmail({
           </Section>
 
           <Text style={{ color: '#a8b8cc', fontSize: '14px', lineHeight: '1.6' }}>
-            Op basis van uw antwoorden adviseren wij het traject{' '}
-            <strong style={{ color: '#e4ecf5' }}>{recommendedTrajectoryName}</strong>.
-            Het volledige rapport bevat een uitgebreide dimensie-analyse,
-            concrete verbeteracties en een persoonlijke uitleg.
+            {recBefore}
+            <strong style={{ color: '#e4ecf5' }}>{recommendedTrajectoryName}</strong>
+            {recAfter}
           </Text>
 
           <Section style={{ margin: '24px 0' }}>
@@ -102,23 +118,24 @@ export default function ScorecardReportEmail({
                 fontSize: '15px',
               }}
             >
-              Open uw volledige rapport →
+              {s.cta}
             </Link>
           </Section>
 
           <Hr style={{ borderColor: 'rgba(107,125,150,0.2)', margin: '24px 0' }} />
 
           <Text style={{ color: '#6b7d96', fontSize: '12px', lineHeight: '1.6' }}>
-            Vragen? Antwoord op deze mail of plan een gesprek via{' '}
-            <Link href="https://cal.com/wwdijkman/intake-call" style={{ color: '#a8b8cc' }}>
-              cal.com/wwdijkman/intake-call
-            </Link>.
+            {qBefore}
+            <Link href={`https://${link}`} style={{ color: '#a8b8cc' }}>
+              {link}
+            </Link>
+            {qAfter}
           </Text>
           <Text style={{ color: '#6b7d96', fontSize: '12px', marginTop: '8px' }}>
-            Agentic Mindshift &middot; Wouter Dijkman &middot; agenticmindshift.nl
+            {s.footer}
           </Text>
           <Text style={{ color: '#4a5a6e', fontSize: '11px', marginTop: '8px' }}>
-            U ontvangt deze e-mail omdat u de AI Readiness Scorecard heeft ingevuld op agenticmindshift.nl.
+            {s.unsubscribe}
           </Text>
         </Container>
       </Body>

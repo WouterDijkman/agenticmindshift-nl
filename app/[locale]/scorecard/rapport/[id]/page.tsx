@@ -129,7 +129,7 @@ export default function RapportPage() {
               className="btn btn-secondary"
               style={{ fontSize: '0.9375rem', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
             >
-              <span>↓</span> PDF downloaden
+              <span>↓</span> {t('download_pdf')}
             </a>
             <Button variant="secondary" size="md" onClick={() => window.print()}>
               {t('print_btn')}
@@ -219,7 +219,7 @@ export default function RapportPage() {
                 className="btn btn-secondary"
                 style={{ fontSize: '0.9375rem', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
               >
-                <span>↓</span> PDF downloaden
+                <span>↓</span> {t('download_pdf')}
               </a>
             )}
             <Button variant="secondary" size="md" onClick={() => window.print()}>
@@ -413,7 +413,7 @@ export default function RapportPage() {
               className="btn btn-secondary"
               style={{ fontSize: '0.9375rem', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
             >
-              <span>↓</span> PDF downloaden
+              <span>↓</span> {t('download_pdf')}
             </a>
           )}
           <Button variant="secondary" size="md" onClick={() => window.print()}>

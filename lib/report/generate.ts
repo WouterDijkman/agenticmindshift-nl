@@ -8,6 +8,7 @@ import { type OfferType } from '@/lib/scoring';
 import { researchCompany } from './webResearch';
 import { buildReportPrompt } from './prompt';
 import { type GeneratedReport } from './types';
+import { type ReportLocale, normalizeReportLocale } from './locale';
 import { isSupabaseConfigured, getSupabaseClient } from '@/lib/supabase';
 
 const DEEPSEEK_BASE = 'https://api.deepseek.com';
@@ -78,6 +79,8 @@ export interface GenerateReportOptions {
   /** Korte vrije toelichting over het bedrijf van de lead */
   companyContext?: string;
   answers: Answers;
+  /** Doeltaal van het rapport — bepaalt de output-taal van DeepSeek. */
+  locale: ReportLocale;
 }
 
 /**
@@ -88,7 +91,7 @@ export interface GenerateReportOptions {
 export async function generateAndStoreReport(
   options: GenerateReportOptions,
 ): Promise<GeneratedReport> {
-  const { leadId, name, company, jobTitle, website, companyContext, answers } = options;
+  const { leadId, name, company, jobTitle, website, companyContext, answers, locale } = options;
 
   if (!isDeepSeekConfigured()) {
     throw new Error('DeepSeek niet geconfigureerd (DEEPSEEK_API_KEY missing)');
@@ -114,7 +117,7 @@ export async function generateAndStoreReport(
     byDimension: scores.byDimension as DimensionScores,
     weakest: scores.weakest,
     offerType,
-  }, research);
+  }, research, locale);
 
   // Roep DeepSeek aan
   console.log(`[generateReport] Calling DeepSeek for lead ${leadId} (${company})`);
@@ -176,11 +179,23 @@ export async function getLeadForReport(leadId: string): Promise<GenerateReportOp
   if (!isSupabaseConfigured()) return null;
 
   const client = getSupabaseClient();
-  const { data, error } = await client
+  const baseCols = 'id, name, company, job_title, website, company_context, answers';
+
+  let { data, error } = await client
     .from('leads')
-    .select('id, name, company, job_title, website, company_context, answers')
+    .select(`${baseCols}, locale`)
     .eq('id', leadId)
     .single();
+
+  // Defensief: als de `locale`-kolom nog niet bestaat (migratie 0004 niet
+  // toegepast), val terug op een select zonder locale.
+  if (error && /locale/i.test(`${error.message} ${error.details ?? ''}`)) {
+    ({ data, error } = await client
+      .from('leads')
+      .select(baseCols)
+      .eq('id', leadId)
+      .single());
+  }
 
   if (error || !data) return null;
   return {
@@ -191,5 +206,6 @@ export async function getLeadForReport(leadId: string): Promise<GenerateReportOp
     website: data.website ?? undefined,
     companyContext: data.company_context ?? undefined,
     answers: data.answers as Answers,
+    locale: normalizeReportLocale((data as { locale?: unknown }).locale),
   };
 }
