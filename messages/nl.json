@@ -25,7 +25,7 @@
     "cta_sub": "Vijftien vragen. Twaalf minuten. Geen account.",
     "start_scorecard": "Start de Scorecard",
     "copyright": "© 2026 Agentic Mindshift — opgericht oktober 2025.",
-    "tagline_bottom": "Founder Factum Capital · lancering 1 juli 2026"
+    "tagline_bottom": "Factum Capital · AI-platform in ontwikkeling"
   },
   "homepage": {
     "meta_title": "AI-advies voor Private Equity & M&A",
@@ -33,24 +33,23 @@
     "hero": {
       "eyebrow": "Voor PE-partners, M&A-directors en family offices",
       "heading": "Hoeveel rendement laat uw portefeuille deze maand liggen?",
-      "subtext": "Uw maandrapportage maskeert onderprestatie. Uw deal-team herhaalt vermijdbare fouten. En AI-gedreven due diligence over alle dimensies ontbreekt in elk IC-voorstel. De Scorecard brengt alle zes dimensies in kaart. In twaalf minuten.",
+      "subtext": "Uw maandrapportage maskeert onderprestatie. Uw deal-team herhaalt vermijdbare fouten. En AI-gedreven due diligence over alle dimensies ontbreekt in de meeste IC-voorstellen. De Scorecard brengt alle zes dimensies in kaart. In twaalf minuten.",
       "cta_primary": "Start de Scorecard",
       "cta_secondary": "Werkwijze & tarieven",
-      "trust": "12 minuten · 6 dimensies · geen account nodig · 100% vertrouwelijk"
+      "trust": "12 minuten · 6 dimensies · geen account nodig · vertrouwelijk"
     },
-    "social_proof": {
-      "eyebrow": "Resultaten",
-      "heading": "Wat anderen al ontdekten.",
-      "disclaimer": "Betreffen daadwerkelijke opdrachten · namen geanonimiseerd op verzoek van cliënt.",
-      "quote_1": "\"Twee van de zes dimensies lagen ver onder het niveau van vergelijkbare partijen — dat was ons nooit eerder zo expliciet gemaakt.\"",
-      "who_1": "PE-partner, Nederlandse lower-mid market fund",
-      "aum_1": "~€120M AUM",
-      "quote_2": "\"Overnameprijs 0,4× naar beneden bijgesteld op basis van de AI-analyse. Het rapport kostte €10.000 — die aanpassing bespaarde ons een veelvoud.\"",
-      "who_2": "M&A-director, buy-and-build platform",
-      "aum_2": "4 acquisities per jaar",
-      "quote_3": "\"We dachten dat onze maandrapportage op orde was. De Scorecard liet in twaalf minuten zien dat drie van de zes dimensies onder het niveau van vergelijkbare fondsen lagen. Dat gesprek hadden we intern nooit gevoerd.\"",
-      "who_3": "CFO, familiekantoor met 8 deelnemingen",
-      "aum_3": "€40M–€60M onder beheer"
+    "founder": {
+      "eyebrow": "Wie hierachter staat",
+      "heading": "Eén adviseur. Zes jaar aan de financierings- en herstructureringskant van Nederlandse deals.",
+      "body": "Agentic Mindshift is opgericht door Wouter Dijkman, voormalig professional in acquisition finance en financial restructuring (Rabobank, ING, Alter Domus). Geen AI-generalist met toevallig PE-klanten, maar iemand die van dichtbij zag waarom technisch perfecte deals alsnog mislukken. Ik bouw dit bewust selectief op: een handvol partners tegelijk, zodat het werk hands-on blijft.",
+      "point_1_label": "6 jaar",
+      "point_1_body": "Acquisition finance en financial restructuring in de Nederlandse mid-market.",
+      "point_2_label": "Founder-led",
+      "point_2_body": "U werkt rechtstreeks met de adviseur. Selectief, persoonlijk, zonder tussenlagen.",
+      "point_3_label": "€1–25M",
+      "point_3_body": "Mid-market focus. Geen startups, geen grote corporates.",
+      "cta": "Meer over Wouter →",
+      "sample_note": "Liever eerst het rapport-format zien? Vraag een geanonimiseerd voorbeeldrapport aan via LinkedIn of e-mail."
     },
     "transformation": {
       "eyebrow": "Het verschil",
@@ -93,7 +92,7 @@
     },
     "pain": {
       "eyebrow": "Herkenbaar?",
-      "heading": "Drie problemen die uw rendement kosten. Niemand benoemt ze.",
+      "heading": "Drie problemen die uw rendement kosten. Zelden expliciet benoemd.",
       "subheading": "U zou geen investeringsbeslissing moeten nemen op basis van een incompleet beeld. Toch is dat de norm.",
       "label_1": "Onzichtbaar risico",
       "title_1": "U neemt beslissingen op basis van wat u ziet.",
@@ -238,20 +237,20 @@
   },
   "over": {
     "meta_title": "Over Wouter Dijkman",
-    "meta_description": "Founder Agentic Mindshift en Factum Capital. Zes jaar deal-ervaring in acquisition finance en financial restructuring, Nederlandse mid-market.",
+    "meta_description": "Founder Agentic Mindshift. Zes jaar ervaring in acquisition finance en financial restructuring in de Nederlandse mid-market.",
     "hero": {
       "eyebrow": "De adviseur",
-      "role": "Founder Agentic Mindshift & Factum Capital",
-      "subtext": "Zes jaar aan beide kanten van de Nederlandse deal-tafel. Die praktijkervaring vertaalt zich naar meetbaar portefeuille-inzicht voor PE-partners die rendement willen borgen vóórdat de jaarcijfers het bevestigen."
+      "role": "Founder Agentic Mindshift",
+      "subtext": "Zes jaar aan de financierings- en herstructureringskant van Nederlandse deals. Die praktijkervaring vertaalt zich naar meetbaar portefeuille-inzicht voor PE-partners die rendement willen borgen vóórdat de jaarcijfers het bevestigen."
     },
-    "answer_first": "Agentic Mindshift is opgericht door Wouter Dijkman, voormalig private-equity- en M&A-professional met ervaring bij Rabobank, ING en Alter Domus. De firma adviseert Nederlandse mid-market fondsen, M&A-kantoren en familiebedrijven over AI-strategie en AI-gedreven due diligence — met de blik van een dealmaker, niet die van een techleverancier.",
+    "answer_first": "Agentic Mindshift is opgericht door Wouter Dijkman, voormalig professional in acquisition finance en financial restructuring met ervaring bij Rabobank, ING en Alter Domus. De firma adviseert Nederlandse mid-market fondsen, M&A-kantoren en familiebedrijven over AI-strategie en AI-gedreven due diligence — met de blik van iemand die naast de deal stond, niet die van een techleverancier.",
     "bio": {
       "eyebrow": "Achtergrond",
       "quote": "Ik heb deals gezien die technisch perfect waren — en toch mislukten omdat niemand bereid was de ongemakkelijke aanname uit te dagen. Dat is het probleem dat ik oplos. Niet met meer data. Met betere vragen.",
-      "para1": "Drie jaar financial restructuring, drie jaar acquisition finance. Beide kanten van de deal-tafel, Nederlandse mid-market. Die combinatie leert u precies waar de aannames niet uitkomen, en waar de maandrapportage onderprestatie maskeert in plaats van signaleert.",
-      "para2_prefix": "In oktober 2025 is Agentic Mindshift gestart. In november 2025 volgde AI for Business aan Nyenrode. Op 1 juli 2026 lanceert",
-      "para2_suffix": ": 29 modules waarmee deal-teams hun DD-proces, maandrapportage en oordeelsvorming structureel instrumenteren.",
-      "para3": "Eerste resultaat uit de praktijk: een overnameprijs-correctie van 0,4× op een buy-and-build deal. De investering in het rapport verdiende zichzelf meervoudig terug."
+      "para1": "Drie jaar financial restructuring, drie jaar acquisition finance — de financierings- en herstructureringskant van de Nederlandse mid-market. Die combinatie leert u precies waar de aannames niet uitkomen, en waar de maandrapportage onderprestatie maskeert in plaats van signaleert.",
+      "para2_prefix": "In oktober 2025 is Agentic Mindshift gestart. In november 2025 volgde AI for Business aan Nyenrode. In ontwikkeling is",
+      "para2_suffix": ": een AI-platform met modules waarmee deal-teams hun DD-proces, maandrapportage en oordeelsvorming structureel instrumenteren.",
+      "para3": "Ik bouw dit bewust selectief op: een handvol partners tegelijk, zodat elk traject hands-on blijft en het werk de aandacht krijgt die een deal verdient."
     },
     "credentials": {
       "eyebrow": "Waarom Wouter",
@@ -259,15 +258,15 @@
       "cred_1_value": "6 jaar",
       "cred_1_label": "Deal-ervaring",
       "cred_1_sub": "Acquisition finance & financial restructuring",
-      "cred_2_value": "Twee kanten",
-      "cred_2_label": "Van de deal-tafel",
-      "cred_2_sub": "Financiering én herstructurering meegemaakt",
+      "cred_2_value": "2 disciplines",
+      "cred_2_label": "Financiering & restructuring",
+      "cred_2_sub": "De volledige cyclus van financiering tot stress",
       "cred_3_value": "€1–25M",
       "cred_3_label": "Mid-market focus",
       "cred_3_sub": "Nederlandse PE‑ en M&A‑dealgrootte",
-      "cred_4_value": "29 modules",
-      "cred_4_label": "Eigen AI-platform",
-      "cred_4_sub": "Factum Capital · lancering 1 juli 2026"
+      "cred_4_value": "Founder-led",
+      "cred_4_label": "Selectief & hands-on",
+      "cred_4_sub": "Een handvol partners tegelijk, geen tussenlagen"
     },
     "timeline": {
       "eyebrow": "Loopbaan",
@@ -328,7 +327,7 @@
       "heading": "Welke situatie past bij u?",
       "subtext": "Vier situaties, vier routes. U herkent uw vraag, of één gesprek volstaat om de juiste route te bevestigen.",
       "guarantee_title": "Garantie",
-      "guarantee_body": "De Scorecard is gratis. De AI Sparring Sessie is vrijblijvend — dertig minuten, geen factuur. Geen verplichtingen.",
+      "guarantee_body": "Concreet: de Scorecard is gratis, de Sparring Sessie kost dertig minuten en geen factuur, en na akkoord op een traject start u binnen zeven werkdagen — met de eerste deliverable, niet met een kick-off. Alleen de Fractional AI Officer kent een minimumlooptijd van drie maanden; alle overige routes zijn per opdracht, zonder lock-in.",
       "most_chosen": "Meest gekozen",
       "investment_label": "Investering"
     },
@@ -377,7 +376,7 @@
     "pricing_note": "* Alle bedragen exclusief btw. Eerste kennismaking altijd vrijblijvend.",
     "risk": {
       "title": "Geen risico",
-      "body": "De Scorecard is gratis. De AI Sparring Sessie is vrijblijvend — dertig minuten, geen factuur. Zo simpel is het."
+      "body": "De Scorecard is gratis en de Sparring Sessie kost dertig minuten zonder factuur. Na akkoord start u binnen zeven werkdagen met de eerste deliverable. Op de Fractional AI Officer na (minimaal drie maanden) is elke route per opdracht, zonder lange looptijd."
     },
     "faq": {
       "eyebrow": "Eerlijk over de investering",
@@ -622,7 +621,7 @@
       "subtext": "Vijftien vragen. Twaalf minuten. Een rapport dat uw blinde vlekken meetbaar maakt en vergelijkt met vergelijkbare partijen.",
       "start_cta": "Start de Scorecard",
       "no_account": "Geen account vereist. Uw antwoorden worden tussentijds opgeslagen.",
-      "trust": "Al ingevuld door PE-partners, M&A-directors en family offices in de Nederlandse mid-market.",
+      "trust": "Ontworpen voor PE-partners, M&A-directors en family offices in de Nederlandse mid-market.",
       "confidentiality_title": "Vertrouwelijkheid",
       "confidentiality_body": "Uw antwoorden worden alleen gebruikt om uw rapport te genereren. U kunt anoniem invullen indien u dat wenst.",
       "blind_spots_note": "De meeste PE-partners ontdekken hun blinde vlekken pas als het te laat is. Uw investering: twaalf minuten.",
@@ -770,7 +769,7 @@
     "variants": {
       "A": {
         "offerName": "AI-gedreven Due Diligence & Portfolio",
-        "interpretation": "Uw score op Analytische Kwaliteit is {score} van 20 punten. Dit is de dimensie waar de meeste partijen in de Nederlandse lower-mid market structureel rendement verliezen — doorgaans onbewust. Uw MBR-cyclus draait, maar vroegtijdige signalering ontbreekt: variantie-analyse gaat niet diep genoeg om bij te sturen voordat een kwartaal verloren is. De portfolio-intelligence dienst — uitgevoerd via Factum Capital (ons AI-platform) — is specifiek gebouwd voor dit scenario.",
+        "interpretation": "Uw score op Analytical Quality is {score} van 20 punten. Dit is de dimensie waar de meeste partijen in de Nederlandse lower-mid market structureel rendement verliezen — doorgaans onbewust. Uw MBR-cyclus draait, maar vroegtijdige signalering ontbreekt: variantie-analyse gaat niet diep genoeg om bij te sturen voordat een kwartaal verloren is. De portfolio-intelligence dienst — uitgevoerd via Factum Capital (ons AI-platform) — is specifiek gebouwd voor dit scenario.",
         "price": "€6.500 – €8.500 / maand · min. 3 maanden · excl. btw",
         "interventions": {
           "0": {
@@ -846,7 +845,7 @@
       },
       "E": {
         "offerName": "AI-gedreven Due Diligence & Portfolio",
-        "interpretation": "Uw score op Analytische Kwaliteit is {score} van 20 punten. Uw financierings- of deal-dossiers zijn nog niet consequent op alle relevante dimensies opgebouwd. Dit leidt tot langere doorlooptijden, onnodige herzieningsronden en een minder sterke onderhandelingspositie. De financieringsmemo-dienst — uitgevoerd via Factum Capital — levert het analytisch fundament en koppelt gecertificeerde adviseurs die formeel ondertekenen waar vereist.",
+        "interpretation": "Uw score op Analytical Quality is {score} van 20 punten. Uw financierings- of deal-dossiers zijn nog niet consequent op alle relevante dimensies opgebouwd. Dit leidt tot langere doorlooptijden, onnodige herzieningsronden en een minder sterke onderhandelingspositie. De financieringsmemo-dienst — uitgevoerd via Factum Capital — levert het analytisch fundament en koppelt gecertificeerde adviseurs die formeel ondertekenen waar vereist.",
         "price": "Vanaf €10.000 per deal · of €6.500–€8.500/mnd portfolio-intelligence · excl. btw",
         "interventions": {
           "0": {

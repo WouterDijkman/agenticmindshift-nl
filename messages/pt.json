@@ -25,7 +25,7 @@
     "cta_sub": "Quinze perguntas. Doze minutos. Sem conta.",
     "start_scorecard": "Iniciar o Scorecard",
     "copyright": "© 2026 Agentic Mindshift — fundada em outubro de 2025.",
-    "tagline_bottom": "Fundador da Factum Capital · lançamento a 1 de julho de 2026"
+    "tagline_bottom": "Factum Capital · plataforma de IA em desenvolvimento"
   },
   "homepage": {
     "meta_title": "Consultoria de IA para Private Equity e M&A",
@@ -33,24 +33,23 @@
     "hero": {
       "eyebrow": "Para sócios de PE, diretores de M&A e family offices",
       "heading": "Quanto retorno está o seu portfólio a deixar escapar este mês?",
-      "subtext": "O seu relatório mensal mascara a subperformance. A sua equipa de deals repete erros evitáveis. E a due diligence impulsionada por IA em todas as dimensões falta em cada proposta ao IC. O Scorecard mapeia as seis dimensões. Em doze minutos.",
+      "subtext": "O seu relatório mensal mascara a subperformance. A sua equipa de deals repete erros evitáveis. E a due diligence impulsionada por IA em todas as dimensões falta na maioria das propostas ao IC. O Scorecard mapeia as seis dimensões. Em doze minutos.",
       "cta_primary": "Iniciar o Scorecard",
       "cta_secondary": "Metodologia e honorários",
-      "trust": "12 minutos · 6 dimensões · sem conta · 100% confidencial"
+      "trust": "12 minutos · 6 dimensões · sem conta · confidencial"
     },
-    "social_proof": {
-      "eyebrow": "Resultados",
-      "heading": "O que outros já descobriram.",
-      "disclaimer": "Baseado em mandatos reais · nomes anonimizados a pedido do cliente.",
-      "quote_1": "\"Duas das seis dimensões estavam bem abaixo do nível de empresas comparáveis — nunca nos tinham dito isso de forma tão explícita.\"",
-      "who_1": "Sócio de PE, fundo neerlandês lower mid-market",
-      "aum_1": "~€120M AUM",
-      "quote_2": "\"O preço de aquisição foi ajustado para baixo em 0,4× com base na análise de IA. O relatório custou €10.000 — esse ajuste poupou-nos um múltiplo.\"",
-      "who_2": "Diretor de M&A, plataforma buy-and-build",
-      "aum_2": "4 aquisições por ano",
-      "quote_3": "\"Pensávamos que o nosso relatório mensal estava em ordem. O Scorecard mostrou em doze minutos que três das seis dimensões estavam abaixo do nível de fundos comparáveis. Essa conversa nunca tinha acontecido internamente.\"",
-      "who_3": "CFO, family office com 8 empresas de portfólio",
-      "aum_3": "€40M–€60M sob gestão"
+    "founder": {
+      "eyebrow": "Quem está por trás disto",
+      "heading": "Um consultor. Seis anos no lado do financiamento e da reestruturação de deals neerlandeses.",
+      "body": "A Agentic Mindshift foi fundada por Wouter Dijkman, antigo profissional em acquisition finance e financial restructuring (Rabobank, ING, Alter Domus). Não um generalista de IA com clientes de PE por acaso, mas alguém que viu de perto porque é que deals tecnicamente perfeitos acabam por falhar. Construo isto deliberadamente de forma seletiva: um punhado de parceiros de cada vez, para que o trabalho se mantenha hands-on.",
+      "point_1_label": "6 anos",
+      "point_1_body": "Acquisition finance e financial restructuring no mid-market neerlandês.",
+      "point_2_label": "Founder-led",
+      "point_2_body": "Trabalha diretamente com o consultor. Seletivo, pessoal, sem camadas intermédias.",
+      "point_3_label": "€1–25M",
+      "point_3_body": "Foco no mid-market. Sem startups, sem grandes corporações.",
+      "cta": "Mais sobre o Wouter →",
+      "sample_note": "Prefere ver primeiro o formato do relatório? Solicite um relatório de amostra anonimizado por LinkedIn ou e-mail."
     },
     "transformation": {
       "eyebrow": "A diferença",
@@ -93,7 +92,7 @@
     },
     "pain": {
       "eyebrow": "Soa familiar?",
-      "heading": "Três problemas que lhe custam rentabilidade. Ninguém os nomeia.",
+      "heading": "Três problemas que lhe custam rentabilidade. Raramente nomeados explicitamente.",
       "subheading": "Não deveria ter de tomar uma decisão de investimento com base numa imagem incompleta. No entanto, essa é a norma.",
       "label_1": "Risco invisível",
       "title_1": "O senhor decide com base no que vê.",
@@ -238,20 +237,20 @@
   },
   "over": {
     "meta_title": "Sobre Wouter Dijkman",
-    "meta_description": "Fundador da Agentic Mindshift e da Factum Capital. Seis anos de experiência em deals de acquisition finance e financial restructuring, mid-market neerlandês.",
+    "meta_description": "Founder Agentic Mindshift. Seis anos de experiência em acquisition finance e financial restructuring no mid-market neerlandês.",
     "hero": {
       "eyebrow": "O consultor",
-      "role": "Fundador Agentic Mindshift & Factum Capital",
-      "subtext": "Seis anos em ambos os lados da mesa de deals neerlandesa. Essa experiência prática traduz-se em informação de carteira mensurável para sócios de PE que querem assegurar a rentabilidade antes de os números anuais a confirmarem."
+      "role": "Founder Agentic Mindshift",
+      "subtext": "Seis anos no lado do financiamento e da reestruturação de deals neerlandeses. Essa experiência prática traduz-se em informação de carteira mensurável para sócios de PE que querem assegurar a rentabilidade antes de os números anuais a confirmarem."
     },
-    "answer_first": "A Agentic Mindshift foi fundada por Wouter Dijkman, antigo profissional de private equity e M&A com experiência no Rabobank, ING e Alter Domus. A firma assessora fundos mid-market, escritórios de M&A e empresas familiares neerlandeses em estratégia de IA e due diligence impulsionada por IA — com o olhar de um dealmaker, não de um fornecedor de tecnologia.",
+    "answer_first": "A Agentic Mindshift foi fundada por Wouter Dijkman, antigo profissional em acquisition finance e financial restructuring com experiência no Rabobank, ING e Alter Domus. A firma assessora fundos mid-market, escritórios de M&A e empresas familiares neerlandeses em estratégia de IA e due diligence impulsionada por IA — com o olhar de quem esteve ao lado do deal, não de um fornecedor de tecnologia.",
     "bio": {
       "eyebrow": "Contexto",
       "quote": "Vi operações que eram tecnicamente perfeitas — e que falharam porque ninguém estava disposto a questionar o pressuposto incómodo. É esse o problema que resolvo. Não com mais dados. Com melhores perguntas.",
-      "para1": "Três anos de financial restructuring, três anos de acquisition finance. Ambos os lados da mesa de deals, mid-market neerlandês. Essa combinação ensina exatamente onde os pressupostos não se concretizam e onde o relatório mensal mascara a subperformance em vez de a sinalizar.",
-      "para2_prefix": "Em outubro de 2025 foi fundada a Agentic Mindshift. Em novembro de 2025 seguiu-se AI for Business na Nyenrode. A 1 de julho de 2026 lança a",
-      "para2_suffix": ": 29 módulos com os quais as equipas de deals instrumentam estruturalmente o seu processo de DD, relatório mensal e formação do juízo.",
-      "para3": "Primeiro resultado na prática: uma correção do preço de aquisição de 0,4× numa operação buy-and-build. O investimento no relatório amortizou-se várias vezes."
+      "para1": "Três anos de financial restructuring, três anos de acquisition finance — o lado do financiamento e da reestruturação do mid-market neerlandês. Essa combinação ensina exatamente onde os pressupostos não se concretizam e onde o relatório mensal mascara a subperformance em vez de a sinalizar.",
+      "para2_prefix": "Em outubro de 2025 foi fundada a Agentic Mindshift. Em novembro de 2025 seguiu-se AI for Business na Nyenrode. Em desenvolvimento está a",
+      "para2_suffix": ": uma plataforma de IA com módulos com os quais as equipas de deals instrumentam estruturalmente o seu processo de DD, relatório mensal e formação do juízo.",
+      "para3": "Construo isto deliberadamente de forma seletiva: um punhado de parceiros de cada vez, para que cada via se mantenha hands-on e o trabalho receba a atenção que um deal merece."
     },
     "credentials": {
       "eyebrow": "Porquê o Wouter",
@@ -259,15 +258,15 @@
       "cred_1_value": "6 anos",
       "cred_1_label": "Experiência em deals",
       "cred_1_sub": "Acquisition finance & financial restructuring",
-      "cred_2_value": "Ambos os lados",
-      "cred_2_label": "Da mesa de deals",
-      "cred_2_sub": "Financiamento e reestruturação experimentados",
+      "cred_2_value": "2 disciplinas",
+      "cred_2_label": "Financiamento & restructuring",
+      "cred_2_sub": "O ciclo completo, do financiamento ao stress",
       "cred_3_value": "€1–25M",
       "cred_3_label": "Foco mid-market",
       "cred_3_sub": "Dimensão de deals PE e M&A neerlandês",
-      "cred_4_value": "29 módulos",
-      "cred_4_label": "Plataforma de IA própria",
-      "cred_4_sub": "Factum Capital · lançamento 1 de julho de 2026"
+      "cred_4_value": "Founder-led",
+      "cred_4_label": "Seletivo & hands-on",
+      "cred_4_sub": "Um punhado de parceiros de cada vez, sem camadas intermédias"
     },
     "timeline": {
       "eyebrow": "Carreira",
@@ -328,7 +327,7 @@
       "heading": "Qual situação corresponde à sua?",
       "subtext": "Quatro situações, quatro vias. Reconhecerá a sua pergunta, ou uma conversa será suficiente para confirmar a via correta.",
       "guarantee_title": "Garantia",
-      "guarantee_body": "O Scorecard é gratuito. A AI Sparring Session é sem compromisso — trinta minutos, sem fatura. Sem obrigações.",
+      "guarantee_body": "Concretamente: o Scorecard é gratuito, a Sparring Session custa-lhe trinta minutos e nenhuma fatura, e após o acordo sobre uma via começa dentro de sete dias úteis — com o primeiro entregável, não com um kick-off. Apenas o Fractional AI Officer tem um prazo mínimo de três meses; todas as restantes vias são por encargo, sem lock-in.",
       "most_chosen": "Mais escolhido",
       "investment_label": "Investimento"
     },
@@ -377,7 +376,7 @@
     "pricing_note": "* Todos os valores sem IVA. Primeira chamada sempre sem compromisso.",
     "risk": {
       "title": "Sem risco",
-      "body": "O Scorecard é gratuito. A AI Sparring Session é sem compromisso — trinta minutos, sem fatura. Simples assim."
+      "body": "O Scorecard é gratuito e a Sparring Session custa-lhe trinta minutos sem fatura. Após o acordo começa dentro de sete dias úteis com o primeiro entregável. À exceção do Fractional AI Officer (mínimo três meses), cada via é por encargo, sem prazo longo."
     },
     "faq": {
       "eyebrow": "Honesto sobre o investimento",
@@ -622,7 +621,7 @@
       "subtext": "Quinze perguntas. Doze minutos. Um relatório que torna os seus pontos cegos mensuráveis e os compara com empresas similares.",
       "start_cta": "Iniciar o Scorecard",
       "no_account": "Sem conta necessária. As suas respostas são guardadas automaticamente.",
-      "trust": "Já preenchido por sócios de PE, diretores de M&A e family offices no mid-market neerlandês.",
+      "trust": "Concebido para sócios de PE, diretores de M&A e family offices no mid-market neerlandês.",
       "confidentiality_title": "Confidencialidade",
       "confidentiality_body": "As suas respostas são utilizadas apenas para gerar o seu relatório. Pode preenchê-lo anonimamente se preferir.",
       "blind_spots_note": "A maioria dos sócios de PE descobre os seus pontos cegos quando já é tarde demais. O seu investimento: doze minutos.",
@@ -770,7 +769,7 @@
     "variants": {
       "A": {
         "offerName": "Due Diligence & Portfolio impulsionada por IA",
-        "interpretation": "A sua pontuação em Qualidade Analítica é {score} de 20 pontos. Esta é a dimensão onde a maioria das empresas no mercado lower-mid holandês perde rentabilidade de forma estrutural, geralmente sem se aperceber. O seu ciclo MBR funciona, mas falta alerta precoce: a análise de variância não vai suficientemente fundo para corrigir o rumo antes de perder um trimestre. O serviço de inteligência de carteira — entregue através do Factum Capital — foi especificamente desenvolvido para este cenário.",
+        "interpretation": "A sua pontuação em Analytical Quality é {score} de 20 pontos. Esta é a dimensão onde a maioria das empresas no mercado lower-mid holandês perde rentabilidade de forma estrutural, geralmente sem se aperceber. O seu ciclo MBR funciona, mas falta alerta precoce: a análise de variância não vai suficientemente fundo para corrigir o rumo antes de perder um trimestre. O serviço de inteligência de carteira — entregue através do Factum Capital — foi especificamente desenvolvido para este cenário.",
         "price": "€6.500 – €8.500 / mês · mín. 3 meses · excl. IVA",
         "interventions": {
           "0": {
@@ -789,7 +788,7 @@
       },
       "B": {
         "offerName": "Due Diligence & Portfolio impulsionada por IA",
-        "interpretation": "A sua pontuação em Prontidão para IA é {score} de 25 pontos. O risco de substituição por IA ainda não é modelado sistematicamente na sua análise de deals, e a sua base analítica varia de processo para processo. Nas suas três aquisições mais recentes, a probabilidade de uma delas sofrer erosão material de margens nos próximos 24 meses é maior do que estima. O serviço de Due Diligence & Portfolio impulsionada por IA — via Factum Capital — fornece a base analítica abrangente para o seu próximo deal.",
+        "interpretation": "A sua pontuação em AI Readiness é {score} de 25 pontos. O risco de substituição por IA ainda não é modelado sistematicamente na sua análise de deals, e a sua base analítica varia de processo para processo. Nas suas três aquisições mais recentes, a probabilidade de uma delas sofrer erosão material de margens nos próximos 24 meses é maior do que estima. O serviço de Due Diligence & Portfolio impulsionada por IA — via Factum Capital — fornece a base analítica abrangente para o seu próximo deal.",
         "price": "A partir de €10.000 por deal · 2–3 semanas · excl. IVA",
         "interventions": {
           "0": {
@@ -808,7 +807,7 @@
       },
       "C": {
         "offerName": "Fractional AI Officer",
-        "interpretation": "A sua pontuação em Retenção de Conhecimento é {score} de 10 pontos. O conhecimento fuga de duas formas: através de relatórios externos que não são processados estruturalmente, e através de colaboradores que saem da organização. Perante sinais de stress financeiro numa participada, essa fuga de conhecimento é especialmente dispendiosa. Como Fractional AI Officer, a Agentic Mindshift sinaliza antecipadamente quando é necessária uma revisão indicativa.",
+        "interpretation": "A sua pontuação em Knowledge Retention é {score} de 10 pontos. O conhecimento fuga de duas formas: através de relatórios externos que não são processados estruturalmente, e através de colaboradores que saem da organização. Perante sinais de stress financeiro numa participada, essa fuga de conhecimento é especialmente dispendiosa. Como Fractional AI Officer, a Agentic Mindshift sinaliza antecipadamente quando é necessária uma revisão indicativa.",
         "price": "€1.099 / dia · mín. 3 meses · excl. IVA",
         "interventions": {
           "0": {
@@ -827,7 +826,7 @@
       },
       "D": {
         "offerName": "Assessoria e Implementação de IA",
-        "interpretation": "As suas pontuações em Engenharia de Capacidade e Velocidade de Deal apontam para um padrão estrutural: a sua equipa está qualificada mas é travada por atrito operacional. Firmas comparáveis que adotam uma abordagem mais estruturada nos processos analíticos veem a sua capacidade de análise duplicar sem ampliar a equipa. Uma abordagem de consultoria ou capacitação direcionada resolve isto.",
+        "interpretation": "As suas pontuações em Capacity Engineering and Deal Velocity apontam para um padrão estrutural: a sua equipa está qualificada mas é travada por atrito operacional. Firmas comparáveis que adotam uma abordagem mais estruturada nos processos analíticos veem a sua capacidade de análise duplicar sem ampliar a equipa. Uma abordagem de consultoria ou capacitação direcionada resolve isto.",
         "price": "A partir de €4.500 por projeto ou retainer · excl. IVA",
         "interventions": {
           "0": {
@@ -846,7 +845,7 @@
       },
       "E": {
         "offerName": "Due Diligence & Portfolio impulsionada por IA",
-        "interpretation": "A sua pontuação em Qualidade Analítica é {score} de 20 pontos. Os seus dossiês de financiamento ou deal ainda não estão estruturados de forma consistente em todas as dimensões relevantes. Isto leva a prazos mais longos, rondas de revisão desnecessárias e uma posição negocial mais fraca. O serviço de memo de financiamento — entregue através do Factum Capital — fornece a base analítica e conecta os consultores certificados que assinarão formalmente onde necessário.",
+        "interpretation": "A sua pontuação em Analytical Quality é {score} de 20 pontos. Os seus dossiês de financiamento ou deal ainda não estão estruturados de forma consistente em todas as dimensões relevantes. Isto leva a prazos mais longos, rondas de revisão desnecessárias e uma posição negocial mais fraca. O serviço de memo de financiamento — entregue através do Factum Capital — fornece a base analítica e conecta os consultores certificados que assinarão formalmente onde necessário.",
         "price": "A partir de €10.000 por deal · ou €6.500–€8.500/mês portfolio intelligence · excl. IVA",
         "interventions": {
           "0": {

@@ -30,7 +30,7 @@ export interface Question {
 
 export const dimensionLabels: Record<Dimension, string> = {
   DealVelocity: 'Deal Velocity',
-  PortfolioIntelligence: 'Analytische Kwaliteit',
+  PortfolioIntelligence: 'Analytical Quality',
   BiasDetection: 'Bias Detection',
   AIReadiness: 'AI Readiness',
   CapacityEngineering: 'Capacity Engineering',

@@ -25,7 +25,7 @@
     "cta_sub": "Fifteen questions. Twelve minutes. No account needed.",
     "start_scorecard": "Start the Scorecard",
     "copyright": "© 2026 Agentic Mindshift — founded October 2025.",
-    "tagline_bottom": "Founder Factum Capital · launch 1 July 2026"
+    "tagline_bottom": "Factum Capital · AI platform in development"
   },
   "homepage": {
     "meta_title": "AI Advisory for Private Equity & M&A",
@@ -33,24 +33,23 @@
     "hero": {
       "eyebrow": "For PE partners, M&A directors and family offices",
       "heading": "How much return is your portfolio leaving on the table this month?",
-      "subtext": "Your monthly reporting masks underperformance. Your deal team repeats avoidable mistakes. And AI-driven due diligence across every dimension is missing from every IC proposal. The Scorecard maps all six dimensions. In twelve minutes.",
+      "subtext": "Your monthly reporting masks underperformance. Your deal team repeats avoidable mistakes. And AI-driven due diligence across every dimension is missing from most IC proposals. The Scorecard maps all six dimensions. In twelve minutes.",
       "cta_primary": "Start the Scorecard",
       "cta_secondary": "How we work & fees",
-      "trust": "12 minutes · 6 dimensions · no account needed · 100% confidential"
+      "trust": "12 minutes · 6 dimensions · no account needed · confidential"
     },
-    "social_proof": {
-      "eyebrow": "Results",
-      "heading": "What others have already discovered.",
-      "disclaimer": "Based on actual engagements · names anonymised at client request.",
-      "quote_1": "\"Two of the six dimensions were well below the level of comparable firms — we had never had that made so explicit to us.\"",
-      "who_1": "PE partner, Dutch lower mid-market fund",
-      "aum_1": "~€120M AUM",
-      "quote_2": "\"Acquisition price adjusted down by 0.4× based on the AI analysis. The report cost €10,000 — that adjustment saved us a multiple.\"",
-      "who_2": "M&A director, buy-and-build platform",
-      "aum_2": "4 acquisitions per year",
-      "quote_3": "\"We thought our monthly reporting was solid. The Scorecard showed in twelve minutes that three of the six dimensions were below the level of comparable funds. That conversation had never happened internally.\"",
-      "who_3": "CFO, family office with 8 portfolio companies",
-      "aum_3": "€40M–€60M under management"
+    "founder": {
+      "eyebrow": "Who's behind this",
+      "heading": "One advisor. Six years on the financing and restructuring side of Dutch deals.",
+      "body": "Agentic Mindshift was founded by Wouter Dijkman, a former professional in acquisition finance and financial restructuring (Rabobank, ING, Alter Domus). Not an AI generalist who happens to have PE clients, but someone who saw up close why technically perfect deals still fail. I'm building this deliberately selectively: a handful of partners at a time, so the work stays hands-on.",
+      "point_1_label": "6 years",
+      "point_1_body": "Acquisition finance and financial restructuring in the Dutch mid-market.",
+      "point_2_label": "Founder-led",
+      "point_2_body": "You work directly with the advisor. Selective, personal, no layers in between.",
+      "point_3_label": "€1–25M",
+      "point_3_body": "Mid-market focus. No startups, no large corporates.",
+      "cta": "More about Wouter →",
+      "sample_note": "Prefer to see the report format first? Request an anonymised sample report via LinkedIn or email."
     },
     "transformation": {
       "eyebrow": "The difference",
@@ -93,7 +92,7 @@
     },
     "pain": {
       "eyebrow": "Sound familiar?",
-      "heading": "Three problems that cost you returns. No one names them.",
+      "heading": "Three problems that cost you returns. Rarely named explicitly.",
       "subheading": "You shouldn't have to make an investment decision based on an incomplete picture. Yet that's the norm.",
       "label_1": "Invisible risk",
       "title_1": "You make decisions based on what you can see.",
@@ -238,20 +237,20 @@
   },
   "over": {
     "meta_title": "About Wouter Dijkman",
-    "meta_description": "Founder of Agentic Mindshift and Factum Capital. Six years of deal experience in acquisition finance and financial restructuring, Dutch mid-market.",
+    "meta_description": "Founder of Agentic Mindshift. Six years of experience in acquisition finance and financial restructuring in the Dutch mid-market.",
     "hero": {
       "eyebrow": "The adviser",
-      "role": "Founder Agentic Mindshift & Factum Capital",
-      "subtext": "Six years on both sides of the Dutch deal table. That hands-on experience translates into measurable portfolio insight for PE partners who want to secure returns before the year-end figures confirm them."
+      "role": "Founder Agentic Mindshift",
+      "subtext": "Six years on the financing and restructuring side of Dutch deals. That hands-on experience translates into measurable portfolio insight for PE partners who want to secure returns before the year-end figures confirm them."
     },
-    "answer_first": "Agentic Mindshift was founded by Wouter Dijkman, a former private equity and M&A professional with experience at Rabobank, ING and Alter Domus. The firm advises Dutch mid-market funds, M&A firms and family businesses on AI strategy and AI-driven due diligence — with the eye of a dealmaker, not a technology vendor.",
+    "answer_first": "Agentic Mindshift was founded by Wouter Dijkman, a former professional in acquisition finance and financial restructuring with experience at Rabobank, ING and Alter Domus. The firm advises Dutch mid-market funds, M&A firms and family businesses on AI strategy and AI-driven due diligence — with the eye of someone who stood beside the deal, not that of a technology vendor.",
     "bio": {
       "eyebrow": "Background",
       "quote": "I have seen deals that were technically perfect — and still failed because nobody was willing to challenge the uncomfortable assumption. That is the problem I solve. Not with more data. With better questions.",
-      "para1": "Three years of financial restructuring, three years of acquisition finance. Both sides of the deal table, Dutch mid-market. That combination shows you exactly where assumptions don't hold, and where monthly reporting masks underperformance instead of signalling it.",
-      "para2_prefix": "Agentic Mindshift launched in October 2025. In November 2025 followed AI for Business at Nyenrode. On 1 July 2026",
-      "para2_suffix": "launches: 29 modules that equip deal teams to systematically instrument their DD process, monthly reporting and judgement formation.",
-      "para3": "First practical result: an acquisition price correction of 0.4× on a buy-and-build deal. The investment in the report paid for itself many times over."
+      "para1": "Three years of financial restructuring, three years of acquisition finance — the financing and restructuring side of the Dutch mid-market. That combination shows you exactly where assumptions don't hold, and where monthly reporting masks underperformance instead of signalling it.",
+      "para2_prefix": "Agentic Mindshift launched in October 2025. In November 2025 followed AI for Business at Nyenrode. In development is",
+      "para2_suffix": ": an AI platform with modules that let deal teams systematically instrument their DD process, monthly reporting and judgement formation.",
+      "para3": "I'm building this deliberately selectively: a handful of partners at a time, so every engagement stays hands-on and the work gets the attention a deal deserves."
     },
     "credentials": {
       "eyebrow": "Why Wouter",
@@ -259,15 +258,15 @@
       "cred_1_value": "6 years",
       "cred_1_label": "Deal experience",
       "cred_1_sub": "Acquisition finance & financial restructuring",
-      "cred_2_value": "Both sides",
-      "cred_2_label": "Of the deal table",
-      "cred_2_sub": "Financing and restructuring, both lived",
+      "cred_2_value": "2 disciplines",
+      "cred_2_label": "Financing & restructuring",
+      "cred_2_sub": "The full cycle from financing to stress",
       "cred_3_value": "€1–25M",
       "cred_3_label": "Mid-market focus",
       "cred_3_sub": "Dutch PE and M&A deal size",
-      "cred_4_value": "29 modules",
-      "cred_4_label": "Own AI platform",
-      "cred_4_sub": "Factum Capital · launch 1 July 2026"
+      "cred_4_value": "Founder-led",
+      "cred_4_label": "Selective & hands-on",
+      "cred_4_sub": "A handful of partners at a time, no layers in between"
     },
     "timeline": {
       "eyebrow": "Career",
@@ -328,7 +327,7 @@
       "heading": "Which situation fits you?",
       "subtext": "Four situations, four routes. You recognise your question, or one conversation is enough to confirm the right route.",
       "guarantee_title": "Guarantee",
-      "guarantee_body": "The Scorecard is free. The AI Sparring Session is no-obligation — thirty minutes, no invoice. No commitments.",
+      "guarantee_body": "Concretely: the Scorecard is free, the Sparring Session costs thirty minutes and no invoice, and once you approve an engagement you start within seven working days — with the first deliverable, not a kick-off. Only the Fractional AI Officer has a minimum term (three months); every other route is per engagement, with no lock-in.",
       "most_chosen": "Most chosen",
       "investment_label": "Investment"
     },
@@ -377,7 +376,7 @@
     "pricing_note": "* All amounts excluding VAT. First introductory call always without obligation.",
     "risk": {
       "title": "No risk",
-      "body": "The Scorecard is free. The AI Sparring Session is no-obligation — thirty minutes, no invoice. It is that simple."
+      "body": "The Scorecard is free and the Sparring Session costs thirty minutes with no invoice. Once you approve, you start within seven working days with the first deliverable. Apart from the Fractional AI Officer (minimum three months), every route is per engagement, with no long commitment."
     },
     "faq": {
       "eyebrow": "Honest about the investment",
@@ -622,7 +621,7 @@
       "subtext": "Fifteen questions. Twelve minutes. A report that makes your blind spots measurable and benchmarks them against comparable firms.",
       "start_cta": "Start the Scorecard",
       "no_account": "No account required. Your answers are saved as you go.",
-      "trust": "Already completed by PE partners, M&A directors and family offices in the Dutch mid-market.",
+      "trust": "Designed for PE partners, M&A directors and family offices in the Dutch mid-market.",
       "confidentiality_title": "Confidentiality",
       "confidentiality_body": "Your answers are used solely to generate your report. You may fill it in anonymously if you prefer.",
       "blind_spots_note": "Most PE partners only discover their blind spots when it’s already too late. Your investment: twelve minutes.",

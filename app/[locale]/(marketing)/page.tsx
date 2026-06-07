@@ -89,76 +89,53 @@ export default async function HomePage() {
       <HomepageStatsSection />
 
       {/* ═══════════════════════════════════════════
-          3b. SOCIAL PROOF
+          3b. FOUNDER — eerlijke geloofwaardigheid i.p.v. social proof
       ═══════════════════════════════════════════ */}
       <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(64px, 8vw, 96px)' }}>
         <div className="container-medium">
-          <div className="reveal" style={{ marginBottom: '32px' }}>
-            <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('social_proof.eyebrow')}</p>
-            <h2 className="type-h2" style={{ margin: 0, maxWidth: '480px' }}>{t('social_proof.heading')}</h2>
+          <div className="reveal" style={{ marginBottom: '32px', maxWidth: '640px' }}>
+            <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('founder.eyebrow')}</p>
+            <h2 className="type-h2" style={{ margin: '0 0 20px', maxWidth: '560px' }}>{t('founder.heading')}</h2>
+            <p style={{ fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)', color: 'var(--text-secondary)', lineHeight: 1.75, margin: 0 }}>
+              {t('founder.body')}
+            </p>
           </div>
           <div
-            className="reveal social-proof-grid feature-grid"
-            style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}
+            className="reveal feature-grid"
+            style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))' }}
           >
             {[
-              {
-                quote: t('social_proof.quote_1'),
-                who: t('social_proof.who_1'),
-                aum: t('social_proof.aum_1'),
-              },
-              {
-                quote: t('social_proof.quote_2'),
-                who: t('social_proof.who_2'),
-                aum: t('social_proof.aum_2'),
-              },
-              {
-                quote: t('social_proof.quote_3'),
-                who: t('social_proof.who_3'),
-                aum: t('social_proof.aum_3'),
-              },
+              { label: t('founder.point_1_label'), body: t('founder.point_1_body') },
+              { label: t('founder.point_2_label'), body: t('founder.point_2_body') },
+              { label: t('founder.point_3_label'), body: t('founder.point_3_body') },
             ].map((item, i) => (
-              <div key={i} className="feature-card" style={{ gap: '24px' }}>
-                <span
-                  aria-hidden="true"
-                  style={{
-                    fontFamily: 'var(--font-display)',
-                    fontSize: '40px',
-                    lineHeight: 0.6,
-                    color: 'var(--accent-cta)',
-                    opacity: 0.35,
-                  }}
-                >
-                  &ldquo;
-                </span>
+              <div key={i} className="feature-card" style={{ gap: '12px' }}>
                 <p
                   style={{
-                    fontSize: 'clamp(1.125rem, 1.8vw, 1.375rem)',
-                    fontStyle: 'italic',
-                    fontWeight: 300,
-                    color: 'var(--text-primary)',
-                    lineHeight: 1.6,
-                    letterSpacing: '0em',
+                    fontFamily: 'var(--font-display)',
+                    fontSize: 'clamp(1.5rem, 2.4vw, 1.875rem)',
+                    fontWeight: 600,
+                    color: 'var(--accent-cta)',
+                    letterSpacing: '-0.01em',
                     margin: 0,
-                    flex: 1,
                   }}
                 >
-                  {item.quote}
+                  {item.label}
                 </p>
-                <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '16px' }}>
-                  <p style={{ fontSize: '0.8125rem', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '2px' }}>
-                    {item.who}
-                  </p>
-                  <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', letterSpacing: '0.06em' }}>
-                    {item.aum}
-                  </p>
-                </div>
+                <p style={{ fontSize: '0.9375rem', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
+                  {item.body}
+                </p>
               </div>
             ))}
           </div>
-          <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '12px', textAlign: 'right', letterSpacing: '0.04em' }}>
-            {t('social_proof.disclaimer')}
-          </p>
+          <div className="reveal" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '20px', marginTop: '28px' }}>
+            <Button href="/over" variant="secondary" size="md">
+              {t('founder.cta')}
+            </Button>
+            <p style={{ fontSize: '0.8125rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0, maxWidth: '420px' }}>
+              {t('founder.sample_note')}
+            </p>
+          </div>
         </div>
       </section>
 
