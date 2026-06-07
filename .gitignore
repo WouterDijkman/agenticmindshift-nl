@@ -45,3 +45,4 @@ next-env.d.ts
 # Local-only dev scripts
 scripts-*.mts
 scripts-*.mjs
+.claude/
