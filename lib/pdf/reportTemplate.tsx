@@ -302,6 +302,19 @@ function urgencyColor(u?: string): string {
   return brand.green;
 }
 
+function exposureColor(e?: string): string {
+  if (e === 'high') return brand.rust;
+  if (e === 'medium') return brand.amber;
+  return brand.green;
+}
+
+function exposureLabel(e: string | undefined, t: PdfStrings): string {
+  if (e === 'high') return t.servicesExposureHigh;
+  if (e === 'medium') return t.servicesExposureMedium;
+  if (e === 'low') return t.servicesExposureLow;
+  return '–';
+}
+
 function footerEl(page: number, total: number, t: PdfStrings) {
   return (
     <View style={s.footer}>
@@ -370,7 +383,13 @@ export function ReportDocument(props: ReportProps) {
   // Q&A for summary page — group by section
   const sectionTitles = t.sectionTitles;
 
-  const TOTAL_PAGES = 11;
+  const services = report?.serviceOpportunities?.slice(0, 8) ?? [];
+  const team = report?.teamAnalysis;
+  const hasServicesTeamPage =
+    services.length > 0 || !!(team && (team.composition || (team.signals?.length ?? 0) > 0));
+  const TOTAL_PAGES = hasServicesTeamPage ? 12 : 11;
+  // Pages 7+ shift by one when the services/team page is present.
+  const pageNo = (n: number) => (hasServicesTeamPage && n >= 7 ? n + 1 : n);
 
   return (
     <Document title={`AI Readiness Report — ${company}`} author="Agentic Mindshift">
@@ -730,6 +749,63 @@ export function ReportDocument(props: ReportProps) {
       </Page>
 
       {/* ══════════════════════════════════════════════════════════════════════
+          PAGINA 7 — DIENSTEN × AI-KANSEN + TEAMOPBOUW (conditioneel)
+          ══════════════════════════════════════════════════════════════════════ */}
+      {hasServicesTeamPage ? (
+        <Page size="A4" style={s.page} wrap>
+          <Text style={s.eyebrow}>{t.servicesEyebrow}</Text>
+          <Text style={s.h1}>{t.servicesTitle}</Text>
+          <Text style={[s.body, { marginBottom: 16 }]}>{t.servicesIntro}</Text>
+
+          {services.map((svc, i) => (
+            <View key={i} style={[s.card, { marginBottom: 10 }]} wrap={false}>
+              <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+                <Text style={{ fontFamily: SANS_BOLD, fontSize: 11.5, color: brand.navy, flex: 1, paddingRight: 8 }}>
+                  {svc.service}
+                </Text>
+                <View style={{ backgroundColor: exposureColor(svc.exposure), paddingHorizontal: 7, paddingVertical: 2 }}>
+                  <Text style={{ fontSize: 7.5, fontFamily: SANS_BOLD, color: '#FFFFFF' }}>
+                    {exposureLabel(svc.exposure, t)}
+                  </Text>
+                </View>
+              </View>
+              {svc.whatItIs ? <Text style={[s.body, { marginBottom: 6 }]}>{svc.whatItIs}</Text> : null}
+              {svc.aiOpportunity ? (
+                <View style={{ flexDirection: 'row', gap: 8 }}>
+                  <Text style={{ fontSize: 9, color: brand.rust, marginTop: 1 }}>◆</Text>
+                  <Text style={[s.body, { flex: 1 }]}>
+                    <Text style={{ fontFamily: SANS_BOLD, color: brand.navy }}>{t.servicesAiLabel}: </Text>
+                    {svc.aiOpportunity}
+                  </Text>
+                </View>
+              ) : null}
+            </View>
+          ))}
+
+          {team && (team.composition || (team.signals?.length ?? 0) > 0) ? (
+            <View style={{ marginTop: services.length > 0 ? 14 : 0 }} wrap={false}>
+              <Text style={[s.h3, { marginBottom: 8 }]}>{t.teamSectionTitle}</Text>
+              {team.composition ? <Text style={[s.body, { marginBottom: 8 }]}>{team.composition}</Text> : null}
+              {team.signals?.map((sig, i) => (
+                <View key={i} style={{ flexDirection: 'row', gap: 8, marginBottom: 4 }}>
+                  <Text style={{ fontSize: 9, color: brand.rust }}>—</Text>
+                  <Text style={[s.body, { flex: 1 }]}>{sig}</Text>
+                </View>
+              ))}
+              {team.implication ? (
+                <View style={[s.cardSoft, { borderLeft: `2pt solid ${brand.rust}`, marginTop: 8 }]}>
+                  <Text style={s.smallLabel}>{t.teamImplicationLabel}</Text>
+                  <Text style={s.body}>{team.implication}</Text>
+                </View>
+              ) : null}
+            </View>
+          ) : null}
+
+          {footerEl(7, TOTAL_PAGES, t)}
+        </Page>
+      ) : null}
+
+      {/* ══════════════════════════════════════════════════════════════════════
           PAGINA 7 — KERNOBSERVATIES
           ══════════════════════════════════════════════════════════════════════ */}
       <Page size="A4" style={s.page}>
@@ -757,7 +833,7 @@ export function ReportDocument(props: ReportProps) {
           ))
         ) : null}
 
-        {footerEl(7, TOTAL_PAGES, t)}
+        {footerEl(pageNo(7), TOTAL_PAGES, t)}
       </Page>
 
       {/* ══════════════════════════════════════════════════════════════════════
@@ -809,7 +885,7 @@ export function ReportDocument(props: ReportProps) {
           );
         })}
 
-        {footerEl(8, TOTAL_PAGES, t)}
+        {footerEl(pageNo(8), TOTAL_PAGES, t)}
       </Page>
 
       {/* ══════════════════════════════════════════════════════════════════════
@@ -877,7 +953,7 @@ export function ReportDocument(props: ReportProps) {
           </Text>
         </View>
 
-        {footerEl(9, TOTAL_PAGES, t)}
+        {footerEl(pageNo(9), TOTAL_PAGES, t)}
       </Page>
 
       {/* ══════════════════════════════════════════════════════════════════════
@@ -1034,7 +1110,7 @@ export function ReportDocument(props: ReportProps) {
           </>
         )}
 
-        {footerEl(10, TOTAL_PAGES, t)}
+        {footerEl(pageNo(10), TOTAL_PAGES, t)}
       </Page>
 
       {/* ══════════════════════════════════════════════════════════════════════
@@ -1091,7 +1167,7 @@ export function ReportDocument(props: ReportProps) {
           </Text>
         </View>
 
-        {footerEl(11, TOTAL_PAGES, t)}
+        {footerEl(pageNo(11), TOTAL_PAGES, t)}
       </Page>
 
     </Document>

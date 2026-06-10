@@ -60,6 +60,35 @@ export interface ValueAtStake {
   basis: string;
 }
 
+/**
+ * Per dienst die de organisatie aanbiedt: waar AI/automatisering de economie
+ * van juist die dienst verandert. Afgeleid uit de volledige site-crawl
+ * ([Expertise / Diensten]-pagina's) — nooit verzonnen diensten.
+ */
+export interface ServiceOpportunity {
+  /** Naam van de dienst zoals op de site, e.g. 'Due diligence', 'WHOA-begeleiding'. */
+  service: string;
+  /** 1-2 zinnen: wat de dienst inhoudt en welk type (mensen)werk erachter zit. */
+  whatItIs: string;
+  /** 1-2 zinnen: waar AI deze specifieke dienst versnelt, verbreedt of goedkoper maakt. */
+  aiOpportunity: string;
+  /** Hoe sterk deze dienst wordt geraakt door AI. */
+  exposure: 'high' | 'medium' | 'low';
+}
+
+/**
+ * Leesbaar beeld van de teamopbouw uit de [Team / Leiderschap]-pagina, en wat
+ * die samenstelling betekent voor AI-adoptie, capaciteit en kennisborging.
+ */
+export interface TeamAnalysis {
+  /** 1-2 zinnen: omvang + senioriteitsmix (partners/consultants/associates) zoals zichtbaar op de site. */
+  composition: string;
+  /** 2-4 concrete signalen: sleutelrollen, specialismen, waar de uren/capaciteit zitten. */
+  signals: string[];
+  /** 1-2 zinnen: wat dit betekent voor AI-versterking, schaalbaarheid en kennisborging. */
+  implication: string;
+}
+
 export interface CompanyContext {
   sector: string;
   estimatedProfile: string; // 'MKB', 'mid-market PE', 'family office', etc.
@@ -90,6 +119,18 @@ export interface GeneratedReport {
 
   /** Bedrijfscontext op basis van antwoorden + eventuele websearch */
   companyContext: CompanyContext;
+
+  /**
+   * Per aangeboden dienst de concrete AI-kans. Optioneel zodat oudere
+   * rapporten en de PDF/e-mail blijven werken. Gevuld uit de site-crawl.
+   */
+  serviceOpportunities?: ServiceOpportunity[];
+
+  /**
+   * Analyse van de teamopbouw en wat die betekent voor AI-adoptie.
+   * Optioneel — gevuld uit de [Team / Leiderschap]-pagina.
+   */
+  teamAnalysis?: TeamAnalysis;
 
   /** Scoreprofliel met betekenisgeving */
   scoreProfile: ScoreProfile;
@@ -136,6 +177,19 @@ export const REPORT_JSON_SCHEMA = `{
     "keyActivities": "string",
     "researchSignals": ["string"],
     "researchNote": "string"
+  },
+  "serviceOpportunities": [
+    {
+      "service": "string (naam van de dienst zoals op de site)",
+      "whatItIs": "string (1-2 zinnen: wat de dienst inhoudt en welk werk erachter zit)",
+      "aiOpportunity": "string (1-2 zinnen: waar AI deze dienst versnelt/verbreedt/goedkoper maakt)",
+      "exposure": "high | medium | low"
+    }
+  ],
+  "teamAnalysis": {
+    "composition": "string (1-2 zinnen: omvang + senioriteitsmix zoals zichtbaar op de site)",
+    "signals": ["string (2-4 concrete signalen: sleutelrollen, specialismen, waar de uren zitten)"],
+    "implication": "string (1-2 zinnen: wat dit betekent voor AI-versterking, schaalbaarheid, kennisborging)"
   },
   "scoreProfile": {
     "totalScore": "number",

@@ -251,6 +251,107 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
         </div>
       )}
 
+      {/* Diensten × AI-kansen */}
+      {report.serviceOpportunities && report.serviceOpportunities.length > 0 && (
+        <div
+          style={{
+            background: 'var(--bg-secondary)',
+            border: '1px solid var(--border-subtle)',
+            padding: '28px 32px',
+            marginBottom: '24px',
+          }}
+        >
+          <p className="eyebrow" style={{ marginBottom: '20px' }}>{td('services_eyebrow')}</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
+            {report.serviceOpportunities.map((svc, i) => {
+              const exposureColor =
+                svc.exposure === 'high' ? '#F14C1D' : svc.exposure === 'medium' ? '#E8B23E' : '#5BA06B';
+              return (
+                <div
+                  key={i}
+                  style={{
+                    paddingBottom: i < report.serviceOpportunities!.length - 1 ? '18px' : 0,
+                    borderBottom: i < report.serviceOpportunities!.length - 1 ? '1px solid var(--border-subtle)' : 'none',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap', marginBottom: '6px' }}>
+                    <h3 style={{ fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', fontWeight: 700, color: 'var(--text-primary)', margin: 0 }}>
+                      {svc.service}
+                    </h3>
+                    {svc.exposure && (
+                      <span
+                        style={{
+                          fontSize: '0.6875rem',
+                          fontWeight: 800,
+                          letterSpacing: '0.05em',
+                          textTransform: 'uppercase',
+                          color: exposureColor,
+                          border: `1px solid ${exposureColor}`,
+                          borderRadius: '2px',
+                          padding: '2px 7px',
+                        }}
+                      >
+                        {td(`services_exposure_${svc.exposure}`)}
+                      </span>
+                    )}
+                  </div>
+                  {svc.whatItIs && (
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', lineHeight: 1.65, margin: '0 0 8px' }}>
+                      {svc.whatItIs}
+                    </p>
+                  )}
+                  {svc.aiOpportunity && (
+                    <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
+                      <span style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--accent-cta)', flexShrink: 0, paddingTop: '2px' }}>
+                        ◆
+                      </span>
+                      <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', lineHeight: 1.6, margin: 0 }}>
+                        <strong style={{ color: 'var(--text-primary)' }}>{td('services_ai_label')}:</strong>{' '}
+                        {svc.aiOpportunity}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Teamopbouw */}
+      {report.teamAnalysis && (report.teamAnalysis.composition || report.teamAnalysis.signals?.length > 0) && (
+        <div
+          style={{
+            background: 'var(--bg-secondary)',
+            border: '1px solid var(--border-subtle)',
+            padding: '28px 32px',
+            marginBottom: '24px',
+          }}
+        >
+          <p className="eyebrow" style={{ marginBottom: '12px' }}>{td('team_eyebrow')}</p>
+          {report.teamAnalysis.composition && (
+            <p style={{ color: 'var(--text-primary)', fontSize: 'clamp(1rem, 1.6vw, 1.0625rem)', lineHeight: 1.7, margin: `0 0 ${report.teamAnalysis.signals?.length > 0 ? '16px' : '0'}` }}>
+              {report.teamAnalysis.composition}
+            </p>
+          )}
+          {report.teamAnalysis.signals?.length > 0 && (
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              {report.teamAnalysis.signals.map((s, i) => (
+                <li key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+                  <span style={{ color: 'var(--accent-cta)', fontWeight: 800, flexShrink: 0, paddingTop: '1px' }}>—</span>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', lineHeight: 1.65, margin: 0 }}>{s}</p>
+                </li>
+              ))}
+            </ul>
+          )}
+          {report.teamAnalysis.implication && (
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.8125rem', lineHeight: 1.55, marginTop: '16px', paddingTop: '12px', borderTop: '1px solid var(--border-subtle)' }}>
+              <strong style={{ color: 'var(--text-secondary)' }}>{td('team_implication_label')}:</strong> {report.teamAnalysis.implication}
+            </p>
+          )}
+        </div>
+      )}
+
       {/* Dimensie-analyse */}
       {report.dimensionAnalysis?.length > 0 && (
         <div

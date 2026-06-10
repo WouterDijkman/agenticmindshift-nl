@@ -58,6 +58,16 @@ export interface PdfStrings {
   researchFindings: string;
   noWebsite: string;
   urgencyExplanation: string;
+  // Services & Team
+  servicesEyebrow: string;
+  servicesTitle: string;
+  servicesIntro: string;
+  servicesExposureHigh: string;
+  servicesExposureMedium: string;
+  servicesExposureLow: string;
+  servicesAiLabel: string;
+  teamSectionTitle: string;
+  teamImplicationLabel: string;
   // Insights
   insightsEyebrow: string;
   insightsTitle: string;
@@ -176,6 +186,15 @@ const nl: PdfStrings = {
   noWebsite:
     'Geen website opgegeven. Vul bij een volgend traject de bedrijfswebsite in voor een specifiek bedrijfsprofiel gebaseerd op actuele online informatie.',
   urgencyExplanation: 'Urgentieverklaring',
+  servicesEyebrow: 'Diensten × AI-kansen',
+  servicesTitle: 'Waar AI uw diensten raakt',
+  servicesIntro: 'Per dienst die u aanbiedt: waar AI en automatisering de economie van juist díe dienst veranderen — versnellen, verbreden of goedkoper maken.',
+  servicesExposureHigh: 'Hoge impact',
+  servicesExposureMedium: 'Gemiddelde impact',
+  servicesExposureLow: 'Lage impact',
+  servicesAiLabel: 'AI-kans',
+  teamSectionTitle: 'Teamopbouw',
+  teamImplicationLabel: 'Wat dit betekent',
   insightsEyebrow: 'Kernobservaties',
   insightsTitle: 'Wat dit rapport ziet dat anderen missen',
   insightsIntro:
@@ -306,6 +325,15 @@ const en: PdfStrings = {
   noWebsite:
     'No website provided. For a future engagement, enter the company website for a specific company profile based on current online information.',
   urgencyExplanation: 'Urgency rationale',
+  servicesEyebrow: 'Services × AI opportunities',
+  servicesTitle: 'Where AI touches your services',
+  servicesIntro: 'For each service you offer: where AI and automation change the economics of that specific service — accelerating, broadening or lowering its cost.',
+  servicesExposureHigh: 'High impact',
+  servicesExposureMedium: 'Medium impact',
+  servicesExposureLow: 'Low impact',
+  servicesAiLabel: 'AI opportunity',
+  teamSectionTitle: 'Team composition',
+  teamImplicationLabel: 'What this means',
   insightsEyebrow: 'Key observations',
   insightsTitle: 'What this report sees that others miss',
   insightsIntro:
@@ -436,6 +464,15 @@ const de: PdfStrings = {
   noWebsite:
     'Keine Website angegeben. Geben Sie bei einem nächsten Vorhaben die Unternehmenswebsite an, um ein spezifisches Unternehmensprofil auf Basis aktueller Online-Informationen zu erhalten.',
   urgencyExplanation: 'Dringlichkeitsbegründung',
+  servicesEyebrow: 'Leistungen × KI-Chancen',
+  servicesTitle: 'Wo KI Ihre Leistungen berührt',
+  servicesIntro: 'Für jede Ihrer Leistungen: wo KI und Automatisierung die Ökonomie genau dieser Leistung verändern — beschleunigen, erweitern oder verbilligen.',
+  servicesExposureHigh: 'Hohe Wirkung',
+  servicesExposureMedium: 'Mittlere Wirkung',
+  servicesExposureLow: 'Geringe Wirkung',
+  servicesAiLabel: 'KI-Chance',
+  teamSectionTitle: 'Teamaufbau',
+  teamImplicationLabel: 'Was das bedeutet',
   insightsEyebrow: 'Kernbeobachtungen',
   insightsTitle: 'Was dieser Bericht sieht, das andere übersehen',
   insightsIntro:
@@ -566,6 +603,15 @@ const es: PdfStrings = {
   noWebsite:
     'No se indicó ningún sitio web. En un próximo trayecto, indique el sitio web de la empresa para obtener un perfil específico basado en información en línea actual.',
   urgencyExplanation: 'Justificación de la urgencia',
+  servicesEyebrow: 'Servicios × oportunidades de IA',
+  servicesTitle: 'Dónde la IA toca sus servicios',
+  servicesIntro: 'Para cada servicio que ofrece: dónde la IA y la automatización cambian la economía de ese servicio concreto — acelerándolo, ampliándolo o abaratándolo.',
+  servicesExposureHigh: 'Alto impacto',
+  servicesExposureMedium: 'Impacto medio',
+  servicesExposureLow: 'Bajo impacto',
+  servicesAiLabel: 'Oportunidad de IA',
+  teamSectionTitle: 'Composición del equipo',
+  teamImplicationLabel: 'Qué significa esto',
   insightsEyebrow: 'Observaciones clave',
   insightsTitle: 'Lo que este informe ve y otros pasan por alto',
   insightsIntro:
@@ -696,6 +742,15 @@ const pt: PdfStrings = {
   noWebsite:
     'Nenhum site indicado. Num próximo percurso, indique o site da empresa para obter um perfil específico baseado em informação online atual.',
   urgencyExplanation: 'Justificação da urgência',
+  servicesEyebrow: 'Serviços × oportunidades de IA',
+  servicesTitle: 'Onde a IA toca os seus serviços',
+  servicesIntro: 'Para cada serviço que oferece: onde a IA e a automação alteram a economia desse serviço específico — acelerando-o, ampliando-o ou tornando-o mais barato.',
+  servicesExposureHigh: 'Alto impacto',
+  servicesExposureMedium: 'Impacto médio',
+  servicesExposureLow: 'Baixo impacto',
+  servicesAiLabel: 'Oportunidade de IA',
+  teamSectionTitle: 'Composição da equipa',
+  teamImplicationLabel: 'O que isto significa',
   insightsEyebrow: 'Observações-chave',
   insightsTitle: 'O que este relatório vê e os outros não veem',
   insightsIntro:
