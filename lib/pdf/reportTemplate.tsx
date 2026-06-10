@@ -551,12 +551,12 @@ export function ReportDocument(props: ReportProps) {
       {/* ═══ PAGINA 5 — UW ROUTE BIJ AGENTIC MINDSHIFT ═══ */}
       <Page size="A4" style={s.page}>
         <Text style={s.eyebrow}>{t.routeEyebrow}</Text>
-        <Text style={s.h1}>{t.routeTitle(firstName)}</Text>
-        <Text style={[s.body, { marginBottom: 10 }]}>{t.routeIntro}</Text>
+        <Text style={[s.h1, { marginBottom: 7 }]}>{t.routeTitle(firstName)}</Text>
+        <Text style={[s.body, { marginBottom: 8 }]}>{t.routeIntro}</Text>
 
         {/* 4-route ladder */}
-        <Text style={[s.smallLabelMuted, { marginBottom: 6 }]}>{t.routeLadderLabel}</Text>
-        <View style={{ marginBottom: 12 }}>
+        <Text style={[s.smallLabelMuted, { marginBottom: 5 }]}>{t.routeLadderLabel}</Text>
+        <View style={{ marginBottom: 9 }}>
           {ladder.map((rung) => {
             const isActive = rung.id === activeId;
             return (
@@ -566,9 +566,9 @@ export function ReportDocument(props: ReportProps) {
                   flexDirection: 'row',
                   alignItems: 'center',
                   gap: 8,
-                  paddingVertical: 7,
+                  paddingVertical: 6,
                   paddingHorizontal: 10,
-                  marginBottom: 3,
+                  marginBottom: 2,
                   backgroundColor: isActive ? brand.navy : brand.bgCardSoft,
                   borderLeft: `3pt solid ${isActive ? brand.rust : brand.border}`,
                 }}
@@ -588,24 +588,24 @@ export function ReportDocument(props: ReportProps) {
         </View>
 
         {/* Actieve route detail */}
-        <View style={[s.cardAccent, { padding: 14, marginBottom: 9 }]} wrap={false}>
+        <View style={[s.cardAccent, { padding: 12, marginBottom: 8 }]} wrap={false}>
           <Text style={s.smallLabel}>{t.routeRecommended}</Text>
-          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 7 }}>
-            <Text style={{ fontFamily: SANS_XB, fontSize: 18, color: brand.navy, flex: 1, paddingRight: 8 }}>{routeName}</Text>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 6, gap: 10 }}>
+            <Text style={{ fontFamily: SANS_XB, fontSize: 16, color: brand.navy, flex: 1 }}>{routeName}</Text>
             {route?.price ? (
-              <View style={{ alignItems: 'flex-end' }}>
+              <View style={{ alignItems: 'flex-end', maxWidth: 170 }}>
                 <Text style={s.smallLabelMuted}>{t.routePriceLabel}</Text>
-                <Text style={{ fontFamily: SANS_BOLD, fontSize: 10, color: brand.rust }}>{route.price}</Text>
+                <Text style={{ fontFamily: SANS_BOLD, fontSize: 9, color: brand.rust, textAlign: 'right' }}>{route.price}</Text>
               </View>
             ) : null}
           </View>
-          {traj?.rationale ? <Text style={[s.body, { marginBottom: 8 }]}>{traj.rationale}</Text> : null}
+          {traj?.rationale ? <Text style={[s.body, { marginBottom: 7 }]}>{traj.rationale}</Text> : null}
 
           {route && route.interventions.length > 0 ? (
             <>
-              <Text style={[s.smallLabel, { marginBottom: 5 }]}>{t.routeWhatYouGet}</Text>
+              <Text style={[s.smallLabel, { marginBottom: 4 }]}>{t.routeWhatYouGet}</Text>
               {route.interventions.map((iv, i) => (
-                <View key={i} style={{ flexDirection: 'row', gap: 8, marginBottom: 4 }}>
+                <View key={i} style={{ flexDirection: 'row', gap: 8, marginBottom: 3 }}>
                   <View style={{ width: 5, height: 5, backgroundColor: brand.rust, marginTop: 4 }} />
                   <Text style={[s.body, { flex: 1 }]}>
                     <Text style={{ fontFamily: SANS_BOLD, color: brand.navy }}>{iv.title}. </Text>
@@ -620,22 +620,22 @@ export function ReportDocument(props: ReportProps) {
         {/* Verwacht resultaat + eerste stap */}
         <View style={{ flexDirection: 'row', gap: 8 }} wrap={false}>
           {traj?.expectedOutcome ? (
-            <View style={[s.statBox, { flex: 1, padding: 9 }]}>
+            <View style={[s.statBox, { flex: 1, padding: 8 }]}>
               <Text style={s.smallLabelMuted}>{t.expectedOutcome}</Text>
-              <Text style={[s.body, { marginTop: 3, fontSize: 9.5 }]}>{traj.expectedOutcome}</Text>
+              <Text style={[s.body, { marginTop: 3, fontSize: 9.3 }]}>{traj.expectedOutcome}</Text>
             </View>
           ) : null}
           {traj?.firstStep ? (
-            <View style={[s.statBox, { flex: 1, padding: 9, borderLeft: `2pt solid ${brand.rust}` }]}>
+            <View style={[s.statBox, { flex: 1, padding: 8, borderLeft: `2pt solid ${brand.rust}` }]}>
               <Text style={[s.smallLabel]}>{t.firstStep}</Text>
-              <Text style={[s.body, { marginTop: 3, fontSize: 9.5, color: brand.navy }]}>{traj.firstStep}</Text>
+              <Text style={[s.body, { marginTop: 3, fontSize: 9.3, color: brand.navy }]}>{traj.firstStep}</Text>
             </View>
           ) : null}
         </View>
 
         {/* Factum positionering (alleen DD-routes) */}
         {routeUsesFactum ? (
-          <View style={{ marginTop: 8, backgroundColor: brand.navy, padding: 11, flexDirection: 'row', gap: 10, alignItems: 'center' }} wrap={false}>
+          <View style={{ marginTop: 7, backgroundColor: brand.navy, padding: 10, flexDirection: 'row', gap: 10, alignItems: 'center' }} wrap={false}>
             <View style={{ width: 4, height: 28, backgroundColor: brand.rust }} />
             <View style={{ flex: 1 }}>
               <Text style={{ fontFamily: SANS_BOLD, fontSize: 7.5, color: brand.rust, letterSpacing: 1.6, textTransform: 'uppercase', marginBottom: 3 }}>
