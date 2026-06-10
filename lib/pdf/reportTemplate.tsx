@@ -231,12 +231,12 @@ function DimensionCard({
         borderRight: `1pt solid ${brand.border}`,
         borderBottom: `1pt solid ${brand.border}`,
         borderLeft: `4pt solid ${c}`,
-        padding: 14,
-        marginBottom: 10,
+        padding: 11,
+        marginBottom: 8,
       }}
       wrap={false}
     >
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 6 }}>
         <View style={{ flex: 1, paddingRight: 8 }}>
           <Text style={{ fontFamily: SANS_BOLD, fontSize: 7.5, color: c, letterSpacing: 1.6, textTransform: 'uppercase', marginBottom: 3 }}>
             {priorityLabel(dim.priority, t)}
@@ -245,10 +245,10 @@ function DimensionCard({
         </View>
         <ScoreBadge score={dim.score} color={c} />
       </View>
-      <View style={{ marginBottom: 10 }}>
+      <View style={{ marginBottom: 7 }}>
         <DimensionBar score={dim.score} peer={PEER} color={c} />
       </View>
-      <Text style={s.body}>{dim.assessment}</Text>
+      <Text style={[s.body, { lineHeight: 1.5 }]}>{dim.assessment}</Text>
       {showQuickWin && dim.quickWin ? (
         <View style={[s.cardSoft, { marginTop: 10, marginBottom: 0, borderLeft: `2pt solid ${c}` }]}>
           <Text style={[s.smallLabel, { color: c }]}>{quickLabel}</Text>
@@ -522,23 +522,23 @@ export function ReportDocument(props: ReportProps) {
       <Page size="A4" style={s.page}>
         <Text style={s.eyebrow}>{adequateDims.length > 0 ? t.strongEyebrow : t.strongEyebrowAlt}</Text>
         <Text style={s.h1}>{adequateDims.length > 0 ? t.strongTitle : t.strongTitleAlt}</Text>
-        <Text style={[s.body, { marginBottom: 14 }]}>{adequateDims.length > 0 ? t.strongIntro : t.strongIntroAlt}</Text>
+        <Text style={[s.body, { marginBottom: 11 }]}>{adequateDims.length > 0 ? t.strongIntro : t.strongIntroAlt}</Text>
 
         {adequateDims.length > 0
           ? adequateDims.map((dim) => <DimensionCard key={dim.dimension} dim={dim} t={t} showQuickWin={false} />)
           : null}
 
         {insights.length > 0 ? (
-          <View style={{ marginTop: 6 }}>
-            <Text style={[s.smallLabel, { marginBottom: 8 }]}>{t.insightsEyebrow}</Text>
+          <View style={{ marginTop: 4 }}>
+            <Text style={[s.smallLabel, { marginBottom: 6 }]}>{t.insightsEyebrow}</Text>
             {insights.map((insight, i) => (
-              <View key={i} style={{ flexDirection: 'row', gap: 10, marginBottom: 10 }} wrap={false}>
+              <View key={i} style={{ flexDirection: 'row', gap: 10, marginBottom: 7 }} wrap={false}>
                 <View style={{ width: 22, height: 22, backgroundColor: brand.rust, alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   <Text style={{ fontFamily: SANS_XB, fontSize: 11, color: '#FFFFFF' }}>{String(i + 1)}</Text>
                 </View>
-                <View style={{ flex: 1, borderBottom: `1pt solid ${brand.border}`, paddingBottom: 8 }}>
-                  <Text style={{ fontFamily: SANS_BOLD, fontSize: 10.5, color: brand.navy, marginBottom: 3 }}>{insight.title}</Text>
-                  <Text style={s.body}>{insight.body}</Text>
+                <View style={{ flex: 1, borderBottom: `1pt solid ${brand.border}`, paddingBottom: 6 }}>
+                  <Text style={{ fontFamily: SANS_BOLD, fontSize: 10.5, color: brand.navy, marginBottom: 2 }}>{insight.title}</Text>
+                  <Text style={[s.body, { lineHeight: 1.5 }]}>{insight.body}</Text>
                 </View>
               </View>
             ))}
