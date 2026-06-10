@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
 import { type GeneratedReport } from '@/lib/report/types';
 
 interface ReportDeepAnalysisProps {
@@ -16,20 +17,17 @@ const PRIORITY_COLORS: Record<string, string> = {
   strong: '#5BA06B',
 };
 
-const PRIORITY_LABELS: Record<string, string> = {
-  critical: '⚡ Kritiek',
-  attention: '◆ Aandacht',
-  adequate: '○ Voldoende',
-  strong: '✓ Sterk',
-};
-
-const URGENCY_LABELS: Record<string, string> = {
-  high: 'Directe actie vereist',
-  medium: 'Verbeterpotentieel',
-  low: 'Goede basis',
+const PRIORITY_SYMBOLS: Record<string, string> = {
+  critical: '⚡',
+  attention: '◆',
+  adequate: '○',
+  strong: '✓',
 };
 
 export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) {
+  const t = useTranslations('scorecard.rapport');
+  const td = useTranslations('scorecard.rapport.deep');
+  const locale = useLocale();
   const [status, setStatus] = useState<Status>('idle');
   const [report, setReport] = useState<GeneratedReport | null>(null);
   const [error, setError] = useState<string>('');
@@ -85,9 +83,9 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '20px' }}>
           <div className="skeleton" style={{ width: '20px', height: '20px', borderRadius: '50%', flexShrink: 0 }} />
           <div>
-            <p className="eyebrow" style={{ marginBottom: '4px' }}>AI-analyse bezig</p>
+            <p className="eyebrow" style={{ marginBottom: '4px' }}>{td('loading_eyebrow')}</p>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', margin: 0 }}>
-              DeepSeek analyseert uw antwoorden en bedrijfscontext — dit duurt ca. 20–30 seconden.
+              {td('loading_body')}
             </p>
           </div>
         </div>
@@ -112,10 +110,9 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
           marginBottom: '48px',
         }}
       >
-        <p className="eyebrow" style={{ marginBottom: '8px' }}>Diepteanalyse niet beschikbaar</p>
+        <p className="eyebrow" style={{ marginBottom: '8px' }}>{td('nolead_eyebrow')}</p>
         <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', margin: 0 }}>
-          De AI-analyse is beschikbaar zodra Supabase geconfigureerd is en uw scorecard-gegevens zijn opgeslagen.
-          Uw scores hierboven zijn correct berekend op basis van uw antwoorden.
+          {td('nolead_body')}
         </p>
       </div>
     );
@@ -133,16 +130,16 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
           marginBottom: '48px',
         }}
       >
-        <p className="eyebrow" style={{ marginBottom: '8px' }}>Analyse tijdelijk niet beschikbaar</p>
+        <p className="eyebrow" style={{ marginBottom: '8px' }}>{td('error_eyebrow')}</p>
         <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', marginBottom: '16px' }}>
-          De AI-diepteanalyse kon niet worden gegenereerd. Probeer het opnieuw of neem contact op.
+          {td('error_body')}
         </p>
         <button
           onClick={generate}
           className="btn btn-secondary"
           style={{ fontSize: '0.875rem' }}
         >
-          Opnieuw proberen
+          {td('retry')}
         </button>
         {process.env.NODE_ENV === 'development' && (
           <p style={{ color: 'var(--text-muted)', fontSize: '0.75rem', marginTop: '8px', fontFamily: 'monospace' }}>
@@ -158,6 +155,7 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
 
   return (
     <div style={{ marginBottom: '48px' }}>
+      <style>{`@media (max-width: 640px) { .roadmap-phase { grid-template-columns: 1fr !important; gap: 10px !important; } }`}</style>
       {/* Executive Summary */}
       <div
         style={{
@@ -168,7 +166,7 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
           marginBottom: '24px',
         }}
       >
-        <p className="eyebrow" style={{ marginBottom: '10px' }}>AI-adviesrapport</p>
+        <p className="eyebrow" style={{ marginBottom: '10px' }}>{td('report_eyebrow')}</p>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px', flexWrap: 'wrap' }}>
           <span
             className="wb-card-chip"
@@ -198,7 +196,7 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
                     : '#5BA06B',
               }}
             >
-              {URGENCY_LABELS[report.urgency]}
+              {td(`urgency_${report.urgency}`)}
             </span>
           )}
         </div>
@@ -224,14 +222,14 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
             marginBottom: '24px',
           }}
         >
-          <p className="eyebrow" style={{ marginBottom: '10px' }}>Bedrijfscontext</p>
+          <p className="eyebrow" style={{ marginBottom: '10px' }}>{td('context_eyebrow')}</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: report.companyContext.keyActivities ? '16px' : 0 }}>
             <div>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '4px' }}>Sector</p>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '4px' }}>{td('sector')}</p>
               <p style={{ color: 'var(--text-primary)', fontSize: '0.9375rem', margin: 0 }}>{report.companyContext.sector}</p>
             </div>
             <div>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '4px' }}>Profiel</p>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '4px' }}>{td('profile')}</p>
               <p style={{ color: 'var(--text-primary)', fontSize: '0.9375rem', margin: 0 }}>{report.companyContext.estimatedProfile}</p>
             </div>
           </div>
@@ -242,7 +240,7 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
           )}
           {report.companyContext.researchSignals?.length > 0 && (
             <div style={{ marginTop: '12px', paddingTop: '12px', borderTop: '1px solid var(--border-subtle)' }}>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.75rem', marginBottom: '6px' }}>Online gevonden:</p>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.75rem', marginBottom: '6px' }}>{td('found_online')}</p>
               {report.companyContext.researchSignals.map((s, i) => (
                 <p key={i} style={{ color: 'var(--text-muted)', fontSize: '0.8125rem', lineHeight: 1.5, margin: '0 0 4px' }}>
                   · {s}
@@ -263,7 +261,7 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
             marginBottom: '24px',
           }}
         >
-          <p className="eyebrow" style={{ marginBottom: '20px' }}>Dimensie-analyse</p>
+          <p className="eyebrow" style={{ marginBottom: '20px' }}>{td('dimensions_eyebrow')}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             {report.dimensionAnalysis
               .sort((a, b) => a.score - b.score) // laagste dimensies eerst
@@ -294,7 +292,8 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
                           color: PRIORITY_COLORS[dim.priority] ?? 'var(--text-muted)',
                         }}
                       >
-                        {PRIORITY_LABELS[dim.priority] ?? dim.priority}
+                        {PRIORITY_SYMBOLS[dim.priority] ? `${PRIORITY_SYMBOLS[dim.priority]} ` : ''}
+                        {td(`prio_${dim.priority}`)}
                       </span>
                       <h3
                         style={{
@@ -364,12 +363,123 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
                       →
                     </span>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', lineHeight: 1.6, margin: 0 }}>
-                      <strong style={{ color: 'var(--text-primary)' }}>Quick win:</strong>{' '}
+                      <strong style={{ color: 'var(--text-primary)' }}>{td('quickwin_label')}:</strong>{' '}
                       {dim.quickWin}
                     </p>
                   </div>
                 </div>
               ))}
+          </div>
+        </div>
+      )}
+
+      {/* Wat er op het spel staat */}
+      {report.valueAtStake && (report.valueAtStake.headline || report.valueAtStake.drivers?.length > 0) && (
+        <div
+          style={{
+            background: 'var(--bg-secondary)',
+            border: '1px solid var(--border-subtle)',
+            borderLeft: '3px solid #F14C1D',
+            padding: '28px 32px',
+            marginBottom: '24px',
+          }}
+        >
+          <p className="eyebrow" style={{ marginBottom: '12px' }}>{t('value_eyebrow')}</p>
+          {report.valueAtStake.headline && (
+            <p
+              style={{
+                color: 'var(--text-primary)',
+                fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
+                fontWeight: 700,
+                lineHeight: 1.6,
+                marginBottom: report.valueAtStake.drivers?.length > 0 ? '18px' : 0,
+              }}
+            >
+              {report.valueAtStake.headline}
+            </p>
+          )}
+          {report.valueAtStake.drivers?.length > 0 && (
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              {report.valueAtStake.drivers.map((d, i) => (
+                <li key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+                  <span style={{ color: '#F14C1D', fontWeight: 800, flexShrink: 0, paddingTop: '1px' }}>—</span>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.9375rem, 1.5vw, 1rem)', lineHeight: 1.65, margin: 0 }}>{d}</p>
+                </li>
+              ))}
+            </ul>
+          )}
+          {report.valueAtStake.basis && (
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.8125rem', fontStyle: 'italic', lineHeight: 1.55, marginTop: '16px', paddingTop: '12px', borderTop: '1px solid var(--border-subtle)' }}>
+              <strong style={{ fontStyle: 'normal' }}>{t('value_basis_label')}:</strong> {report.valueAtStake.basis}
+            </p>
+          )}
+        </div>
+      )}
+
+      {/* Actieplan / roadmap */}
+      {report.actionRoadmap && report.actionRoadmap.length > 0 && (
+        <div
+          style={{
+            background: 'var(--bg-secondary)',
+            border: '1px solid var(--border-subtle)',
+            padding: '28px 32px',
+            marginBottom: '24px',
+          }}
+        >
+          <p className="eyebrow" style={{ marginBottom: '20px' }}>{t('roadmap_eyebrow')}</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            {report.actionRoadmap.map((phase, i) => (
+              <div
+                key={i}
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'minmax(0, 0.85fr) minmax(0, 2fr)',
+                  gap: '20px',
+                  paddingBottom: i < report.actionRoadmap!.length - 1 ? '20px' : 0,
+                  borderBottom: i < report.actionRoadmap!.length - 1 ? '1px solid var(--border-subtle)' : 'none',
+                }}
+                className="roadmap-phase"
+              >
+                <div>
+                  <span
+                    style={{
+                      display: 'inline-block',
+                      fontSize: '0.6875rem',
+                      fontWeight: 800,
+                      letterSpacing: '0.06em',
+                      textTransform: 'uppercase',
+                      color: 'var(--accent-cta)',
+                      border: '1px solid var(--accent-cta)',
+                      borderRadius: '2px',
+                      padding: '3px 8px',
+                      marginBottom: '8px',
+                    }}
+                  >
+                    {phase.horizon}
+                  </span>
+                  <p style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '1rem', lineHeight: 1.4, margin: 0 }}>
+                    {phase.focus}
+                  </p>
+                </div>
+                <div>
+                  {phase.actions?.length > 0 && (
+                    <ol style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {phase.actions.map((a, j) => (
+                        <li key={j} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+                          <span style={{ color: 'var(--accent-cta)', fontWeight: 800, flexShrink: 0, paddingTop: '1px' }}>→</span>
+                          <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', lineHeight: 1.6, margin: 0 }}>{a}</p>
+                        </li>
+                      ))}
+                    </ol>
+                  )}
+                  {phase.outcome && (
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.8125rem', lineHeight: 1.55, marginTop: '12px' }}>
+                      <strong style={{ color: 'var(--text-secondary)' }}>{t('roadmap_outcome_label')}:</strong> {phase.outcome}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       )}
@@ -384,7 +494,7 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
             marginBottom: '24px',
           }}
         >
-          <p className="eyebrow" style={{ marginBottom: '20px' }}>Kernobservaties</p>
+          <p className="eyebrow" style={{ marginBottom: '20px' }}>{td('insights_eyebrow')}</p>
           <ol style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '18px' }}>
             {report.keyInsights.map((insight, i) => (
               <li key={i} style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
@@ -425,7 +535,7 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
             marginBottom: '24px',
           }}
         >
-          <p className="eyebrow" style={{ marginBottom: '10px' }}>Aanbevolen traject</p>
+          <p className="eyebrow" style={{ marginBottom: '10px' }}>{td('trajectory_eyebrow')}</p>
           <h2
             className="type-h2"
             style={{ marginBottom: '12px' }}
@@ -437,7 +547,7 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
           </p>
           {report.recommendedTrajectory.expectedOutcome && (
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', lineHeight: 1.7, marginBottom: '16px' }}>
-              <strong style={{ color: 'var(--text-primary)' }}>Verwacht resultaat:</strong>{' '}
+              <strong style={{ color: 'var(--text-primary)' }}>{td('expected_label')}:</strong>{' '}
               {report.recommendedTrajectory.expectedOutcome}
             </p>
           )}
@@ -451,7 +561,7 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
               }}
             >
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', lineHeight: 1.6, margin: 0 }}>
-                <strong style={{ color: 'var(--text-primary)' }}>Eerste stap:</strong>{' '}
+                <strong style={{ color: 'var(--text-primary)' }}>{td('firststep_label')}:</strong>{' '}
                 {report.recommendedTrajectory.firstStep}
               </p>
             </div>
@@ -469,10 +579,12 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
           marginTop: '8px',
         }}
       >
-        Rapport gegenereerd via {report.model ?? 'DeepSeek'} op{' '}
-        {report.generatedAt
-          ? new Date(report.generatedAt).toLocaleDateString('nl-NL')
-          : 'onbekend'}
+        {td('generated', {
+          model: report.model ?? 'DeepSeek',
+          date: report.generatedAt
+            ? new Date(report.generatedAt).toLocaleDateString(locale)
+            : '—',
+        })}
       </p>
     </div>
   );

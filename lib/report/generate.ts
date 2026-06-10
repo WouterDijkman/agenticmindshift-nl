@@ -101,8 +101,10 @@ export async function generateAndStoreReport(
   const scores = calculateScores(answers);
   const offerType = determineOffer(answers['Q4']) as OfferType;
 
-  // Bedrijfsonderzoek: Jina Reader scraping + Serper search (beide graceful)
-  const research = await researchCompany(company, jobTitle, website);
+  // Strategisch bedrijfsonderzoek: multi-page Jina-scrape (track record, team,
+  // propositie) + thematische Serper-search (deal-activiteit, leiderschap,
+  // digitale signalen). Sector + locale sturen de prioriteit. Beide graceful.
+  const research = await researchCompany(company, jobTitle, website, companyContext, locale);
 
   // Bouw prompt
   const { system, user } = buildReportPrompt({

@@ -14,6 +14,7 @@ import { calculateScores, determineOffer } from '@/lib/scoring';
 import { type Answers } from '@/lib/scoring';
 import ReportDocument from '@/lib/pdf/reportTemplate';
 import { type Dimension } from '@/lib/questions';
+import { normalizeReportLocale, HTML_LANG } from '@/lib/report/locale';
 
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
@@ -31,15 +32,29 @@ export async function GET(
 
   try {
     const client = getSupabaseClient();
-    const { data, error } = await client
+    const baseCols =
+      'id, name, company, answers, total_score, dimension_scores, assigned_offer, weakest_dimensions, report';
+
+    let { data, error } = await client
       .from('leads')
-      .select('id, name, company, answers, total_score, dimension_scores, assigned_offer, weakest_dimensions, report')
+      .select(`${baseCols}, locale`)
       .eq('id', leadId)
       .single();
+
+    // Defensief: val terug op een select zonder locale als migratie 0004 ontbreekt.
+    if (error && /locale/i.test(`${error.message} ${error.details ?? ''}`)) {
+      ({ data, error } = await client
+        .from('leads')
+        .select(baseCols)
+        .eq('id', leadId)
+        .single());
+    }
 
     if (error || !data) {
       return NextResponse.json({ error: 'Lead niet gevonden' }, { status: 404 });
     }
+
+    const locale = normalizeReportLocale((data as { locale?: unknown }).locale);
 
     // Herbereken scores voor PDF (of gebruik opgeslagen waarden)
     const scores = data.answers
@@ -56,9 +71,10 @@ export async function GET(
       byDimension: scores.byDimension as Record<Dimension, number>,
       weakest: scores.weakest,
       offer,
-      generatedAt: new Date().toLocaleDateString('nl-NL'),
+      generatedAt: new Date().toLocaleDateString(HTML_LANG[locale]),
       report: storedReport ?? undefined,
       answers: data.answers as Answers | undefined, // voor de Q&A-pagina
+      locale,
     });
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -36,14 +36,16 @@ export function buildReportPrompt(
   // ── System prompt ──────────────────────────────────────────────────────────
   const system = `Je bent een senior adviseur bij Agentic Mindshift, een Europese adviespartner gespecialiseerd in AI-toepassing voor private equity, M&A-adviseurs en directeur-grootaandeelhouders in het Europese mid-market segment.
 
-TAAL — ZEER BELANGRIJK: schrijf ALLE tekstvelden van het rapport (executiveSummary, companyContext, dimensionAnalysis.assessment, dimensionAnalysis.label, dimensionAnalysis.quickWin, keyInsights, recommendedTrajectory, scoreProfile.profileLabel, profileExplanation, urgencyExplanation, researchNote) volledig in ${targetLanguage}. Vertaal vloeiend en professioneel — geen letterlijke vertaling. Behoud Engelse vakjargon-termen (zoals AI Readiness, due diligence, mid-market, IRR) waar dat in de doeltaal gangbaar is. De JSON-sleutels en enum-waarden (priority, urgency, offerType) blijven exact zoals in het schema; alleen de waarden van vrije-tekstvelden zijn in ${targetLanguage}.
+TAAL — ZEER BELANGRIJK: schrijf ALLE tekstvelden van het rapport (executiveSummary, companyContext, dimensionAnalysis.assessment, dimensionAnalysis.label, dimensionAnalysis.quickWin, keyInsights, recommendedTrajectory, valueAtStake.headline, valueAtStake.drivers, valueAtStake.basis, actionRoadmap.horizon, actionRoadmap.focus, actionRoadmap.actions, actionRoadmap.outcome, scoreProfile.profileLabel, profileExplanation, urgencyExplanation, researchNote) volledig in ${targetLanguage}. Vertaal vloeiend en professioneel — geen letterlijke vertaling. Behoud Engelse vakjargon-termen (zoals AI Readiness, due diligence, mid-market, IRR) waar dat in de doeltaal gangbaar is. De JSON-sleutels en enum-waarden (priority, urgency, offerType) blijven exact zoals in het schema; alleen de waarden van vrije-tekstvelden zijn in ${targetLanguage}.
 
 Je taak: genereer een diepgaand, substantieel en persoonlijk adviesrapport in ${targetLanguage} op basis van (1) de scorecard-antwoorden, (2) de gescrapte inhoud van de bedrijfswebsite, en (3) eventuele aanvullende externe signalen. Het rapport moet specifiek zijn voor déze organisatie — geen generieke teksten.
 
-Werkwijze:
-- LEES eerst de gescrapte website-inhoud volledig door en haal hieruit: welke sector/sub-sector, kernactiviteiten, kerncijfers indien zichtbaar, portfoliobedrijven indien PE/holding, governance-structuur, eventuele AI- of digitaliseringssignalen.
-- KOPPEL deze observaties expliciet aan de scorecard-antwoorden. Bv: als de website een sterke nadruk legt op due diligence en de score op AI Readiness is laag, benoem dat als concrete tegenstelling.
-- VERZIN NOOIT feiten die niet in de antwoorden of de scrape staan. Als iets onbekend is, schrijf: "op basis van uw antwoorden vermoeden wij..." of laat het weg.
+Werkwijze (denk als een strateeg, niet als een samenvatter):
+- De research-context bevat MEERDERE strategische bronpagina's (homepage, portfolio/track record, team/leiderschap, propositie) plus thematische externe signalen (deal-activiteit, leiderschap, digitale signalen). Lees ze alle door.
+- BOUW EERST een strategisch beeld op: welke sector/sub-sector, businessmodel, track record en deal-types (bij PE/M&A), wie de beslissers zijn, en de huidige digitale/AI-volwassenheid — expliciet én impliciet.
+- REDENEER vervolgens: waar staat deze partij in de markt, wat is hun realistische volgende stap, en welke 1-2 strategische spanningen springen eruit? Bv: een sterk due-diligence-track-record gecombineerd met lage AI Readiness betekent dat concurrenten met AI-gedreven sourcing/screening hen kunnen inhalen — maak dat soort gevolg expliciet en concreet.
+- KOPPEL elke observatie aan de scorecard-antwoorden en vertaal die naar zakelijke consequenties (gemiste deals, langzamere due diligence, capaciteitsverlies, kennislek), niet naar abstracte "verbeterpunten".
+- VERZIN NOOIT feiten die niet in de antwoorden of de research staan. Als iets onbekend is, schrijf: "op basis van uw antwoorden vermoeden wij..." of laat het weg. Verzin geen portfoliobedrijven, cijfers of deals.
 
 Schrijfstijl:
 - Directe, professionele adviestoon in ${targetLanguage} (peer-to-peer, niet bureaucratisch)
@@ -101,21 +103,23 @@ Beschrijving: ${offerInfo.description}
 ALLE SCORECARD ANTWOORDEN:
 ${qaLines.join('\n\n')}
 
-BEDRIJFSCONTEXT (websearch):
+STRATEGISCHE RESEARCH-CONTEXT (multi-page scrape + thematische search):
 ${researchBlock}
 
 Genereer nu het volledige rapport als JSON object met exact dit schema:
 ${REPORT_JSON_SCHEMA}
 
 Vereisten:
-1. executiveSummary: overkoepelende beoordeling van 2-3 zinnen, specifiek voor ${lead.company}
-2. companyContext: baseer op antwoorden + websearch — wees specifiek over de sector en situatie
-3. dimensionAnalysis: alle 6 dimensies, elke assessment van 2-3 substantiële zinnen gericht op ${lead.company}
-4. keyInsights: 4 inzichten die direct relevant zijn voor de beslissingen van ${lead.name}
-5. recommendedTrajectory: leg uit WAAROM ${offerInfo.name} aansluit op de specifieke situatie
-6. urgency: 'high' als 2+ dimensies < 40, 'medium' als weakest dimension < 50, anders 'low'
-7. Geen placeholder-tekst of generieke formuleringen — elk woord moet specifiek zijn voor deze lead
-8. TAAL: schrijf alle vrije-tekstvelden volledig in ${targetLanguage}. Dit is een harde eis.`;
+1. executiveSummary: overkoepelende strategische beoordeling van 2-3 zinnen, specifiek voor ${lead.company} — benoem waar ze staan en wat er op het spel staat
+2. companyContext: baseer op antwoorden + multi-page research — wees specifiek over sector, businessmodel, track record en marktpositie
+3. dimensionAnalysis: alle 6 dimensies, elke assessment van 2-3 substantiële zinnen gericht op ${lead.company}, met de zakelijke consequentie van de score
+4. keyInsights: 4 STRATEGISCHE inzichten die een concurrentie- of marktconsequentie benoemen en direct relevant zijn voor de beslissingen van ${lead.name} — geen generieke observaties
+5. recommendedTrajectory: leg uit WAAROM ${offerInfo.name} aansluit op de specifieke strategische situatie en welke spanning het oplost
+6. valueAtStake: kwantificeer eerlijk wat de huidige gaps kosten. Vertaal de twee zwakste dimensies naar een orde-van-grootte van rendementslek of gemiste waarde — in tijd (weken per deal), in kans (gemiste of vertraagde deals), of in risico (onopgemerkte onderprestatie). REGEL: gebruik illustratieve ranges op basis van typische mid-market patronen ("een mid-market deal-team verliest doorgaans 2-4 weken per transactie aan..."), NOOIT verzonnen precieze cijfers over ${lead.company} zelf. Het 'basis'-veld moet die aanname expliciet en eerlijk benoemen. headline = één scherpe zin met de inzet; drivers = 2-4 concrete lekken; basis = de eerlijke onderbouwing.
+7. actionRoadmap: een gefaseerd plan in 3 horizonnen (bv. "Eerste 30 dagen", "60-90 dagen", "Dit kwartaal / half jaar"). Begin bij de zwakste dimensies (${lead.weakest.join(', ')}). Elke fase: focus (korte titel), 2-3 CONCRETE acties die ${lead.name} daadwerkelijk kan uitvoeren of beleggen (geen vaagheden als "verbeter de cultuur"), en outcome (wat het oplevert). Bouw logische sequentie: eerst diagnose/fundament, dan implementatie, dan verankering. Maak het zo bruikbaar dat het ook zonder ons traject waarde heeft — dát wekt vertrouwen.
+8. urgency: 'high' als 2+ dimensies < 40, 'medium' als weakest dimension < 50, anders 'low'
+9. Geen placeholder-tekst of generieke formuleringen — elk woord moet specifiek zijn voor deze lead. Schrijf zoals een senior adviseur die het bedrijf kent, niet zoals een AI die een sjabloon invult.
+10. TAAL: schrijf alle vrije-tekstvelden volledig in ${targetLanguage}. Dit is een harde eis.`;
 
   return { system, user };
 }

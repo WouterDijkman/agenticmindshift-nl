@@ -890,6 +890,56 @@ export function ReportDocument(props: ReportProps) {
           {t.roadmapIntro}
         </Text>
 
+        {report?.valueAtStake && (report.valueAtStake.headline || (report.valueAtStake.drivers?.length ?? 0) > 0) ? (
+          <View style={[s.cardSoft, { borderLeft: `2pt solid ${brand.rust}`, marginBottom: 18 }]}>
+            {report.valueAtStake.headline ? (
+              <Text style={{ fontFamily: SANS_BOLD, fontSize: 11, color: brand.navy, marginBottom: 6 }}>
+                {report.valueAtStake.headline}
+              </Text>
+            ) : null}
+            {report.valueAtStake.drivers?.map((d, i) => (
+              <View key={i} style={{ flexDirection: 'row', gap: 8, marginBottom: 4 }}>
+                <Text style={{ fontSize: 9, color: brand.rust }}>—</Text>
+                <Text style={s.body}>{d}</Text>
+              </View>
+            ))}
+            {report.valueAtStake.basis ? (
+              <Text style={[s.muted, { marginTop: 6 }]}>{report.valueAtStake.basis}</Text>
+            ) : null}
+          </View>
+        ) : null}
+
+        {report?.actionRoadmap && report.actionRoadmap.length > 0 ? (
+          report.actionRoadmap.map((phase, i) => {
+            const phaseColors = [brand.rust, brand.amber, brand.green];
+            const c = phaseColors[i % phaseColors.length];
+            return (
+              <View key={i} style={s.card}>
+                <View style={{ flexDirection: 'row', gap: 10, marginBottom: 10 }}>
+                  <View style={{ backgroundColor: c, paddingHorizontal: 8, paddingVertical: 4, alignSelf: 'flex-start' }}>
+                    <Text style={{ fontFamily: SANS_BOLD, fontSize: 9, color: '#FFFFFF' }}>{t.phase} {i + 1}</Text>
+                    <Text style={{ fontSize: 7.5, color: '#FFFFFF' }}>{phase.horizon}</Text>
+                  </View>
+                  <View style={{ flex: 1 }}>
+                    <Text style={s.h3}>{phase.focus}</Text>
+                  </View>
+                </View>
+                {phase.actions?.map((a, j) => (
+                  <View key={j} style={{ flexDirection: 'row', gap: 8, marginBottom: 6 }}>
+                    <Text style={{ fontSize: 9, color: c }}>→</Text>
+                    <Text style={s.body}>{a}</Text>
+                  </View>
+                ))}
+                {phase.outcome ? (
+                  <Text style={[s.muted, { marginTop: 6 }]}>
+                    <Text style={{ fontFamily: SANS_BOLD }}>{t.expectedOutcome}:</Text> {phase.outcome}
+                  </Text>
+                ) : null}
+              </View>
+            );
+          })
+        ) : (
+          <>
         {/* Fase 1 */}
         <View style={s.card}>
           <View style={{ flexDirection: 'row', gap: 10, marginBottom: 10 }}>
@@ -981,6 +1031,8 @@ export function ReportDocument(props: ReportProps) {
             </Text>
           </View>
         </View>
+          </>
+        )}
 
         {footerEl(10, TOTAL_PAGES, t)}
       </Page>

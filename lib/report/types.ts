@@ -34,6 +34,32 @@ export interface RecommendedTrajectory {
   firstStep: string;
 }
 
+/** Eén fase van het gefaseerde actieplan (30 / 90 / 180 dagen). */
+export interface RoadmapPhase {
+  /** Tijdshorizon in de doeltaal, e.g. 'Eerste 30 dagen', 'First 90 days'. */
+  horizon: string;
+  /** Korte titel van de focus van deze fase. */
+  focus: string;
+  /** 2-3 concrete, uitvoerbare acties. */
+  actions: string[];
+  /** Wat deze fase concreet oplevert. */
+  outcome: string;
+}
+
+/**
+ * Eerlijke kwantificering van wat de huidige gaps kosten — de "cost of
+ * inaction". Geen verzonnen precieze cijfers over dit bedrijf, wél
+ * illustratieve ordes van grootte op basis van mid-market patronen.
+ */
+export interface ValueAtStake {
+  /** Eén kernzin die de inzet samenvat, met een orde-van-grootte. */
+  headline: string;
+  /** 2-4 specifieke bronnen van rendementslek / gemiste waarde. */
+  drivers: string[];
+  /** Eerlijke toelichting op de aannames achter de schatting. */
+  basis: string;
+}
+
 export interface CompanyContext {
   sector: string;
   estimatedProfile: string; // 'MKB', 'mid-market PE', 'family office', etc.
@@ -76,6 +102,18 @@ export interface GeneratedReport {
 
   /** Aanbevolen vervolgtraject op basis van scores + Q4-segmentatie */
   recommendedTrajectory: RecommendedTrajectory;
+
+  /**
+   * Wat de huidige gaps kosten — eerlijk gekwantificeerd. Optioneel zodat
+   * oudere rapporten en de PDF/e-mail blijven werken.
+   */
+  valueAtStake?: ValueAtStake;
+
+  /**
+   * Gefaseerd actieplan (30 / 90 / 180 dagen). Optioneel — de meest
+   * bruikbare sectie: zegt precies wat te doen, in welke volgorde.
+   */
+  actionRoadmap?: RoadmapPhase[];
 
   /** Urgentiesignaal op basis van totaalscores + zwakste dimensies */
   urgency: 'high' | 'medium' | 'low';
@@ -129,6 +167,19 @@ export const REPORT_JSON_SCHEMA = `{
     "expectedOutcome": "string (1-2 zinnen concreet resultaat)",
     "firstStep": "string (1 zin concrete actie)"
   },
+  "valueAtStake": {
+    "headline": "string (1 zin: wat staat er op het spel, met orde-van-grootte)",
+    "drivers": ["string (2-4 specifieke bronnen van rendementslek)"],
+    "basis": "string (1-2 zinnen: eerlijke toelichting op de aannames)"
+  },
+  "actionRoadmap": [
+    {
+      "horizon": "string (tijdshorizon in doeltaal, e.g. 'Eerste 30 dagen')",
+      "focus": "string (korte titel van de focus, max 6 woorden)",
+      "actions": ["string (2-3 concrete uitvoerbare acties)"],
+      "outcome": "string (1 zin: wat deze fase oplevert)"
+    }
+  ],
   "urgency": "high | medium | low",
   "urgencyExplanation": "string (1-2 zinnen)"
 }`;
