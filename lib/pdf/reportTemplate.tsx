@@ -552,7 +552,7 @@ export function ReportDocument(props: ReportProps) {
       <Page size="A4" style={s.page}>
         <Text style={s.eyebrow}>{t.routeEyebrow}</Text>
         <Text style={[s.h1, { marginBottom: 7 }]}>{t.routeTitle(firstName)}</Text>
-        <Text style={[s.body, { marginBottom: 8 }]}>{t.routeIntro}</Text>
+        <Text style={[s.body, { marginBottom: 8, fontSize: 10, lineHeight: 1.45 }]}>{t.routeIntro}</Text>
 
         {/* 4-route ladder */}
         <Text style={[s.smallLabelMuted, { marginBottom: 5 }]}>{t.routeLadderLabel}</Text>
@@ -590,24 +590,24 @@ export function ReportDocument(props: ReportProps) {
         {/* Actieve route detail */}
         <View style={[s.cardAccent, { padding: 12, marginBottom: 8 }]} wrap={false}>
           <Text style={s.smallLabel}>{t.routeRecommended}</Text>
-          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 6, gap: 10 }}>
-            <Text style={{ fontFamily: SANS_XB, fontSize: 16, color: brand.navy, flex: 1 }}>{routeName}</Text>
-            {route?.price ? (
-              <View style={{ alignItems: 'flex-end', maxWidth: 170 }}>
-                <Text style={s.smallLabelMuted}>{t.routePriceLabel}</Text>
-                <Text style={{ fontFamily: SANS_BOLD, fontSize: 9, color: brand.rust, textAlign: 'right' }}>{route.price}</Text>
-              </View>
-            ) : null}
-          </View>
-          {traj?.rationale ? <Text style={[s.body, { marginBottom: 7 }]}>{traj.rationale}</Text> : null}
+          {/* Titel op eigen regel (1 regel), prijs eronder op volle breedte —
+              robuust voor lange prijsregels (bv. offer E) in elke taal. */}
+          <Text style={{ fontFamily: SANS_XB, fontSize: 16, color: brand.navy, marginBottom: route?.price ? 3 : 6 }}>{routeName}</Text>
+          {route?.price ? (
+            <View style={{ flexDirection: 'row', alignItems: 'baseline', gap: 6, marginBottom: 7 }}>
+              <Text style={[s.smallLabelMuted, { flexShrink: 0 }]}>{t.routePriceLabel}</Text>
+              <Text style={{ fontFamily: SANS_BOLD, fontSize: 9, color: brand.rust, flex: 1 }}>{route.price}</Text>
+            </View>
+          ) : null}
+          {traj?.rationale ? <Text style={[s.body, { marginBottom: 7, fontSize: 9.5, lineHeight: 1.42 }]}>{traj.rationale}</Text> : null}
 
           {route && route.interventions.length > 0 ? (
             <>
               <Text style={[s.smallLabel, { marginBottom: 4 }]}>{t.routeWhatYouGet}</Text>
               {route.interventions.map((iv, i) => (
                 <View key={i} style={{ flexDirection: 'row', gap: 8, marginBottom: 3 }}>
-                  <View style={{ width: 5, height: 5, backgroundColor: brand.rust, marginTop: 4 }} />
-                  <Text style={[s.body, { flex: 1 }]}>
+                  <View style={{ width: 5, height: 5, backgroundColor: brand.rust, marginTop: 3.5 }} />
+                  <Text style={[s.body, { flex: 1, fontSize: 9.5, lineHeight: 1.42 }]}>
                     <Text style={{ fontFamily: SANS_BOLD, color: brand.navy }}>{iv.title}. </Text>
                     {iv.body}
                   </Text>
