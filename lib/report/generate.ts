@@ -6,18 +6,26 @@
 import { type Answers, calculateScores, determineOffer, type DimensionScores } from '@/lib/scoring';
 import { type OfferType } from '@/lib/scoring';
 import { researchCompany } from './webResearch';
-import { buildReportPrompt } from './prompt';
+import { buildReportPrompt, CONTACT_TOKEN } from './prompt';
 import { type GeneratedReport } from './types';
 import { type ReportLocale, normalizeReportLocale } from './locale';
 import { isSupabaseConfigured, getSupabaseClient } from '@/lib/supabase';
 
-const DEEPSEEK_BASE = 'https://api.deepseek.com';
+/**
+ * Inference-endpoint is env-configureerbaar zodat het DeepSeek-model bij een
+ * zero-data-retention provider (bv. Fireworks AI / Together AI, US/EU-hosted,
+ * OpenAI-compatible) kan draaien i.p.v. de first-party api.deepseek.com — die
+ * data in China opslaat en op input mag trainen. Default blijft backwards-compatible.
+ * Zet DEEPSEEK_BASE_URL + DEEPSEEK_MODEL (+ DEEPSEEK_API_KEY) om te switchen.
+ */
+const DEEPSEEK_BASE = (process.env.DEEPSEEK_BASE_URL ?? 'https://api.deepseek.com').replace(/\/$/, '');
+const DEEPSEEK_MODEL = process.env.DEEPSEEK_MODEL ?? 'deepseek-chat';
 
 function isDeepSeekConfigured(): boolean {
   return Boolean(process.env.DEEPSEEK_API_KEY);
 }
 
-/** Ruwe call naar DeepSeek chat completions (OpenAI-compatible) */
+/** Ruwe call naar een OpenAI-compatible chat-completions endpoint (DeepSeek of ZDR-host) */
 async function callDeepSeek(system: string, user: string): Promise<string> {
   const apiKey = process.env.DEEPSEEK_API_KEY;
   if (!apiKey) throw new Error('DEEPSEEK_API_KEY not set');
@@ -29,7 +37,7 @@ async function callDeepSeek(system: string, user: string): Promise<string> {
       Authorization: `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
-      model: 'deepseek-chat',
+      model: DEEPSEEK_MODEL,
       messages: [
         { role: 'system', content: system },
         { role: 'user', content: user },
@@ -65,8 +73,29 @@ function validateReport(raw: unknown, leadId: string): GeneratedReport {
     ...r,
     leadId, // forceer correcte leadId ongeacht wat DeepSeek teruggeeft
     generatedAt: new Date().toISOString(),
-    model: 'deepseek-chat',
+    model: DEEPSEEK_MODEL,
   } as GeneratedReport;
+}
+
+/**
+ * Vervangt de geanonimiseerde CONTACT_TOKEN in alle string-velden van het
+ * rapport door de echte voornaam van de lead. De naam is dus nooit naar het
+ * taalmodel gestuurd; personalisatie gebeurt pas hier, lokaal op de server.
+ */
+function rehydrateContact<T>(value: T, firstName: string): T {
+  const name = firstName.trim();
+  if (!name) return value;
+  const walk = (v: unknown): unknown => {
+    if (typeof v === 'string') return v.split(CONTACT_TOKEN).join(name);
+    if (Array.isArray(v)) return v.map(walk);
+    if (v && typeof v === 'object') {
+      const out: Record<string, unknown> = {};
+      for (const [k, val] of Object.entries(v as Record<string, unknown>)) out[k] = walk(val);
+      return out;
+    }
+    return v;
+  };
+  return walk(value) as T;
 }
 
 export interface GenerateReportOptions {
@@ -132,7 +161,12 @@ export async function generateAndStoreReport(
   } catch {
     throw new Error(`DeepSeek output is geen geldig JSON: ${rawJson.slice(0, 200)}`);
   }
-  const report = validateReport(parsed, leadId);
+  const validated = validateReport(parsed, leadId);
+
+  // Personaliseer pas hier, lokaal: vervang de geanonimiseerde token door de
+  // echte voornaam. De naam is nooit naar het taalmodel verstuurd.
+  const firstName = name.trim().split(/\s+/)[0] ?? '';
+  const report = rehydrateContact(validated, firstName);
 
   // Sla op in Supabase
   if (isSupabaseConfigured()) {
