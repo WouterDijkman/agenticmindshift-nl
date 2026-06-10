@@ -1,47 +1,70 @@
 /**
- * Editorial PDF rapport — cream/navy/rust palet, ≥10 pagina's.
- * Built-in fonts only: Times-Roman (serif, headlines) + Helvetica (sans, body).
- * Geen Font.register → geen netwerk-fetch → 100% betrouwbaar op Vercel.
+ * Editorial PDF rapport — Agentic Mindshift huisstijl.
+ * Eén font (SUSE, geometrisch-humanist), cream/navy/rust palet, scherpe hoeken,
+ * site-stijl "data images" als vectorgraphics. Geen serif.
  *
- * Pagina-overzicht:
- *  1. Cover + Executive Summary
- *  2. Scoreoverzicht (alle 6 dimensies vs peer-mediaan)
- *  3. Diepteanalyse — kritieke dimensie 1
- *  4. Diepteanalyse — kritieke dimensie 2
- *  5. Diepteanalyse — overige dimensies
- *  6. Bedrijfsprofiel (web research)
- *  7. Kernobservaties
- *  8. Vraag & Antwoord samenvatting
- *  9. Aanbevolen traject + onderbouwing
- * 10. 90-dagen roadmap
- * 11. Colofon / Over Agentic Mindshift
+ * SUSE wordt geregistreerd uit lib/pdf/fonts/*.ttf met een try/catch-fallback
+ * naar Helvetica, zodat de PDF blijft renderen als de fonts ontbreken (bv. in
+ * een omgeving waar de bundle ze niet meekreeg).
+ *
+ * Pagina-overzicht (8):
+ *  1. Cover — verdict, data-image hero, executive summary, kerncijfers
+ *  2. Scoreprofiel — 6 dimensies vs peer-mediaan + duiding
+ *  3. Wat nu aandacht vraagt — kritieke + aandachtsdimensies
+ *  4. Waar u op bouwt — sterke dimensies + kernobservaties
+ *  5. Uw route bij Agentic Mindshift — concrete, geprijsde dienst + Factum
+ *  6. Actieplan — value-at-stake + 30/90/180 dagen
+ *  7. Bedrijfsprofiel + antwoordoverzicht
+ *  8. Colofon / Over Agentic Mindshift
  */
 
-import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
+import path from 'path';
+import fs from 'fs';
+import { Document, Page, Text, View, StyleSheet, Font } from '@react-pdf/renderer';
 import { dimensionLabels, questions, type Dimension } from '../questions';
 import { offerMap, type OfferType, type Answers } from '../scoring';
 import { type GeneratedReport } from '../report/types';
 import { type ReportLocale } from '../report/locale';
 import { getPdfStrings, type PdfStrings } from './strings';
+import { CoverDataPanel, ScoreGauge, DimensionBar } from './dataviz';
+import { getOfferRoute, getRouteLadder, activeRungId } from './offerRoutes';
 
-const SERIF = 'Times-Roman';
-const SERIF_BOLD = 'Times-Bold';
-const SANS = 'Helvetica';
-const SANS_BOLD = 'Helvetica-Bold';
+// ── Font registration (SUSE, met Helvetica-fallback) ─────────────────────────
+let useSuse = false;
+try {
+  const dir = path.join(process.cwd(), 'lib', 'pdf', 'fonts');
+  if (fs.existsSync(path.join(dir, 'SUSE-Regular.ttf'))) {
+    Font.register({ family: 'SUSE', fonts: [{ src: path.join(dir, 'SUSE-Regular.ttf') }] });
+    Font.register({ family: 'SUSE Medium', fonts: [{ src: path.join(dir, 'SUSE-Medium.ttf') }] });
+    Font.register({ family: 'SUSE Bold', fonts: [{ src: path.join(dir, 'SUSE-Bold.ttf') }] });
+    Font.register({ family: 'SUSE XBold', fonts: [{ src: path.join(dir, 'SUSE-ExtraBold.ttf') }] });
+    Font.registerHyphenationCallback((w) => [w]); // geen woordafbreking
+    useSuse = true;
+  }
+} catch {
+  useSuse = false;
+}
 
+const SANS = useSuse ? 'SUSE' : 'Helvetica';
+const SANS_MED = useSuse ? 'SUSE Medium' : 'Helvetica';
+const SANS_BOLD = useSuse ? 'SUSE Bold' : 'Helvetica-Bold';
+const SANS_XB = useSuse ? 'SUSE XBold' : 'Helvetica-Bold';
+
+// ── Exacte huisstijlkleuren ──────────────────────────────────────────────────
 const brand = {
   bg: '#F7F2EB',
-  bgCard: '#FFFFFF',
-  bgCardSoft: '#FBF7F1',
-  border: '#E5DDD0',
+  bgCard: '#FDFAF5',
+  bgCardSoft: '#EFE7D9',
+  border: '#E4E1DA',
   borderMid: '#CFC0AD',
   navy: '#0B1F3A',
-  navySoft: '#1F3556',
-  textMuted: '#6B5E4E',
+  navySoft: '#0F2B4A',
+  textMuted: '#3A5470',
   rust: '#F14C1D',
-  amber: '#C28A2C',
-  green: '#5E8A4E',
-  peerLine: '#A89C8A',
+  amber: '#B45309',
+  green: '#1A7A3C',
+  peerLine: '#8E97A4',
+  track: '#E7DECF',
 };
 
 const PEER = 60;
@@ -50,74 +73,35 @@ const s = StyleSheet.create({
   page: {
     backgroundColor: brand.bg,
     color: brand.navy,
-    paddingHorizontal: 50,
-    paddingTop: 46,
-    paddingBottom: 56,
+    paddingHorizontal: 48,
+    paddingTop: 44,
+    paddingBottom: 50,
     fontSize: 10.5,
     fontFamily: SANS,
   },
   eyebrow: {
-    fontSize: 8.5,
+    fontSize: 8,
     fontFamily: SANS_BOLD,
     color: brand.rust,
-    letterSpacing: 2.4,
+    letterSpacing: 2.6,
     textTransform: 'uppercase',
     marginBottom: 10,
   },
   eyebrowMuted: {
-    fontSize: 8.5,
+    fontSize: 8,
     fontFamily: SANS_BOLD,
     color: brand.textMuted,
-    letterSpacing: 2.4,
+    letterSpacing: 2.6,
     textTransform: 'uppercase',
     marginBottom: 10,
   },
-  h1: {
-    fontFamily: SERIF_BOLD,
-    fontSize: 30,
-    color: brand.navy,
-    lineHeight: 1.2,
-    marginBottom: 10,
-  },
-  h2: {
-    fontFamily: SERIF_BOLD,
-    fontSize: 20,
-    color: brand.navy,
-    marginBottom: 8,
-  },
-  h3: {
-    fontFamily: SANS_BOLD,
-    fontSize: 11.5,
-    color: brand.navy,
-    marginBottom: 4,
-  },
-  h4: {
-    fontFamily: SANS_BOLD,
-    fontSize: 10,
-    color: brand.navy,
-    marginBottom: 3,
-  },
-  body: {
-    fontSize: 10.5,
-    color: brand.navySoft,
-    lineHeight: 1.7,
-  },
-  bodyLarge: {
-    fontFamily: SERIF_BOLD,
-    fontSize: 13,
-    color: brand.navy,
-    lineHeight: 1.65,
-  },
-  muted: {
-    fontSize: 9,
-    color: brand.textMuted,
-    lineHeight: 1.5,
-  },
-  small: {
-    fontSize: 8,
-    color: brand.textMuted,
-    letterSpacing: 0.2,
-  },
+  h1: { fontFamily: SANS_XB, fontSize: 27, color: brand.navy, lineHeight: 1.15, marginBottom: 10 },
+  h2: { fontFamily: SANS_XB, fontSize: 18, color: brand.navy, marginBottom: 8 },
+  h3: { fontFamily: SANS_BOLD, fontSize: 11.5, color: brand.navy, marginBottom: 4 },
+  body: { fontSize: 10.5, color: brand.navySoft, lineHeight: 1.65 },
+  bodyLarge: { fontFamily: SANS_MED, fontSize: 12.5, color: brand.navy, lineHeight: 1.55 },
+  muted: { fontSize: 9, color: brand.textMuted, lineHeight: 1.5 },
+  small: { fontSize: 8, color: brand.textMuted, letterSpacing: 0.2, lineHeight: 1.5 },
   smallLabel: {
     fontFamily: SANS_BOLD,
     fontSize: 7.5,
@@ -134,76 +118,19 @@ const s = StyleSheet.create({
     textTransform: 'uppercase',
     marginBottom: 4,
   },
-  card: {
-    backgroundColor: brand.bgCard,
-    border: `1pt solid ${brand.border}`,
-    padding: 18,
-    marginBottom: 12,
-  },
-  cardSoft: {
-    backgroundColor: brand.bgCardSoft,
-    border: `1pt solid ${brand.border}`,
-    padding: 12,
-    marginBottom: 10,
-  },
+  card: { backgroundColor: brand.bgCard, border: `1pt solid ${brand.border}`, padding: 16, marginBottom: 11 },
+  cardSoft: { backgroundColor: brand.bgCardSoft, border: `1pt solid ${brand.border}`, padding: 12, marginBottom: 10 },
   cardAccent: {
     backgroundColor: brand.bgCard,
     borderTop: `1pt solid ${brand.border}`,
     borderRight: `1pt solid ${brand.border}`,
     borderBottom: `1pt solid ${brand.border}`,
     borderLeft: `3pt solid ${brand.rust}`,
-    padding: 18,
-    marginBottom: 12,
+    padding: 16,
+    marginBottom: 11,
   },
-  cardCritical: {
-    backgroundColor: brand.bgCard,
-    borderTop: `1pt solid ${brand.border}`,
-    borderRight: `1pt solid ${brand.border}`,
-    borderBottom: `1pt solid ${brand.border}`,
-    borderLeft: `4pt solid ${brand.rust}`,
-    padding: 18,
-    marginBottom: 12,
-  },
-  cardAmber: {
-    backgroundColor: brand.bgCard,
-    borderTop: `1pt solid ${brand.border}`,
-    borderRight: `1pt solid ${brand.border}`,
-    borderBottom: `1pt solid ${brand.border}`,
-    borderLeft: `4pt solid ${brand.amber}`,
-    padding: 18,
-    marginBottom: 12,
-  },
-  cardGreen: {
-    backgroundColor: brand.bgCard,
-    borderTop: `1pt solid ${brand.border}`,
-    borderRight: `1pt solid ${brand.border}`,
-    borderBottom: `1pt solid ${brand.border}`,
-    borderLeft: `4pt solid ${brand.green}`,
-    padding: 18,
-    marginBottom: 12,
-  },
-  statBox: {
-    backgroundColor: brand.bgCardSoft,
-    border: `1pt solid ${brand.border}`,
-    padding: 12,
-    flex: 1,
-  },
-  statNumber: {
-    fontFamily: SERIF_BOLD,
-    fontSize: 26,
-    color: brand.navy,
-    marginTop: 2,
-  },
-  barRow: { marginBottom: 13 },
-  barLabelRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 4,
-  },
-  barLabel: { fontFamily: SANS_BOLD, fontSize: 10, color: brand.navy },
-  barScore: { fontSize: 10, color: brand.navy },
-  barTrack: { height: 6, backgroundColor: '#EFE6D7' },
-  barFill: { height: 6 },
+  statBox: { backgroundColor: brand.bgCardSoft, border: `1pt solid ${brand.border}`, padding: 11, flex: 1 },
+  statNumber: { fontFamily: SANS_XB, fontSize: 24, color: brand.navy, marginTop: 2 },
   legend: {
     flexDirection: 'row',
     gap: 16,
@@ -215,46 +142,20 @@ const s = StyleSheet.create({
   legendDot: { width: 8, height: 8 },
   legendText: { fontSize: 7.5, color: brand.textMuted },
   footer: {
-    marginTop: 'auto',
-    paddingTop: 10,
+    position: 'absolute',
+    bottom: 28,
+    left: 48,
+    right: 48,
+    paddingTop: 9,
     borderTop: `1pt solid ${brand.border}`,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   footerText: { fontSize: 8, color: brand.textMuted },
-  ctaBox: {
-    backgroundColor: brand.rust,
-    padding: 16,
-    marginTop: 14,
-  },
+  ctaBox: { backgroundColor: brand.rust, padding: 16, marginTop: 14 },
   ctaTitle: { fontFamily: SANS_BOLD, fontSize: 12, color: '#FFFFFF', marginBottom: 4 },
   ctaBody: { fontSize: 9.5, color: '#FFE4D7', lineHeight: 1.5 },
-  divider: {
-    height: 1,
-    backgroundColor: brand.border,
-    marginVertical: 14,
-  },
-  pillCritical: {
-    backgroundColor: '#FEF0EC',
-    border: `1pt solid ${brand.rust}`,
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-    alignSelf: 'flex-start',
-  },
-  pillAmber: {
-    backgroundColor: '#FEF8ED',
-    border: `1pt solid ${brand.amber}`,
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-    alignSelf: 'flex-start',
-  },
-  pillGreen: {
-    backgroundColor: '#EDF5EA',
-    border: `1pt solid ${brand.green}`,
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-    alignSelf: 'flex-start',
-  },
+  divider: { height: 1, backgroundColor: brand.border, marginVertical: 14 },
 });
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
@@ -262,25 +163,9 @@ const s = StyleSheet.create({
 function priorityColor(p?: string): string {
   if (p === 'critical') return brand.rust;
   if (p === 'attention') return brand.amber;
-  if (p === 'adequate') return brand.textMuted;
   if (p === 'strong') return brand.green;
   return brand.textMuted;
 }
-
-function priorityCardStyle(p?: string) {
-  if (p === 'critical') return s.cardCritical;
-  if (p === 'attention') return s.cardAmber;
-  if (p === 'strong') return s.cardGreen;
-  return s.card;
-}
-
-function priorityPillStyle(p?: string) {
-  if (p === 'critical') return s.pillCritical;
-  if (p === 'attention') return s.pillAmber;
-  if (p === 'strong') return s.pillGreen;
-  return s.cardSoft;
-}
-
 function priorityLabel(p: string | undefined, t: PdfStrings): string {
   if (p === 'critical') return t.priorityCritical;
   if (p === 'attention') return t.priorityAttention;
@@ -288,48 +173,136 @@ function priorityLabel(p: string | undefined, t: PdfStrings): string {
   if (p === 'strong') return t.priorityStrong;
   return '–';
 }
-
 function urgencyLabel(u: string | undefined, t: PdfStrings): string {
   if (u === 'high') return t.urgencyHigh;
   if (u === 'medium') return t.urgencyMedium;
   if (u === 'low') return t.urgencyLow;
   return '—';
 }
-
 function urgencyColor(u?: string): string {
   if (u === 'high') return brand.rust;
   if (u === 'medium') return brand.amber;
   return brand.green;
 }
-
-function exposureColor(e?: string): string {
-  if (e === 'high') return brand.rust;
-  if (e === 'medium') return brand.amber;
-  return brand.green;
-}
-
-function exposureLabel(e: string | undefined, t: PdfStrings): string {
-  if (e === 'high') return t.servicesExposureHigh;
-  if (e === 'medium') return t.servicesExposureMedium;
-  if (e === 'low') return t.servicesExposureLow;
-  return '–';
-}
-
-function footerEl(page: number, total: number, t: PdfStrings) {
+function footerEl(t: PdfStrings) {
   return (
-    <View style={s.footer}>
+    <View style={s.footer} fixed>
       <Text style={s.footerText}>{t.footerConfidential}</Text>
-      <Text style={s.footerText}>{t.footerPage(page, total)}</Text>
+      <Text style={s.footerText} render={({ pageNumber, totalPages }) => t.footerPage(pageNumber, totalPages)} />
     </View>
   );
 }
-
 function getOptionLabel(questionId: string, letter?: string): string {
   if (!letter) return '—';
   const q = questions.find((q) => q.id === questionId);
   if (!q) return letter;
   const opt = q.options.find((o) => o.letter === letter);
   return opt ? opt.label : letter;
+}
+
+/** Score-badge rechtsboven in een dimensiekaart. */
+function ScoreBadge({ score, color }: { score: number; color: string }) {
+  return (
+    <View style={{ backgroundColor: color, paddingHorizontal: 10, paddingVertical: 5, marginLeft: 12, alignItems: 'center' }}>
+      <Text style={{ fontFamily: SANS_XB, fontSize: 16, color: '#FFFFFF' }}>{score}</Text>
+      <Text style={{ fontSize: 7, color: '#FFFFFFCC' }}>/ 100</Text>
+    </View>
+  );
+}
+
+/** Eén dimensiekaart (kritiek/aandacht/sterk). */
+function DimensionCard({
+  dim,
+  t,
+  showQuickWin = true,
+}: {
+  dim: { dimension: string; label: string; score: number; assessment: string; priority?: string; quickWin?: string };
+  t: PdfStrings;
+  showQuickWin?: boolean;
+}) {
+  const c = priorityColor(dim.priority);
+  const quickLabel =
+    dim.priority === 'critical' ? t.quickWinActionable : dim.priority === 'strong' ? t.anchoring : t.quickWin;
+  return (
+    <View
+      style={{
+        backgroundColor: brand.bgCard,
+        borderTop: `1pt solid ${brand.border}`,
+        borderRight: `1pt solid ${brand.border}`,
+        borderBottom: `1pt solid ${brand.border}`,
+        borderLeft: `4pt solid ${c}`,
+        padding: 14,
+        marginBottom: 10,
+      }}
+      wrap={false}
+    >
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
+        <View style={{ flex: 1, paddingRight: 8 }}>
+          <Text style={{ fontFamily: SANS_BOLD, fontSize: 7.5, color: c, letterSpacing: 1.6, textTransform: 'uppercase', marginBottom: 3 }}>
+            {priorityLabel(dim.priority, t)}
+          </Text>
+          <Text style={{ fontFamily: SANS_XB, fontSize: 15, color: brand.navy }}>{dim.label}</Text>
+        </View>
+        <ScoreBadge score={dim.score} color={c} />
+      </View>
+      <View style={{ marginBottom: 10 }}>
+        <DimensionBar score={dim.score} peer={PEER} color={c} />
+      </View>
+      <Text style={s.body}>{dim.assessment}</Text>
+      {showQuickWin && dim.quickWin ? (
+        <View style={[s.cardSoft, { marginTop: 10, marginBottom: 0, borderLeft: `2pt solid ${c}` }]}>
+          <Text style={[s.smallLabel, { color: c }]}>{quickLabel}</Text>
+          <Text style={[s.body, { color: brand.navy }]}>{dim.quickWin}</Text>
+        </View>
+      ) : null}
+    </View>
+  );
+}
+
+/** Compacte dimensiekaart — voor aandachtspunten (dichtere lijst, geen losse quick-win-box). */
+function CompactDimCard({
+  dim,
+  t,
+}: {
+  dim: { dimension: string; label: string; score: number; assessment: string; priority?: string; quickWin?: string };
+  t: PdfStrings;
+}) {
+  const c = priorityColor(dim.priority);
+  return (
+    <View
+      style={{
+        backgroundColor: brand.bgCard,
+        borderTop: `1pt solid ${brand.border}`,
+        borderRight: `1pt solid ${brand.border}`,
+        borderBottom: `1pt solid ${brand.border}`,
+        borderLeft: `3pt solid ${c}`,
+        paddingVertical: 7,
+        paddingHorizontal: 12,
+        marginBottom: 5,
+      }}
+      wrap={false}
+    >
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8, flex: 1, paddingRight: 8 }}>
+          <Text style={{ fontFamily: SANS_XB, fontSize: 11.5, color: brand.navy }}>{dim.label}</Text>
+          <Text style={{ fontFamily: SANS_BOLD, fontSize: 7, color: c, letterSpacing: 1.2, textTransform: 'uppercase' }}>
+            {priorityLabel(dim.priority, t)}
+          </Text>
+        </View>
+        <View style={{ width: 84 }}>
+          <DimensionBar score={dim.score} peer={PEER} color={c} />
+        </View>
+        <Text style={{ fontFamily: SANS_XB, fontSize: 11, color: c, minWidth: 26, textAlign: 'right' }}>{dim.score}</Text>
+      </View>
+      <Text style={[s.body, { fontSize: 9.3, lineHeight: 1.38 }]}>{dim.assessment}</Text>
+      {dim.quickWin ? (
+        <Text style={{ fontSize: 8.7, color: brand.navy, marginTop: 3, lineHeight: 1.35 }}>
+          <Text style={{ fontFamily: SANS_BOLD, color: c }}>{t.quickWin}: </Text>
+          {dim.quickWin}
+        </Text>
+      ) : null}
+    </View>
+  );
 }
 
 // ── Props ────────────────────────────────────────────────────────────────────
@@ -370,49 +343,43 @@ export function ReportDocument(props: ReportProps) {
   const belowPeer = dimensionEntries.filter(([, sc]) => sc < PEER).length;
   const totalDims = dimensionEntries.length;
 
-  // Sort dimensions by score for analysis pages
-  const allDims = report?.dimensionAnalysis
-    ? [...report.dimensionAnalysis].sort((a, b) => a.score - b.score)
-    : [];
+  const allDims = report?.dimensionAnalysis ? [...report.dimensionAnalysis].sort((a, b) => a.score - b.score) : [];
   const criticalDims = allDims.filter((d) => d.priority === 'critical');
   const attentionDims = allDims.filter((d) => d.priority === 'attention');
   const adequateDims = allDims.filter((d) => d.priority === 'adequate' || d.priority === 'strong');
+  const actionDims = [...criticalDims, ...attentionDims];
 
-  const insights = report?.keyInsights ? report.keyInsights.slice(0, 5) : [];
-
-  // Q&A for summary page — group by section
+  const insights = report?.keyInsights ? report.keyInsights.slice(0, 4) : [];
   const sectionTitles = t.sectionTitles;
+  const services = report?.serviceOpportunities?.slice(0, 4) ?? [];
 
-  const services = report?.serviceOpportunities?.slice(0, 8) ?? [];
-  const team = report?.teamAnalysis;
-  const hasServicesTeamPage =
-    services.length > 0 || !!(team && (team.composition || (team.signals?.length ?? 0) > 0));
-  const TOTAL_PAGES = hasServicesTeamPage ? 12 : 11;
-  // Pages 7+ shift by one when the services/team page is present.
-  const pageNo = (n: number) => (hasServicesTeamPage && n >= 7 ? n + 1 : n);
+  // Deterministische AM-route (uit Q4 → offer)
+  const route = getOfferRoute(locale, offer);
+  const ladder = getRouteLadder(locale);
+  const activeId = activeRungId(offer);
+  const routeUsesFactum = activeId === 'dd';
+
+  const traj = report?.recommendedTrajectory;
+  const routeName = traj?.offerName || route?.offerName || offerInfo?.name || '–';
 
   return (
     <Document title={`AI Readiness Report — ${company}`} author="Agentic Mindshift">
 
-      {/* ══════════════════════════════════════════════════════════════════════
-          PAGINA 1 — COVER
-          ══════════════════════════════════════════════════════════════════════ */}
+      {/* ═══ PAGINA 1 — COVER ═══ */}
       <Page size="A4" style={s.page}>
-        {/* Top rule */}
-        <View style={{ height: 3, backgroundColor: brand.rust, marginBottom: 36 }} />
+        <View style={{ height: 3, backgroundColor: brand.rust, marginBottom: 26 }} />
 
         <Text style={s.eyebrow}>{t.coverEyebrow} · {generatedAt}</Text>
-        <Text style={s.h1}>
-          {report?.scoreProfile?.profileLabel || t.profileFallback}
-        </Text>
-        <Text style={{ fontFamily: SERIF_BOLD, fontSize: 15, color: brand.navySoft, marginBottom: 4 }}>
-          {company}
-        </Text>
-        <Text style={{ fontSize: 10, color: brand.textMuted, marginBottom: 32 }}>
-          {t.preparedFor(name)}
-        </Text>
+        <Text style={s.h1}>{report?.scoreProfile?.profileLabel || t.profileFallback}</Text>
+        <Text style={{ fontFamily: SANS_BOLD, fontSize: 14, color: brand.navySoft, marginBottom: 3 }}>{company}</Text>
+        <Text style={{ fontSize: 9.5, color: brand.textMuted, marginBottom: 18 }}>{t.preparedFor(name)}</Text>
 
-        {/* Executive Summary */}
+        {/* Data-image hero */}
+        <View style={{ marginBottom: 16 }}>
+          <CoverDataPanel height={132} />
+        </View>
+
+        {/* Executive summary */}
         {report?.executiveSummary ? (
           <View style={s.cardAccent}>
             <Text style={s.smallLabel}>{t.execSummary}</Text>
@@ -420,68 +387,53 @@ export function ReportDocument(props: ReportProps) {
           </View>
         ) : null}
 
-        {/* 4 stat boxes */}
-        <View style={{ flexDirection: 'row', gap: 8, marginTop: 8 }}>
-          <View style={s.statBox}>
-            <Text style={s.smallLabelMuted}>{t.totalScore}</Text>
-            <Text style={[s.statNumber, { color: brand.navy }]}>
-              {totalScore}
-            </Text>
-            <Text style={{ fontSize: 9, color: brand.textMuted }}>{t.outOf75}</Text>
+        {/* Kerncijfers: gauge + 3 stats */}
+        <View style={{ flexDirection: 'row', gap: 8, marginTop: 4, alignItems: 'stretch' }}>
+          <View style={[s.statBox, { flexDirection: 'row', alignItems: 'center', gap: 10, flex: 1.4 }]}>
+            <View style={{ position: 'relative', width: 64, height: 64, alignItems: 'center', justifyContent: 'center' }}>
+              <ScoreGauge value={totalScore} max={75} size={64} color={brand.rust} />
+              <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontFamily: SANS_XB, fontSize: 17, color: brand.navy }}>{totalScore}</Text>
+                <Text style={{ fontSize: 6.5, color: brand.textMuted }}>/ 75</Text>
+              </View>
+            </View>
+            <View style={{ flex: 1 }}>
+              <Text style={s.smallLabelMuted}>{t.totalScore}</Text>
+              <Text style={{ fontSize: 9, color: brand.textMuted, lineHeight: 1.4 }}>
+                {report?.scoreProfile?.percentile ? t.percentileNote(report.scoreProfile.percentile) : t.outOf75}
+              </Text>
+            </View>
           </View>
           <View style={s.statBox}>
             <Text style={s.smallLabelMuted}>{t.belowMedian}</Text>
-            <Text style={[s.statNumber, { color: brand.rust }]}>
-              {belowPeer}/{totalDims}
-            </Text>
-            <Text style={{ fontSize: 9, color: brand.textMuted }}>{t.dimensions}</Text>
+            <Text style={[s.statNumber, { color: brand.rust }]}>{belowPeer}/{totalDims}</Text>
+            <Text style={{ fontSize: 8.5, color: brand.textMuted }}>{t.dimensions}</Text>
           </View>
           <View style={s.statBox}>
             <Text style={s.smallLabelMuted}>{t.urgency}</Text>
-            <Text style={[s.statNumber, { fontSize: 20, color: urgencyColor(report?.urgency), marginTop: 6 }]}>
+            <Text style={[s.statNumber, { fontSize: 17, color: urgencyColor(report?.urgency), marginTop: 7 }]}>
               {urgencyLabel(report?.urgency, t)}
             </Text>
           </View>
-          <View style={s.statBox}>
+        </View>
+
+        <View style={[s.statBox, { marginTop: 8, flexGrow: 0, flexShrink: 0, flexDirection: 'row', alignItems: 'center', gap: 10 }]}>
+          <View style={{ width: 4, height: 30, backgroundColor: brand.rust }} />
+          <View style={{ flex: 1 }}>
             <Text style={s.smallLabelMuted}>{t.track}</Text>
-            <Text style={{ fontFamily: SANS_BOLD, fontSize: 9.5, color: brand.navy, marginTop: 4, lineHeight: 1.4 }}>
-              {report?.recommendedTrajectory?.offerName || offerInfo?.name || '–'}
-            </Text>
+            <Text style={{ fontFamily: SANS_BOLD, fontSize: 11, color: brand.navy, marginTop: 2 }}>{routeName}</Text>
           </View>
+          {route?.price ? <Text style={{ fontFamily: SANS_BOLD, fontSize: 9, color: brand.rust }}>{route.price}</Text> : null}
         </View>
 
-        <View style={{ flexDirection: 'row', gap: 8, marginTop: 8 }}>
-          <View style={{ flex: 2, backgroundColor: brand.bgCardSoft, border: `1pt solid ${brand.border}`, padding: 12 }}>
-            <Text style={s.smallLabelMuted}>{t.weakestDims}</Text>
-            {weakest.map((w, i) => (
-              <Text key={i} style={{ fontSize: 10, color: brand.rust, marginTop: 2 }}>· {w}</Text>
-            ))}
-          </View>
-          <View style={{ flex: 3, backgroundColor: brand.bgCardSoft, border: `1pt solid ${brand.border}`, padding: 12 }}>
-            <Text style={s.smallLabelMuted}>{t.strongestDims}</Text>
-            {dimensionEntries
-              .sort((a, b) => b[1] - a[1])
-              .slice(0, 2)
-              .map(([dim, score]) => (
-                <Text key={dim} style={{ fontSize: 10, color: brand.green, marginTop: 2 }}>
-                  · {dimensionLabels[dim]} ({score}/100)
-                </Text>
-              ))}
-          </View>
-        </View>
-
-        {footerEl(1, TOTAL_PAGES, t)}
+        {footerEl(t)}
       </Page>
 
-      {/* ══════════════════════════════════════════════════════════════════════
-          PAGINA 2 — SCOREOVERZICHT (6 dimensies vs peer)
-          ══════════════════════════════════════════════════════════════════════ */}
+      {/* ═══ PAGINA 2 — SCOREPROFIEL ═══ */}
       <Page size="A4" style={s.page}>
         <Text style={s.eyebrow}>{t.scoreOverview}</Text>
         <Text style={s.h1}>{t.scoreOverviewTitle}</Text>
-        <Text style={[s.body, { marginBottom: 16 }]}>
-          {t.scoreOverviewIntro(PEER)}
-        </Text>
+        <Text style={[s.body, { marginBottom: 16 }]}>{t.scoreOverviewIntro(PEER)}</Text>
 
         <View style={s.card}>
           {dimensionEntries
@@ -490,23 +442,15 @@ export function ReportDocument(props: ReportProps) {
               const isBelow = score < PEER;
               const dimReport = report?.dimensionAnalysis?.find((d) => d.dimension === dim);
               const fillColor = isBelow ? brand.rust : brand.navySoft;
-              const pct = `${Math.max(0, Math.min(100, score))}%` as `${number}%`;
               return (
-                <View key={dim} style={s.barRow}>
-                  <View style={s.barLabelRow}>
-                    <Text style={s.barLabel}>{dimensionLabels[dim]}</Text>
-                    <Text style={[s.barScore, { color: isBelow ? brand.rust : brand.navySoft }]}>
-                      {score} / 100{dimReport?.priority ? `  · ${priorityLabel(dimReport.priority, t)}` : ''}
+                <View key={dim} style={{ marginBottom: 12 }}>
+                  <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 4 }}>
+                    <Text style={{ fontFamily: SANS_BOLD, fontSize: 10, color: brand.navy }}>{dimensionLabels[dim]}</Text>
+                    <Text style={{ fontSize: 9.5, color: isBelow ? brand.rust : brand.navySoft }}>
+                      {score} / 100{dimReport?.priority ? `  ·  ${priorityLabel(dimReport.priority, t)}` : ''}
                     </Text>
                   </View>
-                  <View style={s.barTrack}>
-                    <View style={[s.barFill, { width: pct, backgroundColor: fillColor }]} />
-                  </View>
-                  {/* Peer tick */}
-                  <View style={{ height: 4, flexDirection: 'row', alignItems: 'flex-start', marginTop: -2 }}>
-                    <View style={{ width: `${PEER}%` as `${number}%` }} />
-                    <View style={{ width: 1, height: 9, backgroundColor: brand.peerLine }} />
-                  </View>
+                  <DimensionBar score={score} peer={PEER} color={fillColor} />
                 </View>
               );
             })}
@@ -528,202 +472,271 @@ export function ReportDocument(props: ReportProps) {
         </View>
 
         {report?.scoreProfile?.profileExplanation ? (
-          <View style={s.cardSoft}>
+          <View style={s.cardAccent}>
             <Text style={s.smallLabel}>{t.profileExplanation}</Text>
             <Text style={s.body}>{report.scoreProfile.profileExplanation}</Text>
           </View>
         ) : null}
 
-        {footerEl(2, TOTAL_PAGES, t)}
+        <View style={{ flexDirection: 'row', gap: 8, marginTop: 2 }}>
+          <View style={[s.statBox, { flex: 1 }]}>
+            <Text style={s.smallLabelMuted}>{t.weakestDims}</Text>
+            {weakest.map((w, i) => (
+              <Text key={i} style={{ fontSize: 9.5, color: brand.rust, marginTop: 2 }}>· {w}</Text>
+            ))}
+          </View>
+          <View style={[s.statBox, { flex: 1 }]}>
+            <Text style={s.smallLabelMuted}>{t.strongestDims}</Text>
+            {dimensionEntries
+              .sort((a, b) => b[1] - a[1])
+              .slice(0, 2)
+              .map(([dim, score]) => (
+                <Text key={dim} style={{ fontSize: 9.5, color: brand.green, marginTop: 2 }}>
+                  · {dimensionLabels[dim]} ({score})
+                </Text>
+              ))}
+          </View>
+        </View>
+
+        {footerEl(t)}
       </Page>
 
-      {/* ══════════════════════════════════════════════════════════════════════
-          PAGINA 3 — KRITIEKE DIMENSIES (critical priority)
-          ══════════════════════════════════════════════════════════════════════ */}
+      {/* ═══ PAGINA 3 — WAT NU AANDACHT VRAAGT ═══ */}
       <Page size="A4" style={s.page}>
-        <Text style={s.eyebrow}>{t.criticalEyebrow}</Text>
-        <Text style={s.h1}>{t.criticalTitle}</Text>
-        <Text style={[s.body, { marginBottom: 16 }]}>
-          {t.criticalIntro}
-        </Text>
+        <Text style={[s.eyebrow, { marginBottom: 8 }]}>{t.criticalEyebrow}</Text>
+        <Text style={[s.h1, { marginBottom: 7 }]}>{t.criticalTitle}</Text>
+        <Text style={[s.body, { marginBottom: 12 }]}>{t.criticalIntro}</Text>
 
-        {criticalDims.length > 0 ? (
-          criticalDims.map((dim) => (
-            <View key={dim.dimension} style={s.cardCritical}>
-              <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
-                <View style={{ flex: 1 }}>
-                  <Text style={{ fontFamily: SANS_BOLD, fontSize: 7.5, color: brand.rust, letterSpacing: 1.6, textTransform: 'uppercase', marginBottom: 3 }}>
-                    {t.criticalPill}
-                  </Text>
-                  <Text style={{ fontFamily: SERIF_BOLD, fontSize: 16, color: brand.navy }}>{dim.label}</Text>
-                </View>
-                <View style={{ backgroundColor: brand.rust, paddingHorizontal: 10, paddingVertical: 5, marginLeft: 12 }}>
-                  <Text style={{ fontFamily: SERIF_BOLD, fontSize: 16, color: '#FFFFFF' }}>{dim.score}</Text>
-                  <Text style={{ fontSize: 7.5, color: '#FFD4C7', textAlign: 'center' }}>/ 100</Text>
-                </View>
-              </View>
-
-              {/* Mini-bar */}
-              <View style={{ height: 4, backgroundColor: '#EFE6D7', marginBottom: 12 }}>
-                <View style={{ height: 4, width: `${dim.score}%` as `${number}%`, backgroundColor: brand.rust }} />
-              </View>
-
-              <Text style={s.body}>{dim.assessment}</Text>
-
-              <View style={[s.cardSoft, { marginTop: 10, marginBottom: 0 }]}>
-                <Text style={s.smallLabel}>{t.quickWinActionable}</Text>
-                <Text style={[s.body, { color: brand.navy }]}>{dim.quickWin}</Text>
-              </View>
-            </View>
-          ))
+        {actionDims.length > 0 ? (
+          actionDims.map((dim) => <CompactDimCard key={dim.dimension} dim={dim} t={t} />)
         ) : (
           <View style={s.cardSoft}>
             <Text style={s.body}>{t.noCritical}</Text>
           </View>
         )}
 
-        {footerEl(3, TOTAL_PAGES, t)}
+        {footerEl(t)}
       </Page>
 
-      {/* ══════════════════════════════════════════════════════════════════════
-          PAGINA 4 — AANDACHTSDIMENSIES (attention priority)
-          ══════════════════════════════════════════════════════════════════════ */}
+      {/* ═══ PAGINA 4 — WAAR U OP BOUWT / KERNINZICHTEN ═══ */}
       <Page size="A4" style={s.page}>
-        <Text style={s.eyebrow}>{t.attentionEyebrow}</Text>
-        <Text style={s.h1}>{t.attentionTitle}</Text>
-        <Text style={[s.body, { marginBottom: 16 }]}>
-          {t.attentionIntro}
-        </Text>
+        <Text style={s.eyebrow}>{adequateDims.length > 0 ? t.strongEyebrow : t.strongEyebrowAlt}</Text>
+        <Text style={s.h1}>{adequateDims.length > 0 ? t.strongTitle : t.strongTitleAlt}</Text>
+        <Text style={[s.body, { marginBottom: 14 }]}>{adequateDims.length > 0 ? t.strongIntro : t.strongIntroAlt}</Text>
 
-        {attentionDims.length > 0 ? (
-          attentionDims.map((dim) => (
-            <View key={dim.dimension} style={s.cardAmber}>
-              <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
-                <View style={{ flex: 1 }}>
-                  <Text style={{ fontFamily: SANS_BOLD, fontSize: 7.5, color: brand.amber, letterSpacing: 1.6, textTransform: 'uppercase', marginBottom: 3 }}>
-                    {t.attentionPill}
-                  </Text>
-                  <Text style={{ fontFamily: SERIF_BOLD, fontSize: 16, color: brand.navy }}>{dim.label}</Text>
+        {adequateDims.length > 0
+          ? adequateDims.map((dim) => <DimensionCard key={dim.dimension} dim={dim} t={t} showQuickWin={false} />)
+          : null}
+
+        {insights.length > 0 ? (
+          <View style={{ marginTop: 6 }}>
+            <Text style={[s.smallLabel, { marginBottom: 8 }]}>{t.insightsEyebrow}</Text>
+            {insights.map((insight, i) => (
+              <View key={i} style={{ flexDirection: 'row', gap: 10, marginBottom: 10 }} wrap={false}>
+                <View style={{ width: 22, height: 22, backgroundColor: brand.rust, alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <Text style={{ fontFamily: SANS_XB, fontSize: 11, color: '#FFFFFF' }}>{String(i + 1)}</Text>
                 </View>
-                <View style={{ backgroundColor: brand.amber, paddingHorizontal: 10, paddingVertical: 5, marginLeft: 12 }}>
-                  <Text style={{ fontFamily: SERIF_BOLD, fontSize: 16, color: '#FFFFFF' }}>{dim.score}</Text>
-                  <Text style={{ fontSize: 7.5, color: '#FFF3D0', textAlign: 'center' }}>/ 100</Text>
+                <View style={{ flex: 1, borderBottom: `1pt solid ${brand.border}`, paddingBottom: 8 }}>
+                  <Text style={{ fontFamily: SANS_BOLD, fontSize: 10.5, color: brand.navy, marginBottom: 3 }}>{insight.title}</Text>
+                  <Text style={s.body}>{insight.body}</Text>
                 </View>
               </View>
-
-              <View style={{ height: 4, backgroundColor: '#EFE6D7', marginBottom: 12 }}>
-                <View style={{ height: 4, width: `${dim.score}%` as `${number}%`, backgroundColor: brand.amber }} />
-              </View>
-
-              <Text style={s.body}>{dim.assessment}</Text>
-
-              <View style={[s.cardSoft, { marginTop: 10, marginBottom: 0 }]}>
-                <Text style={[s.smallLabel, { color: brand.amber }]}>{t.quickWin}</Text>
-                <Text style={[s.body, { color: brand.navy }]}>{dim.quickWin}</Text>
-              </View>
-            </View>
-          ))
-        ) : (
-          <View style={s.cardSoft}>
-            <Text style={s.body}>{t.noAttention}</Text>
+            ))}
           </View>
-        )}
+        ) : null}
 
-        {footerEl(4, TOTAL_PAGES, t)}
+        {footerEl(t)}
       </Page>
 
-      {/* ══════════════════════════════════════════════════════════════════════
-          PAGINA 5 — VOLDOENDE / STERKE DIMENSIES
-          ══════════════════════════════════════════════════════════════════════ */}
+      {/* ═══ PAGINA 5 — UW ROUTE BIJ AGENTIC MINDSHIFT ═══ */}
       <Page size="A4" style={s.page}>
-        <Text style={s.eyebrow}>{t.strongEyebrow}</Text>
-        <Text style={s.h1}>{t.strongTitle}</Text>
-        <Text style={[s.body, { marginBottom: 16 }]}>
-          {t.strongIntro}
-        </Text>
+        <Text style={s.eyebrow}>{t.routeEyebrow}</Text>
+        <Text style={s.h1}>{t.routeTitle(firstName)}</Text>
+        <Text style={[s.body, { marginBottom: 10 }]}>{t.routeIntro}</Text>
 
-        {adequateDims.length > 0 ? (
-          adequateDims.map((dim) => (
-            <View key={dim.dimension} style={dim.priority === 'strong' ? s.cardGreen : s.card}>
-              <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 6 }}>
-                <View style={{ flex: 1 }}>
-                  <Text style={{ fontFamily: SANS_BOLD, fontSize: 7.5, color: dim.priority === 'strong' ? brand.green : brand.textMuted, letterSpacing: 1.6, textTransform: 'uppercase', marginBottom: 3 }}>
-                    {priorityLabel(dim.priority, t)}
-                  </Text>
-                  <Text style={{ fontFamily: SERIF_BOLD, fontSize: 15, color: brand.navy }}>{dim.label}</Text>
-                </View>
-                <View style={{ backgroundColor: dim.priority === 'strong' ? brand.green : brand.textMuted, paddingHorizontal: 8, paddingVertical: 4, marginLeft: 12 }}>
-                  <Text style={{ fontFamily: SERIF_BOLD, fontSize: 14, color: '#FFFFFF' }}>{dim.score}</Text>
-                  <Text style={{ fontSize: 7.5, color: '#FFFFFFAA', textAlign: 'center' }}>/ 100</Text>
-                </View>
+        {/* 4-route ladder */}
+        <Text style={[s.smallLabelMuted, { marginBottom: 6 }]}>{t.routeLadderLabel}</Text>
+        <View style={{ marginBottom: 12 }}>
+          {ladder.map((rung) => {
+            const isActive = rung.id === activeId;
+            return (
+              <View
+                key={rung.id}
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  gap: 8,
+                  paddingVertical: 7,
+                  paddingHorizontal: 10,
+                  marginBottom: 3,
+                  backgroundColor: isActive ? brand.navy : brand.bgCardSoft,
+                  borderLeft: `3pt solid ${isActive ? brand.rust : brand.border}`,
+                }}
+              >
+                <Text style={{ fontFamily: SANS_BOLD, fontSize: 10.5, color: isActive ? '#FFFFFF' : brand.navy, flex: 1 }}>{rung.name}</Text>
+                {rung.price ? (
+                  <Text style={{ fontSize: 8.5, color: isActive ? '#C9D4E2' : brand.textMuted }}>{rung.price}</Text>
+                ) : null}
+                {isActive ? (
+                  <View style={{ backgroundColor: brand.rust, paddingHorizontal: 7, paddingVertical: 3, marginLeft: 2 }}>
+                    <Text style={{ fontFamily: SANS_BOLD, fontSize: 7, color: '#FFFFFF', letterSpacing: 1 }}>{t.routeActiveBadge}</Text>
+                  </View>
+                ) : null}
               </View>
+            );
+          })}
+        </View>
 
-              <View style={{ height: 4, backgroundColor: '#EFE6D7', marginBottom: 10 }}>
-                <View style={{ height: 4, width: `${dim.score}%` as `${number}%`, backgroundColor: dim.priority === 'strong' ? brand.green : brand.textMuted }} />
+        {/* Actieve route detail */}
+        <View style={[s.cardAccent, { padding: 14, marginBottom: 9 }]} wrap={false}>
+          <Text style={s.smallLabel}>{t.routeRecommended}</Text>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 7 }}>
+            <Text style={{ fontFamily: SANS_XB, fontSize: 18, color: brand.navy, flex: 1, paddingRight: 8 }}>{routeName}</Text>
+            {route?.price ? (
+              <View style={{ alignItems: 'flex-end' }}>
+                <Text style={s.smallLabelMuted}>{t.routePriceLabel}</Text>
+                <Text style={{ fontFamily: SANS_BOLD, fontSize: 10, color: brand.rust }}>{route.price}</Text>
               </View>
-
-              <Text style={s.body}>{dim.assessment}</Text>
-
-              {dim.quickWin ? (
-                <View style={[s.cardSoft, { marginTop: 8, marginBottom: 0 }]}>
-                  <Text style={[s.smallLabel, { color: brand.textMuted }]}>{t.anchoring}</Text>
-                  <Text style={[s.body, { color: brand.navy }]}>{dim.quickWin}</Text>
-                </View>
-              ) : null}
-            </View>
-          ))
-        ) : (
-          <View style={s.card}>
-            <Text style={s.body}>
-              {t.noStrong}
-            </Text>
+            ) : null}
           </View>
-        )}
+          {traj?.rationale ? <Text style={[s.body, { marginBottom: 8 }]}>{traj.rationale}</Text> : null}
 
-        {footerEl(5, TOTAL_PAGES, t)}
+          {route && route.interventions.length > 0 ? (
+            <>
+              <Text style={[s.smallLabel, { marginBottom: 5 }]}>{t.routeWhatYouGet}</Text>
+              {route.interventions.map((iv, i) => (
+                <View key={i} style={{ flexDirection: 'row', gap: 8, marginBottom: 4 }}>
+                  <View style={{ width: 5, height: 5, backgroundColor: brand.rust, marginTop: 4 }} />
+                  <Text style={[s.body, { flex: 1 }]}>
+                    <Text style={{ fontFamily: SANS_BOLD, color: brand.navy }}>{iv.title}. </Text>
+                    {iv.body}
+                  </Text>
+                </View>
+              ))}
+            </>
+          ) : null}
+        </View>
+
+        {/* Verwacht resultaat + eerste stap */}
+        <View style={{ flexDirection: 'row', gap: 8 }} wrap={false}>
+          {traj?.expectedOutcome ? (
+            <View style={[s.statBox, { flex: 1, padding: 9 }]}>
+              <Text style={s.smallLabelMuted}>{t.expectedOutcome}</Text>
+              <Text style={[s.body, { marginTop: 3, fontSize: 9.5 }]}>{traj.expectedOutcome}</Text>
+            </View>
+          ) : null}
+          {traj?.firstStep ? (
+            <View style={[s.statBox, { flex: 1, padding: 9, borderLeft: `2pt solid ${brand.rust}` }]}>
+              <Text style={[s.smallLabel]}>{t.firstStep}</Text>
+              <Text style={[s.body, { marginTop: 3, fontSize: 9.5, color: brand.navy }]}>{traj.firstStep}</Text>
+            </View>
+          ) : null}
+        </View>
+
+        {/* Factum positionering (alleen DD-routes) */}
+        {routeUsesFactum ? (
+          <View style={{ marginTop: 8, backgroundColor: brand.navy, padding: 11, flexDirection: 'row', gap: 10, alignItems: 'center' }} wrap={false}>
+            <View style={{ width: 4, height: 28, backgroundColor: brand.rust }} />
+            <View style={{ flex: 1 }}>
+              <Text style={{ fontFamily: SANS_BOLD, fontSize: 7.5, color: brand.rust, letterSpacing: 1.6, textTransform: 'uppercase', marginBottom: 3 }}>
+                {t.routeFactumLabel}
+              </Text>
+              <Text style={{ fontSize: 9, color: '#D7DEE8', lineHeight: 1.45 }}>{t.routeFactumNote}</Text>
+            </View>
+          </View>
+        ) : null}
+
+        {footerEl(t)}
       </Page>
 
-      {/* ══════════════════════════════════════════════════════════════════════
-          PAGINA 6 — BEDRIJFSPROFIEL (web research)
-          ══════════════════════════════════════════════════════════════════════ */}
+      {/* ═══ PAGINA 6 — ACTIEPLAN ═══ */}
+      <Page size="A4" style={s.page}>
+        <Text style={[s.eyebrow, { marginBottom: 8 }]}>{t.roadmapEyebrow}</Text>
+        <Text style={[s.h1, { marginBottom: 7 }]}>{t.roadmapTitle(firstName)}</Text>
+        <Text style={[s.body, { marginBottom: 9, lineHeight: 1.45 }]}>{t.roadmapIntro}</Text>
+
+        {report?.valueAtStake && (report.valueAtStake.headline || (report.valueAtStake.drivers?.length ?? 0) > 0) ? (
+          <View style={[s.cardSoft, { borderLeft: `3pt solid ${brand.rust}`, marginBottom: 9, padding: 10 }]}>
+            {report.valueAtStake.headline ? (
+              <Text style={{ fontFamily: SANS_BOLD, fontSize: 10, color: brand.navy, marginBottom: 4, lineHeight: 1.35 }}>{report.valueAtStake.headline}</Text>
+            ) : null}
+            {report.valueAtStake.drivers?.map((d, i) => (
+              <View key={i} style={{ flexDirection: 'row', gap: 8, marginBottom: 1 }}>
+                <Text style={{ fontSize: 9, color: brand.rust }}>—</Text>
+                <Text style={[s.body, { fontSize: 9.3, lineHeight: 1.35 }]}>{d}</Text>
+              </View>
+            ))}
+            {report.valueAtStake.basis ? <Text style={[s.muted, { marginTop: 4, fontSize: 8 }]}>{report.valueAtStake.basis}</Text> : null}
+          </View>
+        ) : null}
+
+        {report?.actionRoadmap && report.actionRoadmap.length > 0
+          ? report.actionRoadmap.map((phase, i) => {
+              const phaseColors = [brand.rust, brand.amber, brand.green];
+              const c = phaseColors[i % phaseColors.length];
+              return (
+                <View key={i} style={[s.card, { padding: 10, marginBottom: 7 }]} wrap={false}>
+                  <View style={{ flexDirection: 'row', gap: 10, marginBottom: 5, alignItems: 'center' }}>
+                    <View style={{ backgroundColor: c, paddingHorizontal: 8, paddingVertical: 3, alignSelf: 'flex-start' }}>
+                      <Text style={{ fontFamily: SANS_BOLD, fontSize: 9, color: '#FFFFFF' }}>{t.phase} {i + 1}</Text>
+                      <Text style={{ fontSize: 7, color: '#FFFFFFCC' }}>{phase.horizon}</Text>
+                    </View>
+                    <Text style={[s.h3, { flex: 1, marginBottom: 0 }]}>{phase.focus}</Text>
+                  </View>
+                  {phase.actions?.map((a, j) => (
+                    <View key={j} style={{ flexDirection: 'row', gap: 8, marginBottom: 2 }}>
+                      <Text style={{ fontSize: 9, color: c }}>→</Text>
+                      <Text style={[s.body, { flex: 1, fontSize: 9.3, lineHeight: 1.35 }]}>{a}</Text>
+                    </View>
+                  ))}
+                  {phase.outcome ? (
+                    <Text style={[s.muted, { marginTop: 3, lineHeight: 1.35 }]}>
+                      <Text style={{ fontFamily: SANS_BOLD }}>{t.expectedOutcome}: </Text>
+                      {phase.outcome}
+                    </Text>
+                  ) : null}
+                </View>
+              );
+            })
+          : (
+            <View style={s.cardSoft}>
+              <Text style={s.body}>{t.recTitle(firstName)}</Text>
+            </View>
+          )}
+
+        <View style={s.ctaBox} wrap={false}>
+          <Text style={s.ctaTitle}>{t.ctaTitle}</Text>
+          <Text style={[s.ctaBody, { fontFamily: SANS_BOLD }]}>{t.ctaContact}</Text>
+        </View>
+
+        {footerEl(t)}
+      </Page>
+
+      {/* ═══ PAGINA 7 — BEDRIJFSPROFIEL + ANTWOORDEN ═══ */}
       <Page size="A4" style={s.page}>
         <Text style={s.eyebrow}>{t.companyEyebrow}</Text>
         <Text style={s.h1}>{t.companyTitle(company)}</Text>
-        <Text style={[s.body, { marginBottom: 16 }]}>
-          {t.companyIntro}
-        </Text>
+        <Text style={[s.body, { marginBottom: 12 }]}>{t.companyIntro}</Text>
 
         {report?.companyContext ? (
           <>
-            <View style={{ flexDirection: 'row', gap: 10, marginBottom: 12 }}>
+            <View style={{ flexDirection: 'row', gap: 8, marginBottom: 10 }}>
               <View style={[s.statBox, { flex: 1 }]}>
                 <Text style={s.smallLabelMuted}>{t.sector}</Text>
-                <Text style={{ fontFamily: SANS_BOLD, fontSize: 11, color: brand.navy, marginTop: 4 }}>
-                  {report.companyContext.sector || '–'}
-                </Text>
+                <Text style={{ fontFamily: SANS_BOLD, fontSize: 10, color: brand.navy, marginTop: 4 }}>{report.companyContext.sector || '–'}</Text>
               </View>
               <View style={[s.statBox, { flex: 2 }]}>
                 <Text style={s.smallLabelMuted}>{t.profile}</Text>
-                <Text style={{ fontSize: 10.5, color: brand.navySoft, marginTop: 4, lineHeight: 1.5 }}>
-                  {report.companyContext.estimatedProfile || '–'}
-                </Text>
+                <Text style={{ fontSize: 9.5, color: brand.navySoft, marginTop: 4, lineHeight: 1.45 }}>{report.companyContext.estimatedProfile || '–'}</Text>
               </View>
             </View>
 
-            {report.companyContext.keyActivities ? (
-              <View style={s.card}>
-                <Text style={s.smallLabel}>{t.keyActivities}</Text>
-                <Text style={s.body}>{report.companyContext.keyActivities}</Text>
-              </View>
-            ) : null}
-
-            {Array.isArray(report.companyContext.researchSignals) &&
-            report.companyContext.researchSignals.length > 0 ? (
+            {Array.isArray(report.companyContext.researchSignals) && report.companyContext.researchSignals.length > 0 ? (
               <View style={s.card}>
                 <Text style={s.smallLabel}>{t.researchFindings}</Text>
-                {report.companyContext.researchSignals.map((sig, i) => (
-                  <View key={i} style={{ flexDirection: 'row', gap: 8, marginTop: 6 }}>
-                    <Text style={{ fontSize: 9, color: brand.rust, marginTop: 2 }}>→</Text>
+                {report.companyContext.researchSignals.slice(0, 4).map((sig, i) => (
+                  <View key={i} style={{ flexDirection: 'row', gap: 8, marginTop: 5 }}>
+                    <Text style={{ fontSize: 9, color: brand.rust, marginTop: 1 }}>→</Text>
                     <Text style={[s.body, { flex: 1 }]}>{sig}</Text>
                   </View>
                 ))}
@@ -732,418 +745,73 @@ export function ReportDocument(props: ReportProps) {
           </>
         ) : (
           <View style={s.cardSoft}>
-            <Text style={s.body}>
-              {t.noWebsite}
-            </Text>
+            <Text style={s.body}>{t.noWebsite}</Text>
           </View>
         )}
 
-        {report?.urgencyExplanation ? (
-          <View style={s.cardAccent}>
-            <Text style={s.smallLabel}>{t.urgencyExplanation}</Text>
-            <Text style={s.body}>{report.urgencyExplanation}</Text>
-          </View>
-        ) : null}
-
-        {footerEl(6, TOTAL_PAGES, t)}
-      </Page>
-
-      {/* ══════════════════════════════════════════════════════════════════════
-          PAGINA 7 — DIENSTEN × AI-KANSEN + TEAMOPBOUW (conditioneel)
-          ══════════════════════════════════════════════════════════════════════ */}
-      {hasServicesTeamPage ? (
-        <Page size="A4" style={s.page} wrap>
-          <Text style={s.eyebrow}>{t.servicesEyebrow}</Text>
-          <Text style={s.h1}>{t.servicesTitle}</Text>
-          <Text style={[s.body, { marginBottom: 16 }]}>{t.servicesIntro}</Text>
-
-          {services.map((svc, i) => (
-            <View key={i} style={[s.card, { marginBottom: 10 }]} wrap={false}>
-              <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
-                <Text style={{ fontFamily: SANS_BOLD, fontSize: 11.5, color: brand.navy, flex: 1, paddingRight: 8 }}>
-                  {svc.service}
-                </Text>
-                <View style={{ backgroundColor: exposureColor(svc.exposure), paddingHorizontal: 7, paddingVertical: 2 }}>
-                  <Text style={{ fontSize: 7.5, fontFamily: SANS_BOLD, color: '#FFFFFF' }}>
-                    {exposureLabel(svc.exposure, t)}
-                  </Text>
-                </View>
-              </View>
-              {svc.whatItIs ? <Text style={[s.body, { marginBottom: 6 }]}>{svc.whatItIs}</Text> : null}
-              {svc.aiOpportunity ? (
-                <View style={{ flexDirection: 'row', gap: 8 }}>
-                  <Text style={{ fontSize: 9, color: brand.rust, marginTop: 1 }}>◆</Text>
-                  <Text style={[s.body, { flex: 1 }]}>
-                    <Text style={{ fontFamily: SANS_BOLD, color: brand.navy }}>{t.servicesAiLabel}: </Text>
-                    {svc.aiOpportunity}
-                  </Text>
-                </View>
-              ) : null}
-            </View>
-          ))}
-
-          {team && (team.composition || (team.signals?.length ?? 0) > 0) ? (
-            <View style={{ marginTop: services.length > 0 ? 14 : 0 }} wrap={false}>
-              <Text style={[s.h3, { marginBottom: 8 }]}>{t.teamSectionTitle}</Text>
-              {team.composition ? <Text style={[s.body, { marginBottom: 8 }]}>{team.composition}</Text> : null}
-              {team.signals?.map((sig, i) => (
-                <View key={i} style={{ flexDirection: 'row', gap: 8, marginBottom: 4 }}>
-                  <Text style={{ fontSize: 9, color: brand.rust }}>—</Text>
-                  <Text style={[s.body, { flex: 1 }]}>{sig}</Text>
-                </View>
-              ))}
-              {team.implication ? (
-                <View style={[s.cardSoft, { borderLeft: `2pt solid ${brand.rust}`, marginTop: 8 }]}>
-                  <Text style={s.smallLabel}>{t.teamImplicationLabel}</Text>
-                  <Text style={s.body}>{team.implication}</Text>
-                </View>
-              ) : null}
-            </View>
-          ) : null}
-
-          {footerEl(7, TOTAL_PAGES, t)}
-        </Page>
-      ) : null}
-
-      {/* ══════════════════════════════════════════════════════════════════════
-          PAGINA 7 — KERNOBSERVATIES
-          ══════════════════════════════════════════════════════════════════════ */}
-      <Page size="A4" style={s.page}>
-        <Text style={s.eyebrow}>{t.insightsEyebrow}</Text>
-        <Text style={s.h1}>{t.insightsTitle}</Text>
-        <Text style={[s.body, { marginBottom: 18 }]}>
-          {t.insightsIntro}
-        </Text>
-
-        {insights.length > 0 ? (
-          insights.map((insight, i) => (
-            <View key={i} style={{ flexDirection: 'row', gap: 12, marginBottom: 14 }}>
-              <View style={{ width: 28, height: 28, backgroundColor: brand.rust, alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <Text style={{ fontFamily: SERIF_BOLD, fontSize: 13, color: '#FFFFFF' }}>
-                  {String(i + 1)}
-                </Text>
-              </View>
-              <View style={{ flex: 1, borderBottom: `1pt solid ${brand.border}`, paddingBottom: 12 }}>
-                <Text style={{ fontFamily: SANS_BOLD, fontSize: 11, color: brand.navy, marginBottom: 4 }}>
-                  {insight.title}
-                </Text>
-                <Text style={s.body}>{insight.body}</Text>
-              </View>
-            </View>
-          ))
-        ) : null}
-
-        {footerEl(pageNo(7), TOTAL_PAGES, t)}
-      </Page>
-
-      {/* ══════════════════════════════════════════════════════════════════════
-          PAGINA 8 — VRAAG & ANTWOORD SAMENVATTING
-          ══════════════════════════════════════════════════════════════════════ */}
-      <Page size="A4" style={s.page}>
-        <Text style={s.eyebrow}>{t.qaEyebrow}</Text>
-        <Text style={s.h1}>{t.qaTitle}</Text>
-        <Text style={[s.body, { marginBottom: 16 }]}>
-          {t.qaIntro}
-        </Text>
-
-        {([1, 2, 3, 4] as const).map((section) => {
-          const sectionQs = questions.filter((q) => q.section === section);
-          return (
-            <View key={section} style={{ marginBottom: 12 }}>
-              <Text style={[s.smallLabel, { color: brand.navy, marginBottom: 6 }]}>
-                {t.sectionLabel(section, sectionTitles[section])}
-              </Text>
-              {sectionQs.map((q) => {
-                const letter = answers?.[q.id];
-                const optLabel = getOptionLabel(q.id, letter);
-                const q_ = questions.find((x) => x.id === q.id);
-                const pts = q_?.options.find((o) => o.letter === letter)?.points ?? 0;
-                return (
-                  <View key={q.id} style={{ flexDirection: 'row', gap: 8, marginBottom: 6 }}>
-                    <Text style={{ fontSize: 8.5, fontFamily: SANS_BOLD, color: brand.rust, minWidth: 28 }}>
-                      {q.id}
-                    </Text>
-                    <View style={{ flex: 1 }}>
-                      <Text style={{ fontSize: 9, color: brand.textMuted, marginBottom: 2 }}>
-                        {q.text.length > 80 ? q.text.slice(0, 77) + '…' : q.text}
-                      </Text>
-                      <View style={{ flexDirection: 'row', gap: 8, alignItems: 'center' }}>
-                        <View style={{ backgroundColor: brand.bgCardSoft, border: `1pt solid ${brand.border}`, paddingHorizontal: 6, paddingVertical: 2 }}>
-                          <Text style={{ fontSize: 8, color: brand.navy }}>
-                            {letter ?? '–'} · {pts}/5
-                          </Text>
-                        </View>
-                        <Text style={{ fontSize: 8.5, color: brand.navySoft, flex: 1 }}>
-                          {optLabel.length > 90 ? optLabel.slice(0, 87) + '…' : optLabel}
-                        </Text>
-                      </View>
-                    </View>
-                  </View>
-                );
-              })}
-            </View>
-          );
-        })}
-
-        {footerEl(pageNo(8), TOTAL_PAGES, t)}
-      </Page>
-
-      {/* ══════════════════════════════════════════════════════════════════════
-          PAGINA 9 — AANBEVOLEN TRAJECT
-          ══════════════════════════════════════════════════════════════════════ */}
-      <Page size="A4" style={s.page}>
-        <Text style={s.eyebrow}>{t.recEyebrow}</Text>
-        <Text style={s.h1}>{t.recTitle(firstName)}</Text>
-
-        <View style={s.cardAccent}>
-          <Text style={s.smallLabel}>{t.recommendedTrack}</Text>
-          <Text style={{ fontFamily: SERIF_BOLD, fontSize: 22, color: brand.navy, marginBottom: 8 }}>
-            {report?.recommendedTrajectory?.offerName || offerInfo?.name || '–'}
-          </Text>
-          <Text style={[s.bodyLarge, { marginBottom: 12 }]}>
-            {report?.recommendedTrajectory?.rationale || offerInfo?.description || ''}
-          </Text>
-
-          {report?.recommendedTrajectory?.expectedOutcome ? (
-            <View style={[s.cardSoft, { marginBottom: 8 }]}>
-              <Text style={s.smallLabel}>{t.expectedOutcome}</Text>
-              <Text style={s.body}>{report.recommendedTrajectory.expectedOutcome}</Text>
-            </View>
-          ) : null}
-
-          {report?.recommendedTrajectory?.firstStep ? (
-            <View style={[s.cardSoft, { borderLeft: `2pt solid ${brand.rust}`, marginBottom: 0 }]}>
-              <Text style={s.smallLabel}>{t.firstStep}</Text>
-              <Text style={[s.body, { color: brand.navy }]}>{report.recommendedTrajectory.firstStep}</Text>
-            </View>
-          ) : null}
-        </View>
-
-        {/* Why this offer fits */}
-        <Text style={[s.h3, { marginTop: 10 }]}>{t.whyTrack}</Text>
-        <View style={{ flexDirection: 'row', gap: 8, marginTop: 8 }}>
-          <View style={[s.statBox, { flex: 1, borderLeft: `2pt solid ${brand.rust}` }]}>
-            <Text style={s.smallLabelMuted}>{t.yourScore}</Text>
-            <Text style={[s.statNumber, { fontSize: 20 }]}>{totalScore}/75</Text>
-          </View>
-          <View style={[s.statBox, { flex: 1 }]}>
-            <Text style={s.smallLabelMuted}>{t.attentionRequired}</Text>
-            <Text style={[s.statNumber, { fontSize: 20, color: brand.rust }]}>{belowPeer} {t.dimAbbrev}</Text>
-          </View>
-          <View style={[s.statBox, { flex: 2 }]}>
-            <Text style={s.smallLabelMuted}>{t.urgency}</Text>
-            <Text style={[s.statNumber, { fontSize: 18, color: urgencyColor(report?.urgency), marginTop: 4 }]}>
-              {urgencyLabel(report?.urgency, t)}
-            </Text>
-            {report?.urgencyExplanation ? (
-              <Text style={[s.muted, { marginTop: 4 }]}>
-                {report.urgencyExplanation.slice(0, 80)}...
-              </Text>
-            ) : null}
-          </View>
-        </View>
-
-        <View style={s.ctaBox}>
-          <Text style={s.ctaTitle}>{t.ctaTitle}</Text>
-          <Text style={s.ctaBody}>
-            {t.ctaContact}
-          </Text>
-          <Text style={[s.ctaBody, { marginTop: 4 }]}>
-            {t.ctaBody}
-          </Text>
-        </View>
-
-        {footerEl(pageNo(9), TOTAL_PAGES, t)}
-      </Page>
-
-      {/* ══════════════════════════════════════════════════════════════════════
-          PAGINA 10 — 90-DAGEN ROADMAP
-          ══════════════════════════════════════════════════════════════════════ */}
-      <Page size="A4" style={s.page}>
-        <Text style={s.eyebrow}>{t.roadmapEyebrow}</Text>
-        <Text style={s.h1}>{t.roadmapTitle(firstName)}</Text>
-        <Text style={[s.body, { marginBottom: 18 }]}>
-          {t.roadmapIntro}
-        </Text>
-
-        {report?.valueAtStake && (report.valueAtStake.headline || (report.valueAtStake.drivers?.length ?? 0) > 0) ? (
-          <View style={[s.cardSoft, { borderLeft: `2pt solid ${brand.rust}`, marginBottom: 18 }]}>
-            {report.valueAtStake.headline ? (
-              <Text style={{ fontFamily: SANS_BOLD, fontSize: 11, color: brand.navy, marginBottom: 6 }}>
-                {report.valueAtStake.headline}
-              </Text>
-            ) : null}
-            {report.valueAtStake.drivers?.map((d, i) => (
-              <View key={i} style={{ flexDirection: 'row', gap: 8, marginBottom: 4 }}>
-                <Text style={{ fontSize: 9, color: brand.rust }}>—</Text>
-                <Text style={s.body}>{d}</Text>
+        {services.length > 0 ? (
+          <View style={[s.card, { marginBottom: 10 }]}>
+            <Text style={s.smallLabel}>{t.servicesTitle}</Text>
+            {services.map((svc, i) => (
+              <View key={i} style={{ marginTop: 5 }}>
+                <Text style={{ fontFamily: SANS_BOLD, fontSize: 9.5, color: brand.navy }}>{svc.service}</Text>
+                {svc.aiOpportunity ? <Text style={[s.body, { fontSize: 9.5 }]}>{svc.aiOpportunity}</Text> : null}
               </View>
             ))}
-            {report.valueAtStake.basis ? (
-              <Text style={[s.muted, { marginTop: 6 }]}>{report.valueAtStake.basis}</Text>
-            ) : null}
           </View>
         ) : null}
 
-        {report?.actionRoadmap && report.actionRoadmap.length > 0 ? (
-          report.actionRoadmap.map((phase, i) => {
-            const phaseColors = [brand.rust, brand.amber, brand.green];
-            const c = phaseColors[i % phaseColors.length];
+        {/* Compact antwoordoverzicht */}
+        <Text style={[s.smallLabel, { marginTop: 4, marginBottom: 6 }]}>{t.qaTitle}</Text>
+        <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 4 }}>
+          {questions.map((q) => {
+            const letter = answers?.[q.id];
+            const q_ = questions.find((x) => x.id === q.id);
+            const pts = q_?.options.find((o) => o.letter === letter)?.points ?? 0;
             return (
-              <View key={i} style={s.card}>
-                <View style={{ flexDirection: 'row', gap: 10, marginBottom: 10 }}>
-                  <View style={{ backgroundColor: c, paddingHorizontal: 8, paddingVertical: 4, alignSelf: 'flex-start' }}>
-                    <Text style={{ fontFamily: SANS_BOLD, fontSize: 9, color: '#FFFFFF' }}>{t.phase} {i + 1}</Text>
-                    <Text style={{ fontSize: 7.5, color: '#FFFFFF' }}>{phase.horizon}</Text>
-                  </View>
-                  <View style={{ flex: 1 }}>
-                    <Text style={s.h3}>{phase.focus}</Text>
-                  </View>
+              <View key={q.id} style={{ width: '31.8%', flexDirection: 'row', gap: 5, alignItems: 'center', marginBottom: 2 }}>
+                <Text style={{ fontSize: 7.5, fontFamily: SANS_BOLD, color: brand.rust, minWidth: 18 }}>{q.id}</Text>
+                <View style={{ height: 4, flex: 1, backgroundColor: brand.track }}>
+                  <View style={{ height: 4, width: `${(pts / 5) * 100}%` as `${number}%`, backgroundColor: pts >= 4 ? brand.green : pts <= 2 ? brand.rust : brand.amber }} />
                 </View>
-                {phase.actions?.map((a, j) => (
-                  <View key={j} style={{ flexDirection: 'row', gap: 8, marginBottom: 6 }}>
-                    <Text style={{ fontSize: 9, color: c }}>→</Text>
-                    <Text style={s.body}>{a}</Text>
-                  </View>
-                ))}
-                {phase.outcome ? (
-                  <Text style={[s.muted, { marginTop: 6 }]}>
-                    <Text style={{ fontFamily: SANS_BOLD }}>{t.expectedOutcome}:</Text> {phase.outcome}
-                  </Text>
-                ) : null}
+                <Text style={{ fontSize: 7, color: brand.textMuted, minWidth: 20 }}>{letter ?? '–'}·{pts}</Text>
               </View>
             );
-          })
-        ) : (
-          <>
-        {/* Fase 1 */}
-        <View style={s.card}>
-          <View style={{ flexDirection: 'row', gap: 10, marginBottom: 10 }}>
-            <View style={{ backgroundColor: brand.rust, paddingHorizontal: 8, paddingVertical: 4, alignSelf: 'flex-start' }}>
-              <Text style={{ fontFamily: SANS_BOLD, fontSize: 9, color: '#FFFFFF' }}>{t.phase} 1</Text>
-              <Text style={{ fontSize: 7.5, color: '#FFD4C7' }}>{t.phase1Days}</Text>
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text style={s.h3}>{t.phase1Title}</Text>
-            </View>
-          </View>
-
-          {report?.recommendedTrajectory?.firstStep ? (
-            <View style={{ flexDirection: 'row', gap: 8, marginBottom: 6 }}>
-              <Text style={{ fontSize: 9, color: brand.rust }}>→</Text>
-              <Text style={s.body}>{report.recommendedTrajectory.firstStep}</Text>
-            </View>
-          ) : null}
-
-          {criticalDims.slice(0, 2).map((dim, i) => (
-            <View key={dim.dimension} style={{ flexDirection: 'row', gap: 8, marginBottom: 6 }}>
-              <Text style={{ fontSize: 9, color: brand.rust }}>→</Text>
-              <Text style={s.body}>
-                <Text style={{ fontFamily: SANS_BOLD }}>{dim.label}:</Text>{' '}
-                {dim.quickWin}
-              </Text>
-            </View>
-          ))}
+          })}
         </View>
 
-        {/* Fase 2 */}
-        <View style={s.card}>
-          <View style={{ flexDirection: 'row', gap: 10, marginBottom: 10 }}>
-            <View style={{ backgroundColor: brand.amber, paddingHorizontal: 8, paddingVertical: 4, alignSelf: 'flex-start' }}>
-              <Text style={{ fontFamily: SANS_BOLD, fontSize: 9, color: '#FFFFFF' }}>{t.phase} 2</Text>
-              <Text style={{ fontSize: 7.5, color: '#FFF0CC' }}>{t.phase2Days}</Text>
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text style={s.h3}>{t.phase2Title}</Text>
-            </View>
-          </View>
-
-          {attentionDims.map((dim) => (
-            <View key={dim.dimension} style={{ flexDirection: 'row', gap: 8, marginBottom: 6 }}>
-              <Text style={{ fontSize: 9, color: brand.amber }}>→</Text>
-              <Text style={s.body}>
-                <Text style={{ fontFamily: SANS_BOLD }}>{dim.label}:</Text>{' '}
-                {dim.quickWin}
-              </Text>
-            </View>
-          ))}
-
-          <View style={{ flexDirection: 'row', gap: 8, marginBottom: 6 }}>
-            <Text style={{ fontSize: 9, color: brand.amber }}>→</Text>
-            <Text style={s.body}>
-              {t.pilotEval}
-            </Text>
-          </View>
-        </View>
-
-        {/* Fase 3 */}
-        <View style={s.card}>
-          <View style={{ flexDirection: 'row', gap: 10, marginBottom: 10 }}>
-            <View style={{ backgroundColor: brand.green, paddingHorizontal: 8, paddingVertical: 4, alignSelf: 'flex-start' }}>
-              <Text style={{ fontFamily: SANS_BOLD, fontSize: 9, color: '#FFFFFF' }}>{t.phase} 3</Text>
-              <Text style={{ fontSize: 7.5, color: '#D4EDCE' }}>{t.phase3Days}</Text>
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text style={s.h3}>{t.phase3Title}</Text>
-            </View>
-          </View>
-
-          <View style={{ flexDirection: 'row', gap: 8, marginBottom: 6 }}>
-            <Text style={{ fontSize: 9, color: brand.green }}>→</Text>
-            <Text style={s.body}>
-              {t.phase3Anchor(adequateDims.map((d) => d.label).join(', '))}
-            </Text>
-          </View>
-          <View style={{ flexDirection: 'row', gap: 8, marginBottom: 6 }}>
-            <Text style={{ fontSize: 9, color: brand.green }}>→</Text>
-            <Text style={s.body}>
-              {t.phase3Workflow}
-            </Text>
-          </View>
-          <View style={{ flexDirection: 'row', gap: 8 }}>
-            <Text style={{ fontSize: 9, color: brand.green }}>→</Text>
-            <Text style={s.body}>
-              {t.phase3Remeasure}
-            </Text>
-          </View>
-        </View>
-          </>
-        )}
-
-        {footerEl(pageNo(10), TOTAL_PAGES, t)}
+        {footerEl(t)}
       </Page>
 
-      {/* ══════════════════════════════════════════════════════════════════════
-          PAGINA 11 — COLOFON / OVER AGENTIC MINDSHIFT
-          ══════════════════════════════════════════════════════════════════════ */}
+      {/* ═══ PAGINA 8 — COLOFON ═══ */}
       <Page size="A4" style={s.page}>
-        <View style={{ height: 3, backgroundColor: brand.navy, marginBottom: 36 }} />
+        <View style={{ height: 3, backgroundColor: brand.navy, marginBottom: 26 }} />
 
         <Text style={s.eyebrow}>{t.colophonEyebrow}</Text>
         <Text style={s.h1}>{t.colophonTitle}</Text>
 
-        <View style={[s.card, { marginBottom: 14 }]}>
-          <Text style={[s.body, { marginBottom: 10 }]}>{t.about1}</Text>
-          <Text style={[s.body, { marginBottom: 10 }]}>{t.about2}</Text>
+        <View style={[s.card, { marginBottom: 12 }]}>
+          <Text style={[s.body, { marginBottom: 9 }]}>{t.about1}</Text>
+          <Text style={[s.body, { marginBottom: 9 }]}>{t.about2}</Text>
           <Text style={s.body}>{t.about3}</Text>
         </View>
 
-        <View style={{ flexDirection: 'row', gap: 10, marginBottom: 14 }}>
+        <View style={{ flexDirection: 'row', gap: 8, marginBottom: 12 }}>
           <View style={[s.statBox, { flex: 1 }]}>
             <Text style={s.smallLabelMuted}>{t.founder}</Text>
-            <Text style={{ fontFamily: SANS_BOLD, fontSize: 11, color: brand.navy, marginTop: 4 }}>Wouter Dijkman</Text>
+            <Text style={{ fontFamily: SANS_BOLD, fontSize: 10.5, color: brand.navy, marginTop: 4 }}>Wouter Dijkman</Text>
             <Text style={s.muted}>{t.founderRole}</Text>
             <Text style={[s.muted, { marginTop: 2 }]}>linkedin.com/in/wwdijkman</Text>
           </View>
           <View style={[s.statBox, { flex: 1 }]}>
             <Text style={s.smallLabelMuted}>{t.contact}</Text>
-            <Text style={{ fontSize: 10, color: brand.navy, marginTop: 4 }}>wouter@agenticmindshift.nl</Text>
+            <Text style={{ fontSize: 9.5, color: brand.navy, marginTop: 4 }}>wouter@agenticmindshift.nl</Text>
             <Text style={[s.muted, { marginTop: 2 }]}>agenticmindshift.nl</Text>
             <Text style={[s.muted, { marginTop: 2 }]}>cal.com/wwdijkman/intake-call</Text>
           </View>
           <View style={[s.statBox, { flex: 1 }]}>
             <Text style={s.smallLabelMuted}>{t.registration}</Text>
-            <Text style={{ fontSize: 10, color: brand.navy, marginTop: 4 }}>KvK 99495945</Text>
+            <Text style={{ fontSize: 9.5, color: brand.navy, marginTop: 4 }}>KvK 99495945</Text>
             <Text style={[s.muted, { marginTop: 2 }]}>{t.city}</Text>
             <Text style={[s.muted, { marginTop: 2 }]}>Marius Bauerstraat 235 A 5{'\n'}1062 AL Amsterdam</Text>
           </View>
@@ -1152,24 +820,17 @@ export function ReportDocument(props: ReportProps) {
         <View style={s.ctaBox}>
           <Text style={s.ctaTitle}>{t.finalCtaTitle}</Text>
           <Text style={s.ctaBody}>{t.finalCtaBody}</Text>
-          <Text style={[s.ctaBody, { marginTop: 6, fontFamily: SANS_BOLD }]}>
-            cal.com/wwdijkman/intake-call
-          </Text>
+          <Text style={[s.ctaBody, { marginTop: 6, fontFamily: SANS_BOLD }]}>cal.com/wwdijkman/intake-call</Text>
         </View>
 
-        <View style={{ marginTop: 24 }}>
+        <View style={{ marginTop: 22 }}>
           <View style={s.divider} />
-          <Text style={[s.small, { marginBottom: 4 }]}>
-            {t.confidential(name, company)}
-          </Text>
-          <Text style={s.small}>
-            {t.generatedBy(report?.model || 'DeepSeek', generatedAt)}
-          </Text>
+          <Text style={[s.small, { marginBottom: 4 }]}>{t.confidential(name, company)}</Text>
+          <Text style={s.small}>{t.generatedBy(report?.model || 'DeepSeek', generatedAt)}</Text>
         </View>
 
-        {footerEl(pageNo(11), TOTAL_PAGES, t)}
+        {footerEl(t)}
       </Page>
-
     </Document>
   );
 }

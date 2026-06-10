@@ -20,6 +20,18 @@ export interface PdfStrings {
   track: string;
   weakestDims: string;
   strongestDims: string;
+  percentileNote: (p: number) => string;
+  // Route (AM/Factum) page
+  routeEyebrow: string;
+  routeTitle: (firstName: string) => string;
+  routeIntro: string;
+  routeLadderLabel: string;
+  routeActiveBadge: string;
+  routeRecommended: string;
+  routeWhatYouGet: string;
+  routePriceLabel: string;
+  routeFactumLabel: string;
+  routeFactumNote: string;
   // Score overview
   scoreOverview: string;
   scoreOverviewTitle: string;
@@ -35,6 +47,7 @@ export interface PdfStrings {
   criticalPill: string;
   quickWinActionable: string;
   noCritical: string;
+  attentionAlsoLabel: string;
   // Attention
   attentionEyebrow: string;
   attentionTitle: string;
@@ -46,6 +59,9 @@ export interface PdfStrings {
   strongEyebrow: string;
   strongTitle: string;
   strongIntro: string;
+  strongEyebrowAlt: string;
+  strongTitleAlt: string;
+  strongIntroAlt: string;
   anchoring: string;
   noStrong: string;
   // Company profile
@@ -146,6 +162,19 @@ const nl: PdfStrings = {
   track: 'Traject',
   weakestDims: 'Zwakste dimensies',
   strongestDims: 'Sterkste dimensies',
+  percentileNote: (p) => `Sterker dan ${p}% van vergelijkbare partijen`,
+  routeEyebrow: 'Uw route · Agentic Mindshift',
+  routeTitle: (n) => `Zo zetten we dit om in resultaat, ${n}`,
+  routeIntro:
+    'Uw scorecard wijst rechtstreeks naar één van onze vier routes. Hieronder ziet u waar u staat, welke route het beste past en wat die concreet oplevert — met transparante tarieven.',
+  routeLadderLabel: 'De vier routes',
+  routeActiveBadge: 'PAST BIJ U',
+  routeRecommended: 'Aanbevolen op basis van uw scorecard',
+  routeWhatYouGet: 'Wat dit concreet oplevert',
+  routePriceLabel: 'Investering',
+  routeFactumLabel: 'Powered by Factum Capital',
+  routeFactumNote:
+    'De due-diligence- en portfolio-routes draaien op Factum Capital — ons AI-analyseplatform dat het analytisch fundament levert. Agentic Mindshift verzorgt de dienst en, waar vereist, de gecertificeerde sign-off.',
   scoreOverview: 'Scoreoverzicht',
   scoreOverviewTitle: 'Uw profiel vs. peer-mediaan',
   scoreOverviewIntro: (peer) =>
@@ -158,20 +187,25 @@ const nl: PdfStrings = {
   criticalTitle: 'Waar actie het meest urgent is',
   criticalIntro:
     "De dimensies met prioriteit 'Kritiek' vragen directe aandacht. Ze liggen het verst onder de peer-mediaan en vormen de grootste rem op uw analytische kwaliteit.",
-  criticalPill: '⚑  Kritiek',
+  criticalPill: ' Kritiek',
   quickWinActionable: 'Direct uitvoerbare quick win',
   noCritical: 'Geen dimensies met kritieke prioriteit gevonden op basis van uw scorecard.',
+  attentionAlsoLabel: 'Vraagt ook aandacht',
   attentionEyebrow: 'Diepteanalyse · Verbeterpotentieel',
   attentionTitle: 'Dimensies met ruimte voor verbetering',
   attentionIntro:
     "De dimensies met prioriteit 'Aandacht' liggen onder de peer-mediaan maar zijn niet acuut. Met gerichte actie kunnen zij snel op niveau worden gebracht.",
-  attentionPill: '◆  Aandacht',
+  attentionPill: ' Aandacht',
   quickWin: 'Quick win',
   noAttention: 'Geen dimensies met aandachtsprioriteit gevonden.',
   strongEyebrow: 'Diepteanalyse · Sterke punten',
   strongTitle: 'Wat u goed doet',
   strongIntro:
     'Deze dimensies scoren voldoende of sterk. Ze vormen uw operationele fundament en moeten worden geborgd bij AI-implementatie. Bouwen op sterkte is minstens zo strategisch als het repareren van zwaktes.',
+  strongEyebrowAlt: 'Diepteanalyse · Kerninzichten',
+  strongTitleAlt: 'Wat dit voor u betekent',
+  strongIntroAlt:
+    'Geen enkele dimensie scoort nog boven de peer-mediaan — dat betekent dat hier juist de grootste winst ligt. Deze observaties verbinden uw scores direct aan concrete bedrijfsrisico’s en kansen.',
   anchoring: 'Verankering',
   noStrong:
     "Elke dimensie valt in de categorie 'Aandacht' of 'Kritiek' — zie vorige pagina's voor de aanbevelingen.",
@@ -261,8 +295,8 @@ const nl: PdfStrings = {
     `Dit rapport is vertrouwelijk en uitsluitend bestemd voor ${n} bij ${c}. Niet voor verdere verspreiding zonder schriftelijke toestemming van Agentic Mindshift Consultancy.`,
   generatedBy: (m, d) =>
     `Gegenereerd door ${m} op ${d}, op basis van scorecard-antwoorden en publiek beschikbare bedrijfsinformatie. Agentic Mindshift Consultancy · KvK 99495945 · agenticmindshift.nl`,
-  priorityCritical: '⚑ Kritiek',
-  priorityAttention: '◆ Aandacht',
+  priorityCritical: 'Kritiek',
+  priorityAttention: 'Aandacht',
   priorityAdequate: '○ Voldoende',
   priorityStrong: '✓ Sterk',
   urgencyHigh: 'Hoog',
@@ -285,6 +319,19 @@ const en: PdfStrings = {
   track: 'Track',
   weakestDims: 'Weakest dimensions',
   strongestDims: 'Strongest dimensions',
+  percentileNote: (p) => `Stronger than ${p}% of comparable firms`,
+  routeEyebrow: 'Your route · Agentic Mindshift',
+  routeTitle: (n) => `How we turn this into results, ${n}`,
+  routeIntro:
+    'Your scorecard points directly to one of our four routes. Below you see where you stand, which route fits best and what it concretely delivers — with transparent pricing.',
+  routeLadderLabel: 'The four routes',
+  routeActiveBadge: 'YOUR FIT',
+  routeRecommended: 'Recommended based on your scorecard',
+  routeWhatYouGet: 'What this concretely delivers',
+  routePriceLabel: 'Investment',
+  routeFactumLabel: 'Powered by Factum Capital',
+  routeFactumNote:
+    'The due-diligence and portfolio routes run on Factum Capital — our AI analysis platform that provides the analytical foundation. Agentic Mindshift delivers the service and, where required, the certified sign-off.',
   scoreOverview: 'Score overview',
   scoreOverviewTitle: 'Your profile vs. peer median',
   scoreOverviewIntro: (peer) =>
@@ -297,20 +344,25 @@ const en: PdfStrings = {
   criticalTitle: 'Where action is most urgent',
   criticalIntro:
     "The dimensions marked 'Critical' require immediate attention. They sit furthest below the peer median and form the biggest drag on your analytical quality.",
-  criticalPill: '⚑  Critical',
+  criticalPill: ' Critical',
   quickWinActionable: 'Immediately actionable quick win',
   noCritical: 'No dimensions with critical priority were found based on your scorecard.',
+  attentionAlsoLabel: 'Also needs attention',
   attentionEyebrow: 'Deep analysis · Improvement potential',
   attentionTitle: 'Dimensions with room for improvement',
   attentionIntro:
     "The dimensions marked 'Attention' sit below the peer median but are not acute. With targeted action they can quickly be brought up to level.",
-  attentionPill: '◆  Attention',
+  attentionPill: ' Attention',
   quickWin: 'Quick win',
   noAttention: 'No dimensions with attention priority were found.',
   strongEyebrow: 'Deep analysis · Strengths',
   strongTitle: 'What you do well',
   strongIntro:
     'These dimensions score adequate or strong. They form your operational foundation and must be safeguarded during AI implementation. Building on strength is at least as strategic as fixing weaknesses.',
+  strongEyebrowAlt: 'Deep analysis · Key insights',
+  strongTitleAlt: 'What this means for you',
+  strongIntroAlt:
+    'No dimension scores above the peer median yet — which means this is exactly where the biggest gains are. These observations connect your scores directly to concrete business risks and opportunities.',
   anchoring: 'Anchoring',
   noStrong:
     "Every dimension falls into the 'Attention' or 'Critical' category — see the previous pages for the recommendations.",
@@ -400,8 +452,8 @@ const en: PdfStrings = {
     `This report is confidential and intended solely for ${n} at ${c}. Not for further distribution without written consent from Agentic Mindshift Consultancy.`,
   generatedBy: (m, d) =>
     `Generated by ${m} on ${d}, based on scorecard answers and publicly available company information. Agentic Mindshift Consultancy · KvK 99495945 · agenticmindshift.nl`,
-  priorityCritical: '⚑ Critical',
-  priorityAttention: '◆ Attention',
+  priorityCritical: 'Critical',
+  priorityAttention: 'Attention',
   priorityAdequate: '○ Adequate',
   priorityStrong: '✓ Strong',
   urgencyHigh: 'High',
@@ -424,6 +476,19 @@ const de: PdfStrings = {
   track: 'Weg',
   weakestDims: 'Schwächste Dimensionen',
   strongestDims: 'Stärkste Dimensionen',
+  percentileNote: (p) => `Stärker als ${p}% vergleichbarer Häuser`,
+  routeEyebrow: 'Ihr Weg · Agentic Mindshift',
+  routeTitle: (n) => `So setzen wir das in Ergebnisse um, ${n}`,
+  routeIntro:
+    'Ihre Scorecard verweist direkt auf einen unserer vier Wege. Unten sehen Sie, wo Sie stehen, welcher Weg am besten passt und was er konkret liefert — mit transparenten Preisen.',
+  routeLadderLabel: 'Die vier Wege',
+  routeActiveBadge: 'PASST ZU IHNEN',
+  routeRecommended: 'Empfohlen auf Basis Ihrer Scorecard',
+  routeWhatYouGet: 'Was das konkret liefert',
+  routePriceLabel: 'Investition',
+  routeFactumLabel: 'Powered by Factum Capital',
+  routeFactumNote:
+    'Die Due-Diligence- und Portfolio-Wege laufen auf Factum Capital — unserer KI-Analyseplattform, die das analytische Fundament liefert. Agentic Mindshift erbringt die Leistung und, wo erforderlich, die zertifizierte Freigabe.',
   scoreOverview: 'Punkteübersicht',
   scoreOverviewTitle: 'Ihr Profil vs. Peer-Median',
   scoreOverviewIntro: (peer) =>
@@ -436,20 +501,25 @@ const de: PdfStrings = {
   criticalTitle: 'Wo Handeln am dringendsten ist',
   criticalIntro:
     "Die mit 'Kritisch' eingestuften Dimensionen erfordern sofortige Aufmerksamkeit. Sie liegen am weitesten unter dem Peer-Median und bremsen Ihre analytische Qualität am stärksten.",
-  criticalPill: '⚑  Kritisch',
+  criticalPill: ' Kritisch',
   quickWinActionable: 'Sofort umsetzbarer Quick Win',
   noCritical: 'Auf Basis Ihrer Scorecard wurden keine Dimensionen mit kritischer Priorität gefunden.',
+  attentionAlsoLabel: 'Erfordert ebenfalls Aufmerksamkeit',
   attentionEyebrow: 'Tiefenanalyse · Verbesserungspotenzial',
   attentionTitle: 'Dimensionen mit Verbesserungsspielraum',
   attentionIntro:
     "Die mit 'Aufmerksamkeit' eingestuften Dimensionen liegen unter dem Peer-Median, sind aber nicht akut. Mit gezieltem Handeln lassen sie sich schnell auf Niveau bringen.",
-  attentionPill: '◆  Aufmerksamkeit',
+  attentionPill: ' Aufmerksamkeit',
   quickWin: 'Quick Win',
   noAttention: 'Keine Dimensionen mit Aufmerksamkeitspriorität gefunden.',
   strongEyebrow: 'Tiefenanalyse · Stärken',
   strongTitle: 'Was Sie gut machen',
   strongIntro:
     'Diese Dimensionen sind ausreichend oder stark. Sie bilden Ihr operatives Fundament und müssen bei der KI-Implementierung gesichert werden. Auf Stärken aufzubauen ist mindestens so strategisch wie das Beheben von Schwächen.',
+  strongEyebrowAlt: 'Tiefenanalyse · Kernerkenntnisse',
+  strongTitleAlt: 'Was das für Sie bedeutet',
+  strongIntroAlt:
+    'Noch keine Dimension liegt über dem Peer-Median — genau hier liegt also das größte Potenzial. Diese Beobachtungen verbinden Ihre Werte direkt mit konkreten Geschäftsrisiken und Chancen.',
   anchoring: 'Verankerung',
   noStrong:
     "Jede Dimension fällt in die Kategorie 'Aufmerksamkeit' oder 'Kritisch' — siehe die vorherigen Seiten für die Empfehlungen.",
@@ -539,8 +609,8 @@ const de: PdfStrings = {
     `Dieser Bericht ist vertraulich und ausschließlich für ${n} bei ${c} bestimmt. Keine Weiterverbreitung ohne schriftliche Zustimmung von Agentic Mindshift Consultancy.`,
   generatedBy: (m, d) =>
     `Erstellt von ${m} am ${d}, auf Basis der Scorecard-Antworten und öffentlich verfügbarer Unternehmensinformationen. Agentic Mindshift Consultancy · KvK 99495945 · agenticmindshift.nl`,
-  priorityCritical: '⚑ Kritisch',
-  priorityAttention: '◆ Aufmerksamkeit',
+  priorityCritical: 'Kritisch',
+  priorityAttention: 'Aufmerksamkeit',
   priorityAdequate: '○ Ausreichend',
   priorityStrong: '✓ Stark',
   urgencyHigh: 'Hoch',
@@ -563,6 +633,19 @@ const es: PdfStrings = {
   track: 'Trayecto',
   weakestDims: 'Dimensiones más débiles',
   strongestDims: 'Dimensiones más fuertes',
+  percentileNote: (p) => `Más fuerte que el ${p}% de firmas comparables`,
+  routeEyebrow: 'Su ruta · Agentic Mindshift',
+  routeTitle: (n) => `Así lo convertimos en resultados, ${n}`,
+  routeIntro:
+    'Su scorecard apunta directamente a una de nuestras cuatro rutas. A continuación verá dónde está, qué ruta encaja mejor y qué ofrece en concreto — con precios transparentes.',
+  routeLadderLabel: 'Las cuatro rutas',
+  routeActiveBadge: 'SU ENCAJE',
+  routeRecommended: 'Recomendada según su scorecard',
+  routeWhatYouGet: 'Qué ofrece en concreto',
+  routePriceLabel: 'Inversión',
+  routeFactumLabel: 'Impulsado por Factum Capital',
+  routeFactumNote:
+    'Las rutas de due diligence y portfolio funcionan sobre Factum Capital — nuestra plataforma de análisis con IA que aporta el fundamento analítico. Agentic Mindshift presta el servicio y, cuando se requiere, la firma certificada.',
   scoreOverview: 'Resumen de puntuación',
   scoreOverviewTitle: 'Su perfil frente a la mediana de pares',
   scoreOverviewIntro: (peer) =>
@@ -575,20 +658,25 @@ const es: PdfStrings = {
   criticalTitle: 'Dónde la acción es más urgente',
   criticalIntro:
     "Las dimensiones marcadas como 'Crítico' requieren atención inmediata. Son las que más se alejan por debajo de la mediana de pares y suponen el mayor freno a su calidad analítica.",
-  criticalPill: '⚑  Crítico',
+  criticalPill: ' Crítico',
   quickWinActionable: 'Quick win de aplicación inmediata',
   noCritical: 'No se encontraron dimensiones con prioridad crítica según su scorecard.',
+  attentionAlsoLabel: 'También requiere atención',
   attentionEyebrow: 'Análisis en profundidad · Potencial de mejora',
   attentionTitle: 'Dimensiones con margen de mejora',
   attentionIntro:
     "Las dimensiones marcadas como 'Atención' están por debajo de la mediana de pares, pero no son agudas. Con una acción específica pueden alcanzar el nivel rápidamente.",
-  attentionPill: '◆  Atención',
+  attentionPill: ' Atención',
   quickWin: 'Quick win',
   noAttention: 'No se encontraron dimensiones con prioridad de atención.',
   strongEyebrow: 'Análisis en profundidad · Fortalezas',
   strongTitle: 'Lo que hace bien',
   strongIntro:
     'Estas dimensiones obtienen una puntuación suficiente o fuerte. Constituyen su base operativa y deben preservarse durante la implementación de la IA. Construir sobre las fortalezas es al menos tan estratégico como corregir las debilidades.',
+  strongEyebrowAlt: 'Análisis en profundidad · Ideas clave',
+  strongTitleAlt: 'Lo que esto significa para usted',
+  strongIntroAlt:
+    'Ninguna dimensión supera todavía la mediana de pares, lo que significa que aquí es donde está el mayor potencial. Estas observaciones conectan sus puntuaciones directamente con riesgos y oportunidades concretos del negocio.',
   anchoring: 'Consolidación',
   noStrong:
     "Cada dimensión cae en la categoría 'Atención' o 'Crítico' — consulte las páginas anteriores para las recomendaciones.",
@@ -678,8 +766,8 @@ const es: PdfStrings = {
     `Este informe es confidencial y está destinado exclusivamente a ${n} en ${c}. No debe distribuirse sin el consentimiento por escrito de Agentic Mindshift Consultancy.`,
   generatedBy: (m, d) =>
     `Generado por ${m} el ${d}, a partir de las respuestas de la scorecard e información de empresa públicamente disponible. Agentic Mindshift Consultancy · KvK 99495945 · agenticmindshift.nl`,
-  priorityCritical: '⚑ Crítico',
-  priorityAttention: '◆ Atención',
+  priorityCritical: 'Crítico',
+  priorityAttention: 'Atención',
   priorityAdequate: '○ Suficiente',
   priorityStrong: '✓ Fuerte',
   urgencyHigh: 'Alta',
@@ -702,6 +790,19 @@ const pt: PdfStrings = {
   track: 'Percurso',
   weakestDims: 'Dimensões mais fracas',
   strongestDims: 'Dimensões mais fortes',
+  percentileNote: (p) => `Mais forte do que ${p}% de firmas comparáveis`,
+  routeEyebrow: 'A sua rota · Agentic Mindshift',
+  routeTitle: (n) => `Como transformamos isto em resultados, ${n}`,
+  routeIntro:
+    'O seu scorecard aponta diretamente para uma das nossas quatro rotas. Abaixo vê onde está, qual a rota que melhor se adequa e o que ela oferece em concreto — com preços transparentes.',
+  routeLadderLabel: 'As quatro rotas',
+  routeActiveBadge: 'A SUA ROTA',
+  routeRecommended: 'Recomendada com base no seu scorecard',
+  routeWhatYouGet: 'O que isto oferece em concreto',
+  routePriceLabel: 'Investimento',
+  routeFactumLabel: 'Powered by Factum Capital',
+  routeFactumNote:
+    'As rotas de due diligence e portfólio funcionam na Factum Capital — a nossa plataforma de análise com IA que fornece o fundamento analítico. A Agentic Mindshift presta o serviço e, quando necessário, a validação certificada.',
   scoreOverview: 'Resumo da pontuação',
   scoreOverviewTitle: 'O seu perfil vs. mediana de pares',
   scoreOverviewIntro: (peer) =>
@@ -714,20 +815,25 @@ const pt: PdfStrings = {
   criticalTitle: 'Onde a ação é mais urgente',
   criticalIntro:
     "As dimensões marcadas como 'Crítico' exigem atenção imediata. São as que mais se afastam abaixo da mediana de pares e constituem o maior travão à sua qualidade analítica.",
-  criticalPill: '⚑  Crítico',
+  criticalPill: ' Crítico',
   quickWinActionable: 'Quick win de aplicação imediata',
   noCritical: 'Não foram encontradas dimensões com prioridade crítica com base na sua scorecard.',
+  attentionAlsoLabel: 'Também requer atenção',
   attentionEyebrow: 'Análise aprofundada · Potencial de melhoria',
   attentionTitle: 'Dimensões com margem de melhoria',
   attentionIntro:
     "As dimensões marcadas como 'Atenção' estão abaixo da mediana de pares, mas não são agudas. Com ação direcionada podem rapidamente atingir o nível.",
-  attentionPill: '◆  Atenção',
+  attentionPill: ' Atenção',
   quickWin: 'Quick win',
   noAttention: 'Não foram encontradas dimensões com prioridade de atenção.',
   strongEyebrow: 'Análise aprofundada · Pontos fortes',
   strongTitle: 'O que faz bem',
   strongIntro:
     'Estas dimensões obtêm uma pontuação suficiente ou forte. Constituem a sua base operacional e devem ser salvaguardadas durante a implementação da IA. Construir sobre os pontos fortes é, no mínimo, tão estratégico como corrigir as fraquezas.',
+  strongEyebrowAlt: 'Análise aprofundada · Conclusões-chave',
+  strongTitleAlt: 'O que isto significa para si',
+  strongIntroAlt:
+    'Nenhuma dimensão está ainda acima da mediana dos pares — o que significa que é precisamente aqui que reside o maior potencial. Estas observações ligam as suas pontuações diretamente a riscos e oportunidades concretos do negócio.',
   anchoring: 'Consolidação',
   noStrong:
     "Cada dimensão cai na categoria 'Atenção' ou 'Crítico' — consulte as páginas anteriores para as recomendações.",
@@ -817,8 +923,8 @@ const pt: PdfStrings = {
     `Este relatório é confidencial e destina-se exclusivamente a ${n} na ${c}. Não deve ser distribuído sem o consentimento por escrito da Agentic Mindshift Consultancy.`,
   generatedBy: (m, d) =>
     `Gerado por ${m} a ${d}, com base nas respostas da scorecard e em informação de empresa publicamente disponível. Agentic Mindshift Consultancy · KvK 99495945 · agenticmindshift.nl`,
-  priorityCritical: '⚑ Crítico',
-  priorityAttention: '◆ Atenção',
+  priorityCritical: 'Crítico',
+  priorityAttention: 'Atenção',
   priorityAdequate: '○ Suficiente',
   priorityStrong: '✓ Forte',
   urgencyHigh: 'Alta',
