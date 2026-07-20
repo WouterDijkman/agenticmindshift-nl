@@ -140,7 +140,7 @@
       "track_1_tag": "Deal-Doer · PE / Family Office / Unternehmer",
       "track_1_title": "Lassen Sie es für sich erledigen.",
       "track_1_body": "Wir liefern den vollständigen KI-gestützten Due Diligence & Portfolio-Auftrag zu Ihrem Dossier. Die Scorecard bestimmt, welcher Moment zuerst relevant ist.",
-      "track_1_detail": "Ab €10.000 pro Deal · oder €6.500–€8.500/Monat Portfolio-Einblick · zzgl. MwSt.",
+      "track_1_detail": "Ab €10.000 pro Deal · oder ab €6.500/Monat Portfolio-Einblick · zzgl. MwSt.",
       "track_1_cta": "Scorecard starten",
       "track_1_cta_sub": "12 Minuten · sofort Ihr Profil",
       "track_2_tag": "Berater · RA / RB / M&A-Profi",
@@ -185,7 +185,7 @@
       "row_1_label": "Eine verpasste Korrektur am Kaufpreis",
       "row_1_amount": "€2.500.000",
       "row_1_note": "0,5× bei einem €5M EBITDA-Target",
-      "row_2_label": "KI-gestützte DD · pro Deal",
+      "row_2_label": "Fundierte DD · pro Deal",
       "row_2_amount": "€10.000",
       "row_2_note": "deckt die Korrektur 250×",
       "row_3_label": "Die Scorecard",
@@ -208,7 +208,7 @@
       "sales-pitch_q": "Ist das wieder nur ein verkappter Verkaufsgespräch?",
       "sales-pitch_a": "Nein. Sie erhalten Bewertungen über sechs Dimensionen, zwei vorrangige Schwerpunkte und einen konkreten Vorschlag für die nächsten Schritte. Erst danach entscheiden Sie, ob Sie weitermachen. Kein Druck, kein Follow-up, es sei denn, Sie initiieren es selbst.",
       "investering_q": "Wie hoch sind die Investitionsstufen für die verschiedenen Aufträge?",
-      "investering_a": "Es gibt vier Wege: eine kostenlose AI Sparring-Sitzung (30 Minuten, unverbindlich), KI-Beratung & Implementierung ab €4.500 pro Auftrag oder Retainer, einen Fractional AI Officer für €1.099 pro Tag (mind. 3 Monate) und KI-gestützte Due Diligence & Portfolio ab €10.000 pro Deal oder €6.500–€8.500 pro Monat für laufende Portfolio-Intelligenz. Alle Beträge zzgl. MwSt. Siehe /werkwijze für die vollständige Erläuterung und Volumentarife.",
+      "investering_a": "Es gibt vier Wege: eine kostenlose AI Sparring-Sitzung (30 Minuten, unverbindlich), KI-Beratung & Implementierung ab €4.500 pro Auftrag oder Retainer, einen Fractional AI Officer für €1.099 pro Tag (mind. 3 Monate) und KI-gestützte Due Diligence & Portfolio ab €10.000 pro Deal oder ab €6.500 pro Monat für laufende Portfolio-Intelligenz. Alle Beträge zzgl. MwSt. Siehe /werkwijze für die vollständige Erläuterung.",
       "voorbeeld_q": "Was, wenn ich die Scorecard nicht ausfüllen, aber das Berichtsformat sehen möchte?",
       "voorbeeld_a": "Senden Sie eine Nachricht über LinkedIn oder E-Mail. Wir senden Ihnen dann einen anonymisierten Musterbericht."
     }
@@ -358,20 +358,10 @@
       "badge": "Pro Deal oder fortlaufend",
       "title": "KI-gestützte Due Diligence & Portfolio",
       "situation": "Sie führen M&A-Transaktionen durch oder verwalten ein Portfolio und möchten alle DD-Dimensionen — Financial, Tax, Deal Economics, IBR/WHOA und Portfolio-Health — konsistent mit KI-gestützter Analyse auf einer gemeinsamen Akte begründen.",
-      "price_note": "Oder €6.500 – €8.500 / Monat für fortlaufenden Portfolio-Einblick",
+      "price_note": "Oder ab €6.500 / Monat für fortlaufenden Portfolio-Einblick",
       "cta": "Kennenlernen planen →",
-      "variants_caption": "Mehrere Deals? Volumentarife:",
-      "variant_1_label": "1 Deal",
-      "variant_1_unit": "Einzeldeal",
-      "variant_2_label": "5 Deals",
-      "variant_2_unit": "€8.500 / Deal",
-      "variant_3_label": "10 Deals",
-      "variant_3_unit": "€8.000 / Deal",
       "powered_by_tagline": "KI-gestützte Analyse über alle Factum-Module",
-      "price": "Ab €10.000 pro Deal",
-      "variant_1_price": "€10.000",
-      "variant_2_price": "€42.500",
-      "variant_3_price": "€80.000"
+      "price": "Ab €10.000 pro Deal"
     },
     "pricing_note": "* Alle Beträge zzgl. MwSt. Erstes Kennenlerngespräch stets unverbindlich.",
     "risk": {
@@ -390,8 +380,8 @@
       "q4": "Sind wir an eine lange Laufzeit gebunden?",
       "a4": "Sparring, Consultancy und DD sind pro Auftrag. Fractional AI Officer: mindestens 3 Monate, weil der Rhythmus Zeit braucht.",
       "q5": "Mehrere Deals gleichzeitig?",
-      "a5": "Volumentarife: 5 Deals €42.500 (–15%), 10 Deals €80.000 (–20%). Skaleneffekte bei Einarbeitungszeit und Plattform-Onboarding.",
-      "investering_a": "Es gibt vier Wege: eine kostenlose AI Sparring-Sitzung (30 Minuten, unverbindlich), KI-Beratung & Implementierung ab €4.500 pro Auftrag oder Retainer, einen Fractional AI Officer für €1.099 pro Tag (mind. 3 Monate) und KI-gestützte Due Diligence & Portfolio ab €10.000 pro Deal oder €6.500–€8.500 pro Monat. Alle Beträge zzgl. MwSt. Siehe /werkwijze für die vollständige Erläuterung."
+      "a5": "Ja. Für mehrere Deals gelten Staffeltarife — diese stimmen wir beim Kennenlernen auf Ihren Dealflow ab. Der Skaleneffekt liegt in Einarbeitungszeit und Plattform-Onboarding.",
+      "investering_a": "Es gibt vier Wege: eine kostenlose AI Sparring-Sitzung (30 Minuten, unverbindlich), KI-Beratung & Implementierung ab €4.500 pro Auftrag oder Retainer, einen Fractional AI Officer für €1.099 pro Tag (mind. 3 Monate) und KI-gestützte Due Diligence & Portfolio ab €10.000 pro Deal oder ab €6.500 pro Monat. Alle Beträge zzgl. MwSt. Siehe /werkwijze für die vollständige Erläuterung."
     },
     "cta": {
       "eyebrow": "Hier beginnen",
@@ -458,7 +448,7 @@
       "route_2_label": "Über Agentic Mindshift: KI-gestützte Due Diligence & Portfolio",
       "route_2_title": "Die Dienstleistung",
       "route_2_body": "Agentic Mindshift führt den vollständigen Auftrag für Sie durch, mit Factum als analytischer Plattform. Zu jedem Zeitpunkt verbindet Agentic Mindshift die richtigen zertifizierten Fachleute, die auf der gemeinsamen Akte aufbauen und wo nötig formal unterschreiben.",
-      "route_2_detail": "Ab €10.000 Investition pro Deal · Oder €6.500 – €8.500 / Monat Portfolio-Einblick · Zzgl. MwSt.",
+      "route_2_detail": "Ab €10.000 Investition pro Deal · Oder ab €6.500 / Monat Portfolio-Einblick · Zzgl. MwSt.",
       "route_2_link": "Arbeitsweise & Investition ansehen →"
     },
     "how_it_works": {
@@ -810,7 +800,7 @@
       "A": {
         "offerName": "KI-gestützte Due Diligence & Portfolio",
         "interpretation": "Ihre Punktzahl bei Analytical Quality beträgt {score} von 20 Punkten. Dies ist die Dimension, in der die meisten Unternehmen im europäischen Lower-Mid-Market strukturell Rendite verlieren — in der Regel unbewusst. Ihr MBR-Zyklus läuft, aber Frühwarnungen fehlen: Die Varianzanalyse ist nicht tief genug, um gegenzusteuern, bevor ein Quartal verloren geht. Der Portfolio-Intelligence-Dienst — über Factum Capital (unsere KI-Plattform) — ist speziell für dieses Szenario entwickelt.",
-        "price": "€6.500 – €8.500 / Monat · mind. 3 Monate · zzgl. MwSt.",
+        "price": "Ab €6.500 / Monat · mind. 3 Monate · zzgl. MwSt.",
         "interventions": {
           "0": {
             "title": "Neugestaltung Ihrer MBR-Berichtsstruktur",
@@ -886,7 +876,7 @@
       "E": {
         "offerName": "KI-gestützte Due Diligence & Portfolio",
         "interpretation": "Ihre Punktzahl bei Analytical Quality beträgt {score} von 20 Punkten. Ihre Finanzierungs- oder Deal-Unterlagen sind noch nicht konsequent auf allen relevanten Dimensionen aufgebaut. Dies führt zu längeren Laufzeiten, unnötigen Überarbeitungsrunden und einer schwächeren Verhandlungsposition. Der Finanzierungsmemo-Dienst — über Factum Capital — liefert das analytische Fundament und koppelt zertifizierte Berater für die formelle Genehmigung.",
-        "price": "Ab €10.000 pro Deal · oder €6.500–€8.500/Monat Portfolio-Intelligence · zzgl. MwSt.",
+        "price": "Ab €10.000 pro Deal · oder ab €6.500/Monat Portfolio-Intelligence · zzgl. MwSt.",
         "interventions": {
           "0": {
             "title": "Finanzierungsmemo auf festen Dimensionen strukturieren",

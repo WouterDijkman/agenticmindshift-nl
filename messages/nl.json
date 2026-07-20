@@ -140,7 +140,7 @@
       "track_1_tag": "Deal-doer · PE / Family office / Ondernemer",
       "track_1_title": "Laat het voor u doen.",
       "track_1_body": "Wij leveren het volledige AI-gedreven Due Diligence & Portfolio-traject op uw dossier. De scorecard bepaalt welk moment als eerste relevant is.",
-      "track_1_detail": "Vanaf €10.000 per deal · of €6.500–€8.500/mnd portefeuille-inzicht · excl. btw",
+      "track_1_detail": "Vanaf €10.000 per deal · of vanaf €6.500/mnd portefeuille-inzicht · excl. btw",
       "track_1_cta": "Start de Scorecard",
       "track_1_cta_sub": "12 minuten · direct uw profiel",
       "track_2_tag": "Adviseur · RA / RB / M&A-professional",
@@ -185,7 +185,7 @@
       "row_1_label": "Eén gemiste correctie op de overnameprijs",
       "row_1_amount": "€2.500.000",
       "row_1_note": "0,5× op een €5M EBITDA-target",
-      "row_2_label": "AI-gedreven DD · per deal",
+      "row_2_label": "Onderbouwde DD · per deal",
       "row_2_amount": "€10.000",
       "row_2_note": "dekt de correctie 250×",
       "row_3_label": "De Scorecard",
@@ -208,7 +208,7 @@
       "sales-pitch_q": "Is dit weer een verkapte sales pitch?",
       "sales-pitch_a": "Nee. U ontvangt scores op zes dimensies, twee prioritaire aandachtspunten en een concreet vervolgvoorstel. Pas daarna beslist u of u verdergaat. Geen druk, geen follow-up tenzij u dat zelf initieert.",
       "investering_q": "Wat zijn de investeringsniveaus voor de verschillende trajecten?",
-      "investering_a": "Er zijn vier routes: een gratis AI Sparring Sessie (30 minuten, vrijblijvend), AI-advies & Implementatie vanaf €4.500 per traject of retainer, een Fractional AI Officer voor €1.099 per dag (min. 3 maanden), en AI-gedreven Due Diligence & Portfolio vanaf €10.000 per deal of €6.500–€8.500 per maand voor doorlopende portfolio-intelligence. Alle bedragen exclusief btw. Zie /werkwijze voor de volledige toelichting en volumetarieven.",
+      "investering_a": "Er zijn vier routes: een gratis AI Sparring Sessie (30 minuten, vrijblijvend), AI-advies & Implementatie vanaf €4.500 per traject of retainer, een Fractional AI Officer voor €1.099 per dag (min. 3 maanden), en AI-gedreven Due Diligence & Portfolio vanaf €10.000 per deal of vanaf €6.500 per maand voor doorlopende portfolio-intelligence. Alle bedragen exclusief btw. Zie /werkwijze voor de volledige toelichting.",
       "voorbeeld_q": "Wat als ik de Scorecard niet wil invullen, maar wel het rapport-format wil zien?",
       "voorbeeld_a": "Stuur een bericht via LinkedIn of e-mail. Wij sturen dan een geanonimiseerd voorbeeldrapport toe."
     }
@@ -358,20 +358,10 @@
       "badge": "Per deal of doorlopend",
       "title": "AI-gedreven Due Diligence & Portfolio",
       "situation": "U doet M&A-deals of beheert een portefeuille en wilt álle DD-dimensies — financial, tax, deal economics, IBR/WHOA en portfolio-health — consistent onderbouwd met AI-gedreven analyse op één gedeeld dossier.",
-      "price_note": "Of €6.500 – €8.500 / maand voor doorlopend portefeuille-inzicht",
+      "price_note": "Of vanaf €6.500 / maand voor doorlopend portefeuille-inzicht",
       "cta": "Plan een kennismaking →",
-      "variants_caption": "Meerdere deals? Volumetarieven:",
-      "variant_1_label": "1 deal",
-      "variant_1_unit": "losse deal",
-      "variant_2_label": "5 deals",
-      "variant_2_unit": "€8.500 / deal",
-      "variant_3_label": "10 deals",
-      "variant_3_unit": "€8.000 / deal",
       "powered_by_tagline": "AI-gedreven analyse over alle Factum-modules",
-      "price": "Vanaf €10.000 per deal",
-      "variant_1_price": "€10.000",
-      "variant_2_price": "€42.500",
-      "variant_3_price": "€80.000"
+      "price": "Vanaf €10.000 per deal"
     },
     "pricing_note": "* Alle bedragen exclusief btw. Eerste kennismaking altijd vrijblijvend.",
     "risk": {
@@ -390,8 +380,8 @@
       "q4": "Zitten we vast aan een lange looptijd?",
       "a4": "Sparring, Consultancy en DD zijn per opdracht. Fractional AI Officer: minimaal 3 maanden, omdat het ritme tijd nodig heeft.",
       "q5": "Meerdere deals tegelijk?",
-      "a5": "Volumetarieven: 5 deals €42.500 (–15%), 10 deals €80.000 (–20%). Schaalvoordeel in inwerktijd en platform-onboarding.",
-      "investering_a": "Er zijn vier routes: een gratis AI Sparring Sessie (30 minuten, vrijblijvend), AI-advies & Implementatie vanaf €4.500 per traject of retainer, een Fractional AI Officer voor €1.099 per dag (min. 3 maanden), en AI-gedreven Due Diligence & Portfolio vanaf €10.000 per deal of €6.500–€8.500 per maand voor doorlopende portfolio-intelligence. Alle bedragen exclusief btw. Zie /werkwijze voor de volledige toelichting."
+      "a5": "Ja. Voor meerdere deals gelden staffeltarieven — die stemmen we af op uw dealflow tijdens de kennismaking. Het schaalvoordeel zit in inwerktijd en platform-onboarding.",
+      "investering_a": "Er zijn vier routes: een gratis AI Sparring Sessie (30 minuten, vrijblijvend), AI-advies & Implementatie vanaf €4.500 per traject of retainer, een Fractional AI Officer voor €1.099 per dag (min. 3 maanden), en AI-gedreven Due Diligence & Portfolio vanaf €10.000 per deal of vanaf €6.500 per maand voor doorlopende portfolio-intelligence. Alle bedragen exclusief btw. Zie /werkwijze voor de volledige toelichting."
     },
     "cta": {
       "eyebrow": "Begin hier",
@@ -458,7 +448,7 @@
       "route_2_label": "Via Agentic Mindshift: AI-gedreven Due Diligence & Portfolio",
       "route_2_title": "De Dienstverlening",
       "route_2_body": "Agentic Mindshift voert het volledige traject voor u uit, met Factum als analytisch platform. Op elk moment koppelt Agentic Mindshift de juiste gecertificeerde professionals die op het gedeelde dossier verder bouwen en waar nodig formeel tekenen.",
-      "route_2_detail": "Vanaf €10.000 investering per deal · Of €6.500 – €8.500 / maand portefeuille-inzicht · Excl. btw",
+      "route_2_detail": "Vanaf €10.000 investering per deal · Of vanaf €6.500 / maand portefeuille-inzicht · Excl. btw",
       "route_2_link": "Bekijk werkwijze & investering →"
     },
     "how_it_works": {
@@ -810,7 +800,7 @@
       "A": {
         "offerName": "AI-gedreven Due Diligence & Portfolio",
         "interpretation": "Uw score op Analytical Quality is {score} van 20 punten. Dit is de dimensie waar de meeste partijen in de Europese lower-mid market structureel rendement verliezen — doorgaans onbewust. Uw MBR-cyclus draait, maar vroegtijdige signalering ontbreekt: variantie-analyse gaat niet diep genoeg om bij te sturen voordat een kwartaal verloren is. De portfolio-intelligence dienst — uitgevoerd via Factum Capital (ons AI-platform) — is specifiek gebouwd voor dit scenario.",
-        "price": "€6.500 – €8.500 / maand · min. 3 maanden · excl. btw",
+        "price": "Vanaf €6.500 / maand · min. 3 maanden · excl. btw",
         "interventions": {
           "0": {
             "title": "Herontwerp uw MBR-rapportagestructuur",
@@ -886,7 +876,7 @@
       "E": {
         "offerName": "AI-gedreven Due Diligence & Portfolio",
         "interpretation": "Uw score op Analytical Quality is {score} van 20 punten. Uw financierings- of deal-dossiers zijn nog niet consequent op alle relevante dimensies opgebouwd. Dit leidt tot langere doorlooptijden, onnodige herzieningsronden en een minder sterke onderhandelingspositie. De financieringsmemo-dienst — uitgevoerd via Factum Capital — levert het analytisch fundament en koppelt gecertificeerde adviseurs die formeel ondertekenen waar vereist.",
-        "price": "Vanaf €10.000 per deal · of €6.500–€8.500/mnd portfolio-intelligence · excl. btw",
+        "price": "Vanaf €10.000 per deal · of vanaf €6.500/mnd portfolio-intelligence · excl. btw",
         "interventions": {
           "0": {
             "title": "Structureer uw financieringsmemo op vaste dimensies",

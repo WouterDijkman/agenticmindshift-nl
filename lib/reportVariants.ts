@@ -41,7 +41,7 @@ export const variants: Record<VariantId, VariantContent> = {
         body: 'Tien minuten per portfoliobedrijf per maand. Het ritme is belangrijker dan de techniek.',
       },
     ],
-    price: '€6.500 – €8.500 investering per maand · minimaal 3 maanden · excl. btw',
+    price: 'Vanaf €6.500 investering per maand · minimaal 3 maanden · excl. btw',
   },
   B: {
     id: 'B',
@@ -83,7 +83,7 @@ export const variants: Record<VariantId, VariantContent> = {
         body: 'Twee leading indicators per bedrijf die signaleren of een diepere doorlichting nodig is — vóór het te laat is.',
       },
     ],
-    price: '€3.500 – €5.500 investering per maand · minimaal 3 maanden · excl. btw',
+    price: 'Vanaf €3.500 investering per maand · minimaal 3 maanden · excl. btw',
   },
   D: {
     id: 'D',
@@ -125,7 +125,7 @@ export const variants: Record<VariantId, VariantContent> = {
         body: 'Een bank-proof presentatie vereist een formele financieel adviseur of accountant. Bouw het dossier zo op dat die adviseur in twee uur kan instappen — niet in twee weken.',
       },
     ],
-    price: 'Vanaf €10.000 investering per deal · of €6.500 – €8.500 per maand portfolio-intelligence · excl. btw',
+    price: 'Vanaf €10.000 investering per deal · of vanaf €6.500 per maand portfolio-intelligence · excl. btw',
   },
   F: {
     id: 'F',

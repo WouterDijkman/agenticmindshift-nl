@@ -32,13 +32,6 @@ export async function generateMetadata(
   };
 }
 
-interface DealVariant {
-  label: string;
-  price: string;
-  unit: string;
-  discount?: string;
-}
-
 interface PoweredBy {
   label: string;
   href: string;
@@ -54,8 +47,6 @@ interface Offering {
   ctaLabel: string;
   ctaHref: string;
   featured?: boolean;
-  variants?: DealVariant[];
-  variantsCaption?: string;
   poweredBy?: PoweredBy;
   Icon: SketchIconComponent;
 }
@@ -105,12 +96,6 @@ export default async function WerkwijzePage(
       priceNote: t('offering_4.price_note'),
       ctaLabel: t('offering_4.cta'),
       ctaHref: 'https://cal.com/wwdijkman/intake-call',
-      variantsCaption: t('offering_4.variants_caption'),
-      variants: [
-        { label: t('offering_4.variant_1_label'), price: t('offering_4.variant_1_price'), unit: t('offering_4.variant_1_unit') },
-        { label: t('offering_4.variant_2_label'), price: t('offering_4.variant_2_price'), unit: t('offering_4.variant_2_unit'), discount: '–15%' },
-        { label: t('offering_4.variant_3_label'), price: t('offering_4.variant_3_price'), unit: t('offering_4.variant_3_unit'), discount: '–20%' },
-      ],
       poweredBy: {
         label: 'Factum Capital',
         href: '/factum-capital',
@@ -321,90 +306,6 @@ export default async function WerkwijzePage(
                 >
                   {o.situation}
                 </p>
-
-                {o.variants && (
-                  <div
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: '6px',
-                      paddingTop: '4px',
-                    }}
-                  >
-                    {o.variantsCaption && (
-                      <p
-                        style={{
-                          fontSize: '10px',
-                          fontWeight: 700,
-                          letterSpacing: '0.15em',
-                          textTransform: 'uppercase',
-                          color: o.featured ? 'rgba(247,242,235,0.6)' : 'var(--text-muted)',
-                          margin: 0,
-                          marginBottom: '4px',
-                        }}
-                      >
-                        {o.variantsCaption}
-                      </p>
-                    )}
-                    {o.variants.map((v) => (
-                      <div
-                        key={v.label}
-                        style={{
-                          display: 'grid',
-                          gridTemplateColumns: '70px 1fr auto',
-                          alignItems: 'baseline',
-                          gap: '12px',
-                          padding: '8px 10px',
-                          background: o.featured ? 'rgba(247,242,235,0.06)' : 'var(--bg-secondary)',
-                          border: `1px solid ${o.featured ? 'rgba(247,242,235,0.12)' : 'var(--border-subtle)'}`,
-                          fontSize: '0.8125rem',
-                        }}
-                      >
-                        <span
-                          style={{
-                            fontWeight: 700,
-                            color: o.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
-                            letterSpacing: '-0.005em',
-                          }}
-                        >
-                          {v.label}
-                        </span>
-                        <span
-                          style={{
-                            color: o.featured ? 'rgba(247,242,235,0.7)' : 'var(--text-muted)',
-                            fontSize: '0.75rem',
-                          }}
-                        >
-                          {v.unit}
-                        </span>
-                        <span
-                          style={{
-                            fontWeight: 700,
-                            color: o.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
-                            fontSize: '0.9375rem',
-                            letterSpacing: '-0.01em',
-                          }}
-                        >
-                          {v.price}
-                          {v.discount && (
-                            <span
-                              style={{
-                                marginLeft: '6px',
-                                color: 'var(--accent-cta)',
-                                fontSize: '0.6875rem',
-                                fontWeight: 800,
-                                letterSpacing: '0.04em',
-                                fontFamily: 'inherit',
-                              }}
-                            >
-                              {v.discount}
-                            </span>
-                          )}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                )}
 
                 <div
                   style={{

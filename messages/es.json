@@ -140,7 +140,7 @@
       "track_1_tag": "Deal-doer · PE / Family office / Empresario",
       "track_1_title": "Deje que lo hagan por usted.",
       "track_1_body": "Entregamos el proyecto completo de Due Diligence & Portfolio impulsada por IA sobre su expediente.",
-      "track_1_detail": "Desde €10.000 por operación · o €6.500–€8.500/mes de visión de cartera · IVA no incl.",
+      "track_1_detail": "Desde €10.000 por operación · o desde €6.500/mes de visión de cartera · IVA no incl.",
       "track_1_cta": "Iniciar el Scorecard",
       "track_1_cta_sub": "12 minutos · su perfil al instante",
       "track_2_tag": "Asesor · RA / RB / profesional de M&A",
@@ -185,7 +185,7 @@
       "row_1_label": "Una corrección no aplicada al precio de adquisición",
       "row_1_amount": "€2.500.000",
       "row_1_note": "0,5× en un target de €5M de EBITDA",
-      "row_2_label": "DD impulsada por IA · por operación",
+      "row_2_label": "DD fundamentada · por operación",
       "row_2_amount": "€10.000",
       "row_2_note": "cubre la corrección 250×",
       "row_3_label": "El Scorecard",
@@ -208,7 +208,7 @@
       "sales-pitch_q": "¿Es esto otro discurso de venta encubierto?",
       "sales-pitch_a": "No. Recibe puntuaciones en seis dimensiones, dos puntos prioritarios y una propuesta concreta de siguiente paso. Solo después decide si continúa. Sin presión, sin seguimiento salvo que usted lo inicie.",
       "investering_q": "¿Cuáles son los niveles de inversión para los distintos proyectos?",
-      "investering_a": "Hay cuatro rutas: una AI Sparring Session gratuita (30 minutos, sin compromiso), Asesoría e Implementación de IA desde €4.500 por proyecto o retainer, un Fractional AI Officer por €1.099 al día (mín. 3 meses), y Due Diligence & Portfolio impulsada por IA desde €10.000 por operación o €6.500–€8.500 al mes para inteligencia de cartera continua. Todos los importes sin IVA. Consulte /werkwijze para la explicación completa y las tarifas por volumen.",
+      "investering_a": "Hay cuatro rutas: una AI Sparring Session gratuita (30 minutos, sin compromiso), Asesoría e Implementación de IA desde €4.500 por proyecto o retainer, un Fractional AI Officer por €1.099 al día (mín. 3 meses), y Due Diligence & Portfolio impulsada por IA desde €10.000 por operación o desde €6.500 al mes para inteligencia de cartera continua. Todos los importes sin IVA. Consulte /werkwijze para la explicación completa.",
       "voorbeeld_q": "¿Y si no quiero rellenar el Scorecard pero sí ver el formato del informe?",
       "voorbeeld_a": "Envíe un mensaje por LinkedIn o correo. Le enviaremos entonces un informe de muestra anonimizado."
     }
@@ -358,20 +358,10 @@
       "badge": "Por operación o continuo",
       "title": "Due Diligence & Portfolio impulsada por IA",
       "situation": "Realiza operaciones de M&A o gestiona una cartera y quiere que todas las dimensiones de la DD — financiero, fiscal, deal economics, IBR/WHOA y portfolio health — estén sistemáticamente respaldadas por análisis impulsado por IA en un expediente compartido.",
-      "price_note": "O €6.500 – €8.500 / mes para inteligencia de cartera continua",
+      "price_note": "O desde €6.500 / mes para inteligencia de cartera continua",
       "cta": "Programar una llamada →",
-      "variants_caption": "¿Varias operaciones? Tarifas por volumen:",
-      "variant_1_label": "1 operación",
-      "variant_1_unit": "operación individual",
-      "variant_2_label": "5 operaciones",
-      "variant_2_unit": "€8.500 / operación",
-      "variant_3_label": "10 operaciones",
-      "variant_3_unit": "€8.000 / operación",
       "powered_by_tagline": "Análisis impulsado por IA sobre todos los módulos Factum",
-      "price": "Desde €10.000 por deal",
-      "variant_1_price": "€10.000",
-      "variant_2_price": "€42.500",
-      "variant_3_price": "€80.000"
+      "price": "Desde €10.000 por deal"
     },
     "pricing_note": "* Todos los importes sin IVA. Primera llamada siempre sin compromiso.",
     "risk": {
@@ -390,8 +380,8 @@
       "q4": "¿Estamos atados a un largo plazo?",
       "a4": "Sparring, Consultancy y DD son por encargo. Fractional AI Officer: mínimo 3 meses, porque el ritmo necesita tiempo.",
       "q5": "¿Varias operaciones a la vez?",
-      "a5": "Tarifas por volumen: 5 operaciones €42.500 (–15%), 10 operaciones €80.000 (–20%). Ahorro de escala en tiempo de onboarding y plataforma.",
-      "investering_a": "Hay cuatro rutas: una AI Sparring Session gratuita (30 minutos, sin compromiso), Asesoría e Implementación de IA desde €4.500 por proyecto o retainer, un Fractional AI Officer por €1.099 al día (mín. 3 meses), y Due Diligence & Portfolio impulsada por IA desde €10.000 por deal o €6.500–€8.500 al mes. Todos los importes sin IVA. Consulte /werkwijze para la explicación completa."
+      "a5": "Sí. Para varias operaciones se aplican tarifas escalonadas — las ajustamos a su dealflow durante la llamada. La ventaja de escala está en el tiempo de onboarding y la plataforma.",
+      "investering_a": "Hay cuatro rutas: una AI Sparring Session gratuita (30 minutos, sin compromiso), Asesoría e Implementación de IA desde €4.500 por proyecto o retainer, un Fractional AI Officer por €1.099 al día (mín. 3 meses), y Due Diligence & Portfolio impulsada por IA desde €10.000 por deal o desde €6.500 al mes. Todos los importes sin IVA. Consulte /werkwijze para la explicación completa."
     },
     "cta": {
       "eyebrow": "Empiece aquí",
@@ -458,7 +448,7 @@
       "route_2_label": "Vía Agentic Mindshift: Due Diligence & Portfolio impulsada por IA",
       "route_2_title": "El Servicio",
       "route_2_body": "Agentic Mindshift ejecuta el proyecto completo para usted, con Factum como plataforma analítica. En cada momento, Agentic Mindshift conecta los profesionales certificados adecuados que construyen sobre el expediente compartido y firman formalmente donde sea necesario.",
-      "route_2_detail": "Desde €10.000 de inversión por operación · O €6.500 – €8.500 / mes inteligencia de cartera · Sin IVA",
+      "route_2_detail": "Desde €10.000 de inversión por operación · O desde €6.500 / mes inteligencia de cartera · Sin IVA",
       "route_2_link": "Ver metodología e inversión →"
     },
     "how_it_works": {
@@ -810,7 +800,7 @@
       "A": {
         "offerName": "Due Diligence & Portfolio impulsada por IA",
         "interpretation": "Su puntuación en Analytical Quality es {score} de 20 puntos. Esta es la dimensión donde la mayoría de las firmas del mercado lower-mid holandés pierden rentabilidad de forma estructural, generalmente sin notarlo. Su ciclo MBR funciona, pero falta la alerta temprana: el análisis de varianza no va suficientemente profundo para corregir el rumbo antes de perder un trimestre. El servicio de inteligencia de cartera — entregado a través de Factum Capital — está diseñado específicamente para este escenario.",
-        "price": "€6.500 – €8.500 / mes · mín. 3 meses · excl. IVA",
+        "price": "Desde €6.500 / mes · mín. 3 meses · excl. IVA",
         "interventions": {
           "0": {
             "title": "Rediseñe su estructura de informes MBR",
@@ -886,7 +876,7 @@
       "E": {
         "offerName": "Due Diligence & Portfolio impulsada por IA",
         "interpretation": "Su puntuación en Analytical Quality es {score} de 20 puntos. Sus expedientes de financiación o deal aún no están estructurados de forma consistente en todas las dimensiones relevantes. Esto genera plazos más largos, rondas de revisión innecesarias y una posición negociadora más débil. El servicio de memo de financiación — a través de Factum Capital — proporciona la base analítica y conecta a los asesores certificados que firman formalmente donde se requiere.",
-        "price": "Desde €10.000 por deal · o €6.500–€8.500/mes portfolio intelligence · excl. IVA",
+        "price": "Desde €10.000 por deal · o desde €6.500/mes portfolio intelligence · excl. IVA",
         "interventions": {
           "0": {
             "title": "Estructure su memo de financiación en dimensiones fijas",
