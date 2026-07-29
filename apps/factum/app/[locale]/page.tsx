@@ -5,7 +5,7 @@ import { pageMetadata } from '@/lib/pageMetadata';
 import { DISCIPLINE_COUNT, MODULE_COUNT, VERTICAL_COUNT } from '@/lib/site';
 import Hero from '@/components/Hero';
 import Reveal from '@/components/Reveal';
-import { Section, SectionHeader } from '@/components/Section';
+import { Section, SectionHeader, SubHeader } from '@/components/Section';
 import FindingSchema from '@/components/FindingSchema';
 import Pipeline from '@/components/Pipeline';
 import VerticalIndex from '@/components/VerticalIndex';
@@ -51,31 +51,56 @@ export default async function HomePage({
         footnote={t('hero.footnote')}
       />
 
-      {/* The taste of the product comes before the second ask. */}
+      {/* The problem, then the artifact that answers it — one movement, one section. */}
       <Section id="anatomy">
+        <Reveal>
+          <span className="eyebrow eyebrow-accent" style={{ marginBottom: 22 }}>
+            {t('problem.eyebrow')}
+          </span>
+          <h2 className="type-h2" style={{ maxWidth: '20ch' }}>
+            {t('problem.title')}
+          </h2>
+          <p className="type-lead measure" style={{ marginTop: 28 }}>
+            {t('problem.lead')}
+          </p>
+        </Reveal>
+
         <div
+          className="rule-grid stagger"
           style={{
-            display: 'grid',
-            gap: 'clamp(32px, 5vw, 72px)',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))',
-            alignItems: 'start'
+            marginTop: 'clamp(32px, 4.5vw, 56px)',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))'
           }}
         >
-          <SectionHeader
+          {(t.raw('problem.points') as { title: string; body: string }[]).map((point) => (
+            <div key={point.title}>
+              <Reveal>
+                <h3 className="type-h4" style={{ marginBottom: 10 }}>
+                  {point.title}
+                </h3>
+                <p className="type-small">{point.body}</p>
+              </Reveal>
+            </div>
+          ))}
+        </div>
+
+        {/* The artifact that answers the asymmetry above. */}
+        <div className="split-grid movement">
+          <SubHeader
             eyebrow={t('schema.eyebrow')}
             title={t('schema.title')}
             lead={t('schema.lead')}
           >
-            <p className="type-body" style={{ marginTop: 20 }}>
+            <p className="type-body" style={{ marginTop: 16 }}>
               {t('schema.body')}
             </p>
-            <div style={{ marginTop: 28 }}>
+            <div style={{ marginTop: 24 }}>
               <Link href="/platform" className="link-quiet">
                 {t('schema.link')}
                 <ArrowRight />
               </Link>
             </div>
-          </SectionHeader>
+          </SubHeader>
 
           <Reveal delay={80}>
             <FindingSchema
@@ -98,38 +123,6 @@ export default async function HomePage({
               ]}
             />
           </Reveal>
-        </div>
-      </Section>
-
-      {/* The problem, in the owner's own terms. */}
-      <Section width="medium">
-        <Reveal>
-          <span className="eyebrow eyebrow-accent" style={{ marginBottom: 22 }}>
-            {t('problem.eyebrow')}
-          </span>
-          <h2 className="type-h2" style={{ maxWidth: '20ch' }}>
-            {t('problem.title')}
-          </h2>
-          <p className="type-lead measure" style={{ marginTop: 28 }}>
-            {t('problem.lead')}
-          </p>
-        </Reveal>
-
-        <div
-          className="rule-grid"
-          style={{
-            marginTop: 'clamp(36px, 5vw, 64px)',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))'
-          }}
-        >
-          {(t.raw('problem.points') as { title: string; body: string }[]).map((point) => (
-            <div key={point.title}>
-              <h3 className="type-h4" style={{ marginBottom: 10 }}>
-                {point.title}
-              </h3>
-              <p className="type-small">{point.body}</p>
-            </div>
-          ))}
         </div>
       </Section>
 
@@ -169,6 +162,33 @@ export default async function HomePage({
           </div>
 
           <Pipeline stages={t.raw('pipeline.stages') as { title: string; body: string }[]} />
+        </div>
+
+        {/* Governance lives here because the heading says where it lives: in the pipeline. */}
+        <div className="split-grid movement">
+          <SubHeader
+            eyebrow={t('trust.eyebrow')}
+            title={t('trust.title')}
+            lead={t('trust.lead')}
+          >
+            <div style={{ marginTop: 22 }}>
+              <Link href="/governance" className="link-quiet">
+                {t('trust.link')}
+                <ArrowRight />
+              </Link>
+            </div>
+          </SubHeader>
+
+          <dl className="stagger" style={{ margin: 0 }}>
+            {(s.raw('governancePoints') as { title: string; body: string }[]).map((point) => (
+              <Reveal key={point.title} className="hairline-top" style={{ paddingBlock: 16 }}>
+                <dt className="type-h4">{point.title}</dt>
+                <dd className="type-small" style={{ margin: '8px 0 0' }}>
+                  {point.body}
+                </dd>
+              </Reveal>
+            ))}
+          </dl>
         </div>
       </Section>
 
@@ -273,17 +293,16 @@ export default async function HomePage({
             <ArrowRight />
           </Link>
         </Reveal>
-      </Section>
 
-      {/* Where in the cycle this lands. */}
-      <Section width="medium">
-        <SectionHeader
+        {/* Where in the cycle the same engagement lands. */}
+        <SubHeader
+          className="movement"
           eyebrow={t('cycle.eyebrow')}
           title={t('cycle.title')}
           lead={t('cycle.lead')}
         />
 
-        <ol style={{ listStyle: 'none', margin: 'clamp(32px, 4vw, 48px) 0 0', padding: 0 }}>
+        <ol style={{ listStyle: 'none', margin: 'clamp(24px, 3vw, 36px) 0 0', padding: 0 }}>
           {(t.raw('cycle.stages') as { title: string; body: string }[]).map((stage, i) => (
             <Reveal key={stage.title} as="li" delay={i * 60} className="hairline-top">
               <div className="stage-row">
@@ -304,44 +323,6 @@ export default async function HomePage({
             {t('cycle.note')}
           </p>
         </Reveal>
-      </Section>
-
-      {/* Trust. */}
-      <Section width="medium">
-        <div
-          style={{
-            display: 'grid',
-            gap: 'clamp(28px, 4vw, 64px)',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
-            alignItems: 'start'
-          }}
-        >
-          <SectionHeader
-            eyebrow={t('trust.eyebrow')}
-            title={t('trust.title')}
-            lead={t('trust.lead')}
-          >
-            <div style={{ marginTop: 28 }}>
-              <Link href="/governance" className="link-quiet">
-                {t('trust.link')}
-                <ArrowRight />
-              </Link>
-            </div>
-          </SectionHeader>
-
-          <Reveal delay={60}>
-            <dl style={{ margin: 0 }}>
-              {(s.raw('governancePoints') as { title: string; body: string }[]).map((point) => (
-                <div key={point.title} className="hairline-top" style={{ paddingBlock: 18 }}>
-                  <dt className="type-h4">{point.title}</dt>
-                  <dd className="type-small" style={{ margin: '8px 0 0' }}>
-                    {point.body}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </Reveal>
-        </div>
       </Section>
 
       <CtaBand
