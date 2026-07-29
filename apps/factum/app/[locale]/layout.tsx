@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { fontVariables } from '@/lib/fonts';
 import { getAlternates } from '@/lib/hreflang';
+import { organizationSchema } from '@/lib/jsonld';
 import { SITE_URL } from '@/lib/site';
 import SiteHeader from '@/components/SiteHeader';
 import SiteFooter from '@/components/SiteFooter';
@@ -42,6 +43,7 @@ export async function generateMetadata({
       locale,
       url: `${SITE_URL}/${locale}`
     },
+    twitter: { card: 'summary_large_image' },
     robots: { index: true, follow: true }
   };
 }
@@ -61,10 +63,17 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'a11y' });
+  const meta = await getTranslations({ locale, namespace: 'meta' });
 
   return (
     <html lang={locale} className={fontVariables}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema(locale, meta('home.description')))
+          }}
+        />
         {/* .reveal starts at opacity 0 and is armed by JS; without it the page is blank below the fold. */}
         <noscript>
           <style>{'.reveal{opacity:1!important;transform:none!important}'}</style>

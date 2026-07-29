@@ -9,7 +9,8 @@ const PATHS = [
   { path: '/governance', priority: 0.7 },
   { path: '/team', priority: 0.6 },
   { path: '/partnerships', priority: 0.6 },
-  { path: '/contact', priority: 0.5 }
+  { path: '/contact', priority: 0.5 },
+  { path: '/privacy', priority: 0.3 }
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

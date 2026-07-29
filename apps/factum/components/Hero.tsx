@@ -59,11 +59,11 @@ export default function Hero({
           {eyebrow}
         </span>
 
-        <h1 className="type-display" style={{ maxWidth: '18ch' }}>
+        <h1 className="type-display" style={{ maxWidth: '24ch' }}>
           {title}
         </h1>
 
-        <p className="type-lead" style={{ marginTop: 28, maxWidth: '60ch' }}>
+        <p className="type-lead" style={{ marginTop: 28, maxWidth: '66ch' }}>
           {lead}
         </p>
 

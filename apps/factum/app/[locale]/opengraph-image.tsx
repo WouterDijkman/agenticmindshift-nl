@@ -1,0 +1,111 @@
+import { ImageResponse } from 'next/og';
+import { getTranslations } from 'next-intl/server';
+import { readFile } from 'node:fs/promises';
+import { join } from 'node:path';
+import { routing } from '@/i18n/routing';
+
+export const size = { width: 1200, height: 630 };
+export const contentType = 'image/png';
+export const alt = 'Factum Capital';
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function OpengraphImage({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'home.hero' });
+
+  const [newsreader, inter] = await Promise.all([
+    readFile(join(process.cwd(), 'assets/Newsreader-Medium.ttf')),
+    readFile(join(process.cwd(), 'assets/Inter-Regular.ttf'))
+  ]);
+
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          background: '#081930',
+          padding: '72px 80px',
+          fontFamily: 'Inter'
+        }}
+      >
+        {/* satori has no filter: blur(), so the hero glow is a radial gradient. */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: 1200,
+            height: 630,
+            backgroundImage:
+              'radial-gradient(700px 460px at 12% -10%, rgba(132, 78, 88, 0.55), rgba(132, 78, 88, 0) 70%)'
+          }}
+        />
+
+        <div style={{ display: 'flex', alignItems: 'baseline', fontSize: 30 }}>
+          <span style={{ fontFamily: 'Newsreader', color: '#ffffff', letterSpacing: '0.01em' }}>
+            Factum
+          </span>
+          <span style={{ fontFamily: 'Newsreader', color: '#f14c1d' }}>.</span>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div
+            style={{
+              fontSize: 20,
+              letterSpacing: '0.16em',
+              textTransform: 'uppercase',
+              color: '#c79aa3',
+              marginBottom: 28
+            }}
+          >
+            {t('eyebrow')}
+          </div>
+          <div
+            style={{
+              fontFamily: 'Newsreader',
+              fontSize: 68,
+              lineHeight: 1.08,
+              color: '#ffffff',
+              maxWidth: 940
+            }}
+          >
+            {t('title')}
+          </div>
+        </div>
+
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            borderTop: '1px solid rgba(255, 255, 255, 0.14)',
+            paddingTop: 26,
+            fontSize: 22,
+            color: 'rgba(255, 255, 255, 0.62)'
+          }}
+        >
+          <span>factumcapital.eu</span>
+          <span>Factum Capital, Netherlands</span>
+        </div>
+      </div>
+    ),
+    {
+      ...size,
+      fonts: [
+        { name: 'Newsreader', data: newsreader, weight: 500, style: 'normal' },
+        { name: 'Inter', data: inter, weight: 400, style: 'normal' }
+      ]
+    }
+  );
+}
