@@ -155,42 +155,6 @@ export default async function ScorecardWelcomePage() {
 
       <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
-      {/* Kosten van niets doen — stakes */}
-      <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(56px, 7vw, 80px)' }}>
-        <div className="container-medium">
-          <div className="reveal" style={{ maxWidth: '640px' }}>
-            <p className="eyebrow" style={{ marginBottom: '16px', color: 'var(--text-muted)' }}>
-              {t('landing.stakes_eyebrow')}
-            </p>
-            <h2 className="type-h2" style={{ marginBottom: '20px' }}>
-              {t('landing.stakes_heading')}
-            </h2>
-            <p
-              style={{
-                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
-                color: 'var(--text-secondary)',
-                lineHeight: 1.75,
-                marginBottom: '8px',
-              }}
-            >
-              {t('landing.stakes_body_1a')}
-              <strong style={{ color: 'var(--text-primary)' }}>{t('landing.stakes_highlight')}</strong>
-              {t('landing.stakes_body_1b')}
-            </p>
-            <p
-              style={{
-                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
-                color: 'var(--text-muted)',
-                lineHeight: 1.75,
-                fontStyle: 'italic',
-              }}
-            >
-              {t('landing.stakes_body_2')}
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Final CTA */}
       <section
         className="grain-overlay"

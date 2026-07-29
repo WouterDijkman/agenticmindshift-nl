@@ -103,24 +103,36 @@ export default function RapportPage() {
           {t('subtext')}
         </p>
         <ReportDeepAnalysis leadId={leadId} />
+
+        {/* Eén primaire vervolgstap */}
+        <div
+          className="mb-10 no-print"
+          style={{
+            background: 'var(--bg-secondary)',
+            border: '1px solid var(--accent-primary)',
+            borderLeft: '3px solid var(--accent-cta)',
+            padding: '32px',
+          }}
+        >
+          <p className="eyebrow" style={{ marginBottom: '12px' }}>{t('offer_eyebrow')}</p>
+          <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external>
+            {t('offer_cta_1')}
+          </Button>
+        </div>
+
         <div className="pt-8 no-print" style={{ borderTop: '1px solid var(--border-subtle)' }}>
-          <div className="flex flex-col sm:flex-row gap-3 mb-6">
+          <div className="flex flex-wrap gap-3">
             <a
               href={`/api/download-report/${leadId}`}
               download
               className="btn btn-secondary"
-              style={{ fontSize: '0.9375rem', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+              style={{ fontSize: '0.875rem', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
             >
               <span>↓</span> {t('download_pdf')}
             </a>
             <Button variant="secondary" size="md" onClick={() => window.print()}>
               {t('print_btn')}
             </Button>
-          </div>
-          <div className="flex gap-4 flex-wrap">
-            <a href="https://cal.com/wwdijkman/intake-call" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
-              {t('link_kennismaking')}
-            </a>
           </div>
         </div>
       </section>
@@ -179,12 +191,9 @@ export default function RapportPage() {
           <p className="mb-6 measure" style={{ color: 'var(--text-secondary)', fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', lineHeight: 1.75 }}>
             {t('high_next_body')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 no-print">
+          <div className="no-print">
             <Button href="https://www.linkedin.com/in/wwdijkman/" variant="primary" size="lg" external>
               {t('high_cta_1')}
-            </Button>
-            <Button href="/werkwijze" variant="secondary" size="lg">
-              {t('high_cta_2')}
             </Button>
           </div>
         </div>
@@ -193,13 +202,13 @@ export default function RapportPage() {
           className="pt-8 no-print"
           style={{ borderTop: '1px solid var(--border-subtle)' }}
         >
-          <div className="flex flex-col sm:flex-row gap-3 mb-6">
+          <div className="flex flex-wrap gap-3 mb-6">
             {leadId && (
               <a
                 href={`/api/download-report/${leadId}`}
                 download
                 className="btn btn-secondary"
-                style={{ fontSize: '0.9375rem', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+                style={{ fontSize: '0.875rem', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
               >
                 <span>↓</span> {t('download_pdf')}
               </a>
@@ -212,9 +221,6 @@ export default function RapportPage() {
             <Link href="/werkwijze" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
               {t('link_trajecten')}
             </Link>
-            <a href="https://www.linkedin.com/in/wwdijkman/" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }} target="_blank" rel="noopener noreferrer">
-              {t('high_cta_1')} →
-            </a>
           </div>
         </div>
       </section>
@@ -340,60 +346,61 @@ export default function RapportPage() {
         </div>
       )}
 
-      {/* Offer block: only when weakest normalized <= 40% */}
-      {showOfferBlock && variant && (
-        <div
-          className="mb-12"
-          style={{
-            background: 'var(--bg-secondary)',
-            border: '1px solid var(--accent-primary)',
-            borderLeft: '3px solid var(--accent-cta)',
-            padding: '32px',
-          }}
-        >
-          <p className="eyebrow" style={{ marginBottom: '12px' }}>{t('offer_eyebrow')}</p>
-          <h2 className="type-h2 mb-3">{tV(`${variant.id}.offerName`)}</h2>
-          <p className="mb-4 measure" style={{ color: 'var(--text-secondary)', lineHeight: 1.75 }}>
-            {t('offer_match_body')}
-          </p>
-          {tV(`${variant.id}.price`) && (
-            <>
-              <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', marginBottom: '8px' }}>
-                <p style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--text-primary)' }}>
-                  {t('offer_investment')}
+      {/* Eén primaire vervolgstap — kennismaking plannen. Bij een matched offer
+          (weakest dimensie <= gate) tonen we die context + prijs erbij; anders
+          alleen de eyebrow + CTA. Dit is de enige primary button op de pagina. */}
+      <div
+        className="mb-12"
+        style={{
+          background: 'var(--bg-secondary)',
+          border: '1px solid var(--accent-primary)',
+          borderLeft: '3px solid var(--accent-cta)',
+          padding: '32px',
+        }}
+      >
+        <p className="eyebrow" style={{ marginBottom: '12px' }}>{t('offer_eyebrow')}</p>
+        {showOfferBlock && variant && (
+          <>
+            <h2 className="type-h2 mb-3">{tV(`${variant.id}.offerName`)}</h2>
+            <p className="mb-4 measure" style={{ color: 'var(--text-secondary)', lineHeight: 1.75 }}>
+              {t('offer_match_body')}
+            </p>
+            {tV(`${variant.id}.price`) && (
+              <>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', marginBottom: '8px' }}>
+                  <p style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--text-primary)' }}>
+                    {t('offer_investment')}
+                  </p>
+                  <p style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--accent-cta-ink)' }}>
+                    {tV(`${variant.id}.price`)}
+                  </p>
+                </div>
+                <p className="mb-8" style={{ fontSize: '0.8125rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>
+                  {t('offer_excl_vat')}
                 </p>
-                <p style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--accent-cta-ink)' }}>
-                  {tV(`${variant.id}.price`)}
-                </p>
-              </div>
-              <p className="mb-8" style={{ fontSize: '0.8125rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>
-                {t('offer_excl_vat')}
-              </p>
-            </>
-          )}
-          <div className="flex flex-col sm:flex-row gap-3 no-print">
-            <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external>
-              {t('offer_cta_1')}
-            </Button>
-            <Button href="/werkwijze" variant="secondary" size="lg">
-              {t('offer_cta_2')}
-            </Button>
-          </div>
+              </>
+            )}
+          </>
+        )}
+        <div className="no-print">
+          <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external>
+            {t('offer_cta_1')}
+          </Button>
         </div>
-      )}
+      </div>
 
-      {/* Footer nav */}
+      {/* Secundaire acties — bewust klein en gedempt zodat er maar één primaire CTA is */}
       <div
         className="pt-8 no-print"
         style={{ borderTop: '1px solid var(--border-subtle)' }}
       >
-        <div className="flex flex-col sm:flex-row gap-3 mb-6">
+        <div className="flex flex-wrap gap-3 mb-6">
           {leadId && (
             <a
               href={`/api/download-report/${leadId}`}
               download
               className="btn btn-secondary"
-              style={{ fontSize: '0.9375rem', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+              style={{ fontSize: '0.875rem', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
             >
               <span>↓</span> {t('download_pdf')}
             </a>
@@ -406,9 +413,6 @@ export default function RapportPage() {
           <Link href="/werkwijze" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
             {t('link_trajecten')}
           </Link>
-          <a href="https://cal.com/wwdijkman/intake-call" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
-            {t('link_kennismaking')}
-          </a>
           <Link href="/contact" className="nav-link" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
             {t('link_contact')}
           </Link>

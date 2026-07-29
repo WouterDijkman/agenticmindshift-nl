@@ -271,7 +271,7 @@ export default async function OverPage(
               {t('contact_cta.subtext')}
             </p>
             <div
-              style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}
+              style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center', alignItems: 'center', marginBottom: '20px' }}
             >
               <Button href="/scorecard" variant="primary" size="lg">
                 {t('contact_cta.cta1')}
@@ -279,10 +279,20 @@ export default async function OverPage(
               <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
                 {t('contact_cta.cta2')}
               </Button>
-              <Button href="https://www.linkedin.com/in/wwdijkman" variant="secondary" size="lg" external>
-                {t('contact_cta.cta3')}
-              </Button>
             </div>
+            <a
+              href="https://www.linkedin.com/in/wwdijkman"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontSize: '0.9375rem',
+                color: 'var(--text-muted)',
+                textDecoration: 'underline',
+                textUnderlineOffset: '3px',
+              }}
+            >
+              {t('contact_cta.cta3')}
+            </a>
           </div>
         </div>
       </section>

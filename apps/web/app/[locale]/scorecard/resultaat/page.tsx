@@ -205,10 +205,30 @@ export default function ResultaatPage() {
             {...register('company')}
             error={errors.company?.message}
           />
+          <div
+            className="md:col-span-2"
+            style={{
+              marginTop: '4px',
+              paddingTop: '20px',
+              borderTop: '1px solid var(--border-subtle)',
+            }}
+          >
+            <p
+              style={{
+                fontSize: '0.6875rem',
+                color: 'var(--text-muted)',
+                letterSpacing: '0.06em',
+                textTransform: 'uppercase',
+              }}
+            >
+              {t('optional_section_label')}
+            </p>
+          </div>
           <Input
             label={t('field_jobtitle')}
             type="text"
             autoComplete="organization-title"
+            optional
             {...register('jobTitle')}
             error={errors.jobTitle?.message}
           />
@@ -216,6 +236,7 @@ export default function ResultaatPage() {
             label={t('field_phone')}
             type="tel"
             autoComplete="tel"
+            optional
             {...register('phone')}
             error={errors.phone?.message}
           />
@@ -224,6 +245,7 @@ export default function ResultaatPage() {
             type="text"
             autoComplete="url"
             placeholder="www.uwbedrijf.nl"
+            optional
             {...register('website')}
             error={errors.website?.message}
           />
@@ -231,9 +253,9 @@ export default function ResultaatPage() {
             <label
               style={{
                 display: 'block',
-                fontSize: '0.8125rem',
-                color: 'var(--text-secondary)',
-                fontWeight: 600,
+                fontSize: '0.75rem',
+                color: 'var(--text-muted)',
+                fontWeight: 400,
                 letterSpacing: '0.01em',
                 marginBottom: '6px',
               }}

@@ -14,7 +14,6 @@ const navLinks = [
   { href: '/scorecard', labelKey: 'scorecard', badged: false },
   { href: '/werkwijze', labelKey: 'werkwijze', badged: false },
   { href: '/over', labelKey: 'over', badged: false },
-  { href: '/factum-capital', labelKey: 'factum_capital', badged: false },
   { href: '/contact', labelKey: 'contact', badged: false },
 ] as const;
 
