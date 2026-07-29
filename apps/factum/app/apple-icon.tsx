@@ -6,9 +6,7 @@ export const size = { width: 180, height: 180 };
 export const contentType = 'image/png';
 
 export default async function AppleIcon() {
-  const newsreader = await readFile(
-    join(process.cwd(), 'assets/Newsreader-Medium.ttf')
-  );
+  const inter = await readFile(join(process.cwd(), 'assets/Inter-Bold.ttf'));
 
   return new ImageResponse(
     (
@@ -21,9 +19,10 @@ export default async function AppleIcon() {
           justifyContent: 'center',
           background: '#081930',
           color: '#ffffff',
-          fontFamily: 'Newsreader',
-          fontSize: 108,
-          letterSpacing: '0.01em'
+          fontFamily: 'Inter',
+          fontWeight: 700,
+          fontSize: 100,
+          letterSpacing: '-0.02em'
         }}
       >
         F<span style={{ color: '#f14c1d' }}>.</span>
@@ -31,7 +30,7 @@ export default async function AppleIcon() {
     ),
     {
       ...size,
-      fonts: [{ name: 'Newsreader', data: newsreader, weight: 500, style: 'normal' }]
+      fonts: [{ name: 'Inter', data: inter, weight: 700, style: 'normal' }]
     }
   );
 }

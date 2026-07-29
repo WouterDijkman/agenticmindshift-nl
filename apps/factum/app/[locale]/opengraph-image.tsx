@@ -20,9 +20,10 @@ export default async function OpengraphImage({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'home.hero' });
 
-  const [newsreader, inter] = await Promise.all([
+  const [newsreader, inter, interBold] = await Promise.all([
     readFile(join(process.cwd(), 'assets/Newsreader-Medium.ttf')),
-    readFile(join(process.cwd(), 'assets/Inter-Regular.ttf'))
+    readFile(join(process.cwd(), 'assets/Inter-Regular.ttf')),
+    readFile(join(process.cwd(), 'assets/Inter-Bold.ttf'))
   ]);
 
   return new ImageResponse(
@@ -52,11 +53,17 @@ export default async function OpengraphImage({
           }}
         />
 
-        <div style={{ display: 'flex', alignItems: 'baseline', fontSize: 30 }}>
-          <span style={{ fontFamily: 'Newsreader', color: '#ffffff', letterSpacing: '0.01em' }}>
-            Factum
-          </span>
-          <span style={{ fontFamily: 'Newsreader', color: '#f14c1d' }}>.</span>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'baseline',
+            fontWeight: 700,
+            fontSize: 32,
+            letterSpacing: '-0.02em'
+          }}
+        >
+          <span style={{ color: '#ffffff' }}>FACTUM</span>
+          <span style={{ color: '#f14c1d' }}>.</span>
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -104,7 +111,8 @@ export default async function OpengraphImage({
       ...size,
       fonts: [
         { name: 'Newsreader', data: newsreader, weight: 500, style: 'normal' },
-        { name: 'Inter', data: inter, weight: 400, style: 'normal' }
+        { name: 'Inter', data: inter, weight: 400, style: 'normal' },
+        { name: 'Inter', data: interBold, weight: 700, style: 'normal' }
       ]
     }
   );

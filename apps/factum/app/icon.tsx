@@ -5,9 +5,9 @@ import { join } from 'node:path';
 export const size = { width: 64, height: 64 };
 export const contentType = 'image/png';
 
-/** Drawn in Newsreader so the tab mark is the same letterform as the wordmark. */
+/** Inter Bold, the same letterform as FactumWordmark in the product. */
 export default async function Icon() {
-  const newsreader = await readFile(join(process.cwd(), 'assets/Newsreader-Medium.ttf'));
+  const inter = await readFile(join(process.cwd(), 'assets/Inter-Bold.ttf'));
 
   return new ImageResponse(
     (
@@ -20,13 +20,15 @@ export default async function Icon() {
           justifyContent: 'center',
           background: '#081930',
           color: '#ffffff',
-          fontFamily: 'Newsreader',
-          fontSize: 44
+          fontFamily: 'Inter',
+          fontWeight: 700,
+          fontSize: 40,
+          letterSpacing: '-0.02em'
         }}
       >
         F<span style={{ color: '#f14c1d' }}>.</span>
       </div>
     ),
-    { ...size, fonts: [{ name: 'Newsreader', data: newsreader, weight: 500, style: 'normal' }] }
+    { ...size, fonts: [{ name: 'Inter', data: inter, weight: 700, style: 'normal' }] }
   );
 }
