@@ -16,10 +16,6 @@
       "title": "Gobernanza y tratamiento de datos",
       "description": "Cómo se procesan los documentos, qué hace el control humano y qué es lo que Factum deliberadamente no afirma."
     },
-    "team": {
-      "title": "Quién está detrás de esto",
-      "description": "La lectura del riesgo de un banquero y la disciplina de un ingeniero para sistemas que no se rompen."
-    },
     "partnerships": {
       "title": "Alianzas",
       "description": "Para firmas de asesoramiento y boutiques de corporate finance que quieren capacidad analítica con rigor de due diligence detrás de sus propias relaciones con clientes."
@@ -44,7 +40,6 @@
     "platform": "Plataforma",
     "sprint": "Buyer-Proof Sprint",
     "governance": "Gobernanza",
-    "team": "Equipo",
     "partnerships": "Alianzas",
     "contact": "Contacto",
     "cta": "Reservar una llamada",
@@ -592,47 +587,6 @@
       "body": "La lista anterior es deliberadamente poco favorecedora. Si algo de ella es un impedimento para usted, conviene saberlo en treinta minutos y no en tres semanas.",
       "button": "Reserve una llamada inicial",
       "note": "Sin propuesta adjunta."
-    }
-  },
-
-  "team": {
-    "header": {
-      "eyebrow": "Equipo",
-      "title": "Criterio, no solo software",
-      "lead": "Dos perspectivas sobre un mismo problema: la lectura del riesgo de un banquero y la disciplina de un ingeniero para sistemas que no se rompen."
-    },
-    "historyLabel": "Trayectoria",
-    "people": [
-      {
-        "name": "Wouter Dijkman",
-        "title": "Fundador, Factum",
-        "bio": "Más de cinco años dentro de las instituciones que financian estos deals. En ING, Wouter trabajó en Acquisition & Leveraged Finance, estructurando y examinando el crédito que hay detrás exactamente de este tipo de transacciones. Antes, en Rabobank, se especializó en reestructuración financiera, leyendo las cifras de una empresa por lo que significan de verdad y no por lo que aparentan significar. También dirige Agentic Mindshift, su propia consultora de IA, de modo que el trabajo de due diligence con IA no es el proyecto paralelo de un banquero. Fundó Factum para llevar ese mismo escrutinio al lado vendedor, para que un propietario llegue a su salida con el rigor que aplicaría un banco, antes de que un comprador tenga ocasión de usarlo en su contra.",
-        "history": [
-          { "org": "Factum Capital", "role": "Fundador", "period": "2026 —" },
-          { "org": "Agentic Mindshift", "role": "Fundador, consultora de IA", "period": "2025 —" },
-          { "org": "ING", "role": "Acquisition & Leveraged Finance", "period": "2023 – 2025" },
-          { "org": "Rabobank", "role": "Especialista en reestructuración financiera", "period": "2020 – 2023" },
-          { "org": "Alter Domus", "role": "Responsable jurídico", "period": "2019 – 2020" }
-        ]
-      },
-      {
-        "name": "Daniel Dropuljic",
-        "title": "Responsable técnico, Factum",
-        "bio": "Daniel construye los sistemas que hay detrás del trabajo de due diligence con IA de Factum. Como fundador de Dandro Solutions, diseña pipelines de datos que procesan más de 50.000 registros al día para clientes internacionales del sector sanitario, bajo regímenes estrictos de cumplimiento como el RGPD y FHIR. Esa disciplina — de nivel de producción, auditable, construida para aguantar el escrutinio — es la base sobre la que funciona el motor de due diligence de Factum.",
-        "history": [
-          { "org": "Dandro Solutions", "role": "Fundador, ingeniería de software", "period": "2021 —" },
-          { "org": "Healex, Berlín", "role": "Implementación HL7/FHIR, dirigió un equipo de tres personas", "period": "2019 – 2021" },
-          { "org": "Uniklinik Köln", "role": "Infraestructura de datos de investigación", "period": "2019" },
-          { "org": "Furore, Ámsterdam", "role": "Ingeniería de datos", "period": "2018" }
-        ]
-      }
-    ],
-    "closing": "La lectura del riesgo de un banquero y la disciplina de un ingeniero para sistemas que no se rompen. Juntos respaldan el proceso con criterio, no solo con software.",
-    "cta": {
-      "title": "Hablará con la persona que revisa el entregable",
-      "body": "Mientras Factum está en prelanzamiento, la llamada inicial, el control de revisión y la explicación detallada son la misma persona. Ese es el sentido de aceptar mandatos de un solo dígito.",
-      "button": "Reserve una llamada inicial",
-      "note": "Treinta minutos."
     }
   },
 

@@ -16,10 +16,6 @@
       "title": "Governance und Datenverarbeitung",
       "description": "Wie Dokumente verarbeitet werden, was die menschliche Freigabe leistet und was Factum bewusst nicht behauptet."
     },
-    "team": {
-      "title": "Wer dahintersteht",
-      "description": "Der Blick eines Bankers auf Risiko und die Disziplin eines Ingenieurs für Systeme, die nicht brechen."
-    },
     "partnerships": {
       "title": "Partnerschaften",
       "description": "Für Beratungshäuser und Corporate-Finance-Boutiquen, die analytische Kapazität auf Due-Diligence-Niveau hinter ihren eigenen Mandantenbeziehungen wollen."
@@ -44,7 +40,6 @@
     "platform": "Plattform",
     "sprint": "Buyer-Proof Sprint",
     "governance": "Governance",
-    "team": "Team",
     "partnerships": "Partnerschaften",
     "contact": "Kontakt",
     "cta": "Erstgespräch buchen",
@@ -591,46 +586,6 @@
     }
   },
 
-  "team": {
-    "header": {
-      "eyebrow": "Team",
-      "title": "Urteilsvermögen, nicht nur Software",
-      "lead": "Zwei Blickwinkel auf ein Problem: der Blick eines Bankers auf Risiko und die Disziplin eines Ingenieurs für Systeme, die nicht brechen."
-    },
-    "historyLabel": "Werdegang",
-    "people": [
-      {
-        "name": "Wouter Dijkman",
-        "title": "Gründer, Factum",
-        "bio": "Mehr als fünf Jahre in den Institutionen, die diese Deals finanzieren. Bei der ING arbeitete Wouter im Acquisition & Leveraged Finance und strukturierte und prüfte die Kredite hinter genau solchen Transaktionen. Davor war er bei der Rabobank auf finanzielle Restrukturierung spezialisiert und las die Zahlen eines Unternehmens darauf, was sie tatsächlich bedeuten, statt darauf, was sie bedeuten sollen. Er führt außerdem Agentic Mindshift, seine eigene KI-Beratung, sodass die KI-gestützte Due-Diligence-Arbeit kein Nebenprojekt eines Bankers ist. Er hat Factum gegründet, um dieselbe Strenge auf die Sell-Side zu bringen, damit ein Eigentümer mit der Sorgfalt einer Bank in seinen Exit geht, bevor ein Käufer die Chance bekommt, sie gegen ihn zu verwenden.",
-        "history": [
-          { "org": "Factum Capital", "role": "Gründer", "period": "2026 —" },
-          { "org": "Agentic Mindshift", "role": "Gründer, KI-Beratung", "period": "2025 —" },
-          { "org": "ING", "role": "Acquisition & Leveraged Finance", "period": "2023 – 2025" },
-          { "org": "Rabobank", "role": "Spezialist Financial Restructuring", "period": "2020 – 2023" },
-          { "org": "Alter Domus", "role": "Legal Officer", "period": "2019 – 2020" }
-        ]
-      },
-      {
-        "name": "Daniel Dropuljic",
-        "title": "Technischer Leiter, Factum",
-        "bio": "Daniel baut die Systeme hinter Factums KI-gestützter Due-Diligence-Arbeit. Als Gründer von Dandro Solutions entwirft er Datenpipelines, die täglich über 50.000 Datensätze für internationale Healthcare-Kunden verarbeiten, unter strengen Compliance-Regimen einschließlich DSGVO und FHIR. Diese Disziplin — produktionsreif, prüfbar, gebaut, um genauer Betrachtung standzuhalten — ist das, worauf Factums Due-Diligence-Engine läuft.",
-        "history": [
-          { "org": "Dandro Solutions", "role": "Gründer, Software Engineering", "period": "2021 —" },
-          { "org": "Healex, Berlin", "role": "HL7/FHIR-Implementierung, Leitung eines dreiköpfigen Teams", "period": "2019 – 2021" },
-          { "org": "Uniklinik Köln", "role": "Forschungsdaten-Infrastruktur", "period": "2019" },
-          { "org": "Furore, Amsterdam", "role": "Data Engineering", "period": "2018" }
-        ]
-      }
-    ],
-    "closing": "Der Blick eines Bankers auf Risiko und die Disziplin eines Ingenieurs für Systeme, die nicht brechen. Gemeinsam unterlegen sie den Prozess mit Urteilsvermögen, nicht nur mit Software.",
-    "cta": {
-      "title": "Sie sprechen mit der Person, die das Ergebnis prüft",
-      "body": "Solange Factum vor dem Launch steht, sind das Erstgespräch, die Prüfstufe und die Durchsprache dieselbe Person. Genau darum geht es, nur einstellig viele Mandate anzunehmen.",
-      "button": "Erstgespräch buchen",
-      "note": "Dreißig Minuten."
-    }
-  },
   "partnerships": {
     "header": {
       "eyebrow": "Partnerschaften",

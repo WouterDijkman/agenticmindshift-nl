@@ -16,10 +16,6 @@
       "title": "Governação e tratamento de dados",
       "description": "Como os documentos são processados, o que faz o controlo humano, e o que a Factum deliberadamente não afirma."
     },
-    "team": {
-      "title": "Quem está por trás disto",
-      "description": "A leitura de risco de um banqueiro e a disciplina de um engenheiro para sistemas que não falham."
-    },
     "partnerships": {
       "title": "Parcerias",
       "description": "Para firmas de consultoria e boutiques de corporate finance que querem capacidade analítica ao nível de due diligence por trás das suas próprias relações com clientes."
@@ -44,7 +40,6 @@
     "platform": "Plataforma",
     "sprint": "Buyer-Proof Sprint",
     "governance": "Governação",
-    "team": "Equipa",
     "partnerships": "Parcerias",
     "contact": "Contacto",
     "cta": "Marcar uma chamada de intake",
@@ -592,47 +587,6 @@
       "body": "A lista acima é deliberadamente pouco lisonjeira. Se algo nela for um impedimento para si, vale a pena descobri-lo em trinta minutos e não em três semanas.",
       "button": "Marcar uma chamada de intake",
       "note": "Sem proposta anexada."
-    }
-  },
-
-  "team": {
-    "header": {
-      "eyebrow": "Equipa",
-      "title": "Critério, não apenas software",
-      "lead": "Dois pontos de observação sobre o mesmo problema: a leitura de risco de um banqueiro e a disciplina de um engenheiro para sistemas que não falham."
-    },
-    "historyLabel": "Percurso",
-    "people": [
-      {
-        "name": "Wouter Dijkman",
-        "title": "Fundador, Factum",
-        "bio": "Mais de cinco anos dentro das instituições que financiam estes deals. No ING, Wouter trabalhou em Acquisition & Leveraged Finance, onde estruturou e avaliou o crédito por trás exatamente deste tipo de transação. Antes disso, no Rabobank, especializou-se em reestruturação financeira, lendo os números de uma empresa pelo que realmente significam e não pelo que são apresentados a significar. Dirige também a Agentic Mindshift, a sua própria consultora de IA, pelo que o trabalho de due diligence com IA não é um projeto paralelo de banqueiro. Fundou a Factum para trazer o mesmo escrutínio para o lado vendedor, de modo a que um proprietário chegue à sua saída com o rigor que um banco aplicaria, antes de um comprador ter a oportunidade de o usar contra si.",
-        "history": [
-          { "org": "Factum Capital", "role": "Fundador", "period": "2026 —" },
-          { "org": "Agentic Mindshift", "role": "Fundador, consultora de IA", "period": "2025 —" },
-          { "org": "ING", "role": "Acquisition & Leveraged Finance", "period": "2023 – 2025" },
-          { "org": "Rabobank", "role": "Especialista em Reestruturação Financeira", "period": "2020 – 2023" },
-          { "org": "Alter Domus", "role": "Jurista", "period": "2019 – 2020" }
-        ]
-      },
-      {
-        "name": "Daniel Dropuljic",
-        "title": "Responsável Técnico, Factum",
-        "bio": "Daniel constrói os sistemas por trás do trabalho de due diligence com IA da Factum. Como fundador da Dandro Solutions, desenha pipelines de dados que processam mais de 50 000 registos por dia para clientes internacionais da área da saúde, sob regimes de conformidade exigentes, incluindo o RGPD e o FHIR. É essa disciplina — de nível de produção, auditável, construída para aguentar escrutínio — que sustenta o motor de due diligence da Factum.",
-        "history": [
-          { "org": "Dandro Solutions", "role": "Fundador, engenharia de software", "period": "2021 —" },
-          { "org": "Healex, Berlim", "role": "Implementação HL7/FHIR, liderou uma equipa de três pessoas", "period": "2019 – 2021" },
-          { "org": "Uniklinik Köln", "role": "Infraestrutura de dados de investigação", "period": "2019" },
-          { "org": "Furore, Amesterdão", "role": "Engenharia de dados", "period": "2018" }
-        ]
-      }
-    ],
-    "closing": "A leitura de risco de um banqueiro e a disciplina de um engenheiro para sistemas que não falham. Juntos, sustentam o processo com critério, não apenas com software.",
-    "cta": {
-      "title": "Falará com a pessoa que revê o output",
-      "body": "Enquanto a Factum estiver em pré-lançamento, a chamada de intake, o controlo de revisão e a apresentação são a mesma pessoa. É esse o objetivo de aceitar mandatos na casa das unidades.",
-      "button": "Marcar uma chamada de intake",
-      "note": "Trinta minutos."
     }
   },
 

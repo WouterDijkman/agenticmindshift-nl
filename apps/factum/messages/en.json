@@ -16,10 +16,6 @@
       "title": "Governance and data handling",
       "description": "How documents are processed, what the human gate does, and what Factum deliberately does not claim."
     },
-    "team": {
-      "title": "Who is behind this",
-      "description": "A banker’s read on risk and an engineer’s discipline for systems that don’t break."
-    },
     "partnerships": {
       "title": "Partnerships",
       "description": "For advisory firms and corporate finance boutiques who want diligence-grade analytical capacity behind their own client relationships."
@@ -44,7 +40,6 @@
     "platform": "Platform",
     "sprint": "Buyer-Proof Sprint",
     "governance": "Governance",
-    "team": "Team",
     "partnerships": "Partnerships",
     "contact": "Contact",
     "cta": "Book an intake call",
@@ -592,47 +587,6 @@
       "body": "The list above is deliberately unflattering. If something on it is a blocker for you, that’s worth finding out in thirty minutes rather than three weeks.",
       "button": "Book an intake call",
       "note": "No proposal attached."
-    }
-  },
-
-  "team": {
-    "header": {
-      "eyebrow": "Team",
-      "title": "Judgment, not just software",
-      "lead": "Two vantage points on one problem: a banker’s read on risk, and an engineer’s discipline for systems that don’t break."
-    },
-    "historyLabel": "Background",
-    "people": [
-      {
-        "name": "Wouter Dijkman",
-        "title": "Founder, Factum",
-        "bio": "More than five years inside the institutions that fund these deals. At ING, Wouter worked Acquisition & Leveraged Finance, structuring and vetting the credit behind exactly this kind of transaction. Before that, at Rabobank, he specialized in financial restructuring, reading a company’s numbers for what they actually mean rather than what they’re presented to mean. He also runs Agentic Mindshift, his own AI consultancy, so the AI-driven diligence work isn’t a banker’s side project. He founded Factum to bring that same scrutiny to the sell side, so an owner walks into their exit with the rigor a bank would apply, before a buyer gets the chance to use it against them.",
-        "history": [
-          { "org": "Factum Capital", "role": "Founder", "period": "2026 —" },
-          { "org": "Agentic Mindshift", "role": "Founder, AI consultancy", "period": "2025 —" },
-          { "org": "ING", "role": "Acquisition & Leveraged Finance", "period": "2023 – 2025" },
-          { "org": "Rabobank", "role": "Specialist Financial Restructuring", "period": "2020 – 2023" },
-          { "org": "Alter Domus", "role": "Legal Officer", "period": "2019 – 2020" }
-        ]
-      },
-      {
-        "name": "Daniel Dropuljic",
-        "title": "Technical Lead, Factum",
-        "bio": "Daniel builds the systems behind Factum’s AI-driven diligence work. As founder of Dandro Solutions, he designs data pipelines processing over 50,000 records a day for international healthcare clients, under strict compliance regimes including GDPR and FHIR. That discipline — production-grade, auditable, built to hold up under scrutiny — is what Factum’s diligence engine runs on.",
-        "history": [
-          { "org": "Dandro Solutions", "role": "Founder, software engineering", "period": "2021 —" },
-          { "org": "Healex, Berlin", "role": "HL7/FHIR implementation, led a three-person team", "period": "2019 – 2021" },
-          { "org": "Uniklinik Köln", "role": "Research data infrastructure", "period": "2019" },
-          { "org": "Furore, Amsterdam", "role": "Data engineering", "period": "2018" }
-        ]
-      }
-    ],
-    "closing": "A banker’s read on risk and an engineer’s discipline for systems that don’t break. Together they back the process with judgment, not just software.",
-    "cta": {
-      "title": "You’ll speak to the person who reviews the output",
-      "body": "While Factum is pre-launch, the intake call, the review gate and the walkthrough are the same person. That is the point of taking on single digits of mandates.",
-      "button": "Book an intake call",
-      "note": "Thirty minutes."
     }
   },
 
