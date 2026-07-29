@@ -1,20 +1,24 @@
 {
   "meta": {
     "home": {
-      "title": "Análisis con rigor de due diligence, antes de que el comprador haga el suyo",
-      "description": "Factum realiza una revisión de due diligence completa en once disciplinas sobre su propia empresa, fundamentada en sus documentos y revisada por una persona, para que usted encuentre los problemas antes que el equipo del comprador."
+      "title": "Análisis con rigor de due diligence a lo largo del ciclo de la operación",
+      "description": "Factum lee el data room completo — once disciplinas, reconciliadas entre sí y revisadas por una persona — tanto si compra, financia, mantiene o vende."
     },
     "platform": {
       "title": "La plataforma",
       "description": "241 módulos de due diligence en 31 verticales. Cada hallazgo vinculado a un documento real, comprobado por un segundo agente revisor y filtrado por una persona antes de llegar a usted."
     },
     "sprint": {
-      "title": "The Buyer-Proof Sprint",
-      "description": "Once revisiones analíticas especializadas sobre su data room, reconciliadas en una única narrativa, con un registro vivo de lagunas de información — para que el informe sea un motivo para pagar más, no solo una lista de motivos para pagar menos."
+      "title": "El Diligence Sprint",
+      "description": "Once revisiones analíticas especializadas sobre un data room completo, reconciliadas en una única narrativa, con un registro vivo de lagunas de información — para que los hallazgos lleguen cuando todavía pueden cambiar la decisión."
     },
     "governance": {
       "title": "Gobernanza y tratamiento de datos",
       "description": "Cómo se procesan los documentos, qué hace el control humano y qué es lo que Factum deliberadamente no afirma."
+    },
+    "team": {
+      "title": "Quién está detrás de esto",
+      "description": "La lectura del riesgo de un banquero y la disciplina de un ingeniero para sistemas que no se rompen."
     },
     "partnerships": {
       "title": "Alianzas",
@@ -38,8 +42,9 @@
   "nav": {
     "primary": "Principal",
     "platform": "Plataforma",
-    "sprint": "Buyer-Proof Sprint",
+    "sprint": "Diligence Sprint",
     "governance": "Gobernanza",
+    "team": "Equipo",
     "partnerships": "Alianzas",
     "contact": "Contacto",
     "cta": "Reservar una llamada",
@@ -150,9 +155,9 @@
 
   "home": {
     "hero": {
-      "eyebrow": "Due diligence sell-side",
-      "title": "Encuentre los problemas antes que el equipo del comprador",
-      "lead": "Hoy por hoy, el comprador sabrá más que usted sobre lo que falla en su empresa. Factum cierra esa brecha primero: {disciplines} revisiones analíticas especializadas sobre su propio data room, fundamentadas en sus documentos, reconciliadas entre sí y revisadas por una persona antes de que usted vea nada.",
+      "eyebrow": "Due diligence en todo el ciclo",
+      "title": "Lea la sala entera antes de que la cifra quede fijada",
+      "lead": "Comprar, financiar, mantener o vender: la exposición es la misma, la decisión se toma sobre una muestra. Factum ejecuta {disciplines} revisiones analíticas especializadas sobre el data room completo, fundamentadas en los documentos, reconciliadas entre sí y revisadas por una persona antes de que usted vea nada.",
       "cta": "Reserve una llamada inicial",
       "secondary": "Vea cómo funciona el pipeline",
       "footnote": "Factum está en prelanzamiento. Aceptamos un número limitado de mandatos piloto — de un solo dígito, no una lista de espera abierta."
@@ -166,24 +171,24 @@
     },
     "problem": {
       "eyebrow": "La asimetría",
-      "title": "La conversación sobre la valoración llega cuando menos capacidad tiene de corregir nada",
-      "lead": "La mayoría de los propietarios solo descubren lo que vale realmente su empresa cuando el comprador ya tiene la ventaja. Conozca su cifra y cierre las brechas pronto, en sus términos y no en los del comprador.",
+      "title": "La cifra se fija mientras la sala está leída a medias",
+      "lead": "La due diligence tradicional toma una muestra del data room e informa semanas después. Para entonces el precio ya está anclado, el comité ha seguido adelante y los hallazgos llegan tarde para cambiar la estructura.",
       "points": [
         {
           "title": "Quien lo encuentra primero marca el relato",
-          "body": "Cada semana que un data room permanece sin una revisión como esta detrás es una semana en la que los analistas del comprador pueden encontrar algo primero — y quien encuentra un problema primero controla cómo se plantea durante el resto de la negociación."
+          "body": "Quien saca a la luz un problema primero controla cómo se plantea durante el resto de la negociación. A ambos lados de la mesa, esa ventaja es de quien leyó la sala primero."
         },
         {
           "title": "Una sola dimensión no es due diligence",
-          "body": "Un análisis tradicional de quality of earnings del lado vendedor cubre una dimensión. El equipo del comprador no se detendrá en una. Las brechas aparecen en el espacio entre disciplinas."
+          "body": "Un análisis de quality of earnings cubre una dimensión. La otra parte no se detendrá en una. Las brechas aparecen en el espacio entre disciplinas."
         },
         {
           "title": "Una lista de riesgos no es un argumento",
-          "body": "La mayoría de las due diligence son una lista estática de riesgos: nadie busca activamente palancas de creación de valor. El informe se lee como una advertencia, no como un motivo para pagar más."
+          "body": "La mayoría de las due diligence son una lista estática de riesgos: nadie busca activamente palancas de creación de valor. El informe se lee como una advertencia, no como base para una decisión."
         },
         {
-          "title": "Un data room limpio aún tiene que aguantar",
-          "body": "Un data room limpio solo compensa si aguanta al otro lado de la mesa cuando el equipo del comprador presiona."
+          "title": "Una muestra no es la sala",
+          "body": "Las lagunas de cobertura son la razón por la que las operaciones se tuercen después del cierre. Una lectura que se detiene en una muestra deja fuera justo la parte que nadie pensó en preguntar."
         }
       ]
     },
@@ -244,28 +249,12 @@
     },
     "sprint": {
       "eyebrow": "El encargo",
-      "title": "The Buyer-Proof Sprint",
-      "lead": "Un único encargo que cubre las {disciplines} disciplinas, más las tres capas de síntesis que convierten once lecturas separadas en un entregable utilizable. Para el vendedor que prefiere encontrar los problemas antes de que los encuentre el equipo del comprador.",
-      "guaranteeLabel": "The Buyer-Proof Guarantee",
-      "guarantee": "Si el sprint no saca a la luz al menos tres hallazgos materiales que su propio equipo no hubiera identificado ya — de los que uno querría enterarse antes que el comprador —, el encargo es gratuito.",
+      "title": "El Diligence Sprint",
+      "lead": "Un único encargo que cubre las {disciplines} disciplinas, más las tres capas de síntesis que convierten once lecturas separadas en un entregable utilizable. Ejecutado sobre un target que está comprando, una empresa que mantiene en cartera o su propio negocio antes de que lo lea otro.",
+      "guaranteeLabel": "La garantía de hallazgos",
+      "guarantee": "Si el sprint no saca a la luz al menos tres hallazgos materiales que su propio equipo no hubiera identificado ya — de los que cambian lo que uno hace a continuación —, el encargo es gratuito.",
       "guaranteeNote": "Redactada para los mandatos piloto. No le pedimos a usted que asuma el riesgo de que esto sea temprano; lo asumimos nosotros.",
       "link": "Qué cubre el sprint"
-    },
-    "audience": {
-      "eyebrow": "Para quién es",
-      "title": "Dos momentos en los que esto cambia el resultado",
-      "cases": [
-        {
-          "title": "Un proceso de venta en marcha",
-          "body": "El data room está abierto o a punto de estarlo, y los analistas de un comprador están a días de leerlo. Una revisión completa de sus propios documentos, reconciliada y revisada, hace que nada caiga por sorpresa al otro lado de la mesa.",
-          "outcome": "Usted entra habiendo revisado de forma visible su propio trabajo primero."
-        },
-        {
-          "title": "Una salida a dos o cinco años vista",
-          "body": "Todavía no hay proceso, pero sí una decisión tomada. Ver las brechas y la cifra ahora deja años de margen para cerrarlas, en lugar de descubrirlas cuando la ventaja ya ha cambiado de lado.",
-          "outcome": "Usted corrige en su propio calendario, no en el del comprador."
-        }
-      ]
     },
     "trust": {
       "eyebrow": "Gobernanza",
@@ -278,6 +267,34 @@
       "body": "Treinta minutos para ver si su situación es de las que esto realmente ayuda. Si no lo es, se lo diremos.",
       "button": "Reserve una llamada inicial",
       "note": "Factum está en prelanzamiento y acepta un número limitado de mandatos piloto."
+    },
+    "cycle": {
+      "eyebrow": "A lo largo del ciclo",
+      "title": "Una base de evidencia, cinco momentos",
+      "lead": "El mismo motor analítico y el mismo dossier trazable hasta la fuente, aplicados en cada punto en el que una decisión realmente gira. Nada se reconstruye desde cero cuando llega el momento siguiente.",
+      "stages": [
+        {
+          "title": "Comprar",
+          "body": "Desde el cribado del IM hasta el cierre. La sala entera leída mientras los hallazgos todavía pueden mover precio y estructura, con un resultado preparado para entrar directamente en un memo de comité de inversión."
+        },
+        {
+          "title": "Financiar",
+          "body": "El memo sobre el que un banco o un inversor suscribe, construido sobre la misma base de evidencia que la due diligence en lugar de montarse aparte después."
+        },
+        {
+          "title": "Mantener y crear valor",
+          "body": "Revisión periódica de cartera y seguimiento continuo: margen de covenants, deriva de KPI y señales tempranas de alerta, junto a las palancas de creación de valor que una lista estática de riesgos nunca busca."
+        },
+        {
+          "title": "Vender",
+          "body": "Exit readiness: calidad del data room, presentación financiera, solidez del equipo directivo y cómo aguanta el equity story. La revisión que haría el equipo de un comprador, hecha primero en su lado de la mesa."
+        },
+        {
+          "title": "Reestructurar",
+          "body": "Análisis pre-IBR y WHOA: evaluación de continuidad, posición de los acreedores y margen de covenants, sacados a la luz mientras las opciones siguen abiertas."
+        }
+      ],
+      "note": "El trabajo de reestructuración bajo WHOA e IBR está sujeto a jurisdicción neerlandesa. El resto del ciclo es independiente de la jurisdicción."
     }
   },
 
@@ -426,12 +443,12 @@
   "sprint": {
     "header": {
       "eyebrow": "El encargo",
-      "title": "The Buyer-Proof Sprint",
-      "lead": "Para el vendedor que prefiere encontrar los problemas antes de que los encuentre el equipo del comprador. Las {disciplines} disciplinas, un único encargo, reconciliadas en una sola narrativa antes de que usted vea nada."
+      "title": "El Diligence Sprint",
+      "lead": "Las {disciplines} disciplinas, un único encargo, reconciliadas en una sola narrativa antes de que usted vea nada. Ejecutado sobre un target que está comprando, una empresa que mantiene en cartera o su propio negocio antes de que lo lea un comprador."
     },
     "reframe": {
-      "quote": "Encargar este tipo de revisión sobre su propia operación, antes de que el equipo del comprador haga la suya, no es señal de que algo vaya mal. Es el aspecto que tiene un proceso de venta bien llevado desde el otro lado de la mesa: los vendedores que resultan más creíbles para un comprador profesional son los que revisaron de forma visible su propio trabajo primero.",
-      "body": "El sprint existe porque, por defecto, la secuencia está invertida. El equipo del comprador dispone de semanas con sus documentos y del mandato de encontrar lo que falla, y usted recibe los hallazgos de vuelta convertidos en ventaja negociadora. Esto hace la misma lectura primero, en su lado de la mesa."
+      "quote": "Hacer este tipo de revisión antes de que la otra parte haga la suya no es señal de que algo vaya mal. Es el aspecto que tiene un proceso bien llevado: la parte que resulta más creíble es la que revisó de forma visible su propio trabajo primero.",
+      "body": "El sprint existe porque, por defecto, la secuencia está invertida. Una parte dispone de semanas con los documentos y del mandato de encontrar lo que falla, y la otra recibe los hallazgos de vuelta convertidos en ventaja negociadora. Esto hace la misma lectura primero, en su lado de la mesa."
     },
     "disciplines": {
       "eyebrow": "Alcance",
@@ -446,7 +463,7 @@
       "items": [
         {
           "title": "Lectura de creación de valor",
-          "body": "Una síntesis sobre los hallazgos financieros y comerciales — fugas de margen, brechas de indexación, palancas de venta cruzada — para que el informe sea un motivo para pagar más, no solo una lista de motivos para pagar menos."
+          "body": "Una síntesis sobre los hallazgos financieros y comerciales — fugas de margen, brechas de indexación, palancas de venta cruzada — para que el informe recoja también el caso al alza, no solo la lista de riesgos."
         },
         {
           "title": "Reconciliación entre disciplinas",
@@ -454,7 +471,7 @@
         },
         {
           "title": "Registro vivo de lagunas de información",
-          "body": "La lista de preguntas en curso, actualizada a medida que usted cierra lagunas, para que nada quede sin resolver cuando aparezca el comprador."
+          "body": "La lista de preguntas en curso, actualizada a medida que se cierran lagunas, para que nada quede sin resolver cuando la otra parte empiece a leer."
         }
       ]
     },
@@ -476,14 +493,14 @@
         {
           "label": "Junto a ambos",
           "items": "El registro de lagunas de información",
-          "body": "Reconciliación completa entre documentos, entregada como una lista estructurada de lagunas antes del acceso del comprador, no descubierta por él."
+          "body": "Reconciliación completa entre documentos, entregada como una lista estructurada de lagunas mientras todavía hay tiempo de cerrarlas."
         }
       ]
     },
     "guarantee": {
-      "eyebrow": "The Buyer-Proof Guarantee",
+      "eyebrow": "La garantía de hallazgos",
       "title": "Tres hallazgos materiales, o el encargo es gratuito",
-      "body": "Si el sprint no saca a la luz al menos tres hallazgos materiales que su propio equipo no hubiera identificado ya — de los que uno querría enterarse antes que el comprador —, el encargo es gratuito.",
+      "body": "Si el sprint no saca a la luz al menos tres hallazgos materiales que su propio equipo no hubiera identificado ya — de los que cambian lo que uno hace a continuación —, el encargo es gratuito.",
       "note": "Redactada para los mandatos piloto mientras Factum está en prelanzamiento. No le pedimos a usted que asuma el riesgo de que esto sea temprano; lo asumimos nosotros. Cómo se valora un hallazgo material se establece en la carta de encargo, y no se deja a interpretación posterior."
     },
     "inputs": {
@@ -507,7 +524,7 @@
       "items": [
         {
           "q": "¿Sustituye esto a un informe de quality of earnings?",
-          "a": "Es más amplio, y no es un servicio de atestiguamiento. Un análisis tradicional de quality of earnings del lado vendedor cubre una dimensión y lleva de cuatro a diez semanas; esto ejecuta once disciplinas y las reconcilia entre sí. Cuando su proceso necesite una opinión firmada por un auditor, eso sigue siendo un encargo aparte con una firma aparte."
+          "a": "Es más amplio, y no es un servicio de atestiguamiento. Un análisis tradicional de quality of earnings cubre una dimensión y lleva de cuatro a diez semanas; esto ejecuta once disciplinas y las reconcilia entre sí. Cuando su proceso necesite una opinión firmada por un auditor, eso sigue siendo un encargo aparte con una firma aparte."
         },
         {
           "q": "¿Cuánto tiempo lleva?",
@@ -532,7 +549,7 @@
       ]
     },
     "cta": {
-      "title": "Vea si su data room está listo para esto",
+      "title": "Vea si un sprint encaja con la sala que tiene delante",
       "body": "La llamada inicial es una conversación de alcance: qué hay en el data room, qué falta y si un sprint es el instrumento adecuado para su situación.",
       "button": "Reserve una llamada inicial",
       "note": "Un número limitado de mandatos piloto, de un solo dígito."
@@ -590,6 +607,47 @@
     }
   },
 
+  "team": {
+    "header": {
+      "eyebrow": "Equipo",
+      "title": "Criterio, no solo software",
+      "lead": "Dos perspectivas sobre un mismo problema: la lectura del riesgo de un banquero y la disciplina de un ingeniero para sistemas que no se rompen."
+    },
+    "historyLabel": "Trayectoria",
+    "people": [
+      {
+        "name": "Wouter Dijkman",
+        "title": "Fundador, Factum",
+        "bio": "Más de cinco años dentro de las instituciones que financian estos deals. En ING, Wouter trabajó en Acquisition & Leveraged Finance, estructurando y examinando el crédito que hay detrás exactamente de este tipo de transacciones. Antes, en Rabobank, se especializó en reestructuración financiera, leyendo las cifras de una empresa por lo que significan de verdad y no por lo que aparentan significar. También dirige Agentic Mindshift, su propia consultora de IA, de modo que el trabajo de due diligence con IA no es el proyecto paralelo de un banquero. Fundó Factum para llevar ese mismo escrutinio al lado vendedor, para que un propietario llegue a su salida con el rigor que aplicaría un banco, antes de que un comprador tenga ocasión de usarlo en su contra.",
+        "history": [
+          { "org": "Factum Capital", "role": "Fundador", "period": "2026 —" },
+          { "org": "Agentic Mindshift", "role": "Fundador, consultora de IA", "period": "2025 —" },
+          { "org": "ING", "role": "Acquisition & Leveraged Finance", "period": "2023 – 2025" },
+          { "org": "Rabobank", "role": "Especialista en reestructuración financiera", "period": "2020 – 2023" },
+          { "org": "Alter Domus", "role": "Responsable jurídico", "period": "2019 – 2020" }
+        ]
+      },
+      {
+        "name": "Daniel Dropuljic",
+        "title": "Responsable técnico, Factum",
+        "bio": "Daniel construye los sistemas que hay detrás del trabajo de due diligence con IA de Factum. Como fundador de Dandro Solutions, diseña pipelines de datos que procesan más de 50.000 registros al día para clientes internacionales del sector sanitario, bajo regímenes estrictos de cumplimiento como el RGPD y FHIR. Esa disciplina — de nivel de producción, auditable, construida para aguantar el escrutinio — es la base sobre la que funciona el motor de due diligence de Factum.",
+        "history": [
+          { "org": "Dandro Solutions", "role": "Fundador, ingeniería de software", "period": "2021 —" },
+          { "org": "Healex, Berlín", "role": "Implementación HL7/FHIR, dirigió un equipo de tres personas", "period": "2019 – 2021" },
+          { "org": "Uniklinik Köln", "role": "Infraestructura de datos de investigación", "period": "2019" },
+          { "org": "Furore, Ámsterdam", "role": "Ingeniería de datos", "period": "2018" }
+        ]
+      }
+    ],
+    "closing": "La lectura del riesgo de un banquero y la disciplina de un ingeniero para sistemas que no se rompen. Juntos respaldan el proceso con criterio, no solo con software.",
+    "cta": {
+      "title": "Hablará con la persona que revisa el entregable",
+      "body": "Mientras Factum está en prelanzamiento, la llamada inicial, el control de revisión y la explicación detallada son la misma persona. Ese es el sentido de aceptar mandatos de un solo dígito.",
+      "button": "Reserve una llamada inicial",
+      "note": "Treinta minutos."
+    }
+  },
+
   "partnerships": {
     "header": {
       "eyebrow": "Alianzas",
@@ -603,7 +661,7 @@
       "profiles": [
         {
           "title": "Boutiques de corporate finance",
-          "body": "Que llevan procesos de venta donde la carga analítica es la restricción, no el deal flow."
+          "body": "Que llevan procesos de compra y de venta donde la carga analítica es la restricción, no el deal flow."
         },
         {
           "title": "Asesores de salida y creación de valor",
@@ -721,7 +779,7 @@
     "agenda": {
       "label": "Qué tratamos",
       "items": [
-        "En qué punto está: un proceso en marcha o una salida a dos o cinco años vista.",
+        "En qué punto del ciclo está: comprar, financiar, mantener o vender.",
         "Qué hay hoy en el data room y qué falta en él.",
         "Qué disciplinas concentran el riesgo real en su situación concreta.",
         "Si un sprint es el instrumento adecuado, o si es demasiado pronto.",

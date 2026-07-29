@@ -14,7 +14,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  return pageMetadata(locale, 'sprint', '/buyer-proof-sprint');
+  return pageMetadata(locale, 'sprint', '/diligence-sprint');
 }
 
 export default async function SprintPage({

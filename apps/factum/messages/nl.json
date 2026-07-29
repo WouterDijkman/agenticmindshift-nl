@@ -1,20 +1,24 @@
 {
   "meta": {
     "home": {
-      "title": "Analyse op diligence-niveau, voordat de koper de zijne draait",
-      "description": "Factum draait een volledige due diligence over elf disciplines op uw eigen onderneming, gegrond in uw documenten en beoordeeld door een persoon, zodat u de problemen vindt voordat het team van een koper dat doet."
+      "title": "Analyse op diligence-niveau, de hele dealcyclus door",
+      "description": "Factum leest de volledige data room — elf disciplines, onderling afgestemd en beoordeeld door een persoon — of u nu koopt, financiert, houdt of verkoopt."
     },
     "platform": {
       "title": "Het platform",
       "description": "241 due-diligencemodules over 31 verticals. Elke bevinding gekoppeld aan een echt document, gecontroleerd door een tweede reviewer-agent en pas na een menselijke toets bij u."
     },
     "sprint": {
-      "title": "De Buyer-Proof Sprint",
-      "description": "Elf specialistische analyseslagen over uw data room, afgestemd tot één verhaallijn, met een live data-gap tracker — zodat het rapport een reden is om meer te betalen, niet alleen een lijst met redenen om minder te betalen."
+      "title": "De Diligence Sprint",
+      "description": "Elf specialistische analyseslagen over een volledige data room, afgestemd tot één verhaallijn, met een live data-gap tracker — zodat de bevindingen komen terwijl ze de beslissing nog kunnen veranderen."
     },
     "governance": {
       "title": "Governance en gegevensverwerking",
       "description": "Hoe documenten worden verwerkt, wat de menselijke toets doet, en wat Factum bewust niet claimt."
+    },
+    "team": {
+      "title": "Wie hierachter zit",
+      "description": "De risicoblik van een bankier en de discipline van een engineer voor systemen die niet omvallen."
     },
     "partnerships": {
       "title": "Partnerships",
@@ -38,8 +42,9 @@
   "nav": {
     "primary": "Hoofdnavigatie",
     "platform": "Platform",
-    "sprint": "Buyer-Proof Sprint",
+    "sprint": "Diligence Sprint",
     "governance": "Governance",
+    "team": "Team",
     "partnerships": "Partnerships",
     "contact": "Contact",
     "cta": "Plan een intakegesprek",
@@ -150,9 +155,9 @@
 
   "home": {
     "hero": {
-      "eyebrow": "Sell-side due diligence",
-      "title": "Vind de problemen vóór het team van de koper",
-      "lead": "Zoals het nu gaat, weet de koper straks meer over wat er mis is met uw onderneming dan u zelf. Factum dicht dat gat eerst: {disciplines} specialistische analyseslagen over uw eigen data room, gegrond in uw documenten, onderling afgestemd en beoordeeld door een persoon voordat u iets ziet.",
+      "eyebrow": "Diligence door de dealcyclus",
+      "title": "Lees de hele room voordat het getal vastligt",
+      "lead": "Kopen, financieren, houden of verkopen — de blootstelling is steeds dezelfde: de beslissing valt op basis van een steekproef. Factum draait {disciplines} specialistische analyseslagen over de volledige data room, gegrond in de documenten, onderling afgestemd en beoordeeld door een persoon voordat u iets ziet.",
       "cta": "Plan een intakegesprek",
       "secondary": "Bekijk hoe de pipeline werkt",
       "footnote": "Factum is pre-launch. We nemen een beperkt aantal pilotmandaten aan — een handvol, geen doorlopende wachtlijst."
@@ -166,24 +171,24 @@
     },
     "problem": {
       "eyebrow": "De asymmetrie",
-      "title": "Het waarderingsgesprek komt als u het minst kunt herstellen",
-      "lead": "De meeste eigenaren ontdekken pas wat hun onderneming echt waard is als een koper de onderhandelingspositie al heeft. Ken uw getal en dicht de gaten vroeg, op uw voorwaarden, niet die van de koper.",
+      "title": "Het getal wordt bepaald terwijl de room half gelezen is",
+      "lead": "Traditionele due diligence neemt een steekproef uit de data room en rapporteert weken later. Dan ligt de prijs al verankerd, is de commissie verder, en zijn de bevindingen te laat om de structuur nog te veranderen.",
       "points": [
         {
           "title": "Wie het eerst vindt, bepaalt het kader",
-          "body": "Elke week dat een data room open ligt zonder zo’n slag erachter, is een week waarin de analisten van de koper iets als eerste kunnen vinden — en wie een probleem als eerste vindt, bepaalt hoe het voor de rest van de onderhandeling wordt neergezet."
+          "body": "Wie een probleem als eerste vindt, bepaalt hoe het voor de rest van de onderhandeling wordt neergezet. Aan beide kanten van de tafel gaat dat voordeel naar wie de room het eerst heeft gelezen."
         },
         {
           "title": "Eén dimensie is geen due diligence",
-          "body": "Een traditionele sell-side quality-of-earnings-analyse dekt één dimensie. Het team van een koper stopt niet bij één. De gaten zitten in de ruimte tussen de disciplines."
+          "body": "Een quality-of-earnings-analyse dekt één dimensie. De andere kant stopt niet bij één. De gaten zitten in de ruimte tussen de disciplines."
         },
         {
           "title": "Een risicolijst is geen argument",
-          "body": "De meeste due diligence is een statische risicolijst — niemand jaagt actief op hefbomen voor waardecreatie. Het rapport leest als een waarschuwing, niet als een reden om meer te betalen."
+          "body": "De meeste due diligence is een statische risicolijst — niemand jaagt actief op hefbomen voor waardecreatie. Het rapport leest als een waarschuwing, niet als basis voor een beslissing."
         },
         {
-          "title": "Een schone data room moet het ook houden",
-          "body": "Een schone data room betaalt zich pas uit als die standhoudt aan tafel wanneer het team van de koper tegendruk geeft."
+          "title": "Een steekproef is niet de room",
+          "body": "Dekkingsgaten zijn hoe deals na closing misgaan. Een analyse die bij een steekproef stopt, laat juist het deel weg waar niemand aan dacht te vragen."
         }
       ]
     },
@@ -244,28 +249,12 @@
     },
     "sprint": {
       "eyebrow": "De opdracht",
-      "title": "De Buyer-Proof Sprint",
-      "lead": "Eén opdracht die alle {disciplines} disciplines dekt, plus de drie synthesielagen die elf losse analyses tot één bruikbare oplevering maken. Voor een verkoper die de problemen liever zelf eerst vindt dan dat het team van de koper ze vindt.",
-      "guaranteeLabel": "De Buyer-Proof Garantie",
-      "guarantee": "Levert de sprint niet ten minste drie materiële bevindingen op die uw eigen team nog niet had geïdentificeerd — het soort dat u wilt weten voordat een koper het weet — dan is de opdracht gratis.",
+      "title": "De Diligence Sprint",
+      "lead": "Eén opdracht die alle {disciplines} disciplines dekt, plus de drie synthesielagen die elf losse analyses tot één bruikbare oplevering maken. Gedraaid op een target dat u koopt, een onderneming die u houdt, of uw eigen bedrijf voordat iemand anders het leest.",
+      "guaranteeLabel": "De bevindingengarantie",
+      "guarantee": "Levert de sprint niet ten minste drie materiële bevindingen op die uw eigen team nog niet had geïdentificeerd — het soort dat verandert wat u vervolgens doet — dan is de opdracht gratis.",
       "guaranteeNote": "Opgesteld voor pilotmandaten. Wij vragen u niet het risico te dragen dat dit vroeg is; dat dragen wij.",
       "link": "Wat de sprint dekt"
-    },
-    "audience": {
-      "eyebrow": "Voor wie dit is",
-      "title": "Twee momenten waarop dit de uitkomst verandert",
-      "cases": [
-        {
-          "title": "Een lopend sell-side proces",
-          "body": "De data room is open of gaat bijna open, en de analisten van een koper zijn er dagen van verwijderd. Een volledige slag over uw eigen documenten, afgestemd en beoordeeld, betekent dat er aan tafel niets als verrassing komt.",
-          "outcome": "U komt aan tafel als iemand die zichtbaar eerst zijn eigen werk heeft gecontroleerd."
-        },
-        {
-          "title": "Een exit over twee tot vijf jaar",
-          "body": "Nog geen proces, maar de beslissing is genomen. De gaten en het getal nu zien, laat jaren over om ze te dichten, in plaats van ze te ontdekken als de onderhandelingspositie al is verschoven.",
-          "outcome": "U herstelt op uw eigen tijdlijn, niet die van de koper."
-        }
-      ]
     },
     "trust": {
       "eyebrow": "Governance",
@@ -278,6 +267,34 @@
       "body": "Dertig minuten om te zien of uw situatie er een is waar dit echt bij helpt. Zo niet, dan zeggen we dat.",
       "button": "Plan een intakegesprek",
       "note": "Factum is pre-launch en neemt een beperkt aantal pilotmandaten aan."
+    },
+    "cycle": {
+      "eyebrow": "Door de cyclus heen",
+      "title": "Eén bewijsbasis, vijf momenten",
+      "lead": "Dezelfde analyse-engine en hetzelfde brongebonden dossier, toegepast op elk punt waar een beslissing daadwerkelijk kantelt. Er wordt niets opnieuw opgebouwd als het volgende moment komt.",
+      "stages": [
+        {
+          "title": "Kopen",
+          "body": "Van IM-screening tot closing. De volledige room gelezen terwijl de bevindingen prijs en structuur nog kunnen bewegen, met output die rechtstreeks een investeringscommissiememo in kan."
+        },
+        {
+          "title": "Financieren",
+          "body": "Het memo waar een bank of investeerder op onderschrijft, gebouwd op dezelfde bewijsbasis als de due diligence in plaats van er achteraf apart bij elkaar gezet."
+        },
+        {
+          "title": "Houden en waarde bouwen",
+          "body": "Periodieke portefeuillereview en doorlopende monitoring: convenantruimte, KPI-drift en vroege signalen, naast de hefbomen voor waardecreatie waar een statische risicolijst nooit naar kijkt."
+        },
+        {
+          "title": "Verkopen",
+          "body": "Exit readiness: kwaliteit van de data room, financiële presentatie, sterkte van het management en hoe het equity story standhoudt. De slag die het team van een koper zou draaien, eerst gedraaid aan uw kant van de tafel."
+        },
+        {
+          "title": "Herstructureren",
+          "body": "Pre-IBR- en WHOA-analyse: continuïteitsbeoordeling, crediteurenpositie en convenantruimte, in beeld terwijl de opties nog openliggen."
+        }
+      ],
+      "note": "Herstructureringswerk onder WHOA en IBR is gebonden aan Nederlandse jurisdictie. De rest van de cyclus is jurisdictieonafhankelijk."
     }
   },
 
@@ -426,12 +443,12 @@
   "sprint": {
     "header": {
       "eyebrow": "De opdracht",
-      "title": "De Buyer-Proof Sprint",
-      "lead": "Voor een verkoper die de problemen liever zelf eerst vindt dan dat het team van de koper ze vindt. Alle {disciplines} disciplines, één opdracht, afgestemd tot één verhaallijn voordat u iets ziet."
+      "title": "De Diligence Sprint",
+      "lead": "Alle {disciplines} disciplines, één opdracht, afgestemd tot één verhaallijn voordat u iets ziet. Gedraaid op een target dat u koopt, een onderneming die u houdt, of uw eigen bedrijf voordat een koper het leest."
     },
     "reframe": {
-      "quote": "Zo’n slag op uw eigen deal laten draaien, voordat het team van een koper de zijne draait, is geen teken dat er iets mis is. Het is hoe een goed geleid sell-side proces er vanaf de andere kant van de tafel uitziet — de verkopers die op een professionele koper het geloofwaardigst overkomen, zijn degenen die zichtbaar eerst hun eigen werk hebben gecontroleerd.",
-      "body": "De sprint bestaat omdat de volgorde standaard omgekeerd is. Het team van de koper krijgt weken met uw documenten en een opdracht om te vinden wat er mis is, en u krijgt de bevindingen terug als drukmiddel. Dit draait dezelfde analyse eerst, aan uw kant van de tafel."
+      "quote": "Zo’n slag draaien voordat de andere kant de zijne draait, is geen teken dat er iets mis is. Het is hoe een goed geleid proces eruitziet: de partij die het geloofwaardigst overkomt, is degene die zichtbaar eerst zijn eigen werk heeft gecontroleerd.",
+      "body": "De sprint bestaat omdat de volgorde standaard omgekeerd is. De ene kant krijgt weken met de documenten en een opdracht om te vinden wat er mis is, en de andere krijgt de bevindingen terug als drukmiddel. Dit draait dezelfde analyse eerst, aan uw kant van de tafel."
     },
     "disciplines": {
       "eyebrow": "Scope",
@@ -446,7 +463,7 @@
       "items": [
         {
           "title": "Waardecreatie-analyse",
-          "body": "Een synthese bovenop de financiële en commerciële bevindingen — margelekkage, indexatiegaten, cross-sellhefbomen — zodat het rapport een reden is om meer te betalen, niet alleen een lijst met redenen om minder te betalen."
+          "body": "Een synthese bovenop de financiële en commerciële bevindingen — margelekkage, indexatiegaten, cross-sellhefbomen — zodat het rapport ook de upside draagt, niet alleen de risicolijst."
         },
         {
           "title": "Disciplineoverstijgende afstemming",
@@ -454,7 +471,7 @@
         },
         {
           "title": "Live data-gap tracker",
-          "body": "De lopende vragenlijst, bijgewerkt terwijl u gaten dicht, zodat er niets onopgelost blijft liggen als de koper verschijnt."
+          "body": "De lopende vragenlijst, bijgewerkt terwijl gaten worden gedicht, zodat er niets onopgelost blijft liggen als de andere kant begint te lezen."
         }
       ]
     },
@@ -476,14 +493,14 @@
         {
           "label": "Naast beide",
           "items": "De data-gap tracker",
-          "body": "Volledige afstemming over documenten heen, geleverd als een gestructureerde lijst met datagaten vóór de koper toegang krijgt, niet door hen ontdekt."
+          "body": "Volledige afstemming over documenten heen, geleverd als een gestructureerde lijst met datagaten terwijl er nog tijd is om ze te dichten."
         }
       ]
     },
     "guarantee": {
-      "eyebrow": "De Buyer-Proof Garantie",
+      "eyebrow": "De bevindingengarantie",
       "title": "Drie materiële bevindingen, of de opdracht is gratis",
-      "body": "Levert de sprint niet ten minste drie materiële bevindingen op die uw eigen team nog niet had geïdentificeerd — het soort dat u wilt weten voordat een koper het weet — dan is de opdracht gratis.",
+      "body": "Levert de sprint niet ten minste drie materiële bevindingen op die uw eigen team nog niet had geïdentificeerd — het soort dat verandert wat u vervolgens doet — dan is de opdracht gratis.",
       "note": "Opgesteld voor pilotmandaten zolang Factum pre-launch is. Wij vragen u niet het risico te dragen dat dit vroeg is; dat dragen wij. Hoe een materiële bevinding wordt beoordeeld, staat in de opdrachtbevestiging en wordt niet achteraf aan interpretatie overgelaten."
     },
     "inputs": {
@@ -507,7 +524,7 @@
       "items": [
         {
           "q": "Vervangt dit een quality-of-earnings-rapport?",
-          "a": "Het is breder, en het is geen assurance-dienst. Een traditionele sell-side quality-of-earnings-analyse dekt één dimensie en kost vier tot tien weken; dit draait elf disciplines en stemt ze onderling af. Waar uw proces een ondertekende accountantsverklaring nodig heeft, blijft dat een aparte opdracht bij een apart kantoor."
+          "a": "Het is breder, en het is geen assurance-dienst. Een traditionele quality-of-earnings-analyse dekt één dimensie en kost vier tot tien weken; dit draait elf disciplines en stemt ze onderling af. Waar uw proces een ondertekende accountantsverklaring nodig heeft, blijft dat een aparte opdracht bij een apart kantoor."
         },
         {
           "q": "Hoe lang duurt het?",
@@ -532,7 +549,7 @@
       ]
     },
     "cta": {
-      "title": "Kijk of uw data room hier klaar voor is",
+      "title": "Kijk of een sprint past bij de room waar u naar kijkt",
       "body": "Het intakegesprek is een scopinggesprek: wat er in de room zit, wat ontbreekt, en of een sprint het juiste instrument is voor waar u staat.",
       "button": "Plan een intakegesprek",
       "note": "Een beperkt aantal pilotmandaten, een handvol."
@@ -590,6 +607,47 @@
     }
   },
 
+  "team": {
+    "header": {
+      "eyebrow": "Team",
+      "title": "Oordeel, niet alleen software",
+      "lead": "Twee gezichtspunten op één probleem: de risicoblik van een bankier en de discipline van een engineer voor systemen die niet omvallen."
+    },
+    "historyLabel": "Achtergrond",
+    "people": [
+      {
+        "name": "Wouter Dijkman",
+        "title": "Oprichter, Factum",
+        "bio": "Meer dan vijf jaar binnen de instellingen die deze deals financieren. Bij ING werkte Wouter bij Acquisition & Leveraged Finance, waar hij het krediet achter precies dit soort transacties structureerde en toetste. Daarvoor was hij bij Rabobank gespecialiseerd in financiële herstructurering, waar hij de cijfers van een onderneming las op wat ze werkelijk betekenen in plaats van op wat ze geacht worden te betekenen. Daarnaast leidt hij Agentic Mindshift, zijn eigen AI-consultancy, waardoor het AI-gedreven diligencewerk geen bijproject van een bankier is. Hij richtte Factum op om diezelfde scherpte naar de sell-side te brengen, zodat een eigenaar zijn exit ingaat met de striktheid die een bank zou toepassen, voordat een koper de kans krijgt die tegen hem te gebruiken.",
+        "history": [
+          { "org": "Factum Capital", "role": "Oprichter", "period": "2026 —" },
+          { "org": "Agentic Mindshift", "role": "Oprichter, AI-consultancy", "period": "2025 —" },
+          { "org": "ING", "role": "Acquisition & Leveraged Finance", "period": "2023 – 2025" },
+          { "org": "Rabobank", "role": "Specialist Financial Restructuring", "period": "2020 – 2023" },
+          { "org": "Alter Domus", "role": "Legal Officer", "period": "2019 – 2020" }
+        ]
+      },
+      {
+        "name": "Daniel Dropuljic",
+        "title": "Technical Lead, Factum",
+        "bio": "Daniel bouwt de systemen achter het AI-gedreven diligencewerk van Factum. Als oprichter van Dandro Solutions ontwerpt hij datapipelines die meer dan 50.000 records per dag verwerken voor internationale zorgklanten, onder strikte compliance-regimes waaronder de AVG en FHIR. Die discipline — productiewaardig, auditeerbaar, gebouwd om onder toetsing stand te houden — is waar de diligence-engine van Factum op draait.",
+        "history": [
+          { "org": "Dandro Solutions", "role": "Oprichter, software engineering", "period": "2021 —" },
+          { "org": "Healex, Berlijn", "role": "HL7/FHIR-implementatie, leidde een team van drie", "period": "2019 – 2021" },
+          { "org": "Uniklinik Köln", "role": "Onderzoeksdata-infrastructuur", "period": "2019" },
+          { "org": "Furore, Amsterdam", "role": "Data engineering", "period": "2018" }
+        ]
+      }
+    ],
+    "closing": "De risicoblik van een bankier en de discipline van een engineer voor systemen die niet omvallen. Samen onderbouwen ze het proces met oordeel, niet alleen met software.",
+    "cta": {
+      "title": "U spreekt de persoon die de output beoordeelt",
+      "body": "Zolang Factum pre-launch is, zijn het intakegesprek, de beoordelingstoets en de doorloop dezelfde persoon. Dat is de reden om een handvol mandaten aan te nemen.",
+      "button": "Plan een intakegesprek",
+      "note": "Dertig minuten."
+    }
+  },
+
   "partnerships": {
     "header": {
       "eyebrow": "Partnerships",
@@ -603,7 +661,7 @@
       "profiles": [
         {
           "title": "Corporate-finance-boutiques",
-          "body": "Die sell-side processen draaien waar de analytische belasting de beperking is, niet de dealflow."
+          "body": "Die buy- en sell-side processen draaien waar de analytische belasting de beperking is, niet de dealflow."
         },
         {
           "title": "Exit- en waardecreatieadviseurs",
@@ -721,7 +779,7 @@
     "agenda": {
       "label": "Wat we bespreken",
       "items": [
-        "Waar u staat: een lopend proces, of een exit over twee tot vijf jaar.",
+        "Waar u staat in de cyclus: kopen, financieren, houden of verkopen.",
         "Wat er vandaag in de data room zit, en wat eraan ontbreekt.",
         "Welke disciplines het echte risico dragen in uw specifieke situatie.",
         "Of een sprint het juiste instrument is, of dat het nog te vroeg is.",

@@ -348,6 +348,17 @@ p { margin: 0; }
   .split-sticky { position: static; }
 }
 
+.stage-row {
+  display: grid;
+  gap: 6px clamp(20px, 4vw, 56px);
+  grid-template-columns: minmax(0, 20ch) minmax(0, 1fr);
+  align-items: baseline;
+  padding-block: clamp(20px, 2.5vw, 30px);
+}
+@media (max-width: 760px) {
+  .stage-row { grid-template-columns: 1fr; }
+}
+
 .glow {
   position: absolute;
   border-radius: 50%;

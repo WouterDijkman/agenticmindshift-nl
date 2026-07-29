@@ -217,7 +217,7 @@ export default async function HomePage({
         </Reveal>
       </Section>
 
-      {/* The Buyer-Proof Sprint. */}
+      {/* The Diligence Sprint. */}
       <Section width="medium">
         <SectionHeader
           eyebrow={t('sprint.eyebrow')}
@@ -268,40 +268,42 @@ export default async function HomePage({
         </Reveal>
 
         <Reveal delay={110} style={{ marginTop: 32 }}>
-          <Link href="/buyer-proof-sprint" className="link-quiet">
+          <Link href="/diligence-sprint" className="link-quiet">
             {t('sprint.link')}
             <ArrowRight />
           </Link>
         </Reveal>
       </Section>
 
-      {/* Who it's for. */}
+      {/* Where in the cycle this lands. */}
       <Section width="medium">
-        <SectionHeader eyebrow={t('audience.eyebrow')} title={t('audience.title')} />
-        <div
-          className="rule-grid"
-          style={{
-            marginTop: 'clamp(32px, 4vw, 48px)',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))'
-          }}
-        >
-          {(t.raw('audience.cases') as { title: string; body: string; outcome: string }[]).map(
-            (item) => (
-              <div key={item.title}>
-                <h3 className="type-h3" style={{ marginBottom: 14, fontSize: '1.375rem' }}>
-                  {item.title}
+        <SectionHeader
+          eyebrow={t('cycle.eyebrow')}
+          title={t('cycle.title')}
+          lead={t('cycle.lead')}
+        />
+
+        <ol style={{ listStyle: 'none', margin: 'clamp(32px, 4vw, 48px) 0 0', padding: 0 }}>
+          {(t.raw('cycle.stages') as { title: string; body: string }[]).map((stage, i) => (
+            <Reveal key={stage.title} as="li" delay={i * 60} className="hairline-top">
+              <div className="stage-row">
+                <h3 className="type-h3" style={{ fontSize: '1.375rem' }}>
+                  <span className="mono" style={{ color: 'var(--wine-text)', marginRight: 12 }}>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  {stage.title}
                 </h3>
-                <p className="type-body">{item.body}</p>
-                <p
-                  className="type-small hairline-top"
-                  style={{ marginTop: 20, paddingTop: 16, color: 'var(--wine-text)' }}
-                >
-                  {item.outcome}
-                </p>
+                <p className="type-body">{stage.body}</p>
               </div>
-            )
-          )}
-        </div>
+            </Reveal>
+          ))}
+        </ol>
+
+        <Reveal delay={80}>
+          <p className="type-small" style={{ marginTop: 24, color: 'var(--text-quaternary)' }}>
+            {t('cycle.note')}
+          </p>
+        </Reveal>
       </Section>
 
       {/* Trust. */}

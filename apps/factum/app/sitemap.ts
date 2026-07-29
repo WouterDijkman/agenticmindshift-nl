@@ -5,8 +5,9 @@ import { SITE_URL } from '@/lib/site';
 const PATHS = [
   { path: '', priority: 1 },
   { path: '/platform', priority: 0.9 },
-  { path: '/buyer-proof-sprint', priority: 0.9 },
+  { path: '/diligence-sprint', priority: 0.9 },
   { path: '/governance', priority: 0.7 },
+  { path: '/team', priority: 0.6 },
   { path: '/partnerships', priority: 0.6 },
   { path: '/contact', priority: 0.5 },
   { path: '/privacy', priority: 0.3 }
