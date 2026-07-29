@@ -16,10 +16,6 @@
       "title": "Governance en gegevensverwerking",
       "description": "Hoe documenten worden verwerkt, wat de menselijke toets doet, en wat Factum bewust niet claimt."
     },
-    "team": {
-      "title": "Wie hierachter zit",
-      "description": "De risicoblik van een bankier en de discipline van een engineer voor systemen die niet omvallen."
-    },
     "partnerships": {
       "title": "Partnerships",
       "description": "Voor advieskantoren en corporate-finance-boutiques die analytische capaciteit op diligence-niveau achter hun eigen klantrelaties willen."
@@ -44,7 +40,6 @@
     "platform": "Platform",
     "sprint": "Buyer-Proof Sprint",
     "governance": "Governance",
-    "team": "Team",
     "partnerships": "Partnerships",
     "contact": "Contact",
     "cta": "Plan een intakegesprek",
@@ -592,47 +587,6 @@
       "body": "De lijst hierboven is bewust weinig flatteus. Als iets daarop voor u een blokkade is, ontdekt u dat liever in dertig minuten dan in drie weken.",
       "button": "Plan een intakegesprek",
       "note": "Zonder voorstel."
-    }
-  },
-
-  "team": {
-    "header": {
-      "eyebrow": "Team",
-      "title": "Oordeel, niet alleen software",
-      "lead": "Twee gezichtspunten op één probleem: de risicoblik van een bankier en de discipline van een engineer voor systemen die niet omvallen."
-    },
-    "historyLabel": "Achtergrond",
-    "people": [
-      {
-        "name": "Wouter Dijkman",
-        "title": "Oprichter, Factum",
-        "bio": "Meer dan vijf jaar binnen de instellingen die deze deals financieren. Bij ING werkte Wouter bij Acquisition & Leveraged Finance, waar hij het krediet achter precies dit soort transacties structureerde en toetste. Daarvoor was hij bij Rabobank gespecialiseerd in financiële herstructurering, waar hij de cijfers van een onderneming las op wat ze werkelijk betekenen in plaats van op wat ze geacht worden te betekenen. Daarnaast leidt hij Agentic Mindshift, zijn eigen AI-consultancy, waardoor het AI-gedreven diligencewerk geen bijproject van een bankier is. Hij richtte Factum op om diezelfde scherpte naar de sell-side te brengen, zodat een eigenaar zijn exit ingaat met de striktheid die een bank zou toepassen, voordat een koper de kans krijgt die tegen hem te gebruiken.",
-        "history": [
-          { "org": "Factum Capital", "role": "Oprichter", "period": "2026 —" },
-          { "org": "Agentic Mindshift", "role": "Oprichter, AI-consultancy", "period": "2025 —" },
-          { "org": "ING", "role": "Acquisition & Leveraged Finance", "period": "2023 – 2025" },
-          { "org": "Rabobank", "role": "Specialist Financial Restructuring", "period": "2020 – 2023" },
-          { "org": "Alter Domus", "role": "Legal Officer", "period": "2019 – 2020" }
-        ]
-      },
-      {
-        "name": "Daniel Dropuljic",
-        "title": "Technical Lead, Factum",
-        "bio": "Daniel bouwt de systemen achter het AI-gedreven diligencewerk van Factum. Als oprichter van Dandro Solutions ontwerpt hij datapipelines die meer dan 50.000 records per dag verwerken voor internationale zorgklanten, onder strikte compliance-regimes waaronder de AVG en FHIR. Die discipline — productiewaardig, auditeerbaar, gebouwd om onder toetsing stand te houden — is waar de diligence-engine van Factum op draait.",
-        "history": [
-          { "org": "Dandro Solutions", "role": "Oprichter, software engineering", "period": "2021 —" },
-          { "org": "Healex, Berlijn", "role": "HL7/FHIR-implementatie, leidde een team van drie", "period": "2019 – 2021" },
-          { "org": "Uniklinik Köln", "role": "Onderzoeksdata-infrastructuur", "period": "2019" },
-          { "org": "Furore, Amsterdam", "role": "Data engineering", "period": "2018" }
-        ]
-      }
-    ],
-    "closing": "De risicoblik van een bankier en de discipline van een engineer voor systemen die niet omvallen. Samen onderbouwen ze het proces met oordeel, niet alleen met software.",
-    "cta": {
-      "title": "U spreekt de persoon die de output beoordeelt",
-      "body": "Zolang Factum pre-launch is, zijn het intakegesprek, de beoordelingstoets en de doorloop dezelfde persoon. Dat is de reden om een handvol mandaten aan te nemen.",
-      "button": "Plan een intakegesprek",
-      "note": "Dertig minuten."
     }
   },
 
