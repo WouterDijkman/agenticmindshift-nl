@@ -2,27 +2,27 @@
   "meta": {
     "home": {
       "title": "Analyse op diligence-niveau, de hele dealcyclus door",
-      "description": "Factum leest de volledige data room — elf disciplines, onderling afgestemd en beoordeeld door een persoon — of u nu koopt, financiert, houdt of verkoopt."
+      "description": "Elf disciplines over de volledige data room. Onderling afgestemd. Beoordeeld door een persoon voordat u iets ziet."
     },
     "platform": {
       "title": "Het platform",
-      "description": "241 due-diligencemodules over 31 verticals. Elke bevinding gekoppeld aan een echt document, gecontroleerd door een tweede reviewer-agent en pas na een menselijke toets bij u."
+      "description": "241 due-diligencemodules over 31 verticals. Elke bevinding verwijst naar een document. Elke output passeert een menselijke toets."
     },
     "sprint": {
       "title": "De Diligence Sprint",
-      "description": "Elf specialistische analyseslagen over een volledige data room, afgestemd tot één verhaallijn, met een live data-gap tracker — zodat de bevindingen komen terwijl ze de beslissing nog kunnen veranderen."
+      "description": "Elf specialistische analyseslagen over één data room, afgestemd tot één verhaallijn, met een live data-gap tracker."
     },
     "governance": {
       "title": "Governance en gegevensverwerking",
-      "description": "Hoe documenten worden verwerkt, wat de menselijke toets doet, en wat Factum bewust niet claimt."
+      "description": "Hoe documenten worden verwerkt, wat de menselijke toets doet, en wat Factum niet claimt."
     },
     "team": {
       "title": "Wie hierachter zit",
-      "description": "De risicoblik van een bankier en de discipline van een engineer voor systemen die niet omvallen."
+      "description": "De risicoblik van een bankier. De discipline van een engineer voor systemen die niet omvallen."
     },
     "partnerships": {
       "title": "Partnerships",
-      "description": "Voor advieskantoren en corporate-finance-boutiques die analytische capaciteit op diligence-niveau achter hun eigen klantrelaties willen."
+      "description": "Analytische capaciteit op diligence-niveau achter uw eigen klantrelaties."
     },
     "contact": {
       "title": "Spreek met ons",
@@ -53,7 +53,7 @@
   },
 
   "footer": {
-    "blurb": "Factum bouwt analyse op diligence-niveau voor de sell-side — gegrond in uw eigen documenten, beoordeeld door een persoon met naam, opgeleverd in dagen.",
+    "blurb": "Analyse op diligence-niveau, de hele dealcyclus door. Gegrond in uw documenten. Beoordeeld door een persoon met naam. Opgeleverd in dagen.",
     "sitemap": "Sitemap",
     "company": "Bedrijf",
     "privacy": "Privacy",
@@ -63,7 +63,7 @@
 
   "notFound": {
     "title": "Deze pagina staat niet in het dossier",
-    "body": "De link is kapot of de pagina is verplaatst. Alles wat de site wél zegt, is één klik verderop.",
+    "body": "De link is kapot of de pagina is verplaatst.",
     "home": "Terug naar de homepage",
     "platform": "Bekijk hoe het platform werkt"
   },
@@ -117,7 +117,7 @@
     ],
     "schema": {
       "label": "Outputcontract — elke bevinding",
-      "footnote": "Dit is het schema waaraan elke bevinding moet voldoen, geen voorbeeldbevinding. Klantwerk is vertrouwelijk en geen enkele klant heeft ervoor gekozen bij naam genoemd te worden, dus er is geen fragment om te publiceren.",
+      "footnote": "Het schema waaraan elke bevinding moet voldoen. Klantwerk is vertrouwelijk, dus er is geen voorbeeld om te publiceren.",
       "rows": {
         "module": "Module",
         "finding": "Bevinding",
@@ -140,15 +140,15 @@
       },
       {
         "title": "Zero retention bij de modelaanbieder",
-        "body": "De onderliggende modelaanbieder bewaart uw documenten niet en gebruikt ze niet voor modeltraining buiten de verwerkingsaanroep zelf."
+        "body": "De modelaanbieder bewaart uw documenten niet en traint er niet op."
       },
       {
         "title": "Gepseudonimiseerd vóór verwerking",
-        "body": "Vertrouwelijke financiële en persoonsgegevens worden gepseudonimiseerd voordat ze de analyselaag bereiken, en pas in de uiteindelijk geleverde output teruggezet — niet in enige tussenstap."
+        "body": "Vertrouwelijke gegevens worden gepseudonimiseerd vóór de analyse. Pas in de uiteindelijke output teruggezet."
       },
       {
         "title": "Eén aanspreekpunt dat verantwoordelijk is",
-        "body": "Elke output wordt beoordeeld door een persoon met naam voordat die u bereikt. Niet via een black box waar niemand aanspreekbaar is."
+        "body": "Een persoon met naam beoordeelt elke output voordat die u bereikt."
       }
     ]
   },
@@ -157,144 +157,144 @@
     "hero": {
       "eyebrow": "Diligence door de dealcyclus",
       "title": "Lees de hele room voordat het getal vastligt",
-      "lead": "Kopen, financieren, houden of verkopen — de blootstelling is steeds dezelfde: de beslissing valt op basis van een steekproef. Factum draait {disciplines} specialistische analyseslagen over de volledige data room, gegrond in de documenten, onderling afgestemd en beoordeeld door een persoon voordat u iets ziet.",
+      "lead": "Kopen, financieren, houden, verkopen: de beslissing valt op basis van een steekproef. Factum draait {disciplines} specialistische analyseslagen over de volledige room. Een persoon beoordeelt het voordat u het ziet.",
       "cta": "Plan een intakegesprek",
       "secondary": "Bekijk hoe de pipeline werkt",
-      "footnote": "Factum is pre-launch. We nemen een beperkt aantal pilotmandaten aan — een handvol, geen doorlopende wachtlijst."
+      "footnote": "Pre-launch. We nemen een handvol pilotmandaten aan."
     },
     "schema": {
       "eyebrow": "Het outputcontract",
       "title": "Een bevinding is pas af als die herleidbaar is",
-      "lead": "Het outputschema vereist voor elke bewering een verwijzing naar een specifiek document en een specifieke passage voordat een bevinding als af telt.",
-      "body": "Een structurele beperking op de output, geen verzoek waar het model stilletjes minder van kan leveren als het twintig bevindingen ver in een lange run zit. We publiceren het contract in plaats van een voorbeeld, omdat klantwerk vertrouwelijk is.",
+      "lead": "Elke bewering verwijst naar een specifiek document en een specifieke passage. Geen bronverwijzing, geen bevinding.",
+      "body": "Het schema dwingt dat af. We publiceren het contract in plaats van een voorbeeld, omdat klantwerk vertrouwelijk is.",
       "link": "Lees de volledige pipeline"
     },
     "problem": {
       "eyebrow": "De asymmetrie",
       "title": "Het getal wordt bepaald terwijl de room half gelezen is",
-      "lead": "Traditionele due diligence neemt een steekproef uit de data room en rapporteert weken later. Dan ligt de prijs al verankerd, is de commissie verder, en zijn de bevindingen te laat om de structuur nog te veranderen.",
+      "lead": "Traditionele due diligence neemt een steekproef en rapporteert weken later. Dan ligt de prijs al verankerd en zijn de bevindingen te laat.",
       "points": [
         {
           "title": "Wie het eerst vindt, bepaalt het kader",
-          "body": "Wie een probleem als eerste vindt, bepaalt hoe het voor de rest van de onderhandeling wordt neergezet. Aan beide kanten van de tafel gaat dat voordeel naar wie de room het eerst heeft gelezen."
+          "body": "Wie een probleem als eerste vindt, bepaalt hoe het voor de rest van de onderhandeling wordt neergezet."
         },
         {
           "title": "Eén dimensie is geen due diligence",
-          "body": "Een quality-of-earnings-analyse dekt één dimensie. De andere kant stopt niet bij één. De gaten zitten in de ruimte tussen de disciplines."
+          "body": "Een quality-of-earnings-analyse dekt één dimensie. De gaten zitten tussen de disciplines."
         },
         {
           "title": "Een risicolijst is geen argument",
-          "body": "De meeste due diligence is een statische risicolijst — niemand jaagt actief op hefbomen voor waardecreatie. Het rapport leest als een waarschuwing, niet als basis voor een beslissing."
+          "body": "De meeste due diligence is een statische risicolijst. Niemand jaagt op hefbomen voor waardecreatie."
         },
         {
           "title": "Een steekproef is niet de room",
-          "body": "Dekkingsgaten zijn hoe deals na closing misgaan. Een analyse die bij een steekproef stopt, laat juist het deel weg waar niemand aan dacht te vragen."
+          "body": "Dekkingsgaten zijn hoe deals na closing misgaan."
         }
       ]
     },
     "pipeline": {
       "eyebrow": "Hoe het draait",
-      "title": "Een geteste pipeline, geen sessie die iemand moet bijsturen",
-      "lead": "Elke competente analist kan een agentic tool op een data room richten en die de documenten daadwerkelijk laten doorwerken. Het verschil zit in wat elke keer is ingebouwd versus wat afhangt van hoe goed de sessie op een bepaalde dag wordt bijgestuurd.",
+      "title": "Een geteste pipeline, elke keer hetzelfde gedraaid",
+      "lead": "Iedereen kan een agentic tool op een data room richten. De vraag is wat er elke keer gebeurt, omdat het zo gebouwd is.",
       "refusalTitle": "De loop weigert automatisch goed te keuren",
       "refusals": [
         "Verzonnen of gehallucineerde bronverwijzingen",
         "Privacylekken",
         "Scope-weigeringen"
       ],
-      "refusalNote": "Hard-coded, ook na herhaalde retries. Alle drie gaan naar een mens in plaats van stilzwijgend door te lopen.",
+      "refusalNote": "Hard-coded. Alle drie gaan naar een persoon.",
       "stages": [
         {
           "title": "Gegronde retrieval",
-          "body": "Elke module haalt bewijs rechtstreeks uit de geüploade documenten in plaats van vrij tekst te genereren."
+          "body": "Elke module haalt bewijs rechtstreeks uit de geüploade documenten."
         },
         {
           "title": "Opstellen",
-          "body": "De module stelt haar bevindingen op tegen een schema dat geen bewering accepteert zonder een document en een passage erachter."
+          "body": "Het schema weigert elke bewering zonder document en passage erachter."
         },
         {
           "title": "Generate-critique-retry",
-          "body": "Een tweede reviewer-agent controleert het concept in een generate-critique-retry-loop voordat er iets een mens bereikt."
+          "body": "Een tweede reviewer-agent bekritiseert het concept en stuurt het terug."
         },
         {
           "title": "Onafhankelijke feitencontrole",
-          "body": "Een aparte slag verifieert beweringen tegen de brontekst, los van de reviewer-agent."
+          "body": "Een aparte slag verifieert elke bewering tegen de brontekst."
         },
         {
           "title": "Menselijke goedkeuringstoets",
-          "body": "De enige verplichte menselijke stap: een beoordelings- en goedkeuringstoets op reeds gegenereerde bevindingen. Die toets draait elke keer, niet alleen wanneer iemand eraan denkt erom te vragen."
+          "body": "Eén verplichte menselijke stap. Die draait elke keer."
         }
       ]
     },
     "coverage": {
       "eyebrow": "Dekking",
       "title": "{modules} modules over {verticals} verticals",
-      "lead": "Factum is een al gebouwd platform, geen concept dat nog ontwikkeld moet worden. Elke module is een zelfstandige agent met een eigen vooraf afgebakende opdracht, verfijnd over opdrachten heen in plaats van per prompt opnieuw bedacht.",
-      "note": "Een selectie van de {verticals} verticals, in de eigen naamgeving van het platform. De taxonomie is breder dan deze lijst, en moduleaantallen staan er alleen waar we een vastgesteld getal hebben.",
+      "lead": "Factum is al gebouwd. Elke module is een zelfstandige agent met een eigen vooraf afgebakende opdracht.",
+      "note": "Een selectie van de {verticals} verticals, in de eigen naamgeving van het platform. Aantallen staan er alleen waar we een vastgesteld getal hebben.",
       "figures": {
         "modules": {
           "label": "Due-diligencemodules",
-          "note": "Geteld naar de huidige build van het platform. Elk daarvan is een zelfstandige agent, geen prompttemplate."
+          "note": "Elk daarvan is een zelfstandige agent met een eigen opdracht."
         },
         "disciplines": {
           "label": "Disciplines per opdracht",
-          "note": "Financieel, commercieel, juridisch, fiscaal, HR, IT, ESG, vendor, operationeel, waardering en verzekeringen — allemaal, elke keer."
+          "note": "Financieel, commercieel, juridisch, fiscaal, HR, IT, ESG, vendor, operationeel, waardering, verzekeringen. Allemaal, elke keer."
         },
         "speed": {
           "value": "Dagen",
           "label": "Geen weken",
-          "note": "Een volledige slag over elf disciplines wordt in dagen opgeleverd. De menselijke beoordeling volgt op de pipeline-slag, niet in plaats daarvan."
+          "note": "Een volledige slag over elf disciplines, opgeleverd in dagen. De menselijke beoordeling volgt daarna."
         }
       }
     },
     "sprint": {
       "eyebrow": "De opdracht",
       "title": "De Diligence Sprint",
-      "lead": "Eén opdracht die alle {disciplines} disciplines dekt, plus de drie synthesielagen die elf losse analyses tot één bruikbare oplevering maken. Gedraaid op een target dat u koopt, een onderneming die u houdt, of uw eigen bedrijf voordat iemand anders het leest.",
+      "lead": "Alle {disciplines} disciplines in één opdracht, plus drie synthesielagen. Gedraaid op een target, een onderneming die u houdt, of uw eigen bedrijf.",
       "guaranteeLabel": "De bevindingengarantie",
-      "guarantee": "Levert de sprint niet ten minste drie materiële bevindingen op die uw eigen team nog niet had geïdentificeerd — het soort dat verandert wat u vervolgens doet — dan is de opdracht gratis.",
-      "guaranteeNote": "Opgesteld voor pilotmandaten. Wij vragen u niet het risico te dragen dat dit vroeg is; dat dragen wij.",
+      "guarantee": "Drie materiële bevindingen die uw eigen team nog niet had geïdentificeerd, of de opdracht is gratis.",
+      "guaranteeNote": "Voor pilotmandaten. Wij dragen het risico dat dit vroeg is, niet u.",
       "link": "Wat de sprint dekt"
     },
     "trust": {
       "eyebrow": "Governance",
-      "title": "Ingebouwd in hoe de pipeline draait, niet erop geplakt",
-      "lead": "Alles hieronder beschrijft een mechanisme, geen certificering. De governancepagina is even expliciet over wat we niet claimen.",
+      "title": "Ingebouwd in hoe de pipeline draait",
+      "lead": "Elk punt hieronder is een mechanisme. Geen ervan is een certificering.",
       "link": "Lees de governancepagina"
     },
     "cta": {
       "title": "Begin met een gesprek, niet met een voorstel",
-      "body": "Dertig minuten om te zien of uw situatie er een is waar dit echt bij helpt. Zo niet, dan zeggen we dat.",
+      "body": "Dertig minuten om te zien of dit bij uw situatie past. Zo niet, dan zeggen we dat.",
       "button": "Plan een intakegesprek",
       "note": "Factum is pre-launch en neemt een beperkt aantal pilotmandaten aan."
     },
     "cycle": {
       "eyebrow": "Door de cyclus heen",
       "title": "Eén bewijsbasis, vijf momenten",
-      "lead": "Dezelfde analyse-engine en hetzelfde brongebonden dossier, toegepast op elk punt waar een beslissing daadwerkelijk kantelt. Er wordt niets opnieuw opgebouwd als het volgende moment komt.",
+      "lead": "Eén bewijsbasis, toegepast op elk punt waar een beslissing kantelt. Er wordt niets opnieuw opgebouwd als het volgende moment komt.",
       "stages": [
         {
           "title": "Kopen",
-          "body": "Van IM-screening tot closing. De volledige room gelezen terwijl de bevindingen prijs en structuur nog kunnen bewegen, met output die rechtstreeks een investeringscommissiememo in kan."
+          "body": "Van IM-screening tot closing, terwijl de bevindingen prijs en structuur nog kunnen bewegen."
         },
         {
           "title": "Financieren",
-          "body": "Het memo waar een bank of investeerder op onderschrijft, gebouwd op dezelfde bewijsbasis als de due diligence in plaats van er achteraf apart bij elkaar gezet."
+          "body": "Het memo waar een bank of investeerder op onderschrijft, gebouwd op dezelfde bewijsbasis."
         },
         {
           "title": "Houden en waarde bouwen",
-          "body": "Periodieke portefeuillereview en doorlopende monitoring: convenantruimte, KPI-drift en vroege signalen, naast de hefbomen voor waardecreatie waar een statische risicolijst nooit naar kijkt."
+          "body": "Convenantruimte, KPI-drift, vroege signalen. Plus de hefbomen voor waardecreatie die een risicolijst negeert."
         },
         {
           "title": "Verkopen",
-          "body": "Exit readiness: kwaliteit van de data room, financiële presentatie, sterkte van het management en hoe het equity story standhoudt. De slag die het team van een koper zou draaien, eerst gedraaid aan uw kant van de tafel."
+          "body": "Kwaliteit van de data room, financiële presentatie, sterkte van het management, equity story. De slag van de koper, eerst aan uw kant gedraaid."
         },
         {
           "title": "Herstructureren",
-          "body": "Pre-IBR- en WHOA-analyse: continuïteitsbeoordeling, crediteurenpositie en convenantruimte, in beeld terwijl de opties nog openliggen."
+          "body": "Pre-IBR en WHOA: continuïteit, crediteurenpositie, convenantruimte. Terwijl de opties nog openliggen."
         }
       ],
-      "note": "Herstructureringswerk onder WHOA en IBR is gebonden aan Nederlandse jurisdictie. De rest van de cyclus is jurisdictieonafhankelijk."
+      "note": "WHOA- en IBR-werk is gebonden aan Nederlandse jurisdictie. De rest van de cyclus is jurisdictieonafhankelijk."
     }
   },
 
@@ -302,62 +302,62 @@
     "header": {
       "eyebrow": "Het platform",
       "title": "{modules} modules, en de machinerie die ze eerlijk houdt",
-      "lead": "Het interessante aan een AI-diligenceplatform is niet dat het een data room kan lezen. Het is wat er structureel moet gebeuren voordat een bevinding u mag bereiken."
+      "lead": "De vraag is niet of AI een data room kan lezen. De vraag is wat er moet gebeuren voordat een bevinding u bereikt."
     },
     "difference": {
       "eyebrow": "Het onderscheid",
       "title": "Elke keer ingebouwd versus op de dag zelf bijgestuurd",
-      "lead": "Hiervoor hoeft u niet te geloven dat algemene agentic AI iets niet kan. Het vraagt om te erkennen dat een geteste pipeline die iemand al heeft gebouwd, gedraaid en over opdrachten heen gehard, iets anders is dan diezelfde striktheid zelf samenstellen, correct, onder dealdruk, deze ene keer.",
+      "lead": "Een pipeline die iemand al heeft gebouwd, gedraaid en gehard is iets anders dan diezelfde striktheid zelf samenstellen, onder dealdruk, deze ene keer.",
       "points": [
         {
           "title": "Een geteste, herhaalbare methodiek",
-          "body": "Geen workflow die elke sessie opnieuw wordt samengesteld. De dekking hangt niet af van eraan denken er deze keer correct om te vragen."
+          "body": "De dekking hangt niet af van eraan denken erom te vragen."
         },
         {
           "title": "Bronverwijzingen als schemabeperking",
-          "body": "Elke bewering heeft een specifiek document en een specifieke passage nodig voordat de bevinding als af telt. Een structurele beperking op de output, geen verzoek waar het model stilletjes minder van kan leveren."
+          "body": "Elke bewering heeft een specifiek document en een specifieke passage nodig voordat de bevinding als af telt."
         },
         {
           "title": "Disciplineoverstijgende afstemming als vaste stap",
-          "body": "De echte waarde van een due-diligenceanalyse zit in het opmerken van wat pas zichtbaar wordt wanneer de financiële cijfers, het handelsregister, de juridische contracten en de HR-dossiers tegen elkaar worden gelezen."
+          "body": "De echte vondsten komen boven wanneer cijfers, handelsregister, contracten en HR-dossiers tegen elkaar worden gelezen."
         },
         {
           "title": "Een permanente verificatietoets",
-          "body": "Een beoordelingsslag die elke keer draait, niet alleen wanneer iemand eraan denkt de agent te vragen zichzelf te controleren."
+          "body": "Een beoordelingsslag die elke keer draait, automatisch."
         }
       ]
     },
     "pipeline": {
       "eyebrow": "De pipeline",
       "title": "Van upload tot een bevinding waar u iets mee kunt",
-      "lead": "Van begin tot eind, van data-roomupload tot opgestelde bevindingen, draait de analysestap zonder mens in de loop. De enige verplichte menselijke stap is een beoordelings- en goedkeuringstoets op bevindingen die al bestaan.",
+      "lead": "Van upload tot opgestelde bevindingen draait de analyse zonder mens in de loop. Eén verplichte menselijke toets zit erachter.",
       "stages": [
         {
           "title": "Gegronde retrieval",
-          "body": "Elk van de modules is een zelfstandige agent die gegrond bewijs rechtstreeks uit de geüploade documenten haalt, geen vrij gegenereerde tekst.",
+          "body": "Elke module is een zelfstandige agent die bewijs ophaalt uit de geüploade documenten.",
           "note": "Vertrouwelijke financiële en persoonsgegevens worden gepseudonimiseerd voordat ze deze laag bereiken."
         },
         {
           "title": "Opstellen tegen het schema",
-          "body": "De agent stelt bevindingen op binnen een outputschema dat voor elke bewering een verwijzing naar een specifiek document en een specifieke passage vereist."
+          "body": "Bevindingen worden opgesteld binnen een schema dat voor elke bewering een bronverwijzing eist."
         },
         {
           "title": "Generate-critique-retry",
-          "body": "Een tweede reviewer-agent bekritiseert het concept en stuurt het terug. De loop herhaalt zich voordat er iets een mens bereikt.",
+          "body": "Een tweede reviewer-agent bekritiseert het concept en stuurt het terug. De loop herhaalt zich.",
           "note": "De eigen term van het platform: een generate-critique-retry-loop."
         },
         {
           "title": "Onafhankelijke feitencontrole",
-          "body": "Een tweede, onafhankelijke feitencontroleslag verifieert beweringen tegen de brontekst, los van de reviewer-agent.",
+          "body": "Een onafhankelijke slag verifieert beweringen tegen de brontekst.",
           "note": "Een derde controlelaag, los van zowel de reviewer-agent als de menselijke toets."
         },
         {
           "title": "Disciplineoverstijgende afstemming",
-          "body": "De bevindingen van elke discipline worden tegen die van alle andere gecontroleerd en opgelost tot één samenhangende verhaallijn voordat u iets ziet."
+          "body": "De bevindingen van elke discipline worden tegen die van alle andere gecontroleerd en opgelost tot één verhaallijn."
         },
         {
           "title": "Menselijke beoordeling en goedkeuring",
-          "body": "Een achteraf uitgevoerde beoordelingstoets op reeds gegenereerde bevindingen. Die beoordeling is geen formaliteit die erop is geplakt om AI-output presentabel te maken — het is het mechanisme dat analyse op machinesnelheid veilig maakt om op te leunen bij een beslissing van deze omvang.",
+          "body": "Een persoon met naam beoordeelt reeds gegenereerde bevindingen vóór vrijgave. Dat maakt analyse op machinesnelheid veilig om op te leunen.",
           "note": "Pseudonimisering wordt alleen hier teruggedraaid, in de uiteindelijk geleverde output."
         }
       ]
@@ -365,44 +365,44 @@
     "anatomy": {
       "eyebrow": "Het outputcontract",
       "title": "Wat elke bevinding moet dragen",
-      "lead": "In plaats van een voorbeeldbevinding uit een echte opdracht te publiceren, publiceren we het contract waaraan elke bevinding moet voldoen.",
-      "body": "Klantdocumenten zijn vertrouwelijk en geen enkele klant heeft ervoor gekozen bij naam genoemd te worden, dus er is geen geanonimiseerd fragment om te tonen. Het schema is sowieso het controleerbare deel: het is wat de pipeline afdwingt voordat een bevinding mag bestaan."
+      "lead": "We publiceren het contract waaraan elke bevinding moet voldoen.",
+      "body": "Klantdocumenten zijn vertrouwelijk, dus er is geen fragment om te tonen. Het schema is wat de pipeline afdwingt voordat een bevinding mag bestaan."
     },
     "refusals": {
       "eyebrow": "Faalklassen",
       "title": "Drie dingen die de loop niet automatisch goedkeurt",
-      "lead": "De reviewer-agentloop is hard-coded om drie faalklassen niet automatisch goed te keuren, ook niet na herhaalde retries, en stuurt alle drie naar een mens in plaats van ze stilzwijgend door te laten.",
+      "lead": "Drie faalklassen zijn hard-coded om naar een persoon te gaan, ook na herhaalde retries.",
       "badge": "Weigert",
       "classes": [
         {
           "title": "Verzonnen of gehallucineerde bronverwijzingen",
-          "body": "Een verwijzing die niet leidt naar een echte passage in een echt geüpload document, stopt de bevinding."
+          "body": "Een bronverwijzing die niet naar een echte passage leidt, stopt de bevinding."
         },
         {
           "title": "Privacylekken",
-          "body": "Materiaal dat de analyselaag niet in of uit had mogen gaan, wordt naar een persoon geleid in plaats van vrijgegeven."
+          "body": "Materiaal dat de analyselaag niet in of uit had mogen gaan, gaat naar een persoon."
         },
         {
           "title": "Scope-weigeringen",
-          "body": "Waar een module binnen haar opdracht geen antwoord kan geven, zegt zij dat en escaleert, in plaats van iets aanpalends te produceren."
+          "body": "Waar een module binnen haar opdracht geen antwoord kan geven, zegt zij dat en escaleert."
         }
       ]
     },
     "coverage": {
       "eyebrow": "Dekking",
       "title": "{modules} modules over {verticals} verticals",
-      "lead": "De onderstaande taxonomie is die van het platform zelf. Sommige verticals hebben een vastgesteld moduleaantal; waar geen aantal is vastgesteld, laten we het leeg in plaats van te schatten.",
-      "note": "Dit is een selectie, niet de volledige taxonomie — het platform telt {verticals} verticals en niet allemaal worden ze publiek benoemd."
+      "lead": "De taxonomie van het platform zelf. Waar een moduleaantal niet is vastgesteld, laten we het leeg.",
+      "note": "Een selectie. Het platform telt {verticals} verticals en niet allemaal worden ze publiek benoemd."
     },
     "limits": {
       "eyebrow": "Grenzen",
       "title": "Wat we niet claimen over het platform",
-      "lead": "Specifiek zijn over de grens hoort bij het product. Alles op deze pagina beschrijft een mechanisme; niets ervan is een gecertificeerde metriek.",
+      "lead": "Alles op deze pagina beschrijft een mechanisme. Niets ervan is een gecertificeerde metriek.",
       "items": [
-        "Geen nauwkeurigheidspercentage. De interne benchmarks van de pipeline zijn gebaseerd op één dataset, intern en niet geaudit, dus die publiceren we hier niet als kopgetal.",
-        "Geen claim dat de menselijke toets optioneel is. Die is verplicht, en zonder die toets is de analyse geen afgerond product.",
-        "Geen afgeronde publieke casestudy’s. De eerste liggen voor ons, niet achter ons.",
-        "Geen claim dat elke laag hetzelfde trackrecord heeft. De financiële module is van begin tot eind op een echte deal gedraaid en onafhankelijk geverifieerd tegen brondocumenten; de nieuwste afstemmingslaag is jonger dan dat.",
+        "Geen nauwkeurigheidspercentage. De interne benchmarks zijn gebaseerd op één dataset en niet geaudit.",
+        "Geen claim dat de menselijke toets optioneel is. Die is verplicht.",
+        "Nog geen afgeronde publieke casestudy’s.",
+        "Geen uniform trackrecord. De financiële module is van begin tot eind op een echte deal gedraaid en geverifieerd tegen brondocumenten. De afstemmingslaag is jonger.",
         "Geen algemene beschikbaarheid. Factum is pre-launch."
       ]
     },
@@ -412,29 +412,29 @@
       "items": [
         {
           "q": "Is dit niet gewoon een AI-chatbot met extra stappen?",
-          "a": "Nee — en om precies te zijn, want moderne agentic AI kan echt meerstaps werk met tools doen, niet alleen chatten. Het verschil is niet AI versus geen AI; het is een geteste, herhaalbare pipeline versus een sessie die iemand live en onder dealdruk correct moet bijsturen. Elke discipline draait elke keer als een eigen vooraf afgebakende slag over de volledige documentenset, en de kruiscontrole daartussen is een vaste stap in plaats van iets waar een operator aan moet denken."
+          "a": "Het verschil is niet AI versus geen AI. Het is een geteste pipeline versus een sessie die iemand onder dealdruk bijstuurt. Elke discipline draait elke keer haar eigen vooraf afgebakende slag, en de kruiscontrole daartussen is een vaste stap."
         },
         {
           "q": "Hoe weet ik dat het platform bevindingen van dit gewicht aankan?",
-          "a": "De financiële module — het numeriek meest blootgestelde deel van elke due-diligenceanalyse — is al van begin tot eind op een echte deal gedraaid en onafhankelijk geverifieerd tegen brondocumenten. Nieuwere lagen hebben minder historie achter zich, en bij uw opdracht vertellen we u welke welke is, in plaats van de sterkste claim over het hele systeem te laten gelden."
+          "a": "De financiële module is het numeriek meest blootgestelde deel van elke analyse. Die is van begin tot eind op een echte deal gedraaid en onafhankelijk geverifieerd tegen brondocumenten. Nieuwere lagen hebben minder historie, en we vertellen u welke welke is."
         },
         {
           "q": "Wat gebeurt er als het model het niet weet?",
-          "a": "Dan moet het dat zeggen. Een bevinding is ofwel onderbouwd met een echte bronverwijzing, ofwel expliciet gemarkeerd als onbevestigd. Wat het niet kan doen, is het verschil verzinnen — een verwijzing die nergens naar leidt, is een van de drie faalklassen die de reviewerloop weigert automatisch goed te keuren."
+          "a": "Dan moet het dat zeggen. Een bevinding is onderbouwd met een echte bronverwijzing of gemarkeerd als onbevestigd. Een verwijzing die nergens naar leidt, is een van de drie faalklassen die de reviewerloop weigert automatisch goed te keuren."
         },
         {
           "q": "Wie is verantwoordelijk voor wat mij bereikt?",
-          "a": "Een persoon met naam, die elke output beoordeelt voordat die de deur uitgaat. Niet via een black box waar niemand aanspreekbaar is."
+          "a": "Een persoon met naam, die elke output beoordeelt voordat die de deur uitgaat."
         },
         {
           "q": "Hoe snel is het?",
-          "a": "De pipeline-slag over alle disciplines draait in uren in plaats van de weken die een traditioneel traject met meerdere adviseurs kost, en de afgeronde, beoordeelde output wordt in dagen opgeleverd, niet in weken. We noemen geen gegarandeerde opleverdatum voordat we de data room hebben gezien."
+          "a": "De pipeline-slag draait in uren. De afgeronde, beoordeelde output kost dagen. We noemen geen opleverdatum voordat we de data room hebben gezien."
         }
       ]
     },
     "cta": {
       "title": "Bekijk de mechaniek in een gesprek",
-      "body": "We lopen de werkelijke mechaniek van de pipeline graag met u door als dat helpt voordat u iets besluit.",
+      "body": "We lopen de mechaniek van de pipeline graag eerst met u door.",
       "button": "Plan een intakegesprek",
       "note": "Dertig minuten, zonder voorstel."
     }
@@ -444,17 +444,17 @@
     "header": {
       "eyebrow": "De opdracht",
       "title": "De Diligence Sprint",
-      "lead": "Alle {disciplines} disciplines, één opdracht, afgestemd tot één verhaallijn voordat u iets ziet. Gedraaid op een target dat u koopt, een onderneming die u houdt, of uw eigen bedrijf voordat een koper het leest."
+      "lead": "Alle {disciplines} disciplines, één opdracht, afgestemd tot één verhaallijn. Gedraaid op een target, een onderneming die u houdt, of uw eigen bedrijf."
     },
     "reframe": {
-      "quote": "Zo’n slag draaien voordat de andere kant de zijne draait, is geen teken dat er iets mis is. Het is hoe een goed geleid proces eruitziet: de partij die het geloofwaardigst overkomt, is degene die zichtbaar eerst zijn eigen werk heeft gecontroleerd.",
-      "body": "De sprint bestaat omdat de volgorde standaard omgekeerd is. De ene kant krijgt weken met de documenten en een opdracht om te vinden wat er mis is, en de andere krijgt de bevindingen terug als drukmiddel. Dit draait dezelfde analyse eerst, aan uw kant van de tafel."
+      "quote": "Eerst uw eigen werk controleren is geen teken dat er iets mis is. Het is hoe een goed geleid proces eruitziet.",
+      "body": "Standaard krijgt de ene kant weken met de documenten en de opdracht om te vinden wat er mis is. De sprint draait diezelfde analyse eerst, aan uw kant van de tafel."
     },
     "disciplines": {
       "eyebrow": "Scope",
       "title": "Alle {disciplines} disciplines, één opdracht",
-      "lead": "Elke keer dezelfde elf specialistische analyseslagen, elk vooraf afgebakend op wat er voor die discipline echt toe doet, verfijnd over opdrachten heen in plaats van per prompt opnieuw bedacht.",
-      "note": "Eén opdracht, één prijs. Geen à-la-cartemenu en geen upsell-traject na ondertekening — de scope hierboven is wat er in scope zit. Waar elke discipline in uw geval naar kijkt, wordt in het intakegesprek tegen uw eigen data room bepaald."
+      "lead": "Elke keer dezelfde elf specialistische analyseslagen, elk vooraf afgebakend op wat er voor die discipline toe doet.",
+      "note": "Eén opdracht, één prijs. Geen à-la-cartemenu en geen upsell na ondertekening. Waar elke discipline naar kijkt, wordt in het intakegesprek tegen uw data room bepaald."
     },
     "layers": {
       "eyebrow": "Synthese",
@@ -463,58 +463,58 @@
       "items": [
         {
           "title": "Waardecreatie-analyse",
-          "body": "Een synthese bovenop de financiële en commerciële bevindingen — margelekkage, indexatiegaten, cross-sellhefbomen — zodat het rapport ook de upside draagt, niet alleen de risicolijst."
+          "body": "Margelekkage, indexatiegaten, cross-sellhefbomen. Het rapport draagt ook de upside."
         },
         {
           "title": "Disciplineoverstijgende afstemming",
-          "body": "De bevindingen van elke discipline gecontroleerd tegen die van alle andere en opgelost tot één samenhangende verhaallijn voordat u iets ziet. Door de engine gedraaid, met een persoon met naam die beoordeelt en achter het resultaat staat."
+          "body": "De bevindingen van elke discipline opgelost tot één samenhangende verhaallijn, met een persoon met naam achter het resultaat."
         },
         {
           "title": "Live data-gap tracker",
-          "body": "De lopende vragenlijst, bijgewerkt terwijl gaten worden gedicht, zodat er niets onopgelost blijft liggen als de andere kant begint te lezen."
+          "body": "De lopende vragenlijst, bijgewerkt terwijl gaten worden gedicht."
         }
       ]
     },
     "delivery": {
       "eyebrow": "Oplevering",
       "title": "Hoe het aankomt",
-      "lead": "Verwachtingen scheppen in plaats van een voorbehoud: de oplevering komt in twee pakketten, met dezelfde striktheid en dezelfde beoordeling erachter. Goed om vooraf te weten, niet halverwege de opdracht te ontdekken.",
+      "lead": "De oplevering komt in twee pakketten, met dezelfde striktheid en dezelfde beoordeling erachter.",
       "formats": [
         {
           "label": "Review-dashboard",
           "items": "Financieel, fiscaal, IT en continuïteit",
-          "body": "Deze draaien in een live, doorklikbaar review-dashboard, zodat u een bevinding kunt terugvolgen naar de passage waar die vandaan komt."
+          "body": "Een live, doorklikbaar dashboard. Volg elke bevinding terug naar de bronpassage."
         },
         {
           "label": "Geschreven rapport",
           "items": "De overige disciplines",
-          "body": "Geleverd als een gestructureerd geschreven rapport, afgestemd tot dezelfde verhaallijn als de bevindingen in het dashboard."
+          "body": "Een gestructureerd geschreven rapport, afgestemd tot dezelfde verhaallijn."
         },
         {
           "label": "Naast beide",
           "items": "De data-gap tracker",
-          "body": "Volledige afstemming over documenten heen, geleverd als een gestructureerde lijst met datagaten terwijl er nog tijd is om ze te dichten."
+          "body": "Een gestructureerde lijst met datagaten, geleverd terwijl er nog tijd is om ze te dichten."
         }
       ]
     },
     "guarantee": {
       "eyebrow": "De bevindingengarantie",
       "title": "Drie materiële bevindingen, of de opdracht is gratis",
-      "body": "Levert de sprint niet ten minste drie materiële bevindingen op die uw eigen team nog niet had geïdentificeerd — het soort dat verandert wat u vervolgens doet — dan is de opdracht gratis.",
-      "note": "Opgesteld voor pilotmandaten zolang Factum pre-launch is. Wij vragen u niet het risico te dragen dat dit vroeg is; dat dragen wij. Hoe een materiële bevinding wordt beoordeeld, staat in de opdrachtbevestiging en wordt niet achteraf aan interpretatie overgelaten."
+      "body": "Materieel betekent: het verandert wat u vervolgens doet. Levert de sprint er geen drie op, dan betaalt u niets.",
+      "note": "Voor pilotmandaten zolang Factum pre-launch is. Wij dragen het risico dat dit vroeg is. Hoe een materiële bevinding wordt beoordeeld, staat in de opdrachtbevestiging."
     },
     "inputs": {
       "eyebrow": "Van u",
       "title": "Wat we nodig hebben om te beginnen",
-      "lead": "Twee dingen. Er zit geen managementworkshop, geen interviewschema en geen locatiebezoek in deze opdracht.",
+      "lead": "Twee dingen. Geen managementworkshop, geen interviewschema, geen locatiebezoek.",
       "items": [
         {
           "title": "Toegang tot de data room",
-          "body": "Over de categorieën die in het intakegesprek zijn afgesproken: financiën, juridisch, fiscaal, HR, contracten en IP."
+          "body": "Financiën, juridisch, fiscaal, HR, contracten en IP, zoals afgesproken in het intakegesprek."
         },
         {
           "title": "Antwoorden op de data-gap tracker",
-          "body": "Naarmate de tracker zich vult, dichten uw antwoorden de gaten. Eén afgebakende ronde om ze te verwerken en de analyses die ze raken opnieuw te draaien, zit al inbegrepen."
+          "body": "Uw antwoorden dichten de gaten. Eén ronde om ze te verwerken en de geraakte analyses opnieuw te draaien, zit inbegrepen."
         }
       ]
     },
@@ -524,33 +524,33 @@
       "items": [
         {
           "q": "Vervangt dit een quality-of-earnings-rapport?",
-          "a": "Het is breder, en het is geen assurance-dienst. Een traditionele quality-of-earnings-analyse dekt één dimensie en kost vier tot tien weken; dit draait elf disciplines en stemt ze onderling af. Waar uw proces een ondertekende accountantsverklaring nodig heeft, blijft dat een aparte opdracht bij een apart kantoor."
+          "a": "Het is breder, en het is geen assurance-dienst. Een quality-of-earnings-analyse dekt één dimensie in vier tot tien weken. Dit draait elf disciplines en stemt ze onderling af. Een ondertekende accountantsverklaring blijft een aparte opdracht."
         },
         {
           "q": "Hoe lang duurt het?",
-          "a": "Een volledige slag over elf disciplines wordt in dagen opgeleverd, niet in weken. De pipeline-slag zelf draait in uren; de menselijke beoordeling en de afstemming volgen daarna. We committeren ons niet aan een datum voordat we de data room hebben gezien."
+          "a": "Dagen, geen weken. De pipeline-slag draait in uren; de menselijke beoordeling en de afstemming volgen daarna. We committeren ons niet aan een datum voordat we de data room hebben gezien."
         },
         {
           "q": "Wat kost het?",
-          "a": "Eén prijs voor de hele scope in plaats van een menu met niveaus, bepaald in het intakegesprek aan de hand van de omvang en de staat van uw data room. Een gelaagde scope-upsellstructuur is een instrument om meer te halen uit kopers met een groter budget, en dat is niet het doel bij een eerste opdracht."
+          "a": "Eén prijs voor de hele scope, bepaald in het intakegesprek aan de hand van de omvang en de staat van uw data room. Geen menu met niveaus."
         },
         {
           "q": "Wat gebeurt er met onze documenten?",
-          "a": "Vertrouwelijke financiële en persoonsgegevens worden gepseudonimiseerd voordat ze de analyselaag bereiken en pas in de uiteindelijk geleverde output teruggezet. Alle analyse draait op Google Vertex AI in een EU-regio onder een verwerkersovereenkomst, en de modelaanbieder bewaart uw documenten niet en gebruikt ze niet voor training buiten de verwerkingsaanroep. De governancepagina zet uiteen wat dat wel en wat dat niet dekt."
+          "a": "Vertrouwelijke gegevens worden gepseudonimiseerd vóór de analyse en pas in de uiteindelijke output teruggezet. De analyse draait op Google Vertex AI in een EU-regio onder een verwerkersovereenkomst. De modelaanbieder bewaart uw documenten niet en traint er niet op."
         },
         {
           "q": "Kan ik een voorbeeldrapport zien?",
-          "a": "Geen echt rapport. Klantdocumenten zijn vertrouwelijk en geen enkele klant heeft ervoor gekozen bij naam genoemd te worden, dus er is geen geanonimiseerd fragment dat we willen publiceren. Wat we u in een gesprek wel kunnen laten zien, is het live dashboard, het outputschema waaraan elke bevinding moet voldoen, en hoe een bevinding terugleidt naar de bronpassage."
+          "a": "Geen echt rapport. Klantdocumenten zijn vertrouwelijk en geen enkele klant heeft ervoor gekozen bij naam genoemd te worden. In een gesprek laten we u het live dashboard zien, het outputschema, en hoe een bevinding terugleidt naar de bron."
         },
         {
           "q": "Wie beoordeelt de output eigenlijk?",
-          "a": "Een persoon met naam, voordat er iets op uw bureau ligt. Niet via een black box waar niemand aanspreekbaar is. Zolang Factum pre-launch is, is die persoon de oprichter, op elk mandaat."
+          "a": "Een persoon met naam, voordat er iets op uw bureau ligt. Zolang Factum pre-launch is, is dat de oprichter, op elk mandaat."
         }
       ]
     },
     "cta": {
-      "title": "Kijk of een sprint past bij de room waar u naar kijkt",
-      "body": "Het intakegesprek is een scopinggesprek: wat er in de room zit, wat ontbreekt, en of een sprint het juiste instrument is voor waar u staat.",
+      "title": "Kijk of een sprint bij uw situatie past",
+      "body": "Een scopinggesprek: wat er in de room zit, wat ontbreekt, en of een sprint het juiste instrument is.",
       "button": "Plan een intakegesprek",
       "note": "Een beperkt aantal pilotmandaten, een handvol."
     }
@@ -560,48 +560,54 @@
     "header": {
       "eyebrow": "Governance",
       "title": "Hoe uw documenten worden behandeld, en wat we niet claimen",
-      "lead": "Gegevensverwerking is geen bijzaak die erop is geplakt om een vinkje te halen — het is ingebouwd in hoe de pipeline draait. Het is ook smaller dan de meeste securitypagina’s suggereren, dus deze pagina benoemt de grens expliciet."
+      "lead": "Gegevensverwerking is ingebouwd in hoe de pipeline draait. Het is ook smaller dan de meeste securitypagina’s suggereren, dus deze pagina benoemt de grens."
     },
     "data": {
       "eyebrow": "Gegevensverwerking",
       "title": "Vier dingen die voor elke opdracht gelden",
-      "lead": "Elk hiervan beschrijft een mechanisme in de pipeline. Geen ervan is een certificering, en zo presenteren we ze ook niet."
+      "lead": "Elk hiervan beschrijft een mechanisme in de pipeline. Geen ervan is een certificering."
     },
     "gate": {
       "eyebrow": "De menselijke toets",
       "title": "De enige verplichte menselijke stap",
-      "lead": "Van begin tot eind draait de analyse zonder mens in de loop. De toets zit erachter, op bevindingen die al bestaan, en is niet optioneel.",
+      "lead": "De analyse draait zonder mens in de loop. De toets zit erachter, en is niet optioneel.",
       "items": [
         "Bevindingen worden vóór oplevering teruggecontroleerd tegen de brondocumenten.",
-        "De toets draait elke keer, niet alleen wanneer iemand eraan denkt het systeem te vragen zichzelf te controleren.",
-        "Drie faalklassen zijn hard-coded om naar een persoon te gaan in plaats van automatisch te worden goedgekeurd: verzonnen of gehallucineerde bronverwijzingen, privacylekken en scope-weigeringen.",
-        "Een persoon met naam beoordeelt, stemt af en staat achter de output voordat die de deur uitgaat.",
-        "Gepseudonimiseerde waarden worden alleen hier teruggezet, in de uiteindelijk geleverde output — niet in enige tussenstap."
+        "De toets draait elke keer, automatisch.",
+        "Drie faalklassen gaan naar een persoon in plaats van automatisch te worden goedgekeurd: verzonnen bronverwijzingen, privacylekken en scope-weigeringen.",
+        "Een persoon met naam beoordeelt, stemt af en staat achter de output.",
+        "Gepseudonimiseerde waarden worden alleen hier teruggezet, in de uiteindelijke output."
       ]
     },
     "transparency": {
       "eyebrow": "AI-transparantie",
       "title": "Waar de machine ophoudt en een mens begint",
       "lead": "U moet voor elke bevinding kunnen zien wat die heeft geproduceerd en wat die heeft gecontroleerd.",
-      "body": "De analyse wordt gegenereerd door zelfstandige agents die bewijs ophalen uit uw eigen geüploade documenten. Een tweede reviewer-agent bekritiseert elk concept in een generate-critique-retry-loop, en een aparte feitencontroleslag verifieert beweringen tegen de brontekst. Een persoon beoordeelt het resultaat vervolgens voordat het u bereikt. Als een bewering niet aan een passage in een echt document kan worden gekoppeld, is de output verplicht die als onbevestigd te markeren in plaats van als vaststaand te presenteren."
+      "steps": [
+        "Zelfstandige agents halen bewijs uit uw geüploade documenten.",
+        "Een tweede reviewer-agent bekritiseert elk concept.",
+        "Een aparte slag controleert beweringen tegen de brontekst.",
+        "Een persoon beoordeelt het resultaat.",
+        "Beweringen die niet aan een passage te koppelen zijn, worden gemarkeerd als onbevestigd."
+      ]
     },
     "limits": {
       "eyebrow": "Grenzen",
       "title": "Wat we niet claimen",
-      "lead": "Het meeste van wat een koper op een pagina als deze zou willen zien, hebben we nog niet. Het opsommen is nuttiger voor u dan het suggereren.",
+      "lead": "Het meeste van wat een koper op zo’n pagina wil zien, hebben we nog niet. Het opsommen is beter dan het suggereren.",
       "items": [
-        "Geen ISO 27001, SOC 2 of enige andere certificering, en geen audit van de pipeline door een derde partij.",
+        "Geen ISO 27001, SOC 2 of enige andere certificering. Geen audit van de pipeline door een derde partij.",
         "Geen penetratietest, geen lijst van subverwerkers, geen single sign-on en geen toezegging over audit logs.",
-        "Geen gepubliceerde EU-regio. Analyse draait op Google Vertex AI in een EU-regio; we noemen er geen specifieke.",
-        "Geen toegezegde bewaar- of verwijdertermijn aan de kant van Factum zelf. Zero retention is de toezegging van de modelaanbieder, geen beschrijving van onze opslag.",
-        "Geen geclaimde AVG-compliancestatus. Specifieke verwerkingsvoorwaarden horen in een opdrachtovereenkomst, niet op een marketingpagina.",
-        "Hier wordt geen beroepsaansprakelijkheidsdekking, toezegging over datalekmelding of uitwijkvoorziening vermeld."
+        "Geen gepubliceerde EU-regio. De analyse draait op Google Vertex AI in een EU-regio; we noemen er geen.",
+        "Geen bewaar- of verwijdertermijn aan de kant van Factum zelf. Zero retention is de toezegging van de modelaanbieder.",
+        "Geen geclaimde AVG-compliancestatus. Verwerkingsvoorwaarden horen in een opdrachtovereenkomst.",
+        "Hier wordt geen beroepsaansprakelijkheidsdekking, datalekmelding of uitwijkvoorziening toegezegd."
       ],
-      "note": "Vereist uw proces een van het bovenstaande op schrift, breng het dan op in het intakegesprek. Er is hoe dan ook een echt antwoord, en een kort antwoord."
+      "note": "Vereist uw proces een van deze punten op schrift, breng het dan op in het intakegesprek. Er is hoe dan ook een echt antwoord."
     },
     "cta": {
       "title": "Stel de ongemakkelijke vragen in het gesprek",
-      "body": "De lijst hierboven is bewust weinig flatteus. Als iets daarop voor u een blokkade is, ontdekt u dat liever in dertig minuten dan in drie weken.",
+      "body": "De lijst hierboven is bewust weinig flatteus. Blokkeert iets daarvan u, dan ontdekt u dat liever in dertig minuten.",
       "button": "Plan een intakegesprek",
       "note": "Zonder voorstel."
     }
@@ -611,14 +617,14 @@
     "header": {
       "eyebrow": "Team",
       "title": "Oordeel, niet alleen software",
-      "lead": "Twee gezichtspunten op één probleem: de risicoblik van een bankier en de discipline van een engineer voor systemen die niet omvallen."
+      "lead": "De risicoblik van een bankier. De discipline van een engineer voor systemen die niet omvallen."
     },
     "historyLabel": "Achtergrond",
     "people": [
       {
         "name": "Wouter Dijkman",
         "title": "Oprichter, Factum",
-        "bio": "Meer dan vijf jaar binnen de instellingen die deze deals financieren. Bij ING werkte Wouter bij Acquisition & Leveraged Finance, waar hij het krediet achter precies dit soort transacties structureerde en toetste. Daarvoor was hij bij Rabobank gespecialiseerd in financiële herstructurering, waar hij de cijfers van een onderneming las op wat ze werkelijk betekenen in plaats van op wat ze geacht worden te betekenen. Daarnaast leidt hij Agentic Mindshift, zijn eigen AI-consultancy, waardoor het AI-gedreven diligencewerk geen bijproject van een bankier is. Hij richtte Factum op om diezelfde scherpte naar de sell-side te brengen, zodat een eigenaar zijn exit ingaat met de striktheid die een bank zou toepassen, voordat een koper de kans krijgt die tegen hem te gebruiken.",
+        "bio": "Meer dan vijf jaar binnen de instellingen die deze deals financieren. Bij ING werkte Wouter bij Acquisition & Leveraged Finance, waar hij het krediet achter precies dit soort transacties structureerde en toetste. Daarvoor financiële herstructurering bij Rabobank. Daarnaast leidt hij Agentic Mindshift, zijn eigen AI-consultancy. Met Factum brengt hij de scherpte van een bank naar de hele dealcyclus.",
         "history": [
           { "org": "Factum Capital", "role": "Oprichter", "period": "2026 —" },
           { "org": "Agentic Mindshift", "role": "Oprichter, AI-consultancy", "period": "2025 —" },
@@ -630,7 +636,7 @@
       {
         "name": "Daniel Dropuljic",
         "title": "Technical Lead, Factum",
-        "bio": "Daniel bouwt de systemen achter het AI-gedreven diligencewerk van Factum. Als oprichter van Dandro Solutions ontwerpt hij datapipelines die meer dan 50.000 records per dag verwerken voor internationale zorgklanten, onder strikte compliance-regimes waaronder de AVG en FHIR. Die discipline — productiewaardig, auditeerbaar, gebouwd om onder toetsing stand te houden — is waar de diligence-engine van Factum op draait.",
+        "bio": "Daniel bouwt de systemen achter de diligence-engine van Factum. Als oprichter van Dandro Solutions ontwerpt hij datapipelines die meer dan 50.000 records per dag verwerken voor internationale zorgklanten, onder de AVG en FHIR. Productiewaardig, auditeerbaar, gebouwd om onder toetsing stand te houden.",
         "history": [
           { "org": "Dandro Solutions", "role": "Oprichter, software engineering", "period": "2021 —" },
           { "org": "Healex, Berlijn", "role": "HL7/FHIR-implementatie, leidde een team van drie", "period": "2019 – 2021" },
@@ -639,10 +645,10 @@
         ]
       }
     ],
-    "closing": "De risicoblik van een bankier en de discipline van een engineer voor systemen die niet omvallen. Samen onderbouwen ze het proces met oordeel, niet alleen met software.",
+    "closing": "Oordeel achter het proces, niet alleen software.",
     "cta": {
       "title": "U spreekt de persoon die de output beoordeelt",
-      "body": "Zolang Factum pre-launch is, zijn het intakegesprek, de beoordelingstoets en de doorloop dezelfde persoon. Dat is de reden om een handvol mandaten aan te nemen.",
+      "body": "Zolang Factum pre-launch is, zijn het intakegesprek, de beoordelingstoets en de doorloop dezelfde persoon.",
       "button": "Plan een intakegesprek",
       "note": "Dertig minuten."
     }
@@ -652,35 +658,35 @@
     "header": {
       "eyebrow": "Partnerships",
       "title": "Capaciteit op diligence-niveau achter uw eigen klantrelaties",
-      "lead": "Factum werkt met een klein aantal advieskantoren die de klantrelatie bezitten en daarachter analytische diepgang willen die niet schaalt door mensen aan te nemen."
+      "lead": "Factum werkt met een klein aantal advieskantoren die de klantrelatie bezitten en daarachter analytische diepgang willen."
     },
     "who": {
       "eyebrow": "Fit",
       "title": "Voor wie dit doorgaans werkt",
-      "lead": "Beschreven naar de vorm van het kantoor in plaats van bij naam — de opdrachten van onze partners zijn aan hen om over te praten, niet aan ons.",
+      "lead": "Beschreven naar de vorm van het kantoor. De opdrachten van onze partners zijn aan hen om over te praten.",
       "profiles": [
         {
           "title": "Corporate-finance-boutiques",
-          "body": "Die buy- en sell-side processen draaien waar de analytische belasting de beperking is, niet de dealflow."
+          "body": "Buy- en sell-side processen waar de analytische belasting de beperking is."
         },
         {
           "title": "Exit- en waardecreatieadviseurs",
-          "body": "Die werken met eigenaren die twee tot vijf jaar voor hun exit staan en een verdedigbare nulmeting nodig hebben voordat ze adviseren over wat er hersteld moet worden."
+          "body": "Eigenaren die twee tot vijf jaar voor hun exit staan en eerst een verdedigbare nulmeting nodig hebben."
         },
         {
           "title": "Herstructurerings- en turnaroundpraktijken",
-          "body": "Waar een independent business review snel geproduceerd moet worden en de toetsing van financiers moet doorstaan."
+          "body": "Waar een independent business review snel moet komen en de toetsing van financiers moet doorstaan."
         },
         {
           "title": "Accountants- en auditaanpalende kantoren",
-          "body": "Waar doorverwijs- en onafhankelijkheidsregels per relatie getoetst moeten worden voordat er iets wordt afgesproken."
+          "body": "Waar doorverwijs- en onafhankelijkheidsregels per relatie getoetst moeten worden."
         }
       ]
     },
     "split": {
       "eyebrow": "De verdeling",
       "title": "U houdt de relatie. Wij leveren de slag.",
-      "lead": "Het platform draait {modules} modules over {verticals} verticals. Een partnership zet dat achter uw naam, op uw opdracht, zonder dat u de bouw draagt.",
+      "lead": "Het platform draait {modules} modules over {verticals} verticals. Een partnership zet dat achter uw naam.",
       "columns": [
         {
           "label": "U houdt",
@@ -705,32 +711,32 @@
     "start": {
       "eyebrow": "Beginnen",
       "title": "Hoe een partnership echt begint",
-      "lead": "Niet met een overeenkomst. Met één echte opdracht, goed uitgevoerd, zodat beide kanten de output kunnen lezen voordat iemand zich ergens aan bindt.",
+      "lead": "Met één echte opdracht, goed uitgevoerd, voordat iemand zich ergens aan bindt.",
       "steps": [
         {
           "title": "Een scopinggesprek",
-          "body": "Hoe uw opdrachten eruitzien, waar de analytische belasting vandaag zit, en of de dekking van het platform daarop aansluit. Dertig minuten."
+          "body": "Hoe uw opdrachten eruitzien en waar de analytische belasting zit. Dertig minuten."
         },
         {
           "title": "Eén mandaat, van begin tot eind gedraaid",
-          "body": "Eén lopende opdracht, opgeleverd onder dezelfde beoordelingstoets als al het andere. U ziet de output voordat er iets te tekenen is."
+          "body": "Eén lopende opdracht, dezelfde beoordelingstoets. U ziet de output voordat u iets tekent."
         },
         {
           "title": "Voorwaarden gevormd naar wat er gebeurd is",
-          "body": "Scope, prijs en werkritme worden bepaald aan de hand van een echte oplevering in plaats van een projectie. Dit is een eerste opzet van een partnership, geen slikken-of-stikken."
+          "body": "Scope, prijs en werkritme bepaald aan de hand van een echte oplevering. Een eerste opzet van een partnership."
         }
       ]
     },
     "boundaries": {
       "eyebrow": "Grenzen",
       "title": "Wat een partnership niet omvat",
-      "lead": "Sommige hiervan zijn toezeggingen aan bestaande partners. De rest is gewoon de eerlijke stand van een pre-launch bedrijf.",
+      "lead": "Sommige hiervan zijn toezeggingen aan bestaande partners. De rest is de eerlijke stand van een pre-launch bedrijf.",
       "items": [
-        "Geen white-label claim van certificering of audit. We kunnen achter het mechanisme staan, niet achter een keurmerk dat we niet hebben.",
-        "Geen onbeperkte capaciteit. Factum is pre-launch en de oplevering is bewust klein; een partnership dat de beoordelingstoets voorbijloopt is erger dan geen partnership.",
-        "Geen algemeen beleid voor verwijsvergoedingen. Waar assurance- of onafhankelijkheidsregels gelden, wordt dat per relatie getoetst en aan de klant gemeld.",
-        "Geen aanspraak op uw klant. De relatie is van u, en niets wat wij voor u draaien wordt een referentie of casestudy zonder uw schriftelijke akkoord.",
-        "Geen conflicterend mandaat in een segment waarin we ons al exclusief hebben vastgelegd. Waar exclusiviteit bestaat, zeggen we dat, in plaats van er stilletjes omheen te werken."
+        "Geen white-label claim van certificering of audit. We kunnen niet achter een keurmerk staan dat we niet hebben.",
+        "Geen onbeperkte capaciteit. Een partnership dat de beoordelingstoets voorbijloopt is erger dan geen partnership.",
+        "Geen algemeen beleid voor verwijsvergoedingen. Waar assurance- of onafhankelijkheidsregels gelden, wordt dat per relatie getoetst.",
+        "Geen aanspraak op uw klant. Niets wat wij voor u draaien wordt een casestudy zonder uw schriftelijke akkoord.",
+        "Geen conflicterend mandaat waar we ons al exclusief hebben vastgelegd. Waar exclusiviteit bestaat, zeggen we dat."
       ]
     },
     "faq": {
@@ -739,25 +745,25 @@
       "items": [
         {
           "q": "Werken jullie ook rechtstreeks met eigenaren?",
-          "a": "Ja. Waar dat met uw markt kan overlappen, zeggen we dat voordat het een probleem wordt in plaats van erna."
+          "a": "Ja. Waar dat met uw markt kan overlappen, zeggen we dat voordat het een probleem wordt."
         },
         {
           "q": "Wiens naam staat op het rapport?",
-          "a": "Dat is onderdeel van wat er bij het eerste mandaat wordt bepaald. Beide modellen bestaan: opgeleverd onder uw naam met Factum als analytische engine, of samen opgeleverd waar de klant wil spreken met degene die de bevindingen heeft beoordeeld."
+          "a": "Dat wordt bij het eerste mandaat bepaald. Beide modellen bestaan: opgeleverd onder uw naam met Factum als engine, of samen opgeleverd."
         },
         {
           "q": "Kunnen jullie ook maar een deel van de scope draaien?",
-          "a": "De slag over elf disciplines is een vaste stap, omdat de waarde zit in de afstemming tussen disciplines en niet in één ervan. Wat wel kan variëren, is de diepgang van de uitwerking en welke bevindingen u aan de klant getoond wilt hebben."
+          "a": "De slag over elf disciplines ligt vast, omdat de waarde in de afstemming tussen disciplines zit. Wat varieert, is de diepgang van de uitwerking."
         },
         {
           "q": "Hoe exclusief is dit?",
-          "a": "Exclusiviteit is mogelijk in een afgebakend segment, en het is een echte toezegging als we die doen. Wat we niet doen, is exclusiviteit suggereren die we niet zijn overeengekomen, in beide richtingen."
+          "a": "Exclusiviteit is mogelijk in een afgebakend segment, en het is een echte toezegging als we die doen."
         }
       ]
     },
     "cta": {
       "title": "Begin met één mandaat",
-      "body": "De snelste manier om dit te beoordelen is het op een lopende opdracht richten en de output lezen. Al het andere is een gesprek over een gesprek.",
+      "body": "Richt het op een lopende opdracht en lees de output.",
       "button": "Plan een scopinggesprek",
       "note": "Dertig minuten, en een recht antwoord over de fit."
     }
@@ -767,29 +773,29 @@
     "header": {
       "eyebrow": "Contact",
       "title": "Eén gesprek, met de persoon die de output beoordeelt",
-      "lead": "Er staat geen formulier op deze pagina. Een formulier impliceert een wachtrij en een behandelaar, en zolang Factum pre-launch is, is er geen van beide — er is een agenda."
+      "lead": "Er staat geen formulier op deze pagina. Een formulier impliceert een wachtrij en een behandelaar. Er is een agenda."
     },
     "call": {
       "eyebrow": "Intake",
       "title": "Plan dertig minuten",
-      "lead": "Een scopinggesprek, geen pitch. Als uw situatie er geen is waar dit bij helpt, is dat een sneller en nuttiger antwoord dan een voorstel.",
+      "lead": "Een scopinggesprek. Als uw situatie er geen is waar dit bij helpt, is dat een sneller antwoord dan een voorstel.",
       "button": "Plan een intakegesprek",
-      "note": "Kies een vrij moment. Past er geen enkel moment, dan biedt de boekingspagina een manier om dat te laten weten."
+      "note": "Kies een vrij moment."
     },
     "agenda": {
       "label": "Wat we bespreken",
       "items": [
         "Waar u staat in de cyclus: kopen, financieren, houden of verkopen.",
-        "Wat er vandaag in de data room zit, en wat eraan ontbreekt.",
-        "Welke disciplines het echte risico dragen in uw specifieke situatie.",
-        "Of een sprint het juiste instrument is, of dat het nog te vroeg is.",
-        "Wat het zou kosten, afgebakend tegen de werkelijke data room in plaats van een lijstprijs."
+        "Wat er vandaag in de data room zit, en wat ontbreekt.",
+        "Welke disciplines het echte risico dragen in uw situatie.",
+        "Of een sprint past, of dat het nog te vroeg is.",
+        "Wat het zou kosten, afgebakend tegen de werkelijke room."
       ]
     },
     "documents": {
       "eyebrow": "Voordat u iets stuurt",
       "title": "Stuur geen documenten om een gesprek te plannen",
-      "lead": "Het intakegesprek vraagt niets anders dan het gesprek zelf. Toegang tot documenten wordt daarna schriftelijk afgesproken, met de vertrouwelijkheidsafspraken eerst geregeld — nooit als bijlage bij een eerste e-mail."
+      "lead": "Het intakegesprek vraagt niets anders dan het gesprek zelf. Toegang tot documenten wordt daarna schriftelijk afgesproken."
     },
     "details": {
       "eyebrow": "Gegevens",
@@ -806,46 +812,46 @@
     "header": {
       "eyebrow": "Privacy",
       "title": "Wat deze site verzamelt, en wat een opdracht doet",
-      "lead": "Twee verschillende dingen, bewust gescheiden. Deze pagina gaat over de website. De gegevensverwerking binnen een opdracht is geregeld in de overeenkomst die we tekenen, en samengevat op de governancepagina."
+      "lead": "Deze pagina gaat over de website. De gegevensverwerking binnen een opdracht is geregeld in de overeenkomst die we tekenen."
     },
     "updated": "Voor het laatst beoordeeld op 29 juli 2026.",
     "sections": [
       {
         "title": "Deze website",
         "body": [
-          "Deze site heeft geen contactformulier, geen accountsysteem en geen login. Er wordt niet om persoonsgegevens gevraagd, en er is hier niets te versturen.",
-          "Uw taalvoorkeur wordt afgeleid uit de URL waarop u zich bevindt. Er wordt geen cookie gezet om die te onthouden, en er wordt geen taal afgeleid uit uw IP-adres of browserheaders."
+          "Geen contactformulier, geen accountsysteem, geen login. Er is hier niets te versturen.",
+          "Uw taal komt uit de URL waarop u zich bevindt. Geen cookie, geen detectie via IP."
         ]
       },
       {
         "title": "Een gesprek plannen",
         "body": [
-          "De boekingslink voor de intake brengt u naar Cal.com, een externe planningsdienst. Alles wat u daar invult — uw naam, uw e-mailadres, wat u ook in het notitieveld schrijft — wordt door Cal.com verwerkt onder hun eigen voorwaarden en privacybeleid, en met ons gedeeld zodat we de afspraak kunnen houden.",
-          "We gebruiken die informatie om het gesprek voor te bereiden, te voeren en op te volgen. We voegen die niet toe aan een marketinglijst."
+          "De boekingslink brengt u naar Cal.com, een externe planningsdienst. Wat u daar invult, wordt onder hun voorwaarden verwerkt en met ons gedeeld zodat we de afspraak kunnen houden.",
+          "We gebruiken die informatie om het gesprek voor te bereiden en op te volgen. We voegen die niet toe aan een marketinglijst."
         ]
       },
       {
         "title": "Documenten die u met ons deelt",
         "body": [
-          "Er worden geen documenten via deze website gedeeld. Toegang tot documenten wordt apart en schriftelijk afgesproken voordat er iets wordt overgedragen.",
-          "Tijdens een opdracht worden vertrouwelijke financiële en persoonsgegevens gepseudonimiseerd voordat ze de analyselaag bereiken, en pas in de uiteindelijk geleverde output teruggezet. De analyse draait op Google Vertex AI in een EU-regio onder een verwerkersovereenkomst; de modelaanbieder bewaart uw documenten niet en gebruikt ze niet voor modeltraining buiten de verwerkingsaanroep zelf.",
-          "Bewaar-, verwijder- en vertrouwelijkheidsvoorwaarden aan onze eigen kant worden vastgelegd in de opdrachtovereenkomst en hier niet geclaimd."
+          "Er worden geen documenten via deze website gedeeld. Toegang wordt apart en schriftelijk afgesproken.",
+          "Tijdens een opdracht worden vertrouwelijke gegevens gepseudonimiseerd vóór de analyse en pas in de uiteindelijke output teruggezet. De analyse draait op Google Vertex AI in een EU-regio onder een verwerkersovereenkomst. De modelaanbieder bewaart uw documenten niet en traint er niet op.",
+          "Bewaar- en verwijdertermijnen aan onze eigen kant staan in de opdrachtovereenkomst."
         ]
       },
       {
         "title": "Uw rechten",
         "body": [
-          "Op grond van de AVG kunt u vragen welke persoonsgegevens we van u hebben, om correctie vragen, om verwijdering vragen, of bezwaar maken tegen het gebruik ervan. Breng het op in het intakegesprek of reageer op een e-mail van ons, en u krijgt antwoord.",
-          "Bent u niet tevreden over hoe we een verzoek behandelen, dan kunt u een klacht indienen bij de Nederlandse toezichthouder voor gegevensbescherming, de Autoriteit Persoonsgegevens."
+          "Op grond van de AVG kunt u vragen welke persoonsgegevens we van u hebben, deze laten corrigeren of verwijderen, of bezwaar maken tegen het gebruik. Breng het op in het intakegesprek of reageer op een e-mail van ons.",
+          "Bent u niet tevreden, dan kunt u een klacht indienen bij de Autoriteit Persoonsgegevens, de Nederlandse toezichthouder voor gegevensbescherming."
         ]
       },
       {
         "title": "Wijzigingen",
         "body": [
-          "Deze pagina verandert naarmate Factum uit de pre-launchfase komt en de opdrachtvoorwaarden vaster worden. De beoordelingsdatum bovenaan is het eerlijke signaal van hoe actueel de pagina is."
+          "Deze pagina verandert naarmate Factum uit de pre-launchfase komt. De beoordelingsdatum bovenaan laat zien hoe actueel de pagina is."
         ]
       }
     ],
-    "controller": "De verwerkingsverantwoordelijke is Factum Capital, ingeschreven bij de Nederlandse Kamer van Koophandel onder nummer {kvk}. Deze pagina is een samenvatting in gewone taal, geen vervanging van de voorwaarden in een ondertekende opdrachtovereenkomst."
+    "controller": "De verwerkingsverantwoordelijke is Factum Capital, ingeschreven bij de Nederlandse Kamer van Koophandel onder nummer {kvk}. Deze pagina is een samenvatting in gewone taal."
   }
 }

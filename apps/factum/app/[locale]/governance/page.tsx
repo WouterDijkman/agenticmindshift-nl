@@ -101,7 +101,25 @@ export default async function GovernancePage({
           lead={t('transparency.lead')}
         />
         <Reveal delay={60} style={{ marginTop: 24 }}>
-          <p className="type-body measure">{t('transparency.body')}</p>
+          <ol className="measure" style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+            {(t.raw('transparency.steps') as string[]).map((step, i) => (
+              <li
+                key={step}
+                className="type-body"
+                style={{
+                  display: 'flex',
+                  gap: 14,
+                  paddingBlock: 14,
+                  borderTop: i === 0 ? 'none' : '1px solid var(--hairline-faint)'
+                }}
+              >
+                <span className="mono" style={{ color: 'var(--wine-text)', paddingTop: 4 }}>
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                {step}
+              </li>
+            ))}
+          </ol>
         </Reveal>
       </Section>
 
