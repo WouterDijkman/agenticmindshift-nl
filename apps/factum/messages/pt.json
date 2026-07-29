@@ -2,27 +2,27 @@
   "meta": {
     "home": {
       "title": "Análise ao nível de due diligence ao longo do ciclo do negócio",
-      "description": "A Factum lê o data room completo — onze disciplinas, reconciliadas entre si e revistas por uma pessoa — quer esteja a comprar, a financiar, a deter ou a vender."
+      "description": "Onze disciplinas sobre o data room completo. Reconciliadas entre si. Revistas por uma pessoa antes de lhe chegarem."
     },
     "platform": {
       "title": "A plataforma",
-      "description": "241 módulos de due diligence em 31 verticais. Cada constatação ligada a um documento real, verificada por um segundo agente revisor e sujeita a um controlo humano antes de lhe chegar."
+      "description": "241 módulos de due diligence em 31 verticais. Cada constatação cita um documento. Cada output passa por um controlo humano."
     },
     "sprint": {
       "title": "O Diligence Sprint",
-      "description": "Onze análises especializadas sobre um data room completo, reconciliadas numa única narrativa, com um registo de lacunas de dados sempre atualizado — para que as constatações cheguem enquanto ainda podem mudar a decisão."
+      "description": "Onze análises especializadas sobre um data room, reconciliadas numa única narrativa, com um registo de lacunas de dados sempre atualizado."
     },
     "governance": {
       "title": "Governação e tratamento de dados",
-      "description": "Como os documentos são processados, o que faz o controlo humano, e o que a Factum deliberadamente não afirma."
+      "description": "Como os documentos são processados, o que faz o controlo humano, e o que a Factum não afirma."
     },
     "team": {
       "title": "Quem está por trás disto",
-      "description": "A leitura de risco de um banqueiro e a disciplina de um engenheiro para sistemas que não falham."
+      "description": "A leitura de risco de um banqueiro. A disciplina de um engenheiro para sistemas que não falham."
     },
     "partnerships": {
       "title": "Parcerias",
-      "description": "Para firmas de consultoria e boutiques de corporate finance que querem capacidade analítica ao nível de due diligence por trás das suas próprias relações com clientes."
+      "description": "Capacidade analítica ao nível de due diligence por trás das suas relações com clientes."
     },
     "contact": {
       "title": "Fale connosco",
@@ -53,7 +53,7 @@
   },
 
   "footer": {
-    "blurb": "A Factum produz análise ao nível de due diligence para o sell-side — fundamentada nos seus próprios documentos, revista por uma pessoa identificada, entregue em dias.",
+    "blurb": "Análise ao nível de due diligence ao longo do ciclo do negócio. Fundamentada nos seus documentos. Revista por uma pessoa identificada. Entregue em dias.",
     "sitemap": "Mapa do site",
     "company": "Empresa",
     "privacy": "Privacidade",
@@ -63,7 +63,7 @@
 
   "notFound": {
     "title": "Esta página não está no registo",
-    "body": "O link está partido ou a página mudou de sítio. Tudo o que o site diz está a um clique de distância.",
+    "body": "O link está partido ou a página mudou de sítio.",
     "home": "Voltar à página inicial",
     "platform": "Ver como funciona a plataforma"
   },
@@ -117,7 +117,7 @@
     ],
     "schema": {
       "label": "Contrato de output — todas as constatações",
-      "footnote": "Este é o esquema que cada constatação tem de cumprir, não uma constatação de exemplo. O trabalho com clientes é confidencial e nenhum cliente optou por ser identificado, pelo que não há extrato para publicar.",
+      "footnote": "O esquema que cada constatação tem de cumprir. O trabalho com clientes é confidencial, pelo que não há exemplo para publicar.",
       "rows": {
         "module": "Módulo",
         "finding": "Constatação",
@@ -140,15 +140,15 @@
       },
       {
         "title": "Retenção zero no fornecedor do modelo",
-        "body": "O fornecedor do modelo subjacente não conserva os seus documentos nem os utiliza para treino de modelos além da própria chamada de processamento."
+        "body": "O fornecedor do modelo não conserva os seus documentos nem os utiliza para treino."
       },
       {
         "title": "Pseudonimizados antes do processamento",
-        "body": "Os dados financeiros e pessoais confidenciais são pseudonimizados antes de chegarem à camada de análise, e revertidos apenas no output final entregue — não em nenhum passo intermédio."
+        "body": "Os dados confidenciais são pseudonimizados antes da análise. Revertidos apenas no output final."
       },
       {
         "title": "Um único ponto de contacto responsável",
-        "body": "Todos os outputs são revistos por uma pessoa identificada antes de lhe chegarem. Não passam por uma caixa negra a quem não se pode perguntar nada."
+        "body": "Uma pessoa identificada revê todos os outputs antes de lhe chegarem."
       }
     ]
   },
@@ -157,144 +157,144 @@
     "hero": {
       "eyebrow": "Due diligence ao longo do ciclo",
       "title": "Leia a sala inteira antes de o número ficar fixado",
-      "lead": "Comprar, financiar, deter ou vender: a exposição é a mesma, a decisão é tomada sobre uma amostra. A Factum corre {disciplines} análises especializadas sobre o data room completo, fundamentadas nos documentos, reconciliadas entre si e revistas por uma pessoa antes de ver seja o que for.",
+      "lead": "Comprar, financiar, deter, vender: a decisão é tomada sobre uma amostra. A Factum corre {disciplines} análises especializadas sobre a sala inteira. Uma pessoa revê o resultado antes de lhe chegar.",
       "cta": "Marcar uma chamada de intake",
       "secondary": "Ver como funciona o pipeline",
-      "footnote": "A Factum está em pré-lançamento. Estamos a aceitar um número limitado de mandatos-piloto — contados na casa das unidades, e não uma lista de espera contínua."
+      "footnote": "Em pré-lançamento. Aceitamos mandatos-piloto na casa das unidades."
     },
     "schema": {
       "eyebrow": "O contrato de output",
       "title": "Uma constatação só está terminada quando pode ser rastreada",
-      "lead": "O esquema de output exige, para cada afirmação, a citação de um documento e de uma passagem específicos antes de uma constatação contar como terminada.",
-      "body": "Uma restrição estrutural do output, não um pedido que o modelo possa silenciosamente deixar de cumprir à vigésima constatação de uma execução longa. Publicamos o contrato em vez de um espécime, porque o trabalho com clientes é confidencial.",
+      "lead": "Cada afirmação cita um documento e uma passagem específicos. Sem citação, não há constatação.",
+      "body": "O esquema impõe-no. Publicamos o contrato em vez de um exemplo, porque o trabalho com clientes é confidencial.",
       "link": "Ler o pipeline completo"
     },
     "problem": {
       "eyebrow": "A assimetria",
       "title": "O número é fixado enquanto a sala está lida a meio",
-      "lead": "A due diligence tradicional tira uma amostra do data room e reporta semanas depois. Nessa altura o preço já está ancorado, a comissão já seguiu em frente, e as constatações chegam tarde demais para mudar a estrutura.",
+      "lead": "A due diligence tradicional tira uma amostra da sala e reporta semanas depois. Nessa altura o preço já está ancorado e as constatações chegam tarde.",
       "points": [
         {
           "title": "Quem encontra primeiro define o enquadramento",
-          "body": "Quem traz um problema à superfície primeiro controla a forma como ele é enquadrado no resto da negociação. De ambos os lados da mesa, essa vantagem é de quem leu a sala primeiro."
+          "body": "Quem levanta um problema primeiro controla o enquadramento no resto da negociação."
         },
         {
           "title": "Uma dimensão não é due diligence",
-          "body": "Uma leitura de quality of earnings cobre uma dimensão. A outra parte não fica por uma. As lacunas aparecem no espaço entre disciplinas."
+          "body": "Uma leitura de quality of earnings cobre uma dimensão. As lacunas aparecem entre disciplinas."
         },
         {
           "title": "Uma lista de riscos não é um argumento",
-          "body": "A maior parte da due diligence é uma lista estática de riscos — ninguém procura ativamente alavancas de criação de valor. O relatório lê-se como um aviso, não como base para uma decisão."
+          "body": "A maior parte da due diligence é uma lista estática de riscos. Ninguém procura alavancas de criação de valor."
         },
         {
           "title": "Uma amostra não é a sala",
-          "body": "As lacunas de cobertura são a razão pela qual os negócios correm mal depois do fecho. Uma leitura que fica pela amostra deixa de fora justamente a parte que ninguém se lembrou de perguntar."
+          "body": "As lacunas de cobertura são a razão por que os negócios correm mal depois do fecho."
         }
       ]
     },
     "pipeline": {
       "eyebrow": "Como funciona",
-      "title": "Um pipeline testado, não uma sessão que alguém tem de conduzir",
-      "lead": "Qualquer analista competente consegue apontar uma ferramenta agêntica a um data room e fazê-la trabalhar genuinamente sobre os documentos. A diferença está entre o que está desenhado para acontecer sempre e o que depende de como a sessão é conduzida num determinado dia.",
+      "title": "Um pipeline testado, corrido sempre da mesma forma",
+      "lead": "Qualquer pessoa aponta uma ferramenta agêntica a um data room. A questão é o que acontece sempre, por desenho.",
       "refusalTitle": "O ciclo recusa-se a aprovar automaticamente",
       "refusals": [
         "Citações de origem fabricadas ou alucinadas",
         "Fugas de dados pessoais",
         "Recusas de âmbito"
       ],
-      "refusalNote": "Codificado de forma rígida, mesmo após tentativas repetidas. Os três casos são encaminhados para uma pessoa em vez de passarem silenciosamente.",
+      "refusalNote": "Codificado de forma rígida. Os três casos vão para uma pessoa.",
       "stages": [
         {
           "title": "Recuperação fundamentada",
-          "body": "Cada módulo recupera provas diretamente dos documentos carregados, em vez de gerar texto livremente."
+          "body": "Cada módulo retira provas diretamente dos documentos carregados."
         },
         {
           "title": "Redação",
-          "body": "O módulo redige as suas constatações contra um esquema que não aceita uma afirmação sem um documento e uma passagem por trás."
+          "body": "O esquema rejeita qualquer afirmação sem um documento e uma passagem por trás."
         },
         {
           "title": "Gerar-criticar-repetir",
-          "body": "Um segundo agente revisor verifica o rascunho num ciclo de gerar-criticar-repetir antes de qualquer coisa chegar a uma pessoa."
+          "body": "Um segundo agente revisor critica o rascunho e devolve-o."
         },
         {
           "title": "Verificação factual independente",
-          "body": "Uma passagem separada confirma as afirmações contra o texto de origem, distinta do agente revisor."
+          "body": "Uma passagem separada confirma cada afirmação contra o texto de origem."
         },
         {
           "title": "Controlo de aprovação humana",
-          "body": "O único passo humano obrigatório: um controlo de revisão e aprovação sobre constatações já geradas. Esse controlo corre sempre, e não apenas quando alguém se lembra de o pedir."
+          "body": "Um único passo humano obrigatório. Corre sempre."
         }
       ]
     },
     "coverage": {
       "eyebrow": "Cobertura",
       "title": "{modules} módulos em {verticals} verticais",
-      "lead": "A Factum é uma plataforma já construída, não um conceito por desenvolver. Cada módulo é um agente independente com o seu próprio âmbito pré-definido, refinado ao longo dos mandatos em vez de reinventado a cada prompt.",
-      "note": "Uma seleção das {verticals} verticais, na nomenclatura da própria plataforma. A taxonomia é mais ampla do que esta lista, e as contagens de módulos aparecem apenas onde temos um número declarado.",
+      "lead": "A Factum já está construída. Cada módulo é um agente independente com o seu próprio âmbito pré-definido.",
+      "note": "Uma seleção das {verticals} verticais, na nomenclatura da própria plataforma. As contagens aparecem apenas onde temos um número declarado.",
       "figures": {
         "modules": {
           "label": "Módulos de due diligence",
-          "note": "Contados na versão atual da plataforma. Cada um é um agente independente, não um modelo de prompt."
+          "note": "Cada um é um agente independente com o seu próprio âmbito."
         },
         "disciplines": {
           "label": "Disciplinas por mandato",
-          "note": "Financeira, comercial, jurídica, fiscal, RH, TI, ESG, vendor, operacional, avaliação e seguros — todas elas, sempre."
+          "note": "Financeira, comercial, jurídica, fiscal, RH, TI, ESG, vendor, operacional, avaliação, seguros. Todas elas, sempre."
         },
         "speed": {
           "value": "Dias",
           "label": "Não semanas",
-          "note": "Uma análise completa das onze disciplinas é produzida em dias. A revisão humana vem depois da passagem do pipeline, não em vez dela."
+          "note": "Uma análise completa das onze disciplinas, produzida em dias. A revisão humana vem depois."
         }
       }
     },
     "sprint": {
       "eyebrow": "O mandato",
       "title": "O Diligence Sprint",
-      "lead": "Um único mandato que cobre todas as {disciplines} disciplinas, mais as três camadas de síntese que transformam onze leituras separadas num entregável utilizável. Corrido sobre um target que está a comprar, uma empresa que detém, ou o seu próprio negócio antes de outra pessoa o ler.",
+      "lead": "Todas as {disciplines} disciplinas num único mandato, mais três camadas de síntese. Corra-o sobre um target, uma empresa que detém, ou o seu próprio negócio.",
       "guaranteeLabel": "A garantia de constatações",
-      "guarantee": "Se o sprint não revelar pelo menos três constatações materiais que a sua própria equipa ainda não tinha identificado — do tipo que muda o que faz a seguir — o mandato é gratuito.",
-      "guaranteeNote": "Escrita para mandatos-piloto. Não lhe pedimos que assuma o risco de isto ser recente; assumimo-lo nós.",
+      "guarantee": "Três constatações materiais que a sua equipa ainda não tinha identificado, ou o mandato é gratuito.",
+      "guaranteeNote": "Para mandatos-piloto. O risco de isto ser recente é nosso, não seu.",
       "link": "O que o sprint cobre"
     },
     "trust": {
       "eyebrow": "Governação",
-      "title": "Integrado na forma como o pipeline funciona, não acrescentado por cima",
-      "lead": "Tudo o que se segue descreve um mecanismo, não uma certificação. A página de governação é igualmente explícita sobre o que não afirmamos.",
+      "title": "Integrado na forma como o pipeline funciona",
+      "lead": "Cada ponto abaixo é um mecanismo. Nenhum é uma certificação.",
       "link": "Ler a página de governação"
     },
     "cta": {
       "title": "Comece com uma chamada, não com uma proposta",
-      "body": "Trinta minutos para ver se a sua situação é uma em que isto ajuda mesmo. Se não for, dizemo-lo.",
+      "body": "Trinta minutos para ver se isto encaixa na sua situação. Se não encaixar, dizemo-lo.",
       "button": "Marcar uma chamada de intake",
       "note": "A Factum está em pré-lançamento e a aceitar um número limitado de mandatos-piloto."
     },
     "cycle": {
       "eyebrow": "Ao longo do ciclo",
       "title": "Uma base de evidência, cinco momentos",
-      "lead": "O mesmo motor analítico e o mesmo dossiê rastreável à fonte, aplicados em cada ponto onde uma decisão realmente vira. Nada é reconstruído do zero quando chega o momento seguinte.",
+      "lead": "Uma base de evidência, aplicada em cada ponto onde uma decisão vira. Nada é reconstruído quando chega o momento seguinte.",
       "stages": [
         {
           "title": "Comprar",
-          "body": "Da triagem do IM até ao fecho. A sala inteira lida enquanto as constatações ainda podem mexer no preço e na estrutura, com output pronto a entrar diretamente num memorando de comité de investimento."
+          "body": "Da triagem do IM ao fecho, enquanto as constatações ainda podem mexer no preço e na estrutura."
         },
         {
           "title": "Financiar",
-          "body": "O memorando sobre o qual um banco ou investidor subscreve, construído sobre a mesma base de evidência que a due diligence em vez de montado à parte depois."
+          "body": "O memorando sobre o qual um banco ou investidor subscreve, construído sobre a mesma base de evidência."
         },
         {
           "title": "Deter e criar valor",
-          "body": "Revisão periódica de carteira e monitorização contínua: folga nos covenants, desvio de KPI e sinais de alerta precoce, a par das alavancas de criação de valor que uma lista estática de riscos nunca procura."
+          "body": "Folga nos covenants, desvio de KPI, sinais de alerta precoce. Mais as alavancas de criação de valor que uma lista de riscos ignora."
         },
         {
           "title": "Vender",
-          "body": "Exit readiness: qualidade do data room, apresentação financeira, solidez da gestão e como o equity story aguenta. A análise que a equipa de um comprador faria, feita primeiro do seu lado da mesa."
+          "body": "Qualidade do data room, apresentação financeira, solidez da gestão, equity story. A análise do comprador, feita primeiro do seu lado."
         },
         {
           "title": "Reestruturar",
-          "body": "Análise pré-IBR e WHOA: avaliação de continuidade, posição dos credores e folga nos covenants, trazidas à superfície enquanto as opções ainda estão abertas."
+          "body": "Pré-IBR e WHOA: continuidade, posição dos credores, folga nos covenants. Enquanto as opções ainda estão abertas."
         }
       ],
-      "note": "O trabalho de reestruturação ao abrigo do WHOA e do IBR está sujeito à jurisdição neerlandesa. O resto do ciclo é independente da jurisdição."
+      "note": "O trabalho de WHOA e IBR está sujeito à jurisdição neerlandesa. O resto do ciclo é independente da jurisdição."
     }
   },
 
@@ -302,62 +302,62 @@
     "header": {
       "eyebrow": "A plataforma",
       "title": "{modules} módulos, e a maquinaria que os mantém honestos",
-      "lead": "A parte interessante de uma plataforma de due diligence com IA não é conseguir ler um data room. É o que é estruturalmente obrigatório acontecer antes de uma constatação poder chegar-lhe às mãos."
+      "lead": "A questão não é se a IA consegue ler um data room. É o que tem de acontecer antes de uma constatação lhe chegar."
     },
     "difference": {
       "eyebrow": "A distinção",
       "title": "Desenhado para acontecer sempre, ou conduzido no próprio dia",
-      "lead": "Nada disto exige acreditar que a IA agêntica generalista é incapaz. Exige reconhecer que um pipeline testado, que alguém já construiu, executou e endureceu ao longo de vários mandatos, é coisa diferente de montar esse mesmo rigor por si próprio, corretamente, sob a pressão de um deal, desta única vez.",
+      "lead": "Um pipeline que alguém já construiu, executou e endureceu é coisa diferente de montar esse mesmo rigor por si, sob a pressão de um deal, uma única vez.",
       "points": [
         {
           "title": "Uma metodologia testada e repetível",
-          "body": "Não um fluxo de trabalho montado de novo em cada sessão. A cobertura não depende de alguém se lembrar de a pedir corretamente desta vez."
+          "body": "A cobertura não depende de alguém se lembrar de a pedir."
         },
         {
           "title": "Citações como restrição do esquema",
-          "body": "Cada afirmação precisa de um documento e de uma passagem específicos antes de a constatação contar como terminada. Uma restrição estrutural do output, não um pedido que o modelo possa silenciosamente cumprir apenas em parte."
+          "body": "Cada afirmação precisa de um documento e de uma passagem específicos antes de a constatação contar como terminada."
         },
         {
           "title": "Reconciliação entre disciplinas como passo fixo",
-          "body": "O verdadeiro valor de uma leitura de due diligence está em apanhar o que só aparece quando os números financeiros, o registo comercial, os contratos jurídicos e os registos de RH são lidos uns contra os outros."
+          "body": "As verdadeiras descobertas aparecem quando as contas, o registo comercial, os contratos e os registos de RH são lidos uns contra os outros."
         },
         {
           "title": "Um controlo de verificação permanente",
-          "body": "Uma passagem de revisão que corre sempre, e não apenas quando alguém se lembra de pedir ao agente que se verifique a si próprio."
+          "body": "Uma passagem de revisão que corre sempre, automaticamente."
         }
       ]
     },
     "pipeline": {
       "eyebrow": "O pipeline",
       "title": "Do carregamento a uma constatação sobre a qual pode agir",
-      "lead": "De ponta a ponta, do carregamento do data room às constatações redigidas, o passo de análise corre sem intervenção humana no ciclo. O único passo humano obrigatório é um controlo de revisão e aprovação sobre constatações que já existem.",
+      "lead": "Do carregamento às constatações redigidas, a análise corre sem intervenção humana no ciclo. Um controlo humano obrigatório vem a seguir.",
       "stages": [
         {
           "title": "Recuperação fundamentada",
-          "body": "Cada um dos módulos é um agente independente que recupera provas fundamentadas diretamente dos documentos carregados, e não texto gerado livremente.",
+          "body": "Cada módulo é um agente independente que recupera provas dos documentos carregados.",
           "note": "Os dados financeiros e pessoais confidenciais são pseudonimizados antes de chegarem a esta camada."
         },
         {
           "title": "Redação contra o esquema",
-          "body": "O agente redige as constatações dentro de um esquema de output que exige, para cada afirmação, a citação de um documento e de uma passagem específicos."
+          "body": "As constatações são redigidas dentro de um esquema que exige uma citação para cada afirmação."
         },
         {
           "title": "Gerar-criticar-repetir",
-          "body": "Um segundo agente revisor critica o rascunho e devolve-o. O ciclo repete-se antes de qualquer coisa chegar a uma pessoa.",
+          "body": "Um segundo agente revisor critica o rascunho e devolve-o. O ciclo repete-se.",
           "note": "O termo da própria plataforma: um ciclo de gerar-criticar-repetir."
         },
         {
           "title": "Verificação factual independente",
-          "body": "Uma segunda passagem independente de verificação factual confirma as afirmações contra o texto de origem, separadamente do agente revisor.",
+          "body": "Uma passagem independente confirma as afirmações contra o texto de origem.",
           "note": "Uma terceira camada de verificação, distinta tanto do agente revisor como do controlo humano."
         },
         {
           "title": "Reconciliação entre disciplinas",
-          "body": "As constatações de cada disciplina são verificadas contra as de todas as outras e resolvidas numa narrativa coerente antes de ver seja o que for."
+          "body": "As constatações de cada disciplina são verificadas contra as das restantes e resolvidas numa só narrativa."
         },
         {
           "title": "Revisão e aprovação humana",
-          "body": "Um controlo de revisão a posteriori sobre constatações já geradas. Essa revisão não é uma formalidade acrescentada para tornar apresentável o output de IA — é o mecanismo que torna seguro apoiar uma decisão desta dimensão numa análise à velocidade da máquina.",
+          "body": "Uma pessoa identificada revê as constatações já geradas antes da entrega. É isto que torna seguro apoiar-se numa análise à velocidade da máquina.",
           "note": "A pseudonimização só é revertida aqui, no output final entregue."
         }
       ]
@@ -365,44 +365,44 @@
     "anatomy": {
       "eyebrow": "O contrato de output",
       "title": "O que cada constatação tem de transportar",
-      "lead": "Em vez de publicar uma constatação-espécime de um mandato real, publicamos o contrato que cada constatação tem de cumprir.",
-      "body": "Os documentos dos clientes são confidenciais e nenhum cliente optou por ser identificado, pelo que não há extrato anonimizado para mostrar. De qualquer modo, o esquema é a parte verificável: é o que o pipeline impõe antes de uma constatação poder existir."
+      "lead": "Publicamos o contrato que cada constatação tem de cumprir.",
+      "body": "Os documentos dos clientes são confidenciais, pelo que não há extrato para mostrar. O esquema é o que o pipeline impõe antes de uma constatação poder existir."
     },
     "refusals": {
       "eyebrow": "Classes de falha",
       "title": "Três coisas que o ciclo não aprova automaticamente",
-      "lead": "O ciclo do agente revisor está codificado de forma rígida para recusar a aprovação automática de três classes de falha, mesmo após tentativas repetidas, encaminhando as três para uma pessoa em vez de as deixar passar silenciosamente.",
+      "lead": "Três classes de falha estão codificadas de forma rígida para irem para uma pessoa, mesmo após tentativas repetidas.",
       "badge": "RECUSAR",
       "classes": [
         {
           "title": "Citações de origem fabricadas ou alucinadas",
-          "body": "Uma citação que não corresponda a uma passagem real de um documento real carregado trava a constatação."
+          "body": "Uma citação que não corresponde a uma passagem real trava a constatação."
         },
         {
           "title": "Fugas de dados pessoais",
-          "body": "Material que não deveria ter entrado na camada de análise, ou saído dela, é encaminhado para uma pessoa em vez de ser divulgado."
+          "body": "Tudo o que não devia ter entrado na camada de análise, ou saído dela, vai para uma pessoa."
         },
         {
           "title": "Recusas de âmbito",
-          "body": "Quando um módulo não consegue responder dentro do seu âmbito, di-lo e escala em vez de produzir algo aproximado."
+          "body": "Quando um módulo não consegue responder dentro do seu âmbito, di-lo e escala."
         }
       ]
     },
     "coverage": {
       "eyebrow": "Cobertura",
       "title": "{modules} módulos em {verticals} verticais",
-      "lead": "A taxonomia abaixo é a da própria plataforma. Algumas verticais têm uma contagem de módulos declarada; onde não há contagem declarada, deixamos em branco em vez de estimar.",
-      "note": "Esta é uma seleção, não a taxonomia completa — a plataforma conta {verticals} verticais e nem todas são nomeadas publicamente."
+      "lead": "A taxonomia da própria plataforma. Onde não há contagem de módulos declarada, deixamos em branco.",
+      "note": "Uma seleção. A plataforma conta {verticals} verticais e nem todas são nomeadas publicamente."
     },
     "limits": {
       "eyebrow": "Limites",
       "title": "O que não afirmamos sobre a plataforma",
-      "lead": "Ser específico quanto ao limite faz parte do produto. Tudo nesta página descreve um mecanismo; nada disto é uma métrica certificada.",
+      "lead": "Tudo nesta página descreve um mecanismo. Nada disto é uma métrica certificada.",
       "items": [
-        "Nenhuma taxa de exatidão. Os benchmarks internos do pipeline assentam num único conjunto de dados, são internos e não auditados, pelo que não são publicados aqui como número de destaque.",
-        "Nenhuma afirmação de que o controlo humano é opcional. É obrigatório, e sem ele a análise não é um produto acabado.",
-        "Nenhum caso de estudo público concluído. Os primeiros estão à nossa frente, não atrás.",
-        "Nenhuma afirmação de que todas as camadas têm o mesmo historial. O módulo financeiro já foi executado de ponta a ponta num deal real e verificado de forma independente contra os documentos de origem; a camada de reconciliação mais recente é mais nova do que isso.",
+        "Nenhuma taxa de exatidão. Os benchmarks internos assentam num único conjunto de dados e não são auditados.",
+        "Nenhuma afirmação de que o controlo humano é opcional. É obrigatório.",
+        "Nenhum caso de estudo público concluído até à data.",
+        "Nenhum historial uniforme. O módulo financeiro já correu de ponta a ponta num deal real e foi verificado contra os documentos de origem. A camada de reconciliação é mais recente.",
         "Nenhuma disponibilidade geral. A Factum está em pré-lançamento."
       ]
     },
@@ -412,29 +412,29 @@
       "items": [
         {
           "q": "Isto não é apenas um chatbot de IA com passos extra?",
-          "a": "Não — e sendo preciso, uma vez que a IA agêntica moderna consegue genuinamente fazer trabalho de vários passos com ferramentas, e não apenas conversar. A diferença não é IA contra ausência de IA; é um pipeline testado e repetível contra uma sessão que alguém tem de conduzir corretamente, ao vivo, sob a pressão de um deal. Cada disciplina corre como a sua própria passagem pré-definida sobre o conjunto completo de documentos, sempre, e o cruzamento entre elas é um passo fixo em vez de algo que um operador tem de se lembrar de pedir."
+          "a": "A diferença não é IA contra ausência de IA. É um pipeline testado contra uma sessão que alguém conduz sob a pressão de um deal. Cada disciplina corre a sua própria passagem pré-definida, sempre, e o cruzamento entre elas é um passo fixo."
         },
         {
           "q": "Como sei que a plataforma aguenta constatações desta materialidade?",
-          "a": "O módulo financeiro — a parte numericamente mais exposta de qualquer leitura de due diligence — já foi executado de ponta a ponta num deal real e verificado de forma independente contra os documentos de origem. As camadas mais recentes têm menos historial atrás de si, e diremos qual é qual no seu mandato em vez de deixar a afirmação mais forte cobrir todo o sistema."
+          "a": "O módulo financeiro é a parte numericamente mais exposta de qualquer leitura. Já correu de ponta a ponta num deal real e foi verificado de forma independente contra os documentos de origem. As camadas mais recentes têm menos historial, e dizemos-lhe qual é qual."
         },
         {
           "q": "O que acontece quando o modelo não sabe?",
-          "a": "Tem de o dizer. Uma constatação ou está apoiada numa citação real, ou é explicitamente assinalada como não confirmada. O que não pode fazer é inventar a diferença — uma citação que não se resolve é uma das três classes de falha que o ciclo de revisão recusa aprovar automaticamente."
+          "a": "Tem de o dizer. Uma constatação ou está apoiada numa citação real ou é assinalada como não confirmada. Uma citação que não se resolve é uma das três classes que o ciclo de revisão recusa aprovar automaticamente."
         },
         {
           "q": "Quem é responsável pelo que me chega?",
-          "a": "Uma pessoa identificada, que revê todos os outputs antes de saírem. Não passam por uma caixa negra a quem não se pode perguntar nada."
+          "a": "Uma pessoa identificada, que revê todos os outputs antes de saírem."
         },
         {
           "q": "Qual é a rapidez?",
-          "a": "A passagem do pipeline por todas as disciplinas corre em horas, em vez das semanas que um processo tradicional com vários consultores exige, e o output final revisto é produzido em dias, não em semanas. Não indicamos uma data de entrega garantida antes de ver o data room."
+          "a": "A passagem do pipeline corre em horas. O output final revisto demora dias. Não indicamos uma data de entrega antes de ver o data room."
         }
       ]
     },
     "cta": {
       "title": "Ver a mecânica numa chamada",
-      "body": "Com todo o gosto percorremos a mecânica real do pipeline, se isso for útil antes de decidir seja o que for.",
+      "body": "Com todo o gosto percorremos primeiro a mecânica real do pipeline.",
       "button": "Marcar uma chamada de intake",
       "note": "Trinta minutos, sem proposta anexada."
     }
@@ -444,17 +444,17 @@
     "header": {
       "eyebrow": "O mandato",
       "title": "O Diligence Sprint",
-      "lead": "Todas as {disciplines} disciplinas, um único mandato, reconciliadas numa só narrativa antes de ver seja o que for. Corrido sobre um target que está a comprar, uma empresa que detém, ou o seu próprio negócio antes de um comprador o ler."
+      "lead": "Todas as {disciplines} disciplinas, um único mandato, reconciliadas numa só narrativa. Corra-o sobre um target, uma empresa que detém, ou o seu próprio negócio."
     },
     "reframe": {
-      "quote": "Fazer este tipo de análise antes de a outra parte fazer a sua não é sinal de que algo está mal. É o aspeto de um processo bem conduzido: a parte que parece mais credível é a que verificou visivelmente o seu próprio trabalho primeiro.",
-      "body": "O sprint existe porque, por defeito, a sequência está invertida. Uma das partes recebe semanas com os documentos e um mandato para encontrar o que está mal, e a outra recebe as constatações de volta como alavancagem. Isto faz a mesma leitura primeiro, do seu lado da mesa."
+      "quote": "Verificar o seu próprio trabalho primeiro não é sinal de que algo está mal. É o aspeto de um processo bem conduzido.",
+      "body": "Por defeito, uma das partes recebe semanas com os documentos e um mandato para encontrar o que está mal. O sprint faz essa mesma leitura primeiro, do seu lado da mesa."
     },
     "disciplines": {
       "eyebrow": "Âmbito",
       "title": "Todas as {disciplines} disciplinas, um único mandato",
-      "lead": "As mesmas onze análises especializadas sempre, cada uma pré-definida para o que realmente importa nessa disciplina, refinada ao longo dos mandatos em vez de reinventada a cada prompt.",
-      "note": "Um mandato, um preço. Sem menu à la carte e sem caminho de upsell depois da assinatura — o âmbito acima é o que está em âmbito. O que cada disciplina analisa no seu caso é definido face ao seu próprio data room na chamada de intake."
+      "lead": "As mesmas onze análises especializadas sempre, cada uma pré-definida para o que importa nessa disciplina.",
+      "note": "Um mandato, um preço. Sem menu à la carte e sem upsell depois da assinatura. O que cada disciplina analisa é definido face ao seu data room na chamada de intake."
     },
     "layers": {
       "eyebrow": "Síntese",
@@ -463,58 +463,58 @@
       "items": [
         {
           "title": "Leitura de criação de valor",
-          "body": "Uma síntese sobre as constatações financeiras e comerciais — fugas de margem, lacunas de indexação, alavancas de cross-sell — para que o relatório sustente também o cenário de valorização, e não apenas a lista de riscos."
+          "body": "Fugas de margem, lacunas de indexação, alavancas de cross-sell. O relatório sustenta também o cenário de valorização."
         },
         {
           "title": "Reconciliação entre disciplinas",
-          "body": "As constatações de cada disciplina verificadas contra as de todas as outras e resolvidas numa narrativa coerente antes de ver seja o que for. Executada pelo motor, com uma pessoa identificada a rever e a responder pelo resultado."
+          "body": "As constatações de cada disciplina resolvidas numa narrativa coerente, com uma pessoa identificada a responder pelo resultado."
         },
         {
           "title": "Registo de lacunas de dados sempre atualizado",
-          "body": "A lista de perguntas em curso, atualizada à medida que as lacunas se fecham, para que nada fique por resolver quando a outra parte começar a ler."
+          "body": "A lista de perguntas em curso, atualizada à medida que as lacunas se fecham."
         }
       ]
     },
     "delivery": {
       "eyebrow": "Entrega",
       "title": "Como chega",
-      "lead": "Definição de expectativas em vez de ressalva: o entregável vem em dois pacotes, com o mesmo rigor e a mesma revisão por trás de ambos. Vale a pena saber à partida, não descobrir a meio do mandato.",
+      "lead": "O entregável vem em dois pacotes, com o mesmo rigor e a mesma revisão por trás de ambos.",
       "formats": [
         {
           "label": "Dashboard de revisão",
           "items": "Financeira, fiscal, TI e continuidade da empresa",
-          "body": "Estas correm dentro de um dashboard de revisão interativo, para que possa seguir uma constatação até à passagem de onde veio."
+          "body": "Um dashboard interativo. Siga qualquer constatação até à passagem de origem."
         },
         {
           "label": "Relatório escrito",
           "items": "As restantes disciplinas",
-          "body": "Entregue como relatório escrito estruturado, reconciliado na mesma narrativa que as constatações do dashboard."
+          "body": "Um relatório escrito estruturado, reconciliado na mesma narrativa."
         },
         {
           "label": "Junto de ambos",
           "items": "O registo de lacunas de dados",
-          "body": "Reconciliação completa entre documentos, entregue como lista estruturada de lacunas de dados enquanto ainda há tempo para as fechar."
+          "body": "Uma lista estruturada de lacunas, entregue enquanto ainda há tempo para as fechar."
         }
       ]
     },
     "guarantee": {
       "eyebrow": "A garantia de constatações",
       "title": "Três constatações materiais, ou o mandato é gratuito",
-      "body": "Se o sprint não revelar pelo menos três constatações materiais que a sua própria equipa ainda não tinha identificado — do tipo que muda o que faz a seguir — o mandato é gratuito.",
-      "note": "Escrita para mandatos-piloto enquanto a Factum está em pré-lançamento. Não lhe pedimos que assuma o risco de isto ser recente; assumimo-lo nós. A forma como uma constatação material é avaliada está definida na carta de mandato, e não deixada à interpretação posterior."
+      "body": "Material significa que muda o que faz a seguir. Se o sprint não revelar três, não paga nada.",
+      "note": "Para mandatos-piloto enquanto a Factum está em pré-lançamento. O risco de isto ser recente é nosso. A forma como uma constatação material é avaliada está definida na carta de mandato."
     },
     "inputs": {
       "eyebrow": "Da sua parte",
       "title": "O que precisamos para começar",
-      "lead": "Duas coisas. Neste mandato não há workshop de gestão, nem agenda de entrevistas, nem visita às instalações.",
+      "lead": "Duas coisas. Sem workshop de gestão, sem agenda de entrevistas, sem visita às instalações.",
       "items": [
         {
           "title": "Acesso ao data room",
-          "body": "Nas categorias acordadas na chamada de intake: contas, jurídico, fiscal, RH, contratos e propriedade intelectual."
+          "body": "Contas, jurídico, fiscal, RH, contratos e propriedade intelectual, conforme acordado na chamada de intake."
         },
         {
           "title": "Respostas ao registo de lacunas de dados",
-          "body": "À medida que o registo se preenche, as suas respostas fecham as lacunas. Está já incluída uma ronda delimitada para as integrar e voltar a correr qualquer análise que afetem."
+          "body": "As suas respostas fecham as lacunas. Está incluída uma ronda para as integrar e voltar a correr a análise afetada."
         }
       ]
     },
@@ -524,33 +524,33 @@
       "items": [
         {
           "q": "Isto substitui um relatório de quality of earnings?",
-          "a": "É mais abrangente, e não é um serviço de certificação. Uma leitura tradicional de quality of earnings cobre uma dimensão e demora quatro a dez semanas; esta corre onze disciplinas e reconcilia-as entre si. Onde o seu processo exigir um parecer assinado por um contabilista, isso continua a ser um mandato separado, com uma firma separada."
+          "a": "É mais abrangente, e não é um serviço de certificação. Uma leitura de quality of earnings cobre uma dimensão em quatro a dez semanas. Esta corre onze disciplinas e reconcilia-as. Um parecer assinado por um contabilista continua a ser um mandato separado."
         },
         {
           "q": "Quanto tempo demora?",
-          "a": "Uma análise completa das onze disciplinas é produzida em dias, não em semanas. A passagem do pipeline em si corre em horas; a revisão humana e a reconciliação vêm depois. Não nos comprometemos com uma data antes de ver o data room."
+          "a": "Dias, não semanas. A passagem do pipeline corre em horas; a revisão humana e a reconciliação vêm depois. Não nos comprometemos com uma data antes de ver o data room."
         },
         {
           "q": "Quanto custa?",
-          "a": "Um preço único para todo o âmbito, em vez de um menu por escalões, definido na chamada de intake face à dimensão e ao estado do seu data room. Uma estrutura de upsell de âmbito por escalões é um instrumento para extrair mais de compradores com orçamentos maiores, o que não é o objetivo num primeiro mandato."
+          "a": "Um preço único para todo o âmbito, definido na chamada de intake face à dimensão e ao estado do seu data room. Sem menu por escalões."
         },
         {
           "q": "O que acontece aos nossos documentos?",
-          "a": "Os dados financeiros e pessoais confidenciais são pseudonimizados antes de chegarem à camada de análise e revertidos apenas no output final entregue. Toda a análise corre no Google Vertex AI numa região da UE, ao abrigo de um Acordo de Tratamento de Dados, e o fornecedor do modelo não conserva os seus documentos nem os utiliza para treino além da chamada de processamento. A página de governação expõe tanto o que isso cobre como o que não cobre."
+          "a": "Os dados confidenciais são pseudonimizados antes da análise e revertidos apenas no output final. A análise corre no Google Vertex AI numa região da UE, ao abrigo de um Acordo de Tratamento de Dados. O fornecedor do modelo não conserva os seus documentos nem os utiliza para treino."
         },
         {
           "q": "Posso ver um relatório de exemplo?",
-          "a": "Um relatório real, não. Os documentos dos clientes são confidenciais e nenhum cliente optou por ser identificado, pelo que não há extrato anonimizado que estejamos dispostos a publicar. O que podemos mostrar numa chamada é o dashboard interativo, o esquema de output que cada constatação tem de cumprir, e como uma constatação se rastreia até à passagem de origem."
+          "a": "Um real, não. Os documentos dos clientes são confidenciais e nenhum cliente optou por ser identificado. Numa chamada podemos mostrar-lhe o dashboard interativo, o esquema de output, e como uma constatação se rastreia até à origem."
         },
         {
           "q": "Quem revê efetivamente o output?",
-          "a": "Uma pessoa identificada, antes de qualquer coisa chegar à sua secretária. Não passa por uma caixa negra a quem não se pode perguntar nada. Enquanto a Factum estiver em pré-lançamento, essa pessoa é o fundador, em todos os mandatos."
+          "a": "Uma pessoa identificada, antes de algo chegar à sua secretária. Enquanto a Factum está em pré-lançamento, essa pessoa é o fundador, em todos os mandatos."
         }
       ]
     },
     "cta": {
-      "title": "Ver se um sprint encaixa na sala que tem à frente",
-      "body": "A chamada de intake é uma conversa de definição de âmbito: o que está no data room, o que falta, e se um sprint é o instrumento certo para o ponto em que está.",
+      "title": "Ver se um sprint encaixa na sua situação",
+      "body": "Uma conversa de definição de âmbito: o que está no data room, o que falta, e se um sprint é o instrumento certo.",
       "button": "Marcar uma chamada de intake",
       "note": "Um número limitado de mandatos-piloto, contados na casa das unidades."
     }
@@ -560,48 +560,54 @@
     "header": {
       "eyebrow": "Governação",
       "title": "Como os seus documentos são tratados, e o que não afirmamos",
-      "lead": "O tratamento de dados não é algo acrescentado no fim para cumprir um requisito — está integrado na forma como o pipeline funciona. É também mais estreito do que a maioria das páginas de segurança dá a entender, pelo que esta declara o limite de forma explícita."
+      "lead": "O tratamento de dados está integrado na forma como o pipeline funciona. É também mais estreito do que a maioria das páginas de segurança dá a entender, pelo que esta página declara o limite."
     },
     "data": {
       "eyebrow": "Tratamento de dados",
       "title": "Quatro coisas verdadeiras em todos os mandatos",
-      "lead": "Cada uma delas descreve um mecanismo do pipeline. Nenhuma é uma certificação, e não as apresentamos como tal."
+      "lead": "Cada uma descreve um mecanismo do pipeline. Nenhuma é uma certificação."
     },
     "gate": {
       "eyebrow": "O controlo humano",
       "title": "O único passo humano obrigatório",
-      "lead": "De ponta a ponta, a análise corre sem intervenção humana no ciclo. O controlo vem depois, sobre constatações que já existem, e não é opcional.",
+      "lead": "A análise corre sem intervenção humana no ciclo. O controlo vem depois, e não é opcional.",
       "items": [
         "As constatações são verificadas contra os documentos de origem antes da entrega.",
-        "O controlo corre sempre, e não apenas quando alguém se lembra de pedir ao sistema que se verifique a si próprio.",
-        "Três classes de falha estão codificadas de forma rígida para serem encaminhadas para uma pessoa em vez de aprovadas automaticamente: citações de origem fabricadas ou alucinadas, fugas de dados pessoais e recusas de âmbito.",
-        "Uma pessoa identificada revê, reconcilia e responde pelo output antes de este sair.",
-        "Os valores pseudonimizados só são revertidos aqui, no output final entregue — não em nenhum passo intermédio."
+        "O controlo corre sempre, automaticamente.",
+        "Três classes de falha vão para uma pessoa em vez de serem aprovadas automaticamente: citações fabricadas, fugas de dados pessoais e recusas de âmbito.",
+        "Uma pessoa identificada revê, reconcilia e responde pelo output.",
+        "Os valores pseudonimizados só são revertidos aqui, no output final."
       ]
     },
     "transparency": {
       "eyebrow": "Transparência sobre IA",
       "title": "Onde acaba a máquina e começa uma pessoa",
       "lead": "Deve ser possível saber, para qualquer constatação, o que a produziu e o que a verificou.",
-      "body": "A análise é gerada por agentes independentes que recuperam provas dos seus próprios documentos carregados. Um segundo agente revisor critica cada rascunho num ciclo de gerar-criticar-repetir, e uma passagem separada de verificação factual confirma as afirmações contra o texto de origem. Uma pessoa revê depois o resultado antes de este lhe chegar. Se uma afirmação não puder ser ligada a uma passagem de um documento real, o output é obrigado a assinalá-la como não confirmada em vez de a apresentar como estabelecida."
+      "steps": [
+        "Agentes independentes recuperam provas dos documentos que carrega.",
+        "Um segundo agente revisor critica cada rascunho.",
+        "Uma passagem separada confirma as afirmações contra o texto de origem.",
+        "Uma pessoa revê o resultado.",
+        "As afirmações que não podem ser ligadas a uma passagem são assinaladas como não confirmadas."
+      ]
     },
     "limits": {
       "eyebrow": "Limites",
       "title": "O que não afirmamos",
-      "lead": "A maior parte do que um comprador quereria numa página destas, ainda não temos. Listá-lo é mais útil para si do que insinuá-lo.",
+      "lead": "A maior parte do que um comprador quer numa página destas, ainda não temos. Listá-lo é melhor do que insinuá-lo.",
       "items": [
-        "Nenhuma ISO 27001, SOC 2 ou qualquer outra certificação, e nenhuma auditoria do pipeline por terceiros.",
+        "Nenhuma ISO 27001, SOC 2 ou outra certificação. Nenhuma auditoria do pipeline por terceiros.",
         "Nenhum teste de intrusão, lista de subcontratantes, single sign-on ou compromisso de registo de auditoria.",
-        "Nenhuma região da UE publicada. A análise corre no Google Vertex AI numa região da UE; não indicamos uma em concreto.",
-        "Nenhum prazo de conservação ou eliminação assumido do lado da própria Factum. A retenção zero é um compromisso do fornecedor do modelo, não uma descrição do nosso armazenamento.",
-        "Nenhum estatuto de conformidade com o RGPD afirmado. Os termos concretos de tratamento pertencem a um contrato de mandato, não a uma página de marketing.",
-        "Nenhuma cobertura de responsabilidade civil profissional, compromisso de notificação de violações ou plano de recuperação de desastres declarado aqui."
+        "Nenhuma região da UE publicada. A análise corre no Google Vertex AI numa região da UE; não indicamos qual.",
+        "Nenhum prazo de conservação ou eliminação do lado da própria Factum. A retenção zero é um compromisso do fornecedor do modelo.",
+        "Nenhum estatuto de conformidade com o RGPD afirmado. Os termos de tratamento pertencem a um contrato de mandato.",
+        "Nenhuma cobertura de responsabilidade civil profissional, notificação de violações ou recuperação de desastres declarada aqui."
       ],
-      "note": "Se o seu processo exigir algum dos pontos acima por escrito, levante-o na chamada de intake. Há uma resposta real em qualquer dos casos, e é curta."
+      "note": "Se o seu processo exigir algum destes pontos por escrito, levante-o na chamada de intake. Há uma resposta real em qualquer dos casos."
     },
     "cta": {
       "title": "Faça as perguntas incómodas na chamada",
-      "body": "A lista acima é deliberadamente pouco lisonjeira. Se algo nela for um impedimento para si, vale a pena descobri-lo em trinta minutos e não em três semanas.",
+      "body": "A lista acima é deliberadamente pouco lisonjeira. Se algo nela o impedir, é melhor descobri-lo em trinta minutos.",
       "button": "Marcar uma chamada de intake",
       "note": "Sem proposta anexada."
     }
@@ -611,14 +617,14 @@
     "header": {
       "eyebrow": "Equipa",
       "title": "Critério, não apenas software",
-      "lead": "Dois pontos de observação sobre o mesmo problema: a leitura de risco de um banqueiro e a disciplina de um engenheiro para sistemas que não falham."
+      "lead": "A leitura de risco de um banqueiro. A disciplina de um engenheiro para sistemas que não falham."
     },
     "historyLabel": "Percurso",
     "people": [
       {
         "name": "Wouter Dijkman",
         "title": "Fundador, Factum",
-        "bio": "Mais de cinco anos dentro das instituições que financiam estes deals. No ING, Wouter trabalhou em Acquisition & Leveraged Finance, onde estruturou e avaliou o crédito por trás exatamente deste tipo de transação. Antes disso, no Rabobank, especializou-se em reestruturação financeira, lendo os números de uma empresa pelo que realmente significam e não pelo que são apresentados a significar. Dirige também a Agentic Mindshift, a sua própria consultora de IA, pelo que o trabalho de due diligence com IA não é um projeto paralelo de banqueiro. Fundou a Factum para trazer o mesmo escrutínio para o lado vendedor, de modo a que um proprietário chegue à sua saída com o rigor que um banco aplicaria, antes de um comprador ter a oportunidade de o usar contra si.",
+        "bio": "Mais de cinco anos dentro das instituições que financiam estes deals. No ING trabalhou em Acquisition & Leveraged Finance, estruturando e avaliando o crédito por trás exatamente deste tipo de transação. Antes disso, reestruturação financeira no Rabobank. Dirige também a Agentic Mindshift, a sua própria consultora de IA. A Factum traz o escrutínio de um banco a todo o ciclo do negócio.",
         "history": [
           { "org": "Factum Capital", "role": "Fundador", "period": "2026 —" },
           { "org": "Agentic Mindshift", "role": "Fundador, consultora de IA", "period": "2025 —" },
@@ -630,7 +636,7 @@
       {
         "name": "Daniel Dropuljic",
         "title": "Responsável Técnico, Factum",
-        "bio": "Daniel constrói os sistemas por trás do trabalho de due diligence com IA da Factum. Como fundador da Dandro Solutions, desenha pipelines de dados que processam mais de 50 000 registos por dia para clientes internacionais da área da saúde, sob regimes de conformidade exigentes, incluindo o RGPD e o FHIR. É essa disciplina — de nível de produção, auditável, construída para aguentar escrutínio — que sustenta o motor de due diligence da Factum.",
+        "bio": "Daniel constrói os sistemas por trás do motor de due diligence da Factum. Como fundador da Dandro Solutions, desenha pipelines de dados que processam mais de 50 000 registos por dia para clientes internacionais da área da saúde. Tudo sob o RGPD e o FHIR. De nível de produção, auditáveis, construídos para aguentar escrutínio.",
         "history": [
           { "org": "Dandro Solutions", "role": "Fundador, engenharia de software", "period": "2021 —" },
           { "org": "Healex, Berlim", "role": "Implementação HL7/FHIR, liderou uma equipa de três pessoas", "period": "2019 – 2021" },
@@ -639,10 +645,10 @@
         ]
       }
     ],
-    "closing": "A leitura de risco de um banqueiro e a disciplina de um engenheiro para sistemas que não falham. Juntos, sustentam o processo com critério, não apenas com software.",
+    "closing": "Critério por trás do processo, não apenas software.",
     "cta": {
       "title": "Falará com a pessoa que revê o output",
-      "body": "Enquanto a Factum estiver em pré-lançamento, a chamada de intake, o controlo de revisão e a apresentação são a mesma pessoa. É esse o objetivo de aceitar mandatos na casa das unidades.",
+      "body": "Enquanto a Factum está em pré-lançamento, a chamada de intake, o controlo de revisão e a apresentação são a mesma pessoa.",
       "button": "Marcar uma chamada de intake",
       "note": "Trinta minutos."
     }
@@ -652,35 +658,35 @@
     "header": {
       "eyebrow": "Parcerias",
       "title": "Capacidade ao nível de due diligence por trás das suas relações com clientes",
-      "lead": "A Factum trabalha com um pequeno número de firmas de consultoria que detêm a relação com o cliente e querem, por trás dela, uma profundidade analítica que não se obtém contratando mais pessoas."
+      "lead": "A Factum trabalha com um pequeno número de firmas de consultoria que detêm a relação com o cliente e querem profundidade analítica por trás dela."
     },
     "who": {
       "eyebrow": "Adequação",
       "title": "Para quem isto costuma funcionar",
-      "lead": "Descrito pelo perfil da firma e não pelo nome — os mandatos dos nossos parceiros são deles para falar, não nossos.",
+      "lead": "Descrito pelo perfil da firma. Os mandatos dos nossos parceiros são deles para falar.",
       "profiles": [
         {
           "title": "Boutiques de corporate finance",
-          "body": "Que conduzem processos de compra e de venda em que a limitação é a carga analítica, e não o fluxo de deals."
+          "body": "Processos de compra e de venda em que a limitação é a carga analítica."
         },
         {
           "title": "Consultores de saída e criação de valor",
-          "body": "Que trabalham com proprietários a dois a cinco anos da saída e precisam de uma base defensável antes de aconselhar sobre o que corrigir."
+          "body": "Proprietários a dois a cinco anos da saída, que precisam primeiro de uma base defensável."
         },
         {
           "title": "Práticas de reestruturação e recuperação",
-          "body": "Onde uma revisão independente do negócio tem de ser produzida depressa e aguentar o escrutínio dos financiadores."
+          "body": "Onde uma revisão independente do negócio tem de ser rápida e aguentar o escrutínio dos financiadores."
         },
         {
           "title": "Firmas de contabilidade e adjacentes à auditoria",
-          "body": "Onde as regras de referenciação e de independência têm de ser verificadas em cada relação antes de se acordar seja o que for."
+          "body": "Onde as regras de referenciação e de independência têm de ser verificadas em cada relação."
         }
       ]
     },
     "split": {
       "eyebrow": "A divisão",
       "title": "O cliente fica consigo. Nós fornecemos a análise.",
-      "lead": "A plataforma corre {modules} módulos em {verticals} verticais. Uma parceria coloca isso por trás do seu nome, no seu mandato, sem que tenha de carregar a construção.",
+      "lead": "A plataforma corre {modules} módulos em {verticals} verticais. Uma parceria coloca isso por trás do seu nome.",
       "columns": [
         {
           "label": "Fica consigo",
@@ -705,32 +711,32 @@
     "start": {
       "eyebrow": "Como começar",
       "title": "Como uma parceria começa de facto",
-      "lead": "Não com um acordo. Com um mandato real, executado como deve ser, para que ambos os lados possam ler o output antes de alguém se comprometer com o que quer que seja.",
+      "lead": "Com um mandato real, executado como deve ser, antes de alguém se comprometer com o que quer que seja.",
       "steps": [
         {
           "title": "Uma chamada de enquadramento",
-          "body": "Como são os seus mandatos, onde está hoje a carga analítica, e se a cobertura da plataforma se ajusta a isso. Trinta minutos."
+          "body": "Como são os seus mandatos e onde está a carga analítica. Trinta minutos."
         },
         {
           "title": "Um mandato, executado de ponta a ponta",
-          "body": "Um único mandato real, entregue sob o mesmo controlo de revisão que tudo o resto. Vê o output antes de haver o que assinar."
+          "body": "Um mandato real, o mesmo controlo de revisão. Vê o output antes de assinar seja o que for."
         },
         {
           "title": "Condições moldadas pelo que aconteceu",
-          "body": "O âmbito, o preço e o ritmo de trabalho são definidos face a um entregável real e não a uma projeção. Isto é um primeiro esboço de parceria, não um pegar ou largar."
+          "body": "Âmbito, preço e ritmo definidos face a um entregável real. Um primeiro esboço de parceria."
         }
       ]
     },
     "boundaries": {
       "eyebrow": "Limites",
       "title": "O que uma parceria não inclui",
-      "lead": "Alguns destes pontos são compromissos com parceiros existentes. O resto é apenas o estado honesto de uma empresa em pré-lançamento.",
+      "lead": "Alguns são compromissos com parceiros existentes. O resto é o estado honesto de uma empresa em pré-lançamento.",
       "items": [
-        "Nenhuma afirmação de certificação ou auditoria em marca branca. Podemos responder pelo mecanismo, não por um selo que não temos.",
-        "Nenhuma capacidade ilimitada. A Factum está em pré-lançamento e a entrega é deliberadamente pequena; uma parceria que ultrapasse o controlo de revisão é pior do que parceria nenhuma.",
-        "Nenhuma política geral de comissões de referenciação. Onde se apliquem regras de certificação ou de independência, isso é verificado em cada relação e divulgado ao cliente.",
-        "Nenhuma pretensão sobre o seu cliente. A relação é sua, e nada do que executamos para si se torna referência ou caso de estudo sem o seu acordo escrito.",
-        "Nenhum mandato conflituante numa via em que já assumimos exclusividade. Onde exista exclusividade, di-lo-emos, em vez de a contornar discretamente."
+        "Nenhuma afirmação de certificação ou auditoria em marca branca. Não respondemos por um selo que não temos.",
+        "Nenhuma capacidade ilimitada. Uma parceria que ultrapassa o controlo de revisão é pior do que parceria nenhuma.",
+        "Nenhuma política geral de comissões de referenciação. Onde se apliquem regras de certificação ou de independência, é verificado em cada relação.",
+        "Nenhuma pretensão sobre o seu cliente. Nada do que executamos para si se torna caso de estudo sem o seu acordo escrito.",
+        "Nenhum mandato conflituante onde já assumimos exclusividade. Onde exista exclusividade, dizemo-lo."
       ]
     },
     "faq": {
@@ -739,25 +745,25 @@
       "items": [
         {
           "q": "Também trabalham diretamente com proprietários?",
-          "a": "Sim. Onde isso possa sobrepor-se ao seu mercado, dizemo-lo antes de se tornar um problema, e não depois."
+          "a": "Sim. Onde isso possa sobrepor-se ao seu mercado, dizemo-lo antes de se tornar um problema."
         },
         {
           "q": "Que nome fica no relatório?",
-          "a": "Isso faz parte do que se define no primeiro mandato. Existem ambos os modelos: entregue sob o seu nome, com a Factum como motor analítico, ou coentregue, quando o cliente quer falar com quem reviu as constatações."
+          "a": "Definido no primeiro mandato. Existem ambos os modelos: entregue sob o seu nome, com a Factum como motor, ou coentregue."
         },
         {
           "q": "Podem executar apenas parte do âmbito?",
-          "a": "A análise das onze disciplinas é um passo fixo, porque o valor está na reconciliação entre disciplinas e não em nenhuma delas isoladamente. O que pode variar é a profundidade da redação e quais as constatações que quer levar ao cliente."
+          "a": "A análise das onze disciplinas é fixa, porque o valor está na reconciliação entre disciplinas. O que varia é a profundidade da redação."
         },
         {
           "q": "Qual é o grau de exclusividade?",
-          "a": "A exclusividade é possível numa via definida, e é um compromisso real quando a assumimos. O que não fazemos é insinuar uma exclusividade que não acordámos, em nenhum dos sentidos."
+          "a": "A exclusividade é possível numa via definida, e é um compromisso real quando a assumimos."
         }
       ]
     },
     "cta": {
       "title": "Comece com um mandato",
-      "body": "A forma mais rápida de avaliar isto é apontá-lo a um mandato real e ler o output. Tudo o resto é uma conversa sobre uma conversa.",
+      "body": "Aponte-o a um mandato real e leia o output.",
       "button": "Marcar uma chamada de enquadramento",
       "note": "Trinta minutos, e uma resposta direta sobre a adequação."
     }
@@ -767,29 +773,29 @@
     "header": {
       "eyebrow": "Contacto",
       "title": "Uma chamada, com a pessoa que revê o output",
-      "lead": "Não há formulário nesta página. Um formulário pressupõe uma fila e alguém que a gere, e enquanto a Factum estiver em pré-lançamento não existe nem uma coisa nem outra — existe um calendário."
+      "lead": "Não há formulário nesta página. Um formulário pressupõe uma fila e alguém que a gere. Há um calendário."
     },
     "call": {
       "eyebrow": "Intake",
       "title": "Marque trinta minutos",
-      "lead": "Uma conversa de enquadramento, não um pitch. Se a sua situação não for uma em que isto ajude, essa é uma resposta mais rápida e mais útil do que uma proposta.",
+      "lead": "Uma conversa de definição de âmbito. Se a sua situação não for uma em que isto ajude, essa é uma resposta mais rápida do que uma proposta.",
       "button": "Marcar uma chamada de intake",
-      "note": "Escolha qualquer horário disponível. Se nenhum servir, a página de marcação tem forma de o indicar."
+      "note": "Escolha qualquer horário disponível."
     },
     "agenda": {
       "label": "O que abordamos",
       "items": [
         "Onde está no ciclo: a comprar, a financiar, a deter ou a vender.",
-        "O que está hoje no data room, e o que lhe falta.",
-        "Que disciplinas carregam o risco real na sua situação concreta.",
-        "Se um sprint é o instrumento certo, ou se ainda é cedo.",
-        "Quanto custaria, definido face ao data room real e não a uma tabela de preços."
+        "O que está hoje no data room, e o que falta.",
+        "Que disciplinas carregam o risco real na sua situação.",
+        "Se um sprint encaixa, ou se ainda é cedo.",
+        "Quanto custaria, definido face ao data room real."
       ]
     },
     "documents": {
       "eyebrow": "Antes de enviar seja o que for",
       "title": "Não envie documentos para marcar uma chamada",
-      "lead": "A chamada de intake não precisa de nada além da conversa. O acesso aos documentos é acordado depois, por escrito, com os termos de confidencialidade resolvidos primeiro — nunca anexado a um primeiro e-mail."
+      "lead": "A chamada de intake não precisa de nada além da conversa. O acesso aos documentos é acordado depois, por escrito."
     },
     "details": {
       "eyebrow": "Detalhes",
@@ -806,46 +812,46 @@
     "header": {
       "eyebrow": "Privacidade",
       "title": "O que este site recolhe, e o que faz um mandato",
-      "lead": "Duas coisas diferentes, deliberadamente separadas. Esta página cobre o site. O tratamento de dados nos mandatos é regido pelo contrato que assinamos, e resumido na página de governação."
+      "lead": "Esta página cobre o site. O tratamento de dados nos mandatos é regido pelo contrato que assinamos."
     },
     "updated": "Última revisão a 29 de julho de 2026.",
     "sections": [
       {
         "title": "Este site",
         "body": [
-          "Este site não tem formulário de contacto, nem sistema de conta, nem início de sessão. Não lhe pede dados pessoais, e não há aqui nada para submeter.",
-          "A sua preferência de língua decorre do URL em que se encontra. Não é definido nenhum cookie para a memorizar, e nenhuma língua é inferida a partir do seu endereço IP ou dos cabeçalhos do navegador."
+          "Sem formulário de contacto, sem sistema de conta, sem início de sessão. Não há aqui nada para submeter.",
+          "A sua língua decorre do URL em que se encontra. Sem cookie, sem deteção por endereço IP."
         ]
       },
       {
         "title": "Marcar uma chamada",
         "body": [
-          "O link de marcação leva-o ao Cal.com, um serviço de agendamento de terceiros. Tudo o que aí introduzir — o seu nome, o seu endereço de e-mail, o que escrever no campo de notas — é tratado pelo Cal.com ao abrigo dos seus próprios termos e política de privacidade, e partilhado connosco para podermos realizar a reunião.",
-          "Usamos essa informação para preparar a chamada, para a realizar e para lhe dar seguimento. Não a acrescentamos a nenhuma lista de marketing."
+          "O link de marcação leva-o ao Cal.com, um serviço de agendamento de terceiros. O que aí introduzir é tratado ao abrigo dos termos do Cal.com e partilhado connosco para podermos realizar a reunião.",
+          "Usamos essa informação para preparar a chamada e para lhe dar seguimento. Não a acrescentamos a nenhuma lista de marketing."
         ]
       },
       {
         "title": "Documentos que partilha connosco",
         "body": [
-          "Não são partilhados documentos através deste site. O acesso a documentos é acordado separadamente, por escrito, antes de qualquer transferência.",
-          "Durante um mandato, os dados financeiros e pessoais confidenciais são pseudonimizados antes de chegarem à camada de análise, e revertidos apenas no output final entregue. A análise corre no Google Vertex AI numa região da UE, ao abrigo de um Acordo de Tratamento de Dados; o fornecedor do modelo não conserva os seus documentos nem os utiliza para treino de modelos além da própria chamada de processamento.",
-          "Os prazos de conservação, de eliminação e as condições de confidencialidade do nosso lado são fixados no contrato de mandato, e não afirmados aqui."
+          "Não são partilhados documentos através deste site. O acesso é acordado separadamente, por escrito.",
+          "Durante um mandato, os dados confidenciais são pseudonimizados antes da análise e revertidos apenas no output final. A análise corre no Google Vertex AI numa região da UE, ao abrigo de um Acordo de Tratamento de Dados. O fornecedor do modelo não conserva os seus documentos nem os utiliza para treino.",
+          "Os prazos de conservação e eliminação do nosso lado são fixados no contrato de mandato."
         ]
       },
       {
         "title": "Os seus direitos",
         "body": [
-          "Ao abrigo do RGPD, pode perguntar que dados pessoais seus detemos, pedir que sejam corrigidos, pedir que sejam eliminados, ou opor-se à forma como são utilizados. Levante a questão na chamada de intake ou responda a qualquer e-mail nosso, e terá uma resposta.",
-          "Se não ficar satisfeito com a forma como tratamos um pedido, pode apresentar queixa junto da autoridade neerlandesa de proteção de dados, a Autoriteit Persoonsgegevens."
+          "Ao abrigo do RGPD, pode perguntar que dados pessoais detemos, pedir que sejam corrigidos ou eliminados, ou opor-se à forma como são utilizados. Levante a questão na chamada de intake ou responda a qualquer e-mail nosso.",
+          "Se não ficar satisfeito, pode apresentar queixa junto da Autoriteit Persoonsgegevens, a autoridade neerlandesa de proteção de dados."
         ]
       },
       {
         "title": "Alterações",
         "body": [
-          "Esta página mudará à medida que a Factum sair do pré-lançamento e as condições de mandato se consolidarem. A data de revisão no topo é o sinal honesto de quão atual está."
+          "Esta página mudará à medida que a Factum sair do pré-lançamento. A data de revisão no topo mostra quão atual está."
         ]
       }
     ],
-    "controller": "O responsável pelo tratamento é a Factum Capital, registada na Câmara de Comércio neerlandesa sob o número {kvk}. Esta página é um resumo em linguagem simples, e não um substituto das condições de um contrato de mandato assinado."
+    "controller": "O responsável pelo tratamento é a Factum Capital, registada na Câmara de Comércio neerlandesa sob o número {kvk}. Esta página é um resumo em linguagem simples."
   }
 }
