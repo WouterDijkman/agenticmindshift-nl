@@ -85,9 +85,6 @@ Je output is uitsluitend geldig JSON passend bij het opgegeven schema. Geen proz
     .sort((a, b) => a[1] - b[1]) // van laag naar hoog
     .map(([dim, score]) => `  ${dimensionLabels[dim]}: ${score}/100`);
 
-  // ── Percentiel berekenen ───────────────────────────────────────────────────
-  const percentile = approxPercentile(lead.totalScore);
-
   // ── Research context ──────────────────────────────────────────────────────
   const researchBlock = formatResearchForPrompt(research);
 
@@ -100,7 +97,7 @@ FUNCTIE: ${lead.jobTitle ?? 'niet opgegeven'}
 WEBSITE: ${lead.website ?? 'niet opgegeven'}
 ${lead.companyContext ? `EIGEN TOELICHTING DOOR LEAD: ${lead.companyContext}\n` : ''}
 
-TOTAALSCORE: ${lead.totalScore}/75 (top ${100 - percentile}% van respondenten — beter dan ${percentile}% van vergelijkbare organisaties)
+TOTAALSCORE: ${lead.totalScore}/75
 
 DIMENSIESCORES (van laag naar hoog, focus op de laagste):
 ${dimLines.join('\n')}
@@ -138,16 +135,3 @@ Vereisten:
   return { system, user };
 }
 
-/** Ruwe percentiel-berekening (normaalverdeling, gemiddelde 45, stdev 12) */
-function approxPercentile(total: number): number {
-  const z = (total - 45) / 12;
-  const t = 1 / (1 + 0.2316419 * Math.abs(z));
-  const d = 0.3989422804014327 * Math.exp((-z * z) / 2);
-  let p =
-    d *
-    t *
-    (0.319381530 +
-      t * (-0.356563782 + t * (1.781477937 + t * (-1.821255978 + t * 1.330274429))));
-  if (z > 0) p = 1 - p;
-  return Math.max(1, Math.min(99, Math.round((1 - p) * 100)));
-}

@@ -102,27 +102,28 @@ export default async function FactumCapitalPage(
       {/* CTA — scorecard / kennismaking */}
       <section
         className="grain-overlay"
+        data-surface="dark"
         style={{
-          background: 'var(--accent-primary)',
+          background: 'var(--surface-dark)',
           paddingBlock: 'clamp(56px, 7vw, 88px)',
           position: 'relative',
           overflow: 'hidden',
         }}
       >
         <div className="container-medium reveal" style={{ textAlign: 'center', position: 'relative' }}>
-          <p className="eyebrow" style={{ marginBottom: '20px', color: 'rgba(247,242,235,0.5)' }}>
+          <p className="eyebrow" style={{ marginBottom: '20px', color: 'var(--text-muted)' }}>
             {t('cta.eyebrow')}
           </p>
           <h2
             className="type-h2"
-            style={{ color: 'var(--text-inverse)', marginBottom: '16px', maxWidth: '520px', marginInline: 'auto' }}
+            style={{ color: 'var(--text-primary)', marginBottom: '16px', maxWidth: '520px', marginInline: 'auto' }}
           >
             {t('cta.heading')}
           </h2>
           <p
             style={{
               fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
-              color: 'rgba(247,242,235,0.5)',
+              color: 'var(--text-muted)',
               marginBottom: '40px',
               maxWidth: '460px',
               marginInline: 'auto',

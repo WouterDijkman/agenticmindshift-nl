@@ -40,7 +40,7 @@ export default function CostAnchorVisual() {
               <span className="cost-anchor-label">{t(`${r.key}_label`)}</span>
               <span
                 className="cost-anchor-amount"
-                style={{ color: r.tone === 'rust' ? 'var(--accent-cta)' : 'var(--text-primary)' }}
+                style={{ color: r.tone === 'rust' ? 'var(--accent-cta-ink)' : 'var(--text-primary)' }}
               >
                 {t(`${r.key}_amount`)}
               </span>

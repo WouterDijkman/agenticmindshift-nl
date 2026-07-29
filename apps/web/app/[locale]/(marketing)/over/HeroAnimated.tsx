@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import { useRef } from 'react';
+import { Fragment, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -23,7 +23,6 @@ export default function HeroAnimated() {
       className="hero-full grain-overlay"
       style={{
         background: 'var(--bg-primary)',
-        minHeight: '100svh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -96,16 +95,20 @@ export default function HeroAnimated() {
           variants={{ visible: { transition: { staggerChildren: 0.1, delayChildren: 0.5 } } }}
         >
           {WORDS.map((word, i) => (
-            <motion.span
-              key={i}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease } },
-              }}
-              style={{ display: 'inline-block', marginRight: '0.27em' }}
-            >
-              {word}
-            </motion.span>
+            // The space must be a real text node between the spans — an inline-block
+            // margin looks the same but makes the heading read as "WouterDijkman".
+            <Fragment key={i}>
+              {i > 0 && ' '}
+              <motion.span
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease } },
+                }}
+                style={{ display: 'inline-block' }}
+              >
+                {word}
+              </motion.span>
+            </Fragment>
           ))}
         </motion.h1>
 
@@ -116,7 +119,7 @@ export default function HeroAnimated() {
             fontWeight: 700,
             letterSpacing: '0.12em',
             textTransform: 'uppercase',
-            color: 'var(--accent-cta)',
+            color: 'var(--accent-cta-ink)',
             marginBottom: '28px',
           }}
           initial={{ opacity: 0 }}

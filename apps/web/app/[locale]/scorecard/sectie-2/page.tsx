@@ -39,7 +39,7 @@ export default function Sectie2Page() {
       >
         <div style={{ display: 'flex', alignItems: 'baseline', gap: '16px', marginBottom: '16px' }}>
           <p className="eyebrow" style={{ marginBottom: 0 }}>{t('sections.s2_label')}</p>
-          <span style={{ fontSize: '0.8125rem', color: 'var(--accent-cta)', fontWeight: 500, letterSpacing: '0.01em' }}>
+          <span style={{ fontSize: '0.8125rem', color: 'var(--accent-cta-ink)', fontWeight: 500, letterSpacing: '0.01em' }}>
             {t('sections.s2_tagline')}
           </span>
         </div>

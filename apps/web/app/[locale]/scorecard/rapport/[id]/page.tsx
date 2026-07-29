@@ -5,7 +5,8 @@ import { useParams } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { useAssessmentStore } from '@/store/assessmentStore';
-import { calculateScores, determineOffer } from '@/lib/scoring';
+import { calculateScores, determineOffer, maturityBand, REFERENCE_LEVELS } from '@/lib/scoring';
+import type { Dimension } from '@/lib/questions';
 import {
   variantForOffer,
   rawScoreForVariant,
@@ -16,33 +17,11 @@ import {
 } from '@/lib/reportVariants';
 import TotalScoreCircle from '@/components/scorecard/TotalScoreCircle';
 import DimensionBars from '@/components/scorecard/DimensionBars';
-import PeerBenchmarkChart from '@/components/scorecard/PeerBenchmarkChart';
+import ReferenceLevelChart from '@/components/scorecard/ReferenceLevelChart';
 import Button from '@/components/ui/Button';
 import ReportDeepAnalysis from './ReportDeepAnalysis';
 
 export const dynamic = 'force-dynamic';
-
-/**
- * Rough percentile derived from total score (0..75) assuming a normal
- * distribution with mean 45 and stdev 12. Returns an integer 1..99.
- */
-function approxPercentile(total: number): number {
-  const mean = 45;
-  const stdev = 12;
-  const z = (total - mean) / stdev;
-  const t = 1 / (1 + 0.2316419 * Math.abs(z));
-  const d = 0.3989422804014327 * Math.exp((-z * z) / 2);
-  let p =
-    d *
-    t *
-    (0.319381530 +
-      t *
-        (-0.356563782 +
-          t * (1.781477937 + t * (-1.821255978 + t * 1.330274429))));
-  if (z > 0) p = 1 - p;
-  const pct = Math.round((1 - p) * 100);
-  return Math.max(1, Math.min(99, pct));
-}
 
 export default function RapportPage() {
   const t = useTranslations('scorecard.rapport');
@@ -60,7 +39,10 @@ export default function RapportPage() {
   const scores = useMemo(() => calculateScores(answers), [answers]);
   const offer = useMemo(() => determineOffer(answers['Q4']), [answers]);
   const variant = useMemo(() => variantForOffer(offer), [offer]);
-  const percentile = approxPercentile(scores.total);
+  const band = maturityBand(scores.total);
+  const atReference = (Object.keys(REFERENCE_LEVELS) as Dimension[]).filter(
+    (d) => (scores.byDimension[d] ?? 0) >= REFERENCE_LEVELS[d]
+  ).length;
 
   const isHighScorer = scores.total > HIGH_SCORER_THRESHOLD;
 
@@ -271,7 +253,7 @@ export default function RapportPage() {
         <div className="flex flex-col items-center justify-center">
           <TotalScoreCircle score={scores.total} max={TOTAL_MAX} size={220} />
           <p style={{ fontSize: '0.8125rem', color: 'var(--text-muted)', marginTop: '12px', textAlign: 'center', maxWidth: '180px', lineHeight: 1.5 }}>
-            {t('better_than', { pct: percentile })}
+            {t(`band_${band}`)}
           </p>
         </div>
         <div>
@@ -304,14 +286,14 @@ export default function RapportPage() {
             padding: '28px',
           }}
         >
-          <h2 className="type-h2 mb-5">{t('peer_heading')}</h2>
+          <h2 className="type-h2 mb-5">{t('reference_heading')}</h2>
           <p className="type-stat mb-2" style={{ color: 'var(--text-primary)' }}>
-            {percentile}%
+            {atReference}/6
           </p>
           <p className="hint-italic mb-6" style={{ color: 'var(--text-secondary)' }}>
-            {t('peer_stat', { pct: percentile })}
+            {t('reference_stat', { n: atReference })}
           </p>
-          <PeerBenchmarkChart scores={scores.byDimension} />
+          <ReferenceLevelChart scores={scores.byDimension} />
         </div>
       </div>
 
@@ -340,7 +322,7 @@ export default function RapportPage() {
                 <span style={{
                   fontSize: '0.75rem',
                   fontWeight: 800,
-                  color: 'var(--accent-cta)',
+                  color: 'var(--accent-cta-ink)',
                   letterSpacing: '0.06em',
                   flexShrink: 0,
                   paddingTop: '2px',
@@ -380,7 +362,7 @@ export default function RapportPage() {
                 <p style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--text-primary)' }}>
                   {t('offer_investment')}
                 </p>
-                <p style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--accent-cta)' }}>
+                <p style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--accent-cta-ink)' }}>
                   {tV(`${variant.id}.price`)}
                 </p>
               </div>

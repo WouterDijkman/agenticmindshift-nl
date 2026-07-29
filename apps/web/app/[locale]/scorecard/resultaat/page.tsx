@@ -156,7 +156,7 @@ export default function ResultaatPage() {
                   style={{
                     fontSize: '0.75rem',
                     fontWeight: 800,
-                    color: 'var(--accent-cta)',
+                    color: 'var(--accent-cta-ink)',
                     letterSpacing: '0.06em',
                     flexShrink: 0,
                     paddingTop: '1px',

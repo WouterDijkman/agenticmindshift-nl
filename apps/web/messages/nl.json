@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "site_name": "Agentic Mindshift",
+    "site_title": "Agentic Mindshift — AI-advies voor Europese PE en M&A",
+    "site_description": "Strategisch AI-partnerschap voor PE-fondsen, M&A-kantoren en familiebedrijven in de mid-market. Meet uw AI-rendement met de gratis Scorecard in 12 minuten."
+  },
   "nav": {
     "scorecard": "Scorecard",
     "werkwijze": "Werkwijze",
@@ -10,7 +15,7 @@
     "close_menu": "Sluit menu",
     "close": "Sluit",
     "main_menu": "Hoofdmenu",
-    "badge_july": "juli"
+    "badge_soon": "binnenkort"
   },
   "footer": {
     "tagline": "AI‑advies voor Europese PE‑ en M&A‑firma's. Concreet, vertrouwelijk, meetbaar.",
@@ -33,7 +38,7 @@
     "hero": {
       "eyebrow": "Voor PE-partners, M&A-directors en family offices",
       "heading": "Hoeveel rendement laat uw portefeuille deze maand liggen?",
-      "subtext": "Uw maandrapportage maskeert onderprestatie. Uw deal-team herhaalt vermijdbare fouten. En AI-gedreven due diligence over alle dimensies ontbreekt in de meeste IC-voorstellen. De Scorecard brengt alle zes dimensies in kaart. In twaalf minuten.",
+      "subtext": "Zes dimensies die uw IM en uw maandrapportage niet laten zien — in twaalf minuten in kaart, met een onderbouwd rapport.",
       "cta_primary": "Start de Scorecard",
       "cta_secondary": "Werkwijze & tarieven",
       "trust": "12 minuten · 6 dimensies · geen account nodig · vertrouwelijk"
@@ -60,7 +65,7 @@
       "without_2": "Maandrapportage als ritueel, geen sturingsinstrument.",
       "without_3": "Deal-lessen verdwijnen bij elke teamwissel.",
       "without_4": "Het risico dat AI de kernactiviteit overneemt staat nergens op papier.",
-      "with_1": "Zes dimensies gekwantificeerd, vergeleken met vergelijkbare partijen.",
+      "with_1": "Zes dimensies gekwantificeerd, afgezet tegen een expliciet referentieniveau.",
       "with_2": "Twee concrete aandachtspunten met de hoogste impact.",
       "with_3": "Een rapport dat u intern kunt delen zonder extra uitleg.",
       "with_4": "U gaat naar uw volgende IC met data, niet met een vermoeden."
@@ -120,8 +125,8 @@
     "showcase": {
       "eyebrow": "Het rapport",
       "heading": "Geen losse score. Een rapport dat u intern kunt delen.",
-      "body": "Elke dimensie krijgt een score, afgezet tegen het niveau van vergelijkbare partijen. U ziet in één oogopslag waar u voorloopt en welke twee punten de meeste aandacht verdienen.",
-      "check_1": "Zes dimensies, elk gebenchmarkt tegen vergelijkbare fondsen",
+      "body": "Elke dimensie krijgt een score, afgezet tegen het referentieniveau: het punt waarop een dimensie voldoende gemeten wordt om op te sturen. U ziet in één oogopslag waar u dat haalt en welke twee punten de meeste aandacht verdienen.",
+      "check_1": "Zes dimensies, elk afgezet tegen een expliciet referentieniveau",
       "check_2": "De twee aandachtspunten met de hoogste impact, uitgelicht",
       "check_3": "Direct deelbaar in uw IC, zonder extra toelichting",
       "cta": "Start de Scorecard"
@@ -145,26 +150,25 @@
       "track_1_cta_sub": "12 minuten · direct uw profiel",
       "track_2_tag": "Adviseur · RA / RB / M&A-professional",
       "track_2_title": "Werk zelf met het platform.",
-      "track_2_body": "Factum Capital: 29 modules voor uw eigen deal-team. Van Financial DD en AI Due Diligence tot LBO-modellering en exit readiness. SaaS vanaf 1 juli 2026. Vroege toegang is nu open.",
+      "track_2_body": "Factum Capital: 29 modules voor uw eigen deal-team. Van Financial DD en AI Due Diligence tot LBO-modellering en exit readiness. De SaaS-versie is in ontwikkeling; vroege toegang is nu open.",
       "track_2_detail": "SaaS · maandabonnement · vroeg-toegangstarief bij lancering",
       "track_2_cta": "Factum Capital vroege toegang",
-      "track_2_cta_sub": "Lancering 1 juli 2026",
+      "track_2_cta_sub": "SaaS in ontwikkeling · wachtlijst open",
       "powered_by": "POWERED BY",
-      "attribution": "Het AI-platform achter de AI-gedreven Due Diligence & Portfolio-dienstverlening · lancering 1 juli 2026",
+      "attribution": "Het AI-platform achter de AI-gedreven Due Diligence & Portfolio-dienstverlening · SaaS in ontwikkeling",
       "mockup_phase_acquisition": "Acquisitie",
       "mockup_phase_financing": "Financiering",
       "mockup_phase_portfolio": "Portfolio review",
       "mockup_phase_ibr": "Pre-IBR/WHOA",
       "mockup_module_boedelonderzoek": "Boedelonderzoek",
       "mockup_footer_left": "4 dealfasen · 29 modules",
-      "mockup_footer_right": "SaaS · lancering 1 juli 2026"
+      "mockup_footer_right": "SaaS · in ontwikkeling"
     },
     "dimensions": {
       "eyebrow": "Zes dimensies",
       "heading": "De zes plekken waar rendement weglekt.",
-      "subheading": "De Scorecard meet elk van deze dimensies en vergelijkt uw profiel met vergelijkbare partijen.",
+      "subheading": "De Scorecard meet elk van deze dimensies en zet uw profiel af tegen het referentieniveau per dimensie.",
       "legend_example": "Voorbeeldprofiel",
-      "legend_peer": "Vergelijkbare partijen",
       "card_cta": "Meet deze dimensie →",
       "title_1": "Doorlooptijd",
       "body_1": "Hoeveel werkdagen verliest uw team tussen IM-ontvangst en een beslissingsrijp oordeel?",
@@ -178,7 +182,8 @@
       "body_5": "Hoeveel deals laat uw team liggen door handmatig zoekwerk en rapportage?",
       "title_6": "Kennisborging",
       "body_6": "Vertrekt uw associate? Verdwijnt dan ook het geheugen van drie tot vijf dossiers?",
-      "radar_aria_label": "Radar-grafiek van uw profiel over zes dimensies, vergeleken met vergelijkbare partijen"
+      "radar_aria_label": "Radar-grafiek van een voorbeeldprofiel over zes dimensies, afgezet tegen het referentieniveau",
+      "legend_reference": "Referentieniveau"
     },
     "costAnchor": {
       "title": "De rekensom",
@@ -187,11 +192,11 @@
       "row_1_note": "0,5× op een €5M EBITDA-target",
       "row_2_label": "Onderbouwde DD · per deal",
       "row_2_amount": "€10.000",
-      "row_2_note": "dekt de correctie 250×",
+      "row_2_note": "250× kleiner dan die correctie",
       "row_3_label": "De Scorecard",
       "row_3_amount": "Gratis",
       "row_3_note": "12 minuten · geen account",
-      "foot": "Bedragen op schaal weergegeven. De meting kost een fractie van wat één blinde vlek kost."
+      "foot": "Rekenvoorbeeld, bedragen op schaal weergegeven. De meting kost een fractie van wat één blinde vlek kost."
     },
     "faqItems": {
       "duur_q": "Hoe lang duurt de Scorecard echt?",
@@ -201,7 +206,7 @@
       "vertrouwelijk_q": "Hoe vertrouwelijk is dit?",
       "vertrouwelijk_a": "Volledig. Uw antwoorden worden niet gedeeld, niet verkocht, niet gebruikt voor benchmarks zonder anonimisering. U kunt anoniem invullen als u dat wenst — uw naam wordt pas gevraagd bij het ontvangen van het rapport.",
       "onderbouwing_q": "Wat is de onderbouwing van de zes dimensies?",
-      "onderbouwing_a": "De dimensies zijn gebaseerd op praktijkervaring in acquisition finance en financial restructuring, en gebenchmarkt tegen anonieme indicatoren van vergelijkbare partijen in de Europese lower-mid market.",
+      "onderbouwing_a": "De dimensies komen uit praktijkervaring in acquisition finance en financial restructuring. Het referentieniveau per dimensie is ons eigen streefniveau — het punt waarop een dimensie voldoende geïnstrumenteerd is om op te sturen. Het is geen gemeten marktgemiddelde, en we doen ook niet alsof.",
       "wie_q": "Wie staat er achter Agentic Mindshift?",
       "wie_a": "Wouter Dijkman, founder. Acquisition finance en financial restructuring, Europese mid-market.",
       "wie_link": "Meer op de Over-pagina →",
@@ -284,7 +289,7 @@
       "item_4_year": "November 2025",
       "item_4_label": "AI for Business",
       "item_4_sub": "Nyenrode Business Universiteit · AI-toepassingen in financiële praktijk",
-      "item_5_year": "1 juli 2026",
+      "item_5_year": "In ontwikkeling",
       "item_5_label": "Lancering Factum Capital",
       "item_5_sub": "AI-platform voor M&A en herstructurering"
     },
@@ -376,7 +381,7 @@
       "q2": "Wat maakt Agentic Mindshift anders?",
       "a2": "Deal-ervaring in acquisition finance én financial restructuring: niet een AI-generalist die toevallig PE-klanten heeft. De AI versterkt die praktijk; ze vervangt haar niet.",
       "q3": "Hoe weet ik of de investering rendeert?",
-      "a3": "Eén correctie van 0,5× op de overnameprijs bij een €5M EBITDA-target is €2,5M: dat dekt de DD-kosten 250×. Eén tijdig gesignaleerde afwijking in de maandrapportage dekt de jaarkosten van doorlopend portefeuille-inzicht.",
+      "a3": "Rekenvoorbeeld: één correctie van 0,5× op de overnameprijs bij een €5M EBITDA-target is €2,5M — 250× de kosten van de due diligence zelf. Eén tijdig gesignaleerde afwijking in de maandrapportage dekt de jaarkosten van doorlopend portefeuille-inzicht.",
       "q4": "Zitten we vast aan een lange looptijd?",
       "a4": "Sparring, Consultancy en DD zijn per opdracht. Fractional AI Officer: minimaal 3 maanden, omdat het ritme tijd nodig heeft.",
       "q5": "Meerdere deals tegelijk?",
@@ -397,11 +402,7 @@
     "hero": {
       "eyebrow": "Het platform achter onze AI-gedreven Due Diligence",
       "heading": "Eén platform voor elke fase van uw deal‑ en portfoliopraktijk.",
-      "subtext": "Vier momenten (acquisitie, financiering, portfolio review en pre-IBR/WHOA) op één gedeeld dossier. Vanaf 1 juli 2026 ook als SaaS voor uw eigen team.",
-      "stat_1_sub": "modules totaal",
-      "stat_2_sub": "dienst-momenten",
-      "stat_3_sub": "livegang",
-      "stat_3_label": "1 juli",
+      "subtext": "Vier momenten (acquisitie, financiering, portfolio review en pre-IBR/WHOA) op één gedeeld dossier. De SaaS-versie voor uw eigen team is in ontwikkeling.",
       "countdown_label": "Lancering over"
     },
     "answer_first": "Factum Capital is het AI-gedreven due-diligence- en portfolioplatform van Agentic Mindshift: 29 modules die financiële, commerciële, juridische en AI-due-diligence versnellen voor private-equityfondsen en M&A-kantoren. Van eerste screening tot pre-IBR/WHOA levert het platform onderbouwde inzichten in dagen in plaats van weken.",
@@ -416,7 +417,7 @@
     "description": {
       "eyebrow": "Het systeem",
       "quote": "Eén platform, vier momenten. Factum levert het analytisch fundament — Agentic Mindshift levert de dienst, met koppeling naar gecertificeerde adviseurs die formeel tekenen waar vereist.",
-      "para1": "Het platform, 29 modules van Financial DD en AI Due Diligence tot LBO-modellering en exit readiness, geeft uw team consistente structuur op elk moment. Vanaf 1 juli 2026 beschikbaar als SaaS.",
+      "para1": "Het platform, 29 modules van Financial DD en AI Due Diligence tot LBO-modellering en exit readiness, geeft uw team consistente structuur op elk moment. De SaaS-versie is in ontwikkeling.",
       "para2": "De dienstverlening via Agentic Mindshift levert het volledige analytisch fundament en koppelt gecertificeerde adviseurs: RA/RB/advocaten, financieel adviseurs, restructuring consultants. Eén gedeeld dossier: minder dubbel werk, kortere doorlooptijd."
     },
     "momenten": {
@@ -444,7 +445,7 @@
       "route_1_label": "SaaS: zelf in handen",
       "route_1_title": "Het Platform",
       "route_1_body": "29 modules die uw deal-team de structuur geven om alle vier momenten consistent uit te voeren. Van Financial DD en AI Due Diligence tot LBO-modellering, IBR/WHOA en exit readiness. Kennisopbouw die meegroeit.",
-      "route_1_detail": "Lancering 1 juli 2026 · Maandabonnement · Wachtlijst open",
+      "route_1_detail": "SaaS in ontwikkeling · Maandabonnement · Wachtlijst open",
       "route_2_label": "Via Agentic Mindshift: AI-gedreven Due Diligence & Portfolio",
       "route_2_title": "De Dienstverlening",
       "route_2_body": "Agentic Mindshift voert het volledige traject voor u uit, met Factum als analytisch platform. Op elk moment koppelt Agentic Mindshift de juiste gecertificeerde professionals die op het gedeelde dossier verder bouwen en waar nodig formeel tekenen.",
@@ -482,9 +483,9 @@
       "heading": "Schrijf u in voor early access.",
       "body": "De wachtlijst is bewust beperkt. Vroege deelnemers krijgen directe input op de module-roadmap en gaan als eerste door onboarding. Geen vervolgmails buiten de Factum Capital-roadmap om.",
       "benefit_1": "Directe input op de module-roadmap",
-      "benefit_2": "Voorrang op platform-onboarding per 1 juli 2026",
+      "benefit_2": "Voorrang op platform-onboarding bij livegang",
       "benefit_3": "Vroeg-toegangstarief bij lancering",
-      "benefit_4": "Prioriteit voor pilot deal-analyse-opdrachten in het eerste kwartaal na lancering (juli–september 2026)"
+      "benefit_4": "Prioriteit voor pilot deal-analyse-opdrachten in het eerste kwartaal na lancering"
     },
     "form": {
       "field_name": "Naam",
@@ -513,9 +514,9 @@
       "seconds": "sec"
     },
     "modules": {
-      "eyebrow": "Lancering 1 juli 2026",
+      "eyebrow": "SaaS in ontwikkeling",
       "heading": "De modules bij livegang",
-      "subtext": "De eerste reeks modules. Verdere uitbreiding volgt in H2 2026. Vroege deelnemers brengen mede de volgorde.",
+      "subtext": "De eerste reeks modules. Verdere uitbreiding volgt. Vroege deelnemers brengen mede de volgorde.",
       "m01_title": "Financial DD",
       "m01_body": "Quality of Earnings, werkkapitaalanalyse, netto schuld, cashflow en balansanalyse. De feitelijke basis voor elke overnameprijs.",
       "m02_title": "Commercial DD",
@@ -567,7 +568,7 @@
     "s3_li1": "Het genereren en versturen van uw persoonlijke scorecard-rapport — uitvoering van overeenkomst.",
     "s3_li2": "Twee opvolg-e-mails (na drie en zeven dagen) met inhoudelijke reflectie en een uitnodiging voor een sparring-sessie — gerechtvaardigd belang.",
     "s3_li3": "Het beheren van een wachtlijst voor Factum Capital — uitvoering van overeenkomst dan wel uw uitdrukkelijke toestemming.",
-    "s3_li4": "Het analyseren van geaggregeerde, niet-herleidbare scorecard-uitkomsten ter verbetering van peer-benchmarks — gerechtvaardigd belang.",
+    "s3_li4": "Het analyseren van geaggregeerde, niet-herleidbare scorecard-uitkomsten ter verbetering van de referentieniveaus — gerechtvaardigd belang.",
     "s4_heading": "4. Bewaartermijnen",
     "s4_body": "Uw scorecard-antwoorden en rapportgegevens bewaren wij maximaal 36 maanden, tenzij u verzoekt deze eerder te verwijderen. Wachtlijstgegevens voor Factum Capital worden bewaard tot zes maanden na lancering, daarna geanonimiseerd.",
     "s5_heading": "5. Verwerkers",
@@ -600,17 +601,19 @@
     "s6_heading": "6. Aansprakelijkheid",
     "s6_body": "De aansprakelijkheid van Agentic Mindshift is beperkt tot het factuurbedrag van de betreffende opdracht over een periode van maximaal drie maanden, met een maximum van 25.000 euro. Aansprakelijkheid voor indirecte schade, gevolgschade, gederfde winst of gemiste IRR is uitgesloten.",
     "s7_heading": "7. Vertrouwelijkheid",
-    "s7_body": "Alle informatie die in het kader van een opdracht of sparring-sessie wordt gedeeld wordt vertrouwelijk behandeld. Dit geldt zonder einddatum. Geaggregeerde, niet-herleidbare data kan worden gebruikt om peer-benchmarks te verbeteren.",
+    "s7_body": "Alle informatie die in het kader van een opdracht of sparring-sessie wordt gedeeld wordt vertrouwelijk behandeld. Dit geldt zonder einddatum. Geaggregeerde, niet-herleidbare data kan worden gebruikt om de referentieniveaus te verbeteren.",
     "s8_heading": "8. Intellectueel eigendom",
     "s8_body": "Rapporten, frameworks en analyses blijven intellectueel eigendom van Agentic Mindshift, tenzij anders overeengekomen. De opdrachtgever verkrijgt een niet-overdraagbaar gebruiksrecht voor intern gebruik.",
     "s9_heading": "9. Toepasselijk recht",
     "s9_body": "Op deze voorwaarden en op alle opdrachten is Nederlands recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechter in het arrondissement van vestiging."
   },
   "scorecard": {
+    "meta_title": "Scorecard — zes dimensies, twaalf minuten",
+    "meta_description": "Vijftien vragen over uw dealproces, maandrapportage, AI-bestendigheid en kennisborging. Twaalf minuten, en u krijgt een rapport dat uw blinde vlekken meetbaar maakt.",
     "landing": {
       "eyebrow": "Scorecard · Zes dimensies · Twaalf minuten",
       "heading": "Waar lekt rendement weg, en wat ziet u over het hoofd?",
-      "subtext": "Vijftien vragen. Twaalf minuten. Een rapport dat uw blinde vlekken meetbaar maakt en vergelijkt met vergelijkbare partijen.",
+      "subtext": "Vijftien vragen. Twaalf minuten. Een rapport dat uw blinde vlekken meetbaar maakt en per dimensie laat zien hoever u van het referentieniveau af zit.",
       "start_cta": "Start de Scorecard",
       "no_account": "Geen account vereist. Uw antwoorden worden tussentijds opgeslagen.",
       "trust": "Ontworpen voor PE-partners, M&A-directors en family offices in de Europese mid-market.",
@@ -619,7 +622,7 @@
       "blind_spots_note": "De meeste PE-partners ontdekken hun blinde vlekken pas als het te laat is. Uw investering: twaalf minuten.",
       "preview_eyebrow": "Wat u ontvangt",
       "preview_heading": "Dit is uw rapport, direct na de laatste vraag.",
-      "preview_body": "Zes dimensies, elk gescoord en afgezet tegen vergelijkbare partijen. De twee punten met de hoogste impact worden uitgelicht, zodat u weet waar u als eerste op moet sturen.",
+      "preview_body": "Zes dimensies, elk gescoord en afgezet tegen het referentieniveau. De twee punten met de hoogste impact worden uitgelicht, zodat u weet waar u als eerste op moet sturen.",
       "stakes_eyebrow": "De kosten van uitstellen",
       "stakes_heading": "Twaalf minuten nu of kwartalen onzekerheid later.",
       "stakes_body_1a": "Het verschil tussen een onderbouwde en een ongecalibreerde overnameprijs? Op een €5M EBITDA-target al snel 0,5×: dat is ",
@@ -657,7 +660,7 @@
       "back_to_scorecard": "Terug naar de scorecard",
       "report_contents_eyebrow": "Wat zit er in uw rapport?",
       "report_item_1": "Totaalscore met toelichting per dimensie",
-      "report_item_2": "Zes-dimensies-overzicht met peer-benchmark",
+      "report_item_2": "Zes-dimensies-overzicht met referentieniveau per dimensie",
       "report_item_3": "Uw twee zwakste dimensies en concrete duiding",
       "report_item_4": "Aanbevolen vervolgstap op basis van uw antwoorden",
       "report_item_5": "Persoonlijke link + PDF in uw inbox",
@@ -677,7 +680,7 @@
       "privacy_link": "privacystatement",
       "error_generic": "Er ging iets mis. Probeer het later nog eens.",
       "error_create": "We konden uw rapport niet aanmaken. Controleer de velden en probeer opnieuw.",
-      "score_caption": "Het volledige rapport toont uw score per dimensie met peer-vergelijking.",
+      "score_caption": "Het volledige rapport toont uw score per dimensie, afgezet tegen het referentieniveau.",
       "question_singular": "vraag",
       "question_plural": "vragen"
     },
@@ -715,14 +718,11 @@
       "no_answers_body": "We konden geen scorecard-antwoorden in deze browser vinden. Vul de scorecard opnieuw in om uw rapport te genereren.",
       "heading": "Uw Deal & Portfolio Intelligence Rapport",
       "subtext": "U beschikt nu over inzicht dat de meeste partijen pas krijgen op het moment dat het al te laat is: bij de jaarrapportage, de afwijzing van de bank, of de deal die net niet doorging. Hieronder leest u waar uw analytisch fundament sterk is, waar het weglekt, en welk Factum Capital moment het meest relevant is.",
-      "hint": "Totaalscore · dimensies · peer-vergelijking · aanbevolen vervolgstap",
+      "hint": "Totaalscore · dimensies · referentieniveau · aanbevolen vervolgstap",
       "total_heading": "Totaalscore",
       "total_body_1": "Uw totaalscore is gebaseerd op de optelsom van uw 15 antwoorden, met een maximum van 75 punten. De score is een algemene indicator; de werkelijke informatie zit in de zes dimensies.",
       "total_body_2": "Uw twee zwakste dimensies, hieronder gemarkeerd, zijn de meest waarschijnlijke plekken waar rendement weglekt, niet door slecht beheer, maar door ontbrekende instrumentatie.",
-      "better_than": "Beter dan {pct}% van vergelijkbare partijen",
       "dimensions_heading": "Per dimensie",
-      "peer_heading": "Peer-vergelijking",
-      "peer_stat": "U scoort beter dan {pct}% van vergelijkbare Europese partijen.",
       "interpretation_heading": "Interpretatie",
       "interventions_heading": "Drie concrete interventies",
       "offer_eyebrow": "Aanbevolen vervolgstap",
@@ -778,7 +778,7 @@
       },
       "high_heading": "Beste {name}: uw aanpak valt op. Laten we het hebben over wat u doet dat anderen niet doen.",
       "high_body_1": "U behoort tot de kleine groep PE-partners die al structureel meet wat de meesten pas achteraf zien. Dat is geen kleinigheid.",
-      "high_score_body": "Uw score op de Portfolio Intelligence Scorecard is {score} van 75. Dat is significant boven het gemiddelde van vergelijkbare Europese partijen, en plaatst u in de top 10% van invullers.",
+      "high_score_body": "Uw score op de Portfolio Intelligence Scorecard is {score} van 75. Daarmee ligt u op of boven het referentieniveau op vrijwel elke dimensie — het profiel van een partij die al op data stuurt.",
       "high_body_3": "Een specifieke interventie-aanbeveling is op basis van uw score niet zinvol. U doet wat u zou moeten doen.",
       "high_body_4": "Wat ik zou willen aanbieden, indien u dat interessant vindt, is een vertrouwelijk gesprek over wat u doet dat anderen niet doen. Niet als verkoopgesprek, als peer-uitwisseling. Vrijwillig, geen agenda.",
       "high_next_eyebrow": "Volgende stap",
@@ -786,17 +786,23 @@
       "high_cta_1": "Verbind op LinkedIn",
       "high_cta_2": "Bekijk de trajecten",
       "attention_point": "(aandachtspunt)",
-      "peer_tooltip_label": "Verschil t.o.v. peer-mediaan",
-      "peer_benchmark_footer": "Vergelijking met synthetische peer-mediaan (op basis van Europese PE/M&A-data)."
+      "band_ad_hoc": "Ad hoc — nog nauwelijks geïnstrumenteerd",
+      "band_building": "In opbouw — eerste structuur aanwezig",
+      "band_structured": "Gestructureerd — proces staat, meting nog beperkt",
+      "band_instrumented": "Geïnstrumenteerd — u stuurt op data",
+      "reference_heading": "Referentieniveau",
+      "reference_stat": "{n} van de zes dimensies liggen op of boven het referentieniveau.",
+      "reference_tooltip_label": "Verschil t.o.v. referentieniveau",
+      "reference_footer": "Het referentieniveau is het streefniveau dat wij per dimensie hanteren — het punt waarop een dimensie genoeg gemeten wordt om op te sturen. Het is geen gemeten marktgemiddelde."
     },
     "mockup": {
       "window_label": "Scorecard-rapport · Vertrouwelijk",
-      "title": "Uw profiel vs. vergelijkbare partijen",
-      "subtitle": "Mid-market PE · 12 vergelijkbare fondsen",
-      "callout_label": "dimensies onder\nvergelijkbare partijen",
-      "below_median": "Onder mediaan",
-      "above_median": "Op/boven mediaan",
-      "peer_median": "Peer-mediaan"
+      "title": "Voorbeeldprofiel vs. referentieniveau",
+      "subtitle": "Illustratief voorbeeld · geen echte data",
+      "callout_label": "dimensies onder\nreferentieniveau",
+      "below_reference": "Onder referentie",
+      "above_reference": "Op/boven referentie",
+      "reference_level": "Referentieniveau"
     },
     "variants": {
       "A": {
@@ -863,11 +869,11 @@
         "interventions": {
           "0": {
             "title": "AI-augmented analyse-protocol",
-            "body": "U verviervoudigt uw analysecapaciteit zonder kwaliteitsverlies — van deal-screening tot financieringsmemo."
+            "body": "Meer deals analyseren met dezelfde bezetting, zonder kwaliteitsverlies — van deal-screening tot financieringsmemo."
           },
           "1": {
             "title": "Template-bibliotheek voor dossiers en memo's",
-            "body": "Modulaire bouwstenen die per situatie worden samengesteld. Vermindert voorbereidingstijd met 60%."
+            "body": "Modulaire bouwstenen die per situatie worden samengesteld, zodat u niet elk dossier vanaf nul opbouwt."
           },
           "2": {
             "title": "Maandelijkse capaciteit-audit",

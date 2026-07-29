@@ -75,6 +75,35 @@ export function calculateScores(answers: Answers): ScoreResult {
   };
 }
 
+export type MaturityBand = 'ad_hoc' | 'building' | 'structured' | 'instrumented';
+
+/**
+ * Absolute reading of the 0–75 total. Deliberately not a percentile: we have no
+ * respondent distribution to derive one from, so any "better than X% of firms"
+ * figure would be invented. The bands are our own stated rubric and are
+ * presented as such.
+ */
+export function maturityBand(total: number): MaturityBand {
+  if (total < 30) return 'ad_hoc';
+  if (total < 45) return 'building';
+  if (total < 60) return 'structured';
+  return 'instrumented';
+}
+
+/**
+ * Target level per dimension (0–100) — the level at which a dimension is
+ * instrumented well enough to steer on. This is our stated benchmark, not a
+ * measured market median.
+ */
+export const REFERENCE_LEVELS: Record<Dimension, number> = {
+  DealVelocity: 60,
+  PortfolioIntelligence: 60,
+  BiasDetection: 50,
+  AIReadiness: 50,
+  CapacityEngineering: 60,
+  KnowledgeRetention: 50,
+};
+
 export type OfferType = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'none';
 
 export const offerMap: Record<OfferType, { name: string; description: string }> = {

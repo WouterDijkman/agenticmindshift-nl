@@ -14,13 +14,12 @@ export interface PdfStrings {
   execSummary: string;
   totalScore: string;
   outOf75: string;
-  belowMedian: string;
+  belowReferenceStat: string;
   dimensions: string;
   urgency: string;
   track: string;
   weakestDims: string;
   strongestDims: string;
-  percentileNote: (p: number) => string;
   // Route (AM/Factum) page
   routeEyebrow: string;
   routeTitle: (firstName: string) => string;
@@ -35,10 +34,10 @@ export interface PdfStrings {
   // Score overview
   scoreOverview: string;
   scoreOverviewTitle: string;
-  scoreOverviewIntro: (peer: number) => string;
-  belowPeerMedian: string;
-  atOrAboveMedian: string;
-  peerMedianLegend: (peer: number) => string;
+  scoreOverviewIntro: (reference: number) => string;
+  belowReference: string;
+  atOrAboveReference: string;
+  referenceLegend: (reference: number) => string;
   profileExplanation: string;
   // Critical
   criticalEyebrow: string;
@@ -156,13 +155,12 @@ const nl: PdfStrings = {
   execSummary: 'Executive Summary',
   totalScore: 'Totaalscore',
   outOf75: 'van 75 punten',
-  belowMedian: 'Onder mediaan',
+  belowReferenceStat: 'Onder referentie',
   dimensions: 'dimensies',
   urgency: 'Urgentie',
   track: 'Traject',
   weakestDims: 'Zwakste dimensies',
   strongestDims: 'Sterkste dimensies',
-  percentileNote: (p) => `Sterker dan ${p}% van vergelijkbare partijen`,
   routeEyebrow: 'Uw route · Agentic Mindshift',
   routeTitle: (n) => `Zo zetten we dit om in resultaat, ${n}`,
   routeIntro:
@@ -176,17 +174,17 @@ const nl: PdfStrings = {
   routeFactumNote:
     'De due-diligence- en portfolio-routes draaien op Factum Capital — ons AI-analyseplatform dat het analytisch fundament levert. Agentic Mindshift verzorgt de dienst en, waar vereist, de gecertificeerde sign-off.',
   scoreOverview: 'Scoreoverzicht',
-  scoreOverviewTitle: 'Uw profiel vs. peer-mediaan',
-  scoreOverviewIntro: (peer) =>
-    `Elke dimensie afgezet tegen de mediaan van vergelijkbare partijen in het Europese mid-market (private equity, M&A, corporate finance). De peer-mediaan staat op ${peer}/100. Rood = onder mediaan.`,
-  belowPeerMedian: 'Onder peer-mediaan',
-  atOrAboveMedian: 'Op / boven mediaan',
-  peerMedianLegend: (peer) => `Peer-mediaan (${peer})`,
+  scoreOverviewTitle: 'Uw profiel vs. referentieniveau',
+  scoreOverviewIntro: (reference) =>
+    `Elke dimensie afgezet tegen het referentieniveau van ${reference}/100 — het punt waarop wij een dimensie voldoende geïnstrumenteerd achten om op te sturen. Dit is ons streefniveau, geen gemeten marktgemiddelde. Rood = onder referentie.`,
+  belowReference: 'Onder referentieniveau',
+  atOrAboveReference: 'Op / boven referentie',
+  referenceLegend: (reference) => `Referentieniveau (${reference})`,
   profileExplanation: 'Profielduidering',
   criticalEyebrow: 'Diepteanalyse · Kritieke aandachtspunten',
   criticalTitle: 'Waar actie het meest urgent is',
   criticalIntro:
-    "De dimensies met prioriteit 'Kritiek' vragen directe aandacht. Ze liggen het verst onder de peer-mediaan en vormen de grootste rem op uw analytische kwaliteit.",
+    "De dimensies met prioriteit 'Kritiek' vragen directe aandacht. Ze liggen het verst onder het referentieniveau en vormen de grootste rem op uw analytische kwaliteit.",
   criticalPill: ' Kritiek',
   quickWinActionable: 'Direct uitvoerbare quick win',
   noCritical: 'Geen dimensies met kritieke prioriteit gevonden op basis van uw scorecard.',
@@ -194,7 +192,7 @@ const nl: PdfStrings = {
   attentionEyebrow: 'Diepteanalyse · Verbeterpotentieel',
   attentionTitle: 'Dimensies met ruimte voor verbetering',
   attentionIntro:
-    "De dimensies met prioriteit 'Aandacht' liggen onder de peer-mediaan maar zijn niet acuut. Met gerichte actie kunnen zij snel op niveau worden gebracht.",
+    "De dimensies met prioriteit 'Aandacht' liggen onder het referentieniveau maar zijn niet acuut. Met gerichte actie kunnen zij snel op niveau worden gebracht.",
   attentionPill: ' Aandacht',
   quickWin: 'Quick win',
   noAttention: 'Geen dimensies met aandachtsprioriteit gevonden.',
@@ -205,7 +203,7 @@ const nl: PdfStrings = {
   strongEyebrowAlt: 'Diepteanalyse · Kerninzichten',
   strongTitleAlt: 'Wat dit voor u betekent',
   strongIntroAlt:
-    'Geen enkele dimensie scoort nog boven de peer-mediaan — dat betekent dat hier juist de grootste winst ligt. Deze observaties verbinden uw scores direct aan concrete bedrijfsrisico’s en kansen.',
+    'Geen enkele dimensie scoort nog boven het referentieniveau — dat betekent dat hier juist de grootste winst ligt. Deze observaties verbinden uw scores direct aan concrete bedrijfsrisico’s en kansen.',
   anchoring: 'Verankering',
   noStrong:
     "Elke dimensie valt in de categorie 'Aandacht' of 'Kritiek' — zie vorige pagina's voor de aanbevelingen.",
@@ -313,13 +311,12 @@ const en: PdfStrings = {
   execSummary: 'Executive Summary',
   totalScore: 'Total score',
   outOf75: 'out of 75 points',
-  belowMedian: 'Below median',
+  belowReferenceStat: 'Below reference',
   dimensions: 'dimensions',
   urgency: 'Urgency',
   track: 'Track',
   weakestDims: 'Weakest dimensions',
   strongestDims: 'Strongest dimensions',
-  percentileNote: (p) => `Stronger than ${p}% of comparable firms`,
   routeEyebrow: 'Your route · Agentic Mindshift',
   routeTitle: (n) => `How we turn this into results, ${n}`,
   routeIntro:
@@ -333,17 +330,17 @@ const en: PdfStrings = {
   routeFactumNote:
     'The due-diligence and portfolio routes run on Factum Capital — our AI analysis platform that provides the analytical foundation. Agentic Mindshift delivers the service and, where required, the certified sign-off.',
   scoreOverview: 'Score overview',
-  scoreOverviewTitle: 'Your profile vs. peer median',
-  scoreOverviewIntro: (peer) =>
-    `Each dimension set against the median of comparable players in the European mid-market (private equity, M&A, corporate finance). The peer median sits at ${peer}/100. Red = below median.`,
-  belowPeerMedian: 'Below peer median',
-  atOrAboveMedian: 'At / above median',
-  peerMedianLegend: (peer) => `Peer median (${peer})`,
+  scoreOverviewTitle: 'Your profile vs. reference level',
+  scoreOverviewIntro: (reference) =>
+    `Each dimension set against the reference level of ${reference}/100 — the point at which we consider a dimension instrumented well enough to steer on. This is our target, not a measured market average. Red = below reference.`,
+  belowReference: 'Below reference level',
+  atOrAboveReference: 'At / above reference',
+  referenceLegend: (reference) => `Reference level (${reference})`,
   profileExplanation: 'Profile interpretation',
   criticalEyebrow: 'Deep analysis · Critical priorities',
   criticalTitle: 'Where action is most urgent',
   criticalIntro:
-    "The dimensions marked 'Critical' require immediate attention. They sit furthest below the peer median and form the biggest drag on your analytical quality.",
+    "The dimensions marked 'Critical' require immediate attention. They sit furthest below the reference level and form the biggest drag on your analytical quality.",
   criticalPill: ' Critical',
   quickWinActionable: 'Immediately actionable quick win',
   noCritical: 'No dimensions with critical priority were found based on your scorecard.',
@@ -351,7 +348,7 @@ const en: PdfStrings = {
   attentionEyebrow: 'Deep analysis · Improvement potential',
   attentionTitle: 'Dimensions with room for improvement',
   attentionIntro:
-    "The dimensions marked 'Attention' sit below the peer median but are not acute. With targeted action they can quickly be brought up to level.",
+    "The dimensions marked 'Attention' sit below the reference level but are not acute. With targeted action they can quickly be brought up to level.",
   attentionPill: ' Attention',
   quickWin: 'Quick win',
   noAttention: 'No dimensions with attention priority were found.',
@@ -362,7 +359,7 @@ const en: PdfStrings = {
   strongEyebrowAlt: 'Deep analysis · Key insights',
   strongTitleAlt: 'What this means for you',
   strongIntroAlt:
-    'No dimension scores above the peer median yet — which means this is exactly where the biggest gains are. These observations connect your scores directly to concrete business risks and opportunities.',
+    'No dimension scores above the reference level yet — which means this is exactly where the biggest gains are. These observations connect your scores directly to concrete business risks and opportunities.',
   anchoring: 'Anchoring',
   noStrong:
     "Every dimension falls into the 'Attention' or 'Critical' category — see the previous pages for the recommendations.",
@@ -470,13 +467,12 @@ const de: PdfStrings = {
   execSummary: 'Executive Summary',
   totalScore: 'Gesamtpunktzahl',
   outOf75: 'von 75 Punkten',
-  belowMedian: 'Unter Median',
+  belowReferenceStat: 'Unter Referenz',
   dimensions: 'Dimensionen',
   urgency: 'Dringlichkeit',
   track: 'Weg',
   weakestDims: 'Schwächste Dimensionen',
   strongestDims: 'Stärkste Dimensionen',
-  percentileNote: (p) => `Stärker als ${p}% vergleichbarer Häuser`,
   routeEyebrow: 'Ihr Weg · Agentic Mindshift',
   routeTitle: (n) => `So setzen wir das in Ergebnisse um, ${n}`,
   routeIntro:
@@ -490,17 +486,17 @@ const de: PdfStrings = {
   routeFactumNote:
     'Die Due-Diligence- und Portfolio-Wege laufen auf Factum Capital — unserer KI-Analyseplattform, die das analytische Fundament liefert. Agentic Mindshift erbringt die Leistung und, wo erforderlich, die zertifizierte Freigabe.',
   scoreOverview: 'Punkteübersicht',
-  scoreOverviewTitle: 'Ihr Profil vs. Peer-Median',
-  scoreOverviewIntro: (peer) =>
-    `Jede Dimension im Vergleich zum Median vergleichbarer Akteure im europäischen Mid-Market (Private Equity, M&A, Corporate Finance). Der Peer-Median liegt bei ${peer}/100. Rot = unter dem Median.`,
-  belowPeerMedian: 'Unter dem Peer-Median',
-  atOrAboveMedian: 'Auf / über dem Median',
-  peerMedianLegend: (peer) => `Peer-Median (${peer})`,
+  scoreOverviewTitle: 'Ihr Profil vs. Referenzniveau',
+  scoreOverviewIntro: (reference) =>
+    `Jede Dimension im Vergleich zum Referenzniveau von ${reference}/100 — dem Punkt, ab dem wir eine Dimension als ausreichend instrumentiert ansehen, um darauf zu steuern. Das ist unser Zielwert, kein gemessener Marktdurchschnitt. Rot = unter der Referenz.`,
+  belowReference: 'Unter dem Referenzniveau',
+  atOrAboveReference: 'Auf / über der Referenz',
+  referenceLegend: (reference) => `Referenzniveau (${reference})`,
   profileExplanation: 'Profilerläuterung',
   criticalEyebrow: 'Tiefenanalyse · Kritische Schwerpunkte',
   criticalTitle: 'Wo Handeln am dringendsten ist',
   criticalIntro:
-    "Die mit 'Kritisch' eingestuften Dimensionen erfordern sofortige Aufmerksamkeit. Sie liegen am weitesten unter dem Peer-Median und bremsen Ihre analytische Qualität am stärksten.",
+    "Die mit 'Kritisch' eingestuften Dimensionen erfordern sofortige Aufmerksamkeit. Sie liegen am weitesten unter dem Referenzniveau und bremsen Ihre analytische Qualität am stärksten.",
   criticalPill: ' Kritisch',
   quickWinActionable: 'Sofort umsetzbarer Quick Win',
   noCritical: 'Auf Basis Ihrer Scorecard wurden keine Dimensionen mit kritischer Priorität gefunden.',
@@ -508,7 +504,7 @@ const de: PdfStrings = {
   attentionEyebrow: 'Tiefenanalyse · Verbesserungspotenzial',
   attentionTitle: 'Dimensionen mit Verbesserungsspielraum',
   attentionIntro:
-    "Die mit 'Aufmerksamkeit' eingestuften Dimensionen liegen unter dem Peer-Median, sind aber nicht akut. Mit gezieltem Handeln lassen sie sich schnell auf Niveau bringen.",
+    "Die mit 'Aufmerksamkeit' eingestuften Dimensionen liegen unter dem Referenzniveau, sind aber nicht akut. Mit gezieltem Handeln lassen sie sich schnell auf Niveau bringen.",
   attentionPill: ' Aufmerksamkeit',
   quickWin: 'Quick Win',
   noAttention: 'Keine Dimensionen mit Aufmerksamkeitspriorität gefunden.',
@@ -519,7 +515,7 @@ const de: PdfStrings = {
   strongEyebrowAlt: 'Tiefenanalyse · Kernerkenntnisse',
   strongTitleAlt: 'Was das für Sie bedeutet',
   strongIntroAlt:
-    'Noch keine Dimension liegt über dem Peer-Median — genau hier liegt also das größte Potenzial. Diese Beobachtungen verbinden Ihre Werte direkt mit konkreten Geschäftsrisiken und Chancen.',
+    'Noch keine Dimension liegt über dem Referenzniveau — genau hier liegt also das größte Potenzial. Diese Beobachtungen verbinden Ihre Werte direkt mit konkreten Geschäftsrisiken und Chancen.',
   anchoring: 'Verankerung',
   noStrong:
     "Jede Dimension fällt in die Kategorie 'Aufmerksamkeit' oder 'Kritisch' — siehe die vorherigen Seiten für die Empfehlungen.",
@@ -627,13 +623,12 @@ const es: PdfStrings = {
   execSummary: 'Resumen ejecutivo',
   totalScore: 'Puntuación total',
   outOf75: 'de 75 puntos',
-  belowMedian: 'Por debajo de la mediana',
+  belowReferenceStat: 'Por debajo de la referencia',
   dimensions: 'dimensiones',
   urgency: 'Urgencia',
   track: 'Trayecto',
   weakestDims: 'Dimensiones más débiles',
   strongestDims: 'Dimensiones más fuertes',
-  percentileNote: (p) => `Más fuerte que el ${p}% de firmas comparables`,
   routeEyebrow: 'Su ruta · Agentic Mindshift',
   routeTitle: (n) => `Así lo convertimos en resultados, ${n}`,
   routeIntro:
@@ -647,17 +642,17 @@ const es: PdfStrings = {
   routeFactumNote:
     'Las rutas de due diligence y portfolio funcionan sobre Factum Capital — nuestra plataforma de análisis con IA que aporta el fundamento analítico. Agentic Mindshift presta el servicio y, cuando se requiere, la firma certificada.',
   scoreOverview: 'Resumen de puntuación',
-  scoreOverviewTitle: 'Su perfil frente a la mediana de pares',
-  scoreOverviewIntro: (peer) =>
-    `Cada dimensión comparada con la mediana de actores comparables del mid-market europeo (private equity, M&A, corporate finance). La mediana de pares se sitúa en ${peer}/100. Rojo = por debajo de la mediana.`,
-  belowPeerMedian: 'Por debajo de la mediana de pares',
-  atOrAboveMedian: 'En / por encima de la mediana',
-  peerMedianLegend: (peer) => `Mediana de pares (${peer})`,
+  scoreOverviewTitle: 'Su perfil frente al nivel de referencia',
+  scoreOverviewIntro: (reference) =>
+    `Cada dimensión comparada con el nivel de referencia de ${reference}/100: el punto en que consideramos que una dimensión está lo bastante instrumentada como para dirigir sobre ella. Es nuestro objetivo, no una media de mercado medida. Rojo = por debajo de la referencia.`,
+  belowReference: 'Por debajo del nivel de referencia',
+  atOrAboveReference: 'En / por encima de la referencia',
+  referenceLegend: (reference) => `Nivel de referencia (${reference})`,
   profileExplanation: 'Interpretación del perfil',
   criticalEyebrow: 'Análisis en profundidad · Prioridades críticas',
   criticalTitle: 'Dónde la acción es más urgente',
   criticalIntro:
-    "Las dimensiones marcadas como 'Crítico' requieren atención inmediata. Son las que más se alejan por debajo de la mediana de pares y suponen el mayor freno a su calidad analítica.",
+    "Las dimensiones marcadas como 'Crítico' requieren atención inmediata. Son las que más se alejan por debajo del nivel de referencia y suponen el mayor freno a su calidad analítica.",
   criticalPill: ' Crítico',
   quickWinActionable: 'Quick win de aplicación inmediata',
   noCritical: 'No se encontraron dimensiones con prioridad crítica según su scorecard.',
@@ -665,7 +660,7 @@ const es: PdfStrings = {
   attentionEyebrow: 'Análisis en profundidad · Potencial de mejora',
   attentionTitle: 'Dimensiones con margen de mejora',
   attentionIntro:
-    "Las dimensiones marcadas como 'Atención' están por debajo de la mediana de pares, pero no son agudas. Con una acción específica pueden alcanzar el nivel rápidamente.",
+    "Las dimensiones marcadas como 'Atención' están por debajo del nivel de referencia, pero no son agudas. Con una acción específica pueden alcanzar el nivel rápidamente.",
   attentionPill: ' Atención',
   quickWin: 'Quick win',
   noAttention: 'No se encontraron dimensiones con prioridad de atención.',
@@ -676,7 +671,7 @@ const es: PdfStrings = {
   strongEyebrowAlt: 'Análisis en profundidad · Ideas clave',
   strongTitleAlt: 'Lo que esto significa para usted',
   strongIntroAlt:
-    'Ninguna dimensión supera todavía la mediana de pares, lo que significa que aquí es donde está el mayor potencial. Estas observaciones conectan sus puntuaciones directamente con riesgos y oportunidades concretos del negocio.',
+    'Ninguna dimensión supera todavía el nivel de referencia, lo que significa que aquí es donde está el mayor potencial. Estas observaciones conectan sus puntuaciones directamente con riesgos y oportunidades concretos del negocio.',
   anchoring: 'Consolidación',
   noStrong:
     "Cada dimensión cae en la categoría 'Atención' o 'Crítico' — consulte las páginas anteriores para las recomendaciones.",
@@ -784,13 +779,12 @@ const pt: PdfStrings = {
   execSummary: 'Resumo executivo',
   totalScore: 'Pontuação total',
   outOf75: 'de 75 pontos',
-  belowMedian: 'Abaixo da mediana',
+  belowReferenceStat: 'Abaixo da referência',
   dimensions: 'dimensões',
   urgency: 'Urgência',
   track: 'Percurso',
   weakestDims: 'Dimensões mais fracas',
   strongestDims: 'Dimensões mais fortes',
-  percentileNote: (p) => `Mais forte do que ${p}% de firmas comparáveis`,
   routeEyebrow: 'A sua rota · Agentic Mindshift',
   routeTitle: (n) => `Como transformamos isto em resultados, ${n}`,
   routeIntro:
@@ -804,17 +798,17 @@ const pt: PdfStrings = {
   routeFactumNote:
     'As rotas de due diligence e portfólio funcionam na Factum Capital — a nossa plataforma de análise com IA que fornece o fundamento analítico. A Agentic Mindshift presta o serviço e, quando necessário, a validação certificada.',
   scoreOverview: 'Resumo da pontuação',
-  scoreOverviewTitle: 'O seu perfil vs. mediana de pares',
-  scoreOverviewIntro: (peer) =>
-    `Cada dimensão comparada com a mediana de intervenientes comparáveis no mid-market europeu (private equity, M&A, corporate finance). A mediana de pares situa-se em ${peer}/100. Vermelho = abaixo da mediana.`,
-  belowPeerMedian: 'Abaixo da mediana de pares',
-  atOrAboveMedian: 'Na / acima da mediana',
-  peerMedianLegend: (peer) => `Mediana de pares (${peer})`,
+  scoreOverviewTitle: 'O seu perfil vs. nível de referência',
+  scoreOverviewIntro: (reference) =>
+    `Cada dimensão comparada com o nível de referência de ${reference}/100 — o ponto em que consideramos uma dimensão suficientemente instrumentada para se dirigir por ela. É o nosso objetivo, não uma média de mercado medida. Vermelho = abaixo da referência.`,
+  belowReference: 'Abaixo do nível de referência',
+  atOrAboveReference: 'Na / acima da referência',
+  referenceLegend: (reference) => `Nível de referência (${reference})`,
   profileExplanation: 'Interpretação do perfil',
   criticalEyebrow: 'Análise aprofundada · Prioridades críticas',
   criticalTitle: 'Onde a ação é mais urgente',
   criticalIntro:
-    "As dimensões marcadas como 'Crítico' exigem atenção imediata. São as que mais se afastam abaixo da mediana de pares e constituem o maior travão à sua qualidade analítica.",
+    "As dimensões marcadas como 'Crítico' exigem atenção imediata. São as que mais se afastam abaixo do nível de referência e constituem o maior travão à sua qualidade analítica.",
   criticalPill: ' Crítico',
   quickWinActionable: 'Quick win de aplicação imediata',
   noCritical: 'Não foram encontradas dimensões com prioridade crítica com base na sua scorecard.',
@@ -822,7 +816,7 @@ const pt: PdfStrings = {
   attentionEyebrow: 'Análise aprofundada · Potencial de melhoria',
   attentionTitle: 'Dimensões com margem de melhoria',
   attentionIntro:
-    "As dimensões marcadas como 'Atenção' estão abaixo da mediana de pares, mas não são agudas. Com ação direcionada podem rapidamente atingir o nível.",
+    "As dimensões marcadas como 'Atenção' estão abaixo do nível de referência, mas não são agudas. Com ação direcionada podem rapidamente atingir o nível.",
   attentionPill: ' Atenção',
   quickWin: 'Quick win',
   noAttention: 'Não foram encontradas dimensões com prioridade de atenção.',
@@ -833,7 +827,7 @@ const pt: PdfStrings = {
   strongEyebrowAlt: 'Análise aprofundada · Conclusões-chave',
   strongTitleAlt: 'O que isto significa para si',
   strongIntroAlt:
-    'Nenhuma dimensão está ainda acima da mediana dos pares — o que significa que é precisamente aqui que reside o maior potencial. Estas observações ligam as suas pontuações diretamente a riscos e oportunidades concretos do negócio.',
+    'Nenhuma dimensão está ainda acima do nível de referência — o que significa que é precisamente aqui que reside o maior potencial. Estas observações ligam as suas pontuações diretamente a riscos e oportunidades concretos do negócio.',
   anchoring: 'Consolidação',
   noStrong:
     "Cada dimensão cai na categoria 'Atenção' ou 'Crítico' — consulte as páginas anteriores para as recomendações.",

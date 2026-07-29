@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "site_name": "Agentic Mindshift",
+    "site_title": "Agentic Mindshift — Consultoria de IA para PE e M&A na Europa",
+    "site_description": "Parceria estratégica de IA para fundos de PE, escritórios de M&A e empresas familiares do mid-market. Meça o seu retorno de IA com a Scorecard gratuita em 12 minutos."
+  },
   "nav": {
     "scorecard": "Scorecard",
     "werkwijze": "Metodologia",
@@ -10,7 +15,7 @@
     "close_menu": "Fechar menu",
     "close": "Fechar",
     "main_menu": "Menu principal",
-    "badge_july": "julho"
+    "badge_soon": "em breve"
   },
   "footer": {
     "tagline": "Assessoria de IA para firmas europeias de PE e M&A. Concreto, confidencial, mensurável.",
@@ -33,7 +38,7 @@
     "hero": {
       "eyebrow": "Para sócios de PE, diretores de M&A e family offices",
       "heading": "Quanto retorno está o seu portfólio a deixar escapar este mês?",
-      "subtext": "O seu relatório mensal mascara a subperformance. A sua equipa de deals repete erros evitáveis. E a due diligence impulsionada por IA em todas as dimensões falta na maioria das propostas ao IC. O Scorecard mapeia as seis dimensões. Em doze minutos.",
+      "subtext": "Seis dimensões que o seu IM e o relatório mensal não mostram — mapeadas em doze minutos, com um relatório fundamentado.",
       "cta_primary": "Iniciar o Scorecard",
       "cta_secondary": "Metodologia e honorários",
       "trust": "12 minutos · 6 dimensões · sem conta · confidencial"
@@ -60,7 +65,7 @@
       "without_2": "Relatório mensal como ritual, não como instrumento de gestão.",
       "without_3": "Lições de deals perdem-se a cada mudança de equipa.",
       "without_4": "O risco de a IA assumir as atividades principais não está em papel algum.",
-      "with_1": "Seis dimensões quantificadas, comparadas com empresas similares.",
+      "with_1": "Seis dimensões quantificadas, medidas face a um nível de referência explícito.",
       "with_2": "Duas prioridades concretas com maior impacto.",
       "with_3": "Um relatório que pode partilhar internamente sem explicação adicional.",
       "with_4": "Vai ao próximo IC com dados, não com um pressentimento."
@@ -120,8 +125,8 @@
     "showcase": {
       "eyebrow": "O relatório",
       "heading": "Não uma pontuação isolada. Um relatório que pode partilhar internamente.",
-      "body": "Cada dimensão recebe uma pontuação, comparada com o nível de empresas comparáveis. Vê num relance onde está à frente e quais os dois pontos que merecem mais atenção.",
-      "check_1": "Seis dimensões, cada uma comparada com fundos comparáveis",
+      "body": "Cada dimensão recebe uma pontuação, medida face ao nível de referência: o ponto em que uma dimensão é medida o suficiente para se dirigir por ela. Vê num relance onde o atinge e quais os dois pontos que merecem mais atenção.",
+      "check_1": "Seis dimensões, cada uma medida face a um nível de referência explícito",
       "check_2": "Os dois pontos de maior impacto, em destaque",
       "check_3": "Partilhável diretamente no seu IC, sem explicações adicionais",
       "cta": "Iniciar o Scorecard"
@@ -145,26 +150,25 @@
       "track_1_cta_sub": "12 minutos · o seu perfil de imediato",
       "track_2_tag": "Consultor · RA / RB / profissional de M&A",
       "track_2_title": "Trabalhe você mesmo com a plataforma.",
-      "track_2_body": "Factum Capital: 29 módulos para a sua própria equipa de operações. De Financial DD e AI Due Diligence a modelização LBO e exit readiness. SaaS a partir de 1 de julho de 2026. O acesso antecipado já está aberto.",
+      "track_2_body": "Factum Capital: 29 módulos para a sua própria equipa de operações. De Financial DD e AI Due Diligence a modelização LBO e exit readiness. A versão SaaS está em desenvolvimento; o acesso antecipado já está aberto.",
       "track_2_detail": "SaaS · subscrição mensal · tarifa de acesso antecipado no lançamento",
       "track_2_cta": "Acesso antecipado à Factum Capital",
-      "track_2_cta_sub": "Lançamento 1 de julho de 2026",
+      "track_2_cta_sub": "SaaS em desenvolvimento · lista de espera aberta",
       "powered_by": "POWERED BY",
-      "attribution": "A plataforma de IA por trás dos serviços de Due Diligence & Portfolio impulsionada por IA · lançamento 1 de julho de 2026",
+      "attribution": "A plataforma de IA por trás dos serviços de Due Diligence & Portfolio impulsionada por IA · SaaS em desenvolvimento",
       "mockup_phase_acquisition": "Aquisição",
       "mockup_phase_financing": "Financiamento",
       "mockup_phase_portfolio": "Revisão de portfólio",
       "mockup_phase_ibr": "Pre-IBR/WHOA",
       "mockup_module_boedelonderzoek": "Investigação de ativos",
       "mockup_footer_left": "4 fases de deal · 29 módulos",
-      "mockup_footer_right": "SaaS · lançamento 1 julho 2026"
+      "mockup_footer_right": "SaaS · em desenvolvimento"
     },
     "dimensions": {
       "eyebrow": "Seis dimensões",
       "heading": "Os seis pontos por onde a rentabilidade se escoa.",
-      "subheading": "O Scorecard mede cada uma destas dimensões e compara o seu perfil com empresas comparáveis.",
+      "subheading": "O Scorecard mede cada uma destas dimensões e situa o seu perfil face ao nível de referência por dimensão.",
       "legend_example": "Perfil de exemplo",
-      "legend_peer": "Empresas comparáveis",
       "card_cta": "Medir esta dimensão →",
       "title_1": "Tempo de resposta",
       "body_1": "Quantos dias úteis a sua equipa perde entre a receção do IM e um juízo pronto para decisão?",
@@ -178,7 +182,8 @@
       "body_5": "Quantas operações a sua equipa deixa passar devido à pesquisa e ao reporte manuais?",
       "title_6": "Retenção de conhecimento",
       "body_6": "O seu associate sai? Desaparece também a memória de três a cinco dossiês?",
-      "radar_aria_label": "Gráfico de radar do seu perfil em seis dimensões, comparado com fundos comparáveis"
+      "radar_aria_label": "Gráfico de radar de um perfil de exemplo em seis dimensões, medido face ao nível de referência",
+      "legend_reference": "Nível de referência"
     },
     "costAnchor": {
       "title": "O cálculo",
@@ -187,11 +192,11 @@
       "row_1_note": "0,5× num target de €5M de EBITDA",
       "row_2_label": "DD fundamentada · por operação",
       "row_2_amount": "€10.000",
-      "row_2_note": "cobre a correção 250×",
+      "row_2_note": "250× menor do que essa correção",
       "row_3_label": "O Scorecard",
       "row_3_amount": "Grátis",
       "row_3_note": "12 minutos · sem conta",
-      "foot": "Valores apresentados à escala. A medição custa uma fração do que custa um ponto cego."
+      "foot": "Exemplo de cálculo, valores apresentados à escala. A medição custa uma fração do que custa um ponto cego."
     },
     "faqItems": {
       "duur_q": "Quanto tempo dura realmente o Scorecard?",
@@ -201,7 +206,7 @@
       "vertrouwelijk_q": "Qual o grau de confidencialidade disto?",
       "vertrouwelijk_a": "Total. As suas respostas não são partilhadas, não são vendidas, não são usadas para benchmarks sem anonimização. Pode preencher de forma anónima se quiser — o seu nome só é pedido ao receber o relatório.",
       "onderbouwing_q": "Em que se baseiam as seis dimensões?",
-      "onderbouwing_a": "As dimensões baseiam-se na experiência prática em acquisition finance e financial restructuring, e são comparadas com indicadores anónimos de empresas comparáveis do lower mid-market europeu.",
+      "onderbouwing_a": "As dimensões vêm da experiência prática em acquisition finance e financial restructuring. O nível de referência por dimensão é o nosso próprio objetivo: o ponto em que uma dimensão está suficientemente instrumentada para se dirigir por ela. Não é uma média de mercado medida, e não fingimos o contrário.",
       "wie_q": "Quem está por trás da Agentic Mindshift?",
       "wie_a": "Wouter Dijkman, founder. Acquisition finance e financial restructuring, mid-market europeu.",
       "wie_link": "Mais na página Sobre →",
@@ -284,7 +289,7 @@
       "item_4_year": "Novembro 2025",
       "item_4_label": "AI for Business",
       "item_4_sub": "Nyenrode Business Universiteit · aplicações de IA na prática financeira",
-      "item_5_year": "1 julho 2026",
+      "item_5_year": "Em desenvolvimento",
       "item_5_label": "Lançamento Factum Capital",
       "item_5_sub": "Plataforma de IA para M&A e reestruturação"
     },
@@ -376,7 +381,7 @@
       "q2": "O que torna a Agentic Mindshift diferente?",
       "a2": "Experiência em acquisition finance e financial restructuring: não um generalista de IA que por acaso tem clientes de PE. A IA reforça essa prática; não a substitui.",
       "q3": "Como sei se o investimento rende?",
-      "a3": "Uma correção de 0,5× no preço de aquisição com um target de €5M de EBITDA são €2,5M: isso cobre os custos de DD 250×. Um desvio detetado a tempo no relatório mensal cobre os custos anuais de inteligência de carteira contínua.",
+      "a3": "Exemplo de cálculo: uma correção de 0,5× no preço de aquisição com um target de €5M de EBITDA são €2,5M — 250× o custo da própria due diligence. Um desvio detetado a tempo no relatório mensal cobre os custos anuais de inteligência de carteira contínua.",
       "q4": "Ficamos presos a um longo prazo?",
       "a4": "Sparring, Consultancy e DD são por encargo. Fractional AI Officer: mínimo 3 meses, porque o ritmo precisa de tempo.",
       "q5": "Várias operações ao mesmo tempo?",
@@ -397,11 +402,7 @@
     "hero": {
       "eyebrow": "A plataforma por trás da nossa Due Diligence impulsionada por IA",
       "heading": "Uma plataforma para cada fase da sua prática de deals e carteira.",
-      "subtext": "Quatro momentos (aquisição, financiamento, portfolio review e pré-IBR/WHOA) num único dossiê partilhado. Disponível como SaaS para a sua própria equipa a partir de 1 de julho de 2026.",
-      "stat_1_sub": "módulos no total",
-      "stat_2_sub": "momentos de serviço",
-      "stat_3_sub": "lançamento",
-      "stat_3_label": "1 julho",
+      "subtext": "Quatro momentos (aquisição, financiamento, portfolio review e pré-IBR/WHOA) num único dossiê partilhado. A versão SaaS para a sua própria equipa está em desenvolvimento.",
       "countdown_label": "Lançamento em"
     },
     "answer_first": "A Factum Capital é a plataforma de due diligence e portfólio impulsionada por IA da Agentic Mindshift: 29 módulos que aceleram a due diligence financeira, comercial, jurídica e de IA para fundos de private equity e escritórios de M&A. Do primeiro rastreio ao pre-IBR/WHOA, a plataforma entrega informação fundamentada em dias em vez de semanas.",
@@ -416,7 +417,7 @@
     "description": {
       "eyebrow": "O sistema",
       "quote": "Uma plataforma, quatro momentos. A Factum fornece o fundamento analítico — a Agentic Mindshift presta o serviço, com ligação a consultores certificados que assinam formalmente onde necessário.",
-      "para1": "A plataforma, 29 módulos desde Financial DD e AI Due Diligence até modelização LBO e exit readiness, dá à sua equipa uma estrutura consistente em cada momento. Disponível como SaaS a partir de 1 de julho de 2026.",
+      "para1": "A plataforma, 29 módulos desde Financial DD e AI Due Diligence até modelização LBO e exit readiness, dá à sua equipa uma estrutura consistente em cada momento. A versão SaaS está em desenvolvimento.",
       "para2": "O serviço através da Agentic Mindshift fornece o fundamento analítico completo e liga consultores certificados: RA/RB/advogados, consultores financeiros, consultores de restructuring. Um dossiê partilhado: menos trabalho duplicado, prazos mais curtos."
     },
     "momenten": {
@@ -444,7 +445,7 @@
       "route_1_label": "SaaS: nas suas próprias mãos",
       "route_1_title": "A Plataforma",
       "route_1_body": "29 módulos que dão à sua equipa de deals a estrutura para executar os quatro momentos de forma consistente. Desde Financial DD e AI Due Diligence até modelização LBO, IBR/WHOA e exit readiness. Conhecimento que cresce com a prática.",
-      "route_1_detail": "Lançamento 1 de julho de 2026 · Subscrição mensal · Lista de espera aberta",
+      "route_1_detail": "SaaS em desenvolvimento · Subscrição mensal · Lista de espera aberta",
       "route_2_label": "Via Agentic Mindshift: Due Diligence & Portfolio impulsionada por IA",
       "route_2_title": "O Serviço",
       "route_2_body": "A Agentic Mindshift executa o projeto completo para si, com a Factum como plataforma analítica. Em cada momento, a Agentic Mindshift liga os profissionais certificados adequados que constroem sobre o dossiê partilhado e assinam formalmente onde necessário.",
@@ -482,9 +483,9 @@
       "heading": "Registe-se para acesso antecipado.",
       "body": "A lista de espera está deliberadamente limitada. Os primeiros participantes terão input direto sobre o roadmap de módulos e serão os primeiros no onboarding. Sem emails posteriores fora do roadmap da Factum Capital.",
       "benefit_1": "Input direto sobre o roadmap de módulos",
-      "benefit_2": "Prioridade no onboarding da plataforma a 1 de julho de 2026",
+      "benefit_2": "Prioridade no onboarding da plataforma no lançamento",
       "benefit_3": "Tarifa de acesso antecipado no lançamento",
-      "benefit_4": "Prioridade para projetos piloto de análise de deals no primeiro trimestre pós-lançamento (julho–setembro 2026)"
+      "benefit_4": "Prioridade para projetos piloto de análise de deals no primeiro trimestre pós-lançamento"
     },
     "form": {
       "field_name": "Nome",
@@ -513,9 +514,9 @@
       "seconds": "seg"
     },
     "modules": {
-      "eyebrow": "Lançamento 1 de julho de 2026",
+      "eyebrow": "SaaS em desenvolvimento",
       "heading": "Os módulos no lançamento",
-      "subtext": "A primeira série de módulos. Mais expansões seguem no H2 2026. Os primeiros participantes influenciam a ordem.",
+      "subtext": "A primeira série de módulos. Mais expansões seguirão. Os primeiros participantes influenciam a ordem.",
       "m01_title": "Financial DD",
       "m01_body": "Quality of Earnings, análise de capital circulante, dívida líquida, cashflow e análise de balanço. A base factual para cada preço de aquisição.",
       "m02_title": "Commercial DD",
@@ -567,7 +568,7 @@
     "s3_li1": "Gerar e enviar o seu relatório pessoal do scorecard — execução do contrato.",
     "s3_li2": "Dois emails de seguimento (ao terceiro e sétimo dia) com reflexão sobre o conteúdo e convite para uma sparring session — interesse legítimo.",
     "s3_li3": "Gestão da lista de espera para a Factum Capital — execução do contrato ou o seu consentimento explícito.",
-    "s3_li4": "Análise de resultados do scorecard agregados e não identificáveis para melhorar os peer benchmarks — interesse legítimo.",
+    "s3_li4": "Análise de resultados do scorecard agregados e não identificáveis para melhorar os níveis de referência — interesse legítimo.",
     "s4_heading": "4. Prazos de conservação",
     "s4_body": "Conservamos as suas respostas ao scorecard e os dados do relatório durante um máximo de 36 meses, salvo que solicite a sua eliminação antes. Os dados da lista de espera da Factum Capital são conservados até seis meses após o lançamento, e depois anonimizados.",
     "s5_heading": "5. Subcontratantes",
@@ -600,17 +601,19 @@
     "s6_heading": "6. Responsabilidade",
     "s6_body": "A responsabilidade da Agentic Mindshift limita-se ao valor faturado do encargo em causa durante um período máximo de três meses, com um máximo de 25.000 euros. Exclui-se a responsabilidade por danos indiretos, danos consequentes, lucros cessantes ou IRR não obtida.",
     "s7_heading": "7. Confidencialidade",
-    "s7_body": "Toda a informação partilhada no âmbito de um encargo ou sparring session é tratada de forma confidencial. Isto aplica-se sem data de vencimento. Os dados agregados e não identificáveis podem ser utilizados para melhorar os peer benchmarks.",
+    "s7_body": "Toda a informação partilhada no âmbito de um encargo ou sparring session é tratada de forma confidencial. Isto aplica-se sem data de vencimento. Os dados agregados e não identificáveis podem ser utilizados para melhorar os níveis de referência.",
     "s8_heading": "8. Propriedade intelectual",
     "s8_body": "Os relatórios, frameworks e análises permanecem propriedade intelectual da Agentic Mindshift, salvo acordo em contrário. O cliente obtém uma licença de utilização não transferível para uso interno.",
     "s9_heading": "9. Direito aplicável",
     "s9_body": "Estes termos e todos os encargos são regidos pelo direito neerlandês. Os litígios serão submetidos ao tribunal competente da sede."
   },
   "scorecard": {
+    "meta_title": "Scorecard — seis dimensões, doze minutos",
+    "meta_description": "Quinze perguntas sobre o seu processo de deals, reporting mensal, preparação para a IA e retenção de conhecimento. Doze minutos, e recebe um relatório que torna os seus pontos cegos mensuráveis.",
     "landing": {
       "eyebrow": "Scorecard · Seis dimensões · Doze minutos",
       "heading": "Onde está a escapar a rentabilidade e o que está a ignorar?",
-      "subtext": "Quinze perguntas. Doze minutos. Um relatório que torna os seus pontos cegos mensuráveis e os compara com empresas similares.",
+      "subtext": "Quinze perguntas. Doze minutos. Um relatório que torna os seus pontos cegos mensuráveis e mostra, por dimensão, a que distância está do nível de referência.",
       "start_cta": "Iniciar o Scorecard",
       "no_account": "Sem conta necessária. As suas respostas são guardadas automaticamente.",
       "trust": "Concebido para sócios de PE, diretores de M&A e family offices no mid-market europeu.",
@@ -619,7 +622,7 @@
       "blind_spots_note": "A maioria dos sócios de PE descobre os seus pontos cegos quando já é tarde demais. O seu investimento: doze minutos.",
       "preview_eyebrow": "O que você recebe",
       "preview_heading": "Este é o seu relatório, imediatamente após a última pergunta.",
-      "preview_body": "Seis dimensões, cada uma pontuada e comparada com empresas semelhantes. Os dois pontos de maior impacto são destacados.",
+      "preview_body": "Seis dimensões, cada uma pontuada e medida face ao nível de referência. Os dois pontos de maior impacto são destacados.",
       "stakes_eyebrow": "O custo de esperar",
       "stakes_heading": "Doze minutos agora ou trimestres de incerteza depois.",
       "stakes_body_1a": "A diferença entre um preço de aquisição fundamentado e um não calibrado? Em um alvo de EBITDA de €5M facilmente 0,5×: isso são ",
@@ -657,7 +660,7 @@
       "back_to_scorecard": "Voltar ao scorecard",
       "report_contents_eyebrow": "O que contém o seu relatório?",
       "report_item_1": "Pontuação total com comentário por dimensão",
-      "report_item_2": "Visão geral de seis dimensões com peer benchmark",
+      "report_item_2": "Visão geral de seis dimensões com nível de referência por dimensão",
       "report_item_3": "As suas duas dimensões mais fracas com análise concreta",
       "report_item_4": "Próximo passo recomendado com base nas suas respostas",
       "report_item_5": "Link pessoal + PDF na sua caixa de entrada",
@@ -677,7 +680,7 @@
       "privacy_link": "declaração de privacidade",
       "error_generic": "Algo correu mal. Por favor, tente novamente mais tarde.",
       "error_create": "Não conseguimos criar o seu relatório. Verifique os campos e tente novamente.",
-      "score_caption": "O relatório completo mostra a sua pontuação por dimensão com comparação entre pares.",
+      "score_caption": "O relatório completo mostra a sua pontuação por dimensão, medida face ao nível de referência.",
       "question_singular": "pergunta",
       "question_plural": "perguntas"
     },
@@ -715,14 +718,11 @@
       "no_answers_body": "Não foram encontradas respostas do scorecard neste navegador. Por favor, complete o scorecard novamente.",
       "heading": "Seu Relatório de Deal & Portfolio Intelligence",
       "subtext": "Você agora dispõe de informações que a maioria das empresas só obtém quando já é tarde demais.",
-      "hint": "Pontuação total · dimensões · comparação de pares · próximo passo recomendado",
+      "hint": "Pontuação total · dimensões · nível de referência · próximo passo recomendado",
       "total_heading": "Pontuação total",
       "total_body_1": "Sua pontuação total é baseada na soma das suas 15 respostas, com um máximo de 75 pontos.",
       "total_body_2": "Suas duas dimensões mais fracas são os lugares mais prováveis onde os retornos estão vazando.",
-      "better_than": "Melhor que {pct}% das empresas comparáveis",
       "dimensions_heading": "Por dimensão",
-      "peer_heading": "Comparação de pares",
-      "peer_stat": "Você pontua melhor que {pct}% das empresas comparáveis.",
       "interpretation_heading": "Interpretação",
       "interventions_heading": "Três intervenções concretas",
       "offer_eyebrow": "Próximo passo recomendado",
@@ -778,7 +778,7 @@
       },
       "high_heading": "Caro {name}: a sua abordagem se destaca. Vamos conversar.",
       "high_body_1": "Você pertence ao pequeno grupo de sócios de PE que já mede sistematicamente o que a maioria só vê retrospectivamente.",
-      "high_score_body": "A sua pontuação é {score} de 75, significativamente acima da média.",
+      "high_score_body": "A sua pontuação é {score} de 75. Isso coloca-o no ou acima do nível de referência em quase todas as dimensões — o perfil de uma empresa que já dirige por dados.",
       "high_body_3": "Uma recomendação específica não é significativa. Você está fazendo o que deve fazer.",
       "high_body_4": "O que gostaria de oferecer é uma conversa confidencial sobre o seu enfoque, como troca entre pares, voluntário, sem agenda.",
       "high_next_eyebrow": "Próximo passo",
@@ -786,17 +786,23 @@
       "high_cta_1": "Conectar no LinkedIn",
       "high_cta_2": "Ver os programas",
       "attention_point": "(ponto de atenção)",
-      "peer_tooltip_label": "Diferença vs. mediana de peers",
-      "peer_benchmark_footer": "Comparação com a mediana sintética de peers (com base em dados de PE/M&A holandeses)."
+      "band_ad_hoc": "Ad hoc — quase sem instrumentação",
+      "band_building": "Em construção — primeira estrutura implementada",
+      "band_structured": "Estruturado — o processo funciona, a medição ainda é limitada",
+      "band_instrumented": "Instrumentado — dirige com dados",
+      "reference_heading": "Nível de referência",
+      "reference_stat": "{n} de seis dimensões estão no ou acima do nível de referência.",
+      "reference_tooltip_label": "Diferença vs. nível de referência",
+      "reference_footer": "O nível de referência é o objetivo que aplicamos por dimensão: o ponto em que uma dimensão é medida o suficiente para se dirigir por ela. Não é uma média de mercado medida."
     },
     "mockup": {
       "window_label": "Relatório de scorecard · Confidencial",
-      "title": "O seu perfil vs. fundos comparáveis",
-      "subtitle": "Mid-market PE · 12 fundos comparáveis",
-      "callout_label": "dimensões abaixo de\nfundos comparáveis",
-      "below_median": "Abaixo da mediana",
-      "above_median": "Na/acima da mediana",
-      "peer_median": "Mediana de peers"
+      "title": "Perfil de exemplo vs. nível de referência",
+      "subtitle": "Exemplo ilustrativo · não são dados reais",
+      "callout_label": "dimensões abaixo do\nnível de referência",
+      "below_reference": "Abaixo da referência",
+      "above_reference": "Na/acima da referência",
+      "reference_level": "Nível de referência"
     },
     "variants": {
       "A": {
@@ -863,11 +869,11 @@
         "interventions": {
           "0": {
             "title": "Protocolo de análise aumentado por IA",
-            "body": "Quadruplica a sua capacidade de análise sem perda de qualidade — desde o screening de deals até ao memo de financiamento."
+            "body": "Analisar mais operações com a mesma equipa, sem perda de qualidade — desde o screening de deals até ao memo de financiamento."
           },
           "1": {
             "title": "Biblioteca de templates para processos e memos",
-            "body": "Blocos modulares montados por situação. Reduz o tempo de preparação em 60%."
+            "body": "Blocos modulares montados por situação, para não construir cada processo do zero."
           },
           "2": {
             "title": "Auditoria de capacidade mensal",

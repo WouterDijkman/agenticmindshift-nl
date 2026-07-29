@@ -4,13 +4,13 @@ import { useLocale, useTranslations } from 'next-intl';
 import { sectionTranslations } from '@/lib/questions.locales';
 
 // Six dimensions, values 0–1. Matches the illustrative report mockup.
-const AXES: { key: string; value: number; peer: number }[] = [
-  { key: 'DealVelocity', value: 0.58, peer: 0.7 },
-  { key: 'PortfolioIntelligence', value: 0.74, peer: 0.68 },
-  { key: 'BiasDetection', value: 0.63, peer: 0.66 },
-  { key: 'AIReadiness', value: 0.39, peer: 0.64 },
-  { key: 'CapacityEngineering', value: 0.71, peer: 0.67 },
-  { key: 'KnowledgeRetention', value: 0.46, peer: 0.65 },
+const AXES: { key: string; value: number; reference: number }[] = [
+  { key: 'DealVelocity', value: 0.58, reference: 0.7 },
+  { key: 'PortfolioIntelligence', value: 0.74, reference: 0.68 },
+  { key: 'BiasDetection', value: 0.63, reference: 0.66 },
+  { key: 'AIReadiness', value: 0.39, reference: 0.64 },
+  { key: 'CapacityEngineering', value: 0.71, reference: 0.67 },
+  { key: 'KnowledgeRetention', value: 0.46, reference: 0.65 },
 ];
 
 const CX = 180;
@@ -75,9 +75,9 @@ export default function DimensionRadar() {
         );
       })}
 
-      {/* peer-median polygon — navy, dashed outline */}
+      {/* reference-level polygon — navy, dashed outline */}
       <polygon
-        points={polygon(AXES.map((a) => a.peer))}
+        points={polygon(AXES.map((a) => a.reference))}
         fill="none"
         stroke="var(--text-primary)"
         strokeOpacity={0.45}

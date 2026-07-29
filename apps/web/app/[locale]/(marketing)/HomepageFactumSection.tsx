@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import Button from '@/components/ui/Button';
 import FactumModulesMockup from '@/components/FactumModulesMockup';
@@ -64,7 +64,7 @@ export default function HomepageFactumSection() {
                   fontWeight: 700,
                   letterSpacing: '0.12em',
                   textTransform: 'uppercase',
-                  color: 'var(--accent-cta)',
+                  color: 'var(--accent-cta-ink)',
                   marginBottom: '24px',
                   opacity: 0.8,
                 }}
@@ -79,7 +79,7 @@ export default function HomepageFactumSection() {
                   fontWeight: 800,
                   letterSpacing: '-0.04em',
                   lineHeight: 0.9,
-                  color: 'var(--accent-cta)',
+                  color: 'var(--accent-cta-ink)',
                   marginBottom: '28px',
                   opacity: 0.9,
                 }}
@@ -190,7 +190,7 @@ export default function HomepageFactumSection() {
                 fontWeight: 700,
                 letterSpacing: '0.14em',
                 textTransform: 'uppercase',
-                color: 'var(--accent-cta)',
+                color: 'var(--accent-cta-ink)',
               }}
             >
               {t('powered_by')}
@@ -204,7 +204,7 @@ export default function HomepageFactumSection() {
             >
               Factum Capital
             </span>
-            <span style={{ color: 'var(--accent-cta)', fontSize: '0.875rem' }}>→</span>
+            <span style={{ color: 'var(--accent-cta-ink)', fontSize: '0.875rem' }}>→</span>
           </Link>
           <p
             style={{

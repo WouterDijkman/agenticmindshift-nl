@@ -1,5 +1,7 @@
 /**
- * Hreflang helper for multilingual metadata.
+ * Single source of truth for multilingual URL metadata: hreflang alternates,
+ * canonicals and Open Graph locale tags. Both generateMetadata and sitemap.ts
+ * read from here so the two can never disagree about a language tag.
  *
  * Usage in every page's generateMetadata({ params }):
  *
@@ -8,17 +10,40 @@
  *   alternates: getAlternates('/werkwijze', locale),
  */
 
-const BASE = 'https://www.agenticmindshift.nl';
-const LOCALES = ['nl', 'en', 'de', 'es', 'pt'] as const;
+export const BASE = 'https://www.agenticmindshift.nl';
+export const LOCALES = ['nl', 'en', 'de', 'es', 'pt'] as const;
 
-// BCP-47 language tag mapped to locale code
-const LANG_TAGS: Record<string, string> = {
+/**
+ * Bare language subtags, deliberately without a region. The audience spans the
+ * whole European mid-market, so `en-GB` would wrongly exclude other English
+ * regions and `de-DE` would exclude AT/CH.
+ */
+export const LANG_TAGS: Record<string, string> = {
   nl: 'nl',
   en: 'en',
   de: 'de',
   es: 'es',
   pt: 'pt',
 };
+
+/** Open Graph wants a full territory tag, unlike hreflang. */
+export const OG_LOCALES: Record<string, string> = {
+  nl: 'nl_NL',
+  en: 'en_GB',
+  de: 'de_DE',
+  es: 'es_ES',
+  pt: 'pt_PT',
+};
+
+/** Every locale variant of `path`, plus x-default pointing at Dutch. */
+export function getLanguageAlternates(path: string) {
+  const languages: Record<string, string> = {};
+  for (const loc of LOCALES) {
+    languages[LANG_TAGS[loc]] = `${BASE}/${loc}${path}`;
+  }
+  languages['x-default'] = `${BASE}/nl${path}`;
+  return languages;
+}
 
 /**
  * Returns `alternates` for Next.js Metadata, including:
@@ -27,17 +52,8 @@ const LANG_TAGS: Record<string, string> = {
  * - an `x-default` pointing to the Dutch (default) variant
  */
 export function getAlternates(path: string, currentLocale: string) {
-  const languages: Record<string, string> = {};
-
-  for (const loc of LOCALES) {
-    languages[LANG_TAGS[loc]] = `${BASE}/${loc}${path}`;
-  }
-
-  // x-default = primary/Dutch version
-  languages['x-default'] = `${BASE}/nl${path}`;
-
   return {
     canonical: `${BASE}/${currentLocale}${path}`,
-    languages,
+    languages: getLanguageAlternates(path),
   };
 }

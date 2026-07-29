@@ -86,7 +86,7 @@ export default function FactumModulesGrid() {
                 transition: { duration: 0.18 },
               }}
             >
-              <p style={{ fontSize: '10px', fontWeight: 800, letterSpacing: '0.15em', color: 'var(--accent-cta)', margin: '0 0 12px' }}>
+              <p style={{ fontSize: '10px', fontWeight: 800, letterSpacing: '0.15em', color: 'var(--accent-cta-ink)', margin: '0 0 12px' }}>
                 {m.n}
               </p>
               <p style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--text-primary)', margin: '0 0 10px', letterSpacing: '-0.01em', lineHeight: 1.2 }}>

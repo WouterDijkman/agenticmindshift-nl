@@ -105,7 +105,7 @@ export default function LanguageSwitcher({ tone = 'default' }: { tone?: 'default
                 fontSize: '0.75rem',
                 fontWeight: loc === locale ? 700 : 400,
                 letterSpacing: '0.08em',
-                color: loc === locale ? 'var(--accent-cta)' : 'var(--text-secondary)',
+                color: loc === locale ? 'var(--accent-cta-ink)' : 'var(--text-secondary)',
                 background: 'none',
                 border: 'none',
                 cursor: 'pointer',
