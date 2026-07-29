@@ -86,9 +86,14 @@
   /* motion */
   --ease-fn: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-expressive: cubic-bezier(0.4, 0.05, 0.22, 1.2);
+  /* Expo-out: travels most of the distance immediately, then settles. Reads as
+     weight rather than as a timed effect, which is the whole difference. */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --dur-hover: 120ms;
   --dur-micro: 180ms;
   --dur-enter: 400ms;
+  --dur-reveal: 900ms;
+  --stagger-step: 70ms;
 }
 
 @theme inline {
@@ -483,9 +488,9 @@ p { margin: 0; }
 @media (prefers-reduced-motion: no-preference) {
   .reveal {
     opacity: 0;
-    transform: translateY(12px);
-    transition: opacity var(--dur-enter) var(--ease-fn),
-      transform var(--dur-enter) var(--ease-fn);
+    transform: translate3d(0, 18px, 0);
+    transition: opacity calc(var(--dur-reveal) * 0.6) var(--ease-out-expo),
+      transform var(--dur-reveal) var(--ease-out-expo);
     transition-delay: var(--reveal-delay, 0ms);
     /* Scroll animations are not exempt from CLS — reserve the box. */
     will-change: opacity, transform;
@@ -499,6 +504,68 @@ p { margin: 0; }
     transition: none;
     will-change: auto;
   }
+
+  /* Children of a .stagger enter in sequence without hand-numbered delays.
+     Set on the child, not the .reveal, so it works whether the reveal is the
+     child itself or nested inside it — custom properties inherit. */
+  .stagger > *:nth-child(2) { --reveal-delay: var(--stagger-step); }
+  .stagger > *:nth-child(3) { --reveal-delay: calc(var(--stagger-step) * 2); }
+  .stagger > *:nth-child(4) { --reveal-delay: calc(var(--stagger-step) * 3); }
+  .stagger > *:nth-child(5) { --reveal-delay: calc(var(--stagger-step) * 4); }
+  .stagger > *:nth-child(n + 6) { --reveal-delay: calc(var(--stagger-step) * 5); }
+}
+
+/* A second movement inside a section: the divider that replaces a section seam. */
+.movement {
+  margin-top: clamp(44px, 5.5vw, 76px);
+  padding-top: clamp(34px, 4vw, 52px);
+  border-top: 1px solid var(--hairline);
+}
+@media (min-resolution: 2dppx) {
+  .movement { border-top-width: 0.5px; }
+}
+.split-grid > .movement { margin-top: 0; }
+.split-grid.movement > * { border-top: none; padding-top: 0; }
+
+/* ============================================================
+   Hero entrance — plays on load, not on scroll.
+   ============================================================ */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-enter {
+    animation: hero-rise 900ms var(--ease-out-expo) both;
+    animation-delay: var(--enter-delay, 0ms);
+  }
+  /* The H1 is the LCP element, so it never starts transparent — an opacity:0
+     LCP candidate keeps the LCP clock running. Transform alone is free. */
+  .hero-settle {
+    animation: hero-settle 1000ms var(--ease-out-expo) both;
+  }
+  .hero-glow {
+    animation: glow-in 1800ms var(--ease-out-expo) both;
+  }
+  @supports (animation-timeline: scroll()) {
+    .hero-glow {
+      animation: glow-in 1800ms var(--ease-out-expo) both, glow-drift linear both;
+      animation-timeline: auto, scroll();
+      animation-range: normal, 0 90vh;
+    }
+  }
+}
+
+@keyframes hero-rise {
+  from { opacity: 0; transform: translate3d(0, 16px, 0); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes hero-settle {
+  from { transform: translate3d(0, 12px, 0); }
+  to   { transform: none; }
+}
+@keyframes glow-in {
+  from { opacity: 0; transform: scale(0.86); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes glow-drift {
+  to { transform: translate3d(0, 90px, 0); }
 }
 
 /* Section seam that draws itself as it enters. */

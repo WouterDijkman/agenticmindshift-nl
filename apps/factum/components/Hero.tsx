@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import { Button } from '@repo/ui/Button';
 import { Link } from '@/i18n/navigation';
 import { INTAKE_URL } from '@/lib/site';
@@ -27,7 +28,7 @@ export default function Hero({
   return (
     <section className="grain-overlay" style={{ position: 'relative', overflow: 'hidden' }}>
       <span
-        className="glow"
+        className="glow hero-glow"
         style={{
           width: 900,
           height: 460,
@@ -37,7 +38,7 @@ export default function Hero({
         }}
       />
       <span
-        className="glow"
+        className="glow hero-glow"
         style={{
           width: 460,
           height: 300,
@@ -55,26 +56,33 @@ export default function Hero({
           paddingBottom: 'clamp(56px, 8vw, 104px)'
         }}
       >
-        <span className="eyebrow eyebrow-accent" style={{ marginBottom: 28 }}>
+        <span className="eyebrow eyebrow-accent hero-enter" style={{ marginBottom: 28 }}>
           {eyebrow}
         </span>
 
-        <h1 className="type-display" style={{ maxWidth: '24ch' }}>
+        <h1 className="type-display hero-settle" style={{ maxWidth: '24ch' }}>
           {title}
         </h1>
 
-        <p className="type-lead" style={{ marginTop: 28, maxWidth: '66ch' }}>
+        <p
+          className="type-lead hero-enter"
+          style={{ marginTop: 28, maxWidth: '66ch', '--enter-delay': '120ms' } as CSSProperties}
+        >
           {lead}
         </p>
 
         <div
-          style={{
-            marginTop: 40,
-            display: 'flex',
-            flexWrap: 'wrap',
-            alignItems: 'center',
-            gap: 'clamp(20px, 3vw, 36px)'
-          }}
+          className="hero-enter"
+          style={
+            {
+              marginTop: 40,
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'center',
+              gap: 'clamp(20px, 3vw, 36px)',
+              '--enter-delay': '210ms'
+            } as CSSProperties
+          }
         >
           <Button href={INTAKE_URL} size="lg" magnetic={false}>
             {cta}
@@ -85,7 +93,16 @@ export default function Hero({
           </Link>
         </div>
 
-        <p className="type-small" style={{ marginTop: 26, color: 'var(--text-quaternary)' }}>
+        <p
+          className="type-small hero-enter"
+          style={
+            {
+              marginTop: 26,
+              color: 'var(--text-quaternary)',
+              '--enter-delay': '290ms'
+            } as CSSProperties
+          }
+        >
           {footnote}
         </p>
       </div>

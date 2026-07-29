@@ -8,7 +8,7 @@ import type { CSSProperties, ElementType, ReactNode } from 'react';
 export default function Reveal({
   children,
   as: Tag = 'div',
-  delay = 0,
+  delay,
   className = '',
   style
 }: {
@@ -18,10 +18,14 @@ export default function Reveal({
   className?: string;
   style?: CSSProperties;
 }) {
+  // Left unset, the delay is inherited from an ancestor `.stagger`. Writing it
+  // inline unconditionally would outrank that rule and flatten every sequence.
   return (
     <Tag
       className={`reveal ${className}`}
-      style={{ ...style, '--reveal-delay': `${delay}ms` } as CSSProperties}
+      style={
+        (delay === undefined ? style : { ...style, '--reveal-delay': `${delay}ms` }) as CSSProperties
+      }
     >
       {children}
     </Tag>

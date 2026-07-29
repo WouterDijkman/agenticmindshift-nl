@@ -55,3 +55,39 @@ export function SectionHeader({
     </Reveal>
   );
 }
+
+/**
+ * A second movement inside one section. Sections were merged to cut the page
+ * down; this keeps the copy but drops a whole section's worth of chrome, so the
+ * heading steps down to h3 rather than starting a new h2 block.
+ */
+export function SubHeader({
+  eyebrow,
+  title,
+  lead,
+  className = '',
+  children
+}: {
+  eyebrow?: string;
+  title: string;
+  lead?: string;
+  className?: string;
+  children?: ReactNode;
+}) {
+  return (
+    <Reveal className={`measure ${className}`}>
+      {eyebrow && (
+        <span className="eyebrow eyebrow-accent" style={{ marginBottom: 14 }}>
+          {eyebrow}
+        </span>
+      )}
+      <h3 className="type-h3">{title}</h3>
+      {lead && (
+        <p className="type-body" style={{ marginTop: 14 }}>
+          {lead}
+        </p>
+      )}
+      {children}
+    </Reveal>
+  );
+}
