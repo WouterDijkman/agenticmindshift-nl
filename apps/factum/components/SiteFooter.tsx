@@ -20,7 +20,7 @@ export default async function SiteFooter() {
         >
           <div style={{ maxWidth: 320 }}>
             <div className="wordmark" style={{ marginBottom: 14 }}>
-              Factum<span>.</span>
+              FACTUM<span>.</span>
             </div>
             <p className="type-small">{t('blurb')}</p>
           </div>

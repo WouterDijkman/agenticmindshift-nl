@@ -44,7 +44,7 @@ export default function SiteHeader() {
         }}
       >
         <Link href="/" className="wordmark" aria-label="Factum Capital">
-          Factum<span>.</span>
+          FACTUM<span>.</span>
         </Link>
 
         <nav
