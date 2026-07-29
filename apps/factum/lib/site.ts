@@ -8,7 +8,7 @@ export const KVK = '99495945';
 /** Primary header nav — the small set of items every visitor needs. */
 export const NAV = [
   { href: '/platform', key: 'platform' },
-  { href: '/buyer-proof-sprint', key: 'sprint' },
+  { href: '/diligence-sprint', key: 'sprint' },
   { href: '/governance', key: 'governance' },
   { href: '/team', key: 'team' }
 ] as const;

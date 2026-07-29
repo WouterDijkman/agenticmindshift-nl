@@ -1,20 +1,24 @@
 {
   "meta": {
     "home": {
-      "title": "Analyse auf Due-Diligence-Niveau, bevor der Käufer seine startet",
-      "description": "Factum führt einen vollständigen Due-Diligence-Durchgang über elf Disziplinen an Ihrem eigenen Unternehmen durch, belegt aus Ihren Dokumenten und von einer Person geprüft, damit Sie die Probleme finden, bevor das Team des Käufers es tut."
+      "title": "Analyse auf Due-Diligence-Niveau über den gesamten Deal-Zyklus",
+      "description": "Factum liest den vollständigen Datenraum — elf Disziplinen, gegeneinander abgeglichen und von einer Person geprüft — ob Sie kaufen, finanzieren, halten oder verkaufen."
     },
     "platform": {
       "title": "Die Plattform",
       "description": "241 Due-Diligence-Module über 31 Verticals. Jede Feststellung ist an ein reales Dokument gebunden, wird von einem zweiten Prüf-Agenten kontrolliert und passiert eine menschliche Freigabe, bevor sie Sie erreicht."
     },
     "sprint": {
-      "title": "Der Buyer-Proof Sprint",
-      "description": "Elf fachspezifische Analysedurchgänge über Ihren Datenraum, zu einem Narrativ zusammengeführt, mit laufendem Datenlücken-Tracker — damit der Bericht ein Grund ist, mehr zu zahlen, und nicht nur eine Liste von Gründen, weniger zu zahlen."
+      "title": "Der Diligence Sprint",
+      "description": "Elf fachspezifische Analysedurchgänge über einen vollständigen Datenraum, zu einem Narrativ zusammengeführt, mit laufendem Datenlücken-Tracker — damit die Ergebnisse kommen, solange sie die Entscheidung noch verändern können."
     },
     "governance": {
       "title": "Governance und Datenverarbeitung",
       "description": "Wie Dokumente verarbeitet werden, was die menschliche Freigabe leistet und was Factum bewusst nicht behauptet."
+    },
+    "team": {
+      "title": "Wer dahintersteht",
+      "description": "Der Blick eines Bankers auf Risiko und die Disziplin eines Ingenieurs für Systeme, die nicht brechen."
     },
     "partnerships": {
       "title": "Partnerschaften",
@@ -38,8 +42,9 @@
   "nav": {
     "primary": "Hauptnavigation",
     "platform": "Plattform",
-    "sprint": "Buyer-Proof Sprint",
+    "sprint": "Diligence Sprint",
     "governance": "Governance",
+    "team": "Team",
     "partnerships": "Partnerschaften",
     "contact": "Kontakt",
     "cta": "Erstgespräch buchen",
@@ -147,11 +152,12 @@
       }
     ]
   },
+
   "home": {
     "hero": {
-      "eyebrow": "Sell-Side-Due-Diligence",
-      "title": "Finden Sie die Probleme vor dem Team des Käufers",
-      "lead": "Im Moment weiß der Käufer mehr darüber, was in Ihrem Unternehmen nicht stimmt, als Sie selbst. Factum schließt diese Lücke zuerst: {disciplines} fachspezifische Analysedurchgänge über Ihren eigenen Datenraum, belegt aus Ihren Dokumenten, gegeneinander abgeglichen und von einer Person geprüft, bevor Sie etwas zu sehen bekommen.",
+      "eyebrow": "Due Diligence über den Deal-Zyklus",
+      "title": "Lesen Sie den ganzen Raum, bevor die Zahl feststeht",
+      "lead": "Kaufen, finanzieren, halten oder verkaufen — das Risiko ist dasselbe: die Entscheidung fällt auf Basis einer Stichprobe. Factum führt {disciplines} fachspezifische Analysedurchgänge über den gesamten Datenraum durch, belegt aus den Dokumenten, gegeneinander abgeglichen und von einer Person geprüft, bevor Sie etwas zu sehen bekommen.",
       "cta": "Erstgespräch buchen",
       "secondary": "So funktioniert die Pipeline",
       "footnote": "Factum steht vor dem Launch. Wir nehmen eine begrenzte Zahl an Pilotmandaten an — im einstelligen Bereich, keine laufende Warteliste."
@@ -165,24 +171,24 @@
     },
     "problem": {
       "eyebrow": "Die Asymmetrie",
-      "title": "Das Gespräch über den Wert fällt in den Moment, in dem Sie am wenigsten ändern können",
-      "lead": "Die meisten Eigentümer erfahren erst, was ihr Unternehmen wirklich wert ist, wenn der Käufer den Hebel bereits in der Hand hält. Kennen Sie Ihre Zahl und schließen Sie die Lücken früh, zu Ihren Bedingungen, nicht zu denen des Käufers.",
+      "title": "Die Zahl wird gesetzt, während der Raum halb gelesen ist",
+      "lead": "Klassische Due Diligence zieht eine Stichprobe aus dem Datenraum und berichtet Wochen später. Dann ist der Preis verankert, das Gremium ist weiter, und die Ergebnisse kommen zu spät, um die Struktur noch zu verändern.",
       "points": [
         {
           "title": "Wer es zuerst findet, bestimmt die Deutung",
-          "body": "Jede Woche, in der ein Datenraum ohne einen solchen Durchgang dasteht, ist eine Woche, in der die Analysten des Käufers etwas zuerst finden können — und wer ein Thema zuerst findet, bestimmt, wie es für den Rest der Verhandlung gerahmt wird."
+          "body": "Wer ein Thema zuerst aufdeckt, bestimmt, wie es für den Rest der Verhandlung gerahmt wird. Auf beiden Seiten des Tisches geht dieser Vorteil an den, der den Raum zuerst gelesen hat."
         },
         {
           "title": "Eine Dimension ist keine Due Diligence",
-          "body": "Eine klassische Quality-of-Earnings-Analyse auf der Sell-Side deckt eine Dimension ab. Das Team eines Käufers hört bei einer nicht auf. Die Lücken zeigen sich im Raum zwischen den Disziplinen."
+          "body": "Eine Quality-of-Earnings-Analyse deckt eine Dimension ab. Die Gegenseite hört bei einer nicht auf. Die Lücken zeigen sich im Raum zwischen den Disziplinen."
         },
         {
           "title": "Eine Risikoliste ist kein Argument",
-          "body": "Die meiste Due Diligence ist eine statische Risikoliste — niemand sucht aktiv nach Hebeln für Wertsteigerung. Der Bericht liest sich als Warnung, nicht als Grund, mehr zu zahlen."
+          "body": "Die meiste Due Diligence ist eine statische Risikoliste — niemand sucht aktiv nach Hebeln für Wertsteigerung. Der Bericht liest sich als Warnung, nicht als Grundlage für eine Entscheidung."
         },
         {
-          "title": "Ein sauberer Datenraum muss auch halten",
-          "body": "Ein sauberer Datenraum zahlt sich nur aus, wenn er am Verhandlungstisch hält, sobald das Team des Käufers nachhakt."
+          "title": "Eine Stichprobe ist nicht der Raum",
+          "body": "Abdeckungslücken sind der Grund, warum Deals nach dem Closing schiefgehen. Eine Prüfung, die bei einer Stichprobe endet, lässt genau den Teil aus, nach dem niemand zu fragen dachte."
         }
       ]
     },
@@ -243,28 +249,12 @@
     },
     "sprint": {
       "eyebrow": "Das Mandat",
-      "title": "Der Buyer-Proof Sprint",
-      "lead": "Ein Mandat über alle {disciplines} Disziplinen, plus die drei Synthese-Ebenen, die aus elf getrennten Analysen ein nutzbares Ergebnis machen. Für Verkäufer, die die Probleme lieber selbst zuerst finden, als sie vom Team des Käufers finden zu lassen.",
-      "guaranteeLabel": "Die Buyer-Proof-Garantie",
-      "guarantee": "Wenn der Sprint nicht mindestens drei wesentliche Feststellungen zutage fördert, die Ihr eigenes Team noch nicht kannte — von der Art, die Sie vor einem Käufer kennen wollen —, ist das Mandat kostenlos.",
+      "title": "Der Diligence Sprint",
+      "lead": "Ein Mandat über alle {disciplines} Disziplinen, plus die drei Synthese-Ebenen, die aus elf getrennten Analysen ein nutzbares Ergebnis machen. Gefahren auf einem Target, das Sie kaufen, einem Unternehmen, das Sie halten, oder Ihrem eigenen Betrieb, bevor jemand anderes ihn liest.",
+      "guaranteeLabel": "Die Befundgarantie",
+      "guarantee": "Wenn der Sprint nicht mindestens drei wesentliche Feststellungen zutage fördert, die Ihr eigenes Team noch nicht kannte — von der Art, die verändert, was Sie als Nächstes tun —, ist das Mandat kostenlos.",
       "guaranteeNote": "Formuliert für Pilotmandate. Wir bitten nicht Sie, das Risiko zu tragen, dass dies früh ist; das tun wir.",
       "link": "Was der Sprint abdeckt"
-    },
-    "audience": {
-      "eyebrow": "Für wen das ist",
-      "title": "Zwei Momente, in denen das den Ausgang verändert",
-      "cases": [
-        {
-          "title": "Ein laufender Verkaufsprozess",
-          "body": "Der Datenraum ist offen oder kurz davor, und die Analysten eines Käufers sind Tage davon entfernt, ihn zu lesen. Ein vollständiger Durchgang über Ihre eigenen Dokumente, abgeglichen und geprüft, sorgt dafür, dass am Tisch nichts als Überraschung landet.",
-          "outcome": "Sie treten an, nachdem Sie sichtbar zuerst Ihre eigene Arbeit geprüft haben."
-        },
-        {
-          "title": "Ein Exit in zwei bis fünf Jahren",
-          "body": "Noch kein Prozess, aber eine getroffene Entscheidung. Die Lücken und die Zahl jetzt zu sehen, lässt Jahre Zeit, sie zu schließen, statt sie zu entdecken, wenn der Hebel bereits gewechselt hat.",
-          "outcome": "Sie beheben es auf Ihrer Zeitachse, nicht auf der des Käufers."
-        }
-      ]
     },
     "trust": {
       "eyebrow": "Governance",
@@ -277,8 +267,37 @@
       "body": "Dreißig Minuten, um zu sehen, ob Ihre Situation eine ist, bei der das wirklich hilft. Wenn nicht, sagen wir das.",
       "button": "Erstgespräch buchen",
       "note": "Factum steht vor dem Launch und nimmt eine begrenzte Zahl an Pilotmandaten an."
+    },
+    "cycle": {
+      "eyebrow": "Über den Zyklus",
+      "title": "Eine Beweisgrundlage, fünf Momente",
+      "lead": "Dieselbe Analyse-Engine und dasselbe quellenbelegte Dossier, angewendet an jedem Punkt, an dem eine Entscheidung tatsächlich kippt. Nichts wird neu aufgebaut, wenn der nächste Moment kommt.",
+      "stages": [
+        {
+          "title": "Kaufen",
+          "body": "Vom IM-Screening bis zum Closing. Der vollständige Raum gelesen, solange die Ergebnisse Preis und Struktur noch bewegen können, mit Output, der direkt in ein Investment-Committee-Memo geht."
+        },
+        {
+          "title": "Finanzieren",
+          "body": "Das Memo, auf dessen Basis eine Bank oder ein Investor zeichnet, aufgebaut auf derselben Beweisgrundlage wie die Due Diligence statt nachträglich separat zusammengestellt."
+        },
+        {
+          "title": "Halten und Wert aufbauen",
+          "body": "Periodische Portfolio-Reviews und laufendes Monitoring: Covenant-Spielraum, KPI-Drift und Frühwarnsignale, neben den Hebeln für Wertsteigerung, nach denen eine statische Risikoliste nie sucht."
+        },
+        {
+          "title": "Verkaufen",
+          "body": "Exit Readiness: Qualität des Datenraums, finanzielle Darstellung, Stärke des Managements und wie die Equity Story standhält. Der Durchgang, den das Team eines Käufers fahren würde, zuerst auf Ihrer Seite des Tisches gefahren."
+        },
+        {
+          "title": "Restrukturieren",
+          "body": "Pre-IBR- und WHOA-Analyse: Fortführungsprognose, Gläubigerposition und Covenant-Spielraum, sichtbar gemacht, solange die Optionen noch offen sind."
+        }
+      ],
+      "note": "Restrukturierungsarbeit nach WHOA und IBR ist an niederländisches Recht gebunden. Der Rest des Zyklus ist rechtsraumunabhängig."
     }
   },
+
   "platform": {
     "header": {
       "eyebrow": "Die Plattform",
@@ -420,15 +439,16 @@
       "note": "Dreißig Minuten, kein Angebot im Anhang."
     }
   },
+
   "sprint": {
     "header": {
       "eyebrow": "Das Mandat",
-      "title": "Der Buyer-Proof Sprint",
-      "lead": "Für Verkäufer, die die Probleme lieber selbst zuerst finden, als sie vom Team des Käufers finden zu lassen. Alle {disciplines} Disziplinen, ein Mandat, zu einem einzigen Narrativ zusammengeführt, bevor Sie etwas sehen."
+      "title": "Der Diligence Sprint",
+      "lead": "Alle {disciplines} Disziplinen, ein Mandat, zu einem einzigen Narrativ zusammengeführt, bevor Sie etwas sehen. Gefahren auf einem Target, das Sie kaufen, einem Unternehmen, das Sie halten, oder Ihrem eigenen Betrieb, bevor ein Käufer ihn liest."
     },
     "reframe": {
-      "quote": "Eine solche Analyse für den eigenen Deal in Auftrag zu geben, bevor das Team eines Käufers seine durchführt, ist kein Zeichen dafür, dass etwas nicht stimmt. So sieht ein gut geführter Verkaufsprozess von der anderen Seite des Tisches aus — die Verkäufer, die auf einen professionellen Käufer am glaubwürdigsten wirken, sind die, die sichtbar zuerst ihre eigene Arbeit geprüft haben.",
-      "body": "Den Sprint gibt es, weil die Reihenfolge standardmäßig verkehrt herum ist. Das Team des Käufers bekommt Wochen mit Ihren Dokumenten und den Auftrag zu finden, was nicht stimmt, und Sie bekommen die Feststellungen als Hebel zurück. Hier läuft dieselbe Analyse zuerst, auf Ihrer Seite des Tisches."
+      "quote": "Einen solchen Durchgang zu fahren, bevor die Gegenseite ihren fährt, ist kein Zeichen dafür, dass etwas nicht stimmt. So sieht ein gut geführter Prozess aus: Am glaubwürdigsten wirkt die Partei, die sichtbar zuerst die eigene Arbeit geprüft hat.",
+      "body": "Den Sprint gibt es, weil die Reihenfolge standardmäßig verkehrt herum ist. Eine Seite bekommt Wochen mit den Dokumenten und den Auftrag zu finden, was nicht stimmt, und die andere bekommt die Feststellungen als Hebel zurück. Hier läuft derselbe Durchgang zuerst, auf Ihrer Seite des Tisches."
     },
     "disciplines": {
       "eyebrow": "Umfang",
@@ -443,7 +463,7 @@
       "items": [
         {
           "title": "Wertsteigerungs-Analyse",
-          "body": "Eine Synthese über den finanziellen und kommerziellen Feststellungen — Margenverluste, Indexierungslücken, Cross-Selling-Hebel — damit der Bericht ein Grund ist, mehr zu zahlen, und nicht nur eine Liste von Gründen, weniger zu zahlen."
+          "body": "Eine Synthese über den finanziellen und kommerziellen Feststellungen — Margenverluste, Indexierungslücken, Cross-Selling-Hebel — damit der Bericht auch den Upside-Fall trägt, nicht nur die Risikoliste."
         },
         {
           "title": "Disziplinübergreifender Abgleich",
@@ -451,7 +471,7 @@
         },
         {
           "title": "Laufender Datenlücken-Tracker",
-          "body": "Die fortlaufende Fragenliste, aktualisiert, während Sie Lücken schließen, damit nichts offen bleibt, wenn der Käufer auftaucht."
+          "body": "Die fortlaufende Fragenliste, aktualisiert, während Lücken geschlossen werden, damit nichts offen bleibt, wenn die Gegenseite zu lesen beginnt."
         }
       ]
     },
@@ -473,14 +493,14 @@
         {
           "label": "Zu beidem",
           "items": "Der Datenlücken-Tracker",
-          "body": "Vollständiger dokumentenübergreifender Abgleich, geliefert als strukturierte Datenlücken-Liste vor dem Käuferzugang, nicht von ihm entdeckt."
+          "body": "Vollständiger dokumentenübergreifender Abgleich, geliefert als strukturierte Datenlücken-Liste, solange noch Zeit bleibt, die Lücken zu schließen."
         }
       ]
     },
     "guarantee": {
-      "eyebrow": "Die Buyer-Proof-Garantie",
+      "eyebrow": "Die Befundgarantie",
       "title": "Drei wesentliche Feststellungen, oder das Mandat ist kostenlos",
-      "body": "Wenn der Sprint nicht mindestens drei wesentliche Feststellungen zutage fördert, die Ihr eigenes Team noch nicht kannte — von der Art, die Sie vor einem Käufer kennen wollen —, ist das Mandat kostenlos.",
+      "body": "Wenn der Sprint nicht mindestens drei wesentliche Feststellungen zutage fördert, die Ihr eigenes Team noch nicht kannte — von der Art, die verändert, was Sie als Nächstes tun —, ist das Mandat kostenlos.",
       "note": "Formuliert für Pilotmandate, solange Factum vor dem Launch steht. Wir bitten nicht Sie, das Risiko zu tragen, dass dies früh ist; das tun wir. Wie eine wesentliche Feststellung bewertet wird, steht im Mandatsschreiben und wird nicht hinterher der Auslegung überlassen."
     },
     "inputs": {
@@ -504,7 +524,7 @@
       "items": [
         {
           "q": "Ersetzt das einen Quality-of-Earnings-Bericht?",
-          "a": "Es ist breiter, und es ist keine Prüfungsleistung. Eine klassische Quality-of-Earnings-Analyse auf der Sell-Side deckt eine Dimension ab und dauert vier bis zehn Wochen; hier laufen elf Disziplinen, die gegeneinander abgeglichen werden. Wo Ihr Prozess ein unterzeichnetes Testat eines Wirtschaftsprüfers braucht, bleibt das ein separates Mandat bei einer separaten Gesellschaft."
+          "a": "Es ist breiter, und es ist keine Prüfungsleistung. Eine klassische Quality-of-Earnings-Analyse deckt eine Dimension ab und dauert vier bis zehn Wochen; hier laufen elf Disziplinen, die gegeneinander abgeglichen werden. Wo Ihr Prozess ein unterzeichnetes Testat eines Wirtschaftsprüfers braucht, bleibt das ein separates Mandat bei einer separaten Gesellschaft."
         },
         {
           "q": "Wie lange dauert es?",
@@ -529,12 +549,13 @@
       ]
     },
     "cta": {
-      "title": "Prüfen, ob Ihr Datenraum dafür bereit ist",
+      "title": "Prüfen, ob ein Sprint zu dem Raum passt, den Sie vor sich haben",
       "body": "Das Erstgespräch ist ein Scoping-Gespräch: was im Datenraum liegt, was fehlt und ob ein Sprint das richtige Instrument für Ihren Stand ist.",
       "button": "Erstgespräch buchen",
       "note": "Eine begrenzte Zahl an Pilotmandaten, im einstelligen Bereich."
     }
   },
+
   "governance": {
     "header": {
       "eyebrow": "Governance",
@@ -586,6 +607,47 @@
     }
   },
 
+  "team": {
+    "header": {
+      "eyebrow": "Team",
+      "title": "Urteilsvermögen, nicht nur Software",
+      "lead": "Zwei Blickwinkel auf ein Problem: der Blick eines Bankers auf Risiko und die Disziplin eines Ingenieurs für Systeme, die nicht brechen."
+    },
+    "historyLabel": "Werdegang",
+    "people": [
+      {
+        "name": "Wouter Dijkman",
+        "title": "Gründer, Factum",
+        "bio": "Mehr als fünf Jahre in den Institutionen, die diese Deals finanzieren. Bei der ING arbeitete Wouter im Acquisition & Leveraged Finance und strukturierte und prüfte die Kredite hinter genau solchen Transaktionen. Davor war er bei der Rabobank auf finanzielle Restrukturierung spezialisiert und las die Zahlen eines Unternehmens darauf, was sie tatsächlich bedeuten, statt darauf, was sie bedeuten sollen. Er führt außerdem Agentic Mindshift, seine eigene KI-Beratung, sodass die KI-gestützte Due-Diligence-Arbeit kein Nebenprojekt eines Bankers ist. Er hat Factum gegründet, um dieselbe Strenge auf die Sell-Side zu bringen, damit ein Eigentümer mit der Sorgfalt einer Bank in seinen Exit geht, bevor ein Käufer die Chance bekommt, sie gegen ihn zu verwenden.",
+        "history": [
+          { "org": "Factum Capital", "role": "Gründer", "period": "2026 —" },
+          { "org": "Agentic Mindshift", "role": "Gründer, KI-Beratung", "period": "2025 —" },
+          { "org": "ING", "role": "Acquisition & Leveraged Finance", "period": "2023 – 2025" },
+          { "org": "Rabobank", "role": "Spezialist Financial Restructuring", "period": "2020 – 2023" },
+          { "org": "Alter Domus", "role": "Legal Officer", "period": "2019 – 2020" }
+        ]
+      },
+      {
+        "name": "Daniel Dropuljic",
+        "title": "Technischer Leiter, Factum",
+        "bio": "Daniel baut die Systeme hinter Factums KI-gestützter Due-Diligence-Arbeit. Als Gründer von Dandro Solutions entwirft er Datenpipelines, die täglich über 50.000 Datensätze für internationale Healthcare-Kunden verarbeiten, unter strengen Compliance-Regimen einschließlich DSGVO und FHIR. Diese Disziplin — produktionsreif, prüfbar, gebaut, um genauer Betrachtung standzuhalten — ist das, worauf Factums Due-Diligence-Engine läuft.",
+        "history": [
+          { "org": "Dandro Solutions", "role": "Gründer, Software Engineering", "period": "2021 —" },
+          { "org": "Healex, Berlin", "role": "HL7/FHIR-Implementierung, Leitung eines dreiköpfigen Teams", "period": "2019 – 2021" },
+          { "org": "Uniklinik Köln", "role": "Forschungsdaten-Infrastruktur", "period": "2019" },
+          { "org": "Furore, Amsterdam", "role": "Data Engineering", "period": "2018" }
+        ]
+      }
+    ],
+    "closing": "Der Blick eines Bankers auf Risiko und die Disziplin eines Ingenieurs für Systeme, die nicht brechen. Gemeinsam unterlegen sie den Prozess mit Urteilsvermögen, nicht nur mit Software.",
+    "cta": {
+      "title": "Sie sprechen mit der Person, die das Ergebnis prüft",
+      "body": "Solange Factum vor dem Launch steht, sind das Erstgespräch, die Prüfstufe und die Durchsprache dieselbe Person. Genau darum geht es, nur einstellig viele Mandate anzunehmen.",
+      "button": "Erstgespräch buchen",
+      "note": "Dreißig Minuten."
+    }
+  },
+
   "partnerships": {
     "header": {
       "eyebrow": "Partnerschaften",
@@ -599,7 +661,7 @@
       "profiles": [
         {
           "title": "Corporate-Finance-Boutiquen",
-          "body": "Die Sell-Side-Prozesse führen, bei denen die analytische Last der Engpass ist, nicht der Deal Flow."
+          "body": "Die Buy- und Sell-Side-Prozesse führen, bei denen die analytische Last der Engpass ist, nicht der Deal Flow."
         },
         {
           "title": "Exit- und Wertsteigerungsberater",
@@ -717,7 +779,7 @@
     "agenda": {
       "label": "Worüber wir sprechen",
       "items": [
-        "Wo Sie stehen: ein laufender Prozess oder ein Exit in zwei bis fünf Jahren.",
+        "Wo Sie im Zyklus stehen: kaufen, finanzieren, halten oder verkaufen.",
         "Was heute im Datenraum liegt und was darin fehlt.",
         "Welche Disziplinen in Ihrer konkreten Situation das eigentliche Risiko tragen.",
         "Ob ein Sprint das richtige Instrument ist oder ob es zu früh ist.",

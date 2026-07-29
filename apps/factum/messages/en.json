@@ -1,20 +1,24 @@
 {
   "meta": {
     "home": {
-      "title": "Diligence-grade analysis, before the buyer runs theirs",
-      "description": "Factum runs a full eleven-discipline diligence pass on your own business, grounded in your documents and reviewed by a person, so you find the problems before a buyer’s team does."
+      "title": "Diligence-grade analysis across the deal cycle",
+      "description": "Factum reads the full data room — eleven disciplines, reconciled against each other and reviewed by a person — whether you are acquiring, financing, holding or selling."
     },
     "platform": {
       "title": "The platform",
       "description": "241 due-diligence modules across 31 verticals. Every finding tied to a real document, checked by a second reviewer agent, and gated by a human before it reaches you."
     },
     "sprint": {
-      "title": "The Buyer-Proof Sprint",
-      "description": "Eleven specialist analytical passes over your data room, reconciled into one narrative, with a live data-gap tracker — so the report is a reason to pay more, not just a list of reasons to pay less."
+      "title": "The Diligence Sprint",
+      "description": "Eleven specialist analytical passes over a full data room, reconciled into one narrative, with a live data-gap tracker — so the findings arrive while they can still change the decision."
     },
     "governance": {
       "title": "Governance and data handling",
       "description": "How documents are processed, what the human gate does, and what Factum deliberately does not claim."
+    },
+    "team": {
+      "title": "Who is behind this",
+      "description": "A banker’s read on risk and an engineer’s discipline for systems that don’t break."
     },
     "partnerships": {
       "title": "Partnerships",
@@ -38,8 +42,9 @@
   "nav": {
     "primary": "Primary",
     "platform": "Platform",
-    "sprint": "Buyer-Proof Sprint",
+    "sprint": "Diligence Sprint",
     "governance": "Governance",
+    "team": "Team",
     "partnerships": "Partnerships",
     "contact": "Contact",
     "cta": "Book an intake call",
@@ -150,9 +155,9 @@
 
   "home": {
     "hero": {
-      "eyebrow": "Sell-side diligence",
-      "title": "Find the problems before the buyer’s team does",
-      "lead": "Right now, the buyer will know more about what’s wrong with your business than you do. Factum closes that gap first: {disciplines} specialist analytical passes over your own data room, grounded in your documents, reconciled against each other, and reviewed by a person before you see anything.",
+      "eyebrow": "Deal-cycle diligence",
+      "title": "Read the whole room before the number is fixed",
+      "lead": "Acquiring, financing, holding or selling, the exposure is the same: the decision gets made on a sample. Factum runs {disciplines} specialist analytical passes over the entire data room, grounded in the documents, reconciled against each other, and reviewed by a person before you see anything.",
       "cta": "Book an intake call",
       "secondary": "See how the pipeline works",
       "footnote": "Factum is pre-launch. We are taking on a limited number of pilot mandates — counted in single digits, not a rolling waitlist."
@@ -166,24 +171,24 @@
     },
     "problem": {
       "eyebrow": "The asymmetry",
-      "title": "The valuation conversation happens when you have the least power to fix anything",
-      "lead": "Most owners only find out what their business is really worth once a buyer already has the leverage. Know your number and close the gaps early, on your own terms, not the buyer’s.",
+      "title": "The number gets set while the room is still half-read",
+      "lead": "Traditional diligence samples the data room and reports weeks later. By then the price is anchored, the committee has moved on, and the findings are too late to change the structure.",
       "points": [
         {
           "title": "Whoever finds it first frames it",
-          "body": "Every week a data room sits without a pass like this behind it is a week the buyer’s own analysts might find something first — and whoever finds an issue first controls how it gets framed for the rest of the negotiation."
+          "body": "Whoever surfaces an issue first controls how it gets framed for the rest of the negotiation. On either side of the table, that advantage goes to whoever read the room first."
         },
         {
           "title": "One dimension isn’t diligence",
-          "body": "A traditional sell-side quality-of-earnings read covers one dimension. A buyer’s team will not stop at one. The gaps show up in the space between disciplines."
+          "body": "A quality-of-earnings read covers one dimension. The other side will not stop at one. The gaps show up in the space between disciplines."
         },
         {
           "title": "A risk list is not an argument",
-          "body": "Most diligence is a static risk list — nobody actively hunts for value-creation levers. The report reads as a warning, not a reason to pay more."
+          "body": "Most diligence is a static risk list — nobody actively hunts for value-creation levers. The report reads as a warning rather than a basis for a decision."
         },
         {
-          "title": "A clean room still has to hold",
-          "body": "A clean data room only pays off if it holds up across the table when the buyer’s team pushes back."
+          "title": "A sample is not the room",
+          "body": "Coverage gaps are how deals go wrong after closing. A read that stops at a sample leaves out the part nobody thought to ask about."
         }
       ]
     },
@@ -244,28 +249,12 @@
     },
     "sprint": {
       "eyebrow": "The engagement",
-      "title": "The Buyer-Proof Sprint",
-      "lead": "One engagement covering all {disciplines} disciplines, plus the three synthesis layers that turn eleven separate reads into one usable deliverable. For a seller who’d rather find the problems first than have the buyer’s team find them.",
-      "guaranteeLabel": "The Buyer-Proof Guarantee",
-      "guarantee": "If the sprint doesn’t surface at least three material findings your own team hadn’t already identified — the kind you’d want to know about before a buyer does — the engagement is free.",
+      "title": "The Diligence Sprint",
+      "lead": "One engagement covering all {disciplines} disciplines, plus the three synthesis layers that turn eleven separate reads into one usable deliverable. Run on a target you are acquiring, a company you hold, or your own business before someone else reads it.",
+      "guaranteeLabel": "The Findings Guarantee",
+      "guarantee": "If the sprint doesn’t surface at least three material findings your own team hadn’t already identified — the kind that change what you do next — the engagement is free.",
       "guaranteeNote": "Written for pilot mandates. We are not asking you to underwrite the risk of this being early; we are.",
       "link": "What the sprint covers"
-    },
-    "audience": {
-      "eyebrow": "Who this is for",
-      "title": "Two moments where this changes the outcome",
-      "cases": [
-        {
-          "title": "A live sell-side process",
-          "body": "The data room is open or about to be, and a buyer’s analysts are days away from reading it. A full pass over your own documents, reconciled and reviewed, means nothing lands as a surprise across the table.",
-          "outcome": "You walk in having visibly checked your own work first."
-        },
-        {
-          "title": "An exit two to five years out",
-          "body": "No process yet, but a decision made. Seeing the gaps and the number now leaves years of runway to close them, instead of discovering them when the leverage has already moved.",
-          "outcome": "You fix on your own timeline, not the buyer’s."
-        }
-      ]
     },
     "trust": {
       "eyebrow": "Governance",
@@ -278,6 +267,34 @@
       "body": "Thirty minutes to see whether your situation is one this actually helps. If it isn’t, we’ll say so.",
       "button": "Book an intake call",
       "note": "Factum is pre-launch and taking on a limited number of pilot mandates."
+    },
+    "cycle": {
+      "eyebrow": "Across the cycle",
+      "title": "One evidence base, five moments",
+      "lead": "The same analytical engine and the same source-traceable dossier, applied at each point where a decision actually turns. Nothing is rebuilt from scratch when the next moment arrives.",
+      "stages": [
+        {
+          "title": "Acquiring",
+          "body": "From IM screening through to closing. The full room read while the findings can still move price and structure, with output shaped to go straight into an investment committee memo."
+        },
+        {
+          "title": "Financing",
+          "body": "The memo a bank or investor underwrites from, built off the same evidence base as the diligence instead of assembled separately after the fact."
+        },
+        {
+          "title": "Holding and building value",
+          "body": "Periodic portfolio review and continuous monitoring: covenant headroom, KPI drift and early warning signals, alongside the value-creation levers a static risk list never looks for."
+        },
+        {
+          "title": "Selling",
+          "body": "Exit readiness: data-room quality, financial presentation, management strength and how the equity story holds up. The pass a buyer’s team would run, run first on your side of the table."
+        },
+        {
+          "title": "Restructuring",
+          "body": "Pre-IBR and WHOA analysis: going-concern assessment, creditor position and covenant headroom, surfaced while the options are still open."
+        }
+      ],
+      "note": "Restructuring work under WHOA and IBR is bound to Dutch jurisdiction. The rest of the cycle is jurisdiction-independent."
     }
   },
 
@@ -426,12 +443,12 @@
   "sprint": {
     "header": {
       "eyebrow": "The engagement",
-      "title": "The Buyer-Proof Sprint",
-      "lead": "For a seller who’d rather find the problems first than have the buyer’s team find them. All {disciplines} disciplines, one engagement, reconciled into a single narrative before you see anything."
+      "title": "The Diligence Sprint",
+      "lead": "All {disciplines} disciplines, one engagement, reconciled into a single narrative before you see anything. Run on a target you are acquiring, a company you hold, or your own business before a buyer reads it."
     },
     "reframe": {
-      "quote": "Commissioning this kind of pass on your own deal, before a buyer’s team runs theirs, isn’t a sign that something’s wrong. It’s what a well-run sell-side process looks like from the other side of the table — the sellers who read as most credible to a professional buyer are the ones who visibly checked their own work first.",
-      "body": "The sprint exists because the sequence is backwards by default. The buyer’s team gets weeks with your documents and a mandate to find what’s wrong, and you get the findings back as leverage. This runs the same read first, on your side of the table."
+      "quote": "Running this kind of pass before the other side runs theirs isn’t a sign that something is wrong. It is what a well-run process looks like: the party that reads as most credible is the one that visibly checked its own work first.",
+      "body": "The sprint exists because the sequence is backwards by default. One side gets weeks with the documents and a mandate to find what is wrong, and the other gets the findings back as leverage. This runs the same read first, on your side of the table."
     },
     "disciplines": {
       "eyebrow": "Scope",
@@ -446,7 +463,7 @@
       "items": [
         {
           "title": "Value-creation read",
-          "body": "A synthesis on top of the financial and commercial findings — margin leakage, indexation gaps, cross-sell levers — so the report is a reason to pay more, not just a list of reasons to pay less."
+          "body": "A synthesis on top of the financial and commercial findings — margin leakage, indexation gaps, cross-sell levers — so the report carries the upside case, not only the risk list."
         },
         {
           "title": "Cross-discipline reconciliation",
@@ -454,7 +471,7 @@
         },
         {
           "title": "Live data-gap tracker",
-          "body": "The running question list, updated as you close gaps, so nothing sits unresolved when the buyer shows up."
+          "body": "The running question list, updated as gaps close, so nothing sits unresolved when the other side starts reading."
         }
       ]
     },
@@ -476,14 +493,14 @@
         {
           "label": "Alongside both",
           "items": "The data-gap tracker",
-          "body": "Full cross-document reconciliation, delivered as a structured data-gap list before buyer access, not discovered by them."
+          "body": "Full cross-document reconciliation, delivered as a structured data-gap list while there is still time to close the gaps."
         }
       ]
     },
     "guarantee": {
-      "eyebrow": "The Buyer-Proof Guarantee",
+      "eyebrow": "The Findings Guarantee",
       "title": "Three material findings, or the engagement is free",
-      "body": "If the sprint doesn’t surface at least three material findings your own team hadn’t already identified — the kind you’d want to know about before a buyer does — the engagement is free.",
+      "body": "If the sprint doesn’t surface at least three material findings your own team hadn’t already identified — the kind that change what you do next — the engagement is free.",
       "note": "Written for pilot mandates while Factum is pre-launch. We are not asking you to underwrite the risk of this being early; we are. How a material finding is assessed is set out in the engagement letter, not left to interpretation afterwards."
     },
     "inputs": {
@@ -507,7 +524,7 @@
       "items": [
         {
           "q": "Does this replace a quality-of-earnings report?",
-          "a": "It is broader, and it is not an attest service. A traditional sell-side quality-of-earnings read covers one dimension and takes four to ten weeks; this runs eleven disciplines and reconciles them against each other. Where your process needs a signed accountant’s opinion, that stays a separate engagement with a separate firm."
+          "a": "It is broader, and it is not an attest service. A traditional quality-of-earnings read covers one dimension and takes four to ten weeks; this runs eleven disciplines and reconciles them against each other. Where your process needs a signed accountant’s opinion, that stays a separate engagement with a separate firm."
         },
         {
           "q": "How long does it take?",
@@ -532,7 +549,7 @@
       ]
     },
     "cta": {
-      "title": "See whether your data room is ready for this",
+      "title": "See whether a sprint fits the room you are looking at",
       "body": "The intake call is a scoping conversation: what’s in the room, what’s missing, and whether a sprint is the right instrument for where you are.",
       "button": "Book an intake call",
       "note": "A limited number of pilot mandates, counted in single digits."
@@ -590,6 +607,47 @@
     }
   },
 
+  "team": {
+    "header": {
+      "eyebrow": "Team",
+      "title": "Judgment, not just software",
+      "lead": "Two vantage points on one problem: a banker’s read on risk, and an engineer’s discipline for systems that don’t break."
+    },
+    "historyLabel": "Background",
+    "people": [
+      {
+        "name": "Wouter Dijkman",
+        "title": "Founder, Factum",
+        "bio": "More than five years inside the institutions that fund these deals. At ING, Wouter worked Acquisition & Leveraged Finance, structuring and vetting the credit behind exactly this kind of transaction. Before that, at Rabobank, he specialized in financial restructuring, reading a company’s numbers for what they actually mean rather than what they’re presented to mean. He also runs Agentic Mindshift, his own AI consultancy, so the AI-driven diligence work isn’t a banker’s side project. He founded Factum to bring that same scrutiny to the sell side, so an owner walks into their exit with the rigor a bank would apply, before a buyer gets the chance to use it against them.",
+        "history": [
+          { "org": "Factum Capital", "role": "Founder", "period": "2026 —" },
+          { "org": "Agentic Mindshift", "role": "Founder, AI consultancy", "period": "2025 —" },
+          { "org": "ING", "role": "Acquisition & Leveraged Finance", "period": "2023 – 2025" },
+          { "org": "Rabobank", "role": "Specialist Financial Restructuring", "period": "2020 – 2023" },
+          { "org": "Alter Domus", "role": "Legal Officer", "period": "2019 – 2020" }
+        ]
+      },
+      {
+        "name": "Daniel Dropuljic",
+        "title": "Technical Lead, Factum",
+        "bio": "Daniel builds the systems behind Factum’s AI-driven diligence work. As founder of Dandro Solutions, he designs data pipelines processing over 50,000 records a day for international healthcare clients, under strict compliance regimes including GDPR and FHIR. That discipline — production-grade, auditable, built to hold up under scrutiny — is what Factum’s diligence engine runs on.",
+        "history": [
+          { "org": "Dandro Solutions", "role": "Founder, software engineering", "period": "2021 —" },
+          { "org": "Healex, Berlin", "role": "HL7/FHIR implementation, led a three-person team", "period": "2019 – 2021" },
+          { "org": "Uniklinik Köln", "role": "Research data infrastructure", "period": "2019" },
+          { "org": "Furore, Amsterdam", "role": "Data engineering", "period": "2018" }
+        ]
+      }
+    ],
+    "closing": "A banker’s read on risk and an engineer’s discipline for systems that don’t break. Together they back the process with judgment, not just software.",
+    "cta": {
+      "title": "You’ll speak to the person who reviews the output",
+      "body": "While Factum is pre-launch, the intake call, the review gate and the walkthrough are the same person. That is the point of taking on single digits of mandates.",
+      "button": "Book an intake call",
+      "note": "Thirty minutes."
+    }
+  },
+
   "partnerships": {
     "header": {
       "eyebrow": "Partnerships",
@@ -603,7 +661,7 @@
       "profiles": [
         {
           "title": "Corporate finance boutiques",
-          "body": "Running sell-side processes where the analytical load is the constraint, not the deal flow."
+          "body": "Running buy- and sell-side processes where the analytical load is the constraint, not the deal flow."
         },
         {
           "title": "Exit and value-creation advisors",
@@ -721,7 +779,7 @@
     "agenda": {
       "label": "What we cover",
       "items": [
-        "Where you are: a live process, or an exit two to five years out.",
+        "Where you are in the cycle: acquiring, financing, holding or selling.",
         "What’s in the data room today, and what’s missing from it.",
         "Which disciplines carry the real risk in your specific situation.",
         "Whether a sprint is the right instrument, or whether it’s too early.",
