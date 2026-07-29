@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { AM_URL, KVK, NAV } from '@/lib/site';
+import { AM_URL, FOOTER_NAV, KVK } from '@/lib/site';
 
 export default async function SiteFooter() {
   const t = await getTranslations('footer');
@@ -31,7 +31,7 @@ export default async function SiteFooter() {
                 {t('sitemap')}
               </span>
               <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: 9 }}>
-                {NAV.map((item) => (
+                {FOOTER_NAV.map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} className="type-small nav-link">
                       {tn(item.key)}

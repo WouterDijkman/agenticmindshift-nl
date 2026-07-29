@@ -5,12 +5,20 @@ export const AM_URL = 'https://www.agenticmindshift.nl';
 /** Registered with the Dutch Chamber of Commerce. */
 export const KVK = '99495945';
 
+/** Primary header nav — the small set of items every visitor needs. */
 export const NAV = [
   { href: '/platform', key: 'platform' },
   { href: '/buyer-proof-sprint', key: 'sprint' },
   { href: '/governance', key: 'governance' },
-  { href: '/partnerships', key: 'partnerships' }
+  { href: '/team', key: 'team' }
 ] as const;
+
+/**
+ * Footer sitemap nav — primary nav plus narrower-audience pages (e.g.
+ * Partnerships, which serves referral partners rather than the primary
+ * buyer persona) that still deserve a discoverable, lower-emphasis link.
+ */
+export const FOOTER_NAV = [...NAV, { href: '/partnerships', key: 'partnerships' }] as const;
 
 export const LOCALE_NAMES: Record<string, string> = {
   en: 'English',
