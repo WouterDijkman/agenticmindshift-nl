@@ -30,7 +30,10 @@ export default function PageHeader({
         <span className="eyebrow eyebrow-accent" style={{ marginBottom: 24 }}>
           {eyebrow}
         </span>
-        <h1 className="type-display" style={{ maxWidth: '17ch', fontSize: 'clamp(2.25rem, 1.5rem + 3vw, 3.75rem)' }}>
+        <h1
+          className="type-display"
+          style={{ maxWidth: '22ch', fontSize: 'clamp(2.25rem, 1.45rem + 3.9vw, 4.875rem)' }}
+        >
           {title}
         </h1>
         {lead && (
