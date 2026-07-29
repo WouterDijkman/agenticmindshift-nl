@@ -1,0 +1,22 @@
+{
+  "name": "@repo/ui",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./Button": "./src/Button.tsx",
+    "./CardVisual": "./src/CardVisual.tsx",
+    "./SketchIcons": "./src/SketchIcons.tsx"
+  },
+  "peerDependencies": {
+    "framer-motion": "^12",
+    "next": "^16",
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}
