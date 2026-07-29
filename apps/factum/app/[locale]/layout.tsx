@@ -1,18 +1,54 @@
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-import { routing } from '@/i18n/routing';
+import type { Metadata, Viewport } from 'next';
 import { notFound } from 'next/navigation';
-import ScrollReveal from './ScrollReveal';
-import SiteHeader from './SiteHeader';
-import SiteFooter from './SiteFooter';
+import { NextIntlClientProvider } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { routing } from '@/i18n/routing';
+import { fontVariables } from '@/lib/fonts';
+import { getAlternates } from '@/lib/hreflang';
+import { SITE_URL } from '@/lib/site';
+import SiteHeader from '@/components/SiteHeader';
+import SiteFooter from '@/components/SiteFooter';
+import RevealObserver from '@/components/RevealObserver';
+import '../globals.css';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+export const viewport: Viewport = {
+  colorScheme: 'dark',
+  themeColor: '#081930'
+};
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'meta' });
+
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: {
+      default: t('home.title'),
+      template: '%s — Factum Capital'
+    },
+    description: t('home.description'),
+    alternates: getAlternates('', locale),
+    openGraph: {
+      type: 'website',
+      siteName: 'Factum Capital',
+      locale,
+      url: `${SITE_URL}/${locale}`
+    },
+    robots: { index: true, follow: true }
+  };
+}
+
 export default async function LocaleLayout({
   children,
-  params,
+  params
 }: {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -23,14 +59,26 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const messages = await getMessages();
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: 'a11y' });
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      <SiteHeader />
-      {children}
-      <SiteFooter />
-      <ScrollReveal />
-    </NextIntlClientProvider>
+    <html lang={locale} className={fontVariables}>
+      <body>
+        {/* .reveal starts at opacity 0 and is armed by JS; without it the page is blank below the fold. */}
+        <noscript>
+          <style>{'.reveal{opacity:1!important;transform:none!important}'}</style>
+        </noscript>
+        <a href="#main" className="skip-link">
+          {t('skipToContent')}
+        </a>
+        <NextIntlClientProvider>
+          <SiteHeader />
+          <main id="main">{children}</main>
+          <SiteFooter />
+          <RevealObserver />
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
