@@ -17,6 +17,8 @@ interface CommonProps {
   size?: Size;
   children: ReactNode;
   className?: string;
+  /** Cursor-following primary button. Defaults on for backwards compatibility. */
+  magnetic?: boolean;
 }
 
 interface ButtonProps
@@ -41,10 +43,14 @@ const sizeClasses: Record<Size, string> = {
 function variantStyle(variant: Variant): React.CSSProperties {
   if (variant === 'primary') {
     return {
-      background: 'var(--accent-cta)',
-      color: '#ffffff',
-      border: '1px solid var(--accent-cta)',
-      borderRadius: '4px',
+      // -strong lets a theme darken the fill enough to reach AA against its label
+      // without moving the brand accent used decoratively elsewhere.
+      background: 'var(--accent-cta-strong, var(--accent-cta))',
+      // Light themes keep white; dark themes that fail contrast on the CTA fill
+      // set --accent-cta-text to a dark ink instead.
+      color: 'var(--accent-cta-text, #ffffff)',
+      border: '1px solid var(--accent-cta-strong, var(--accent-cta))',
+      borderRadius: 'var(--radius-btn, 4px)',
     };
   }
   return {
@@ -104,11 +110,17 @@ function MagneticWrapper({
 }
 
 export function Button(props: ButtonProps | LinkButtonProps) {
-  const { variant = 'primary', size = 'md', children, className = '' } = props;
+  const {
+    variant = 'primary',
+    size = 'md',
+    children,
+    className = '',
+    magnetic = true,
+  } = props;
   const style = variantStyle(variant);
   const variantClass = variant === 'primary' ? 'btn-primary' : 'btn-secondary';
   const classes = `${baseClasses} ${sizeClasses[size]} ${variantClass} ${className}`;
-  const isPrimary = variant === 'primary';
+  const isPrimary = variant === 'primary' && magnetic;
 
   if ('href' in props && props.href) {
     const isExternal = props.external || /^https?:\/\//.test(props.href);
@@ -125,9 +137,9 @@ export function Button(props: ButtonProps | LinkButtonProps) {
     return isPrimary ? <MagneticWrapper fullWidth={isFullWidth}>{inner}</MagneticWrapper> : inner;
   }
 
-  const { variant: _v, size: _s, children: _c, className: _cn, ...rest } =
+  const { variant: _v, size: _s, children: _c, className: _cn, magnetic: _m, ...rest } =
     props as ButtonProps;
-  void _v; void _s; void _c; void _cn;
+  void _v; void _s; void _c; void _cn; void _m;
 
   const isFullWidth = className.includes('w-full');
   const inner = (

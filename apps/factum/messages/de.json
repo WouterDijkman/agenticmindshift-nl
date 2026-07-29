@@ -1,169 +1,834 @@
 {
-  "hero": {
-    "meta_title": "Factum Capital — Die Intelligence Machine für M&A und Restrukturierung",
-    "meta_description": "KI-gestützte Due Diligence und Portfolio-Intelligence für M&A und Restrukturierung. Forensische Geschwindigkeit, 100 % Datenraum-Abdeckung, Ihr Urteil.",
-    "eyebrow": "Die Intelligence Machine für M&A und Restrukturierung",
-    "heading": "Forensische Geschwindigkeit. Ihr Urteil.",
-    "subtext": "Factum liest den gesamten Datenraum, verknüpft die Belege und liefert die Fundierung — damit Sie schneller und mit mehr Sicherheit über Ihren Deal entscheiden.",
-    "cta_primary": "Intake-Gespräch buchen"
+  "meta": {
+    "home": {
+      "title": "Analyse auf Due-Diligence-Niveau, bevor der Käufer seine startet",
+      "description": "Factum führt einen vollständigen Due-Diligence-Durchgang über elf Disziplinen an Ihrem eigenen Unternehmen durch, belegt aus Ihren Dokumenten und von einer Person geprüft, damit Sie die Probleme finden, bevor das Team des Käufers es tut."
+    },
+    "platform": {
+      "title": "Die Plattform",
+      "description": "241 Due-Diligence-Module über 31 Verticals. Jede Feststellung ist an ein reales Dokument gebunden, wird von einem zweiten Prüf-Agenten kontrolliert und passiert eine menschliche Freigabe, bevor sie Sie erreicht."
+    },
+    "sprint": {
+      "title": "Der Buyer-Proof Sprint",
+      "description": "Elf fachspezifische Analysedurchgänge über Ihren Datenraum, zu einem Narrativ zusammengeführt, mit laufendem Datenlücken-Tracker — damit der Bericht ein Grund ist, mehr zu zahlen, und nicht nur eine Liste von Gründen, weniger zu zahlen."
+    },
+    "governance": {
+      "title": "Governance und Datenverarbeitung",
+      "description": "Wie Dokumente verarbeitet werden, was die menschliche Freigabe leistet und was Factum bewusst nicht behauptet."
+    },
+    "team": {
+      "title": "Wer dahintersteht",
+      "description": "Der Blick eines Bankers auf Risiko und die Disziplin eines Ingenieurs für Systeme, die nicht brechen."
+    },
+    "partnerships": {
+      "title": "Partnerschaften",
+      "description": "Für Beratungshäuser und Corporate-Finance-Boutiquen, die analytische Kapazität auf Due-Diligence-Niveau hinter ihren eigenen Mandantenbeziehungen wollen."
+    },
+    "contact": {
+      "title": "Sprechen Sie uns an",
+      "description": "Ein Erstgespräch mit der Person, die jedes Ergebnis prüft. Kein Formular, keine Warteschlange."
+    },
+    "privacy": {
+      "title": "Datenschutz",
+      "description": "Wie diese Website und unsere Mandate mit personenbezogenen Daten umgehen."
+    }
   },
-  "fc": {
-    "meta_title": "Factum Capital — KI-Plattform für KI-gestützte Due Diligence & Portfolio",
-    "meta_description": "Factum Capital ist die KI-Plattform hinter den KI-gestützten Due Diligence & Portfolio-Leistungen von Agentic Mindshift. Vier Momente: Akquisition, Finanzierung, Portfolio-Review und Pre-IBR/WHOA.",
+
+  "a11y": {
+    "skipToContent": "Zum Inhalt springen",
+    "changeLanguage": "Sprache wechseln"
+  },
+
+  "nav": {
+    "primary": "Hauptnavigation",
+    "platform": "Plattform",
+    "sprint": "Buyer-Proof Sprint",
+    "governance": "Governance",
+    "team": "Team",
+    "partnerships": "Partnerschaften",
+    "contact": "Kontakt",
+    "cta": "Erstgespräch buchen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  },
+
+  "footer": {
+    "blurb": "Factum erstellt Analysen auf Due-Diligence-Niveau für die Sell-Side — belegt aus Ihren eigenen Dokumenten, geprüft von einer namentlich benannten Person, fertig in Tagen.",
+    "sitemap": "Sitemap",
+    "company": "Unternehmen",
+    "privacy": "Datenschutz",
+    "kvk": "KvK {number}",
+    "copyright": "© {year} Factum Capital. Vor dem Launch."
+  },
+
+  "notFound": {
+    "title": "Diese Seite ist nicht erfasst",
+    "body": "Der Link ist defekt oder die Seite wurde verschoben. Alles, was diese Website sagt, ist einen Klick entfernt.",
+    "home": "Zurück zur Startseite",
+    "platform": "So funktioniert die Plattform"
+  },
+
+  "shared": {
+    "moduleSuffix": "Module",
+    "verticals": [
+      "financial DD",
+      "legal DD",
+      "tax DD",
+      "commercial DD",
+      "HR DD",
+      "IT DD",
+      "ESG DD",
+      "operational DD",
+      "AI DD",
+      "insurance DD",
+      "vendor DD",
+      "valuation",
+      "deal structuring",
+      "IC memo",
+      "LBO returns modeling",
+      "teaser/IM drafting",
+      "financing memo",
+      "document factory",
+      "deal economics",
+      "VDD (sell-side vendor DD)",
+      "PMI & integration",
+      "monthly business review",
+      "portfolio health monitoring",
+      "IC report",
+      "IM screener",
+      "IBR",
+      "WHOA",
+      "boedelonderzoek",
+      "portfolio/active monitoring",
+      "Exit Readiness"
+    ],
+    "disciplines": [
+      "Finanzen",
+      "Kommerziell",
+      "Recht",
+      "Steuern",
+      "Personal",
+      "IT",
+      "ESG",
+      "Vendor",
+      "Operativ",
+      "Bewertung",
+      "Versicherung"
+    ],
+    "schema": {
+      "label": "Output-Kontrakt — jede Feststellung",
+      "footnote": "Dies ist das Schema, das jede Feststellung erfüllen muss, keine Beispielfeststellung. Mandatsarbeit ist vertraulich und kein Mandant hat sich für eine Nennung entschieden, daher gibt es keinen Auszug zu veröffentlichen.",
+      "rows": {
+        "module": "Modul",
+        "finding": "Feststellung",
+        "evidence": "Wörtliches Zitat",
+        "document": "Quelldokument und Passage",
+        "review": "Menschliche Prüfung"
+      },
+      "values": {
+        "module": "Vordefiniert, eines aus der Bibliothek",
+        "finding": "Zurückgehalten",
+        "evidence": "Zurückgehalten",
+        "document": "Zurückgehalten",
+        "review": "Vor Freigabe erforderlich"
+      }
+    },
+    "governancePoints": [
+      {
+        "title": "In der EU gehostete Analyse",
+        "body": "Die gesamte Analyse läuft auf Google Vertex AI in einer EU-Region, unter einem Auftragsverarbeitungsvertrag."
+      },
+      {
+        "title": "Zero Retention beim Modellanbieter",
+        "body": "Der zugrunde liegende Modellanbieter speichert Ihre Dokumente nicht und nutzt sie über den Verarbeitungsaufruf hinaus nicht für das Training von Modellen."
+      },
+      {
+        "title": "Vor der Verarbeitung pseudonymisiert",
+        "body": "Vertrauliche Finanz- und Personendaten werden pseudonymisiert, bevor sie die Analyseebene erreichen, und erst im final ausgelieferten Ergebnis zurückübersetzt — nicht in einem Zwischenschritt."
+      },
+      {
+        "title": "Ein verantwortlicher Ansprechpartner",
+        "body": "Jedes Ergebnis wird von einer namentlich benannten Person geprüft, bevor es Sie erreicht. Nicht durch eine Blackbox geleitet, bei der es niemanden zu fragen gibt."
+      }
+    ]
+  },
+  "home": {
     "hero": {
-      "eyebrow": "Die Plattform hinter unserer KI-gestützten Due Diligence",
-      "heading": "Eine Plattform für jede Phase Ihrer Deal- und Portfolio-Praxis.",
-      "subtext": "Vier Momente (Akquisition, Finanzierung, Portfolio-Review und Pre-IBR/WHOA) in einer gemeinsamen Akte. Ab 1. Juli 2026 auch als SaaS für Ihr eigenes Team.",
-      "stat_1_sub": "Module gesamt",
-      "stat_2_sub": "Service-Momente",
-      "stat_3_sub": "Live-Start",
-      "stat_3_label": "1. Juli",
-      "countdown_label": "Start in"
+      "eyebrow": "Sell-Side-Due-Diligence",
+      "title": "Finden Sie die Probleme vor dem Team des Käufers",
+      "lead": "Im Moment weiß der Käufer mehr darüber, was in Ihrem Unternehmen nicht stimmt, als Sie selbst. Factum schließt diese Lücke zuerst: {disciplines} fachspezifische Analysedurchgänge über Ihren eigenen Datenraum, belegt aus Ihren Dokumenten, gegeneinander abgeglichen und von einer Person geprüft, bevor Sie etwas zu sehen bekommen.",
+      "cta": "Erstgespräch buchen",
+      "secondary": "So funktioniert die Pipeline",
+      "footnote": "Factum steht vor dem Launch. Wir nehmen eine begrenzte Zahl an Pilotmandaten an — im einstelligen Bereich, keine laufende Warteliste."
     },
-    "answer_first": "Factum Capital ist die KI-gestützte Due-Diligence- und Portfolio-Plattform von Agentic Mindshift: 29 Module, die finanzielle, kommerzielle, rechtliche und KI-Due-Diligence für Private-Equity-Fonds und M&A-Kanzleien beschleunigen. Von der ersten Prüfung bis pre-IBR/WHOA liefert die Plattform fundierte Erkenntnisse in Tagen statt Wochen.",
+    "schema": {
+      "eyebrow": "Der Output-Kontrakt",
+      "title": "Eine Feststellung ist erst fertig, wenn sie nachverfolgbar ist",
+      "lead": "Das Output-Schema verlangt für jede Aussage einen Beleg auf ein bestimmtes Dokument und eine bestimmte Passage, bevor eine Feststellung als fertig gilt.",
+      "body": "Eine strukturelle Vorgabe an das Ergebnis, keine Bitte, die das Modell nach zwanzig Feststellungen in einem langen Lauf still unterlaufen kann. Wir veröffentlichen den Kontrakt statt eines Musters, weil Mandatsarbeit vertraulich ist.",
+      "link": "Die vollständige Pipeline lesen"
+    },
     "problem": {
-      "item_1_label": "Jede Situation von vorn",
-      "item_1_body": "Jeder Moment beginnt bei null. Keine gemeinsame Struktur, keine Wiederverwendung der vorherigen Akte.",
-      "item_2_label": "Berater zu spät",
-      "item_2_body": "Zertifizierte Berater kommen erst, wenn die Akte bereits voller Annahmen steckt. Doppelarbeit, höhere Kosten.",
-      "item_3_label": "Stress zu spät sichtbar",
-      "item_3_body": "IBR- oder WHOA-Signale werden erst sichtbar, wenn die Optionen begrenzt sind."
+      "eyebrow": "Die Asymmetrie",
+      "title": "Das Gespräch über den Wert fällt in den Moment, in dem Sie am wenigsten ändern können",
+      "lead": "Die meisten Eigentümer erfahren erst, was ihr Unternehmen wirklich wert ist, wenn der Käufer den Hebel bereits in der Hand hält. Kennen Sie Ihre Zahl und schließen Sie die Lücken früh, zu Ihren Bedingungen, nicht zu denen des Käufers.",
+      "points": [
+        {
+          "title": "Wer es zuerst findet, bestimmt die Deutung",
+          "body": "Jede Woche, in der ein Datenraum ohne einen solchen Durchgang dasteht, ist eine Woche, in der die Analysten des Käufers etwas zuerst finden können — und wer ein Thema zuerst findet, bestimmt, wie es für den Rest der Verhandlung gerahmt wird."
+        },
+        {
+          "title": "Eine Dimension ist keine Due Diligence",
+          "body": "Eine klassische Quality-of-Earnings-Analyse auf der Sell-Side deckt eine Dimension ab. Das Team eines Käufers hört bei einer nicht auf. Die Lücken zeigen sich im Raum zwischen den Disziplinen."
+        },
+        {
+          "title": "Eine Risikoliste ist kein Argument",
+          "body": "Die meiste Due Diligence ist eine statische Risikoliste — niemand sucht aktiv nach Hebeln für Wertsteigerung. Der Bericht liest sich als Warnung, nicht als Grund, mehr zu zahlen."
+        },
+        {
+          "title": "Ein sauberer Datenraum muss auch halten",
+          "body": "Ein sauberer Datenraum zahlt sich nur aus, wenn er am Verhandlungstisch hält, sobald das Team des Käufers nachhakt."
+        }
+      ]
     },
-    "description": {
-      "eyebrow": "Das System",
-      "quote": "Eine Plattform, vier Momente. Factum liefert das analytische Fundament — Agentic Mindshift liefert den Service, mit Anbindung an zertifizierte Berater, die dort formal unterschreiben, wo es erforderlich ist.",
-      "para1": "Die Plattform, 29 Module von Financial DD und AI Due Diligence bis LBO-Modellierung und Exit-Readiness, gibt Ihrem Team zu jedem Zeitpunkt eine konsistente Struktur. Ab 1. Juli 2026 als SaaS verfügbar.",
-      "para2": "Die Dienstleistungen über Agentic Mindshift liefern das vollständige analytische Fundament und verbinden zertifizierte Berater: RA/RB/Anwälte, Finanzberater, Restructuring-Consultants. Eine gemeinsame Akte: weniger Doppelarbeit, kürzere Durchlaufzeiten."
+    "pipeline": {
+      "eyebrow": "Wie es läuft",
+      "title": "Eine erprobte Pipeline, keine Sitzung, die jemand steuern muss",
+      "lead": "Jeder kompetente Analyst kann ein agentisches Werkzeug auf einen Datenraum richten und es die Dokumente tatsächlich durcharbeiten lassen. Der Unterschied liegt zwischen dem, was jedes Mal konstruktiv sichergestellt ist, und dem, was davon abhängt, wie gut die Sitzung an einem bestimmten Tag gesteuert wird.",
+      "refusalTitle": "Die Schleife verweigert die automatische Freigabe",
+      "refusals": [
+        "Erfundene oder halluzinierte Quellenangaben",
+        "Datenschutzverletzungen",
+        "Scope-Verweigerungen"
+      ],
+      "refusalNote": "Fest verdrahtet, auch nach wiederholten Versuchen. Alle drei gehen an einen Menschen, statt still durchzulaufen.",
+      "stages": [
+        {
+          "title": "Belegbasierter Abruf",
+          "body": "Jedes Modul zieht Belege direkt aus den hochgeladenen Dokumenten, statt Text frei zu erzeugen."
+        },
+        {
+          "title": "Entwurf",
+          "body": "Das Modul entwirft seine Feststellungen gegen ein Schema, das keine Aussage ohne Dokument und Passage dahinter akzeptiert."
+        },
+        {
+          "title": "Erzeugen–Kritisieren–Wiederholen",
+          "body": "Ein zweiter Prüf-Agent kontrolliert den Entwurf in einer Schleife aus Erzeugen, Kritisieren und Wiederholen, bevor irgendetwas eine Person erreicht."
+        },
+        {
+          "title": "Unabhängiger Faktencheck",
+          "body": "Ein separater Durchgang gleicht Aussagen gegen den Quelltext ab, getrennt vom Prüf-Agenten."
+        },
+        {
+          "title": "Menschliche Freigabe",
+          "body": "Der eine verpflichtende menschliche Schritt: eine Prüf- und Freigabestufe für bereits erzeugte Feststellungen. Diese Stufe läuft jedes Mal, nicht nur, wenn jemand daran denkt, danach zu fragen."
+        }
+      ]
     },
-    "momenten": {
-      "eyebrow": "Vier Momente",
-      "heading": "Ein System. Jeder Moment in Ihrer Praxis.",
-      "m1_label": "Buy-side Deal-Analyse",
-      "m1_title": "Akquisition",
-      "m1_body": "Von der ersten Beurteilung des Informationsmemorandums bis zum Closing: ein umfassendes analytisches Fundament auf allen relevanten Dimensionen. Zertifizierte Berater (RA/RB/Anwälte) für das formelle Sign-off, wo erforderlich.",
-      "m1_advisors": "RA · RB · Anwälte",
-      "m2_label": "Finanzierungsmemo & Untermauerung",
-      "m2_title": "Finanzierung",
-      "m2_body": "Analytische Untermauerung für Bankgespräche und Investorenpräsentationen. Auch für kleinere Finanzierungsanfragen, bei denen Struktur den Unterschied zwischen Genehmigung und Ablehnung macht.",
-      "m2_advisors": "Finanzberater · Wirtschaftsprüfer",
-      "m3_label": "Fortlaufender Einblick",
-      "m3_title": "Portfolio-Durchleuchtung",
-      "m3_body": "Periodische Durchleuchtung Ihrer bestehenden Beteiligungen auf den sechs Dimensionen. Frühzeitige Erkennung von Minderleistung, KI-Verwundbarkeit und Exit-Hindernissen, lange vor dem Jahresbericht.",
-      "m3_advisors": "Portfolio-Management · Geschäftsführer",
-      "m4_label": "Indikativ · Restrukturierung",
-      "m4_title": "Pre-IBR / WHOA",
-      "m4_body": "Bei ersten Anzeichen finanzieller Belastung: eine indikative Durchleuchtung, die bestimmt, ob ein IBR- oder WHOA-Verfahren angemessen ist, mit direkter Anbindung an spezialisierte Restructuring-Consultants.",
-      "m4_advisors": "Restructuring-Consultants · Anwälte"
+    "coverage": {
+      "eyebrow": "Abdeckung",
+      "title": "{modules} Module über {verticals} Verticals",
+      "lead": "Factum ist eine bereits gebaute Plattform, kein Konzept, das noch entwickelt werden muss. Jedes Modul ist ein eigenständiger Agent mit eigenem, vordefiniertem Auftrag, über Mandate hinweg verfeinert statt pro Prompt neu erfunden.",
+      "note": "Eine Auswahl der {verticals} Verticals, in der Benennung der Plattform selbst. Die Taxonomie ist breiter als diese Liste, und Modulzahlen erscheinen nur dort, wo uns eine ausgewiesene Zahl vorliegt.",
+      "figures": {
+        "modules": {
+          "label": "Due-Diligence-Module",
+          "note": "Gezählt zum aktuellen Stand der Plattform. Jedes einzelne ist ein eigenständiger Agent, keine Prompt-Vorlage."
+        },
+        "disciplines": {
+          "label": "Disziplinen pro Mandat",
+          "note": "Finanzen, Kommerzielles, Recht, Steuern, Personal, IT, ESG, Vendor, Operatives, Bewertung und Versicherung — jede einzelne, jedes Mal."
+        },
+        "speed": {
+          "value": "Tage",
+          "label": "Nicht Wochen",
+          "note": "Ein vollständiger Durchgang über elf Disziplinen entsteht in Tagen. Die menschliche Prüfung sitzt nach dem Pipeline-Durchgang, nicht an seiner Stelle."
+        }
+      }
     },
-    "two_routes": {
-      "eyebrow": "Zwei Wege, Factum einzusetzen",
-      "route_1_label": "SaaS: selbst in der Hand",
-      "route_1_title": "Die Plattform",
-      "route_1_body": "29 Module, die Ihrem Deal-Team die Struktur geben, alle vier Momente konsistent auszuführen. Von Financial DD und AI Due Diligence bis LBO-Modellierung, IBR/WHOA und Exit-Readiness. Wissen, das mitwächst.",
-      "route_1_detail": "Start 1. Juli 2026 · Monatsabonnement · Warteliste offen",
-      "route_2_label": "Über Agentic Mindshift: KI-gestützte Due Diligence & Portfolio",
-      "route_2_title": "Die Dienstleistung",
-      "route_2_body": "Agentic Mindshift führt den vollständigen Auftrag für Sie durch, mit Factum als analytischer Plattform. Zu jedem Zeitpunkt verbindet Agentic Mindshift die richtigen zertifizierten Fachleute, die auf der gemeinsamen Akte aufbauen und wo nötig formal unterschreiben.",
-      "route_2_detail": "Ab €10.000 Investition pro Deal · Oder ab €6.500 / Monat Portfolio-Einblick · Zzgl. MwSt.",
-      "route_2_link": "Arbeitsweise & Investition ansehen →"
+    "sprint": {
+      "eyebrow": "Das Mandat",
+      "title": "Der Buyer-Proof Sprint",
+      "lead": "Ein Mandat über alle {disciplines} Disziplinen, plus die drei Synthese-Ebenen, die aus elf getrennten Analysen ein nutzbares Ergebnis machen. Für Verkäufer, die die Probleme lieber selbst zuerst finden, als sie vom Team des Käufers finden zu lassen.",
+      "guaranteeLabel": "Die Buyer-Proof-Garantie",
+      "guarantee": "Wenn der Sprint nicht mindestens drei wesentliche Feststellungen zutage fördert, die Ihr eigenes Team noch nicht kannte — von der Art, die Sie vor einem Käufer kennen wollen —, ist das Mandat kostenlos.",
+      "guaranteeNote": "Formuliert für Pilotmandate. Wir bitten nicht Sie, das Risiko zu tragen, dass dies früh ist; das tun wir.",
+      "link": "Was der Sprint abdeckt"
     },
-    "how_it_works": {
-      "eyebrow": "Wie die Dienstleistung funktioniert",
-      "step_1_title": "Analytisches Fundament",
-      "step_1_body": "Agentic Mindshift durchleuchtet die Situation systematisch auf allen relevanten Dimensionen, mit Factum als Plattform, je nach Moment: Akquisition, Finanzierung, Portfolio oder Restrukturierung.",
-      "step_2_title": "Richtiger Berater angebunden",
-      "step_2_body": "Agentic Mindshift bindet den zertifizierten Fachmann an, der zum Moment passt: RA/RB für Akquisitions-Sign-off, Finanzberater für Bankgespräche, Restructuring-Consultant für Pre-IBR/WHOA.",
-      "step_3_title": "Gemeinsame Akte",
-      "step_3_body": "Alle beteiligten Parteien arbeiten in einer Factum-Akte. Weniger Doppelarbeit, kürzere Durchlaufzeiten, Wissenserhalt nach Abschluss.",
-      "disclaimer": "Weder Factum Capital noch Agentic Mindshift ist ein Wirtschaftsprüfer; keines von beiden tritt als formeller Auftragnehmer für bankfähige Due Diligence oder gesetzlich vorgeschriebene Berichte auf. Die zertifizierten Berater und Consultants, mit denen Agentic Mindshift zusammenarbeitet, sind selbstständige Fachleute mit eigenen Berufsqualifikationen und Haftung."
+    "audience": {
+      "eyebrow": "Für wen das ist",
+      "title": "Zwei Momente, in denen das den Ausgang verändert",
+      "cases": [
+        {
+          "title": "Ein laufender Verkaufsprozess",
+          "body": "Der Datenraum ist offen oder kurz davor, und die Analysten eines Käufers sind Tage davon entfernt, ihn zu lesen. Ein vollständiger Durchgang über Ihre eigenen Dokumente, abgeglichen und geprüft, sorgt dafür, dass am Tisch nichts als Überraschung landet.",
+          "outcome": "Sie treten an, nachdem Sie sichtbar zuerst Ihre eigene Arbeit geprüft haben."
+        },
+        {
+          "title": "Ein Exit in zwei bis fünf Jahren",
+          "body": "Noch kein Prozess, aber eine getroffene Entscheidung. Die Lücken und die Zahl jetzt zu sehen, lässt Jahre Zeit, sie zu schließen, statt sie zu entdecken, wenn der Hebel bereits gewechselt hat.",
+          "outcome": "Sie beheben es auf Ihrer Zeitachse, nicht auf der des Käufers."
+        }
+      ]
     },
-    "voor_wie": {
-      "eyebrow": "Für wen",
-      "heading": "Gebaut für die europäische Deal- und Finanzierungspraxis",
-      "item_1_label": "Tier-2 PE-Fonds",
-      "item_1_body": "Deals €5M–€50M. Struktur bei Akquisition, Portfolio-Review und Exit.",
-      "item_2_label": "Family Offices",
-      "item_2_body": "DD-Qualität und Bankpräsentationen ohne ein großes internes Team.",
-      "item_3_label": "KMU-Unternehmer",
-      "item_3_body": "Finanzierungsanfragen professionell untermauert, auch bei kleineren Beträgen.",
-      "item_4_label": "Buy-and-Build-Unternehmer",
-      "item_4_body": "Die Disziplin eines professionellen Deal-Teams, mit Beratern auf Abruf.",
-      "item_5_label": "M&A-Direktoren",
-      "item_5_body": "Wissenserhalt über mehrere Deals: Jede Akte baut auf der vorherigen auf.",
-      "item_6_label": "Finanziers & Restrukturierung",
-      "item_6_body": "Frühzeitige Erkennung bei Stress. Direkte Anbindung an Restructuring-Consultants."
-    },
-    "early_access": {
-      "eyebrow": "Frühzeitiger Zugang",
-      "heading": "Tragen Sie sich für den frühen Zugang ein.",
-      "body": "Die Warteliste ist bewusst begrenzt. Frühe Teilnehmer erhalten direkten Input auf die Modul-Roadmap und durchlaufen als Erste das Onboarding. Keine Folge-E-Mails außerhalb der Factum Capital-Roadmap.",
-      "benefit_1": "Direkter Input auf die Modul-Roadmap",
-      "benefit_2": "Vorrang beim Plattform-Onboarding ab 1. Juli 2026",
-      "benefit_3": "Frühzugangstarif bei der Markteinführung",
-      "benefit_4": "Priorität für Pilot-Deal-Analyse-Aufträge im ersten Quartal nach der Markteinführung (Juli–September 2026)"
-    },
-    "form": {
-      "field_name": "Name",
-      "field_email": "E-Mail-Adresse",
-      "field_company": "Unternehmen",
-      "field_jobtitle": "Berufsbezeichnung (optional)",
-      "field_partytype": "Art der Partei",
-      "option_pe": "PE-Partner",
-      "option_ma": "M&A-Direktor",
-      "option_entrepreneur": "Unternehmer",
-      "option_restructuring": "Restructuring-Spezialist",
-      "option_other": "Sonstiges",
-      "field_notes": "Anmerkungen (optional)",
-      "notes_placeholder": "Was ist für Sie der wichtigste Grund, frühen Zugang zu wollen?",
-      "submit": "Frühzeitigen Zugang anfragen",
-      "submitting": "Wird gesendet...",
-      "success": "Vielen Dank. Ihre Daten wurden empfangen. Wir melden uns, sobald das Early-Access-Programm öffnet.",
-      "error_invalid": "Nicht alle Angaben sind gültig. Bitte überprüfen Sie die Felder.",
-      "error_generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut.",
-      "privacy_note": "Ihre Daten werden ausschließlich für das Factum Capital Early-Access-Programm verwendet."
-    },
-    "countdown": {
-      "days": "Tage",
-      "hours": "Std.",
-      "minutes": "Min.",
-      "seconds": "Sek."
-    },
-    "modules": {
-      "eyebrow": "Start 1. Juli 2026",
-      "heading": "Die Module bei der Markteinführung",
-      "subtext": "Die erste Modulreihe. Weitere Erweiterungen folgen in H2 2026. Frühe Teilnehmer beeinflussen die Reihenfolge.",
-      "m01_title": "Financial DD",
-      "m01_body": "Quality of Earnings, Betriebskapitalanalyse, Nettoverschuldung, Cashflow und Bilanzanalyse. Die sachliche Grundlage für jeden Kaufpreis.",
-      "m02_title": "Commercial DD",
-      "m02_body": "Marktanalyse, Kundenanalyse, Wettbewerbsposition und Business Case. Prüft, ob die Umsatzannahmen tragfähig sind.",
-      "m03_title": "AI Due Diligence",
-      "m03_body": "Quantifiziert das Risiko, dass KI die Kernaktivität übernimmt, pro Funktionsgruppe und Umsatzstrom — übersetzt in die Auswirkung auf den Kaufpreis.",
-      "m04_title": "Legal",
-      "m04_body": "Corporate Governance, Verträge, Streitigkeiten, IP/Daten, Arbeitsrecht und Immobilien. Frühzeitige Erkennung rechtlicher Deal-Breaker.",
-      "m05_title": "Tax",
-      "m05_body": "Körperschaftsteuer, Umsatzsteuer, Lohnsteuer, Transfer Pricing und Steuerstruktur. Prüft historische Compliance und strukturiert die Transaktion steuerlich.",
-      "m06_title": "Valuation",
-      "m06_body": "DCF, Trading Multiples, Transaction Comps und Synergiewertermittlung in einem konsistenten Football Field. Untermauert die IC-Entscheidung.",
-      "m07_title": "IC-Memo",
-      "m07_body": "Investment Thesis, Unternehmen & Markt, Finanzanalyse, Bewertung und Transaktionsstruktur. Bereit zur Präsentation vor dem Investment Committee.",
-      "m08_title": "LBO-Model",
-      "m08_body": "Entry Assumptions, Kapitalstruktur, Finanzprojektionen, Schuldenplan und Renditeanalyse mit Sensitivitätstabelle.",
-      "m09_title": "IBR",
-      "m09_body": "Cashflow-Realitätscheck, Liquiditätsanalyse, Business-Plan-Review, Covenant-Analyse und Going-Concern-Beurteilung.",
-      "m10_title": "WHOA",
-      "m10_body": "Diagnose, Gläubigerklassifizierung, Akkordgestaltung, Bewertung auf Recovery-Basis und Homologationsverfahren.",
-      "m11_title": "Vigil",
-      "m11_body": "Laufendes Portfolio-Monitoring: Finanzleistung, Covenant-Monitoring, Synergie-Tracking und Exit-Readiness pro Beteiligung.",
-      "m12_title": "Exit Readiness",
-      "m12_body": "Equity Story, QoE-Readiness, Governance, Datenraum-Vorbereitung und CSRD/SFDR-Compliance für eine optimale verkaufsbereite Position."
+    "trust": {
+      "eyebrow": "Governance",
+      "title": "Eingebaut in den Ablauf der Pipeline, nicht angeflanscht",
+      "lead": "Alles Folgende beschreibt einen Mechanismus, keine Zertifizierung. Die Governance-Seite ist ebenso deutlich darin, was wir nicht behaupten.",
+      "link": "Die Governance-Seite lesen"
     },
     "cta": {
-      "eyebrow": "Hier beginnen",
-      "heading": "Ihr Scorecard-Profil bestimmt, welcher Moment zuerst relevant ist.",
-      "subtext": "Zwölf Minuten. Sechs Dimensionen. Ein Bericht, der zeigt, wo Sie stehen und was zuerst Aufmerksamkeit verdient.",
-      "primary": "Scorecard starten",
-      "secondary_1": "Arbeitsweise & Investition",
-      "secondary_2": "Kennenlernen planen"
+      "title": "Beginnen Sie mit einem Gespräch, nicht mit einem Angebot",
+      "body": "Dreißig Minuten, um zu sehen, ob Ihre Situation eine ist, bei der das wirklich hilft. Wenn nicht, sagen wir das.",
+      "button": "Erstgespräch buchen",
+      "note": "Factum steht vor dem Launch und nimmt eine begrenzte Zahl an Pilotmandaten an."
     }
+  },
+  "platform": {
+    "header": {
+      "eyebrow": "Die Plattform",
+      "title": "{modules} Module und die Mechanik, die sie ehrlich hält",
+      "lead": "Das Interessante an einer KI-Due-Diligence-Plattform ist nicht, dass sie einen Datenraum lesen kann. Es ist das, was strukturell passieren muss, bevor eine Feststellung Sie erreichen darf."
+    },
+    "difference": {
+      "eyebrow": "Der Unterschied",
+      "title": "Jedes Mal konstruiert statt am Tag gesteuert",
+      "lead": "Nichts davon setzt voraus, allgemeine agentische KI für unfähig zu halten. Es setzt voraus zu erkennen, dass eine erprobte Pipeline, die jemand bereits gebaut, betrieben und über Mandate hinweg gehärtet hat, etwas anderes ist, als dieselbe Strenge selbst zusammenzustellen, korrekt, unter Deal-Druck, dieses eine Mal.",
+      "points": [
+        {
+          "title": "Eine erprobte, wiederholbare Methodik",
+          "body": "Kein Ablauf, der in jeder Sitzung neu zusammengesetzt wird. Die Abdeckung hängt nicht davon ab, dieses Mal daran zu denken, richtig danach zu fragen."
+        },
+        {
+          "title": "Belege als Schema-Vorgabe",
+          "body": "Jede Aussage braucht ein bestimmtes Dokument und eine bestimmte Passage, bevor die Feststellung als fertig gilt. Eine strukturelle Vorgabe an das Ergebnis, keine Bitte, die das Modell still unterlaufen kann."
+        },
+        {
+          "title": "Disziplinübergreifender Abgleich als fester Schritt",
+          "body": "Der eigentliche Wert einer Due-Diligence-Analyse liegt darin zu erkennen, was sich erst zeigt, wenn Finanzzahlen, Handelsregister, Verträge und Personalunterlagen gegeneinander gelesen werden."
+        },
+        {
+          "title": "Eine ständige Verifikationsstufe",
+          "body": "Ein Prüfdurchgang, der jedes Mal läuft, nicht nur, wenn jemand daran denkt, den Agenten um eine Selbstkontrolle zu bitten."
+        }
+      ]
+    },
+    "pipeline": {
+      "eyebrow": "Die Pipeline",
+      "title": "Vom Upload zur Feststellung, mit der Sie arbeiten können",
+      "lead": "Von Anfang bis Ende, vom Upload des Datenraums bis zu entworfenen Feststellungen, läuft der Analyseschritt ohne Menschen in der Schleife. Der eine verpflichtende menschliche Schritt ist eine Prüf- und Freigabestufe für Feststellungen, die bereits existieren.",
+      "stages": [
+        {
+          "title": "Belegbasierter Abruf",
+          "body": "Jedes der Module ist ein eigenständiger Agent, der belegte Nachweise direkt aus den hochgeladenen Dokumenten zieht, keinen frei erzeugten Text.",
+          "note": "Vertrauliche Finanz- und Personendaten werden pseudonymisiert, bevor sie diese Ebene erreichen."
+        },
+        {
+          "title": "Entwurf gegen das Schema",
+          "body": "Der Agent entwirft Feststellungen innerhalb eines Output-Schemas, das für jede Aussage einen Beleg auf ein bestimmtes Dokument und eine bestimmte Passage verlangt."
+        },
+        {
+          "title": "Erzeugen–Kritisieren–Wiederholen",
+          "body": "Ein zweiter Prüf-Agent kritisiert den Entwurf und schickt ihn zurück. Die Schleife wiederholt sich, bevor irgendetwas eine Person erreicht.",
+          "note": "Der plattformeigene Begriff dafür: eine Generate-Critique-Retry-Schleife."
+        },
+        {
+          "title": "Unabhängiger Faktencheck",
+          "body": "Ein zweiter, unabhängiger Faktencheck-Durchgang gleicht Aussagen gegen den Quelltext ab, getrennt vom Prüf-Agenten.",
+          "note": "Eine dritte Kontrollebene, verschieden sowohl vom Prüf-Agenten als auch von der menschlichen Freigabe."
+        },
+        {
+          "title": "Disziplinübergreifender Abgleich",
+          "body": "Die Feststellungen jeder Disziplin werden gegen die aller anderen geprüft und zu einem kohärenten Narrativ zusammengeführt, bevor Sie etwas sehen."
+        },
+        {
+          "title": "Menschliche Prüfung und Freigabe",
+          "body": "Eine nachgelagerte Prüfstufe für bereits erzeugte Feststellungen. Diese Prüfung ist keine Formalie, die angeflanscht wurde, um KI-Ergebnisse präsentabel zu machen — sie ist der eigentliche Mechanismus, der Analyse in Maschinengeschwindigkeit für eine Entscheidung dieser Größe verlässlich macht.",
+          "note": "Die Pseudonymisierung wird erst hier zurückgenommen, im final ausgelieferten Ergebnis."
+        }
+      ]
+    },
+    "anatomy": {
+      "eyebrow": "Der Output-Kontrakt",
+      "title": "Was jede Feststellung tragen muss",
+      "lead": "Statt eine Musterfeststellung aus einem realen Mandat zu veröffentlichen, veröffentlichen wir den Kontrakt, den jede Feststellung erfüllen muss.",
+      "body": "Mandantendokumente sind vertraulich und kein Mandant hat sich für eine Nennung entschieden, daher gibt es keinen anonymisierten Auszug zu zeigen. Das Schema ist ohnehin der überprüfbare Teil: Es ist das, was die Pipeline erzwingt, bevor eine Feststellung überhaupt entstehen darf."
+    },
+    "refusals": {
+      "eyebrow": "Fehlerklassen",
+      "title": "Drei Dinge, die die Schleife nicht automatisch freigibt",
+      "lead": "Die Prüf-Agenten-Schleife ist fest verdrahtet, drei Fehlerklassen auch nach wiederholten Versuchen nicht automatisch freizugeben, und leitet alle drei an einen Menschen weiter, statt sie still durchzulassen.",
+      "badge": "ABLEHNEN",
+      "classes": [
+        {
+          "title": "Erfundene oder halluzinierte Quellenangaben",
+          "body": "Ein Beleg, der sich nicht auf eine reale Passage in einem real hochgeladenen Dokument auflösen lässt, stoppt die Feststellung."
+        },
+        {
+          "title": "Datenschutzverletzungen",
+          "body": "Material, das nicht in die Analyseebene hinein- oder aus ihr herausgelangen sollte, geht an eine Person, statt freigegeben zu werden."
+        },
+        {
+          "title": "Scope-Verweigerungen",
+          "body": "Wo ein Modul innerhalb seines Auftrags nicht antworten kann, sagt es das und eskaliert, statt etwas Benachbartes zu produzieren."
+        }
+      ]
+    },
+    "coverage": {
+      "eyebrow": "Abdeckung",
+      "title": "{modules} Module über {verticals} Verticals",
+      "lead": "Die Taxonomie unten ist die der Plattform selbst. Einige Verticals führen eine ausgewiesene Modulzahl; wo keine Zahl ausgewiesen ist, lassen wir sie leer, statt zu schätzen.",
+      "note": "Dies ist eine Auswahl, nicht die vollständige Taxonomie — die Plattform zählt {verticals} Verticals, und nicht alle werden öffentlich genannt."
+    },
+    "limits": {
+      "eyebrow": "Grenzen",
+      "title": "Was wir über die Plattform nicht behaupten",
+      "lead": "Beim Rand konkret zu sein, gehört zum Produkt. Alles auf dieser Seite beschreibt einen Mechanismus; nichts davon ist eine zertifizierte Kennzahl.",
+      "items": [
+        "Keine Genauigkeitsquote. Die internen Benchmarks der Pipeline beruhen auf einem einzigen Datensatz, sind intern und ungeprüft, daher werden sie hier nicht als plakative Zahl veröffentlicht.",
+        "Keine Behauptung, dass die menschliche Freigabe optional wäre. Sie ist verpflichtend, und ohne sie ist die Analyse kein fertiges Produkt.",
+        "Keine abgeschlossenen öffentlichen Fallstudien. Die ersten liegen vor uns, nicht hinter uns.",
+        "Keine Behauptung, dass jede Ebene dieselbe Erfahrung hinter sich hat. Das Finanzmodul wurde in einem realen Deal von Anfang bis Ende eingesetzt und unabhängig gegen Quelldokumente verifiziert; die neueste Abgleichebene ist jünger als das.",
+        "Keine allgemeine Verfügbarkeit. Factum steht vor dem Launch."
+      ]
+    },
+    "faq": {
+      "eyebrow": "Fragen",
+      "title": "Vorab beantwortet",
+      "items": [
+        {
+          "q": "Ist das nicht einfach ein KI-Chatbot mit Zwischenschritten?",
+          "a": "Nein — und um genau zu sein, denn moderne agentische KI kann tatsächlich mehrstufig und werkzeuggestützt arbeiten, nicht nur chatten. Der Unterschied ist nicht KI gegen keine KI; es ist eine erprobte, wiederholbare Pipeline gegen eine Sitzung, die jemand live und unter Deal-Druck richtig steuern muss. Jede Disziplin läuft als eigener, vordefinierter Durchgang über den vollständigen Dokumentenbestand, jedes Mal, und der Abgleich zwischen ihnen ist ein fester Schritt statt etwas, woran ein Bediener denken muss."
+        },
+        {
+          "q": "Woher weiß ich, dass die Plattform Feststellungen dieser Tragweite tragen kann?",
+          "a": "Das Finanzmodul — der zahlenmäßig exponierteste Teil jeder Due-Diligence-Analyse — wurde bereits in einem realen Deal von Anfang bis Ende eingesetzt und unabhängig gegen Quelldokumente verifiziert. Neuere Ebenen haben weniger Historie hinter sich, und wir sagen Ihnen in Ihrem Mandat, was was ist, statt die stärkste Aussage über das ganze System zu legen."
+        },
+        {
+          "q": "Was passiert, wenn das Modell etwas nicht weiß?",
+          "a": "Es muss das sagen. Eine Feststellung ist entweder durch einen realen Beleg gestützt oder ausdrücklich als unbestätigt gekennzeichnet. Was es nicht darf, ist die Differenz erfinden — ein nicht auflösbarer Beleg ist eine der drei Fehlerklassen, die die Prüfschleife nicht automatisch freigibt."
+        },
+        {
+          "q": "Wer ist verantwortlich für das, was mich erreicht?",
+          "a": "Eine namentlich benannte Person, die jedes Ergebnis prüft, bevor es hinausgeht. Nicht durch eine Blackbox geleitet, bei der es niemanden zu fragen gibt."
+        },
+        {
+          "q": "Wie schnell ist es?",
+          "a": "Der Pipeline-Durchgang über alle Disziplinen läuft in Stunden statt in den Wochen, die ein klassischer Prozess mit mehreren Beratern braucht, und das fertige, geprüfte Ergebnis entsteht in Tagen, nicht Wochen. Ein garantiertes Lieferdatum nennen wir nicht, bevor wir den Datenraum gesehen haben."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Die Mechanik im Gespräch sehen",
+      "body": "Wir gehen gern die tatsächliche Pipeline-Mechanik durch, falls das hilft, bevor Sie etwas entscheiden.",
+      "button": "Erstgespräch buchen",
+      "note": "Dreißig Minuten, kein Angebot im Anhang."
+    }
+  },
+  "sprint": {
+    "header": {
+      "eyebrow": "Das Mandat",
+      "title": "Der Buyer-Proof Sprint",
+      "lead": "Für Verkäufer, die die Probleme lieber selbst zuerst finden, als sie vom Team des Käufers finden zu lassen. Alle {disciplines} Disziplinen, ein Mandat, zu einem einzigen Narrativ zusammengeführt, bevor Sie etwas sehen."
+    },
+    "reframe": {
+      "quote": "Eine solche Analyse für den eigenen Deal in Auftrag zu geben, bevor das Team eines Käufers seine durchführt, ist kein Zeichen dafür, dass etwas nicht stimmt. So sieht ein gut geführter Verkaufsprozess von der anderen Seite des Tisches aus — die Verkäufer, die auf einen professionellen Käufer am glaubwürdigsten wirken, sind die, die sichtbar zuerst ihre eigene Arbeit geprüft haben.",
+      "body": "Den Sprint gibt es, weil die Reihenfolge standardmäßig verkehrt herum ist. Das Team des Käufers bekommt Wochen mit Ihren Dokumenten und den Auftrag zu finden, was nicht stimmt, und Sie bekommen die Feststellungen als Hebel zurück. Hier läuft dieselbe Analyse zuerst, auf Ihrer Seite des Tisches."
+    },
+    "disciplines": {
+      "eyebrow": "Umfang",
+      "title": "Alle {disciplines} Disziplinen, ein Mandat",
+      "lead": "Jedes Mal dieselben elf fachspezifischen Analysedurchgänge, jeder vordefiniert auf das, worauf es in dieser Disziplin tatsächlich ankommt, über Mandate hinweg verfeinert statt pro Prompt neu erfunden.",
+      "note": "Ein Mandat, ein Preis. Keine À-la-carte-Karte und kein Upsell-Pfad nach Unterschrift — der Umfang oben ist der Umfang. Worauf jede Disziplin in Ihrem Fall schaut, wird im Erstgespräch anhand Ihres eigenen Datenraums festgelegt."
+    },
+    "layers": {
+      "eyebrow": "Synthese",
+      "title": "Drei Ebenen über den elf",
+      "lead": "Die Ebenen, die aus {disciplines} getrennten Analysen ein nutzbares Ergebnis machen.",
+      "items": [
+        {
+          "title": "Wertsteigerungs-Analyse",
+          "body": "Eine Synthese über den finanziellen und kommerziellen Feststellungen — Margenverluste, Indexierungslücken, Cross-Selling-Hebel — damit der Bericht ein Grund ist, mehr zu zahlen, und nicht nur eine Liste von Gründen, weniger zu zahlen."
+        },
+        {
+          "title": "Disziplinübergreifender Abgleich",
+          "body": "Die Feststellungen jeder Disziplin werden gegen die aller anderen geprüft und zu einem kohärenten Narrativ zusammengeführt, bevor Sie etwas sehen. Maschinell erzeugt, mit einer namentlich benannten Person, die prüft und für das Ergebnis einsteht."
+        },
+        {
+          "title": "Laufender Datenlücken-Tracker",
+          "body": "Die fortlaufende Fragenliste, aktualisiert, während Sie Lücken schließen, damit nichts offen bleibt, wenn der Käufer auftaucht."
+        }
+      ]
+    },
+    "delivery": {
+      "eyebrow": "Lieferung",
+      "title": "Wie es ankommt",
+      "lead": "Erwartungsklärung statt Kleingedrucktem: Das Ergebnis kommt in zwei Paketen, mit derselben Strenge und derselben Prüfung hinter beiden. Gut, das vorher zu wissen, statt es mitten im Mandat zu entdecken.",
+      "formats": [
+        {
+          "label": "Prüf-Dashboard",
+          "items": "Finanzen, Steuern, IT und Fortführung",
+          "body": "Diese laufen in einem interaktiven Prüf-Dashboard, sodass Sie eine Feststellung bis zu der Passage zurückverfolgen können, aus der sie stammt."
+        },
+        {
+          "label": "Schriftlicher Bericht",
+          "items": "Die übrigen Disziplinen",
+          "body": "Geliefert als strukturierter schriftlicher Bericht, eingefügt in dasselbe Narrativ wie die Feststellungen im Dashboard."
+        },
+        {
+          "label": "Zu beidem",
+          "items": "Der Datenlücken-Tracker",
+          "body": "Vollständiger dokumentenübergreifender Abgleich, geliefert als strukturierte Datenlücken-Liste vor dem Käuferzugang, nicht von ihm entdeckt."
+        }
+      ]
+    },
+    "guarantee": {
+      "eyebrow": "Die Buyer-Proof-Garantie",
+      "title": "Drei wesentliche Feststellungen, oder das Mandat ist kostenlos",
+      "body": "Wenn der Sprint nicht mindestens drei wesentliche Feststellungen zutage fördert, die Ihr eigenes Team noch nicht kannte — von der Art, die Sie vor einem Käufer kennen wollen —, ist das Mandat kostenlos.",
+      "note": "Formuliert für Pilotmandate, solange Factum vor dem Launch steht. Wir bitten nicht Sie, das Risiko zu tragen, dass dies früh ist; das tun wir. Wie eine wesentliche Feststellung bewertet wird, steht im Mandatsschreiben und wird nicht hinterher der Auslegung überlassen."
+    },
+    "inputs": {
+      "eyebrow": "Von Ihnen",
+      "title": "Was wir zum Start brauchen",
+      "lead": "Zwei Dinge. Es gibt in diesem Mandat keinen Management-Workshop, keinen Interviewplan und keinen Vor-Ort-Besuch.",
+      "items": [
+        {
+          "title": "Zugang zum Datenraum",
+          "body": "Über die im Erstgespräch vereinbarten Kategorien: Finanzen, Recht, Steuern, Personal, Verträge und IP."
+        },
+        {
+          "title": "Antworten auf den Datenlücken-Tracker",
+          "body": "Während sich der Tracker füllt, schließen Ihre Antworten die Lücken. Eine begrenzte Runde, um sie einzuarbeiten und betroffene Analysen erneut laufen zu lassen, ist bereits enthalten."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Fragen",
+      "title": "Die, die zuerst kommen",
+      "items": [
+        {
+          "q": "Ersetzt das einen Quality-of-Earnings-Bericht?",
+          "a": "Es ist breiter, und es ist keine Prüfungsleistung. Eine klassische Quality-of-Earnings-Analyse auf der Sell-Side deckt eine Dimension ab und dauert vier bis zehn Wochen; hier laufen elf Disziplinen, die gegeneinander abgeglichen werden. Wo Ihr Prozess ein unterzeichnetes Testat eines Wirtschaftsprüfers braucht, bleibt das ein separates Mandat bei einer separaten Gesellschaft."
+        },
+        {
+          "q": "Wie lange dauert es?",
+          "a": "Ein vollständiger Durchgang über elf Disziplinen entsteht in Tagen, nicht Wochen. Der Pipeline-Durchgang selbst läuft in Stunden; die menschliche Prüfung und der Abgleich sitzen dahinter. Auf ein Datum legen wir uns nicht fest, bevor wir den Datenraum gesehen haben."
+        },
+        {
+          "q": "Was kostet es?",
+          "a": "Ein einziger Preis für den gesamten Umfang statt einer gestaffelten Karte, festgelegt im Erstgespräch anhand von Größe und Zustand Ihres Datenraums. Eine gestaffelte Upsell-Struktur ist ein Werkzeug, um von Käufern mit größerem Budget mehr zu holen, und das ist bei einem ersten Mandat nicht das Ziel."
+        },
+        {
+          "q": "Was passiert mit unseren Dokumenten?",
+          "a": "Vertrauliche Finanz- und Personendaten werden pseudonymisiert, bevor sie die Analyseebene erreichen, und erst im final ausgelieferten Ergebnis zurückübersetzt. Die gesamte Analyse läuft auf Google Vertex AI in einer EU-Region unter einem Auftragsverarbeitungsvertrag, und der Modellanbieter speichert Ihre Dokumente nicht und nutzt sie über den Verarbeitungsaufruf hinaus nicht für Training. Die Governance-Seite legt dar, was das abdeckt und was nicht."
+        },
+        {
+          "q": "Kann ich einen Beispielbericht sehen?",
+          "a": "Keinen echten. Mandantendokumente sind vertraulich und kein Mandant hat sich für eine Nennung entschieden, daher gibt es keinen anonymisierten Auszug, den wir veröffentlichen wollen. Was wir Ihnen im Gespräch zeigen können, ist das Live-Dashboard, das Output-Schema, das jede Feststellung erfüllen muss, und wie sich eine Feststellung auf ihre Quellpassage zurückführen lässt."
+        },
+        {
+          "q": "Wer prüft das Ergebnis tatsächlich?",
+          "a": "Eine namentlich benannte Person, bevor irgendetwas auf Ihrem Tisch landet. Nicht durch eine Blackbox geleitet, bei der es niemanden zu fragen gibt. Solange Factum vor dem Launch steht, ist diese Person der Gründer, bei jedem Mandat."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prüfen, ob Ihr Datenraum dafür bereit ist",
+      "body": "Das Erstgespräch ist ein Scoping-Gespräch: was im Datenraum liegt, was fehlt und ob ein Sprint das richtige Instrument für Ihren Stand ist.",
+      "button": "Erstgespräch buchen",
+      "note": "Eine begrenzte Zahl an Pilotmandaten, im einstelligen Bereich."
+    }
+  },
+  "governance": {
+    "header": {
+      "eyebrow": "Governance",
+      "title": "Wie Ihre Dokumente behandelt werden, und was wir nicht behaupten",
+      "lead": "Datenverarbeitung ist kein Nachgedanke, der angeflanscht wurde, um ein Häkchen zu erfüllen — sie ist in den Ablauf der Pipeline eingebaut. Sie ist zugleich enger, als die meisten Sicherheitsseiten nahelegen, deshalb benennt diese hier die Grenze ausdrücklich."
+    },
+    "data": {
+      "eyebrow": "Datenverarbeitung",
+      "title": "Vier Dinge, die für jedes Mandat gelten",
+      "lead": "Jedes davon beschreibt einen Mechanismus in der Pipeline. Keines davon ist eine Zertifizierung, und wir stellen es auch nicht als eine dar."
+    },
+    "gate": {
+      "eyebrow": "Die menschliche Freigabe",
+      "title": "Der eine verpflichtende menschliche Schritt",
+      "lead": "Von Anfang bis Ende läuft die Analyse ohne Menschen in der Schleife. Die Freigabe sitzt dahinter, auf Feststellungen, die bereits existieren, und sie ist nicht optional.",
+      "items": [
+        "Feststellungen werden vor der Lieferung gegen die Quelldokumente zurückgeprüft.",
+        "Die Freigabe läuft jedes Mal, nicht nur, wenn jemand daran denkt, das System um eine Selbstkontrolle zu bitten.",
+        "Drei Fehlerklassen sind fest verdrahtet, an eine Person zu gehen statt automatisch freigegeben zu werden: erfundene oder halluzinierte Quellenangaben, Datenschutzverletzungen und Scope-Verweigerungen.",
+        "Eine namentlich benannte Person prüft, gleicht ab und steht für das Ergebnis ein, bevor es hinausgeht.",
+        "Pseudonymisierte Werte werden erst hier zurückübersetzt, im final ausgelieferten Ergebnis — nicht in einem Zwischenschritt."
+      ]
+    },
+    "transparency": {
+      "eyebrow": "KI-Transparenz",
+      "title": "Wo die Maschine endet und ein Mensch beginnt",
+      "lead": "Sie sollten für jede Feststellung erkennen können, was sie erzeugt und was sie geprüft hat.",
+      "body": "Die Analyse wird von eigenständigen Agenten erzeugt, die Belege aus Ihren eigenen hochgeladenen Dokumenten ziehen. Ein zweiter Prüf-Agent kritisiert jeden Entwurf in einer Schleife aus Erzeugen, Kritisieren und Wiederholen, und ein separater Faktencheck-Durchgang gleicht Aussagen gegen den Quelltext ab. Anschließend prüft eine Person das Ergebnis, bevor es Sie erreicht. Lässt sich eine Aussage nicht an eine Passage in einem realen Dokument binden, muss das Ergebnis sie als unbestätigt kennzeichnen, statt sie als gesichert darzustellen."
+    },
+    "limits": {
+      "eyebrow": "Grenzen",
+      "title": "Was wir nicht behaupten",
+      "lead": "Das meiste, was ein Käufer auf einer Seite wie dieser sehen möchte, haben wir noch nicht. Es aufzulisten, nützt Ihnen mehr, als es anzudeuten.",
+      "items": [
+        "Keine ISO 27001, kein SOC 2 und keine andere Zertifizierung, und kein Audit der Pipeline durch Dritte.",
+        "Kein Penetrationstest, keine Liste der Unterauftragsverarbeiter, kein Single Sign-on und keine Zusage zu Audit-Logs.",
+        "Keine veröffentlichte EU-Region. Die Analyse läuft auf Google Vertex AI in einer EU-Region; wir nennen keine bestimmte.",
+        "Keine zugesagte Aufbewahrungs- oder Löschfrist auf Seiten von Factum. Zero Retention ist die Zusage des Modellanbieters, keine Beschreibung unserer eigenen Speicherung.",
+        "Keine behauptete DSGVO-Konformität. Konkrete Verarbeitungsbedingungen gehören in eine Mandatsvereinbarung, nicht auf eine Marketingseite.",
+        "Keine Vermögensschadenhaftpflicht, keine Zusage zur Meldung von Datenschutzverletzungen und keine hier genannte Notfallwiederherstellung."
+      ],
+      "note": "Wenn Ihr Prozess eines der oben Genannten schriftlich verlangt, sprechen Sie es im Erstgespräch an. Es gibt so oder so eine echte Antwort, und eine kurze."
+    },
+    "cta": {
+      "title": "Stellen Sie die unbequemen Fragen im Gespräch",
+      "body": "Die Liste oben ist bewusst unvorteilhaft. Wenn etwas darauf für Sie ein Ausschlusskriterium ist, findet man das besser in dreißig Minuten heraus als in drei Wochen.",
+      "button": "Erstgespräch buchen",
+      "note": "Kein Angebot im Anhang."
+    }
+  },
+
+  "team": {
+    "header": {
+      "eyebrow": "Team",
+      "title": "Urteilsvermögen, nicht nur Software",
+      "lead": "Zwei Blickwinkel auf ein Problem: der Blick eines Bankers auf Risiko und die Disziplin eines Ingenieurs für Systeme, die nicht brechen."
+    },
+    "historyLabel": "Werdegang",
+    "people": [
+      {
+        "name": "Wouter Dijkman",
+        "title": "Gründer, Factum",
+        "bio": "Mehr als fünf Jahre in den Institutionen, die diese Deals finanzieren. Bei der ING arbeitete Wouter im Acquisition & Leveraged Finance und strukturierte und prüfte die Kredite hinter genau solchen Transaktionen. Davor war er bei der Rabobank auf finanzielle Restrukturierung spezialisiert und las die Zahlen eines Unternehmens darauf, was sie tatsächlich bedeuten, statt darauf, was sie bedeuten sollen. Er führt außerdem Agentic Mindshift, seine eigene KI-Beratung, sodass die KI-gestützte Due-Diligence-Arbeit kein Nebenprojekt eines Bankers ist. Er hat Factum gegründet, um dieselbe Strenge auf die Sell-Side zu bringen, damit ein Eigentümer mit der Sorgfalt einer Bank in seinen Exit geht, bevor ein Käufer die Chance bekommt, sie gegen ihn zu verwenden.",
+        "history": [
+          { "org": "Factum Capital", "role": "Gründer", "period": "2026 —" },
+          { "org": "Agentic Mindshift", "role": "Gründer, KI-Beratung", "period": "2025 —" },
+          { "org": "ING", "role": "Acquisition & Leveraged Finance", "period": "2023 – 2025" },
+          { "org": "Rabobank", "role": "Spezialist Financial Restructuring", "period": "2020 – 2023" },
+          { "org": "Alter Domus", "role": "Legal Officer", "period": "2019 – 2020" }
+        ]
+      },
+      {
+        "name": "Daniel Dropuljic",
+        "title": "Technischer Leiter, Factum",
+        "bio": "Daniel baut die Systeme hinter Factums KI-gestützter Due-Diligence-Arbeit. Als Gründer von Dandro Solutions entwirft er Datenpipelines, die täglich über 50.000 Datensätze für internationale Healthcare-Kunden verarbeiten, unter strengen Compliance-Regimen einschließlich DSGVO und FHIR. Diese Disziplin — produktionsreif, prüfbar, gebaut, um genauer Betrachtung standzuhalten — ist das, worauf Factums Due-Diligence-Engine läuft.",
+        "history": [
+          { "org": "Dandro Solutions", "role": "Gründer, Software Engineering", "period": "2021 —" },
+          { "org": "Healex, Berlin", "role": "HL7/FHIR-Implementierung, Leitung eines dreiköpfigen Teams", "period": "2019 – 2021" },
+          { "org": "Uniklinik Köln", "role": "Forschungsdaten-Infrastruktur", "period": "2019" },
+          { "org": "Furore, Amsterdam", "role": "Data Engineering", "period": "2018" }
+        ]
+      }
+    ],
+    "closing": "Der Blick eines Bankers auf Risiko und die Disziplin eines Ingenieurs für Systeme, die nicht brechen. Gemeinsam unterlegen sie den Prozess mit Urteilsvermögen, nicht nur mit Software.",
+    "cta": {
+      "title": "Sie sprechen mit der Person, die das Ergebnis prüft",
+      "body": "Solange Factum vor dem Launch steht, sind das Erstgespräch, die Prüfstufe und die Durchsprache dieselbe Person. Genau darum geht es, nur einstellig viele Mandate anzunehmen.",
+      "button": "Erstgespräch buchen",
+      "note": "Dreißig Minuten."
+    }
+  },
+  "partnerships": {
+    "header": {
+      "eyebrow": "Partnerschaften",
+      "title": "Kapazität auf Due-Diligence-Niveau hinter Ihren eigenen Mandantenbeziehungen",
+      "lead": "Factum arbeitet mit einer kleinen Zahl von Beratungshäusern, die die Mandantenbeziehung halten und analytische Tiefe dahinter wollen, die nicht über Einstellungen skaliert."
+    },
+    "who": {
+      "eyebrow": "Passung",
+      "title": "Für wen das meist funktioniert",
+      "lead": "Beschrieben über die Form der Gesellschaft statt über Namen — die Mandate unserer Partner sind ihre Sache, nicht unsere.",
+      "profiles": [
+        {
+          "title": "Corporate-Finance-Boutiquen",
+          "body": "Die Sell-Side-Prozesse führen, bei denen die analytische Last der Engpass ist, nicht der Deal Flow."
+        },
+        {
+          "title": "Exit- und Wertsteigerungsberater",
+          "body": "Die mit Eigentümern zwei bis fünf Jahre vor dem Exit arbeiten und eine belastbare Ausgangslage brauchen, bevor sie beraten, was zu beheben ist."
+        },
+        {
+          "title": "Restrukturierungs- und Turnaround-Praxen",
+          "body": "Wo ein Independent Business Review schnell entstehen und der Prüfung durch Kreditgeber standhalten muss."
+        },
+        {
+          "title": "Rechnungslegungs- und prüfungsnahe Gesellschaften",
+          "body": "Wo Empfehlungs- und Unabhängigkeitsregeln je Beziehung geprüft werden müssen, bevor etwas vereinbart wird."
+        }
+      ]
+    },
+    "split": {
+      "eyebrow": "Die Aufteilung",
+      "title": "Sie behalten die Beziehung. Wir liefern die Analyse.",
+      "lead": "Die Plattform betreibt {modules} Module über {verticals} Verticals. Eine Partnerschaft stellt das hinter Ihren Namen, in Ihr Mandat, ohne dass Sie den Aufbau tragen.",
+      "columns": [
+        {
+          "label": "Sie behalten",
+          "items": [
+            "Die Mandantenbeziehung und das Mandat",
+            "Das beraterische Urteil und die Empfehlung",
+            "Die kommerziellen Konditionen mit Ihrem Mandanten",
+            "Die Kontrolle darüber, was unter Ihrem Namen geliefert wird"
+          ]
+        },
+        {
+          "label": "Wir liefern",
+          "items": [
+            "Den Durchgang über elf Disziplinen im Datenraum",
+            "Disziplinübergreifenden Abgleich als festen Schritt",
+            "Feststellungen, an ein Dokument und eine Passage gebunden, jedes Mal",
+            "Eine namentlich benannte Person, die für das Ergebnis einsteht"
+          ]
+        }
+      ]
+    },
+    "start": {
+      "eyebrow": "Erste Schritte",
+      "title": "Wie eine Partnerschaft tatsächlich beginnt",
+      "lead": "Nicht mit einer Vereinbarung. Mit einem echten Mandat, sauber durchgeführt, damit beide Seiten das Ergebnis lesen können, bevor sich jemand bindet.",
+      "steps": [
+        {
+          "title": "Ein Scoping-Gespräch",
+          "body": "Wie Ihre Mandate aussehen, wo heute die analytische Last liegt und ob die Abdeckung der Plattform dazu passt. Dreißig Minuten."
+        },
+        {
+          "title": "Ein Mandat, von Anfang bis Ende",
+          "body": "Ein einzelnes laufendes Mandat, geliefert unter derselben Prüfstufe wie alles andere. Sie sehen das Ergebnis, bevor es etwas zu unterschreiben gibt."
+        },
+        {
+          "title": "Konditionen entlang des Erlebten",
+          "body": "Umfang, Preis und Arbeitsrhythmus werden an einem echten Ergebnis festgelegt, nicht an einer Prognose. Das ist ein erster Entwurf einer Partnerschaft, kein Friss-oder-stirb."
+        }
+      ]
+    },
+    "boundaries": {
+      "eyebrow": "Grenzen",
+      "title": "Was eine Partnerschaft nicht enthält",
+      "lead": "Einiges davon sind Zusagen an bestehende Partner. Der Rest ist schlicht der ehrliche Stand eines Unternehmens vor dem Launch.",
+      "items": [
+        "Keine unter Ihrem Namen erhobene Behauptung von Zertifizierung oder Audit. Wir können für den Mechanismus einstehen, nicht für ein Siegel, das wir nicht haben.",
+        "Keine unbegrenzte Kapazität. Factum steht vor dem Launch und die Lieferung ist bewusst klein; eine Partnerschaft, die der Prüfstufe davonläuft, ist schlechter als keine Partnerschaft.",
+        "Keine pauschale Regelung zu Vermittlungsprovisionen. Wo Prüfungs- oder Unabhängigkeitsregeln gelten, wird das je Beziehung geprüft und dem Mandanten offengelegt.",
+        "Kein Anspruch auf Ihren Mandanten. Die Beziehung ist Ihre, und nichts, was wir für Sie durchführen, wird ohne Ihre schriftliche Zustimmung zur Referenz oder Fallstudie.",
+        "Kein konkurrierendes Mandat in einem Feld, das wir bereits exklusiv zugesagt haben. Wo eine Exklusivität besteht, sagen wir das, statt sie still zu umgehen."
+      ]
+    },
+    "faq": {
+      "eyebrow": "Fragen",
+      "title": "Was Partner zuerst fragen",
+      "items": [
+        {
+          "q": "Arbeiten Sie auch direkt mit Eigentümern?",
+          "a": "Ja. Wo sich das mit Ihrem Markt überschneiden könnte, sagen wir Ihnen das, bevor es ein Problem wird, nicht danach."
+        },
+        {
+          "q": "Wessen Name steht auf dem Bericht?",
+          "a": "Das gehört zu dem, was im ersten Mandat festgelegt wird. Beide Modelle gibt es: Lieferung unter Ihrem Namen mit Factum als analytischer Engine, oder gemeinsame Lieferung, wenn der Mandant mit der Person sprechen will, die die Feststellungen geprüft hat."
+        },
+        {
+          "q": "Können Sie auch nur einen Teil des Umfangs übernehmen?",
+          "a": "Der Durchgang über elf Disziplinen ist ein fester Schritt, weil der Wert im Abgleich zwischen den Disziplinen liegt und nicht in einer einzelnen. Variieren kann die Tiefe der Ausarbeitung und welche Feststellungen Sie dem Mandanten zeigen wollen."
+        },
+        {
+          "q": "Wie exklusiv ist das?",
+          "a": "Exklusivität ist in einem definierten Feld möglich, und sie ist eine echte Zusage, wenn wir sie geben. Was wir nicht tun, ist Exklusivität anzudeuten, die wir nicht vereinbart haben — in keine Richtung."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Beginnen Sie mit einem Mandat",
+      "body": "Der schnellste Weg, das zu beurteilen, ist, es auf ein laufendes Mandat zu richten und das Ergebnis zu lesen. Alles andere ist ein Gespräch über ein Gespräch.",
+      "button": "Scoping-Gespräch buchen",
+      "note": "Dreißig Minuten und eine ehrliche Antwort zur Passung."
+    }
+  },
+
+  "contact": {
+    "header": {
+      "eyebrow": "Kontakt",
+      "title": "Ein Gespräch, mit der Person, die das Ergebnis prüft",
+      "lead": "Auf dieser Seite gibt es kein Formular. Ein Formular unterstellt eine Warteschlange und einen Bearbeiter, und solange Factum vor dem Launch steht, gibt es weder das eine noch das andere — es gibt einen Kalender."
+    },
+    "call": {
+      "eyebrow": "Erstgespräch",
+      "title": "Dreißig Minuten buchen",
+      "lead": "Ein Scoping-Gespräch, kein Pitch. Wenn Ihre Situation keine ist, bei der das hilft, ist das eine schnellere und nützlichere Antwort als ein Angebot.",
+      "button": "Erstgespräch buchen",
+      "note": "Wählen Sie einen freien Termin. Wenn keiner passt, bietet die Buchungsseite eine Möglichkeit, das zu sagen."
+    },
+    "agenda": {
+      "label": "Worüber wir sprechen",
+      "items": [
+        "Wo Sie stehen: ein laufender Prozess oder ein Exit in zwei bis fünf Jahren.",
+        "Was heute im Datenraum liegt und was darin fehlt.",
+        "Welche Disziplinen in Ihrer konkreten Situation das eigentliche Risiko tragen.",
+        "Ob ein Sprint das richtige Instrument ist oder ob es zu früh ist.",
+        "Was es kosten würde, bemessen am tatsächlichen Datenraum statt an einem Listenpreis."
+      ]
+    },
+    "documents": {
+      "eyebrow": "Bevor Sie etwas senden",
+      "title": "Senden Sie keine Dokumente, um ein Gespräch zu buchen",
+      "lead": "Das Erstgespräch braucht nichts außer dem Gespräch. Der Zugang zu Dokumenten wird danach schriftlich vereinbart, mit vorher geklärten Vertraulichkeitsbedingungen — nie als Anhang einer ersten E-Mail."
+    },
+    "details": {
+      "eyebrow": "Details",
+      "title": "Unternehmen",
+      "entityLabel": "Rechtsträger",
+      "entityValue": "Factum Capital, Niederlande",
+      "kvkLabel": "Handelsregister",
+      "languagesLabel": "Arbeitssprachen",
+      "languagesValue": "Englisch und Niederländisch"
+    }
+  },
+
+  "privacy": {
+    "header": {
+      "eyebrow": "Datenschutz",
+      "title": "Was diese Website erhebt, und was ein Mandat tut",
+      "lead": "Zwei verschiedene Dinge, bewusst getrennt. Diese Seite behandelt die Website. Der Umgang mit Mandatsdaten richtet sich nach der Vereinbarung, die wir unterzeichnen, und ist auf der Governance-Seite zusammengefasst."
+    },
+    "updated": "Zuletzt geprüft am 29. Juli 2026.",
+    "sections": [
+      {
+        "title": "Diese Website",
+        "body": [
+          "Diese Website hat kein Kontaktformular, kein Nutzerkonto und keinen Login. Sie fragt Sie nicht nach personenbezogenen Daten, und es gibt hier nichts abzusenden.",
+          "Ihre Sprachpräferenz ergibt sich aus der URL, auf der Sie sich befinden. Es wird kein Cookie gesetzt, um sie zu merken, und es wird keine Sprache aus Ihrer IP-Adresse oder aus Browser-Headern abgeleitet."
+        ]
+      },
+      {
+        "title": "Ein Gespräch buchen",
+        "body": [
+          "Der Buchungslink führt Sie zu Cal.com, einem externen Terminplanungsdienst. Alles, was Sie dort eingeben — Ihr Name, Ihre E-Mail-Adresse, was auch immer Sie in das Notizfeld schreiben —, wird von Cal.com nach deren eigenen Bedingungen und deren Datenschutzerklärung verarbeitet und mit uns geteilt, damit wir den Termin halten können.",
+          "Wir nutzen diese Informationen, um uns auf das Gespräch vorzubereiten, es zu führen und nachzufassen. Wir nehmen sie nicht in einen Marketingverteiler auf."
+        ]
+      },
+      {
+        "title": "Dokumente, die Sie mit uns teilen",
+        "body": [
+          "Über diese Website werden keine Dokumente geteilt. Der Zugang zu Dokumenten wird separat und schriftlich vereinbart, bevor etwas übertragen wird.",
+          "Während eines Mandats werden vertrauliche Finanz- und Personendaten pseudonymisiert, bevor sie die Analyseebene erreichen, und erst im final ausgelieferten Ergebnis zurückübersetzt. Die Analyse läuft auf Google Vertex AI in einer EU-Region unter einem Auftragsverarbeitungsvertrag; der Modellanbieter speichert Ihre Dokumente nicht und nutzt sie über den Verarbeitungsaufruf hinaus nicht für das Training von Modellen.",
+          "Aufbewahrungs-, Lösch- und Vertraulichkeitsbedingungen auf unserer Seite werden in der Mandatsvereinbarung festgelegt und nicht hier behauptet."
+        ]
+      },
+      {
+        "title": "Ihre Rechte",
+        "body": [
+          "Nach der DSGVO können Sie Auskunft darüber verlangen, welche personenbezogenen Daten wir über Sie haben, ihre Berichtigung verlangen, ihre Löschung verlangen oder der Nutzung widersprechen. Sprechen Sie es im Erstgespräch an oder antworten Sie auf eine beliebige E-Mail von uns, und Sie erhalten eine Antwort.",
+          "Wenn Sie mit der Bearbeitung einer Anfrage nicht zufrieden sind, können Sie sich bei der niederländischen Datenschutzbehörde beschweren, der Autoriteit Persoonsgegevens."
+        ]
+      },
+      {
+        "title": "Änderungen",
+        "body": [
+          "Diese Seite wird sich ändern, während Factum den Status vor dem Launch verlässt und die Mandatsbedingungen feste Form annehmen. Das Prüfdatum oben ist das ehrliche Signal dafür, wie aktuell sie ist."
+        ]
+      }
+    ],
+    "controller": "Verantwortlicher ist Factum Capital, eingetragen bei der niederländischen Handelskammer unter der Nummer {kvk}. Diese Seite ist eine Zusammenfassung in klarer Sprache und kein Ersatz für die Bedingungen einer unterzeichneten Mandatsvereinbarung."
   }
 }
