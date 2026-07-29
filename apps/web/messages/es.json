@@ -548,7 +548,9 @@
       "primary": "Iniciar el Scorecard",
       "secondary_1": "Metodología e inversión",
       "secondary_2": "Programar una llamada"
-    }
+    },
+    "site_cta": "Explora la plataforma completa",
+    "site_note": "Factum Capital ahora tiene su propia plataforma. Descubre los 29 módulos, los cuatro momentos y la oferta completa en factumcapital.eu."
   },
   "privacy": {
     "meta_title": "Privacidad",

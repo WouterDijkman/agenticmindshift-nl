@@ -1,3 +1,15 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+
+# @hookform/resolvers imports `zod/v4/core` from its own deep module but declares zod
+# only as an OPTIONAL peer, so pnpm never links zod adjacent to it. Under npm's flat
+# node_modules this resolved via hoisting; pnpm's strict store does not, which breaks
+# Turbopack's resolver. Public-hoist zod to the root node_modules so the deep module
+# resolves it via directory walk-up (restores the previous npm behavior).
+publicHoistPattern:
+  - 'zod'
+
 allowBuilds:
   '@parcel/watcher': true
   '@swc/core': true
