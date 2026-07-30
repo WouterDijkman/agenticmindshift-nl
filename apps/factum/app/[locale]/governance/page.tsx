@@ -1,7 +1,15 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/pageMetadata';
+import {
+  SketchChip,
+  SketchDueDiligence,
+  SketchEyeHidden,
+  SketchKnowledge
+} from '@repo/ui/SketchIcons';
 import PageHeader from '@/components/PageHeader';
+import HandoffTrack from '@/components/HandoffTrack';
+import MediaCards from '@/components/MediaCards';
 import Reveal from '@/components/Reveal';
 import { Section, SectionHeader } from '@/components/Section';
 import CtaBand from '@/components/CtaBand';
@@ -41,20 +49,14 @@ export default async function GovernancePage({
           title={t('data.title')}
           lead={t('data.lead')}
         />
-        <Reveal delay={60} style={{ marginTop: 32 }}>
-          <dl style={{ margin: 0 }}>
-            {(s.raw('governancePoints') as { title: string; body: string }[]).map((point) => (
-              <div key={point.title} className="hairline-top" style={{ paddingBlock: 22 }}>
-                <dt className="type-h3" style={{ fontSize: '1.25rem', marginBottom: 10 }}>
-                  {point.title}
-                </dt>
-                <dd className="type-body measure" style={{ margin: 0 }}>
-                  {point.body}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </Reveal>
+        <div style={{ marginTop: 32 }}>
+          <MediaCards
+            items={s.raw('governancePoints') as { title: string; body: string }[]}
+            icons={[SketchChip, SketchEyeHidden, SketchKnowledge, SketchDueDiligence]}
+            seed={11}
+            wide
+          />
+        </div>
       </Section>
 
       {/* The human gate. */}
@@ -100,26 +102,13 @@ export default async function GovernancePage({
           title={t('transparency.title')}
           lead={t('transparency.lead')}
         />
-        <Reveal delay={60} style={{ marginTop: 24 }}>
-          <ol className="measure" style={{ margin: 0, padding: 0, listStyle: 'none' }}>
-            {(t.raw('transparency.steps') as string[]).map((step, i) => (
-              <li
-                key={step}
-                className="type-body"
-                style={{
-                  display: 'flex',
-                  gap: 14,
-                  paddingBlock: 14,
-                  borderTop: i === 0 ? 'none' : '1px solid var(--hairline-faint)'
-                }}
-              >
-                <span className="mono" style={{ color: 'var(--wine-text)', paddingTop: 4 }}>
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                {step}
-              </li>
-            ))}
-          </ol>
+        <Reveal delay={60} className="measure" style={{ marginTop: 24 }}>
+          <HandoffTrack
+            steps={t.raw('transparency.steps') as string[]}
+            humanFrom={3}
+            machineLabel={t('transparency.machineLabel')}
+            humanLabel={t('transparency.humanLabel')}
+          />
         </Reveal>
       </Section>
 

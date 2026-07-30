@@ -2,7 +2,17 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/pageMetadata';
 import { DISCIPLINE_COUNT, MODULE_COUNT, VERTICAL_COUNT } from '@/lib/site';
+import {
+  SketchClipboard,
+  SketchDueDiligence,
+  SketchEyeHidden,
+  SketchGear,
+  SketchHourglass,
+  SketchScale,
+  SketchWarning
+} from '@repo/ui/SketchIcons';
 import PageHeader from '@/components/PageHeader';
+import MediaCards from '@/components/MediaCards';
 import Reveal from '@/components/Reveal';
 import { Section, SectionHeader } from '@/components/Section';
 import Pipeline from '@/components/Pipeline';
@@ -51,21 +61,12 @@ export default async function PlatformPage({
           title={t('difference.title')}
           lead={t('difference.lead')}
         />
-        <div
-          className="rule-grid"
-          style={{
-            marginTop: 'clamp(32px, 4vw, 48px)',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))'
-          }}
-        >
-          {(t.raw('difference.points') as { title: string; body: string }[]).map((point) => (
-            <div key={point.title}>
-              <h3 className="type-h4" style={{ marginBottom: 10 }}>
-                {point.title}
-              </h3>
-              <p className="type-small">{point.body}</p>
-            </div>
-          ))}
+        <div style={{ marginTop: 'clamp(32px, 4vw, 48px)' }}>
+          <MediaCards
+            items={t.raw('difference.points') as { title: string; body: string }[]}
+            icons={[SketchGear, SketchClipboard, SketchScale, SketchDueDiligence]}
+            seed={2}
+          />
         </div>
       </Section>
 
@@ -130,27 +131,13 @@ export default async function PlatformPage({
           title={t('refusals.title')}
           lead={t('refusals.lead')}
         />
-        <div
-          className="rule-grid"
-          style={{
-            marginTop: 'clamp(28px, 4vw, 44px)',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))'
-          }}
-        >
-          {(t.raw('refusals.classes') as { title: string; body: string }[]).map((item) => (
-            <div key={item.title}>
-              <span
-                className="mono"
-                style={{ color: 'var(--wine-text)', display: 'block', marginBottom: 12 }}
-              >
-                {t('refusals.badge')}
-              </span>
-              <h3 className="type-h4" style={{ marginBottom: 10 }}>
-                {item.title}
-              </h3>
-              <p className="type-small">{item.body}</p>
-            </div>
-          ))}
+        <div style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
+          <MediaCards
+            items={t.raw('refusals.classes') as { title: string; body: string }[]}
+            icons={[SketchWarning, SketchEyeHidden, SketchHourglass]}
+            chip={t('refusals.badge')}
+            seed={7}
+          />
         </div>
       </Section>
 

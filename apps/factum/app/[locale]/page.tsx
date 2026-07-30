@@ -3,7 +3,14 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { pageMetadata } from '@/lib/pageMetadata';
 import { DISCIPLINE_COUNT, MODULE_COUNT, VERTICAL_COUNT } from '@/lib/site';
+import {
+  SketchEyeHidden,
+  SketchScale,
+  SketchSpeed,
+  SketchWarning
+} from '@repo/ui/SketchIcons';
 import Hero from '@/components/Hero';
+import MediaCards from '@/components/MediaCards';
 import Reveal from '@/components/Reveal';
 import { Section, SectionHeader, SubHeader } from '@/components/Section';
 import FindingSchema from '@/components/FindingSchema';
@@ -65,23 +72,11 @@ export default async function HomePage({
           </p>
         </Reveal>
 
-        <div
-          className="rule-grid stagger"
-          style={{
-            marginTop: 'clamp(32px, 4.5vw, 56px)',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))'
-          }}
-        >
-          {(t.raw('problem.points') as { title: string; body: string }[]).map((point) => (
-            <div key={point.title}>
-              <Reveal>
-                <h3 className="type-h4" style={{ marginBottom: 10 }}>
-                  {point.title}
-                </h3>
-                <p className="type-small">{point.body}</p>
-              </Reveal>
-            </div>
-          ))}
+        <div style={{ marginTop: 'clamp(32px, 4.5vw, 56px)' }}>
+          <MediaCards
+            items={t.raw('problem.points') as { title: string; body: string }[]}
+            icons={[SketchSpeed, SketchScale, SketchWarning, SketchEyeHidden]}
+          />
         </div>
 
         {/* The artifact that answers the asymmetry above. */}

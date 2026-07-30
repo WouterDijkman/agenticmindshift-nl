@@ -271,7 +271,7 @@
     "cycle": {
       "eyebrow": "A lo largo del ciclo",
       "title": "Una base de evidencia, cinco momentos",
-      "lead": "Una sola base de evidencia, aplicada en cada punto donde gira una decisión. Nada se reconstruye cuando llega el momento siguiente.",
+      "lead": "Nada se reconstruye cuando llega el momento siguiente.",
       "stages": [
         {
           "title": "Comprar",
@@ -453,7 +453,7 @@
     "disciplines": {
       "eyebrow": "Alcance",
       "title": "Las {disciplines} disciplinas, un encargo",
-      "lead": "Las mismas once revisiones especializadas siempre, cada una delimitada a lo que importa en su disciplina.",
+      "lead": "Cada revisión delimitada a lo que importa en su disciplina.",
       "note": "Un encargo, un precio. Sin menú a la carta y sin ampliaciones después de firmar. Qué mira cada disciplina se fija contra su data room en la llamada inicial."
     },
     "layers": {
@@ -506,7 +506,7 @@
     "inputs": {
       "eyebrow": "De su parte",
       "title": "Qué necesitamos para empezar",
-      "lead": "Dos cosas. Sin taller con la dirección, sin agenda de entrevistas, sin visita a las instalaciones.",
+      "lead": "Sin taller con la dirección, sin agenda de entrevistas, sin visita a las instalaciones.",
       "items": [
         {
           "title": "Acceso al data room",
@@ -589,7 +589,9 @@
         "Una revisión aparte contrasta las afirmaciones con el texto de origen.",
         "Después una persona revisa el resultado.",
         "Las afirmaciones que no pueden vincularse a un pasaje se marcan como no confirmadas."
-      ]
+      ],
+      "machineLabel": "Máquina",
+      "humanLabel": "Persona"
     },
     "limits": {
       "eyebrow": "Límites",
@@ -706,7 +708,8 @@
             "Un revisor identificado que responde del entregable"
           ]
         }
-      ]
+      ],
+      "seam": "Límite"
     },
     "start": {
       "eyebrow": "Cómo empezar",

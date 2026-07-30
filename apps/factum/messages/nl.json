@@ -271,7 +271,7 @@
     "cycle": {
       "eyebrow": "Door de cyclus heen",
       "title": "Eén bewijsbasis, vijf momenten",
-      "lead": "Eén bewijsbasis, toegepast op elk punt waar een beslissing kantelt. Er wordt niets opnieuw opgebouwd als het volgende moment komt.",
+      "lead": "Er wordt niets opnieuw opgebouwd als het volgende moment komt.",
       "stages": [
         {
           "title": "Kopen",
@@ -453,7 +453,7 @@
     "disciplines": {
       "eyebrow": "Scope",
       "title": "Alle {disciplines} disciplines, één opdracht",
-      "lead": "Elke keer dezelfde elf specialistische analyseslagen, elk vooraf afgebakend op wat er voor die discipline toe doet.",
+      "lead": "Elke slag vooraf afgebakend op wat er voor die discipline toe doet.",
       "note": "Eén opdracht, één prijs. Geen à-la-cartemenu en geen upsell na ondertekening. Waar elke discipline naar kijkt, wordt in het intakegesprek tegen uw data room bepaald."
     },
     "layers": {
@@ -506,7 +506,7 @@
     "inputs": {
       "eyebrow": "Van u",
       "title": "Wat we nodig hebben om te beginnen",
-      "lead": "Twee dingen. Geen managementworkshop, geen interviewschema, geen locatiebezoek.",
+      "lead": "Geen managementworkshop, geen interviewschema, geen locatiebezoek.",
       "items": [
         {
           "title": "Toegang tot de data room",
@@ -589,7 +589,9 @@
         "Een aparte slag controleert beweringen tegen de brontekst.",
         "Een persoon beoordeelt het resultaat.",
         "Beweringen die niet aan een passage te koppelen zijn, worden gemarkeerd als onbevestigd."
-      ]
+      ],
+      "machineLabel": "Machine",
+      "humanLabel": "Mens"
     },
     "limits": {
       "eyebrow": "Grenzen",
@@ -706,7 +708,8 @@
             "Een beoordelaar met naam die achter de output staat"
           ]
         }
-      ]
+      ],
+      "seam": "Grens"
     },
     "start": {
       "eyebrow": "Beginnen",
