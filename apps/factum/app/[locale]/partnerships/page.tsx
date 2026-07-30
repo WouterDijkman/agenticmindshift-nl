@@ -2,7 +2,16 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/pageMetadata';
 import { MODULE_COUNT, VERTICAL_COUNT } from '@/lib/site';
+import {
+  SketchClipboard,
+  SketchDueDiligence,
+  SketchPortfolio,
+  SketchScale
+} from '@repo/ui/SketchIcons';
 import PageHeader from '@/components/PageHeader';
+import MediaCards from '@/components/MediaCards';
+import SplitDiagram from '@/components/SplitDiagram';
+import Stepper from '@/components/Stepper';
 import Reveal from '@/components/Reveal';
 import { Section, SectionHeader } from '@/components/Section';
 import Disclosures from '@/components/Disclosures';
@@ -43,60 +52,28 @@ export default async function PartnershipsPage({
           title={t('who.title')}
           lead={t('who.lead')}
         />
-        <div
-          className="rule-grid"
-          style={{
-            marginTop: 'clamp(28px, 4vw, 44px)',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))'
-          }}
-        >
-          {(t.raw('who.profiles') as { title: string; body: string }[]).map((profile) => (
-            <div key={profile.title}>
-              <h3 className="type-h4" style={{ marginBottom: 10 }}>
-                {profile.title}
-              </h3>
-              <p className="type-small">{profile.body}</p>
-            </div>
-          ))}
+        <div style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
+          <MediaCards
+            items={t.raw('who.profiles') as { title: string; body: string }[]}
+            icons={[SketchDueDiligence, SketchPortfolio, SketchScale, SketchClipboard]}
+            seed={3}
+          />
         </div>
       </Section>
 
       {/* What the partner keeps, what we supply. */}
       <Section width="medium">
-        <div className="split-grid">
-          <div>
-            <SectionHeader
-              eyebrow={t('split.eyebrow')}
-              title={t('split.title')}
-              lead={t('split.lead', numbers)}
-            />
-          </div>
-          <Reveal delay={60}>
-            <div className="panel" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
-              {(t.raw('split.columns') as { label: string; items: string[] }[]).map((column) => (
-                <div key={column.label} className="hairline-top" style={{ paddingBlock: 20 }}>
-                  <span className="eyebrow" style={{ marginBottom: 12 }}>
-                    {column.label}
-                  </span>
-                  <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
-                    {column.items.map((item) => (
-                      <li
-                        key={item}
-                        className="type-small"
-                        style={{ display: 'flex', gap: 12, paddingBlock: 6 }}
-                      >
-                        <span className="mono" style={{ color: 'var(--wine-text)' }}>
-                          &mdash;
-                        </span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
+        <SectionHeader
+          eyebrow={t('split.eyebrow')}
+          title={t('split.title')}
+          lead={t('split.lead', numbers)}
+        />
+        <Reveal delay={60} style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
+          <SplitDiagram
+            columns={t.raw('split.columns') as { label: string; items: string[] }[]}
+            seamLabel={t('split.seam')}
+          />
+        </Reveal>
       </Section>
 
       {/* How an engagement starts. */}
@@ -106,21 +83,9 @@ export default async function PartnershipsPage({
           title={t('start.title')}
           lead={t('start.lead')}
         />
-        <Reveal delay={60} style={{ marginTop: 32 }}>
-          <ol style={{ margin: 0, padding: 0, listStyle: 'none' }}>
-            {(t.raw('start.steps') as { title: string; body: string }[]).map((step, i) => (
-              <li key={step.title} className="hairline-top" style={{ paddingBlock: 22 }}>
-                <span className="mono" style={{ color: 'var(--wine-text)' }}>
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <h3 className="type-h4" style={{ marginTop: 10, marginBottom: 8 }}>
-                  {step.title}
-                </h3>
-                <p className="type-body measure">{step.body}</p>
-              </li>
-            ))}
-          </ol>
-        </Reveal>
+        <div style={{ marginTop: 'clamp(30px, 4vw, 48px)' }}>
+          <Stepper steps={t.raw('start.steps') as { title: string; body: string }[]} />
+        </div>
       </Section>
 
       {/* Boundaries — the honest version of an exclusivity conversation. */}

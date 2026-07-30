@@ -271,7 +271,7 @@
     "cycle": {
       "eyebrow": "Über den Zyklus",
       "title": "Eine Beweisgrundlage, fünf Momente",
-      "lead": "Eine Beweisgrundlage, angewendet an jedem Punkt, an dem eine Entscheidung kippt. Nichts wird neu aufgebaut, wenn der nächste Moment kommt.",
+      "lead": "Nichts wird neu aufgebaut, wenn der nächste Moment kommt.",
       "stages": [
         {
           "title": "Kaufen",
@@ -453,7 +453,7 @@
     "disciplines": {
       "eyebrow": "Umfang",
       "title": "Alle {disciplines} Disziplinen, ein Mandat",
-      "lead": "Jedes Mal dieselben elf fachspezifischen Durchgänge, jeder vordefiniert auf das, worauf es in dieser Disziplin ankommt.",
+      "lead": "Jeder Durchgang vordefiniert auf das, worauf es in dieser Disziplin ankommt.",
       "note": "Ein Mandat, ein Preis. Keine À-la-carte-Karte und kein Upsell nach Unterschrift. Worauf jede Disziplin schaut, wird im Erstgespräch anhand Ihres Datenraums festgelegt."
     },
     "layers": {
@@ -506,7 +506,7 @@
     "inputs": {
       "eyebrow": "Von Ihnen",
       "title": "Was wir zum Start brauchen",
-      "lead": "Zwei Dinge. Kein Management-Workshop, kein Interviewplan, kein Vor-Ort-Besuch.",
+      "lead": "Kein Management-Workshop, kein Interviewplan, kein Vor-Ort-Besuch.",
       "items": [
         {
           "title": "Zugang zum Datenraum",
@@ -589,7 +589,9 @@
         "Ein separater Durchgang gleicht Aussagen gegen den Quelltext ab.",
         "Eine Person prüft das Ergebnis.",
         "Aussagen ohne Passage dahinter werden als unbestätigt gekennzeichnet."
-      ]
+      ],
+      "machineLabel": "Maschine",
+      "humanLabel": "Mensch"
     },
     "limits": {
       "eyebrow": "Grenzen",
@@ -706,7 +708,8 @@
             "Eine namentlich benannte Person, die für das Ergebnis einsteht"
           ]
         }
-      ]
+      ],
+      "seam": "Grenze"
     },
     "start": {
       "eyebrow": "Erste Schritte",

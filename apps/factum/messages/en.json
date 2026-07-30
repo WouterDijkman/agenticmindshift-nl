@@ -271,7 +271,7 @@
     "cycle": {
       "eyebrow": "Across the cycle",
       "title": "One evidence base, five moments",
-      "lead": "One evidence base, applied at each point where a decision turns. Nothing gets rebuilt when the next moment arrives.",
+      "lead": "Nothing gets rebuilt when the next moment arrives.",
       "stages": [
         {
           "title": "Acquiring",
@@ -453,7 +453,7 @@
     "disciplines": {
       "eyebrow": "Scope",
       "title": "All {disciplines} disciplines, one engagement",
-      "lead": "The same eleven specialist passes every time, each pre-scoped to what matters for that discipline.",
+      "lead": "Each pass pre-scoped to what matters for that discipline.",
       "note": "One engagement, one price. No à la carte menu and no upsell after signing. What each discipline looks at is set against your data room on the intake call."
     },
     "layers": {
@@ -506,7 +506,7 @@
     "inputs": {
       "eyebrow": "From you",
       "title": "What we need to start",
-      "lead": "Two things. No management workshop, no interview schedule, no site visit.",
+      "lead": "No management workshop, no interview schedule, no site visit.",
       "items": [
         {
           "title": "Data-room access",
@@ -589,7 +589,9 @@
         "A separate pass fact-checks claims against the source text.",
         "A person reviews the result.",
         "Claims that can’t be tied to a passage are flagged as unconfirmed."
-      ]
+      ],
+      "machineLabel": "Machine",
+      "humanLabel": "Person"
     },
     "limits": {
       "eyebrow": "Limits",
@@ -706,7 +708,8 @@
             "A named reviewer standing behind the output"
           ]
         }
-      ]
+      ],
+      "seam": "Boundary"
     },
     "start": {
       "eyebrow": "Getting started",

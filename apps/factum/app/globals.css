@@ -338,6 +338,305 @@ p { margin: 0; }
   .rule-grid { gap: 0.5px; }
 }
 
+/* ============================================================
+   Media cards
+   A vector scene carries the block and the prose sits under it, so a
+   category list stops reading as another paragraph. The `wb-card-*` names
+   are fixed by @repo/ui CardVisual; only the styling here is Factum's.
+   ============================================================ */
+.card-grid {
+  display: grid;
+  gap: clamp(14px, 1.8vw, 22px);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+}
+.card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }
+
+.media-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-1);
+  border: 1px solid var(--hairline);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+.media-card:has(.wb-card-media) > .wb-card-media { flex: none; }
+
+.wb-card-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--surface-inset);
+  border-bottom: 1px solid var(--hairline);
+}
+.wb-card-scene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.wb-card-icon {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  filter: drop-shadow(0 6px 14px rgba(6, 20, 40, 0.55));
+  transition: transform 420ms var(--ease-out-expo);
+}
+.media-card:hover .wb-card-icon { transform: scale(1.06); }
+.wb-card-chip {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  /* Own floor: the chip sits over a gradient that runs light at one end. */
+  background: var(--surface-inset);
+  border: 1px solid var(--hairline);
+  padding: 3px 7px;
+  border-radius: 2px;
+  line-height: 1;
+}
+.card-body { padding: clamp(18px, 2.2vw, 26px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .wb-card-icon { transition: none; }
+  .media-card:hover .wb-card-icon { transform: none; }
+}
+
+/* ============================================================
+   Handoff track — a sequence with a labelled boundary in it
+   ============================================================ */
+.track {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.track-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: start;
+  gap: 4px 18px;
+  padding: 14px 0 14px 22px;
+}
+/* The rail is drawn per step so the handoff can break and recolour it. */
+.track-step::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--hairline-strong);
+}
+.track-step:first-child::before { top: 26px; }
+.track-step:last-child::before { bottom: calc(100% - 26px); }
+.track-step-human::before { background: var(--accent-cta); opacity: 0.5; }
+
+.track-node {
+  position: absolute;
+  left: 0;
+  top: 22px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--surface-0);
+  border: 1px solid var(--hairline-strong);
+}
+.track-step-human .track-node {
+  background: var(--accent-cta);
+  border-color: var(--accent-cta);
+}
+.track-num {
+  grid-column: 1;
+  color: var(--text-quaternary);
+  padding-top: 3px;
+}
+.track-step-human .track-num { color: var(--accent-cta); }
+.track-text {
+  grid-column: 2;
+  margin: 0;
+}
+.track-zone {
+  grid-column: 1 / -1;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-quaternary);
+  margin-bottom: 8px;
+}
+.track-step-human .track-zone { color: var(--accent-cta); }
+/* The zone label opens a band, so it needs air above it — except at the top. */
+.track-step:has(.track-zone):not(:first-child) { padding-top: 30px; }
+
+@media (max-width: 560px) {
+  .track-step { grid-template-columns: 28px minmax(0, 1fr); gap: 4px 12px; }
+}
+
+/* ============================================================
+   Discipline grid — scope as a board of marks
+   ============================================================ */
+.discipline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* The gap is the rule: the floor shows through a 1px grid gap, so the board
+     is ruled without every tile carrying its own border. It is darker than the
+     tiles because the last row rarely fills, and the remainder has to read as
+     an empty slot rather than as a brighter one. */
+  background: var(--surface-inset);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.discipline-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: clamp(18px, 2.2vw, 24px);
+  background: var(--surface-1);
+  transition: background 320ms var(--ease-out-expo);
+}
+.discipline-tile:hover { background: var(--surface-inset); }
+.discipline-mark { color: var(--accent-cta); opacity: 0.85; }
+.discipline-num {
+  position: absolute;
+  top: clamp(18px, 2.2vw, 24px);
+  right: clamp(18px, 2.2vw, 24px);
+  color: var(--text-quaternary);
+}
+.discipline-label { display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  .discipline-tile { transition: none; }
+}
+
+/* ============================================================
+   Stepper — a short sequence on a horizontal rail
+   ============================================================ */
+.stepper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: clamp(20px, 3vw, 40px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.stepper-step { position: relative; padding-top: 46px; }
+/* The rail runs through the node and stops at the last step. */
+.stepper-step::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: calc(-1 * clamp(20px, 3vw, 40px));
+  height: 1px;
+  background: var(--hairline-strong);
+}
+.stepper-step:last-child::before { right: 0; }
+.stepper-node {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 31px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--hairline-strong);
+  background: var(--surface-0);
+  font-size: 0.6875rem;
+  color: var(--wine-text);
+}
+.stepper-title { margin-bottom: 8px; }
+
+@media (max-width: 700px) {
+  /* Stacked, a rail between rows would run through the prose. */
+  .stepper-step::before { display: none; }
+}
+
+/* ============================================================
+   Split diagram — two territories with a drawn seam
+   ============================================================ */
+.split-diagram {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-sm);
+  background: var(--surface-1);
+  overflow: hidden;
+}
+.split-side { padding: clamp(22px, 2.8vw, 32px); }
+/* Our side is the one being bought, so it carries the accent field. */
+.split-side-ours {
+  background:
+    linear-gradient(180deg, rgba(241, 76, 29, 0.07), rgba(241, 76, 29, 0));
+}
+.split-side-label { display: block; margin-bottom: 16px; }
+.split-side-ours .split-side-label { color: var(--accent-cta); }
+
+.split-list { margin: 0; padding: 0; list-style: none; }
+.split-item {
+  display: flex;
+  gap: 12px;
+  padding-block: 11px;
+  border-top: 1px solid var(--hairline-faint);
+}
+.split-item:first-child { border-top: none; padding-top: 0; }
+.split-marker {
+  flex: none;
+  width: 6px;
+  height: 6px;
+  margin-top: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--hairline-strong);
+}
+.split-side-ours .split-marker { background: var(--accent-cta); border-color: var(--accent-cta); }
+
+.split-seam {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: var(--hairline-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.split-seam-label {
+  font-size: 0.625rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-quaternary);
+  white-space: nowrap;
+  background: var(--surface-1);
+  padding: 6px 4px;
+  /* Reads down the seam, so it never competes with the two column labels. */
+  writing-mode: vertical-rl;
+}
+
+@media (max-width: 700px) {
+  .split-diagram { grid-template-columns: 1fr; }
+  /* Stacked, the two sides have unequal heights, so the seam can no longer be
+     placed by percentage. The border between them carries the split instead. */
+  .split-seam { display: none; }
+  .split-side-ours { border-top: 1px solid var(--hairline-strong); }
+}
+
 .split-grid {
   display: grid;
   gap: clamp(32px, 5vw, 80px);

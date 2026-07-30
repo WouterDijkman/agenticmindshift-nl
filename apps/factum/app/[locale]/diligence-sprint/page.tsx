@@ -2,7 +2,16 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/pageMetadata';
 import { DISCIPLINE_COUNT } from '@/lib/site';
+import {
+  SketchClipboard,
+  SketchKnowledge,
+  SketchReport,
+  SketchScale,
+  SketchSpeed
+} from '@repo/ui/SketchIcons';
 import PageHeader from '@/components/PageHeader';
+import DisciplineGrid from '@/components/DisciplineGrid';
+import MediaCards from '@/components/MediaCards';
 import Reveal from '@/components/Reveal';
 import { Section, SectionHeader } from '@/components/Section';
 import Disclosures from '@/components/Disclosures';
@@ -56,28 +65,9 @@ export default async function SprintPage({
           title={t('disciplines.title', numbers)}
           lead={t('disciplines.lead')}
         />
-        <Reveal delay={60} style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
-          <ol
-            className="rule-grid"
-            style={{
-              listStyle: 'none',
-              margin: 0,
-              padding: 0,
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))'
-            }}
-          >
-            {(s.raw('disciplines') as string[]).map((d, i) => (
-              <li key={d}>
-                <span className="mono" style={{ color: 'var(--text-quaternary)' }}>
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <h3 className="type-h4" style={{ marginTop: 8 }}>
-                  {d}
-                </h3>
-              </li>
-            ))}
-          </ol>
-        </Reveal>
+        <div style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
+          <DisciplineGrid labels={s.raw('disciplines') as string[]} />
+        </div>
         <Reveal delay={90}>
           <p className="type-small" style={{ marginTop: 22, color: 'var(--text-quaternary)', maxWidth: '70ch' }}>
             {t('disciplines.note')}
@@ -92,20 +82,14 @@ export default async function SprintPage({
           title={t('layers.title')}
           lead={t('layers.lead', numbers)}
         />
-        <Reveal delay={60} style={{ marginTop: 32 }}>
-          <dl style={{ margin: 0 }}>
-            {(t.raw('layers.items') as { title: string; body: string }[]).map((item) => (
-              <div key={item.title} className="hairline-top" style={{ paddingBlock: 22 }}>
-                <dt className="type-h3" style={{ fontSize: '1.25rem', marginBottom: 10 }}>
-                  {item.title}
-                </dt>
-                <dd className="type-body measure" style={{ margin: 0 }}>
-                  {item.body}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </Reveal>
+        <div style={{ marginTop: 32 }}>
+          <MediaCards
+            items={t.raw('layers.items') as { title: string; body: string }[]}
+            icons={[SketchScale, SketchKnowledge, SketchReport]}
+            chip="number"
+            seed={5}
+          />
+        </div>
       </Section>
 
       {/* Delivery format — expectation-setting, not caveat. */}
@@ -168,21 +152,13 @@ export default async function SprintPage({
           title={t('inputs.title')}
           lead={t('inputs.lead')}
         />
-        <div
-          className="rule-grid"
-          style={{
-            marginTop: 32,
-            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))'
-          }}
-        >
-          {(t.raw('inputs.items') as { title: string; body: string }[]).map((item) => (
-            <div key={item.title}>
-              <h3 className="type-h4" style={{ marginBottom: 10 }}>
-                {item.title}
-              </h3>
-              <p className="type-small">{item.body}</p>
-            </div>
-          ))}
+        <div style={{ marginTop: 32 }}>
+          <MediaCards
+            items={t.raw('inputs.items') as { title: string; body: string }[]}
+            icons={[SketchClipboard, SketchSpeed]}
+            seed={9}
+            wide
+          />
         </div>
       </Section>
 

@@ -271,7 +271,7 @@
     "cycle": {
       "eyebrow": "Ao longo do ciclo",
       "title": "Uma base de evidência, cinco momentos",
-      "lead": "Uma base de evidência, aplicada em cada ponto onde uma decisão vira. Nada é reconstruído quando chega o momento seguinte.",
+      "lead": "Nada é reconstruído quando chega o momento seguinte.",
       "stages": [
         {
           "title": "Comprar",
@@ -453,7 +453,7 @@
     "disciplines": {
       "eyebrow": "Âmbito",
       "title": "Todas as {disciplines} disciplinas, um único mandato",
-      "lead": "As mesmas onze análises especializadas sempre, cada uma pré-definida para o que importa nessa disciplina.",
+      "lead": "Cada análise pré-definida para o que importa nessa disciplina.",
       "note": "Um mandato, um preço. Sem menu à la carte e sem upsell depois da assinatura. O que cada disciplina analisa é definido face ao seu data room na chamada de intake."
     },
     "layers": {
@@ -506,7 +506,7 @@
     "inputs": {
       "eyebrow": "Da sua parte",
       "title": "O que precisamos para começar",
-      "lead": "Duas coisas. Sem workshop de gestão, sem agenda de entrevistas, sem visita às instalações.",
+      "lead": "Sem workshop de gestão, sem agenda de entrevistas, sem visita às instalações.",
       "items": [
         {
           "title": "Acesso ao data room",
@@ -589,7 +589,9 @@
         "Uma passagem separada confirma as afirmações contra o texto de origem.",
         "Uma pessoa revê o resultado.",
         "As afirmações que não podem ser ligadas a uma passagem são assinaladas como não confirmadas."
-      ]
+      ],
+      "machineLabel": "Máquina",
+      "humanLabel": "Pessoa"
     },
     "limits": {
       "eyebrow": "Limites",
@@ -706,7 +708,8 @@
             "Um revisor identificado a responder pelo output"
           ]
         }
-      ]
+      ],
+      "seam": "Limite"
     },
     "start": {
       "eyebrow": "Como começar",
