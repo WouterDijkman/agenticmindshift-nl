@@ -69,39 +69,6 @@
   },
 
   "shared": {
-    "moduleSuffix": "Module",
-    "verticals": [
-      "financial DD",
-      "legal DD",
-      "tax DD",
-      "commercial DD",
-      "HR DD",
-      "IT DD",
-      "ESG DD",
-      "operational DD",
-      "AI DD",
-      "insurance DD",
-      "vendor DD",
-      "valuation",
-      "deal structuring",
-      "IC memo",
-      "LBO returns modeling",
-      "teaser/IM drafting",
-      "financing memo",
-      "document factory",
-      "deal economics",
-      "VDD (sell-side vendor DD)",
-      "PMI & integration",
-      "monthly business review",
-      "portfolio health monitoring",
-      "IC report",
-      "IM screener",
-      "IBR",
-      "WHOA",
-      "boedelonderzoek",
-      "portfolio/active monitoring",
-      "Exit Readiness"
-    ],
     "disciplines": [
       "Finanzen",
       "Kommerziell",
@@ -150,14 +117,83 @@
         "title": "Ein verantwortlicher Ansprechpartner",
         "body": "Eine namentlich benannte Person prüft jedes Ergebnis, bevor es Sie erreicht."
       }
-    ]
+    ],
+    "modules": [
+      "Financial DD",
+      "Commercial DD",
+      "HR DD",
+      "IT DD",
+      "ESG DD",
+      "Vigil-Monitoring",
+      "Boedelonderzoek",
+      "Operational DD",
+      "Vendor DD",
+      "AI DD",
+      "IM-Screener",
+      "Tax DD",
+      "Legal DD",
+      "Insurance DD",
+      "Independent Business Review",
+      "WHOA-Restrukturierung",
+      "Deal Economics",
+      "Bewertung",
+      "Dealstrukturierung",
+      "Portfoliomanagement",
+      "LBO-Modell",
+      "Post-Merger-Integration",
+      "Vendor Due Diligence",
+      "IC-Memo",
+      "Teaser / CIM",
+      "Finanzierungsmemorandum",
+      "Dokumentenfabrik",
+      "Exit Readiness",
+      "Portfoliogesundheit",
+      "Monthly Business Review",
+      "IC-Bericht"
+    ],
+    "waves": [
+      {
+        "title": "Unabhängige Reads",
+        "body": "Elf Module ohne Vorstufe. Sie starten alle gleichzeitig."
+      },
+      {
+        "title": "Abhängige Reads",
+        "body": "Steuern, Recht und Versicherung brauchen den Output aus Welle 1."
+      },
+      {
+        "title": "Synthese",
+        "body": "Bewertung, Restrukturierung und Deal Economics lesen alles Vorherige."
+      },
+      {
+        "title": "Deliverables",
+        "body": "Die Dokumente, die Sie erhalten, gebaut aus den Wellen darüber."
+      },
+      {
+        "title": "Nach dem Closing",
+        "body": "Monitoring und Reporting. Läuft nach dem Deal auf eigener Uhr."
+      }
+    ],
+    "chart": {
+      "agentLabel": "Sub-Agents pro Modul",
+      "zdr": "ZDR",
+      "zdrTitle": "Zero-Retention-Routing erzwungen. Ohne diese Route startet der Lauf nicht.",
+      "modulesLabel": "Module",
+      "agentsLabel": "Sub-Agents"
+    },
+    "specimen": {
+      "pageLabel": "Datenraum",
+      "pageRef": "Quelldokument, Seite n",
+      "highlight": "Zitierte Passage",
+      "findingLabel": "Der Befund, der daraus entstand",
+      "footnote": "Geschwärzt, weil Mandantendokumente vertraulich sind, nicht weil die Spur fehlt. Jeder Balken ist eine Zeile einer echten Seite; der markierte ist das, worauf der Nachweis zeigt."
+    }
   },
 
   "home": {
     "hero": {
       "eyebrow": "Due Diligence über den Deal-Zyklus",
       "title": "Lesen Sie den ganzen Raum, bevor die Zahl feststeht",
-      "lead": "Kaufen, finanzieren, halten, verkaufen: Die Entscheidung fällt auf Basis einer Stichprobe. Factum führt {disciplines} fachspezifische Durchgänge über den gesamten Datenraum. Eine Person prüft das Ergebnis, bevor Sie es sehen.",
+      "lead": "Kaufen, finanzieren, halten, verkaufen: die Entscheidung fällt auf einer Stichprobe. Factum setzt {agents} spezialisierte Sub-Agents auf den gesamten Datenraum an. Ein Mensch prüft das, bevor Sie es sehen.",
       "cta": "Erstgespräch buchen",
       "secondary": "So funktioniert die Pipeline",
       "footnote": "Vor dem Launch. Wir nehmen einstellig viele Pilotmandate an."
@@ -196,54 +232,55 @@
       "eyebrow": "Wie es läuft",
       "title": "Eine erprobte Pipeline, jedes Mal gleich gefahren",
       "lead": "Jeder kann ein agentisches Werkzeug auf einen Datenraum richten. Die Frage ist, was jedes Mal passiert, weil es so gebaut ist.",
-      "refusalTitle": "Die Schleife verweigert die automatische Freigabe",
+      "refusalTitle": "Die Schleife verweigert die Auto-Freigabe",
       "refusals": [
-        "Erfundene oder halluzinierte Quellenangaben",
-        "Datenschutzverletzungen",
-        "Scope-Verweigerungen"
+        "Erfundene oder halluzinierte Fundstellen",
+        "Datenschutzlecks",
+        "Scope-Verweigerungen",
+        "Entwürfe unter dem Reviewer-Schwellenwert"
       ],
-      "refusalNote": "Fest verdrahtet. Alle drei gehen an eine Person.",
+      "refusalNote": "{blocks} harte Blockaden insgesamt. Jede geht an eine Person.",
       "stages": [
         {
-          "title": "Belegbasierter Abruf",
-          "body": "Jedes Modul zieht Belege direkt aus den hochgeladenen Dokumenten."
+          "title": "Fundierte Retrieval",
+          "body": "Jedes Modul setzt eigene Sub-Agents auf Ihre Dokumente an."
         },
         {
           "title": "Entwurf",
           "body": "Das Schema weist jede Aussage ohne Dokument und Passage zurück."
         },
         {
-          "title": "Erzeugen–Kritisieren–Wiederholen",
-          "body": "Ein zweiter Prüf-Agent kritisiert den Entwurf und schickt ihn zurück."
+          "title": "Generate-Critique-Retry",
+          "body": "Ein Reviewer-Agent kritisiert den Entwurf und schickt ihn zurück."
         },
         {
-          "title": "Unabhängiger Faktencheck",
-          "body": "Ein separater Durchgang gleicht jede Aussage gegen den Quelltext ab."
+          "title": "Vierstufige Grounding-Prüfung",
+          "body": "Index, Zitat, Entailment, Zweitmeinung."
         },
         {
-          "title": "Menschliche Freigabe",
+          "title": "Menschliches Freigabetor",
           "body": "Ein verpflichtender menschlicher Schritt. Er läuft jedes Mal."
         }
       ]
     },
     "coverage": {
       "eyebrow": "Abdeckung",
-      "title": "{modules} Module über {verticals} Verticals",
-      "lead": "Factum ist bereits gebaut. Jedes Modul ist ein eigenständiger Agent mit eigenem, vordefiniertem Auftrag.",
-      "note": "Eine Auswahl der {verticals} Verticals, in der Benennung der Plattform selbst. Modulzahlen erscheinen nur dort, wo uns eine ausgewiesene Zahl vorliegt.",
+      "title": "{modules} Module, {agents} Sub-Agents, {waves} Wellen",
+      "lead": "Factum ist bereits gebaut. Jedes Modul ist ein Team von Spezialisten mit vorab zugeschnittenem Auftrag.",
+      "note": "Aus dem Produktquellcode gezählt. Das größte Modul setzt {largest} Sub-Agents ein.",
       "figures": {
         "modules": {
-          "label": "Due-Diligence-Module",
-          "note": "Jedes einzelne ist ein eigenständiger Agent mit eigenem Auftrag."
+          "label": "Vorab zugeschnittene Module",
+          "note": "Eines je Disziplin oder Deliverable."
         },
-        "disciplines": {
-          "label": "Disziplinen pro Mandat",
-          "note": "Finanzen, Kommerzielles, Recht, Steuern, Personal, IT, ESG, Vendor, Operatives, Bewertung, Versicherung. Jede einzelne, jedes Mal."
+        "agents": {
+          "label": "Spezialisierte Sub-Agents",
+          "note": "Verteilt auf {waves} nach Abhängigkeit geordnete Wellen."
         },
         "speed": {
           "value": "Tage",
-          "label": "Nicht Wochen",
-          "note": "Ein vollständiger Durchgang über elf Disziplinen, fertig in Tagen. Die menschliche Prüfung folgt danach."
+          "label": "Keine Wochen",
+          "note": "Ein vollständiger Durchlauf über {disciplines} Disziplinen, in Tagen. Die menschliche Prüfung kommt danach."
         }
       }
     },
@@ -301,142 +338,236 @@
   "platform": {
     "header": {
       "eyebrow": "Die Plattform",
-      "title": "{modules} Module und die Mechanik, die sie ehrlich hält",
-      "lead": "Die Frage ist nicht, ob KI einen Datenraum lesen kann. Die Frage ist, was passieren muss, bevor eine Feststellung Sie erreicht."
+      "title": "{modules} Module. {agents} Sub-Agents. {waves} Wellen.",
+      "lead": "Kein einzelner Agent, der einen Datenraum liest. Ein Dispatch-Graph, jedes Mal gleich ausgeführt."
     },
-    "difference": {
-      "eyebrow": "Der Unterschied",
-      "title": "Jedes Mal konstruiert statt am Tag gesteuert",
-      "lead": "Jemand hat diese Pipeline bereits gebaut, betrieben und gehärtet. Das ist etwas anderes, als dieselbe Strenge unter Deal-Druck einmal selbst zusammenzustellen.",
-      "points": [
-        {
-          "title": "Eine erprobte, wiederholbare Methodik",
-          "body": "Die Abdeckung hängt nicht davon ab, dass jemand daran denkt, danach zu fragen."
+    "scale": {
+      "eyebrow": "Umfang",
+      "title": "Was tatsächlich gebaut ist",
+      "lead": "Jede Zahl auf dieser Seite ist aus dem Produktquellcode gezählt.",
+      "tiles": {
+        "modules": {
+          "title": "Module",
+          "body": "Jedes vorab auf eine Disziplin oder ein Deliverable zugeschnitten."
         },
-        {
-          "title": "Belege als Schema-Vorgabe",
-          "body": "Jede Aussage braucht ein bestimmtes Dokument und eine bestimmte Passage, bevor die Feststellung als fertig gilt."
+        "agents": {
+          "title": "Spezialisierte Sub-Agents",
+          "body": "Ein Modul ist ein Team, kein Prompt. Das größte setzt {largest} ein."
         },
-        {
-          "title": "Disziplinübergreifender Abgleich als fester Schritt",
-          "body": "Die eigentlichen Funde zeigen sich, wenn Finanzzahlen, Handelsregister, Verträge und Personalunterlagen gegeneinander gelesen werden."
+        "waves": {
+          "title": "Dispatch-Wellen",
+          "body": "Nach Abhängigkeit geordnet, nicht nach Präferenz. Welle 1 fährt elf Module gleichzeitig."
         },
-        {
-          "title": "Eine ständige Verifikationsstufe",
-          "body": "Ein Prüfdurchgang, der jedes Mal automatisch läuft."
+        "zdr": {
+          "title": "Zero-Retention-gesichert",
+          "body": "Steuern, Recht, Finanzen und Boedelonderzoek weigern sich, auf einem speichernden Modell zu laufen."
+        },
+        "blocks": {
+          "title": "Harte Blockaden",
+          "body": "Bedingungen, die einen Entwurf stoppen, egal wie viele Retries es gab."
+        },
+        "disciplines": {
+          "title": "Disziplinen pro Mandat",
+          "body": "Finanzen, Commercial, Recht, Steuern, HR, IT, ESG, Vendor, Operations, Bewertung, Versicherung."
         }
-      ]
+      }
+    },
+    "coverage": {
+      "eyebrow": "Die Bibliothek",
+      "title": "Alle {modules} Module, nach Dispatch-Welle gruppiert",
+      "lead": "Ein Modul, das den Output eines anderen braucht, kann nicht früher starten. Diese Abhängigkeit ist die Reihenfolge. Die Spreizung ist die andere Hälfte des Bildes: das größte Modul setzt {largest} Sub-Agents ein, das kleinste zwei.",
+      "note": "Aus den Dispatch-Graphen im Produktquellcode gezählt, nicht geschätzt. ZDR markiert die Module, deren Routing hart auf einen Zero-Retention-EU-Endpunkt gesetzt ist."
     },
     "pipeline": {
-      "eyebrow": "Die Pipeline",
-      "title": "Vom Upload zur Feststellung, mit der Sie arbeiten können",
-      "lead": "Vom Upload bis zu entworfenen Feststellungen läuft die Analyse ohne Menschen in der Schleife. Dahinter sitzt eine verpflichtende menschliche Freigabe.",
+      "eyebrow": "Innerhalb eines Moduls",
+      "title": "Vom Upload zu einem Befund, mit dem Sie arbeiten können",
+      "lead": "Vom Upload bis zu den Entwürfen ist kein Mensch in der Schleife. Ein verpflichtendes menschliches Tor sitzt dahinter.",
       "stages": [
         {
-          "title": "Belegbasierter Abruf",
-          "body": "Jedes Modul ist ein eigenständiger Agent und zieht Belege aus den hochgeladenen Dokumenten.",
+          "title": "Fundierte Retrieval",
+          "body": "Das Modul entsendet seine Sub-Agents. Jeder holt Belege aus Ihren Dokumenten.",
           "note": "Vertrauliche Finanz- und Personendaten werden pseudonymisiert, bevor sie diese Ebene erreichen."
         },
         {
-          "title": "Entwurf gegen das Schema",
-          "body": "Feststellungen entstehen in einem Schema, das für jede Aussage einen Beleg verlangt."
+          "title": "Entwurf im Schema",
+          "body": "Eine Aussage ohne Dokument und Passage dahinter ist kein Befund."
         },
         {
-          "title": "Erzeugen–Kritisieren–Wiederholen",
-          "body": "Ein zweiter Prüf-Agent kritisiert den Entwurf und schickt ihn zurück. Die Schleife wiederholt sich.",
-          "note": "Der plattformeigene Begriff dafür: eine Generate-Critique-Retry-Schleife."
+          "title": "Generate-Critique-Retry",
+          "body": "Ein Reviewer-Agent kritisiert den Entwurf und schickt ihn zurück. Maximal zwei Retries je Spezialist."
         },
         {
-          "title": "Unabhängiger Faktencheck",
-          "body": "Ein unabhängiger Durchgang gleicht Aussagen gegen den Quelltext ab.",
-          "note": "Eine dritte Kontrollebene, verschieden sowohl vom Prüf-Agenten als auch von der menschlichen Freigabe."
+          "title": "Vierstufige Grounding-Prüfung",
+          "body": "Index, Zitat, Entailment, Zweitmeinung. Jede Stufe fängt, was die vorige übersah."
         },
         {
-          "title": "Disziplinübergreifender Abgleich",
-          "body": "Die Feststellungen jeder Disziplin werden gegen alle anderen geprüft und zu einem Narrativ zusammengeführt."
+          "title": "Abgleich zwischen Disziplinen",
+          "body": "Befunde werden gegeneinander gelesen und zu einer Darstellung zusammengeführt."
         },
         {
           "title": "Menschliche Prüfung und Freigabe",
-          "body": "Eine namentlich benannte Person prüft die erzeugten Feststellungen vor der Freigabe. Das macht Analyse in Maschinengeschwindigkeit verlässlich.",
-          "note": "Die Pseudonymisierung wird erst hier zurückgenommen, im final ausgelieferten Ergebnis."
+          "body": "Eine namentlich benannte Person prüft die Befunde vor der Freigabe.",
+          "note": "Die Pseudonymisierung wird nur hier aufgehoben, im finalen Output."
+        }
+      ]
+    },
+    "grounding": {
+      "eyebrow": "Grounding",
+      "title": "Vier Prüfungen, jede enger als die vorige",
+      "lead": "Ein Nachweis ist erst ein Beleg, wenn etwas ihn gelesen hat. Vier Ebenen tun das, der Reihe nach.",
+      "catchLabel": "Fängt",
+      "layers": [
+        {
+          "title": "Zitationskalibrierung",
+          "body": "Jeder Zitationsindex wird gegen die tatsächlich abgerufenen Passagen geprüft.",
+          "catches": "Verweise auf ein Dokument, das der Lauf nie geöffnet hat."
+        },
+        {
+          "title": "Lexikalische Zitatprüfung",
+          "body": "Der zitierte Text muss zeichengenau in der angegebenen Passage stehen.",
+          "catches": "Paraphrase, die als wörtliches Zitat auftritt."
+        },
+        {
+          "title": "Entailment-Urteil",
+          "body": "Ein separates Modell liest Aussage und Passage und urteilt, ob das eine aus dem anderen folgt.",
+          "catches": "Echte Zitate, die die darauf gebaute Aussage nicht tragen."
+        },
+        {
+          "title": "Zweitmeinungs-Verifikation",
+          "body": "Ein lokales NLI-Modell wiederholt das Urteil. Diese Ebene schlägt geschlossen fehl.",
+          "catches": "Was die ersten drei durchgelassen haben."
+        }
+      ],
+      "repair": "Aussagen, die durchfallen, bekommen einen Reparaturversuch: neu aus der Quelle zitieren, dann neu bewerten. Was dann noch durchfällt, entfällt oder wird als unbestätigt markiert."
+    },
+    "blocks": {
+      "eyebrow": "Harte Blockaden",
+      "title": "{blocks} Bedingungen, die die Auto-Freigabe stoppen",
+      "lead": "Retries sind auf zwei je Spezialist begrenzt. Diese Bedingungen beenden die Schleife in jedem Fall und leiten den Entwurf an eine Person.",
+      "items": [
+        {
+          "title": "Datenschutzleck",
+          "body": "Daten haben eine Grenze überschritten, die sie nicht überschreiten durften."
+        },
+        {
+          "title": "Erfundene Quelle",
+          "body": "Ein Nachweis, der nicht auf eine echte Passage führt."
+        },
+        {
+          "title": "Scope-Verweigerung",
+          "body": "Das Modul kann es im eigenen Auftrag nicht beantworten und sagt das."
+        },
+        {
+          "title": "Zu wenig Tiefe",
+          "body": "Eine Antwort, die den Standard des Schemas nicht erreicht."
+        },
+        {
+          "title": "Platzhaltertext",
+          "body": "Fülltext dort, wo Belege stehen müssten."
+        },
+        {
+          "title": "Fast leerer Entwurf",
+          "body": "Zu wenig Substanz für eine Prüfung."
+        },
+        {
+          "title": "Niedrige Reviewer-Bewertung",
+          "body": "Der Critic-Agent bewertete den Entwurf unter dem Schwellenwert."
         }
       ]
     },
     "anatomy": {
-      "eyebrow": "Der Output-Kontrakt",
-      "title": "Was jede Feststellung tragen muss",
-      "lead": "Wir veröffentlichen den Kontrakt, den jede Feststellung erfüllen muss.",
-      "body": "Mandantendokumente sind vertraulich, daher gibt es keinen Auszug zu zeigen. Das Schema ist das, was die Pipeline erzwingt, bevor eine Feststellung entstehen darf."
+      "eyebrow": "Der Output-Vertrag",
+      "title": "Jeder Befund zeigt auf eine Seite zurück",
+      "lead": "Die Spur ist das Produkt. Ein Befund, den Sie nicht auf eine Passage zurückführen können, ist eine Meinung."
     },
-    "refusals": {
-      "eyebrow": "Fehlerklassen",
-      "title": "Drei Dinge, die die Schleife nicht automatisch freigibt",
-      "lead": "Drei Fehlerklassen gehen fest verdrahtet an eine Person, auch nach wiederholten Versuchen.",
-      "badge": "ABLEHNEN",
-      "classes": [
+    "alternatives": {
+      "eyebrow": "Die Alternativen",
+      "title": "Drei andere Wege, das zu tun",
+      "lead": "Verglichen als Werkzeugkategorien, nicht als Produktnamen. Jede Markierung beantwortet eine Frage: tut diese Kategorie das überhaupt.",
+      "columns": [
+        "Virtueller Datenraum",
+        "KI-DD-Tools",
+        "Allgemeine KI",
+        "Factum"
+      ],
+      "legend": {
+        "yes": "Ja",
+        "partial": "Teilweise",
+        "no": "Nein",
+        "na": "Nicht anwendbar"
+      },
+      "rows": [
         {
-          "title": "Erfundene oder halluzinierte Quellenangaben",
-          "body": "Ein Beleg, der sich nicht auf eine reale Passage auflösen lässt, stoppt die Feststellung."
+          "label": "Vorab zugeschnittenes Modul je Disziplin"
         },
         {
-          "title": "Datenschutzverletzungen",
-          "body": "Material, das nicht in die Analyseebene hinein- oder aus ihr herausgelangen sollte, geht an eine Person."
+          "label": "Läuft ohne Prompt"
         },
         {
-          "title": "Scope-Verweigerungen",
-          "body": "Wo ein Modul innerhalb seines Auftrags nicht antworten kann, sagt es das und eskaliert."
+          "label": "Nachweis im Schema verpflichtend"
+        },
+        {
+          "label": "Abgleich zwischen Disziplinen"
+        },
+        {
+          "label": "Liefert das Deliverable, nicht eine Antwort"
+        },
+        {
+          "label": "Zero Retention beim Modellanbieter"
+        },
+        {
+          "label": "Namentlich benannte Person zeichnet ab"
+        },
+        {
+          "label": "Veröffentlichtes Genauigkeitsaudit",
+          "note": "Niemand in dieser Tabelle hat eins, wir auch nicht."
         }
-      ]
-    },
-    "coverage": {
-      "eyebrow": "Abdeckung",
-      "title": "{modules} Module über {verticals} Verticals",
-      "lead": "Die Taxonomie der Plattform selbst. Wo keine Modulzahl ausgewiesen ist, lassen wir sie leer.",
-      "note": "Eine Auswahl. Die Plattform zählt {verticals} Verticals, und nicht alle werden öffentlich genannt."
+      ],
+      "note": "Kategorien, keine Anbieter. Produkte ändern sich quartalsweise, und die meisten öffentlichen Aussagen darüber stammen vom Anbieter selbst."
     },
     "limits": {
       "eyebrow": "Grenzen",
       "title": "Was wir über die Plattform nicht behaupten",
-      "lead": "Alles auf dieser Seite beschreibt einen Mechanismus. Nichts davon ist eine zertifizierte Kennzahl.",
+      "lead": "Alles oben beschreibt einen Mechanismus. Nichts davon ist eine zertifizierte Kennzahl.",
       "items": [
-        "Keine Genauigkeitsquote. Die internen Benchmarks beruhen auf einem einzigen Datensatz und sind ungeprüft.",
-        "Keine Behauptung, dass die menschliche Freigabe optional wäre. Sie ist verpflichtend.",
+        "Keine auditierte Genauigkeitsquote. Interne Benchmarks beruhen auf einem Datensatz und sind ungeprüft.",
+        "Keine Behauptung, das menschliche Tor sei optional. Es ist verpflichtend.",
         "Noch keine abgeschlossenen öffentlichen Fallstudien.",
-        "Keine einheitliche Erfahrungsbasis. Das Finanzmodul lief in einem realen Deal von Anfang bis Ende und wurde gegen Quelldokumente verifiziert. Die Abgleichebene ist jünger.",
-        "Keine allgemeine Verfügbarkeit. Factum steht vor dem Launch."
+        "Keine einheitliche Historie. Das Finanzmodul lief end-to-end an einem realen Deal und wurde gegen Quelldokumente verifiziert. Die Abgleichebene ist jünger.",
+        "Keine allgemeine Verfügbarkeit. Factum ist Pre-Launch."
       ]
     },
     "faq": {
       "eyebrow": "Fragen",
-      "title": "Vorab beantwortet",
+      "title": "Bevor Sie fragen",
       "items": [
         {
           "q": "Ist das nicht einfach ein KI-Chatbot mit Zwischenschritten?",
-          "a": "Der Unterschied ist nicht KI gegen keine KI. Es ist eine erprobte Pipeline gegen eine Sitzung, die jemand unter Deal-Druck steuert. Jede Disziplin läuft als eigener, vordefinierter Durchgang, jedes Mal, und der Abgleich zwischen ihnen ist ein fester Schritt."
+          "a": "Eine Chat-Sitzung ist ein Kontextfenster, das Sie steuern. Das hier sind {agents} Sub-Agents über {modules} vorab zugeschnittene Module, in fester Abhängigkeitsreihenfolge, mit vier Grounding-Prüfungen und einem verpflichtenden menschlichen Tor. Der Unterschied zeigt sich, wenn niemand hinsieht."
         },
         {
-          "q": "Woher weiß ich, dass die Plattform Feststellungen dieser Tragweite tragen kann?",
-          "a": "Das Finanzmodul ist der zahlenmäßig exponierteste Teil jeder Analyse. Es lief in einem realen Deal von Anfang bis Ende und wurde unabhängig gegen Quelldokumente verifiziert. Neuere Ebenen haben weniger Historie, und wir sagen Ihnen, was was ist."
+          "q": "Warum Wellen statt alles gleichzeitig?",
+          "a": "Steuern kann ohne den Finanz- und Rechts-Read nicht argumentieren. Bewertung kann ohne Steuern nicht bepreisen. Der Abhängigkeitsgraph setzt die Reihenfolge; Welle 1 fährt trotzdem elf Module parallel."
         },
         {
-          "q": "Was passiert, wenn das Modell etwas nicht weiß?",
-          "a": "Es muss das sagen. Eine Feststellung ist entweder durch einen realen Beleg gestützt oder als unbestätigt gekennzeichnet. Ein nicht auflösbarer Beleg ist eine der drei Klassen, die die Prüfschleife nicht automatisch freigibt."
+          "q": "Was passiert, wenn das Modell es nicht weiß?",
+          "a": "Dann muss es das sagen. Ein Befund ist entweder durch einen Nachweis gedeckt, der vier Prüfungen überstanden hat, oder als unbestätigt markiert. Erfundene Quellen sind eine der {blocks} harten Blockaden."
         },
         {
-          "q": "Wer ist verantwortlich für das, was mich erreicht?",
-          "a": "Eine namentlich benannte Person, die jedes Ergebnis prüft, bevor es hinausgeht."
+          "q": "Woher weiß ich, dass die Plattform Befunde dieser Tragweite trägt?",
+          "a": "Das Finanzmodul ist der numerisch exponierteste Teil jedes Reads. Es lief end-to-end an einem realen Deal und wurde unabhängig gegen Quelldokumente verifiziert. Neuere Ebenen haben weniger Historie, und wir sagen dazu, welche das sind."
         },
         {
           "q": "Wie schnell ist es?",
-          "a": "Der Pipeline-Durchgang läuft in Stunden. Das fertige, geprüfte Ergebnis braucht Tage. Ein Lieferdatum nennen wir nicht, bevor wir den Datenraum gesehen haben."
+          "a": "Der Pipeline-Durchlauf braucht Stunden. Der fertige, geprüfte Output braucht Tage. Wir nennen kein Lieferdatum, bevor wir den Datenraum gesehen haben."
         }
       ]
     },
     "cta": {
-      "title": "Die Mechanik im Gespräch sehen",
-      "body": "Wir gehen die tatsächliche Pipeline-Mechanik gern zuerst durch.",
+      "title": "Die Mechanik im Gespräch ansehen",
+      "body": "Wir gehen gern zuerst den tatsächlichen Dispatch-Graph durch.",
       "button": "Erstgespräch buchen",
-      "note": "Dreißig Minuten, kein Angebot im Anhang."
+      "note": "Dreißig Minuten, ohne Angebot im Anhang."
     }
   },
 
@@ -572,11 +703,11 @@
       "title": "Der eine verpflichtende menschliche Schritt",
       "lead": "Die Analyse läuft ohne Menschen in der Schleife. Die Freigabe sitzt dahinter, und sie ist nicht optional.",
       "items": [
-        "Feststellungen werden vor der Lieferung gegen die Quelldokumente zurückgeprüft.",
-        "Die Freigabe läuft jedes Mal, automatisch.",
-        "Drei Fehlerklassen gehen an eine Person, ohne automatische Freigabe: erfundene Quellenangaben, Datenschutzverletzungen und Scope-Verweigerungen.",
-        "Eine namentlich benannte Person prüft, gleicht ab und steht für das Ergebnis ein.",
-        "Pseudonymisierte Werte werden erst hier zurückübersetzt, im finalen Ergebnis."
+        "Befunde werden vor der Lieferung gegen die Quelldokumente zurückgeprüft.",
+        "Das Tor läuft jedes Mal, automatisch.",
+        "{blocks} Fehlerklassen gehen an eine Person, statt automatisch freigegeben zu werden.",
+        "Eine namentlich benannte Person prüft, gleicht ab und steht für den Output ein.",
+        "Pseudonymisierte Werte werden nur hier aufgelöst, im finalen Output."
       ]
     },
     "transparency": {
@@ -598,12 +729,13 @@
       "title": "Was wir nicht behaupten",
       "lead": "Das meiste, was ein Käufer auf einer solchen Seite sucht, haben wir noch nicht. Wir listen es lieber auf, als es anzudeuten.",
       "items": [
-        "Keine ISO 27001, kein SOC 2, keine andere Zertifizierung. Kein Audit der Pipeline durch Dritte.",
-        "Kein Penetrationstest, keine Liste der Unterauftragsverarbeiter, kein Single Sign-on und keine Zusage zu Audit-Logs.",
+        "Keine ISO 27001, SOC 2 oder sonstige Zertifizierung. Kein Drittaudit der Pipeline.",
+        "Kein Penetrationstest, keine Subprozessorliste, kein Single Sign-on, keine Audit-Log-Zusage.",
         "Keine veröffentlichte EU-Region. Die Analyse läuft auf Google Vertex AI in einer EU-Region; welche, nennen wir nicht.",
-        "Keine zugesagte Aufbewahrungs- oder Löschfrist auf Seiten von Factum. Zero Retention ist die Zusage des Modellanbieters.",
-        "Keine behauptete DSGVO-Konformität. Verarbeitungsbedingungen gehören in eine Mandatsvereinbarung.",
-        "Keine Vermögensschadenhaftpflicht, keine Meldung von Datenschutzverletzungen, keine Notfallwiederherstellung hier zugesagt."
+        "Keine Aufbewahrungs- oder Löschfrist auf Seiten von Factum. Zero Retention ist die Zusage des Modellanbieters.",
+        "Kein behaupteter DSGVO-Compliance-Status. Verarbeitungsbedingungen gehören in einen Mandatsvertrag.",
+        "Keine Berufshaftpflicht-, Meldepflicht- oder Notfallwiederherstellungszusage auf dieser Seite.",
+        "Keine auditierte Genauigkeitsquote. Der eine Benchmark auf dieser Seite ist intern und beruht auf einem Datensatz."
       ],
       "note": "Wenn Ihr Prozess eines davon schriftlich verlangt, sprechen Sie es im Erstgespräch an. Es gibt so oder so eine echte Antwort."
     },
@@ -612,6 +744,72 @@
       "body": "Die Liste oben ist bewusst unvorteilhaft. Wenn etwas darauf Sie blockiert, findet man das besser in dreißig Minuten heraus.",
       "button": "Erstgespräch buchen",
       "note": "Kein Angebot im Anhang."
+    },
+    "zdr": {
+      "eyebrow": "Zero Retention",
+      "title": "Vier Module weigern sich, auf einem speichernden Modell zu laufen",
+      "lead": "Zero Data Retention ist eine Routing-Regel im Code, kein Versprechen auf einer Seite. Steuern, Recht, Finanzen und Boedelonderzoek sind gesichert: ist keine Zero-Retention-Route verfügbar, scheitert der Lauf, statt zurückzufallen.",
+      "items": [
+        "Das Tor ist eine harte Anforderung, geprüft vor dem Dispatch.",
+        "Es gibt kein stilles Ausweichen auf einen speichernden Anbieter.",
+        "Die Analyse läuft auf Google Vertex AI in einer EU-Region, unter Auftragsverarbeitungsvertrag.",
+        "Die anderen {other} Module laufen auf derselben Infrastruktur. Nur diese vier starten ohne das Tor nicht."
+      ]
+    },
+    "learning": {
+      "eyebrow": "Was das System lernt",
+      "title": "Zwei Gedächtnisse, und nur eines wird geteilt",
+      "lead": "Wir sagen das ausdrücklich, weil Sie danach nicht fragen müssen sollten.",
+      "columns": [
+        {
+          "label": "Mandantenübergreifend geteilt",
+          "body": "Methodische Lehren — wie eine Prüfung laufen sollte, wo eine Analyseart typischerweise schiefgeht. Vor der Speicherung von Personendaten bereinigt. Die wichtigsten Lehren fließen in spätere Läufe zurück.",
+          "items": [
+            "Methode, kein Inhalt",
+            "Personendaten vor der Speicherung entfernt",
+            "Keine Mandantennamen, Dokumente oder Zahlen"
+          ]
+        },
+        {
+          "label": "Verlässt Ihren Mandanten nie",
+          "body": "Regeln aus Ihren eigenen Mandaten. Streng auf Ihr Konto begrenzt; der Dienst startet ohne Mandantenkennung nicht.",
+          "items": [
+            "Ihre Dokumente und Befunde",
+            "Ihre abgeleiteten Regeln und Präferenzen",
+            "Nach Mandanten-ID begrenzt, im Code erzwungen"
+          ]
+        }
+      ],
+      "note": "Ist mandantenübergreifendes Methodenlernen für Ihr Mandat ein Problem, sagen Sie das im Erstgespräch. Für Ihr Konto lässt es sich abschalten."
+    },
+    "grounding": {
+      "eyebrow": "Die gemessene Zahl",
+      "title": "Ein Benchmark, veröffentlicht mit angehängten Vorbehalten",
+      "lead": "Lieber eine Zahl mit ihren Grenzen als gar keine Zahl.",
+      "dialLabel": "Aussagen, die in einer zitierten Passage fundiert oder ausdrücklich als unbestätigt markiert sind",
+      "dialCaveat": "Ein interner Datensatz, gemessen am {date}. Nicht auditiert. Keine Garantie für Ihren Deal und nicht mit fremden Zahlen vergleichbar.",
+      "items": [
+        "Ein Datensatz, ein Lauf. Kein Dritter hat es geprüft.",
+        "Der Rest ist nicht „{remainder}% falsch“. Es ist der Anteil, den die Prüfungen nicht abschließend fundieren oder markieren konnten.",
+        "Ein anderer Datenraum ergibt eine andere Zahl.",
+        "Genau deshalb ist das menschliche Tor verpflichtend und nicht optional."
+      ]
+    },
+    "legal": {
+      "eyebrow": "Warum das Tor existiert",
+      "title": "Zwei Gründe, warum ein Mensch abzeichnet",
+      "lead": "Einer aus dem Gerichtssaal, einer aus dem Gesetzbuch.",
+      "items": [
+        {
+          "title": "Ungeprüfter KI-Output wurde gerichtlich sanktioniert",
+          "body": "In United States v. Heppner sanktionierte ein Bundesgericht Anwälte für Schriftsätze mit KI-generierten Fundstellen, die es nicht gab. DD-Output trägt dasselbe Risiko: ein Befund, den niemand geprüft hat, ist eine Haftung, kein Vermögenswert."
+        },
+        {
+          "title": "Der EU AI Act setzt Pflichten auf eine Uhr",
+          "body": "Pflichten für General-Purpose-KI nach dem EU AI Act gelten seit dem 2. August 2025, weitere Pflichten greifen gestaffelt bis 2026 und 2027. Eine Pipeline mit dokumentiertem menschlichem Tor lässt sich in dieses Regime leichter einordnen als eine Ad-hoc-Chat-Sitzung."
+        }
+      ],
+      "note": "Beides ist keine Rechtsberatung. Beides sind Gründe, warum das Tor nicht optional ist."
     }
   },
 
@@ -688,7 +886,7 @@
     "split": {
       "eyebrow": "Die Aufteilung",
       "title": "Sie behalten die Beziehung. Wir liefern die Analyse.",
-      "lead": "Die Plattform betreibt {modules} Module über {verticals} Verticals. Eine Partnerschaft stellt das hinter Ihren Namen.",
+      "lead": "Die Plattform fährt {modules} Module und {agents} spezialisierte Sub-Agents. Eine Partnerschaft stellt das hinter Ihren Namen.",
       "columns": [
         {
           "label": "Sie behalten",

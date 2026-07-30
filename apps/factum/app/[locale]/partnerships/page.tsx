@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/pageMetadata';
-import { MODULE_COUNT, VERTICAL_COUNT } from '@/lib/site';
+import { MODULE_COUNT, SUBAGENT_COUNT } from '@/lib/site';
 import {
   SketchClipboard,
   SketchDueDiligence,
@@ -35,7 +35,7 @@ export default async function PartnershipsPage({
   setRequestLocale(locale);
 
   const t = await getTranslations('partnerships');
-  const numbers = { modules: MODULE_COUNT, verticals: VERTICAL_COUNT };
+  const numbers = { modules: MODULE_COUNT, agents: SUBAGENT_COUNT };
 
   return (
     <>

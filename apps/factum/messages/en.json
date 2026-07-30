@@ -69,39 +69,6 @@
   },
 
   "shared": {
-    "moduleSuffix": "modules",
-    "verticals": [
-      "financial DD",
-      "legal DD",
-      "tax DD",
-      "commercial DD",
-      "HR DD",
-      "IT DD",
-      "ESG DD",
-      "operational DD",
-      "AI DD",
-      "insurance DD",
-      "vendor DD",
-      "valuation",
-      "deal structuring",
-      "IC memo",
-      "LBO returns modeling",
-      "teaser/IM drafting",
-      "financing memo",
-      "document factory",
-      "deal economics",
-      "VDD (sell-side vendor DD)",
-      "PMI & integration",
-      "monthly business review",
-      "portfolio health monitoring",
-      "IC report",
-      "IM screener",
-      "IBR",
-      "WHOA",
-      "boedelonderzoek",
-      "portfolio/active monitoring",
-      "Exit Readiness"
-    ],
     "disciplines": [
       "Financial",
       "Commercial",
@@ -150,14 +117,83 @@
         "title": "One accountable point of contact",
         "body": "A named person reviews every output before it reaches you."
       }
-    ]
+    ],
+    "modules": [
+      "Financial DD",
+      "Commercial DD",
+      "HR DD",
+      "IT DD",
+      "ESG DD",
+      "Vigil monitoring",
+      "Boedelonderzoek",
+      "Operational DD",
+      "Vendor DD",
+      "AI DD",
+      "IM screener",
+      "Tax DD",
+      "Legal DD",
+      "Insurance DD",
+      "Independent Business Review",
+      "WHOA restructuring",
+      "Deal economics",
+      "Valuation",
+      "Deal structuring",
+      "Portfolio management",
+      "LBO model",
+      "Post-merger integration",
+      "Vendor due diligence",
+      "IC memo",
+      "Teaser / CIM",
+      "Financing memorandum",
+      "Document factory",
+      "Exit readiness",
+      "Portfolio health",
+      "Monthly business review",
+      "IC report"
+    ],
+    "waves": [
+      {
+        "title": "Independent reads",
+        "body": "Eleven modules with nothing upstream of them. They all start at once."
+      },
+      {
+        "title": "Dependent reads",
+        "body": "Tax, legal and insurance need wave 1 output before they can reason."
+      },
+      {
+        "title": "Synthesis",
+        "body": "Valuation, restructuring and deal economics read across everything before them."
+      },
+      {
+        "title": "Deliverables",
+        "body": "The documents you actually receive, assembled from the waves above."
+      },
+      {
+        "title": "Post-close",
+        "body": "Monitoring and reporting. Runs on its own clock, after the deal."
+      }
+    ],
+    "chart": {
+      "agentLabel": "Sub-agents per module",
+      "zdr": "ZDR",
+      "zdrTitle": "Zero-retention routing enforced. The run refuses to start without it.",
+      "modulesLabel": "modules",
+      "agentsLabel": "sub-agents"
+    },
+    "specimen": {
+      "pageLabel": "Data room",
+      "pageRef": "Source document, page n",
+      "highlight": "Cited passage",
+      "findingLabel": "The finding it produced",
+      "footnote": "Redacted because client documents are confidential, not because the trace is missing. Every bar is a line of a real page; the highlighted one is what the citation points at."
+    }
   },
 
   "home": {
     "hero": {
       "eyebrow": "Deal-cycle diligence",
       "title": "Read the whole room before the number is fixed",
-      "lead": "Acquiring, financing, holding, selling: the decision gets made on a sample. Factum runs {disciplines} specialist passes over the whole room. A person reviews it before you see it.",
+      "lead": "Acquiring, financing, holding, selling: the decision gets made on a sample. Factum runs {agents} specialist sub-agents over the whole room. A person reviews it before you see it.",
       "cta": "Book an intake call",
       "secondary": "See how the pipeline works",
       "footnote": "Pre-launch. We take on single digits of pilot mandates."
@@ -198,15 +234,16 @@
       "lead": "Anyone can point an agentic tool at a data room. The question is what happens every time, by design.",
       "refusalTitle": "The loop refuses to auto-approve",
       "refusals": [
-        "Fabricated or hallucinated source citations",
+        "Fabricated or hallucinated citations",
         "Privacy leaks",
-        "Scope refusals"
+        "Scope refusals",
+        "Drafts below the reviewer threshold"
       ],
-      "refusalNote": "Hard-coded. All three route to a person.",
+      "refusalNote": "{blocks} hard-block conditions in total. Every one routes to a person.",
       "stages": [
         {
           "title": "Grounded retrieval",
-          "body": "Each module pulls evidence straight from the uploaded documents."
+          "body": "Each module dispatches its own sub-agents at your documents."
         },
         {
           "title": "Drafting",
@@ -214,11 +251,11 @@
         },
         {
           "title": "Generate-critique-retry",
-          "body": "A second reviewer agent critiques the draft and sends it back."
+          "body": "A reviewer agent critiques the draft and sends it back."
         },
         {
-          "title": "Independent fact-check",
-          "body": "A separate pass cross-verifies every claim against the source text."
+          "title": "Four-layer grounding check",
+          "body": "Index, quote, entailment, second opinion."
         },
         {
           "title": "Human approval gate",
@@ -228,22 +265,22 @@
     },
     "coverage": {
       "eyebrow": "Coverage",
-      "title": "{modules} modules across {verticals} verticals",
-      "lead": "Factum is already built. Each module is an independent agent with its own pre-scoped brief.",
-      "note": "A selection of the {verticals} verticals, in the platform’s own naming. Counts appear only where we have a stated figure.",
+      "title": "{modules} modules, {agents} sub-agents, {waves} waves",
+      "lead": "Factum is already built. Every module is a team of specialists with a pre-scoped brief.",
+      "note": "Counted from the product source. The largest module fields {largest} sub-agents.",
       "figures": {
         "modules": {
-          "label": "Due-diligence modules",
-          "note": "Each one is an independent agent with its own brief."
+          "label": "Pre-scoped modules",
+          "note": "One per discipline or deliverable."
         },
-        "disciplines": {
-          "label": "Disciplines per engagement",
-          "note": "Financial, commercial, legal, tax, HR, IT, ESG, vendor, operational, valuation, insurance. Every one, every time."
+        "agents": {
+          "label": "Specialist sub-agents",
+          "note": "Dispatched across {waves} dependency-ordered waves."
         },
         "speed": {
           "value": "Days",
           "label": "Not weeks",
-          "note": "A full eleven-discipline pass, produced in days. Human review comes after it."
+          "note": "A full {disciplines}-discipline pass, produced in days. Human review comes after it."
         }
       }
     },
@@ -301,105 +338,199 @@
   "platform": {
     "header": {
       "eyebrow": "The platform",
-      "title": "{modules} modules, and the machinery that keeps them honest",
-      "lead": "The question isn’t whether AI can read a data room. It’s what has to happen before a finding reaches you."
+      "title": "{modules} modules. {agents} sub-agents. {waves} waves.",
+      "lead": "Not one agent reading a data room. A dispatch graph, run the same way every time."
     },
-    "difference": {
-      "eyebrow": "The distinction",
-      "title": "Engineered every time versus steered on the day",
-      "lead": "A pipeline someone has already built, run and hardened is a different thing from assembling that same rigor yourself, under deal pressure, once.",
-      "points": [
-        {
-          "title": "A tested, repeatable methodology",
-          "body": "Coverage doesn’t depend on remembering to ask for it."
+    "scale": {
+      "eyebrow": "Scale",
+      "title": "What is actually built",
+      "lead": "Every number on this page is counted from the product source.",
+      "tiles": {
+        "modules": {
+          "title": "Modules",
+          "body": "Each one pre-scoped to a discipline or a deliverable."
         },
-        {
-          "title": "Citations as a schema constraint",
-          "body": "Every claim needs a specific document and passage before the finding counts as finished."
+        "agents": {
+          "title": "Specialist sub-agents",
+          "body": "A module is a team, not a prompt. The largest fields {largest}."
         },
-        {
-          "title": "Cross-discipline reconciliation as a fixed step",
-          "body": "The real finds show up when financials, registry, contracts and HR records are read against each other."
+        "waves": {
+          "title": "Dispatch waves",
+          "body": "Ordered by dependency, not by preference. Wave 1 runs eleven modules at once."
         },
-        {
-          "title": "A standing verification gate",
-          "body": "A review pass that runs every time, automatically."
+        "zdr": {
+          "title": "Zero-retention gated",
+          "body": "Tax, legal, financial and boedelonderzoek refuse to run off a retaining model."
+        },
+        "blocks": {
+          "title": "Hard-block conditions",
+          "body": "Conditions that stop a draft from being auto-approved, however many retries it has had."
+        },
+        "disciplines": {
+          "title": "Disciplines per engagement",
+          "body": "Financial, commercial, legal, tax, HR, IT, ESG, vendor, operational, valuation, insurance."
         }
-      ]
+      }
+    },
+    "coverage": {
+      "eyebrow": "The library",
+      "title": "All {modules} modules, grouped by dispatch wave",
+      "lead": "A module that needs another module’s output cannot start before it. That dependency is the running order. The spread is the other half of the picture: the largest module fields {largest} sub-agents, the smallest two.",
+      "note": "Counted from the dispatch graphs in the product source, not estimated. ZDR marks the modules whose provider routing is hard-gated to a zero-retention EU endpoint."
     },
     "pipeline": {
-      "eyebrow": "The pipeline",
+      "eyebrow": "Inside a module",
       "title": "From upload to a finding you can act on",
-      "lead": "From upload to drafted findings, the analysis runs with no human in the loop. One mandatory human gate sits after it.",
+      "lead": "From upload to drafted findings there is no human in the loop. One mandatory human gate sits after it.",
       "stages": [
         {
           "title": "Grounded retrieval",
-          "body": "Each module is an independent agent that retrieves evidence from the uploaded documents.",
+          "body": "The module dispatches its sub-agents. Each retrieves evidence from your documents.",
           "note": "Confidential financial and personal data is pseudonymized before it reaches this layer."
         },
         {
           "title": "Drafting against the schema",
-          "body": "Findings are drafted inside a schema that requires a citation for every claim."
+          "body": "A claim without a document and a passage behind it is not a finding."
         },
         {
           "title": "Generate-critique-retry",
-          "body": "A second reviewer agent critiques the draft and sends it back. The loop repeats.",
-          "note": "The platform’s own term for it: a generate-critique-retry loop."
+          "body": "A reviewer agent critiques the draft and sends it back. Up to two retries per specialist."
         },
         {
-          "title": "Independent fact-check",
-          "body": "An independent pass cross-verifies claims against the source text.",
-          "note": "A third checking layer, distinct from both the reviewer agent and the human gate."
+          "title": "Four-layer grounding check",
+          "body": "Index, quote, entailment, second opinion. Each layer catches what the one before it missed."
         },
         {
           "title": "Cross-discipline reconciliation",
-          "body": "Every discipline’s findings are checked against every other’s and resolved into one narrative."
+          "body": "Findings are read against each other and resolved into one narrative."
         },
         {
           "title": "Human review and approval",
-          "body": "A named person reviews already-generated findings before release. This is what makes machine-speed analysis safe to rely on.",
+          "body": "A named person reviews the findings before release.",
           "note": "Pseudonymization is reversed only here, in the final delivered output."
+        }
+      ]
+    },
+    "grounding": {
+      "eyebrow": "Grounding",
+      "title": "Four checks, each narrower than the last",
+      "lead": "A citation is not evidence until something has read it. Four layers do, in order.",
+      "catchLabel": "Catches",
+      "layers": [
+        {
+          "title": "Citation calibration",
+          "body": "Every citation index is checked against the set of passages that were actually retrieved.",
+          "catches": "Citations pointing at a document the run never opened."
+        },
+        {
+          "title": "Lexical quote check",
+          "body": "The quoted text has to appear in the cited passage, character for character.",
+          "catches": "Paraphrase presented as a verbatim excerpt."
+        },
+        {
+          "title": "Entailment judge",
+          "body": "A separate model reads the claim and the passage and rules on whether one follows from the other.",
+          "catches": "Real quotes that do not support the claim built on them."
+        },
+        {
+          "title": "Second-opinion verify",
+          "body": "A local natural-language-inference model re-runs the judgment. This layer fails closed.",
+          "catches": "Whatever the first three let through."
+        }
+      ],
+      "repair": "Claims that fail get one repair attempt: re-quote from source, then re-judge. Claims that still fail are cut or marked unconfirmed."
+    },
+    "blocks": {
+      "eyebrow": "Hard blocks",
+      "title": "{blocks} conditions that stop auto-approval",
+      "lead": "Retries are capped at two per specialist. These conditions end the loop regardless and route the draft to a person.",
+      "items": [
+        {
+          "title": "Privacy leak",
+          "body": "Data crossed a boundary it should not have."
+        },
+        {
+          "title": "Fabricated source",
+          "body": "A citation that does not resolve to a real passage."
+        },
+        {
+          "title": "Scope refusal",
+          "body": "The module cannot answer inside its brief, and says so."
+        },
+        {
+          "title": "Insufficient depth",
+          "body": "An answer that does not meet the standard the schema demands."
+        },
+        {
+          "title": "Placeholder text",
+          "body": "Filler left where evidence belongs."
+        },
+        {
+          "title": "Near-empty draft",
+          "body": "Too little substance to review."
+        },
+        {
+          "title": "Low reviewer score",
+          "body": "The critic agent scored the draft below threshold."
         }
       ]
     },
     "anatomy": {
       "eyebrow": "The output contract",
-      "title": "What every finding has to carry",
-      "lead": "We publish the contract every finding has to satisfy.",
-      "body": "Client documents are confidential, so there is no extract to show. The schema is what the pipeline enforces before a finding can exist."
+      "title": "Every finding points back at a page",
+      "lead": "The trace is the product. A finding you cannot walk back to a passage is an opinion."
     },
-    "refusals": {
-      "eyebrow": "Failure classes",
-      "title": "Three things the loop will not auto-approve",
-      "lead": "Three failure classes are hard-coded to route to a person, even after repeated retries.",
-      "badge": "REFUSE",
-      "classes": [
+    "alternatives": {
+      "eyebrow": "The alternatives",
+      "title": "Three other ways to do this",
+      "lead": "Compared as categories of tool, not as named products. Marks answer one question each: does this category of tool do this thing at all.",
+      "columns": [
+        "Virtual data room",
+        "AI diligence tools",
+        "General-purpose AI",
+        "Factum"
+      ],
+      "legend": {
+        "yes": "Yes",
+        "partial": "Partly",
+        "no": "No",
+        "na": "Not applicable"
+      },
+      "rows": [
         {
-          "title": "Fabricated or hallucinated source citations",
-          "body": "A citation that doesn’t resolve to a real passage stops the finding."
+          "label": "Pre-scoped module per discipline"
         },
         {
-          "title": "Privacy leaks",
-          "body": "Anything that shouldn’t have crossed into or out of the analysis layer goes to a person."
+          "label": "Runs without being prompted"
         },
         {
-          "title": "Scope refusals",
-          "body": "Where a module can’t answer within its brief, it says so and escalates."
+          "label": "Citation required by the schema"
+        },
+        {
+          "label": "Cross-discipline reconciliation"
+        },
+        {
+          "label": "Produces the deliverable, not an answer"
+        },
+        {
+          "label": "Zero retention at the model provider"
+        },
+        {
+          "label": "Named person signs off"
+        },
+        {
+          "label": "Published accuracy audit",
+          "note": "Nobody in this table has one, including us."
         }
-      ]
-    },
-    "coverage": {
-      "eyebrow": "Coverage",
-      "title": "{modules} modules across {verticals} verticals",
-      "lead": "The platform’s own taxonomy. Where a module count isn’t stated, we leave it blank.",
-      "note": "A selection. The platform counts {verticals} verticals and not all of them are named publicly."
+      ],
+      "note": "Categories, not vendors. Named products change quarterly and most public claims about them are vendor-published."
     },
     "limits": {
       "eyebrow": "Limits",
       "title": "What we don’t claim about the platform",
-      "lead": "Everything on this page describes a mechanism. None of it is a certified metric.",
+      "lead": "Everything above describes a mechanism. None of it is a certified metric.",
       "items": [
-        "No accuracy rate. Internal benchmarks are single-dataset and unaudited.",
+        "No audited accuracy rate. Internal benchmarks are single-dataset and unaudited.",
         "No claim that the human gate is optional. It is mandatory.",
         "No completed public case studies yet.",
         "No uniform track record. The financial module has run end to end on a live deal and been verified against source documents. The reconciliation layer is younger.",
@@ -412,19 +543,19 @@
       "items": [
         {
           "q": "Isn’t this just an AI chatbot with extra steps?",
-          "a": "The difference isn’t AI versus no AI. It’s a tested pipeline versus a session someone steers under deal pressure. Every discipline runs its own pre-scoped pass, every time, and the cross-check between them is a fixed step."
+          "a": "A chat session is one context window that you steer. This is {agents} sub-agents across {modules} pre-scoped modules, dispatched in a fixed dependency order, with four grounding checks and a mandatory human gate. The difference is what happens when nobody is watching."
+        },
+        {
+          "q": "Why waves instead of running everything at once?",
+          "a": "Tax cannot reason without the financial and legal reads. Valuation cannot price without tax. The dependency graph sets the order; wave 1 still runs eleven modules in parallel."
+        },
+        {
+          "q": "What happens when the model doesn’t know?",
+          "a": "It has to say so. A finding is either backed by a citation that survived four checks or flagged as unconfirmed. Fabricated sources are one of the {blocks} hard blocks."
         },
         {
           "q": "How do I know the platform can carry findings this material?",
           "a": "The financial module is the most numerically exposed part of any read. It has run end to end on a live deal and been independently verified against source documents. Newer layers have less history, and we tell you which is which."
-        },
-        {
-          "q": "What happens when the model doesn’t know?",
-          "a": "It has to say so. A finding is either backed by a real citation or flagged as unconfirmed. An unresolvable citation is one of the three classes the reviewer loop refuses to auto-approve."
-        },
-        {
-          "q": "Who is accountable for what reaches me?",
-          "a": "A named person, who reviews every output before it leaves."
         },
         {
           "q": "How fast is it?",
@@ -434,7 +565,7 @@
     },
     "cta": {
       "title": "See the mechanics on a call",
-      "body": "Happy to walk through the actual pipeline mechanics first.",
+      "body": "Happy to walk through the actual dispatch graph first.",
       "button": "Book an intake call",
       "note": "Thirty minutes, no proposal attached."
     }
@@ -574,7 +705,7 @@
       "items": [
         "Findings are checked back against the source documents before delivery.",
         "The gate runs every time, automatically.",
-        "Three failure classes route to a person instead of auto-approving: fabricated citations, privacy leaks, and scope refusals.",
+        "{blocks} failure classes route to a person instead of auto-approving.",
         "A named person reviews, reconciles and stands behind the output.",
         "Pseudonymized values are reversed only here, in the final output."
       ]
@@ -603,7 +734,8 @@
         "No published EU region. Analysis runs on Google Vertex AI in an EU region; we don’t name which one.",
         "No retention or deletion period on Factum’s own side. Zero retention is the model provider’s commitment.",
         "No asserted GDPR-compliance status. Processing terms belong in an engagement agreement.",
-        "No professional-indemnity cover, breach-notification or disaster-recovery commitment stated here."
+        "No professional-indemnity cover, breach-notification or disaster-recovery commitment stated here.",
+        "No audited accuracy rate. The one benchmark on this page is internal and single-dataset."
       ],
       "note": "If your process needs any of these in writing, raise it on the intake call. There is a real answer either way."
     },
@@ -612,6 +744,72 @@
       "body": "The list above is deliberately unflattering. If something on it blocks you, better to find that out in thirty minutes.",
       "button": "Book an intake call",
       "note": "No proposal attached."
+    },
+    "zdr": {
+      "eyebrow": "Zero retention",
+      "title": "Four modules refuse to run off a retaining model",
+      "lead": "Zero data retention is a routing rule in the code, not a promise on a page. Tax, legal, financial and boedelonderzoek are gated: if no zero-retention route is available, the run fails instead of falling back.",
+      "items": [
+        "The gate is a hard requirement, checked before dispatch.",
+        "There is no silent downgrade to a retaining provider.",
+        "Analysis runs on Google Vertex AI in an EU region, under a Data Processing Agreement.",
+        "The other {other} modules run on the same infrastructure. Only these four refuse to start without the gate."
+      ]
+    },
+    "learning": {
+      "eyebrow": "What the system learns",
+      "title": "Two memories, and only one of them is shared",
+      "lead": "Stating this plainly, because it is the kind of thing you should not have to ask about.",
+      "columns": [
+        {
+          "label": "Shared across clients",
+          "body": "Methodology lessons — how a check should be run, where a class of analysis tends to go wrong. Scrubbed of personal data before storage. The top lessons are re-injected into later runs.",
+          "items": [
+            "Method, not content",
+            "Personal data scrubbed before storage",
+            "No client names, documents or figures"
+          ]
+        },
+        {
+          "label": "Never leaves your tenant",
+          "body": "Rules derived from your own engagements. Strictly scoped to your account; the service refuses to run without a client identifier.",
+          "items": [
+            "Your documents and findings",
+            "Your derived rules and preferences",
+            "Scoped by client ID, enforced in code"
+          ]
+        }
+      ],
+      "note": "If cross-client methodology learning is a problem for your mandate, say so on the intake call. It can be switched off for your account."
+    },
+    "grounding": {
+      "eyebrow": "The measured number",
+      "title": "One benchmark, published with its caveats attached",
+      "lead": "We would rather show a number with its limits than no number at all.",
+      "dialLabel": "Claims either grounded in a cited passage or explicitly flagged as unconfirmed",
+      "dialCaveat": "One internal dataset, measured {date}. Not audited. Not a guarantee for your deal, and not comparable to anyone else’s figure.",
+      "items": [
+        "Single dataset, single run. No third party has checked it.",
+        "The remainder is not “{remainder}% wrong”. It is the share the checks could not conclusively ground or flag.",
+        "A different data room will produce a different number.",
+        "This is why the human gate is mandatory, not optional."
+      ]
+    },
+    "legal": {
+      "eyebrow": "Why the gate exists",
+      "title": "Two reasons a person signs off",
+      "lead": "One from the courts, one from the statute book.",
+      "items": [
+        {
+          "title": "Unverified AI output has been sanctioned in court",
+          "body": "In United States v. Heppner, a federal court sanctioned counsel over filings containing AI-generated citations that did not exist. Diligence output carries the same exposure: a finding nobody checked is a liability, not an asset."
+        },
+        {
+          "title": "The EU AI Act sets obligations on a clock",
+          "body": "General-purpose AI obligations under the EU AI Act have applied since 2 August 2025, with further obligations phasing in through 2026 and 2027. A pipeline with a documented human gate is easier to place inside that regime than an ad-hoc chat session."
+        }
+      ],
+      "note": "Neither of these is legal advice. Both are reasons the gate is not optional."
     }
   },
 
@@ -688,7 +886,7 @@
     "split": {
       "eyebrow": "The split",
       "title": "You keep the relationship. We supply the pass.",
-      "lead": "The platform runs {modules} modules across {verticals} verticals. A partnership puts that behind your name.",
+      "lead": "The platform runs {modules} modules and {agents} specialist sub-agents. A partnership puts that behind your name.",
       "columns": [
         {
           "label": "You keep",

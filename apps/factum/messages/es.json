@@ -69,39 +69,6 @@
   },
 
   "shared": {
-    "moduleSuffix": "módulos",
-    "verticals": [
-      "financial DD",
-      "legal DD",
-      "tax DD",
-      "commercial DD",
-      "HR DD",
-      "IT DD",
-      "ESG DD",
-      "operational DD",
-      "AI DD",
-      "insurance DD",
-      "vendor DD",
-      "valuation",
-      "deal structuring",
-      "IC memo",
-      "LBO returns modeling",
-      "teaser/IM drafting",
-      "financing memo",
-      "document factory",
-      "deal economics",
-      "VDD (sell-side vendor DD)",
-      "PMI & integration",
-      "monthly business review",
-      "portfolio health monitoring",
-      "IC report",
-      "IM screener",
-      "IBR",
-      "WHOA",
-      "boedelonderzoek",
-      "portfolio/active monitoring",
-      "Exit Readiness"
-    ],
     "disciplines": [
       "Financiera",
       "Comercial",
@@ -150,14 +117,83 @@
         "title": "Un único responsable de contacto",
         "body": "Una persona identificada revisa cada entregable antes de que llegue a usted."
       }
-    ]
+    ],
+    "modules": [
+      "Financial DD",
+      "Commercial DD",
+      "HR DD",
+      "IT DD",
+      "ESG DD",
+      "Monitorización Vigil",
+      "Boedelonderzoek",
+      "Operational DD",
+      "Vendor DD",
+      "AI DD",
+      "Cribado de IM",
+      "Tax DD",
+      "Legal DD",
+      "Insurance DD",
+      "Independent Business Review",
+      "Reestructuración WHOA",
+      "Deal economics",
+      "Valoración",
+      "Estructuración de la operación",
+      "Gestión de cartera",
+      "Modelo LBO",
+      "Integración post-fusión",
+      "Vendor due diligence",
+      "Memo para el comité",
+      "Teaser / CIM",
+      "Memorando de financiación",
+      "Fábrica de documentos",
+      "Preparación para la salida",
+      "Salud de la cartera",
+      "Monthly business review",
+      "Informe para el comité"
+    ],
+    "waves": [
+      {
+        "title": "Lecturas independientes",
+        "body": "Once módulos sin nada aguas arriba. Arrancan todos a la vez."
+      },
+      {
+        "title": "Lecturas dependientes",
+        "body": "Fiscal, legal y seguros necesitan el resultado de la ola 1."
+      },
+      {
+        "title": "Síntesis",
+        "body": "Valoración, reestructuración y deal economics leen todo lo anterior."
+      },
+      {
+        "title": "Entregables",
+        "body": "Los documentos que usted recibe, montados a partir de las olas anteriores."
+      },
+      {
+        "title": "Post-cierre",
+        "body": "Monitorización y reporting. Corre a su propio ritmo, después de la operación."
+      }
+    ],
+    "chart": {
+      "agentLabel": "Subagentes por módulo",
+      "zdr": "ZDR",
+      "zdrTitle": "Enrutado de retención cero obligatorio. Sin esa ruta, la ejecución no arranca.",
+      "modulesLabel": "módulos",
+      "agentsLabel": "subagentes"
+    },
+    "specimen": {
+      "pageLabel": "Sala de datos",
+      "pageRef": "Documento fuente, página n",
+      "highlight": "Pasaje citado",
+      "findingLabel": "El hallazgo que produjo",
+      "footnote": "Redactado porque los documentos del cliente son confidenciales, no porque falte el rastro. Cada barra es una línea de una página real; la marcada es a la que apunta la cita."
+    }
   },
 
   "home": {
     "hero": {
       "eyebrow": "Due diligence en todo el ciclo",
       "title": "Lea la sala entera antes de que la cifra quede fijada",
-      "lead": "Comprar, financiar, mantener, vender: la decisión se toma sobre una muestra. Factum ejecuta {disciplines} revisiones especializadas sobre el data room completo. Una persona lo revisa antes de que usted lo vea.",
+      "lead": "Comprar, financiar, mantener, vender: la decisión se toma sobre una muestra. Factum pone {agents} subagentes especializados sobre toda la sala. Una persona lo revisa antes de que usted lo vea.",
       "cta": "Reserve una llamada inicial",
       "secondary": "Vea cómo funciona el pipeline",
       "footnote": "En prelanzamiento. Aceptamos mandatos piloto de un solo dígito."
@@ -196,54 +232,55 @@
       "eyebrow": "Cómo funciona",
       "title": "Un pipeline probado, ejecutado igual siempre",
       "lead": "Cualquiera puede apuntar una herramienta agéntica a un data room. La cuestión es qué ocurre siempre, por diseño.",
-      "refusalTitle": "El bucle se niega a autoaprobar",
+      "refusalTitle": "El circuito se niega a aprobar automáticamente",
       "refusals": [
-        "Citas de origen fabricadas o alucinadas",
-        "Fugas de datos personales",
-        "Rechazos por alcance"
+        "Citas fabricadas o alucinadas",
+        "Fugas de privacidad",
+        "Rechazos por alcance",
+        "Borradores por debajo del umbral del revisor"
       ],
-      "refusalNote": "Codificado de forma fija. Los tres casos se derivan a una persona.",
+      "refusalNote": "{blocks} bloqueos duros en total. Todos van a una persona.",
       "stages": [
         {
           "title": "Recuperación fundamentada",
-          "body": "Cada módulo extrae evidencia directamente de los documentos cargados."
+          "body": "Cada módulo lanza sus propios subagentes sobre sus documentos."
         },
         {
           "title": "Redacción",
-          "body": "El esquema rechaza cualquier afirmación sin un documento y un pasaje detrás."
+          "body": "El esquema rechaza cualquier afirmación sin documento y pasaje detrás."
         },
         {
           "title": "Generar-criticar-reintentar",
-          "body": "Un segundo agente revisor critica el borrador y lo devuelve."
+          "body": "Un agente revisor critica el borrador y lo devuelve."
         },
         {
-          "title": "Verificación independiente",
-          "body": "Una revisión aparte contrasta cada afirmación con el texto de origen."
+          "title": "Comprobación de fundamentación en cuatro capas",
+          "body": "Índice, cita, implicación, segunda opinión."
         },
         {
-          "title": "Control humano de aprobación",
-          "body": "Un único paso humano obligatorio. Se ejecuta siempre."
+          "title": "Puerta de aprobación humana",
+          "body": "Un paso humano obligatorio. Se ejecuta siempre."
         }
       ]
     },
     "coverage": {
       "eyebrow": "Cobertura",
-      "title": "{modules} módulos en {verticals} verticales",
-      "lead": "Factum ya está construido. Cada módulo es un agente independiente con su propio alcance predefinido.",
-      "note": "Una selección de las {verticals} verticales, con la nomenclatura de la plataforma. Los recuentos aparecen solo donde hay una cifra declarada.",
+      "title": "{modules} módulos, {agents} subagentes, {waves} olas",
+      "lead": "Factum ya está construido. Cada módulo es un equipo de especialistas con un encargo acotado de antemano.",
+      "note": "Contado desde el código fuente del producto. El módulo mayor despliega {largest} subagentes.",
       "figures": {
         "modules": {
-          "label": "Módulos de due diligence",
-          "note": "Cada uno es un agente independiente con su propio alcance."
+          "label": "Módulos acotados",
+          "note": "Uno por disciplina o entregable."
         },
-        "disciplines": {
-          "label": "Disciplinas por encargo",
-          "note": "Financiera, comercial, legal, fiscal, RR. HH., TI, ESG, vendor, operativa, valoración, seguros. Todas, siempre."
+        "agents": {
+          "label": "Subagentes especializados",
+          "note": "Repartidos en {waves} olas ordenadas por dependencia."
         },
         "speed": {
           "value": "Días",
           "label": "No semanas",
-          "note": "Una revisión completa de once disciplinas, producida en días. La revisión humana va después."
+          "note": "Una pasada completa sobre {disciplines} disciplinas, en días. La revisión humana viene después."
         }
       }
     },
@@ -301,109 +338,203 @@
   "platform": {
     "header": {
       "eyebrow": "La plataforma",
-      "title": "{modules} módulos, y la maquinaria que los mantiene honestos",
-      "lead": "La cuestión no es si la IA puede leer un data room. Es qué tiene que ocurrir antes de que un hallazgo llegue a usted."
+      "title": "{modules} módulos. {agents} subagentes. {waves} olas.",
+      "lead": "No es un agente leyendo una sala de datos. Es un grafo de despacho, ejecutado igual cada vez."
     },
-    "difference": {
-      "eyebrow": "La distinción",
-      "title": "Diseñado siempre frente a dirigido sobre la marcha",
-      "lead": "Un pipeline que alguien ya ha construido, ejecutado y endurecido es algo distinto de montar ese mismo rigor uno mismo, bajo la presión de un deal, una sola vez.",
-      "points": [
-        {
-          "title": "Una metodología probada y repetible",
-          "body": "La cobertura no depende de acordarse de pedirla."
+    "scale": {
+      "eyebrow": "Escala",
+      "title": "Lo que está construido de verdad",
+      "lead": "Cada cifra de esta página está contada desde el código fuente del producto.",
+      "tiles": {
+        "modules": {
+          "title": "Módulos",
+          "body": "Cada uno acotado de antemano a una disciplina o a un entregable."
         },
-        {
-          "title": "Las citas como restricción del esquema",
-          "body": "Cada afirmación necesita un documento y un pasaje concretos antes de que el hallazgo cuente como terminado."
+        "agents": {
+          "title": "Subagentes especializados",
+          "body": "Un módulo es un equipo, no un prompt. El mayor despliega {largest}."
         },
-        {
-          "title": "La reconciliación entre disciplinas como paso fijo",
-          "body": "Los hallazgos reales aparecen cuando las cifras, el registro mercantil, los contratos y los expedientes de RR. HH. se leen unos contra otros."
+        "waves": {
+          "title": "Olas de despacho",
+          "body": "Ordenadas por dependencia, no por preferencia. La ola 1 lanza once módulos a la vez."
         },
-        {
-          "title": "Un control de verificación permanente",
-          "body": "Una revisión que se ejecuta siempre, de forma automática."
+        "zdr": {
+          "title": "Con retención cero obligatoria",
+          "body": "Fiscal, legal, financiero y boedelonderzoek se niegan a correr sobre un modelo que retiene datos."
+        },
+        "blocks": {
+          "title": "Bloqueos duros",
+          "body": "Condiciones que detienen un borrador, por muchos reintentos que haya habido."
+        },
+        "disciplines": {
+          "title": "Disciplinas por encargo",
+          "body": "Financiera, comercial, legal, fiscal, RRHH, TI, ESG, proveedores, operaciones, valoración, seguros."
         }
-      ]
+      }
+    },
+    "coverage": {
+      "eyebrow": "La biblioteca",
+      "title": "Los {modules} módulos, agrupados por ola de despacho",
+      "lead": "Un módulo que necesita el resultado de otro no puede arrancar antes. Esa dependencia es el orden de ejecución. La dispersión es la otra mitad del cuadro: el módulo mayor despliega {largest} subagentes, el menor dos.",
+      "note": "Contado desde los grafos de despacho del código fuente, no estimado. ZDR marca los módulos cuyo enrutado está fijado a un endpoint europeo de retención cero."
     },
     "pipeline": {
-      "eyebrow": "El pipeline",
-      "title": "De la carga a un hallazgo sobre el que actuar",
-      "lead": "De la carga a los hallazgos redactados, el análisis se ejecuta sin intervención humana. Después hay un control humano obligatorio.",
+      "eyebrow": "Dentro de un módulo",
+      "title": "Del archivo subido a un hallazgo accionable",
+      "lead": "Desde la subida hasta los borradores no hay persona en el circuito. Una puerta humana obligatoria va después.",
       "stages": [
         {
           "title": "Recuperación fundamentada",
-          "body": "Cada módulo es un agente independiente que extrae evidencia de los documentos cargados.",
-          "note": "Los datos financieros confidenciales y personales se seudonimizan antes de llegar a esta capa."
+          "body": "El módulo despacha sus subagentes. Cada uno extrae evidencia de sus documentos.",
+          "note": "Los datos financieros y personales confidenciales se seudonimizan antes de llegar a esta capa."
         },
         {
           "title": "Redacción contra el esquema",
-          "body": "Los hallazgos se redactan dentro de un esquema que exige una cita para cada afirmación."
+          "body": "Una afirmación sin documento y pasaje detrás no es un hallazgo."
         },
         {
           "title": "Generar-criticar-reintentar",
-          "body": "Un segundo agente revisor critica el borrador y lo devuelve. El bucle se repite.",
-          "note": "El término propio de la plataforma: un bucle de generar-criticar-reintentar."
+          "body": "Un agente revisor critica el borrador y lo devuelve. Máximo dos reintentos por especialista."
         },
         {
-          "title": "Verificación independiente",
-          "body": "Una revisión independiente contrasta las afirmaciones con el texto de origen.",
-          "note": "Una tercera capa de comprobación, distinta tanto del agente revisor como del control humano."
+          "title": "Comprobación de fundamentación en cuatro capas",
+          "body": "Índice, cita, implicación, segunda opinión. Cada capa recoge lo que se le escapó a la anterior."
         },
         {
           "title": "Reconciliación entre disciplinas",
-          "body": "Los hallazgos de cada disciplina se contrastan con los de las demás y se resuelven en una sola narrativa."
+          "body": "Los hallazgos se leen unos contra otros y se resuelven en un solo relato."
         },
         {
-          "title": "Revisión y aprobación humanas",
-          "body": "Una persona identificada revisa los hallazgos ya generados antes de la entrega. Eso es lo que hace fiable un análisis a velocidad de máquina.",
+          "title": "Revisión y aprobación humana",
+          "body": "Una persona con nombre revisa los hallazgos antes de la entrega.",
           "note": "La seudonimización solo se revierte aquí, en el entregable final."
+        }
+      ]
+    },
+    "grounding": {
+      "eyebrow": "Fundamentación",
+      "title": "Cuatro comprobaciones, cada una más estrecha que la anterior",
+      "lead": "Una cita no es evidencia hasta que algo la ha leído. Cuatro capas lo hacen, en orden.",
+      "catchLabel": "Detecta",
+      "layers": [
+        {
+          "title": "Calibración de citas",
+          "body": "Cada índice de cita se coteja con el conjunto de pasajes realmente recuperados.",
+          "catches": "Citas que apuntan a un documento que la ejecución nunca abrió."
+        },
+        {
+          "title": "Comprobación léxica de la cita",
+          "body": "El texto citado debe aparecer en el pasaje, carácter por carácter.",
+          "catches": "Paráfrasis presentada como cita literal."
+        },
+        {
+          "title": "Juez de implicación",
+          "body": "Un modelo aparte lee la afirmación y el pasaje y dicta si una se sigue del otro.",
+          "catches": "Citas reales que no sostienen la afirmación construida sobre ellas."
+        },
+        {
+          "title": "Verificación de segunda opinión",
+          "body": "Un modelo NLI local repite el juicio. Esta capa falla en cerrado.",
+          "catches": "Lo que dejaron pasar las tres primeras."
+        }
+      ],
+      "repair": "Las afirmaciones que fallan reciben un intento de reparación: volver a citar desde la fuente y volver a juzgar. Lo que sigue fallando se elimina o se marca como no confirmado."
+    },
+    "blocks": {
+      "eyebrow": "Bloqueos duros",
+      "title": "{blocks} condiciones que detienen la aprobación automática",
+      "lead": "Los reintentos están limitados a dos por especialista. Estas condiciones cierran el circuito igualmente y envían el borrador a una persona.",
+      "items": [
+        {
+          "title": "Fuga de privacidad",
+          "body": "Datos que cruzaron un límite que no debían cruzar."
+        },
+        {
+          "title": "Fuente fabricada",
+          "body": "Una cita que no resuelve a un pasaje real."
+        },
+        {
+          "title": "Rechazo por alcance",
+          "body": "El módulo no puede responder dentro de su encargo, y lo dice."
+        },
+        {
+          "title": "Profundidad insuficiente",
+          "body": "Una respuesta que no alcanza el estándar que exige el esquema."
+        },
+        {
+          "title": "Texto de relleno",
+          "body": "Relleno dejado donde debería haber evidencia."
+        },
+        {
+          "title": "Borrador casi vacío",
+          "body": "Demasiado poca sustancia para revisar."
+        },
+        {
+          "title": "Puntuación baja del revisor",
+          "body": "El agente crítico puntuó el borrador por debajo del umbral."
         }
       ]
     },
     "anatomy": {
       "eyebrow": "El contrato de salida",
-      "title": "Lo que cada hallazgo tiene que llevar",
-      "lead": "Publicamos el contrato que cada hallazgo debe cumplir.",
-      "body": "Los documentos de los clientes son confidenciales, así que no hay extracto que mostrar. El esquema es lo que el pipeline impone antes de que un hallazgo pueda existir."
+      "title": "Cada hallazgo apunta de vuelta a una página",
+      "lead": "El rastro es el producto. Un hallazgo que no puede devolverse a un pasaje es una opinión."
     },
-    "refusals": {
-      "eyebrow": "Clases de fallo",
-      "title": "Tres cosas que el bucle no autoaprueba",
-      "lead": "Tres clases de fallo están codificadas para derivarse a una persona, incluso tras reintentos repetidos.",
-      "badge": "RECHAZA",
-      "classes": [
+    "alternatives": {
+      "eyebrow": "Las alternativas",
+      "title": "Otras tres maneras de hacer esto",
+      "lead": "Comparadas como categorías de herramienta, no como productos con nombre. Cada marca responde a una pregunta: ¿hace esta categoría esto siquiera?",
+      "columns": [
+        "Sala de datos virtual",
+        "Herramientas de DD con IA",
+        "IA de uso general",
+        "Factum"
+      ],
+      "legend": {
+        "yes": "Sí",
+        "partial": "En parte",
+        "no": "No",
+        "na": "No aplica"
+      },
+      "rows": [
         {
-          "title": "Citas de origen fabricadas o alucinadas",
-          "body": "Una cita que no se corresponde con un pasaje real detiene el hallazgo."
+          "label": "Módulo acotado por disciplina"
         },
         {
-          "title": "Fugas de datos personales",
-          "body": "Todo lo que no debería haber entrado en la capa de análisis, o salido de ella, pasa a una persona."
+          "label": "Corre sin que se le pida"
         },
         {
-          "title": "Rechazos por alcance",
-          "body": "Cuando un módulo no puede responder dentro de su alcance, lo dice y escala."
+          "label": "Cita exigida por el esquema"
+        },
+        {
+          "label": "Reconciliación entre disciplinas"
+        },
+        {
+          "label": "Produce el entregable, no una respuesta"
+        },
+        {
+          "label": "Retención cero en el proveedor del modelo"
+        },
+        {
+          "label": "Una persona con nombre firma"
+        },
+        {
+          "label": "Auditoría de exactitud publicada",
+          "note": "Nadie en esta tabla la tiene, nosotros tampoco."
         }
-      ]
-    },
-    "coverage": {
-      "eyebrow": "Cobertura",
-      "title": "{modules} módulos en {verticals} verticales",
-      "lead": "La taxonomía propia de la plataforma. Donde no hay recuento de módulos declarado, lo dejamos en blanco.",
-      "note": "Una selección. La plataforma cuenta {verticals} verticales y no todas se nombran públicamente."
+      ],
+      "note": "Categorías, no proveedores. Los productos cambian cada trimestre y la mayoría de lo que se afirma públicamente sobre ellos lo publica el propio proveedor."
     },
     "limits": {
       "eyebrow": "Límites",
       "title": "Lo que no afirmamos sobre la plataforma",
-      "lead": "Todo lo de esta página describe un mecanismo. Nada es una métrica certificada.",
+      "lead": "Todo lo anterior describe un mecanismo. Nada de ello es una métrica certificada.",
       "items": [
-        "Ninguna tasa de precisión. Los benchmarks internos son de un solo conjunto de datos y sin auditar.",
-        "Ninguna afirmación de que el control humano sea opcional. Es obligatorio.",
-        "Ningún caso público completado todavía.",
-        "Ningún historial uniforme. El módulo financiero se ha ejecutado de principio a fin en un deal real y verificado contra los documentos de origen. La capa de reconciliación es más reciente.",
-        "Ninguna disponibilidad general. Factum está en prelanzamiento."
+        "Sin tasa de exactitud auditada. Los benchmarks internos son de un solo conjunto de datos y no están auditados.",
+        "Sin afirmar que la puerta humana sea opcional. Es obligatoria.",
+        "Todavía sin casos públicos cerrados.",
+        "Sin historial uniforme. El módulo financiero ha corrido de extremo a extremo en una operación real y se ha verificado contra los documentos fuente. La capa de reconciliación es más joven.",
+        "Sin disponibilidad general. Factum está en fase previa al lanzamiento."
       ]
     },
     "faq": {
@@ -411,31 +542,31 @@
       "title": "Vale la pena responderlas antes de que pregunte",
       "items": [
         {
-          "q": "¿No es esto solo un chatbot de IA con pasos de más?",
-          "a": "La diferencia no está entre IA y no IA. Está entre un pipeline probado y una sesión que alguien dirige bajo la presión de un deal. Cada disciplina ejecuta su propia revisión predefinida, siempre, y el contraste entre ellas es un paso fijo."
+          "q": "¿No es esto un chatbot de IA con pasos de más?",
+          "a": "Una sesión de chat es una ventana de contexto que usted dirige. Esto son {agents} subagentes repartidos en {modules} módulos acotados de antemano, despachados en un orden de dependencia fijo, con cuatro comprobaciones de fundamentación y una puerta humana obligatoria. La diferencia es lo que pasa cuando nadie mira."
         },
         {
-          "q": "¿Cómo sé que la plataforma puede sostener hallazgos tan materiales?",
-          "a": "El módulo financiero es la parte más expuesta numéricamente de cualquier revisión. Se ha ejecutado de principio a fin en un deal real y verificado de forma independiente contra los documentos de origen. Las capas más recientes tienen menos historial, y le diremos cuál es cuál."
+          "q": "¿Por qué olas y no todo a la vez?",
+          "a": "Fiscal no puede razonar sin las lecturas financiera y legal. Valoración no puede fijar precio sin fiscal. El grafo de dependencias marca el orden; la ola 1 sigue lanzando once módulos en paralelo."
         },
         {
           "q": "¿Qué pasa cuando el modelo no lo sabe?",
-          "a": "Tiene que decirlo. Un hallazgo está respaldado por una cita real o queda marcado como no confirmado. Una cita que no se puede resolver es una de las tres clases que el bucle revisor no autoaprueba."
+          "a": "Tiene que decirlo. Un hallazgo o está respaldado por una cita que ha sobrevivido a cuatro comprobaciones, o va marcado como no confirmado. Las fuentes fabricadas son uno de los {blocks} bloqueos duros."
         },
         {
-          "q": "¿Quién responde de lo que llega hasta mí?",
-          "a": "Una persona identificada, que revisa cada entregable antes de que salga."
+          "q": "¿Cómo sé que la plataforma aguanta hallazgos de este calibre?",
+          "a": "El módulo financiero es la parte más expuesta numéricamente de cualquier lectura. Ha corrido de extremo a extremo en una operación real y se ha verificado de forma independiente contra los documentos fuente. Las capas más nuevas tienen menos historial, y le decimos cuáles son."
         },
         {
           "q": "¿Cuánto tarda?",
-          "a": "La ejecución del pipeline dura horas. El entregable final ya revisado, días. No damos fecha de entrega antes de ver el data room."
+          "a": "La pasada de la pipeline tarda horas. El resultado terminado y revisado tarda días. No damos fecha de entrega antes de ver la sala de datos."
         }
       ]
     },
     "cta": {
       "title": "Vea la mecánica en una llamada",
-      "body": "Con gusto repasamos antes la mecánica real del pipeline.",
-      "button": "Reserve una llamada inicial",
+      "body": "Con gusto repasamos primero el grafo de despacho real.",
+      "button": "Reservar una llamada",
       "note": "Treinta minutos, sin propuesta adjunta."
     }
   },
@@ -572,10 +703,10 @@
       "title": "El único paso humano obligatorio",
       "lead": "El análisis se ejecuta sin intervención humana. El control va después, y no es opcional.",
       "items": [
-        "Los hallazgos se contrastan con los documentos de origen antes de la entrega.",
-        "El control se ejecuta siempre, de forma automática.",
-        "Tres clases de fallo se derivan a una persona en vez de autoaprobarse: citas fabricadas, fugas de datos personales y rechazos por alcance.",
-        "Una persona identificada revisa, reconcilia y responde del entregable.",
+        "Los hallazgos se contrastan con los documentos fuente antes de la entrega.",
+        "La puerta se ejecuta siempre, de forma automática.",
+        "{blocks} clases de fallo van a una persona en lugar de aprobarse automáticamente.",
+        "Una persona con nombre revisa, reconcilia y responde por el resultado.",
         "Los valores seudonimizados solo se revierten aquí, en el entregable final."
       ]
     },
@@ -598,12 +729,13 @@
       "title": "Lo que no afirmamos",
       "lead": "La mayor parte de lo que un comprador espera en una página como esta, todavía no la tenemos. Enumerarlo es mejor que insinuarlo.",
       "items": [
-        "Ninguna certificación ISO 27001, SOC 2 ni de ningún otro tipo. Ninguna auditoría del pipeline por un tercero.",
-        "Ningún test de penetración, lista de subencargados, inicio de sesión único ni compromiso de registro de auditoría.",
-        "Ninguna región de la UE publicada. El análisis se ejecuta en Google Vertex AI en una región de la UE; no decimos cuál.",
-        "Ningún plazo de retención o eliminación por parte de Factum. La retención cero es un compromiso del proveedor del modelo.",
-        "Ningún estatus de cumplimiento del RGPD afirmado. Las condiciones de tratamiento corresponden a un contrato de encargo.",
-        "Aquí no se declara cobertura de responsabilidad civil profesional, notificación de brechas ni recuperación ante desastres."
+        "Sin ISO 27001, SOC 2 ni ninguna otra certificación. Sin auditoría externa de la pipeline.",
+        "Sin test de intrusión, lista de subencargados, inicio de sesión único ni compromiso de registro de auditoría.",
+        "Sin región de la UE publicada. El análisis corre en Google Vertex AI en una región de la UE; no decimos cuál.",
+        "Sin plazo de conservación o supresión por parte de Factum. La retención cero es el compromiso del proveedor del modelo.",
+        "Sin declarar un estado de cumplimiento del RGPD. Las condiciones de tratamiento van en el contrato del encargo.",
+        "Sin cobertura de responsabilidad profesional, notificación de brechas ni compromiso de recuperación en esta página.",
+        "Sin tasa de exactitud auditada. El único benchmark de esta página es interno y de un solo conjunto de datos."
       ],
       "note": "Si su proceso exige alguno de estos puntos por escrito, plantéelo en la llamada inicial. En cualquier caso hay una respuesta real."
     },
@@ -612,6 +744,72 @@
       "body": "La lista anterior es deliberadamente poco favorecedora. Si algo de ella le bloquea, mejor saberlo en treinta minutos.",
       "button": "Reserve una llamada inicial",
       "note": "Sin propuesta adjunta."
+    },
+    "zdr": {
+      "eyebrow": "Retención cero",
+      "title": "Cuatro módulos se niegan a correr sobre un modelo que retiene",
+      "lead": "La retención cero de datos es una regla de enrutado en el código, no una promesa en una página. Fiscal, legal, financiero y boedelonderzoek están sujetos a esa puerta: si no hay ruta de retención cero disponible, la ejecución falla en vez de degradarse.",
+      "items": [
+        "La puerta es un requisito duro, comprobado antes del despacho.",
+        "No hay degradación silenciosa a un proveedor que retenga.",
+        "El análisis corre en Google Vertex AI en una región de la UE, bajo un acuerdo de encargo de tratamiento.",
+        "Los otros {other} módulos corren sobre la misma infraestructura. Solo estos cuatro se niegan a arrancar sin la puerta."
+      ]
+    },
+    "learning": {
+      "eyebrow": "Qué aprende el sistema",
+      "title": "Dos memorias, y solo una se comparte",
+      "lead": "Lo decimos sin rodeos, porque no debería tener que preguntarlo.",
+      "columns": [
+        {
+          "label": "Compartido entre clientes",
+          "body": "Lecciones de método — cómo debe ejecutarse una comprobación, dónde suele torcerse un tipo de análisis. Limpiadas de datos personales antes de guardarse. Las principales se reinyectan en ejecuciones posteriores.",
+          "items": [
+            "Método, no contenido",
+            "Datos personales eliminados antes de guardar",
+            "Sin nombres de cliente, documentos ni cifras"
+          ]
+        },
+        {
+          "label": "Nunca sale de su entorno",
+          "body": "Reglas derivadas de sus propios encargos. Estrictamente acotadas a su cuenta; el servicio se niega a correr sin identificador de cliente.",
+          "items": [
+            "Sus documentos y hallazgos",
+            "Sus reglas y preferencias derivadas",
+            "Acotado por ID de cliente, forzado en el código"
+          ]
+        }
+      ],
+      "note": "Si el aprendizaje metodológico entre clientes es un problema para su mandato, dígalo en la llamada. Puede desactivarse para su cuenta."
+    },
+    "grounding": {
+      "eyebrow": "La cifra medida",
+      "title": "Un benchmark, publicado con sus salvedades pegadas",
+      "lead": "Preferimos una cifra con sus límites a ninguna cifra.",
+      "dialLabel": "Afirmaciones fundamentadas en un pasaje citado o marcadas explícitamente como no confirmadas",
+      "dialCaveat": "Un conjunto de datos interno, medido el {date}. No auditado. No es una garantía para su operación ni comparable con la cifra de nadie más.",
+      "items": [
+        "Un conjunto de datos, una ejecución. Ningún tercero lo ha comprobado.",
+        "El resto no es «{remainder}% erróneo». Es la parte que las comprobaciones no pudieron fundamentar ni marcar de forma concluyente.",
+        "Otra sala de datos dará otra cifra.",
+        "Por esto la puerta humana es obligatoria y no opcional."
+      ]
+    },
+    "legal": {
+      "eyebrow": "Por qué existe la puerta",
+      "title": "Dos razones por las que firma una persona",
+      "lead": "Una de los tribunales, otra del boletín oficial.",
+      "items": [
+        {
+          "title": "La salida de IA sin verificar ya ha sido sancionada en un tribunal",
+          "body": "En United States v. Heppner, un tribunal federal sancionó a los abogados por escritos con citas generadas por IA que no existían. La salida de due diligence tiene la misma exposición: un hallazgo que nadie ha comprobado es un pasivo, no un activo."
+        },
+        {
+          "title": "El Reglamento de IA de la UE pone obligaciones en un reloj",
+          "body": "Las obligaciones para IA de uso general bajo el Reglamento de IA de la UE se aplican desde el 2 de agosto de 2025, con más obligaciones escalonadas hasta 2026 y 2027. Una pipeline con una puerta humana documentada encaja mejor en ese régimen que una sesión de chat improvisada."
+        }
+      ],
+      "note": "Ninguna de las dos cosas es asesoramiento jurídico. Ambas son razones por las que la puerta no es opcional."
     }
   },
 
@@ -688,7 +886,7 @@
     "split": {
       "eyebrow": "El reparto",
       "title": "Usted conserva la relación. Nosotros aportamos la revisión.",
-      "lead": "La plataforma ejecuta {modules} módulos en {verticals} verticales. Una alianza pone eso detrás de su nombre.",
+      "lead": "La plataforma corre {modules} módulos y {agents} subagentes especializados. Una alianza pone eso detrás de su nombre.",
       "columns": [
         {
           "label": "Usted conserva",

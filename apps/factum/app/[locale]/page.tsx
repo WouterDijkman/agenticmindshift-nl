@@ -2,7 +2,14 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { pageMetadata } from '@/lib/pageMetadata';
-import { DISCIPLINE_COUNT, MODULE_COUNT, VERTICAL_COUNT } from '@/lib/site';
+import {
+  DISCIPLINE_COUNT,
+  HARD_BLOCK_COUNT,
+  LARGEST_MODULE_AGENTS,
+  MODULE_COUNT,
+  SUBAGENT_COUNT,
+  WAVE_COUNT
+} from '@/lib/site';
 import {
   SketchEyeHidden,
   SketchScale,
@@ -15,7 +22,7 @@ import Reveal from '@/components/Reveal';
 import { Section, SectionHeader, SubHeader } from '@/components/Section';
 import FindingSchema from '@/components/FindingSchema';
 import Pipeline from '@/components/Pipeline';
-import VerticalIndex from '@/components/VerticalIndex';
+import WaveFlow from '@/components/WaveFlow';
 import Figures from '@/components/Figures';
 import CtaBand from '@/components/CtaBand';
 import { ArrowRight } from '@/components/Icons';
@@ -42,8 +49,11 @@ export default async function HomePage({
 
   const numbers = {
     modules: MODULE_COUNT,
-    verticals: VERTICAL_COUNT,
-    disciplines: DISCIPLINE_COUNT
+    agents: SUBAGENT_COUNT,
+    waves: WAVE_COUNT,
+    disciplines: DISCIPLINE_COUNT,
+    largest: LARGEST_MODULE_AGENTS,
+    blocks: HARD_BLOCK_COUNT
   };
 
   return (
@@ -150,7 +160,7 @@ export default async function HomePage({
                   ))}
                 </ul>
                 <p className="type-small" style={{ marginTop: 16, color: 'var(--text-quaternary)' }}>
-                  {t('pipeline.refusalNote')}
+                  {t('pipeline.refusalNote', numbers)}
                 </p>
               </div>
             </Reveal>
@@ -196,11 +206,11 @@ export default async function HomePage({
           align="wide"
         />
 
-        <Reveal delay={60} style={{ marginTop: 'clamp(32px, 4vw, 56px)' }}>
-          <VerticalIndex labels={s.raw('verticals') as string[]} moduleSuffix={s('moduleSuffix')} />
-        </Reveal>
+        <div style={{ marginTop: 'clamp(32px, 4vw, 56px)' }}>
+          <WaveFlow waves={s.raw('waves') as { title: string; body: string }[]} />
+        </div>
 
-        <Reveal delay={100}>
+        <Reveal>
           <p
             className="type-small"
             style={{ marginTop: 24, color: 'var(--text-quaternary)', maxWidth: '70ch' }}
@@ -218,14 +228,14 @@ export default async function HomePage({
                 note: t('coverage.figures.modules.note')
               },
               {
-                value: String(DISCIPLINE_COUNT),
-                label: t('coverage.figures.disciplines.label'),
-                note: t('coverage.figures.disciplines.note')
+                value: String(SUBAGENT_COUNT),
+                label: t('coverage.figures.agents.label'),
+                note: t('coverage.figures.agents.note', numbers)
               },
               {
                 value: t('coverage.figures.speed.value'),
                 label: t('coverage.figures.speed.label'),
-                note: t('coverage.figures.speed.note')
+                note: t('coverage.figures.speed.note', numbers)
               }
             ]}
           />
