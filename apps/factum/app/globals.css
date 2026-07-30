@@ -643,6 +643,7 @@ p { margin: 0; }
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
   align-items: start;
 }
+.split-grid-even { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 .split-sticky {
   position: sticky;
   top: 100px;
@@ -1122,6 +1123,481 @@ details.disclosure > summary::after {
 }
 details.disclosure[open] > summary::after { content: "−"; }
 details.disclosure > div { padding-bottom: 24px; }
+
+/* ============================================================
+   Module chart — 31 bars, banded by dispatch wave.
+   ============================================================ */
+.chart { display: flex; flex-direction: column; gap: 40px; }
+
+.chart-axis {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.6875rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-quaternary);
+}
+.chart-axis-rule { flex: 1; height: 1px; background: var(--hairline); }
+
+.chart-wave { display: flex; flex-direction: column; gap: 14px; }
+.chart-wave-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--hairline);
+}
+.chart-wave-num { font-size: 0.6875rem; color: var(--accent-cta); flex: none; }
+.chart-wave-label {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-body);
+  flex: 1;
+}
+.chart-wave-sum { font-size: 0.75rem; color: var(--text-quaternary); flex: none; }
+
+.chart-rows { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.chart-row {
+  display: grid;
+  grid-template-columns: minmax(0, 15em) 1fr 2.5em;
+  align-items: center;
+  gap: 16px;
+}
+.chart-row-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.chart-zdr {
+  font-size: 0.5625rem;
+  letter-spacing: 0.08em;
+  padding: 2px 5px;
+  border: 1px solid var(--wine-line);
+  color: var(--wine-text);
+  border-radius: 2px;
+  flex: none;
+}
+.chart-track {
+  height: 10px;
+  background: var(--surface-inset);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.chart-fill {
+  display: block;
+  height: 100%;
+  width: var(--pct);
+  background: linear-gradient(90deg, var(--wine) 0%, var(--accent-cta) 100%);
+  border-radius: 2px;
+}
+.chart-value {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .chart-fill {
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform var(--dur-reveal) var(--ease-out-expo);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .reveal[data-shown="true"] .chart-fill { transform: scaleX(1); }
+}
+
+@media (max-width: 700px) {
+  .chart-row { grid-template-columns: 1fr 2.5em; grid-template-areas: "label value" "track track"; row-gap: 6px; }
+  .chart-row-label { grid-area: label; }
+  .chart-value { grid-area: value; }
+  .chart-track { grid-area: track; }
+}
+
+/* ============================================================
+   Wave flow — one square per sub-agent, grouped by module.
+   ============================================================ */
+.waveflow { list-style: none; display: flex; flex-direction: column; gap: 1px; }
+.waveflow-band {
+  display: grid;
+  grid-template-columns: minmax(0, 22em) 1fr;
+  gap: 32px;
+  padding: 28px 0;
+  border-top: 1px solid var(--hairline);
+  transition: background var(--dur-hover) var(--ease-fn);
+}
+.waveflow-band:last-child { border-bottom: 1px solid var(--hairline); }
+.waveflow-meta { display: flex; flex-direction: column; gap: 8px; }
+.waveflow-num { font-size: 0.6875rem; color: var(--accent-cta); }
+.waveflow-count { font-size: 0.6875rem; color: var(--text-quaternary); margin-top: 4px; }
+.waveflow-waffle { display: flex; flex-wrap: wrap; gap: 12px; align-content: flex-start; }
+.waveflow-group { display: flex; flex-wrap: wrap; gap: 3px; max-width: 60px; }
+.waveflow-cell {
+  width: 9px;
+  height: 9px;
+  border-radius: 1px;
+  background: var(--wine);
+  transition: background var(--dur-hover) var(--ease-fn);
+}
+.waveflow-band:hover .waveflow-cell { background: var(--accent-cta); }
+
+@media (max-width: 760px) {
+  .waveflow-band { grid-template-columns: 1fr; gap: 18px; }
+}
+
+/* ============================================================
+   Grounding stack — four checks, each narrower than the last.
+   ============================================================ */
+.gstack { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.gstack-layer {
+  margin-inline: var(--inset);
+  display: grid;
+  grid-template-columns: 2.5em 1fr minmax(0, 14em);
+  gap: 20px;
+  align-items: start;
+  padding: 22px 24px;
+  background: var(--surface-1);
+  border: 1px solid var(--hairline);
+  border-radius: 3px;
+}
+.gstack-layer:last-child { border-color: var(--accent-cta-soft); }
+.gstack-num { font-size: 0.6875rem; color: var(--accent-cta); }
+.gstack-text { display: flex; flex-direction: column; gap: 6px; }
+.gstack-catch {
+  font-size: 0.75rem;
+  color: var(--text-quaternary);
+  border-left: 1px solid var(--hairline-strong);
+  padding-left: 16px;
+}
+.gstack-catch-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-quaternary);
+  margin-bottom: 5px;
+}
+
+@media (max-width: 760px) {
+  .gstack-layer { margin-inline: 0; grid-template-columns: 2.5em 1fr; }
+  .gstack-catch { grid-column: 2; border-left: 0; padding-left: 0; padding-top: 12px; border-top: 1px solid var(--hairline); }
+}
+
+/* ============================================================
+   Dial — an arc that deliberately does not close.
+   ============================================================ */
+.dial { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
+.dial-ring { position: relative; width: 168px; max-width: 100%; }
+.dial-ring svg { display: block; width: 100%; height: auto; overflow: visible; }
+.dial-track { fill: none; stroke: var(--surface-inset); stroke-width: 10; stroke-linecap: round; }
+.dial-fill {
+  fill: none;
+  stroke: var(--accent-cta);
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+.dial-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dial-value {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  color: var(--text-display);
+  font-variant-numeric: tabular-nums;
+}
+.dial-unit { font-size: 1rem; color: var(--text-tertiary); margin-left: 2px; }
+.dial-caption { max-width: 26em; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal[data-shown="true"] .dial-fill { animation: dial-sweep 1200ms var(--ease-out-expo) both; }
+}
+@keyframes dial-sweep {
+  from { stroke-dasharray: 0 9999; }
+}
+
+/* ============================================================
+   Bento — mixed-weight tiles on one six-column grid.
+   ============================================================ */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  background: var(--hairline);
+  border: 1px solid var(--hairline);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.bento-tile {
+  grid-column: span var(--span);
+  background: var(--surface-1);
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: background var(--dur-hover) var(--ease-fn);
+}
+.bento-tile:hover { background: var(--surface-2); }
+.bento-tall { min-height: 320px; }
+.bento-accent { background: var(--surface-2); }
+.bento-tag {
+  font-size: 0.5625rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-quaternary);
+  margin-bottom: 18px;
+}
+.bento-figure { margin-bottom: 22px; }
+.bento-title { margin-top: auto; }
+.bento-stat {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 1.9rem + 3.4vw, 4.75rem);
+  line-height: 0.92;
+  font-weight: 400;
+  color: var(--text-display);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+.bento-accent .bento-stat { color: var(--accent-cta); }
+.bento-stat-rule {
+  height: 1px;
+  background: var(--hairline-strong);
+  margin: 0 0 18px;
+  transform-origin: left center;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .bento-stat-rule {
+    transform: scaleX(0);
+    transition: transform var(--dur-reveal) var(--ease-out-expo);
+  }
+  .reveal[data-shown="true"] .bento-stat-rule { transform: scaleX(1); }
+}
+.bento-accent .bento-stat-rule { background: var(--accent-cta-soft); }
+
+@media (max-width: 900px) {
+  .bento { grid-template-columns: repeat(2, 1fr); }
+  .bento-tile { grid-column: span 1; }
+  .bento-tile[style*="--span: 6"], .bento-tile[style*="--span:6"] { grid-column: span 2; }
+}
+@media (max-width: 560px) {
+  .bento { grid-template-columns: 1fr; }
+  .bento-tile, .bento-tile[style*="--span: 6"], .bento-tile[style*="--span:6"] { grid-column: span 1; }
+}
+
+/* ============================================================
+   Specimen — a page from the data room, tied to its finding.
+   ============================================================ */
+.specimen {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr);
+  align-items: start;
+  gap: 0;
+}
+.specimen-page {
+  background: var(--surface-1);
+  border: 1px solid var(--hairline);
+  border-radius: 3px;
+  padding: 24px;
+  position: relative;
+}
+.specimen-page-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-quaternary);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--hairline);
+  margin-bottom: 18px;
+}
+.specimen-page-ref { color: var(--text-tertiary); }
+.specimen-lines { display: flex; flex-direction: column; gap: 9px; }
+.specimen-line { display: block; height: 7px; border-radius: 1px; background: var(--surface-inset); }
+.specimen-line-hit { background: var(--accent-cta-soft); box-shadow: 0 0 0 3px var(--accent-cta-soft); }
+.specimen-tag {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 0.5625rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent-cta);
+}
+.specimen-tie {
+  align-self: center;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent-cta-soft), var(--hairline-strong));
+}
+.specimen-finding {
+  background: var(--surface-1);
+  border: 1px solid var(--hairline);
+  border-radius: 3px;
+  padding: 24px;
+}
+.specimen-finding-head {
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-quaternary);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--hairline);
+  margin-bottom: 18px;
+}
+.specimen-rows { display: flex; flex-direction: column; }
+.specimen-row {
+  display: grid;
+  grid-template-columns: minmax(0, 8em) 1fr;
+  gap: 16px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--hairline-faint);
+}
+.specimen-row:last-child { border-bottom: 0; }
+.specimen-row-hit { color: var(--text-body); }
+.specimen-foot { margin-top: 18px; color: var(--text-quaternary); }
+
+@media (max-width: 860px) {
+  .specimen { grid-template-columns: 1fr; }
+  .specimen-tie { width: 1px; height: 40px; justify-self: center; background: linear-gradient(180deg, var(--accent-cta-soft), var(--hairline-strong)); }
+}
+
+/* ============================================================
+   Comparison matrix — categories of tool, scored on capability.
+   ============================================================ */
+.matrix-wrap { overflow-x: auto; }
+.matrix { width: 100%; border-collapse: collapse; min-width: 620px; }
+.matrix-corner { width: 34%; }
+.matrix-head {
+  padding: 0 0 14px;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--text-tertiary);
+  border-bottom: 1px solid var(--hairline-strong);
+}
+.matrix-head-ours { color: var(--text-display); }
+.matrix-row-label {
+  text-align: left;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  padding: 16px 24px 16px 0;
+  border-bottom: 1px solid var(--hairline-faint);
+}
+.matrix-note {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-quaternary);
+  margin-top: 4px;
+}
+.matrix-cell {
+  text-align: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--hairline-faint);
+}
+.matrix-cell-ours { background: var(--surface-1); }
+.matrix-mark {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+.matrix-yes .matrix-mark { background: var(--accent-cta); }
+.matrix-partial .matrix-mark {
+  background: linear-gradient(90deg, var(--accent-cta) 50%, transparent 50%);
+  border: 1px solid var(--accent-cta-soft);
+}
+.matrix-no .matrix-mark { border: 1px solid var(--hairline-strong); }
+.matrix-na .matrix-mark { width: 9px; height: 1px; border-radius: 0; background: var(--hairline-strong); }
+.matrix-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-quaternary);
+}
+.matrix-legend li { display: flex; align-items: center; gap: 8px; }
+
+/* ============================================================
+   Tenancy split — which memory crosses the client boundary.
+   ============================================================ */
+.tenancy { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; position: relative; }
+.tenancy::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: repeating-linear-gradient(180deg, var(--hairline-strong) 0 5px, transparent 5px 11px);
+}
+.tenancy-col {
+  padding: 28px 26px;
+  border: 1px solid var(--hairline);
+  border-radius: 3px;
+  background: var(--surface-1);
+}
+.tenancy-scoped { border-color: var(--accent-cta-soft); }
+.tenancy-label {
+  display: block;
+  font-size: 0.5625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-quaternary);
+  margin-bottom: 16px;
+}
+.tenancy-scoped .tenancy-label { color: var(--accent-cta); }
+.tenancy-body { margin-bottom: 20px; }
+.tenancy-items { list-style: none; margin: 0; padding: 0; }
+.tenancy-items li {
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+  padding: 9px 0 9px 20px;
+  border-top: 1px solid var(--hairline-faint);
+  position: relative;
+}
+.tenancy-items li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  width: 7px;
+  height: 1px;
+  background: var(--hairline-strong);
+}
+
+@media (max-width: 760px) {
+  .tenancy { grid-template-columns: 1fr; }
+  .tenancy::before { display: none; }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
 
 /* ============================================================
    Grain — tuned. 0.04 is invisible, 0.3 looks dirty.
