@@ -80,7 +80,9 @@
       "Vendor",
       "Operationeel",
       "Waardering",
-      "Verzekeringen"
+      "Verzekeringen",
+      "AI",
+      "Vigil"
     ],
     "schema": {
       "label": "Outputcontract — elke bevinding",
@@ -391,7 +393,7 @@
         },
         "disciplines": {
           "title": "Disciplines per opdracht",
-          "body": "Financieel, commercieel, juridisch, fiscaal, HR, IT, ESG, vendor, operationeel, waardering, verzekeringen."
+          "body": "Financieel, commercieel, juridisch, fiscaal, HR, IT, ESG, vendor, operationeel, waardering, verzekeringen, AI, Vigil."
         }
       }
     },

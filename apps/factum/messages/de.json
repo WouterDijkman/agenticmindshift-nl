@@ -80,7 +80,9 @@
       "Vendor",
       "Operativ",
       "Bewertung",
-      "Versicherung"
+      "Versicherung",
+      "KI",
+      "Vigil"
     ],
     "schema": {
       "label": "Output-Kontrakt — jede Feststellung",
@@ -391,7 +393,7 @@
         },
         "disciplines": {
           "title": "Disziplinen pro Mandat",
-          "body": "Finanzen, Commercial, Recht, Steuern, HR, IT, ESG, Vendor, Operations, Bewertung, Versicherung."
+          "body": "Finanzen, Commercial, Recht, Steuern, HR, IT, ESG, Vendor, Operations, Bewertung, Versicherung, KI, Vigil."
         }
       }
     },

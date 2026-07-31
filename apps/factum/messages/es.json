@@ -80,7 +80,9 @@
       "Vendor",
       "Operativa",
       "Valoración",
-      "Seguros"
+      "Seguros",
+      "IA",
+      "Vigil"
     ],
     "schema": {
       "label": "Contrato de salida — cada hallazgo",
@@ -391,7 +393,7 @@
         },
         "disciplines": {
           "title": "Disciplinas por encargo",
-          "body": "Financiera, comercial, legal, fiscal, RRHH, TI, ESG, proveedores, operaciones, valoración, seguros."
+          "body": "Financiera, comercial, legal, fiscal, RRHH, TI, ESG, proveedores, operaciones, valoración, seguros, IA, Vigil."
         }
       }
     },

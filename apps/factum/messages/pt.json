@@ -80,7 +80,9 @@
       "Vendor",
       "Operacional",
       "Avaliação",
-      "Seguros"
+      "Seguros",
+      "IA",
+      "Vigil"
     ],
     "schema": {
       "label": "Contrato de output — todas as constatações",
@@ -391,7 +393,7 @@
         },
         "disciplines": {
           "title": "Disciplinas por mandato",
-          "body": "Financeira, comercial, jurídica, fiscal, RH, TI, ESG, fornecedores, operações, avaliação, seguros."
+          "body": "Financeira, comercial, jurídica, fiscal, RH, TI, ESG, fornecedores, operações, avaliação, seguros, IA, Vigil."
         }
       }
     },

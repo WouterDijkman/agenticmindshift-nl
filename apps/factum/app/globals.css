@@ -514,42 +514,90 @@ p { margin: 0; }
    Discipline grid — scope as a board of marks
    ============================================================ */
 .discipline-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
-  gap: 1px;
+  /* Flex, not grid: a fixed column count would leave a dead cell whenever the
+     item count doesn't divide evenly. Borders live on the tiles themselves
+     (not a filled background behind the gaps), so an incomplete last row
+     just ends against the page background instead of exposing a highlighted
+     "missing" rectangle. The grid contributes only the top/left edges; each
+     tile draws its own right/bottom edge, so the two never overlap. */
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
-  /* The gap is the rule: the floor shows through a 1px grid gap, so the board
-     is ruled without every tile carrying its own border. It is darker than the
-     tiles because the last row rarely fills, and the remainder has to read as
-     an empty slot rather than as a brighter one. */
-  background: var(--surface-inset);
-  border: 1px solid var(--hairline);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
+  border-top: 1px solid var(--hairline);
+  border-left: 1px solid var(--hairline);
 }
 .discipline-tile {
   position: relative;
+  flex: 1 1 205px;
+  max-width: 340px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: clamp(18px, 2.2vw, 24px);
+  gap: 14px;
+  padding: clamp(20px, 2.4vw, 27px);
   background: var(--surface-1);
+  border-right: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  overflow: hidden;
   transition: background 320ms var(--ease-out-expo);
 }
-.discipline-tile:hover { background: var(--surface-inset); }
-.discipline-mark { color: var(--accent-cta); opacity: 0.85; }
+/* A hairline accent bar draws in on hover — the tile reads as picked up,
+   not just recolored. */
+.discipline-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: var(--accent-cta);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 420ms var(--ease-out-expo);
+}
+/* Hover lifts toward the lighter surfaces, matching the file's own elevation
+   convention, rather than sinking into the darker inset tone. */
+.discipline-tile:hover { background: var(--surface-2); }
+.discipline-tile:hover::before { transform: scaleX(1); }
+.discipline-mark {
+  position: relative;
+  display: inline-flex;
+  color: var(--accent-cta);
+  opacity: 0.9;
+  transition: color 320ms var(--ease-out-expo), transform 320ms var(--ease-out-expo);
+}
+.discipline-tile:hover .discipline-mark {
+  color: var(--accent-cta-hover);
+  transform: translateY(-2px);
+}
+/* A soft radial halo behind the mark, dormant until hover — the accent glow
+   the rest of the site earns from motion, held still here until touched. */
+.discipline-mark-glow {
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-cta-soft), transparent 70%);
+  opacity: 0;
+  transition: opacity 320ms var(--ease-out-expo);
+}
+.discipline-tile:hover .discipline-mark-glow { opacity: 1; }
 .discipline-num {
   position: absolute;
-  top: clamp(18px, 2.2vw, 24px);
-  right: clamp(18px, 2.2vw, 24px);
+  top: clamp(20px, 2.4vw, 27px);
+  right: clamp(20px, 2.4vw, 27px);
   color: var(--text-quaternary);
+  transition: color 320ms var(--ease-out-expo);
 }
+.discipline-tile:hover .discipline-num { color: var(--text-tertiary); }
 .discipline-label { display: block; }
 
 @media (prefers-reduced-motion: reduce) {
-  .discipline-tile { transition: none; }
+  .discipline-tile,
+  .discipline-tile::before,
+  .discipline-mark,
+  .discipline-mark-glow,
+  .discipline-num {
+    transition: none;
+  }
 }
 
 /* ============================================================

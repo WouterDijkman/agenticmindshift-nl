@@ -80,7 +80,9 @@
       "Vendor",
       "Operational",
       "Valuation",
-      "Insurance"
+      "Insurance",
+      "AI",
+      "Vigil"
     ],
     "schema": {
       "label": "Output contract — every finding",
@@ -391,7 +393,7 @@
         },
         "disciplines": {
           "title": "Disciplines per engagement",
-          "body": "Financial, commercial, legal, tax, HR, IT, ESG, vendor, operational, valuation, insurance."
+          "body": "Financial, commercial, legal, tax, HR, IT, ESG, vendor, operational, valuation, insurance, AI, Vigil."
         }
       }
     },

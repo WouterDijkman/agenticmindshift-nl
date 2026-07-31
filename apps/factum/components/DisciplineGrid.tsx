@@ -10,13 +10,20 @@ import {
   SketchPortfolio,
   SketchReport,
   SketchScale,
-  SketchSpeed
+  SketchSparring,
+  SketchSpeed,
+  SketchWarning
 } from '@repo/ui/SketchIcons';
 import Reveal from './Reveal';
 
 type SketchIcon = ComponentType<{ size?: number; opacity?: number; strokeWidth?: number }>;
 
-/** One mark per discipline, in the order the sources list them. */
+/**
+ * One mark per discipline, in the order the sources list them. New
+ * disciplines are appended, never inserted mid-list — inserting would shift
+ * every later label onto a different icon by index, since the mapping here
+ * is positional rather than keyed by name.
+ */
 const ICONS: SketchIcon[] = [
   SketchReport,
   SketchScale,
@@ -26,9 +33,11 @@ const ICONS: SketchIcon[] = [
   SketchPortfolio,
   SketchDueDiligence,
   SketchGear,
-  SketchEyeHidden,
+  SketchWarning,
   SketchSpeed,
-  SketchHourglass
+  SketchHourglass,
+  SketchSparring,
+  SketchEyeHidden
 ];
 
 /**
@@ -43,7 +52,8 @@ export default function DisciplineGrid({ labels }: { labels: string[] }) {
         return (
           <Reveal as="li" key={label} className="discipline-tile">
             <span className="discipline-mark" aria-hidden="true">
-              <Icon size={30} strokeWidth={1.1} />
+              <span className="discipline-mark-glow" aria-hidden="true" />
+              <Icon size={32} strokeWidth={1.1} />
             </span>
             <span className="mono discipline-num">{String(i + 1).padStart(2, '0')}</span>
             <span className="type-h4 discipline-label">{label}</span>
