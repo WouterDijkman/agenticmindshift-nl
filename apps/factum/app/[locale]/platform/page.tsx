@@ -21,6 +21,7 @@ import Specimen from '@/components/Specimen';
 import ComparisonMatrix, { type Verdict } from '@/components/ComparisonMatrix';
 import Disclosures from '@/components/Disclosures';
 import CtaBand from '@/components/CtaBand';
+import FindingSchema from '@/components/FindingSchema';
 
 export async function generateMetadata({
   params
@@ -80,55 +81,32 @@ export default async function PlatformPage({
         eyebrow={t('header.eyebrow')}
         title={t('header.title', n)}
         lead={t('header.lead')}
-      />
-
-      {/* Everything that is built, as one grid of measured numbers. */}
-      <Section width="wide">
-        <SectionHeader
-          eyebrow={t('scale.eyebrow')}
-          title={t('scale.title')}
-          lead={t('scale.lead')}
-          align="wide"
-        />
-        <div style={{ marginTop: 'clamp(32px, 4vw, 52px)' }}>
-          <BentoGrid
-            tiles={[
-              { ...tile('agents'), stat: String(SUBAGENT_COUNT), span: 3, accent: true },
-              { ...tile('modules'), stat: String(MODULE_COUNT), span: 3 },
-              { ...tile('waves'), stat: String(WAVE_COUNT), span: 2 },
-              { ...tile('zdr'), stat: String(ZDR_MODULE_COUNT), span: 2 },
-              { ...tile('blocks'), stat: String(HARD_BLOCK_COUNT), span: 2 },
-              { ...tile('disciplines'), stat: String(DISCIPLINE_COUNT), span: 6 }
+        visual={0}
+        aside={
+          <FindingSchema
+            label={s('schema.label')}
+            footnote={s('schema.footnote')}
+            rows={[
+              { key: s('schema.rows.module'), value: s('schema.values.module') },
+              { key: s('schema.rows.finding'), value: s('schema.values.finding'), redacted: true },
+              { key: s('schema.rows.evidence'), value: s('schema.values.evidence'), redacted: true },
+              { key: s('schema.rows.document'), value: s('schema.values.document'), redacted: true },
+              { key: s('schema.rows.review'), value: s('schema.values.review') }
             ]}
           />
-        </div>
-      </Section>
+        }
+      />
 
-      {/* The library and the running order, in one chart. */}
-      <Section id="modules" width="wide">
-        <SectionHeader
-          eyebrow={t('coverage.eyebrow')}
-          title={t('coverage.title', n)}
-          lead={t('coverage.lead', n)}
-          align="wide"
-        />
-        <div style={{ marginTop: 'clamp(32px, 4vw, 52px)' }}>
-          <ModuleChart
-            labels={s.raw('modules') as string[]}
-            waveLabels={(s.raw('waves') as { title: string }[]).map((w) => w.title)}
-            agentLabel={s('chart.agentLabel')}
-            zdrLabel={s('chart.zdr')}
-          />
-        </div>
-        <Reveal>
-          <p
-            className="type-small"
-            style={{ marginTop: 28, color: 'var(--text-quaternary)', maxWidth: '70ch' }}
-          >
-            {t('coverage.note')}
-          </p>
-        </Reveal>
-      </Section>
+      {/*
+        Mechanism first, inventory last.
+
+        This page used to open on a bento of six counted figures under the
+        heading "What is actually built" — which answered a question about us
+        before the reader had been given a reason to care how big we are. The
+        counts are true and they stay on the page, but they are evidence for a
+        claim, so they now sit below the claim. What a reader wants first is
+        what happens to their documents.
+      */}
 
       {/* What happens inside one module. */}
       <Section id="pipeline">
@@ -193,8 +171,8 @@ export default async function PlatformPage({
         </div>
       </Section>
 
-      {/* The trace, at full size. */}
-      <Section id="anatomy" width="wide">
+      {/* The trace, at full size — the one feature moment on this page. */}
+      <Section id="anatomy" width="wide" tone="inset">
         <SectionHeader
           eyebrow={t('anatomy.eyebrow')}
           title={t('anatomy.title')}
@@ -214,6 +192,54 @@ export default async function PlatformPage({
               { key: s('schema.rows.evidence'), value: s('schema.values.evidence') },
               { key: s('schema.rows.document'), value: s('schema.values.document') },
               { key: s('schema.rows.review'), value: s('schema.values.review') }
+            ]}
+          />
+        </div>
+      </Section>
+
+      {/* The library and the running order, in one chart. */}
+      <Section id="modules" width="wide">
+        <SectionHeader
+          eyebrow={t('coverage.eyebrow')}
+          title={t('coverage.title')}
+          lead={t('coverage.lead', n)}
+          align="wide"
+        />
+        <div style={{ marginTop: 'clamp(32px, 4vw, 52px)' }}>
+          <ModuleChart
+            labels={s.raw('modules') as string[]}
+            waveLabels={(s.raw('waves') as { title: string }[]).map((w) => w.title)}
+            agentLabel={s('chart.agentLabel')}
+            zdrLabel={s('chart.zdr')}
+          />
+        </div>
+        <Reveal>
+          <p
+            className="type-small"
+            style={{ marginTop: 28, color: 'var(--text-quaternary)', maxWidth: '70ch' }}
+          >
+            {t('coverage.note')}
+          </p>
+        </Reveal>
+      </Section>
+
+      {/* The inventory, as one grid of measured numbers. */}
+      <Section width="wide">
+        <SectionHeader
+          eyebrow={t('scale.eyebrow')}
+          title={t('scale.title')}
+          lead={t('scale.lead')}
+          align="wide"
+        />
+        <div style={{ marginTop: 'clamp(32px, 4vw, 52px)' }}>
+          <BentoGrid
+            tiles={[
+              { ...tile('agents'), stat: String(SUBAGENT_COUNT), span: 3, accent: true },
+              { ...tile('modules'), stat: String(MODULE_COUNT), span: 3 },
+              { ...tile('waves'), stat: String(WAVE_COUNT), span: 2 },
+              { ...tile('zdr'), stat: String(ZDR_MODULE_COUNT), span: 2 },
+              { ...tile('blocks'), stat: String(HARD_BLOCK_COUNT), span: 2 },
+              { ...tile('disciplines'), stat: String(DISCIPLINE_COUNT), span: 6 }
             ]}
           />
         </div>

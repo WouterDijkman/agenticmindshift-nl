@@ -2,13 +2,6 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/pageMetadata';
 import { DISCIPLINE_COUNT } from '@/lib/site';
-import {
-  SketchClipboard,
-  SketchKnowledge,
-  SketchReport,
-  SketchScale,
-  SketchSpeed
-} from '@repo/ui/SketchIcons';
 import PageHeader from '@/components/PageHeader';
 import DisciplineGrid from '@/components/DisciplineGrid';
 import MediaCards from '@/components/MediaCards';
@@ -44,6 +37,7 @@ export default async function SprintPage({
         eyebrow={t('header.eyebrow')}
         title={t('header.title')}
         lead={t('header.lead', numbers)}
+        visual={1}
       />
 
       {/* The reframe: this is what a well-run sell-side process looks like. */}
@@ -55,6 +49,29 @@ export default async function SprintPage({
           <p className="type-body measure" style={{ marginTop: 28 }}>
             {t('reframe.body')}
           </p>
+        </Reveal>
+      </Section>
+
+      {/* The guarantee — the strongest claim on the page belongs up front. */}
+      <Section width="medium">
+        <Reveal>
+          <div className="panel panel-raised" style={{ padding: 'clamp(26px, 4vw, 48px)' }}>
+            <span className="eyebrow eyebrow-accent" style={{ marginBottom: 18 }}>
+              {t('guarantee.eyebrow')}
+            </span>
+            <p
+              className="type-h3"
+              style={{ fontFamily: 'var(--font-display)', maxWidth: '30ch' }}
+            >
+              {t('guarantee.title')}
+            </p>
+            <p className="type-body measure" style={{ marginTop: 20 }}>
+              {t('guarantee.body')}
+            </p>
+            <p className="type-small" style={{ marginTop: 18, color: 'var(--text-quaternary)' }}>
+              {t('guarantee.note')}
+            </p>
+          </div>
         </Reveal>
       </Section>
 
@@ -85,64 +102,32 @@ export default async function SprintPage({
         <div style={{ marginTop: 32 }}>
           <MediaCards
             items={t.raw('layers.items') as { title: string; body: string }[]}
-            icons={[SketchScale, SketchKnowledge, SketchReport]}
             chip="number"
             seed={5}
           />
         </div>
       </Section>
 
-      {/* Delivery format — expectation-setting, not caveat. */}
+      {/* Delivery format — expectation-setting, not caveat. Same image-topped
+          treatment as `layers` above and `inputs` below: this was the one
+          three-item list on the page still rendered as a bare panel list. */}
       <Section width="medium">
-        <div className="split-grid">
-          <div>
-            <SectionHeader
-              eyebrow={t('delivery.eyebrow')}
-              title={t('delivery.title')}
-              lead={t('delivery.lead')}
-            />
-          </div>
-          <Reveal delay={60}>
-            <div className="panel" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
-              {(t.raw('delivery.formats') as { label: string; items: string; body: string }[]).map(
-                (format) => (
-                  <div key={format.label} className="hairline-top" style={{ paddingBlock: 18 }}>
-                    <span className="eyebrow" style={{ marginBottom: 8 }}>
-                      {format.label}
-                    </span>
-                    <p className="type-h4" style={{ marginBottom: 6 }}>
-                      {format.items}
-                    </p>
-                    <p className="type-small">{format.body}</p>
-                  </div>
-                )
-              )}
-            </div>
-          </Reveal>
+        <SectionHeader
+          eyebrow={t('delivery.eyebrow')}
+          title={t('delivery.title')}
+          lead={t('delivery.lead')}
+        />
+        <div style={{ marginTop: 32 }}>
+          <MediaCards
+            items={(t.raw('delivery.formats') as { label: string; items: string; body: string }[]).map(
+              (format) => ({
+                title: format.label,
+                body: `${format.items}. ${format.body}`
+              })
+            )}
+            seed={2}
+          />
         </div>
-      </Section>
-
-      {/* The guarantee. */}
-      <Section width="medium">
-        <Reveal>
-          <div className="panel panel-raised" style={{ padding: 'clamp(26px, 4vw, 48px)' }}>
-            <span className="eyebrow eyebrow-accent" style={{ marginBottom: 18 }}>
-              {t('guarantee.eyebrow')}
-            </span>
-            <p
-              className="type-h3"
-              style={{ fontFamily: 'var(--font-display)', maxWidth: '30ch' }}
-            >
-              {t('guarantee.title')}
-            </p>
-            <p className="type-body measure" style={{ marginTop: 20 }}>
-              {t('guarantee.body')}
-            </p>
-            <p className="type-small" style={{ marginTop: 18, color: 'var(--text-quaternary)' }}>
-              {t('guarantee.note')}
-            </p>
-          </div>
-        </Reveal>
       </Section>
 
       {/* What we need from you. */}
@@ -155,7 +140,6 @@ export default async function SprintPage({
         <div style={{ marginTop: 32 }}>
           <MediaCards
             items={t.raw('inputs.items') as { title: string; body: string }[]}
-            icons={[SketchClipboard, SketchSpeed]}
             seed={9}
             wide
           />

@@ -32,6 +32,7 @@ export default async function ContactPage({
         eyebrow={t('header.eyebrow')}
         title={t('header.title')}
         lead={t('header.lead')}
+        visual={5}
       />
 
       {/* One channel, deliberately. A form with no one behind it is worse than no form. */}
@@ -50,6 +51,26 @@ export default async function ContactPage({
               <p className="type-small" style={{ marginTop: 18, color: 'var(--text-quaternary)' }}>
                 {t('call.note')}
               </p>
+            </Reveal>
+
+            {/* Before you send anything — folded in as a note rather than a standalone
+                section, which used to be a 160-character block with no visual weight
+                of its own sitting between two panel-heavy sections. */}
+            <Reveal delay={90} style={{ marginTop: 28 }}>
+              <div
+                className="hairline-top"
+                style={{ paddingTop: 20 }}
+              >
+                <span className="eyebrow eyebrow-accent" style={{ marginBottom: 10 }}>
+                  {t('documents.eyebrow')}
+                </span>
+                <p className="type-h4" style={{ marginBottom: 6 }}>
+                  {t('documents.title')}
+                </p>
+                <p className="type-small" style={{ color: 'var(--text-quaternary)', maxWidth: '52ch' }}>
+                  {t('documents.lead')}
+                </p>
+              </div>
             </Reveal>
           </div>
 
@@ -80,15 +101,6 @@ export default async function ContactPage({
             </div>
           </Reveal>
         </div>
-      </Section>
-
-      {/* Before you send anything. */}
-      <Section width="medium">
-        <SectionHeader
-          eyebrow={t('documents.eyebrow')}
-          title={t('documents.title')}
-          lead={t('documents.lead')}
-        />
       </Section>
 
       {/* Company details — only what is on the register. */}

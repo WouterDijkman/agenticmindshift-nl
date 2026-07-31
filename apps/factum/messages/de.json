@@ -6,7 +6,7 @@
     },
     "platform": {
       "title": "Die Plattform",
-      "description": "241 Due-Diligence-Module über 31 Verticals. Jede Feststellung belegt ein Dokument. Jedes Ergebnis passiert eine menschliche Freigabe."
+      "description": "31 Due-Diligence-Module über 11 Disziplinen. Jede Feststellung belegt ein Dokument. Jedes Ergebnis passiert eine menschliche Freigabe."
     },
     "sprint": {
       "title": "Der Diligence Sprint",
@@ -191,55 +191,42 @@
 
   "home": {
     "hero": {
-      "eyebrow": "Due Diligence über den Deal-Zyklus",
-      "title": "Lesen Sie den ganzen Raum, bevor die Zahl feststeht",
-      "lead": "Kaufen, finanzieren, halten, verkaufen: die Entscheidung fällt auf einer Stichprobe. Factum setzt {agents} spezialisierte Sub-Agents auf den gesamten Datenraum an. Ein Mensch prüft das, bevor Sie es sehen.",
-      "cta": "Erstgespräch buchen",
-      "secondary": "So funktioniert die Pipeline",
-      "footnote": "Vor dem Launch. Wir nehmen einstellig viele Pilotmandate an."
-    },
-    "schema": {
-      "eyebrow": "Der Output-Kontrakt",
-      "title": "Eine Feststellung ist erst fertig, wenn sie nachverfolgbar ist",
-      "lead": "Jede Aussage belegt ein bestimmtes Dokument und eine bestimmte Passage. Kein Beleg, keine Feststellung.",
-      "body": "Das Schema erzwingt es. Mandatsarbeit ist vertraulich, deshalb veröffentlichen wir den Kontrakt und kein Muster.",
-      "link": "Die vollständige Pipeline lesen"
+      "eyebrow": "Due Diligence über den gesamten Deal-Zyklus",
+      "title": "Unterschreiben Sie keine Zahl, die Sie nicht gelesen haben",
+      "lead": "Due Diligence zieht eine Stichprobe und berichtet nach Wochen. Was sie übersprungen hat, liegt weiterhin im Raum. Factum liest alles, in Tagen, mit der Quellpassage hinter jedem Befund.",
+      "cta": "Erstgespräch über 30 Minuten buchen",
+      "secondary": "So sieht ein Befund aus",
+      "footnote": "Vor dem Launch. Wir nehmen eine begrenzte Zahl an Pilotmandaten an."
     },
     "problem": {
-      "eyebrow": "Die Asymmetrie",
-      "title": "Die Zahl wird gesetzt, während der Raum halb gelesen ist",
-      "lead": "Klassische Due Diligence zieht eine Stichprobe und berichtet Wochen später. Dann ist der Preis verankert und die Ergebnisse kommen zu spät.",
+      "eyebrow": "Das Problem",
+      "title": "Die Zahl steht fest, bevor der Raum gelesen ist",
+      "lead": "Nicht aus Nachlässigkeit. Es war nie genug Zeit, alles zu lesen.",
       "points": [
         {
-          "title": "Wer es zuerst findet, bestimmt die Deutung",
-          "body": "Wer ein Thema zuerst aufdeckt, bestimmt seine Deutung für den Rest der Verhandlung."
+          "title": "Sie arbeiten mit einer Stichprobe",
+          "body": "Klassische Due Diligence liest einen Bruchteil des Raums und nennt das Abdeckung. Der Rest liegt weiterhin darin."
         },
         {
-          "title": "Eine Dimension ist keine Due Diligence",
-          "body": "Eine Quality-of-Earnings-Analyse deckt eine Dimension ab. Die Lücken zeigen sich zwischen den Disziplinen."
+          "title": "Wer zuerst findet, besitzt es",
+          "body": "Ein Befund in deren Händen ist ein Hebel. Derselbe Befund in Ihren ist eine Position."
         },
         {
-          "title": "Eine Risikoliste ist kein Argument",
-          "body": "Die meiste Due Diligence ist eine statische Risikoliste. Niemand sucht nach Hebeln für Wertsteigerung."
+          "title": "Eine Disziplin ist keine Due Diligence",
+          "body": "Eine Quality-of-Earnings-Analyse deckt die Earnings ab. Was schiefgeht, liegt zwischen den Disziplinen, wo niemand hingesehen hat."
         },
         {
-          "title": "Eine Stichprobe ist nicht der Raum",
-          "body": "Abdeckungslücken sind der Grund, warum Deals nach dem Closing schiefgehen."
+          "title": "Sie erfahren es nach dem Closing",
+          "body": "Die Lücke zwischen dem Geprüften und dem Unterschriebenen ist der Ort für Überraschungen nach dem Closing."
         }
       ]
     },
     "pipeline": {
       "eyebrow": "Wie es läuft",
-      "title": "Eine erprobte Pipeline, jedes Mal gleich gefahren",
-      "lead": "Jeder kann ein agentisches Werkzeug auf einen Datenraum richten. Die Frage ist, was jedes Mal passiert, weil es so gebaut ist.",
-      "refusalTitle": "Die Schleife verweigert die Auto-Freigabe",
-      "refusals": [
-        "Erfundene oder halluzinierte Fundstellen",
-        "Datenschutzlecks",
-        "Scope-Verweigerungen",
-        "Entwürfe unter dem Reviewer-Schwellenwert"
-      ],
-      "refusalNote": "{blocks} harte Blockaden insgesamt. Jede geht an eine Person.",
+      "title": "Dieselben fünf Schritte, bei jedem Mandat",
+      "lead": "Jeder kann ein KI-Tool auf einen Datenraum richten. Entscheidend ist, was jedes Mal passiert, ob jemand zusieht oder nicht.",
+      "refusalTitle": "Die Schleife verweigert die automatische Freigabe",
+      "refusalNote": "Jede harte Blockade geht an einen Menschen.",
       "stages": [
         {
           "title": "Fundierte Retrieval",
@@ -261,37 +248,75 @@
           "title": "Menschliches Freigabetor",
           "body": "Ein verpflichtender menschlicher Schritt. Er läuft jedes Mal."
         }
+      ],
+      "refusals": [
+        "Erfundene oder halluzinierte Fundstellen",
+        "Datenschutzlecks",
+        "Scope-Verweigerungen",
+        "Entwürfe unter dem Reviewer-Schwellenwert"
+      ]
+    },
+    "plan": {
+      "eyebrow": "So fangen wir an",
+      "title": "Drei Schritte, und der erste ist ein Gespräch",
+      "lead": "Kein Angebot, bevor wir beide wissen, dass es passt.",
+      "steps": [
+        {
+          "title": "Buchen Sie 30 Minuten",
+          "body": "Wir klären, ob das zu Ihrer Situation passt. Wenn nicht, sagen wir das im Gespräch."
+        },
+        {
+          "title": "Zeigen Sie uns den Raum",
+          "body": "Sie stecken das Mandat ab. Der Zugang läuft unter AVV, in der EU, mit Zero Retention."
+        },
+        {
+          "title": "Lesen Sie die Befunde in Tagen",
+          "body": "Jeder nennt seine Quelle. Eine namentlich benannte Person hat ihn freigegeben, bevor er Sie erreicht."
+        }
       ]
     },
     "coverage": {
       "eyebrow": "Abdeckung",
-      "title": "{modules} Module, {agents} Sub-Agents, {waves} Wellen",
-      "lead": "Factum ist bereits gebaut. Jedes Modul ist ein Team von Spezialisten mit vorab zugeschnittenem Auftrag.",
-      "note": "Aus dem Produktquellcode gezählt. Das größte Modul setzt {largest} Sub-Agents ein.",
-      "figures": {
-        "modules": {
-          "label": "Vorab zugeschnittene Module",
-          "note": "Eines je Disziplin oder Deliverable."
-        },
-        "agents": {
-          "label": "Spezialisierte Sub-Agents",
-          "note": "Verteilt auf {waves} nach Abhängigkeit geordnete Wellen."
-        },
-        "speed": {
-          "value": "Tage",
-          "label": "Keine Wochen",
-          "note": "Ein vollständiger Durchlauf über {disciplines} Disziplinen, in Tagen. Die menschliche Prüfung kommt danach."
-        }
-      }
+      "title": "Der ganze Raum, keine Stichprobe",
+      "lead": "Jede Disziplin läuft im selben Durchgang, damit nichts für eine zweite Phase liegen bleibt, die nie kommt.",
+      "note": "Nach Abhängigkeit geordnet: spätere Arbeit wartet auf die Befunde, die sie braucht."
     },
     "sprint": {
       "eyebrow": "Das Mandat",
       "title": "Der Diligence Sprint",
-      "lead": "Alle {disciplines} Disziplinen in einem Mandat, plus drei Synthese-Ebenen. Gefahren auf einem Target, einem Unternehmen, das Sie halten, oder Ihrem eigenen Betrieb.",
+      "lead": "Ein Mandat, jede Disziplin, plus die Synthese darüber. Auf einem Target, auf einem Unternehmen, das Sie halten, oder auf Ihrem eigenen Betrieb, bevor ein Käufer es tut.",
       "guaranteeLabel": "Die Befundgarantie",
-      "guarantee": "Drei wesentliche Feststellungen, die Ihr eigenes Team noch nicht kannte, oder das Mandat ist kostenlos.",
-      "guaranteeNote": "Für Pilotmandate. Wir tragen das Risiko, dass dies früh ist.",
+      "guarantee": "Drei wesentliche Befunde, die Ihr eigenes Team noch nicht kannte, oder das Mandat ist kostenlos.",
+      "guaranteeNote": "Für Pilotmandate. Wir tragen das Risiko, dass dies früh ist, nicht Sie.",
       "link": "Was der Sprint abdeckt"
+    },
+    "cycle": {
+      "eyebrow": "Über den Zyklus",
+      "title": "Fünf Momente, eine Beweisbasis",
+      "lead": "Derselbe Raum wird neu gelesen, sobald jemand Neues ihm vertrauen muss. Lesen Sie ihn einmal, richtig.",
+      "stages": [
+        {
+          "title": "Kaufen",
+          "body": "Sie bepreisen, was der Verkäufer Ihnen zeigen wollte. Befunde landen, solange sie Preis und Struktur noch bewegen können."
+        },
+        {
+          "title": "Finanzieren",
+          "body": "Die Bank macht die Arbeit noch einmal, die Sie schon bezahlt haben. Stattdessen eine Beweisbasis, auf der ein Kreditgeber aufsetzen kann."
+        },
+        {
+          "title": "Halten",
+          "body": "Covenant-Spielraum verschiebt sich leise. KPI-Drift und Frühwarnsignale, plus die Werthebel, nach denen eine Risikoliste nie sucht."
+        },
+        {
+          "title": "Verkaufen",
+          "body": "Die Berater des Käufers werden es finden. Fahren Sie deren Durchgang zuerst auf Ihrer Seite, solange noch Zeit bleibt, das Gefundene zu beheben."
+        },
+        {
+          "title": "Restrukturieren",
+          "body": "Optionen schließen sich schneller, als Entscheidungen fallen. Fortführung, Gläubigerposition und Covenant-Spielraum, pre-IBR und WHOA."
+        }
+      ],
+      "note": "WHOA- und IBR-Arbeit ist an niederländisches Recht gebunden. Der Rest des Zyklus ist rechtsraumunabhängig."
     },
     "trust": {
       "eyebrow": "Governance",
@@ -302,49 +327,47 @@
     "cta": {
       "title": "Beginnen Sie mit einem Gespräch, nicht mit einem Angebot",
       "body": "Dreißig Minuten, um zu sehen, ob das zu Ihrer Situation passt. Wenn nicht, sagen wir das.",
-      "button": "Erstgespräch buchen",
-      "note": "Factum steht vor dem Launch und nimmt eine begrenzte Zahl an Pilotmandaten an."
+      "button": "Erstgespräch über 30 Minuten buchen",
+      "note": "Factum steht vor dem Launch und nimmt eine begrenzte Zahl an Pilotmandaten an — im einstelligen Bereich."
     },
-    "cycle": {
-      "eyebrow": "Über den Zyklus",
-      "title": "Eine Beweisgrundlage, fünf Momente",
-      "lead": "Nichts wird neu aufgebaut, wenn der nächste Moment kommt.",
-      "stages": [
+    "guide": {
+      "eyebrow": "Wer es liest",
+      "title": "Geprüft wie eine Bank es täte, gebaut wie Produktionssoftware es sein muss",
+      "lead": "Der Blick eines Bankers auf Risiko, aus dem Inneren der Institute, die Deals wie Ihren finanzieren. Die Disziplin eines Ingenieurs für Systeme, die nicht leise versagen dürfen. Beide zeichnen ab, bevor Sie etwas sehen.",
+      "link": "Das Team kennenlernen"
+    },
+    "success": {
+      "eyebrow": "Danach",
+      "title": "Was sich ändert, wenn Sie unterschreiben",
+      "lead": "Kein besserer Bericht. Eine andere Position am Tisch.",
+      "points": [
         {
-          "title": "Kaufen",
-          "body": "Vom IM-Screening bis zum Closing, solange die Ergebnisse Preis und Struktur noch bewegen können."
+          "title": "Der Preis spiegelt den ganzen Raum wider",
+          "body": "Keine Stichprobe. Jede Disziplin, abgeglichen, bevor der Preis feststeht."
         },
         {
-          "title": "Finanzieren",
-          "body": "Das Memo, auf dessen Basis eine Bank oder ein Investor zeichnet, aufgebaut auf derselben Beweisgrundlage."
+          "title": "Sie wissen schon, was sie finden werden",
+          "body": "Die Berater des Käufers führen diese Prüfung ohnehin durch. Diesmal haben Sie es zuerst gesehen, mit Zeit zum Beheben."
         },
         {
-          "title": "Halten und Wert aufbauen",
-          "body": "Covenant-Spielraum, KPI-Drift, Frühwarnsignale. Dazu die Hebel für Wertsteigerung, die eine Risikoliste übergeht."
-        },
-        {
-          "title": "Verkaufen",
-          "body": "Qualität des Datenraums, finanzielle Darstellung, Stärke des Managements, Equity Story. Der Durchgang des Käufers, zuerst auf Ihrer Seite gefahren."
-        },
-        {
-          "title": "Restrukturieren",
-          "body": "Pre-IBR und WHOA: Fortführungsprognose, Gläubigerposition, Covenant-Spielraum. Solange die Optionen noch offen sind."
+          "title": "Jede Feststellung bleibt bis zur Quelle rückverfolgbar",
+          "body": "Monate später können Sie noch immer die Passage öffnen, aus der eine Zahl stammt."
         }
       ],
-      "note": "WHOA- und IBR-Arbeit ist an niederländisches Recht gebunden. Der Rest des Zyklus ist rechtsraumunabhängig."
+      "link": "Sehen, wie eine Feststellung entsteht"
     }
   },
 
   "platform": {
     "header": {
       "eyebrow": "Die Plattform",
-      "title": "{modules} Module. {agents} Sub-Agents. {waves} Wellen.",
-      "lead": "Kein einzelner Agent, der einen Datenraum liest. Ein Dispatch-Graph, jedes Mal gleich ausgeführt."
+      "title": "Wie wir alles lesen, ohne etwas zu erfinden",
+      "lead": "Ein Agent mit großem Kontextfenster ist keine Due Diligence. Das hier ist ein Dispatch-Graph, bei jedem Mandat gleich gefahren."
     },
     "scale": {
-      "eyebrow": "Umfang",
-      "title": "Was tatsächlich gebaut ist",
-      "lead": "Jede Zahl auf dieser Seite ist aus dem Produktquellcode gezählt.",
+      "eyebrow": "Der Bestand",
+      "title": "Aus der Quelle gezählt, nicht geschätzt",
+      "lead": "Für Leser, die die Form des Baus sehen wollen. Jede Zahl hier ist aus dem Produkt-Quellcode gezählt.",
       "tiles": {
         "modules": {
           "title": "Module",
@@ -374,8 +397,8 @@
     },
     "coverage": {
       "eyebrow": "Die Bibliothek",
-      "title": "Alle {modules} Module, nach Dispatch-Welle gruppiert",
-      "lead": "Ein Modul, das den Output eines anderen braucht, kann nicht früher starten. Diese Abhängigkeit ist die Reihenfolge. Die Spreizung ist die andere Hälfte des Bildes: das größte Modul setzt {largest} Sub-Agents ein, das kleinste zwei.",
+      "title": "Die Modulbibliothek, in Dispatch-Reihenfolge",
+      "lead": "Ein Modul, das auf den Output eines anderen wartet, kann nicht früher starten — diese Abhängigkeit bestimmt die Reihenfolge. Das größte Modul setzt {largest} Sub-Agents ein. Das kleinste, zwei.",
       "note": "Aus den Dispatch-Graphen im Produktquellcode gezählt, nicht geschätzt. ZDR markiert die Module, deren Routing hart auf einen Zero-Retention-EU-Endpunkt gesetzt ist."
     },
     "pipeline": {
@@ -573,9 +596,9 @@
 
   "sprint": {
     "header": {
-      "eyebrow": "Das Mandat",
-      "title": "Der Diligence Sprint",
-      "lead": "Alle {disciplines} Disziplinen, ein Mandat, zu einem einzigen Narrativ zusammengeführt. Gefahren auf einem Target, einem Unternehmen, das Sie halten, oder Ihrem eigenen Betrieb."
+      "eyebrow": "Der Diligence Sprint",
+      "title": "Sehen Sie, was ein Käufer finden würde, bevor er es tut",
+      "lead": "Alle {disciplines} Disziplinen, zu einem einzigen Narrativ zusammengeführt. Gefahren auf einem Target, einem Unternehmen, das Sie halten, oder Ihrem eigenen Betrieb."
     },
     "reframe": {
       "quote": "Die eigene Arbeit zuerst zu prüfen, ist kein Zeichen dafür, dass etwas nicht stimmt. So sieht ein gut geführter Prozess aus.",
@@ -583,14 +606,14 @@
     },
     "disciplines": {
       "eyebrow": "Umfang",
-      "title": "Alle {disciplines} Disziplinen, ein Mandat",
+      "title": "Abgegrenzt pro Disziplin, nicht pro Stunde",
       "lead": "Jeder Durchgang vordefiniert auf das, worauf es in dieser Disziplin ankommt.",
       "note": "Ein Mandat, ein Preis. Keine À-la-carte-Karte und kein Upsell nach Unterschrift. Worauf jede Disziplin schaut, wird im Erstgespräch anhand Ihres Datenraums festgelegt."
     },
     "layers": {
       "eyebrow": "Synthese",
-      "title": "Drei Ebenen über den elf",
-      "lead": "Die Ebenen, die aus {disciplines} getrennten Analysen ein nutzbares Ergebnis machen.",
+      "title": "Von elf Analysen zu einem Urteil",
+      "lead": "Was {disciplines} getrennte Analysen zu einem einzigen Ergebnis macht, nicht elf.",
       "items": [
         {
           "title": "Wertsteigerungs-Analyse",
@@ -845,7 +868,7 @@
         ]
       }
     ],
-    "closing": "Urteilsvermögen hinter dem Prozess, nicht nur Software.",
+    "closing": "Zusammen: Leveraged-Finance-Underwriting bei der ING, Restrukturierung bei der Rabobank, und Produktions-Datenpipelines, die nach DSGVO geprüft wurden. Dieselbe Sorgfalt, gerichtet auf den Deal vor Ihnen.",
     "cta": {
       "title": "Sie sprechen mit der Person, die das Ergebnis prüft",
       "body": "Solange Factum vor dem Launch steht, sind Erstgespräch, Prüfstufe und Durchsprache dieselbe Person.",
@@ -857,8 +880,8 @@
   "partnerships": {
     "header": {
       "eyebrow": "Partnerschaften",
-      "title": "Kapazität auf Due-Diligence-Niveau hinter Ihren eigenen Mandantenbeziehungen",
-      "lead": "Factum arbeitet mit einer kleinen Zahl von Beratungshäusern, die die Mandantenbeziehung halten und analytische Tiefe dahinter wollen."
+      "title": "Mehr Mandate, als Ihr Team lesen kann",
+      "lead": "Sie behalten die Beziehung und das Urteilsvermögen. Wir führen die Analyse über elf Disziplinen dahinter aus, unter Ihrem Namen."
     },
     "who": {
       "eyebrow": "Passung",
@@ -878,15 +901,15 @@
           "body": "Wo ein Independent Business Review schnell entstehen und der Prüfung durch Kreditgeber standhalten muss."
         },
         {
-          "title": "Rechnungslegungs- und prüfungsnahe Gesellschaften",
-          "body": "Wo Empfehlungs- und Unabhängigkeitsregeln je Beziehung geprüft werden müssen."
+          "title": "PE- und Buy-Side-Berater",
+          "body": "Wettbewerbsprozesse mit engem Zeitplan, in denen die Einschätzung trotzdem einem Investment Committee standhalten muss."
         }
       ]
     },
     "split": {
       "eyebrow": "Die Aufteilung",
       "title": "Sie behalten die Beziehung. Wir liefern die Analyse.",
-      "lead": "Die Plattform fährt {modules} Module und {agents} spezialisierte Sub-Agents. Eine Partnerschaft stellt das hinter Ihren Namen.",
+      "lead": "Dieselbe Plattform mit elf Disziplinen, dasselbe Prüfgate — geliefert unter Ihrem Namen.",
       "columns": [
         {
           "label": "Sie behalten",
@@ -1000,7 +1023,7 @@
     },
     "details": {
       "eyebrow": "Details",
-      "title": "Unternehmen",
+      "title": "Mit wem Sie es zu tun haben",
       "entityLabel": "Rechtsträger",
       "entityValue": "Factum Capital, Niederlande",
       "kvkLabel": "Handelsregister",

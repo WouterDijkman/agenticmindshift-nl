@@ -6,7 +6,7 @@
     },
     "platform": {
       "title": "Het platform",
-      "description": "241 due-diligencemodules over 31 verticals. Elke bevinding verwijst naar een document. Elke output passeert een menselijke toets."
+      "description": "31 due-diligencemodules over 11 disciplines. Elke bevinding verwijst naar een document. Elke output passeert een menselijke toets."
     },
     "sprint": {
       "title": "De Diligence Sprint",
@@ -191,55 +191,42 @@
 
   "home": {
     "hero": {
-      "eyebrow": "Diligence door de dealcyclus",
-      "title": "Lees de hele room voordat het getal vastligt",
-      "lead": "Kopen, financieren, houden, verkopen: het besluit valt op een steekproef. Factum zet {agents} gespecialiseerde sub-agents op de hele dataroom. Een persoon beoordeelt het voordat u het ziet.",
-      "cta": "Plan een intakegesprek",
-      "secondary": "Bekijk hoe de pipeline werkt",
-      "footnote": "Pre-launch. We nemen een handvol pilotmandaten aan."
-    },
-    "schema": {
-      "eyebrow": "Het outputcontract",
-      "title": "Een bevinding is pas af als die herleidbaar is",
-      "lead": "Elke bewering verwijst naar een specifiek document en een specifieke passage. Geen bronverwijzing, geen bevinding.",
-      "body": "Het schema dwingt dat af. We publiceren het contract in plaats van een voorbeeld, omdat klantwerk vertrouwelijk is.",
-      "link": "Lees de volledige pipeline"
+      "eyebrow": "Due diligence door de hele dealcyclus",
+      "title": "Teken geen getal dat u niet gelezen hebt",
+      "lead": "Due diligence neemt een steekproef en rapporteert na weken. Wat is overgeslagen, ligt er nog steeds. Factum leest alles, in dagen, met de bronpassage achter elke bevinding.",
+      "cta": "Plan een intakegesprek van 30 minuten",
+      "secondary": "Bekijk hoe een bevinding eruitziet",
+      "footnote": "Pre-launch. We nemen een beperkt aantal pilotmandaten aan."
     },
     "problem": {
-      "eyebrow": "De asymmetrie",
-      "title": "Het getal wordt bepaald terwijl de room half gelezen is",
-      "lead": "Traditionele due diligence neemt een steekproef en rapporteert weken later. Dan ligt de prijs al verankerd en zijn de bevindingen te laat.",
+      "eyebrow": "Het probleem",
+      "title": "Het getal ligt vast voordat de room gelezen is",
+      "lead": "Niet uit onzorgvuldigheid. Er was nooit tijd om alles te lezen.",
       "points": [
         {
-          "title": "Wie het eerst vindt, bepaalt het kader",
-          "body": "Wie een probleem als eerste vindt, bepaalt hoe het voor de rest van de onderhandeling wordt neergezet."
+          "title": "U werkt met een steekproef",
+          "body": "Traditionele due diligence leest een fractie van de room en noemt dat dekking. De rest ligt er nog."
         },
         {
-          "title": "Eén dimensie is geen due diligence",
-          "body": "Een quality-of-earnings-analyse dekt één dimensie. De gaten zitten tussen de disciplines."
+          "title": "Wie het eerst vindt, bezit het",
+          "body": "Een bevinding in hun handen is een drukmiddel. Dezelfde bevinding in die van u is een positie."
         },
         {
-          "title": "Een risicolijst is geen argument",
-          "body": "De meeste due diligence is een statische risicolijst. Niemand jaagt op hefbomen voor waardecreatie."
+          "title": "Eén discipline is geen due diligence",
+          "body": "Een quality-of-earnings-analyse dekt de earnings. Wat misgaat zit tussen disciplines in, waar niemand keek."
         },
         {
-          "title": "Een steekproef is niet de room",
-          "body": "Dekkingsgaten zijn hoe deals na closing misgaan."
+          "title": "U komt het na closing tegen",
+          "body": "Het gat tussen wat beoordeeld is en wat getekend is, is waar verrassingen na closing zitten."
         }
       ]
     },
     "pipeline": {
       "eyebrow": "Hoe het draait",
-      "title": "Een geteste pipeline, elke keer hetzelfde gedraaid",
-      "lead": "Iedereen kan een agentic tool op een data room richten. De vraag is wat er elke keer gebeurt, omdat het zo gebouwd is.",
+      "title": "Dezelfde vijf stappen, elk mandaat",
+      "lead": "Iedereen kan een AI-tool op een data room richten. Het gaat om wat er elke keer gebeurt, of iemand nu meekijkt of niet.",
       "refusalTitle": "De lus weigert automatisch goed te keuren",
-      "refusals": [
-        "Verzonnen of gehallucineerde bronverwijzingen",
-        "Privacylekken",
-        "Scope-weigeringen",
-        "Concepten onder de reviewerdrempel"
-      ],
-      "refusalNote": "{blocks} harde blokkades in totaal. Elke gaat naar een persoon.",
+      "refusalNote": "Elke harde blokkade gaat naar een persoon.",
       "stages": [
         {
           "title": "Gefundeerde retrieval",
@@ -261,37 +248,75 @@
           "title": "Menselijke goedkeuringspoort",
           "body": "Eén verplichte menselijke stap. Die draait elke keer."
         }
+      ],
+      "refusals": [
+        "Verzonnen of gehallucineerde bronverwijzingen",
+        "Privacylekken",
+        "Scope-weigeringen",
+        "Concepten onder de reviewerdrempel"
+      ]
+    },
+    "plan": {
+      "eyebrow": "Zo begint het",
+      "title": "Drie stappen, en de eerste is een gesprek",
+      "lead": "Geen voorstel voordat we allebei weten dat het past.",
+      "steps": [
+        {
+          "title": "Plan een gesprek van 30 minuten",
+          "body": "We bepalen samen of dit bij uw situatie past. Zo niet, dan zeggen we dat in het gesprek."
+        },
+        {
+          "title": "Wijs ons de room aan",
+          "body": "U bakent het mandaat af. Toegang loopt onder een verwerkersovereenkomst, in de EU, met zero retention."
+        },
+        {
+          "title": "Lees de bevindingen in dagen",
+          "body": "Elke bevinding noemt zijn bron. Een persoon met naam keurde die goed voordat u hem zag."
+        }
       ]
     },
     "coverage": {
       "eyebrow": "Dekking",
-      "title": "{modules} modules, {agents} sub-agents, {waves} golven",
-      "lead": "Factum is al gebouwd. Elke module is een team specialisten met een vooraf afgebakende opdracht.",
-      "note": "Geteld uit de broncode van het product. De grootste module zet {largest} sub-agents in.",
-      "figures": {
-        "modules": {
-          "label": "Vooraf afgebakende modules",
-          "note": "Eén per discipline of deliverable."
-        },
-        "agents": {
-          "label": "Gespecialiseerde sub-agents",
-          "note": "Verdeeld over {waves} golven op volgorde van afhankelijkheid."
-        },
-        "speed": {
-          "value": "Dagen",
-          "label": "Geen weken",
-          "note": "Een volledige pass over {disciplines} disciplines, in dagen. Menselijke review komt daarna."
-        }
-      }
+      "title": "De hele room, geen steekproef",
+      "lead": "Elke discipline draait in dezelfde pass, dus er blijft niets liggen voor een tweede fase die er nooit komt.",
+      "note": "Op volgorde van afhankelijkheid: later werk wacht op de bevindingen die het nodig heeft."
     },
     "sprint": {
       "eyebrow": "De opdracht",
       "title": "De Diligence Sprint",
-      "lead": "Alle {disciplines} disciplines in één opdracht, plus drie synthesielagen. Gedraaid op een target, een onderneming die u houdt, of uw eigen bedrijf.",
+      "lead": "Eén opdracht, elke discipline, plus de synthese daarbovenop. Draai hem op een target, op een onderneming die u al houdt, of op uw eigen bedrijf voordat een koper dat doet.",
       "guaranteeLabel": "De bevindingengarantie",
       "guarantee": "Drie materiële bevindingen die uw eigen team nog niet had geïdentificeerd, of de opdracht is gratis.",
       "guaranteeNote": "Voor pilotmandaten. Wij dragen het risico dat dit vroeg is, niet u.",
       "link": "Wat de sprint dekt"
+    },
+    "cycle": {
+      "eyebrow": "Door de cyclus heen",
+      "title": "Vijf momenten, één bewijsbasis",
+      "lead": "Dezelfde room wordt opnieuw gelezen zodra iemand nieuw erop moet vertrouwen. Lees hem één keer, goed.",
+      "stages": [
+        {
+          "title": "Kopen",
+          "body": "U prijst op wat de verkoper u koos te laten zien. Bevindingen landen terwijl ze prijs en structuur nog kunnen bewegen."
+        },
+        {
+          "title": "Financieren",
+          "body": "De bank doet het werk over waar u al voor betaalde. Eén bewijsbasis waar een financier op kan onderschrijven."
+        },
+        {
+          "title": "Houden",
+          "body": "Convenantruimte schuift stilletjes. KPI-drift en vroege signalen, plus de waardehefbomen waar een risicolijst nooit naar kijkt."
+        },
+        {
+          "title": "Verkopen",
+          "body": "De adviseurs van de koper vinden het. Draai hun slag eerst aan uw eigen kant, nu er nog tijd is om te repareren wat eruit komt."
+        },
+        {
+          "title": "Herstructureren",
+          "body": "Opties sluiten sneller dan besluiten vallen. Continuïteit, crediteurenpositie en convenantruimte, pre-IBR en WHOA."
+        }
+      ],
+      "note": "WHOA- en IBR-werk is gebonden aan Nederlandse jurisdictie. De rest van de cyclus is jurisdictieonafhankelijk."
     },
     "trust": {
       "eyebrow": "Governance",
@@ -302,49 +327,47 @@
     "cta": {
       "title": "Begin met een gesprek, niet met een voorstel",
       "body": "Dertig minuten om te zien of dit bij uw situatie past. Zo niet, dan zeggen we dat.",
-      "button": "Plan een intakegesprek",
-      "note": "Factum is pre-launch en neemt een beperkt aantal pilotmandaten aan."
+      "button": "Plan een intakegesprek van 30 minuten",
+      "note": "Factum is pre-launch en neemt een beperkt aantal pilotmandaten aan — op één hand te tellen."
     },
-    "cycle": {
-      "eyebrow": "Door de cyclus heen",
-      "title": "Eén bewijsbasis, vijf momenten",
-      "lead": "Er wordt niets opnieuw opgebouwd als het volgende moment komt.",
-      "stages": [
+    "guide": {
+      "eyebrow": "Wie het beoordeelt",
+      "title": "Doorgelicht zoals een bank het zou doen, gebouwd zoals productiesoftware moet zijn",
+      "lead": "Een bankier’s blik op risico, van binnenuit de instellingen die deals zoals de uwe financieren. De discipline van een engineer voor systemen die niet stilletjes mogen falen. Beiden tekenen af voordat u iets ziet.",
+      "link": "Maak kennis met het team"
+    },
+    "success": {
+      "eyebrow": "Erna",
+      "title": "Wat er anders is als u tekent",
+      "lead": "Geen beter rapport. Een andere positie aan tafel.",
+      "points": [
         {
-          "title": "Kopen",
-          "body": "Van IM-screening tot closing, terwijl de bevindingen prijs en structuur nog kunnen bewegen."
+          "title": "De prijs weerspiegelt de hele kamer",
+          "body": "Geen steekproef. Elke discipline, afgestemd, voordat het bedrag vaststaat."
         },
         {
-          "title": "Financieren",
-          "body": "Het memo waar een bank of investeerder op onderschrijft, gebouwd op dezelfde bewijsbasis."
+          "title": "U weet al wat ze zullen vinden",
+          "body": "De adviseurs van de koper doorlopen deze analyse toch. Deze keer zag u het eerst, met tijd om het te verhelpen."
         },
         {
-          "title": "Houden en waarde bouwen",
-          "body": "Convenantruimte, KPI-drift, vroege signalen. Plus de hefbomen voor waardecreatie die een risicolijst negeert."
-        },
-        {
-          "title": "Verkopen",
-          "body": "Kwaliteit van de data room, financiële presentatie, sterkte van het management, equity story. De slag van de koper, eerst aan uw kant gedraaid."
-        },
-        {
-          "title": "Herstructureren",
-          "body": "Pre-IBR en WHOA: continuïteit, crediteurenpositie, convenantruimte. Terwijl de opties nog openliggen."
+          "title": "Elke bevinding blijft herleidbaar tot de bron",
+          "body": "Maanden later kunt u nog steeds de passage openen waar een getal vandaan komt."
         }
       ],
-      "note": "WHOA- en IBR-werk is gebonden aan Nederlandse jurisdictie. De rest van de cyclus is jurisdictieonafhankelijk."
+      "link": "Zie hoe een bevinding wordt opgebouwd"
     }
   },
 
   "platform": {
     "header": {
       "eyebrow": "Het platform",
-      "title": "{modules} modules. {agents} sub-agents. {waves} golven.",
-      "lead": "Geen enkele agent die een dataroom leest. Een dispatchgraaf, elke keer op dezelfde manier uitgevoerd."
+      "title": "Hoe we alles lezen zonder iets te verzinnen",
+      "lead": "Eén agent met een groot contextvenster is geen due diligence. Dit is een dispatchgraaf, elk mandaat op dezelfde manier gedraaid."
     },
     "scale": {
-      "eyebrow": "Schaal",
-      "title": "Wat er daadwerkelijk gebouwd is",
-      "lead": "Elk getal op deze pagina is geteld uit de broncode van het product.",
+      "eyebrow": "De inventaris",
+      "title": "Geteld uit de bron, niet geschat",
+      "lead": "Voor wie de vorm van de bouw wil zien. Elk getal hier is geteld uit de broncode van het product.",
       "tiles": {
         "modules": {
           "title": "Modules",
@@ -374,8 +397,8 @@
     },
     "coverage": {
       "eyebrow": "De bibliotheek",
-      "title": "Alle {modules} modules, gegroepeerd per dispatchgolf",
-      "lead": "Een module die output van een andere module nodig heeft, kan niet eerder starten. Die afhankelijkheid is de volgorde. De spreiding is de andere helft van het beeld: de grootste module zet {largest} sub-agents in, de kleinste twee.",
+      "title": "De modulebibliotheek, in dispatchvolgorde",
+      "lead": "Een module die op de output van een andere module wacht, kan niet eerder starten — die afhankelijkheid bepaalt de volgorde. De grootste module zet {largest} sub-agents in. De kleinste, twee.",
       "note": "Geteld uit de dispatchgrafen in de broncode, niet geschat. ZDR markeert de modules waarvan de routing hard is vastgezet op een zero-retention EU-endpoint."
     },
     "pipeline": {
@@ -573,9 +596,9 @@
 
   "sprint": {
     "header": {
-      "eyebrow": "De opdracht",
-      "title": "De Diligence Sprint",
-      "lead": "Alle {disciplines} disciplines, één opdracht, afgestemd tot één verhaallijn. Gedraaid op een target, een onderneming die u houdt, of uw eigen bedrijf."
+      "eyebrow": "De Diligence Sprint",
+      "title": "Zie wat een koper zou vinden, voordat hij het vindt",
+      "lead": "Alle {disciplines} disciplines, afgestemd tot één verhaallijn. Gedraaid op een target, een onderneming die u houdt, of uw eigen bedrijf."
     },
     "reframe": {
       "quote": "Eerst uw eigen werk controleren is geen teken dat er iets mis is. Het is hoe een goed geleid proces eruitziet.",
@@ -583,14 +606,14 @@
     },
     "disciplines": {
       "eyebrow": "Scope",
-      "title": "Alle {disciplines} disciplines, één opdracht",
+      "title": "Per discipline afgebakend, niet per uur",
       "lead": "Elke slag vooraf afgebakend op wat er voor die discipline toe doet.",
       "note": "Eén opdracht, één prijs. Geen à-la-cartemenu en geen upsell na ondertekening. Waar elke discipline naar kijkt, wordt in het intakegesprek tegen uw data room bepaald."
     },
     "layers": {
       "eyebrow": "Synthese",
-      "title": "Drie lagen bovenop de elf",
-      "lead": "De lagen die {disciplines} losse analyses tot één bruikbare oplevering maken.",
+      "title": "Van elf analyses naar één oordeel",
+      "lead": "Wat {disciplines} losse analyses tot één oplevering maakt, niet elf.",
       "items": [
         {
           "title": "Waardecreatie-analyse",
@@ -845,7 +868,7 @@
         ]
       }
     ],
-    "closing": "Oordeel achter het proces, niet alleen software.",
+    "closing": "Samen: leveraged-finance-underwriting bij ING, herstructurering bij Rabobank, en productie-datapijplijnen die onder de AVG zijn geaudit. Dezelfde strengheid, gericht op de deal die voor u ligt.",
     "cta": {
       "title": "U spreekt de persoon die de output beoordeelt",
       "body": "Zolang Factum pre-launch is, zijn het intakegesprek, de beoordelingstoets en de doorloop dezelfde persoon.",
@@ -857,8 +880,8 @@
   "partnerships": {
     "header": {
       "eyebrow": "Partnerships",
-      "title": "Capaciteit op diligence-niveau achter uw eigen klantrelaties",
-      "lead": "Factum werkt met een klein aantal advieskantoren die de klantrelatie bezitten en daarachter analytische diepgang willen."
+      "title": "Meer mandaten dan uw team kan lezen",
+      "lead": "U behoudt de relatie en het oordeel. Wij draaien de analyse over elf disciplines erachter, onder uw naam."
     },
     "who": {
       "eyebrow": "Fit",
@@ -878,15 +901,15 @@
           "body": "Waar een independent business review snel moet komen en de toetsing van financiers moet doorstaan."
         },
         {
-          "title": "Accountants- en auditaanpalende kantoren",
-          "body": "Waar doorverwijs- en onafhankelijkheidsregels per relatie getoetst moeten worden."
+          "title": "PE- en buy-side-adviseurs",
+          "body": "Concurrerende processen op een strakke klok, waar de analyse alsnog een investeringscomité moet doorstaan."
         }
       ]
     },
     "split": {
       "eyebrow": "De verdeling",
       "title": "U houdt de relatie. Wij leveren de slag.",
-      "lead": "Het platform draait {modules} modules en {agents} gespecialiseerde sub-agents. Een partnership zet dat achter uw naam.",
+      "lead": "Hetzelfde platform met elf disciplines, dezelfde toetsing — geleverd onder uw naam.",
       "columns": [
         {
           "label": "U houdt",
@@ -1000,7 +1023,7 @@
     },
     "details": {
       "eyebrow": "Gegevens",
-      "title": "Bedrijf",
+      "title": "Met wie u te maken heeft",
       "entityLabel": "Entiteit",
       "entityValue": "Factum Capital, Nederland",
       "kvkLabel": "Kamer van Koophandel",

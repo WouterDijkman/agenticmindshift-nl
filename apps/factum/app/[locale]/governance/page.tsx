@@ -1,12 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/pageMetadata';
-import {
-  SketchChip,
-  SketchDueDiligence,
-  SketchEyeHidden,
-  SketchKnowledge
-} from '@repo/ui/SketchIcons';
 import PageHeader from '@/components/PageHeader';
 import HandoffTrack from '@/components/HandoffTrack';
 import MediaCards from '@/components/MediaCards';
@@ -57,6 +51,7 @@ export default async function GovernancePage({
         eyebrow={t('header.eyebrow')}
         title={t('header.title')}
         lead={t('header.lead')}
+        visual={2}
       />
 
       {/* Data handling. */}
@@ -69,7 +64,6 @@ export default async function GovernancePage({
         <div style={{ marginTop: 32 }}>
           <MediaCards
             items={s.raw('governancePoints') as { title: string; body: string }[]}
-            icons={[SketchChip, SketchEyeHidden, SketchKnowledge, SketchDueDiligence]}
             seed={11}
             wide
           />
@@ -158,8 +152,8 @@ export default async function GovernancePage({
         </Reveal>
       </Section>
 
-      {/* The one measured number, welded to its caveat. */}
-      <Section id="grounding" width="medium">
+      {/* The one measured number, welded to its caveat — the feature moment on this page. */}
+      <Section id="grounding" width="medium" tone="inset">
         <SectionHeader
           eyebrow={t('grounding.eyebrow')}
           title={t('grounding.title')}

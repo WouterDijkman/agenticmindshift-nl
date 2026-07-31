@@ -40,6 +40,7 @@ export default async function TeamPage({
         eyebrow={t('header.eyebrow')}
         title={t('header.title')}
         lead={t('header.lead')}
+        visual={3}
       />
 
       <Section width="wide">

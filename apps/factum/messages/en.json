@@ -6,7 +6,7 @@
     },
     "platform": {
       "title": "The platform",
-      "description": "241 due-diligence modules across 31 verticals. Every finding cites a document. Every output passes a human gate."
+      "description": "31 due-diligence modules across 11 disciplines. Every finding cites a document. Every output passes a human gate."
     },
     "sprint": {
       "title": "The Diligence Sprint",
@@ -191,47 +191,40 @@
 
   "home": {
     "hero": {
-      "eyebrow": "Deal-cycle diligence",
-      "title": "Read the whole room before the number is fixed",
-      "lead": "Acquiring, financing, holding, selling: the decision gets made on a sample. Factum runs {agents} specialist sub-agents over the whole room. A person reviews it before you see it.",
-      "cta": "Book an intake call",
-      "secondary": "See how the pipeline works",
-      "footnote": "Pre-launch. We take on single digits of pilot mandates."
-    },
-    "schema": {
-      "eyebrow": "The output contract",
-      "title": "A finding isn’t finished until it can be traced",
-      "lead": "Every claim cites a specific document and passage. No citation, no finding.",
-      "body": "The schema enforces it. We publish the contract instead of a sample, because client work is confidential.",
-      "link": "Read the full pipeline"
+      "eyebrow": "Due diligence across the deal cycle",
+      "title": "Nobody should sign a number they haven’t read",
+      "lead": "Diligence samples the data room and reports in weeks. Whatever it skipped is still in there. Factum reads all of it in days, with the source passage behind every finding.",
+      "cta": "Book a 30-minute intake call",
+      "secondary": "See what a finding looks like",
+      "footnote": "Pre-launch. We take on a limited number of pilot mandates."
     },
     "problem": {
-      "eyebrow": "The asymmetry",
-      "title": "The number gets set while the room is still half-read",
-      "lead": "Traditional diligence samples the room and reports weeks later. By then the price is anchored and the findings are too late.",
+      "eyebrow": "The problem",
+      "title": "The number gets set before the room is read",
+      "lead": "Not because anyone was careless. Because there was never enough time to read all of it.",
       "points": [
         {
-          "title": "Whoever finds it first frames it",
-          "body": "Whoever surfaces an issue first controls how it gets framed for the rest of the negotiation."
+          "title": "You are working from a sample",
+          "body": "Traditional diligence reads a fraction of the room and calls it coverage. The rest is still in there."
         },
         {
-          "title": "One dimension isn’t diligence",
-          "body": "A quality-of-earnings read covers one dimension. The gaps show up between disciplines."
+          "title": "Whoever finds it first owns it",
+          "body": "A finding in their hands is leverage. The same finding in yours is a position."
         },
         {
-          "title": "A risk list is not an argument",
-          "body": "Most diligence is a static risk list. Nobody hunts for value-creation levers."
+          "title": "One discipline is not diligence",
+          "body": "A quality-of-earnings read covers earnings. What goes wrong sits between disciplines, where nobody was looking."
         },
         {
-          "title": "A sample is not the room",
-          "body": "Coverage gaps are how deals go wrong after closing."
+          "title": "You find out after closing",
+          "body": "The gap between what was reviewed and what was signed is where post-close surprises live."
         }
       ]
     },
     "pipeline": {
       "eyebrow": "How it runs",
-      "title": "A tested pipeline, run the same way every time",
-      "lead": "Anyone can point an agentic tool at a data room. The question is what happens every time, by design.",
+      "title": "The same five steps, every mandate",
+      "lead": "Anyone can point an AI tool at a data room. What matters is what happens every time, whether or not anyone is watching.",
       "refusalTitle": "The loop refuses to auto-approve",
       "refusals": [
         "Fabricated or hallucinated citations",
@@ -239,7 +232,7 @@
         "Scope refusals",
         "Drafts below the reviewer threshold"
       ],
-      "refusalNote": "{blocks} hard-block conditions in total. Every one routes to a person.",
+      "refusalNote": "Every hard-block condition routes to a person.",
       "stages": [
         {
           "title": "Grounded retrieval",
@@ -265,31 +258,16 @@
     },
     "coverage": {
       "eyebrow": "Coverage",
-      "title": "{modules} modules, {agents} sub-agents, {waves} waves",
-      "lead": "Factum is already built. Every module is a team of specialists with a pre-scoped brief.",
-      "note": "Counted from the product source. The largest module fields {largest} sub-agents.",
-      "figures": {
-        "modules": {
-          "label": "Pre-scoped modules",
-          "note": "One per discipline or deliverable."
-        },
-        "agents": {
-          "label": "Specialist sub-agents",
-          "note": "Dispatched across {waves} dependency-ordered waves."
-        },
-        "speed": {
-          "value": "Days",
-          "label": "Not weeks",
-          "note": "A full {disciplines}-discipline pass, produced in days. Human review comes after it."
-        }
-      }
+      "title": "The whole room, not a sample of it",
+      "lead": "Every discipline runs in the same pass, so nothing is left for a second phase that never happens.",
+      "note": "Dependency-ordered: later work waits for the findings it depends on."
     },
     "sprint": {
       "eyebrow": "The engagement",
       "title": "The Diligence Sprint",
-      "lead": "All {disciplines} disciplines in one engagement, plus three synthesis layers. Run it on a target, a company you hold, or your own business.",
+      "lead": "One engagement, every discipline, plus the synthesis on top. Run it on a target, on a company you already hold, or on your own business before a buyer does.",
       "guaranteeLabel": "The Findings Guarantee",
-      "guarantee": "Three material findings your own team hadn’t already identified, or the engagement is free.",
+      "guarantee": "Three material findings your own team had not already identified, or the engagement is free.",
       "guaranteeNote": "For pilot mandates. We carry the risk of this being early, not you.",
       "link": "What the sprint covers"
     },
@@ -301,50 +279,95 @@
     },
     "cta": {
       "title": "Start with a call, not a proposal",
-      "body": "Thirty minutes to see whether this fits your situation. If it doesn’t, we’ll say so.",
-      "button": "Book an intake call",
-      "note": "Factum is pre-launch and taking on a limited number of pilot mandates."
+      "body": "Thirty minutes to see whether this fits your situation. If it does not, we will say so.",
+      "button": "Book a 30-minute intake call",
+      "note": "Factum is pre-launch, taking on a limited number of pilot mandates — counted in single digits."
     },
     "cycle": {
       "eyebrow": "Across the cycle",
-      "title": "One evidence base, five moments",
-      "lead": "Nothing gets rebuilt when the next moment arrives.",
+      "title": "Five moments, one evidence base",
+      "lead": "The same room gets re-read every time somebody new has to trust it. Read it once, properly.",
       "stages": [
         {
           "title": "Acquiring",
-          "body": "From IM screening to closing, while the findings can still move price and structure."
+          "body": "You are pricing on what the seller chose to show you. Findings land while they can still move price and structure."
         },
         {
           "title": "Financing",
-          "body": "The memo a bank or investor underwrites from, built off the same evidence base."
+          "body": "The bank re-does the work you already paid for. One evidence base a lender can underwrite from instead."
         },
         {
-          "title": "Holding and building value",
-          "body": "Covenant headroom, KPI drift, early warning signals. Plus the value-creation levers a risk list ignores."
+          "title": "Holding",
+          "body": "Covenant headroom moves quietly. KPI drift and early warning signals, plus the value levers a risk list never looks for."
         },
         {
           "title": "Selling",
-          "body": "Data-room quality, financial presentation, management strength, equity story. The buyer’s pass, run first on your side."
+          "body": "The buyer’s advisers will find it. Run their pass on your own side first, while there is still time to fix what it finds."
         },
         {
           "title": "Restructuring",
-          "body": "Pre-IBR and WHOA: going concern, creditor position, covenant headroom. While the options are still open."
+          "body": "Options close faster than decisions get made. Going concern, creditor position and covenant headroom, pre-IBR and WHOA."
         }
       ],
       "note": "WHOA and IBR work is bound to Dutch jurisdiction. The rest of the cycle is jurisdiction-independent."
+    },
+    "plan": {
+      "eyebrow": "Getting started",
+      "title": "Three steps, and the first one is a conversation",
+      "lead": "No proposal until we both know it fits.",
+      "steps": [
+        {
+          "title": "Book a 30-minute call",
+          "body": "We work out whether this suits your situation. If it does not, we say so on the call."
+        },
+        {
+          "title": "Point us at the room",
+          "body": "You scope the mandate. Access runs under a DPA, in the EU, with zero retention."
+        },
+        {
+          "title": "Read the findings in days",
+          "body": "Each one cites its source. A named person approved it before it reached you."
+        }
+      ]
+    },
+    "guide": {
+      "eyebrow": "Who reads it",
+      "title": "Underwritten like a bank would, built like production software has to be",
+      "lead": "A banker’s read on risk, from inside the institutions that fund deals like yours. An engineer’s discipline for systems that can’t fail quietly. Both sign off before you see anything.",
+      "link": "Meet the team"
+    },
+    "success": {
+      "eyebrow": "After",
+      "title": "What’s different when you sign",
+      "lead": "Not a better report. A different position at the table.",
+      "points": [
+        {
+          "title": "The price reflects the whole room",
+          "body": "Not a sample. Every discipline, reconciled, before the number is set."
+        },
+        {
+          "title": "You already know what they’ll find",
+          "body": "The buyer’s advisers run this pass anyway. This time you saw it first, with time to fix it."
+        },
+        {
+          "title": "Every finding still traces to its source",
+          "body": "Months later, you can still open the passage a number came from."
+        }
+      ],
+      "link": "See how a finding is built"
     }
   },
 
   "platform": {
     "header": {
       "eyebrow": "The platform",
-      "title": "{modules} modules. {agents} sub-agents. {waves} waves.",
-      "lead": "Not one agent reading a data room. A dispatch graph, run the same way every time."
+      "title": "How we read all of it without inventing any of it",
+      "lead": "One agent with a large context window is not diligence. This is a dispatch graph, run the same way every mandate."
     },
     "scale": {
-      "eyebrow": "Scale",
-      "title": "What is actually built",
-      "lead": "Every number on this page is counted from the product source.",
+      "eyebrow": "The inventory",
+      "title": "Counted from the source, not estimated",
+      "lead": "For readers who want the shape of the build. Every number here is counted from the product source.",
       "tiles": {
         "modules": {
           "title": "Modules",
@@ -374,8 +397,8 @@
     },
     "coverage": {
       "eyebrow": "The library",
-      "title": "All {modules} modules, grouped by dispatch wave",
-      "lead": "A module that needs another module’s output cannot start before it. That dependency is the running order. The spread is the other half of the picture: the largest module fields {largest} sub-agents, the smallest two.",
+      "title": "The module library, in dispatch order",
+      "lead": "A module that needs another module’s output waits for it — that dependency sets the running order. The largest module fields {largest} sub-agents. The smallest, two.",
       "note": "Counted from the dispatch graphs in the product source, not estimated. ZDR marks the modules whose provider routing is hard-gated to a zero-retention EU endpoint."
     },
     "pipeline": {
@@ -573,9 +596,9 @@
 
   "sprint": {
     "header": {
-      "eyebrow": "The engagement",
-      "title": "The Diligence Sprint",
-      "lead": "All {disciplines} disciplines, one engagement, reconciled into a single narrative. Run it on a target, a company you hold, or your own business."
+      "eyebrow": "The Diligence Sprint",
+      "title": "See what a buyer would find, before they do",
+      "lead": "All {disciplines} disciplines, reconciled into one narrative. Run it on a target, a company you hold, or your own business."
     },
     "reframe": {
       "quote": "Checking your own work first isn’t a sign that something is wrong. It is what a well-run process looks like.",
@@ -583,14 +606,14 @@
     },
     "disciplines": {
       "eyebrow": "Scope",
-      "title": "All {disciplines} disciplines, one engagement",
+      "title": "Scoped per discipline, not per hour",
       "lead": "Each pass pre-scoped to what matters for that discipline.",
       "note": "One engagement, one price. No à la carte menu and no upsell after signing. What each discipline looks at is set against your data room on the intake call."
     },
     "layers": {
       "eyebrow": "Synthesis",
-      "title": "Three layers on top of the eleven",
-      "lead": "The layers that turn {disciplines} separate reads into one usable deliverable.",
+      "title": "From eleven reads to one verdict",
+      "lead": "What turns {disciplines} separate reads into one deliverable, not eleven.",
       "items": [
         {
           "title": "Value-creation read",
@@ -845,7 +868,7 @@
         ]
       }
     ],
-    "closing": "Judgment behind the process, not just software.",
+    "closing": "Between them: leveraged-finance underwriting at ING, restructuring at Rabobank, and production data pipelines audited under GDPR. The same scrutiny, turned on the deal in front of you.",
     "cta": {
       "title": "You’ll speak to the person who reviews the output",
       "body": "While Factum is pre-launch, the intake call, the review gate and the walkthrough are the same person.",
@@ -857,8 +880,8 @@
   "partnerships": {
     "header": {
       "eyebrow": "Partnerships",
-      "title": "Diligence-grade capacity behind your own client relationships",
-      "lead": "Factum works with a small number of advisory firms who own the client relationship and want analytical depth behind it."
+      "title": "More mandates than your team can read",
+      "lead": "You keep the relationship and the judgment. We run the eleven-discipline read behind it, under your name."
     },
     "who": {
       "eyebrow": "Fit",
@@ -878,15 +901,15 @@
           "body": "Where an independent business review has to be fast and hold up to lenders."
         },
         {
-          "title": "Accounting and audit-adjacent firms",
-          "body": "Where referral and independence rules need checking per relationship."
+          "title": "PE and buy-side advisors",
+          "body": "Competitive processes on a tight clock, where the read still has to survive an investment committee."
         }
       ]
     },
     "split": {
       "eyebrow": "The split",
       "title": "You keep the relationship. We supply the pass.",
-      "lead": "The platform runs {modules} modules and {agents} specialist sub-agents. A partnership puts that behind your name.",
+      "lead": "The same eleven-discipline platform, the same review gate — delivered under your name.",
       "columns": [
         {
           "label": "You keep",
@@ -1000,7 +1023,7 @@
     },
     "details": {
       "eyebrow": "Details",
-      "title": "Company",
+      "title": "Who you’re dealing with",
       "entityLabel": "Entity",
       "entityValue": "Factum Capital, Netherlands",
       "kvkLabel": "Chamber of Commerce",
