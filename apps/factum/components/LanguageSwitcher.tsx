@@ -94,7 +94,21 @@ export default function LanguageSwitcher() {
                 }}
               >
                 {LOCALE_NAMES[loc]}
-                <span className="mono" style={{ textTransform: 'uppercase', opacity: 0.5 }}>
+                {/*
+                  The code is quieter than the autonym, but it gets there with a
+                  token rather than `opacity`. Opacity multiplies into the colour
+                  it inherits: 0.5 over --text-tertiary's own 0.60 alpha landed at
+                  an effective 0.30, which measured 2.65:1 on --surface-2 and
+                  failed AA. Tracking the row state keeps the hierarchy and clears
+                  4.5 on both grounds — 6.13:1 on --surface-3, 4.66:1 on --surface-2.
+                */}
+                <span
+                  className="mono"
+                  style={{
+                    textTransform: 'uppercase',
+                    color: loc === locale ? 'var(--text-tertiary)' : 'var(--text-quaternary)'
+                  }}
+                >
                   {loc}
                 </span>
               </Link>

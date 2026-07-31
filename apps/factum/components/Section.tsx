@@ -6,18 +6,21 @@ export function Section({
   seam = true,
   tight = false,
   id,
-  width = 'wide'
+  width = 'wide',
+  tone = 'default'
 }: {
   children: ReactNode;
   seam?: boolean;
   tight?: boolean;
   id?: string;
   width?: 'narrow' | 'medium' | 'wide';
+  /** 'inset' is the one full-width feature moment per page — use it once. */
+  tone?: 'default' | 'inset';
 }) {
   return (
     <section
       id={id}
-      className={`section ${tight ? 'section-tight' : ''} ${seam ? 'seam' : ''}`}
+      className={`section ${tight ? 'section-tight' : ''} ${seam ? 'seam' : ''} ${tone === 'inset' ? 'section-inset' : ''}`}
       style={{ scrollMarginTop: 80 }}
     >
       <div className={`container-${width}`}>{children}</div>

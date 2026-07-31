@@ -6,7 +6,7 @@
     },
     "platform": {
       "title": "A plataforma",
-      "description": "241 módulos de due diligence em 31 verticais. Cada constatação cita um documento. Cada output passa por um controlo humano."
+      "description": "31 módulos de due diligence em 11 disciplinas. Cada constatação cita um documento. Cada output passa por um controlo humano."
     },
     "sprint": {
       "title": "O Diligence Sprint",
@@ -191,55 +191,42 @@
 
   "home": {
     "hero": {
-      "eyebrow": "Due diligence ao longo do ciclo",
-      "title": "Leia a sala inteira antes de o número ficar fixado",
-      "lead": "Comprar, financiar, deter, vender: a decisão é tomada sobre uma amostra. A Factum coloca {agents} subagentes especializados sobre a sala inteira. Uma pessoa revê antes de o ver.",
-      "cta": "Marcar uma chamada de intake",
-      "secondary": "Ver como funciona o pipeline",
-      "footnote": "Em pré-lançamento. Aceitamos mandatos-piloto na casa das unidades."
-    },
-    "schema": {
-      "eyebrow": "O contrato de output",
-      "title": "Uma constatação só está terminada quando pode ser rastreada",
-      "lead": "Cada afirmação cita um documento e uma passagem específicos. Sem citação, não há constatação.",
-      "body": "O esquema impõe-no. Publicamos o contrato em vez de um exemplo, porque o trabalho com clientes é confidencial.",
-      "link": "Ler o pipeline completo"
+      "eyebrow": "Due diligence ao longo de todo o ciclo",
+      "title": "Não assine um número que não leu",
+      "lead": "A due diligence tira uma amostra e reporta ao fim de semanas. O que ficou de fora continua lá. A Factum lê tudo, em dias, com a passagem de origem por trás de cada constatação.",
+      "cta": "Marcar uma chamada de 30 minutos",
+      "secondary": "Ver como é uma constatação",
+      "footnote": "Em pré-lançamento. Aceitamos um número limitado de mandatos-piloto."
     },
     "problem": {
-      "eyebrow": "A assimetria",
-      "title": "O número é fixado enquanto a sala está lida a meio",
-      "lead": "A due diligence tradicional tira uma amostra da sala e reporta semanas depois. Nessa altura o preço já está ancorado e as constatações chegam tarde.",
+      "eyebrow": "O problema",
+      "title": "O número fica fixado antes de a sala ser lida",
+      "lead": "Não por descuido. Porque nunca houve tempo para ler tudo.",
       "points": [
         {
-          "title": "Quem encontra primeiro define o enquadramento",
-          "body": "Quem levanta um problema primeiro controla o enquadramento no resto da negociação."
+          "title": "Está a trabalhar sobre uma amostra",
+          "body": "A due diligence tradicional lê uma fração da sala e chama-lhe cobertura. O resto continua lá."
         },
         {
-          "title": "Uma dimensão não é due diligence",
-          "body": "Uma leitura de quality of earnings cobre uma dimensão. As lacunas aparecem entre disciplinas."
+          "title": "Quem encontra primeiro, fica com ela",
+          "body": "Uma constatação nas mãos deles é alavancagem. A mesma constatação nas suas é uma posição."
         },
         {
-          "title": "Uma lista de riscos não é um argumento",
-          "body": "A maior parte da due diligence é uma lista estática de riscos. Ninguém procura alavancas de criação de valor."
+          "title": "Uma disciplina não é due diligence",
+          "body": "Uma análise de quality of earnings cobre as earnings. O que corre mal fica entre disciplinas, onde ninguém estava a olhar."
         },
         {
-          "title": "Uma amostra não é a sala",
-          "body": "As lacunas de cobertura são a razão por que os negócios correm mal depois do fecho."
+          "title": "Descobre depois do closing",
+          "body": "A distância entre o que foi revisto e o que foi assinado é onde vivem as surpresas pós-closing."
         }
       ]
     },
     "pipeline": {
       "eyebrow": "Como funciona",
-      "title": "Um pipeline testado, corrido sempre da mesma forma",
-      "lead": "Qualquer pessoa aponta uma ferramenta agêntica a um data room. A questão é o que acontece sempre, por desenho.",
-      "refusalTitle": "O circuito recusa aprovar automaticamente",
-      "refusals": [
-        "Citações fabricadas ou alucinadas",
-        "Fugas de privacidade",
-        "Recusas por âmbito",
-        "Rascunhos abaixo do limiar do revisor"
-      ],
-      "refusalNote": "{blocks} bloqueios duros no total. Todos vão para uma pessoa.",
+      "title": "Os mesmos cinco passos, em cada mandato",
+      "lead": "Qualquer um pode apontar uma ferramenta de IA a uma sala de dados. O que conta é o que acontece sempre, esteja alguém a ver ou não.",
+      "refusalTitle": "O ciclo recusa aprovar automaticamente",
+      "refusalNote": "Cada bloqueio duro passa a uma pessoa.",
       "stages": [
         {
           "title": "Recuperação fundamentada",
@@ -261,37 +248,75 @@
           "title": "Porta de aprovação humana",
           "body": "Um passo humano obrigatório. Corre sempre."
         }
+      ],
+      "refusals": [
+        "Citações fabricadas ou alucinadas",
+        "Fugas de privacidade",
+        "Recusas por âmbito",
+        "Rascunhos abaixo do limiar do revisor"
+      ]
+    },
+    "plan": {
+      "eyebrow": "Como começar",
+      "title": "Três passos, e o primeiro é uma conversa",
+      "lead": "Não há proposta antes de ambos sabermos que encaixa.",
+      "steps": [
+        {
+          "title": "Marque 30 minutos",
+          "body": "Vemos se isto encaixa na sua situação. Se não encaixar, dizemo-lo na chamada."
+        },
+        {
+          "title": "Aponte-nos a sala",
+          "body": "É o cliente que define o âmbito. O acesso corre sob um DPA, na UE, sem retenção de dados."
+        },
+        {
+          "title": "Leia as constatações em dias",
+          "body": "Cada uma cita a sua fonte. Uma pessoa com nome aprovou-a antes de lhe chegar."
+        }
       ]
     },
     "coverage": {
       "eyebrow": "Cobertura",
-      "title": "{modules} módulos, {agents} subagentes, {waves} ondas",
-      "lead": "A Factum já está construída. Cada módulo é uma equipa de especialistas com um mandato delimitado à partida.",
-      "note": "Contado a partir do código-fonte do produto. O maior módulo coloca {largest} subagentes em campo.",
-      "figures": {
-        "modules": {
-          "label": "Módulos delimitados",
-          "note": "Um por disciplina ou entregável."
-        },
-        "agents": {
-          "label": "Subagentes especializados",
-          "note": "Distribuídos por {waves} ondas ordenadas por dependência."
-        },
-        "speed": {
-          "value": "Dias",
-          "label": "Não semanas",
-          "note": "Uma passagem completa por {disciplines} disciplinas, em dias. A revisão humana vem depois."
-        }
-      }
+      "title": "A sala inteira, não uma amostra",
+      "lead": "Todas as disciplinas correm na mesma passagem, por isso nada fica para uma segunda fase que nunca chega.",
+      "note": "Ordenado por dependências: o trabalho posterior espera pelas constatações de que precisa."
     },
     "sprint": {
       "eyebrow": "O mandato",
       "title": "O Diligence Sprint",
-      "lead": "Todas as {disciplines} disciplinas num único mandato, mais três camadas de síntese. Corra-o sobre um target, uma empresa que detém, ou o seu próprio negócio.",
+      "lead": "Um mandato, todas as disciplinas, mais a síntese por cima. Sobre um target, sobre uma empresa que já detém, ou sobre o seu próprio negócio antes de um comprador o fazer.",
       "guaranteeLabel": "A garantia de constatações",
       "guarantee": "Três constatações materiais que a sua equipa ainda não tinha identificado, ou o mandato é gratuito.",
       "guaranteeNote": "Para mandatos-piloto. O risco de isto ser recente é nosso, não seu.",
       "link": "O que o sprint cobre"
+    },
+    "cycle": {
+      "eyebrow": "Ao longo do ciclo",
+      "title": "Cinco momentos, uma base de evidência",
+      "lead": "A mesma sala é relida sempre que alguém novo tem de confiar nela. Leia-a uma vez, como deve ser.",
+      "stages": [
+        {
+          "title": "Comprar",
+          "body": "Está a fixar preço sobre o que o vendedor escolheu mostrar. As constatações chegam enquanto ainda podem mover preço e estrutura."
+        },
+        {
+          "title": "Financiar",
+          "body": "O banco refaz o trabalho que já pagou. Em vez disso, uma base de evidência sobre a qual um financiador pode avaliar o risco."
+        },
+        {
+          "title": "Deter",
+          "body": "A folga nos covenants move-se em silêncio. Desvio de KPI e sinais precoces, mais as alavancas de valor que uma lista de riscos nunca procura."
+        },
+        {
+          "title": "Vender",
+          "body": "Os assessores do comprador vão encontrá-lo. Faça essa mesma passagem primeiro do seu lado, enquanto há tempo para corrigir o que aparecer."
+        },
+        {
+          "title": "Reestruturar",
+          "body": "As opções fecham-se mais depressa do que as decisões se tomam. Continuidade, posição dos credores e folga nos covenants, pré-IBR e WHOA."
+        }
+      ],
+      "note": "O trabalho de WHOA e IBR está sujeito à jurisdição neerlandesa. O resto do ciclo é independente da jurisdição."
     },
     "trust": {
       "eyebrow": "Governação",
@@ -302,49 +327,47 @@
     "cta": {
       "title": "Comece com uma chamada, não com uma proposta",
       "body": "Trinta minutos para ver se isto encaixa na sua situação. Se não encaixar, dizemo-lo.",
-      "button": "Marcar uma chamada de intake",
-      "note": "A Factum está em pré-lançamento e a aceitar um número limitado de mandatos-piloto."
+      "button": "Marcar uma chamada de 30 minutos",
+      "note": "A Factum está em pré-lançamento e a aceitar um número limitado de mandatos-piloto — contados pelos dedos de uma mão."
     },
-    "cycle": {
-      "eyebrow": "Ao longo do ciclo",
-      "title": "Uma base de evidência, cinco momentos",
-      "lead": "Nada é reconstruído quando chega o momento seguinte.",
-      "stages": [
+    "guide": {
+      "eyebrow": "Quem analisa",
+      "title": "Subscrito como um banco faria, construído como o software de produção tem de ser",
+      "lead": "A leitura de risco de um banqueiro, a partir de dentro das instituições que financiam negócios como o seu. A disciplina de um engenheiro para sistemas que não podem falhar em silêncio. Ambos dão o aval antes de ver seja o que for.",
+      "link": "Conhecer a equipa"
+    },
+    "success": {
+      "eyebrow": "Depois",
+      "title": "O que muda quando assina",
+      "lead": "Não um relatório melhor. Uma posição diferente à mesa.",
+      "points": [
         {
-          "title": "Comprar",
-          "body": "Da triagem do IM ao fecho, enquanto as constatações ainda podem mexer no preço e na estrutura."
+          "title": "O preço reflete toda a sala",
+          "body": "Não uma amostra. Cada disciplina, reconciliada, antes de o preço ser fixado."
         },
         {
-          "title": "Financiar",
-          "body": "O memorando sobre o qual um banco ou investidor subscreve, construído sobre a mesma base de evidência."
+          "title": "Já sabe o que vão encontrar",
+          "body": "Os assessores do comprador fazem esta mesma passagem de qualquer forma. Desta vez, viu-a primeiro, com tempo para corrigir."
         },
         {
-          "title": "Deter e criar valor",
-          "body": "Folga nos covenants, desvio de KPI, sinais de alerta precoce. Mais as alavancas de criação de valor que uma lista de riscos ignora."
-        },
-        {
-          "title": "Vender",
-          "body": "Qualidade do data room, apresentação financeira, solidez da gestão, equity story. A análise do comprador, feita primeiro do seu lado."
-        },
-        {
-          "title": "Reestruturar",
-          "body": "Pré-IBR e WHOA: continuidade, posição dos credores, folga nos covenants. Enquanto as opções ainda estão abertas."
+          "title": "Cada constatação continua rastreável até à fonte",
+          "body": "Meses depois, ainda pode abrir a passagem de onde vem um número."
         }
       ],
-      "note": "O trabalho de WHOA e IBR está sujeito à jurisdição neerlandesa. O resto do ciclo é independente da jurisdição."
+      "link": "Veja como se constrói uma constatação"
     }
   },
 
   "platform": {
     "header": {
       "eyebrow": "A plataforma",
-      "title": "{modules} módulos. {agents} subagentes. {waves} ondas.",
-      "lead": "Não é um agente a ler uma sala de dados. É um grafo de despacho, executado da mesma forma todas as vezes."
+      "title": "Como lemos tudo sem inventar nada",
+      "lead": "Um agente com uma janela de contexto grande não é due diligence. Isto é um grafo de despacho, corrido da mesma forma em cada mandato."
     },
     "scale": {
-      "eyebrow": "Escala",
-      "title": "O que está mesmo construído",
-      "lead": "Todos os números desta página são contados a partir do código-fonte do produto.",
+      "eyebrow": "O inventário",
+      "title": "Contado a partir do código, não estimado",
+      "lead": "Para quem quer ver a forma do que está construído. Cada número é contado a partir do código-fonte do produto.",
       "tiles": {
         "modules": {
           "title": "Módulos",
@@ -374,8 +397,8 @@
     },
     "coverage": {
       "eyebrow": "A biblioteca",
-      "title": "Os {modules} módulos, agrupados por onda de despacho",
-      "lead": "Um módulo que precisa do resultado de outro não pode arrancar antes. Essa dependência é a ordem de execução. A dispersão é a outra metade do quadro: o maior módulo coloca {largest} subagentes em campo, o menor dois.",
+      "title": "A biblioteca de módulos, por ordem de despacho",
+      "lead": "Um módulo que espera o resultado de outro não pode arrancar antes — essa dependência determina a ordem de execução. O maior módulo coloca {largest} subagentes em campo. O menor, dois.",
       "note": "Contado a partir dos grafos de despacho no código-fonte, não estimado. ZDR marca os módulos cujo encaminhamento está fixado num endpoint europeu de retenção zero."
     },
     "pipeline": {
@@ -573,9 +596,9 @@
 
   "sprint": {
     "header": {
-      "eyebrow": "O mandato",
-      "title": "O Diligence Sprint",
-      "lead": "Todas as {disciplines} disciplinas, um único mandato, reconciliadas numa só narrativa. Corra-o sobre um target, uma empresa que detém, ou o seu próprio negócio."
+      "eyebrow": "O Diligence Sprint",
+      "title": "Veja o que um comprador encontraria, antes dele",
+      "lead": "Todas as {disciplines} disciplinas, reconciliadas numa só narrativa. Corra-o sobre um target, uma empresa que detém, ou o seu próprio negócio."
     },
     "reframe": {
       "quote": "Verificar o seu próprio trabalho primeiro não é sinal de que algo está mal. É o aspeto de um processo bem conduzido.",
@@ -583,14 +606,14 @@
     },
     "disciplines": {
       "eyebrow": "Âmbito",
-      "title": "Todas as {disciplines} disciplinas, um único mandato",
+      "title": "Delimitado por disciplina, não por hora",
       "lead": "Cada análise pré-definida para o que importa nessa disciplina.",
       "note": "Um mandato, um preço. Sem menu à la carte e sem upsell depois da assinatura. O que cada disciplina analisa é definido face ao seu data room na chamada de intake."
     },
     "layers": {
       "eyebrow": "Síntese",
-      "title": "Três camadas por cima das onze",
-      "lead": "As camadas que transformam {disciplines} leituras separadas num entregável utilizável.",
+      "title": "De onze leituras a um único veredito",
+      "lead": "O que transforma {disciplines} leituras separadas num único entregável, não onze.",
       "items": [
         {
           "title": "Leitura de criação de valor",
@@ -845,7 +868,7 @@
         ]
       }
     ],
-    "closing": "Critério por trás do processo, não apenas software.",
+    "closing": "Entre os dois: underwriting de leveraged finance no ING, reestruturação no Rabobank, e pipelines de dados de produção auditados ao abrigo do RGPD. O mesmo rigor, aplicado ao negócio à sua frente.",
     "cta": {
       "title": "Falará com a pessoa que revê o output",
       "body": "Enquanto a Factum está em pré-lançamento, a chamada de intake, o controlo de revisão e a apresentação são a mesma pessoa.",
@@ -857,8 +880,8 @@
   "partnerships": {
     "header": {
       "eyebrow": "Parcerias",
-      "title": "Capacidade ao nível de due diligence por trás das suas relações com clientes",
-      "lead": "A Factum trabalha com um pequeno número de firmas de consultoria que detêm a relação com o cliente e querem profundidade analítica por trás dela."
+      "title": "Mais mandatos do que a sua equipa consegue ler",
+      "lead": "Mantém a relação e o critério. Nós corremos a leitura de onze disciplinas por trás, sob o seu nome."
     },
     "who": {
       "eyebrow": "Adequação",
@@ -878,15 +901,15 @@
           "body": "Onde uma revisão independente do negócio tem de ser rápida e aguentar o escrutínio dos financiadores."
         },
         {
-          "title": "Firmas de contabilidade e adjacentes à auditoria",
-          "body": "Onde as regras de referenciação e de independência têm de ser verificadas em cada relação."
+          "title": "Consultores de PE e do lado comprador",
+          "body": "Processos competitivos com prazo apertado, onde a leitura ainda tem de aguentar um comité de investimento."
         }
       ]
     },
     "split": {
       "eyebrow": "A divisão",
       "title": "O cliente fica consigo. Nós fornecemos a análise.",
-      "lead": "A plataforma corre {modules} módulos e {agents} subagentes especializados. Uma parceria coloca isso atrás do seu nome.",
+      "lead": "A mesma plataforma de onze disciplinas, o mesmo filtro de revisão — entregue sob o seu nome.",
       "columns": [
         {
           "label": "Fica consigo",
@@ -1000,7 +1023,7 @@
     },
     "details": {
       "eyebrow": "Detalhes",
-      "title": "Empresa",
+      "title": "Com quem está a lidar",
       "entityLabel": "Entidade",
       "entityValue": "Factum Capital, Países Baixos",
       "kvkLabel": "Câmara de Comércio",

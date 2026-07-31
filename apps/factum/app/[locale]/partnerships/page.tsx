@@ -1,13 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/pageMetadata';
-import { MODULE_COUNT, SUBAGENT_COUNT } from '@/lib/site';
-import {
-  SketchClipboard,
-  SketchDueDiligence,
-  SketchPortfolio,
-  SketchScale
-} from '@repo/ui/SketchIcons';
 import PageHeader from '@/components/PageHeader';
 import MediaCards from '@/components/MediaCards';
 import SplitDiagram from '@/components/SplitDiagram';
@@ -35,7 +28,6 @@ export default async function PartnershipsPage({
   setRequestLocale(locale);
 
   const t = await getTranslations('partnerships');
-  const numbers = { modules: MODULE_COUNT, agents: SUBAGENT_COUNT };
 
   return (
     <>
@@ -43,6 +35,7 @@ export default async function PartnershipsPage({
         eyebrow={t('header.eyebrow')}
         title={t('header.title')}
         lead={t('header.lead')}
+        visual={4}
       />
 
       {/* Who this is for — described by shape of firm, never by name. */}
@@ -55,8 +48,8 @@ export default async function PartnershipsPage({
         <div style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
           <MediaCards
             items={t.raw('who.profiles') as { title: string; body: string }[]}
-            icons={[SketchDueDiligence, SketchPortfolio, SketchScale, SketchClipboard]}
             seed={3}
+            wide
           />
         </div>
       </Section>
@@ -66,7 +59,7 @@ export default async function PartnershipsPage({
         <SectionHeader
           eyebrow={t('split.eyebrow')}
           title={t('split.title')}
-          lead={t('split.lead', numbers)}
+          lead={t('split.lead')}
         />
         <Reveal delay={60} style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
           <SplitDiagram
