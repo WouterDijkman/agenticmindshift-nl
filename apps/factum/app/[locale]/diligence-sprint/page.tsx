@@ -75,7 +75,7 @@ export default async function SprintPage({
         </Reveal>
       </Section>
 
-      {/* The eleven disciplines. */}
+      {/* The discipline roster; count comes from DISCIPLINES in lib/site.ts. */}
       <Section width="medium">
         <SectionHeader
           eyebrow={t('disciplines.eyebrow')}

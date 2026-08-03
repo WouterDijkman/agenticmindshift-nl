@@ -31,7 +31,16 @@ export default async function ContactPage() {
         heading={t('heading')}
         subtext={t('subtext')}
         headingMaxWidth="720px"
-      />
+      >
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
+          <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external>
+            {t('card_02_cta')}
+          </Button>
+          <Button href="/scorecard" variant="secondary" size="lg">
+            {t('card_01_cta')}
+          </Button>
+        </div>
+      </AnimatedHeroShell>
 
       {/* Contact cards */}
       <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(64px, 9vw, 112px)' }}>
@@ -76,7 +85,7 @@ export default async function ContactPage() {
                         href="mailto:wouter@agenticmindshift.nl"
                         style={{
                           fontSize: '0.875rem',
-                          color: 'var(--accent-cta)',
+                          color: 'var(--accent-cta-ink)',
                           fontWeight: 500,
                           transition: 'opacity 180ms ease',
                         }}
@@ -122,7 +131,7 @@ export default async function ContactPage() {
                     fontWeight: 800,
                     letterSpacing: '-0.04em',
                     lineHeight: 0.9,
-                    color: 'var(--accent-cta)',
+                    color: 'var(--accent-cta-ink)',
                     marginBottom: '28px',
                     opacity: 0.9,
                   }}

@@ -99,7 +99,7 @@ export default async function OverPage(
                   {t('bio.para2_prefix')}{' '}
                   <Link
                     href="/factum-capital"
-                    style={{ color: 'var(--accent-cta)', textDecoration: 'underline', textUnderlineOffset: '3px' }}
+                    style={{ color: 'var(--accent-cta-ink)', textDecoration: 'underline', textUnderlineOffset: '3px' }}
                   >
                     Factum Capital
                   </Link>
@@ -176,7 +176,7 @@ export default async function OverPage(
                   style={{
                     fontSize: '0.875rem',
                     fontWeight: 700,
-                    color: row.future ? 'var(--text-muted)' : 'var(--accent-cta)',
+                    color: row.future ? 'var(--text-muted)' : 'var(--accent-cta-ink)',
                     letterSpacing: '-0.01em',
                     paddingTop: '2px',
                   }}
@@ -194,7 +194,7 @@ export default async function OverPage(
                         fontWeight: 700,
                         letterSpacing: '0.12em',
                         textTransform: 'uppercase' as const,
-                        color: 'var(--accent-cta)',
+                        color: 'var(--accent-cta-ink)',
                         border: '1px solid var(--accent-cta)',
                         padding: '2px 6px',
                         lineHeight: 1,
@@ -239,8 +239,9 @@ export default async function OverPage(
       {/* ═══ CONTACT CTA ═══ */}
       <section
         className="grain-overlay"
+        data-surface="dark"
         style={{
-          background: 'var(--accent-primary)',
+          background: 'var(--surface-dark)',
           paddingBlock: 'clamp(64px, 10vw, 120px)',
           position: 'relative',
           overflow: 'hidden',
@@ -248,19 +249,19 @@ export default async function OverPage(
       >
         <div className="container-medium" style={{ textAlign: 'center', position: 'relative' }}>
           <div className="reveal" style={{ position: 'relative' }}>
-            <p className="eyebrow" style={{ marginBottom: '28px', color: 'rgba(247,242,235,0.5)' }}>
+            <p className="eyebrow" style={{ marginBottom: '28px', color: 'var(--text-muted)' }}>
               {t('contact_cta.eyebrow')}
             </p>
             <h2
               className="type-h2"
-              style={{ color: 'var(--text-inverse)', marginBottom: '16px', maxWidth: '560px', marginInline: 'auto' }}
+              style={{ color: 'var(--text-primary)', marginBottom: '16px', maxWidth: '560px', marginInline: 'auto' }}
             >
               {t('contact_cta.heading')}
             </h2>
             <p
               style={{
                 fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
-                color: 'rgba(247,242,235,0.5)',
+                color: 'var(--text-muted)',
                 marginBottom: '44px',
                 maxWidth: '400px',
                 marginInline: 'auto',
@@ -270,7 +271,7 @@ export default async function OverPage(
               {t('contact_cta.subtext')}
             </p>
             <div
-              style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}
+              style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center', alignItems: 'center', marginBottom: '20px' }}
             >
               <Button href="/scorecard" variant="primary" size="lg">
                 {t('contact_cta.cta1')}
@@ -278,10 +279,20 @@ export default async function OverPage(
               <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
                 {t('contact_cta.cta2')}
               </Button>
-              <Button href="https://www.linkedin.com/in/wwdijkman" variant="secondary" size="lg" external>
-                {t('contact_cta.cta3')}
-              </Button>
             </div>
+            <a
+              href="https://www.linkedin.com/in/wwdijkman"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontSize: '0.9375rem',
+                color: 'var(--text-muted)',
+                textDecoration: 'underline',
+                textUnderlineOffset: '3px',
+              }}
+            >
+              {t('contact_cta.cta3')}
+            </a>
           </div>
         </div>
       </section>

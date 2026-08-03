@@ -2,15 +2,15 @@
   "meta": {
     "home": {
       "title": "Análise ao nível de due diligence ao longo do ciclo do negócio",
-      "description": "Onze disciplinas sobre o data room completo. Reconciliadas entre si. Revistas por uma pessoa antes de lhe chegarem."
+      "description": "Treze disciplinas sobre o data room completo. Reconciliadas entre si. Revistas por uma pessoa antes de lhe chegarem."
     },
     "platform": {
       "title": "A plataforma",
-      "description": "31 módulos de due diligence em 11 disciplinas. Cada constatação cita um documento. Cada output passa por um controlo humano."
+      "description": "31 módulos de due diligence em 13 disciplinas. Cada constatação cita um documento. Cada output passa por um controlo humano."
     },
     "sprint": {
       "title": "O Diligence Sprint",
-      "description": "Onze análises especializadas sobre um data room, reconciliadas numa única narrativa, com um registo de lacunas de dados sempre atualizado."
+      "description": "Treze análises especializadas sobre um data room, reconciliadas numa única narrativa, com um registo de lacunas de dados sempre atualizado."
     },
     "governance": {
       "title": "Governação e tratamento de dados",
@@ -614,8 +614,8 @@
     },
     "layers": {
       "eyebrow": "Síntese",
-      "title": "De onze leituras a um único veredito",
-      "lead": "O que transforma {disciplines} leituras separadas num único entregável, não onze.",
+      "title": "De treze leituras a um único veredito",
+      "lead": "O que transforma {disciplines} leituras separadas num único entregável, não treze.",
       "items": [
         {
           "title": "Leitura de criação de valor",
@@ -680,7 +680,7 @@
       "items": [
         {
           "q": "Isto substitui um relatório de quality of earnings?",
-          "a": "É mais abrangente, e não é um serviço de certificação. Uma leitura de quality of earnings cobre uma dimensão em quatro a dez semanas. Esta corre onze disciplinas e reconcilia-as. Um parecer assinado por um contabilista continua a ser um mandato separado."
+          "a": "É mais abrangente, e não é um serviço de certificação. Uma leitura de quality of earnings cobre uma dimensão em quatro a dez semanas. Esta corre treze disciplinas e reconcilia-as. Um parecer assinado por um contabilista continua a ser um mandato separado."
         },
         {
           "q": "Quanto tempo demora?",
@@ -883,7 +883,7 @@
     "header": {
       "eyebrow": "Parcerias",
       "title": "Mais mandatos do que a sua equipa consegue ler",
-      "lead": "Mantém a relação e o critério. Nós corremos a leitura de onze disciplinas por trás, sob o seu nome."
+      "lead": "Mantém a relação e o critério. Nós corremos a leitura de treze disciplinas por trás, sob o seu nome."
     },
     "who": {
       "eyebrow": "Adequação",
@@ -911,7 +911,7 @@
     "split": {
       "eyebrow": "A divisão",
       "title": "O cliente fica consigo. Nós fornecemos a análise.",
-      "lead": "A mesma plataforma de onze disciplinas, o mesmo filtro de revisão — entregue sob o seu nome.",
+      "lead": "A mesma plataforma de treze disciplinas, o mesmo filtro de revisão — entregue sob o seu nome.",
       "columns": [
         {
           "label": "Fica consigo",
@@ -925,7 +925,7 @@
         {
           "label": "Fornecemos nós",
           "items": [
-            "A análise das onze disciplinas sobre o data room",
+            "A análise das treze disciplinas sobre o data room",
             "A reconciliação entre disciplinas como passo fixo",
             "Constatações ligadas a um documento e a uma passagem, sempre",
             "Um revisor identificado a responder pelo output"
@@ -979,7 +979,7 @@
         },
         {
           "q": "Podem executar apenas parte do âmbito?",
-          "a": "A análise das onze disciplinas é fixa, porque o valor está na reconciliação entre disciplinas. O que varia é a profundidade da redação."
+          "a": "A análise das treze disciplinas é fixa, porque o valor está na reconciliação entre disciplinas. O que varia é a profundidade da redação."
         },
         {
           "q": "Qual é o grau de exclusividade?",

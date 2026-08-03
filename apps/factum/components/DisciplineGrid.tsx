@@ -14,6 +14,7 @@ import {
   SketchSpeed,
   SketchWarning
 } from '@repo/ui/SketchIcons';
+import { DISCIPLINE_COUNT } from '@/lib/site';
 import Reveal from './Reveal';
 
 type SketchIcon = ComponentType<{ size?: number; opacity?: number; strokeWidth?: number }>;
@@ -45,6 +46,16 @@ const ICONS: SketchIcon[] = [
  * breadth registers before any of the labels are read.
  */
 export default function DisciplineGrid({ labels }: { labels: string[] }) {
+  // The prose elsewhere prints DISCIPLINE_COUNT next to this grid. When the two
+  // drift the page contradicts itself in public, which is exactly what happened
+  // once already. Fail loudly in development instead of shipping the mismatch.
+  if (process.env.NODE_ENV !== 'production' && labels.length !== DISCIPLINE_COUNT) {
+    throw new Error(
+      `DisciplineGrid: ${labels.length} labels but DISCIPLINE_COUNT is ${DISCIPLINE_COUNT}. ` +
+        'Update shared.disciplines in every messages/<locale>.json, or DISCIPLINES in lib/site.ts.'
+    );
+  }
+
   return (
     <ol className="discipline-grid stagger">
       {labels.map((label, i) => {

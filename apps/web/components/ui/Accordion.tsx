@@ -48,7 +48,7 @@ export default function Accordion({ items }: AccordionProps) {
                 animate={{ rotate: isOpen ? 45 : 0 }}
                 transition={{ duration: 0.22, ease }}
                 style={{
-                  color: isOpen ? 'var(--accent-cta)' : 'var(--accent-primary)',
+                  color: isOpen ? 'var(--accent-cta-ink)' : 'var(--accent-primary)',
                   display: 'inline-block',
                   lineHeight: 1,
                   fontSize: '1.25rem',

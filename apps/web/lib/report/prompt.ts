@@ -7,6 +7,7 @@ import { questions, dimensionLabels, type Dimension } from '@/lib/questions';
 import { type DimensionScores } from '@/lib/scoring';
 import { type Answers } from '@/lib/scoring';
 import { offerMap, type OfferType } from '@/lib/scoring';
+import { getOfferName } from '@/lib/pdf/offerRoutes';
 import { REPORT_JSON_SCHEMA } from './types';
 import { type ResearchFindings, formatResearchForPrompt } from './webResearch';
 import { type ReportLocale, LANGUAGE_NAME } from './locale';
@@ -39,6 +40,9 @@ export function buildReportPrompt(
   locale: ReportLocale = 'nl',
 ): { system: string; user: string } {
   const offerInfo = offerMap[lead.offerType];
+  // De naam die de lead te zien krijgt, in diens eigen taal. offerMap bevat
+  // alleen Nederlandse interne labels; die mogen nooit in het rapport belanden.
+  const offerName = getOfferName(locale, lead.offerType);
   const targetLanguage = LANGUAGE_NAME[locale];
 
   // ── System prompt ──────────────────────────────────────────────────────────
@@ -85,9 +89,6 @@ Je output is uitsluitend geldig JSON passend bij het opgegeven schema. Geen proz
     .sort((a, b) => a[1] - b[1]) // van laag naar hoog
     .map(([dim, score]) => `  ${dimensionLabels[dim]}: ${score}/100`);
 
-  // ── Percentiel berekenen ───────────────────────────────────────────────────
-  const percentile = approxPercentile(lead.totalScore);
-
   // ── Research context ──────────────────────────────────────────────────────
   const researchBlock = formatResearchForPrompt(research);
 
@@ -100,7 +101,7 @@ FUNCTIE: ${lead.jobTitle ?? 'niet opgegeven'}
 WEBSITE: ${lead.website ?? 'niet opgegeven'}
 ${lead.companyContext ? `EIGEN TOELICHTING DOOR LEAD: ${lead.companyContext}\n` : ''}
 
-TOTAALSCORE: ${lead.totalScore}/75 (top ${100 - percentile}% van respondenten — beter dan ${percentile}% van vergelijkbare organisaties)
+TOTAALSCORE: ${lead.totalScore}/75
 
 DIMENSIESCORES (van laag naar hoog, focus op de laagste):
 ${dimLines.join('\n')}
@@ -109,7 +110,7 @@ ZWAKSTE DIMENSIES: ${lead.weakest.join(', ')}
 
 AANBEVOLEN TRAJECT (op basis van Q4-segmentatie):
 Trajecttype: ${lead.offerType}
-Naam: ${offerInfo.name}
+Naam: ${offerName}
 Beschrijving: ${offerInfo.description}
 
 ALLE SCORECARD ANTWOORDEN:
@@ -128,7 +129,7 @@ Vereisten:
 2b. teamAnalysis (BELANGRIJK — gebruik de teampagina): composition = omvang en senioriteitsmix (partners vs. consultants vs. associates) zoals zichtbaar op de [Team / Leiderschap]-pagina; signals = 2-4 concrete observaties over sleutelrollen, specialismen en waar de menselijke uren/capaciteit zitten (noem rollen/functies die je daadwerkelijk ziet, geen verzonnen namen); implication = wat deze teamopbouw betekent voor AI-versterking, schaalbaarheid en kennisborging — welke rollen winnen het meest bij AI, en waar zit het risico van capaciteits- of kennisverlies.
 3. dimensionAnalysis: alle 6 dimensies, elke assessment van 2-3 substantiële zinnen gericht op ${lead.company}, met de zakelijke consequentie van de score
 4. keyInsights: 4 STRATEGISCHE inzichten die een concurrentie- of marktconsequentie benoemen en direct relevant zijn voor de beslissingen van ${CONTACT_TOKEN} — geen generieke observaties
-5. recommendedTrajectory: leg uit WAAROM ${offerInfo.name} aansluit op de specifieke strategische situatie en welke spanning het oplost
+5. recommendedTrajectory: leg uit WAAROM ${offerName} aansluit op de specifieke strategische situatie en welke spanning het oplost
 6. valueAtStake: kwantificeer eerlijk wat de huidige gaps kosten. Vertaal de twee zwakste dimensies naar een orde-van-grootte van rendementslek of gemiste waarde — in tijd (weken per deal), in kans (gemiste of vertraagde deals), of in risico (onopgemerkte onderprestatie). REGEL: gebruik illustratieve ranges op basis van typische mid-market patronen ("een mid-market deal-team verliest doorgaans 2-4 weken per transactie aan..."), NOOIT verzonnen precieze cijfers over ${lead.company} zelf. Het 'basis'-veld moet die aanname expliciet en eerlijk benoemen. headline = één scherpe zin met de inzet; drivers = 2-4 concrete lekken; basis = de eerlijke onderbouwing.
 7. actionRoadmap: een gefaseerd plan in 3 horizonnen (bv. "Eerste 30 dagen", "60-90 dagen", "Dit kwartaal / half jaar"). Begin bij de zwakste dimensies (${lead.weakest.join(', ')}). Elke fase: focus (korte titel), 2-3 CONCRETE acties die ${CONTACT_TOKEN} daadwerkelijk kan uitvoeren of beleggen (geen vaagheden als "verbeter de cultuur"), en outcome (wat het oplevert). Bouw logische sequentie: eerst diagnose/fundament, dan implementatie, dan verankering. Maak het zo bruikbaar dat het ook zonder ons traject waarde heeft — dát wekt vertrouwen.
 8. urgency: 'high' als 2+ dimensies < 40, 'medium' als weakest dimension < 50, anders 'low'
@@ -138,16 +139,3 @@ Vereisten:
   return { system, user };
 }
 
-/** Ruwe percentiel-berekening (normaalverdeling, gemiddelde 45, stdev 12) */
-function approxPercentile(total: number): number {
-  const z = (total - 45) / 12;
-  const t = 1 / (1 + 0.2316419 * Math.abs(z));
-  const d = 0.3989422804014327 * Math.exp((-z * z) / 2);
-  let p =
-    d *
-    t *
-    (0.319381530 +
-      t * (-0.356563782 + t * (1.781477937 + t * (-1.821255978 + t * 1.330274429))));
-  if (z > 0) p = 1 - p;
-  return Math.max(1, Math.min(99, Math.round((1 - p) * 100)));
-}

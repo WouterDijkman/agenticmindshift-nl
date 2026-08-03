@@ -1,9 +1,25 @@
 import { z } from 'zod';
 
+/**
+ * Validatiefouten zijn message *keys*, geen zinnen.
+ *
+ * Dit formulier draait in vijf talen. Een hardcoded Nederlandse zin toonde een
+ * Duitse of Spaanse bezoeker Nederlandse foutmeldingen bij zijn eigen formulier.
+ * De keys worden opgelost in de `validation`-namespace van messages/<locale>.json,
+ * op de plek waar de fout ook echt getoond wordt.
+ */
+export const validationKeys = {
+  nameMin: 'name_min',
+  emailInvalid: 'email_invalid',
+  companyMin: 'company_min',
+  websiteInvalid: 'website_invalid',
+  contextMax: 'context_max',
+} as const;
+
 export const emailCaptureSchema = z.object({
-  name: z.string().min(2, 'Naam moet ten minste 2 tekens bevatten'),
-  email: z.string().email('Voer een geldig e-mailadres in'),
-  company: z.string().min(2, 'Voer een bedrijfsnaam in'),
+  name: z.string().min(2, validationKeys.nameMin),
+  email: z.string().email(validationKeys.emailInvalid),
+  company: z.string().min(2, validationKeys.companyMin),
   jobTitle: z.string().optional(),
   phone: z.string().optional(),
   /**
@@ -17,13 +33,13 @@ export const emailCaptureSchema = z.object({
     .optional()
     .refine(
       (v) => !v || /^([a-z]+:\/\/)?[^\s.]+\.[^\s]{2,}$/i.test(v),
-      'Voer een geldige URL in (bv. www.uwbedrijf.nl)',
+      validationKeys.websiteInvalid,
     ),
   /**
    * Korte vrije omschrijving van het bedrijf/fonds (optioneel).
    * Voor extra context in het rapport — bv. "PE-fonds, mid-market, 3 portfolio".
    */
-  companyContext: z.string().trim().max(500, 'Maximaal 500 tekens').optional(),
+  companyContext: z.string().trim().max(500, validationKeys.contextMax).optional(),
 });
 
 export type EmailCaptureInput = z.infer<typeof emailCaptureSchema>;
@@ -37,9 +53,9 @@ export const partyTypeEnum = z.enum([
 ]);
 
 export const earlyAccessSchema = z.object({
-  name: z.string().min(2, 'Naam moet ten minste 2 tekens bevatten'),
-  email: z.string().email('Voer een geldig e-mailadres in'),
-  company: z.string().min(2, 'Voer een bedrijfsnaam in'),
+  name: z.string().min(2, validationKeys.nameMin),
+  email: z.string().email(validationKeys.emailInvalid),
+  company: z.string().min(2, validationKeys.companyMin),
   jobTitle: z.string().optional(),
   partyType: partyTypeEnum,
   notes: z.string().optional(),

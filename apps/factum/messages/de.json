@@ -2,15 +2,15 @@
   "meta": {
     "home": {
       "title": "Analyse auf Due-Diligence-Niveau über den gesamten Deal-Zyklus",
-      "description": "Elf Disziplinen über den gesamten Datenraum. Gegeneinander abgeglichen. Von einer Person geprüft, bevor Sie es sehen."
+      "description": "Dreizehn Disziplinen über den gesamten Datenraum. Gegeneinander abgeglichen. Von einer Person geprüft, bevor Sie es sehen."
     },
     "platform": {
       "title": "Die Plattform",
-      "description": "31 Due-Diligence-Module über 11 Disziplinen. Jede Feststellung belegt ein Dokument. Jedes Ergebnis passiert eine menschliche Freigabe."
+      "description": "31 Due-Diligence-Module über 13 Disziplinen. Jede Feststellung belegt ein Dokument. Jedes Ergebnis passiert eine menschliche Freigabe."
     },
     "sprint": {
       "title": "Der Diligence Sprint",
-      "description": "Elf fachspezifische Durchgänge über einen Datenraum, zu einem Narrativ zusammengeführt, mit laufendem Datenlücken-Tracker."
+      "description": "Dreizehn fachspezifische Durchgänge über einen Datenraum, zu einem Narrativ zusammengeführt, mit laufendem Datenlücken-Tracker."
     },
     "governance": {
       "title": "Governance und Datenverarbeitung",
@@ -614,8 +614,8 @@
     },
     "layers": {
       "eyebrow": "Synthese",
-      "title": "Von elf Analysen zu einem Urteil",
-      "lead": "Was {disciplines} getrennte Analysen zu einem einzigen Ergebnis macht, nicht elf.",
+      "title": "Von dreizehn Analysen zu einem Urteil",
+      "lead": "Was {disciplines} getrennte Analysen zu einem einzigen Ergebnis macht, nicht dreizehn.",
       "items": [
         {
           "title": "Wertsteigerungs-Analyse",
@@ -680,7 +680,7 @@
       "items": [
         {
           "q": "Ersetzt das einen Quality-of-Earnings-Bericht?",
-          "a": "Es ist breiter, und es ist keine Prüfungsleistung. Eine Quality-of-Earnings-Analyse deckt eine Dimension ab und dauert vier bis zehn Wochen. Hier laufen elf Disziplinen, gegeneinander abgeglichen. Ein unterzeichnetes Testat eines Wirtschaftsprüfers bleibt ein separates Mandat."
+          "a": "Es ist breiter, und es ist keine Prüfungsleistung. Eine Quality-of-Earnings-Analyse deckt eine Dimension ab und dauert vier bis zehn Wochen. Hier laufen dreizehn Disziplinen, gegeneinander abgeglichen. Ein unterzeichnetes Testat eines Wirtschaftsprüfers bleibt ein separates Mandat."
         },
         {
           "q": "Wie lange dauert es?",
@@ -883,7 +883,7 @@
     "header": {
       "eyebrow": "Partnerschaften",
       "title": "Mehr Mandate, als Ihr Team lesen kann",
-      "lead": "Sie behalten die Beziehung und das Urteilsvermögen. Wir führen die Analyse über elf Disziplinen dahinter aus, unter Ihrem Namen."
+      "lead": "Sie behalten die Beziehung und das Urteilsvermögen. Wir führen die Analyse über dreizehn Disziplinen dahinter aus, unter Ihrem Namen."
     },
     "who": {
       "eyebrow": "Passung",
@@ -911,7 +911,7 @@
     "split": {
       "eyebrow": "Die Aufteilung",
       "title": "Sie behalten die Beziehung. Wir liefern die Analyse.",
-      "lead": "Dieselbe Plattform mit elf Disziplinen, dasselbe Prüfgate — geliefert unter Ihrem Namen.",
+      "lead": "Dieselbe Plattform mit dreizehn Disziplinen, dasselbe Prüfgate — geliefert unter Ihrem Namen.",
       "columns": [
         {
           "label": "Sie behalten",
@@ -925,7 +925,7 @@
         {
           "label": "Wir liefern",
           "items": [
-            "Den Durchgang über elf Disziplinen im Datenraum",
+            "Den Durchgang über dreizehn Disziplinen im Datenraum",
             "Disziplinübergreifenden Abgleich als festen Schritt",
             "Feststellungen, an ein Dokument und eine Passage gebunden, jedes Mal",
             "Eine namentlich benannte Person, die für das Ergebnis einsteht"
@@ -979,7 +979,7 @@
         },
         {
           "q": "Können Sie auch nur einen Teil des Umfangs übernehmen?",
-          "a": "Der Durchgang über elf Disziplinen ist fest, weil der Wert im Abgleich zwischen den Disziplinen liegt. Variieren kann die Tiefe der Ausarbeitung."
+          "a": "Der Durchgang über dreizehn Disziplinen ist fest, weil der Wert im Abgleich zwischen den Disziplinen liegt. Variieren kann die Tiefe der Ausarbeitung."
         },
         {
           "q": "Wie exklusiv ist das?",

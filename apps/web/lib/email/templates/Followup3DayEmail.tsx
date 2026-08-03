@@ -9,10 +9,18 @@ import {
   Hr,
 } from '@react-email/components';
 
+import {
+  FOLLOWUP_STRINGS,
+  HTML_LANG,
+  type ReportLocale,
+} from '@/lib/report/locale';
+
 interface Followup3DayEmailProps {
   name: string;
   weakestDimensions: string[];
   intakeUrl?: string;
+  /** Taal van de lead. Default 'nl'. */
+  locale?: ReportLocale;
 }
 
 const wrap: React.CSSProperties = {
@@ -35,26 +43,29 @@ export default function Followup3DayEmail({
   name,
   weakestDimensions,
   intakeUrl = 'https://cal.com/wwdijkman/intake-call',
+  locale = 'nl',
 }: Followup3DayEmailProps) {
+  const s = FOLLOWUP_STRINGS[locale];
+  const copy = s.day3;
+  const firstName = name.split(' ')[0];
+
   return (
-    <Html lang="nl">
+    <Html lang={HTML_LANG[locale]}>
       <Head />
       <Body style={wrap}>
         <Container style={card}>
           <Heading style={{ color: '#e4ecf5', fontSize: '22px', marginBottom: '16px' }}>
-            Drie dagen later &mdash; wat valt op in uw rapport?
+            {copy.heading}
           </Heading>
-          <Text style={{ color: '#cfe9ec' }}>Beste {name},</Text>
+          <Text style={{ color: '#cfe9ec' }}>{s.greeting(firstName)}</Text>
           <Text style={{ color: '#a8b8cc', lineHeight: 1.6 }}>
-            De afgelopen dagen heeft u uw scorecard-rapport waarschijnlijk doorgenomen. In de
-            meeste gevallen valt op dat twee dimensies achterblijven. Bij u zijn dat{' '}
-            <strong style={{ color: '#e4ecf5' }}>{weakestDimensions.join(' en ')}</strong>.
+            {copy.body1Lead}
+            <strong style={{ color: '#e4ecf5' }}>
+              {weakestDimensions.join(s.and)}
+            </strong>
+            {copy.body1Tail}
           </Text>
-          <Text style={{ color: '#a8b8cc', lineHeight: 1.6 }}>
-            Dit zijn vaak de plaatsen waar de meeste IRR weglekt &mdash; niet door slecht beheer,
-            maar omdat ze zelden expliciet gemeten worden. Wilt u een vrijblijvend gesprek over wat
-            dit voor uw portefeuille betekent? Plan dan een sparring-sessie in.
-          </Text>
+          <Text style={{ color: '#a8b8cc', lineHeight: 1.6 }}>{copy.body2}</Text>
           <Text style={{ marginTop: '24px' }}>
             <Link
               href={intakeUrl}
@@ -67,13 +78,11 @@ export default function Followup3DayEmail({
                 fontWeight: 600,
               }}
             >
-              Plan een sparring-sessie
+              {copy.cta}
             </Link>
           </Text>
           <Hr style={{ borderColor: 'rgba(107,125,150,0.2)', margin: '24px 0' }} />
-          <Text style={{ color: '#6b7d96', fontSize: '13px' }}>
-            Wilt u geen vervolgmails meer? Antwoord met &quot;afmelden&quot;.
-          </Text>
+          <Text style={{ color: '#6b7d96', fontSize: '13px' }}>{s.unsubscribe}</Text>
         </Container>
       </Body>
     </Html>

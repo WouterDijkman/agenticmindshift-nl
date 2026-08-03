@@ -209,7 +209,7 @@ export default async function HomePage({
         />
 
         {/* The discipline chips used to repeat here. The coverage grid above
-            already names all eleven, two sections earlier. */}
+            already names every discipline, two sections earlier. */}
         <Reveal delay={90} style={{ marginTop: 36 }}>
           <div className="panel" style={{ padding: 'clamp(22px, 3vw, 34px)' }}>
             <span className="eyebrow eyebrow-accent" style={{ marginBottom: 14 }}>

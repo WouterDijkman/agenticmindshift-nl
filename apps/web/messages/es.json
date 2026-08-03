@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "site_name": "Agentic Mindshift",
+    "site_title": "Agentic Mindshift — Asesoría en IA para private equity y M&A en Europa",
+    "site_description": "Asesoría en IA para fondos de private equity, firmas de M&A y empresas familiares del mid-market europeo. Haga la Scorecard gratuita: doce minutos, seis dimensiones, informe inmediato."
+  },
   "nav": {
     "scorecard": "Scorecard",
     "werkwijze": "Metodología",
@@ -10,10 +15,11 @@
     "close_menu": "Cerrar menú",
     "close": "Cerrar",
     "main_menu": "Menú principal",
-    "badge_july": "julio"
+    "badge_soon": "próximamente",
+    "choose_language": "Elegir idioma"
   },
   "footer": {
-    "tagline": "Asesoría de IA para firmas europeas de PE y M&A. Concreto, confidencial, medible.",
+    "tagline": "Asesoría en IA para fondos de private equity y firmas de M&A europeos. Concreta, confidencial, medible.",
     "email_wouter": "Email a Wouter",
     "linkedin": "LinkedIn →",
     "navigation": "Navegación",
@@ -21,7 +27,7 @@
     "over_wouter": "Sobre Wouter",
     "privacy": "Privacidad",
     "voorwaarden": "Términos",
-    "cta_title": "¿Listo para ver sus puntos ciegos?",
+    "cta_title": "¿Dónde están sus puntos ciegos?",
     "cta_sub": "Quince preguntas. Doce minutos. Sin cuenta.",
     "start_scorecard": "Iniciar el Scorecard",
     "copyright": "© 2026 Agentic Mindshift — fundada en octubre de 2025.",
@@ -29,11 +35,11 @@
   },
   "homepage": {
     "meta_title": "Asesoría de IA para Private Equity y M&A",
-    "meta_description": "Alianza estratégica de IA para fondos de PE, firmas de M&A y empresas familiares del mid-market. Mida su retorno de IA con la Scorecard gratuita en 12 minutos.",
+    "meta_description": "Asesoría en IA para fondos de private equity, firmas de M&A y empresas familiares del mid-market europeo. Haga la Scorecard gratuita: doce minutos, seis dimensiones, informe inmediato.",
     "hero": {
       "eyebrow": "Para socios de PE, directores de M&A y family offices",
-      "heading": "¿Cuánto rendimiento está dejando su cartera sobre la mesa este mes?",
-      "subtext": "Su informe mensual enmascara el bajo rendimiento. Su equipo de deals repite errores evitables. Y la due diligence impulsada por IA en todas las dimensiones falta en la mayoría de las propuestas al IC. El Scorecard mapea las seis dimensiones. En doce minutos.",
+      "heading": "¿Cuánta rentabilidad está dejando su cartera sobre la mesa?",
+      "subtext": "Seis dimensiones que ni el IM ni el reporte mensual muestran. Doce minutos y tendrá un informe con fundamento.",
       "cta_primary": "Iniciar el Scorecard",
       "cta_secondary": "Metodología y honorarios",
       "trust": "12 minutos · 6 dimensiones · sin cuenta · confidencial"
@@ -41,29 +47,23 @@
     "founder": {
       "eyebrow": "Quién está detrás de esto",
       "heading": "Un asesor. Seis años en el lado de la financiación y la reestructuración de los deals europeos.",
-      "body": "Agentic Mindshift fue fundada por Wouter Dijkman, antiguo profesional de acquisition finance y financial restructuring (Rabobank, ING, Alter Domus). No un generalista de IA con clientes de PE por casualidad, sino alguien que vio de cerca por qué los deals técnicamente perfectos fracasan igualmente. Lo construyo de forma deliberadamente selectiva: un puñado de socios a la vez, para que el trabajo siga siendo hands-on.",
-      "point_1_label": "6 años",
-      "point_1_body": "Acquisition finance y financial restructuring en el mid-market europeo.",
-      "point_2_label": "Founder-led",
-      "point_2_body": "Trabaja directamente con el asesor. Selectivo, personal, sin capas intermedias.",
-      "point_3_label": "€1–25M",
-      "point_3_body": "Enfoque mid-market. Sin startups, sin grandes corporaciones.",
+      "body": "Wouter Dijkman fundó Agentic Mindshift tras seis años en acquisition finance y financial restructuring en Rabobank, ING y Alter Domus. Allí quedó a la vista por qué operaciones que cuadraban sobre el papel acababan encallando. La firma se mantiene deliberadamente pequeña: unos pocos socios a la vez, para que cada proyecto conserve atención personal.",
       "cta": "Más sobre Wouter →",
-      "sample_note": "¿Prefiere ver primero el formato del informe? Solicite un informe de muestra anonimizado por LinkedIn o correo."
+      "sample_note": "¿Prefiere ver antes el formato del informe? Solicite un informe de muestra anonimizado por LinkedIn o correo electrónico."
     },
     "transformation": {
       "eyebrow": "La diferencia",
       "heading": "Del instinto a la fundamentación.",
       "without_label": "Sin el Scorecard",
       "with_label": "Después del Scorecard",
-      "without_1": "Decisiones del IC basadas en intuición y experiencia.",
-      "without_2": "Informe mensual como ritual, no como herramienta de gestión.",
+      "without_1": "Las decisiones del comité se apoyan en intuición y experiencia.",
+      "without_2": "El reporte mensual es un ritual, no una herramienta de gestión.",
       "without_3": "Las lecciones de deals se pierden con cada cambio de equipo.",
-      "without_4": "El riesgo de que la IA tome las actividades principales no está en ningún papel.",
-      "with_1": "Seis dimensiones cuantificadas, comparadas con empresas similares.",
-      "with_2": "Dos prioridades concretas con mayor impacto.",
+      "without_4": "En ningún documento consta si la IA puede absorber el modelo de negocio de una participada.",
+      "with_1": "Seis dimensiones puntuadas, junto al nivel al que quiere llegar.",
+      "with_2": "Las dos medidas que más rinden.",
       "with_3": "Un informe que puede compartir internamente sin explicación adicional.",
-      "with_4": "Va a su próximo IC con datos, no con una corazonada."
+      "with_4": "Sustenta su próximo comité con cifras."
     },
     "faq": {
       "eyebrow": "Preguntas",
@@ -73,15 +73,13 @@
     },
     "stakes": {
       "eyebrow": "El coste de la inacción",
-      "heading": "Cada trimestre sin medición le cuesta más que la propia medición.",
-      "body_1": "Sin medición estructural, el riesgo de que la IA tome las actividades principales sigue siendo un punto ciego en su precio de adquisición. Su informe mensual sigue siendo un ritual en lugar de una herramienta de gestión. Cada lección de deal desaparece con el siguiente cambio de equipo.",
-      "body_2": "¿La diferencia entre un precio de adquisición fundamentado y uno sin calibrar? En un objetivo de EBITDA de €5M, fácilmente 0,5×: eso son €2,5M.",
-      "body_3": "El Scorecard tarda doce minutos. La inacción cuesta trimestres."
+      "heading": "Cada trimestre sin medición cuesta más que medir.",
+      "body": "La Scorecard cuesta doce minutos. No hacer nada cuesta trimestres."
     },
     "final_cta": {
       "eyebrow": "Su próximo paso",
-      "heading": "En doce minutos sabrá exactamente dónde es vulnerable su cartera.",
-      "subtext": "Va a su próxima reunión del IC con datos, no con un presentimiento. Sin cuenta. Sin compromisos. Su informe está disponible de inmediato.",
+      "heading": "Dentro de doce minutos sabrá dónde es vulnerable su cartera.",
+      "subtext": "Sustenta su próximo comité con cifras. Sin cuenta y sin compromiso. Su informe está disponible al instante.",
       "cta_primary": "Iniciar el Scorecard",
       "cta_secondary": "Programar una llamada sin compromiso"
     },
@@ -92,19 +90,19 @@
     },
     "pain": {
       "eyebrow": "¿Le resulta familiar?",
-      "heading": "Tres problemas que le cuestan rentabilidad. Rara vez se nombran explícitamente.",
-      "subheading": "No debería tener que tomar una decisión de inversión basándose en una imagen incompleta. Sin embargo, esa es la norma.",
+      "heading": "Tres problemas que cuestan rentabilidad. Rara vez se nombran en voz alta.",
+      "subheading": "Nadie quiere decidir con media imagen. Aun así ocurre en cada operación.",
       "label_1": "Riesgo invisible",
-      "title_1": "Usted decide en función de lo que ve.",
-      "body_1": "El riesgo de que la IA asuma la actividad central de su target, y la concentración de clientes, no están en el IM. Solo se vuelven visibles una vez firmada la operación, o cuando la cartera ya está bajo tensión.",
-      "feeling_1": "¿Esa sensación persistente en una decisión del IC? Es acertada. Hay más de lo que usted ve.",
+      "title_1": "Decide con lo que le enseñan.",
+      "body_1": "La concentración de clientes y si la IA puede absorber la actividad principal de su target: nada de eso figura en el IM. Se ve cuando la operación ya está firmada, o cuando la cartera ya está bajo presión.",
+      "feeling_1": "Esa duda incómoda en el comité suele tener razón. Hay más de lo que ve.",
       "label_2": "Retención del conocimiento",
       "title_2": "Cada adquisición vuelve a empezar de cero.",
-      "body_2": "Los aprendizajes de la operación anterior desaparecen con el dealmaker o en una carpeta que nadie abre. Su práctica acumula operaciones pero no aprende de ellas.",
-      "feeling_2": "Sabe que ya investigó esto antes. Pero nadie sabe dónde está.",
+      "body_2": "Lo que dejó la operación anterior se va con el dealmaker o acaba en una carpeta que nadie abre. Su firma acumula operaciones sin aprender de ellas.",
+      "feeling_2": "Sabe que ya analizó esto antes. Solo que no recuerda dónde está.",
       "label_3": "Alerta tardía",
-      "title_3": "Los problemas de la cartera son visibles meses antes.",
-      "body_3": "El bajo rendimiento y los obstáculos a la salida se gestan durante trimestres antes de que el informe anual los confirme. Sin estructura, siempre llega tarde.",
+      "title_3": "Los problemas de cartera son visibles meses antes.",
+      "body_3": "Las cifras que flojean y los riesgos de salida se acumulan durante trimestres antes de que el informe anual los confirme. Sin una medición fija, lo detecta estructuralmente tarde.",
       "feeling_3": "El informe anual confirma lo que usted ya sospechaba hace tres trimestres."
     },
     "steps": {
@@ -113,72 +111,53 @@
       "title_1": "Responda 15 preguntas",
       "body_1": "Opción múltiple sobre su proceso de operaciones, informe mensual, resistencia a la IA y retención del conocimiento. Doce minutos. Sin campos abiertos.",
       "title_2": "Reciba su informe",
-      "body_2": "Puntuación en seis dimensiones, dos puntos prioritarios y una propuesta concreta de siguiente paso. Inmediatamente al terminar.",
+      "body_2": "Una puntuación en seis dimensiones, los dos puntos prioritarios y una propuesta concreta para el siguiente paso. Al terminar.",
       "title_3": "Determine su siguiente paso",
-      "body_3": "Compártalo internamente, agende una sesión de sparring o inicie un proyecto directamente. Sin compromisos. Usted marca el ritmo."
+      "body_3": "Compártalo internamente, reserve una sesión de sparring o empiece ya. Usted marca el ritmo."
     },
     "showcase": {
       "eyebrow": "El informe",
       "heading": "No una puntuación aislada. Un informe que puede compartir internamente.",
-      "body": "Cada dimensión recibe una puntuación, medida frente al nivel de firmas comparables. Verá de un vistazo en qué destaca y qué dos puntos merecen más atención.",
-      "check_1": "Seis dimensiones, cada una comparada con fondos comparables",
+      "body": "Cada dimensión recibe una puntuación, con el nivel de referencia al lado: el punto en que una dimensión está lo bastante medida como para gestionarla. De un vistazo ve dónde lo alcanza y qué dos puntos van primero.",
+      "check_1": "Seis dimensiones, cada una con puntuación y nivel de referencia",
       "check_2": "Los dos puntos de mayor impacto, destacados",
-      "check_3": "Compartible directamente en su IC, sin explicaciones adicionales",
+      "check_3": "Listo para compartir en su comité, sin explicaciones adicionales",
       "cta": "Iniciar el Scorecard"
     },
     "stats": {
       "label_1": "múltiplo de EBITDA",
-      "sub_1": "pérdida potencial de rentabilidad por empresa de cartera. En un target de €5M de EBITDA son €2,5M",
+      "sub_1": "de rentabilidad potencial perdida por participada por un precio de compra mal fijado",
       "label_2": "días laborables",
-      "sub_2": "por informe mensual perdidos en la consolidación manual de datos. Tiempo que no va a las operaciones",
+      "sub_2": "por reporte mensual recopilando cifras a mano. Tiempo que no va a operaciones",
       "label_3": "minutos",
-      "sub_3": "para medir, puntuar y comparar seis dimensiones de su cartera"
+      "sub_3": "para medir y puntuar seis dimensiones de su cartera"
     },
     "factum": {
-      "eyebrow": "Dos rutas",
-      "heading": "Externalizar o hacerlo usted mismo: en ambos casos tiene la base.",
-      "track_1_tag": "Deal-doer · PE / Family office / Empresario",
-      "track_1_title": "Deje que lo hagan por usted.",
-      "track_1_body": "Entregamos el proyecto completo de Due Diligence & Portfolio impulsada por IA sobre su expediente.",
-      "track_1_detail": "Desde €10.000 por operación · o desde €6.500/mes de visión de cartera · IVA no incl.",
-      "track_1_cta": "Iniciar el Scorecard",
-      "track_1_cta_sub": "12 minutos · su perfil al instante",
-      "track_2_tag": "Asesor · RA / RB / profesional de M&A",
-      "track_2_title": "Trabaje usted mismo con la plataforma.",
-      "track_2_body": "Factum Capital: 29 módulos para su propio equipo de operaciones. Desde Financial DD y AI Due Diligence hasta modelización LBO y exit readiness. SaaS desde el 1 de julio de 2026. El acceso anticipado ya está abierto.",
-      "track_2_detail": "SaaS · suscripción mensual · tarifa de acceso anticipado en el lanzamiento",
-      "track_2_cta": "Acceso anticipado a Factum Capital",
-      "track_2_cta_sub": "Lanzamiento 1 de julio de 2026",
-      "powered_by": "POWERED BY",
-      "attribution": "La plataforma de IA detrás de los servicios de Due Diligence & Portfolio impulsada por IA · lanzamiento 1 de julio de 2026",
-      "mockup_phase_acquisition": "Adquisición",
-      "mockup_phase_financing": "Financiación",
-      "mockup_phase_portfolio": "Portfolio review",
-      "mockup_phase_ibr": "Pre-IBR/WHOA",
-      "mockup_module_boedelonderzoek": "Investigación de activos",
-      "mockup_footer_left": "4 fases de deal · 29 módulos",
-      "mockup_footer_right": "SaaS · lanzamiento 1 julio 2026"
+      "eyebrow": "La plataforma que hay detrás",
+      "heading": "¿Quiere trabajar usted mismo con la plataforma?",
+      "body": "La Scorecard funciona sobre Factum Capital, nuestra plataforma de IA para due diligence y análisis de cartera. Los asesores y equipos de operaciones que quieran usar los módulos por su cuenta la encontrarán allí.",
+      "cta": "Ver Factum Capital"
     },
     "dimensions": {
       "eyebrow": "Seis dimensiones",
       "heading": "Los seis puntos por donde se fuga la rentabilidad.",
-      "subheading": "El Scorecard mide cada una de estas dimensiones y compara su perfil con firmas comparables.",
+      "subheading": "La Scorecard puntúa las seis y coloca su perfil junto al nivel de referencia.",
       "legend_example": "Perfil de ejemplo",
-      "legend_peer": "Firmas comparables",
       "card_cta": "Medir esta dimensión →",
       "title_1": "Tiempo de respuesta",
-      "body_1": "¿Cuántos días laborables pierde su equipo entre la recepción del IM y un juicio listo para decidir?",
+      "body_1": "¿Cuántos días hábiles median entre el IM y un juicio sobre el que pueda decidir?",
       "title_2": "Visión de cartera",
       "body_2": "¿Su informe mensual corrige a tiempo o confirma a posteriori lo que ya sospechaba?",
       "title_3": "Formación del juicio",
-      "body_3": "¿Cuánto de su análisis son datos y cuánto es la relación con la dirección?",
+      "body_3": "¿Cuánto de su análisis son datos y cuánto la relación con el equipo directivo?",
       "title_4": "Resistencia a la IA",
       "body_4": "¿Puede un competidor impulsado por IA asumir la actividad central de su participada?",
       "title_5": "Capacidad del equipo",
-      "body_5": "¿Cuántas operaciones deja pasar su equipo por la búsqueda y el reporte manuales?",
+      "body_5": "¿Cuántas operaciones se quedan atrás por búsquedas y reportes manuales?",
       "title_6": "Retención del conocimiento",
-      "body_6": "¿Se va su associate? ¿Desaparece también la memoria de tres a cinco expedientes?",
-      "radar_aria_label": "Gráfico de radar de su perfil en seis dimensiones, comparado con fondos comparables"
+      "body_6": "Si su associate se marcha, ¿se va también la memoria de tres a cinco expedientes?",
+      "radar_aria_label": "Gráfico radar de un perfil de ejemplo en seis dimensiones, junto al nivel de referencia",
+      "legend_reference": "Nivel de referencia"
     },
     "costAnchor": {
       "title": "El cálculo",
@@ -187,29 +166,29 @@
       "row_1_note": "0,5× en un target de €5M de EBITDA",
       "row_2_label": "DD fundamentada · por operación",
       "row_2_amount": "€10.000",
-      "row_2_note": "cubre la corrección 250×",
+      "row_2_note": "250× menor que esa corrección",
       "row_3_label": "El Scorecard",
       "row_3_amount": "Gratis",
       "row_3_note": "12 minutos · sin cuenta",
-      "foot": "Importes mostrados a escala. La medición cuesta una fracción de lo que cuesta un punto ciego."
+      "foot": "Ejemplo de cálculo; importes a escala. Medir cuesta una fracción de lo que cuesta un punto ciego."
     },
     "faqItems": {
       "duur_q": "¿Cuánto dura realmente el Scorecard?",
-      "duur_a": "Doce minutos de media. Cuatro secciones, quince preguntas. Puede pausar a mitad — sus respuestas se guardan localmente y siguen disponibles en cuanto vuelve a abrir la página.",
+      "duur_a": "Doce minutos de media. Cuatro secciones, quince preguntas. Puede parar a mitad: sus respuestas quedan guardadas en local y siguen ahí al volver a abrir la página.",
       "voor-wie_q": "¿Para qué tipo de firma está diseñado el Scorecard?",
-      "voor-wie_a": "Específicamente para fondos de PE regionales europeos, firmas de M&A y empresarios del lower mid-market (operaciones de €1M–€25M). No para startups, ni para grandes corporaciones, ni para firmas fuera de este segmento.",
+      "voor-wie_a": "Para fondos de private equity regionales europeos, firmas de M&A y empresarios del lower-mid market, con operaciones de €1M a €25M. Fuera de ese segmento la Scorecard aporta poco.",
       "vertrouwelijk_q": "¿Qué grado de confidencialidad tiene esto?",
-      "vertrouwelijk_a": "Total. Sus respuestas no se comparten, no se venden, no se usan para benchmarks sin anonimización. Puede rellenarlo de forma anónima si lo desea — su nombre solo se solicita al recibir el informe.",
+      "vertrouwelijk_a": "Totalmente. Sus respuestas no se comparten, no se venden y solo se usan de forma anonimizada. Puede completar la scorecard de forma anónima; le pedimos el nombre solo cuando quiera recibir el informe.",
       "onderbouwing_q": "¿En qué se basan las seis dimensiones?",
-      "onderbouwing_a": "Las dimensiones se basan en la experiencia práctica en acquisition finance y financial restructuring, y están comparadas con indicadores anónimos de firmas comparables del lower mid-market europeo.",
+      "onderbouwing_a": "Las dimensiones vienen de la práctica: acquisition finance y financial restructuring. El nivel de referencia de cada dimensión es nuestro propio nivel objetivo, el punto en que una dimensión está lo bastante medida como para gestionarla. No es una media de mercado medida. Tampoco lo afirmamos.",
       "wie_q": "¿Quién está detrás de Agentic Mindshift?",
       "wie_a": "Wouter Dijkman, founder. Acquisition finance y financial restructuring, mid-market europeo.",
       "wie_link": "Más en la página Sobre nosotros →",
       "sales-pitch_q": "¿Es esto otro discurso de venta encubierto?",
-      "sales-pitch_a": "No. Recibe puntuaciones en seis dimensiones, dos puntos prioritarios y una propuesta concreta de siguiente paso. Solo después decide si continúa. Sin presión, sin seguimiento salvo que usted lo inicie.",
+      "sales-pitch_a": "No. Recibe puntuaciones en seis dimensiones, los dos puntos prioritarios y una propuesta concreta. Después decide usted. No sabrá de nosotros salvo que nos escriba.",
       "investering_q": "¿Cuáles son los niveles de inversión para los distintos proyectos?",
-      "investering_a": "Hay cuatro rutas: una AI Sparring Session gratuita (30 minutos, sin compromiso), Asesoría e Implementación de IA desde €4.500 por proyecto o retainer, un Fractional AI Officer por €1.099 al día (mín. 3 meses), y Due Diligence & Portfolio impulsada por IA desde €10.000 por operación o desde €6.500 al mes para inteligencia de cartera continua. Todos los importes sin IVA. Consulte /werkwijze para la explicación completa.",
-      "voorbeeld_q": "¿Y si no quiero rellenar el Scorecard pero sí ver el formato del informe?",
+      "investering_a": "Hay cuatro rutas. Una AI Sparring Session gratuita de veinte minutos. Asesoría e implementación de IA desde €4.500 por proyecto o en retainer. Un Fractional AI Officer por €1.099 al día, mínimo tres meses. Y due diligence y cartera con IA desde €10.000 por operación, o desde €6.500 al mes de forma continua. Todos los importes excluyen IVA. El detalle completo está en /werkwijze.",
+      "voorbeeld_q": "No quiero completar la Scorecard, pero sí ver el informe. ¿Es posible?",
       "voorbeeld_a": "Envíe un mensaje por LinkedIn o correo. Le enviaremos entonces un informe de muestra anonimizado."
     }
   },
@@ -221,46 +200,46 @@
   },
   "contact": {
     "meta_title": "Contacto",
-    "meta_description": "Tres formas de ponerse en contacto con Wouter Dijkman de Agentic Mindshift.",
+    "meta_description": "Tres formas de contactar con Wouter Dijkman, de Agentic Mindshift.",
     "eyebrow": "Contacto",
-    "heading": "Empiece con una pregunta. No con un compromiso.",
-    "subtext": "Comience con el Scorecard para obtener información inmediata, o programe una llamada de veinte minutos sin compromiso. Usted establece la agenda.",
+    "heading": "Primero pregunte. Decidir viene después.",
+    "subtext": "Empiece con la Scorecard para una lectura inmediata, o reserve una conversación de veinte minutos sin compromiso. Usted marca la agenda.",
     "card_01_title": "Scorecard",
-    "card_01_body": "Doce minutos. Informe de cuatro páginas. El punto de partida más estructurado para hacer medible su cartera.",
+    "card_01_body": "Doce minutos. Cuatro páginas de informe. El punto de partida más rápido para hacer medible su cartera.",
     "card_01_cta": "Iniciar el Scorecard",
     "card_02_title": "Sesión de sparring",
-    "card_02_body": "Veinte minutos para ver si hay compatibilidad. Usted establece la agenda.",
+    "card_02_body": "Veinte minutos para ver si hay encaje. Usted marca la agenda.",
     "card_02_cta": "Programar una llamada sin compromiso",
     "card_03_title": "Mensaje directo",
-    "card_03_body": "Para preguntas específicas o si prefiere empezar por escrito. Respuesta en dos días laborables.",
+    "card_03_body": "Para preguntas concretas, o si prefiere empezar por escrito. Respuesta en dos días hábiles.",
     "card_03_cta": "Enviar un email"
   },
   "over": {
     "meta_title": "Sobre Wouter Dijkman",
-    "meta_description": "Fundador de Agentic Mindshift. Seis años de experiencia en acquisition finance y financial restructuring en el mid-market europeo.",
+    "meta_description": "Fundador de Agentic Mindshift. Seis años de acquisition finance y financial restructuring en el mid-market europeo.",
     "hero": {
       "eyebrow": "El asesor",
       "role": "Fundador Agentic Mindshift",
-      "subtext": "Seis años en el lado de la financiación y la reestructuración de los deals europeos. Esa experiencia práctica se traduce en información de cartera medible para socios de PE que quieren asegurar rentabilidad antes de que las cifras anuales la confirmen."
+      "subtext": "Seis años en el lado de la financiación y la reestructuración de operaciones europeas. Uso esa experiencia para mostrar a los socios de private equity dónde se les escapa la rentabilidad, antes de que las cuentas anuales lo confirmen."
     },
-    "answer_first": "Agentic Mindshift fue fundada por Wouter Dijkman, antiguo profesional de acquisition finance y financial restructuring con experiencia en Rabobank, ING y Alter Domus. La firma asesora a fondos mid-market, firmas de M&A y empresas familiares europeos sobre estrategia de IA y due diligence impulsada por IA — con la mirada de alguien que estuvo junto al deal, no la de un proveedor de tecnología.",
+    "answer_first": "Agentic Mindshift fue fundada por Wouter Dijkman, con seis años de acquisition finance y financial restructuring en Rabobank, ING y Alter Domus. La firma asesora a fondos mid-market europeos, firmas de M&A y empresas familiares en estrategia de IA y due diligence con IA, desde la propia práctica de operaciones.",
     "bio": {
       "eyebrow": "Antecedentes",
-      "quote": "He visto operaciones que eran técnicamente perfectas — y que fracasaron porque nadie estaba dispuesto a cuestionar el supuesto incómodo. Ese es el problema que resuelvo. No con más datos. Con mejores preguntas.",
-      "para1": "Tres años de financial restructuring, tres años de acquisition finance — el lado de la financiación y la reestructuración del mid-market europeo. Esa combinación enseña exactamente dónde los supuestos no se cumplen y dónde el informe mensual enmascara el bajo rendimiento en lugar de señalarlo.",
+      "quote": "He visto operaciones que cuadraban sobre el papel y aun así encallaron. Nadie se atrevía a cuestionar en voz alta la premisa incómoda. En eso trabajo. Con mejores preguntas, no con más datos.",
+      "para1": "Tres años de financial restructuring, tres de acquisition finance. Los dos lados del mid-market europeo. Esa combinación muestra exactamente dónde fallan las hipótesis y dónde el reporte mensual esconde los reveses en lugar de señalarlos.",
       "para2_prefix": "En octubre de 2025 se fundó Agentic Mindshift. En noviembre de 2025 siguió AI for Business en Nyenrode. En desarrollo está",
-      "para2_suffix": ": una plataforma de IA con módulos con los que los equipos de deals instrumentan estructuralmente su proceso de DD, informe mensual y formación del juicio.",
-      "para3": "Lo construyo de forma deliberadamente selectiva: un puñado de socios a la vez, para que cada proyecto siga siendo hands-on y el trabajo reciba la atención que merece un deal."
+      "para2_suffix": ": una plataforma de IA con la que los equipos de operaciones fijan su proceso de DD, su reporte mensual y su formación de criterio.",
+      "para3": "Lo mantengo deliberadamente selectivo: unos pocos socios a la vez, para que cada proyecto reciba la atención que merece una operación."
     },
     "credentials": {
       "eyebrow": "Por qué Wouter",
-      "heading": "No un generalista de IA con clientes de PE por casualidad.",
+      "heading": "Primero dealmaker, después asesor de IA.",
       "cred_1_value": "6 años",
       "cred_1_label": "Experiencia en deals",
       "cred_1_sub": "Acquisition finance & financial restructuring",
       "cred_2_value": "2 disciplinas",
       "cred_2_label": "Financiación y reestructuración",
-      "cred_2_sub": "El ciclo completo de la financiación al stress",
+      "cred_2_sub": "El ciclo completo, de la financiación al estrés",
       "cred_3_value": "€1–25M",
       "cred_3_label": "Enfoque mid-market",
       "cred_3_sub": "Tamaño de deals PE y M&A europeo",
@@ -274,29 +253,29 @@
       "future_badge": "previsto",
       "item_1_year": "2017–2020",
       "item_1_label": "Financial Restructuring",
-      "item_1_sub": "Carteras pyme y mid-market en stress: cuidados intensivos y reestructuración",
+      "item_1_sub": "Carteras de pymes y mid-market en estrés: cuidados intensivos y reestructuración",
       "item_2_year": "2020–2023",
       "item_2_label": "Acquisition Finance",
-      "item_2_sub": "Financiación LBO en deals de PE europeo, mid-market 1–25M",
+      "item_2_sub": "Financiación LBO en operaciones de PE europeas, mid-market €1–25M",
       "item_3_year": "Octubre 2025",
       "item_3_label": "Fundación de Agentic Mindshift",
-      "item_3_sub": "Asesoría de IA para firmas europeas de PE y M&A",
+      "item_3_sub": "Asesoría en IA para firmas de PE y M&A europeas",
       "item_4_year": "Noviembre 2025",
       "item_4_label": "AI for Business",
-      "item_4_sub": "Nyenrode Business Universiteit · aplicaciones de IA en la práctica financiera",
-      "item_5_year": "1 julio 2026",
+      "item_4_sub": "Nyenrode Business Universiteit · IA en la práctica financiera",
+      "item_5_year": "En desarrollo",
       "item_5_label": "Lanzamiento Factum Capital",
       "item_5_sub": "Plataforma de IA para M&A y reestructuración"
     },
     "werkwijze_link": {
       "eyebrow": "Metodología",
-      "body": "Cuatro formas de colaborar, desde una sesión puntual hasta un rol de IA integrado.",
+      "body": "Cuatro formas de trabajar juntos, desde una sola sesión hasta un rol fijo de IA en su comité de dirección.",
       "cta": "Ver metodología e inversión →"
     },
     "contact_cta": {
       "eyebrow": "Contacto directo",
       "heading": "Una conversación. Veinte minutos. Usted elige el tema.",
-      "subtext": "Sin agenda. Sin compromisos. Sin seguimiento a menos que usted lo inicie.",
+      "subtext": "Sin agenda y sin compromiso. No sabrá de nosotros salvo que nos escriba.",
       "cta1": "Iniciar el Scorecard",
       "cta2": "Programar una llamada sin compromiso",
       "cta3": "Conectar en LinkedIn"
@@ -304,30 +283,30 @@
   },
   "werkwijze": {
     "meta_title": "Metodología e Inversión",
-    "meta_description": "Cuatro formas claramente diferenciadas de trabajar con Agentic Mindshift — desde una Sparring Session accesible hasta un Fractional AI Officer y Due Diligence impulsada por IA por operación o en volumen.",
+    "meta_description": "Cuatro formas de trabajar con Agentic Mindshift: desde una sesión breve de sparring hasta un Fractional AI Officer y due diligence con IA por operación o en volumen.",
     "hero": {
       "eyebrow": "Metodología e Inversión",
-      "heading": "Desde la primera conversación hasta el liderazgo de IA integrado: usted elige según su necesidad.",
+      "heading": "Desde la primera toma de contacto hasta un rol fijo de IA en su comité de dirección. Usted elige lo que encaja con su pregunta.",
       "subtext": "Cuatro rutas, cuatro situaciones. Cada ruta comienza con una conversación sin compromiso y termina con un resultado concreto."
     },
-    "answer_first": "Agentic Mindshift ofrece asesoría de IA y due diligence impulsada por IA para fondos de private equity, firmas de M&A y empresas familiares del mid-market europeo. Elige entre cuatro rutas —desde una sesión de sparring gratuita hasta un Fractional AI Officer integrado— según su punto de partida. Cada ruta empieza sin compromiso y termina con un resultado concreto.",
+    "answer_first": "Agentic Mindshift ofrece asesoría en IA y due diligence con IA a fondos de private equity, firmas de M&A y empresas familiares del mid-market europeo. Elige entre cuatro rutas, desde una sesión de sparring gratuita hasta un Fractional AI Officer fijo. Cada ruta empieza sin compromiso y termina con un resultado concreto.",
     "steps": {
       "eyebrow": "Del interés a la colaboración",
       "heading": "Tres pasos",
-      "subtext": "Sin largos procesos de selección. Del primer contacto a la colaboración activa suele tardar dos semanas.",
+      "subtext": "Sin procesos de selección largos. Del primer contacto a la colaboración en marcha suelen pasar dos semanas.",
       "step_1_title": "Scorecard o sparring",
-      "step_1_body": "Rellene el Scorecard (12 min) o programe una sesión de sparring de veinte minutos. No se requiere preparación: la conversación o el informe sacan los puntos relevantes a la superficie.",
+      "step_1_body": "Completa la Scorecard (12 min) o reserva una sesión de sparring de veinte minutos. No hace falta preparación; los puntos relevantes salen solos.",
       "step_2_title": "Intake y propuesta",
-      "step_2_body": "A partir de su perfil del Scorecard o la conversación, recibirá en dos días laborables una propuesta concreta: alcance, plazos, honorarios y resultado esperado. Sin puntos abiertos.",
+      "step_2_body": "En dos días hábiles recibe una propuesta: alcance, plazos, tarifa y resultado. Sin cabos sueltos.",
       "step_3_title": "Inicio en una semana",
-      "step_3_body": "Tras el acuerdo, comenzamos en siete días. Recibirá de inmediato el primer entregable o se le agendará la primera sesión. Sin tiempo de espera."
+      "step_3_body": "Tras la aprobación empezamos en siete días. Recibe de inmediato el primer resultado concreto o queda agendado para la primera sesión. Sin esperas."
     },
     "offerings": {
       "eyebrow": "Inversión",
       "heading": "¿Qué situación le corresponde?",
-      "subtext": "Cuatro situaciones, cuatro rutas. Reconocerá su pregunta, o una conversación bastará para confirmar la ruta correcta.",
+      "subtext": "Cuatro situaciones, cuatro rutas. ¿No reconoce la suya de inmediato? Una conversación basta para decidirla.",
       "guarantee_title": "Garantía",
-      "guarantee_body": "En concreto: el Scorecard es gratuito, la Sparring Session cuesta treinta minutos y ninguna factura, y una vez que aprueba un proyecto comienza en un plazo de siete días laborables — con el primer entregable, no con un kick-off. Solo el Fractional AI Officer tiene una duración mínima (tres meses); cualquier otra ruta es por encargo, sin lock-in.",
+      "guarantee_body": "La Scorecard es gratuita. La Sparring Session cuesta veinte minutos y ninguna factura. Aceptado el proyecto, empieza en siete días hábiles, con el primer resultado concreto. Solo el Fractional AI Officer tiene una duración mínima de tres meses; el resto de rutas van por encargo.",
       "most_chosen": "Más elegido",
       "investment_label": "Inversión"
     },
@@ -335,13 +314,13 @@
       "badge": "Introducción · sin compromiso",
       "title": "AI Sparring Session",
       "situation": "Quiere saber rápidamente qué significa la IA para su empresa, su operación o su próxima decisión.",
-      "price_note": "30 minutos · sin compromiso · sin factura",
+      "price_note": "20 minutos · sin compromiso · sin factura",
       "cta": "Reservar una sesión →"
     },
     "offering_2": {
       "badge": "Por proyecto o retainer",
       "title": "Asesoría e Implementación de IA",
-      "situation": "Quiere implementar la IA de forma concreta en sus procesos, flujos de trabajo u organización, con implementación, masterclasses y formación del equipo.",
+      "situation": "Quiere aplicar la IA de forma concreta en sus procesos y su equipo: implementación, masterclasses y formación.",
       "price_note": "Por proyecto o en retainer continuo",
       "cta": "Hable sobre su proyecto →",
       "price": "Desde €4.500"
@@ -349,208 +328,74 @@
     "offering_3": {
       "badge": "Integrado · continuo",
       "title": "Fractional AI Officer",
-      "situation": "Quiere un líder de IA a nivel de dirección sin contratación a jornada completa: estrategia, selección de proveedores y formación del equipo garantizados.",
-      "price_note": "Mínimo 3 meses · participación en dirección y responsabilidad operativa",
+      "situation": "Quiere IA a nivel de dirección sin contratar a tiempo completo. Estrategia, elección de proveedores y formación del equipo en una sola mano.",
+      "price_note": "Mínimo 3 meses · asiento en el comité de dirección y responsabilidad operativa",
       "cta": "Hable sobre el encaje →",
       "price": "€1.099 / día · excl. IVA"
     },
     "offering_4": {
       "badge": "Por operación o continuo",
       "title": "Due Diligence & Portfolio impulsada por IA",
-      "situation": "Realiza operaciones de M&A o gestiona una cartera y quiere que todas las dimensiones de la DD — financiero, fiscal, deal economics, IBR/WHOA y portfolio health — estén sistemáticamente respaldadas por análisis impulsado por IA en un expediente compartido.",
-      "price_note": "O desde €6.500 / mes para inteligencia de cartera continua",
+      "situation": "Hace operaciones de M&A o gestiona una cartera. Cada dimensión de DD — financial, tax, deal economics, IBR/WHOA y portfolio health — sustentada con análisis de IA, sobre un único expediente compartido.",
+      "price_note": "O desde €6.500 al mes para visibilidad continua de la cartera",
       "cta": "Programar una llamada →",
       "powered_by_tagline": "Análisis impulsado por IA sobre todos los módulos Factum",
       "price": "Desde €10.000 por deal"
     },
-    "pricing_note": "* Todos los importes sin IVA. Primera llamada siempre sin compromiso.",
+    "pricing_note": "* Todos los importes excluyen IVA. La primera toma de contacto siempre es sin compromiso.",
     "risk": {
       "title": "Sin riesgo",
-      "body": "El Scorecard es gratuito y la Sparring Session cuesta treinta minutos sin factura. Tras la aprobación, comienza en un plazo de siete días laborables con el primer entregable. Salvo el Fractional AI Officer (mínimo tres meses), cada ruta es por encargo, sin largos compromisos."
+      "body": "La Scorecard es gratuita y la Sparring Session cuesta veinte minutos sin factura. Aceptado el proyecto, empieza en siete días hábiles con el primer resultado concreto. Salvo el Fractional AI Officer, que dura al menos tres meses, cada ruta va por encargo."
     },
     "faq": {
       "eyebrow": "Honesto sobre la inversión",
-      "heading": "Lo que los socios suelen querer saber primero",
+      "heading": "Lo que los socios preguntan primero",
       "q1": "¿Y si no es para nosotros?",
-      "a1": "Empiece con una AI Sparring Session: una pregunta, un resumen, sin obligación de continuidad.",
+      "a1": "Empiece con una AI Sparring Session: una pregunta, un resumen, sin continuación.",
       "q2": "¿Qué hace diferente a Agentic Mindshift?",
-      "a2": "Experiencia en acquisition finance y financial restructuring: no un generalista de IA que casualmente tiene clientes de PE. La IA refuerza esa práctica; no la reemplaza.",
+      "a2": "Seis años en acquisition finance y financial restructuring. El criterio viene de la práctica de operaciones; la IA lo acelera.",
       "q3": "¿Cómo sé si la inversión rinde?",
-      "a3": "Una corrección de 0,5× en el precio de adquisición con un target de €5M de EBITDA son €2,5M: eso cubre los costes de DD 250×. Una desviación detectada a tiempo en el informe mensual cubre los costes anuales de inteligencia de cartera continua.",
+      "a3": "Un ejemplo de cálculo: una corrección no detectada en el precio de compra compensa enseguida años de honorarios. Y una desviación detectada a tiempo en el reporte mensual suele cubrir el coste anual de la visibilidad continua de la cartera. Los importes están en la página de inicio.",
       "q4": "¿Estamos atados a un largo plazo?",
-      "a4": "Sparring, Consultancy y DD son por encargo. Fractional AI Officer: mínimo 3 meses, porque el ritmo necesita tiempo.",
+      "a4": "Sparring, asesoría y DD van por encargo. El Fractional AI Officer dura al menos tres meses, porque ese ritmo necesita tiempo.",
       "q5": "¿Varias operaciones a la vez?",
-      "a5": "Sí. Para varias operaciones se aplican tarifas escalonadas — las ajustamos a su dealflow durante la llamada. La ventaja de escala está en el tiempo de onboarding y la plataforma.",
-      "investering_a": "Hay cuatro rutas: una AI Sparring Session gratuita (30 minutos, sin compromiso), Asesoría e Implementación de IA desde €4.500 por proyecto o retainer, un Fractional AI Officer por €1.099 al día (mín. 3 meses), y Due Diligence & Portfolio impulsada por IA desde €10.000 por deal o desde €6.500 al mes. Todos los importes sin IVA. Consulte /werkwijze para la explicación completa."
+      "a5": "Sí. Con varias operaciones se aplican tarifas escalonadas; las ajustamos a su dealflow en la primera conversación. El ahorro está en la puesta al día y el arranque.",
+      "investering_a": "Hay cuatro rutas. Una AI Sparring Session gratuita de veinte minutos. Asesoría e implementación de IA desde €4.500 por proyecto o en retainer. Un Fractional AI Officer por €1.099 al día, mínimo tres meses. Y due diligence y cartera con IA desde €10.000 por operación, o desde €6.500 al mes de forma continua. Todos los importes excluyen IVA. El detalle completo está en /werkwijze."
     },
     "cta": {
       "eyebrow": "Empiece aquí",
       "heading": "¿No está seguro de qué ruta encaja? El Scorecard marca el camino.",
-      "subtext": "Doce minutos. Su perfil determina qué ruta es más rentable. Sin obligación, sin seguimiento a menos que usted lo inicie.",
+      "subtext": "Doce minutos. Su perfil muestra qué ruta rinde más. Sin compromiso, y no sabrá de nosotros salvo que nos escriba.",
       "primary": "Iniciar el Scorecard",
       "secondary": "Programar una llamada sin compromiso"
     }
   },
   "factum_capital": {
     "meta_title": "Factum Capital — plataforma de IA para Due Diligence & Portfolio impulsada por IA",
-    "meta_description": "Factum Capital es la plataforma de IA detrás del servicio de Due Diligence & Portfolio impulsada por IA de Agentic Mindshift. Cuatro momentos: adquisición, financiación, portfolio review y pre-IBR/WHOA.",
+    "meta_description": "Factum Capital es la plataforma de IA detrás de la due diligence y la cartera con IA de Agentic Mindshift. Cuatro momentos: adquisición, financiación, revisión de cartera y pre-IBR/WHOA.",
     "hero": {
       "eyebrow": "La plataforma detrás de nuestra Due Diligence impulsada por IA",
-      "heading": "Una plataforma para cada fase de su práctica de deals y cartera.",
-      "subtext": "Cuatro momentos (adquisición, financiación, portfolio review y pre-IBR/WHOA) en un único expediente compartido. Disponible como SaaS para su propio equipo a partir del 1 de julio de 2026.",
-      "stat_1_sub": "módulos en total",
-      "stat_2_sub": "momentos de servicio",
-      "stat_3_sub": "lanzamiento",
-      "stat_3_label": "1 julio",
+      "heading": "Una plataforma para cada fase de su práctica de operaciones y cartera.",
+      "subtext": "Cuatro momentos — adquisición, financiación, revisión de cartera y pre-IBR/WHOA — sobre un único expediente compartido. La versión SaaS para su propio equipo está en desarrollo.",
       "countdown_label": "Lanzamiento en"
     },
-    "answer_first": "Factum Capital es la plataforma de due diligence y portfolio impulsada por IA de Agentic Mindshift: 29 módulos que aceleran la due diligence financiera, comercial, legal y de IA para fondos de private equity y firmas de M&A. Desde el primer cribado hasta pre-IBR/WHOA, la plataforma aporta información fundamentada en días en lugar de semanas.",
-    "problem": {
-      "item_1_label": "Cada situación desde cero",
-      "item_1_body": "Cada momento empieza de cero. Sin estructura compartida, sin reutilización del expediente anterior.",
-      "item_2_label": "Asesores demasiado tarde",
-      "item_2_body": "Los asesores certificados llegan cuando el expediente ya está lleno de supuestos. Trabajo duplicado, costes más altos.",
-      "item_3_label": "El stress visible demasiado tarde",
-      "item_3_body": "Las señales de IBR o WHOA solo se hacen visibles cuando las opciones son limitadas."
-    },
+    "answer_first": "Factum Capital es la plataforma de IA de Agentic Mindshift para due diligence y análisis de cartera: 31 módulos que aceleran la due diligence financiera, comercial, legal y de IA para fondos de private equity y firmas de M&A. Del primer cribado al pre-IBR/WHOA, las conclusiones sustentadas están en días.",
     "description": {
       "eyebrow": "El sistema",
-      "quote": "Una plataforma, cuatro momentos. Factum proporciona el fundamento analítico — Agentic Mindshift presta el servicio, con conexión a asesores certificados que firman formalmente donde se requiere.",
-      "para1": "La plataforma, 29 módulos desde Financial DD y AI Due Diligence hasta modelización LBO y exit readiness, da a su equipo una estructura consistente en cada momento. Disponible como SaaS a partir del 1 de julio de 2026.",
-      "para2": "El servicio a través de Agentic Mindshift proporciona el fundamento analítico completo y conecta asesores certificados: RA/RB/abogados, asesores financieros, consultores de restructuring. Un expediente compartido: menos trabajo duplicado, plazos más cortos."
-    },
-    "momenten": {
-      "eyebrow": "Cuatro momentos",
-      "heading": "Un sistema. Cada momento en su práctica.",
-      "m1_label": "Análisis buy-side",
-      "m1_title": "Adquisición",
-      "m1_body": "Desde la primera evaluación del information memorandum hasta el cierre: un fundamento analítico exhaustivo en todas las dimensiones relevantes. Asesores certificados (RA/RB/abogados) para la firma formal donde se requiera.",
-      "m1_advisors": "RA · RB · Abogados",
-      "m2_label": "Memo de financiación y fundamentación",
-      "m2_title": "Financiación",
-      "m2_body": "Fundamentación analítica para conversaciones bancarias y presentaciones a inversores. También para solicitudes de financiación más pequeñas donde la estructura marca la diferencia entre aprobación y rechazo.",
-      "m2_advisors": "Asesores financieros · Contables",
-      "m3_label": "Visión continua",
-      "m3_title": "Revisión de cartera",
-      "m3_body": "Revisión periódica de sus participadas actuales en las seis dimensiones. Detección temprana de bajo rendimiento, vulnerabilidad a la IA y obstáculos de salida, mucho antes del informe anual.",
-      "m3_advisors": "Gestión de cartera · Consejeros",
-      "m4_label": "Indicativo · Reestructuración",
-      "m4_title": "Pre-IBR / WHOA",
-      "m4_body": "Ante los primeros signos de stress financiero: una revisión indicativa que determina si procede un proceso IBR o WHOA, con conexión directa a consultores de restructuring especializados.",
-      "m4_advisors": "Consultores de restructuring · Abogados"
-    },
-    "two_routes": {
-      "eyebrow": "Dos formas de usar Factum",
-      "route_1_label": "SaaS: en sus propias manos",
-      "route_1_title": "La Plataforma",
-      "route_1_body": "29 módulos que dan a su equipo de deals la estructura para ejecutar los cuatro momentos de forma consistente. Desde Financial DD y AI Due Diligence hasta modelización LBO, IBR/WHOA y exit readiness. Conocimiento que crece con la práctica.",
-      "route_1_detail": "Lanzamiento 1 de julio de 2026 · Suscripción mensual · Lista de espera abierta",
-      "route_2_label": "Vía Agentic Mindshift: Due Diligence & Portfolio impulsada por IA",
-      "route_2_title": "El Servicio",
-      "route_2_body": "Agentic Mindshift ejecuta el proyecto completo para usted, con Factum como plataforma analítica. En cada momento, Agentic Mindshift conecta los profesionales certificados adecuados que construyen sobre el expediente compartido y firman formalmente donde sea necesario.",
-      "route_2_detail": "Desde €10.000 de inversión por operación · O desde €6.500 / mes inteligencia de cartera · Sin IVA",
-      "route_2_link": "Ver metodología e inversión →"
-    },
-    "how_it_works": {
-      "eyebrow": "Cómo funciona el servicio",
-      "step_1_title": "Fundamento analítico",
-      "step_1_body": "Agentic Mindshift analiza sistemáticamente la situación en todas las dimensiones relevantes, con Factum como plataforma, dependiendo del momento: adquisición, financiación, cartera o reestructuración.",
-      "step_2_title": "Asesor adecuado conectado",
-      "step_2_body": "Agentic Mindshift conecta al profesional certificado adecuado para el momento: RA/RB para la firma de adquisición, asesor financiero para conversaciones bancarias, consultor de restructuring para pre-IBR/WHOA.",
-      "step_3_title": "Expediente compartido",
-      "step_3_body": "Todas las partes involucradas trabajan en un único expediente de Factum. Menos trabajo duplicado, plazos más cortos, retención del conocimiento tras la finalización.",
-      "disclaimer": "Ni Factum Capital ni Agentic Mindshift son auditores registrados; ninguno actúa como contratista formal para due diligence bancaria o informes legalmente obligatorios. Los asesores y consultores certificados con quienes colabora Agentic Mindshift son profesionales independientes con sus propias cualificaciones y responsabilidad."
-    },
-    "voor_wie": {
-      "eyebrow": "Para quién",
-      "heading": "Construido para la práctica europea de deals y financiación",
-      "item_1_label": "Fondos de PE tier-2",
-      "item_1_body": "Deals €5M–€50M. Estructura en adquisición, portfolio review y salida.",
-      "item_2_label": "Family offices",
-      "item_2_body": "Calidad de DD y presentaciones bancarias sin un gran equipo interno.",
-      "item_3_label": "Empresarios pyme",
-      "item_3_body": "Solicitudes de financiación respaldadas profesionalmente, incluso para importes más pequeños.",
-      "item_4_label": "Empresarios buy-and-build",
-      "item_4_body": "La disciplina de un equipo de deals profesional, con asesores disponibles bajo demanda.",
-      "item_5_label": "Directores de M&A",
-      "item_5_body": "Retención del conocimiento en múltiples operaciones: cada expediente se construye sobre el anterior.",
-      "item_6_label": "Financiadores y reestructuración",
-      "item_6_body": "Detección temprana ante el stress. Conexión directa con consultores de restructuring."
-    },
-    "early_access": {
-      "eyebrow": "Acceso anticipado",
-      "heading": "Regístrese para el acceso anticipado.",
-      "body": "La lista de espera está deliberadamente limitada. Los primeros participantes tendrán input directo sobre la hoja de ruta de módulos y serán los primeros en el onboarding. Sin emails posteriores fuera de la hoja de ruta de Factum Capital.",
-      "benefit_1": "Input directo sobre la hoja de ruta de módulos",
-      "benefit_2": "Prioridad en el onboarding de la plataforma el 1 de julio de 2026",
-      "benefit_3": "Tarifa de acceso anticipado en el lanzamiento",
-      "benefit_4": "Prioridad para proyectos piloto de análisis de deals en el primer trimestre post-lanzamiento (julio–septiembre 2026)"
-    },
-    "form": {
-      "field_name": "Nombre",
-      "field_email": "Email",
-      "field_company": "Empresa",
-      "field_jobtitle": "Cargo (opcional)",
-      "field_partytype": "Tipo de perfil",
-      "option_pe": "Socio de PE",
-      "option_ma": "Director de M&A",
-      "option_entrepreneur": "Empresario",
-      "option_restructuring": "Especialista en restructuring",
-      "option_other": "Otro",
-      "field_notes": "Comentarios (opcional)",
-      "notes_placeholder": "¿Cuál es su principal motivo para querer acceso anticipado?",
-      "submit": "Solicitar acceso anticipado",
-      "submitting": "Enviando...",
-      "success": "Gracias. Sus datos han sido recibidos. Le informaremos cuando el proceso de acceso anticipado abra.",
-      "error_invalid": "No todos los datos son válidos. Compruebe los campos.",
-      "error_generic": "Algo salió mal. Por favor, inténtelo de nuevo más tarde.",
-      "privacy_note": "Sus datos se utilizan únicamente para el proceso de acceso anticipado de Factum Capital."
-    },
-    "countdown": {
-      "days": "días",
-      "hours": "horas",
-      "minutes": "min",
-      "seconds": "seg"
-    },
-    "modules": {
-      "eyebrow": "Lanzamiento 1 de julio de 2026",
-      "heading": "Los módulos en el lanzamiento",
-      "subtext": "La primera serie de módulos. Más expansiones siguen en H2 2026. Los primeros participantes influyen en el orden.",
-      "m01_title": "Financial DD",
-      "m01_body": "Quality of Earnings, análisis de capital circulante, deuda neta, cashflow y análisis de balance. La base fáctica para cada precio de adquisición.",
-      "m02_title": "Commercial DD",
-      "m02_body": "Análisis de mercado, análisis de clientes, posición competitiva y business case. Verifica si los supuestos de ingresos son sostenibles.",
-      "m03_title": "AI Due Diligence",
-      "m03_body": "Cuantifica el riesgo de que la IA asuma la actividad principal, por grupo de funciones y flujo de ingresos — traducido al impacto en el precio de adquisición.",
-      "m04_title": "Legal",
-      "m04_body": "Corporate governance, contratos, litigios, IP/datos, derecho laboral e inmuebles. Detección temprana de deal-breakers legales.",
-      "m05_title": "Tax",
-      "m05_body": "Impuesto de sociedades, IVA, nóminas, transfer pricing y estructura fiscal. Verifica el cumplimiento histórico y estructura la transacción fiscalmente.",
-      "m06_title": "Valuation",
-      "m06_body": "DCF, trading multiples, transaction comps y valoración de sinergias en un football field consistente. Fundamenta la decisión del IC.",
-      "m07_title": "IC-Memo",
-      "m07_body": "Investment thesis, company & market, financial analysis, valuation y transaction structure. Listo para presentar al Investment Committee.",
-      "m08_title": "LBO-Model",
-      "m08_body": "Entry assumptions, capital structure, financial projections, debt schedule y análisis de rentabilidad con tabla de sensibilidad.",
-      "m09_title": "IBR",
-      "m09_body": "Cashflow reality check, análisis de liquidez, business plan review, análisis de covenants y evaluación de going concern.",
-      "m10_title": "WHOA",
-      "m10_body": "Diagnóstico, clasificación de acreedores, diseño de acuerdo, valoración en base recovery y procedimiento de homologación.",
-      "m11_title": "Vigil",
-      "m11_body": "Monitorización continua de cartera: rendimiento financiero, covenant monitoring, seguimiento de sinergias y exit readiness por participada.",
-      "m12_title": "Exit Readiness",
-      "m12_body": "Equity story, QoE readiness, governance, preparación del dataroom y cumplimiento CSRD/SFDR para una posición de venta óptima."
+      "quote": "Una plataforma, cuatro momentos. Factum hace el análisis. Agentic Mindshift presta el servicio e incorpora asesores certificados allí donde hace falta una firma.",
+      "para1": "31 módulos, de Financial DD y AI Due Diligence al modelado LBO y la exit readiness. La misma estructura en cada momento. La versión SaaS está en desarrollo.",
+      "para2": "A través de Agentic Mindshift obtiene el análisis completo más asesores certificados: auditores, asesores fiscales, abogados, asesores financieros y consultores de reestructuración. Un único expediente compartido evita trabajo duplicado y acorta plazos."
     },
     "cta": {
       "eyebrow": "Empiece aquí",
-      "heading": "Su perfil del Scorecard determina qué momento es relevante primero.",
-      "subtext": "Doce minutos. Seis dimensiones. Un informe que muestra dónde está y qué merece atención primero.",
+      "heading": "Su perfil de Scorecard muestra qué momento cuenta primero.",
+      "subtext": "Doce minutos. Seis dimensiones. Un informe que muestra dónde está y qué va primero.",
       "primary": "Iniciar el Scorecard",
       "secondary_1": "Metodología e inversión",
       "secondary_2": "Programar una llamada"
     },
     "site_cta": "Explora la plataforma completa",
-    "site_note": "Factum Capital ahora tiene su propia plataforma. Descubre los 29 módulos, los cuatro momentos y la oferta completa en factumcapital.eu."
+    "site_note": "Factum Capital ya tiene su propia web. Los 31 módulos, los cuatro momentos y la oferta completa están en factumcapital.eu."
   },
   "privacy": {
     "meta_title": "Privacidad",
@@ -567,7 +412,7 @@
     "s3_li1": "Generar y enviar su informe personal del scorecard — ejecución del contrato.",
     "s3_li2": "Dos emails de seguimiento (a los tres y siete días) con reflexión sobre el contenido e invitación a una sparring session — interés legítimo.",
     "s3_li3": "Gestión de la lista de espera para Factum Capital — ejecución del contrato o su consentimiento explícito.",
-    "s3_li4": "Análisis de resultados del scorecard agregados y no identificables para mejorar los peer benchmarks — interés legítimo.",
+    "s3_li4": "El análisis de resultados de scorecard agregados y no identificables para mejorar los niveles de referencia — interés legítimo.",
     "s4_heading": "4. Plazos de conservación",
     "s4_body": "Conservamos sus respuestas al scorecard y los datos del informe durante un máximo de 36 meses, salvo que solicite su eliminación antes. Los datos de la lista de espera de Factum Capital se conservan hasta seis meses después del lanzamiento, y luego se anonimizan.",
     "s5_heading": "5. Encargados del tratamiento",
@@ -600,35 +445,31 @@
     "s6_heading": "6. Responsabilidad",
     "s6_body": "La responsabilidad de Agentic Mindshift se limita al importe facturado del encargo correspondiente durante un período máximo de tres meses, con un máximo de 25.000 euros. Se excluye la responsabilidad por daños indirectos, daños consecuentes, lucro cesante o IRR no obtenida.",
     "s7_heading": "7. Confidencialidad",
-    "s7_body": "Toda la información compartida en el marco de un encargo o sparring session se trata de forma confidencial. Esto se aplica sin fecha de vencimiento. Los datos agregados y no identificables pueden utilizarse para mejorar los peer benchmarks.",
+    "s7_body": "Toda la información compartida en el marco de un encargo o una sesión de sparring se trata de forma confidencial. Sin fecha de finalización. Los datos agregados y no identificables pueden usarse para mejorar los niveles de referencia.",
     "s8_heading": "8. Propiedad intelectual",
     "s8_body": "Los informes, frameworks y análisis siguen siendo propiedad intelectual de Agentic Mindshift, salvo acuerdo en contrario. El cliente obtiene una licencia de uso no transferible para uso interno.",
     "s9_heading": "9. Derecho aplicable",
     "s9_body": "Estos términos y todos los encargos se rigen por el derecho neerlandés. Los litigios se someterán al tribunal competente del lugar de domicilio."
   },
   "scorecard": {
+    "meta_title": "Scorecard — seis dimensiones, doce minutos",
+    "meta_description": "Quince preguntas sobre su proceso de operaciones, reporte mensual, resistencia ante la IA y retención del conocimiento. Doce minutos y tendrá un informe que hace medibles sus puntos ciegos.",
     "landing": {
       "eyebrow": "Scorecard · Seis dimensiones · Doce minutos",
-      "heading": "¿Dónde se escapa la rentabilidad y qué está pasando por alto?",
-      "subtext": "Quince preguntas. Doce minutos. Un informe que hace medibles sus puntos ciegos y los compara con empresas similares.",
+      "heading": "¿Por dónde se le escapa la rentabilidad?",
+      "subtext": "Quince preguntas, doce minutos. Después sabrá, dimensión a dimensión, a qué distancia está del nivel de referencia.",
       "start_cta": "Iniciar el Scorecard",
-      "no_account": "Sin cuenta requerida. Sus respuestas se guardan automáticamente.",
-      "trust": "Diseñado para socios de PE, directores de M&A y family offices en el mid-market europeo.",
+      "no_account": "No hace falta cuenta. Sus respuestas se guardan sobre la marcha.",
+      "trust": "Hecho para socios de private equity, directores de M&A y family offices del mid-market europeo.",
       "confidentiality_title": "Confidencialidad",
-      "confidentiality_body": "Sus respuestas se utilizan únicamente para generar su informe. Puede rellenarlo de forma anónima si lo prefiere.",
-      "blind_spots_note": "La mayoría de los socios de PE descubren sus puntos ciegos cuando ya es demasiado tarde. Su inversión: doce minutos.",
+      "confidentiality_body": "Usamos sus respuestas únicamente para elaborar su informe. Puede completar la scorecard de forma anónima.",
+      "blind_spots_note": "La mayoría de los socios descubre sus puntos ciegos cuando ya es tarde. Esta medición cuesta doce minutos.",
       "preview_eyebrow": "Lo que recibe",
       "preview_heading": "Este es su informe, inmediatamente después de la última pregunta.",
-      "preview_body": "Seis dimensiones, cada una puntuada y comparada con empresas similares. Los dos puntos de mayor impacto se destacan para que sepa exactamente dónde concentrarse primero.",
-      "stakes_eyebrow": "El coste de esperar",
-      "stakes_heading": "Doce minutos ahora o trimestres de incertidumbre después.",
-      "stakes_body_1a": "¿La diferencia entre un precio de adquisición fundamentado y uno no calibrado? En un objetivo de EBITDA de €5M fácilmente 0,5×: eso son ",
-      "stakes_highlight": "€2,5M",
-      "stakes_body_1b": ".",
-      "stakes_body_2": "El Scorecard es gratuito. Sin cuenta. Su informe está disponible de inmediato.",
+      "preview_body": "Seis dimensiones, cada una con su puntuación y el nivel de referencia al lado. Se destacan los dos puntos de mayor impacto, para que sepa por dónde empezar.",
       "final_eyebrow": "Su próximo paso",
-      "final_heading": "En doce minutos sabrá exactamente dónde es vulnerable su cartera.",
-      "final_body": "Sin cuenta. Sin compromisos. Informe disponible inmediatamente después de completarlo.",
+      "final_heading": "Dentro de doce minutos sabrá dónde es vulnerable su cartera.",
+      "final_body": "Sin cuenta. Sin compromiso. Informe al terminar.",
       "final_cta_2": "¿Prefiere una conversación?"
     },
     "navigation": {
@@ -644,40 +485,42 @@
       "answer_all_s3": "Responda las cuatro preguntas para continuar.",
       "answer_all_s4": "Responda las cuatro preguntas para ver su resultado.",
       "question_counter": "Pregunta {index} / 15",
-      "keyboard_tip": "Consejo: también puede usar las teclas A, B, C, D o E.",
+      "keyboard_tip": "Consejo: también puede usar las teclas de la A a la E.",
       "progress_label": "Pregunta {current} de {total}"
     },
     "resultaat": {
       "eyebrow": "Scorecard completado",
       "heading": "Ahora ve lo que la mayoría de socios solo ven en la revisión anual.",
-      "subtext": "Rellene sus datos para recibir el informe completo, directamente en su navegador y como PDF en su bandeja de entrada.",
+      "subtext": "Introduzca sus datos para recibir el informe completo: al momento en su navegador y en PDF en su bandeja de entrada.",
       "incomplete_eyebrow": "Scorecard incompleto",
       "incomplete_heading": "{remaining} {questions} restantes",
-      "incomplete_body": "Ha respondido {answered} de {total} preguntas. Complete el scorecard para generar su informe personal.",
+      "incomplete_body": "Ha respondido {answered} de las {total} preguntas. Termine primero la scorecard; después elaboramos su informe.",
       "back_to_scorecard": "Volver al scorecard",
       "report_contents_eyebrow": "¿Qué contiene su informe?",
-      "report_item_1": "Puntuación total con comentario por dimensión",
-      "report_item_2": "Resumen de seis dimensiones con peer benchmark",
-      "report_item_3": "Sus dos dimensiones más débiles con análisis concreto",
-      "report_item_4": "Próximo paso recomendado basado en sus respuestas",
-      "report_item_5": "Enlace personal + PDF en su bandeja de entrada",
+      "report_item_1": "Puntuación total, con explicación por dimensión",
+      "report_item_2": "Las seis dimensiones, con el nivel de referencia al lado",
+      "report_item_3": "Sus dos dimensiones más débiles, explicadas",
+      "report_item_4": "Un siguiente paso recomendado, según sus respuestas",
+      "report_item_5": "Un enlace personal y un PDF en su bandeja de entrada",
       "form_heading": "¿Dónde debo enviar su informe?",
+      "optional_section_label": "Opcional — esto afina el informe",
       "field_name": "Nombre",
       "field_email": "Correo electrónico corporativo",
       "field_company": "Empresa",
       "field_jobtitle": "Cargo (opcional)",
       "field_phone": "Teléfono (opcional)",
       "field_website": "Sitio web de la empresa (opcional)",
+      "field_website_placeholder": "www.suempresa.com",
       "field_company_context": "Breve descripción de su empresa o fondo (opcional)",
-      "field_company_context_placeholder": "Ej. fondo de PE mid-market, 12 empresas en cartera, servicios B2B en Benelux. O: empresa familiar de maquinaria, 80 empleados, salida en 3 años.",
-      "field_company_context_hint": "Cuanto más específico sea, más preciso el informe — nuestra IA lo combina con su sitio web para un análisis profundo.",
+      "field_company_context_placeholder": "Por ejemplo: fondo de PE mid-market, 12 participadas, servicios B2B en el Benelux. O: empresa familiar de bienes de equipo, 80 empleados, salida en 3 años.",
+      "field_company_context_hint": "Cuanto más concreto, más afinado será el informe. Nuestra IA lo usa junto con su web para el análisis.",
       "submit_button": "Ver mi informe",
       "submit_loading": "Generando informe...",
-      "privacy_notice": "Al hacer clic acepta nuestra declaración de privacidad. Recibirá dos emails de seguimiento (día 3 y 7). Después, nada más.",
+      "privacy_notice": "Al hacer clic acepta nuestra política de privacidad. Recibirá dos correos de seguimiento, el día 3 y el día 7. Después, nada más.",
       "privacy_link": "declaración de privacidad",
-      "error_generic": "Algo salió mal. Por favor, inténtelo de nuevo más tarde.",
-      "error_create": "No pudimos crear su informe. Compruebe los campos e inténtelo de nuevo.",
-      "score_caption": "El informe completo muestra su puntuación por dimensión con comparación entre pares.",
+      "error_generic": "Algo ha fallado. Inténtelo de nuevo más tarde.",
+      "error_create": "No hemos podido crear su informe. Revise los campos e inténtelo de nuevo.",
+      "score_caption": "El informe completo recoge su puntuación por dimensión, con el nivel de referencia al lado.",
       "question_singular": "pregunta",
       "question_plural": "preguntas"
     },
@@ -695,47 +538,44 @@
       "s1_label": "Sección 1 de 4",
       "s1_tagline": "Inicio. Doce minutos.",
       "s1_title": "Su enfoque analítico hoy",
-      "s1_desc": "¿Qué tan sistemático es su enfoque analítico en deals, financiación y revisión de cartera? Esta sección mapea su posición actual.",
+      "s1_desc": "¿Con qué sistemática trabaja en operaciones, financiación y revisión de cartera? Esta sección determina dónde está hoy.",
       "s2_label": "Sección 2 de 4",
       "s2_tagline": "Buen progreso, un cuarto completado.",
       "s2_title": "Su ciclo de deal",
-      "s2_desc": "Tiempo hasta el IC y su formación de juicio: puntos donde se filtran los rendimientos. Esta sección los mide.",
+      "s2_desc": "Plazo hasta el comité, el riesgo de que la IA absorba la actividad principal y cómo llega a un juicio. Tres lugares por donde se escapa la rentabilidad.",
       "s3_label": "Sección 3 de 4",
       "s3_tagline": "A medio camino. La parte más interesante.",
       "s3_title": "Cartera, financiación y seguimiento",
-      "s3_desc": "Informes de cartera, memorandos de financiación, alertas tempranas: ¿puede corregir el rumbo a tiempo? Esta sección mide la estructura detrás de su información.",
+      "s3_desc": "Reporte de cartera, memorandos de financiación, alerta temprana. ¿Puede corregir a tiempo? Esta sección mide la estructura que hay tras su información.",
       "s4_label": "Sección 4 de 4",
       "s4_tagline": "Última sección. Casi su informe.",
       "s4_title": "Su equipo y conocimiento",
-      "s4_desc": "Cuando un asociado se va, desaparece la memoria de tres a cinco expedientes. Esta sección mide si su organización puede resistir eso."
+      "s4_desc": "Cuando un associate se marcha, se va la memoria de tres a cinco expedientes. Esta sección mide si su organización lo resiste."
     },
     "rapport": {
       "eyebrow": "Informe personal",
       "no_answers_heading": "No se encontró ningún informe",
-      "no_answers_body": "No se encontraron respuestas del scorecard en este navegador. Por favor, complete el scorecard nuevamente.",
+      "no_answers_body": "No encontramos respuestas de scorecard en este navegador. Vuelva a completarla y elaboraremos su informe.",
       "heading": "Su Informe de Deal & Portfolio Intelligence",
-      "subtext": "Ahora dispone de información que la mayoría de las empresas solo obtienen cuando ya es demasiado tarde.",
-      "hint": "Puntuación total · dimensiones · comparación de pares · próximo paso recomendado",
+      "subtext": "Ahora tiene una lectura que la mayoría solo obtiene cuando ya es tarde: en el informe anual, ante una negativa del banco o en la operación que se quedó a las puertas. Abajo ve dónde su base es sólida, dónde pierde y qué momento de Factum Capital cuenta ahora.",
+      "hint": "Puntuación total · dimensiones · nivel de referencia · siguiente paso recomendado",
       "total_heading": "Puntuación total",
-      "total_body_1": "Su puntuación total se basa en la suma de sus 15 respuestas, con un máximo de 75 puntos.",
-      "total_body_2": "Sus dos dimensiones más débiles son los lugares más probables donde se filtran los rendimientos.",
-      "better_than": "Mejor que el {pct}% de empresas comparables",
+      "total_body_1": "Su puntuación total suma las quince respuestas, sobre un máximo de 75 puntos. Es un indicador general. La información real está en las seis dimensiones.",
+      "total_body_2": "Sus dos dimensiones más débiles están marcadas abajo. Ahí es donde la rentabilidad se escapa más rápido, normalmente porque no se mide de forma regular.",
       "dimensions_heading": "Por dimensión",
-      "peer_heading": "Comparación de pares",
-      "peer_stat": "Usted puntúa mejor que el {pct}% de empresas comparables.",
       "interpretation_heading": "Interpretación",
       "interventions_heading": "Tres intervenciones concretas",
       "offer_eyebrow": "Próximo paso recomendado",
-      "offer_match_body": "Basado en su perfil, este programa se adapta mejor a su situación.",
+      "offer_match_body": "Esta ruta es la que mejor encaja con su perfil. ¿Quiere contrastarla antes? Empiece sin compromiso con una Sparring Session.",
       "offer_investment": "Inversión:",
-      "offer_excl_vat": "Excl. IVA. Primera sesión siempre sin compromiso.",
+      "offer_excl_vat": "IVA no incluido. La primera sesión siempre es sin compromiso.",
       "offer_cta_1": "Programe una conversación sin compromiso",
       "offer_cta_2": "Ver todos los programas e inversión",
-      "pdf_note": "También recibirá este informe como PDF en su bandeja de entrada.",
+      "pdf_note": "También recibirá este informe en PDF en su bandeja de entrada.",
       "link_trajecten": "Ver todos los programas →",
       "link_kennismaking": "Programe una conversación sin compromiso →",
       "link_contact": "Discuta su situación →",
-      "print_btn": "Imprimir / guardar como PDF",
+      "print_btn": "Imprimir o guardar como PDF",
       "download_pdf": "Descargar PDF",
       "value_eyebrow": "Lo que está en juego",
       "value_basis_label": "Base",
@@ -743,11 +583,11 @@
       "roadmap_outcome_label": "Resultado",
       "deep": {
         "loading_eyebrow": "Análisis de IA en curso",
-        "loading_body": "DeepSeek está analizando sus respuestas y el contexto de la empresa — esto tarda unos 20–30 segundos.",
+        "loading_body": "Estamos analizando sus respuestas y el contexto de su empresa. Tarda unos 20 a 30 segundos.",
         "nolead_eyebrow": "Análisis en profundidad no disponible",
-        "nolead_body": "El análisis de IA estará disponible cuando se hayan guardado los datos de su scorecard. Sus puntuaciones de arriba se han calculado correctamente según sus respuestas.",
+        "nolead_body": "El análisis con IA estará disponible en cuanto se guarden sus datos. Las puntuaciones de arriba están bien calculadas.",
         "error_eyebrow": "Análisis temporalmente no disponible",
-        "error_body": "No se pudo generar el análisis de IA en profundidad. Inténtelo de nuevo o póngase en contacto.",
+        "error_body": "No se ha podido generar el análisis en profundidad. Inténtelo de nuevo o póngase en contacto.",
         "retry": "Intentar de nuevo",
         "report_eyebrow": "Informe de asesoramiento con IA",
         "context_eyebrow": "Contexto de la empresa",
@@ -773,78 +613,84 @@
         "prio_adequate": "Adecuado",
         "prio_strong": "Sólido",
         "urgency_high": "Acción inmediata necesaria",
-        "urgency_medium": "Potencial de mejora",
+        "urgency_medium": "Margen de mejora",
         "urgency_low": "Base sólida"
       },
-      "high_heading": "Estimado {name}: su enfoque destaca. Hablemos.",
-      "high_body_1": "Pertenece al pequeño grupo de socios de PE que ya mide sistemáticamente lo que la mayoría solo ve en retrospectiva.",
-      "high_score_body": "Su puntuación es {score} de 75, significativamente por encima del promedio.",
-      "high_body_3": "Una recomendación específica no es significativa. Está haciendo lo correcto.",
-      "high_body_4": "Me gustaría ofrecer una conversación confidencial sobre su enfoque, como intercambio entre pares, voluntario, sin agenda.",
+      "high_heading": "{name}, su enfoque destaca. Hablemos de lo que hace distinto.",
+      "high_body_1": "Pertenece al reducido grupo de socios que ya mide con regularidad lo que la mayoría solo ve a posteriori. No es poca cosa.",
+      "high_score_body": "Su puntuación es {score} sobre 75. En casi todas las dimensiones está en el nivel de referencia o por encima. Es el perfil de quien ya gestiona con datos.",
+      "high_body_3": "Una lista de puntos de mejora aporta poco con esta puntuación. Está haciendo lo que corresponde.",
+      "high_body_4": "Lo que sí le ofrecería con gusto: una conversación confidencial entre colegas sobre su enfoque. Sin agenda, sin continuación.",
       "high_next_eyebrow": "Próximo paso",
-      "high_next_body": "Envíe un mensaje por LinkedIn para un intercambio entre pares.",
+      "high_next_body": "Escríbame por LinkedIn cuando quiera contrastarlo. Por iniciativa suya.",
       "high_cta_1": "Conectar en LinkedIn",
       "high_cta_2": "Ver los programas",
       "attention_point": "(punto de atención)",
-      "peer_tooltip_label": "Diferencia vs. mediana de peers",
-      "peer_benchmark_footer": "Comparación con la mediana sintética de peers (basada en datos de PE/M&A holandeses)."
+      "band_ad_hoc": "Ad hoc — apenas medido",
+      "band_building": "En construcción — primera estructura en pie",
+      "band_structured": "Estructurado — el proceso está, la medición todavía no",
+      "band_instrumented": "En orden — gestiona con datos",
+      "reference_heading": "Nivel de referencia",
+      "reference_stat": "{n} de las seis dimensiones están en el nivel de referencia o por encima.",
+      "reference_tooltip_label": "Diferencia con el nivel de referencia",
+      "reference_footer": "El nivel de referencia es nuestro propio nivel objetivo por dimensión: el punto en que una dimensión está lo bastante medida como para gestionarla. No es una media de mercado medida."
     },
     "mockup": {
       "window_label": "Informe de scorecard · Confidencial",
-      "title": "Su perfil vs. fondos comparables",
-      "subtitle": "Mid-market PE · 12 fondos comparables",
-      "callout_label": "dimensiones por debajo\nde fondos comparables",
-      "below_median": "Por debajo de la mediana",
-      "above_median": "En/sobre la mediana",
-      "peer_median": "Mediana de peers"
+      "title": "Perfil de ejemplo vs. nivel de referencia",
+      "subtitle": "Ejemplo ilustrativo · no son datos reales",
+      "callout_label": "dimensiones por debajo\ndel nivel de referencia",
+      "below_reference": "Bajo referencia",
+      "above_reference": "En/sobre referencia",
+      "reference_level": "Nivel de referencia"
     },
     "variants": {
       "A": {
         "offerName": "Due Diligence & Portfolio impulsada por IA",
-        "interpretation": "Su puntuación en Analytical Quality es {score} de 20 puntos. Esta es la dimensión donde la mayoría de las firmas del mercado lower-mid holandés pierden rentabilidad de forma estructural, generalmente sin notarlo. Su ciclo MBR funciona, pero falta la alerta temprana: el análisis de varianza no va suficientemente profundo para corregir el rumbo antes de perder un trimestre. El servicio de inteligencia de cartera — entregado a través de Factum Capital — está diseñado específicamente para este escenario.",
+        "interpretation": "Su puntuación en Analytical Quality es {score} sobre 20 puntos. En esta dimensión es donde más rentabilidad pierden las firmas del lower-mid market europeo, a menudo sin notarlo. Su ciclo de MBR funciona, pero ve los problemas tarde: el análisis de desviaciones no baja lo suficiente como para corregir antes de que el trimestre se pierda. Nuestro servicio de portfolio intelligence, que funciona sobre Factum Capital, está hecho justo para esto.",
         "price": "Desde €6.500 / mes · mín. 3 meses · excl. IVA",
         "interventions": {
           "0": {
             "title": "Rediseñe su estructura de informes MBR",
-            "body": "Defina por empresa en cartera los tres a cinco indicadores adelantados que sirvan como señales de alerta, independientemente de la varianza estándar de P&L."
+            "body": "Fije en cada participada los tres a cinco indicadores que dan la alarma pronto, al margen de la desviación habitual de la cuenta de resultados."
           },
           "1": {
-            "title": "Análisis de varianza en la fuente operativa, no en el nivel de informes",
+            "title": "Analice la desviación en la fuente operativa, no en el reporte",
             "body": "¿Hasta qué nivel operativo es rastreable la causa? Dos meses de trabajo, impacto duradero."
           },
           "2": {
-            "title": "Benchmark de peers mensual — también manual",
-            "body": "Diez minutos por empresa en cartera al mes. El ritmo es más importante que la técnica."
+            "title": "Compare cada mes con empresas comparables",
+            "body": "Diez minutos por participada al mes, a mano si hace falta. El ritmo pesa más que la tecnología."
           }
         }
       },
       "B": {
         "offerName": "Due Diligence & Portfolio impulsada por IA",
-        "interpretation": "Su puntuación en AI Readiness es {score} de 25 puntos. El riesgo de sustitución por IA aún no se modela sistemáticamente en su análisis de deals, y su base analítica varía de expediente a expediente. En sus tres adquisiciones más recientes, la probabilidad de que una experimente erosión de márgenes en los próximos 24 meses es mayor de lo que estima. El servicio de AI Due Diligence — a través de Factum Capital — proporciona la base analítica completa para su próximo deal.",
+        "interpretation": "Su puntuación en AI Readiness es {score} sobre 25 puntos. Todavía no incorpora de forma estándar el riesgo de que la IA asuma tareas en su análisis de operaciones, y su fundamentación varía de un expediente a otro. La probabilidad de que una de sus tres últimas adquisiciones pierda margen en 24 meses es mayor de lo que supone. Nuestra AI Due Diligence, que funciona sobre Factum Capital, aporta esa fundamentación para su próxima operación, con asesores certificados para la firma formal.",
         "price": "Desde €10.000 por deal · 2–3 semanas · excl. IVA",
         "interventions": {
           "0": {
             "title": "Marco de sustitución por IA por grupo de funciones",
-            "body": "Por tipo de rol: estime el porcentaje de trabajo que puede ser reemplazado por IA en 24 meses."
+            "body": "Estime por tipo de puesto qué porcentaje del trabajo puede hacer la IA en 24 meses."
           },
           "1": {
             "title": "Análisis de sensibilidad sobre la erosión de márgenes",
-            "body": "Tres escenarios: 5%, 15%, 30% de erosión. Calcule hasta el ajuste del múltiplo de entrada."
+            "body": "Tres escenarios: 5%, 15% y 30% de erosión. Llévelos hasta el múltiplo de entrada."
           },
           "2": {
-            "title": "Ampliar el cuestionario de DD con estructura analítica",
-            "body": "¿Qué datos proporciona el target? ¿Qué porcentaje del reporting está automatizado? Esto co-determina la calidad del expediente Factum."
+            "title": "Pregunte también por la estructura analítica en la DD",
+            "body": "¿Qué datos aporta el propio target? ¿Cuánto del reporte está automatizado? Eso condiciona la calidad del expediente Factum."
           }
         }
       },
       "C": {
         "offerName": "Fractional AI Officer",
-        "interpretation": "Su puntuación en Knowledge Retention es {score} de 10 puntos. El conocimiento se filtra de dos formas: a través de informes externos no procesados estructuralmente, y a través de empleados que abandonan la organización. Ante señales de estrés financiero en una participada, esa fuga de conocimiento es especialmente costosa. Como Fractional AI Officer, Agentic Mindshift señala con anticipación cuándo se necesita una revisión indicativa.",
+        "interpretation": "Su puntuación en Knowledge Retention es {score} sobre 10 puntos. El conocimiento se pierde por dos vías: informes externos que no aterrizan en ningún sitio y personas que se van. Si una participada está en tensión financiera, esa fuga sale cara. Como Fractional AI Officer aviso a tiempo cuando hace falta una revisión a fondo.",
         "price": "€1.099 / día · mín. 3 meses · excl. IVA",
         "interventions": {
           "0": {
-            "title": "Repositorio central de conocimiento con salida de expedientes",
-            "body": "No como almacenamiento, sino como base de conocimiento buscable lista para la próxima situación."
+            "title": "Una base de conocimiento central con el resultado de los expedientes",
+            "body": "Consultable, para que en la siguiente situación sirva de inmediato."
           },
           "1": {
             "title": "Playbooks específicos por sector y tipo de situación",
@@ -852,68 +698,75 @@
           },
           "2": {
             "title": "Pruebas de estrés tempranas por participada",
-            "body": "Dos indicadores adelantados por empresa que señalan si se necesita una revisión más profunda — antes de que sea demasiado tarde."
+            "body": "Dos indicadores tempranos por empresa que señalen si hace falta una revisión más a fondo, antes de que sea tarde."
           }
         }
       },
       "D": {
         "offerName": "Asesoría e Implementación de IA",
-        "interpretation": "Sus puntuaciones en Capacity Engineering and Deal Velocity apuntan a un patrón estructural: su equipo está cualificado pero se ve frenado por la fricción operativa. Firmas comparables que adoptan un enfoque más estructurado en los procesos analíticos ven duplicada su capacidad de análisis sin ampliar el equipo. Un enfoque de consultoría o habilitación dirigido resuelve esto.",
+        "interpretation": "Sus puntuaciones en Capacity Engineering y Deal Velocity muestran un patrón: su equipo está cualificado, pero atascado en trabajo manual. Las firmas que abordan esto de forma estructurada sacan bastante más de la misma plantilla, sin ampliarla. Un proyecto específico de asesoría o implementación lo resuelve.",
         "price": "Desde €4.500 por proyecto o retainer · excl. IVA",
         "interventions": {
           "0": {
             "title": "Protocolo de análisis potenciado por IA",
-            "body": "Cuadruplica su capacidad de análisis sin pérdida de calidad — desde el screening de deals hasta el memo de financiación."
+            "body": "Analizar más operaciones con la misma plantilla, sin ceder en calidad. Del cribado al memorando de financiación."
           },
           "1": {
             "title": "Biblioteca de plantillas para expedientes y memos",
-            "body": "Bloques modulares ensamblados por situación. Reduce el tiempo de preparación en un 60%."
+            "body": "Bloques modulares que combina según la situación, para que ningún expediente empiece de cero."
           },
           "2": {
-            "title": "Auditoría de capacidad mensual",
+            "title": "Revise brevemente su capacidad cada mes",
             "body": "¿Qué trabajo analítico podría haber asumido la IA o la estructura? Diez minutos, información duradera."
           }
         }
       },
       "E": {
         "offerName": "Due Diligence & Portfolio impulsada por IA",
-        "interpretation": "Su puntuación en Analytical Quality es {score} de 20 puntos. Sus expedientes de financiación o deal aún no están estructurados de forma consistente en todas las dimensiones relevantes. Esto genera plazos más largos, rondas de revisión innecesarias y una posición negociadora más débil. El servicio de memo de financiación — a través de Factum Capital — proporciona la base analítica y conecta a los asesores certificados que firman formalmente donde se requiere.",
+        "interpretation": "Su puntuación en Analytical Quality es {score} sobre 20 puntos. Sus expedientes de financiación y de operación aún no están construidos en todas las dimensiones relevantes. Eso cuesta plazos, genera rondas de revisión adicionales y debilita su posición negociadora. Nuestro servicio de memorando de financiación, que funciona sobre Factum Capital, aporta la fundamentación e incorpora asesores certificados que firman donde hace falta.",
         "price": "Desde €10.000 por deal · o desde €6.500/mes portfolio intelligence · excl. IVA",
         "interventions": {
           "0": {
             "title": "Estructure su memo de financiación en dimensiones fijas",
-            "body": "Un memo listo para el banco tiene al menos cinco capas: rendimiento histórico, supuestos prospectivos, posición en el mercado, perfil de riesgo y calidad de gestión."
+            "body": "Un memorando listo para banco tiene al menos cinco capas: desempeño histórico, hipótesis a futuro, posición de mercado, perfil de riesgo y calidad del equipo directivo."
           },
           "1": {
-            "title": "Incorpore una comparación sectorial — también manual",
+            "title": "Ponga al lado una comparativa sectorial, a mano si hace falta",
             "body": "Diez empresas comparables en tres ratios. Dos horas de trabajo. La diferencia entre 'creemos en esta empresa' y 'el mercado confirma este perfil'."
           },
           "2": {
             "title": "Vincule su expediente analítico a asesores certificados",
-            "body": "Una presentación a prueba de banco requiere un asesor financiero formal. Estructure el expediente para que ese asesor pueda incorporarse en dos horas — no en dos semanas."
+            "body": "Una presentación lista para banco exige un asesor financiero o auditor formal. Construya el expediente para que esa persona pueda incorporarse en dos horas, no en dos semanas."
           }
         }
       },
       "F": {
         "offerName": "AI Sparring Session",
-        "interpretation": "Su scorecard muestra que está comenzando a estructurar su enfoque analítico — y ese es precisamente el momento adecuado para un primer paso concreto y orientado. Una AI Sparring Session no es una llamada de ventas: son 60–90 minutos centrados en su pregunta específica, con un resumen escrito como resultado.",
+        "interpretation": "Su scorecard muestra que está al principio de estructurar su enfoque. Ese es justo el momento para un primer paso bien dirigido. Una AI Sparring Session dura veinte minutos, se centra en su propia pregunta y termina con un resumen por escrito.",
         "price": "",
         "interventions": {
           "0": {
             "title": "Defina su punto ciego más urgente",
-            "body": "¿Qué decisión está por venir — y qué información falta para tomarla de forma fundamentada? Ese es el punto de partida."
+            "body": "¿Qué decisión tiene por delante y qué información le falta para tomarla bien? Ahí empieza todo."
           },
           "1": {
             "title": "Ponga a prueba sus supuestos antes de actuar",
-            "body": "La sesión hace los supuestos explícitos — no para confirmarlos. Una sesión puede evitar un error costoso."
+            "body": "La sesión pone al descubierto sus hipótesis. Una conversación puede evitar un error caro."
           },
           "2": {
             "title": "Luego elija el track de seguimiento correcto",
-            "body": "Después de una sesión sabrá qué enfoque estructural se adapta mejor: inteligencia de cartera, due diligence, fractional o consultoría."
+            "body": "Tras una sesión sabrá qué enfoque encaja: portfolio intelligence, due diligence, fractional o asesoría."
           }
         }
       }
     },
     "close_scorecard": "Cerrar scorecard"
+  },
+  "validation": {
+    "name_min": "Introduzca su nombre.",
+    "email_invalid": "Introduzca una dirección de correo válida.",
+    "company_min": "Introduzca el nombre de su organización.",
+    "website_invalid": "Esta dirección no es válida. Por ejemplo: www.suempresa.com",
+    "context_max": "Máximo 500 caracteres."
   }
 }

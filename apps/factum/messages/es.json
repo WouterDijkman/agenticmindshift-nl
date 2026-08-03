@@ -2,15 +2,15 @@
   "meta": {
     "home": {
       "title": "Análisis con rigor de due diligence a lo largo del ciclo de la operación",
-      "description": "Once disciplinas sobre el data room completo. Reconciliadas entre sí. Revisadas por una persona antes de que usted las vea."
+      "description": "Trece disciplinas sobre el data room completo. Reconciliadas entre sí. Revisadas por una persona antes de que usted las vea."
     },
     "platform": {
       "title": "La plataforma",
-      "description": "31 módulos de due diligence en 11 disciplinas. Cada hallazgo cita un documento. Cada entregable pasa por un control humano."
+      "description": "31 módulos de due diligence en 13 disciplinas. Cada hallazgo cita un documento. Cada entregable pasa por un control humano."
     },
     "sprint": {
       "title": "El Diligence Sprint",
-      "description": "Once revisiones especializadas sobre un data room, reconciliadas en una única narrativa, con un registro vivo de lagunas."
+      "description": "Trece revisiones especializadas sobre un data room, reconciliadas en una única narrativa, con un registro vivo de lagunas."
     },
     "governance": {
       "title": "Gobernanza y tratamiento de datos",
@@ -614,8 +614,8 @@
     },
     "layers": {
       "eyebrow": "Síntesis",
-      "title": "De once lecturas a un solo veredicto",
-      "lead": "Lo que convierte {disciplines} lecturas separadas en un solo entregable, no en once.",
+      "title": "De trece lecturas a un solo veredicto",
+      "lead": "Lo que convierte {disciplines} lecturas separadas en un solo entregable, no en trece.",
       "items": [
         {
           "title": "Lectura de creación de valor",
@@ -680,7 +680,7 @@
       "items": [
         {
           "q": "¿Sustituye esto a un informe de quality of earnings?",
-          "a": "Es más amplio, y no es un servicio de atestiguamiento. Un quality of earnings cubre una dimensión en cuatro a diez semanas. Esto ejecuta once disciplinas y las reconcilia. Una opinión firmada por un auditor sigue siendo un encargo aparte."
+          "a": "Es más amplio, y no es un servicio de atestiguamiento. Un quality of earnings cubre una dimensión en cuatro a diez semanas. Esto ejecuta trece disciplinas y las reconcilia. Una opinión firmada por un auditor sigue siendo un encargo aparte."
         },
         {
           "q": "¿Cuánto tiempo lleva?",
@@ -883,7 +883,7 @@
     "header": {
       "eyebrow": "Alianzas",
       "title": "Más mandatos de los que su equipo puede leer",
-      "lead": "Usted conserva la relación y el criterio. Nosotros ejecutamos la lectura de once disciplinas detrás, bajo su nombre."
+      "lead": "Usted conserva la relación y el criterio. Nosotros ejecutamos la lectura de trece disciplinas detrás, bajo su nombre."
     },
     "who": {
       "eyebrow": "Encaje",
@@ -911,7 +911,7 @@
     "split": {
       "eyebrow": "El reparto",
       "title": "Usted conserva la relación. Nosotros aportamos la revisión.",
-      "lead": "La misma plataforma de once disciplinas, el mismo filtro de revisión — entregado bajo su nombre.",
+      "lead": "La misma plataforma de trece disciplinas, el mismo filtro de revisión — entregado bajo su nombre.",
       "columns": [
         {
           "label": "Usted conserva",
@@ -925,7 +925,7 @@
         {
           "label": "Nosotros aportamos",
           "items": [
-            "La revisión de once disciplinas sobre el data room",
+            "La revisión de trece disciplinas sobre el data room",
             "La reconciliación entre disciplinas como paso fijo",
             "Hallazgos vinculados a un documento y un pasaje, siempre",
             "Un revisor identificado que responde del entregable"
@@ -979,7 +979,7 @@
         },
         {
           "q": "¿Pueden ejecutar solo una parte del alcance?",
-          "a": "La revisión de once disciplinas es fija, porque el valor está en la reconciliación entre disciplinas. Lo que varía es la profundidad de la redacción."
+          "a": "La revisión de trece disciplinas es fija, porque el valor está en la reconciliación entre disciplinas. Lo que varía es la profundidad de la redacción."
         },
         {
           "q": "¿Hasta qué punto es exclusivo?",

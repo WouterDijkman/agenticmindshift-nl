@@ -1,16 +1,5 @@
 import { MetadataRoute } from 'next';
-
-const base = 'https://www.agenticmindshift.nl';
-const locales = ['nl', 'en', 'de', 'es', 'pt'] as const;
-
-// Map from locale to BCP-47 language tag for hreflang
-const hreflangMap: Record<string, string> = {
-  nl: 'nl-NL',
-  en: 'en-GB',
-  de: 'de-DE',
-  es: 'es-ES',
-  pt: 'pt-PT',
-};
+import { BASE, LOCALES, getLanguageAlternates } from '@/lib/hreflang';
 
 const pages = [
   { path: '', priority: 1.0, changeFrequency: 'weekly' as const },
@@ -24,23 +13,13 @@ const pages = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return locales.flatMap((locale) =>
-    pages.map(({ path, priority, changeFrequency }) => {
-      // Build hreflang alternates for every locale
-      const languages: Record<string, string> = {};
-      for (const loc of locales) {
-        languages[hreflangMap[loc]] = `${base}/${loc}${path}`;
-      }
-      // x-default points to the Dutch (primary) version
-      languages['x-default'] = `${base}/nl${path}`;
-
-      return {
-        url: `${base}/${locale}${path}`,
-        lastModified: new Date(),
-        priority,
-        changeFrequency,
-        alternates: { languages },
-      };
-    })
+  return LOCALES.flatMap((locale) =>
+    pages.map(({ path, priority, changeFrequency }) => ({
+      url: `${BASE}/${locale}${path}`,
+      lastModified: new Date(),
+      priority,
+      changeFrequency,
+      alternates: { languages: getLanguageAlternates(path) },
+    }))
   );
 }

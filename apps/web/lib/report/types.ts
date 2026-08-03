@@ -101,7 +101,6 @@ export interface CompanyContext {
 export interface ScoreProfile {
   totalScore: number;
   totalMax: number;
-  percentile: number;
   /** Kort profiellabel, e.g. 'Analytisch gefundeerd', 'In transitie' */
   profileLabel: string;
   profileExplanation: string;
@@ -194,7 +193,6 @@ export const REPORT_JSON_SCHEMA = `{
   "scoreProfile": {
     "totalScore": "number",
     "totalMax": 75,
-    "percentile": "number (1-99)",
     "profileLabel": "string (max 4 woorden)",
     "profileExplanation": "string (2-3 zinnen)"
   },

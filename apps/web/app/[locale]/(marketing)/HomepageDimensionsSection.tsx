@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import type { ComponentType } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import {
   SketchSpeed,
   SketchPortfolio,
@@ -45,6 +45,7 @@ const headingVariants = {
 };
 
 export default function HomepageDimensionsSection() {
+  const locale = useLocale();
   const t = useTranslations('homepage.dimensions');
   return (
     <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(80px, 11vw, 136px)' }}>
@@ -72,8 +73,8 @@ export default function HomepageDimensionsSection() {
                 {t('legend_example')}
               </span>
               <span className="dim-radar-legend-item">
-                <span className="dim-radar-swatch dim-radar-swatch--peer" />
-                {t('legend_peer')}
+                <span className="dim-radar-swatch dim-radar-swatch--reference" />
+                {t('legend_reference')}
               </span>
             </div>
           </div>
@@ -94,7 +95,7 @@ export default function HomepageDimensionsSection() {
           {DIMENSION_META.map((d) => (
             <motion.a
               key={d.n}
-              href="/scorecard"
+              href={`/${locale}/scorecard`}
               className="wb-card"
               variants={itemVariants}
               whileHover={{ y: -6, boxShadow: '0 22px 44px rgba(11, 31, 58, 0.16)' }}

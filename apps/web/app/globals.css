@@ -1,4 +1,10 @@
 @import "tailwindcss";
+
+/* Tailwind v4 only scans this app's own tree. The shared design-system package
+   lives outside it, so its utility classes (px-7, py-3.5, min-h-[44px] …) would
+   never be generated and every Button would render with zero padding. */
+@source "../../../packages/ui/src";
+
 :root {
   --bg-primary: #F7F2EB;
   --bg-secondary: #EFE7D9;
@@ -11,9 +17,16 @@
   --text-inverse: #F7F2EB;
   --accent-primary: #0B1F3A;
   --accent-primary-soft: rgba(11, 31, 58, 0.1);
+  /* The brand rust is legible as a shape but not as a letter: 3.26:1 on cream,
+     and white on it is 3.63:1. So --accent-cta is reserved for non-text (fills,
+     rules, icons, borders, all ≥3:1) and the darkened pair carries anything
+     that has to be read. --accent-cta-ink flips back to the pure rust on dark
+     surfaces, where it already clears AA at 4.56:1. */
   --accent-cta: #F14C1D;
-  --accent-cta-hover: #d63a0e;
-  --accent-cta-soft: rgba(241, 76, 29, 0.08);
+  --accent-cta-strong: #BA320B;
+  --accent-cta-ink: #BA320B;
+  --accent-cta-hover: #A82D08;
+  --accent-cta-soft: rgba(241, 76, 29, 0.05);
   --border-subtle: rgba(11, 31, 58, 0.1);
   --border-medium: rgba(11, 31, 58, 0.22);
   --border-strong: rgba(11, 31, 58, 0.4);
@@ -22,7 +35,11 @@
   --status-error: #c0392b;
   --shadow-sm: 0 1px 3px rgba(11, 31, 58, 0.12);
   --shadow-md: 0 4px 12px rgba(11, 31, 58, 0.15);
-  --font-display: var(--font-suse), 'SUSE', sans-serif;
+  /* Headings are editorial serif; everything else stays SUSE. --font-numeric
+     is split out from --font-display because the big stat figures need SUSE's
+     800 weight and tabular figures, which the serif doesn't carry. */
+  --font-display: var(--font-fraunces), Georgia, 'Times New Roman', serif;
+  --font-numeric: var(--font-suse), 'SUSE', sans-serif;
   --font-body: var(--font-suse), 'SUSE', sans-serif;
   --font-ui: var(--font-suse), 'SUSE', sans-serif;
   --space-3xs: 4px;
@@ -38,7 +55,34 @@
   --container-narrow: 700px;
   --container-medium: 960px;
   --container-wide: 1200px;
+  /* Header is sticky and occupies flow space, so a 100svh hero below it
+     overflows the viewport by exactly this much. Header.tsx sets its own
+     height from this var, so the two can't drift apart. */
+  --header-h: 78px;
   --container-extra: 1400px;
+  --surface-dark: #0B1F3A;
+}
+
+/* Depth system. A section painted navy re-points the foreground tokens at cream
+   equivalents, so anything inside it — including the shared Button, which reads
+   --text-primary and --border-strong — inverts without knowing where it sits.
+   --bg-* is deliberately untouched: .wb-card paints itself with --bg-primary and
+   must stay cream when nested in a dark section. */
+[data-surface='dark'] {
+  --text-primary: #F7F2EB;
+  --text-secondary: rgba(247, 242, 235, 0.82);
+  --text-tertiary: rgba(247, 242, 235, 0.72);
+  --text-muted: rgba(247, 242, 235, 0.62);
+  --text-inverse: #0B1F3A;
+  /* --accent-primary stays navy: it is the ink that sits *on* rust badges here,
+     and flipping it would also invert charts nested in a dark section. */
+  --accent-primary-soft: rgba(247, 242, 235, 0.12);
+  --accent-cta-ink: #F14C1D;
+  --border-subtle: rgba(247, 242, 235, 0.14);
+  --border-medium: rgba(247, 242, 235, 0.36);
+  --border-strong: rgba(247, 242, 235, 0.45);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.32);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 @theme inline {
@@ -62,7 +106,7 @@
   --color-status-success: var(--status-success);
   --color-status-warning: var(--status-warning);
   --color-status-error: var(--status-error);
-  --font-serif: var(--font-suse), 'SUSE', sans-serif;
+  --font-serif: var(--font-fraunces), Georgia, 'Times New Roman', serif;
   --radius-none: 0;
   --radius-sm: 2px;
   --radius-md: 4px;
@@ -75,9 +119,16 @@
 }
 
 html {
-  scroll-behavior: smooth;
   overflow-x: hidden; /* prevent horizontal scroll from absolutely positioned decorative elements */
   max-width: 100vw;
+}
+
+/* Smooth scroll is opt-in: it hijacks anchor jumps and in-page navigation for
+   anyone who has asked the OS to reduce motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -104,7 +155,7 @@ h6 {
   font-family: var(--font-display);
   color: var(--text-primary);
   font-weight: 500;
-  line-height: 1.15;
+  line-height: 1.2;
   margin: 0;
   word-break: break-word;
   overflow-wrap: break-word;
@@ -203,8 +254,8 @@ select {
 .type-display {
   font-family: var(--font-display);
   font-size: clamp(38px, 5.2vw, 66px);
-  line-height: 1.06;
-  letter-spacing: -0.02em;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
   font-weight: 500;
   text-wrap: balance;
 }
@@ -215,7 +266,7 @@ select {
   font-family: var(--font-display);
   font-size: clamp(32px, 4vw, 52px);
   line-height: 1.1;
-  letter-spacing: -0.018em;
+  letter-spacing: -0.012em;
   font-weight: 500;
   text-wrap: balance;
 }
@@ -223,23 +274,23 @@ select {
   font-family: var(--font-display);
   font-size: clamp(32px, 4vw, 52px);
   line-height: 1.1;
-  letter-spacing: -0.018em;
+  letter-spacing: -0.012em;
   font-weight: 500;
   text-wrap: balance;
 }
 .type-h2 {
   font-family: var(--font-display);
   font-size: clamp(26px, 3.4vw, 42px);
-  line-height: 1.14;
-  letter-spacing: -0.015em;
+  line-height: 1.16;
+  letter-spacing: -0.008em;
   font-weight: 500;
   text-wrap: balance;
 }
 .type-h3 {
   font-family: var(--font-display);
   font-size: clamp(20px, 2.4vw, 28px);
-  line-height: 1.2;
-  letter-spacing: -0.01em;
+  line-height: 1.28;
+  letter-spacing: -0.004em;
   font-weight: 500;
   text-wrap: balance;
 }
@@ -249,10 +300,10 @@ select {
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--accent-cta);
+  color: var(--accent-cta-ink);
 }
 .type-stat {
-  font-family: var(--font-display);
+  font-family: var(--font-numeric);
   font-size: clamp(52px, 8vw, 96px);
   line-height: 0.95;
   font-weight: 800;
@@ -500,6 +551,10 @@ nav, header, .nav-link, .eyebrow-ui {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(11, 31, 58, 0.12);
 }
+[data-surface='dark'] .btn-secondary:hover {
+  background: rgba(247, 242, 235, 0.12) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
 
 /* ------------------------------------------------------------------ */
 /* Scroll-reveal                                                       */
@@ -536,12 +591,16 @@ nav, header, .nav-link, .eyebrow-ui {
   border-left-color: var(--accent-cta) !important;
   transform: translateY(-2px);
 }
+/* The CTA stays visible: hiding it until hover made it unreachable on touch
+   and invisible to anyone scanning the page without a pointer. */
 .dim-card .dim-card-cta {
-  opacity: 0;
-  transition: opacity 200ms ease;
+  opacity: 0.72;
+  transition: opacity 200ms ease, transform 200ms ease;
 }
-.dim-card:hover .dim-card-cta {
+.dim-card:hover .dim-card-cta,
+.dim-card:focus-within .dim-card-cta {
   opacity: 1 !important;
+  transform: translateX(3px);
 }
 
 /* ------------------------------------------------------------------ */
@@ -607,20 +666,6 @@ nav, header, .nav-link, .eyebrow-ui {
 }
 
 /* ------------------------------------------------------------------ */
-/* Custom cursor — hide native cursor on pointer:fine devices         */
-/* Re-enable text cursor for inputs so typing UX is preserved         */
-/* ------------------------------------------------------------------ */
-@media (pointer: fine) {
-  *, *::before, *::after {
-    cursor: none !important;
-  }
-  input, textarea, select, [contenteditable] {
-    cursor: text !important;
-  }
-}
-
-
-/* ------------------------------------------------------------------ */
 /* WeAreBrain-style image cards                                         */
 /* ------------------------------------------------------------------ */
 .wb-card {
@@ -655,7 +700,13 @@ nav, header, .nav-link, .eyebrow-ui {
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.15em;
-  color: var(--accent-cta);
+  color: var(--accent-cta-ink);
+  /* The chip floats over a gradient that runs from near-black to a mid navy,
+     so it needs its own floor to stay above 4.5:1 at the light end. */
+  background: #071529;
+  padding: 3px 6px;
+  border-radius: 2px;
+  line-height: 1;
 }
 .wb-card-scene {
   position: absolute;
@@ -667,7 +718,7 @@ nav, header, .nav-link, .eyebrow-ui {
   position: relative;
   z-index: 1;
   display: inline-flex;
-  color: var(--accent-cta);
+  color: var(--accent-cta-ink);
   filter: drop-shadow(0 6px 14px rgba(6, 21, 43, 0.45));
   transition: transform 380ms cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -718,7 +769,7 @@ nav, header, .nav-link, .eyebrow-ui {
   font-size: 0.8125rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  color: var(--accent-cta);
+  color: var(--accent-cta-ink);
 }
 .wb-card-cta span {
   display: inline-block;
@@ -772,7 +823,7 @@ nav, header, .nav-link, .eyebrow-ui {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--accent-cta);
+  color: var(--accent-cta-ink);
 }
 /* Centered statistic showcase cards (big number as the focal subject) */
 .stat-card {
@@ -781,12 +832,12 @@ nav, header, .nav-link, .eyebrow-ui {
   padding-block: clamp(44px, 5vw, 64px);
 }
 .stat-number {
-  font-family: var(--font-display);
+  font-family: var(--font-numeric);
   font-size: clamp(72px, 9vw, 116px);
   font-weight: 800;
   letter-spacing: -0.05em;
   line-height: 0.86;
-  color: var(--accent-cta);
+  color: var(--accent-cta-ink);
   margin: 0;
 }
 .stat-accent {
@@ -896,7 +947,7 @@ nav, header, .nav-link, .eyebrow-ui {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent-cta);
+  color: var(--accent-cta-ink);
   margin: 0 0 18px;
 }
 
@@ -916,7 +967,7 @@ nav, header, .nav-link, .eyebrow-ui {
   transition: color 150ms ease;
 }
 .footer-link:hover {
-  color: var(--accent-cta);
+  color: var(--accent-cta-ink);
 }
 
 .footer-pill {
@@ -930,8 +981,8 @@ nav, header, .nav-link, .eyebrow-ui {
   transition: border-color 150ms ease, color 150ms ease, background 150ms ease;
 }
 .footer-pill:hover {
-  color: var(--accent-cta);
-  border-color: var(--accent-cta);
+  color: var(--accent-cta-ink);
+  border-color: var(--accent-cta-ink);
   background: var(--accent-cta-soft);
 }
 
@@ -942,7 +993,7 @@ nav, header, .nav-link, .eyebrow-ui {
   padding: 28px 26px;
 }
 .footer-cta-title {
-  font-family: var(--font-display);
+  font-family: var(--font-ui);
   font-size: 1.0625rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -962,7 +1013,7 @@ nav, header, .nav-link, .eyebrow-ui {
   font-size: 0.875rem;
   font-weight: 600;
   color: #fff;
-  background: var(--accent-cta);
+  background: var(--accent-cta-strong);
   padding: 11px 20px;
   border-radius: 999px;
   transition: background 150ms ease;
@@ -1041,7 +1092,7 @@ nav, header, .nav-link, .eyebrow-ui {
   height: 22px;
   border-radius: 999px;
   background: var(--accent-cta-soft);
-  color: var(--accent-cta);
+  color: var(--accent-cta-ink);
   font-size: 0.75rem;
   font-weight: 700;
   display: inline-flex;
@@ -1135,10 +1186,10 @@ nav, header, .nav-link, .eyebrow-ui {
   max-width: 200px;
 }
 .showcase-callout-num {
-  font-family: var(--font-display);
+  font-family: var(--font-numeric);
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--accent-cta);
+  color: var(--accent-cta-ink);
   line-height: 1;
   letter-spacing: -0.02em;
 }
@@ -1202,12 +1253,12 @@ nav, header, .nav-link, .eyebrow-ui {
   border-top: 3px solid var(--accent-cta);
 }
 .cred-value {
-  font-family: var(--font-display);
+  font-family: var(--font-numeric);
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1;
-  color: var(--accent-cta);
+  color: var(--accent-cta-ink);
   margin: 0 0 14px;
 }
 .cred-label {
@@ -1256,7 +1307,7 @@ nav, header, .nav-link, .eyebrow-ui {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent-cta);
+  color: var(--accent-cta-ink);
   margin: 0 0 24px;
 }
 .cost-anchor-rows {
@@ -1278,7 +1329,7 @@ nav, header, .nav-link, .eyebrow-ui {
   color: var(--text-secondary);
 }
 .cost-anchor-amount {
-  font-family: var(--font-display);
+  font-family: var(--font-numeric);
   font-size: 1.125rem;
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -1344,7 +1395,7 @@ nav, header, .nav-link, .eyebrow-ui {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent-cta);
+  color: var(--accent-cta-ink);
   margin: 0 0 4px;
 }
 .factum-mod-chip {
@@ -1360,7 +1411,7 @@ nav, header, .nav-link, .eyebrow-ui {
   transition: border-color 160ms ease, background 160ms ease;
 }
 .factum-mod-chip--hot {
-  color: var(--accent-cta);
+  color: var(--accent-cta-ink);
   background: var(--accent-cta-soft);
   border-color: rgba(241, 76, 29, 0.45);
   font-weight: 600;
@@ -1425,7 +1476,7 @@ nav, header, .nav-link, .eyebrow-ui {
   border-radius: 3px;
   display: inline-block;
 }
-.dim-radar-swatch--peer {
+.dim-radar-swatch--reference {
   background: transparent;
   border: 1.5px dashed rgba(11, 31, 58, 0.45);
 }
@@ -1635,6 +1686,16 @@ nav, header, .nav-link, .eyebrow-ui {
 }
 
 /* ================================================================== */
+/* FULL-HEIGHT HEROES                                                  */
+/* The sticky header sits in normal flow, so a hero asking for 100svh  */
+/* renders one header taller than the space actually left below it.    */
+/* ================================================================== */
+.hero-full,
+.hero-home {
+  min-height: calc(100svh - var(--header-h));
+}
+
+/* ================================================================== */
 /* MOBILE HERO — remove fullscreen constraint, tighten padding        */
 /* All hero sections (.hero-full, .hero-home) carry 100svh min-height */
 /* on desktop. On mobile that creates ~300px of blank space above the  */
@@ -1654,39 +1715,54 @@ nav, header, .nav-link, .eyebrow-ui {
     padding-top: 56px !important;
     padding-bottom: 48px !important;
   }
+  /* The cue points at a fold that no longer exists once the hero is
+     auto-height; at this width it just crowds the spec strip. */
+  .scroll-indicator {
+    display: none;
+  }
 }
 
 /* ================================================================== */
-/* HERO TWO-COLUMN GRID — copy left, animated data visual right        */
+/* HERO SPEC STRIP — rule-anchored facts at the foot of the homepage   */
+/* hero. Replaces the sample-score card that used to sit in a right    */
+/* column: it competed with the CTA for the page's only rust accent.   */
 /* ================================================================== */
-.hero-home-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  gap: clamp(32px, 5vw, 72px);
-  align-items: center;
-  width: 100%;
+.hero-specs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px clamp(20px, 3vw, 36px);
+  list-style: none;
+  margin: clamp(40px, 6vh, 64px) 0 0;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--border-subtle);
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
-.hero-home-copy {
-  min-width: 0;
+.hero-specs li {
+  position: relative;
 }
-.hero-home-visual {
-  min-width: 0;
-  justify-self: center;
-  width: 100%;
-  max-width: 520px;
-  filter: drop-shadow(0 24px 48px rgba(11, 31, 58, 0.1));
+/* Hairline separators instead of middots — the dots came from the source
+   string and read as punctuation noise at this size. */
+.hero-specs li + li::before {
+  content: '';
+  position: absolute;
+  left: calc(clamp(20px, 3vw, 36px) / -2);
+  top: 0.1em;
+  bottom: 0.1em;
+  width: 1px;
+  background: var(--border-subtle);
 }
-.hero-viz {
-  width: 100%;
-}
-@media (max-width: 900px) {
-  .hero-home-grid {
-    grid-template-columns: 1fr;
-    gap: clamp(32px, 7vw, 48px);
+@media (max-width: 560px) {
+  .hero-specs li + li::before {
+    display: none;
   }
-  .hero-home-visual {
-    max-width: 440px;
-    justify-self: start;
+  .hero-specs {
+    gap: 8px 18px;
   }
 }
 
@@ -1715,6 +1791,24 @@ nav, header, .nav-link, .eyebrow-ui {
 :lang(pt) .eyebrow {
   hyphens: none;
   -webkit-hyphens: none;
+}
+
+/* ================================================================== */
+/* REDUCED MOTION — global backstop                                   */
+/* ================================================================== */
+/* Framer-driven motion is handled by MotionConfig reducedMotion="user".
+   This covers the CSS keyframes and transitions it cannot reach. Rules that
+   need a specific end state (.reveal, .scroll-indicator) set it themselves
+   above; this block only collapses the durations. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* ================================================================== */

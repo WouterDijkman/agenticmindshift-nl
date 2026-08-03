@@ -5,7 +5,13 @@ import { getSupabaseClient, isSupabaseConfigured } from '@/lib/supabase';
 import Followup3DayEmail from '@/lib/email/templates/Followup3DayEmail';
 import Followup7DayEmail from '@/lib/email/templates/Followup7DayEmail';
 import { sendMail, isGmailConfigured } from '@/lib/email/mailer';
-import { offerMap, type OfferType } from '@/lib/scoring';
+import { type OfferType } from '@/lib/scoring';
+import { getOfferName } from '@/lib/pdf/offerRoutes';
+import {
+  FOLLOWUP_STRINGS,
+  normalizeReportLocale,
+  type ReportLocale,
+} from '@/lib/report/locale';
 
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
@@ -20,7 +26,12 @@ interface LeadRow {
   unsubscribed: boolean | null;
   weakest_dimensions: string[] | null;
   assigned_offer: OfferType | null;
+  /** Ontbreekt als migratie 0004 niet is toegepast; valt dan terug op 'nl'. */
+  locale?: string | null;
 }
+
+const LEAD_COLUMNS =
+  'id, name, email, email_sequence_step, last_email_sent_at, responded_to_email3, unsubscribed, weakest_dimensions, assigned_offer';
 
 const DAY_MS = 1000 * 60 * 60 * 24;
 
@@ -45,13 +56,27 @@ export async function GET(request: Request) {
 
   try {
     const supabase = getSupabaseClient();
-    const { data, error } = await supabase
+    const primary = await supabase
       .from('leads')
-      .select(
-        'id, name, email, email_sequence_step, last_email_sent_at, responded_to_email3, unsubscribed, weakest_dimensions, assigned_offer',
-      )
+      .select(`${LEAD_COLUMNS}, locale`)
       .eq('unsubscribed', false)
       .lt('email_sequence_step', 4);
+
+    let rows = primary.data as LeadRow[] | null;
+    let error = primary.error;
+
+    // Defensief: de locale-kolom kan ontbreken (migratie 0004 niet toegepast).
+    // Zonder deze fallback zou de hele cron-run stilvallen op een schema-detail;
+    // de leads krijgen dan simpelweg de Nederlandse standaardtaal.
+    if (error && /locale/i.test(`${error.message} ${error.details ?? ''}`)) {
+      const fallback = await supabase
+        .from('leads')
+        .select(LEAD_COLUMNS)
+        .eq('unsubscribed', false)
+        .lt('email_sequence_step', 4);
+      rows = fallback.data as LeadRow[] | null;
+      error = fallback.error;
+    }
 
     if (error) {
       console.error('[cron] supabase select error', error);
@@ -59,7 +84,7 @@ export async function GET(request: Request) {
     }
 
     const now = Date.now();
-    const leads: LeadRow[] = data ?? [];
+    const leads: LeadRow[] = rows ?? [];
 
     for (const lead of leads) {
       const step = lead.email_sequence_step ?? 1;
@@ -67,6 +92,9 @@ export async function GET(request: Request) {
         ? new Date(lead.last_email_sent_at).getTime()
         : 0;
       const daysSinceLast = lastAt === 0 ? Infinity : (now - lastAt) / DAY_MS;
+      // De opvolgmail volgt de taal waarin de lead de scorecard invulde.
+      const locale: ReportLocale = normalizeReportLocale(lead.locale);
+      const strings = FOLLOWUP_STRINGS[locale];
 
       try {
         if (step === 1 && daysSinceLast >= 3) {
@@ -75,11 +103,12 @@ export async function GET(request: Request) {
             createElement(Followup3DayEmail, {
               name: lead.name,
               weakestDimensions: weakest,
+              locale,
             }),
           );
           await sendMail({
             to: lead.email,
-            subject: 'Drie dagen later — wat valt op in uw rapport?',
+            subject: strings.day3.subject,
             html,
           });
           await supabase
@@ -92,16 +121,17 @@ export async function GET(request: Request) {
           processed += 1;
         } else if (step === 2 && daysSinceLast >= 4) {
           const offer = (lead.assigned_offer ?? 'none') as OfferType;
-          const offerName = offerMap[offer]?.name ?? 'Portfolio Intelligence';
+          const offerName = getOfferName(locale, offer);
           const html = await render(
             createElement(Followup7DayEmail, {
               name: lead.name,
               offerName,
+              locale,
             }),
           );
           await sendMail({
             to: lead.email,
-            subject: 'Een week later — concrete vervolgstap',
+            subject: strings.day7.subject,
             html,
           });
           await supabase
@@ -119,16 +149,17 @@ export async function GET(request: Request) {
         ) {
           // Step 4: light "if responded" follow-up reusing the same template body.
           const offer = (lead.assigned_offer ?? 'none') as OfferType;
-          const offerName = offerMap[offer]?.name ?? 'Portfolio Intelligence';
+          const offerName = getOfferName(locale, offer);
           const html = await render(
             createElement(Followup7DayEmail, {
               name: lead.name,
               offerName,
+              locale,
             }),
           );
           await sendMail({
             to: lead.email,
-            subject: 'Opvolging — wanneer past het?',
+            subject: strings.nudgeSubject,
             html,
           });
           await supabase

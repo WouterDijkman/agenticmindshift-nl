@@ -96,3 +96,22 @@ export function getRouteLadder(locale: ReportLocale): RouteRung[] {
 export function activeRungId(offer: OfferType): RouteRung['id'] | null {
   return OFFER_TO_RUNG[offer];
 }
+
+/**
+ * The service name to show a lead, in their own language.
+ *
+ * Use this anywhere an offer is named outside the PDF route block — follow-up
+ * emails, the report prompt. The names in scoring.ts's offerMap are Dutch-only
+ * internal labels and must never reach a non-Dutch reader.
+ *
+ * Offer 'none' has no variant of its own; we fall back to the Sparring session,
+ * the free entry rung, because the follow-up email always names a concrete
+ * next step.
+ */
+export function getOfferName(locale: ReportLocale, offer: OfferType): string {
+  if (offer !== 'none') {
+    const name = getOfferRoute(locale, offer)?.offerName;
+    if (name) return name;
+  }
+  return getRouteLadder(locale)[0].name;
+}

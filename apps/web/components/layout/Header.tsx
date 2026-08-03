@@ -14,7 +14,6 @@ const navLinks = [
   { href: '/scorecard', labelKey: 'scorecard', badged: false },
   { href: '/werkwijze', labelKey: 'werkwijze', badged: false },
   { href: '/over', labelKey: 'over', badged: false },
-  { href: '/factum-capital', labelKey: 'factum_capital', badged: false },
   { href: '/contact', labelKey: 'contact', badged: false },
 ] as const;
 
@@ -44,13 +43,14 @@ export default function Header() {
     <header
       className="sticky top-0 z-50"
       style={{
+        height: 'var(--header-h)',
         background: scrolled ? 'rgba(247, 242, 235, 0.95)' : 'transparent',
         backdropFilter: scrolled ? 'blur(16px)' : 'none',
         borderBottom: scrolled ? '1px solid var(--border-subtle)' : '1px solid transparent',
         transition: 'all 220ms ease',
       }}
     >
-      <div className="container-extra flex items-center justify-between" style={{ paddingBlock: '14px' }}>
+      <div className="container-extra flex h-full items-center justify-between">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, x: -12 }}
@@ -108,13 +108,13 @@ export default function Header() {
                         fontWeight: 700,
                         letterSpacing: '0.12em',
                         textTransform: 'uppercase',
-                        color: 'var(--accent-cta)',
+                        color: 'var(--accent-cta-ink)',
                         border: '1px solid var(--accent-cta)',
                         padding: '2px 5px',
                         lineHeight: 1,
                       }}
                     >
-                      {t('badge_july')}
+                      {t('badge_soon')}
                     </motion.span>
                   )}
                 </Link>
@@ -209,7 +209,9 @@ export default function Header() {
       />
       <aside
         className={`lg:hidden drawer-panel ${mobileOpen ? 'open' : ''}`}
-        aria-hidden={!mobileOpen}
+        // `inert` rather than aria-hidden: the closed drawer stays in the DOM and
+        // its links would otherwise still be tab-reachable behind the page.
+        inert={!mobileOpen}
         role="dialog"
         aria-label={t('main_menu')}
       >

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { getAlternates } from '@/lib/hreflang';
 import Button from '@/components/ui/Button';
 import AnimatedHero from './AnimatedHero';
@@ -28,6 +28,7 @@ export async function generateMetadata(
 }
 
 export default async function HomePage() {
+  const locale = await getLocale();
   const t = await getTranslations('homepage');
   const tFaq = await getTranslations('homepage.faqItems');
 
@@ -44,8 +45,8 @@ export default async function HomePage() {
           <>
             {f.answer}{' '}
             <a
-              href="/over"
-              style={{ color: 'var(--accent-cta)', fontWeight: 500, whiteSpace: 'nowrap' }}
+              href={`/${locale}/over`}
+              style={{ color: 'var(--accent-cta-ink)', fontWeight: 500, whiteSpace: 'nowrap' }}
             >
               {tFaq('wie_link')}
             </a>
@@ -91,56 +92,29 @@ export default async function HomePage() {
       {/* ═══════════════════════════════════════════
           3b. FOUNDER — eerlijke geloofwaardigheid i.p.v. social proof
       ═══════════════════════════════════════════ */}
-      <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(64px, 8vw, 96px)' }}>
+      <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(56px, 7vw, 80px)' }}>
         <div className="container-medium">
-          <div className="reveal" style={{ marginBottom: '32px', maxWidth: '640px' }}>
+          <div className="reveal" style={{ maxWidth: '640px' }}>
             <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('founder.eyebrow')}</p>
             <h2 className="type-h2" style={{ margin: '0 0 20px', maxWidth: '560px' }}>{t('founder.heading')}</h2>
-            <p style={{ fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)', color: 'var(--text-secondary)', lineHeight: 1.75, margin: 0 }}>
+            <p style={{ fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)', color: 'var(--text-secondary)', lineHeight: 1.75, margin: '0 0 28px' }}>
               {t('founder.body')}
             </p>
-          </div>
-          <div
-            className="reveal feature-grid"
-            style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))' }}
-          >
-            {[
-              { label: t('founder.point_1_label'), body: t('founder.point_1_body') },
-              { label: t('founder.point_2_label'), body: t('founder.point_2_body') },
-              { label: t('founder.point_3_label'), body: t('founder.point_3_body') },
-            ].map((item, i) => (
-              <div key={i} className="feature-card" style={{ gap: '12px' }}>
-                <p
-                  style={{
-                    fontFamily: 'var(--font-display)',
-                    fontSize: 'clamp(1.5rem, 2.4vw, 1.875rem)',
-                    fontWeight: 600,
-                    color: 'var(--accent-cta)',
-                    letterSpacing: '-0.01em',
-                    margin: 0,
-                  }}
-                >
-                  {item.label}
-                </p>
-                <p style={{ fontSize: '0.9375rem', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
-                  {item.body}
-                </p>
-              </div>
-            ))}
-          </div>
-          <div className="reveal" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '20px', marginTop: '28px' }}>
-            <Button href="/over" variant="secondary" size="md">
-              {t('founder.cta')}
-            </Button>
-            <p style={{ fontSize: '0.8125rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0, maxWidth: '420px' }}>
-              {t('founder.sample_note')}
-            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '20px' }}>
+              <Button href="/over" variant="secondary" size="md">
+                {t('founder.cta')}
+              </Button>
+              <p style={{ fontSize: '0.8125rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0, maxWidth: '420px' }}>
+                {t('founder.sample_note')}
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════
-          3c. FACTUM CAPITAL — twee tracks
+          3c. FACTUM CAPITAL — short teaser, full pitch lives on
+              /factum-capital and factumcapital.eu
       ═══════════════════════════════════════════ */}
       <HomepageFactumSection />
 
@@ -221,7 +195,7 @@ export default async function HomePage() {
               </div>
             </div>
             <div className="feature-card feature-card--accent">
-              <p style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--accent-cta)', marginBottom: '20px' }}>
+              <p style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--accent-cta-ink)', marginBottom: '20px' }}>
                 {t('transformation.with_label')}
               </p>
               <div style={{ fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75, display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -284,23 +258,16 @@ export default async function HomePage() {
             <h2 className="type-h2" style={{ marginBottom: '20px' }}>
               {t('stakes.heading')}
             </h2>
-            <div
+            <p
               style={{
-                                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
+                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
                 color: 'var(--text-secondary)',
                 lineHeight: 1.75,
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '12px',
+                margin: 0,
               }}
             >
-              <p style={{ margin: 0 }}>
-                {t('stakes.body_1')}
-              </p>
-              <p style={{ margin: 0, marginTop: '8px' }}>
-                {t('stakes.body_3')}
-              </p>
-            </div>
+              {t('stakes.body')}
+            </p>
             <CostAnchorVisual />
           </div>
         </div>
@@ -313,27 +280,28 @@ export default async function HomePage() {
       ═══════════════════════════════════════════ */}
       <section
         className="grain-overlay"
+        data-surface="dark"
         style={{
-          background: 'var(--accent-primary)',
+          background: 'var(--surface-dark)',
           paddingBlock: 'clamp(80px, 11vw, 136px)',
           position: 'relative',
           overflow: 'hidden',
         }}
       >
         <div className="container-medium reveal" style={{ textAlign: 'center', position: 'relative' }}>
-          <p className="eyebrow" style={{ marginBottom: '28px', color: 'rgba(247,242,235,0.5)' }}>
+          <p className="eyebrow" style={{ marginBottom: '28px', color: 'var(--text-muted)' }}>
             {t('final_cta.eyebrow')}
           </p>
           <h2
             className="type-h2"
-            style={{ color: 'var(--text-inverse)', marginBottom: '16px', maxWidth: '600px', marginInline: 'auto' }}
+            style={{ color: 'var(--text-primary)', marginBottom: '16px', maxWidth: '600px', marginInline: 'auto' }}
           >
             {t('final_cta.heading')}
           </h2>
           <p
             style={{
                             fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
-              color: 'rgba(247,242,235,0.5)',
+              color: 'var(--text-muted)',
               marginBottom: '48px',
               maxWidth: '460px',
               marginInline: 'auto',

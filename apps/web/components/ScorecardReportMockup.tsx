@@ -11,13 +11,13 @@ type DimKey =
   | 'CapacityEngineering'
   | 'KnowledgeRetention';
 
-const DIMENSION_SCORES: { key: DimKey; score: number; peer: number }[] = [
-  { key: 'DealVelocity', score: 58, peer: 70 },
-  { key: 'PortfolioIntelligence', score: 74, peer: 68 },
-  { key: 'BiasDetection', score: 63, peer: 66 },
-  { key: 'AIReadiness', score: 39, peer: 64 },
-  { key: 'CapacityEngineering', score: 71, peer: 67 },
-  { key: 'KnowledgeRetention', score: 46, peer: 65 },
+const DIMENSION_SCORES: { key: DimKey; score: number; reference: number }[] = [
+  { key: 'DealVelocity', score: 58, reference: 70 },
+  { key: 'PortfolioIntelligence', score: 74, reference: 68 },
+  { key: 'BiasDetection', score: 63, reference: 66 },
+  { key: 'AIReadiness', score: 39, reference: 64 },
+  { key: 'CapacityEngineering', score: 71, reference: 67 },
+  { key: 'KnowledgeRetention', score: 46, reference: 65 },
 ];
 
 const NAVY = 'var(--text-primary)';
@@ -26,15 +26,15 @@ const RUST = 'var(--accent-cta)';
 function ScoreRow({
   label,
   score,
-  peer,
+  reference,
   highlight,
 }: {
   label: string;
   score: number;
-  peer: number;
+  reference: number;
   highlight: boolean;
 }) {
-  const below = score < peer;
+  const below = score < reference;
   const fill = below ? RUST : NAVY;
   return (
     <div
@@ -91,14 +91,14 @@ function ScoreRow({
             borderRadius: '999px',
           }}
         />
-        {/* peer-median tick */}
+        {/* reference-level tick */}
         <div
           aria-hidden="true"
           style={{
             position: 'absolute',
             top: '-3px',
             bottom: '-3px',
-            left: `${peer}%`,
+            left: `${reference}%`,
             width: '2px',
             background: 'var(--text-muted)',
             opacity: 0.55,
@@ -145,7 +145,7 @@ export default function ScorecardReportMockup({ callout = true }: { callout?: bo
           <div>
             <p
               style={{
-                fontFamily: 'var(--font-display)',
+                fontFamily: 'var(--font-ui)',
                 fontSize: '1.0625rem',
                 fontWeight: 700,
                 color: 'var(--text-primary)',
@@ -174,7 +174,7 @@ export default function ScorecardReportMockup({ callout = true }: { callout?: bo
                 key={d.key}
                 label={dims[d.key] ?? d.key}
                 score={d.score}
-                peer={d.peer}
+                reference={d.reference}
                 highlight={d.key === 'AIReadiness'}
               />
             ))}
@@ -184,15 +184,15 @@ export default function ScorecardReportMockup({ callout = true }: { callout?: bo
           <div className="showcase-legend">
             <span className="showcase-legend-item">
               <span className="showcase-legend-swatch" style={{ background: RUST }} />
-              {t('below_median')}
+              {t('below_reference')}
             </span>
             <span className="showcase-legend-item">
               <span className="showcase-legend-swatch" style={{ background: NAVY }} />
-              {t('above_median')}
+              {t('above_reference')}
             </span>
             <span className="showcase-legend-item">
               <span className="showcase-legend-tick" />
-              {t('peer_median')}
+              {t('reference_level')}
             </span>
           </div>
         </div>

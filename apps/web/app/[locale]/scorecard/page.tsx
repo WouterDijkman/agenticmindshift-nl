@@ -6,12 +6,19 @@ import { serviceLd } from '@/lib/jsonld';
 import ScorecardSectionCards from './ScorecardSectionCards';
 import ScorecardReportMockup from '@/components/ScorecardReportMockup';
 import Button from '@/components/ui/Button';
+import { getAlternates } from '@/lib/hreflang';
 
-export const metadata: Metadata = {
-  title: 'Scorecard — Zes dimensies, twaalf minuten',
-  description:
-    'Vier secties, 15 vragen, twaalf minuten. Inzicht in uw dealproces, maandrapportage, AI-bestendigheid en kennisborging — vergeleken met vergelijkbare partijen.',
-};
+export async function generateMetadata(
+  { params }: { params: Promise<{ locale: string }> }
+): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'scorecard' });
+  return {
+    title: t('meta_title'),
+    description: t('meta_description'),
+    alternates: getAlternates('/scorecard', locale),
+  };
+}
 
 export default async function ScorecardWelcomePage() {
   const t = await getTranslations('scorecard');
@@ -27,16 +34,16 @@ export default async function ScorecardWelcomePage() {
         heading={t('landing.heading')}
         subtext={t('landing.subtext')}
         containerClass="container-narrow"
-        centered={true}
       >
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '16px' }}>
           <p
             style={{
               fontSize: '0.875rem',
               color: 'var(--text-muted)',
               fontStyle: 'italic',
               lineHeight: 1.6,
-              textAlign: 'center',
+              maxWidth: '56ch',
+              margin: 0,
             }}
           >
             {t('landing.blind_spots_note')}
@@ -49,7 +56,7 @@ export default async function ScorecardWelcomePage() {
               fontSize: '0.8125rem',
               color: 'var(--text-muted)',
               lineHeight: 1.6,
-              textAlign: 'center',
+              margin: 0,
             }}
           >
             {t('landing.no_account')}
@@ -59,8 +66,8 @@ export default async function ScorecardWelcomePage() {
               fontSize: '0.75rem',
               color: 'var(--text-muted)',
               letterSpacing: '0.06em',
-              textAlign: 'center',
               fontStyle: 'italic',
+              margin: 0,
             }}
           >
             {t('landing.trust')}
@@ -100,7 +107,7 @@ export default async function ScorecardWelcomePage() {
                   fontWeight: 700,
                   letterSpacing: '0.12em',
                   textTransform: 'uppercase',
-                  color: 'var(--accent-cta)',
+                  color: 'var(--accent-cta-ink)',
                   marginBottom: '6px',
                 }}
               >
@@ -148,66 +155,31 @@ export default async function ScorecardWelcomePage() {
 
       <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
-      {/* Kosten van niets doen — stakes */}
-      <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(56px, 7vw, 80px)' }}>
-        <div className="container-medium">
-          <div className="reveal" style={{ maxWidth: '640px' }}>
-            <p className="eyebrow" style={{ marginBottom: '16px', color: 'var(--text-muted)' }}>
-              {t('landing.stakes_eyebrow')}
-            </p>
-            <h2 className="type-h2" style={{ marginBottom: '20px' }}>
-              {t('landing.stakes_heading')}
-            </h2>
-            <p
-              style={{
-                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
-                color: 'var(--text-secondary)',
-                lineHeight: 1.75,
-                marginBottom: '8px',
-              }}
-            >
-              {t('landing.stakes_body_1a')}
-              <strong style={{ color: 'var(--text-primary)' }}>{t('landing.stakes_highlight')}</strong>
-              {t('landing.stakes_body_1b')}
-            </p>
-            <p
-              style={{
-                fontSize: 'clamp(1.0625rem, 1.6vw, 1.1875rem)',
-                color: 'var(--text-muted)',
-                lineHeight: 1.75,
-                fontStyle: 'italic',
-              }}
-            >
-              {t('landing.stakes_body_2')}
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Final CTA */}
       <section
         className="grain-overlay"
+        data-surface="dark"
         style={{
-          background: 'var(--accent-primary)',
+          background: 'var(--surface-dark)',
           paddingBlock: 'clamp(64px, 9vw, 112px)',
           position: 'relative',
           overflow: 'hidden',
         }}
       >
         <div className="container-medium reveal" style={{ textAlign: 'center', position: 'relative' }}>
-          <p className="eyebrow" style={{ marginBottom: '24px', color: 'rgba(247,242,235,0.5)' }}>
+          <p className="eyebrow" style={{ marginBottom: '24px', color: 'var(--text-muted)' }}>
             {t('landing.final_eyebrow')}
           </p>
           <h2
             className="type-h2"
-            style={{ color: 'var(--text-inverse)', marginBottom: '16px', maxWidth: '560px', marginInline: 'auto' }}
+            style={{ color: 'var(--text-primary)', marginBottom: '16px', maxWidth: '560px', marginInline: 'auto' }}
           >
             {t('landing.final_heading')}
           </h2>
           <p
             style={{
               fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
-              color: 'rgba(247,242,235,0.55)',
+              color: 'var(--text-muted)',
               marginBottom: '44px',
               maxWidth: '420px',
               marginInline: 'auto',

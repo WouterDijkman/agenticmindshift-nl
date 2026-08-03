@@ -2,15 +2,15 @@
   "meta": {
     "home": {
       "title": "Diligence-grade analysis across the deal cycle",
-      "description": "Eleven disciplines over the full data room. Reconciled against each other. Reviewed by a person before you see it."
+      "description": "Thirteen disciplines over the full data room. Reconciled against each other. Reviewed by a person before you see it."
     },
     "platform": {
       "title": "The platform",
-      "description": "31 due-diligence modules across 11 disciplines. Every finding cites a document. Every output passes a human gate."
+      "description": "31 due-diligence modules across 13 disciplines. Every finding cites a document. Every output passes a human gate."
     },
     "sprint": {
       "title": "The Diligence Sprint",
-      "description": "Eleven specialist passes over one data room, reconciled into a single narrative, with a live data-gap tracker."
+      "description": "Thirteen specialist passes over one data room, reconciled into a single narrative, with a live data-gap tracker."
     },
     "governance": {
       "title": "Governance and data handling",
@@ -614,8 +614,8 @@
     },
     "layers": {
       "eyebrow": "Synthesis",
-      "title": "From eleven reads to one verdict",
-      "lead": "What turns {disciplines} separate reads into one deliverable, not eleven.",
+      "title": "From thirteen reads to one verdict",
+      "lead": "What turns {disciplines} separate reads into one deliverable, not thirteen.",
       "items": [
         {
           "title": "Value-creation read",
@@ -680,7 +680,7 @@
       "items": [
         {
           "q": "Does this replace a quality-of-earnings report?",
-          "a": "It is broader, and it is not an attest service. A quality-of-earnings read covers one dimension in four to ten weeks. This runs eleven disciplines and reconciles them. A signed accountant’s opinion stays a separate engagement."
+          "a": "It is broader, and it is not an attest service. A quality-of-earnings read covers one dimension in four to ten weeks. This runs thirteen disciplines and reconciles them. A signed accountant’s opinion stays a separate engagement."
         },
         {
           "q": "How long does it take?",
@@ -883,7 +883,7 @@
     "header": {
       "eyebrow": "Partnerships",
       "title": "More mandates than your team can read",
-      "lead": "You keep the relationship and the judgment. We run the eleven-discipline read behind it, under your name."
+      "lead": "You keep the relationship and the judgment. We run the thirteen-discipline read behind it, under your name."
     },
     "who": {
       "eyebrow": "Fit",
@@ -911,7 +911,7 @@
     "split": {
       "eyebrow": "The split",
       "title": "You keep the relationship. We supply the pass.",
-      "lead": "The same eleven-discipline platform, the same review gate — delivered under your name.",
+      "lead": "The same thirteen-discipline platform, the same review gate — delivered under your name.",
       "columns": [
         {
           "label": "You keep",
@@ -925,7 +925,7 @@
         {
           "label": "We supply",
           "items": [
-            "The eleven-discipline pass over the data room",
+            "The thirteen-discipline pass over the data room",
             "Cross-discipline reconciliation as a fixed step",
             "Findings tied to a document and a passage, every time",
             "A named reviewer standing behind the output"
@@ -979,7 +979,7 @@
         },
         {
           "q": "Can you run only part of the scope?",
-          "a": "The eleven-discipline pass is fixed, because the value sits in the reconciliation between disciplines. What varies is the depth of the write-up."
+          "a": "The thirteen-discipline pass is fixed, because the value sits in the reconciliation between disciplines. What varies is the depth of the write-up."
         },
         {
           "q": "How exclusive is this?",

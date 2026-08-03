@@ -18,7 +18,18 @@ import Button from '@/components/ui/Button';
 
 export default function ResultaatPage() {
   const t = useTranslations('scorecard.resultaat');
+  const tv = useTranslations('validation');
   const locale = useLocale();
+
+  /**
+   * Zod geeft een message *key* terug (zie lib/schemas.ts); hier wordt die
+   * opgelost in de taal van de bezoeker. Een onbekende key valt terug op zijn
+   * eigen tekst, zodat een ontbrekende vertaling het formulier niet laat crashen.
+   */
+  const fieldError = (message?: string) => {
+    if (!message) return undefined;
+    return tv.has(message) ? tv(message) : message;
+  };
   const router = useRouter();
   const answers = useAssessmentStore((s) => s.answers);
   const setLeadId = useAssessmentStore((s) => s.setLeadId);
@@ -156,7 +167,7 @@ export default function ResultaatPage() {
                   style={{
                     fontSize: '0.75rem',
                     fontWeight: 800,
-                    color: 'var(--accent-cta)',
+                    color: 'var(--accent-cta-ink)',
                     letterSpacing: '0.06em',
                     flexShrink: 0,
                     paddingTop: '1px',
@@ -189,51 +200,73 @@ export default function ResultaatPage() {
             type="text"
             autoComplete="name"
             {...register('name')}
-            error={errors.name?.message}
+            error={fieldError(errors.name?.message)}
           />
           <Input
             label={t('field_email')}
             type="email"
             autoComplete="email"
             {...register('email')}
-            error={errors.email?.message}
+            error={fieldError(errors.email?.message)}
           />
           <Input
             label={t('field_company')}
             type="text"
             autoComplete="organization"
             {...register('company')}
-            error={errors.company?.message}
+            error={fieldError(errors.company?.message)}
           />
+          <div
+            className="md:col-span-2"
+            style={{
+              marginTop: '4px',
+              paddingTop: '20px',
+              borderTop: '1px solid var(--border-subtle)',
+            }}
+          >
+            <p
+              style={{
+                fontSize: '0.6875rem',
+                color: 'var(--text-muted)',
+                letterSpacing: '0.06em',
+                textTransform: 'uppercase',
+              }}
+            >
+              {t('optional_section_label')}
+            </p>
+          </div>
           <Input
             label={t('field_jobtitle')}
             type="text"
             autoComplete="organization-title"
+            optional
             {...register('jobTitle')}
-            error={errors.jobTitle?.message}
+            error={fieldError(errors.jobTitle?.message)}
           />
           <Input
             label={t('field_phone')}
             type="tel"
             autoComplete="tel"
+            optional
             {...register('phone')}
-            error={errors.phone?.message}
+            error={fieldError(errors.phone?.message)}
           />
           <Input
             label={t('field_website')}
             type="text"
             autoComplete="url"
-            placeholder="www.uwbedrijf.nl"
+            placeholder={t('field_website_placeholder')}
+            optional
             {...register('website')}
-            error={errors.website?.message}
+            error={fieldError(errors.website?.message)}
           />
           <div className="md:col-span-2">
             <label
               style={{
                 display: 'block',
-                fontSize: '0.8125rem',
-                color: 'var(--text-secondary)',
-                fontWeight: 600,
+                fontSize: '0.75rem',
+                color: 'var(--text-muted)',
+                fontWeight: 400,
                 letterSpacing: '0.01em',
                 marginBottom: '6px',
               }}
@@ -259,7 +292,7 @@ export default function ResultaatPage() {
             />
             {errors.companyContext?.message && (
               <p className="text-sm mt-1" style={{ color: 'var(--status-error)' }}>
-                {errors.companyContext.message}
+                {fieldError(errors.companyContext.message)}
               </p>
             )}
             <p

@@ -1,5 +1,5 @@
 'use client';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useRouter, usePathname } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import { useEffect, useRef, useState } from 'react';
@@ -11,6 +11,7 @@ const LANG_LABELS: Record<string, string> = {
 export default function LanguageSwitcher({ tone = 'default' }: { tone?: 'default' | 'onDark' }) {
   const triggerColor = tone === 'onDark' ? 'var(--text-inverse)' : 'var(--text-secondary)';
   const locale = useLocale();
+  const t = useTranslations('nav');
   const router = useRouter();
   const pathname = usePathname(); // path WITHOUT locale prefix
   const [open, setOpen] = useState(false);
@@ -44,7 +45,7 @@ export default function LanguageSwitcher({ tone = 'default' }: { tone?: 'default
         onClick={() => setOpen((v) => !v)}
         aria-haspopup="listbox"
         aria-expanded={open}
-        aria-label="Taal kiezen"
+        aria-label={t('choose_language')}
         style={{
           display: 'inline-flex',
           alignItems: 'center',
@@ -105,7 +106,7 @@ export default function LanguageSwitcher({ tone = 'default' }: { tone?: 'default
                 fontSize: '0.75rem',
                 fontWeight: loc === locale ? 700 : 400,
                 letterSpacing: '0.08em',
-                color: loc === locale ? 'var(--accent-cta)' : 'var(--text-secondary)',
+                color: loc === locale ? 'var(--accent-cta-ink)' : 'var(--text-secondary)',
                 background: 'none',
                 border: 'none',
                 cursor: 'pointer',

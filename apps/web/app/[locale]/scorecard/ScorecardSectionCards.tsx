@@ -60,7 +60,7 @@ export default function ScorecardSectionCards() {
               fontWeight: 800,
               letterSpacing: '-0.04em',
               lineHeight: 0.9,
-              color: 'var(--accent-cta)',
+              color: 'var(--accent-cta-ink)',
               marginBottom: '20px',
               opacity: 0.85,
             }}

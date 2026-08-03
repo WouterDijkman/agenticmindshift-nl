@@ -9,7 +9,7 @@
  *
  * Pagina-overzicht (8):
  *  1. Cover — verdict, data-image hero, executive summary, kerncijfers
- *  2. Scoreprofiel — 6 dimensies vs peer-mediaan + duiding
+ *  2. Scoreprofiel — 6 dimensies vs referentieniveau + duiding
  *  3. Wat nu aandacht vraagt — kritieke + aandachtsdimensies
  *  4. Waar u op bouwt — sterke dimensies + kernobservaties
  *  5. Uw route bij Agentic Mindshift — concrete, geprijsde dienst + Factum
@@ -22,12 +22,12 @@ import path from 'path';
 import fs from 'fs';
 import { Document, Page, Text, View, StyleSheet, Font } from '@react-pdf/renderer';
 import { dimensionLabels, questions, type Dimension } from '../questions';
-import { offerMap, type OfferType, type Answers } from '../scoring';
+import { type OfferType, type Answers } from '../scoring';
 import { type GeneratedReport } from '../report/types';
 import { type ReportLocale } from '../report/locale';
 import { getPdfStrings, type PdfStrings } from './strings';
 import { CoverDataPanel, ScoreGauge, DimensionBar } from './dataviz';
-import { getOfferRoute, getRouteLadder, activeRungId } from './offerRoutes';
+import { getOfferRoute, getRouteLadder, activeRungId, getOfferName } from './offerRoutes';
 
 // ── Font registration (SUSE, met Helvetica-fallback) ─────────────────────────
 let useSuse = false;
@@ -63,11 +63,12 @@ const brand = {
   rust: '#F14C1D',
   amber: '#B45309',
   green: '#1A7A3C',
-  peerLine: '#8E97A4',
+  referenceLine: '#8E97A4',
   track: '#E7DECF',
 };
 
-const PEER = 60;
+/** Declared reference level per dimension — our target, not a measured market median. */
+const REFERENCE = 60;
 
 const s = StyleSheet.create({
   page: {
@@ -246,7 +247,7 @@ function DimensionCard({
         <ScoreBadge score={dim.score} color={c} />
       </View>
       <View style={{ marginBottom: 7 }}>
-        <DimensionBar score={dim.score} peer={PEER} color={c} />
+        <DimensionBar score={dim.score} reference={REFERENCE} color={c} />
       </View>
       <Text style={[s.body, { lineHeight: 1.5 }]}>{dim.assessment}</Text>
       {showQuickWin && dim.quickWin ? (
@@ -290,7 +291,7 @@ function CompactDimCard({
           </Text>
         </View>
         <View style={{ width: 84 }}>
-          <DimensionBar score={dim.score} peer={PEER} color={c} />
+          <DimensionBar score={dim.score} reference={REFERENCE} color={c} />
         </View>
         <Text style={{ fontFamily: SANS_XB, fontSize: 11, color: c, minWidth: 26, textAlign: 'right' }}>{dim.score}</Text>
       </View>
@@ -337,10 +338,9 @@ export function ReportDocument(props: ReportProps) {
   } = props;
 
   const t = getPdfStrings(locale);
-  const offerInfo = offerMap[offer];
   const firstName = name.split(' ')[0] || name;
   const dimensionEntries = Object.entries(byDimension) as [Dimension, number][];
-  const belowPeer = dimensionEntries.filter(([, sc]) => sc < PEER).length;
+  const belowReference = dimensionEntries.filter(([, sc]) => sc < REFERENCE).length;
   const totalDims = dimensionEntries.length;
 
   const allDims = report?.dimensionAnalysis ? [...report.dimensionAnalysis].sort((a, b) => a.score - b.score) : [];
@@ -360,7 +360,9 @@ export function ReportDocument(props: ReportProps) {
   const routeUsesFactum = activeId === 'dd';
 
   const traj = report?.recommendedTrajectory;
-  const routeName = traj?.offerName || route?.offerName || offerInfo?.name || '–';
+  // offerInfo.name is een Nederlands intern label; getOfferName geeft de naam
+  // in de taal van de lead, ook voor offer 'none'.
+  const routeName = traj?.offerName || route?.offerName || getOfferName(locale, offer) || '–';
 
   return (
     <Document title={`AI Readiness Report — ${company}`} author="Agentic Mindshift">
@@ -400,13 +402,13 @@ export function ReportDocument(props: ReportProps) {
             <View style={{ flex: 1 }}>
               <Text style={s.smallLabelMuted}>{t.totalScore}</Text>
               <Text style={{ fontSize: 9, color: brand.textMuted, lineHeight: 1.4 }}>
-                {report?.scoreProfile?.percentile ? t.percentileNote(report.scoreProfile.percentile) : t.outOf75}
+                {t.outOf75}
               </Text>
             </View>
           </View>
           <View style={s.statBox}>
-            <Text style={s.smallLabelMuted}>{t.belowMedian}</Text>
-            <Text style={[s.statNumber, { color: brand.rust }]}>{belowPeer}/{totalDims}</Text>
+            <Text style={s.smallLabelMuted}>{t.belowReferenceStat}</Text>
+            <Text style={[s.statNumber, { color: brand.rust }]}>{belowReference}/{totalDims}</Text>
             <Text style={{ fontSize: 8.5, color: brand.textMuted }}>{t.dimensions}</Text>
           </View>
           <View style={s.statBox}>
@@ -433,13 +435,13 @@ export function ReportDocument(props: ReportProps) {
       <Page size="A4" style={s.page}>
         <Text style={s.eyebrow}>{t.scoreOverview}</Text>
         <Text style={s.h1}>{t.scoreOverviewTitle}</Text>
-        <Text style={[s.body, { marginBottom: 16 }]}>{t.scoreOverviewIntro(PEER)}</Text>
+        <Text style={[s.body, { marginBottom: 16 }]}>{t.scoreOverviewIntro(REFERENCE)}</Text>
 
         <View style={s.card}>
           {dimensionEntries
             .sort((a, b) => a[1] - b[1])
             .map(([dim, score]) => {
-              const isBelow = score < PEER;
+              const isBelow = score < REFERENCE;
               const dimReport = report?.dimensionAnalysis?.find((d) => d.dimension === dim);
               const fillColor = isBelow ? brand.rust : brand.navySoft;
               return (
@@ -450,7 +452,7 @@ export function ReportDocument(props: ReportProps) {
                       {score} / 100{dimReport?.priority ? `  ·  ${priorityLabel(dimReport.priority, t)}` : ''}
                     </Text>
                   </View>
-                  <DimensionBar score={score} peer={PEER} color={fillColor} />
+                  <DimensionBar score={score} reference={REFERENCE} color={fillColor} />
                 </View>
               );
             })}
@@ -458,15 +460,15 @@ export function ReportDocument(props: ReportProps) {
           <View style={s.legend}>
             <View style={s.legendItem}>
               <View style={[s.legendDot, { backgroundColor: brand.rust }]} />
-              <Text style={s.legendText}>{t.belowPeerMedian}</Text>
+              <Text style={s.legendText}>{t.belowReference}</Text>
             </View>
             <View style={s.legendItem}>
               <View style={[s.legendDot, { backgroundColor: brand.navySoft }]} />
-              <Text style={s.legendText}>{t.atOrAboveMedian}</Text>
+              <Text style={s.legendText}>{t.atOrAboveReference}</Text>
             </View>
             <View style={s.legendItem}>
-              <View style={{ width: 1, height: 10, backgroundColor: brand.peerLine }} />
-              <Text style={s.legendText}>{t.peerMedianLegend(PEER)}</Text>
+              <View style={{ width: 1, height: 10, backgroundColor: brand.referenceLine }} />
+              <Text style={s.legendText}>{t.referenceLegend(REFERENCE)}</Text>
             </View>
           </View>
         </View>

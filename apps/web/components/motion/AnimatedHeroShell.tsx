@@ -29,7 +29,6 @@ interface Props {
   children?: ReactNode;
   containerClass?: string;
   headingMaxWidth?: string;
-  centered?: boolean;
 }
 
 const HERO_ANIM_CSS = `
@@ -72,7 +71,6 @@ export default function AnimatedHeroShell({
   children,
   containerClass = 'container-medium',
   headingMaxWidth = '800px',
-  centered = false,
 }: Props) {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -88,10 +86,11 @@ export default function AnimatedHeroShell({
       className="hero-full grain-overlay"
       style={{
         background: 'var(--bg-primary)',
-        minHeight: '100svh',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'flex-start',
+        // Centred rather than top-aligned: the copy is short enough that
+        // flex-start left the bottom half of the viewport empty.
+        justifyContent: 'center',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -143,9 +142,8 @@ export default function AnimatedHeroShell({
       <div
         className={`hero-full-content ${containerClass}`}
         style={{
-          paddingTop: 'clamp(120px, 20vh, 200px)',
-          paddingBottom: 'clamp(80px, 10vh, 120px)',
-          textAlign: centered ? 'center' : undefined,
+          paddingTop: 'clamp(104px, 13vh, 148px)',
+          paddingBottom: 'clamp(72px, 9vh, 104px)',
           position: 'relative',
         }}
       >
@@ -157,19 +155,16 @@ export default function AnimatedHeroShell({
             alignItems: 'center',
             gap: '14px',
             marginBottom: '28px',
-            justifyContent: centered ? 'center' : undefined,
           }}
         >
-          {!centered && (
-            <div
-              style={{
-                width: '32px',
-                height: '1.5px',
-                background: 'var(--accent-cta)',
-                flexShrink: 0,
-              }}
-            />
-          )}
+          <div
+            style={{
+              width: '32px',
+              height: '1.5px',
+              background: 'var(--accent-cta)',
+              flexShrink: 0,
+            }}
+          />
           <p className="eyebrow" style={{ margin: 0 }}>
             {eyebrow}
           </p>
@@ -181,10 +176,9 @@ export default function AnimatedHeroShell({
         <h1
           className="type-display-sub hero-anim hero-anim--h1"
           style={{
-            marginBottom: '28px',
+            marginBottom: '22px',
             color: 'var(--text-primary)',
-            maxWidth: centered ? undefined : headingMaxWidth,
-            marginInline: centered ? 'auto' : undefined,
+            maxWidth: headingMaxWidth,
           }}
         >
           {heading}
@@ -194,14 +188,13 @@ export default function AnimatedHeroShell({
         <p
           className="hero-anim hero-anim--subtext"
           style={{
-                        fontSize: 'clamp(1.125rem, 2vw, 1.5rem)',
+            fontSize: 'clamp(1.0625rem, 1.5vw, 1.3125rem)',
             fontWeight: 400,
-            lineHeight: 1.55,
+            lineHeight: 1.6,
             color: 'var(--text-secondary)',
-            maxWidth: centered ? '640px' : '780px',
-            marginBottom: children ? '48px' : 0,
+            maxWidth: '700px',
+            marginBottom: children ? '36px' : 0,
             letterSpacing: '-0.005em',
-            marginInline: centered ? 'auto' : undefined,
           }}
         >
           {subtext}

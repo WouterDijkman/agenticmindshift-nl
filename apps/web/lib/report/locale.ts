@@ -149,6 +149,166 @@ export const EMAIL_STRINGS: Record<ReportLocale, EmailStrings> = {
   },
 };
 
+/**
+ * Chrome-strings voor de twee opvolgmails (dag 3 en dag 7).
+ *
+ * Deze stonden hardcoded in het Nederlands in de cron-route en in de templates.
+ * Een Duitse of Spaanse lead kreeg dus een Nederlandse opvolgmail op een
+ * Engelstalig rapport. De taal staat per lead in de `locale`-kolom.
+ */
+interface FollowupMail {
+  subject: string;
+  heading: string;
+  /**
+   * Gesplitst rond de vetgedrukte waarde (de zwakke dimensies resp. de naam van
+   * het traject); de template zet daar het <strong>-element tussen.
+   */
+  body1Lead: string;
+  body1Tail: string;
+  body2: string;
+  cta: string;
+}
+
+interface FollowupStrings {
+  greeting: (firstName: string) => string;
+  unsubscribe: string;
+  /** Voegwoord tussen de twee zwakste dimensies. */
+  and: string;
+  day3: FollowupMail;
+  day7: FollowupMail;
+  /** Stap 4 hergebruikt de dag-7-tekst met een eigen onderwerpregel. */
+  nudgeSubject: string;
+}
+
+export const FOLLOWUP_STRINGS: Record<ReportLocale, FollowupStrings> = {
+  nl: {
+    greeting: (n) => `Beste ${n},`,
+    unsubscribe: 'Liever geen vervolgmails? Antwoord met "afmelden".',
+    and: ' en ',
+    day3: {
+      subject: 'Uw twee zwakste dimensies',
+      heading: 'Waar het rendement weglekt',
+      body1Lead:
+        'U heeft uw rapport inmiddels kunnen doornemen. Twee dimensies bleven achter: ',
+      body1Tail: '.',
+      body2:
+        'Juist deze twee worden zelden expliciet gemeten. Daardoor blijft het verlies lang onzichtbaar. Twintig minuten is genoeg om te bepalen wat dit voor uw portefeuille betekent.',
+      cta: 'Plan een sparring-sessie',
+    },
+    day7: {
+      subject: 'Een concrete vervolgstap',
+      heading: 'De vervolgstap die bij uw score past',
+      body1Lead: 'Op basis van uw antwoorden sluit het traject ',
+      body1Tail:
+        ' het beste aan bij uw situatie. Dat is een hypothese uit uw scorecard, geen verplichting.',
+      body2:
+        'Twintig minuten aan de telefoon is genoeg om te toetsen of die hypothese standhoudt tegen uw praktijk.',
+      cta: 'Plan een gesprek van 20 minuten',
+    },
+    nudgeSubject: 'Opvolging — wanneer komt het u uit?',
+  },
+  en: {
+    greeting: (n) => `Dear ${n},`,
+    unsubscribe: 'Prefer not to receive further emails? Reply with "unsubscribe".',
+    and: ' and ',
+    day3: {
+      subject: 'Your two weakest dimensions',
+      heading: 'Where the return leaks away',
+      body1Lead:
+        'You have had a few days with your report. Two dimensions fell behind: ',
+      body1Tail: '.',
+      body2:
+        'Those two are rarely measured explicitly, so the loss stays invisible for a long time. Twenty minutes is enough to work out what it means for your portfolio.',
+      cta: 'Book a sparring session',
+    },
+    day7: {
+      subject: 'A concrete next step',
+      heading: 'The next step your score points to',
+      body1Lead: 'Based on your answers, the track that fits your situation best is ',
+      body1Tail: '. That is a hypothesis from your scorecard, not a commitment.',
+      body2:
+        'Twenty minutes on the phone is enough to test whether it holds up against your reality.',
+      cta: 'Book a 20-minute call',
+    },
+    nudgeSubject: 'Following up — when would suit you?',
+  },
+  de: {
+    greeting: (n) => `Guten Tag ${n},`,
+    unsubscribe: 'Keine weiteren E-Mails erwünscht? Antworten Sie mit „abmelden".',
+    and: ' und ',
+    day3: {
+      subject: 'Ihre zwei schwächsten Dimensionen',
+      heading: 'Wo die Rendite versickert',
+      body1Lead:
+        'Sie hatten einige Tage Zeit für Ihren Bericht. Zwei Dimensionen fielen ab: ',
+      body1Tail: '.',
+      body2:
+        'Gerade diese beiden werden selten explizit gemessen. Der Verlust bleibt dadurch lange unsichtbar. Zwanzig Minuten genügen, um zu klären, was das für Ihr Portfolio bedeutet.',
+      cta: 'Sparring-Gespräch vereinbaren',
+    },
+    day7: {
+      subject: 'Ein konkreter nächster Schritt',
+      heading: 'Der nächste Schritt zu Ihrem Ergebnis',
+      body1Lead: 'Auf Basis Ihrer Antworten passt am besten der Weg ',
+      body1Tail: '. Das ist eine Hypothese aus Ihrer Scorecard, keine Verpflichtung.',
+      body2:
+        'Zwanzig Minuten am Telefon genügen, um zu prüfen, ob sie Ihrer Praxis standhält.',
+      cta: 'Gespräch von 20 Minuten vereinbaren',
+    },
+    nudgeSubject: 'Nachfassen — wann passt es Ihnen?',
+  },
+  es: {
+    greeting: (n) => `Estimado/a ${n}:`,
+    unsubscribe: '¿Prefiere no recibir más correos? Responda con «baja».',
+    and: ' y ',
+    day3: {
+      subject: 'Sus dos dimensiones más débiles',
+      heading: 'Dónde se escapa la rentabilidad',
+      body1Lead:
+        'Ha tenido unos días para revisar su informe. Dos dimensiones quedaron rezagadas: ',
+      body1Tail: '.',
+      body2:
+        'Precisamente esas dos se miden pocas veces de forma explícita, así que la pérdida tarda en hacerse visible. Veinte minutos bastan para determinar qué significa para su cartera.',
+      cta: 'Reservar una sesión de sparring',
+    },
+    day7: {
+      subject: 'Un siguiente paso concreto',
+      heading: 'El siguiente paso que indica su puntuación',
+      body1Lead: 'Según sus respuestas, el trayecto que mejor encaja con su situación es ',
+      body1Tail: '. Es una hipótesis derivada de su scorecard, no un compromiso.',
+      body2:
+        'Veinte minutos por teléfono bastan para comprobar si se sostiene frente a su realidad.',
+      cta: 'Reservar una llamada de 20 minutos',
+    },
+    nudgeSubject: 'Seguimiento: ¿cuándo le viene bien?',
+  },
+  pt: {
+    greeting: (n) => `Caro(a) ${n},`,
+    unsubscribe: 'Prefere não receber mais e-mails? Responda com «cancelar».',
+    and: ' e ',
+    day3: {
+      subject: 'As suas duas dimensões mais fracas',
+      heading: 'Onde a rentabilidade se perde',
+      body1Lead:
+        'Já teve alguns dias para rever o seu relatório. Duas dimensões ficaram para trás: ',
+      body1Tail: '.',
+      body2:
+        'São precisamente essas duas que raramente se medem de forma explícita, pelo que a perda permanece invisível durante muito tempo. Vinte minutos chegam para perceber o que significa para a sua carteira.',
+      cta: 'Marcar uma sessão de sparring',
+    },
+    day7: {
+      subject: 'Um passo seguinte concreto',
+      heading: 'O passo seguinte indicado pela sua pontuação',
+      body1Lead: 'Com base nas suas respostas, o percurso que melhor se adequa à sua situação é ',
+      body1Tail: '. É uma hipótese retirada da sua scorecard, não um compromisso.',
+      body2:
+        'Vinte minutos ao telefone chegam para verificar se se mantém perante a sua realidade.',
+      cta: 'Marcar uma chamada de 20 minutos',
+    },
+    nudgeSubject: 'Seguimento — quando lhe é conveniente?',
+  },
+};
+
 export function calLink(): string {
   return CAL_LINK;
 }

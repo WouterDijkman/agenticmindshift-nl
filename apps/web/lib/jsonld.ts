@@ -147,14 +147,14 @@ export const professionalServiceLd = {
   ],
   serviceType: 'AI Advisory & Due Diligence',
   description:
-    'AI-gedreven due diligence en portfolio-intelligence voor Europese PE-fondsen en M&A-kantoren. Vier routes: gratis Sparring Sessie, AI-advies & Implementatie, Fractional AI Officer, en AI-gedreven Due Diligence & Portfolio via Factum Capital (29 modules).',
+    'AI-gedreven due diligence en portfolio-intelligence voor Europese PE-fondsen en M&A-kantoren. Vier routes: gratis Sparring Sessie, AI-advies & Implementatie, Fractional AI Officer, en AI-gedreven Due Diligence & Portfolio via Factum Capital (31 modules).',
   offers: [
     {
       '@type': 'Offer',
       name: 'AI Sparring Sessie',
       price: '0',
       priceCurrency: 'EUR',
-      description: 'Gratis 30-minuten kennismakingsgesprek — geen verplichtingen',
+      description: 'Gratis kennismakingsgesprek van 20 minuten — geen verplichtingen',
     },
     {
       '@type': 'Offer',
@@ -175,7 +175,7 @@ export const professionalServiceLd = {
       name: 'AI-gedreven Due Diligence & Portfolio',
       priceCurrency: 'EUR',
       lowPrice: '10000',
-      description: 'Vanaf €10.000 per deal via Factum Capital (29 modules)',
+      description: 'Vanaf €10.000 per deal via Factum Capital (31 modules)',
     },
   ],
 };

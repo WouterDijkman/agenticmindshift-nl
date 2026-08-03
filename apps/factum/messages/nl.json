@@ -2,15 +2,15 @@
   "meta": {
     "home": {
       "title": "Analyse op diligence-niveau, de hele dealcyclus door",
-      "description": "Elf disciplines over de volledige data room. Onderling afgestemd. Beoordeeld door een persoon voordat u iets ziet."
+      "description": "Dertien disciplines over de volledige data room. Onderling afgestemd. Beoordeeld door een persoon voordat u iets ziet."
     },
     "platform": {
       "title": "Het platform",
-      "description": "31 due-diligencemodules over 11 disciplines. Elke bevinding verwijst naar een document. Elke output passeert een menselijke toets."
+      "description": "31 due-diligencemodules over 13 disciplines. Elke bevinding verwijst naar een document. Elke output passeert een menselijke toets."
     },
     "sprint": {
       "title": "De Diligence Sprint",
-      "description": "Elf specialistische analyseslagen over één data room, afgestemd tot één verhaallijn, met een live data-gap tracker."
+      "description": "Dertien specialistische analyseslagen over één data room, afgestemd tot één verhaallijn, met een live data-gap tracker."
     },
     "governance": {
       "title": "Governance en gegevensverwerking",
@@ -202,12 +202,12 @@
     },
     "problem": {
       "eyebrow": "Het probleem",
-      "title": "Het getal ligt vast voordat de room gelezen is",
+      "title": "Het getal ligt vast voordat de data room gelezen is",
       "lead": "Niet uit onzorgvuldigheid. Er was nooit tijd om alles te lezen.",
       "points": [
         {
           "title": "U werkt met een steekproef",
-          "body": "Traditionele due diligence leest een fractie van de room en noemt dat dekking. De rest ligt er nog."
+          "body": "Traditionele due diligence leest een fractie van de data room en noemt dat dekking. De rest ligt er nog."
         },
         {
           "title": "Wie het eerst vindt, bezit het",
@@ -268,7 +268,7 @@
           "body": "We bepalen samen of dit bij uw situatie past. Zo niet, dan zeggen we dat in het gesprek."
         },
         {
-          "title": "Wijs ons de room aan",
+          "title": "Wijs ons de data room aan",
           "body": "U bakent het mandaat af. Toegang loopt onder een verwerkersovereenkomst, in de EU, met zero retention."
         },
         {
@@ -279,7 +279,7 @@
     },
     "coverage": {
       "eyebrow": "Dekking",
-      "title": "De hele room, geen steekproef",
+      "title": "De hele data room, geen steekproef",
       "lead": "Elke discipline draait in dezelfde pass, dus er blijft niets liggen voor een tweede fase die er nooit komt.",
       "note": "Op volgorde van afhankelijkheid: later werk wacht op de bevindingen die het nodig heeft."
     },
@@ -299,7 +299,7 @@
       "stages": [
         {
           "title": "Kopen",
-          "body": "U prijst op wat de verkoper u koos te laten zien. Bevindingen landen terwijl ze prijs en structuur nog kunnen bewegen."
+          "body": "U prijst op wat de verkoper u wilde laten zien. Bevindingen landen terwijl ze prijs en structuur nog kunnen bewegen."
         },
         {
           "title": "Financieren",
@@ -323,7 +323,7 @@
     "trust": {
       "eyebrow": "Governance",
       "title": "Ingebouwd in hoe de pipeline draait",
-      "lead": "Elk punt hieronder is een mechanisme. Geen ervan is een certificering.",
+      "lead": "Elk punt hieronder is een mechanisme. Geen daarvan is een certificering.",
       "link": "Lees de governancepagina"
     },
     "cta": {
@@ -334,8 +334,8 @@
     },
     "guide": {
       "eyebrow": "Wie het beoordeelt",
-      "title": "Doorgelicht zoals een bank het zou doen, gebouwd zoals productiesoftware moet zijn",
-      "lead": "Een bankier’s blik op risico, van binnenuit de instellingen die deals zoals de uwe financieren. De discipline van een engineer voor systemen die niet stilletjes mogen falen. Beiden tekenen af voordat u iets ziet.",
+      "title": "Doorgelicht zoals een bank dat doet, gebouwd zoals productiesoftware hoort te zijn",
+      "lead": "De blik van een bankier op risico, van binnenuit de instellingen die deals zoals de uwe financieren. De discipline van een engineer voor systemen die niet stilletjes mogen falen. Beiden tekenen af voordat u iets ziet.",
       "link": "Maak kennis met het team"
     },
     "success": {
@@ -344,7 +344,7 @@
       "lead": "Geen beter rapport. Een andere positie aan tafel.",
       "points": [
         {
-          "title": "De prijs weerspiegelt de hele kamer",
+          "title": "De prijs weerspiegelt de hele data room",
           "body": "Geen steekproef. Elke discipline, afgestemd, voordat het bedrag vaststaat."
         },
         {
@@ -614,8 +614,8 @@
     },
     "layers": {
       "eyebrow": "Synthese",
-      "title": "Van elf analyses naar één oordeel",
-      "lead": "Wat {disciplines} losse analyses tot één oplevering maakt, niet elf.",
+      "title": "Van dertien analyses naar één oordeel",
+      "lead": "Wat {disciplines} losse analyses tot één oplevering maakt, niet dertien.",
       "items": [
         {
           "title": "Waardecreatie-analyse",
@@ -680,7 +680,7 @@
       "items": [
         {
           "q": "Vervangt dit een quality-of-earnings-rapport?",
-          "a": "Het is breder, en het is geen assurance-dienst. Een quality-of-earnings-analyse dekt één dimensie in vier tot tien weken. Dit draait elf disciplines en stemt ze onderling af. Een ondertekende accountantsverklaring blijft een aparte opdracht."
+          "a": "Het is breder, en het is geen assurance-dienst. Een quality-of-earnings-analyse dekt één dimensie in vier tot tien weken. Dit draait dertien disciplines en stemt ze onderling af. Een ondertekende accountantsverklaring blijft een aparte opdracht."
         },
         {
           "q": "Hoe lang duurt het?",
@@ -706,7 +706,7 @@
     },
     "cta": {
       "title": "Kijk of een sprint bij uw situatie past",
-      "body": "Een scopinggesprek: wat er in de room zit, wat ontbreekt, en of een sprint het juiste instrument is.",
+      "body": "Een scopinggesprek: wat er in de data room zit, wat ontbreekt, en of een sprint het juiste instrument is.",
       "button": "Plan een intakegesprek",
       "note": "Een beperkt aantal pilotmandaten, een handvol."
     }
@@ -721,7 +721,7 @@
     "data": {
       "eyebrow": "Gegevensverwerking",
       "title": "Vier dingen die voor elke opdracht gelden",
-      "lead": "Elk hiervan beschrijft een mechanisme in de pipeline. Geen ervan is een certificering."
+      "lead": "Elk hiervan beschrijft een mechanisme in de pipeline. Geen daarvan is een certificering."
     },
     "gate": {
       "eyebrow": "De menselijke toets",
@@ -883,7 +883,7 @@
     "header": {
       "eyebrow": "Partnerships",
       "title": "Meer mandaten dan uw team kan lezen",
-      "lead": "U behoudt de relatie en het oordeel. Wij draaien de analyse over elf disciplines erachter, onder uw naam."
+      "lead": "U behoudt de relatie en het oordeel. Wij draaien de analyse over dertien disciplines erachter, onder uw naam."
     },
     "who": {
       "eyebrow": "Fit",
@@ -911,7 +911,7 @@
     "split": {
       "eyebrow": "De verdeling",
       "title": "U houdt de relatie. Wij leveren de slag.",
-      "lead": "Hetzelfde platform met elf disciplines, dezelfde toetsing — geleverd onder uw naam.",
+      "lead": "Hetzelfde platform met dertien disciplines, dezelfde toetsing — geleverd onder uw naam.",
       "columns": [
         {
           "label": "U houdt",
@@ -925,7 +925,7 @@
         {
           "label": "Wij leveren",
           "items": [
-            "De slag over elf disciplines over de data room",
+            "De slag over dertien disciplines over de data room",
             "Disciplineoverstijgende afstemming als vaste stap",
             "Bevindingen gekoppeld aan een document en een passage, elke keer",
             "Een beoordelaar met naam die achter de output staat"
@@ -979,7 +979,7 @@
         },
         {
           "q": "Kunnen jullie ook maar een deel van de scope draaien?",
-          "a": "De slag over elf disciplines ligt vast, omdat de waarde in de afstemming tussen disciplines zit. Wat varieert, is de diepgang van de uitwerking."
+          "a": "De slag over dertien disciplines ligt vast, omdat de waarde in de afstemming tussen disciplines zit. Wat varieert, is de diepgang van de uitwerking."
         },
         {
           "q": "Hoe exclusief is dit?",

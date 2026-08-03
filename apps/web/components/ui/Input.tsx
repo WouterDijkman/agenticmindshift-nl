@@ -4,17 +4,19 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
   error?: string;
   hint?: string;
+  /** Demotes the label visually (muted color, lighter weight) for non-required fields. */
+  optional?: boolean;
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ label, error, hint, id, ...rest }, ref) => {
+  ({ label, error, hint, id, optional, ...rest }, ref) => {
     const inputId = id || rest.name || label.replace(/\s+/g, '-').toLowerCase();
     return (
       <div className="flex flex-col gap-2">
         <label
           htmlFor={inputId}
-          className="text-sm font-medium"
-          style={{ color: 'var(--text-secondary)' }}
+          className={optional ? 'text-xs font-normal' : 'text-sm font-semibold'}
+          style={{ color: optional ? 'var(--text-muted)' : 'var(--text-primary)' }}
         >
           {label}
         </label>
@@ -51,17 +53,19 @@ interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   label: string;
   error?: string;
   hint?: string;
+  /** Demotes the label visually (muted color, lighter weight) for non-required fields. */
+  optional?: boolean;
 }
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ label, error, hint, id, ...rest }, ref) => {
+  ({ label, error, hint, id, optional, ...rest }, ref) => {
     const inputId = id || rest.name || label.replace(/\s+/g, '-').toLowerCase();
     return (
       <div className="flex flex-col gap-2">
         <label
           htmlFor={inputId}
-          className="text-sm font-medium"
-          style={{ color: 'var(--text-secondary)' }}
+          className={optional ? 'text-xs font-normal' : 'text-sm font-semibold'}
+          style={{ color: optional ? 'var(--text-muted)' : 'var(--text-primary)' }}
         >
           {label}
         </label>

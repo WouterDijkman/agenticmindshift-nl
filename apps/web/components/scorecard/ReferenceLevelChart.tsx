@@ -4,20 +4,11 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, LabelL
 import { useLocale, useTranslations } from 'next-intl';
 import { Dimension } from '@/lib/questions';
 import { sectionTranslations } from '@/lib/questions.locales';
+import { REFERENCE_LEVELS } from '@/lib/scoring';
 
-interface PeerBenchmarkChartProps {
+interface ReferenceLevelChartProps {
   scores: Record<Dimension, number>; // 0..100
 }
-
-// Synthetic peer-median values per dimension (illustrative benchmark).
-const peerMedians: Record<Dimension, number> = {
-  DealVelocity: 52,
-  PortfolioIntelligence: 47,
-  BiasDetection: 41,
-  AIReadiness: 38,
-  CapacityEngineering: 55,
-  KnowledgeRetention: 44,
-};
 
 const order: Dimension[] = [
   'DealVelocity',
@@ -28,16 +19,16 @@ const order: Dimension[] = [
   'KnowledgeRetention',
 ];
 
-export default function PeerBenchmarkChart({ scores }: PeerBenchmarkChartProps) {
+export default function ReferenceLevelChart({ scores }: ReferenceLevelChartProps) {
   const locale = useLocale();
   const tR = useTranslations('scorecard.rapport');
   const dims = (sectionTranslations[locale] ?? sectionTranslations['nl']).dimensions;
 
   const data = order.map((dim) => ({
     dimension: dims[dim] ?? dim,
-    delta: (scores[dim] ?? 0) - peerMedians[dim],
+    delta: (scores[dim] ?? 0) - REFERENCE_LEVELS[dim],
     self: scores[dim] ?? 0,
-    peer: peerMedians[dim],
+    reference: REFERENCE_LEVELS[dim],
   }));
 
   return (
@@ -70,11 +61,11 @@ export default function PeerBenchmarkChart({ scores }: PeerBenchmarkChartProps) 
             }}
             formatter={(value, _name, item) => {
               const n = typeof value === 'number' ? value : Number(value);
-              const p = item?.payload as { self: number; peer: number; delta: number } | undefined;
+              const p = item?.payload as { self: number; reference: number; delta: number } | undefined;
               if (!p || Number.isNaN(n)) return [String(value), 'Delta'];
               return [
-                `${n > 0 ? '+' : ''}${n} (u: ${p.self}, peers: ${p.peer})`,
-                tR('peer_tooltip_label'),
+                `${n > 0 ? '+' : ''}${n} (${p.self} / ${p.reference})`,
+                tR('reference_tooltip_label'),
               ];
             }}
           />
@@ -99,7 +90,7 @@ export default function PeerBenchmarkChart({ scores }: PeerBenchmarkChartProps) 
         </BarChart>
       </ResponsiveContainer>
       <p className="text-xs mt-3" style={{ color: 'var(--text-muted)' }}>
-        {tR('peer_benchmark_footer')}
+        {tR('reference_footer')}
       </p>
     </div>
   );

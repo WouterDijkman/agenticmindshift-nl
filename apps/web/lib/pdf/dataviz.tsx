@@ -145,16 +145,16 @@ export function ScoreGauge({
   );
 }
 
-// ── Horizontal dimension bar with peer tick ──────────────────────────────────
+// ── Horizontal dimension bar with reference tick ─────────────────────────────
 
 export function DimensionBar({
   score,
-  peer = 60,
+  reference = 60,
   color,
   width = 100,
 }: {
   score: number;
-  peer?: number;
+  reference?: number;
   color: string;
   width?: number;
 }) {
@@ -164,8 +164,8 @@ export function DimensionBar({
     <Svg viewBox={`0 0 ${width} ${h}`} style={{ width: '100%', height: h }}>
       <Rect x={0} y={2} width={width} height={5} rx={0} fill="#E7DECF" />
       <Rect x={0} y={2} width={(width * s) / 100} height={5} rx={0} fill={color} />
-      {/* peer tick */}
-      <Line x1={(width * peer) / 100} y1={0} x2={(width * peer) / 100} y2={h} stroke="#8E97A4" strokeWidth={0.9} />
+      {/* reference tick */}
+      <Line x1={(width * reference) / 100} y1={0} x2={(width * reference) / 100} y2={h} stroke="#8E97A4" strokeWidth={0.9} />
     </Svg>
   );
 }

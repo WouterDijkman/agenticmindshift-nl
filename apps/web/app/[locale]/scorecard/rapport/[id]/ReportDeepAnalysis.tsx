@@ -172,7 +172,7 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
             className="wb-card-chip"
             style={{
               position: 'static',
-              color: report.scoreProfile?.profileLabel ? 'var(--accent-cta)' : 'var(--text-muted)',
+              color: report.scoreProfile?.profileLabel ? 'var(--accent-cta-ink)' : 'var(--text-muted)',
               fontSize: '0.75rem',
               letterSpacing: '0.06em',
               fontWeight: 800,
@@ -302,7 +302,7 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
                   )}
                   {svc.aiOpportunity && (
                     <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                      <span style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--accent-cta)', flexShrink: 0, paddingTop: '2px' }}>
+                      <span style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--accent-cta-ink)', flexShrink: 0, paddingTop: '2px' }}>
                         ◆
                       </span>
                       <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', lineHeight: 1.6, margin: 0 }}>
@@ -338,7 +338,7 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {report.teamAnalysis.signals.map((s, i) => (
                 <li key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                  <span style={{ color: 'var(--accent-cta)', fontWeight: 800, flexShrink: 0, paddingTop: '1px' }}>—</span>
+                  <span style={{ color: 'var(--accent-cta-ink)', fontWeight: 800, flexShrink: 0, paddingTop: '1px' }}>—</span>
                   <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', lineHeight: 1.65, margin: 0 }}>{s}</p>
                 </li>
               ))}
@@ -352,7 +352,8 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
         </div>
       )}
 
-      {/* Dimensie-analyse */}
+      {/* Dimensie-analyse — narratieve duiding; scores/bars staan al hierboven bij
+          DimensionBars + ReferenceLevelChart, dus die worden hier niet herhaald. */}
       {report.dimensionAnalysis?.length > 0 && (
         <div
           style={{
@@ -378,65 +379,31 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
                     style={{
                       display: 'flex',
                       alignItems: 'center',
-                      justifyContent: 'space-between',
-                      flexWrap: 'wrap',
-                      gap: '8px',
+                      gap: '10px',
                       marginBottom: '10px',
                     }}
                   >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <span
-                        style={{
-                          fontSize: '0.75rem',
-                          fontWeight: 800,
-                          letterSpacing: '0.05em',
-                          color: PRIORITY_COLORS[dim.priority] ?? 'var(--text-muted)',
-                        }}
-                      >
-                        {PRIORITY_SYMBOLS[dim.priority] ? `${PRIORITY_SYMBOLS[dim.priority]} ` : ''}
-                        {td(`prio_${dim.priority}`)}
-                      </span>
-                      <h3
-                        style={{
-                          fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
-                          fontWeight: 700,
-                          color: 'var(--text-primary)',
-                          margin: 0,
-                        }}
-                      >
-                        {dim.label}
-                      </h3>
-                    </div>
                     <span
                       style={{
-                        fontSize: '0.875rem',
-                        fontWeight: 700,
-                        color: 'var(--text-muted)',
+                        fontSize: '0.75rem',
+                        fontWeight: 800,
+                        letterSpacing: '0.05em',
+                        color: PRIORITY_COLORS[dim.priority] ?? 'var(--text-muted)',
                       }}
                     >
-                      {dim.score}/100
+                      {PRIORITY_SYMBOLS[dim.priority] ? `${PRIORITY_SYMBOLS[dim.priority]} ` : ''}
+                      {td(`prio_${dim.priority}`)}
                     </span>
-                  </div>
-
-                  {/* Score bar */}
-                  <div
-                    style={{
-                      height: '4px',
-                      background: 'var(--border-subtle)',
-                      borderRadius: '2px',
-                      marginBottom: '12px',
-                      overflow: 'hidden',
-                    }}
-                  >
-                    <div
+                    <h3
                       style={{
-                        height: '100%',
-                        width: `${dim.score}%`,
-                        background: PRIORITY_COLORS[dim.priority] ?? 'var(--accent-cta)',
-                        borderRadius: '2px',
-                        transition: 'width 0.8s ease',
+                        fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
+                        fontWeight: 700,
+                        color: 'var(--text-primary)',
+                        margin: 0,
                       }}
-                    />
+                    >
+                      {dim.label}
+                    </h3>
                   </div>
 
                   <p
@@ -460,7 +427,7 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
                       border: '1px solid var(--border-subtle)',
                     }}
                   >
-                    <span style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--accent-cta)', flexShrink: 0, paddingTop: '1px' }}>
+                    <span style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--accent-cta-ink)', flexShrink: 0, paddingTop: '1px' }}>
                       →
                     </span>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', lineHeight: 1.6, margin: 0 }}>
@@ -549,7 +516,7 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
                       fontWeight: 800,
                       letterSpacing: '0.06em',
                       textTransform: 'uppercase',
-                      color: 'var(--accent-cta)',
+                      color: 'var(--accent-cta-ink)',
                       border: '1px solid var(--accent-cta)',
                       borderRadius: '2px',
                       padding: '3px 8px',
@@ -567,7 +534,7 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
                     <ol style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
                       {phase.actions.map((a, j) => (
                         <li key={j} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                          <span style={{ color: 'var(--accent-cta)', fontWeight: 800, flexShrink: 0, paddingTop: '1px' }}>→</span>
+                          <span style={{ color: 'var(--accent-cta-ink)', fontWeight: 800, flexShrink: 0, paddingTop: '1px' }}>→</span>
                           <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', lineHeight: 1.6, margin: 0 }}>{a}</p>
                         </li>
                       ))}
@@ -603,7 +570,7 @@ export default function ReportDeepAnalysis({ leadId }: ReportDeepAnalysisProps) 
                   style={{
                     fontSize: '0.75rem',
                     fontWeight: 800,
-                    color: 'var(--accent-cta)',
+                    color: 'var(--accent-cta-ink)',
                     letterSpacing: '0.06em',
                     flexShrink: 0,
                     paddingTop: '3px',

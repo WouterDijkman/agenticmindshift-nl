@@ -93,7 +93,35 @@ export const MODULE_COUNT = MODULES.length;
 export const SUBAGENT_COUNT = MODULES.reduce((n, m) => n + m.agents, 0);
 export const WAVE_COUNT = 5;
 export const ZDR_MODULE_COUNT = MODULES.filter((m) => m.zdr).length;
-export const DISCIPLINE_COUNT = 11;
+/**
+ * The disciplines a Sprint covers, in the order `DisciplineGrid` draws them.
+ *
+ * These slugs are the canonical roster; the visible labels live in
+ * `messages/<locale>.json` under `shared.disciplines` and must line up
+ * one-for-one. Deriving the count from this list rather than hardcoding it
+ * closed a real drift: the grid was expanded to thirteen disciplines while the
+ * constant stayed at eleven, so the platform page printed "11" directly above a
+ * list of thirteen names.
+ *
+ * Append only. Inserting mid-list would re-pair every label with the wrong slug.
+ */
+export const DISCIPLINES = [
+  'financial',
+  'commercial',
+  'legal',
+  'tax',
+  'hr',
+  'it',
+  'esg',
+  'vendor',
+  'operational',
+  'valuation',
+  'insurance',
+  'ai',
+  'vigil'
+] as const;
+
+export const DISCIPLINE_COUNT = DISCIPLINES.length;
 
 /** The largest module, called out because the spread is the point. */
 export const LARGEST_MODULE_AGENTS = Math.max(...MODULES.map((m) => m.agents));

@@ -14,23 +14,23 @@ type Copy = { title: string; tagline: string };
 const COPY: Record<string, Copy> = {
   nl: {
     title: 'AI-advies voor Private Equity & M&A',
-    tagline: 'Meet uw AI-rendement op zes dimensies — in twaalf minuten.',
+    tagline: 'Hoeveel rendement laat uw portefeuille liggen? Twaalf minuten, zes dimensies.',
   },
   en: {
     title: 'AI advisory for Private Equity & M&A',
-    tagline: 'Measure your AI return across six dimensions — in twelve minutes.',
+    tagline: 'How much return is your portfolio leaving behind? Twelve minutes, six dimensions.',
   },
   de: {
     title: 'KI-Beratung für Private Equity & M&A',
-    tagline: 'Messen Sie Ihre KI-Rendite über sechs Dimensionen — in zwölf Minuten.',
+    tagline: 'Wie viel Rendite lässt Ihr Portfolio liegen? Zwölf Minuten, sechs Dimensionen.',
   },
   es: {
     title: 'Asesoría de IA para Private Equity y M&A',
-    tagline: 'Mida su retorno de IA en seis dimensiones — en doce minutos.',
+    tagline: '¿Cuánta rentabilidad deja su cartera sobre la mesa? Doce minutos, seis dimensiones.',
   },
   pt: {
     title: 'Consultoria de IA para Private Equity e M&A',
-    tagline: 'Meça o seu retorno de IA em seis dimensões — em doze minutos.',
+    tagline: 'Quanto retorno deixa a sua carteira por realizar? Doze minutos, seis dimensões.',
   },
 };
 

@@ -155,7 +155,7 @@ export default async function WerkwijzePage(
             </p>
             {/* Guarantee strip */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 16px', background: 'var(--bg-secondary)', border: '1px solid var(--border-subtle)', borderLeft: '3px solid var(--accent-cta)' }}>
-              <span style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: 'var(--accent-cta)', flexShrink: 0 }}>{t('offerings.guarantee_title')}</span>
+              <span style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: 'var(--accent-cta-ink)', flexShrink: 0 }}>{t('offerings.guarantee_title')}</span>
               <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.55, margin: 0 }}>
                 {t('offerings.guarantee_body')}
               </p>
@@ -176,9 +176,10 @@ export default async function WerkwijzePage(
               <article
                 key={o.title}
                 className="reveal tier-card"
+                data-surface={o.featured ? 'dark' : undefined}
                 style={{
-                  background: o.featured ? 'var(--accent-primary)' : 'var(--bg-primary)',
-                  color: o.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
+                  background: o.featured ? 'var(--surface-dark)' : 'var(--bg-primary)',
+                  color: 'var(--text-primary)',
                   padding: 'clamp(32px, 4vw, 44px)',
                   display: 'flex',
                   flexDirection: 'column',
@@ -190,7 +191,7 @@ export default async function WerkwijzePage(
                 {/* Sketch-icon header */}
                 <div
                   style={{
-                    color: o.featured ? 'rgba(247,242,235,0.92)' : 'var(--accent-cta)',
+                    color: o.featured ? 'var(--text-secondary)' : 'var(--accent-cta)',
                     marginBottom: '-4px',
                   }}
                 >
@@ -204,7 +205,7 @@ export default async function WerkwijzePage(
                       fontWeight: 800,
                       letterSpacing: '0.18em',
                       textTransform: 'uppercase',
-                      color: 'var(--accent-cta)',
+                      color: 'var(--accent-cta-ink)',
                       lineHeight: 1,
                     }}
                   >
@@ -231,10 +232,7 @@ export default async function WerkwijzePage(
 
                 <h3
                   className="type-h3"
-                  style={{
-                    margin: 0,
-                    color: o.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
-                  }}
+                  style={{ margin: 0, color: 'var(--text-primary)' }}
                 >
                   {o.title}
                 </h3>
@@ -247,9 +245,9 @@ export default async function WerkwijzePage(
                       flexDirection: 'column',
                       gap: '4px',
                       padding: '12px 14px',
-                      background: o.featured ? 'rgba(247,242,235,0.08)' : 'var(--bg-secondary)',
+                      background: o.featured ? 'var(--accent-primary-soft)' : 'var(--bg-secondary)',
                       borderLeft: '3px solid var(--accent-cta)',
-                      border: `1px solid ${o.featured ? 'rgba(247,242,235,0.14)' : 'var(--border-subtle)'}`,
+                      border: '1px solid var(--border-subtle)',
                       borderLeftWidth: '3px',
                       borderLeftColor: 'var(--accent-cta)',
                       textDecoration: 'none',
@@ -265,7 +263,7 @@ export default async function WerkwijzePage(
                         fontWeight: 800,
                         letterSpacing: '0.18em',
                         textTransform: 'uppercase',
-                        color: 'var(--accent-cta)',
+                        color: 'var(--accent-cta-ink)',
                         lineHeight: 1,
                       }}
                     >
@@ -275,18 +273,18 @@ export default async function WerkwijzePage(
                           fontSize: '0.9375rem',
                           fontWeight: 700,
                           letterSpacing: '-0.01em',
-                          color: o.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
+                          color: 'var(--text-primary)',
                           textTransform: 'none',
                         }}
                       >
                         {o.poweredBy.label}
                       </span>
-                      <span style={{ color: 'var(--accent-cta)' }}>→</span>
+                      <span style={{ color: 'var(--accent-cta-ink)' }}>→</span>
                     </span>
                     <span
                       style={{
                         fontSize: '0.875rem',
-                        color: o.featured ? 'rgba(247,242,235,0.7)' : 'var(--text-muted)',
+                        color: 'var(--text-muted)',
                         lineHeight: 1.4,
                       }}
                     >
@@ -299,7 +297,7 @@ export default async function WerkwijzePage(
                   style={{
                     fontSize: '1.0625rem',
                     lineHeight: 1.65,
-                    color: o.featured ? 'rgba(247,242,235,0.86)' : 'var(--text-secondary)',
+                    color: 'var(--text-secondary)',
                     margin: 0,
                     flexGrow: 1,
                   }}
@@ -310,7 +308,7 @@ export default async function WerkwijzePage(
                 <div
                   style={{
                     paddingTop: '20px',
-                    borderTop: `1px solid ${o.featured ? 'rgba(247,242,235,0.18)' : 'var(--border-subtle)'}`,
+                    borderTop: '1px solid var(--border-subtle)',
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '6px',
@@ -322,7 +320,7 @@ export default async function WerkwijzePage(
                       fontWeight: 700,
                       letterSpacing: '0.15em',
                       textTransform: 'uppercase',
-                      color: o.featured ? 'rgba(247,242,235,0.6)' : 'var(--text-muted)',
+                      color: 'var(--text-muted)',
                       margin: 0,
                     }}
                   >
@@ -335,7 +333,7 @@ export default async function WerkwijzePage(
                         fontWeight: 700,
                         letterSpacing: '-0.02em',
                         lineHeight: 1.1,
-                        color: o.featured ? 'var(--text-inverse)' : 'var(--text-primary)',
+                        color: 'var(--text-primary)',
                         margin: 0,
                       }}
                     >
@@ -345,7 +343,7 @@ export default async function WerkwijzePage(
                   <p
                     style={{
                       fontSize: '0.875rem',
-                      color: o.featured ? 'rgba(247,242,235,0.7)' : 'var(--text-muted)',
+                      color: 'var(--text-muted)',
                       margin: 0,
                       lineHeight: 1.5,
                     }}
@@ -408,7 +406,7 @@ export default async function WerkwijzePage(
                   fontWeight: 700,
                   letterSpacing: '0.12em',
                   textTransform: 'uppercase',
-                  color: 'var(--accent-cta)',
+                  color: 'var(--accent-cta-ink)',
                   marginBottom: '6px',
                 }}
               >
@@ -452,8 +450,9 @@ export default async function WerkwijzePage(
       {/* SLOT CTA */}
       <section
         className="grain-overlay"
+        data-surface="dark"
         style={{
-          background: 'var(--accent-primary)',
+          background: 'var(--surface-dark)',
           paddingBlock: 'clamp(64px, 10vw, 120px)',
           position: 'relative',
           overflow: 'hidden',
@@ -461,19 +460,19 @@ export default async function WerkwijzePage(
       >
         <div className="container-medium" style={{ textAlign: 'center', position: 'relative' }}>
           <div className="reveal">
-            <p className="eyebrow" style={{ marginBottom: '28px', color: 'rgba(247,242,235,0.5)' }}>
+            <p className="eyebrow" style={{ marginBottom: '28px', color: 'var(--text-muted)' }}>
               {t('cta.eyebrow')}
             </p>
             <h2
               className="type-h2"
-              style={{ color: 'var(--text-inverse)', marginBottom: '16px', maxWidth: '600px', marginInline: 'auto' }}
+              style={{ color: 'var(--text-primary)', marginBottom: '16px', maxWidth: '600px', marginInline: 'auto' }}
             >
               {t('cta.heading')}
             </h2>
             <p
               style={{
                 fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
-                color: 'rgba(247,242,235,0.5)',
+                color: 'var(--text-muted)',
                 marginBottom: '44px',
                 maxWidth: '440px',
                 marginInline: 'auto',

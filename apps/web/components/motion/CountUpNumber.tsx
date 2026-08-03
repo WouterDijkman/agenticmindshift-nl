@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, CSSProperties } from 'react';
 import { useInView } from 'framer-motion';
+import { useLocale } from 'next-intl';
 
 interface Props {
   /** Numeric end value */
@@ -21,9 +22,9 @@ interface Props {
 }
 
 /**
- * Counts from 0 to `value` with an ease-out cubic curve.
- * Starts when the element enters the viewport.
- * Uses Dutch decimal comma formatting.
+ * Counts from 0 to `value` with an ease-out cubic curve, starting when the
+ * element enters the viewport. Under prefers-reduced-motion the final value is
+ * rendered straight away.
  */
 export default function CountUpNumber({
   value,
@@ -35,6 +36,7 @@ export default function CountUpNumber({
   style,
   className,
 }: Props) {
+  const locale = useLocale();
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
   const [displayed, setDisplayed] = useState(0);
@@ -43,6 +45,11 @@ export default function CountUpNumber({
   useEffect(() => {
     if (!isInView || started.current) return;
     started.current = true;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setDisplayed(value);
+      return;
+    }
 
     const timer = setTimeout(() => {
       const startTime = Date.now();
@@ -61,10 +68,10 @@ export default function CountUpNumber({
     return () => clearTimeout(timer);
   }, [isInView, value, duration, delay]);
 
-  const formatted =
-    decimals > 0
-      ? displayed.toFixed(decimals).replace('.', ',')
-      : Math.round(displayed).toString();
+  const formatted = new Intl.NumberFormat(locale, {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  }).format(displayed);
 
   return (
     <span ref={ref} style={style} className={className}>
