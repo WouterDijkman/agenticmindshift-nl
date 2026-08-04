@@ -6,8 +6,9 @@ import { ArrowRight } from './Icons';
 import SegmentField from './SegmentField';
 
 /**
- * Deliberately not 100vh: the top edge of the next section has to stay visible,
- * and the H1 never fades — an `opacity: 0` LCP element keeps the LCP clock running.
+ * Exactly one screen tall — see `.fit-screen` in globals.css for why, and for
+ * the scroll-cue trade-off it accepts. The H1 still never fades: an
+ * `opacity: 0` LCP element keeps the LCP clock running.
  */
 export default function Hero({
   eyebrow,
@@ -38,18 +39,13 @@ export default function Hero({
     <section style={{ position: 'relative', overflow: 'hidden' }}>
       <SegmentField value="{abdeg}" />
 
-      <div
-        className="container-wide"
-        style={{
-          position: 'relative',
-          zIndex: 1,
-          paddingTop: 'clamp(72px, 11vw, 148px)',
-          paddingBottom: 'clamp(56px, 8vw, 104px)'
-        }}
-      >
+      <div className="container-wide fit-screen" style={{ position: 'relative', zIndex: 1 }}>
         <div className={aside ? 'hero-split' : undefined}>
           <div>
-            <span className="eyebrow eyebrow-accent hero-enter" style={{ marginBottom: 28 }}>
+            <span
+              className="eyebrow eyebrow-accent hero-enter"
+              style={{ marginBottom: 'var(--fit-gap-md)' }}
+            >
               {eyebrow}
             </span>
 
@@ -59,7 +55,13 @@ export default function Hero({
 
             <p
               className="type-lead hero-enter"
-              style={{ marginTop: 28, maxWidth: '52ch', '--enter-delay': '120ms' } as CSSProperties}
+              style={
+                {
+                  marginTop: 'var(--fit-gap-md)',
+                  maxWidth: '52ch',
+                  '--enter-delay': '120ms'
+                } as CSSProperties
+              }
             >
               {lead}
             </p>
@@ -68,7 +70,7 @@ export default function Hero({
               className="hero-enter"
               style={
                 {
-                  marginTop: 40,
+                  marginTop: 'var(--fit-gap-lg)',
                   display: 'flex',
                   flexWrap: 'wrap',
                   alignItems: 'center',
@@ -90,7 +92,7 @@ export default function Hero({
               className="type-small hero-enter"
               style={
                 {
-                  marginTop: 26,
+                  marginTop: 'var(--fit-gap-sm)',
                   color: 'var(--text-quaternary)',
                   '--enter-delay': '290ms'
                 } as CSSProperties

@@ -95,6 +95,11 @@
   --container-medium: 940px;
   --container-wide: 1180px;
 
+  /* The sticky header is a 68px bar plus its hairline. First screens subtract
+     it, so a "full screen" is measured against what the reader can actually
+     see rather than against the raw viewport. */
+  --header-h: 69px;
+
   /* motion */
   --ease-fn: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-expressive: cubic-bezier(0.4, 0.05, 0.22, 1.2);
@@ -907,6 +912,52 @@ p { margin: 0; }
 .split-grid.movement > * { border-top: none; padding-top: 0; }
 
 /* ============================================================
+   First screens — height-budgeted, not padding-budgeted.
+
+   A hero used to be sized by its padding, so its real height depended on how
+   many lines the H1 happened to take. On a 1512x850 laptop that put the
+   homepage CTA at 828-886px: 22 of 58 pixels visible, footnote fully below
+   the fold. The primary action of the site was cut in half.
+
+   So the opening block of every page now gets exactly one screen and centres
+   its content inside it.
+
+   - `min-height`, not `height`: a long German or Dutch translation grows the
+     box instead of clipping it. Overflow is always better than a lost CTA.
+   - `svh`, not `vh`: on mobile `vh` assumes the URL bar is hidden, which is
+     precisely the state the reader is not in on first paint.
+   - The display type is capped against viewport *height* as well as width
+     (see .fit-screen .type-display), because a 4-line H1 is what actually
+     blew the budget — padding was only ever half the problem.
+
+   This reverses the earlier "deliberately not 100vh" rule, which kept the
+   next section's seam peeking above the fold as a scroll cue. Losing that
+   cue is the accepted cost; the scroll affordance is not worth a clipped
+   call to action.
+   ============================================================ */
+.fit-screen {
+  /* Vertical rhythm scales with the viewport for the same reason the box does.
+     Shared by Hero and PageHeader so both read off one set of numbers. */
+  --fit-gap-sm: clamp(12px, 2vh, 26px);
+  --fit-gap-md: clamp(14px, 2.2vh, 28px);
+  --fit-gap-lg: clamp(20px, 3.2vh, 40px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100svh - var(--header-h));
+  padding-block: clamp(24px, 4.5vh, 64px);
+}
+
+/* Width alone decides the display size everywhere else on the site. In a
+   first screen the short viewport is the binding constraint, so height gets a
+   vote too — `min()` takes whichever is tighter, which means phones (narrow
+   but very tall) keep the size they already had. */
+.fit-screen .type-display {
+  font-size: clamp(2.25rem, min(1.55rem + 4.6vw, 10.5vh), 5.875rem);
+}
+
+/* ============================================================
    Hero entrance — plays on load, not on scroll.
    ============================================================ */
 /* Copy left, artefact right. The ratio is deliberately uneven: the H1 is the
@@ -919,8 +970,12 @@ p { margin: 0; }
   align-items: center;
 }
 /* Below this the two columns would each be too narrow to hold their content:
-   the display face starts breaking words, and the schema rows wrap. */
-@media (max-width: 1020px) {
+   the display face starts breaking words, and the schema rows wrap.
+   Raised from 1020px: at 1024 the rows were already wrapping, which pushed the
+   artefact to 654px and made it — not the copy — the tallest thing in the
+   hero, blowing the one-screen budget by 24px on a 768-tall iPad. Stacked, the
+   copy and its CTA sit in the top half of the screen instead. */
+@media (max-width: 1120px) {
   .hero-split { grid-template-columns: 1fr; gap: 40px; }
   .hero-aside { max-width: 34rem; }
 }

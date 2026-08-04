@@ -53,28 +53,25 @@ export default function PageHeader({
   return (
     <header style={{ position: 'relative', overflow: 'hidden' }}>
       <SegmentField value={preset.value} style={color ? { color } : undefined} />
-      <div
-        className="container-wide"
-        style={{
-          position: 'relative',
-          zIndex: 1,
-          paddingTop: 'clamp(56px, 8vw, 104px)',
-          paddingBottom: 'clamp(40px, 5vw, 64px)'
-        }}
-      >
+      <div className="container-wide fit-screen" style={{ position: 'relative', zIndex: 1 }}>
         <div className={aside ? 'hero-split' : undefined}>
           <div>
-            <span className="eyebrow eyebrow-accent" style={{ marginBottom: 24 }}>
+            <span className="eyebrow eyebrow-accent" style={{ marginBottom: 'var(--fit-gap-md)' }}>
               {eyebrow}
             </span>
             <h1
               className="type-display"
-              style={{ maxWidth: '22ch', fontSize: 'clamp(2.25rem, 1.45rem + 3.9vw, 4.875rem)' }}
+              style={{
+                maxWidth: '22ch',
+                /* A notch under the homepage H1, and capped against viewport
+                   height for the same reason .fit-screen caps the Hero's. */
+                fontSize: 'clamp(2.25rem, min(1.45rem + 3.9vw, 8.8vh), 4.875rem)'
+              }}
             >
               {title}
             </h1>
             {lead && (
-              <p className="type-lead" style={{ marginTop: 26, maxWidth: '62ch' }}>
+              <p className="type-lead" style={{ marginTop: 'var(--fit-gap-md)', maxWidth: '62ch' }}>
                 {lead}
               </p>
             )}
