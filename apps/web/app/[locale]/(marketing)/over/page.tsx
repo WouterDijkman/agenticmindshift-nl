@@ -7,7 +7,7 @@ import HeroAnimated from './HeroAnimated';
 import OverCredentials from './OverCredentials';
 import AnswerFirst from '@/components/AnswerFirst';
 import JsonLd from '@/components/JsonLd';
-import { organizationLd, personLd, getBreadcrumbLd } from '@/lib/jsonld';
+import { getOrganizationLd, getPersonLd, getBreadcrumbLd } from '@/lib/jsonld';
 
 export async function generateMetadata(
   { params }: { params: Promise<{ locale: string }> }
@@ -37,8 +37,8 @@ export default async function OverPage(
 
   return (
     <>
-      <JsonLd data={organizationLd} />
-      <JsonLd data={personLd} />
+      <JsonLd data={getOrganizationLd(locale)} />
+      <JsonLd data={getPersonLd(locale)} />
       <JsonLd data={getBreadcrumbLd('/over', 'Wouter Dijkman', locale)} />
 
       <HeroAnimated />

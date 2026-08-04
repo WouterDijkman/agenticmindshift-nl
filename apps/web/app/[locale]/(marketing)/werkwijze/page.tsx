@@ -14,7 +14,7 @@ import {
 import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
 import JsonLd from '@/components/JsonLd';
-import { professionalServiceLd, getBreadcrumbLd } from '@/lib/jsonld';
+import { getProfessionalServiceLd, getBreadcrumbLd } from '@/lib/jsonld';
 import WerkwijzeOnboardingSteps from './WerkwijzeOnboardingSteps';
 import AnswerFirst from '@/components/AnswerFirst';
 
@@ -115,7 +115,7 @@ export default async function WerkwijzePage(
 
   return (
     <>
-      <JsonLd data={professionalServiceLd} />
+      <JsonLd data={getProfessionalServiceLd(locale)} />
       <JsonLd data={getBreadcrumbLd('/werkwijze', t('hero.heading'), locale)} />
 
       <AnimatedHeroShell

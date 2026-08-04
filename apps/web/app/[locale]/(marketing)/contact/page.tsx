@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { getAlternates } from '@/lib/hreflang';
 import Button from '@/components/ui/Button';
 import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
 import JsonLd from '@/components/JsonLd';
-import { personLd } from '@/lib/jsonld';
+import { getPersonLd } from '@/lib/jsonld';
 
 export async function generateMetadata(
   { params }: { params: Promise<{ locale: string }> }
@@ -19,11 +19,12 @@ export async function generateMetadata(
 }
 
 export default async function ContactPage() {
+  const locale = await getLocale();
   const t = await getTranslations('contact');
 
   return (
     <>
-      <JsonLd data={personLd} />
+      <JsonLd data={getPersonLd(locale)} />
 
       <AnimatedHeroShell
         bgChar="C"

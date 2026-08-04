@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
 import JsonLd from '@/components/JsonLd';
-import { serviceLd } from '@/lib/jsonld';
+import { getServiceLd } from '@/lib/jsonld';
 import ScorecardSectionCards from './ScorecardSectionCards';
 import ScorecardReportMockup from '@/components/ScorecardReportMockup';
 import Button from '@/components/ui/Button';
@@ -21,11 +21,12 @@ export async function generateMetadata(
 }
 
 export default async function ScorecardWelcomePage() {
+  const locale = await getLocale();
   const t = await getTranslations('scorecard');
 
   return (
     <>
-      <JsonLd data={serviceLd} />
+      <JsonLd data={getServiceLd(locale)} />
 
       <AnimatedHeroShell
         bgChar="15"

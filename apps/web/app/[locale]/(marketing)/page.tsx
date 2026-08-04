@@ -13,7 +13,7 @@ import CostAnchorVisual from './CostAnchorVisual';
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
 import JsonLd from '@/components/JsonLd';
 import { getLocalizedFaqItems } from '@/lib/faq';
-import { organizationLd, personLd, serviceLd, websiteLd, getFaqLd } from '@/lib/jsonld';
+import { getOrganizationLd, getPersonLd, getServiceLd, websiteLd, getFaqLd } from '@/lib/jsonld';
 
 export async function generateMetadata(
   { params }: { params: Promise<{ locale: string }> }
@@ -59,9 +59,9 @@ export default async function HomePage() {
 
   return (
     <>
-      <JsonLd data={organizationLd} />
-      <JsonLd data={personLd} />
-      <JsonLd data={serviceLd} />
+      <JsonLd data={getOrganizationLd(locale)} />
+      <JsonLd data={getPersonLd(locale)} />
+      <JsonLd data={getServiceLd(locale)} />
       <JsonLd data={websiteLd} />
       <JsonLd data={faqLd} />
 
