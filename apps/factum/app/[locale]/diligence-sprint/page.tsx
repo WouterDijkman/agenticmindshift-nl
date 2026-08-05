@@ -45,11 +45,13 @@ export default async function SprintPage({
         visual={1}
       />
 
-      {/* The reframe: this is what a well-run sell-side process looks like. */}
+      {/* The reframe: this is what a well-run sell-side process looks like.
+          The line itself lives in `shared` because the homepage opens on it
+          too, and the two must never drift apart. */}
       <Section width="medium">
         <Reveal>
           <blockquote className="source-quote" style={{ fontSize: 'clamp(1.125rem, 1rem + 0.8vw, 1.5rem)' }}>
-            {t('reframe.quote')}
+            {s('reframe.quote')}
           </blockquote>
           <p className="type-body measure" style={{ marginTop: 28 }}>
             {t('reframe.body')}

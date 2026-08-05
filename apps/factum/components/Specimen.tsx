@@ -4,23 +4,26 @@ import Reveal from './Reveal';
  * The trace, drawn: a page from the data room on the left, the finding it
  * produced on the right, and a line tying one to the other.
  *
- * Every line of the page is a redaction bar. That is not a placeholder standing
- * in for a real sample — it is the actual constraint. Client documents are
- * confidential and no client has released one, so the honest thing to show is
- * the *shape* of the trace at full size: which passage, on which page, behind
- * which claim. The one line that is not redacted is the highlight itself,
- * because where the excerpt sits on the page is the whole point of the picture.
+ * The page around the excerpt stays as grey bars, because the surrounding
+ * document is not the point and drawing it would only invite reading. The
+ * excerpt itself is legible: a reader has to be able to check the quote
+ * against the finding, which is the whole claim this picture makes. Both the
+ * clause and the finding are constructed on a fictional target and labelled as
+ * such — no client has released a document, and inventing one that looked real
+ * would be worse than saying so.
  */
 
 /** Deterministic line widths — a random layout would shift between renders. */
-const LINES = [96, 88, 92, 74, 90, 84, 96, 61, 88, 93, 79, 90, 86, 68];
-const HIGHLIGHT = 7;
+const LINES = [96, 88, 92, 74, 90, 84, 96, 61, 88, 93, 79];
+const HIGHLIGHT = 6;
 
 export default function Specimen({
   pageLabel,
   pageRef,
   highlightLabel,
   findingLabel,
+  quote,
+  tag,
   rows,
   footnote
 }: {
@@ -28,6 +31,8 @@ export default function Specimen({
   pageRef: string;
   highlightLabel: string;
   findingLabel: string;
+  quote: string;
+  tag: string;
   rows: { key: string; value: string }[];
   footnote: string;
 }) {
@@ -38,15 +43,24 @@ export default function Specimen({
           <span className="mono">{pageLabel}</span>
           <span className="mono specimen-page-ref">{pageRef}</span>
         </div>
-        <div className="specimen-lines" aria-hidden="true">
-          {LINES.map((w, i) => (
+
+        <div className="specimen-lines">
+          {LINES.slice(0, HIGHLIGHT).map((w, i) => (
+            <span key={i} className="specimen-line" style={{ width: `${w}%` }} aria-hidden="true" />
+          ))}
+
+          <blockquote className="specimen-quote type-small">{quote}</blockquote>
+
+          {LINES.slice(HIGHLIGHT).map((w, i) => (
             <span
-              key={i}
-              className={`specimen-line ${i === HIGHLIGHT ? 'specimen-line-hit' : ''}`}
+              key={HIGHLIGHT + i}
+              className="specimen-line"
               style={{ width: `${w}%` }}
+              aria-hidden="true"
             />
           ))}
         </div>
+
         <span className="specimen-tag mono">{highlightLabel}</span>
       </Reveal>
 
@@ -55,6 +69,7 @@ export default function Specimen({
       <Reveal delay={140} className="specimen-finding">
         <div className="specimen-finding-head">
           <span className="mono">{findingLabel}</span>
+          <span className="mono specimen-badge">{tag}</span>
         </div>
         <dl className="specimen-rows">
           {rows.map((row, i) => (

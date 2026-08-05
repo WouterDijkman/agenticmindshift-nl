@@ -91,9 +91,9 @@
       },
       "values": {
         "module": "Pre-scoped, one of the library",
-        "finding": "Withheld",
-        "evidence": "Withheld",
-        "document": "Withheld",
+        "finding": "One claim, in one sentence",
+        "evidence": "Quoted word for word",
+        "document": "File name and page",
         "review": "Required before release"
       }
     },
@@ -178,10 +178,19 @@
     },
     "specimen": {
       "pageLabel": "Data room",
-      "pageRef": "Source document, page n",
+      "pageRef": "TargetCo — Master Services Agreement, p. 14",
       "highlight": "Cited passage",
       "findingLabel": "The finding it produced",
-      "footnote": "Redacted because client documents are confidential, not because the trace is missing."
+      "footnote": "A constructed example on a fictional target. No client document appears here. Your mandate produces these same five fields, on your own room.",
+      "quote": "Customer may terminate this Agreement on thirty (30) days’ written notice in the event of a change of control of Supplier.",
+      "tag": "Illustrative",
+      "values": {
+        "module": "Contracts — change of control",
+        "finding": "TargetCo’s largest customer can leave over the transaction itself, at thirty days’ notice and with no break fee.",
+        "evidence": "Clause 14.2, quoted in full on the left.",
+        "document": "TargetCo — Master Services Agreement with Customer A, page 14.",
+        "review": "Approved by W. Dijkman before release."
+      }
     },
     "ctaProof": "Three material findings your team didn’t already have, or the engagement is free — on pilot mandates.",
     "guarantee": {
@@ -193,6 +202,9 @@
       "governance": "How documents are handled",
       "platform": "How the platform works",
       "sprint": "What the sprint covers"
+    },
+    "reframe": {
+      "quote": "Checking your own work first isn’t a sign that something is wrong. It is what a well-run process looks like."
     }
   },
   "home": {
@@ -210,7 +222,7 @@
       "points": [
         {
           "title": "You are working from a sample",
-          "body": "Traditional diligence reads a fraction of the room and calls it coverage. The rest is still in there."
+          "body": "Traditional diligence reads a fraction of the room, because the timetable allows a fraction. The rest is still in there."
         },
         {
           "title": "Whoever finds it first owns it",
@@ -295,7 +307,7 @@
         },
         {
           "title": "Financing",
-          "body": "The bank re-does the work you already paid for. One evidence base a lender can underwrite from instead."
+          "body": "The lender runs its own read regardless. Give them an evidence base that is already sourced, so their pass confirms instead of starting over."
         },
         {
           "title": "Holding",
@@ -322,8 +334,8 @@
           "body": "We work out whether this suits your situation."
         },
         {
-          "title": "Point us at the room",
-          "body": "You scope the mandate. Access runs under a DPA, in the EU, with zero retention."
+          "title": "Sign the NDA, then point us at the room",
+          "body": "An NDA before a single document moves. You scope the mandate. Access runs under a DPA, in the EU, with zero retention."
         },
         {
           "title": "Read the findings in days",
@@ -356,6 +368,9 @@
         }
       ],
       "link": "See how a finding is built"
+    },
+    "reframe": {
+      "body": "Your adviser reads the room once, against the clock, on the questions they were asked. This is a second pass over all of it, on your side of the table, before anyone else gets a turn."
     }
   },
   "platform": {
@@ -602,7 +617,6 @@
       "cta": "Book a 30-minute intake call"
     },
     "reframe": {
-      "quote": "Checking your own work first isn’t a sign that something is wrong. It is what a well-run process looks like.",
       "body": "By default, one side gets weeks with the documents and a mandate to find what is wrong. The sprint runs that same read first, on your side of the table."
     },
     "disciplines": {
@@ -754,11 +768,10 @@
       "lead": "Most of what a buyer wants on a page like this, we don’t have yet. Listing it beats implying it.",
       "items": [
         "No ISO 27001, SOC 2 or any other certification. No third-party audit of the pipeline.",
-        "No penetration test, sub-processor list, single sign-on or audit-log commitment.",
+        "No penetration test, single sign-on or audit-log commitment.",
         "No published EU region. Analysis runs on Google Vertex AI in an EU region; we don’t name which one.",
-        "No retention or deletion period on Factum’s own side. Zero retention is the model provider’s commitment.",
         "No asserted GDPR-compliance status. Processing terms belong in an engagement agreement.",
-        "No professional-indemnity cover, breach-notification or disaster-recovery commitment stated here.",
+        "No breach-notification or disaster-recovery commitment stated here.",
         "No audited accuracy rate. The one benchmark on this page is internal and single-dataset."
       ],
       "note": "If your process needs any of these in writing, raise it on the intake call. There is a real answer either way."
@@ -820,20 +833,56 @@
       ]
     },
     "legal": {
-      "eyebrow": "Why the gate exists",
-      "title": "Two reasons a person signs off",
-      "lead": "One from the courts, one from the statute book.",
+      "eyebrow": "Why it works this way",
+      "title": "Three reasons this is not a chat window",
+      "lead": "One from the courts. One from your own NDA. One from the statute book.",
       "items": [
         {
-          "title": "Unverified AI output has been sanctioned in court",
-          "body": "In United States v. Heppner, a federal court sanctioned counsel over filings containing AI-generated citations that did not exist. Diligence output carries the same exposure: a finding nobody checked is a liability, not an asset."
+          "title": "A public AI tool is not a private one",
+          "body": "In United States v. Heppner a federal court held that a defendant’s exchanges with a public AI assistant were neither privileged nor work product, and handed them to prosecutors. Where the work runs decides who can read it later."
         },
         {
-          "title": "The EU AI Act sets obligations on a clock",
-          "body": "General-purpose AI obligations under the EU AI Act have applied since 2 August 2025, with further obligations phasing in through 2026 and 2027. A pipeline with a documented human gate is easier to place inside that regime than an ad-hoc chat session."
+          "title": "Your NDA may not cover the tool",
+          "body": "Most M&A NDAs permit disclosure only to named Representatives: staff, advisers, financing sources. An AI platform is rarely one of them. Putting the data room into a consumer tool can be the breach itself."
+        },
+        {
+          "title": "The EU AI Act runs on a clock",
+          "body": "General-purpose AI obligations have applied since 2 August 2025. The Article 50 transparency duties follow on 2 August 2026. A documented human gate is easier to place inside that regime than a chat session nobody logged."
         }
       ],
-      "note": "Neither of these is legal advice. Both are reasons the gate is not optional."
+      "note": "None of this is legal advice. All three are reasons the pipeline is shaped the way it is."
+    },
+    "terms": {
+      "eyebrow": "What is arranged",
+      "title": "The terms, before you have to ask",
+      "lead": "The list further down says what we don’t have. This says what we do.",
+      "items": [
+        {
+          "title": "An NDA first",
+          "body": "Signed before a single document moves. Not after scoping, not alongside the engagement letter. First."
+        },
+        {
+          "title": "Who you contract with",
+          "body": "Factum Capital is not yet a separate legal entity. Engagements are contracted by Agentic Mindshift Consultancy, Netherlands, KvK {kvk}. Incorporation is with the notary."
+        },
+        {
+          "title": "Liability, capped",
+          "body": "Our liability is capped at the price of the engagement. Consequential loss, lost profit and missed IRR are excluded."
+        },
+        {
+          "title": "Professional indemnity",
+          "body": "Cover runs through Agentic Mindshift Consultancy, the contracting entity. Factum’s own policy follows its incorporation."
+        },
+        {
+          "title": "What we keep, and why",
+          "body": "Your documents and findings stay in your own tenant, so a later mandate can read across an earlier one. Deleted on request, at any point. The term is set in the engagement agreement."
+        },
+        {
+          "title": "Sub-processors",
+          "body": "Analysis runs on Google Vertex AI in an EU region, under a DPA. Scheduling runs on Cal.com. The full list per module is on the table before you upload anything."
+        }
+      ],
+      "note": "Ask for it in writing. Under DORA, a fund above the threshold has to name every ICT third party in a register filed with its supervisor — including us."
     }
   },
   "team": {
@@ -1062,7 +1111,7 @@
       "eyebrow": "Details",
       "title": "Who you’re dealing with",
       "entityLabel": "Entity",
-      "entityValue": "Factum Capital, Netherlands",
+      "entityValue": "Agentic Mindshift Consultancy, Netherlands. Factum Capital is its trading name until incorporation completes.",
       "kvkLabel": "Chamber of Commerce",
       "languagesLabel": "Working languages",
       "languagesValue": "English and Dutch"
@@ -1074,13 +1123,15 @@
       "title": "What this site collects, and what an engagement does",
       "lead": "This page covers the website. Engagement data handling is governed by the agreement we sign."
     },
-    "updated": "Last reviewed 29 July 2026.",
+    "updated": "Last reviewed 5 August 2026.",
     "sections": [
       {
         "title": "This website",
         "body": [
           "No contact form, no account system, no login. There is nothing here to submit.",
-          "Your language comes from the URL you are on. No cookie, no IP-based detection."
+          "Your language comes from the URL you are on. No cookie, no IP-based detection.",
+          "Visits are counted with Plausible Analytics: no cookie, no fingerprint, no cross-site profile, data held in the EU. It records the page, the referring site, the country and the device type.",
+          "That count writes nothing to your device. That is why this site carries no cookie banner."
         ]
       },
       {
@@ -1112,6 +1163,6 @@
         ]
       }
     ],
-    "controller": "The controller is Factum Capital, registered with the Dutch Chamber of Commerce under number {kvk}. This page is a plain-language summary."
+    "controller": "The controller is Agentic Mindshift Consultancy, registered with the Dutch Chamber of Commerce under number {kvk} and trading as Factum Capital. This page is a plain-language summary."
   }
 }

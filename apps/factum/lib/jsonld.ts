@@ -11,6 +11,10 @@ export function organizationSchema(locale: string, description: string) {
     '@type': 'Organization',
     '@id': `${SITE_URL}/#organization`,
     name: 'Factum Capital',
+    // The KvK registration belongs to Agentic Mindshift Consultancy; Factum is
+    // its trading name until incorporation. Publishing the number under the
+    // trading name alone would assert a registration that doesn't exist.
+    legalName: 'Agentic Mindshift Consultancy',
     url: `${SITE_URL}/${locale}`,
     description,
     identifier: {

@@ -2,23 +2,35 @@ export const SITE_URL = 'https://www.factumcapital.eu';
 export const INTAKE_URL = 'https://cal.com/wwdijkman/intake-call';
 export const AM_URL = 'https://www.agenticmindshift.nl';
 
-/** Registered with the Dutch Chamber of Commerce. */
+/**
+ * Agentic Mindshift Consultancy's registration. Factum Capital is not yet a
+ * separate legal entity, so this is the number engagements are contracted
+ * under — which is why /governance says so in as many words rather than
+ * letting a footer imply a company that does not exist yet.
+ */
 export const KVK = '99495945';
 
-/** Primary header nav — the small set of items every visitor needs. */
+/**
+ * Primary header nav.
+ *
+ * Partnerships sits here, not in the footer. It was moved out on the argument
+ * that referral partners are a narrower audience than the buyer — true of the
+ * page, wrong about the funnel. The likeliest first mandate is the
+ * corporate-finance adviser at a Dutch boutique, who keeps the client
+ * relationship as a shield and carries far less career risk than a PE partner
+ * signing off on an unproven vendor. That reader does not scroll to the footer
+ * to find out a referral route exists.
+ */
 export const NAV = [
   { href: '/platform', key: 'platform' },
   { href: '/diligence-sprint', key: 'sprint' },
   { href: '/governance', key: 'governance' },
+  { href: '/partnerships', key: 'partnerships' },
   { href: '/team', key: 'team' }
 ] as const;
 
-/**
- * Footer sitemap nav — primary nav plus narrower-audience pages (e.g.
- * Partnerships, which serves referral partners rather than the primary
- * buyer persona) that still deserve a discoverable, lower-emphasis link.
- */
-export const FOOTER_NAV = [...NAV, { href: '/partnerships', key: 'partnerships' }] as const;
+/** Footer sitemap — the same set again, at lower emphasis. */
+export const FOOTER_NAV = NAV;
 
 export const LOCALE_NAMES: Record<string, string> = {
   en: 'English',

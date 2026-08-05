@@ -91,9 +91,9 @@
       },
       "values": {
         "module": "Pré-definido, um dos da biblioteca",
-        "finding": "Reservado",
-        "evidence": "Reservado",
-        "document": "Reservado",
+        "finding": "Uma afirmação, numa frase",
+        "evidence": "Citado literalmente",
+        "document": "Nome do ficheiro e página",
         "review": "Obrigatória antes da entrega"
       }
     },
@@ -178,10 +178,19 @@
     },
     "specimen": {
       "pageLabel": "Sala de dados",
-      "pageRef": "Documento fonte, página n",
+      "pageRef": "TargetCo — Contrato-quadro de serviços, p. 14",
       "highlight": "Passagem citada",
       "findingLabel": "A constatação que daí resultou",
-      "footnote": "Ocultado porque os documentos do cliente são confidenciais, não porque falte o rasto."
+      "footnote": "Um exemplo construído sobre uma target fictícia. Não há aqui qualquer documento de cliente. O seu mandato produz estes mesmos cinco campos, sobre a sua própria data room.",
+      "quote": "O Cliente pode resolver este Contrato mediante aviso escrito de trinta (30) dias em caso de mudança de controlo do Fornecedor.",
+      "tag": "Ilustrativo",
+      "values": {
+        "module": "Contratos — mudança de controlo",
+        "finding": "O maior cliente da TargetCo pode sair por causa da própria operação, com trinta dias de aviso e sem indemnização.",
+        "evidence": "Cláusula 14.2, citada na íntegra à esquerda.",
+        "document": "TargetCo — Contrato-quadro com Cliente A, página 14.",
+        "review": "Aprovado por W. Dijkman antes da entrega."
+      }
     },
     "ctaProof": "Três constatações materiais que a sua equipa ainda não tinha, ou o mandato é gratuito — em mandatos-piloto.",
     "guarantee": {
@@ -193,6 +202,9 @@
       "governance": "Como os documentos são tratados",
       "platform": "Como funciona a plataforma",
       "sprint": "O que o sprint cobre"
+    },
+    "reframe": {
+      "quote": "Verificar primeiro o seu próprio trabalho não é sinal de que algo está errado. É assim que se parece um processo bem conduzido."
     }
   },
   "home": {
@@ -210,7 +222,7 @@
       "points": [
         {
           "title": "Está a trabalhar sobre uma amostra",
-          "body": "A due diligence tradicional lê uma fração da sala e chama-lhe cobertura. O resto continua lá."
+          "body": "A diligência tradicional lê uma fração da data room, porque o calendário permite uma fração. O resto continua lá dentro."
         },
         {
           "title": "Quem encontra primeiro, fica com ela",
@@ -271,8 +283,8 @@
           "body": "Vemos se isto encaixa na sua situação."
         },
         {
-          "title": "Aponte-nos a sala",
-          "body": "É o cliente que define o âmbito. O acesso corre sob um DPA, na UE, sem retenção de dados."
+          "title": "Assine o NDA e depois indique-nos a data room",
+          "body": "Um NDA antes de um único documento se mover. É você que define o âmbito. O acesso corre ao abrigo de um DPA, na UE, com retenção zero."
         },
         {
           "title": "Leia as constatações em dias",
@@ -303,7 +315,7 @@
         },
         {
           "title": "Financiar",
-          "body": "O banco refaz o trabalho que já pagou. Em vez disso, uma base de evidência sobre a qual um financiador pode avaliar o risco."
+          "body": "O financiador faz a sua própria leitura de qualquer forma. Dê-lhe uma base de evidência já suportada, para que a passagem dele confirme em vez de recomeçar."
         },
         {
           "title": "Deter",
@@ -356,6 +368,9 @@
         }
       ],
       "link": "Veja como se constrói uma constatação"
+    },
+    "reframe": {
+      "body": "O seu assessor lê a data room uma vez, contra o relógio, sobre as perguntas que lhe foram feitas. Isto é uma segunda passagem sobre tudo, do seu lado da mesa, antes de chegar a vez de outra pessoa."
     }
   },
   "platform": {
@@ -602,7 +617,6 @@
       "cta": "Marcar uma chamada de 30 minutos"
     },
     "reframe": {
-      "quote": "Verificar o seu próprio trabalho primeiro não é sinal de que algo está mal. É o aspeto de um processo bem conduzido.",
       "body": "Por defeito, uma das partes recebe semanas com os documentos e um mandato para encontrar o que está mal. O sprint faz essa mesma leitura primeiro, do seu lado da mesa."
     },
     "disciplines": {
@@ -754,11 +768,10 @@
       "lead": "A maior parte do que um comprador quer numa página destas, ainda não temos. Listá-lo é melhor do que insinuá-lo.",
       "items": [
         "Sem ISO 27001, SOC 2 ou qualquer outra certificação. Sem auditoria externa da pipeline.",
-        "Sem teste de intrusão, lista de subcontratantes, início de sessão único ou compromisso de registo de auditoria.",
+        "Sem teste de intrusão, início de sessão único ou compromisso de registo de auditoria.",
         "Sem região da UE publicada. A análise corre no Google Vertex AI numa região da UE; não dizemos qual.",
-        "Sem prazo de conservação ou eliminação do lado da própria Factum. A retenção zero é o compromisso do fornecedor do modelo.",
         "Sem estado de conformidade com o RGPD declarado. As condições de tratamento pertencem ao contrato de mandato.",
-        "Sem cobertura de responsabilidade profissional, notificação de violações ou compromisso de recuperação nesta página.",
+        "Sem notificação de violações ou compromisso de recuperação nesta página.",
         "Sem taxa de exatidão auditada. O único benchmark nesta página é interno e de um único conjunto de dados."
       ],
       "note": "Se o seu processo exigir algum destes pontos por escrito, levante-o na chamada de intake. Há uma resposta real em qualquer dos casos."
@@ -820,20 +833,56 @@
       ]
     },
     "legal": {
-      "eyebrow": "Porque existe a porta",
-      "title": "Duas razões para uma pessoa assinar",
-      "lead": "Uma dos tribunais, outra do diário da república europeu.",
+      "eyebrow": "Porque é construído assim",
+      "title": "Três razões para isto não ser uma janela de chat",
+      "lead": "Uma dos tribunais. Outra do seu próprio NDA. Outra da lei.",
       "items": [
         {
-          "title": "Resultados de IA não verificados já foram sancionados em tribunal",
-          "body": "Em United States v. Heppner, um tribunal federal sancionou advogados por peças processuais com citações geradas por IA que não existiam. O resultado de due diligence tem a mesma exposição: uma constatação que ninguém verificou é um passivo, não um ativo."
+          "title": "Uma ferramenta de IA pública não é privada",
+          "body": "Em United States v. Heppner, um tribunal federal decidiu que as trocas de um arguido com um assistente de IA público não estavam cobertas pelo sigilo profissional nem pela doutrina do work product, e entregou-as à acusação. Onde o trabalho corre decide quem o pode ler depois."
         },
         {
-          "title": "O Regulamento de IA da UE coloca obrigações num relógio",
-          "body": "As obrigações para IA de uso geral ao abrigo do Regulamento de IA da UE aplicam-se desde 2 de agosto de 2025, com mais obrigações a entrarem faseadamente até 2026 e 2027. Uma pipeline com uma porta humana documentada enquadra-se mais facilmente nesse regime do que uma sessão de chat improvisada."
+          "title": "O seu NDA pode não cobrir a ferramenta",
+          "body": "A maioria dos NDA de M&A só permite divulgação a Representatives designados: colaboradores, assessores, financiadores. Uma plataforma de IA raramente é um deles. Colocar a data room numa ferramenta de consumo pode ser a própria violação."
+        },
+        {
+          "title": "O Regulamento de IA da UE corre sobre um relógio",
+          "body": "As obrigações para IA de uso geral aplicam-se desde 2 de agosto de 2025. Os deveres de transparência do artigo 50.º chegam a 2 de agosto de 2026. Uma porta humana documentada enquadra-se mais facilmente nesse regime do que uma sessão de chat que ninguém registou."
         }
       ],
-      "note": "Nenhuma das duas coisas é aconselhamento jurídico. Ambas são razões para a porta não ser opcional."
+      "note": "Nada disto é aconselhamento jurídico. As três são razões para a pipeline ter a forma que tem."
+    },
+    "terms": {
+      "eyebrow": "O que está tratado",
+      "title": "As condições, antes de ter de as pedir",
+      "lead": "A lista mais abaixo diz o que não temos. Esta diz o que temos.",
+      "items": [
+        {
+          "title": "Primeiro um NDA",
+          "body": "Assinado antes de um único documento se mover. Não depois do scoping, não ao lado da carta de mandato. Primeiro."
+        },
+        {
+          "title": "Com quem contrata",
+          "body": "A Factum Capital ainda não é uma pessoa jurídica autónoma. Os mandatos são contratados pela Agentic Mindshift Consultancy, Países Baixos, KvK {kvk}. A constituição está com o notário."
+        },
+        {
+          "title": "Responsabilidade, com limite",
+          "body": "A nossa responsabilidade tem como limite o preço do mandato. Ficam excluídos o dano consequencial, o lucro cessante e a TIR não atingida."
+        },
+        {
+          "title": "Responsabilidade civil profissional",
+          "body": "A cobertura corre através da Agentic Mindshift Consultancy, a entidade contratante. A apólice própria da Factum segue-se à sua constituição."
+        },
+        {
+          "title": "O que guardamos, e porquê",
+          "body": "Os seus documentos e constatações ficam no seu próprio tenant, para que um mandato posterior possa reler um anterior. Eliminados a pedido, a qualquer momento. O prazo fica fixado no contrato de mandato."
+        },
+        {
+          "title": "Subcontratantes",
+          "body": "A análise corre no Google Vertex AI numa região da UE, ao abrigo de um DPA. O agendamento corre no Cal.com. A lista completa por módulo está em cima da mesa antes de carregar seja o que for."
+        }
+      ],
+      "note": "Peça-o por escrito. Ao abrigo do DORA, um fundo acima do limiar tem de nomear cada terceiro de TIC num registo entregue ao seu supervisor — nós incluídos."
     }
   },
   "team": {
@@ -1062,7 +1111,7 @@
       "eyebrow": "Detalhes",
       "title": "Com quem está a lidar",
       "entityLabel": "Entidade",
-      "entityValue": "Factum Capital, Países Baixos",
+      "entityValue": "Agentic Mindshift Consultancy, Países Baixos. Factum Capital é o nome comercial até a constituição estar concluída.",
       "kvkLabel": "Câmara de Comércio",
       "languagesLabel": "Línguas de trabalho",
       "languagesValue": "Inglês e neerlandês"
@@ -1074,13 +1123,15 @@
       "title": "O que este site recolhe, e o que faz um mandato",
       "lead": "Esta página cobre o site. O tratamento de dados nos mandatos é regido pelo contrato que assinamos."
     },
-    "updated": "Última revisão a 29 de julho de 2026.",
+    "updated": "Última revisão a 5 de agosto de 2026.",
     "sections": [
       {
         "title": "Este site",
         "body": [
           "Sem formulário de contacto, sem sistema de conta, sem início de sessão. Não há aqui nada para submeter.",
-          "A sua língua decorre do URL em que se encontra. Sem cookie, sem deteção por endereço IP."
+          "A sua língua decorre do URL em que se encontra. Sem cookie, sem deteção por endereço IP.",
+          "As visitas são contadas com o Plausible Analytics: sem cookie, sem impressão digital, sem perfil entre sites, dados na UE. São registados a página, o site de origem, o país e o tipo de dispositivo.",
+          "Essa contagem não guarda nada no seu dispositivo. Por isso este site não apresenta um banner de cookies."
         ]
       },
       {
@@ -1112,6 +1163,6 @@
         ]
       }
     ],
-    "controller": "O responsável pelo tratamento é a Factum Capital, registada na Câmara de Comércio neerlandesa sob o número {kvk}. Esta página é um resumo em linguagem simples."
+    "controller": "O responsável pelo tratamento é a Agentic Mindshift Consultancy, registada na Câmara de Comércio neerlandesa sob o número {kvk} e que opera sob o nome Factum Capital. Esta página é um resumo em linguagem simples."
   }
 }

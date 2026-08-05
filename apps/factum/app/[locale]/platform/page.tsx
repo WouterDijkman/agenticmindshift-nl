@@ -93,9 +93,9 @@ export default async function PlatformPage({
             footnote={s('schema.footnote')}
             rows={[
               { key: s('schema.rows.module'), value: s('schema.values.module') },
-              { key: s('schema.rows.finding'), value: s('schema.values.finding'), redacted: true },
-              { key: s('schema.rows.evidence'), value: s('schema.values.evidence'), redacted: true },
-              { key: s('schema.rows.document'), value: s('schema.values.document'), redacted: true },
+              { key: s('schema.rows.finding'), value: s('schema.values.finding') },
+              { key: s('schema.rows.evidence'), value: s('schema.values.evidence') },
+              { key: s('schema.rows.document'), value: s('schema.values.document') },
               { key: s('schema.rows.review'), value: s('schema.values.review') }
             ]}
           />
@@ -185,18 +185,23 @@ export default async function PlatformPage({
           align="wide"
         />
         <div style={{ marginTop: 'clamp(32px, 4vw, 52px)' }}>
+          {/* The row keys are the output contract, shared with the hero schema.
+              The values are the worked example and live under `specimen`, so
+              the contract can stay abstract while this one stays concrete. */}
           <Specimen
             pageLabel={s('specimen.pageLabel')}
             pageRef={s('specimen.pageRef')}
             highlightLabel={s('specimen.highlight')}
             findingLabel={s('specimen.findingLabel')}
+            quote={s('specimen.quote')}
+            tag={s('specimen.tag')}
             footnote={s('specimen.footnote')}
             rows={[
-              { key: s('schema.rows.module'), value: s('schema.values.module') },
-              { key: s('schema.rows.finding'), value: s('schema.values.finding') },
-              { key: s('schema.rows.evidence'), value: s('schema.values.evidence') },
-              { key: s('schema.rows.document'), value: s('schema.values.document') },
-              { key: s('schema.rows.review'), value: s('schema.values.review') }
+              { key: s('schema.rows.module'), value: s('specimen.values.module') },
+              { key: s('schema.rows.finding'), value: s('specimen.values.finding') },
+              { key: s('schema.rows.evidence'), value: s('specimen.values.evidence') },
+              { key: s('schema.rows.document'), value: s('specimen.values.document') },
+              { key: s('schema.rows.review'), value: s('specimen.values.review') }
             ]}
           />
         </div>

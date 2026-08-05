@@ -743,6 +743,15 @@ p { margin: 0; }
   align-items: start;
 }
 .split-grid-even { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.split-grid-thirds {
+  display: grid;
+  gap: clamp(20px, 2.4vw, 28px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+@media (max-width: 900px) {
+  .split-grid-thirds { grid-template-columns: 1fr; }
+}
 .split-sticky {
   position: sticky;
   top: 100px;
@@ -1220,20 +1229,6 @@ p { margin: 0; }
   .schema-row { grid-template-columns: 1fr; gap: 6px; }
 }
 
-.redacted {
-  display: inline-block;
-  height: 0.72em;
-  border-radius: 1px;
-  background: repeating-linear-gradient(
-    -45deg,
-    rgba(255, 255, 255, 0.16),
-    rgba(255, 255, 255, 0.16) 3px,
-    rgba(255, 255, 255, 0.07) 3px,
-    rgba(255, 255, 255, 0.07) 6px
-  );
-  vertical-align: baseline;
-}
-
 blockquote.source-quote {
   margin: 0;
   padding-left: 16px;
@@ -1649,7 +1644,14 @@ details.disclosure > div { padding-bottom: 24px; }
 .specimen-page-ref { color: var(--text-tertiary); }
 .specimen-lines { display: flex; flex-direction: column; gap: 9px; }
 .specimen-line { display: block; height: 7px; border-radius: 1px; background: var(--surface-inset); }
-.specimen-line-hit { background: var(--accent-cta-soft); box-shadow: 0 0 0 3px var(--accent-cta-soft); }
+.specimen-quote {
+  margin: 7px 0;
+  padding: 12px 14px;
+  border-left: 2px solid var(--accent-cta);
+  background: var(--accent-cta-soft);
+  color: var(--text-body);
+  border-radius: 0 2px 2px 0;
+}
 .specimen-tag {
   display: inline-block;
   margin-top: 20px;
@@ -1670,6 +1672,10 @@ details.disclosure > div { padding-bottom: 24px; }
   padding: 24px;
 }
 .specimen-finding-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
   font-size: 0.625rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1677,6 +1683,15 @@ details.disclosure > div { padding-bottom: 24px; }
   padding-bottom: 14px;
   border-bottom: 1px solid var(--hairline);
   margin-bottom: 18px;
+}
+.specimen-badge {
+  flex: none;
+  padding: 3px 8px;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 2px;
+  font-size: 0.5625rem;
+  letter-spacing: 0.09em;
+  color: var(--text-tertiary);
 }
 .specimen-rows { display: flex; flex-direction: column; }
 .specimen-row {

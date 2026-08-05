@@ -91,9 +91,9 @@
       },
       "values": {
         "module": "Vordefiniert, eines aus der Bibliothek",
-        "finding": "Zurückgehalten",
-        "evidence": "Zurückgehalten",
-        "document": "Zurückgehalten",
+        "finding": "Eine Aussage, in einem Satz",
+        "evidence": "Wörtlich zitiert",
+        "document": "Dateiname und Seite",
         "review": "Vor Freigabe erforderlich"
       }
     },
@@ -178,10 +178,19 @@
     },
     "specimen": {
       "pageLabel": "Datenraum",
-      "pageRef": "Quelldokument, Seite n",
+      "pageRef": "TargetCo — Rahmenvertrag, S. 14",
       "highlight": "Zitierte Passage",
       "findingLabel": "Der Befund, der daraus entstand",
-      "footnote": "Geschwärzt, weil Mandantendokumente vertraulich sind, nicht weil die Spur fehlt."
+      "footnote": "Ein konstruiertes Beispiel an einer fiktiven Zielgesellschaft. Hier steht kein Mandantendokument. Ihr Mandat liefert dieselben fünf Felder, an Ihrem eigenen Datenraum.",
+      "quote": "Der Kunde kann diesen Vertrag mit einer Frist von dreißig (30) Tagen schriftlich kündigen, wenn sich die Kontrolle über den Lieferanten ändert.",
+      "tag": "Beispiel",
+      "values": {
+        "module": "Verträge — Change of Control",
+        "finding": "Der größte Kunde von TargetCo kann wegen der Transaktion selbst kündigen, mit dreißig Tagen Frist und ohne Ausgleichszahlung.",
+        "evidence": "Ziffer 14.2, links vollständig zitiert.",
+        "document": "TargetCo — Rahmenvertrag mit Kunde A, Seite 14.",
+        "review": "Freigegeben von W. Dijkman."
+      }
     },
     "ctaProof": "Drei wesentliche Befunde, die Ihr Team noch nicht hatte, oder das Mandat ist kostenlos — bei Pilotmandaten.",
     "guarantee": {
@@ -193,6 +202,9 @@
       "governance": "Wie Dokumente behandelt werden",
       "platform": "Wie die Plattform arbeitet",
       "sprint": "Was der Sprint abdeckt"
+    },
+    "reframe": {
+      "quote": "Die eigene Arbeit zuerst zu prüfen ist kein Zeichen dafür, dass etwas nicht stimmt. So sieht ein gut geführter Prozess aus."
     }
   },
   "home": {
@@ -210,7 +222,7 @@
       "points": [
         {
           "title": "Sie arbeiten mit einer Stichprobe",
-          "body": "Klassische Due Diligence liest einen Bruchteil des Raums und nennt das Abdeckung. Der Rest liegt weiterhin darin."
+          "body": "Klassische Due Diligence liest einen Bruchteil des Datenraums, weil der Zeitplan einen Bruchteil zulässt. Der Rest liegt weiter darin."
         },
         {
           "title": "Wer zuerst findet, besitzt es",
@@ -271,8 +283,8 @@
           "body": "Wir klären, ob das zu Ihrer Situation passt."
         },
         {
-          "title": "Zeigen Sie uns den Raum",
-          "body": "Sie stecken das Mandat ab. Der Zugang läuft unter AVV, in der EU, mit Zero Retention."
+          "title": "NDA unterschreiben, dann den Datenraum zeigen",
+          "body": "Ein NDA, bevor sich ein einziges Dokument bewegt. Sie legen den Umfang fest. Der Zugang läuft unter einem AV-Vertrag, in der EU, mit Zero Retention."
         },
         {
           "title": "Lesen Sie die Befunde in Tagen",
@@ -303,7 +315,7 @@
         },
         {
           "title": "Finanzieren",
-          "body": "Die Bank macht die Arbeit noch einmal, die Sie schon bezahlt haben. Stattdessen eine Beweisbasis, auf der ein Kreditgeber aufsetzen kann."
+          "body": "Der Kreditgeber macht ohnehin seine eigene Prüfung. Geben Sie ihm eine bereits belegte Beweisbasis, damit sein Durchgang bestätigt statt neu anzufangen."
         },
         {
           "title": "Halten",
@@ -356,6 +368,9 @@
         }
       ],
       "link": "Sehen, wie eine Feststellung entsteht"
+    },
+    "reframe": {
+      "body": "Ihr Berater liest den Datenraum einmal, gegen die Uhr, auf die Fragen, die man ihm gestellt hat. Dies ist ein zweiter Durchgang über alles, auf Ihrer Seite des Tisches, bevor jemand anders an die Reihe kommt."
     }
   },
   "platform": {
@@ -602,7 +617,6 @@
       "cta": "Erstgespräch über 30 Minuten buchen"
     },
     "reframe": {
-      "quote": "Die eigene Arbeit zuerst zu prüfen, ist kein Zeichen dafür, dass etwas nicht stimmt. So sieht ein gut geführter Prozess aus.",
       "body": "Standardmäßig bekommt eine Seite Wochen mit den Dokumenten und den Auftrag zu finden, was nicht stimmt. Der Sprint fährt denselben Durchgang zuerst, auf Ihrer Seite des Tisches."
     },
     "disciplines": {
@@ -754,11 +768,10 @@
       "lead": "Das meiste, was ein Käufer auf einer solchen Seite sucht, haben wir noch nicht. Wir listen es lieber auf, als es anzudeuten.",
       "items": [
         "Keine ISO 27001, SOC 2 oder sonstige Zertifizierung. Kein Drittaudit der Pipeline.",
-        "Kein Penetrationstest, keine Subprozessorliste, kein Single Sign-on, keine Audit-Log-Zusage.",
+        "Kein Penetrationstest, kein Single Sign-on, keine Audit-Log-Zusage.",
         "Keine veröffentlichte EU-Region. Die Analyse läuft auf Google Vertex AI in einer EU-Region; welche, nennen wir nicht.",
-        "Keine Aufbewahrungs- oder Löschfrist auf Seiten von Factum. Zero Retention ist die Zusage des Modellanbieters.",
         "Kein behaupteter DSGVO-Compliance-Status. Verarbeitungsbedingungen gehören in einen Mandatsvertrag.",
-        "Keine Berufshaftpflicht-, Meldepflicht- oder Notfallwiederherstellungszusage auf dieser Seite.",
+        "Keine Meldepflicht- oder Notfallwiederherstellungszusage auf dieser Seite.",
         "Keine auditierte Genauigkeitsquote. Der eine Benchmark auf dieser Seite ist intern und beruht auf einem Datensatz."
       ],
       "note": "Wenn Ihr Prozess eines davon schriftlich verlangt, sprechen Sie es im Erstgespräch an. Es gibt so oder so eine echte Antwort."
@@ -820,20 +833,56 @@
       ]
     },
     "legal": {
-      "eyebrow": "Warum das Tor existiert",
-      "title": "Zwei Gründe, warum ein Mensch abzeichnet",
-      "lead": "Einer aus dem Gerichtssaal, einer aus dem Gesetzbuch.",
+      "eyebrow": "Warum es so gebaut ist",
+      "title": "Drei Gründe, warum das kein Chatfenster ist",
+      "lead": "Einer aus dem Gerichtssaal. Einer aus Ihrem eigenen NDA. Einer aus dem Gesetzbuch.",
       "items": [
         {
-          "title": "Ungeprüfter KI-Output wurde gerichtlich sanktioniert",
-          "body": "In United States v. Heppner sanktionierte ein Bundesgericht Anwälte für Schriftsätze mit KI-generierten Fundstellen, die es nicht gab. DD-Output trägt dasselbe Risiko: ein Befund, den niemand geprüft hat, ist eine Haftung, kein Vermögenswert."
+          "title": "Ein öffentliches KI-Tool ist kein privates",
+          "body": "In United States v. Heppner entschied ein Bundesgericht, dass der Austausch eines Angeklagten mit einem öffentlichen KI-Assistenten weder dem Anwaltsgeheimnis noch dem Work-Product-Schutz unterlag, und gab ihn an die Staatsanwaltschaft. Wo die Arbeit läuft, entscheidet, wer sie später lesen darf."
         },
         {
-          "title": "Der EU AI Act setzt Pflichten auf eine Uhr",
-          "body": "Pflichten für General-Purpose-KI nach dem EU AI Act gelten seit dem 2. August 2025, weitere Pflichten greifen gestaffelt bis 2026 und 2027. Eine Pipeline mit dokumentiertem menschlichem Tor lässt sich in dieses Regime leichter einordnen als eine Ad-hoc-Chat-Sitzung."
+          "title": "Ihr NDA deckt das Tool womöglich nicht",
+          "body": "Die meisten M&A-NDAs erlauben die Weitergabe nur an benannte Representatives: Mitarbeiter, Berater, Finanzierer. Eine KI-Plattform gehört selten dazu. Den Datenraum in ein Consumer-Tool zu geben, kann selbst der Verstoß sein."
+        },
+        {
+          "title": "Der EU AI Act läuft auf einer Uhr",
+          "body": "Pflichten für General-Purpose-KI gelten seit dem 2. August 2025. Die Transparenzpflichten aus Artikel 50 folgen am 2. August 2026. Ein dokumentiertes menschliches Tor lässt sich in dieses Regime leichter einordnen als eine Chat-Sitzung, die niemand protokolliert hat."
         }
       ],
-      "note": "Beides ist keine Rechtsberatung. Beides sind Gründe, warum das Tor nicht optional ist."
+      "note": "Nichts davon ist Rechtsberatung. Alle drei sind Gründe, warum die Pipeline so aussieht, wie sie aussieht."
+    },
+    "terms": {
+      "eyebrow": "Was geregelt ist",
+      "title": "Die Konditionen, bevor Sie fragen müssen",
+      "lead": "Die Liste weiter unten sagt, was wir nicht haben. Das hier sagt, was wir haben.",
+      "items": [
+        {
+          "title": "Zuerst ein NDA",
+          "body": "Unterschrieben, bevor sich ein einziges Dokument bewegt. Nicht nach dem Scoping, nicht neben dem Mandatsvertrag. Zuerst."
+        },
+        {
+          "title": "Mit wem Sie kontrahieren",
+          "body": "Factum Capital ist noch keine eigene Rechtsperson. Mandate werden von Agentic Mindshift Consultancy, Niederlande, KvK {kvk}, kontrahiert. Die Gründung liegt beim Notar."
+        },
+        {
+          "title": "Haftung, begrenzt",
+          "body": "Unsere Haftung ist auf den Preis des Mandats begrenzt. Folgeschäden, entgangener Gewinn und verfehlte IRR sind ausgeschlossen."
+        },
+        {
+          "title": "Berufshaftpflicht",
+          "body": "Die Deckung läuft über Agentic Mindshift Consultancy, die kontrahierende Einheit. Factums eigene Police folgt auf die Gründung."
+        },
+        {
+          "title": "Was wir aufbewahren, und warum",
+          "body": "Ihre Dokumente und Befunde bleiben in Ihrem eigenen Mandanten-Bereich, damit ein späteres Mandat auf ein früheres zurücklesen kann. Auf Wunsch jederzeit gelöscht. Die Frist steht im Mandatsvertrag."
+        },
+        {
+          "title": "Subprozessoren",
+          "body": "Die Analyse läuft auf Google Vertex AI in einer EU-Region, unter einem AV-Vertrag. Die Terminbuchung läuft über Cal.com. Die vollständige Liste je Modul liegt auf dem Tisch, bevor Sie irgendetwas hochladen."
+        }
+      ],
+      "note": "Verlangen Sie es schriftlich. Nach DORA muss ein Fonds oberhalb der Schwelle jeden IKT-Drittanbieter in einem Register benennen, das bei der Aufsicht eingereicht wird — uns eingeschlossen."
     }
   },
   "team": {
@@ -1062,7 +1111,7 @@
       "eyebrow": "Details",
       "title": "Mit wem Sie es zu tun haben",
       "entityLabel": "Rechtsträger",
-      "entityValue": "Factum Capital, Niederlande",
+      "entityValue": "Agentic Mindshift Consultancy, Niederlande. Factum Capital ist der Handelsname, bis die Gründung abgeschlossen ist.",
       "kvkLabel": "Handelsregister",
       "languagesLabel": "Arbeitssprachen",
       "languagesValue": "Englisch und Niederländisch"
@@ -1074,13 +1123,15 @@
       "title": "Was diese Website erhebt, und was ein Mandat tut",
       "lead": "Diese Seite behandelt die Website. Der Umgang mit Mandatsdaten richtet sich nach der Vereinbarung, die wir unterzeichnen."
     },
-    "updated": "Zuletzt geprüft am 29. Juli 2026.",
+    "updated": "Zuletzt geprüft am 5. August 2026.",
     "sections": [
       {
         "title": "Diese Website",
         "body": [
           "Kein Kontaktformular, kein Nutzerkonto, kein Login. Es gibt hier nichts abzusenden.",
-          "Ihre Sprache ergibt sich aus der URL, auf der Sie sind. Kein Cookie, keine Erkennung über die IP-Adresse."
+          "Ihre Sprache ergibt sich aus der URL, auf der Sie sind. Kein Cookie, keine Erkennung über die IP-Adresse.",
+          "Besuche werden mit Plausible Analytics gezählt: kein Cookie, kein Fingerprint, kein seitenübergreifendes Profil, Daten in der EU. Erfasst werden Seite, verweisende Website, Land und Gerätetyp.",
+          "Für diese Zählung wird nichts auf Ihrem Gerät gespeichert. Deshalb gibt es auf dieser Website kein Cookie-Banner."
         ]
       },
       {
@@ -1112,6 +1163,6 @@
         ]
       }
     ],
-    "controller": "Verantwortlicher ist Factum Capital, eingetragen bei der niederländischen Handelskammer unter der Nummer {kvk}. Diese Seite ist eine Zusammenfassung in klarer Sprache."
+    "controller": "Verantwortlicher ist Agentic Mindshift Consultancy, eingetragen bei der niederländischen Handelskammer unter der Nummer {kvk} und auftretend unter dem Namen Factum Capital. Diese Seite ist eine Zusammenfassung in einfacher Sprache."
   }
 }

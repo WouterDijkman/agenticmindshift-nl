@@ -91,9 +91,9 @@
       },
       "values": {
         "module": "Vooraf afgebakend, één uit de bibliotheek",
-        "finding": "Niet vrijgegeven",
-        "evidence": "Niet vrijgegeven",
-        "document": "Niet vrijgegeven",
+        "finding": "Eén claim, in één zin",
+        "evidence": "Woordelijk geciteerd",
+        "document": "Bestandsnaam en pagina",
         "review": "Vereist vóór vrijgave"
       }
     },
@@ -178,10 +178,19 @@
     },
     "specimen": {
       "pageLabel": "Dataroom",
-      "pageRef": "Brondocument, pagina n",
+      "pageRef": "TargetCo — Raamovereenkomst, p. 14",
       "highlight": "Geciteerde passage",
       "findingLabel": "De bevinding die eruit volgde",
-      "footnote": "Weggelakt omdat cliëntdocumenten vertrouwelijk zijn, niet omdat het spoor ontbreekt."
+      "footnote": "Een geconstrueerd voorbeeld op een fictieve target. Hier staat geen cliëntdocument. Uw mandaat levert dezelfde vijf velden, op uw eigen dataroom.",
+      "quote": "Afnemer kan deze overeenkomst opzeggen met een schriftelijke termijn van dertig (30) dagen bij een wijziging van zeggenschap over Leverancier.",
+      "tag": "Illustratief",
+      "values": {
+        "module": "Contracten — change of control",
+        "finding": "De grootste klant van TargetCo kan weglopen op de transactie zelf, met dertig dagen opzegtermijn en zonder afkoopsom.",
+        "evidence": "Artikel 14.2, links volledig geciteerd.",
+        "document": "TargetCo — Raamovereenkomst met Klant A, pagina 14.",
+        "review": "Vrijgegeven door W. Dijkman."
+      }
     },
     "ctaProof": "Drie materiële bevindingen die uw team nog niet had, of de opdracht is gratis — bij pilotmandaten.",
     "guarantee": {
@@ -193,6 +202,9 @@
       "governance": "Hoe documenten worden behandeld",
       "platform": "Hoe het platform werkt",
       "sprint": "Wat de sprint dekt"
+    },
+    "reframe": {
+      "quote": "Uw eigen werk eerst controleren is geen teken dat er iets mis is. Zo ziet een goed geleid proces eruit."
     }
   },
   "home": {
@@ -210,7 +222,7 @@
       "points": [
         {
           "title": "U werkt met een steekproef",
-          "body": "Traditionele due diligence leest een fractie van de data room en noemt dat dekking. De rest ligt er nog."
+          "body": "Klassiek boekenonderzoek leest een fractie van de dataroom, omdat het tijdpad een fractie toelaat. De rest zit er nog steeds in."
         },
         {
           "title": "Wie het eerst vindt, bezit het",
@@ -271,8 +283,8 @@
           "body": "We bepalen samen of dit bij uw situatie past."
         },
         {
-          "title": "Wijs ons de data room aan",
-          "body": "U bakent het mandaat af. Toegang loopt onder een verwerkersovereenkomst, in de EU, met zero retention."
+          "title": "Teken de NDA, wijs ons dan de dataroom aan",
+          "body": "Een NDA voordat er één document beweegt. U bepaalt de scope. Toegang loopt onder een verwerkersovereenkomst, in de EU, met zero retention."
         },
         {
           "title": "Lees de bevindingen in dagen",
@@ -303,7 +315,7 @@
         },
         {
           "title": "Financieren",
-          "body": "De bank doet het werk over waar u al voor betaalde. Eén bewijsbasis waar een financier op kan onderschrijven."
+          "body": "De financier doet hoe dan ook zijn eigen lezing. Geef hem een bewijsbasis die al onderbouwd is, zodat zijn ronde bevestigt in plaats van opnieuw begint."
         },
         {
           "title": "Houden",
@@ -356,6 +368,9 @@
         }
       ],
       "link": "Zie hoe een bevinding wordt opgebouwd"
+    },
+    "reframe": {
+      "body": "Uw adviseur leest de dataroom één keer, tegen de klok, op de vragen die hij meekreeg. Dit is een tweede lezing over het geheel, aan uw kant van de tafel, voordat iemand anders aan de beurt is."
     }
   },
   "platform": {
@@ -602,7 +617,6 @@
       "cta": "Plan een intakegesprek van 30 minuten"
     },
     "reframe": {
-      "quote": "Eerst uw eigen werk controleren is geen teken dat er iets mis is. Het is hoe een goed geleid proces eruitziet.",
       "body": "Standaard krijgt de ene kant weken met de documenten en de opdracht om te vinden wat er mis is. De sprint draait diezelfde analyse eerst, aan uw kant van de tafel."
     },
     "disciplines": {
@@ -754,11 +768,10 @@
       "lead": "Het meeste van wat een koper op zo’n pagina wil zien, hebben we nog niet. Het opsommen is beter dan het suggereren.",
       "items": [
         "Geen ISO 27001, SOC 2 of andere certificering. Geen audit van de pipeline door derden.",
-        "Geen pentest, sub-processorlijst, single sign-on of toezegging over audit logs.",
+        "Geen pentest, single sign-on of toezegging over audit logs.",
         "Geen gepubliceerde EU-regio. Analyse draait op Google Vertex AI in een EU-regio; we noemen niet welke.",
-        "Geen bewaar- of verwijdertermijn aan de kant van Factum zelf. Zero retention is de toezegging van de modelaanbieder.",
         "Geen beweerde AVG-compliancestatus. Verwerkingsvoorwaarden horen in een opdrachtovereenkomst.",
-        "Geen beroepsaansprakelijkheidsdekking, meldplicht- of uitwijktoezegging op deze pagina.",
+        "Geen meldplicht- of uitwijktoezegging op deze pagina.",
         "Geen geauditeerd accuratessepercentage. De ene benchmark op deze pagina is intern en één dataset."
       ],
       "note": "Vereist uw proces een van deze punten op schrift, breng het dan op in het intakegesprek. Er is hoe dan ook een echt antwoord."
@@ -820,20 +833,56 @@
       ]
     },
     "legal": {
-      "eyebrow": "Waarom die poort bestaat",
-      "title": "Twee redenen dat een mens aftekent",
-      "lead": "Eén uit de rechtszaal, één uit het wetboek.",
+      "eyebrow": "Waarom het zo gebouwd is",
+      "title": "Drie redenen dat dit geen chatvenster is",
+      "lead": "Eén uit de rechtszaal. Eén uit uw eigen NDA. Eén uit het wetboek.",
       "items": [
         {
-          "title": "Ongecontroleerde AI-output is in de rechtszaal bestraft",
-          "body": "In United States v. Heppner sanctioneerde een federale rechter advocaten voor processtukken met AI-gegenereerde bronverwijzingen die niet bestonden. DD-output draagt dezelfde blootstelling: een bevinding die niemand heeft gecontroleerd is een risico, geen bezit."
+          "title": "Een publieke AI-tool is geen private",
+          "body": "In United States v. Heppner oordeelde een federale rechter dat de uitwisselingen van een verdachte met een publieke AI-assistent geen verschoningsrecht en geen work product genoten, en gaf ze aan het openbaar ministerie. Waar het werk draait, bepaalt wie het later mag lezen."
         },
         {
-          "title": "De EU AI Act legt verplichtingen op een klok",
-          "body": "Verplichtingen voor general-purpose AI onder de EU AI Act gelden sinds 2 augustus 2025, met verdere verplichtingen die tot in 2026 en 2027 gefaseerd ingaan. Een pipeline met een gedocumenteerde menselijke poort is makkelijker in dat regime te plaatsen dan een ad-hoc chatsessie."
+          "title": "Uw NDA dekt de tool mogelijk niet",
+          "body": "De meeste M&A-NDA’s staan verstrekking alleen toe aan benoemde Representatives: medewerkers, adviseurs, financiers. Een AI-platform hoort daar zelden bij. De dataroom in een consumententool zetten kan de schending zelf zijn."
+        },
+        {
+          "title": "De EU AI Act loopt op een klok",
+          "body": "Verplichtingen voor general-purpose AI gelden sinds 2 augustus 2025. De transparantieplichten uit artikel 50 volgen op 2 augustus 2026. Een gedocumenteerde menselijke poort is makkelijker in dat regime te plaatsen dan een chatsessie die niemand heeft gelogd."
         }
       ],
-      "note": "Geen van beide is juridisch advies. Beide zijn redenen dat de poort niet optioneel is."
+      "note": "Niets hiervan is juridisch advies. Alle drie zijn redenen dat de pipeline is zoals hij is."
+    },
+    "terms": {
+      "eyebrow": "Wat wel geregeld is",
+      "title": "De voorwaarden, voordat u erom vraagt",
+      "lead": "De lijst verderop zegt wat we niet hebben. Dit zegt wat we wel hebben.",
+      "items": [
+        {
+          "title": "Eerst een NDA",
+          "body": "Getekend voordat er één document beweegt. Niet na de scoping, niet naast de opdrachtbevestiging. Eerst."
+        },
+        {
+          "title": "Met wie u contracteert",
+          "body": "Factum Capital is nog geen zelfstandige rechtspersoon. Opdrachten worden gecontracteerd door Agentic Mindshift Consultancy, Nederland, KvK {kvk}. De oprichting ligt bij de notaris."
+        },
+        {
+          "title": "Aansprakelijkheid, gemaximeerd",
+          "body": "Onze aansprakelijkheid is gemaximeerd op de prijs van de opdracht. Gevolgschade, gederfde winst en gemiste IRR zijn uitgesloten."
+        },
+        {
+          "title": "Beroepsaansprakelijkheid",
+          "body": "De dekking loopt via Agentic Mindshift Consultancy, de contracterende partij. Factums eigen polis volgt op de oprichting."
+        },
+        {
+          "title": "Wat we bewaren, en waarom",
+          "body": "Uw documenten en bevindingen blijven in uw eigen tenant, zodat een volgend mandaat kan teruglezen op een eerder mandaat. Op verzoek verwijderd, op elk moment. De termijn staat in de opdrachtovereenkomst."
+        },
+        {
+          "title": "Sub-processors",
+          "body": "Analyse draait op Google Vertex AI in een EU-regio, onder een verwerkersovereenkomst. Inplannen loopt via Cal.com. De volledige lijst per module ligt op tafel voordat u iets uploadt."
+        }
+      ],
+      "note": "Vraag het op schrift. Onder DORA moet een fonds boven de drempel elke ICT-derde partij benoemen in een register dat bij de toezichthouder wordt ingediend — ons inbegrepen."
     }
   },
   "team": {
@@ -1062,7 +1111,7 @@
       "eyebrow": "Gegevens",
       "title": "Met wie u te maken heeft",
       "entityLabel": "Entiteit",
-      "entityValue": "Factum Capital, Nederland",
+      "entityValue": "Agentic Mindshift Consultancy, Nederland. Factum Capital is de handelsnaam tot de oprichting rond is.",
       "kvkLabel": "Kamer van Koophandel",
       "languagesLabel": "Werktalen",
       "languagesValue": "Engels en Nederlands"
@@ -1074,13 +1123,15 @@
       "title": "Wat deze site verzamelt, en wat een opdracht doet",
       "lead": "Deze pagina gaat over de website. De gegevensverwerking binnen een opdracht is geregeld in de overeenkomst die we tekenen."
     },
-    "updated": "Voor het laatst beoordeeld op 29 juli 2026.",
+    "updated": "Voor het laatst beoordeeld op 5 augustus 2026.",
     "sections": [
       {
         "title": "Deze website",
         "body": [
           "Geen contactformulier, geen accountsysteem, geen login. Er is hier niets te versturen.",
-          "Uw taal komt uit de URL waarop u zich bevindt. Geen cookie, geen detectie via IP."
+          "Uw taal komt uit de URL waarop u zich bevindt. Geen cookie, geen detectie via IP.",
+          "Bezoeken worden geteld met Plausible Analytics: geen cookie, geen fingerprint, geen profiel over websites heen, data binnen de EU. Geregistreerd worden pagina, verwijzende site, land en apparaattype.",
+          "Voor die telling wordt niets op uw apparaat gezet. Daarom staat er geen cookiebanner op deze site."
         ]
       },
       {
@@ -1112,6 +1163,6 @@
         ]
       }
     ],
-    "controller": "De verwerkingsverantwoordelijke is Factum Capital, ingeschreven bij de Nederlandse Kamer van Koophandel onder nummer {kvk}. Deze pagina is een samenvatting in gewone taal."
+    "controller": "De verwerkingsverantwoordelijke is Agentic Mindshift Consultancy, ingeschreven bij de Kamer van Koophandel onder nummer {kvk} en handelend onder de naam Factum Capital. Deze pagina is een samenvatting in gewone taal."
   }
 }

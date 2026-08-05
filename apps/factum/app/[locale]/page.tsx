@@ -58,9 +58,9 @@ export default async function HomePage({
             footnote={s('schema.footnote')}
             rows={[
               { key: s('schema.rows.module'), value: s('schema.values.module') },
-              { key: s('schema.rows.finding'), value: s('schema.values.finding'), redacted: true },
-              { key: s('schema.rows.evidence'), value: s('schema.values.evidence'), redacted: true },
-              { key: s('schema.rows.document'), value: s('schema.values.document'), redacted: true },
+              { key: s('schema.rows.finding'), value: s('schema.values.finding') },
+              { key: s('schema.rows.evidence'), value: s('schema.values.evidence') },
+              { key: s('schema.rows.document'), value: s('schema.values.document') },
               { key: s('schema.rows.review'), value: s('schema.values.review') }
             ]}
           />
@@ -95,6 +95,28 @@ export default async function HomePage({
           />
         </div>
 
+        {/*
+          The second-pass reframe, before the reader can conclude we are
+          arguing their adviser did a bad job.
+
+          The problem section above says the room gets read in part and the
+          number gets set anyway. Left there, the obvious reading is that
+          somebody was careless and we are the replacement — which is the one
+          reading that loses the mandate, because the person weighing us up is
+          often the adviser himself. This line already existed halfway down
+          /diligence-sprint, where almost nobody reached it.
+        */}
+        <Reveal delay={80} className="movement">
+          <blockquote
+            className="source-quote"
+            style={{ fontSize: 'clamp(1.125rem, 1rem + 0.8vw, 1.5rem)' }}
+          >
+            {s('reframe.quote')}
+          </blockquote>
+          <p className="type-body measure" style={{ marginTop: 28 }}>
+            {t('reframe.body')}
+          </p>
+        </Reveal>
       </Section>
 
       {/* The guide: who is behind the read, and why that's the reason to trust it.

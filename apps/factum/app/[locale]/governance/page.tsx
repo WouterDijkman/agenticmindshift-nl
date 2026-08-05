@@ -15,6 +15,7 @@ import {
   GROUNDING_RATE,
   GROUNDING_REMAINDER,
   HARD_BLOCK_COUNT,
+  KVK,
   MODULE_COUNT,
   ZDR_MODULE_COUNT
 } from '@/lib/site';
@@ -191,7 +192,7 @@ export default async function GovernancePage({
         </div>
       </Section>
 
-      {/* Why the gate is not optional: one court, one statute. */}
+      {/* Why the pipeline has this shape: one court, one NDA, one statute. */}
       <Section id="why-the-gate" width="medium">
         <SectionHeader
           eyebrow={t('legal.eyebrow')}
@@ -199,7 +200,7 @@ export default async function GovernancePage({
           lead={t('legal.lead')}
         />
         <Reveal delay={60} style={{ marginTop: 28 }}>
-          <div className="split-grid split-grid-even">
+          <div className="split-grid-thirds">
             {(t.raw('legal.items') as { title: string; body: string }[]).map((item) => (
               <div key={item.title} className="panel" style={{ padding: 'clamp(22px, 3vw, 30px)' }}>
                 <h3 className="type-h4" style={{ marginBottom: 10 }}>
@@ -211,6 +212,45 @@ export default async function GovernancePage({
           </div>
           <p className="type-small" style={{ marginTop: 20, color: 'var(--text-quaternary)' }}>
             {t('legal.note')}
+          </p>
+        </Reveal>
+      </Section>
+
+      {/*
+        What is arranged, immediately before what isn't.
+
+        The limits list below was the only answer this page gave to "who am I
+        contracting with, who carries the risk, and what happens to my
+        documents afterwards" — and its answer to all three was "nothing here".
+        Those questions now have real answers, so they get stated first and the
+        limits list shrinks to what genuinely is still missing.
+      */}
+      <Section id="terms" width="medium">
+        <SectionHeader
+          eyebrow={t('terms.eyebrow')}
+          title={t('terms.title')}
+          lead={t('terms.lead')}
+        />
+        <Reveal delay={60} style={{ marginTop: 28 }}>
+          <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+            {(t.raw('terms.items') as { title: string; body: string }[]).map((item, i) => (
+              <li key={item.title} className="type-body hairline-top" style={{ paddingBlock: 18 }}>
+                <div style={{ display: 'flex', gap: 14 }}>
+                  <span className="mono" style={{ color: 'var(--wine-text)', paddingTop: 4 }}>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div>
+                    <h3 className="type-h4" style={{ marginBottom: 8 }}>
+                      {item.title}
+                    </h3>
+                    <p className="type-small">{t(`terms.items.${i}.body`, { kvk: KVK })}</p>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <p className="type-small" style={{ marginTop: 22, color: 'var(--text-quaternary)' }}>
+            {t('terms.note')}
           </p>
         </Reveal>
       </Section>
