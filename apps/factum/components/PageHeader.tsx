@@ -1,4 +1,8 @@
 import type { CSSProperties, ReactNode } from 'react';
+import { Button } from '@repo/ui/Button';
+import { Link } from '@/i18n/navigation';
+import { INTAKE_URL } from '@/lib/site';
+import { ArrowRight } from './Icons';
 import SegmentField from './SegmentField';
 
 /**
@@ -29,12 +33,36 @@ export default function PageHeader({
   eyebrow,
   title,
   lead,
+  cta,
+  secondary,
+  secondaryHref,
+  footnote,
   aside,
   visual = 0
 }: {
   eyebrow: string;
   title: string;
   lead?: string;
+  /**
+   * Primary action, pointing at the intake calendar. Optional only so the
+   * component stays usable for a page that genuinely has nothing to ask for.
+   *
+   * It exists because `.fit-screen` made every inner page exactly one screen:
+   * the first and only guaranteed screen of six pages was copy with no
+   * question attached, and `/diligence-sprint` — the page someone lands on
+   * once they are already interested — spent its lower two thirds on empty
+   * gradient.
+   */
+  cta?: string;
+  /** Quiet in-site link beside the primary action. Needs `secondaryHref`. */
+  secondary?: string;
+  secondaryHref?: string;
+  /**
+   * Sits directly under the button, which is where doubt peaks and therefore
+   * where the proof belongs. In practice this is `shared.ctaProof` — the
+   * findings guarantee with its condition spoken in the same breath.
+   */
+  footnote?: string;
   /**
    * Optional artefact for the right column. Without it, every inner page ran
    * a single centred measure on a wide container — true on a 1440 screen the
@@ -73,6 +101,41 @@ export default function PageHeader({
             {lead && (
               <p className="type-lead" style={{ marginTop: 'var(--fit-gap-md)', maxWidth: '62ch' }}>
                 {lead}
+              </p>
+            )}
+
+            {cta && (
+              <div
+                style={{
+                  marginTop: 'var(--fit-gap-lg)',
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  alignItems: 'center',
+                  gap: 'clamp(20px, 3vw, 36px)'
+                }}
+              >
+                <Button href={INTAKE_URL} size="lg" magnetic={false}>
+                  {cta}
+                </Button>
+                {secondary && secondaryHref && (
+                  <Link href={secondaryHref} className="link-quiet">
+                    {secondary}
+                    <ArrowRight />
+                  </Link>
+                )}
+              </div>
+            )}
+
+            {cta && footnote && (
+              <p
+                className="type-small"
+                style={{
+                  marginTop: 'var(--fit-gap-sm)',
+                  maxWidth: '58ch',
+                  color: 'var(--text-quaternary)'
+                }}
+              >
+                {footnote}
               </p>
             )}
           </div>

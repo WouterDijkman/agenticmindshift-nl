@@ -15,12 +15,13 @@ import Reveal from '@/components/Reveal';
 import { Section, SectionHeader } from '@/components/Section';
 import Pipeline from '@/components/Pipeline';
 import BentoGrid from '@/components/BentoGrid';
-import ModuleChart from '@/components/ModuleChart';
+import DispatchGraph from '@/components/DispatchGraph';
 import GroundingStack from '@/components/GroundingStack';
 import Specimen from '@/components/Specimen';
 import ComparisonMatrix, { type Verdict } from '@/components/ComparisonMatrix';
 import Disclosures from '@/components/Disclosures';
 import CtaBand from '@/components/CtaBand';
+import GuaranteePanel from '@/components/GuaranteePanel';
 import FindingSchema from '@/components/FindingSchema';
 
 export async function generateMetadata({
@@ -81,6 +82,10 @@ export default async function PlatformPage({
         eyebrow={t('header.eyebrow')}
         title={t('header.title', n)}
         lead={t('header.lead')}
+        cta={t('header.cta')}
+        secondary={s('links.sprint')}
+        secondaryHref="/diligence-sprint"
+        footnote={s('ctaProof')}
         visual={0}
         aside={
           <FindingSchema
@@ -197,7 +202,15 @@ export default async function PlatformPage({
         </div>
       </Section>
 
-      {/* The library and the running order, in one chart. */}
+      {/* The library and the running order, as one graph.
+
+          This was a 31-row bar chart ranked by sub-agent count. It answered
+          "how big is each module" — our fact — and the reader had to infer the
+          dependency structure from the wave bands. The graph states it: eleven
+          modules opening at once, three waiting on them, a synthesis layer
+          reading across everything, deliverables, and post-close on its own
+          clock. The wave bodies in `shared.waves` were already written to
+          describe exactly that and had nowhere to render. */}
       <Section id="modules" width="wide">
         <SectionHeader
           eyebrow={t('coverage.eyebrow')}
@@ -206,11 +219,13 @@ export default async function PlatformPage({
           align="wide"
         />
         <div style={{ marginTop: 'clamp(32px, 4vw, 52px)' }}>
-          <ModuleChart
+          <DispatchGraph
             labels={s.raw('modules') as string[]}
-            waveLabels={(s.raw('waves') as { title: string }[]).map((w) => w.title)}
-            agentLabel={s('chart.agentLabel')}
+            waves={s.raw('waves') as { title: string; body: string }[]}
+            modulesLabel={s('chart.modulesLabel')}
+            agentsLabel={s('chart.agentsLabel')}
             zdrLabel={s('chart.zdr')}
+            zdrTitle={s('chart.zdrTitle')}
           />
         </div>
         <Reveal>
@@ -321,6 +336,9 @@ export default async function PlatformPage({
         body={t('cta.body')}
         cta={t('cta.button')}
         note={t('cta.note')}
+        /* Doubt peaks at the button, so the guarantee is restated beside it
+           rather than left behind on the homepage. */
+        aside={<GuaranteePanel label={s('guarantee.label')} claim={s('guarantee.claim')} note={s('guarantee.note')} />}
       />
     </>
   );

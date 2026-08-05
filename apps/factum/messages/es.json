@@ -33,12 +33,10 @@
       "description": "Cómo tratan los datos personales este sitio web y nuestros encargos."
     }
   },
-
   "a11y": {
     "skipToContent": "Saltar al contenido",
     "changeLanguage": "Cambiar idioma"
   },
-
   "nav": {
     "primary": "Principal",
     "platform": "Plataforma",
@@ -51,7 +49,6 @@
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú"
   },
-
   "footer": {
     "blurb": "Análisis con rigor de due diligence en todo el ciclo. Fundamentado en sus documentos. Revisado por una persona identificada. Entregado en días.",
     "sitemap": "Mapa del sitio",
@@ -60,14 +57,12 @@
     "kvk": "KvK {number}",
     "copyright": "© {year} Factum Capital. Prelanzamiento."
   },
-
   "notFound": {
     "title": "Esta página no consta",
     "body": "El enlace está roto o la página se ha movido.",
     "home": "Volver a la página de inicio",
     "platform": "Ver cómo funciona la plataforma"
   },
-
   "shared": {
     "disciplines": [
       "Financiera",
@@ -86,7 +81,7 @@
     ],
     "schema": {
       "label": "Contrato de salida — cada hallazgo",
-      "footnote": "El esquema que cada hallazgo debe cumplir. El trabajo con clientes es confidencial, así que no hay muestra que publicar.",
+      "footnote": "El esquema que toda constatación debe cumplir. Detrás de cada una, un documento, un pasaje y un revisor con nombre — abribles meses después.",
       "rows": {
         "module": "Módulo",
         "finding": "Hallazgo",
@@ -176,7 +171,6 @@
       }
     ],
     "chart": {
-      "agentLabel": "Subagentes por módulo",
       "zdr": "ZDR",
       "zdrTitle": "Enrutado de retención cero obligatorio. Sin esa ruta, la ejecución no arranca.",
       "modulesLabel": "módulos",
@@ -187,18 +181,27 @@
       "pageRef": "Documento fuente, página n",
       "highlight": "Pasaje citado",
       "findingLabel": "El hallazgo que produjo",
-      "footnote": "Redactado porque los documentos del cliente son confidenciales, no porque falte el rastro. Cada barra es una línea de una página real; la marcada es a la que apunta la cita."
+      "footnote": "Redactado porque los documentos del cliente son confidenciales, no porque falte el rastro."
+    },
+    "ctaProof": "Tres hallazgos materiales que su equipo aún no tenía, o el encargo es gratuito — en mandatos piloto.",
+    "guarantee": {
+      "label": "La garantía de hallazgos",
+      "claim": "Tres hallazgos materiales que su equipo no hubiera identificado ya, o el encargo es gratuito.",
+      "note": "Para mandatos piloto. Nosotros asumimos el riesgo de que esto sea temprano, no usted."
+    },
+    "links": {
+      "governance": "Cómo se tratan los documentos",
+      "platform": "Cómo funciona la plataforma",
+      "sprint": "Qué cubre el sprint"
     }
   },
-
   "home": {
     "hero": {
       "eyebrow": "Due diligence en todo el ciclo de la operación",
       "title": "No firme una cifra que no ha leído",
       "lead": "La due diligence toma una muestra y entrega el informe semanas después. Lo que se saltó sigue ahí. Factum lo lee todo, en días, con el pasaje de origen detrás de cada hallazgo.",
       "cta": "Reserve una llamada de 30 minutos",
-      "secondary": "Vea cómo es un hallazgo",
-      "footnote": "En prelanzamiento. Aceptamos un número limitado de mandatos piloto."
+      "secondary": "Vea cómo es un hallazgo"
     },
     "problem": {
       "eyebrow": "El problema",
@@ -265,7 +268,7 @@
       "steps": [
         {
           "title": "Reserve 30 minutos",
-          "body": "Vemos si esto encaja con su situación. Si no encaja, se lo decimos en la llamada."
+          "body": "Vemos si esto encaja con su situación."
         },
         {
           "title": "Señálenos la sala",
@@ -286,10 +289,7 @@
     "sprint": {
       "eyebrow": "El encargo",
       "title": "El Diligence Sprint",
-      "lead": "Un encargo, todas las disciplinas, más la síntesis encima. Sobre un target, sobre una empresa que ya tiene, o sobre la suya antes de que lo haga un comprador.",
-      "guaranteeLabel": "La garantía de hallazgos",
-      "guarantee": "Tres hallazgos materiales que su equipo no hubiera identificado ya, o el encargo es gratuito.",
-      "guaranteeNote": "Para mandatos piloto. Nosotros asumimos el riesgo de que esto sea temprano, no usted.",
+      "lead": "Un encargo, todas las disciplinas, más la síntesis encima. Sobre un target, sobre una empresa que ya tiene, o sobre la suya propia.",
       "link": "Qué cubre el sprint"
     },
     "cycle": {
@@ -329,13 +329,12 @@
     "cta": {
       "title": "Empiece con una llamada, no con una propuesta",
       "body": "Treinta minutos para ver si esto encaja con su situación. Si no encaja, se lo diremos.",
-      "button": "Reserve una llamada de 30 minutos",
-      "note": "Factum está en prelanzamiento y acepta un número limitado de mandatos piloto — contados con los dedos de una mano."
+      "button": "Reserve una llamada de 30 minutos"
     },
     "guide": {
       "eyebrow": "Quién lo revisa",
       "title": "Suscrito como lo haría un banco, construido como debe estarlo el software de producción",
-      "lead": "La lectura de riesgo de un banquero, desde dentro de las instituciones que financian acuerdos como el suyo. La disciplina de un ingeniero para sistemas que no pueden fallar en silencio. Ambos firman antes de que usted vea nada.",
+      "lead": "La lectura de riesgo de un banquero, desde dentro de las instituciones que financian acuerdos como el suyo. La disciplina de un ingeniero para sistemas que no pueden fallar en silencio.",
       "link": "Conozca al equipo"
     },
     "success": {
@@ -345,7 +344,7 @@
       "points": [
         {
           "title": "El precio refleja toda la sala",
-          "body": "No una muestra. Cada disciplina, reconciliada, antes de fijar el precio."
+          "body": "Cada disciplina, reconciliada, antes de fijar el precio."
         },
         {
           "title": "Ya sabe lo que van a encontrar",
@@ -359,12 +358,12 @@
       "link": "Vea cómo se construye un hallazgo"
     }
   },
-
   "platform": {
     "header": {
       "eyebrow": "La plataforma",
       "title": "Cómo lo leemos todo sin inventarnos nada",
-      "lead": "Un agente con una ventana de contexto grande no es due diligence. Esto es un grafo de despacho, ejecutado igual en cada mandato."
+      "lead": "Un agente con una ventana de contexto grande no es due diligence. Esto es un grafo de despacho, ejecutado igual en cada mandato.",
+      "cta": "Vea la mecánica en una llamada"
     },
     "scale": {
       "eyebrow": "El inventario",
@@ -595,12 +594,12 @@
       "note": "Treinta minutos, sin propuesta adjunta."
     }
   },
-
   "sprint": {
     "header": {
       "eyebrow": "El Diligence Sprint",
       "title": "Vea lo que un comprador encontraría, antes que él",
-      "lead": "Las {disciplines} disciplinas, reconciliadas en una sola narrativa. Ejecútelo sobre un target, una empresa de su cartera o su propio negocio."
+      "lead": "Las {disciplines} disciplinas, reconciliadas en una sola narrativa. Ejecútelo sobre un target, una empresa de su cartera o su propio negocio.",
+      "cta": "Reserve una llamada de 30 minutos"
     },
     "reframe": {
       "quote": "Revisar su propio trabajo primero no es señal de que algo vaya mal. Es el aspecto que tiene un proceso bien llevado.",
@@ -711,12 +710,12 @@
       "note": "Un número limitado de mandatos piloto, de un solo dígito."
     }
   },
-
   "governance": {
     "header": {
       "eyebrow": "Gobernanza",
       "title": "Cómo se tratan sus documentos, y qué no afirmamos",
-      "lead": "El tratamiento de datos está integrado en cómo funciona el pipeline. También es más limitado de lo que dan a entender la mayoría de las páginas de seguridad, así que esta declara el límite."
+      "lead": "El tratamiento de datos está integrado en cómo funciona el pipeline. También es más limitado de lo que dan a entender la mayoría de las páginas de seguridad, así que esta declara el límite.",
+      "cta": "Haga las preguntas incómodas en una llamada"
     },
     "data": {
       "eyebrow": "Tratamiento de datos",
@@ -773,7 +772,7 @@
     "zdr": {
       "eyebrow": "Retención cero",
       "title": "Cuatro módulos se niegan a correr sobre un modelo que retiene",
-      "lead": "La retención cero de datos es una regla de enrutado en el código, no una promesa en una página. Fiscal, legal, financiero y boedelonderzoek están sujetos a esa puerta: si no hay ruta de retención cero disponible, la ejecución falla en vez de degradarse.",
+      "lead": "La retención cero de datos es una regla de enrutado en el código, no una promesa en una página. Fiscal, legal, financiero y boedelonderzoek dependen de esa puerta.",
       "items": [
         "La puerta es un requisito duro, comprobado antes del despacho.",
         "No hay degradación silenciosa a un proveedor que retenga.",
@@ -837,40 +836,76 @@
       "note": "Ninguna de las dos cosas es asesoramiento jurídico. Ambas son razones por las que la puerta no es opcional."
     }
   },
-
   "team": {
     "header": {
       "eyebrow": "Equipo",
       "title": "Criterio, no solo software",
-      "lead": "La lectura del riesgo de un banquero. La disciplina de un ingeniero para sistemas que no se rompen."
+      "lead": "La lectura del riesgo de un banquero. La disciplina de un ingeniero para sistemas que no se rompen.",
+      "cta": "Hable con quien revisa el entregable"
     },
     "historyLabel": "Trayectoria",
     "people": [
       {
         "name": "Wouter Dijkman",
         "title": "Fundador, Factum",
-        "bio": "Más de cinco años dentro de las instituciones que financian estos deals. En ING trabajó en Acquisition & Leveraged Finance, estructurando y examinando el crédito detrás de este tipo de transacciones. Antes, reestructuración financiera en Rabobank. También dirige Agentic Mindshift, su propia consultora de IA. Factum lleva el escrutinio de un banco a todo el ciclo de la operación.",
+        "bio": "Más de cinco años dentro de las instituciones que financian estos deals. En ING: Acquisition & Leveraged Finance, estructurando y examinando el crédito detrás de este tipo de transacciones. Antes, reestructuración financiera en Rabobank. También dirige Agentic Mindshift, su propia consultora de IA.",
         "history": [
-          { "org": "Factum Capital", "role": "Fundador", "period": "2026 —" },
-          { "org": "Agentic Mindshift", "role": "Fundador, consultora de IA", "period": "2025 —" },
-          { "org": "ING", "role": "Acquisition & Leveraged Finance", "period": "2023 – 2025" },
-          { "org": "Rabobank", "role": "Especialista en reestructuración financiera", "period": "2020 – 2023" },
-          { "org": "Alter Domus", "role": "Responsable jurídico", "period": "2019 – 2020" }
+          {
+            "org": "Factum Capital",
+            "role": "Fundador",
+            "period": "2026 —"
+          },
+          {
+            "org": "Agentic Mindshift",
+            "role": "Fundador, consultora de IA",
+            "period": "2025 —"
+          },
+          {
+            "org": "ING",
+            "role": "Acquisition & Leveraged Finance",
+            "period": "2023 – 2025"
+          },
+          {
+            "org": "Rabobank",
+            "role": "Especialista en reestructuración financiera",
+            "period": "2020 – 2023"
+          },
+          {
+            "org": "Alter Domus",
+            "role": "Responsable jurídico",
+            "period": "2019 – 2020"
+          }
         ]
       },
       {
         "name": "Daniel Dropuljic",
         "title": "Responsable técnico, Factum",
-        "bio": "Daniel construye los sistemas que hay detrás del motor de due diligence de Factum. Como fundador de Dandro Solutions, diseña pipelines de datos que procesan más de 50.000 registros al día para clientes internacionales del sector sanitario, bajo RGPD y FHIR. De nivel de producción, auditables, construidos para aguantar el escrutinio.",
+        "bio": "Daniel construye los sistemas que hay detrás del motor de due diligence de Factum. Como fundador de Dandro Solutions, diseña pipelines de datos que procesan más de 50.000 registros al día para clientes internacionales del sector sanitario, bajo RGPD y FHIR.",
         "history": [
-          { "org": "Dandro Solutions", "role": "Fundador, ingeniería de software", "period": "2021 —" },
-          { "org": "Healex, Berlín", "role": "Implementación HL7/FHIR, dirigió un equipo de tres personas", "period": "2019 – 2021" },
-          { "org": "Uniklinik Köln", "role": "Infraestructura de datos de investigación", "period": "2019" },
-          { "org": "Furore, Ámsterdam", "role": "Ingeniería de datos", "period": "2018" }
+          {
+            "org": "Dandro Solutions",
+            "role": "Fundador, ingeniería de software",
+            "period": "2021 —"
+          },
+          {
+            "org": "Healex, Berlín",
+            "role": "Implementación HL7/FHIR, dirigió un equipo de tres personas",
+            "period": "2019 – 2021"
+          },
+          {
+            "org": "Uniklinik Köln",
+            "role": "Infraestructura de datos de investigación",
+            "period": "2019"
+          },
+          {
+            "org": "Furore, Ámsterdam",
+            "role": "Ingeniería de datos",
+            "period": "2018"
+          }
         ]
       }
     ],
-    "closing": "Entre ambos: suscripción de financiación apalancada en ING, reestructuraciones en Rabobank, y pipelines de datos de producción auditados bajo el RGPD. El mismo rigor, aplicado al acuerdo que tiene delante.",
+    "closing": "El mismo rigor, aplicado al acuerdo que tiene delante.",
     "cta": {
       "title": "Hablará con la persona que revisa el entregable",
       "body": "Mientras Factum está en prelanzamiento, la llamada inicial, el control de revisión y la explicación detallada son la misma persona.",
@@ -878,12 +913,12 @@
       "note": "Treinta minutos."
     }
   },
-
   "partnerships": {
     "header": {
       "eyebrow": "Alianzas",
       "title": "Más mandatos de los que su equipo puede leer",
-      "lead": "Usted conserva la relación y el criterio. Nosotros ejecutamos la lectura de trece disciplinas detrás, bajo su nombre."
+      "lead": "Usted conserva la relación y el criterio. Nosotros ejecutamos la lectura de trece disciplinas detrás, bajo su nombre.",
+      "cta": "Reserve una llamada de alcance"
     },
     "who": {
       "eyebrow": "Encaje",
@@ -994,12 +1029,12 @@
       "note": "Treinta minutos, y una respuesta directa sobre el encaje."
     }
   },
-
   "contact": {
     "header": {
       "eyebrow": "Contacto",
       "title": "Una llamada, con la persona que revisa el entregable",
-      "lead": "En esta página no hay formulario. Un formulario implica una cola y alguien que la gestiona. Hay un calendario."
+      "lead": "En esta página no hay formulario. Un formulario implica una cola y alguien que la gestiona. Hay un calendario.",
+      "cta": "Reserve una llamada de 30 minutos"
     },
     "call": {
       "eyebrow": "Llamada inicial",
@@ -1033,7 +1068,6 @@
       "languagesValue": "Inglés y neerlandés"
     }
   },
-
   "privacy": {
     "header": {
       "eyebrow": "Privacidad",

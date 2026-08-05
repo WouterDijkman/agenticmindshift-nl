@@ -25,6 +25,7 @@ export default async function ContactPage({
   setRequestLocale(locale);
 
   const t = await getTranslations('contact');
+  const s = await getTranslations('shared');
 
   return (
     <>
@@ -32,6 +33,8 @@ export default async function ContactPage({
         eyebrow={t('header.eyebrow')}
         title={t('header.title')}
         lead={t('header.lead')}
+        cta={t('header.cta')}
+        footnote={s('ctaProof')}
         visual={5}
       />
 

@@ -6,6 +6,7 @@ import Reveal from '@/components/Reveal';
 import { Section } from '@/components/Section';
 import PersonCard from '@/components/PersonCard';
 import CtaBand from '@/components/CtaBand';
+import GuaranteePanel from '@/components/GuaranteePanel';
 
 export async function generateMetadata({
   params
@@ -32,6 +33,7 @@ export default async function TeamPage({
   setRequestLocale(locale);
 
   const t = await getTranslations('team');
+  const s = await getTranslations('shared');
   const people = t.raw('people') as Person[];
 
   return (
@@ -40,6 +42,10 @@ export default async function TeamPage({
         eyebrow={t('header.eyebrow')}
         title={t('header.title')}
         lead={t('header.lead')}
+        cta={t('header.cta')}
+        secondary={s('links.governance')}
+        secondaryHref="/governance"
+        footnote={s('ctaProof')}
         visual={3}
       />
 
@@ -76,6 +82,9 @@ export default async function TeamPage({
         body={t('cta.body')}
         cta={t('cta.button')}
         note={t('cta.note')}
+        /* Doubt peaks at the button, so the guarantee is restated beside it
+           rather than left behind on the homepage. */
+        aside={<GuaranteePanel label={s('guarantee.label')} claim={s('guarantee.claim')} note={s('guarantee.note')} />}
       />
     </>
   );

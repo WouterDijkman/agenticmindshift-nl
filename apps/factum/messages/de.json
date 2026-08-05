@@ -33,12 +33,10 @@
       "description": "Wie diese Website und unsere Mandate mit personenbezogenen Daten umgehen."
     }
   },
-
   "a11y": {
     "skipToContent": "Zum Inhalt springen",
     "changeLanguage": "Sprache wechseln"
   },
-
   "nav": {
     "primary": "Hauptnavigation",
     "platform": "Plattform",
@@ -51,7 +49,6 @@
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen"
   },
-
   "footer": {
     "blurb": "Analyse auf Due-Diligence-Niveau über den gesamten Deal-Zyklus. Belegt aus Ihren Dokumenten. Geprüft von einer namentlich benannten Person. Fertig in Tagen.",
     "sitemap": "Sitemap",
@@ -60,14 +57,12 @@
     "kvk": "KvK {number}",
     "copyright": "© {year} Factum Capital. Vor dem Launch."
   },
-
   "notFound": {
     "title": "Diese Seite ist nicht erfasst",
     "body": "Der Link ist defekt oder die Seite wurde verschoben.",
     "home": "Zurück zur Startseite",
     "platform": "So funktioniert die Plattform"
   },
-
   "shared": {
     "disciplines": [
       "Finanzen",
@@ -86,7 +81,7 @@
     ],
     "schema": {
       "label": "Output-Kontrakt — jede Feststellung",
-      "footnote": "Das Schema, das jede Feststellung erfüllen muss. Mandatsarbeit ist vertraulich, daher gibt es keinen Auszug zu veröffentlichen.",
+      "footnote": "Das Schema, dem jede Erkenntnis genügen muss. Hinter jeder stehen ein Dokument, eine Passage und ein namentlich benannter Prüfer — noch Monate später aufrufbar.",
       "rows": {
         "module": "Modul",
         "finding": "Feststellung",
@@ -176,7 +171,6 @@
       }
     ],
     "chart": {
-      "agentLabel": "Sub-Agents pro Modul",
       "zdr": "ZDR",
       "zdrTitle": "Zero-Retention-Routing erzwungen. Ohne diese Route startet der Lauf nicht.",
       "modulesLabel": "Module",
@@ -187,18 +181,27 @@
       "pageRef": "Quelldokument, Seite n",
       "highlight": "Zitierte Passage",
       "findingLabel": "Der Befund, der daraus entstand",
-      "footnote": "Geschwärzt, weil Mandantendokumente vertraulich sind, nicht weil die Spur fehlt. Jeder Balken ist eine Zeile einer echten Seite; der markierte ist das, worauf der Nachweis zeigt."
+      "footnote": "Geschwärzt, weil Mandantendokumente vertraulich sind, nicht weil die Spur fehlt."
+    },
+    "ctaProof": "Drei wesentliche Befunde, die Ihr Team noch nicht hatte, oder das Mandat ist kostenlos — bei Pilotmandaten.",
+    "guarantee": {
+      "label": "Die Befundgarantie",
+      "claim": "Drei wesentliche Befunde, die Ihr eigenes Team noch nicht kannte, oder das Mandat ist kostenlos.",
+      "note": "Für Pilotmandate. Wir tragen das Risiko, dass dies früh ist, nicht Sie."
+    },
+    "links": {
+      "governance": "Wie Dokumente behandelt werden",
+      "platform": "Wie die Plattform arbeitet",
+      "sprint": "Was der Sprint abdeckt"
     }
   },
-
   "home": {
     "hero": {
       "eyebrow": "Due Diligence über den gesamten Deal-Zyklus",
       "title": "Unterschreiben Sie keine Zahl, die Sie nicht gelesen haben",
       "lead": "Due Diligence zieht eine Stichprobe und berichtet nach Wochen. Was sie übersprungen hat, liegt weiterhin im Raum. Factum liest alles, in Tagen, mit der Quellpassage hinter jedem Befund.",
       "cta": "Erstgespräch über 30 Minuten buchen",
-      "secondary": "So sieht ein Befund aus",
-      "footnote": "Vor dem Launch. Wir nehmen eine begrenzte Zahl an Pilotmandaten an."
+      "secondary": "So sieht ein Befund aus"
     },
     "problem": {
       "eyebrow": "Das Problem",
@@ -265,7 +268,7 @@
       "steps": [
         {
           "title": "Buchen Sie 30 Minuten",
-          "body": "Wir klären, ob das zu Ihrer Situation passt. Wenn nicht, sagen wir das im Gespräch."
+          "body": "Wir klären, ob das zu Ihrer Situation passt."
         },
         {
           "title": "Zeigen Sie uns den Raum",
@@ -286,10 +289,7 @@
     "sprint": {
       "eyebrow": "Das Mandat",
       "title": "Der Diligence Sprint",
-      "lead": "Ein Mandat, jede Disziplin, plus die Synthese darüber. Auf einem Target, auf einem Unternehmen, das Sie halten, oder auf Ihrem eigenen Betrieb, bevor ein Käufer es tut.",
-      "guaranteeLabel": "Die Befundgarantie",
-      "guarantee": "Drei wesentliche Befunde, die Ihr eigenes Team noch nicht kannte, oder das Mandat ist kostenlos.",
-      "guaranteeNote": "Für Pilotmandate. Wir tragen das Risiko, dass dies früh ist, nicht Sie.",
+      "lead": "Ein Mandat, jede Disziplin, plus die Synthese darüber. Auf einem Target, auf einem Unternehmen, das Sie halten, oder auf Ihrem eigenen Betrieb.",
       "link": "Was der Sprint abdeckt"
     },
     "cycle": {
@@ -329,13 +329,12 @@
     "cta": {
       "title": "Beginnen Sie mit einem Gespräch, nicht mit einem Angebot",
       "body": "Dreißig Minuten, um zu sehen, ob das zu Ihrer Situation passt. Wenn nicht, sagen wir das.",
-      "button": "Erstgespräch über 30 Minuten buchen",
-      "note": "Factum steht vor dem Launch und nimmt eine begrenzte Zahl an Pilotmandaten an — im einstelligen Bereich."
+      "button": "Erstgespräch über 30 Minuten buchen"
     },
     "guide": {
       "eyebrow": "Wer es liest",
       "title": "Geprüft wie eine Bank es täte, gebaut wie Produktionssoftware es sein muss",
-      "lead": "Der Blick eines Bankers auf Risiko, aus dem Inneren der Institute, die Deals wie Ihren finanzieren. Die Disziplin eines Ingenieurs für Systeme, die nicht leise versagen dürfen. Beide zeichnen ab, bevor Sie etwas sehen.",
+      "lead": "Der Blick eines Bankers auf Risiko, aus dem Inneren der Institute, die Deals wie Ihren finanzieren. Die Disziplin eines Ingenieurs für Systeme, die nicht leise versagen dürfen.",
       "link": "Das Team kennenlernen"
     },
     "success": {
@@ -345,7 +344,7 @@
       "points": [
         {
           "title": "Der Preis spiegelt den ganzen Raum wider",
-          "body": "Keine Stichprobe. Jede Disziplin, abgeglichen, bevor der Preis feststeht."
+          "body": "Jede Disziplin, abgeglichen, bevor der Preis feststeht."
         },
         {
           "title": "Sie wissen schon, was sie finden werden",
@@ -359,12 +358,12 @@
       "link": "Sehen, wie eine Feststellung entsteht"
     }
   },
-
   "platform": {
     "header": {
       "eyebrow": "Die Plattform",
       "title": "Wie wir alles lesen, ohne etwas zu erfinden",
-      "lead": "Ein Agent mit großem Kontextfenster ist keine Due Diligence. Das hier ist ein Dispatch-Graph, bei jedem Mandat gleich gefahren."
+      "lead": "Ein Agent mit großem Kontextfenster ist keine Due Diligence. Das hier ist ein Dispatch-Graph, bei jedem Mandat gleich gefahren.",
+      "cta": "Die Mechanik im Gespräch ansehen"
     },
     "scale": {
       "eyebrow": "Der Bestand",
@@ -595,12 +594,12 @@
       "note": "Dreißig Minuten, ohne Angebot im Anhang."
     }
   },
-
   "sprint": {
     "header": {
       "eyebrow": "Der Diligence Sprint",
       "title": "Sehen Sie, was ein Käufer finden würde, bevor er es tut",
-      "lead": "Alle {disciplines} Disziplinen, zu einem einzigen Narrativ zusammengeführt. Gefahren auf einem Target, einem Unternehmen, das Sie halten, oder Ihrem eigenen Betrieb."
+      "lead": "Alle {disciplines} Disziplinen, zu einem einzigen Narrativ zusammengeführt. Gefahren auf einem Target, einem Unternehmen, das Sie halten, oder Ihrem eigenen Betrieb.",
+      "cta": "Erstgespräch über 30 Minuten buchen"
     },
     "reframe": {
       "quote": "Die eigene Arbeit zuerst zu prüfen, ist kein Zeichen dafür, dass etwas nicht stimmt. So sieht ein gut geführter Prozess aus.",
@@ -711,12 +710,12 @@
       "note": "Eine begrenzte Zahl an Pilotmandaten, im einstelligen Bereich."
     }
   },
-
   "governance": {
     "header": {
       "eyebrow": "Governance",
       "title": "Wie Ihre Dokumente behandelt werden, und was wir nicht behaupten",
-      "lead": "Datenverarbeitung ist in den Ablauf der Pipeline eingebaut. Sie ist zugleich enger, als die meisten Sicherheitsseiten nahelegen. Diese Seite benennt die Grenze."
+      "lead": "Datenverarbeitung ist in den Ablauf der Pipeline eingebaut. Sie ist zugleich enger, als die meisten Sicherheitsseiten nahelegen. Diese Seite benennt die Grenze.",
+      "cta": "Die unbequemen Fragen im Gespräch stellen"
     },
     "data": {
       "eyebrow": "Datenverarbeitung",
@@ -773,7 +772,7 @@
     "zdr": {
       "eyebrow": "Zero Retention",
       "title": "Vier Module weigern sich, auf einem speichernden Modell zu laufen",
-      "lead": "Zero Data Retention ist eine Routing-Regel im Code, kein Versprechen auf einer Seite. Steuern, Recht, Finanzen und Boedelonderzoek sind gesichert: ist keine Zero-Retention-Route verfügbar, scheitert der Lauf, statt zurückzufallen.",
+      "lead": "Zero Data Retention ist eine Routing-Regel im Code, kein Versprechen auf einer Seite. Steuern, Recht, Finanzen und Boedelonderzoek hängen an dieser Regel.",
       "items": [
         "Das Tor ist eine harte Anforderung, geprüft vor dem Dispatch.",
         "Es gibt kein stilles Ausweichen auf einen speichernden Anbieter.",
@@ -837,40 +836,76 @@
       "note": "Beides ist keine Rechtsberatung. Beides sind Gründe, warum das Tor nicht optional ist."
     }
   },
-
   "team": {
     "header": {
       "eyebrow": "Team",
       "title": "Urteilsvermögen, nicht nur Software",
-      "lead": "Der Blick eines Bankers auf Risiko. Die Disziplin eines Ingenieurs für Systeme, die nicht brechen."
+      "lead": "Der Blick eines Bankers auf Risiko. Die Disziplin eines Ingenieurs für Systeme, die nicht brechen.",
+      "cta": "Mit der prüfenden Person sprechen"
     },
     "historyLabel": "Werdegang",
     "people": [
       {
         "name": "Wouter Dijkman",
         "title": "Gründer, Factum",
-        "bio": "Mehr als fünf Jahre in den Institutionen, die diese Deals finanzieren. Bei der ING arbeitete er im Acquisition & Leveraged Finance und strukturierte und prüfte die Kredite hinter genau solchen Transaktionen. Davor: finanzielle Restrukturierung bei der Rabobank. Er führt außerdem Agentic Mindshift, seine eigene KI-Beratung. Mit Factum bringt er die Sorgfalt einer Bank auf den gesamten Deal-Zyklus.",
+        "bio": "Mehr als fünf Jahre in den Institutionen, die diese Deals finanzieren. Bei der ING: Acquisition & Leveraged Finance, wo er die Kredite hinter genau solchen Transaktionen strukturierte und prüfte. Davor finanzielle Restrukturierung bei der Rabobank. Er führt außerdem Agentic Mindshift, seine eigene KI-Beratung.",
         "history": [
-          { "org": "Factum Capital", "role": "Gründer", "period": "2026 —" },
-          { "org": "Agentic Mindshift", "role": "Gründer, KI-Beratung", "period": "2025 —" },
-          { "org": "ING", "role": "Acquisition & Leveraged Finance", "period": "2023 – 2025" },
-          { "org": "Rabobank", "role": "Spezialist Financial Restructuring", "period": "2020 – 2023" },
-          { "org": "Alter Domus", "role": "Legal Officer", "period": "2019 – 2020" }
+          {
+            "org": "Factum Capital",
+            "role": "Gründer",
+            "period": "2026 —"
+          },
+          {
+            "org": "Agentic Mindshift",
+            "role": "Gründer, KI-Beratung",
+            "period": "2025 —"
+          },
+          {
+            "org": "ING",
+            "role": "Acquisition & Leveraged Finance",
+            "period": "2023 – 2025"
+          },
+          {
+            "org": "Rabobank",
+            "role": "Spezialist Financial Restructuring",
+            "period": "2020 – 2023"
+          },
+          {
+            "org": "Alter Domus",
+            "role": "Legal Officer",
+            "period": "2019 – 2020"
+          }
         ]
       },
       {
         "name": "Daniel Dropuljic",
         "title": "Technischer Leiter, Factum",
-        "bio": "Daniel baut die Systeme hinter Factums Due-Diligence-Engine. Als Gründer von Dandro Solutions entwirft er Datenpipelines, die täglich über 50.000 Datensätze für internationale Healthcare-Kunden verarbeiten, unter DSGVO und FHIR. Produktionsreif, prüfbar, gebaut, um genauer Betrachtung standzuhalten.",
+        "bio": "Daniel baut die Systeme hinter Factums Due-Diligence-Engine. Als Gründer von Dandro Solutions entwirft er Datenpipelines, die täglich über 50.000 Datensätze für internationale Healthcare-Kunden verarbeiten, unter DSGVO und FHIR.",
         "history": [
-          { "org": "Dandro Solutions", "role": "Gründer, Software Engineering", "period": "2021 —" },
-          { "org": "Healex, Berlin", "role": "HL7/FHIR-Implementierung, Leitung eines dreiköpfigen Teams", "period": "2019 – 2021" },
-          { "org": "Uniklinik Köln", "role": "Forschungsdaten-Infrastruktur", "period": "2019" },
-          { "org": "Furore, Amsterdam", "role": "Data Engineering", "period": "2018" }
+          {
+            "org": "Dandro Solutions",
+            "role": "Gründer, Software Engineering",
+            "period": "2021 —"
+          },
+          {
+            "org": "Healex, Berlin",
+            "role": "HL7/FHIR-Implementierung, Leitung eines dreiköpfigen Teams",
+            "period": "2019 – 2021"
+          },
+          {
+            "org": "Uniklinik Köln",
+            "role": "Forschungsdaten-Infrastruktur",
+            "period": "2019"
+          },
+          {
+            "org": "Furore, Amsterdam",
+            "role": "Data Engineering",
+            "period": "2018"
+          }
         ]
       }
     ],
-    "closing": "Zusammen: Leveraged-Finance-Underwriting bei der ING, Restrukturierung bei der Rabobank, und Produktions-Datenpipelines, die nach DSGVO geprüft wurden. Dieselbe Sorgfalt, gerichtet auf den Deal vor Ihnen.",
+    "closing": "Dieselbe Sorgfalt, gerichtet auf den Deal vor Ihnen.",
     "cta": {
       "title": "Sie sprechen mit der Person, die das Ergebnis prüft",
       "body": "Solange Factum vor dem Launch steht, sind Erstgespräch, Prüfstufe und Durchsprache dieselbe Person.",
@@ -878,12 +913,12 @@
       "note": "Dreißig Minuten."
     }
   },
-
   "partnerships": {
     "header": {
       "eyebrow": "Partnerschaften",
       "title": "Mehr Mandate, als Ihr Team lesen kann",
-      "lead": "Sie behalten die Beziehung und das Urteilsvermögen. Wir führen die Analyse über dreizehn Disziplinen dahinter aus, unter Ihrem Namen."
+      "lead": "Sie behalten die Beziehung und das Urteilsvermögen. Wir führen die Analyse über dreizehn Disziplinen dahinter aus, unter Ihrem Namen.",
+      "cta": "Ein Scoping-Gespräch buchen"
     },
     "who": {
       "eyebrow": "Passung",
@@ -994,12 +1029,12 @@
       "note": "Dreißig Minuten und eine ehrliche Antwort zur Passung."
     }
   },
-
   "contact": {
     "header": {
       "eyebrow": "Kontakt",
       "title": "Ein Gespräch, mit der Person, die das Ergebnis prüft",
-      "lead": "Auf dieser Seite gibt es kein Formular. Ein Formular unterstellt eine Warteschlange und einen Bearbeiter. Es gibt einen Kalender."
+      "lead": "Auf dieser Seite gibt es kein Formular. Ein Formular unterstellt eine Warteschlange und einen Bearbeiter. Es gibt einen Kalender.",
+      "cta": "Erstgespräch über 30 Minuten buchen"
     },
     "call": {
       "eyebrow": "Erstgespräch",
@@ -1033,7 +1068,6 @@
       "languagesValue": "Englisch und Niederländisch"
     }
   },
-
   "privacy": {
     "header": {
       "eyebrow": "Datenschutz",

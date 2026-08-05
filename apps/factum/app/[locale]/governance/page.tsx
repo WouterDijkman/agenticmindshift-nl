@@ -9,6 +9,7 @@ import { Section, SectionHeader } from '@/components/Section';
 import Dial from '@/components/Dial';
 import TenancySplit from '@/components/TenancySplit';
 import CtaBand from '@/components/CtaBand';
+import GuaranteePanel from '@/components/GuaranteePanel';
 import {
   GROUNDING_AUDIT_DATE,
   GROUNDING_RATE,
@@ -51,6 +52,10 @@ export default async function GovernancePage({
         eyebrow={t('header.eyebrow')}
         title={t('header.title')}
         lead={t('header.lead')}
+        cta={t('header.cta')}
+        secondary={s('links.platform')}
+        secondaryHref="/platform"
+        footnote={s('ctaProof')}
         visual={2}
       />
 
@@ -260,6 +265,9 @@ export default async function GovernancePage({
         body={t('cta.body')}
         cta={t('cta.button')}
         note={t('cta.note')}
+        /* Doubt peaks at the button, so the guarantee is restated beside it
+           rather than left behind on the homepage. */
+        aside={<GuaranteePanel label={s('guarantee.label')} claim={s('guarantee.claim')} note={s('guarantee.note')} />}
       />
     </>
   );

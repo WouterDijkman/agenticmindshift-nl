@@ -33,12 +33,10 @@
       "description": "How this website and our engagements handle personal data."
     }
   },
-
   "a11y": {
     "skipToContent": "Skip to content",
     "changeLanguage": "Change language"
   },
-
   "nav": {
     "primary": "Primary",
     "platform": "Platform",
@@ -51,7 +49,6 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
   },
-
   "footer": {
     "blurb": "Diligence-grade analysis across the deal cycle. Grounded in your documents. Reviewed by a named person. Delivered in days.",
     "sitemap": "Sitemap",
@@ -60,14 +57,12 @@
     "kvk": "KvK {number}",
     "copyright": "© {year} Factum Capital. Pre-launch."
   },
-
   "notFound": {
     "title": "This page isn’t in the record",
     "body": "The link is broken or the page has moved.",
     "home": "Back to the home page",
     "platform": "See how the platform works"
   },
-
   "shared": {
     "disciplines": [
       "Financial",
@@ -86,7 +81,7 @@
     ],
     "schema": {
       "label": "Output contract — every finding",
-      "footnote": "The schema every finding has to satisfy. Client work is confidential, so there is no sample to publish.",
+      "footnote": "The schema every finding has to satisfy. A document, a passage and a named reviewer behind each one — still openable months later.",
       "rows": {
         "module": "Module",
         "finding": "Finding",
@@ -176,7 +171,6 @@
       }
     ],
     "chart": {
-      "agentLabel": "Sub-agents per module",
       "zdr": "ZDR",
       "zdrTitle": "Zero-retention routing enforced. The run refuses to start without it.",
       "modulesLabel": "modules",
@@ -187,18 +181,27 @@
       "pageRef": "Source document, page n",
       "highlight": "Cited passage",
       "findingLabel": "The finding it produced",
-      "footnote": "Redacted because client documents are confidential, not because the trace is missing. Every bar is a line of a real page; the highlighted one is what the citation points at."
+      "footnote": "Redacted because client documents are confidential, not because the trace is missing."
+    },
+    "ctaProof": "Three material findings your team didn’t already have, or the engagement is free — on pilot mandates.",
+    "guarantee": {
+      "label": "The Findings Guarantee",
+      "claim": "Three material findings your own team had not already identified, or the engagement is free.",
+      "note": "For pilot mandates. We carry the risk of this being early, not you."
+    },
+    "links": {
+      "governance": "How documents are handled",
+      "platform": "How the platform works",
+      "sprint": "What the sprint covers"
     }
   },
-
   "home": {
     "hero": {
       "eyebrow": "Due diligence across the deal cycle",
       "title": "Nobody should sign a number they haven’t read",
       "lead": "Diligence samples the data room and reports in weeks. Whatever it skipped is still in there. Factum reads all of it in days, with the source passage behind every finding.",
       "cta": "Book a 30-minute intake call",
-      "secondary": "See what a finding looks like",
-      "footnote": "Pre-launch. We take on a limited number of pilot mandates."
+      "secondary": "See what a finding looks like"
     },
     "problem": {
       "eyebrow": "The problem",
@@ -267,10 +270,7 @@
     "sprint": {
       "eyebrow": "The engagement",
       "title": "The Diligence Sprint",
-      "lead": "One engagement, every discipline, plus the synthesis on top. Run it on a target, on a company you already hold, or on your own business before a buyer does.",
-      "guaranteeLabel": "The Findings Guarantee",
-      "guarantee": "Three material findings your own team had not already identified, or the engagement is free.",
-      "guaranteeNote": "For pilot mandates. We carry the risk of this being early, not you.",
+      "lead": "One engagement, every discipline, plus the synthesis on top. Run it on a target, on a company you already hold, or on your own business.",
       "link": "What the sprint covers"
     },
     "trust": {
@@ -282,8 +282,7 @@
     "cta": {
       "title": "Start with a call, not a proposal",
       "body": "Thirty minutes to see whether this fits your situation. If it does not, we will say so.",
-      "button": "Book a 30-minute intake call",
-      "note": "Factum is pre-launch, taking on a limited number of pilot mandates — counted in single digits."
+      "button": "Book a 30-minute intake call"
     },
     "cycle": {
       "eyebrow": "Across the cycle",
@@ -320,7 +319,7 @@
       "steps": [
         {
           "title": "Book a 30-minute call",
-          "body": "We work out whether this suits your situation. If it does not, we say so on the call."
+          "body": "We work out whether this suits your situation."
         },
         {
           "title": "Point us at the room",
@@ -335,7 +334,7 @@
     "guide": {
       "eyebrow": "Who reads it",
       "title": "Underwritten like a bank would, built like production software has to be",
-      "lead": "A banker’s read on risk, from inside the institutions that fund deals like yours. An engineer’s discipline for systems that can’t fail quietly. Both sign off before you see anything.",
+      "lead": "A banker’s read on risk, from inside the institutions that fund deals like yours. An engineer’s discipline for systems that can’t fail quietly.",
       "link": "Meet the team"
     },
     "success": {
@@ -345,7 +344,7 @@
       "points": [
         {
           "title": "The price reflects the whole room",
-          "body": "Not a sample. Every discipline, reconciled, before the number is set."
+          "body": "Every discipline, reconciled, before the number is set."
         },
         {
           "title": "You already know what they’ll find",
@@ -359,12 +358,12 @@
       "link": "See how a finding is built"
     }
   },
-
   "platform": {
     "header": {
       "eyebrow": "The platform",
       "title": "How we read all of it without inventing any of it",
-      "lead": "One agent with a large context window is not diligence. This is a dispatch graph, run the same way every mandate."
+      "lead": "One agent with a large context window is not diligence. This is a dispatch graph, run the same way every mandate.",
+      "cta": "See the mechanics on a call"
     },
     "scale": {
       "eyebrow": "The inventory",
@@ -595,12 +594,12 @@
       "note": "Thirty minutes, no proposal attached."
     }
   },
-
   "sprint": {
     "header": {
       "eyebrow": "The Diligence Sprint",
       "title": "See what a buyer would find, before they do",
-      "lead": "All {disciplines} disciplines, reconciled into one narrative. Run it on a target, a company you hold, or your own business."
+      "lead": "All {disciplines} disciplines, reconciled into one narrative. Run it on a target, a company you hold, or your own business.",
+      "cta": "Book a 30-minute intake call"
     },
     "reframe": {
       "quote": "Checking your own work first isn’t a sign that something is wrong. It is what a well-run process looks like.",
@@ -711,12 +710,12 @@
       "note": "A limited number of pilot mandates, counted in single digits."
     }
   },
-
   "governance": {
     "header": {
       "eyebrow": "Governance",
       "title": "How your documents are handled, and what we don’t claim",
-      "lead": "Data handling is built into how the pipeline runs. It is also narrower than most security pages imply, so this page states the boundary."
+      "lead": "Data handling is built into how the pipeline runs. It is also narrower than most security pages imply, so this page states the boundary.",
+      "cta": "Ask the awkward questions on a call"
     },
     "data": {
       "eyebrow": "Data handling",
@@ -773,7 +772,7 @@
     "zdr": {
       "eyebrow": "Zero retention",
       "title": "Four modules refuse to run off a retaining model",
-      "lead": "Zero data retention is a routing rule in the code, not a promise on a page. Tax, legal, financial and boedelonderzoek are gated: if no zero-retention route is available, the run fails instead of falling back.",
+      "lead": "Zero data retention is a routing rule in the code, not a promise on a page. Tax, legal, financial and boedelonderzoek are gated on it.",
       "items": [
         "The gate is a hard requirement, checked before dispatch.",
         "There is no silent downgrade to a retaining provider.",
@@ -837,40 +836,76 @@
       "note": "Neither of these is legal advice. Both are reasons the gate is not optional."
     }
   },
-
   "team": {
     "header": {
       "eyebrow": "Team",
       "title": "Judgment, not just software",
-      "lead": "A banker’s read on risk. An engineer’s discipline for systems that don’t break."
+      "lead": "A banker’s read on risk. An engineer’s discipline for systems that don’t break.",
+      "cta": "Speak to the person who reviews it"
     },
     "historyLabel": "Background",
     "people": [
       {
         "name": "Wouter Dijkman",
         "title": "Founder, Factum",
-        "bio": "More than five years inside the institutions that fund these deals. At ING he worked Acquisition & Leveraged Finance, structuring and vetting the credit behind exactly this kind of transaction. Before that, financial restructuring at Rabobank. He also runs Agentic Mindshift, his own AI consultancy. Factum brings a bank’s scrutiny to the whole deal cycle.",
+        "bio": "More than five years inside the institutions that fund these deals. At ING, Acquisition & Leveraged Finance — structuring and vetting the credit behind exactly this kind of transaction. Before that, financial restructuring at Rabobank. He also runs Agentic Mindshift, his own AI consultancy.",
         "history": [
-          { "org": "Factum Capital", "role": "Founder", "period": "2026 —" },
-          { "org": "Agentic Mindshift", "role": "Founder, AI consultancy", "period": "2025 —" },
-          { "org": "ING", "role": "Acquisition & Leveraged Finance", "period": "2023 – 2025" },
-          { "org": "Rabobank", "role": "Specialist Financial Restructuring", "period": "2020 – 2023" },
-          { "org": "Alter Domus", "role": "Legal Officer", "period": "2019 – 2020" }
+          {
+            "org": "Factum Capital",
+            "role": "Founder",
+            "period": "2026 —"
+          },
+          {
+            "org": "Agentic Mindshift",
+            "role": "Founder, AI consultancy",
+            "period": "2025 —"
+          },
+          {
+            "org": "ING",
+            "role": "Acquisition & Leveraged Finance",
+            "period": "2023 – 2025"
+          },
+          {
+            "org": "Rabobank",
+            "role": "Specialist Financial Restructuring",
+            "period": "2020 – 2023"
+          },
+          {
+            "org": "Alter Domus",
+            "role": "Legal Officer",
+            "period": "2019 – 2020"
+          }
         ]
       },
       {
         "name": "Daniel Dropuljic",
         "title": "Technical Lead, Factum",
-        "bio": "Daniel builds the systems behind Factum’s diligence engine. As founder of Dandro Solutions he designs data pipelines processing over 50,000 records a day for international healthcare clients, under GDPR and FHIR. Production-grade, auditable, built to hold up under scrutiny.",
+        "bio": "Daniel builds the systems behind Factum’s diligence engine. As founder of Dandro Solutions he designs data pipelines processing over 50,000 records a day for international healthcare clients, under GDPR and FHIR.",
         "history": [
-          { "org": "Dandro Solutions", "role": "Founder, software engineering", "period": "2021 —" },
-          { "org": "Healex, Berlin", "role": "HL7/FHIR implementation, led a three-person team", "period": "2019 – 2021" },
-          { "org": "Uniklinik Köln", "role": "Research data infrastructure", "period": "2019" },
-          { "org": "Furore, Amsterdam", "role": "Data engineering", "period": "2018" }
+          {
+            "org": "Dandro Solutions",
+            "role": "Founder, software engineering",
+            "period": "2021 —"
+          },
+          {
+            "org": "Healex, Berlin",
+            "role": "HL7/FHIR implementation, led a three-person team",
+            "period": "2019 – 2021"
+          },
+          {
+            "org": "Uniklinik Köln",
+            "role": "Research data infrastructure",
+            "period": "2019"
+          },
+          {
+            "org": "Furore, Amsterdam",
+            "role": "Data engineering",
+            "period": "2018"
+          }
         ]
       }
     ],
-    "closing": "Between them: leveraged-finance underwriting at ING, restructuring at Rabobank, and production data pipelines audited under GDPR. The same scrutiny, turned on the deal in front of you.",
+    "closing": "The same scrutiny, turned on the deal in front of you.",
     "cta": {
       "title": "You’ll speak to the person who reviews the output",
       "body": "While Factum is pre-launch, the intake call, the review gate and the walkthrough are the same person.",
@@ -878,12 +913,12 @@
       "note": "Thirty minutes."
     }
   },
-
   "partnerships": {
     "header": {
       "eyebrow": "Partnerships",
       "title": "More mandates than your team can read",
-      "lead": "You keep the relationship and the judgment. We run the thirteen-discipline read behind it, under your name."
+      "lead": "You keep the relationship and the judgment. We run the thirteen-discipline read behind it, under your name.",
+      "cta": "Book a scoping call"
     },
     "who": {
       "eyebrow": "Fit",
@@ -994,12 +1029,12 @@
       "note": "Thirty minutes, and a straight answer on fit."
     }
   },
-
   "contact": {
     "header": {
       "eyebrow": "Contact",
       "title": "One call, with the person who reviews the output",
-      "lead": "There is no form on this page. A form implies a queue and a handler. There is a calendar."
+      "lead": "There is no form on this page. A form implies a queue and a handler. There is a calendar.",
+      "cta": "Book a 30-minute intake call"
     },
     "call": {
       "eyebrow": "Intake",
@@ -1033,7 +1068,6 @@
       "languagesValue": "English and Dutch"
     }
   },
-
   "privacy": {
     "header": {
       "eyebrow": "Privacy",

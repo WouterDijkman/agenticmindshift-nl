@@ -9,6 +9,7 @@ import Reveal from '@/components/Reveal';
 import { Section, SectionHeader } from '@/components/Section';
 import Disclosures from '@/components/Disclosures';
 import CtaBand from '@/components/CtaBand';
+import GuaranteePanel from '@/components/GuaranteePanel';
 
 export async function generateMetadata({
   params
@@ -28,6 +29,7 @@ export default async function PartnershipsPage({
   setRequestLocale(locale);
 
   const t = await getTranslations('partnerships');
+  const s = await getTranslations('shared');
 
   return (
     <>
@@ -35,6 +37,10 @@ export default async function PartnershipsPage({
         eyebrow={t('header.eyebrow')}
         title={t('header.title')}
         lead={t('header.lead')}
+        cta={t('header.cta')}
+        secondary={s('links.sprint')}
+        secondaryHref="/diligence-sprint"
+        footnote={s('ctaProof')}
         visual={4}
       />
 
@@ -118,6 +124,9 @@ export default async function PartnershipsPage({
         body={t('cta.body')}
         cta={t('cta.button')}
         note={t('cta.note')}
+        /* Doubt peaks at the button, so the guarantee is restated beside it
+           rather than left behind on the homepage. */
+        aside={<GuaranteePanel label={s('guarantee.label')} claim={s('guarantee.claim')} note={s('guarantee.note')} />}
       />
     </>
   );

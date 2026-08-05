@@ -3,8 +3,8 @@
  *
  * The gap at the top of the ring is the 3.3% — it is the only honest way to
  * draw a figure whose whole point is that it is not 100% and not audited. The
- * caveat is a required prop for the same reason the Figures component requires
- * a note: this number must never render without it.
+ * caveat is a required prop, not an optional one: an unqualified figure is the
+ * exact thing this site is arguing against, so it must never render alone.
  */
 export default function Dial({
   value,

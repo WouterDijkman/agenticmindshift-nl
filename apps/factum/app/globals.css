@@ -519,24 +519,39 @@ p { margin: 0; }
    Discipline grid — scope as a board of marks
    ============================================================ */
 .discipline-grid {
-  /* Flex, not grid: a fixed column count would leave a dead cell whenever the
-     item count doesn't divide evenly. Borders live on the tiles themselves
-     (not a filled background behind the gaps), so an incomplete last row
-     just ends against the page background instead of exposing a highlighted
-     "missing" rectangle. The grid contributes only the top/left edges; each
-     tile draws its own right/bottom edge, so the two never overlap. */
-  display: flex;
-  flex-wrap: wrap;
+  /* Grid with an explicit column count, not flex.
+   *
+   * Flex was chosen so an incomplete last row would "just end" instead of
+   * exposing a dead cell — and that half worked. What it also did was let the
+   * trailing tiles grow: with thirteen disciplines the last row of three came
+   * out at ~378px against ~262px for the ten tiles above it, and still stopped
+   * short of the right margin. A row that is both a different width and short
+   * reads as a bug, which on a page selling reconciliation is expensive.
+   *
+   * Thirteen is prime, so some row is always short. Fixing the width is the
+   * part that matters: an equal-width row that ends early reads as a deliberate
+   * ragged edge. Borders still live on the tiles rather than behind the gaps,
+   * so the empty cells render as page background and never as a highlighted
+   * "missing" rectangle. The list contributes only the top/left edges.
+   *
+   * 5 / 3 / 2 columns: 13 splits 5+5+3 on wide, which is the kindest of the
+   * available remainders. */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin: 0;
   padding: 0;
   list-style: none;
   border-top: 1px solid var(--hairline);
   border-left: 1px solid var(--hairline);
 }
+@media (min-width: 680px) {
+  .discipline-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1080px) {
+  .discipline-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
 .discipline-tile {
   position: relative;
-  flex: 1 1 205px;
-  max-width: 340px;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -957,6 +972,25 @@ p { margin: 0; }
   font-size: clamp(2.25rem, min(1.55rem + 4.6vw, 10.5vh), 5.875rem);
 }
 
+/* Laptops, which are the machines this is actually read on. Measured at
+   1280x720 the German homepage H1 wrapped to four lines and pushed the first
+   screen 42px past the fold, which clips the line directly under the button —
+   the one place clipping is not survivable. 10.5vh is the right cap when there
+   is height to spend; below 800px there is not, so the height term gets to win
+   harder. Deliberately a separate rule rather than a lower cap everywhere: at
+   1440x900 the width term binds and the display size is correct as it is, and
+   nothing should shrink a screen that already fits. Phones are narrow and very
+   tall, so they never reach this query. */
+@media (max-height: 800px) {
+  .fit-screen .type-display {
+    font-size: clamp(2rem, min(1.55rem + 4.6vw, 8.8vh), 5.875rem);
+  }
+
+  .fit-screen {
+    padding-block: clamp(20px, 3.4vh, 64px);
+  }
+}
+
 /* ============================================================
    Hero entrance — plays on load, not on scroll.
    ============================================================ */
@@ -1242,55 +1276,150 @@ details.disclosure[open] > summary::after { content: "−"; }
 details.disclosure > div { padding-bottom: 24px; }
 
 /* ============================================================
-   Module chart — 31 bars, banded by dispatch wave.
+   Dispatch graph — the running order as a graph.
+
+   This replaced a 31-row bar chart. The chart ranked modules by sub-agent
+   count, which is our fact; the graph shows what happens to a data room,
+   which is the reader's question. The rail down the left is the dependency
+   edge: solid where a wave reads the wave above it, dashed above wave 5,
+   which is post-close and runs on its own clock. The per-module meter
+   survives inside each node, so the spread is still legible without
+   spending a full row per module.
    ============================================================ */
-.chart { display: flex; flex-direction: column; gap: 40px; }
+.dispatch { list-style: none; margin: 0; padding: 0; }
 
-.chart-axis {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.6875rem;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--text-quaternary);
+.dispatch-wave {
+  display: grid;
+  grid-template-columns: 9px minmax(0, 1fr);
+  column-gap: clamp(16px, 2vw, 26px);
 }
-.chart-axis-rule { flex: 1; height: 1px; background: var(--hairline); }
+/* The gap between waves is padding on the *content* column, not on the row.
+   Padding on the row sits outside the grid track, so the stretched rail
+   stopped at the last node and the edge came out as five disconnected
+   segments instead of one line running down the dependency chain. */
+.dispatch-body { padding-bottom: clamp(30px, 3.6vw, 46px); }
+.dispatch-wave:last-child .dispatch-body { padding-bottom: 0; }
 
-.chart-wave { display: flex; flex-direction: column; gap: 14px; }
-.chart-wave-head {
+.dispatch-rail {
+  position: relative;
+  display: block;
+  justify-self: center;
+  width: 1px;
+  background: var(--hairline);
+}
+/* The rail is a stretched grid item, so on the final wave it would trail a
+   line past the last node into nothing. Pin it to its marker instead. */
+.dispatch-wave:last-child .dispatch-rail { align-self: start; height: 46px; }
+
+/* Break the rail before the detached wave. Without this the dashed segment
+   butts straight onto the solid one and reads as "the line continues, only
+   fainter" — the opposite of the claim. The gap is the edge being absent. */
+.dispatch-wave:has(+ [data-detached]) .dispatch-rail {
+  align-self: start;
+  height: calc(100% - 24px);
+}
+
+/* Dashed rather than a second colour: wave 5 does not read the pre-close
+   waves. Each wave's own body line says so in all five locales, so the
+   dash carries no meaning the copy does not already carry — it needs no
+   legend, which is why it can be this quiet. */
+.dispatch-wave[data-detached] .dispatch-rail {
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--hairline) 0 4px,
+    transparent 4px 10px
+  );
+}
+
+.dispatch-rail::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  margin-left: -3.5px;
+  border-radius: 50%;
+  /* Wine, not CTA orange. Five lit dots down the page would spend the one
+     colour the site reserves for the one action per viewport. */
+  background: var(--wine);
+  box-shadow: 0 0 0 4px var(--wine-soft);
+}
+
+.dispatch-head {
   display: flex;
   align-items: baseline;
-  gap: 14px;
+  gap: 8px 14px;
+  flex-wrap: wrap;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--hairline);
 }
-.chart-wave-num { font-size: 0.6875rem; color: var(--accent-cta); flex: none; }
-.chart-wave-label {
+.dispatch-num { font-size: 0.6875rem; color: var(--accent-cta); flex: none; }
+.dispatch-title {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
   font-weight: 400;
-  color: var(--text-body);
-  flex: 1;
-}
-.chart-wave-sum { font-size: 0.75rem; color: var(--text-quaternary); flex: none; }
-
-.chart-rows { list-style: none; display: flex; flex-direction: column; gap: 7px; }
-.chart-row {
-  display: grid;
-  grid-template-columns: minmax(0, 15em) 1fr 2.5em;
-  align-items: center;
-  gap: 16px;
-}
-.chart-row-label {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  line-height: 1.25;
+  color: var(--text-display);
+  flex: 1 1 12ch;
   min-width: 0;
 }
-.chart-zdr {
+.dispatch-tally {
+  font-size: 0.6875rem;
+  letter-spacing: 0.03em;
+  color: var(--text-quaternary);
+  flex: none;
+  font-variant-numeric: tabular-nums;
+}
+.dispatch-tally-sep { padding: 0 7px; }
+
+.dispatch-lead {
+  margin-top: 12px;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--text-tertiary);
+  max-width: 62ch;
+}
+
+.dispatch-nodes {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  /* auto-fill, not auto-fit: a three-module wave should keep node-sized
+     nodes rather than stretch three cards across the full width, which
+     would draw it as large as the eleven-module wave above it. */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+}
+.dispatch-node {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  padding: 11px 12px 10px;
+  background: var(--surface-inset);
+  border: 1px solid var(--hairline-faint);
+  border-radius: 3px;
+}
+.dispatch-node-name {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  color: var(--text-secondary);
+  /* German compounds do not fit a 150px node — "Finanzierungsmemorandum" is
+     one unbreakable word 29px wider than its card. `hyphens` breaks it at a
+     real syllable because <html lang> is locale-aware; `break-word` is the
+     fallback for engines that ship no dictionary for the locale. It is
+     break-word rather than anywhere so the node's min-content width is left
+     alone and the grid keeps sizing off whole words. */
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+.dispatch-node-zdr {
   font-size: 0.5625rem;
   letter-spacing: 0.08em;
   padding: 2px 5px;
@@ -1299,47 +1428,51 @@ details.disclosure > div { padding-bottom: 24px; }
   border-radius: 2px;
   flex: none;
 }
-.chart-track {
-  height: 14px;
-  background: var(--surface-inset);
-  border: 1px solid var(--hairline-faint);
+.dispatch-node-foot {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: auto;
+}
+.dispatch-node-meter {
+  flex: 1;
+  min-width: 0;
+  height: 3px;
+  background: var(--hairline-faint);
   border-radius: 2px;
   overflow: hidden;
 }
-.chart-fill {
+.dispatch-node-fill {
   display: block;
   height: 100%;
   width: var(--pct);
-  min-width: 3px;
-  /* Every bar ends in the same bright orange regardless of its own length —
-     the gradient is relative to the fill's own box, not the track — so a
-     three-agent bar still reads as lit instead of vanishing into the wine. */
-  background: linear-gradient(90deg, var(--wine) 0%, var(--accent-cta) 65%, var(--accent-cta) 100%);
+  min-width: 2px;
+  /* The gradient is relative to the fill's own box, not the track, so a
+     two-agent meter still ends lit instead of vanishing into the wine. */
+  background: linear-gradient(90deg, var(--wine) 0%, var(--accent-cta) 70%, var(--accent-cta) 100%);
   border-radius: 2px;
-  box-shadow: 0 0 8px rgba(241, 76, 29, 0.35);
 }
-.chart-value {
-  font-size: 0.75rem;
-  color: var(--text-tertiary);
-  text-align: right;
+.dispatch-node-count {
+  flex: none;
+  font-size: 0.6875rem;
+  color: var(--text-quaternary);
   font-variant-numeric: tabular-nums;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .chart-fill {
+  .dispatch-node-fill {
     transform: scaleX(0);
     transform-origin: left center;
     transition: transform var(--dur-reveal) var(--ease-out-expo);
     transition-delay: var(--reveal-delay, 0ms);
   }
-  .reveal[data-shown="true"] .chart-fill { transform: scaleX(1); }
+  .reveal[data-shown="true"] .dispatch-node-fill { transform: scaleX(1); }
 }
 
-@media (max-width: 700px) {
-  .chart-row { grid-template-columns: 1fr 2.5em; grid-template-areas: "label value" "track track"; row-gap: 6px; }
-  .chart-row-label { grid-area: label; }
-  .chart-value { grid-area: value; }
-  .chart-track { grid-area: track; }
+@media (max-width: 560px) {
+  .dispatch-wave { grid-template-columns: 7px minmax(0, 1fr); column-gap: 14px; }
+  .dispatch-nodes { grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); }
+  .dispatch-tally { flex-basis: 100%; }
 }
 
 /* ============================================================
@@ -1903,3 +2036,66 @@ details.disclosure > div { padding-bottom: 24px; }
   transition: top var(--dur-micro) var(--ease-fn);
 }
 .skip-link:focus { top: 16px; }
+
+/* ============================================================
+   Guarantee band — the findings guarantee, directly under the hero.
+
+   A rule-and-a-sentence rather than a card, because the page already runs
+   eight card grids and a ninth would read as one more feature tile instead
+   of as a term of business.
+
+   The claim sits in the left two-thirds so the line breaks at a readable
+   measure on a wide screen; on narrow the grid collapses and the note
+   follows the claim in reading order.
+   ============================================================ */
+.guarantee-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+  border-top: 1px solid var(--accent-cta);
+  padding-top: clamp(20px, 2.6vw, 30px);
+}
+.guarantee-band-claim {
+  margin: 0;
+  max-width: 46ch;
+  color: var(--text-display);
+}
+.guarantee-band-note {
+  margin: 0;
+  max-width: 52ch;
+  color: var(--text-quaternary);
+}
+@media (min-width: 900px) {
+  .guarantee-band {
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+    grid-template-areas:
+      "label note"
+      "claim note";
+    column-gap: clamp(36px, 5vw, 72px);
+    align-items: start;
+  }
+  .guarantee-band > .eyebrow { grid-area: label; }
+  .guarantee-band-claim { grid-area: claim; }
+  .guarantee-band-note { grid-area: note; align-self: end; }
+}
+
+/* ============================================================
+   Shared left edge.
+
+   Sections used to pick a centred container per width, so one page ran two
+   different left edges. The box is now always `.container-wide` and the
+   reading measure is taken off the right, which keeps the column
+   left-aligned as well as aligned to its neighbours.
+   ============================================================ */
+.measure-medium { max-width: var(--container-medium); }
+.measure-narrow { max-width: var(--container-narrow); }
+
+/* Closing CTA — copy left, proof right. The band ran one column with the
+   right half empty, on the last screen before the footer. */
+.cta-split { display: grid; gap: clamp(32px, 5vw, 72px); }
+@media (min-width: 900px) {
+  .cta-split {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    align-items: center;
+  }
+}

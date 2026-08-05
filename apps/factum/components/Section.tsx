@@ -23,7 +23,19 @@ export function Section({
       className={`section ${tight ? 'section-tight' : ''} ${seam ? 'seam' : ''} ${tone === 'inset' ? 'section-inset' : ''}`}
       style={{ scrollMarginTop: 80 }}
     >
-      <div className={`container-${width}`}>{children}</div>
+      {/*
+        The box is always the wide container; `width` narrows the *measure*
+        inside it. Each width used to pick its own centred container, so a
+        single page ran two different left edges — measured on the homepage at
+        1440, the wide sections started at x=145 and the medium ones at x=280.
+        A shared left edge is the strongest alignment cue a page has, and
+        trading it for a reading measure loses more than it buys. The narrower
+        measure now comes off the right only, which also keeps the column
+        left-aligned instead of centred.
+      */}
+      <div className="container-wide">
+        <div className={width === 'wide' ? undefined : `measure-${width}`}>{children}</div>
+      </div>
     </section>
   );
 }

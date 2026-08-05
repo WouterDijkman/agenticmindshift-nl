@@ -11,6 +11,8 @@ import FindingSchema from '@/components/FindingSchema';
 import Pipeline from '@/components/Pipeline';
 import DisciplineGrid from '@/components/DisciplineGrid';
 import Stepper from '@/components/Stepper';
+import GuaranteeBand from '@/components/GuaranteeBand';
+import GuaranteePanel from '@/components/GuaranteePanel';
 import CtaBand from '@/components/CtaBand';
 import { ArrowRight } from '@/components/Icons';
 
@@ -43,7 +45,13 @@ export default async function HomePage({
         cta={t('hero.cta')}
         secondary={t('hero.secondary')}
         secondaryHref="/platform"
-        footnote={t('hero.footnote')}
+        /* The findings guarantee, not the launch status. This line is the last
+           thing read before the click, which is exactly where doubt peaks, so
+           it carries the strongest risk reversal we have instead of the
+           weakest disclaimer. "Pre-launch" still appears on /team, on
+           /governance and in the footer, where it reads as candour rather
+           than as a warning. */
+        footnote={s('ctaProof')}
         aside={
           <FindingSchema
             label={s('schema.label')}
@@ -57,6 +65,14 @@ export default async function HomePage({
             ]}
           />
         }
+      />
+
+      {/* The guarantee, before anything else has to be believed. It used to sit
+          inside the Sprint teaser at 58% of the page height, beside no button. */}
+      <GuaranteeBand
+        label={s('guarantee.label')}
+        guarantee={s('guarantee.claim')}
+        note={s('guarantee.note')}
       />
 
       {/* The problem, then the artifact that answers it — one movement, one section. */}
@@ -209,21 +225,10 @@ export default async function HomePage({
         />
 
         {/* The discipline chips used to repeat here. The coverage grid above
-            already names every discipline, two sections earlier. */}
-        <Reveal delay={90} style={{ marginTop: 36 }}>
-          <div className="panel" style={{ padding: 'clamp(22px, 3vw, 34px)' }}>
-            <span className="eyebrow eyebrow-accent" style={{ marginBottom: 14 }}>
-              {t('sprint.guaranteeLabel')}
-            </span>
-            <p className="type-lead" style={{ color: 'var(--text-body)' }}>
-              {t('sprint.guarantee')}
-            </p>
-            <p className="type-small" style={{ marginTop: 14, color: 'var(--text-quaternary)' }}>
-              {t('sprint.guaranteeNote')}
-            </p>
-          </div>
-        </Reveal>
-
+            already names every discipline, two sections earlier. The guarantee
+            panel that used to sit here has moved to GuaranteeBand, directly
+            under the hero — it is the page's strongest claim and this was the
+            page's 58% mark. */}
         <Reveal delay={110} style={{ marginTop: 32 }}>
           <Link href="/diligence-sprint" className="link-quiet">
             {t('sprint.link')}
@@ -292,11 +297,15 @@ export default async function HomePage({
         </Reveal>
       </Section>
 
+      {/* The guarantee, restated beside the button rather than the launch
+          status underneath it — this is the last screen before the footer and
+          the point at which doubt is highest. */}
       <CtaBand
         title={t('cta.title')}
         body={t('cta.body')}
         cta={t('cta.button')}
-        note={t('cta.note')}
+        note={s('guarantee.note')}
+        aside={<GuaranteePanel label={s('guarantee.label')} claim={s('guarantee.claim')} />}
       />
     </>
   );
