@@ -172,7 +172,7 @@ const COPY: Record<ReportLocale, JsonLdCopy> = {
     scorecardName: 'AI Scorecard — evaluación de doce minutos',
     scorecardDescription:
       'Una evaluación gratuita de doce minutos sobre seis dimensiones de IA, para fondos de PE, firmas de M&A y family offices europeos.',
-    scorecardOffer: 'Gratuito: sin necesidad de cuenta',
+    scorecardOffer: 'Gratuito — sin necesidad de cuenta',
     advisoryServiceType: 'Due diligence e inteligencia de cartera con IA',
     advisoryDescription: ([a, b, c, d]) =>
       `Due diligence e inteligencia de cartera con IA para fondos de PE y firmas de M&A europeos. Cuatro rutas: ${a}, ${b}, ${c} y ${d} a través de Factum Capital (31 módulos).`,

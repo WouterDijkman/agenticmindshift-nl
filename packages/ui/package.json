@@ -6,7 +6,8 @@
   "exports": {
     "./Button": "./src/Button.tsx",
     "./CardVisual": "./src/CardVisual.tsx",
-    "./SketchIcons": "./src/SketchIcons.tsx"
+    "./SketchIcons": "./src/SketchIcons.tsx",
+    "./locale": "./src/locale.ts"
   },
   "peerDependencies": {
     "framer-motion": "^12",

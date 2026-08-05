@@ -35,13 +35,22 @@ export const OG_LOCALES: Record<string, string> = {
   pt: 'pt_PT',
 };
 
-/** Every locale variant of `path`, plus x-default pointing at Dutch. */
+/**
+ * Every locale variant of `path`, plus x-default.
+ *
+ * x-default is the page for a reader whose language is none of the five, so it
+ * points at English. It used to point at Dutch, which was defensible only
+ * while the proxy also fell back to Dutch. It does not any more — `/` now
+ * resolves to English for anyone outside the five language areas — and the two
+ * have to agree, or the crawler is told one thing and the visitor shown
+ * another.
+ */
 export function getLanguageAlternates(path: string) {
   const languages: Record<string, string> = {};
   for (const loc of LOCALES) {
     languages[LANG_TAGS[loc]] = `${BASE}/${loc}${path}`;
   }
-  languages['x-default'] = `${BASE}/nl${path}`;
+  languages['x-default'] = `${BASE}/en${path}`;
   return languages;
 }
 
@@ -49,7 +58,7 @@ export function getLanguageAlternates(path: string) {
  * Returns `alternates` for Next.js Metadata, including:
  * - a self-referencing canonical for `currentLocale`
  * - a `hreflang` entry for every locale
- * - an `x-default` pointing to the Dutch (default) variant
+ * - an `x-default` pointing to the English variant
  */
 export function getAlternates(path: string, currentLocale: string) {
   return {

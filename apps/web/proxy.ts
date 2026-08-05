@@ -1,21 +1,9 @@
 import createMiddleware from 'next-intl/middleware';
-import { routing } from './i18n/routing';
 import { NextRequest, NextResponse } from 'next/server';
+import { resolveLocale, LOCALE_VARY_HEADER } from '@repo/ui/locale';
+import { routing } from './i18n/routing';
 
 const intlMiddleware = createMiddleware(routing);
-
-// Map country code → locale
-function getLocaleFromCountry(country: string): string {
-  const nl = ['NL', 'BE', 'SR', 'AW', 'CW', 'SX'];
-  const de = ['DE', 'AT', 'CH', 'LI'];
-  const es = ['ES', 'MX', 'AR', 'CL', 'CO', 'PE', 'VE', 'UY', 'BO', 'EC', 'PY', 'CR', 'PA', 'HN', 'GT', 'SV', 'NI', 'CU', 'DO', 'PR'];
-  const pt = ['PT', 'BR', 'AO', 'MZ', 'GW', 'CV', 'ST', 'TL'];
-  if (nl.includes(country)) return 'nl';
-  if (de.includes(country)) return 'de';
-  if (es.includes(country)) return 'es';
-  if (pt.includes(country)) return 'pt';
-  return 'en';
-}
 
 /**
  * Everything *below* /scorecard is a funnel step (questions, result, generated
@@ -29,18 +17,43 @@ const NOINDEX_PATH = /^\/[a-z]{2}\/scorecard\/.+/;
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Only apply geo-redirect on root path and if no locale cookie set
+  // The bare `/` is the only URL with no answer in it, so it is the only one
+  // resolved from the request. Anything that already names a locale is served
+  // as asked: redirecting there would break deep links, hreflang, and the
+  // crawl of four fifths of the site.
+  //
+  // The old version of this block had three defects. It fell back to Dutch for
+  // an unrecognised country, so a Finn got a language they cannot read rather
+  // than the English the brief asks for. It had no Accept-Language step, so
+  // with no geo header — local, self-hosted, or behind a proxy that strips it
+  // — every visitor got the same answer. And it sent no Vary, which is the
+  // one that bites in production rather than in review.
   if (pathname === '/') {
-    const savedLocale = request.cookies.get('NEXT_LOCALE')?.value;
-    if (!savedLocale) {
-      const country = request.headers.get('x-vercel-ip-country') ?? 'NL';
-      const detectedLocale = getLocaleFromCountry(country);
-      const url = request.nextUrl.clone();
-      url.pathname = `/${detectedLocale}`;
-      const response = NextResponse.redirect(url);
-      response.cookies.set('NEXT_LOCALE', detectedLocale, { maxAge: 60 * 60 * 24 * 365 });
-      return response;
-    }
+    const { locale } = resolveLocale({
+      getHeader: (name) => request.headers.get(name),
+      cookieLocale: request.cookies.get('NEXT_LOCALE')?.value,
+      supported: routing.locales,
+    });
+
+    const url = request.nextUrl.clone();
+    url.pathname = `/${locale}`;
+
+    // 307, not a permanent redirect. A 308 is cached by the browser against
+    // the origin, so the first visit would pin every later visit from that
+    // machine — including after a deliberate language switch — to whichever
+    // country the visitor happened to be in that day.
+    const response = NextResponse.redirect(url, 307);
+
+    // Without this a CDN caches one visitor's redirect and hands it to the
+    // next one from another continent. It fails silently: correct in dev,
+    // correct on the first hit, wrong at scale.
+    response.headers.set('Vary', LOCALE_VARY_HEADER);
+    response.cookies.set('NEXT_LOCALE', locale, {
+      maxAge: 60 * 60 * 24 * 365,
+      path: '/',
+      sameSite: 'lax',
+    });
+    return response;
   }
 
   const response = intlMiddleware(request);
