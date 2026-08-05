@@ -11,9 +11,8 @@ import SegmentField from './SegmentField';
  * runs platform, diligence-sprint, governance, team, partnerships, contact —
  * not alphabetical call-site order, so that no two *consecutive* pages in
  * that list (or the nav's platform/diligence-sprint/governance/team run)
- * land on the same tone. Masks are unique to this component (not reused
- * from SegmentCard's presets) so a page that shows both a header and a row
- * of cards never doubles a silhouette.
+ * land on the same tone. The masks are defined here rather than shared, so a
+ * page showing both a header and a row of cards never doubles a silhouette.
  *
  * Photographs were tried here and behaved the same way they did in the hero:
  * too much going on behind display type. Headers stay procedural; the
