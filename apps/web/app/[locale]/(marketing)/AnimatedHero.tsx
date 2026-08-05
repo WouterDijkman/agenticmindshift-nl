@@ -129,7 +129,7 @@ export default function AnimatedHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 1.15, ease }}
         >
-          <Button href="/scorecard" variant="primary" size="lg">
+          <Button href="/scorecard" variant="primary" size="lg" className="plausible-event-name=Scorecard+CTA plausible-event-location=home-hero">
             {t('cta_primary')}
           </Button>
           <a

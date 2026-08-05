@@ -79,7 +79,7 @@ export default function Hero({
                 } as CSSProperties
               }
             >
-              <Button href={INTAKE_URL} size="lg" magnetic={false}>
+              <Button href={INTAKE_URL} size="lg" magnetic={false} className="plausible-event-name=Intake+CTA plausible-event-location=home-hero">
                 {cta}
               </Button>
               <Link href={secondaryHref} className="link-quiet">

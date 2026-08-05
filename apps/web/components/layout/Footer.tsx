@@ -98,7 +98,7 @@ export default async function Footer() {
           <div className="footer-cta-card">
             <p className="footer-cta-title">{t('cta_title')}</p>
             <p className="footer-cta-sub">{t('cta_sub')}</p>
-            <Link href="/scorecard" className="footer-cta-button">
+            <Link href="/scorecard" className="footer-cta-button plausible-event-name=Scorecard+CTA plausible-event-location=footer">
               {t('start_scorecard')}
               <span aria-hidden="true">&nbsp;→</span>
             </Link>

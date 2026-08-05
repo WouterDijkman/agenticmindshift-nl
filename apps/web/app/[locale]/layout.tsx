@@ -84,10 +84,23 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <MotionProvider>{children}</MotionProvider>
         </NextIntlClientProvider>
+        {/*
+          No consent banner, deliberately. The ePrivacy consent rule is about
+          reading from or writing to the visitor's device; Plausible does
+          neither — no cookie, no fingerprint, no cross-site identifier, no
+          personal data leaving the EU. Nothing to consent to, so asking would
+          be theatre.
+
+          Two extensions on the bundle: `outbound-links` counts every click to
+          an external host, which is how intake bookings on cal.com get
+          measured; `tagged-events` reads the `plausible-event-*` classes on
+          the CTAs. The scorecard funnel itself is fired from
+          `lib/analytics.ts`, which queues until this script lands.
+        */}
         <Script
           defer
           data-domain="agenticmindshift.nl"
-          src="https://plausible.io/js/script.js"
+          src="https://plausible.io/js/script.outbound-links.tagged-events.js"
           strategy="afterInteractive"
         />
       </body>

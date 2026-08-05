@@ -140,7 +140,7 @@ export default function Header() {
 
         <div className="hidden lg:flex items-center gap-4">
           <LanguageSwitcher />
-          <Button href="/scorecard" variant="primary" size="md">
+          <Button href="/scorecard" variant="primary" size="md" className="plausible-event-name=Scorecard+CTA plausible-event-location=header">
             {t('start_scorecard')}
           </Button>
         </div>
@@ -249,7 +249,7 @@ export default function Header() {
             ))}
           </nav>
           <div className="mt-auto flex flex-col gap-4">
-            <Button href="/scorecard" variant="primary" size="lg" className="w-full">
+            <Button href="/scorecard" variant="primary" size="lg" className="w-full plausible-event-name=Scorecard+CTA plausible-event-location=header-mobile">
               {t('start_scorecard')}
             </Button>
           </div>

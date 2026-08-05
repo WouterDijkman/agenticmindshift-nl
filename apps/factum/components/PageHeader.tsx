@@ -114,7 +114,7 @@ export default function PageHeader({
                   gap: 'clamp(20px, 3vw, 36px)'
                 }}
               >
-                <Button href={INTAKE_URL} size="lg" magnetic={false}>
+                <Button href={INTAKE_URL} size="lg" magnetic={false} className="plausible-event-name=Intake+CTA plausible-event-location=page-header">
                   {cta}
                 </Button>
                 {secondary && secondaryHref && (

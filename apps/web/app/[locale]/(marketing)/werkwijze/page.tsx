@@ -132,10 +132,10 @@ export default async function WerkwijzePage(
             answers "which route?" was four screens down. Same two actions,
             same words — moved to where the intent is. */}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', alignItems: 'center' }}>
-          <Button href="/scorecard" variant="primary" size="lg">
+          <Button href="/scorecard" variant="primary" size="lg" className="plausible-event-name=Scorecard+CTA plausible-event-location=pricing-top">
             {t('cta.primary')}
           </Button>
-          <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
+          <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=pricing-top">
             {t('cta.secondary')}
           </Button>
         </div>
@@ -372,6 +372,7 @@ export default async function WerkwijzePage(
                     variant={o.featured ? 'primary' : 'secondary'}
                     size="md"
                     external
+                    className={`plausible-event-name=Intake+CTA plausible-event-location=pricing-tier-${i + 1}`}
                   >
                     {o.ctaLabel}
                   </Button>
@@ -496,10 +497,10 @@ export default async function WerkwijzePage(
               {t('cta.subtext')}
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>
-              <Button href="/scorecard" variant="primary" size="lg">
+              <Button href="/scorecard" variant="primary" size="lg" className="plausible-event-name=Scorecard+CTA plausible-event-location=pricing-final">
                 {t('cta.primary')}
               </Button>
-              <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
+              <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=pricing-final">
                 {t('cta.secondary')}
               </Button>
             </div>

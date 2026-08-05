@@ -47,7 +47,7 @@ export default function CtaBand({
               {body}
             </p>
             <div style={{ marginTop: 36 }}>
-              <Button href={INTAKE_URL} size="lg" magnetic={false}>
+              <Button href={INTAKE_URL} size="lg" magnetic={false} className="plausible-event-name=Intake+CTA plausible-event-location=cta-band">
                 {cta}
               </Button>
             </div>

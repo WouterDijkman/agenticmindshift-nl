@@ -6,6 +6,7 @@ import { useRouter } from '@/i18n/navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import { useAssessmentStore } from '@/store/assessmentStore';
 import { getLocalizedQuestionsBySection, questions } from '@/lib/questions';
+import { trackOnce } from '@/lib/analytics';
 import QuestionCard from '@/components/scorecard/QuestionCard';
 import ProgressBar from '@/components/scorecard/ProgressBar';
 import Button from '@/components/ui/Button';
@@ -20,7 +21,12 @@ export default function Sectie1Page() {
 
   useEffect(() => {
     setCurrentSection(1);
-  }, [setCurrentSection]);
+    // A start, not a revisit. The store rehydrates from localStorage before
+    // effects run, so an empty answer set means this really is question one.
+    if (Object.keys(useAssessmentStore.getState().answers).length === 0) {
+      trackOnce('Scorecard Start', { locale });
+    }
+  }, [setCurrentSection, locale]);
 
   const section = getLocalizedQuestionsBySection(locale, 1);
   const sectionDone = section.every((q) => answers[q.id]);

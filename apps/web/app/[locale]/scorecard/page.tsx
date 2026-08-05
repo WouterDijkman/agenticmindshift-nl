@@ -193,7 +193,7 @@ export default async function ScorecardWelcomePage() {
             <Button href="/scorecard/sectie-1" variant="primary" size="lg">
               {t('landing.start_cta')}
             </Button>
-            <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
+            <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=scorecard-landing">
               {t('landing.final_cta_2')}
             </Button>
           </div>

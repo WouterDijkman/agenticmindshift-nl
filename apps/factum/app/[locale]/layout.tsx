@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -87,6 +88,23 @@ export default async function LocaleLayout({
           <SiteFooter />
           <RevealObserver />
         </NextIntlClientProvider>
+        {/*
+          No consent banner, deliberately. The ePrivacy consent rule is about
+          reading from or writing to the visitor's device; Plausible does
+          neither — no cookie, no fingerprint, no cross-site identifier, no
+          personal data leaving the EU. A site that sells data governance
+          should not open with a banner asking permission it does not need.
+
+          `outbound-links` counts every click to an external host, which is how
+          intake bookings on cal.com get measured; `tagged-events` reads the
+          `plausible-event-*` classes on the CTAs.
+        */}
+        <Script
+          defer
+          data-domain="factumcapital.eu"
+          src="https://plausible.io/js/script.outbound-links.tagged-events.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

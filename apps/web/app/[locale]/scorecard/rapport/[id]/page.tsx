@@ -115,7 +115,7 @@ export default function RapportPage() {
           }}
         >
           <p className="eyebrow" style={{ marginBottom: '12px' }}>{t('offer_eyebrow')}</p>
-          <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external>
+          <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=report-top">
             {t('offer_cta_1')}
           </Button>
         </div>
@@ -383,7 +383,7 @@ export default function RapportPage() {
           </>
         )}
         <div className="no-print">
-          <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external>
+          <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=report-bottom">
             {t('offer_cta_1')}
           </Button>
         </div>

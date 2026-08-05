@@ -34,10 +34,10 @@ export default async function ContactPage() {
         headingMaxWidth="720px"
       >
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
-          <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external>
+          <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=contact-hero">
             {t('card_02_cta')}
           </Button>
-          <Button href="/scorecard" variant="secondary" size="lg">
+          <Button href="/scorecard" variant="secondary" size="lg" className="plausible-event-name=Scorecard+CTA plausible-event-location=contact-hero">
             {t('card_01_cta')}
           </Button>
         </div>
@@ -61,7 +61,7 @@ export default async function ContactPage() {
                 n: '01',
                 title: t('card_01_title'),
                 body: t('card_01_body'),
-                cta: <Button href="/scorecard" variant="primary" size="md">{t('card_01_cta')}</Button>,
+                cta: <Button href="/scorecard" variant="primary" size="md" className="plausible-event-name=Scorecard+CTA plausible-event-location=contact-card">{t('card_01_cta')}</Button>,
                 delay: 0,
               },
               {
@@ -69,7 +69,7 @@ export default async function ContactPage() {
                 title: t('card_02_title'),
                 body: t('card_02_body'),
                 cta: (
-                  <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="md" external>
+                  <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="md" external className="plausible-event-name=Intake+CTA plausible-event-location=contact-card">
                     {t('card_02_cta')}
                   </Button>
                 ),

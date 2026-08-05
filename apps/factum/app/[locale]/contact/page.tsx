@@ -48,7 +48,7 @@ export default async function ContactPage({
               lead={t('call.lead')}
             />
             <Reveal delay={60} style={{ marginTop: 32 }}>
-              <Button href={INTAKE_URL} size="lg" magnetic={false}>
+              <Button href={INTAKE_URL} size="lg" magnetic={false} className="plausible-event-name=Intake+CTA plausible-event-location=contact">
                 {t('call.button')}
               </Button>
               <p className="type-small" style={{ marginTop: 18, color: 'var(--text-quaternary)' }}>

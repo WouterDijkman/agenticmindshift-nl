@@ -151,7 +151,7 @@ export default async function HomePage() {
                 {t('mid_cta.subtext')}
               </p>
             </div>
-            <Button href="/scorecard" variant="primary" size="lg">
+            <Button href="/scorecard" variant="primary" size="lg" className="plausible-event-name=Scorecard+CTA plausible-event-location=home-mid">
               {t('mid_cta.cta')}
             </Button>
           </div>
@@ -231,7 +231,7 @@ export default async function HomePage() {
               }}>
                 {t('faq.subtext')}
               </p>
-              <Button href="/scorecard" variant="primary" size="md">
+              <Button href="/scorecard" variant="primary" size="md" className="plausible-event-name=Scorecard+CTA plausible-event-location=home-faq">
                 {t('faq.cta')}
               </Button>
             </div>
@@ -310,10 +310,10 @@ export default async function HomePage() {
             {t('final_cta.subtext')}
           </p>
           <div className="cta-button-row" style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>
-            <Button href="/scorecard" variant="primary" size="lg">
+            <Button href="/scorecard" variant="primary" size="lg" className="plausible-event-name=Scorecard+CTA plausible-event-location=home-final">
               {t('final_cta.cta_primary')}
             </Button>
-            <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
+            <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=home-final">
               {t('final_cta.cta_secondary')}
             </Button>
           </div>

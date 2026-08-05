@@ -69,7 +69,7 @@ export default function SiteHeader() {
             <LanguageSwitcher />
           </div>
           <div className="nav-desktop">
-            <Button href={INTAKE_URL} size="md" magnetic={false} className="text-sm">
+            <Button href={INTAKE_URL} size="md" magnetic={false} className="text-sm plausible-event-name=Intake+CTA plausible-event-location=header">
               {t('cta')}
             </Button>
           </div>
@@ -135,7 +135,7 @@ export default function SiteHeader() {
             ))}
           </nav>
           <div style={{ marginTop: 28, display: 'flex', flexDirection: 'column', gap: 20 }}>
-            <Button href={INTAKE_URL} size="lg" magnetic={false} className="w-full">
+            <Button href={INTAKE_URL} size="lg" magnetic={false} className="w-full plausible-event-name=Intake+CTA plausible-event-location=header-mobile">
               {t('cta')}
             </Button>
             <LanguageSwitcher />

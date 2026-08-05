@@ -44,7 +44,7 @@ export default async function FactumCapitalPage(
           <Button href={factumUrl} variant="primary" size="lg" external>
             {t('site_cta')}
           </Button>
-          <Button href="/scorecard" variant="secondary" size="lg">
+          <Button href="/scorecard" variant="secondary" size="lg" className="plausible-event-name=Scorecard+CTA plausible-event-location=factum-hero">
             {t('cta.primary')}
           </Button>
         </div>
@@ -133,13 +133,13 @@ export default async function FactumCapitalPage(
             {t('cta.subtext')}
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>
-            <Button href="/scorecard" variant="primary" size="lg">
+            <Button href="/scorecard" variant="primary" size="lg" className="plausible-event-name=Scorecard+CTA plausible-event-location=factum-final">
               {t('cta.primary')}
             </Button>
             <Button href="/werkwijze" variant="secondary" size="lg">
               {t('cta.secondary_1')}
             </Button>
-            <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
+            <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=factum-final">
               {t('cta.secondary_2')}
             </Button>
           </div>

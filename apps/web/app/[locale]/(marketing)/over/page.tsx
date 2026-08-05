@@ -273,10 +273,10 @@ export default async function OverPage(
             <div
               style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center', alignItems: 'center', marginBottom: '20px' }}
             >
-              <Button href="/scorecard" variant="primary" size="lg">
+              <Button href="/scorecard" variant="primary" size="lg" className="plausible-event-name=Scorecard+CTA plausible-event-location=about-final">
                 {t('contact_cta.cta1')}
               </Button>
-              <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
+              <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=about-final">
                 {t('contact_cta.cta2')}
               </Button>
             </div>

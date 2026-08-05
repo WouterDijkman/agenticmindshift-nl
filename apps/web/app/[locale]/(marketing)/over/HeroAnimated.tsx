@@ -159,10 +159,10 @@ export default function HeroAnimated() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.3, ease }}
         >
-          <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external>
+          <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=about-hero">
             {t('contact_cta.cta2')}
           </Button>
-          <Button href="/scorecard" variant="secondary" size="lg">
+          <Button href="/scorecard" variant="secondary" size="lg" className="plausible-event-name=Scorecard+CTA plausible-event-location=about-hero">
             {t('contact_cta.cta1')}
           </Button>
         </motion.div>
