@@ -772,6 +772,34 @@ export const questionTranslations: Record<string, LocaleQuestionData> = {
   },
 };
 
+/**
+ * The one place a dimension turns into words. Every surface — the bars, the
+ * radar, the PDF, the follow-up mail, the report prompt — resolves through
+ * here, so a reader can never be shown two names for the same thing in one
+ * language.
+ */
+export function dimensionLabel(dim: string, locale: string): string {
+  return (sectionTranslations[locale] ?? sectionTranslations.nl).dimensions[dim] ?? dim;
+}
+
+/**
+ * `leads.weakest_dimensions` used to be written as English label strings.
+ * Rows from before the rename are read back here and turned into IDs, so
+ * everything downstream only ever handles IDs.
+ */
+const LEGACY_DIMENSION_LABELS: Record<string, string> = {
+  'Deal Velocity': 'DealVelocity',
+  'Analytical Quality': 'PortfolioIntelligence',
+  'Bias Detection': 'BiasDetection',
+  'AI Readiness': 'AIReadiness',
+  'Capacity Engineering': 'CapacityEngineering',
+  'Knowledge Retention': 'KnowledgeRetention'
+};
+
+export function toDimensionIds(stored: string[] | null | undefined): string[] {
+  return (stored ?? []).map((v) => LEGACY_DIMENSION_LABELS[v] ?? v);
+}
+
 export const sectionTranslations: Record<string, {
   sections: Array<{ title: string; eyebrow: string; description: string }>;
   dimensions: Record<string, string>;
@@ -784,12 +812,12 @@ export const sectionTranslations: Record<string, {
       { title: 'Kennisborging, capaciteit en AI-gereedheid', eyebrow: 'Sectie 4 van 4', description: 'Als een associate vertrekt, verdwijnt het geheugen van drie tot vijf dossiers. Deze sectie meet of uw organisatie daartegen bestand is.' },
     ],
     dimensions: {
-      DealVelocity: 'Deal Velocity',
-      PortfolioIntelligence: 'Analytical Quality',
-      BiasDetection: 'Bias Detection',
-      AIReadiness: 'AI Readiness',
-      CapacityEngineering: 'Capacity Engineering',
-      KnowledgeRetention: 'Knowledge Retention',
+      DealVelocity: 'Doorlooptijd',
+      PortfolioIntelligence: 'Portefeuille-inzicht',
+      BiasDetection: 'Oordeelsvorming',
+      AIReadiness: 'AI-volwassenheid',
+      CapacityEngineering: 'Teamcapaciteit',
+      KnowledgeRetention: 'Kennisborging',
     },
   },
   en: {
@@ -800,12 +828,12 @@ export const sectionTranslations: Record<string, {
       { title: 'Knowledge retention, capacity and AI readiness', eyebrow: 'Section 4 of 4', description: 'When an associate leaves, the memory of three to five files goes with them. This section measures whether your organisation can absorb that.' },
     ],
     dimensions: {
-      DealVelocity: 'Deal Velocity',
-      PortfolioIntelligence: 'Analytical Quality',
-      BiasDetection: 'Bias Detection',
-      AIReadiness: 'AI Readiness',
-      CapacityEngineering: 'Capacity Engineering',
-      KnowledgeRetention: 'Knowledge Retention',
+      DealVelocity: 'Turnaround time',
+      PortfolioIntelligence: 'Portfolio insight',
+      BiasDetection: 'Judgement',
+      AIReadiness: 'AI maturity',
+      CapacityEngineering: 'Team capacity',
+      KnowledgeRetention: 'Knowledge retention',
     },
   },
   de: {
@@ -816,12 +844,12 @@ export const sectionTranslations: Record<string, {
       { title: 'Wissenssicherung, Kapazität und KI-Bereitschaft', eyebrow: 'Abschnitt 4 von 4', description: 'Geht ein Associate, verschwindet das Gedächtnis von drei bis fünf Dossiers. Dieser Abschnitt misst, ob Ihre Organisation das auffängt.' },
     ],
     dimensions: {
-      DealVelocity: 'Deal Velocity',
-      PortfolioIntelligence: 'Analytical Quality',
-      BiasDetection: 'Bias Detection',
-      AIReadiness: 'AI Readiness',
-      CapacityEngineering: 'Capacity Engineering',
-      KnowledgeRetention: 'Knowledge Retention',
+      DealVelocity: 'Durchlaufzeit',
+      PortfolioIntelligence: 'Portfolio-Einblick',
+      BiasDetection: 'Urteilsbildung',
+      AIReadiness: 'KI-Reifegrad',
+      CapacityEngineering: 'Teamkapazität',
+      KnowledgeRetention: 'Wissenssicherung',
     },
   },
   es: {
@@ -832,12 +860,12 @@ export const sectionTranslations: Record<string, {
       { title: 'Retención de conocimiento, capacidad y preparación para la IA', eyebrow: 'Sección 4 de 4', description: 'Cuando un associate se va, se lleva la memoria de tres a cinco expedientes. Esta sección mide si su organización lo absorbe.' },
     ],
     dimensions: {
-      DealVelocity: 'Deal Velocity',
-      PortfolioIntelligence: 'Analytical Quality',
-      BiasDetection: 'Bias Detection',
-      AIReadiness: 'AI Readiness',
-      CapacityEngineering: 'Capacity Engineering',
-      KnowledgeRetention: 'Knowledge Retention',
+      DealVelocity: 'Tiempo de respuesta',
+      PortfolioIntelligence: 'Visión de cartera',
+      BiasDetection: 'Formación del juicio',
+      AIReadiness: 'Madurez en IA',
+      CapacityEngineering: 'Capacidad del equipo',
+      KnowledgeRetention: 'Retención del conocimiento',
     },
   },
   pt: {
@@ -848,12 +876,12 @@ export const sectionTranslations: Record<string, {
       { title: 'Retenção de conhecimento, capacidade e preparação para a IA', eyebrow: 'Secção 4 de 4', description: 'Quando um associate sai, leva a memória de três a cinco processos. Esta secção mede se a sua organização o absorve.' },
     ],
     dimensions: {
-      DealVelocity: 'Deal Velocity',
-      PortfolioIntelligence: 'Analytical Quality',
-      BiasDetection: 'Bias Detection',
-      AIReadiness: 'AI Readiness',
-      CapacityEngineering: 'Capacity Engineering',
-      KnowledgeRetention: 'Knowledge Retention',
+      DealVelocity: 'Tempo de resposta',
+      PortfolioIntelligence: 'Visão de carteira',
+      BiasDetection: 'Formação do juízo',
+      AIReadiness: 'Maturidade em IA',
+      CapacityEngineering: 'Capacidade da equipa',
+      KnowledgeRetention: 'Retenção de conhecimento',
     },
   },
 };

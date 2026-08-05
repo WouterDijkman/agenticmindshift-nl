@@ -7,17 +7,21 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 import { useAssessmentStore } from '@/store/assessmentStore';
-import { calculateScores } from '@/lib/scoring';
+import { calculateScores, maturityBand } from '@/lib/scoring';
+import { dimensionLabel } from '@/lib/questions.locales';
 import { emailCaptureSchema, type EmailCaptureInput } from '@/lib/schemas';
 import { submitScorecard } from '@/app/actions/submitScorecard';
 import { totalQuestions } from '@/lib/questions';
+import { track, trackOnce } from '@/lib/analytics';
 
 import TotalScoreCircle from '@/components/scorecard/TotalScoreCircle';
+import DimensionBars from '@/components/scorecard/DimensionBars';
 import { Input } from '@/components/ui/Input';
 import Button from '@/components/ui/Button';
 
 export default function ResultaatPage() {
   const t = useTranslations('scorecard.resultaat');
+  const tR = useTranslations('scorecard.rapport');
   const tv = useTranslations('validation');
   const locale = useLocale();
 
@@ -50,6 +54,13 @@ export default function ResultaatPage() {
   const allAnswered = answeredCount === totalQuestions;
 
   const scores = useMemo(() => calculateScores(answers), [answers]);
+
+  // Completion is reaching this page with all fifteen answered — the form below
+  // is a separate, optional step and is counted separately.
+  useEffect(() => {
+    if (!hydrated || !allAnswered) return;
+    trackOnce('Scorecard Completed', { locale, band: maturityBand(scores.total) });
+  }, [hydrated, allAnswered, locale, scores.total]);
 
   const {
     register,
@@ -88,6 +99,7 @@ export default function ResultaatPage() {
         locale: locale as 'nl' | 'en' | 'de' | 'es' | 'pt',
       });
       if (res.ok && res.leadId) {
+        track('Report Requested', { locale });
         setLeadId(res.leadId);
         setLeadName(data.name);
         router.push(`/scorecard/rapport/${res.leadId}`);
@@ -121,17 +133,22 @@ export default function ResultaatPage() {
         </p>
       </div>
 
-      {/* Score + rapport-inhoud */}
+      {/*
+        The result itself, before anything is asked for. The homepage promises
+        "no account" six times and this page used to answer that with a name,
+        a business email and a company field. Everything below is computed in
+        the browser from answers already in the store, so there is nothing to
+        withhold.
+      */}
       <div
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
           gap: 'clamp(32px, 5vw, 64px)',
           alignItems: 'center',
-          marginBottom: '48px',
+          marginBottom: 'clamp(40px, 5vw, 56px)',
         }}
       >
-        {/* Score cirkel */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
           <TotalScoreCircle score={scores.total} max={75} size={240} />
           <p
@@ -140,26 +157,65 @@ export default function ResultaatPage() {
               color: 'var(--text-muted)',
               letterSpacing: '0.04em',
               textAlign: 'center',
-              maxWidth: '200px',
+              maxWidth: '220px',
               lineHeight: 1.6,
             }}
           >
-            {t('score_caption')}
+            {tR(`band_${maturityBand(scores.total)}`)}
           </p>
         </div>
 
-        {/* Rapport inhoud */}
         <div>
-          <p className="eyebrow" style={{ marginBottom: '20px' }}>{t('report_contents_eyebrow')}</p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
-            {(['report_item_1', 'report_item_2', 'report_item_3', 'report_item_4', 'report_item_5'] as const).map((key, i) => (
+          <h2 className="type-h3" style={{ marginBottom: '12px' }}>{t('weakest_eyebrow')}</h2>
+          <p style={{ fontSize: 'clamp(1rem, 1.6vw, 1.125rem)', color: 'var(--text-secondary)', lineHeight: 1.75 }}>
+            {t('weakest_body', {
+              first: dimensionLabel(scores.weakest[0], locale),
+              second: dimensionLabel(scores.weakest[1], locale),
+            })}
+          </p>
+          <p style={{ fontSize: '0.8125rem', color: 'var(--text-muted)', marginTop: '16px', lineHeight: 1.6 }}>
+            {t('score_caption')}
+          </p>
+        </div>
+      </div>
+
+      <div
+        style={{
+          background: 'var(--bg-secondary)',
+          border: '1px solid var(--border-subtle)',
+          padding: 'clamp(24px, 3.5vw, 32px)',
+          marginBottom: 'clamp(48px, 6vw, 72px)',
+        }}
+      >
+        <h2 className="type-h3" style={{ marginBottom: '24px' }}>{t('dimensions_heading')}</h2>
+        <DimensionBars scores={scores.byDimension} weakest={scores.weakest} />
+      </div>
+
+      {/* The written report — an offer now, not a toll gate. */}
+      <div
+        style={{
+          background: 'var(--bg-secondary)',
+          border: '1px solid var(--border-medium)',
+          padding: 'clamp(28px, 4vw, 44px)',
+        }}
+      >
+        <p className="eyebrow" style={{ marginBottom: '14px' }}>{t('optional_eyebrow')}</p>
+        <h2 className="type-h3" style={{ marginBottom: '10px' }}>{t('form_heading')}</h2>
+        <p style={{ color: 'var(--text-secondary)', lineHeight: 1.75, maxWidth: '52ch' }}>
+          {t('report_lead')}
+        </p>
+
+        <div style={{ marginBlock: 'clamp(24px, 3vw, 32px)' }}>
+          <p className="eyebrow" style={{ marginBottom: '16px' }}>{t('report_contents_eyebrow')}</p>
+          {(['report_item_1', 'report_item_2', 'report_item_3', 'report_item_4', 'report_item_5'] as const).map(
+            (key, i) => (
               <div
                 key={key}
                 style={{
                   display: 'flex',
                   alignItems: 'flex-start',
                   gap: '16px',
-                  paddingBlock: '14px',
+                  paddingBlock: '12px',
                   borderBottom: '1px solid var(--border-subtle)',
                 }}
               >
@@ -170,29 +226,18 @@ export default function ResultaatPage() {
                     color: 'var(--accent-cta-ink)',
                     letterSpacing: '0.06em',
                     flexShrink: 0,
-                    paddingTop: '1px',
+                    paddingTop: '2px',
                   }}
                 >
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <span style={{ fontSize: 'clamp(1rem, 1.5vw, 1.0625rem)', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                <span style={{ fontSize: '1rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
                   {t(key)}
                 </span>
               </div>
-            ))}
-          </div>
+            ),
+          )}
         </div>
-      </div>
-
-      {/* Formulier */}
-      <div
-        style={{
-          background: 'var(--bg-secondary)',
-          border: '1px solid var(--border-medium)',
-          padding: 'clamp(28px, 4vw, 44px)',
-        }}
-      >
-        <h2 className="type-h3" style={{ marginBottom: '8px' }}>{t('form_heading')}</h2>
 
         <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-2 gap-5" noValidate>
           <Input
@@ -320,6 +365,17 @@ export default function ResultaatPage() {
             </p>
           </div>
         </form>
+      </div>
+
+      {/* The route out for a reader who wants none of the above. */}
+      <div style={{ marginTop: 'clamp(40px, 5vw, 56px)' }}>
+        <p className="eyebrow" style={{ marginBottom: '12px' }}>{t('next_eyebrow')}</p>
+        <p style={{ color: 'var(--text-secondary)', lineHeight: 1.75, marginBottom: '20px', maxWidth: '48ch' }}>
+          {t('next_body')}
+        </p>
+        <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="md" external className="plausible-event-name=Intake+CTA plausible-event-location=result">
+          {t('next_cta')}
+        </Button>
       </div>
     </section>
   );

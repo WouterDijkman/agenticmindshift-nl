@@ -14,6 +14,7 @@ import { calculateScores, determineOffer } from '@/lib/scoring';
 import { type Answers } from '@/lib/scoring';
 import ReportDocument from '@/lib/pdf/reportTemplate';
 import { type Dimension } from '@/lib/questions';
+import { toDimensionIds } from '@/lib/questions.locales';
 import { normalizeReportLocale, HTML_LANG } from '@/lib/report/locale';
 
 export const dynamic = 'force-dynamic';
@@ -59,7 +60,11 @@ export async function GET(
     // Herbereken scores voor PDF (of gebruik opgeslagen waarden)
     const scores = data.answers
       ? calculateScores(data.answers as Answers)
-      : { total: data.total_score, byDimension: data.dimension_scores, weakest: data.weakest_dimensions ?? [] };
+      : {
+          total: data.total_score,
+          byDimension: data.dimension_scores,
+          weakest: toDimensionIds(data.weakest_dimensions),
+        };
 
     const offer = (data.assigned_offer ?? 'none') as OfferType;
     const storedReport = data.report as GeneratedReport | null;

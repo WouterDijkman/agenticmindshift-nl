@@ -3,7 +3,6 @@ import {
   OptionLetter,
   questions,
   getQuestion,
-  dimensionLabels,
 } from './questions';
 
 export type Answers = Record<string, OptionLetter>;
@@ -13,7 +12,13 @@ export type DimensionScores = Record<Dimension, number>;
 export interface ScoreResult {
   total: number;
   byDimension: DimensionScores;
-  weakest: string[];
+  /**
+   * Dimension IDs, not labels. This lands in `leads.weakest_dimensions` and is
+   * read back months later by the PDF, the follow-up mail and the report
+   * prompt — each of which renders in the lead's own language. Storing a label
+   * would freeze one language into the row.
+   */
+  weakest: Dimension[];
 }
 
 const dimensionMap: Record<Dimension, string[]> = {
@@ -62,11 +67,11 @@ export function calculateScores(answers: Answers): ScoreResult {
     }
   });
 
-  // weakest: two lowest dimensions (by score). Use Dutch label.
+  // weakest: two lowest dimensions (by score), as IDs.
   const sortedDims = (Object.entries(byDimension) as [Dimension, number][])
     .sort((a, b) => a[1] - b[1])
     .slice(0, 2)
-    .map(([dim]) => dimensionLabels[dim]);
+    .map(([dim]) => dim);
 
   return {
     total,

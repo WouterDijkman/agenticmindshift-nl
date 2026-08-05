@@ -7,6 +7,7 @@ import Followup7DayEmail from '@/lib/email/templates/Followup7DayEmail';
 import { sendMail, isGmailConfigured } from '@/lib/email/mailer';
 import { type OfferType } from '@/lib/scoring';
 import { getOfferName } from '@/lib/pdf/offerRoutes';
+import { dimensionLabel, toDimensionIds } from '@/lib/questions.locales';
 import {
   FOLLOWUP_STRINGS,
   normalizeReportLocale,
@@ -98,7 +99,9 @@ export async function GET(request: Request) {
 
       try {
         if (step === 1 && daysSinceLast >= 3) {
-          const weakest = lead.weakest_dimensions ?? [];
+          const weakest = toDimensionIds(lead.weakest_dimensions).map((d) =>
+            dimensionLabel(d, locale),
+          );
           const html = await render(
             createElement(Followup3DayEmail, {
               name: lead.name,

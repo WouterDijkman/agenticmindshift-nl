@@ -6,7 +6,7 @@
 export interface DimensionAnalysis {
   /** e.g. 'AIReadiness' */
   dimension: string;
-  /** Nederlandse naam, e.g. 'AI Readiness' */
+  /** Dimensienaam in de taal van de lead, e.g. 'AI-volwassenheid' */
   label: string;
   /** Genormaliseerde score 0-100 */
   score: number;

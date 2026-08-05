@@ -28,14 +28,10 @@ export interface Question {
   options: QuestionOption[];
 }
 
-export const dimensionLabels: Record<Dimension, string> = {
-  DealVelocity: 'Deal Velocity',
-  PortfolioIntelligence: 'Analytical Quality',
-  BiasDetection: 'Bias Detection',
-  AIReadiness: 'AI Readiness',
-  CapacityEngineering: 'Capacity Engineering',
-  KnowledgeRetention: 'Knowledge Retention',
-};
+// Dimension names live in `questions.locales.ts` — see `dimensionLabel`. There
+// is deliberately no English map here: it used to name the same six things
+// differently from the visible copy, so a reader could meet "Analytical
+// Quality" in the report and "Portefeuille-inzicht" on the page.
 
 export const questions: Question[] = [
   // ===== SECTION 1: Uw analytische aanpak vandaag =====

@@ -109,7 +109,7 @@
       "eyebrow": "How it works",
       "heading": "The Quickscan Method: three steps, twelve minutes.",
       "title_1": "Answer 15 questions",
-      "body_1": "Multiple choice on deal process, monthly reporting, AI resilience and knowledge retention. No open fields.",
+      "body_1": "Multiple choice on deal process, monthly reporting, AI maturity and knowledge retention. No open fields.",
       "title_2": "Receive your report",
       "body_2": "A score on six dimensions. The two priorities that come first. Straight after you finish.",
       "title_3": "Determine your next step",
@@ -141,8 +141,8 @@
       "body_2": "Does your monthly reporting steer in time, or confirm after the fact what you already suspected?",
       "title_3": "Judgement",
       "body_3": "How much of your analysis is data, and how much is the relationship with management?",
-      "title_4": "AI resilience",
-      "body_4": "Can an AI-driven competitor take over the core activity of your portfolio company?",
+      "title_4": "AI maturity",
+      "body_4": "How much of your analysis work can AI take over today, without losing quality?",
       "title_5": "Team capacity",
       "body_5": "How many deals stall on manual searching and reporting?",
       "title_6": "Knowledge retention",
@@ -176,7 +176,7 @@
       "wie_a": "Wouter Dijkman, founder. Acquisition finance and financial restructuring, European mid-market.",
       "wie_link": "More on the About page →",
       "sales-pitch_q": "Is this just another disguised sales pitch?",
-      "sales-pitch_a": "No. You receive scores on six dimensions, the two priorities that come first and a concrete proposal. After that you decide. You will not hear from us unless you get in touch.",
+      "sales-pitch_a": "No. You see your scores immediately, with no form. If you leave an email address for the report, two follow-up emails follow, on day 3 and day 7. One click to stop them.",
       "investering_q": "What are the investment levels for the different tracks?",
       "investering_a": "There are four routes. A free twenty-minute AI Sparring Session. AI Advisory & Implementation from €4,500 per engagement or on retainer. A Fractional AI Officer at €1,099 per day, minimum three months. And AI-driven Due Diligence & Portfolio from €10,000 per deal, or from €6,500 per month on an ongoing basis. All amounts exclude VAT. The full breakdown is on /werkwijze.",
       "voorbeeld_q": "I would rather not fill in the Scorecard but still see the report. Is that possible?",
@@ -266,7 +266,7 @@
     "contact_cta": {
       "eyebrow": "Get in touch",
       "heading": "One conversation. Twenty minutes. You set the topic.",
-      "subtext": "No agenda, no obligation. You will not hear from us unless you get in touch.",
+      "subtext": "No agenda, no obligation. A conversation does not start a mail sequence.",
       "cta1": "Start the Scorecard",
       "cta2": "Schedule a no-obligation call",
       "cta3": "Connect on LinkedIn"
@@ -356,7 +356,7 @@
     "cta": {
       "eyebrow": "Start here",
       "heading": "Not sure which route fits? The Scorecard shows the way.",
-      "subtext": "Twelve minutes. Your profile shows which route pays off most. No obligation, and you will not hear from us unless you get in touch.",
+      "subtext": "Twelve minutes. Your profile shows which route pays off most. You see the scores immediately, with no form.",
       "primary": "Start the Scorecard",
       "secondary": "Schedule a no-obligation call"
     }
@@ -393,7 +393,7 @@
     "meta_description": "Privacy statement of Agentic Mindshift. GDPR-compliant, transparent and limited in data collection.",
     "legal_label": "Legal",
     "heading": "Privacy Statement",
-    "last_modified": "Last modified: 13 May 2026",
+    "last_modified": "Last modified: 5 August 2026",
     "intro": "This privacy statement explains what personal data Agentic Mindshift collects, for what purpose, on what legal basis, how long it is retained and what rights you have. The policy is aligned with the General Data Protection Regulation (GDPR).",
     "s1_heading": "1. Controller",
     "s1_body": "The controller for processing is Agentic Mindshift, established in the Netherlands. Contact person: Wouter Dijkman, reachable at wouter@agenticmindshift.nl.",
@@ -407,13 +407,13 @@
     "s4_heading": "4. Retention periods",
     "s4_body": "Your scorecard answers and report data are retained for a maximum of 36 months, unless you request earlier deletion. Waitlist data for Factum Capital is retained until six months after launch, then anonymised.",
     "s5_heading": "5. Processors",
-    "s5_body": "We use a limited number of processors: Supabase (European region) for data persistence, Resend for sending emails and a European hosting provider for the website. A data processing agreement has been concluded with each processor.",
+    "s5_body": "We use a limited number of processors: Supabase (European region) for data persistence, Resend for sending emails, Plausible Analytics (EU) for visit statistics and a European hosting provider for the website. A data processing agreement has been concluded with each processor.",
     "s6_heading": "6. Transfers outside the EU",
     "s6_body": "By default your data is stored and processed within the European Union. Should transfer outside the EU occur, it takes place exclusively on the basis of the standard contractual clauses of the European Commission.",
     "s7_heading": "7. Your rights",
     "s7_body": "You have the right to access, rectification, erasure, restriction of processing, data portability and objection. A request can be directed to wouter@agenticmindshift.nl. You may also lodge a complaint with the supervisory authority.",
     "s8_heading": "8. Cookies",
-    "s8_body": "The website uses only functional cookies and local storage (localStorage) for the interim saving of your scorecard answers. No tracking cookies or advertising cookies are used.",
+    "s8_body": "The website uses only functional cookies and local storage (localStorage) for the interim saving of your scorecard answers. No tracking cookies or advertising cookies are used. Visits are counted with Plausible Analytics: no cookie, no fingerprint, no cross-site profile. It records the page, the referring site, the country and the device type. That count writes nothing to your device, and the local storage above is functional. That is why this site carries no cookie banner.",
     "s9_heading": "9. Changes",
     "s9_body": "We reserve the right to amend this statement. The most current version is always on this page."
   },
@@ -444,7 +444,7 @@
   },
   "scorecard": {
     "meta_title": "Scorecard — six dimensions, twelve minutes",
-    "meta_description": "Fifteen questions on your deal process, monthly reporting, AI resilience and knowledge retention. Twelve minutes, and you have a report that makes your blind spots measurable.",
+    "meta_description": "Fifteen questions on your deal process, monthly reporting, AI maturity and knowledge retention. Twelve minutes, and you have a report that makes your blind spots measurable.",
     "landing": {
       "eyebrow": "Scorecard · Six dimensions · Twelve minutes",
       "heading": "Where is your return leaking away?",
@@ -481,20 +481,20 @@
     },
     "resultaat": {
       "eyebrow": "Scorecard completed",
-      "heading": "You now see what most partners only see at the annual review.",
-      "subtext": "Enter your details to receive the full report: straight away in your browser, and as a PDF in your inbox.",
+      "heading": "Your score. Right now, no form.",
+      "subtext": "Below are your six dimension scores and the two points that deserve priority. No account, no email address.",
       "incomplete_eyebrow": "Scorecard incomplete",
       "incomplete_heading": "{remaining} {questions} remaining",
       "incomplete_body": "You have answered {answered} of the {total} questions. Finish the scorecard first; then we produce your report.",
       "back_to_scorecard": "Back to the scorecard",
-      "report_contents_eyebrow": "What is in your report?",
-      "report_item_1": "Total score, with an explanation per dimension",
+      "report_contents_eyebrow": "What the report contains",
+      "report_item_1": "An analysis per dimension, based on your answers",
       "report_item_2": "All six dimensions, with the reference level beside them",
       "report_item_3": "Your two weakest dimensions, explained",
-      "report_item_4": "A recommended next step, based on your answers",
+      "report_item_4": "A recommended next step",
       "report_item_5": "A personal link and a PDF in your inbox",
-      "form_heading": "Where should I send your report?",
-      "optional_section_label": "Optional — this sharpens the report",
+      "form_heading": "Would you like the written report as well?",
+      "optional_section_label": "Extra context — sharpens the report",
       "field_name": "Name",
       "field_email": "Business email address",
       "field_company": "Company",
@@ -504,16 +504,24 @@
       "field_website_placeholder": "www.yourcompany.com",
       "field_company_context": "Brief note on your company or fund (optional)",
       "field_company_context_placeholder": "For example: mid-market PE fund, 12 portfolio companies, B2B services in the Benelux. Or: family-owned machine builder, 80 staff, exit within 3 years.",
-      "field_company_context_hint": "The more specific, the sharper the report. Our AI uses this together with your website for the analysis.",
-      "submit_button": "Show my report",
+      "field_company_context_hint": "The more specific, the sharper the report. If you give a website, our AI reads those pages too.",
+      "submit_button": "Send the report",
       "submit_loading": "Generating report...",
-      "privacy_notice": "By clicking you agree to our privacy statement. You will receive two follow-up emails, on day 3 and day 7. Nothing after that.",
+      "privacy_notice": "We send the report, plus two follow-up emails on day 3 and day 7. One click to unsubscribe. Nothing beyond that.",
       "privacy_link": "privacy statement",
       "error_generic": "Something went wrong. Please try again later.",
       "error_create": "We could not create your report. Check the fields and try again.",
-      "score_caption": "The full report gives your score per dimension, with the reference level beside it.",
+      "score_caption": "Your total adds up fifteen answers, out of a maximum of 75 points.",
       "question_singular": "question",
-      "question_plural": "questions"
+      "question_plural": "questions",
+      "dimensions_heading": "Your six dimensions",
+      "weakest_eyebrow": "Two points that deserve priority",
+      "weakest_body": "{first} and {second} score lowest. That is where return leaks away fastest.",
+      "optional_eyebrow": "Optional",
+      "report_lead": "We produce a report with an analysis per dimension and a recommended next step. In your browser and as a PDF.",
+      "next_eyebrow": "Rather talk it through?",
+      "next_body": "Twenty minutes on your own situation. Without leaving any details.",
+      "next_cta": "Book an introductory call"
     },
     "section_cards": {
       "s1_title": "Your analytical approach today",
@@ -638,7 +646,7 @@
     "variants": {
       "A": {
         "offerName": "AI-driven Due Diligence & Portfolio",
-        "interpretation": "Your score on Analytical Quality is {score} out of 20 points. This is the dimension where most parties in the European lower-mid market lose return, often without noticing. Your MBR cycle runs, but you see problems late: the variance analysis does not go deep enough to correct course before the quarter is gone. Our portfolio intelligence service, which runs on Factum Capital, was built for exactly this.",
+        "interpretation": "Your score on Portfolio insight is {score} out of 20 points. This is the dimension where most parties in the European lower-mid market lose return, often without noticing. Your MBR cycle runs, but you see problems late: the variance analysis does not go deep enough to correct course before the quarter is gone. Our portfolio intelligence service, which runs on Factum Capital, was built for exactly this.",
         "price": "From €6,500 / month · min. 3 months · excl. VAT",
         "interventions": {
           "0": {
@@ -657,7 +665,7 @@
       },
       "B": {
         "offerName": "AI-driven Due Diligence & Portfolio",
-        "interpretation": "Your score on AI Readiness is {score} out of 25 points. You do not yet price the risk of AI taking over work as standard in your deal analysis, and your evidence differs from file to file. The chance that one of your three most recent acquisitions loses margin within 24 months is higher than you currently assume. Our AI Due Diligence, which runs on Factum Capital, delivers that evidence for your next deal, including certified advisers for the formal sign-off.",
+        "interpretation": "Your score on AI maturity is {score} out of 25 points. You do not yet price the risk of AI taking over work as standard in your deal analysis, and your evidence differs from file to file. The chance that one of your three most recent acquisitions loses margin within 24 months is higher than you currently assume. Our AI Due Diligence, which runs on Factum Capital, delivers that evidence for your next deal, including certified advisers for the formal sign-off.",
         "price": "From €10,000 per deal · 2–3 weeks · excl. VAT",
         "interventions": {
           "0": {
@@ -676,7 +684,7 @@
       },
       "C": {
         "offerName": "Fractional AI Officer",
-        "interpretation": "Your score on Knowledge Retention is {score} out of 10 points. Knowledge leaks away in two ways: through external reports that land nowhere, and through people who leave. If a holding is in financial distress, that leak gets expensive. As Fractional AI Officer I flag in good time when a review is needed.",
+        "interpretation": "Your score on Knowledge retention is {score} out of 10 points. Knowledge leaks away in two ways: through external reports that land nowhere, and through people who leave. If a holding is in financial distress, that leak gets expensive. As Fractional AI Officer I flag in good time when a review is needed.",
         "price": "€1,099 / day · min. 3 months · excl. VAT",
         "interventions": {
           "0": {
@@ -695,7 +703,7 @@
       },
       "D": {
         "offerName": "AI Advisory & Implementation",
-        "interpretation": "Your scores on Capacity Engineering and Deal Velocity show a pattern: your team is qualified, but stuck in manual work. Firms that tackle this systematically get considerably more out of the same headcount, without hiring. A targeted advisory or implementation engagement resolves it.",
+        "interpretation": "Your scores on Team capacity and Turnaround time show a pattern: your team is qualified, but stuck in manual work. Firms that tackle this systematically get considerably more out of the same headcount, without hiring. A targeted advisory or implementation engagement resolves it.",
         "price": "From €4,500 per track or retainer · excl. VAT",
         "interventions": {
           "0": {
@@ -714,7 +722,7 @@
       },
       "E": {
         "offerName": "AI-driven Due Diligence & Portfolio",
-        "interpretation": "Your score on Analytical Quality is {score} out of 20 points. Your financing and deal files are not yet built out across every relevant dimension. That costs turnaround time, produces extra rounds of revision and weakens your negotiating position. Our financing memo service, which runs on Factum Capital, supplies the evidence and brings in certified advisers who sign where required.",
+        "interpretation": "Your score on Portfolio insight is {score} out of 20 points. Your financing and deal files are not yet built out across every relevant dimension. That costs turnaround time, produces extra rounds of revision and weakens your negotiating position. Our financing memo service, which runs on Factum Capital, supplies the evidence and brings in certified advisers who sign where required.",
         "price": "From €10,000 per deal · or from €6,500/month portfolio intelligence · excl. VAT",
         "interventions": {
           "0": {

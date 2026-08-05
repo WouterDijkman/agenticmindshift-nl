@@ -21,7 +21,8 @@
 import path from 'path';
 import fs from 'fs';
 import { Document, Page, Text, View, StyleSheet, Font } from '@react-pdf/renderer';
-import { dimensionLabels, questions, type Dimension } from '../questions';
+import { questions, type Dimension } from '../questions';
+import { dimensionLabel } from '../questions.locales';
 import { type OfferType, type Answers } from '../scoring';
 import { type GeneratedReport } from '../report/types';
 import { type ReportLocale } from '../report/locale';
@@ -447,7 +448,7 @@ export function ReportDocument(props: ReportProps) {
               return (
                 <View key={dim} style={{ marginBottom: 12 }}>
                   <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 4 }}>
-                    <Text style={{ fontFamily: SANS_BOLD, fontSize: 10, color: brand.navy }}>{dimensionLabels[dim]}</Text>
+                    <Text style={{ fontFamily: SANS_BOLD, fontSize: 10, color: brand.navy }}>{dimensionLabel(dim, locale)}</Text>
                     <Text style={{ fontSize: 9.5, color: isBelow ? brand.rust : brand.navySoft }}>
                       {score} / 100{dimReport?.priority ? `  ·  ${priorityLabel(dimReport.priority, t)}` : ''}
                     </Text>
@@ -484,7 +485,9 @@ export function ReportDocument(props: ReportProps) {
           <View style={[s.statBox, { flex: 1 }]}>
             <Text style={s.smallLabelMuted}>{t.weakestDims}</Text>
             {weakest.map((w, i) => (
-              <Text key={i} style={{ fontSize: 9.5, color: brand.rust, marginTop: 2 }}>· {w}</Text>
+              <Text key={i} style={{ fontSize: 9.5, color: brand.rust, marginTop: 2 }}>
+                · {dimensionLabel(w, locale)}
+              </Text>
             ))}
           </View>
           <View style={[s.statBox, { flex: 1 }]}>
@@ -494,7 +497,7 @@ export function ReportDocument(props: ReportProps) {
               .slice(0, 2)
               .map(([dim, score]) => (
                 <Text key={dim} style={{ fontSize: 9.5, color: brand.green, marginTop: 2 }}>
-                  · {dimensionLabels[dim]} ({score})
+                  · {dimensionLabel(dim, locale)} ({score})
                 </Text>
               ))}
           </View>

@@ -109,7 +109,7 @@
       "eyebrow": "Así funciona",
       "heading": "El Método Quickscan: tres pasos, doce minutos.",
       "title_1": "Responda 15 preguntas",
-      "body_1": "Opción múltiple sobre proceso de deals, reporte mensual, resiliencia ante la IA y retención de conocimiento. Sin campos abiertos.",
+      "body_1": "Opción múltiple sobre proceso de deals, reporte mensual, madurez en IA y retención de conocimiento. Sin campos abiertos.",
       "title_2": "Reciba su informe",
       "body_2": "Una puntuación en seis dimensiones. Los dos puntos que van primero. Nada más terminar.",
       "title_3": "Determine su siguiente paso",
@@ -141,8 +141,8 @@
       "body_2": "¿Su informe mensual corrige a tiempo o confirma a posteriori lo que ya sospechaba?",
       "title_3": "Formación del juicio",
       "body_3": "¿Cuánto de su análisis son datos y cuánto la relación con el equipo directivo?",
-      "title_4": "Resistencia a la IA",
-      "body_4": "¿Puede un competidor impulsado por IA asumir la actividad central de su participada?",
+      "title_4": "Madurez en IA",
+      "body_4": "¿Cuánto de su trabajo de análisis puede asumir hoy la IA, sin pérdida de calidad?",
       "title_5": "Capacidad del equipo",
       "body_5": "¿Cuántas operaciones se quedan atrás por búsquedas y reportes manuales?",
       "title_6": "Retención del conocimiento",
@@ -176,7 +176,7 @@
       "wie_a": "Wouter Dijkman, founder. Acquisition finance y financial restructuring, mid-market europeo.",
       "wie_link": "Más en la página Sobre nosotros →",
       "sales-pitch_q": "¿Es esto otro discurso de venta encubierto?",
-      "sales-pitch_a": "No. Recibe puntuaciones en seis dimensiones, los dos puntos prioritarios y una propuesta concreta. Después decide usted. No sabrá de nosotros salvo que nos escriba.",
+      "sales-pitch_a": "No. Ve sus puntuaciones al momento, sin formulario. Si deja un correo para el informe, siguen dos correos de seguimiento, el día 3 y el día 7. Un clic para pararlos.",
       "investering_q": "¿Cuáles son los niveles de inversión para los distintos proyectos?",
       "investering_a": "Hay cuatro rutas. Una AI Sparring Session gratuita de veinte minutos. Asesoría e implementación de IA desde €4.500 por proyecto o en retainer. Un Fractional AI Officer por €1.099 al día, mínimo tres meses. Y due diligence y cartera con IA desde €10.000 por operación, o desde €6.500 al mes de forma continua. Todos los importes excluyen IVA. El detalle completo está en /werkwijze.",
       "voorbeeld_q": "No quiero completar la Scorecard, pero sí ver el informe. ¿Es posible?",
@@ -266,7 +266,7 @@
     "contact_cta": {
       "eyebrow": "Contacto directo",
       "heading": "Una conversación. Veinte minutos. Usted elige el tema.",
-      "subtext": "Sin agenda y sin compromiso. No sabrá de nosotros salvo que nos escriba.",
+      "subtext": "Sin agenda, sin compromiso. Una conversación no activa ninguna secuencia de correos.",
       "cta1": "Iniciar el Scorecard",
       "cta2": "Programar una llamada sin compromiso",
       "cta3": "Conectar en LinkedIn"
@@ -356,7 +356,7 @@
     "cta": {
       "eyebrow": "Empiece aquí",
       "heading": "¿No está seguro de qué ruta encaja? El Scorecard marca el camino.",
-      "subtext": "Doce minutos. Su perfil muestra qué ruta rinde más. Sin compromiso, y no sabrá de nosotros salvo que nos escriba.",
+      "subtext": "Doce minutos. Su perfil muestra qué ruta rinde más. Ve las puntuaciones al momento, sin formulario.",
       "primary": "Iniciar el Scorecard",
       "secondary": "Programar una llamada sin compromiso"
     }
@@ -393,7 +393,7 @@
     "meta_description": "Declaración de privacidad de Agentic Mindshift. Conforme al RGPD, transparente y con recopilación limitada de datos.",
     "legal_label": "Legal",
     "heading": "Declaración de privacidad",
-    "last_modified": "Última modificación: 13 de mayo de 2026",
+    "last_modified": "Última modificación: 5 de agosto de 2026",
     "intro": "Esta declaración de privacidad explica qué datos personales recopila Agentic Mindshift, con qué finalidad, sobre qué base legal, durante cuánto tiempo se conservan y qué derechos tiene usted. La política se ajusta al Reglamento General de Protección de Datos (RGPD).",
     "s1_heading": "1. Responsable",
     "s1_body": "El responsable del tratamiento es Agentic Mindshift, con sede en los Países Bajos. Persona de contacto: Wouter Dijkman, accesible en wouter@agenticmindshift.nl.",
@@ -407,13 +407,13 @@
     "s4_heading": "4. Plazos de conservación",
     "s4_body": "Conservamos sus respuestas al scorecard y los datos del informe durante un máximo de 36 meses, salvo que solicite su eliminación antes. Los datos de la lista de espera de Factum Capital se conservan hasta seis meses después del lanzamiento, y luego se anonimizan.",
     "s5_heading": "5. Encargados del tratamiento",
-    "s5_body": "Utilizamos un número limitado de encargados: Supabase (región europea) para la persistencia de datos, Resend para el envío de emails y un hosting europeo para el sitio web. Se ha firmado un acuerdo de encargo del tratamiento con cada uno.",
+    "s5_body": "Utilizamos un número limitado de encargados: Supabase (región europea) para la persistencia de datos, Resend para el envío de emails, Plausible Analytics (UE) para estadísticas de visitas y un hosting europeo para el sitio web. Se ha firmado un acuerdo de encargo del tratamiento con cada uno.",
     "s6_heading": "6. Transferencias fuera de la UE",
     "s6_body": "Por defecto, sus datos se almacenan y procesan dentro de la Unión Europea. Si se produjera alguna transferencia fuera de la UE, se realizará exclusivamente sobre la base de las cláusulas contractuales tipo de la Comisión Europea.",
     "s7_heading": "7. Sus derechos",
     "s7_body": "Tiene derecho de acceso, rectificación, supresión, limitación del tratamiento, portabilidad de datos y oposición. Puede dirigir su solicitud a wouter@agenticmindshift.nl. También puede presentar una reclamación ante la autoridad de protección de datos competente.",
     "s8_heading": "8. Cookies",
-    "s8_body": "El sitio web utiliza únicamente cookies funcionales y almacenamiento local (localStorage) para guardar temporalmente sus respuestas al scorecard. No se utilizan cookies de seguimiento ni publicitarias.",
+    "s8_body": "El sitio web utiliza únicamente cookies funcionales y almacenamiento local (localStorage) para guardar temporalmente sus respuestas al scorecard. No se utilizan cookies de seguimiento ni publicitarias. Las visitas se cuentan con Plausible Analytics: sin cookie, sin huella digital, sin perfil entre sitios. Se registran la página, el sitio de procedencia, el país y el tipo de dispositivo. Ese recuento no guarda nada en su dispositivo, y el almacenamiento local anterior es funcional. Por eso este sitio no muestra un banner de cookies.",
     "s9_heading": "9. Cambios",
     "s9_body": "Nos reservamos el derecho a modificar esta declaración. La versión más actualizada siempre estará en esta página."
   },
@@ -444,7 +444,7 @@
   },
   "scorecard": {
     "meta_title": "Scorecard — seis dimensiones, doce minutos",
-    "meta_description": "Quince preguntas sobre su proceso de operaciones, reporte mensual, resistencia ante la IA y retención del conocimiento. Doce minutos y tendrá un informe que hace medibles sus puntos ciegos.",
+    "meta_description": "Quince preguntas sobre su proceso de operaciones, reporte mensual, madurez en IA y retención del conocimiento. Doce minutos y tendrá un informe que hace medibles sus puntos ciegos.",
     "landing": {
       "eyebrow": "Scorecard · Seis dimensiones · Doce minutos",
       "heading": "¿Por dónde se le escapa la rentabilidad?",
@@ -481,20 +481,20 @@
     },
     "resultaat": {
       "eyebrow": "Scorecard completado",
-      "heading": "Ahora ve lo que la mayoría de socios solo ven en la revisión anual.",
-      "subtext": "Introduzca sus datos para recibir el informe completo: al momento en su navegador y en PDF en su bandeja de entrada.",
+      "heading": "Su puntuación. Ahora, sin formulario.",
+      "subtext": "Abajo están sus seis puntuaciones por dimensión y los dos puntos que merecen prioridad. Sin cuenta, sin correo electrónico.",
       "incomplete_eyebrow": "Scorecard incompleto",
       "incomplete_heading": "{remaining} {questions} restantes",
       "incomplete_body": "Ha respondido {answered} de las {total} preguntas. Termine primero la scorecard; después elaboramos su informe.",
       "back_to_scorecard": "Volver al scorecard",
-      "report_contents_eyebrow": "¿Qué contiene su informe?",
-      "report_item_1": "Puntuación total, con explicación por dimensión",
+      "report_contents_eyebrow": "Qué contiene el informe",
+      "report_item_1": "Un análisis por dimensión, basado en sus respuestas",
       "report_item_2": "Las seis dimensiones, con el nivel de referencia al lado",
       "report_item_3": "Sus dos dimensiones más débiles, explicadas",
-      "report_item_4": "Un siguiente paso recomendado, según sus respuestas",
+      "report_item_4": "Un siguiente paso recomendado",
       "report_item_5": "Un enlace personal y un PDF en su bandeja de entrada",
-      "form_heading": "¿Dónde debo enviar su informe?",
-      "optional_section_label": "Opcional — esto afina el informe",
+      "form_heading": "¿Quiere además el informe escrito?",
+      "optional_section_label": "Contexto adicional — afina el informe",
       "field_name": "Nombre",
       "field_email": "Correo electrónico corporativo",
       "field_company": "Empresa",
@@ -504,16 +504,24 @@
       "field_website_placeholder": "www.suempresa.com",
       "field_company_context": "Breve descripción de su empresa o fondo (opcional)",
       "field_company_context_placeholder": "Por ejemplo: fondo de PE mid-market, 12 participadas, servicios B2B en el Benelux. O: empresa familiar de bienes de equipo, 80 empleados, salida en 3 años.",
-      "field_company_context_hint": "Cuanto más concreto, más afinado será el informe. Nuestra IA lo usa junto con su web para el análisis.",
-      "submit_button": "Ver mi informe",
+      "field_company_context_hint": "Cuanto más concreto, más afilado el informe. Si indica una web, nuestra IA también lee esas páginas.",
+      "submit_button": "Enviar el informe",
       "submit_loading": "Generando informe...",
-      "privacy_notice": "Al hacer clic acepta nuestra política de privacidad. Recibirá dos correos de seguimiento, el día 3 y el día 7. Después, nada más.",
+      "privacy_notice": "Enviamos el informe y dos correos de seguimiento, el día 3 y el día 7. Un clic para darse de baja. Nada más.",
       "privacy_link": "declaración de privacidad",
       "error_generic": "Algo ha fallado. Inténtelo de nuevo más tarde.",
       "error_create": "No hemos podido crear su informe. Revise los campos e inténtelo de nuevo.",
-      "score_caption": "El informe completo recoge su puntuación por dimensión, con el nivel de referencia al lado.",
+      "score_caption": "Su total suma quince respuestas, sobre un máximo de 75 puntos.",
       "question_singular": "pregunta",
-      "question_plural": "preguntas"
+      "question_plural": "preguntas",
+      "dimensions_heading": "Sus seis dimensiones",
+      "weakest_eyebrow": "Dos puntos que merecen prioridad",
+      "weakest_body": "{first} y {second} son las más bajas. Ahí es donde la rentabilidad se escapa más rápido.",
+      "optional_eyebrow": "Opcional",
+      "report_lead": "Preparamos un informe con un análisis por dimensión y un siguiente paso recomendado. En su navegador y en PDF.",
+      "next_eyebrow": "¿Prefiere hablarlo directamente?",
+      "next_body": "Veinte minutos sobre su propia situación. Sin dejar ningún dato.",
+      "next_cta": "Agende una toma de contacto sin compromiso"
     },
     "section_cards": {
       "s1_title": "Su enfoque analítico hoy",
@@ -638,7 +646,7 @@
     "variants": {
       "A": {
         "offerName": "Due Diligence & Portfolio impulsada por IA",
-        "interpretation": "Su puntuación en Analytical Quality es {score} sobre 20 puntos. En esta dimensión es donde más rentabilidad pierden las firmas del lower-mid market europeo, a menudo sin notarlo. Su ciclo de MBR funciona, pero ve los problemas tarde: el análisis de desviaciones no baja lo suficiente como para corregir antes de que el trimestre se pierda. Nuestro servicio de portfolio intelligence, que funciona sobre Factum Capital, está hecho justo para esto.",
+        "interpretation": "Su puntuación en Visión de cartera es {score} sobre 20 puntos. En esta dimensión es donde más rentabilidad pierden las firmas del lower-mid market europeo, a menudo sin notarlo. Su ciclo de MBR funciona, pero ve los problemas tarde: el análisis de desviaciones no baja lo suficiente como para corregir antes de que el trimestre se pierda. Nuestro servicio de portfolio intelligence, que funciona sobre Factum Capital, está hecho justo para esto.",
         "price": "Desde €6.500 / mes · mín. 3 meses · excl. IVA",
         "interventions": {
           "0": {
@@ -657,7 +665,7 @@
       },
       "B": {
         "offerName": "Due Diligence & Portfolio impulsada por IA",
-        "interpretation": "Su puntuación en AI Readiness es {score} sobre 25 puntos. Todavía no incorpora de forma estándar el riesgo de que la IA asuma tareas en su análisis de operaciones, y su fundamentación varía de un expediente a otro. La probabilidad de que una de sus tres últimas adquisiciones pierda margen en 24 meses es mayor de lo que supone. Nuestra AI Due Diligence, que funciona sobre Factum Capital, aporta esa fundamentación para su próxima operación, con asesores certificados para la firma formal.",
+        "interpretation": "Su puntuación en Madurez en IA es {score} sobre 25 puntos. Todavía no incorpora de forma estándar el riesgo de que la IA asuma tareas en su análisis de operaciones, y su fundamentación varía de un expediente a otro. La probabilidad de que una de sus tres últimas adquisiciones pierda margen en 24 meses es mayor de lo que supone. Nuestra AI Due Diligence, que funciona sobre Factum Capital, aporta esa fundamentación para su próxima operación, con asesores certificados para la firma formal.",
         "price": "Desde €10.000 por deal · 2–3 semanas · excl. IVA",
         "interventions": {
           "0": {
@@ -676,7 +684,7 @@
       },
       "C": {
         "offerName": "Fractional AI Officer",
-        "interpretation": "Su puntuación en Knowledge Retention es {score} sobre 10 puntos. El conocimiento se pierde por dos vías: informes externos que no aterrizan en ningún sitio y personas que se van. Si una participada está en tensión financiera, esa fuga sale cara. Como Fractional AI Officer aviso a tiempo cuando hace falta una revisión a fondo.",
+        "interpretation": "Su puntuación en Retención del conocimiento es {score} sobre 10 puntos. El conocimiento se pierde por dos vías: informes externos que no aterrizan en ningún sitio y personas que se van. Si una participada está en tensión financiera, esa fuga sale cara. Como Fractional AI Officer aviso a tiempo cuando hace falta una revisión a fondo.",
         "price": "€1.099 / día · mín. 3 meses · excl. IVA",
         "interventions": {
           "0": {
@@ -695,7 +703,7 @@
       },
       "D": {
         "offerName": "Asesoría e Implementación de IA",
-        "interpretation": "Sus puntuaciones en Capacity Engineering y Deal Velocity muestran un patrón: su equipo está cualificado, pero atascado en trabajo manual. Las firmas que abordan esto de forma estructurada sacan bastante más de la misma plantilla, sin ampliarla. Un proyecto específico de asesoría o implementación lo resuelve.",
+        "interpretation": "Sus puntuaciones en Capacidad del equipo y Tiempo de respuesta muestran un patrón: su equipo está cualificado, pero atascado en trabajo manual. Las firmas que abordan esto de forma estructurada sacan bastante más de la misma plantilla, sin ampliarla. Un proyecto específico de asesoría o implementación lo resuelve.",
         "price": "Desde €4.500 por proyecto o retainer · excl. IVA",
         "interventions": {
           "0": {
@@ -714,7 +722,7 @@
       },
       "E": {
         "offerName": "Due Diligence & Portfolio impulsada por IA",
-        "interpretation": "Su puntuación en Analytical Quality es {score} sobre 20 puntos. Sus expedientes de financiación y de operación aún no están construidos en todas las dimensiones relevantes. Eso cuesta plazos, genera rondas de revisión adicionales y debilita su posición negociadora. Nuestro servicio de memorando de financiación, que funciona sobre Factum Capital, aporta la fundamentación e incorpora asesores certificados que firman donde hace falta.",
+        "interpretation": "Su puntuación en Visión de cartera es {score} sobre 20 puntos. Sus expedientes de financiación y de operación aún no están construidos en todas las dimensiones relevantes. Eso cuesta plazos, genera rondas de revisión adicionales y debilita su posición negociadora. Nuestro servicio de memorando de financiación, que funciona sobre Factum Capital, aporta la fundamentación e incorpora asesores certificados que firman donde hace falta.",
         "price": "Desde €10.000 por deal · o desde €6.500/mes portfolio intelligence · excl. IVA",
         "interventions": {
           "0": {

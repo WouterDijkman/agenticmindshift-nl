@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import { Dimension, dimensionLabels } from '@/lib/questions';
-import { sectionTranslations } from '@/lib/questions.locales';
+import { Dimension } from '@/lib/questions';
+import { dimensionLabel } from '@/lib/questions.locales';
 
 interface DimensionBarsProps {
   scores: Record<Dimension, number>; // 0..100
+  /** Dimension IDs. Rows written before the rename hold English labels instead. */
   weakest?: string[];
 }
 
@@ -22,7 +23,6 @@ const order: Dimension[] = [
 export default function DimensionBars({ scores, weakest = [] }: DimensionBarsProps) {
   const locale = useLocale();
   const tR = useTranslations('scorecard.rapport');
-  const dims = (sectionTranslations[locale] ?? sectionTranslations['nl']).dimensions;
 
   // After mount, the .dim-bar elements transition from width 0 to their
   // final pct over 800ms with a 100ms stagger via inline animation-delay.
@@ -35,9 +35,9 @@ export default function DimensionBars({ scores, weakest = [] }: DimensionBarsPro
   return (
     <div className="flex flex-col gap-5">
       {order.map((dim, idx) => {
-        const label = dims[dim] ?? dim;
+        const label = dimensionLabel(dim, locale);
         const val = scores[dim] ?? 0;
-        const isWeak = weakest.includes(dimensionLabels[dim]);
+        const isWeak = weakest.includes(dim);
         const targetPct = `${Math.max(0, Math.min(100, val))}%`;
         return (
           <div key={dim}>

@@ -256,8 +256,9 @@ export function getOrganizationLd(locale: string) {
       addressLocality: 'Amsterdam',
       addressCountry: 'NL',
     },
-    /** KvK Handelsregister (Dutch Chamber of Commerce) — used by Google as taxID */
-    taxID: 'NL 99495945',
+    /* No taxID: this used to publish the KvK number as `NL 99495945`, which
+       reads as a Dutch VAT number and is not one — those are formatted
+       NL……B01. The registration is stated once, correctly, as an identifier. */
     identifier: {
       '@type': 'PropertyValue',
       propertyID: 'KvK',

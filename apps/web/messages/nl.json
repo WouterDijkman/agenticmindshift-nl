@@ -109,7 +109,7 @@
       "eyebrow": "Zo werkt het",
       "heading": "De Quickscan Methode: drie stappen, twaalf minuten.",
       "title_1": "Beantwoord 15 vragen",
-      "body_1": "Multiple choice over dealproces, maandrapportage, AI-bestendigheid en kennisborging. Geen open velden.",
+      "body_1": "Multiple choice over dealproces, maandrapportage, AI-volwassenheid en kennisborging. Geen open velden.",
       "title_2": "Ontvang uw rapport",
       "body_2": "Een score op zes dimensies. De twee punten die voorrang verdienen. Direct na afronding.",
       "title_3": "Bepaal uw volgende stap",
@@ -141,8 +141,8 @@
       "body_2": "Stuurt uw maandrapportage bij, of bevestigt ze achteraf wat u al vermoedde?",
       "title_3": "Oordeelsvorming",
       "body_3": "Hoeveel van uw analyse is data, en hoeveel is de relatie met het management?",
-      "title_4": "AI-bestendigheid",
-      "body_4": "Kan een AI-gedreven concurrent de kernactiviteit van uw deelneming overnemen?",
+      "title_4": "AI-volwassenheid",
+      "body_4": "Hoeveel van uw analysewerk kan AI vandaag al overnemen, zonder kwaliteitsverlies?",
       "title_5": "Teamcapaciteit",
       "body_5": "Hoeveel deals blijven liggen door handmatig zoekwerk en rapportage?",
       "title_6": "Kennisborging",
@@ -176,7 +176,7 @@
       "wie_a": "Wouter Dijkman, founder. Acquisition finance en financial restructuring, Europese mid-market.",
       "wie_link": "Meer op de Over-pagina →",
       "sales-pitch_q": "Is dit weer een verkapte sales pitch?",
-      "sales-pitch_a": "Nee. U ontvangt scores op zes dimensies, de twee punten die voorrang verdienen en een concreet voorstel. Daarna beslist u zelf. U hoort niets van ons tenzij u zelf contact opneemt.",
+      "sales-pitch_a": "Nee. U ziet uw scores direct, zonder formulier. Laat u een e-mailadres achter voor het rapport, dan volgen twee opvolgmails, op dag 3 en dag 7. Eén klik om te stoppen.",
       "investering_q": "Wat zijn de investeringsniveaus voor de verschillende trajecten?",
       "investering_a": "Er zijn vier routes. Een gratis AI Sparring Sessie van twintig minuten. AI-advies & Implementatie vanaf €4.500 per traject of in retainer. Een Fractional AI Officer voor €1.099 per dag, minimaal drie maanden. En AI-gedreven Due Diligence & Portfolio vanaf €10.000 per deal, of vanaf €6.500 per maand doorlopend. Alle bedragen zijn exclusief btw. De volledige toelichting staat op /werkwijze.",
       "voorbeeld_q": "Ik wil de Scorecard niet invullen, maar wel het rapport zien. Kan dat?",
@@ -266,7 +266,7 @@
     "contact_cta": {
       "eyebrow": "Direct contact",
       "heading": "Eén gesprek. Twintig minuten. U bepaalt het onderwerp.",
-      "subtext": "Geen agenda, geen verplichting. U hoort niets van ons tenzij u zelf contact opneemt.",
+      "subtext": "Geen agenda, geen verplichting. Een gesprek zet geen mailreeks in gang.",
       "cta1": "Start de Scorecard",
       "cta2": "Plan een vrijblijvende kennismaking",
       "cta3": "Verbind via LinkedIn"
@@ -356,7 +356,7 @@
     "cta": {
       "eyebrow": "Begin hier",
       "heading": "Niet zeker welke route past? De Scorecard wijst de weg.",
-      "subtext": "Twaalf minuten. Uw profiel laat zien welke route het meeste oplevert. Geen verplichting, en u hoort niets van ons tenzij u zelf contact opneemt.",
+      "subtext": "Twaalf minuten. Uw profiel laat zien welke route het meeste oplevert. De scores ziet u direct, zonder formulier.",
       "primary": "Start de Scorecard",
       "secondary": "Plan een vrijblijvende kennismaking"
     }
@@ -393,7 +393,7 @@
     "meta_description": "Privacystatement van Agentic Mindshift. AVG-conform, transparant en beperkt in dataverzameling.",
     "legal_label": "Juridisch",
     "heading": "Privacystatement",
-    "last_modified": "Laatste wijziging: 13 mei 2026",
+    "last_modified": "Laatste wijziging: 5 augustus 2026",
     "intro": "Dit privacystatement legt uit welke persoonsgegevens Agentic Mindshift verzamelt, met welk doel, op welke grondslag, hoe lang ze worden bewaard en welke rechten u heeft. Het beleid sluit aan op de Algemene Verordening Gegevensbescherming (AVG).",
     "s1_heading": "1. Verantwoordelijke",
     "s1_body": "Verantwoordelijke voor de verwerking is Agentic Mindshift, gevestigd in Nederland. Contactpersoon: Wouter Dijkman, te bereiken via wouter@agenticmindshift.nl.",
@@ -407,13 +407,13 @@
     "s4_heading": "4. Bewaartermijnen",
     "s4_body": "Uw scorecard-antwoorden en rapportgegevens bewaren wij maximaal 36 maanden, tenzij u verzoekt deze eerder te verwijderen. Wachtlijstgegevens voor Factum Capital worden bewaard tot zes maanden na lancering, daarna geanonimiseerd.",
     "s5_heading": "5. Verwerkers",
-    "s5_body": "Wij maken gebruik van een beperkt aantal verwerkers: Supabase (Europese regio) voor datapersistentie, Resend voor het verzenden van e-mails en een Europese hostingpartij voor de website. Met elke verwerker is een verwerkersovereenkomst gesloten.",
+    "s5_body": "Wij maken gebruik van een beperkt aantal verwerkers: Supabase (Europese regio) voor datapersistentie, Resend voor het verzenden van e-mails, Plausible Analytics (EU) voor bezoekstatistieken en een Europese hostingpartij voor de website. Met elke verwerker is een verwerkersovereenkomst gesloten.",
     "s6_heading": "6. Doorgifte buiten de EU",
     "s6_body": "Standaard worden uw gegevens binnen de Europese Unie opgeslagen en verwerkt. Mocht doorgifte buiten de EU plaatsvinden, dan gebeurt dat uitsluitend op basis van de standaardcontractbepalingen van de Europese Commissie.",
     "s7_heading": "7. Uw rechten",
     "s7_body": "U heeft het recht op inzage, rectificatie, verwijdering, beperking van verwerking, dataportabiliteit en bezwaar. Een verzoek kunt u richten aan wouter@agenticmindshift.nl. Daarnaast kunt u een klacht indienen bij de Autoriteit Persoonsgegevens.",
     "s8_heading": "8. Cookies",
-    "s8_body": "De website maakt uitsluitend gebruik van functionele cookies en lokale opslag (localStorage) voor het tussentijds opslaan van uw scorecard-antwoorden. Er worden geen trackingcookies of advertentiecookies gebruikt.",
+    "s8_body": "De website maakt uitsluitend gebruik van functionele cookies en lokale opslag (localStorage) voor het tussentijds opslaan van uw scorecard-antwoorden. Er worden geen trackingcookies of advertentiecookies gebruikt. Bezoeken worden geteld met Plausible Analytics: geen cookie, geen fingerprint, geen profiel over websites heen. Geregistreerd worden pagina, verwijzende site, land en apparaattype. Voor die telling wordt niets op uw apparaat gezet, en de lokale opslag hierboven is functioneel. Daarom staat er geen cookiebanner op deze site.",
     "s9_heading": "9. Wijzigingen",
     "s9_body": "Wij behouden ons het recht voor dit statement aan te passen. De meest actuele versie staat altijd op deze pagina."
   },
@@ -444,7 +444,7 @@
   },
   "scorecard": {
     "meta_title": "Scorecard — zes dimensies, twaalf minuten",
-    "meta_description": "Vijftien vragen over uw dealproces, maandrapportage, AI-bestendigheid en kennisborging. Twaalf minuten, en u heeft een rapport dat uw blinde vlekken meetbaar maakt.",
+    "meta_description": "Vijftien vragen over uw dealproces, maandrapportage, AI-volwassenheid en kennisborging. Twaalf minuten, en u heeft een rapport dat uw blinde vlekken meetbaar maakt.",
     "landing": {
       "eyebrow": "Scorecard · Zes dimensies · Twaalf minuten",
       "heading": "Waar lekt uw rendement weg?",
@@ -481,20 +481,20 @@
     },
     "resultaat": {
       "eyebrow": "Scorecard voltooid",
-      "heading": "U ziet nu wat de meeste partners pas bij de jaarrapportage zien.",
-      "subtext": "Vul uw gegevens in om het volledige rapport te ontvangen: direct in uw browser en als PDF in uw inbox.",
+      "heading": "Uw score. Direct, zonder formulier.",
+      "subtext": "Hieronder staan uw zes dimensiescores en de twee punten die voorrang verdienen. Geen account, geen e-mailadres.",
       "incomplete_eyebrow": "Scorecard onvolledig",
       "incomplete_heading": "Nog {remaining} {questions} te gaan",
       "incomplete_body": "U heeft {answered} van de {total} vragen beantwoord. Rond de scorecard eerst af; daarna stellen wij uw rapport op.",
       "back_to_scorecard": "Terug naar de scorecard",
-      "report_contents_eyebrow": "Wat zit er in uw rapport?",
-      "report_item_1": "Totaalscore, met toelichting per dimensie",
+      "report_contents_eyebrow": "Wat er in het rapport staat",
+      "report_item_1": "Een analyse per dimensie, op uw antwoorden gebaseerd",
       "report_item_2": "Alle zes dimensies, met het referentieniveau ernaast",
       "report_item_3": "Uw twee zwakste dimensies, met uitleg",
-      "report_item_4": "Een aanbevolen vervolgstap, op uw antwoorden gebaseerd",
+      "report_item_4": "Een aanbevolen vervolgstap",
       "report_item_5": "Een persoonlijke link en een PDF in uw inbox",
-      "form_heading": "Waar stuur ik uw rapport naartoe?",
-      "optional_section_label": "Optioneel — dit maakt het rapport scherper",
+      "form_heading": "Wilt u het geschreven rapport erbij?",
+      "optional_section_label": "Extra context — maakt het rapport scherper",
       "field_name": "Naam",
       "field_email": "Zakelijk e-mailadres",
       "field_company": "Bedrijf",
@@ -504,16 +504,24 @@
       "field_website_placeholder": "www.uwbedrijf.nl",
       "field_company_context": "Korte toelichting op uw bedrijf of fonds (optioneel)",
       "field_company_context_placeholder": "Bijvoorbeeld: mid-market PE-fonds, 12 portfoliobedrijven, B2B services in de Benelux. Of: familiebedrijf in machinebouw, 80 medewerkers, exit binnen 3 jaar.",
-      "field_company_context_hint": "Hoe specifieker, hoe scherper het rapport. Onze AI gebruikt dit samen met uw website voor de analyse.",
-      "submit_button": "Toon mijn rapport",
+      "field_company_context_hint": "Hoe specifieker, hoe scherper het rapport. Vult u een website in, dan leest onze AI die pagina's mee.",
+      "submit_button": "Stuur het rapport",
       "submit_loading": "Rapport genereren...",
-      "privacy_notice": "Door te klikken gaat u akkoord met ons privacystatement. U ontvangt twee opvolgmails, op dag 3 en dag 7. Daarna niets meer.",
+      "privacy_notice": "Wij sturen het rapport, plus twee opvolgmails op dag 3 en dag 7. Eén klik om af te melden. Verder niets.",
       "privacy_link": "privacystatement",
       "error_generic": "Er is iets misgegaan. Probeer het later opnieuw.",
       "error_create": "We konden uw rapport niet aanmaken. Controleer de velden en probeer het opnieuw.",
-      "score_caption": "In het volledige rapport staat uw score per dimensie, met het referentieniveau ernaast.",
+      "score_caption": "Uw totaalscore telt vijftien antwoorden op, met een maximum van 75 punten.",
       "question_singular": "vraag",
-      "question_plural": "vragen"
+      "question_plural": "vragen",
+      "dimensions_heading": "Uw zes dimensies",
+      "weakest_eyebrow": "Twee punten die voorrang verdienen",
+      "weakest_body": "{first} en {second} scoren het laagst. Daar lekt rendement het snelst weg.",
+      "optional_eyebrow": "Optioneel",
+      "report_lead": "Wij stellen een rapport op met een analyse per dimensie en een aanbevolen vervolgstap. In uw browser en als PDF.",
+      "next_eyebrow": "Liever direct sparren?",
+      "next_body": "Twintig minuten over uw eigen situatie. Zonder gegevens achter te laten.",
+      "next_cta": "Plan een vrijblijvende kennismaking"
     },
     "section_cards": {
       "s1_title": "Uw analytische aanpak vandaag",
@@ -638,7 +646,7 @@
     "variants": {
       "A": {
         "offerName": "AI-gedreven Due Diligence & Portfolio",
-        "interpretation": "Uw score op Analytical Quality is {score} van 20 punten. Op deze dimensie verliezen de meeste partijen in de Europese lower-mid market rendement, vaak zonder het te merken. Uw MBR-cyclus draait, maar u ziet problemen te laat: de variantie-analyse gaat niet diep genoeg om bij te sturen voordat het kwartaal weg is. Onze portfolio-intelligence dienst, die op Factum Capital draait, is precies hiervoor gebouwd.",
+        "interpretation": "Uw score op Portefeuille-inzicht is {score} van 20 punten. Op deze dimensie verliezen de meeste partijen in de Europese lower-mid market rendement, vaak zonder het te merken. Uw MBR-cyclus draait, maar u ziet problemen te laat: de variantie-analyse gaat niet diep genoeg om bij te sturen voordat het kwartaal weg is. Onze portfolio-intelligence dienst, die op Factum Capital draait, is precies hiervoor gebouwd.",
         "price": "Vanaf €6.500 / maand · min. 3 maanden · excl. btw",
         "interventions": {
           "0": {
@@ -657,7 +665,7 @@
       },
       "B": {
         "offerName": "AI-gedreven Due Diligence & Portfolio",
-        "interpretation": "Uw score op AI Readiness is {score} van 25 punten. U rekent het risico dat AI werk overneemt nog niet standaard mee in uw deal-analyse, en uw onderbouwing verschilt per dossier. De kans dat een van uw drie recentste acquisities binnen 24 maanden marge verliest, is groter dan u nu denkt. Onze AI Due Diligence, die op Factum Capital draait, levert die onderbouwing voor uw volgende deal, inclusief gecertificeerde adviseurs voor de formele sign-off.",
+        "interpretation": "Uw score op AI-volwassenheid is {score} van 25 punten. U rekent het risico dat AI werk overneemt nog niet standaard mee in uw deal-analyse, en uw onderbouwing verschilt per dossier. De kans dat een van uw drie recentste acquisities binnen 24 maanden marge verliest, is groter dan u nu denkt. Onze AI Due Diligence, die op Factum Capital draait, levert die onderbouwing voor uw volgende deal, inclusief gecertificeerde adviseurs voor de formele sign-off.",
         "price": "Vanaf €10.000 per deal · 2–3 weken · excl. btw",
         "interventions": {
           "0": {
@@ -676,7 +684,7 @@
       },
       "C": {
         "offerName": "Fractional AI Officer",
-        "interpretation": "Uw score op Knowledge Retention is {score} van 10 punten. Kennis lekt op twee manieren weg: via externe rapporten die nergens landen, en via mensen die vertrekken. Zit een deelneming in financiële stress, dan is dat lek extra duur. Als Fractional AI Officer signaleer ik op tijd wanneer een doorlichting nodig is.",
+        "interpretation": "Uw score op Kennisborging is {score} van 10 punten. Kennis lekt op twee manieren weg: via externe rapporten die nergens landen, en via mensen die vertrekken. Zit een deelneming in financiële stress, dan is dat lek extra duur. Als Fractional AI Officer signaleer ik op tijd wanneer een doorlichting nodig is.",
         "price": "€1.099 / dag · min. 3 maanden · excl. btw",
         "interventions": {
           "0": {
@@ -695,7 +703,7 @@
       },
       "D": {
         "offerName": "AI-advies & Implementatie",
-        "interpretation": "Uw scores op Capacity Engineering en Deal Velocity laten een patroon zien: uw team is gekwalificeerd, maar loopt vast in handmatig werk. Partijen die dit gestructureerd aanpakken, halen aanzienlijk meer uit dezelfde bezetting, zonder uitbreiding. Een gericht advies- of implementatietraject lost dit op.",
+        "interpretation": "Uw scores op Teamcapaciteit en Doorlooptijd laten een patroon zien: uw team is gekwalificeerd, maar loopt vast in handmatig werk. Partijen die dit gestructureerd aanpakken, halen aanzienlijk meer uit dezelfde bezetting, zonder uitbreiding. Een gericht advies- of implementatietraject lost dit op.",
         "price": "Vanaf €4.500 per traject of retainer · excl. btw",
         "interventions": {
           "0": {
@@ -714,7 +722,7 @@
       },
       "E": {
         "offerName": "AI-gedreven Due Diligence & Portfolio",
-        "interpretation": "Uw score op Analytical Quality is {score} van 20 punten. Uw financierings- en dealdossiers zijn nog niet op alle relevante dimensies opgebouwd. Dat kost doorlooptijd, levert extra herzieningsrondes op en verzwakt uw onderhandelingspositie. Onze financieringsmemo-dienst, die op Factum Capital draait, levert de onderbouwing en schakelt gecertificeerde adviseurs in die tekenen waar dat moet.",
+        "interpretation": "Uw score op Portefeuille-inzicht is {score} van 20 punten. Uw financierings- en dealdossiers zijn nog niet op alle relevante dimensies opgebouwd. Dat kost doorlooptijd, levert extra herzieningsrondes op en verzwakt uw onderhandelingspositie. Onze financieringsmemo-dienst, die op Factum Capital draait, levert de onderbouwing en schakelt gecertificeerde adviseurs in die tekenen waar dat moet.",
         "price": "Vanaf €10.000 per deal · of vanaf €6.500/mnd portfolio-intelligence · excl. btw",
         "interventions": {
           "0": {
