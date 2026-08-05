@@ -327,7 +327,7 @@
     "offering_4": {
       "badge": "Pro Deal oder fortlaufend",
       "title": "KI-gestützte Due Diligence & Portfolio",
-      "situation": "Sie machen M&A-Deals oder verwalten ein Portfolio. Jede DD-Dimension — financial, tax, deal economics, IBR/WHOA und portfolio health — belegt durch KI-Analyse, auf einem gemeinsamen Dossier.",
+      "situation": "Sie machen M&A-Deals oder verwalten ein Portfolio. Jede DD-Dimension — financial, tax, legal, deal economics und portfolio health — belegt durch KI-Analyse, auf einem gemeinsamen Dossier.",
       "price_note": "Oder ab €6.500 pro Monat für laufende Portfoliotransparenz",
       "cta": "Kennenlernen planen →",
       "powered_by_tagline": "KI-gestützte Analyse über alle Factum-Module",
@@ -363,18 +363,18 @@
   },
   "factum_capital": {
     "meta_title": "Factum Capital — KI-Plattform für KI-gestützte Due Diligence & Portfolio",
-    "meta_description": "Factum Capital ist die KI-Plattform hinter der KI-gestützten Due Diligence & Portfolio von Agentic Mindshift. Vier Momente: Akquisition, Finanzierung, Portfolio Review und Pre-IBR/WHOA.",
+    "meta_description": "Factum Capital ist die KI-Plattform hinter der KI-gestützten Due Diligence & Portfolio von Agentic Mindshift. Fünf Momente: Kauf, Finanzierung, Halten, Verkauf und Restrukturierung.",
     "hero": {
       "eyebrow": "Die Plattform hinter unserer KI-gestützten Due Diligence",
       "heading": "Eine Plattform für jede Phase Ihrer Deal- und Portfoliopraxis.",
-      "subtext": "Vier Momente — Akquisition, Finanzierung, Portfolio Review und Pre-IBR/WHOA — auf einem gemeinsamen Dossier. Die SaaS-Version für Ihr eigenes Team ist in Entwicklung.",
+      "subtext": "Fünf Momente — Kauf, Finanzierung, Halten, Verkauf und Restrukturierung — auf einem gemeinsamen Dossier. Die SaaS-Version für Ihr eigenes Team ist in Entwicklung.",
       "countdown_label": "Start in"
     },
-    "answer_first": "Factum Capital ist die KI-Plattform von Agentic Mindshift für Due Diligence und Portfolioanalyse: 31 Module, die Financial, Commercial, Legal und AI Due Diligence für Private-Equity-Fonds und M&A-Häuser beschleunigen. Vom ersten Screening bis Pre-IBR/WHOA liegen die belegten Erkenntnisse in Tagen vor.",
+    "answer_first": "Factum Capital ist die KI-Plattform von Agentic Mindshift für Due Diligence und Portfolioanalyse: 23 Module, die Financial, Commercial, Legal und AI Due Diligence für Private-Equity-Fonds und M&A-Häuser beschleunigen. Vom ersten Screening bis nach dem Closing liegen die belegten Erkenntnisse in Tagen vor.",
     "description": {
       "eyebrow": "Das System",
-      "quote": "Eine Plattform, vier Momente. Factum übernimmt die Analyse. Agentic Mindshift erbringt die Leistung und zieht zertifizierte Berater hinzu, wo eine Unterschrift nötig ist.",
-      "para1": "31 Module, von Financial DD und AI Due Diligence bis LBO-Modellierung und Exit Readiness. In jedem Moment dieselbe Struktur. Die SaaS-Version ist in Entwicklung.",
+      "quote": "Eine Plattform, fünf Momente. Factum übernimmt die Analyse. Agentic Mindshift erbringt die Leistung und zieht zertifizierte Berater hinzu, wo eine Unterschrift nötig ist.",
+      "para1": "23 Module, von Financial DD und AI Due Diligence bis Vendor Due Diligence und Exit Readiness. In jedem Moment dieselbe Struktur. Die SaaS-Version ist in Entwicklung.",
       "para2": "Über Agentic Mindshift erhalten Sie die vollständige Analyse plus zertifizierte Berater: Wirtschaftsprüfer, Steuerberater, Rechtsanwälte, Finanzberater und Restrukturierungsberater. Ein gemeinsames Dossier spart Doppelarbeit und Laufzeit."
     },
     "cta": {
@@ -386,7 +386,7 @@
       "secondary_2": "Kennenlernen planen"
     },
     "site_cta": "Zur vollständigen Plattform",
-    "site_note": "Factum Capital hat inzwischen eine eigene Website. Alle 31 Module, die vier Momente und das vollständige Angebot stehen auf factumcapital.eu."
+    "site_note": "Factum Capital hat inzwischen eine eigene Website. Alle 23 Module, die fünf Momente und das vollständige Angebot stehen auf factumcapital.eu."
   },
   "privacy": {
     "meta_title": "Datenschutz",

@@ -327,7 +327,7 @@
     "offering_4": {
       "badge": "Per deal or ongoing",
       "title": "AI-driven Due Diligence & Portfolio",
-      "situation": "You run M&A deals or manage a portfolio. Every DD dimension — financial, tax, deal economics, IBR/WHOA and portfolio health — evidenced by AI analysis, on one shared file.",
+      "situation": "You run M&A deals or manage a portfolio. Every DD dimension — financial, tax, legal, deal economics and portfolio health — evidenced by AI analysis, on one shared file.",
       "price_note": "Or from €6,500 per month for ongoing portfolio visibility",
       "cta": "Schedule an introduction →",
       "powered_by_tagline": "AI-driven analysis across all Factum modules",
@@ -363,18 +363,18 @@
   },
   "factum_capital": {
     "meta_title": "Factum Capital — AI platform for AI-driven Due Diligence & Portfolio",
-    "meta_description": "Factum Capital is the AI platform behind Agentic Mindshift's AI-driven Due Diligence & Portfolio. Four moments: acquisition, financing, portfolio review and pre-IBR/WHOA.",
+    "meta_description": "Factum Capital is the AI platform behind Agentic Mindshift's AI-driven Due Diligence & Portfolio. Five moments: buying, financing, holding, selling and restructuring.",
     "hero": {
       "eyebrow": "The platform behind our AI-driven Due Diligence",
       "heading": "One platform for every stage of your deal and portfolio practice.",
-      "subtext": "Four moments — acquisition, financing, portfolio review and pre-IBR/WHOA — on one shared file. The SaaS version for your own team is in development.",
+      "subtext": "Five moments — buying, financing, holding, selling and restructuring — on one shared file. The SaaS version for your own team is in development.",
       "countdown_label": "Launch in"
     },
-    "answer_first": "Factum Capital is Agentic Mindshift's AI platform for due diligence and portfolio analysis: 31 modules that speed up financial, commercial, legal and AI due diligence for private equity funds and M&A firms. From first screening to pre-IBR/WHOA, the evidenced findings are there in days.",
+    "answer_first": "Factum Capital is Agentic Mindshift's AI platform for due diligence and portfolio analysis: 23 modules that speed up financial, commercial, legal and AI due diligence for private equity funds and M&A firms. From first screening to post-close, the evidenced findings are there in days.",
     "description": {
       "eyebrow": "The system",
-      "quote": "One platform, four moments. Factum does the analysis. Agentic Mindshift delivers the service and brings in certified advisers wherever a signature is required.",
-      "para1": "31 modules, from Financial DD and AI Due Diligence to LBO modelling and exit readiness. The same structure at every moment. The SaaS version is in development.",
+      "quote": "One platform, five moments. Factum does the analysis. Agentic Mindshift delivers the service and brings in certified advisers wherever a signature is required.",
+      "para1": "23 modules, from Financial DD and AI Due Diligence to vendor due diligence and exit readiness. The same structure at every moment. The SaaS version is in development.",
       "para2": "Through Agentic Mindshift you get the full analysis plus certified advisers: chartered accountants, tax advisers, lawyers, financial advisers and restructuring consultants. One shared file saves duplicated work and turnaround time."
     },
     "cta": {
@@ -386,7 +386,7 @@
       "secondary_2": "Schedule an introduction"
     },
     "site_cta": "Explore the full platform",
-    "site_note": "Factum Capital now has its own site. All 31 modules, the four moments and the full offering are on factumcapital.eu."
+    "site_note": "Factum Capital now has its own site. All 23 modules, the five moments and the full offering are on factumcapital.eu."
   },
   "privacy": {
     "meta_title": "Privacy",

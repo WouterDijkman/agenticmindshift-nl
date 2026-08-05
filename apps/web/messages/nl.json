@@ -327,7 +327,7 @@
     "offering_4": {
       "badge": "Per deal of doorlopend",
       "title": "AI-gedreven Due Diligence & Portfolio",
-      "situation": "U doet M&A-deals of beheert een portefeuille. Elke DD-dimensie — financial, tax, deal economics, IBR/WHOA en portfolio-health — onderbouwd met AI-analyse, op één gedeeld dossier.",
+      "situation": "U doet M&A-deals of beheert een portefeuille. Elke DD-dimensie — financial, tax, legal, deal economics en portfolio-health — onderbouwd met AI-analyse, op één gedeeld dossier.",
       "price_note": "Of vanaf €6.500 per maand voor doorlopend zicht op de portefeuille",
       "cta": "Plan een kennismaking →",
       "powered_by_tagline": "AI-gedreven analyse over alle Factum-modules",
@@ -363,18 +363,18 @@
   },
   "factum_capital": {
     "meta_title": "Factum Capital — AI-platform voor AI-gedreven Due Diligence & Portfolio",
-    "meta_description": "Factum Capital is het AI-platform achter de AI-gedreven Due Diligence & Portfolio van Agentic Mindshift. Vier momenten: acquisitie, financiering, portfolio review en pre-IBR/WHOA.",
+    "meta_description": "Factum Capital is het AI-platform achter de AI-gedreven Due Diligence & Portfolio van Agentic Mindshift. Vijf momenten: kopen, financieren, houden, verkopen en herstructureren.",
     "hero": {
       "eyebrow": "Het platform achter onze AI-gedreven Due Diligence",
       "heading": "Eén platform voor elke fase van uw deal- en portfoliopraktijk.",
-      "subtext": "Vier momenten — acquisitie, financiering, portfolio review en pre-IBR/WHOA — op één gedeeld dossier. De SaaS-versie voor uw eigen team is in ontwikkeling.",
+      "subtext": "Vijf momenten — kopen, financieren, houden, verkopen en herstructureren — op één gedeeld dossier. De SaaS-versie voor uw eigen team is in ontwikkeling.",
       "countdown_label": "Lancering over"
     },
-    "answer_first": "Factum Capital is het AI-platform voor due diligence en portfolio-analyse van Agentic Mindshift: 31 modules die financiële, commerciële, juridische en AI-due-diligence versnellen voor private-equityfondsen en M&A-kantoren. Van eerste screening tot pre-IBR/WHOA staan de onderbouwde inzichten er in dagen.",
+    "answer_first": "Factum Capital is het AI-platform voor due diligence en portfolio-analyse van Agentic Mindshift: 23 modules die financiële, commerciële, juridische en AI-due-diligence versnellen voor private-equityfondsen en M&A-kantoren. Van eerste screening tot na closing staan de onderbouwde bevindingen er in dagen.",
     "description": {
       "eyebrow": "Het systeem",
-      "quote": "Eén platform, vier momenten. Factum doet de analyse. Agentic Mindshift levert de dienst en schakelt gecertificeerde adviseurs in waar een handtekening nodig is.",
-      "para1": "31 modules, van Financial DD en AI Due Diligence tot LBO-modellering en exit readiness. Op elk moment dezelfde structuur. De SaaS-versie is in ontwikkeling.",
+      "quote": "Eén platform, vijf momenten. Factum doet de analyse. Agentic Mindshift levert de dienst en schakelt gecertificeerde adviseurs in waar een handtekening nodig is.",
+      "para1": "23 modules, van Financial DD en AI Due Diligence tot vendor due diligence en exit readiness. Op elk moment dezelfde structuur. De SaaS-versie is in ontwikkeling.",
       "para2": "Via Agentic Mindshift krijgt u de volledige analyse plus gecertificeerde adviseurs: RA's, RB's, advocaten, financieel adviseurs en restructuring consultants. Eén gedeeld dossier scheelt dubbel werk en doorlooptijd."
     },
     "cta": {
@@ -386,7 +386,7 @@
       "secondary_2": "Plan een kennismaking"
     },
     "site_cta": "Bekijk het volledige platform",
-    "site_note": "Factum Capital heeft inmiddels een eigen site. Alle 31 modules, de vier momenten en het volledige aanbod staan op factumcapital.eu."
+    "site_note": "Factum Capital heeft inmiddels een eigen site. Alle 23 modules, de vijf momenten en het volledige aanbod staan op factumcapital.eu."
   },
   "privacy": {
     "meta_title": "Privacy",

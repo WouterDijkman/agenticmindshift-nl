@@ -327,7 +327,7 @@
     "offering_4": {
       "badge": "Por operação ou contínuo",
       "title": "Due Diligence & Portfolio impulsionada por IA",
-      "situation": "Faz operações de M&A ou gere uma carteira. Cada dimensão de DD — financial, tax, deal economics, IBR/WHOA e portfolio health — sustentada por análise de IA, num único processo partilhado.",
+      "situation": "Faz operações de M&A ou gere uma carteira. Cada dimensão de DD — financial, tax, legal, deal economics e portfolio health — sustentada por análise de IA, num único processo partilhado.",
       "price_note": "Ou a partir de €6.500 por mês para visibilidade contínua da carteira",
       "cta": "Agendar uma chamada →",
       "powered_by_tagline": "Análise impulsionada por IA sobre todos os módulos Factum",
@@ -363,18 +363,18 @@
   },
   "factum_capital": {
     "meta_title": "Factum Capital — plataforma de IA para Due Diligence & Portfolio impulsionada por IA",
-    "meta_description": "A Factum Capital é a plataforma de IA por trás da due diligence e da carteira com IA da Agentic Mindshift. Quatro momentos: aquisição, financiamento, revisão de carteira e pré-IBR/WHOA.",
+    "meta_description": "A Factum Capital é a plataforma de IA por trás da due diligence e da carteira com IA da Agentic Mindshift. Cinco momentos: compra, financiamento, detenção, venda e reestruturação.",
     "hero": {
       "eyebrow": "A plataforma por trás da nossa Due Diligence impulsionada por IA",
       "heading": "Uma plataforma para cada fase da sua prática de operações e carteira.",
-      "subtext": "Quatro momentos — aquisição, financiamento, revisão de carteira e pré-IBR/WHOA — num único processo partilhado. A versão SaaS para a sua própria equipa está em desenvolvimento.",
+      "subtext": "Cinco momentos — compra, financiamento, detenção, venda e reestruturação — num único processo partilhado. A versão SaaS para a sua própria equipa está em desenvolvimento.",
       "countdown_label": "Lançamento em"
     },
-    "answer_first": "A Factum Capital é a plataforma de IA da Agentic Mindshift para due diligence e análise de carteira: 31 módulos que aceleram a due diligence financeira, comercial, legal e de IA para fundos de private equity e sociedades de M&A. Da primeira triagem ao pré-IBR/WHOA, as conclusões sustentadas estão prontas em dias.",
+    "answer_first": "A Factum Capital é a plataforma de IA da Agentic Mindshift para due diligence e análise de carteira: 23 módulos que aceleram a due diligence financeira, comercial, legal e de IA para fundos de private equity e sociedades de M&A. Da primeira triagem ao pós-closing, as conclusões sustentadas estão prontas em dias.",
     "description": {
       "eyebrow": "O sistema",
-      "quote": "Uma plataforma, quatro momentos. A Factum faz a análise. A Agentic Mindshift presta o serviço e integra consultores certificados onde é precisa uma assinatura.",
-      "para1": "31 módulos, de Financial DD e AI Due Diligence à modelação LBO e à exit readiness. A mesma estrutura em cada momento. A versão SaaS está em desenvolvimento.",
+      "quote": "Uma plataforma, cinco momentos. A Factum faz a análise. A Agentic Mindshift presta o serviço e integra consultores certificados onde é precisa uma assinatura.",
+      "para1": "23 módulos, de Financial DD e AI Due Diligence à vendor due diligence e à exit readiness. A mesma estrutura em cada momento. A versão SaaS está em desenvolvimento.",
       "para2": "Através da Agentic Mindshift obtém a análise completa mais consultores certificados: revisores oficiais de contas, consultores fiscais, advogados, consultores financeiros e consultores de reestruturação. Um único processo partilhado evita trabalho duplicado e encurta prazos."
     },
     "cta": {
@@ -386,7 +386,7 @@
       "secondary_2": "Agendar uma chamada"
     },
     "site_cta": "Explore a plataforma completa",
-    "site_note": "A Factum Capital já tem site próprio. Os 31 módulos, os quatro momentos e a oferta completa estão em factumcapital.eu."
+    "site_note": "A Factum Capital já tem site próprio. Os 23 módulos, os cinco momentos e a oferta completa estão em factumcapital.eu."
   },
   "privacy": {
     "meta_title": "Privacidade",
