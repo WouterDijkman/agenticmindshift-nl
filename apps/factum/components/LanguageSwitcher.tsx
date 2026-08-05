@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
+import { rememberLocale } from '@repo/ui/locale';
 import { LOCALE_NAMES } from '@/lib/site';
 import { Chevron } from './Icons';
 
@@ -79,7 +80,15 @@ export default function LanguageSwitcher() {
               <Link
                 href={pathname}
                 locale={loc}
-                onClick={() => setOpen(false)}
+                /* This click is the only thing on the site that writes the
+                   locale cookie. next-intl used to write it on every request,
+                   which meant a geo guess was recorded as if it were a choice;
+                   that sync is off now, so without this line the switch would
+                   not survive a return visit to the bare domain. */
+                onClick={() => {
+                  rememberLocale(loc);
+                  setOpen(false);
+                }}
                 lang={loc}
                 hrefLang={loc}
                 style={{

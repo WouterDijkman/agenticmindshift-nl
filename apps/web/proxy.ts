@@ -1,6 +1,6 @@
 import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
-import { resolveLocale, LOCALE_VARY_HEADER } from '@repo/ui/locale';
+import { resolveLocale, LOCALE_COOKIE, LOCALE_VARY_HEADER } from '@repo/ui/locale';
 import { routing } from './i18n/routing';
 
 const intlMiddleware = createMiddleware(routing);
@@ -31,7 +31,7 @@ export function proxy(request: NextRequest) {
   if (pathname === '/') {
     const { locale } = resolveLocale({
       getHeader: (name) => request.headers.get(name),
-      cookieLocale: request.cookies.get('NEXT_LOCALE')?.value,
+      cookieLocale: request.cookies.get(LOCALE_COOKIE)?.value,
       supported: routing.locales,
     });
 
@@ -48,11 +48,17 @@ export function proxy(request: NextRequest) {
     // next one from another continent. It fails silently: correct in dev,
     // correct on the first hit, wrong at scale.
     response.headers.set('Vary', LOCALE_VARY_HEADER);
-    response.cookies.set('NEXT_LOCALE', locale, {
-      maxAge: 60 * 60 * 24 * 365,
-      path: '/',
-      sameSite: 'lax',
-    });
+
+    // Geo is re-read on every visit, so this answer must never be reused. Vary
+    // is not enough on its own: a shared cache that does not understand an
+    // unknown Vary key may hand one country's redirect to everyone behind it.
+    response.headers.set('Cache-Control', 'no-store');
+
+    // Deliberately no cookie. This is a guess, and writing it down made the
+    // guess outrank every later guess for a year — one visit from an airport
+    // abroad and the site kept speaking that country's language. Only the
+    // language switcher writes the cookie, because a click is the only signal
+    // here that actually means "I want this language".
     return response;
   }
 

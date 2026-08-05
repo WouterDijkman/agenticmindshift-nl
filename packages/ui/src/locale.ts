@@ -9,6 +9,12 @@
  *
  *   1. `NEXT_LOCALE` cookie — the visitor has already chosen. Nothing outranks
  *      an explicit choice, including a geo header that disagrees with it.
+ *      The cookie is written in exactly one place: the language switcher's
+ *      click handler. Nothing else may write it. It used to be set on the geo
+ *      redirect too, which quietly turned a guess into a year-long verdict —
+ *      one visit through an airport wifi in Frankfurt and the site spoke
+ *      German until the cookie expired. A guess must stay a guess, so geo is
+ *      re-read on every visit and only a click is remembered.
  *   2. Edge geo header (`x-vercel-ip-country`, or `cf-ipcountry` behind
  *      Cloudflare). This is what the brief asks for: a Colombian gets Spanish.
  *   3. `Accept-Language`. Weaker than geo for this audience — a Dutch partner
@@ -50,6 +56,30 @@ export const COUNTRY_TO_LANGUAGE: Readonly<Record<string, string>> = {
 
 /** The last resort, and the answer for everywhere not in the table. */
 export const FALLBACK_LOCALE = 'en';
+
+/**
+ * The one cookie that records a language choice, and how long it lasts.
+ *
+ * Shared so the two switchers and the two proxies cannot drift: a switcher
+ * writing a name the proxy does not read is a bug that looks like "the site
+ * forgets my language" and is invisible in review.
+ *
+ * `next-intl`'s own cookie sync must stay off (`localeCookie: false` in both
+ * routing configs). It writes this same cookie on every locale-prefixed
+ * request, which would restore the sticky-guess behaviour one hop after the
+ * geo redirect — the redirect lands on `/nl`, and next-intl would helpfully
+ * pin `nl` for a year.
+ */
+export const LOCALE_COOKIE = 'NEXT_LOCALE';
+export const LOCALE_COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
+
+/**
+ * Record an explicit language choice. Browser-only — call it from a click
+ * handler, never during render or on the server.
+ */
+export function rememberLocale(locale: string): void {
+  document.cookie = `${LOCALE_COOKIE}=${locale}; path=/; max-age=${LOCALE_COOKIE_MAX_AGE}; samesite=lax`;
+}
 
 /**
  * Every header this resolver reads. Any response whose *body* depends on it

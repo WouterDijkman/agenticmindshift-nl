@@ -2,6 +2,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { useRouter, usePathname } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
+import { rememberLocale } from '@repo/ui/locale';
 import { useEffect, useRef, useState } from 'react';
 
 const LANG_LABELS: Record<string, string> = {
@@ -33,8 +34,11 @@ export default function LanguageSwitcher({ tone = 'default' }: { tone?: 'default
     };
   }, [open]);
 
+  // The only place in this app allowed to write the locale cookie. A click is
+  // the one signal that unambiguously means "I want this language"; geo and
+  // Accept-Language are guesses, and guesses get re-made on every visit.
   const switchLocale = (newLocale: string) => {
-    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=${60 * 60 * 24 * 365}`;
+    rememberLocale(newLocale);
     setOpen(false);
     router.replace(pathname, { locale: newLocale });
   };

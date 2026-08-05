@@ -1,6 +1,6 @@
 import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
-import { resolveLocale, LOCALE_VARY_HEADER } from '@repo/ui/locale';
+import { resolveLocale, LOCALE_COOKIE, LOCALE_VARY_HEADER } from '@repo/ui/locale';
 import { routing } from './i18n/routing';
 
 const intlMiddleware = createMiddleware(routing);
@@ -19,7 +19,7 @@ export function proxy(request: NextRequest) {
   if (request.nextUrl.pathname === '/') {
     const { locale } = resolveLocale({
       getHeader: (name) => request.headers.get(name),
-      cookieLocale: request.cookies.get('NEXT_LOCALE')?.value,
+      cookieLocale: request.cookies.get(LOCALE_COOKIE)?.value,
       supported: routing.locales,
       fallback: routing.defaultLocale,
     });
@@ -32,11 +32,13 @@ export function proxy(request: NextRequest) {
     const response = NextResponse.redirect(url, 307);
     // Without Vary a CDN serves one visitor's language to the next.
     response.headers.set('Vary', LOCALE_VARY_HEADER);
-    response.cookies.set('NEXT_LOCALE', locale, {
-      maxAge: 60 * 60 * 24 * 365,
-      path: '/',
-      sameSite: 'lax',
-    });
+    // Geo is re-read on every visit, so this answer must never be reused — not
+    // by a CDN and not by the browser's back/forward cache. Vary alone is not
+    // enough: a shared cache that does not understand an unknown Vary key may
+    // pin one country's redirect for everyone behind it.
+    response.headers.set('Cache-Control', 'no-store');
+    // Deliberately no cookie here. Writing one would turn a guess into a
+    // year-long verdict; only the language switcher records a choice.
     return response;
   }
 
