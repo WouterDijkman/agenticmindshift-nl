@@ -1,0 +1,121 @@
+{
+  "shared": {
+    "model": "Qwen/Qwen-Image",
+    "videoModel": "Wan-AI/Wan2.2-I2V-A14B",
+    "imageSize": "1664x928",
+    "videoSize": "1280x720",
+    "style": "extreme macro photograph, framed so close that only two or three elements of the subject fill the entire frame and every one of them bleeds off at least two edges — the subject should be barely identifiable, read as light and shape first and as an object second. Depth of field so shallow that one narrow band holds focus and everything else melts into soft bokeh. A single warm amber light source, everything else falling away to near-black. Deep shadow detail, fine photographic grain, dark moody editorial still-life photography.",
+    "negative": "text, caption, watermark, logo, signature, legible writing, lettering, letters, words, printed label, engraved name, brand name, sharp readable numbers, crest, coat of arms, heraldry, shield, emblem, insignia, badge, medal, monogram, laurel wreath, person, people, hand, hands, fingers, face, body, 3d render, cgi, illustration, cartoon, plastic, toy, oversaturated, neon, purple, green, cyan, blue, swimming pool, water, window, daylight, teal and orange grade, busy background, cluttered composition, wide shot, whole object in frame, object sitting on a surface, centred symmetrical composition, flat even lighting, stock photo look"
+  },
+  "scenes": [
+    {
+      "id": "readout",
+      "subject": "one small round indicator lamp lit warm amber in a dark brushed metal panel, sharp and sitting left of centre, an identical row of unlit lamps continuing away behind it and dissolving into near-black, the fine brush grain of the panel catching the glow around the one lit lamp, nothing else in the frame",
+      "motion": "the lit lamp steadies and brightens a fraction; the unlit row stays dark. Locked-off macro shot, no people.",
+      "negative": "numerals, digits, dial, gauge, needle, pointer, clock, watch face, graduations, switch, toggle, button, knob, keyboard, car dashboard, stereo, amplifier, radio, traffic light, string lights, bokeh balls"
+    },
+    {
+      "id": "caliper",
+      "subject": "two straight precision-ground steel edges facing one another across one narrow gap, both edges running the full width of the picture and off the left and right sides, a hard warm highlight riding the whole length of each edge, the gap between them staying completely black, the steel above and below falling away into darkness",
+      "motion": "the two edges draw a hair closer and stop; the highlights travel slowly along the steel. Locked-off macro shot, no people.",
+      "negative": "teeth, serrated, sawtooth, jaws, pliers, wrench, spanner, clamp, vice, trap, blade, knife, scissors, shears, gear, cog, machinery, crushing, numerals, digits, numbered scale, graduations, ruler, vernier scale, tick marks, dial, tabletop, workbench, desk, whole tool in frame"
+    },
+    {
+      "id": "balance",
+      "subject": "one slender polished brass beam lying dead level across the picture and running off both the left and the right edges, a fine machined pivot at its exact centre, a thin brass chain hanging from each end of the beam and dropping out of the bottom of the frame, one continuous warm highlight running the whole length of the beam, everything behind it near-black",
+      "motion": "the beam settles through a slow damped oscillation and comes to rest level. Locked-off macro shot, no people.",
+      "negative": "knife, blade, cutlery, sword, letter opener, razor, stone, agate, geode, coaster, wood slice, seesaw, statue, blindfolded figure, courthouse, pans, dishes, weights, numerals, digits, arrow, dart, feather, whole object in frame"
+    },
+    {
+      "id": "tumbler",
+      "subject": "the machined dial of a heavy safe lock, knurled edge and engraved graduations sweeping across the frame, thick steel front plate falling away into darkness",
+      "motion": "the dial rotates slowly a few degrees and stops. Locked-off macro shot, no people."
+    },
+    {
+      "id": "ledger",
+      "subject": "the ruled columns of an old paper ledger under low raking light, the paper fibre and the ruling lines catching the light in relief, the writing far out of focus and illegible, edge of the page curling slightly",
+      "motion": "the light creeps across the paper and the page edge lifts very slightly. Locked-off macro shot, no people."
+    },
+    {
+      "id": "loupe",
+      "subject": "one small circle of concentrated warm light thrown onto dark matte paper, the paper fibre inside the bright disc rendered sharp and raking with every thread visible, the disc sitting left of centre and the rest of the sheet falling steeply away into near-black, a single loose fibre catching the light at the middle of the disc",
+      "motion": "the disc of light drifts a few millimetres across the fibre and sharpens. Locked-off macro shot, no people.",
+      "negative": "ring, bracelet, bangle, jewellery, gold band, knurled ring, coin, medal, magnifying glass, lens, spectacles, eyeglass, handle, grip, torch, flashlight, lamp, bulb, moon, sun, halo, spotlight cone, desk, tabletop"
+    },
+    {
+      "id": "plotter",
+      "subject": "the inked needle of a chart recorder resting on graph paper, the fine ruled grid running away out of focus, a single drawn trace line visible under the pen tip",
+      "motion": "the needle twitches and draws a short distance along the paper. Locked-off macro shot, no people."
+    },
+    {
+      "id": "tape",
+      "subject": "a wall of fine parallel curved lines — the wound edges of magnetic tape seen from the side — magnified until only eight or nine layers are visible, every one of them entering at the bottom left of the frame and leaving at the top right, one hard highlight riding along a single layer",
+      "motion": "the layers creep steadily sideways, the highlight travelling along the curve. Locked-off macro shot, no people.",
+      "negative": "reel, spool, hub, flange, cassette, circle, disc, whole reel in frame, picture frame, border, black border, letterbox, black bars, matted print, framed photograph, inset image, stain, spill, rust, blood, red"
+    },
+    {
+      "id": "index",
+      "subject": "the packed edges of hundreds of completely blank index cards seen end-on, a dense wall of fine bare paper edges filling the picture and running off all four sides, one single card drawn slightly proud of the wall and catching the light along its clean unmarked edge, every card entirely blank with nothing printed, written or ruled on any surface anywhere",
+      "motion": "one card tips forward a few degrees as if just released. Locked-off macro shot, no people.",
+      "negative": "text, writing, handwriting, print, printed lines, typed lines, lettering, letters, words, characters, numerals, digits, page numbers, index tabs, tabs, labels, colour coding, coloured tabs, ruled lines, margin line, barcode, punched hole, staple, paper clip, book, spine, binding, open book, pages of a book, newspaper, keyboard, ledger, filing cabinet, drawer"
+    },
+    {
+      "id": "seal",
+      "subject": "a fine even layer of pale dust settled across a dark matte surface, and one clean sharp-edged rectangular patch swept bare in it where something has been lifted away after sitting there a long time, the bare surface inside the patch dark and untouched, the patch pushed off centre and running off the bottom edge of the picture, hard warm light raking from the left so every grain of the settled dust catches and the edge of the patch throws one thin shadow, the dust filling the rest of the frame and running off all remaining edges",
+      "motion": "the raking light travels across the dust and the shadow at the edge of the bare patch shortens. Locked-off macro shot, no people.",
+      "negative": "wax, seal, disc, circle, round, oval, rim, crest, emblem, monogram, insignia, heraldry, signet ring, stamp, object in the patch, box, book, paper sheet, envelope, card, tray, mat, picture frame, border, black border, letterbox, black bars, matted print, framed photograph, inset image, snow, frost, flour, sugar, powder spill, sand dune, beach, footprint, handprint, fingerprint, writing in the dust, drawing, letters, words, numerals, digits, cobweb, mould"
+    },
+    {
+      "id": "trace",
+      "subject": "a single luminous amber line drawn across a dark phosphor screen, entering at the left edge of the frame and leaving at the right, a faint square grid of etched guide lines just visible behind it, the screen surface filling the whole picture with no bezel, no housing and no controls in view",
+      "motion": "the line drifts and re-triggers once, sweeping across the screen. Locked-off macro shot, no people.",
+      "negative": "drinking glass, tumbler, goblet, wine glass, cup, bottle, jar, liquid, condensation, transparent vessel"
+    },
+    {
+      "id": "micrometer",
+      "subject": "a stretch of matte steel crossed by one deeply engraved reference line, a run of evenly spaced short graduation marks stepping along the lower edge beside it, magnified until only a short length of the steel crosses the picture and it runs off the left and right sides, warm light raking hard along the surface so the engraved line holds its own shadow, the steel above and below falling to near-black",
+      "motion": "the raking light travels along the steel and the engraved line's shadow narrows. Locked-off macro shot, no people.",
+      "negative": "numerals, digits, numbers, numbered scale, printed scale, thimble, sewing, needle, thread, bell, cone, cap, knurling, diamond knurl, screw thread, bolt, nut, tool handle, watch, whole object in frame"
+    },
+    {
+      "id": "sheaf",
+      "subject": "the stacked edges of hundreds of sheets of paper under hard raking light, each sheet edge a fine bright line, the stack running diagonally across the frame and out of it at both ends, the far end falling away into darkness",
+      "motion": "the light travels slowly across the stacked edges. Locked-off macro shot, no people."
+    },
+    {
+      "id": "bolt",
+      "subject": "one hard steel wedge driven tight under the edge of a massive dark block, the whole weight of the block resting on it, magnified until only the wedge and a short span of the block's underside cross the picture and both run off the left and the right edges, a hard warm highlight riding the top face of the wedge, the seam where the wedge meets the block closed to a single black line, everything above and below near-black",
+      "motion": "the wedge is driven a hair further in and the block settles onto it. Locked-off macro shot, no people.",
+      "negative": "axe, hatchet, chisel, blade, knife, splitting maul, door stop, triangle, arrow, spearhead, gear, cog, sprocket, machinery, engine, wheel, nail, screw, bolt, nut, hexagon, hammer, tool handle, stamped marking, numerals, digits, rust, workbench, whole object in frame"
+    },
+    {
+      "id": "splice",
+      "subject": "two heavy steel cables crossing and knotted around one another, the woven strands of the knot holding sharp focus and both cables running away out of focus into opposite corners of the frame, hard side light picking out the twist of every strand",
+      "motion": "the cables draw tight and the strands settle. Locked-off macro shot, no people."
+    }
+  ],
+  "features": [
+    {
+      "id": "hero",
+      "subject": "the lit seven-segment display of an old analogue-era alarm clock, photographed so close that two glowing segments fill the whole frame and bleed off every edge, the fine mesh texture of the diffuser visible inside the glowing bars, the left half holding focus and the right half melting into warm bokeh and darkness",
+      "motion": "the glow breathes almost imperceptibly and one segment flickers once; the camera drifts a few millimetres closer. No cuts, no people, locked-off macro shot."
+    },
+    {
+      "id": "sprint",
+      "subject": "a rack of steel filing drawers photographed at a shallow angle, one drawer pulled slightly open with light spilling from the gap, the rest receding into darkness, the drawer fronts entirely blank",
+      "motion": "the open drawer slides a few centimetres further and the spill of light widens. Locked-off shot, no people.",
+      "negative": "numerals, digits, drawer numbers, index card holder, label frame, handle plate"
+    },
+    {
+      "id": "team",
+      "subject": "two overlapping circles of warm lamplight thrown across dark polished wood, the light itself the subject, the turned brass foot of one desk lamp just clipping the right edge of the frame, the left third empty and falling away to near-black",
+      "motion": "the light steadies and dust drifts slowly through the beams. Locked-off shot, no people.",
+      "negative": "lamp shade, whole lamp, bulb, window, curtain, night sky, interior wall"
+    },
+    {
+      "id": "contact",
+      "subject": "the ruled time columns of an open diary under low raking light, magnified until only a few ruled lines and the gutter fill the frame and run off every edge, the writing far out of focus and illegible, the left third falling away to near-black",
+      "motion": "the light creeps across the page and a page edge lifts slightly. Locked-off macro shot, no people."
+    }
+  ]
+}

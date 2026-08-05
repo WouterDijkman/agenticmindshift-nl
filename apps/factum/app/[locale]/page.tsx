@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { pageMetadata } from '@/lib/pageMetadata';
+import { GOVERNANCE_POINTS, HOME_GUIDE, HOME_PROBLEM, HOME_SUCCESS } from '@/lib/scenes';
 import Hero from '@/components/Hero';
 import MediaCards from '@/components/MediaCards';
-import SegmentCard from '@/components/SegmentCard';
+import SceneCard from '@/components/SceneCard';
 import Reveal from '@/components/Reveal';
 import { Section, SectionHeader, SubHeader } from '@/components/Section';
 import FindingSchema from '@/components/FindingSchema';
@@ -92,6 +93,7 @@ export default async function HomePage({
         <div style={{ marginTop: 'clamp(32px, 4.5vw, 56px)' }}>
           <MediaCards
             items={t.raw('problem.points') as { title: string; body: string }[]}
+            scenes={HOME_PROBLEM}
           />
         </div>
 
@@ -139,7 +141,7 @@ export default async function HomePage({
             </Reveal>
           </div>
           <Reveal delay={60} className="media-card">
-            <SegmentCard index={2} />
+            <SceneCard id={HOME_GUIDE} />
           </Reveal>
         </div>
       </Section>
@@ -204,7 +206,7 @@ export default async function HomePage({
               different seed keeps the crops from matching card-for-card. */}
           <MediaCards
             items={s.raw('governancePoints') as { title: string; body: string }[]}
-            seed={7}
+            scenes={GOVERNANCE_POINTS}
           />
         </div>
       </Section>
@@ -308,7 +310,7 @@ export default async function HomePage({
         <div style={{ marginTop: 'clamp(32px, 4.5vw, 56px)' }}>
           <MediaCards
             items={t.raw('success.points') as { title: string; body: string }[]}
-            seed={13}
+            scenes={HOME_SUCCESS}
           />
         </div>
         <Reveal delay={110} style={{ marginTop: 32 }}>

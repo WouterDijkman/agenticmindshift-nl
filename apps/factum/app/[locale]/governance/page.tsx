@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/pageMetadata';
+import { GOVERNANCE_POINTS } from '@/lib/scenes';
 import PageHeader from '@/components/PageHeader';
 import HandoffTrack from '@/components/HandoffTrack';
 import MediaCards from '@/components/MediaCards';
@@ -70,7 +71,7 @@ export default async function GovernancePage({
         <div style={{ marginTop: 32 }}>
           <MediaCards
             items={s.raw('governancePoints') as { title: string; body: string }[]}
-            seed={11}
+            scenes={GOVERNANCE_POINTS}
             wide
           />
         </div>

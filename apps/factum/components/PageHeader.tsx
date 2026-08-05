@@ -14,6 +14,10 @@ import SegmentField from './SegmentField';
  * land on the same tone. Masks are unique to this component (not reused
  * from SegmentCard's presets) so a page that shows both a header and a row
  * of cards never doubles a silhouette.
+ *
+ * Photographs were tried here and behaved the same way they did in the hero:
+ * too much going on behind display type. Headers stay procedural; the
+ * generated scenes live on the cards.
  */
 const HEADER_PRESETS: { value: string; tone?: 'wine' | 'mono' }[] = [
   { value: '{aceg}', tone: 'wine' }, // platform

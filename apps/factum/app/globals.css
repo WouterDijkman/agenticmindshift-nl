@@ -445,6 +445,41 @@ p { margin: 0; }
 }
 
 /* ============================================================
+   Scenes — the generated stills
+   The grade lives here rather than in the asset. A dozen frames come back from
+   the model at a dozen different colour temperatures; one flat navy tint over
+   all of them collapses that spread, so the set reads as a single shoot. The
+   scrim underneath is what any text sitting over a scene stands on.
+   ============================================================ */
+.scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--surface-inset);
+}
+.scene-still {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.scene-tint,
+.scene-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+/* Navy at 0.42 is where a warm frame and a cold one stop being tellable apart
+   while the subject underneath is still readable. */
+.scene-tint { background: rgba(8, 25, 48, 0.42); }
+.scene-scrim {
+  background: linear-gradient(rgba(8, 25, 48, 0) 42%, rgba(8, 25, 48, 0.92) 100%);
+  mix-blend-mode: darken;
+}
+
+/* ============================================================
    Handoff track — a sequence with a labelled boundary in it
    ============================================================ */
 .track {

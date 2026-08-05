@@ -1,0 +1,102 @@
+{
+  "shared": {
+    "model": "Qwen/Qwen-Image",
+    "videoModel": "Wan-AI/Wan2.2-I2V-A14B",
+    "imageSize": "1664x928",
+    "videoSize": "1280x720",
+    "style": "high-key architectural still life. One broad source of cool north-facing daylight entering from the side, throwing soft-edged shadows with long clean gradients. A palette of warm bone and off-white against cool pale grey shade, nothing saturated anywhere. Deep focus, so almost the entire frame is sharp. Generous empty space around the subject. Matte plaster and uncoated paper surfaces, fine photographic grain, calm restrained editorial photography.",
+    "negative": "text, caption, watermark, logo, signature, legible writing, lettering, letters, words, numerals, digits, printed label, brand name, person, people, hand, hands, fingers, face, body, 3d render, cgi, illustration, cartoon, plastic, toy, dark, near-black background, black background, low key, chiaroscuro, night, candlelight, tungsten, amber, orange glow, warm spotlight, single light source in darkness, heavy bokeh, shallow depth of field, extreme macro, brass, polished steel, antique instrument, gear, dial, gauge, machinery, oversaturated, neon, teal and orange grade, blue sky, green, purple, busy background, cluttered composition, desk clutter, plant, coffee cup, laptop, phone, picture frame, border, black border, letterbox, black bars, matted print, framed photograph, inset image, stock photo look, flat even lighting"
+  },
+  "scenes": [
+    {
+      "id": "wedge",
+      "subject": "a broad plane of warm off-white plaster crossed by one hard-edged band of shadow, the shadow edge running from the top left corner down to the bottom right and cutting the plane into two unequal parts, the lit part faintly textured and the shaded part an even cool pale grey, the plane filling the whole frame and running off every edge",
+      "motion": "the shadow edge creeps a few millimetres down the plane. Locked-off shot, no people."
+    },
+    {
+      "id": "blocks",
+      "subject": "five plain pale limestone blocks of clearly unequal height standing in a loose row on a warm off-white surface, each throwing a soft shadow of a different length toward the camera, the row running off both the left and the right edges of the frame, nothing else in the picture",
+      "motion": "the light shifts and all five shadows shorten together. Locked-off shot, no people.",
+      "negative": "building blocks, lego, dice, chess piece, city model, skyline, tower, candles, sugar cubes"
+    },
+    {
+      "id": "overlap",
+      "subject": "two sheets of translucent pale vellum laid across one another at a shallow angle on a warm off-white surface, the region where they overlap reading as a clear third tone darker than either sheet alone, both sheets running off the edges of the frame, soft daylight from the left",
+      "motion": "the upper sheet settles a few millimetres and the overlap shifts. Locked-off shot, no people.",
+      "negative": "printed image, traced drawing, pattern, plastic wrap, cling film, glass, water, ice"
+    },
+    {
+      "id": "grid",
+      "subject": "a shallow grid of identical square recesses cut into a warm off-white board, the grid filling the whole frame and running off every edge, each recess holding one small soft shadow in its corner, a single horizontal band of them falling into deeper shade",
+      "motion": "the band of deeper shade travels slowly down one row. Locked-off shot, no people.",
+      "negative": "waffle, chocolate, ice cube tray, food, window pane, mullion, bathroom tiles, keyboard, calculator, chessboard"
+    },
+    {
+      "id": "stack",
+      "subject": "a tall stack of plain pale paper seen from slightly above and to one side, the top few sheets fanned a little out of true, the stack filling most of the frame and running off the bottom edge, one clean soft shadow falling to the right across an otherwise empty warm off-white surface",
+      "motion": "the fanned top sheets settle back into line. Locked-off shot, no people.",
+      "negative": "printed text, writing, book, spine, binding, newspaper, magazine, pen, laptop, paper clip, staple"
+    },
+    {
+      "id": "tab",
+      "subject": "a row of plain pale card dividers standing upright and closely packed, seen from above at a shallow angle, one divider drawn forward clear of the row and an obvious empty gap left further along where another is missing, warm off-white throughout, soft daylight raking from the left",
+      "motion": "the drawn-forward divider tips a few degrees further. Locked-off shot, no people.",
+      "negative": "printed tabs, index letters, alphabet, colour coding, coloured tabs, filing cabinet, drawer, folder icon, book pages"
+    },
+    {
+      "id": "aperture",
+      "subject": "a large plain rectangular opening cut clean through a thick warm off-white wall, photographed straight on, brilliant flat daylight filling the opening so the space beyond reads as an empty pale void, the wall surface around it faintly textured and falling gently into cool shade toward the edges of the frame",
+      "motion": "the light in the opening brightens almost imperceptibly. Locked-off shot, no people.",
+      "negative": "window frame, mullion, glass, curtain, blind, sky, clouds, landscape, doorway, door, room, furniture, building exterior"
+    },
+    {
+      "id": "flap",
+      "subject": "a heavy pale card portfolio lying closed and flat on a warm off-white surface, its front flap edge crossing the picture at a shallow diagonal and running off both sides, a single thin shadow line along the closure, the rest of the frame almost entirely empty, soft daylight from the upper left",
+      "motion": "the light creeps along the closure and the shadow line thins. Locked-off shot, no people.",
+      "negative": "printed cover, title, writing, leather, zip, buckle, book spine, envelope, letter, stamp, laptop, tablet"
+    },
+    {
+      "id": "lag",
+      "subject": "one extremely long slender shadow thrown right across a broad empty warm off-white floor, entering the frame at the bottom right corner and reaching almost to the top left, the object casting it entirely outside the picture, the floor otherwise completely bare, very low soft daylight",
+      "motion": "the shadow lengthens very slowly across the floor. Locked-off shot, no people.",
+      "negative": "figure, silhouette, tree, pole, lamp post, street, road, sunset, horizon, sky, furniture, rug"
+    },
+    {
+      "id": "punch",
+      "subject": "a row of clean round perforations punched through a single sheet of pale card, magnified so only five or six of them cross the frame, daylight coming through each hole and landing as a small even disc of brightness on the warm off-white surface below, the card otherwise entirely blank",
+      "motion": "the discs of light below the card drift a little as the light moves. Locked-off shot, no people.",
+      "negative": "punch card, computer tape, music box roll, sheet music, buttons, coins, polka dots, repeating pattern, colander, speaker grille"
+    },
+    {
+      "id": "curl",
+      "subject": "a single sheet of heavy pale paper curving up off a warm off-white surface, the curve holding the light along its whole length and a clean crescent of soft shadow gathered underneath it, the sheet running off the top edge of the frame, everything else empty",
+      "motion": "the sheet flexes very slightly and the crescent of shadow narrows. Locked-off shot, no people.",
+      "negative": "printed text, writing, drawing, scroll, parchment, burnt edge, torn edge, letter, envelope, plant, leaf, petal, shell"
+    },
+    {
+      "id": "step",
+      "subject": "two broad flat warm off-white planes at slightly different heights meeting along one crisp straight riser, photographed from almost directly above so the whole picture reads as two offset rectangles of slightly different brightness, the riser throwing a single narrow band of cool shadow, nothing else in frame",
+      "motion": "the band of shadow at the riser widens a fraction. Locked-off shot, no people.",
+      "negative": "staircase, flight of stairs, steps receding, building, architectural model, table edge, book, paper sheet, wall corner"
+    },
+    {
+      "id": "pair",
+      "subject": "two identical plain pale cylinders standing side by side on a warm off-white surface, the left one in full soft daylight and the right one falling into even cool shade, a clear gap of empty surface between them, both running off the bottom edge of the frame, light from the left",
+      "motion": "the shade on the right cylinder retreats slightly. Locked-off shot, no people.",
+      "negative": "candles, vases, bottles, cups, glasses, chess pieces, statues, figures, columns of a building, salt and pepper, rolling pin"
+    },
+    {
+      "id": "corner",
+      "subject": "two broad warm off-white plaster planes meeting at a clean right angle that runs vertically through the picture, the left plane in full soft daylight and the right plane in even cool shade, both planes running off the top and the bottom edges, the join perfectly sharp, no other object anywhere in the frame",
+      "motion": "the light on the left plane strengthens a little. Locked-off shot, no people.",
+      "negative": "room, furniture, skirting board, floor, ceiling, window, door, building exterior, sky, box, cardboard, paper fold"
+    },
+    {
+      "id": "ramp",
+      "subject": "a smooth pale incline rising from the bottom left of the frame and running off the top right, daylight travelling up the slope and brightening steadily toward the top, the surface warm off-white and completely bare, one soft cool shadow along its lower edge",
+      "motion": "the brightness travels further up the slope. Locked-off shot, no people.",
+      "negative": "road, street, hill, landscape, sky, ski slope, snow, skate ramp, staircase, building, figure, vehicle"
+    }
+  ],
+  "features": []
+}

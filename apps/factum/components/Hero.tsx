@@ -9,6 +9,10 @@ import SegmentField from './SegmentField';
  * Exactly one screen tall — see `.fit-screen` in globals.css for why, and for
  * the scroll-cue trade-off it accepts. The H1 still never fades: an
  * `opacity: 0` LCP element keeps the LCP clock running.
+ *
+ * The background stays procedural. A full-bleed photograph was tried here and
+ * read as restless behind display type — the generated scenes earn their keep
+ * at card size, where they are looked *at* rather than read *through*.
  */
 export default function Hero({
   eyebrow,

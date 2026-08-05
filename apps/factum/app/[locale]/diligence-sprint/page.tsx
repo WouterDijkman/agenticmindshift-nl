@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/pageMetadata';
 import { DISCIPLINE_COUNT } from '@/lib/site';
+import { SPRINT_FORMATS, SPRINT_INPUTS, SPRINT_LAYERS } from '@/lib/scenes';
 import PageHeader from '@/components/PageHeader';
 import DisciplineGrid from '@/components/DisciplineGrid';
 import MediaCards from '@/components/MediaCards';
@@ -110,7 +111,7 @@ export default async function SprintPage({
           <MediaCards
             items={t.raw('layers.items') as { title: string; body: string }[]}
             chip="number"
-            seed={5}
+            scenes={SPRINT_LAYERS}
           />
         </div>
       </Section>
@@ -132,7 +133,7 @@ export default async function SprintPage({
                 body: `${format.items}. ${format.body}`
               })
             )}
-            seed={2}
+            scenes={SPRINT_FORMATS}
           />
         </div>
       </Section>
@@ -147,7 +148,7 @@ export default async function SprintPage({
         <div style={{ marginTop: 32 }}>
           <MediaCards
             items={t.raw('inputs.items') as { title: string; body: string }[]}
-            seed={9}
+            scenes={SPRINT_INPUTS}
             wide
           />
         </div>

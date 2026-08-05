@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/pageMetadata';
+import { PARTNER_PROFILES } from '@/lib/scenes';
 import PageHeader from '@/components/PageHeader';
 import MediaCards from '@/components/MediaCards';
 import SplitDiagram from '@/components/SplitDiagram';
@@ -54,7 +55,7 @@ export default async function PartnershipsPage({
         <div style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
           <MediaCards
             items={t.raw('who.profiles') as { title: string; body: string }[]}
-            seed={3}
+            scenes={PARTNER_PROFILES}
             wide
           />
         </div>
