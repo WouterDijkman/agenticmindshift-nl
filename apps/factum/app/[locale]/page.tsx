@@ -11,6 +11,7 @@ import { Section, SectionHeader, SubHeader } from '@/components/Section';
 import FindingSchema from '@/components/FindingSchema';
 import Pipeline from '@/components/Pipeline';
 import DisciplineGrid from '@/components/DisciplineGrid';
+import InlineCta from '@/components/InlineCta';
 import Stepper from '@/components/Stepper';
 import GuaranteeBand from '@/components/GuaranteeBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
@@ -57,6 +58,7 @@ export default async function HomePage({
           <FindingSchema
             label={s('schema.label')}
             footnote={s('schema.footnote')}
+            moreLabel={s('schema.more')}
             rows={[
               { key: s('schema.rows.module'), value: s('schema.values.module') },
               { key: s('schema.rows.finding'), value: s('schema.values.finding') },
@@ -221,13 +223,19 @@ export default async function HomePage({
         />
 
         {/*
-          The disciplines, not the sub-agent waffle that used to sit here. The
-          claim in the heading is breadth, and a board of named disciplines
-          proves breadth to a reader. A grid of anonymous squares proves a
-          headcount, which is our fact rather than their problem.
+          Each discipline states the thing that goes wrong when nobody reads
+          for it, then the thing the reader holds afterwards. A bare list of
+          discipline names proves breadth but leaves the reader to work out why
+          any of them matters to their deal; this does that work for them.
+          Naming the failure first is the point — the result only lands once
+          there is a hole for it to fill.
         */}
         <div style={{ marginTop: 'clamp(32px, 4vw, 56px)' }}>
-          <DisciplineGrid labels={s.raw('disciplines') as string[]} />
+          <DisciplineGrid
+            items={
+              s.raw('disciplines') as { label: string; pain: string; result: string }[]
+            }
+          />
         </div>
 
         <Reveal>
@@ -238,6 +246,15 @@ export default async function HomePage({
             {t('coverage.note')}
           </p>
         </Reveal>
+
+        {/* The reader has just been walked through every discipline and what
+            each one turns up. This is the most persuaded they get before the
+            footer, and the page used to answer it with another heading. */}
+        <InlineCta
+          line={t('coverage.ctaLine')}
+          cta={s('links.intake')}
+          location="home-coverage"
+        />
       </Section>
 
       {/* The Diligence Sprint. */}
@@ -280,6 +297,8 @@ export default async function HomePage({
             {t('cycle.note')}
           </p>
         </Reveal>
+
+        <InlineCta line={t('cycle.ctaLine')} cta={s('links.intake')} location="home-cycle" />
       </Section>
 
       {/*

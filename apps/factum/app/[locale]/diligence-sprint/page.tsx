@@ -91,7 +91,9 @@ export default async function SprintPage({
           lead={t('disciplines.lead')}
         />
         <div style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
-          <DisciplineGrid labels={s.raw('disciplines') as string[]} />
+          <DisciplineGrid
+            items={s.raw('disciplines') as { label: string; pain: string; result: string }[]}
+          />
         </div>
         <Reveal delay={90}>
           <p className="type-small" style={{ marginTop: 22, color: 'var(--text-quaternary)', maxWidth: '70ch' }}>
@@ -157,8 +159,17 @@ export default async function SprintPage({
       {/* FAQ. */}
       <Section width="medium">
         <SectionHeader eyebrow={t('faq.eyebrow')} title={t('faq.title')} />
+        {/* Answers go through `t()` rather than `t.raw()` so the discipline
+            count in the first one stays wired to DISCIPLINES in lib/site.ts.
+            Raw arrays skip ICU, which is how a hardcoded "thirteen" survived
+            the roster being cut to ten. */}
         <Reveal delay={60} style={{ marginTop: 28 }}>
-          <Disclosures items={t.raw('faq.items') as { q: string; a: string }[]} />
+          <Disclosures
+            items={(t.raw('faq.items') as { q: string }[]).map((item, i) => ({
+              q: item.q,
+              a: t(`faq.items.${i}.a`, numbers)
+            }))}
+          />
         </Reveal>
       </Section>
 

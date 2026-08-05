@@ -2,15 +2,15 @@
   "meta": {
     "home": {
       "title": "Diligence-grade analysis across the deal cycle",
-      "description": "Thirteen disciplines over the full data room. Reconciled against each other. Reviewed by a person before you see it."
+      "description": "Ten disciplines over the full data room. Reconciled against each other. Reviewed by a person before you see it."
     },
     "platform": {
       "title": "The platform",
-      "description": "31 due-diligence modules across 13 disciplines. Every finding cites a document. Every output passes a human gate."
+      "description": "23 due-diligence modules across ten disciplines. Every finding cites a document. Every output passes a human gate."
     },
     "sprint": {
       "title": "The Diligence Sprint",
-      "description": "Thirteen specialist passes over one data room, reconciled into a single narrative, with a live data-gap tracker."
+      "description": "Ten specialist passes over one data room, reconciled into a single narrative, with a live data-gap tracker."
     },
     "governance": {
       "title": "Governance and data handling",
@@ -65,19 +65,56 @@
   },
   "shared": {
     "disciplines": [
-      "Financial",
-      "Commercial",
-      "Legal",
-      "Tax",
-      "HR",
-      "IT",
-      "ESG",
-      "Vendor",
-      "Operational",
-      "Valuation",
-      "Insurance",
-      "AI",
-      "Vigil"
+      {
+        "label": "Financial",
+        "pain": "The EBITDA in the information memorandum has already been normalised by the seller.",
+        "result": "Which adjustments hold, which don’t, and what that does to the price."
+      },
+      {
+        "label": "Commercial",
+        "pain": "Revenue concentration rarely makes the summary page.",
+        "result": "Which customers carry the revenue, on what terms, and who is free to walk."
+      },
+      {
+        "label": "Legal",
+        "pain": "Change-of-control clauses sit in the schedules nobody reads to the end.",
+        "result": "Every clause that triggers on the transaction itself, with clause number and page."
+      },
+      {
+        "label": "Tax",
+        "pain": "A tax position that doesn’t hold announces itself years later.",
+        "result": "Where the structure carries risk, and what belongs in the purchase agreement because of it."
+      },
+      {
+        "label": "HR",
+        "pain": "Key people leave after closing, and the earn-out was resting on them.",
+        "result": "Who is contractually tied in, who isn’t, and what pension and collective labour agreements really cost."
+      },
+      {
+        "label": "IT",
+        "pain": "Technical debt appears on nobody’s balance sheet.",
+        "result": "Where the systems won’t carry the business case, and what fixing them costs."
+      },
+      {
+        "label": "ESG",
+        "pain": "Reporting obligations move to the buyer along with the company.",
+        "result": "What has to be reported from here, and what that takes in investment."
+      },
+      {
+        "label": "Operational",
+        "pain": "Margin leaks through processes nobody has put a number on.",
+        "result": "Where the margin goes, and which levers genuinely exist after closing."
+      },
+      {
+        "label": "Valuation",
+        "pain": "The bid comes out of a model that hadn’t seen the findings yet.",
+        "result": "What the findings do to the price, calculated through rather than assumed."
+      },
+      {
+        "label": "AI",
+        "pain": "“AI-driven” in the IM is usually a licence on somebody else’s model.",
+        "result": "What actually runs, who it depends on, and whether it falls under the AI Act."
+      }
     ],
     "schema": {
       "label": "Output contract — every finding",
@@ -95,7 +132,8 @@
         "evidence": "Quoted word for word",
         "document": "File name and page",
         "review": "Required before release"
-      }
+      },
+      "more": "+2 fields, on a wider screen"
     },
     "governancePoints": [
       {
@@ -121,22 +159,15 @@
       "HR DD",
       "IT DD",
       "ESG DD",
-      "Vigil monitoring",
-      "Boedelonderzoek",
       "Operational DD",
-      "Vendor DD",
       "AI DD",
       "IM screener",
+      "Vigil monitoring",
       "Tax DD",
       "Legal DD",
-      "Insurance DD",
-      "Independent Business Review",
-      "WHOA restructuring",
       "Deal economics",
       "Valuation",
-      "Deal structuring",
       "Portfolio management",
-      "LBO model",
       "Post-merger integration",
       "Vendor due diligence",
       "IC memo",
@@ -145,21 +176,20 @@
       "Document factory",
       "Exit readiness",
       "Portfolio health",
-      "Monthly business review",
       "IC report"
     ],
     "waves": [
       {
         "title": "Independent reads",
-        "body": "Eleven modules with nothing upstream of them. They all start at once."
+        "body": "These modules need nothing upstream of them. They all start at once."
       },
       {
         "title": "Dependent reads",
-        "body": "Tax, legal and insurance need wave 1 output before they can reason."
+        "body": "Tax and legal can only reason with the first wave in hand."
       },
       {
         "title": "Synthesis",
-        "body": "Valuation, restructuring and deal economics read across everything before them."
+        "body": "Valuation, deal economics and portfolio read across everything before them."
       },
       {
         "title": "Deliverables",
@@ -174,7 +204,11 @@
       "zdr": "ZDR",
       "zdrTitle": "Zero-retention routing enforced. The run refuses to start without it.",
       "modulesLabel": "modules",
-      "agentsLabel": "sub-agents"
+      "kinds": {
+        "analysis": "Finding",
+        "deliverable": "Document",
+        "monitoring": "Ongoing"
+      }
     },
     "specimen": {
       "pageLabel": "Data room",
@@ -201,7 +235,8 @@
     "links": {
       "governance": "How documents are handled",
       "platform": "How the platform works",
-      "sprint": "What the sprint covers"
+      "sprint": "What the sprint covers",
+      "intake": "Book a call"
     },
     "reframe": {
       "quote": "Checking your own work first isn’t a sign that something is wrong. It is what a well-run process looks like."
@@ -253,7 +288,7 @@
       "stages": [
         {
           "title": "Grounded retrieval",
-          "body": "Each module dispatches its own sub-agents at your documents."
+          "body": "Each module goes into the data room itself and pulls the passages that answer its question."
         },
         {
           "title": "Drafting",
@@ -275,9 +310,10 @@
     },
     "coverage": {
       "eyebrow": "Coverage",
-      "title": "The whole room, not a sample of it",
-      "lead": "Every discipline runs in the same pass, so nothing is left for a second phase that never happens.",
-      "note": "Dependency-ordered: later work waits for the findings it depends on."
+      "title": "The whole data room, not a sample of it",
+      "lead": "Every discipline runs in the same pass. What one of them finds is on the table for the next — instead of in a second phase that never happens.",
+      "note": "Dependency-ordered: later work waits for the findings it depends on.",
+      "ctaLine": "This is the pass your team cannot get through in two weeks."
     },
     "sprint": {
       "eyebrow": "The engagement",
@@ -319,10 +355,11 @@
         },
         {
           "title": "Restructuring",
-          "body": "Options close faster than decisions get made. Going concern, creditor position and covenant headroom, pre-IBR and WHOA."
+          "body": "Options close faster than decisions get made. Going concern, creditor position and covenant headroom, while there is still something left to choose."
         }
       ],
-      "note": "WHOA and IBR work is bound to Dutch jurisdiction. The rest of the cycle is jurisdiction-independent."
+      "note": "Restructuring work follows the local jurisdiction. The rest of the cycle is jurisdiction-independent.",
+      "ctaLine": "One read of the data room, usable at every one of these five moments."
     },
     "plan": {
       "eyebrow": "Getting started",
@@ -386,36 +423,40 @@
       "lead": "For readers who want the shape of the build. Every number here is counted from the product source.",
       "tiles": {
         "modules": {
-          "title": "Modules",
-          "body": "Each one pre-scoped to a discipline or a deliverable."
+          "title": "Modules per engagement",
+          "body": "Each one pre-scoped to a discipline or a deliverable. They all run, every mandate."
         },
-        "agents": {
-          "title": "Specialist sub-agents",
-          "body": "A module is a team, not a prompt. The largest fields {largest}."
+        "analysis": {
+          "title": "Return findings",
+          "body": "They read the data room out and return claims with the source passage underneath."
+        },
+        "deliverables": {
+          "title": "Assemble documents",
+          "body": "IC memo, vendor due diligence, teaser, financing memorandum. Built on the findings above."
+        },
+        "monitoring": {
+          "title": "Keep running after close",
+          "body": "Covenant headroom and early warning signals, on their own clock."
         },
         "waves": {
           "title": "Dispatch waves",
-          "body": "Ordered by dependency, not by preference. Wave 1 runs eleven modules at once."
+          "body": "Ordered by dependency, not by preference. Wave 1 opens with nine modules at once."
         },
         "zdr": {
           "title": "Zero-retention gated",
-          "body": "Tax, legal, financial and boedelonderzoek refuse to run off a retaining model."
+          "body": "Tax, legal and financial refuse to run off a retaining model."
         },
         "blocks": {
           "title": "Hard-block conditions",
           "body": "Conditions that stop a draft from being auto-approved, however many retries it has had."
-        },
-        "disciplines": {
-          "title": "Disciplines per engagement",
-          "body": "Financial, commercial, legal, tax, HR, IT, ESG, vendor, operational, valuation, insurance, AI, Vigil."
         }
       }
     },
     "coverage": {
       "eyebrow": "The library",
       "title": "The module library, in dispatch order",
-      "lead": "A module that needs another module’s output waits for it — that dependency sets the running order. The largest module fields {largest} sub-agents. The smallest, two.",
-      "note": "Counted from the dispatch graphs in the product source, not estimated. ZDR marks the modules whose provider routing is hard-gated to a zero-retention EU endpoint."
+      "lead": "A module that waits on another module’s output cannot start any earlier. That dependency sets the running order, not our preference. The label under each module says what it hands back: a finding, a document, or an ongoing signal.",
+      "note": "Derived from the dispatch graphs in the product source, not estimated. ZDR marks the modules whose provider routing is hard-gated to a zero-retention EU endpoint."
     },
     "pipeline": {
       "eyebrow": "Inside a module",
@@ -424,7 +465,7 @@
       "stages": [
         {
           "title": "Grounded retrieval",
-          "body": "The module dispatches its sub-agents. Each retrieves evidence from your documents.",
+          "body": "The module goes into the data room and pulls the passages that answer its question.",
           "note": "Confidential financial and personal data is pseudonymized before it reaches this layer."
         },
         {
@@ -573,6 +614,8 @@
         "No claim that the human gate is optional. It is mandatory.",
         "No completed public case studies yet.",
         "No uniform track record. The financial module has run end to end on a live deal and been verified against source documents. The reconciliation layer is younger.",
+        "No product-level technical due diligence. Source-code review, architecture assessment and scalability testing sit outside the standard pass.",
+        "No integrity or reputational screening. Background checks on people and counterparties run outside this platform.",
         "No general availability. Factum is pre-launch."
       ]
     },
@@ -582,11 +625,11 @@
       "items": [
         {
           "q": "Isn’t this just an AI chatbot with extra steps?",
-          "a": "A chat session is one context window that you steer. This is {agents} sub-agents across {modules} pre-scoped modules, dispatched in a fixed dependency order, with four grounding checks and a mandatory human gate. The difference is what happens when nobody is watching."
+          "a": "A chat session is one context window that you steer. This is {modules} pre-scoped modules in a fixed dependency order, with four grounding checks and a mandatory human gate. The difference is what happens when nobody is watching."
         },
         {
           "q": "Why waves instead of running everything at once?",
-          "a": "Tax cannot reason without the financial and legal reads. Valuation cannot price without tax. The dependency graph sets the order; wave 1 still runs eleven modules in parallel."
+          "a": "Tax cannot reason without the financial and legal reads. Valuation cannot price without tax. The dependency graph sets the order; wave 1 still runs nine modules in parallel."
         },
         {
           "q": "What happens when the model doesn’t know?",
@@ -627,8 +670,8 @@
     },
     "layers": {
       "eyebrow": "Synthesis",
-      "title": "From thirteen reads to one verdict",
-      "lead": "What turns {disciplines} separate reads into one deliverable, not thirteen.",
+      "title": "From separate reads to one verdict",
+      "lead": "What turns {disciplines} separate reads into one deliverable, instead of {disciplines} separate reports.",
       "items": [
         {
           "title": "Value-creation read",
@@ -693,7 +736,7 @@
       "items": [
         {
           "q": "Does this replace a quality-of-earnings report?",
-          "a": "It is broader, and it is not an attest service. A quality-of-earnings read covers one dimension in four to ten weeks. This runs thirteen disciplines and reconciles them. A signed accountant’s opinion stays a separate engagement."
+          "a": "It is broader, and it is not an attest service. A quality-of-earnings read covers one dimension in four to ten weeks. This runs {disciplines} disciplines and reconciles them. A signed accountant’s opinion stays a separate engagement."
         },
         {
           "q": "How long does it take?",
@@ -753,7 +796,7 @@
       "title": "Where the machine ends and a person starts",
       "lead": "You should be able to tell, for any finding, what produced it and what checked it.",
       "steps": [
-        "Independent agents retrieve evidence from your uploaded documents.",
+        "Each module retrieves evidence from your uploaded documents on its own.",
         "A second reviewer agent critiques each draft.",
         "A separate pass fact-checks claims against the source text.",
         "A person reviews the result.",
@@ -784,13 +827,13 @@
     },
     "zdr": {
       "eyebrow": "Zero retention",
-      "title": "Four modules refuse to run off a retaining model",
-      "lead": "Zero data retention is a routing rule in the code, not a promise on a page. Tax, legal, financial and boedelonderzoek are gated on it.",
+      "title": "Three modules refuse to run off a retaining model",
+      "lead": "Zero data retention is a routing rule in the code, not a promise on a page. Tax, legal and financial are gated on it.",
       "items": [
         "The gate is a hard requirement, checked before dispatch.",
         "There is no silent downgrade to a retaining provider.",
         "Analysis runs on Google Vertex AI in an EU region, under a Data Processing Agreement.",
-        "The other {other} modules run on the same infrastructure. Only these four refuse to start without the gate."
+        "The other {other} modules run on the same infrastructure. Only these three refuse to start without the gate."
       ]
     },
     "learning": {
@@ -966,7 +1009,7 @@
     "header": {
       "eyebrow": "Partnerships",
       "title": "More mandates than your team can read",
-      "lead": "You keep the relationship and the judgment. We run the thirteen-discipline read behind it, under your name.",
+      "lead": "You keep the relationship and the judgment. We run the read across every discipline behind it, under your name.",
       "cta": "Book a scoping call"
     },
     "who": {
@@ -984,7 +1027,7 @@
         },
         {
           "title": "Restructuring and turnaround practices",
-          "body": "Where an independent business review has to be fast and hold up to lenders."
+          "body": "Where an independent review has to be fast and hold up to lenders."
         },
         {
           "title": "PE and buy-side advisors",
@@ -995,7 +1038,7 @@
     "split": {
       "eyebrow": "The split",
       "title": "You keep the relationship. We supply the pass.",
-      "lead": "The same thirteen-discipline platform, the same review gate — delivered under your name.",
+      "lead": "The same platform, every discipline, the same review gate. Delivered under your name.",
       "columns": [
         {
           "label": "You keep",
@@ -1009,7 +1052,7 @@
         {
           "label": "We supply",
           "items": [
-            "The thirteen-discipline pass over the data room",
+            "The full pass over the data room, every discipline",
             "Cross-discipline reconciliation as a fixed step",
             "Findings tied to a document and a passage, every time",
             "A named reviewer standing behind the output"
@@ -1063,7 +1106,7 @@
         },
         {
           "q": "Can you run only part of the scope?",
-          "a": "The thirteen-discipline pass is fixed, because the value sits in the reconciliation between disciplines. What varies is the depth of the write-up."
+          "a": "The full pass is fixed, because the value sits in the reconciliation between disciplines. What varies is the depth of the write-up."
         },
         {
           "q": "How exclusive is this?",

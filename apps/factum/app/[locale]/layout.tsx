@@ -8,6 +8,10 @@ import { fontVariables } from '@/lib/fonts';
 import { getAlternates } from '@/lib/hreflang';
 import { organizationSchema } from '@/lib/jsonld';
 import { SITE_URL } from '@/lib/site';
+/* Side-effect only: throws at build if the module roster in lib/site.ts and the
+   five message files have drifted apart, or if an agent count has crept back
+   into prose. See lib/roster.manifest.ts. */
+import '@/lib/roster.manifest';
 import SiteHeader from '@/components/SiteHeader';
 import SiteFooter from '@/components/SiteFooter';
 import RevealObserver from '@/components/RevealObserver';

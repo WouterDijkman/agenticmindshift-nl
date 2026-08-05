@@ -2,15 +2,15 @@
   "meta": {
     "home": {
       "title": "Analyse auf Due-Diligence-Niveau über den gesamten Deal-Zyklus",
-      "description": "Dreizehn Disziplinen über den gesamten Datenraum. Gegeneinander abgeglichen. Von einer Person geprüft, bevor Sie es sehen."
+      "description": "Zehn Disziplinen über den gesamten Datenraum. Gegeneinander abgeglichen. Von einer Person geprüft, bevor Sie es sehen."
     },
     "platform": {
       "title": "Die Plattform",
-      "description": "31 Due-Diligence-Module über 13 Disziplinen. Jede Feststellung belegt ein Dokument. Jedes Ergebnis passiert eine menschliche Freigabe."
+      "description": "23 Due-Diligence-Module über zehn Disziplinen. Jede Feststellung belegt ein Dokument. Jedes Ergebnis passiert eine menschliche Freigabe."
     },
     "sprint": {
       "title": "Der Diligence Sprint",
-      "description": "Dreizehn fachspezifische Durchgänge über einen Datenraum, zu einem Narrativ zusammengeführt, mit laufendem Datenlücken-Tracker."
+      "description": "Zehn fachspezifische Durchgänge über einen Datenraum, zu einem Narrativ zusammengeführt, mit laufendem Datenlücken-Tracker."
     },
     "governance": {
       "title": "Governance und Datenverarbeitung",
@@ -65,19 +65,56 @@
   },
   "shared": {
     "disciplines": [
-      "Finanzen",
-      "Kommerziell",
-      "Recht",
-      "Steuern",
-      "Personal",
-      "IT",
-      "ESG",
-      "Vendor",
-      "Operativ",
-      "Bewertung",
-      "Versicherung",
-      "KI",
-      "Vigil"
+      {
+        "label": "Finanzen",
+        "pain": "Das EBITDA im Information Memorandum hat der Verkäufer selbst bereinigt.",
+        "result": "Sie sehen, welche Bereinigungen halten, welche nicht, und was das mit dem Preis macht."
+      },
+      {
+        "label": "Kommerziell",
+        "pain": "Umsatzkonzentration steht selten in der Zusammenfassung.",
+        "result": "Welche Kunden den Umsatz tragen, zu welchen Konditionen, und wer abspringen kann."
+      },
+      {
+        "label": "Recht",
+        "pain": "Change-of-Control-Klauseln liegen in den Anlagen, die niemand zu Ende liest.",
+        "result": "Jede Klausel, die bei der Transaktion selbst greift, mit Ziffer und Seite."
+      },
+      {
+        "label": "Steuern",
+        "pain": "Eine steuerliche Position, die nicht hält, meldet sich erst Jahre später.",
+        "result": "Wo die Struktur Risiko trägt, und was dafür in den Kaufvertrag gehört."
+      },
+      {
+        "label": "Personal",
+        "pain": "Schlüsselpersonen gehen nach dem Closing, und der Earn-out hing an ihnen.",
+        "result": "Wer vertraglich gebunden ist, wer nicht, und was Pensionszusagen und Tarifbindung wirklich kosten."
+      },
+      {
+        "label": "IT",
+        "pain": "Technische Schulden stehen in keiner Bilanz.",
+        "result": "Wo die Systeme den Business Case nicht tragen, und was es kostet, das zu beheben."
+      },
+      {
+        "label": "ESG",
+        "pain": "Berichtspflichten wandern mit dem Unternehmen zum Käufer.",
+        "result": "Was künftig berichtet werden muss, und welche Investition das verlangt."
+      },
+      {
+        "label": "Operativ",
+        "pain": "Marge versickert in Prozessen, die nie jemand in Zahlen gefasst hat.",
+        "result": "Wo die Marge verloren geht, und welche Hebel nach dem Closing wirklich existieren."
+      },
+      {
+        "label": "Bewertung",
+        "pain": "Das Gebot stammt aus einem Modell, das die Befunde noch nicht kannte.",
+        "result": "Was die Befunde mit dem Preis machen, durchgerechnet statt unterstellt."
+      },
+      {
+        "label": "KI",
+        "pain": "„KI-getrieben“ im Information Memorandum ist meist eine Lizenz auf das Modell eines anderen.",
+        "result": "Was wirklich läuft, wovon es abhängt, und ob es unter den AI Act fällt."
+      }
     ],
     "schema": {
       "label": "Output-Kontrakt — jede Feststellung",
@@ -95,7 +132,8 @@
         "evidence": "Wörtlich zitiert",
         "document": "Dateiname und Seite",
         "review": "Vor Freigabe erforderlich"
-      }
+      },
+      "more": "+2 Felder, auf einem breiteren Bildschirm"
     },
     "governancePoints": [
       {
@@ -121,22 +159,15 @@
       "HR DD",
       "IT DD",
       "ESG DD",
-      "Vigil-Monitoring",
-      "Boedelonderzoek",
       "Operational DD",
-      "Vendor DD",
       "AI DD",
       "IM-Screener",
+      "Vigil-Monitoring",
       "Tax DD",
       "Legal DD",
-      "Insurance DD",
-      "Independent Business Review",
-      "WHOA-Restrukturierung",
       "Deal Economics",
       "Bewertung",
-      "Dealstrukturierung",
       "Portfoliomanagement",
-      "LBO-Modell",
       "Post-Merger-Integration",
       "Vendor Due Diligence",
       "IC-Memo",
@@ -145,21 +176,20 @@
       "Dokumentenfabrik",
       "Exit Readiness",
       "Portfoliogesundheit",
-      "Monthly Business Review",
       "IC-Bericht"
     ],
     "waves": [
       {
         "title": "Unabhängige Reads",
-        "body": "Elf Module ohne Vorstufe. Sie starten alle gleichzeitig."
+        "body": "Diese Module brauchen keine Vorstufe. Sie starten alle gleichzeitig."
       },
       {
         "title": "Abhängige Reads",
-        "body": "Steuern, Recht und Versicherung brauchen den Output aus Welle 1."
+        "body": "Steuern und Recht können erst argumentieren, wenn die erste Welle vorliegt."
       },
       {
         "title": "Synthese",
-        "body": "Bewertung, Restrukturierung und Deal Economics lesen alles Vorherige."
+        "body": "Bewertung, Deal Economics und Portfolio lesen alles Vorherige."
       },
       {
         "title": "Deliverables",
@@ -174,7 +204,11 @@
       "zdr": "ZDR",
       "zdrTitle": "Zero-Retention-Routing erzwungen. Ohne diese Route startet der Lauf nicht.",
       "modulesLabel": "Module",
-      "agentsLabel": "Sub-Agents"
+      "kinds": {
+        "analysis": "Befund",
+        "deliverable": "Dokument",
+        "monitoring": "Laufend"
+      }
     },
     "specimen": {
       "pageLabel": "Datenraum",
@@ -201,7 +235,8 @@
     "links": {
       "governance": "Wie Dokumente behandelt werden",
       "platform": "Wie die Plattform arbeitet",
-      "sprint": "Was der Sprint abdeckt"
+      "sprint": "Was der Sprint abdeckt",
+      "intake": "Gespräch buchen"
     },
     "reframe": {
       "quote": "Die eigene Arbeit zuerst zu prüfen ist kein Zeichen dafür, dass etwas nicht stimmt. So sieht ein gut geführter Prozess aus."
@@ -247,7 +282,7 @@
       "stages": [
         {
           "title": "Fundierte Retrieval",
-          "body": "Jedes Modul setzt eigene Sub-Agents auf Ihre Dokumente an."
+          "body": "Jedes Modul geht selbst in den Datenraum und holt die Passagen, die seine Frage beantworten."
         },
         {
           "title": "Entwurf",
@@ -294,9 +329,10 @@
     },
     "coverage": {
       "eyebrow": "Abdeckung",
-      "title": "Der ganze Raum, keine Stichprobe",
-      "lead": "Jede Disziplin läuft im selben Durchgang, damit nichts für eine zweite Phase liegen bleibt, die nie kommt.",
-      "note": "Nach Abhängigkeit geordnet: spätere Arbeit wartet auf die Befunde, die sie braucht."
+      "title": "Der ganze Datenraum, keine Stichprobe",
+      "lead": "Jede Disziplin läuft im selben Durchgang. Was die eine findet, liegt bei der nächsten auf dem Tisch — statt in einer zweiten Phase, die nie kommt.",
+      "note": "Nach Abhängigkeit geordnet: spätere Arbeit wartet auf die Befunde, die sie braucht.",
+      "ctaLine": "Das ist der Durchgang, den Ihr Team in zwei Wochen nicht schafft."
     },
     "sprint": {
       "eyebrow": "Das Mandat",
@@ -327,10 +363,11 @@
         },
         {
           "title": "Restrukturieren",
-          "body": "Optionen schließen sich schneller, als Entscheidungen fallen. Fortführung, Gläubigerposition und Covenant-Spielraum, pre-IBR und WHOA."
+          "body": "Optionen schließen sich schneller, als Entscheidungen fallen. Fortführung, Gläubigerposition und Covenant-Spielraum, solange noch zu wählen ist."
         }
       ],
-      "note": "WHOA- und IBR-Arbeit ist an niederländisches Recht gebunden. Der Rest des Zyklus ist rechtsraumunabhängig."
+      "note": "Restrukturierungsarbeit folgt dem lokalen Rechtsraum. Der Rest des Zyklus ist rechtsraumunabhängig.",
+      "ctaLine": "Ein Durchgang durch den Datenraum, nutzbar an jedem dieser fünf Punkte."
     },
     "trust": {
       "eyebrow": "Governance",
@@ -386,36 +423,40 @@
       "lead": "Für Leser, die die Form des Baus sehen wollen. Jede Zahl hier ist aus dem Produkt-Quellcode gezählt.",
       "tiles": {
         "modules": {
-          "title": "Module",
-          "body": "Jedes vorab auf eine Disziplin oder ein Deliverable zugeschnitten."
+          "title": "Module pro Mandat",
+          "body": "Jedes vorab auf eine Disziplin oder ein Deliverable zugeschnitten. Alle laufen, bei jedem Mandat."
         },
-        "agents": {
-          "title": "Spezialisierte Sub-Agents",
-          "body": "Ein Modul ist ein Team, kein Prompt. Das größte setzt {largest} ein."
+        "analysis": {
+          "title": "Liefern Befunde",
+          "body": "Sie lesen den Datenraum aus und liefern Aussagen mit der Quellpassage darunter."
+        },
+        "deliverables": {
+          "title": "Bauen Dokumente",
+          "body": "IC-Memo, Vendor Due Diligence, Teaser, Finanzierungsmemorandum. Gebaut auf den Befunden darüber."
+        },
+        "monitoring": {
+          "title": "Laufen nach dem Closing weiter",
+          "body": "Covenant-Spielraum und Frühwarnsignale, auf eigener Uhr."
         },
         "waves": {
           "title": "Dispatch-Wellen",
-          "body": "Nach Abhängigkeit geordnet, nicht nach Präferenz. Welle 1 fährt elf Module gleichzeitig."
+          "body": "Nach Abhängigkeit geordnet, nicht nach Präferenz. Welle 1 öffnet mit neun Modulen gleichzeitig."
         },
         "zdr": {
           "title": "Zero-Retention-gesichert",
-          "body": "Steuern, Recht, Finanzen und Boedelonderzoek weigern sich, auf einem speichernden Modell zu laufen."
+          "body": "Steuern, Recht und Finanzen weigern sich, auf einem speichernden Modell zu laufen."
         },
         "blocks": {
           "title": "Harte Blockaden",
           "body": "Bedingungen, die einen Entwurf stoppen, egal wie viele Retries es gab."
-        },
-        "disciplines": {
-          "title": "Disziplinen pro Mandat",
-          "body": "Finanzen, Commercial, Recht, Steuern, HR, IT, ESG, Vendor, Operations, Bewertung, Versicherung, KI, Vigil."
         }
       }
     },
     "coverage": {
       "eyebrow": "Die Bibliothek",
       "title": "Die Modulbibliothek, in Dispatch-Reihenfolge",
-      "lead": "Ein Modul, das auf den Output eines anderen wartet, kann nicht früher starten — diese Abhängigkeit bestimmt die Reihenfolge. Das größte Modul setzt {largest} Sub-Agents ein. Das kleinste, zwei.",
-      "note": "Aus den Dispatch-Graphen im Produktquellcode gezählt, nicht geschätzt. ZDR markiert die Module, deren Routing hart auf einen Zero-Retention-EU-Endpunkt gesetzt ist."
+      "lead": "Ein Modul, das auf den Output eines anderen wartet, kann nicht früher starten. Diese Abhängigkeit bestimmt die Reihenfolge, nicht unsere Präferenz. Das Label unter jedem Modul sagt, was es liefert: einen Befund, ein Dokument oder ein laufendes Signal.",
+      "note": "Aus den Dispatch-Graphen im Produktquellcode abgeleitet, nicht geschätzt. ZDR markiert die Module, deren Routing hart auf einen Zero-Retention-EU-Endpunkt gesetzt ist."
     },
     "pipeline": {
       "eyebrow": "Innerhalb eines Moduls",
@@ -424,7 +465,7 @@
       "stages": [
         {
           "title": "Fundierte Retrieval",
-          "body": "Das Modul entsendet seine Sub-Agents. Jeder holt Belege aus Ihren Dokumenten.",
+          "body": "Das Modul geht in den Datenraum und holt die Passagen, die seine Frage beantworten.",
           "note": "Vertrauliche Finanz- und Personendaten werden pseudonymisiert, bevor sie diese Ebene erreichen."
         },
         {
@@ -573,6 +614,8 @@
         "Keine Behauptung, das menschliche Tor sei optional. Es ist verpflichtend.",
         "Noch keine abgeschlossenen öffentlichen Fallstudien.",
         "Keine einheitliche Historie. Das Finanzmodul lief end-to-end an einem realen Deal und wurde gegen Quelldokumente verifiziert. Die Abgleichebene ist jünger.",
+        "Keine technische Due Diligence auf Produktebene. Quellcode-Review, Architekturbewertung und Skalierbarkeitstests sind nicht Teil des Standarddurchgangs.",
+        "Keine Integritäts- oder Reputationsprüfung. Hintergrundchecks zu Personen und Gegenparteien laufen außerhalb dieser Plattform.",
         "Keine allgemeine Verfügbarkeit. Factum ist Pre-Launch."
       ]
     },
@@ -582,11 +625,11 @@
       "items": [
         {
           "q": "Ist das nicht einfach ein KI-Chatbot mit Zwischenschritten?",
-          "a": "Eine Chat-Sitzung ist ein Kontextfenster, das Sie steuern. Das hier sind {agents} Sub-Agents über {modules} vorab zugeschnittene Module, in fester Abhängigkeitsreihenfolge, mit vier Grounding-Prüfungen und einem verpflichtenden menschlichen Tor. Der Unterschied zeigt sich, wenn niemand hinsieht."
+          "a": "Eine Chat-Sitzung ist ein Kontextfenster, das Sie steuern. Das hier sind {modules} vorab zugeschnittene Module in fester Abhängigkeitsreihenfolge, mit vier Grounding-Prüfungen und einem verpflichtenden menschlichen Tor. Der Unterschied zeigt sich, wenn niemand hinsieht."
         },
         {
           "q": "Warum Wellen statt alles gleichzeitig?",
-          "a": "Steuern kann ohne den Finanz- und Rechts-Read nicht argumentieren. Bewertung kann ohne Steuern nicht bepreisen. Der Abhängigkeitsgraph setzt die Reihenfolge; Welle 1 fährt trotzdem elf Module parallel."
+          "a": "Steuern kann ohne den Finanz- und Rechts-Read nicht argumentieren. Bewertung kann ohne Steuern nicht bepreisen. Der Abhängigkeitsgraph setzt die Reihenfolge; Welle 1 fährt trotzdem neun Module parallel."
         },
         {
           "q": "Was passiert, wenn das Modell es nicht weiß?",
@@ -627,8 +670,8 @@
     },
     "layers": {
       "eyebrow": "Synthese",
-      "title": "Von dreizehn Analysen zu einem Urteil",
-      "lead": "Was {disciplines} getrennte Analysen zu einem einzigen Ergebnis macht, nicht dreizehn.",
+      "title": "Von einzelnen Analysen zu einem Urteil",
+      "lead": "Was {disciplines} getrennte Analysen zu einem einzigen Ergebnis macht, statt zu {disciplines} getrennten Berichten.",
       "items": [
         {
           "title": "Wertsteigerungs-Analyse",
@@ -693,7 +736,7 @@
       "items": [
         {
           "q": "Ersetzt das einen Quality-of-Earnings-Bericht?",
-          "a": "Es ist breiter, und es ist keine Prüfungsleistung. Eine Quality-of-Earnings-Analyse deckt eine Dimension ab und dauert vier bis zehn Wochen. Hier laufen dreizehn Disziplinen, gegeneinander abgeglichen. Ein unterzeichnetes Testat eines Wirtschaftsprüfers bleibt ein separates Mandat."
+          "a": "Es ist breiter, und es ist keine Prüfungsleistung. Eine Quality-of-Earnings-Analyse deckt eine Dimension ab und dauert vier bis zehn Wochen. Hier laufen {disciplines} Disziplinen, gegeneinander abgeglichen. Ein unterzeichnetes Testat eines Wirtschaftsprüfers bleibt ein separates Mandat."
         },
         {
           "q": "Wie lange dauert es?",
@@ -753,7 +796,7 @@
       "title": "Wo die Maschine endet und ein Mensch beginnt",
       "lead": "Sie sollten für jede Feststellung erkennen können, was sie erzeugt und was sie geprüft hat.",
       "steps": [
-        "Eigenständige Agenten ziehen Belege aus Ihren hochgeladenen Dokumenten.",
+        "Jedes Modul zieht selbstständig Belege aus Ihren hochgeladenen Dokumenten.",
         "Ein zweiter Prüf-Agent kritisiert jeden Entwurf.",
         "Ein separater Durchgang gleicht Aussagen gegen den Quelltext ab.",
         "Eine Person prüft das Ergebnis.",
@@ -784,13 +827,13 @@
     },
     "zdr": {
       "eyebrow": "Zero Retention",
-      "title": "Vier Module weigern sich, auf einem speichernden Modell zu laufen",
-      "lead": "Zero Data Retention ist eine Routing-Regel im Code, kein Versprechen auf einer Seite. Steuern, Recht, Finanzen und Boedelonderzoek hängen an dieser Regel.",
+      "title": "Drei Module weigern sich, auf einem speichernden Modell zu laufen",
+      "lead": "Zero Data Retention ist eine Routing-Regel im Code, kein Versprechen auf einer Seite. Steuern, Recht und Finanzen hängen an dieser Regel.",
       "items": [
         "Das Tor ist eine harte Anforderung, geprüft vor dem Dispatch.",
         "Es gibt kein stilles Ausweichen auf einen speichernden Anbieter.",
         "Die Analyse läuft auf Google Vertex AI in einer EU-Region, unter Auftragsverarbeitungsvertrag.",
-        "Die anderen {other} Module laufen auf derselben Infrastruktur. Nur diese vier starten ohne das Tor nicht."
+        "Die anderen {other} Module laufen auf derselben Infrastruktur. Nur diese drei starten ohne das Tor nicht."
       ]
     },
     "learning": {
@@ -966,7 +1009,7 @@
     "header": {
       "eyebrow": "Partnerschaften",
       "title": "Mehr Mandate, als Ihr Team lesen kann",
-      "lead": "Sie behalten die Beziehung und das Urteilsvermögen. Wir führen die Analyse über dreizehn Disziplinen dahinter aus, unter Ihrem Namen.",
+      "lead": "Sie behalten die Beziehung und das Urteilsvermögen. Wir führen die Analyse über alle Disziplinen dahinter aus, unter Ihrem Namen.",
       "cta": "Ein Scoping-Gespräch buchen"
     },
     "who": {
@@ -984,7 +1027,7 @@
         },
         {
           "title": "Restrukturierungs- und Turnaround-Praxen",
-          "body": "Wo ein Independent Business Review schnell entstehen und der Prüfung durch Kreditgeber standhalten muss."
+          "body": "Wo eine unabhängige Bestandsaufnahme schnell vorliegen und der Prüfung durch Kreditgeber standhalten muss."
         },
         {
           "title": "PE- und Buy-Side-Berater",
@@ -995,7 +1038,7 @@
     "split": {
       "eyebrow": "Die Aufteilung",
       "title": "Sie behalten die Beziehung. Wir liefern die Analyse.",
-      "lead": "Dieselbe Plattform mit dreizehn Disziplinen, dasselbe Prüfgate — geliefert unter Ihrem Namen.",
+      "lead": "Dieselbe Plattform, alle Disziplinen, dieselbe Prüfstufe. Geliefert unter Ihrem Namen.",
       "columns": [
         {
           "label": "Sie behalten",
@@ -1009,7 +1052,7 @@
         {
           "label": "Wir liefern",
           "items": [
-            "Den Durchgang über dreizehn Disziplinen im Datenraum",
+            "Den vollständigen Durchgang über den Datenraum, jede Disziplin",
             "Disziplinübergreifenden Abgleich als festen Schritt",
             "Feststellungen, an ein Dokument und eine Passage gebunden, jedes Mal",
             "Eine namentlich benannte Person, die für das Ergebnis einsteht"
@@ -1063,7 +1106,7 @@
         },
         {
           "q": "Können Sie auch nur einen Teil des Umfangs übernehmen?",
-          "a": "Der Durchgang über dreizehn Disziplinen ist fest, weil der Wert im Abgleich zwischen den Disziplinen liegt. Variieren kann die Tiefe der Ausarbeitung."
+          "a": "Der vollständige Durchgang liegt fest, weil der Wert im Abgleich zwischen den Disziplinen liegt. Variieren kann die Tiefe der Ausarbeitung."
         },
         {
           "q": "Wie exklusiv ist das?",

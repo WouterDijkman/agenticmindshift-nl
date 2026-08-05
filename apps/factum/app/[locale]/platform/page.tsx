@@ -2,11 +2,12 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/pageMetadata';
 import {
+  ANALYSIS_MODULE_COUNT,
+  DELIVERABLE_MODULE_COUNT,
   DISCIPLINE_COUNT,
   HARD_BLOCK_COUNT,
-  LARGEST_MODULE_AGENTS,
   MODULE_COUNT,
-  SUBAGENT_COUNT,
+  MONITORING_MODULE_COUNT,
   WAVE_COUNT,
   ZDR_MODULE_COUNT
 } from '@/lib/site';
@@ -63,11 +64,9 @@ export default async function PlatformPage({
   const s = await getTranslations('shared');
   const n = {
     modules: MODULE_COUNT,
-    agents: SUBAGENT_COUNT,
     waves: WAVE_COUNT,
     disciplines: DISCIPLINE_COUNT,
     zdr: ZDR_MODULE_COUNT,
-    largest: LARGEST_MODULE_AGENTS,
     blocks: HARD_BLOCK_COUNT
   };
 
@@ -91,6 +90,7 @@ export default async function PlatformPage({
           <FindingSchema
             label={s('schema.label')}
             footnote={s('schema.footnote')}
+            moreLabel={s('schema.more')}
             rows={[
               { key: s('schema.rows.module'), value: s('schema.values.module') },
               { key: s('schema.rows.finding'), value: s('schema.values.finding') },
@@ -209,13 +209,14 @@ export default async function PlatformPage({
 
       {/* The library and the running order, as one graph.
 
-          This was a 31-row bar chart ranked by sub-agent count. It answered
-          "how big is each module" — our fact — and the reader had to infer the
-          dependency structure from the wave bands. The graph states it: eleven
-          modules opening at once, three waiting on them, a synthesis layer
-          reading across everything, deliverables, and post-close on its own
-          clock. The wave bodies in `shared.waves` were already written to
-          describe exactly that and had nowhere to render. */}
+          This was a bar chart ranked by sub-agent count. It answered "how big
+          is each module" — our fact, not the reader's — and the dependency
+          structure had to be inferred from the wave bands. The graph states it
+          instead: nine modules opening at once, two waiting on them, a
+          synthesis layer reading across everything, deliverables, and
+          post-close on its own clock. Each node now carries what it returns —
+          finding, document, or ongoing signal — which is the question a buyer
+          is actually asking. */}
       <Section id="modules" width="wide">
         <SectionHeader
           eyebrow={t('coverage.eyebrow')}
@@ -228,7 +229,11 @@ export default async function PlatformPage({
             labels={s.raw('modules') as string[]}
             waves={s.raw('waves') as { title: string; body: string }[]}
             modulesLabel={s('chart.modulesLabel')}
-            agentsLabel={s('chart.agentsLabel')}
+            kindLabels={{
+              analysis: s('chart.kinds.analysis'),
+              deliverable: s('chart.kinds.deliverable'),
+              monitoring: s('chart.kinds.monitoring')
+            }}
             zdrLabel={s('chart.zdr')}
             zdrTitle={s('chart.zdrTitle')}
           />
@@ -253,13 +258,19 @@ export default async function PlatformPage({
         />
         <div style={{ marginTop: 'clamp(32px, 4vw, 52px)' }}>
           <BentoGrid
+            /* The three-way split leads, because it is the answer to "what do
+               I actually get" — findings, documents, and something that keeps
+               running after the deal. The totals underneath are the evidence
+               for it. The old lead tile counted sub-agents, which measured our
+               plumbing rather than the reader's output. */
             tiles={[
-              { ...tile('agents'), stat: String(SUBAGENT_COUNT), span: 3, accent: true },
-              { ...tile('modules'), stat: String(MODULE_COUNT), span: 3 },
+              { ...tile('modules'), stat: String(MODULE_COUNT), span: 3, accent: true },
+              { ...tile('analysis'), stat: String(ANALYSIS_MODULE_COUNT), span: 3 },
+              { ...tile('deliverables'), stat: String(DELIVERABLE_MODULE_COUNT), span: 2 },
+              { ...tile('monitoring'), stat: String(MONITORING_MODULE_COUNT), span: 2 },
               { ...tile('waves'), stat: String(WAVE_COUNT), span: 2 },
-              { ...tile('zdr'), stat: String(ZDR_MODULE_COUNT), span: 2 },
-              { ...tile('blocks'), stat: String(HARD_BLOCK_COUNT), span: 2 },
-              { ...tile('disciplines'), stat: String(DISCIPLINE_COUNT), span: 6 }
+              { ...tile('zdr'), stat: String(ZDR_MODULE_COUNT), span: 3 },
+              { ...tile('blocks'), stat: String(HARD_BLOCK_COUNT), span: 3 }
             ]}
           />
         </div>

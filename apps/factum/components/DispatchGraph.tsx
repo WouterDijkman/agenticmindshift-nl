@@ -6,29 +6,31 @@ type Wave = { title: string; body: string };
 /**
  * The dispatch graph: the *shape* of a run, not a ranked list of modules.
  *
- * This replaces a 31-row bar chart. The chart answered "how big is each
+ * This replaces a bar chart ranked by size. The chart answered "how big is each
  * module", which is our fact; the graph answers "what happens when I hand over
- * a data room", which is the reader's question. Eleven modules opening at once,
- * three that have to wait, a synthesis layer that reads across everything, the
- * documents falling out of the end, and a post-close wave on its own clock —
- * that is the argument for the whole platform, and it is a picture, not a
- * paragraph.
+ * a data room", which is the reader's question. A first wave opening at once,
+ * two modules that have to wait, a synthesis layer that reads across
+ * everything, the documents falling out of the end, and a post-close wave on
+ * its own clock — that is the argument for the whole platform, and it is a
+ * picture, not a paragraph.
  *
  * Every value is derived from `MODULES` in `lib/site.ts`, which is itself
  * generated from the product's module registry. Nothing here is authored: the
- * wave grouping, the per-wave module count, the per-wave sub-agent sum and the
- * relative bar in each node all fall out of that array. If a module moves wave
- * in the product, this diagram moves with it.
+ * wave grouping and the per-wave module count both fall out of that array. If a
+ * module moves wave in the product, this diagram moves with it.
  *
- * The fan-out meter is kept per node rather than dropped, because the spread is
- * still the point — the largest module runs ten times the sub-agents of the
- * smallest — but it rides inside the node instead of taking a full row.
+ * Each node used to carry a fan-out meter and a sub-agent count. Both are gone.
+ * The meter ranked modules by how many agents they spawn, which is a fact about
+ * our implementation that a reader cannot check, cannot use, and would be wrong
+ * about within a quarter. In its place each node says which of the three things
+ * it hands back — a finding, a document, or a running watch — because that is
+ * what decides whether the reader gets it during diligence or after closing.
  */
 export default function DispatchGraph({
   labels,
   waves,
   modulesLabel,
-  agentsLabel,
+  kindLabels,
   zdrLabel,
   zdrTitle
 }: {
@@ -36,28 +38,22 @@ export default function DispatchGraph({
   labels: string[];
   /** Five waves in dispatch order, each with the dependency it describes. */
   waves: Wave[];
-  /** Unit nouns for the per-wave tally, e.g. "modules" / "sub-agents". */
+  /** Unit noun for the per-wave tally, e.g. "modules". */
   modulesLabel: string;
-  agentsLabel: string;
+  /** One short noun per module kind: what this module hands back. */
+  kindLabels: Record<'analysis' | 'deliverable' | 'monitoring', string>;
   zdrLabel: string;
   zdrTitle: string;
 }) {
-  const max = Math.max(...MODULES.map((m) => m.agents));
-
   const rows = waves.map((wave, i) => {
     const n = i + 1;
     const nodes = MODULES.map((m, index) => ({ m, index })).filter(({ m }) => m.wave === n);
-    return {
-      n,
-      wave,
-      nodes,
-      agents: nodes.reduce((sum, { m }) => sum + m.agents, 0)
-    };
+    return { n, wave, nodes };
   });
 
   return (
     <ol className="dispatch">
-      {rows.map(({ n, wave, nodes, agents }) => (
+      {rows.map(({ n, wave, nodes }) => (
         <li
           key={n}
           className="dispatch-wave"
@@ -74,10 +70,6 @@ export default function DispatchGraph({
               <h3 className="dispatch-title">{wave.title}</h3>
               <span className="mono dispatch-tally">
                 {nodes.length} {modulesLabel}
-                <span aria-hidden="true" className="dispatch-tally-sep">
-                  ·
-                </span>
-                {agents} {agentsLabel}
               </span>
             </Reveal>
 
@@ -92,8 +84,8 @@ export default function DispatchGraph({
                   key={m.slug}
                   className="dispatch-node"
                   /* Stepped per node rather than via .stagger, whose ladder
-                     stops at five children — wave 1 has eleven, and the last
-                     six would otherwise land as one block. */
+                     stops at five children — wave 1 has nine, and the last
+                     four would otherwise land as one block. */
                   delay={110 + i * 40}
                 >
                   <span className="dispatch-node-name">
@@ -105,13 +97,9 @@ export default function DispatchGraph({
                     )}
                   </span>
                   <span className="dispatch-node-foot">
-                    <span className="dispatch-node-meter" aria-hidden="true">
-                      <span
-                        className="dispatch-node-fill"
-                        style={{ '--pct': `${(m.agents / max) * 100}%` } as React.CSSProperties}
-                      />
+                    <span className="mono dispatch-node-kind" data-kind={m.kind}>
+                      {kindLabels[m.kind]}
                     </span>
-                    <span className="mono dispatch-node-count">{m.agents}</span>
                   </span>
                 </Reveal>
               ))}

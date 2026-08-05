@@ -558,39 +558,36 @@ p { margin: 0; }
    *
    * Flex was chosen so an incomplete last row would "just end" instead of
    * exposing a dead cell — and that half worked. What it also did was let the
-   * trailing tiles grow: with thirteen disciplines the last row of three came
-   * out at ~378px against ~262px for the ten tiles above it, and still stopped
-   * short of the right margin. A row that is both a different width and short
-   * reads as a bug, which on a page selling reconciliation is expensive.
+   * trailing tiles grow: the last row came out wider than the rows above it and
+   * still stopped short of the right margin. A row that is both a different
+   * width and short reads as a bug, which on a page selling reconciliation is
+   * expensive.
    *
-   * Thirteen is prime, so some row is always short. Fixing the width is the
-   * part that matters: an equal-width row that ends early reads as a deliberate
-   * ragged edge. Borders still live on the tiles rather than behind the gaps,
-   * so the empty cells render as page background and never as a highlighted
-   * "missing" rectangle. The list contributes only the top/left edges.
+   * Borders live on the tiles rather than behind the gaps, so any empty cell
+   * renders as page background and never as a highlighted "missing" rectangle.
+   * The list contributes only the top/left edges.
    *
-   * 5 / 3 / 2 columns: 13 splits 5+5+3 on wide, which is the kindest of the
-   * available remainders. */
+   * One column, then two. It was five, back when a tile held a single word.
+   * Each tile now carries a risk and a finding — two full sentences — and at
+   * five across they set to three words a line. Ten entries divide evenly by
+   * two, so no row is ever short. */
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   margin: 0;
   padding: 0;
   list-style: none;
   border-top: 1px solid var(--hairline);
   border-left: 1px solid var(--hairline);
 }
-@media (min-width: 680px) {
-  .discipline-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-}
-@media (min-width: 1080px) {
-  .discipline-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+@media (min-width: 720px) {
+  .discipline-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 .discipline-tile {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  padding: clamp(20px, 2.4vw, 27px);
+  gap: 12px;
+  padding: clamp(22px, 2.6vw, 30px);
   background: var(--surface-1);
   border-right: 1px solid var(--hairline);
   border-bottom: 1px solid var(--hairline);
@@ -643,14 +640,50 @@ p { margin: 0; }
   transition: color 320ms var(--ease-out-expo);
 }
 .discipline-tile:hover .discipline-num { color: var(--text-tertiary); }
-.discipline-label { display: block; }
+.discipline-label {
+  display: block;
+  /* Room for the two-line number in the corner, so a long label such as
+     "Operationeel" never runs under it. */
+  padding-right: 3.5em;
+}
+/* The risk, stated before the answer to it. Quiet and slightly reduced, so the
+   eye lands on the finding underneath — this line is the setup, not the point. */
+.discipline-pain {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--text-quaternary);
+}
+/* What the reader ends up holding. Carries the accent rule, because on a tile
+   with two paragraphs the reader needs one of them marked as the payoff. */
+.discipline-result {
+  position: relative;
+  margin: 0;
+  padding-top: 12px;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--hairline-faint);
+}
+.discipline-result::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 24px;
+  height: 1px;
+  background: var(--accent-cta);
+  transition: width 420ms var(--ease-out-expo);
+}
+.discipline-tile:hover .discipline-result::before { width: 52px; }
 
 @media (prefers-reduced-motion: reduce) {
   .discipline-tile,
   .discipline-tile::before,
   .discipline-mark,
   .discipline-mark-glow,
-  .discipline-num {
+  .discipline-num,
+  .discipline-result::before {
     transition: none;
   }
 }
@@ -1260,8 +1293,22 @@ p { margin: 0; }
   color: var(--wine-text);
   padding-top: 3px;
 }
+.schema-more {
+  display: none;
+  margin: 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--hairline-faint);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  color: var(--text-quaternary);
+}
 @media (max-width: 620px) {
   .schema-row { grid-template-columns: 1fr; gap: 6px; }
+  /* Three rows on a phone, not five — see the note in FindingSchema.tsx. The
+     held-back rows are replaced by a line that says how many, so the artefact
+     is shortened in the open rather than silently truncated. */
+  .schema-row[data-fold="true"] { display: none; }
+  .schema-more { display: block; }
 }
 
 blockquote.source-quote {
@@ -1401,7 +1448,6 @@ details.disclosure > div { padding-bottom: 24px; }
   flex: none;
   font-variant-numeric: tabular-nums;
 }
-.dispatch-tally-sep { padding: 0 7px; }
 
 .dispatch-lead {
   margin-top: 12px;
@@ -1416,9 +1462,9 @@ details.disclosure > div { padding-bottom: 24px; }
   margin: 16px 0 0;
   padding: 0;
   display: grid;
-  /* auto-fill, not auto-fit: a three-module wave should keep node-sized
-     nodes rather than stretch three cards across the full width, which
-     would draw it as large as the eleven-module wave above it. */
+  /* auto-fill, not auto-fit: a two-module wave should keep node-sized
+     nodes rather than stretch two cards across the full width, which
+     would draw it as large as the nine-module wave above it. */
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 8px;
 }
@@ -1464,39 +1510,37 @@ details.disclosure > div { padding-bottom: 24px; }
   gap: 9px;
   margin-top: auto;
 }
-.dispatch-node-meter {
-  flex: 1;
-  min-width: 0;
-  height: 3px;
-  background: var(--hairline-faint);
-  border-radius: 2px;
-  overflow: hidden;
-}
-.dispatch-node-fill {
-  display: block;
-  height: 100%;
-  width: var(--pct);
-  min-width: 2px;
-  /* The gradient is relative to the fill's own box, not the track, so a
-     two-agent meter still ends lit instead of vanishing into the wine. */
-  background: linear-gradient(90deg, var(--wine) 0%, var(--accent-cta) 70%, var(--accent-cta) 100%);
-  border-radius: 2px;
-}
-.dispatch-node-count {
-  flex: none;
-  font-size: 0.6875rem;
+/* What the module hands back, in place of the fan-out meter that used to sit
+   here. Three states, distinguished by a leading rule rather than by three
+   different type colours — the nodes sit at 13px on a dark panel and colour
+   alone was not separating them. */
+.dispatch-node-kind {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.625rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
   color: var(--text-quaternary);
-  font-variant-numeric: tabular-nums;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .dispatch-node-fill {
-    transform: scaleX(0);
-    transform-origin: left center;
-    transition: transform var(--dur-reveal) var(--ease-out-expo);
-    transition-delay: var(--reveal-delay, 0ms);
-  }
-  .reveal[data-shown="true"] .dispatch-node-fill { transform: scaleX(1); }
+.dispatch-node-kind::before {
+  content: "";
+  width: 14px;
+  height: 2px;
+  border-radius: 1px;
+  flex: none;
+  background: var(--text-quaternary);
+}
+.dispatch-node-kind[data-kind="analysis"]::before { background: var(--accent-cta); }
+.dispatch-node-kind[data-kind="deliverable"]::before { background: var(--wine-text); }
+/* Monitoring runs after closing, so its rule is broken rather than solid —
+   the same visual argument the wave-5 rail already makes one level up. */
+.dispatch-node-kind[data-kind="monitoring"]::before {
+  background: repeating-linear-gradient(
+    90deg,
+    var(--text-tertiary) 0 3px,
+    transparent 3px 6px
+  );
 }
 
 @media (max-width: 560px) {
@@ -2127,6 +2171,65 @@ details.disclosure > div { padding-bottom: 24px; }
   .guarantee-band > .eyebrow { grid-area: label; }
   .guarantee-band-claim { grid-area: claim; }
   .guarantee-band-note { grid-area: note; align-self: end; }
+}
+
+/* ============================================================
+   Inline CTA — one line and one button, mid-argument.
+
+   Sized to read as a beat rather than an ending: no panel, no heading, and it
+   keeps the section's left edge. The top rule is the only chrome, and it is
+   there so the ask does not appear to belong to the paragraph above it.
+   ============================================================ */
+.inline-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(18px, 3vw, 32px);
+  margin-top: clamp(32px, 4vw, 52px);
+  padding-top: clamp(22px, 2.8vw, 32px);
+  border-top: 1px solid var(--hairline);
+}
+.inline-cta-line {
+  margin: 0;
+  flex: 1 1 26ch;
+  max-width: 48ch;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+/* ============================================================
+   CTA proof — the guarantee, directly under the button.
+
+   Previously a bare <p> in --text-quaternary: the same grey as source notes
+   and caveats. That put the site's only risk reversal in the visual register
+   of small print, on every page, immediately below the only thing we ask the
+   reader to click.
+
+   It is a strip rather than a pill because the sentence is long enough to
+   wrap on a phone and a pill that wraps stops looking like a badge. The accent
+   left edge does the work a pill would have done.
+   ============================================================ */
+.cta-proof {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  max-width: 58ch;
+  padding: 11px 15px 11px 13px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  background: var(--surface-inset);
+  border: 1px solid var(--hairline-faint);
+  border-left: 2px solid var(--accent-cta);
+  border-radius: 3px;
+}
+.cta-proof-mark {
+  display: inline-flex;
+  flex: none;
+  margin-top: 3px;
+  color: var(--accent-cta);
 }
 
 /* ============================================================

@@ -2,6 +2,7 @@ import type { CSSProperties, ReactNode } from 'react';
 import { Button } from '@repo/ui/Button';
 import { Link } from '@/i18n/navigation';
 import { INTAKE_URL } from '@/lib/site';
+import CtaProof from './CtaProof';
 import { ArrowRight } from './Icons';
 import SegmentField from './SegmentField';
 
@@ -130,16 +131,9 @@ export default function PageHeader({
             )}
 
             {cta && footnote && (
-              <p
-                className="type-small"
-                style={{
-                  marginTop: 'var(--fit-gap-sm)',
-                  maxWidth: '58ch',
-                  color: 'var(--text-quaternary)'
-                }}
-              >
-                {footnote}
-              </p>
+              <div style={{ marginTop: 'var(--fit-gap-sm)' }}>
+                <CtaProof>{footnote}</CtaProof>
+              </div>
             )}
           </div>
           {aside && (

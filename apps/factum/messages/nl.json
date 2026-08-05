@@ -2,15 +2,15 @@
   "meta": {
     "home": {
       "title": "Analyse op diligence-niveau, de hele dealcyclus door",
-      "description": "Dertien disciplines over de volledige data room. Onderling afgestemd. Beoordeeld door een persoon voordat u iets ziet."
+      "description": "Tien disciplines over de volledige dataroom. Onderling afgestemd. Beoordeeld door een persoon voordat u iets ziet."
     },
     "platform": {
       "title": "Het platform",
-      "description": "31 due-diligencemodules over 13 disciplines. Elke bevinding verwijst naar een document. Elke output passeert een menselijke toets."
+      "description": "23 due-diligencemodules over tien disciplines. Elke bevinding verwijst naar een document. Elke output passeert een menselijke toets."
     },
     "sprint": {
       "title": "De Diligence Sprint",
-      "description": "Dertien specialistische analyseslagen over één data room, afgestemd tot één verhaallijn, met een live data-gap tracker."
+      "description": "Tien specialistische analyseslagen over één dataroom, afgestemd tot één verhaallijn, met een live data-gap tracker."
     },
     "governance": {
       "title": "Governance en gegevensverwerking",
@@ -65,19 +65,56 @@
   },
   "shared": {
     "disciplines": [
-      "Financieel",
-      "Commercieel",
-      "Juridisch",
-      "Fiscaal",
-      "HR",
-      "IT",
-      "ESG",
-      "Vendor",
-      "Operationeel",
-      "Waardering",
-      "Verzekeringen",
-      "AI",
-      "Vigil"
+      {
+        "label": "Financieel",
+        "pain": "De EBITDA in het informatiememorandum is genormaliseerd door de verkoper.",
+        "result": "U ziet welke correcties standhouden, welke niet, en wat dat met de prijs doet."
+      },
+      {
+        "label": "Commercieel",
+        "pain": "Omzetconcentratie staat zelden in de samenvatting.",
+        "result": "Welke klanten de omzet dragen, op welke voorwaarden, en wie er weg kan lopen."
+      },
+      {
+        "label": "Juridisch",
+        "pain": "Change-of-control-clausules zitten in de bijlagen die niemand uitleest.",
+        "result": "Elke clausule die op de transactie zelf afgaat, met artikelnummer en pagina."
+      },
+      {
+        "label": "Fiscaal",
+        "pain": "Een fiscale positie die niet houdt, meldt zich pas jaren later.",
+        "result": "Waar de structuur risico draagt, en wat daarvoor in de koopovereenkomst hoort."
+      },
+      {
+        "label": "HR",
+        "pain": "Sleutelpersoneel vertrekt na closing, en de earn-out hing eraan.",
+        "result": "Wie contractueel vastzit, wie niet, en wat pensioen en cao werkelijk kosten."
+      },
+      {
+        "label": "IT",
+        "pain": "Technische schuld staat op geen enkele balans.",
+        "result": "Waar de systemen de businesscase niet dragen, en wat herstel kost."
+      },
+      {
+        "label": "ESG",
+        "pain": "Rapportageverplichtingen verhuizen mee naar de koper.",
+        "result": "Wat er straks gerapporteerd moet worden, en wat dat aan investering vraagt."
+      },
+      {
+        "label": "Operationeel",
+        "pain": "Marge lekt weg in processen die niemand in cijfers heeft gezet.",
+        "result": "Waar de marge weglekt, en welke hefbomen na closing echt bestaan."
+      },
+      {
+        "label": "Waardering",
+        "pain": "Het bod komt uit een model dat de bevindingen nog niet kende.",
+        "result": "Wat de bevindingen samen met de prijs doen, doorgerekend in plaats van aangenomen."
+      },
+      {
+        "label": "AI",
+        "pain": "“AI-gedreven” in het IM is meestal een licentie op het model van iemand anders.",
+        "result": "Wat er echt draait, van wie het afhankelijk is, en of het onder de AI Act valt."
+      }
     ],
     "schema": {
       "label": "Outputcontract — elke bevinding",
@@ -95,7 +132,8 @@
         "evidence": "Woordelijk geciteerd",
         "document": "Bestandsnaam en pagina",
         "review": "Vereist vóór vrijgave"
-      }
+      },
+      "more": "+2 velden, op een breder scherm"
     },
     "governancePoints": [
       {
@@ -121,22 +159,15 @@
       "HR DD",
       "IT DD",
       "ESG DD",
-      "Vigil-monitoring",
-      "Boedelonderzoek",
       "Operational DD",
-      "Vendor DD",
       "AI DD",
       "IM-screener",
+      "Vigil-monitoring",
       "Tax DD",
       "Legal DD",
-      "Insurance DD",
-      "Independent Business Review",
-      "WHOA-herstructurering",
       "Deal economics",
       "Waardering",
-      "Dealstructurering",
       "Portefeuillebeheer",
-      "LBO-model",
       "Post-merger integratie",
       "Vendor due diligence",
       "IC-memo",
@@ -145,21 +176,20 @@
       "Documentfabriek",
       "Exit readiness",
       "Portefeuillegezondheid",
-      "Monthly business review",
       "IC-rapport"
     ],
     "waves": [
       {
         "title": "Onafhankelijke reads",
-        "body": "Elf modules zonder iets bovenstrooms. Ze starten allemaal tegelijk."
+        "body": "Deze modules hebben niets bovenstrooms nodig. Ze starten allemaal tegelijk."
       },
       {
         "title": "Afhankelijke reads",
-        "body": "Fiscaal, juridisch en verzekeringen hebben output uit golf 1 nodig."
+        "body": "Fiscaal en juridisch kunnen pas redeneren met de eerste golf in handen."
       },
       {
         "title": "Synthese",
-        "body": "Waardering, herstructurering en deal economics lezen alles daarvoor."
+        "body": "Waardering, deal economics en portefeuille lezen alles daarvoor."
       },
       {
         "title": "Deliverables",
@@ -174,7 +204,11 @@
       "zdr": "ZDR",
       "zdrTitle": "Zero-retention routing afgedwongen. Zonder die route start de run niet.",
       "modulesLabel": "modules",
-      "agentsLabel": "sub-agents"
+      "kinds": {
+        "analysis": "Bevinding",
+        "deliverable": "Document",
+        "monitoring": "Doorlopend"
+      }
     },
     "specimen": {
       "pageLabel": "Dataroom",
@@ -201,7 +235,8 @@
     "links": {
       "governance": "Hoe documenten worden behandeld",
       "platform": "Hoe het platform werkt",
-      "sprint": "Wat de sprint dekt"
+      "sprint": "Wat de sprint dekt",
+      "intake": "Plan een gesprek"
     },
     "reframe": {
       "quote": "Uw eigen werk eerst controleren is geen teken dat er iets mis is. Zo ziet een goed geleid proces eruit."
@@ -217,7 +252,7 @@
     },
     "problem": {
       "eyebrow": "Het probleem",
-      "title": "Het getal ligt vast voordat de data room gelezen is",
+      "title": "Het getal ligt vast voordat de dataroom gelezen is",
       "lead": "Niet uit onzorgvuldigheid. Er was nooit tijd om alles te lezen.",
       "points": [
         {
@@ -241,13 +276,13 @@
     "pipeline": {
       "eyebrow": "Hoe het draait",
       "title": "Dezelfde vijf stappen, elk mandaat",
-      "lead": "Iedereen kan een AI-tool op een data room richten. Het gaat om wat er elke keer gebeurt, of iemand nu meekijkt of niet.",
+      "lead": "Iedereen kan een AI-tool op een dataroom richten. Het gaat om wat er elke keer gebeurt, of iemand nu meekijkt of niet.",
       "refusalTitle": "De lus weigert automatisch goed te keuren",
       "refusalNote": "Elke harde blokkade gaat naar een persoon.",
       "stages": [
         {
           "title": "Gefundeerde retrieval",
-          "body": "Elke module stuurt zijn eigen sub-agents op uw documenten af."
+          "body": "Elke module gaat zelf de dataroom in en haalt de passages op die zijn vraag beantwoorden."
         },
         {
           "title": "Opstellen",
@@ -294,9 +329,10 @@
     },
     "coverage": {
       "eyebrow": "Dekking",
-      "title": "De hele data room, geen steekproef",
-      "lead": "Elke discipline draait in dezelfde pass, dus er blijft niets liggen voor een tweede fase die er nooit komt.",
-      "note": "Op volgorde van afhankelijkheid: later werk wacht op de bevindingen die het nodig heeft."
+      "title": "De hele dataroom, geen steekproef",
+      "lead": "Elke discipline draait in dezelfde pass. Wat de één vindt, ligt bij de volgende op tafel — in plaats van in een tweede fase die er nooit komt.",
+      "note": "Op volgorde van afhankelijkheid: later werk wacht op de bevindingen die het nodig heeft.",
+      "ctaLine": "Dit is de slag die uw team in twee weken niet haalt."
     },
     "sprint": {
       "eyebrow": "De opdracht",
@@ -327,10 +363,11 @@
         },
         {
           "title": "Herstructureren",
-          "body": "Opties sluiten sneller dan besluiten vallen. Continuïteit, crediteurenpositie en convenantruimte, pre-IBR en WHOA."
+          "body": "Opties sluiten sneller dan besluiten vallen. Continuïteit, crediteurenpositie en convenantruimte, terwijl er nog te kiezen valt."
         }
       ],
-      "note": "WHOA- en IBR-werk is gebonden aan Nederlandse jurisdictie. De rest van de cyclus is jurisdictieonafhankelijk."
+      "note": "Herstructureringswerk volgt de lokale jurisdictie. De rest van de cyclus is jurisdictieonafhankelijk.",
+      "ctaLine": "Eén lezing van de dataroom, bruikbaar op elk van deze vijf momenten."
     },
     "trust": {
       "eyebrow": "Governance",
@@ -355,7 +392,7 @@
       "lead": "Geen beter rapport. Een andere positie aan tafel.",
       "points": [
         {
-          "title": "De prijs weerspiegelt de hele data room",
+          "title": "De prijs weerspiegelt de hele dataroom",
           "body": "Elke discipline, afgestemd, voordat het bedrag vaststaat."
         },
         {
@@ -386,36 +423,40 @@
       "lead": "Voor wie de vorm van de bouw wil zien. Elk getal hier is geteld uit de broncode van het product.",
       "tiles": {
         "modules": {
-          "title": "Modules",
-          "body": "Elk vooraf afgebakend op een discipline of een deliverable."
+          "title": "Modules per opdracht",
+          "body": "Elk vooraf afgebakend op een discipline of een oplevering. Ze draaien allemaal, elk mandaat."
         },
-        "agents": {
-          "title": "Gespecialiseerde sub-agents",
-          "body": "Een module is een team, geen prompt. De grootste zet er {largest} in."
+        "analysis": {
+          "title": "Leveren bevindingen",
+          "body": "Ze lezen de dataroom uit en leveren claims met de bronpassage eronder."
+        },
+        "deliverables": {
+          "title": "Stellen documenten samen",
+          "body": "IC-memo, vendor due diligence, teaser, financieringsmemorandum. Gebouwd op de bevindingen erboven."
+        },
+        "monitoring": {
+          "title": "Lopen door na closing",
+          "body": "Convenantruimte en vroege signalen, op een eigen klok."
         },
         "waves": {
           "title": "Dispatchgolven",
-          "body": "Geordend op afhankelijkheid, niet op voorkeur. Golf 1 draait elf modules tegelijk."
+          "body": "Geordend op afhankelijkheid, niet op voorkeur. Golf 1 opent met negen modules tegelijk."
         },
         "zdr": {
           "title": "Zero-retention gated",
-          "body": "Fiscaal, juridisch, financieel en boedelonderzoek weigeren te draaien op een model dat data bewaart."
+          "body": "Fiscaal, juridisch en financieel weigeren te draaien op een model dat data bewaart."
         },
         "blocks": {
           "title": "Harde blokkades",
           "body": "Condities die een concept tegenhouden, hoeveel retries er ook zijn geweest."
-        },
-        "disciplines": {
-          "title": "Disciplines per opdracht",
-          "body": "Financieel, commercieel, juridisch, fiscaal, HR, IT, ESG, vendor, operationeel, waardering, verzekeringen, AI, Vigil."
         }
       }
     },
     "coverage": {
       "eyebrow": "De bibliotheek",
       "title": "De modulebibliotheek, in dispatchvolgorde",
-      "lead": "Een module die op de output van een andere module wacht, kan niet eerder starten — die afhankelijkheid bepaalt de volgorde. De grootste module zet {largest} sub-agents in. De kleinste, twee.",
-      "note": "Geteld uit de dispatchgrafen in de broncode, niet geschat. ZDR markeert de modules waarvan de routing hard is vastgezet op een zero-retention EU-endpoint."
+      "lead": "Een module die op de output van een andere wacht, kan niet eerder starten. Die afhankelijkheid bepaalt de volgorde, niet onze voorkeur. Het label onder elke module zegt wat hij oplevert: een bevinding, een document, of een doorlopend signaal.",
+      "note": "Afgeleid uit de dispatchgrafen in de broncode, niet geschat. ZDR markeert de modules waarvan de routing hard is vastgezet op een zero-retention EU-endpoint."
     },
     "pipeline": {
       "eyebrow": "Binnen een module",
@@ -424,7 +465,7 @@
       "stages": [
         {
           "title": "Gefundeerde retrieval",
-          "body": "De module stuurt zijn sub-agents uit. Elk haalt bewijs uit uw documenten.",
+          "body": "De module gaat de dataroom in en haalt de passages op die zijn vraag beantwoorden.",
           "note": "Vertrouwelijke financiële en persoonsgegevens worden gepseudonimiseerd voordat ze deze laag bereiken."
         },
         {
@@ -573,6 +614,8 @@
         "Geen claim dat de menselijke poort optioneel is. Die is verplicht.",
         "Nog geen afgeronde publieke cases.",
         "Geen uniform trackrecord. De financiële module heeft end-to-end op een live deal gedraaid en is geverifieerd tegen brondocumenten. De reconciliatielaag is jonger.",
+        "Geen technische due diligence op productniveau. Broncode-review, architectuurbeoordeling en schaalbaarheidstests zitten niet in de standaardslag.",
+        "Geen integriteits- of reputatieonderzoek. Achtergrondchecks op personen en tegenpartijen lopen buiten dit platform om.",
         "Geen algemene beschikbaarheid. Factum is pre-launch."
       ]
     },
@@ -582,11 +625,11 @@
       "items": [
         {
           "q": "Is dit niet gewoon een AI-chatbot met extra stappen?",
-          "a": "Een chatsessie is één contextvenster dat u stuurt. Dit zijn {agents} sub-agents over {modules} vooraf afgebakende modules, in een vaste afhankelijkheidsvolgorde, met vier groundingchecks en een verplichte menselijke poort. Het verschil is wat er gebeurt als niemand kijkt."
+          "a": "Een chatsessie is één contextvenster dat u stuurt. Dit zijn {modules} vooraf afgebakende modules in een vaste afhankelijkheidsvolgorde, met vier groundingchecks en een verplichte menselijke poort. Het verschil is wat er gebeurt als niemand kijkt."
         },
         {
           "q": "Waarom golven en niet alles tegelijk?",
-          "a": "Fiscaal kan niet redeneren zonder de financiële en juridische reads. Waardering kan niet prijzen zonder fiscaal. De afhankelijkheidsgraaf bepaalt de volgorde; golf 1 draait nog steeds elf modules parallel."
+          "a": "Fiscaal kan niet redeneren zonder de financiële en juridische reads. Waardering kan niet prijzen zonder fiscaal. De afhankelijkheidsgraaf bepaalt de volgorde; golf 1 draait nog steeds negen modules parallel."
         },
         {
           "q": "Wat gebeurt er als het model het niet weet?",
@@ -623,12 +666,12 @@
       "eyebrow": "Scope",
       "title": "Per discipline afgebakend, niet per uur",
       "lead": "Elke slag vooraf afgebakend op wat er voor die discipline toe doet.",
-      "note": "Eén opdracht, één prijs. Geen à-la-cartemenu en geen upsell na ondertekening. Waar elke discipline naar kijkt, wordt in het intakegesprek tegen uw data room bepaald."
+      "note": "Eén opdracht, één prijs. Geen à-la-cartemenu en geen upsell na ondertekening. Waar elke discipline naar kijkt, wordt in het intakegesprek tegen uw dataroom bepaald."
     },
     "layers": {
       "eyebrow": "Synthese",
-      "title": "Van dertien analyses naar één oordeel",
-      "lead": "Wat {disciplines} losse analyses tot één oplevering maakt, niet dertien.",
+      "title": "Van losse analyses naar één oordeel",
+      "lead": "Wat {disciplines} losse analyses tot één oplevering maakt, in plaats van {disciplines} losse rapporten.",
       "items": [
         {
           "title": "Waardecreatie-analyse",
@@ -678,7 +721,7 @@
       "lead": "Geen managementworkshop, geen interviewschema, geen locatiebezoek.",
       "items": [
         {
-          "title": "Toegang tot de data room",
+          "title": "Toegang tot de dataroom",
           "body": "Financiën, juridisch, fiscaal, HR, contracten en IP, zoals afgesproken in het intakegesprek."
         },
         {
@@ -693,15 +736,15 @@
       "items": [
         {
           "q": "Vervangt dit een quality-of-earnings-rapport?",
-          "a": "Het is breder, en het is geen assurance-dienst. Een quality-of-earnings-analyse dekt één dimensie in vier tot tien weken. Dit draait dertien disciplines en stemt ze onderling af. Een ondertekende accountantsverklaring blijft een aparte opdracht."
+          "a": "Het is breder, en het is geen assurance-dienst. Een quality-of-earnings-analyse dekt één dimensie in vier tot tien weken. Dit draait {disciplines} disciplines en stemt ze onderling af. Een ondertekende accountantsverklaring blijft een aparte opdracht."
         },
         {
           "q": "Hoe lang duurt het?",
-          "a": "Dagen, geen weken. De pipeline-slag draait in uren; de menselijke beoordeling en de afstemming volgen daarna. We committeren ons niet aan een datum voordat we de data room hebben gezien."
+          "a": "Dagen, geen weken. De pipeline-slag draait in uren; de menselijke beoordeling en de afstemming volgen daarna. We committeren ons niet aan een datum voordat we de dataroom hebben gezien."
         },
         {
           "q": "Wat kost het?",
-          "a": "Eén prijs voor de hele scope, bepaald in het intakegesprek aan de hand van de omvang en de staat van uw data room. Geen menu met niveaus."
+          "a": "Eén prijs voor de hele scope, bepaald in het intakegesprek aan de hand van de omvang en de staat van uw dataroom. Geen menu met niveaus."
         },
         {
           "q": "Wat gebeurt er met onze documenten?",
@@ -719,7 +762,7 @@
     },
     "cta": {
       "title": "Kijk of een sprint bij uw situatie past",
-      "body": "Een scopinggesprek: wat er in de data room zit, wat ontbreekt, en of een sprint het juiste instrument is.",
+      "body": "Een scopinggesprek: wat er in de dataroom zit, wat ontbreekt, en of een sprint het juiste instrument is.",
       "button": "Plan een intakegesprek",
       "note": "Een beperkt aantal pilotmandaten, een handvol."
     }
@@ -753,7 +796,7 @@
       "title": "Waar de machine ophoudt en een mens begint",
       "lead": "U moet voor elke bevinding kunnen zien wat die heeft geproduceerd en wat die heeft gecontroleerd.",
       "steps": [
-        "Zelfstandige agents halen bewijs uit uw geüploade documenten.",
+        "Elke module haalt zelfstandig bewijs uit uw geüploade documenten.",
         "Een tweede reviewer-agent bekritiseert elk concept.",
         "Een aparte slag controleert beweringen tegen de brontekst.",
         "Een persoon beoordeelt het resultaat.",
@@ -784,13 +827,13 @@
     },
     "zdr": {
       "eyebrow": "Zero retention",
-      "title": "Vier modules weigeren te draaien op een model dat data bewaart",
-      "lead": "Zero data retention is een routeringsregel in de code, geen belofte op een pagina. Fiscaal, juridisch, financieel en boedelonderzoek zitten achter die poort.",
+      "title": "Drie modules weigeren te draaien op een model dat data bewaart",
+      "lead": "Zero data retention is een routeringsregel in de code, geen belofte op een pagina. Fiscaal, juridisch en financieel zitten achter die poort.",
       "items": [
         "De poort is een harde eis, gecontroleerd vóór dispatch.",
         "Er is geen stille afwaardering naar een aanbieder die wel bewaart.",
         "Analyse draait op Google Vertex AI in een EU-regio, onder een verwerkersovereenkomst.",
-        "De andere {other} modules draaien op dezelfde infrastructuur. Alleen deze vier weigeren te starten zonder de poort."
+        "De andere {other} modules draaien op dezelfde infrastructuur. Alleen deze drie weigeren te starten zonder de poort."
       ]
     },
     "learning": {
@@ -966,7 +1009,7 @@
     "header": {
       "eyebrow": "Partnerships",
       "title": "Meer mandaten dan uw team kan lezen",
-      "lead": "U behoudt de relatie en het oordeel. Wij draaien de analyse over dertien disciplines erachter, onder uw naam.",
+      "lead": "U behoudt de relatie en het oordeel. Wij draaien de analyse over alle disciplines erachter, onder uw naam.",
       "cta": "Plan een scopinggesprek"
     },
     "who": {
@@ -984,7 +1027,7 @@
         },
         {
           "title": "Herstructurerings- en turnaroundpraktijken",
-          "body": "Waar een independent business review snel moet komen en de toetsing van financiers moet doorstaan."
+          "body": "Waar een onafhankelijke doorlichting snel moet komen en de toetsing van financiers moet doorstaan."
         },
         {
           "title": "PE- en buy-side-adviseurs",
@@ -995,7 +1038,7 @@
     "split": {
       "eyebrow": "De verdeling",
       "title": "U houdt de relatie. Wij leveren de slag.",
-      "lead": "Hetzelfde platform met dertien disciplines, dezelfde toetsing — geleverd onder uw naam.",
+      "lead": "Hetzelfde platform, alle disciplines, dezelfde toetsing. Geleverd onder uw naam.",
       "columns": [
         {
           "label": "U houdt",
@@ -1009,7 +1052,7 @@
         {
           "label": "Wij leveren",
           "items": [
-            "De slag over dertien disciplines over de data room",
+            "De volledige slag over de dataroom, elke discipline",
             "Disciplineoverstijgende afstemming als vaste stap",
             "Bevindingen gekoppeld aan een document en een passage, elke keer",
             "Een beoordelaar met naam die achter de output staat"
@@ -1063,7 +1106,7 @@
         },
         {
           "q": "Kunnen jullie ook maar een deel van de scope draaien?",
-          "a": "De slag over dertien disciplines ligt vast, omdat de waarde in de afstemming tussen disciplines zit. Wat varieert, is de diepgang van de uitwerking."
+          "a": "De volledige slag ligt vast, omdat de waarde in de afstemming tussen disciplines zit. Wat varieert, is de diepgang van de uitwerking."
         },
         {
           "q": "Hoe exclusief is dit?",
@@ -1096,7 +1139,7 @@
       "label": "Wat we bespreken",
       "items": [
         "Waar u staat in de cyclus: kopen, financieren, houden of verkopen.",
-        "Wat er vandaag in de data room zit, en wat ontbreekt.",
+        "Wat er vandaag in de dataroom zit, en wat ontbreekt.",
         "Welke disciplines het echte risico dragen in uw situatie.",
         "Of een sprint past, of dat het nog te vroeg is.",
         "Wat het zou kosten, afgebakend tegen de werkelijke room."

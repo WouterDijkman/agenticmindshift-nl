@@ -2,15 +2,15 @@
   "meta": {
     "home": {
       "title": "Análisis con rigor de due diligence a lo largo del ciclo de la operación",
-      "description": "Trece disciplinas sobre el data room completo. Reconciliadas entre sí. Revisadas por una persona antes de que usted las vea."
+      "description": "Diez disciplinas sobre el data room completo. Reconciliadas entre sí. Revisadas por una persona antes de que usted las vea."
     },
     "platform": {
       "title": "La plataforma",
-      "description": "31 módulos de due diligence en 13 disciplinas. Cada hallazgo cita un documento. Cada entregable pasa por un control humano."
+      "description": "23 módulos de due diligence en diez disciplinas. Cada hallazgo cita un documento. Cada entregable pasa por un control humano."
     },
     "sprint": {
       "title": "El Diligence Sprint",
-      "description": "Trece revisiones especializadas sobre un data room, reconciliadas en una única narrativa, con un registro vivo de lagunas."
+      "description": "Diez revisiones especializadas sobre un data room, reconciliadas en una única narrativa, con un registro vivo de lagunas."
     },
     "governance": {
       "title": "Gobernanza y tratamiento de datos",
@@ -65,19 +65,56 @@
   },
   "shared": {
     "disciplines": [
-      "Financiera",
-      "Comercial",
-      "Legal",
-      "Fiscal",
-      "RR. HH.",
-      "TI",
-      "ESG",
-      "Vendor",
-      "Operativa",
-      "Valoración",
-      "Seguros",
-      "IA",
-      "Vigil"
+      {
+        "label": "Financiera",
+        "pain": "El EBITDA del cuaderno de venta ya viene normalizado por el vendedor.",
+        "result": "Qué ajustes se sostienen, cuáles no, y qué le hace eso al precio."
+      },
+      {
+        "label": "Comercial",
+        "pain": "La concentración de clientes casi nunca aparece en el resumen ejecutivo.",
+        "result": "Qué clientes sostienen los ingresos, con qué condiciones, y quién puede marcharse."
+      },
+      {
+        "label": "Legal",
+        "pain": "Las cláusulas de cambio de control viven en los anexos que nadie termina de leer.",
+        "result": "Cada cláusula que se dispara con la propia operación, con artículo y página."
+      },
+      {
+        "label": "Fiscal",
+        "pain": "Una posición fiscal que no aguanta no se manifiesta hasta años después.",
+        "result": "Dónde carga riesgo la estructura, y qué debe cubrir por ello el contrato de compraventa."
+      },
+      {
+        "label": "RR. HH.",
+        "pain": "El personal clave se marcha tras el cierre, y el earn-out dependía de él.",
+        "result": "Quién está atado por contrato, quién no, y cuánto cuestan de verdad pensiones y convenio."
+      },
+      {
+        "label": "TI",
+        "pain": "La deuda técnica no figura en ningún balance.",
+        "result": "Dónde los sistemas no sostienen el plan de negocio, y qué cuesta repararlos."
+      },
+      {
+        "label": "ESG",
+        "pain": "Las obligaciones de reporte viajan con la empresa hasta el comprador.",
+        "result": "Qué habrá que reportar, y qué inversión exige llegar a hacerlo."
+      },
+      {
+        "label": "Operativa",
+        "pain": "El margen se fuga en procesos que nadie ha puesto en cifras.",
+        "result": "Por dónde se escapa el margen, y qué palancas existen de verdad tras el cierre."
+      },
+      {
+        "label": "Valoración",
+        "pain": "La oferta sale de un modelo que todavía no conocía los hallazgos.",
+        "result": "Qué le hacen los hallazgos al precio, calculado en lugar de supuesto."
+      },
+      {
+        "label": "IA",
+        "pain": "«Impulsado por IA» en el material de venta suele ser una licencia sobre el modelo de otro.",
+        "result": "Qué corre de verdad, de quién depende, y si entra en el Reglamento de IA."
+      }
     ],
     "schema": {
       "label": "Contrato de salida — cada hallazgo",
@@ -95,7 +132,8 @@
         "evidence": "Citado literalmente",
         "document": "Nombre del archivo y página",
         "review": "Obligatoria antes de la entrega"
-      }
+      },
+      "more": "+2 campos, en una pantalla más ancha"
     },
     "governancePoints": [
       {
@@ -121,22 +159,15 @@
       "HR DD",
       "IT DD",
       "ESG DD",
-      "Monitorización Vigil",
-      "Boedelonderzoek",
       "Operational DD",
-      "Vendor DD",
       "AI DD",
       "Cribado de IM",
+      "Monitorización Vigil",
       "Tax DD",
       "Legal DD",
-      "Insurance DD",
-      "Independent Business Review",
-      "Reestructuración WHOA",
       "Deal economics",
       "Valoración",
-      "Estructuración de la operación",
       "Gestión de cartera",
-      "Modelo LBO",
       "Integración post-fusión",
       "Vendor due diligence",
       "Memo para el comité",
@@ -145,21 +176,20 @@
       "Fábrica de documentos",
       "Preparación para la salida",
       "Salud de la cartera",
-      "Monthly business review",
       "Informe para el comité"
     ],
     "waves": [
       {
         "title": "Lecturas independientes",
-        "body": "Once módulos sin nada aguas arriba. Arrancan todos a la vez."
+        "body": "Estos módulos no necesitan nada aguas arriba. Arrancan todos a la vez."
       },
       {
         "title": "Lecturas dependientes",
-        "body": "Fiscal, legal y seguros necesitan el resultado de la ola 1."
+        "body": "Fiscal y legal solo pueden razonar con la primera ola en la mano."
       },
       {
         "title": "Síntesis",
-        "body": "Valoración, reestructuración y deal economics leen todo lo anterior."
+        "body": "Valoración, deal economics y cartera leen todo lo anterior."
       },
       {
         "title": "Entregables",
@@ -174,7 +204,11 @@
       "zdr": "ZDR",
       "zdrTitle": "Enrutado de retención cero obligatorio. Sin esa ruta, la ejecución no arranca.",
       "modulesLabel": "módulos",
-      "agentsLabel": "subagentes"
+      "kinds": {
+        "analysis": "Hallazgo",
+        "deliverable": "Documento",
+        "monitoring": "Continuo"
+      }
     },
     "specimen": {
       "pageLabel": "Sala de datos",
@@ -201,7 +235,8 @@
     "links": {
       "governance": "Cómo se tratan los documentos",
       "platform": "Cómo funciona la plataforma",
-      "sprint": "Qué cubre el sprint"
+      "sprint": "Qué cubre el sprint",
+      "intake": "Reserve una llamada"
     },
     "reframe": {
       "quote": "Revisar primero su propio trabajo no es señal de que algo vaya mal. Así es un proceso bien llevado."
@@ -247,7 +282,7 @@
       "stages": [
         {
           "title": "Recuperación fundamentada",
-          "body": "Cada módulo lanza sus propios subagentes sobre sus documentos."
+          "body": "Cada módulo entra por su cuenta en la sala de datos y saca los pasajes que responden a su pregunta."
         },
         {
           "title": "Redacción",
@@ -294,9 +329,10 @@
     },
     "coverage": {
       "eyebrow": "Cobertura",
-      "title": "La sala entera, no una muestra",
-      "lead": "Todas las disciplinas corren en la misma pasada, así que nada queda para una segunda fase que nunca llega.",
-      "note": "Ordenado por dependencias: el trabajo posterior espera a los hallazgos que necesita."
+      "title": "El data room entero, no una muestra",
+      "lead": "Todas las disciplinas corren en la misma pasada. Lo que encuentra una queda sobre la mesa para la siguiente, en lugar de esperar a una segunda fase que nunca llega.",
+      "note": "Ordenado por dependencias: el trabajo posterior espera a los hallazgos que necesita.",
+      "ctaLine": "Esta es la lectura que su equipo no alcanza en dos semanas."
     },
     "sprint": {
       "eyebrow": "El encargo",
@@ -327,10 +363,11 @@
         },
         {
           "title": "Reestructurar",
-          "body": "Las opciones se cierran más rápido de lo que se decide. Empresa en funcionamiento, posición de acreedores y margen de covenants, pre-IBR y WHOA."
+          "body": "Las opciones se cierran más rápido de lo que se decide. Empresa en funcionamiento, posición de acreedores y margen de covenants, mientras todavía queda algo que elegir."
         }
       ],
-      "note": "El trabajo bajo WHOA e IBR está sujeto a jurisdicción neerlandesa. El resto del ciclo es independiente de la jurisdicción."
+      "note": "El trabajo de reestructuración sigue la jurisdicción local. El resto del ciclo es independiente de la jurisdicción.",
+      "ctaLine": "Una sola lectura del data room, utilizable en cualquiera de estos cinco momentos."
     },
     "trust": {
       "eyebrow": "Gobernanza",
@@ -386,36 +423,40 @@
       "lead": "Para quien quiera ver la forma de lo construido. Cada cifra está contada desde el código fuente del producto.",
       "tiles": {
         "modules": {
-          "title": "Módulos",
-          "body": "Cada uno acotado de antemano a una disciplina o a un entregable."
+          "title": "Módulos por encargo",
+          "body": "Cada uno acotado de antemano a una disciplina o a un entregable. Corren todos, en cada mandato."
         },
-        "agents": {
-          "title": "Subagentes especializados",
-          "body": "Un módulo es un equipo, no un prompt. El mayor despliega {largest}."
+        "analysis": {
+          "title": "Entregan hallazgos",
+          "body": "Leen el data room y devuelven afirmaciones con el pasaje de origen debajo."
+        },
+        "deliverables": {
+          "title": "Montan documentos",
+          "body": "Memo para el comité, vendor due diligence, teaser, memorando de financiación. Construidos sobre los hallazgos de arriba."
+        },
+        "monitoring": {
+          "title": "Siguen tras el cierre",
+          "body": "Margen de covenants y señales tempranas, a su propio ritmo."
         },
         "waves": {
           "title": "Olas de despacho",
-          "body": "Ordenadas por dependencia, no por preferencia. La ola 1 lanza once módulos a la vez."
+          "body": "Ordenadas por dependencia, no por preferencia. La ola 1 abre con nueve módulos a la vez."
         },
         "zdr": {
           "title": "Con retención cero obligatoria",
-          "body": "Fiscal, legal, financiero y boedelonderzoek se niegan a correr sobre un modelo que retiene datos."
+          "body": "Fiscal, legal y financiero se niegan a correr sobre un modelo que retiene datos."
         },
         "blocks": {
           "title": "Bloqueos duros",
           "body": "Condiciones que detienen un borrador, por muchos reintentos que haya habido."
-        },
-        "disciplines": {
-          "title": "Disciplinas por encargo",
-          "body": "Financiera, comercial, legal, fiscal, RRHH, TI, ESG, proveedores, operaciones, valoración, seguros, IA, Vigil."
         }
       }
     },
     "coverage": {
       "eyebrow": "La biblioteca",
       "title": "La biblioteca de módulos, en orden de despacho",
-      "lead": "Un módulo que espera el resultado de otro no puede arrancar antes — esa dependencia determina el orden de ejecución. El módulo mayor despliega {largest} subagentes. El menor, dos.",
-      "note": "Contado desde los grafos de despacho del código fuente, no estimado. ZDR marca los módulos cuyo enrutado está fijado a un endpoint europeo de retención cero."
+      "lead": "Un módulo que espera el resultado de otro no puede arrancar antes. Esa dependencia fija el orden, no nuestra preferencia. La etiqueta bajo cada módulo dice qué entrega: un hallazgo, un documento o una señal continua.",
+      "note": "Derivado de los grafos de despacho del código fuente, no estimado. ZDR marca los módulos cuyo enrutado está fijado a un endpoint europeo de retención cero."
     },
     "pipeline": {
       "eyebrow": "Dentro de un módulo",
@@ -424,7 +465,7 @@
       "stages": [
         {
           "title": "Recuperación fundamentada",
-          "body": "El módulo despacha sus subagentes. Cada uno extrae evidencia de sus documentos.",
+          "body": "El módulo entra en el data room y saca los pasajes que responden a su pregunta.",
           "note": "Los datos financieros y personales confidenciales se seudonimizan antes de llegar a esta capa."
         },
         {
@@ -573,6 +614,8 @@
         "Sin afirmar que la puerta humana sea opcional. Es obligatoria.",
         "Todavía sin casos públicos cerrados.",
         "Sin historial uniforme. El módulo financiero ha corrido de extremo a extremo en una operación real y se ha verificado contra los documentos fuente. La capa de reconciliación es más joven.",
+        "Sin due diligence técnica a nivel de producto. La revisión de código fuente, la evaluación de la arquitectura y las pruebas de escalabilidad quedan fuera de la pasada estándar.",
+        "Sin investigación de integridad ni reputacional. Las comprobaciones de antecedentes sobre personas y contrapartes corren fuera de esta plataforma.",
         "Sin disponibilidad general. Factum está en fase previa al lanzamiento."
       ]
     },
@@ -582,11 +625,11 @@
       "items": [
         {
           "q": "¿No es esto un chatbot de IA con pasos de más?",
-          "a": "Una sesión de chat es una ventana de contexto que usted dirige. Esto son {agents} subagentes repartidos en {modules} módulos acotados de antemano, despachados en un orden de dependencia fijo, con cuatro comprobaciones de fundamentación y una puerta humana obligatoria. La diferencia es lo que pasa cuando nadie mira."
+          "a": "Una sesión de chat es una ventana de contexto que usted dirige. Esto son {modules} módulos acotados de antemano, despachados en un orden de dependencia fijo, con cuatro comprobaciones de fundamentación y una puerta humana obligatoria. La diferencia es lo que pasa cuando nadie mira."
         },
         {
           "q": "¿Por qué olas y no todo a la vez?",
-          "a": "Fiscal no puede razonar sin las lecturas financiera y legal. Valoración no puede fijar precio sin fiscal. El grafo de dependencias marca el orden; la ola 1 sigue lanzando once módulos en paralelo."
+          "a": "Fiscal no puede razonar sin las lecturas financiera y legal. Valoración no puede fijar precio sin fiscal. El grafo de dependencias marca el orden; la ola 1 sigue lanzando nueve módulos en paralelo."
         },
         {
           "q": "¿Qué pasa cuando el modelo no lo sabe?",
@@ -627,8 +670,8 @@
     },
     "layers": {
       "eyebrow": "Síntesis",
-      "title": "De trece lecturas a un solo veredicto",
-      "lead": "Lo que convierte {disciplines} lecturas separadas en un solo entregable, no en trece.",
+      "title": "De análisis sueltos a un solo veredicto",
+      "lead": "Lo que convierte {disciplines} análisis separados en un solo entregable, en lugar de {disciplines} informes sueltos.",
       "items": [
         {
           "title": "Lectura de creación de valor",
@@ -693,7 +736,7 @@
       "items": [
         {
           "q": "¿Sustituye esto a un informe de quality of earnings?",
-          "a": "Es más amplio, y no es un servicio de atestiguamiento. Un quality of earnings cubre una dimensión en cuatro a diez semanas. Esto ejecuta trece disciplinas y las reconcilia. Una opinión firmada por un auditor sigue siendo un encargo aparte."
+          "a": "Es más amplio, y no es un servicio de atestiguamiento. Un quality of earnings cubre una dimensión en cuatro a diez semanas. Esto ejecuta {disciplines} disciplinas y las reconcilia. Una opinión firmada por un auditor sigue siendo un encargo aparte."
         },
         {
           "q": "¿Cuánto tiempo lleva?",
@@ -753,7 +796,7 @@
       "title": "Dónde termina la máquina y empieza una persona",
       "lead": "Usted debería poder saber, para cualquier hallazgo, qué lo produjo y qué lo comprobó.",
       "steps": [
-        "Agentes independientes extraen evidencia de sus documentos cargados.",
+        "Cada módulo extrae por su cuenta evidencia de los documentos que usted ha cargado.",
         "Un segundo agente revisor critica cada borrador.",
         "Una revisión aparte contrasta las afirmaciones con el texto de origen.",
         "Después una persona revisa el resultado.",
@@ -784,13 +827,13 @@
     },
     "zdr": {
       "eyebrow": "Retención cero",
-      "title": "Cuatro módulos se niegan a correr sobre un modelo que retiene",
-      "lead": "La retención cero de datos es una regla de enrutado en el código, no una promesa en una página. Fiscal, legal, financiero y boedelonderzoek dependen de esa puerta.",
+      "title": "Tres módulos se niegan a correr sobre un modelo que retiene",
+      "lead": "La retención cero de datos es una regla de enrutado en el código, no una promesa en una página. Fiscal, legal y financiero dependen de esa puerta.",
       "items": [
         "La puerta es un requisito duro, comprobado antes del despacho.",
         "No hay degradación silenciosa a un proveedor que retenga.",
         "El análisis corre en Google Vertex AI en una región de la UE, bajo un acuerdo de encargo de tratamiento.",
-        "Los otros {other} módulos corren sobre la misma infraestructura. Solo estos cuatro se niegan a arrancar sin la puerta."
+        "Los otros {other} módulos corren sobre la misma infraestructura. Solo estos tres se niegan a arrancar sin la puerta."
       ]
     },
     "learning": {
@@ -966,7 +1009,7 @@
     "header": {
       "eyebrow": "Alianzas",
       "title": "Más mandatos de los que su equipo puede leer",
-      "lead": "Usted conserva la relación y el criterio. Nosotros ejecutamos la lectura de trece disciplinas detrás, bajo su nombre.",
+      "lead": "Usted conserva la relación y el criterio. Nosotros ejecutamos detrás el análisis de todas las disciplinas, bajo su nombre.",
       "cta": "Reserve una llamada de alcance"
     },
     "who": {
@@ -984,7 +1027,7 @@
         },
         {
           "title": "Prácticas de reestructuración y turnaround",
-          "body": "Donde un independent business review tiene que ser rápido y aguantar ante los financiadores."
+          "body": "Donde una revisión independiente tiene que llegar rápido y aguantar ante los financiadores."
         },
         {
           "title": "Asesores de PE y del lado comprador",
@@ -995,7 +1038,7 @@
     "split": {
       "eyebrow": "El reparto",
       "title": "Usted conserva la relación. Nosotros aportamos la revisión.",
-      "lead": "La misma plataforma de trece disciplinas, el mismo filtro de revisión — entregado bajo su nombre.",
+      "lead": "La misma plataforma, todas las disciplinas, el mismo filtro de revisión. Entregado bajo su nombre.",
       "columns": [
         {
           "label": "Usted conserva",
@@ -1009,7 +1052,7 @@
         {
           "label": "Nosotros aportamos",
           "items": [
-            "La revisión de trece disciplinas sobre el data room",
+            "La revisión completa del data room, en todas las disciplinas",
             "La reconciliación entre disciplinas como paso fijo",
             "Hallazgos vinculados a un documento y un pasaje, siempre",
             "Un revisor identificado que responde del entregable"
@@ -1063,7 +1106,7 @@
         },
         {
           "q": "¿Pueden ejecutar solo una parte del alcance?",
-          "a": "La revisión de trece disciplinas es fija, porque el valor está en la reconciliación entre disciplinas. Lo que varía es la profundidad de la redacción."
+          "a": "La revisión completa es fija, porque el valor está en la reconciliación entre disciplinas. Lo que varía es la profundidad de la redacción."
         },
         {
           "q": "¿Hasta qué punto es exclusivo?",

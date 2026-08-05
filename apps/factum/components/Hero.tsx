@@ -3,6 +3,7 @@ import { Button } from '@repo/ui/Button';
 import { Link } from '@/i18n/navigation';
 import { INTAKE_URL } from '@/lib/site';
 import { ArrowRight } from './Icons';
+import CtaProof from './CtaProof';
 import SegmentField from './SegmentField';
 
 /**
@@ -92,18 +93,14 @@ export default function Hero({
               </Link>
             </div>
 
-            <p
-              className="type-small hero-enter"
+            <div
+              className="hero-enter"
               style={
-                {
-                  marginTop: 'var(--fit-gap-sm)',
-                  color: 'var(--text-quaternary)',
-                  '--enter-delay': '290ms'
-                } as CSSProperties
+                { marginTop: 'var(--fit-gap-sm)', '--enter-delay': '290ms' } as CSSProperties
               }
             >
-              {footnote}
-            </p>
+              <CtaProof>{footnote}</CtaProof>
+            </div>
           </div>
 
           {aside && (

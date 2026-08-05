@@ -43,9 +43,16 @@ export const LOCALE_NAMES: Record<string, string> = {
 /**
  * The module library, derived from the product source rather than from a
  * strategy document: `MODULE_WAVES` in `src/lib/dispatch/module-registry.ts`
- * for the roster and the wave, and each module's `agents: [...]` array for the
- * sub-agent count. `scripts/count_modules.py` reproduces every number here, so
- * the figures on the site can be re-checked against the running product.
+ * for the roster and the wave.
+ *
+ * Sub-agent counts used to live here too, and they are gone on purpose. They
+ * were the largest numbers on the site and the least useful ones: a fan-out
+ * width is our implementation detail, it answers "how big are you" rather than
+ * "what do I get", and it is the figure that drifts fastest — the roster
+ * changed eight modules before anyone noticed the totals were a quarter too
+ * high. What a module *is for* survives a refactor; how many agents it fans out
+ * to does not. Nothing on the site may print an agent count again; see
+ * `lib/roster.manifest.ts`, which fails the build if one comes back.
  *
  * Listed in dispatch order, which is also the order the wave diagram draws.
  * `zdr` marks the modules whose provider routing is hard-gated to a
@@ -54,68 +61,82 @@ export const LOCALE_NAMES: Record<string, string> = {
 export type FactumModule = {
   /** Product slug. Stable, and the key the wave diagram draws from. */
   readonly slug: string;
-  /** Sub-agents that fan out inside this module. */
-  readonly agents: number;
   /** Dispatch wave, 1–5. */
   readonly wave: number;
+  /**
+   * What the module hands back. Analysis produces findings, deliverables
+   * produce documents, monitoring keeps running after closing. Every module is
+   * in exactly one, and that is what decides when it runs — the distinction the
+   * roster always had in the product and never showed on the site, which is why
+   * a monitoring product sat in a row of thirteen analysis disciplines as
+   * though it were the same kind of thing.
+   */
+  readonly kind: 'analysis' | 'deliverable' | 'monitoring';
   /** Provider routing hard-gated to zero-retention EU inference. */
   readonly zdr?: true;
 };
 
 export const MODULES: readonly FactumModule[] = [
   // Wave 1 — no upstream dependencies, run fully in parallel.
-  { slug: 'financial', agents: 11, wave: 1, zdr: true },
-  { slug: 'commercial', agents: 10, wave: 1 },
-  { slug: 'hr', agents: 10, wave: 1 },
-  { slug: 'it', agents: 7, wave: 1 },
-  { slug: 'esg', agents: 11, wave: 1 },
-  { slug: 'vigil', agents: 21, wave: 1 },
-  { slug: 'boedelonderzoek', agents: 11, wave: 1, zdr: true },
-  { slug: 'operational', agents: 11, wave: 1 },
-  { slug: 'vendor', agents: 8, wave: 1 },
-  { slug: 'ai-dd', agents: 9, wave: 1 },
-  { slug: 'im-screener', agents: 4, wave: 1 },
+  { slug: 'financial', wave: 1, kind: 'analysis', zdr: true },
+  { slug: 'commercial', wave: 1, kind: 'analysis' },
+  { slug: 'hr', wave: 1, kind: 'analysis' },
+  { slug: 'it', wave: 1, kind: 'analysis' },
+  { slug: 'esg', wave: 1, kind: 'analysis' },
+  { slug: 'operational', wave: 1, kind: 'analysis' },
+  { slug: 'ai-dd', wave: 1, kind: 'analysis' },
+  { slug: 'im-screener', wave: 1, kind: 'analysis' },
+  { slug: 'vigil', wave: 1, kind: 'monitoring' },
   // Wave 2 — read wave 1 output before they can reason.
-  { slug: 'tax', agents: 10, wave: 2, zdr: true },
-  { slug: 'legal', agents: 10, wave: 2, zdr: true },
-  { slug: 'insurance', agents: 6, wave: 2 },
+  { slug: 'tax', wave: 2, kind: 'analysis', zdr: true },
+  { slug: 'legal', wave: 2, kind: 'analysis', zdr: true },
   // Wave 3 — synthesis across waves 1 and 2.
-  { slug: 'ibr', agents: 11, wave: 3 },
-  { slug: 'whoa', agents: 14, wave: 3 },
-  { slug: 'deal-economics', agents: 9, wave: 3 },
-  { slug: 'valuation', agents: 6, wave: 3 },
-  { slug: 'structuring', agents: 4, wave: 3 },
-  { slug: 'portfolio', agents: 6, wave: 3 },
-  { slug: 'lbo-model', agents: 7, wave: 3 },
-  { slug: 'pmi', agents: 6, wave: 3 },
+  { slug: 'deal-economics', wave: 3, kind: 'analysis' },
+  { slug: 'valuation', wave: 3, kind: 'analysis' },
+  { slug: 'portfolio', wave: 3, kind: 'analysis' },
+  { slug: 'pmi', wave: 3, kind: 'analysis' },
   // Wave 4 — assemble client-facing deliverables from everything upstream.
-  { slug: 'vdd', agents: 13, wave: 4 },
-  { slug: 'ic-memo', agents: 5, wave: 4 },
-  { slug: 'teaser', agents: 5, wave: 4 },
-  { slug: 'fin-memo', agents: 6, wave: 4 },
-  { slug: 'document-factory', agents: 5, wave: 4 },
+  { slug: 'vdd', wave: 4, kind: 'deliverable' },
+  { slug: 'ic-memo', wave: 4, kind: 'deliverable' },
+  { slug: 'teaser', wave: 4, kind: 'deliverable' },
+  { slug: 'fin-memo', wave: 4, kind: 'deliverable' },
+  { slug: 'document-factory', wave: 4, kind: 'deliverable' },
   // Wave 5 — post-close, independent of the pre-close waves.
-  { slug: 'exit-readiness', agents: 8, wave: 5 },
-  { slug: 'portfolio-health', agents: 2, wave: 5 },
-  { slug: 'mbr', agents: 3, wave: 5 },
-  { slug: 'ic-report', agents: 5, wave: 5 }
+  { slug: 'exit-readiness', wave: 5, kind: 'analysis' },
+  { slug: 'portfolio-health', wave: 5, kind: 'monitoring' },
+  { slug: 'ic-report', wave: 5, kind: 'deliverable' }
 ];
 
 export const MODULE_COUNT = MODULES.length;
-export const SUBAGENT_COUNT = MODULES.reduce((n, m) => n + m.agents, 0);
 export const WAVE_COUNT = 5;
 export const ZDR_MODULE_COUNT = MODULES.filter((m) => m.zdr).length;
+
+/** Module counts per kind, for the copy that names the three-way split. */
+export const ANALYSIS_MODULE_COUNT = MODULES.filter((m) => m.kind === 'analysis').length;
+export const DELIVERABLE_MODULE_COUNT = MODULES.filter((m) => m.kind === 'deliverable').length;
+export const MONITORING_MODULE_COUNT = MODULES.filter((m) => m.kind === 'monitoring').length;
 /**
- * The disciplines a Sprint covers, in the order `DisciplineGrid` draws them.
+ * The disciplines a Sprint analyses, in the order `DisciplineGrid` draws them.
  *
- * These slugs are the canonical roster; the visible labels live in
+ * These slugs are the canonical roster; the visible copy lives in
  * `messages/<locale>.json` under `shared.disciplines` and must line up
  * one-for-one. Deriving the count from this list rather than hardcoding it
- * closed a real drift: the grid was expanded to thirteen disciplines while the
- * constant stayed at eleven, so the platform page printed "11" directly above a
- * list of thirteen names.
+ * closed a real drift: the grid was expanded while the constant stayed put, so
+ * the platform page printed one number directly above a list of another length.
  *
- * Append only. Inserting mid-list would re-pair every label with the wrong slug.
+ * Three entries came off this list rather than being renamed, and the reason is
+ * the same each time — the row was answering a different question from its
+ * neighbours:
+ *   — `insurance` was retired from the product and had no business being
+ *     orderable on a page for two days longer than it existed;
+ *   — `vendor` is a deliverable (`vdd`), not something we analyse *about* a
+ *     target, so it belongs in the documents wave;
+ *   — `vigil` is monitoring that starts after closing, and listing it beside
+ *     Legal implied a buyer could ask for it during diligence.
+ *
+ * What is left is ten things we read the data room *for*. Append only:
+ * inserting mid-list would re-pair every entry with the wrong icon, since
+ * `DisciplineGrid` maps them by position.
  */
 export const DISCIPLINES = [
   'financial',
@@ -125,18 +146,24 @@ export const DISCIPLINES = [
   'hr',
   'it',
   'esg',
-  'vendor',
   'operational',
   'valuation',
-  'insurance',
-  'ai',
-  'vigil'
+  'ai'
 ] as const;
 
 export const DISCIPLINE_COUNT = DISCIPLINES.length;
 
-/** The largest module, called out because the spread is the point. */
-export const LARGEST_MODULE_AGENTS = Math.max(...MODULES.map((m) => m.agents));
+/**
+ * Factum's own coverage map, against the fourteen diligence dimensions the
+ * reference checklists share. Published with the gaps named rather than
+ * rounded off — "nothing is left behind" was the previous claim and it does not
+ * survive one informed question, whereas nine-of-fourteen with the missing five
+ * spelled out does. The two dimensions with no pre-deal owner at all are named
+ * in `platform.limits`, in the buyer's words rather than ours.
+ */
+export const COVERAGE_DIMENSIONS = 14;
+export const COVERAGE_FULL = 9;
+export const COVERAGE_PARTIAL = 5;
 
 /**
  * Factum's own grounding audit. Published only with its caveat attached, and
