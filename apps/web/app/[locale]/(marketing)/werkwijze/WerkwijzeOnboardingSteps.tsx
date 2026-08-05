@@ -2,12 +2,10 @@
 
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { SketchClipboard, SketchReport, SketchArrow } from '@/components/icons/SketchIcons';
-import CardVisual from '@/components/CardVisual';
+import SceneCard from '@/components/SceneCard';
+import { WERKWIJZE_STEPS } from '@/lib/scenes';
 
 const ease = [0.22, 1, 0.36, 1] as const;
-
-const STEP_ICONS = [SketchClipboard, SketchReport, SketchArrow];
 
 const containerVariants = {
   hidden: {},
@@ -27,9 +25,9 @@ const headingVariants = {
 export default function WerkwijzeOnboardingSteps() {
   const t = useTranslations('werkwijze');
   const steps = [
-    { n: '01', i: 1, Icon: STEP_ICONS[0], title: t('steps.step_1_title'), body: t('steps.step_1_body') },
-    { n: '02', i: 2, Icon: STEP_ICONS[1], title: t('steps.step_2_title'), body: t('steps.step_2_body') },
-    { n: '03', i: 3, Icon: STEP_ICONS[2], title: t('steps.step_3_title'), body: t('steps.step_3_body') },
+    { n: '01', title: t('steps.step_1_title'), body: t('steps.step_1_body') },
+    { n: '02', title: t('steps.step_2_title'), body: t('steps.step_2_body') },
+    { n: '03', title: t('steps.step_3_title'), body: t('steps.step_3_body') },
   ];
 
   return (
@@ -56,9 +54,9 @@ export default function WerkwijzeOnboardingSteps() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {steps.map((s) => (
+          {steps.map((s, i) => (
             <motion.div key={s.n} className="wb-card" variants={itemVariants}>
-              <CardVisual index={s.i + 30} Icon={s.Icon} chip={s.n} />
+              <SceneCard id={WERKWIJZE_STEPS[i]} chip={s.n} />
               <div className="wb-card-body">
                 <h3 className="wb-card-title">{s.title}</h3>
                 <p className="wb-card-text">{s.body}</p>

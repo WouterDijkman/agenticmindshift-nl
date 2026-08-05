@@ -1,28 +1,18 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import type { ComponentType } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import {
-  SketchSpeed,
-  SketchPortfolio,
-  SketchScale,
-  SketchChip,
-  SketchGear,
-  SketchKnowledge,
-} from '@/components/icons/SketchIcons';
 import DimensionRadar from '@/components/DimensionRadar';
-import CardVisual from '@/components/CardVisual';
+import SceneCard from '@/components/SceneCard';
+import { HOME_DIMENSIONS } from '@/lib/scenes';
 
-type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
-
-const DIMENSION_META: { n: string; i: 1 | 2 | 3 | 4 | 5 | 6; Icon: SketchIconComponent }[] = [
-  { n: '01', i: 1, Icon: SketchSpeed },
-  { n: '02', i: 2, Icon: SketchPortfolio },
-  { n: '03', i: 3, Icon: SketchScale },
-  { n: '04', i: 4, Icon: SketchChip },
-  { n: '05', i: 5, Icon: SketchGear },
-  { n: '06', i: 6, Icon: SketchKnowledge },
+const DIMENSION_META: { n: string; i: 1 | 2 | 3 | 4 | 5 | 6 }[] = [
+  { n: '01', i: 1 },
+  { n: '02', i: 2 },
+  { n: '03', i: 3 },
+  { n: '04', i: 4 },
+  { n: '05', i: 5 },
+  { n: '06', i: 6 },
 ];
 
 const containerVariants = {
@@ -92,7 +82,7 @@ export default function HomepageDimensionsSection() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
         >
-          {DIMENSION_META.map((d) => (
+          {DIMENSION_META.map((d, i) => (
             <motion.a
               key={d.n}
               href={`/${locale}/scorecard`}
@@ -101,7 +91,7 @@ export default function HomepageDimensionsSection() {
               whileHover={{ y: -6, boxShadow: '0 22px 44px rgba(11, 31, 58, 0.16)' }}
               transition={{ type: 'spring', stiffness: 300, damping: 26 }}
             >
-              <CardVisual index={d.i} Icon={d.Icon} chip={d.n} />
+              <SceneCard id={HOME_DIMENSIONS[i]} chip={d.n} />
 
               <div className="wb-card-body">
                 <p className="wb-card-title">{t(`title_${d.i}`)}</p>

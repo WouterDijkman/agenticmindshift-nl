@@ -1,17 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import type { ComponentType } from 'react';
 import { useTranslations } from 'next-intl';
-import { SketchClipboard, SketchReport, SketchArrow } from '@/components/icons/SketchIcons';
-import CardVisual from '@/components/CardVisual';
+import SceneCard from '@/components/SceneCard';
+import { HOME_STEPS } from '@/lib/scenes';
 
-type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
-
-const STEP_META: { n: '01' | '02' | '03'; i: 1 | 2 | 3; Icon: SketchIconComponent }[] = [
-  { n: '01', i: 1, Icon: SketchClipboard },
-  { n: '02', i: 2, Icon: SketchReport },
-  { n: '03', i: 3, Icon: SketchArrow },
+const STEP_META: { n: '01' | '02' | '03'; i: 1 | 2 | 3 }[] = [
+  { n: '01', i: 1 },
+  { n: '02', i: 2 },
+  { n: '03', i: 3 },
 ];
 
 const containerVariants = {
@@ -58,9 +55,9 @@ export default function HomepageStepsSection() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {STEP_META.map((s) => (
+          {STEP_META.map((s, i) => (
             <motion.div key={s.n} className="wb-card" variants={itemVariants}>
-              <CardVisual index={s.i + 22} Icon={s.Icon} chip={s.n} scene="chart" />
+              <SceneCard id={HOME_STEPS[i]} chip={s.n} />
               <div className="wb-card-body">
                 <h3 className="wb-card-title">{t(`title_${s.i}`)}</h3>
                 <p className="wb-card-text">{t(`body_${s.i}`)}</p>

@@ -1,17 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import type { ComponentType } from 'react';
 import { useTranslations } from 'next-intl';
-import { SketchEyeHidden, SketchKnowledge, SketchHourglass } from '@/components/icons/SketchIcons';
-import CardVisual from '@/components/CardVisual';
+import SceneCard from '@/components/SceneCard';
+import { HOME_PAIN } from '@/lib/scenes';
 
-type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
-
-const PAIN_META: { code: string; n: 1 | 2 | 3; Icon: SketchIconComponent }[] = [
-  { code: '01', n: 1, Icon: SketchEyeHidden },
-  { code: '02', n: 2, Icon: SketchKnowledge },
-  { code: '03', n: 3, Icon: SketchHourglass },
+const PAIN_META: { code: string; n: 1 | 2 | 3 }[] = [
+  { code: '01', n: 1 },
+  { code: '02', n: 2 },
+  { code: '03', n: 3 },
 ];
 
 const containerVariants = {
@@ -56,9 +53,9 @@ export default function HomepagePainSection() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
         >
-          {PAIN_META.map((p) => (
+          {PAIN_META.map((p, i) => (
             <motion.div key={p.code} className="wb-card" variants={itemVariants}>
-              <CardVisual index={p.n + 10} Icon={p.Icon} chip={p.code} />
+              <SceneCard id={HOME_PAIN[i]} chip={p.code} />
               <div className="wb-card-body">
                 <p className="feature-kicker" style={{ marginBottom: '10px' }}>
                   {t(`label_${p.n}`)}

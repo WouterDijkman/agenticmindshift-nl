@@ -1,101 +1,85 @@
 {
   "shared": {
     "model": "Qwen/Qwen-Image",
-    "videoModel": "Wan-AI/Wan2.2-I2V-A14B",
     "imageSize": "1664x928",
-    "videoSize": "1280x720",
-    "style": "high-key architectural still life. One broad source of cool north-facing daylight entering from the side, throwing soft-edged shadows with long clean gradients. A palette of warm bone and off-white against cool pale grey shade, nothing saturated anywhere. Deep focus, so almost the entire frame is sharp. Generous empty space around the subject. Matte plaster and uncoated paper surfaces, fine photographic grain, calm restrained editorial photography.",
-    "negative": "text, caption, watermark, logo, signature, legible writing, lettering, letters, words, numerals, digits, printed label, brand name, person, people, hand, hands, fingers, face, body, 3d render, cgi, illustration, cartoon, plastic, toy, dark, near-black background, black background, low key, chiaroscuro, night, candlelight, tungsten, amber, orange glow, warm spotlight, single light source in darkness, heavy bokeh, shallow depth of field, extreme macro, brass, polished steel, antique instrument, gear, dial, gauge, machinery, oversaturated, neon, teal and orange grade, blue sky, green, purple, busy background, cluttered composition, desk clutter, plant, coffee cup, laptop, phone, picture frame, border, black border, letterbox, black bars, matted print, framed photograph, inset image, stock photo look, flat even lighting"
+    "style": "calm editorial still-life photography. One broad source of cool north-facing daylight entering from the side, throwing soft-edged shadows with long clean gradients. A palette of warm bone and off-white against cool pale grey shade, nothing saturated anywhere. Deep focus, so the subject is sharp and plainly recognisable and fills a good part of the frame, standing on a bare uncluttered pale surface with quiet space around it. Matte plaster, uncoated paper and pale wood, fine photographic grain, restrained documentary realism.",
+    "negative": "text, caption, watermark, logo, signature, legible writing, handwriting, lettering, letters, words, numerals, digits, printed label, brand name, person, people, hand, hands, fingers, face, body, 3d render, cgi, illustration, cartoon, plastic, toy, dark, near-black background, black background, low key, chiaroscuro, night, candlelight, tungsten, amber, orange glow, warm spotlight, single light source in darkness, heavy bokeh, shallow depth of field, extreme macro, oversaturated, neon, teal and orange grade, green, purple, busy background, cluttered composition, picture frame, border, black border, letterbox, black bars, matted print, framed photograph, inset image, stock photo look, flat even lighting"
   },
   "scenes": [
     {
-      "id": "wedge",
-      "subject": "a broad plane of warm off-white plaster crossed by one hard-edged band of shadow, the shadow edge running from the top left corner down to the bottom right and cutting the plane into two unequal parts, the lit part faintly textured and the shaded part an even cool pale grey, the plane filling the whole frame and running off every edge",
-      "motion": "the shadow edge creeps a few millimetres down the plane. Locked-off shot, no people."
+      "id": "hourglass",
+      "subject": "a plain glass hourglass standing on a bare pale desk, pale sand rather more than half run through into the lower bulb, the daylight passing through the glass and laying one long soft shadow away to the right, the desk otherwise completely empty",
+      "negative": "gold, brass, ornate, antique, carved wood, sundial, clock face, watch, egg timer, kitchen, coloured sand, beach, glitter, sparkle"
     },
     {
-      "id": "blocks",
-      "subject": "five plain pale limestone blocks of clearly unequal height standing in a loose row on a warm off-white surface, each throwing a soft shadow of a different length toward the camera, the row running off both the left and the right edges of the frame, nothing else in the picture",
-      "motion": "the light shifts and all five shadows shorten together. Locked-off shot, no people.",
-      "negative": "building blocks, lego, dice, chess piece, city model, skyline, tower, candles, sugar cubes"
+      "id": "chart",
+      "subject": "a single sheet of pale uncoated paper lying flat on a bare desk, printed flat on it a plain grid of small squares about six rows deep and eight across, scattered squares filled in solid soft grey and all the others left completely empty, the filled ones falling in no pattern at all with whole runs of empty squares between them, one row almost entirely empty, nothing whatsoever else printed on the sheet, a slim pen resting on the desk beside it, daylight from the left",
+      "negative": "text, title, heading, caption, labels, legend, numbers, percentages, bar chart, bars, columns, rising bars, growth chart, line graph, pie chart, 3d, extruded, raised blocks, objects standing up off the paper, qr code, barcode, crossword, sudoku, chessboard, draughts board, calendar, pixel art, game board, mosaic tiles, keyboard, coloured squares, heatmap colours, rainbow, screen, monitor, laptop, dashboard"
     },
     {
-      "id": "overlap",
-      "subject": "two sheets of translucent pale vellum laid across one another at a shallow angle on a warm off-white surface, the region where they overlap reading as a clear third tone darker than either sheet alone, both sheets running off the edges of the frame, soft daylight from the left",
-      "motion": "the upper sheet settles a few millimetres and the overlap shifts. Locked-off shot, no people.",
-      "negative": "printed image, traced drawing, pattern, plastic wrap, cling film, glass, water, ice"
+      "id": "chairs",
+      "subject": "two empty chairs drawn up facing one another across the corner of a bare pale meeting table, the chair on the left standing in full daylight and the chair on the right falling into even cool shade, the table top completely clear, plain pale wood and pale upholstery, nothing else in the room in frame",
+      "negative": "people, person seated, office clutter, laptop, papers, coffee cup, plant, window view, conference room full of chairs, boardroom table long shot, dining room, restaurant, leather executive chair, wheels"
     },
     {
-      "id": "grid",
-      "subject": "a shallow grid of identical square recesses cut into a warm off-white board, the grid filling the whole frame and running off every edge, each recess holding one small soft shadow in its corner, a single horizontal band of them falling into deeper shade",
-      "motion": "the band of deeper shade travels slowly down one row. Locked-off shot, no people.",
-      "negative": "waffle, chocolate, ice cube tray, food, window pane, mullion, bathroom tiles, keyboard, calculator, chessboard"
+      "id": "keys",
+      "subject": "a slim pale keyboard filling most of the frame, photographed close and low from one end so the rows of keys run away from the camera, the top of every key a smooth unbroken blank surface of plain pale plastic with absolutely nothing printed, moulded or engraved on it, the near keys sharp and lit and the far end of the keyboard falling into soft shade, standing on a bare pale desk",
+      "negative": "letters, letters on keys, alphabet, characters, symbols, punctuation, arrows, key legends, printed keycaps, engraved keycaps, qwerty, function row, backlit keys, rgb, glowing keys, screen, monitor, laptop, laptop screen, mouse, cables, gaming, black keyboard, typewriter, piano, piano keys, calculator, cash register, wide desk shot, whole room"
     },
     {
-      "id": "stack",
-      "subject": "a tall stack of plain pale paper seen from slightly above and to one side, the top few sheets fanned a little out of true, the stack filling most of the frame and running off the bottom edge, one clean soft shadow falling to the right across an otherwise empty warm off-white surface",
-      "motion": "the fanned top sheets settle back into line. Locked-off shot, no people.",
-      "negative": "printed text, writing, book, spine, binding, newspaper, magazine, pen, laptop, paper clip, staple"
+      "id": "intray",
+      "subject": "a plain wire desk tray stacked far past full with plain unmarked documents, the pile leaning noticeably to one side and overhanging the edges of the tray, a second smaller heap of papers on the bare pale desk beside it, daylight from the left throwing a long soft shadow",
+      "negative": "printed text, writing, forms, invoices, newspaper, magazines, books, binders, sticky notes, coloured paper, folders with tabs, mess of pens, coffee cup, plant, office background, filing cabinet"
     },
     {
-      "id": "tab",
-      "subject": "a row of plain pale card dividers standing upright and closely packed, seen from above at a shallow angle, one divider drawn forward clear of the row and an obvious empty gap left further along where another is missing, warm off-white throughout, soft daylight raking from the left",
-      "motion": "the drawn-forward divider tips a few degrees further. Locked-off shot, no people.",
-      "negative": "printed tabs, index letters, alphabet, colour coding, coloured tabs, filing cabinet, drawer, folder icon, book pages"
+      "id": "binders",
+      "subject": "a shelf of upright ring binders with a large empty space in the middle of the row, easily wide enough for three or four more binders, the bare shelf board and the plain wall behind it clearly visible right through that empty space, a group of binders pressed together at the left of the picture and another group at the right, the last binder on each side leaning over into the emptiness, every spine entirely plain and blank, daylight raking along the spines from the left",
+      "negative": "printed spine labels, titles, years, index letters, colour coding, coloured binders, full shelf, complete row, unbroken row, binders filling the shelf, one binder pulled out, one binder turned sideways, book, library, bookshelf full of books, archive room wide shot, clutter"
     },
     {
-      "id": "aperture",
-      "subject": "a large plain rectangular opening cut clean through a thick warm off-white wall, photographed straight on, brilliant flat daylight filling the opening so the space beyond reads as an empty pale void, the wall surface around it faintly textured and falling gently into cool shade toward the edges of the frame",
-      "motion": "the light in the opening brightens almost imperceptibly. Locked-off shot, no people.",
-      "negative": "window frame, mullion, glass, curtain, blind, sky, clouds, landscape, doorway, door, room, furniture, building exterior"
+      "id": "underneath",
+      "subject": "one thick squared stack of plain unprinted paper sitting directly on a bare pale wooden desk, and one single extra sheet trapped underneath the stack and sticking out a few centimetres past its front edge, that protruding strip of paper lying flat on the bare desk and lit brightly so it stands out clearly against the wood, the rest of that sheet hidden completely under the weight of the stack, the desk bare all around and nothing else anywhere in the picture",
+      "negative": "printed text, writing, title page, large sheet under the stack, paper covering the desk, desk pad, blotter, placemat, table runner, cloth, book, hardback, spine, binding, envelope, letter, stamp, paper clip, staple, sticky note, laptop, pen, fanned pages, untidy pile"
     },
     {
-      "id": "flap",
-      "subject": "a heavy pale card portfolio lying closed and flat on a warm off-white surface, its front flap edge crossing the picture at a shallow diagonal and running off both sides, a single thin shadow line along the closure, the rest of the frame almost entirely empty, soft daylight from the upper left",
-      "motion": "the light creeps along the closure and the shadow line thins. Locked-off shot, no people.",
-      "negative": "printed cover, title, writing, leather, zip, buckle, book spine, envelope, letter, stamp, laptop, tablet"
+      "id": "archivebox",
+      "subject": "one plain pale archive box sitting closed on a bare floor against a plain wall, its lid on and squared, a fine even film of settled dust across the top of the lid catching the raking daylight, the label panel on the front completely blank, nothing else in the frame",
+      "negative": "printed label, handwriting, dates, cardboard brown, corrugated, moving boxes, stack of boxes, storage unit, warehouse, attic, cobweb, rot, damage, tape, string"
     },
     {
-      "id": "lag",
-      "subject": "one extremely long slender shadow thrown right across a broad empty warm off-white floor, entering the frame at the bottom right corner and reaching almost to the top left, the object casting it entirely outside the picture, the floor otherwise completely bare, very low soft daylight",
-      "motion": "the shadow lengthens very slowly across the floor. Locked-off shot, no people.",
-      "negative": "figure, silhouette, tree, pole, lamp post, street, road, sunset, horizon, sky, furniture, rug"
+      "id": "decline",
+      "subject": "the near edge of a bare pale desk seen close and from the side, filling the upper part of the picture, with one single unbroken strip of plain pale paper running along the desk top, turning over that edge and hanging down in one long clean fall to the floor, where the end of it has settled into a few wide loose loops lying quietly on the pale floor, one continuous unbroken ribbon of paper throughout, entirely blank with nothing printed on it, soft daylight from the left",
+      "negative": "shredded paper, shredder, tangle, tangled heap, many separate strips, torn strips, receipt, chart, graph, toilet paper, kitchen roll, bandage, streamer, confetti, tape measure, film strip, fabric, cloth, scroll, printer, typewriter, wide empty room, long trestle table"
     },
     {
-      "id": "punch",
-      "subject": "a row of clean round perforations punched through a single sheet of pale card, magnified so only five or six of them cross the frame, daylight coming through each hole and landing as a small even disc of brightness on the warm off-white surface below, the card otherwise entirely blank",
-      "motion": "the discs of light below the card drift a little as the light moves. Locked-off shot, no people.",
-      "negative": "punch card, computer tape, music box roll, sheet music, buttons, coins, polka dots, repeating pattern, colander, speaker grille"
+      "id": "form",
+      "subject": "a single printed form lying flat on a bare pale desk, showing only evenly spaced rows of small empty square checkboxes and short plain rules where words would be, with no actual words, letters or numbers printed anywhere on it, a slim pen lying across the lower corner of the sheet, daylight from the left",
+      "negative": "text, questions, printed words, letters, numbers, ticks, crosses, filled boxes, signature, official form, tax form, exam paper, questionnaire with text, barcode, logo, letterhead, clipboard"
     },
     {
-      "id": "curl",
-      "subject": "a single sheet of heavy pale paper curving up off a warm off-white surface, the curve holding the light along its whole length and a clean crescent of soft shadow gathered underneath it, the sheet running off the top edge of the frame, everything else empty",
-      "motion": "the sheet flexes very slightly and the crescent of shadow narrows. Locked-off shot, no people.",
-      "negative": "printed text, writing, drawing, scroll, parchment, burnt edge, torn edge, letter, envelope, plant, leaf, petal, shell"
+      "id": "report",
+      "subject": "a slim bound report lying closed on a bare pale desk, its cover plain pale card and completely blank, the binding edge crisp, one corner of the cover lifting very slightly away from the pages beneath, one clean soft shadow to the right, nothing else on the desk",
+      "negative": "printed cover, title, author, logo, glossy magazine, book, hardback, textbook, spiral binding, ring binder, stack of books, newspaper, envelope, laptop"
     },
     {
-      "id": "step",
-      "subject": "two broad flat warm off-white planes at slightly different heights meeting along one crisp straight riser, photographed from almost directly above so the whole picture reads as two offset rectangles of slightly different brightness, the riser throwing a single narrow band of cool shadow, nothing else in frame",
-      "motion": "the band of shadow at the riser widens a fraction. Locked-off shot, no people.",
-      "negative": "staircase, flight of stairs, steps receding, building, architectural model, table edge, book, paper sheet, wall corner"
+      "id": "diary",
+      "subject": "a desk diary lying open flat on a bare pale desk, both visible pages entirely blank apart from faint ruling, the gutter and the stitched binding running down the centre of the picture, a slim pen resting in the gutter, soft daylight from the upper left",
+      "negative": "printed text, handwriting, dates, days of the week, month names, numbers, calendar grid with numbers, appointments, printed diary layout, book of text, sheet music, bible, laptop, phone"
     },
     {
-      "id": "pair",
-      "subject": "two identical plain pale cylinders standing side by side on a warm off-white surface, the left one in full soft daylight and the right one falling into even cool shade, a clear gap of empty surface between them, both running off the bottom edge of the frame, light from the left",
-      "motion": "the shade on the right cylinder retreats slightly. Locked-off shot, no people.",
-      "negative": "candles, vases, bottles, cups, glasses, chess pieces, statues, figures, columns of a building, salt and pepper, rolling pin"
+      "id": "twocups",
+      "subject": "two plain white cups standing on a bare pale table, one set toward each side of the picture with clear empty table between them, a closed plain notebook lying beside the left-hand cup, daylight from the left so each cup throws its own long soft shadow, nothing else on the table",
+      "negative": "coffee, latte art, steam, saucers with spoons, teapot, cafe interior, people, breakfast, food, pastry, coloured mugs, printed mug, logo on cup, laptop, phone, plant"
     },
     {
-      "id": "corner",
-      "subject": "two broad warm off-white plaster planes meeting at a clean right angle that runs vertically through the picture, the left plane in full soft daylight and the right plane in even cool shade, both planes running off the top and the bottom edges, the join perfectly sharp, no other object anywhere in the frame",
-      "motion": "the light on the left plane strengthens a little. Locked-off shot, no people.",
-      "negative": "room, furniture, skirting board, floor, ceiling, window, door, building exterior, sky, box, cardboard, paper fold"
+      "id": "proposal",
+      "subject": "a small neat stack of plain unmarked documents squared up on a bare pale desk, a fountain pen lying across the top sheet at a slight angle, the edges of the stack crisp and aligned, soft daylight from the left casting one clean shadow, the rest of the desk empty",
+      "negative": "printed text, writing, signature, contract, letterhead, logo, stamp, seal, envelope, book, binding, paper clip, staple, glasses, calculator, laptop, coffee cup"
     },
     {
-      "id": "ramp",
-      "subject": "a smooth pale incline rising from the bottom left of the frame and running off the top right, daylight travelling up the slope and brightening steadily toward the top, the surface warm off-white and completely bare, one soft cool shadow along its lower edge",
-      "motion": "the brightness travels further up the slope. Locked-off shot, no people.",
-      "negative": "road, street, hill, landscape, sky, ski slope, snow, skate ramp, staircase, building, figure, vehicle"
+      "id": "deskready",
+      "subject": "a bare pale wooden desk photographed from directly above, holding only one closed plain notebook and one slim pen set square beside it, both placed precisely, a large area of clear empty desk around them, even cool daylight and one soft shadow along the notebook edge",
+      "negative": "printed cover, title, logo, laptop, keyboard, mouse, phone, coffee cup, plant, glasses, papers, clutter, flat lay of stationery, coloured objects, marble, dark wood"
     }
   ],
   "features": []

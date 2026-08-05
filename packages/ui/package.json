@@ -5,7 +5,6 @@
   "type": "module",
   "exports": {
     "./Button": "./src/Button.tsx",
-    "./CardVisual": "./src/CardVisual.tsx",
     "./SketchIcons": "./src/SketchIcons.tsx",
     "./locale": "./src/locale.ts"
   },
