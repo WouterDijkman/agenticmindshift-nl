@@ -38,8 +38,8 @@
     "meta_description": "AI-advies voor PE-fondsen, M&A-kantoren en familiebedrijven in de Europese mid-market. Doe de gratis Scorecard: twaalf minuten, zes dimensies, direct een rapport.",
     "hero": {
       "eyebrow": "Voor PE-partners, M&A-directors en family offices",
-      "heading": "Hoeveel rendement laat uw portefeuille liggen?",
-      "subtext": "Zes dimensies die het IM en de maandrapportage niet laten zien. Twaalf minuten invullen, daarna heeft u een onderbouwd rapport.",
+      "heading": "Weet in twaalf minuten waar uw rendement weglekt.",
+      "subtext": "Zes dimensies die het IM en de maandrapportage niet laten zien. Direct een rapport dat u intern kunt delen.",
       "cta_primary": "Start de Scorecard",
       "cta_secondary": "Werkwijze & tarieven",
       "trust": "12 minuten · 6 dimensies · geen account · vertrouwelijk"
@@ -47,7 +47,7 @@
     "founder": {
       "eyebrow": "Wie hierachter staat",
       "heading": "Eén adviseur. Zes jaar aan de financierings- en herstructureringskant van Europese deals.",
-      "body": "Wouter Dijkman richtte Agentic Mindshift op na zes jaar in acquisition finance en financial restructuring bij Rabobank, ING en Alter Domus. Daar werd zichtbaar waarom deals die op papier sluitend waren alsnog vastliepen. Het kantoor blijft bewust klein: een handvol partners tegelijk, zodat elk traject persoonlijke aandacht houdt.",
+      "body": "Wouter Dijkman werkte in acquisition finance en financial restructuring bij Rabobank, ING en Alter Domus. Daar zag hij waarom deals die op papier klopten alsnog vastliepen. Het kantoor blijft klein: een handvol partners tegelijk.",
       "cta": "Meer over Wouter →",
       "sample_note": "Wilt u eerst het rapportformat zien? Vraag een geanonimiseerd voorbeeldrapport op via LinkedIn of e-mail."
     },
@@ -78,8 +78,8 @@
     },
     "final_cta": {
       "eyebrow": "Uw volgende stap",
-      "heading": "Over twaalf minuten weet u waar uw portefeuille kwetsbaar zit.",
-      "subtext": "U onderbouwt uw volgende IC met cijfers. Geen account, geen verplichting. Uw rapport is direct beschikbaar.",
+      "heading": "Onderbouw uw volgende beslissing met cijfers.",
+      "subtext": "Geen account, geen verplichting. Uw rapport is direct beschikbaar.",
       "cta_primary": "Start de Scorecard",
       "cta_secondary": "Plan een vrijblijvende kennismaking"
     },
@@ -94,35 +94,26 @@
       "subheading": "Niemand wil beslissen op een half beeld. Toch gebeurt het bij elke deal opnieuw.",
       "label_1": "Onzichtbaar risico",
       "title_1": "U beslist op basis van wat u ziet.",
-      "body_1": "Klantconcentratie, en de vraag of AI de kernactiviteit van uw target kan overnemen: het staat niet in het IM. Het wordt pas zichtbaar wanneer de deal getekend is, of wanneer de portefeuille al onder druk staat.",
+      "body_1": "Klantconcentratie. Of AI de kernactiviteit van het target overneemt. Het staat niet in het IM. Het blijkt pas na tekenen.",
       "feeling_1": "Het knagende gevoel bij een IC-beslissing klopt meestal. Er is meer dan u ziet.",
       "label_2": "Kennisretentie",
       "title_2": "Elke acquisitie begint weer bij nul.",
-      "body_2": "Wat de vorige deal opleverde, vertrekt met de dealmaker of belandt in een map die niemand opent. Uw kantoor stapelt deals op zonder ervan te leren.",
+      "body_2": "Wat de vorige deal opleverde, vertrekt met de dealmaker. Of belandt in een map die niemand opent.",
       "feeling_2": "U weet dat u dit eerder hebt uitgezocht. Alleen niet meer waar het staat.",
       "label_3": "Te late signalering",
       "title_3": "Portefeuilleproblemen zijn maanden eerder zichtbaar.",
-      "body_3": "Achterblijvende cijfers en exit-risico's spelen al kwartalen voordat de jaarrapportage ze bevestigt. Zonder vaste meting signaleert u het structureel te laat.",
+      "body_3": "Achterblijvende cijfers spelen al kwartalen voordat de jaarrapportage ze bevestigt. Zonder vaste meting ziet u het te laat.",
       "feeling_3": "De jaarrapportage bevestigt wat u drie kwartalen geleden al vermoedde."
     },
     "steps": {
       "eyebrow": "Zo werkt het",
       "heading": "De Quickscan Methode: drie stappen, twaalf minuten.",
       "title_1": "Beantwoord 15 vragen",
-      "body_1": "Multiple choice over uw dealproces, maandrapportage, AI-bestendigheid en kennisborging. Twaalf minuten. Geen open velden.",
+      "body_1": "Multiple choice over dealproces, maandrapportage, AI-bestendigheid en kennisborging. Geen open velden.",
       "title_2": "Ontvang uw rapport",
-      "body_2": "Een score op zes dimensies, de twee punten die voorrang verdienen en een concreet voorstel voor de volgende stap. Direct na afronding.",
+      "body_2": "Een score op zes dimensies. De twee punten die voorrang verdienen. Direct na afronding.",
       "title_3": "Bepaal uw volgende stap",
       "body_3": "Intern delen, een sparringsessie inplannen of direct starten. U bepaalt het tempo."
-    },
-    "showcase": {
-      "eyebrow": "Het rapport",
-      "heading": "Geen losse score. Een rapport dat u intern kunt delen.",
-      "body": "Elke dimensie krijgt een score, met het referentieniveau ernaast: het punt waarop een dimensie voldoende gemeten wordt om op te sturen. In één oogopslag ziet u waar u dat haalt en welke twee punten voorrang verdienen.",
-      "check_1": "Zes dimensies, elk met een score en een referentieniveau",
-      "check_2": "De twee punten met de hoogste impact, uitgelicht",
-      "check_3": "Direct deelbaar in uw IC, zonder verdere toelichting",
-      "cta": "Start de Scorecard"
     },
     "stats": {
       "label_1": "EBITDA-multiple",
@@ -441,7 +432,7 @@
     "s4_heading": "4. Tarieven en betaling",
     "s4_body": "Tarieven zijn vermeld op de pagina \"Werkwijze\" en gelden exclusief btw, tenzij anders aangegeven. Facturatie geschiedt maandelijks vooraf voor retainer-trajecten en bij oplevering voor projecten. Betalingstermijn: dertig dagen netto.",
     "s5_heading": "5. Annulering en opzegging",
-    "s5_body": "Retainer-trajecten kennen een minimumlooptijd van zes maanden en zijn daarna maandelijks opzegbaar met een opzegtermijn van eveneens een maand. AI-gedreven Due Diligence-trajecten kunnen tot drie werkdagen na opdrachtbevestiging kosteloos worden geannuleerd. Workshops zijn niet annuleerbaar binnen tien werkdagen voor de afgesproken datum.",
+    "s5_body": "Retainer-trajecten kennen een minimumlooptijd van drie maanden en zijn daarna maandelijks opzegbaar met een opzegtermijn van eveneens een maand. AI-gedreven Due Diligence-trajecten kunnen tot drie werkdagen na opdrachtbevestiging kosteloos worden geannuleerd. Workshops zijn niet annuleerbaar binnen tien werkdagen voor de afgesproken datum.",
     "s6_heading": "6. Aansprakelijkheid",
     "s6_body": "De aansprakelijkheid van Agentic Mindshift is beperkt tot het factuurbedrag van de betreffende opdracht over een periode van maximaal drie maanden, met een maximum van 25.000 euro. Aansprakelijkheid voor indirecte schade, gevolgschade, gederfde winst of gemiste IRR is uitgesloten.",
     "s7_heading": "7. Vertrouwelijkheid",
@@ -636,12 +627,12 @@
       "reference_footer": "Het referentieniveau is ons eigen streefniveau per dimensie: het punt waarop een dimensie voldoende gemeten wordt om op te sturen. Het is geen gemeten marktgemiddelde."
     },
     "mockup": {
-      "window_label": "Scorecard-rapport · Vertrouwelijk",
+      "window_label": "Scorecard-rapport",
       "title": "Voorbeeldprofiel vs. referentieniveau",
       "subtitle": "Illustratief voorbeeld · geen echte data",
       "callout_label": "dimensies onder\nreferentieniveau",
-      "below_reference": "Onder referentie",
-      "above_reference": "Op/boven referentie",
+      "below_reference": "Onder",
+      "above_reference": "Op/boven",
       "reference_level": "Referentieniveau"
     },
     "variants": {

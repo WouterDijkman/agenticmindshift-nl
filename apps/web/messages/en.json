@@ -38,8 +38,8 @@
     "meta_description": "AI advisory for PE funds, M&A firms and family businesses in the European mid-market. Take the free Scorecard: twelve minutes, six dimensions, a report straight away.",
     "hero": {
       "eyebrow": "For PE partners, M&A directors and family offices",
-      "heading": "How much return is your portfolio leaving behind?",
-      "subtext": "Six dimensions the IM and the monthly reporting never show. Twelve minutes to complete, and you have a report that holds up.",
+      "heading": "Know in twelve minutes where your return leaks away.",
+      "subtext": "Six dimensions the IM and the monthly report do not show. A report you can share internally, straight away.",
       "cta_primary": "Start the Scorecard",
       "cta_secondary": "How we work & fees",
       "trust": "12 minutes · 6 dimensions · no account · confidential"
@@ -47,7 +47,7 @@
     "founder": {
       "eyebrow": "Who's behind this",
       "heading": "One advisor. Six years on the financing and restructuring side of European deals.",
-      "body": "Wouter Dijkman founded Agentic Mindshift after six years in acquisition finance and financial restructuring at Rabobank, ING and Alter Domus. That work made visible why deals that added up on paper still stalled. The firm stays deliberately small: a handful of partners at a time, so every engagement keeps personal attention.",
+      "body": "Wouter Dijkman worked in acquisition finance and financial restructuring at Rabobank, ING and Alter Domus. That is where he saw why deals that worked on paper still stalled. The firm stays small: a handful of partners at a time.",
       "cta": "More about Wouter →",
       "sample_note": "Want to see the report format first? Request an anonymised sample report via LinkedIn or email."
     },
@@ -78,8 +78,8 @@
     },
     "final_cta": {
       "eyebrow": "Your next step",
-      "heading": "Twelve minutes from now you will know where your portfolio is exposed.",
-      "subtext": "You back your next IC with numbers. No account, no obligation. Your report is available immediately.",
+      "heading": "Back your next decision with numbers.",
+      "subtext": "No account, no obligation. Your report is available immediately.",
       "cta_primary": "Start the Scorecard",
       "cta_secondary": "Schedule a no-obligation call"
     },
@@ -94,35 +94,26 @@
       "subheading": "Nobody wants to decide on half a picture. It happens on every deal anyway.",
       "label_1": "Invisible risk",
       "title_1": "You decide on what you are shown.",
-      "body_1": "Customer concentration, and whether AI could take over your target's core activity: neither appears in the IM. Both surface once the deal is signed, or once the portfolio is already under pressure.",
+      "body_1": "Customer concentration. Whether AI can take over the target's core business. Neither is in the IM. It surfaces after signing.",
       "feeling_1": "That nagging feeling in an IC decision is usually right. There is more than you can see.",
       "label_2": "Knowledge retention",
       "title_2": "Every acquisition starts from zero again.",
-      "body_2": "What the last deal taught leaves with the dealmaker or lands in a folder nobody opens. Your firm stacks up deals without learning from them.",
+      "body_2": "What the last deal taught you leaves with the dealmaker. Or lands in a folder nobody opens.",
       "feeling_2": "You know you worked this out before. You just cannot find where.",
       "label_3": "Late warning",
       "title_3": "Portfolio problems are visible months earlier.",
-      "body_3": "Lagging numbers and exit risks build for quarters before the annual report confirms them. Without steady measurement you see it structurally too late.",
+      "body_3": "Lagging numbers play out for quarters before the annual report confirms them. Without regular measurement you see it too late.",
       "feeling_3": "The annual report confirms what you suspected three quarters ago."
     },
     "steps": {
       "eyebrow": "How it works",
       "heading": "The Quickscan Method: three steps, twelve minutes.",
       "title_1": "Answer 15 questions",
-      "body_1": "Multiple choice on your deal process, monthly reporting, AI resilience and knowledge retention. Twelve minutes. No open fields.",
+      "body_1": "Multiple choice on deal process, monthly reporting, AI resilience and knowledge retention. No open fields.",
       "title_2": "Receive your report",
-      "body_2": "A score on six dimensions, the two priorities that come first and a concrete proposal for the next step. Immediately on completion.",
+      "body_2": "A score on six dimensions. The two priorities that come first. Straight after you finish.",
       "title_3": "Determine your next step",
       "body_3": "Share it internally, book a sparring session or start right away. You set the pace."
-    },
-    "showcase": {
-      "eyebrow": "The report",
-      "heading": "Not a standalone score. A report you can share internally.",
-      "body": "Every dimension gets a score, with the reference level beside it: the point at which a dimension is measured well enough to steer on. At a glance you see where you reach it and which two priorities come first.",
-      "check_1": "Six dimensions, each with a score and a reference level",
-      "check_2": "The two highest-impact priorities, highlighted",
-      "check_3": "Ready to share in your IC, without further explanation",
-      "cta": "Start the Scorecard"
     },
     "stats": {
       "label_1": "EBITDA multiple",
@@ -441,7 +432,7 @@
     "s4_heading": "4. Fees and payment",
     "s4_body": "Fees are listed on the \"How We Work\" page and are exclusive of VAT unless stated otherwise. Invoicing takes place monthly in advance for retainer engagements and upon delivery for projects. Payment term: thirty days net.",
     "s5_heading": "5. Cancellation and termination",
-    "s5_body": "Retainer engagements have a minimum duration of six months and are thereafter terminable monthly with a notice period of one month. AI-driven Due Diligence engagements may be cancelled without charge up to three working days after confirmation. Workshops are non-cancellable within ten working days before the agreed date.",
+    "s5_body": "Retainer engagements have a minimum duration of three months and are thereafter terminable monthly with a notice period of one month. AI-driven Due Diligence engagements may be cancelled without charge up to three working days after confirmation. Workshops are non-cancellable within ten working days before the agreed date.",
     "s6_heading": "6. Liability",
     "s6_body": "The liability of Agentic Mindshift is limited to the invoice amount of the engagement in question over a period of a maximum of three months, with a maximum of 25,000 euro. Liability for indirect damage, consequential loss, loss of profit or missed IRR is excluded.",
     "s7_heading": "7. Confidentiality",
@@ -636,12 +627,12 @@
       "reference_footer": "The reference level is our own target level per dimension: the point at which a dimension is measured well enough to steer on. It is not a measured market average."
     },
     "mockup": {
-      "window_label": "Scorecard report · Confidential",
+      "window_label": "Scorecard report",
       "title": "Sample profile vs. reference level",
       "subtitle": "Illustrative example · not real data",
       "callout_label": "dimensions below\nreference level",
-      "below_reference": "Below reference",
-      "above_reference": "At/above reference",
+      "below_reference": "Below",
+      "above_reference": "At/above",
       "reference_level": "Reference level"
     },
     "variants": {

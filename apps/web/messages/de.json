@@ -38,8 +38,8 @@
     "meta_description": "KI-Beratung für PE-Fonds, M&A-Häuser und Familienunternehmen im europäischen Mid-Market. Machen Sie die kostenlose Scorecard: zwölf Minuten, sechs Dimensionen, sofort ein Bericht.",
     "hero": {
       "eyebrow": "Für PE-Partner, M&A-Direktoren und Family Offices",
-      "heading": "Wie viel Rendite lässt Ihr Portfolio liegen?",
-      "subtext": "Sechs Dimensionen, die weder das IM noch das Monatsreporting zeigen. Zwölf Minuten ausfüllen, danach haben Sie einen belastbaren Bericht.",
+      "heading": "Wissen Sie in zwölf Minuten, wo Ihre Rendite versickert.",
+      "subtext": "Sechs Dimensionen, die das IM und die Monatsberichte nicht zeigen. Sofort ein Bericht, den Sie intern teilen können.",
       "cta_primary": "Scorecard starten",
       "cta_secondary": "Arbeitsweise & Honorare",
       "trust": "12 Minuten · 6 Dimensionen · kein Konto · vertraulich"
@@ -47,7 +47,7 @@
     "founder": {
       "eyebrow": "Wer dahintersteht",
       "heading": "Ein Berater. Sechs Jahre auf der Finanzierungs- und Restrukturierungsseite europäischer Deals.",
-      "body": "Wouter Dijkman gründete Agentic Mindshift nach sechs Jahren in Acquisition Finance und Financial Restructuring bei Rabobank, ING und Alter Domus. Dort wurde sichtbar, warum Deals, die auf dem Papier aufgingen, dennoch scheiterten. Das Haus bleibt bewusst klein: eine Handvoll Partner zugleich, damit jedes Mandat persönliche Aufmerksamkeit behält.",
+      "body": "Wouter Dijkman arbeitete in Acquisition Finance und Financial Restructuring bei Rabobank, ING und Alter Domus. Dort sah er, warum Deals, die auf dem Papier stimmten, dennoch scheiterten. Das Büro bleibt klein: eine Handvoll Partner gleichzeitig.",
       "cta": "Mehr über Wouter →",
       "sample_note": "Möchten Sie zuerst das Berichtsformat sehen? Fordern Sie über LinkedIn oder per E-Mail einen anonymisierten Musterbericht an."
     },
@@ -78,8 +78,8 @@
     },
     "final_cta": {
       "eyebrow": "Ihr nächster Schritt",
-      "heading": "In zwölf Minuten wissen Sie, wo Ihr Portfolio verwundbar ist.",
-      "subtext": "Ihr nächstes IC untermauern Sie mit Zahlen. Kein Konto, keine Verpflichtung. Ihr Bericht steht sofort bereit.",
+      "heading": "Untermauern Sie Ihre nächste Entscheidung mit Zahlen.",
+      "subtext": "Kein Konto, keine Verpflichtung. Ihr Bericht ist sofort verfügbar.",
       "cta_primary": "Scorecard starten",
       "cta_secondary": "Unverbindliches Gespräch planen"
     },
@@ -94,35 +94,26 @@
       "subheading": "Niemand entscheidet gern auf halber Informationslage. Bei jedem Deal geschieht es dennoch.",
       "label_1": "Unsichtbares Risiko",
       "title_1": "Sie entscheiden auf Basis dessen, was Sie sehen.",
-      "body_1": "Kundenkonzentration und die Frage, ob KI die Kerntätigkeit Ihres Targets übernehmen kann: Im IM steht davon nichts. Sichtbar wird es erst nach Unterzeichnung oder wenn das Portfolio bereits unter Druck steht.",
+      "body_1": "Kundenkonzentration. Ob KI das Kerngeschäft des Targets übernimmt. Beides steht nicht im IM. Es zeigt sich erst nach der Unterschrift.",
       "feeling_1": "Das ungute Gefühl bei einer IC-Entscheidung trügt selten. Es gibt mehr, als Sie sehen.",
       "label_2": "Wissensbindung",
       "title_2": "Jede Akquisition beginnt wieder bei null.",
-      "body_2": "Was der letzte Deal gebracht hat, geht mit dem Dealmaker oder landet in einem Ordner, den niemand öffnet. Ihr Haus reiht Deals aneinander, ohne daraus zu lernen.",
+      "body_2": "Was der letzte Deal gelehrt hat, geht mit dem Dealmaker. Oder landet in einem Ordner, den niemand öffnet.",
       "feeling_2": "Sie wissen, dass Sie das schon einmal geprüft haben. Nur nicht mehr, wo es liegt.",
       "label_3": "Späte Warnung",
       "title_3": "Portfolioprobleme sind Monate früher sichtbar.",
-      "body_3": "Nachlassende Zahlen und Exit-Risiken bauen sich über Quartale auf, bevor der Jahresbericht sie bestätigt. Ohne feste Messung erkennen Sie das strukturell zu spät.",
+      "body_3": "Zurückbleibende Zahlen laufen Quartale, bevor der Jahresbericht sie bestätigt. Ohne feste Messung sehen Sie es zu spät.",
       "feeling_3": "Der Jahresbericht bestätigt, was Sie schon vor drei Quartalen vermutet haben."
     },
     "steps": {
       "eyebrow": "So funktioniert es",
       "heading": "Die Quickscan-Methode: drei Schritte, zwölf Minuten.",
       "title_1": "Beantworten Sie 15 Fragen",
-      "body_1": "Multiple Choice zu Ihrem Deal-Prozess, Ihrer Monatsberichterstattung, KI-Beständigkeit und Wissenssicherung. Zwölf Minuten. Keine offenen Felder.",
+      "body_1": "Multiple Choice zu Dealprozess, Monatsberichten, KI-Resilienz und Wissenssicherung. Keine offenen Felder.",
       "title_2": "Erhalten Sie Ihren Bericht",
-      "body_2": "Eine Bewertung auf sechs Dimensionen, die zwei Punkte mit Vorrang und ein konkreter Vorschlag für den nächsten Schritt. Direkt nach Abschluss.",
+      "body_2": "Eine Bewertung auf sechs Dimensionen. Die zwei Punkte mit Vorrang. Direkt nach Abschluss.",
       "title_3": "Bestimmen Sie Ihren nächsten Schritt",
       "body_3": "Intern teilen, eine Sparring-Session buchen oder direkt starten. Sie bestimmen das Tempo."
-    },
-    "showcase": {
-      "eyebrow": "Der Bericht",
-      "heading": "Keine isolierte Bewertung. Ein Bericht, den Sie intern teilen können.",
-      "body": "Jede Dimension erhält eine Bewertung, daneben das Referenzniveau: der Punkt, ab dem eine Dimension ausreichend gemessen wird, um danach zu steuern. Auf einen Blick sehen Sie, wo Sie es erreichen und welche zwei Punkte Vorrang haben.",
-      "check_1": "Sechs Dimensionen, jeweils mit Bewertung und Referenzniveau",
-      "check_2": "Die zwei wirkungsstärksten Punkte, hervorgehoben",
-      "check_3": "Direkt in Ihrem IC teilbar, ohne weitere Erläuterung",
-      "cta": "Scorecard starten"
     },
     "stats": {
       "label_1": "EBITDA-Multiple",
@@ -441,7 +432,7 @@
     "s4_heading": "4. Honorare und Zahlung",
     "s4_body": "Die Honorare sind auf der Seite „Arbeitsweise“ angegeben und verstehen sich zzgl. MwSt., sofern nicht anders angegeben. Die Rechnungsstellung erfolgt monatlich im Voraus für Retainer-Aufträge und bei Lieferung für Projekte. Zahlungsfrist: dreißig Tage netto.",
     "s5_heading": "5. Kündigung und Stornierung",
-    "s5_body": "Retainer-Aufträge haben eine Mindestlaufzeit von sechs Monaten und sind danach monatlich mit einer Kündigungsfrist von ebenfalls einem Monat kündbar. KI-gestützte Due Diligence-Aufträge können bis zu drei Werktage nach Auftragsbestätigung kostenlos storniert werden. Workshops können nicht innerhalb von zehn Werktagen vor dem vereinbarten Datum storniert werden.",
+    "s5_body": "Retainer-Aufträge haben eine Mindestlaufzeit von drei Monaten und sind danach monatlich mit einer Kündigungsfrist von ebenfalls einem Monat kündbar. KI-gestützte Due Diligence-Aufträge können bis zu drei Werktage nach Auftragsbestätigung kostenlos storniert werden. Workshops können nicht innerhalb von zehn Werktagen vor dem vereinbarten Datum storniert werden.",
     "s6_heading": "6. Haftung",
     "s6_body": "Die Haftung von Agentic Mindshift ist auf den Rechnungsbetrag des betreffenden Auftrags über einen Zeitraum von maximal drei Monaten begrenzt, mit einem Maximum von 25.000 Euro. Die Haftung für mittelbare Schäden, Folgeschäden, entgangenen Gewinn oder entgangene IRR ist ausgeschlossen.",
     "s7_heading": "7. Vertraulichkeit",
@@ -636,12 +627,12 @@
       "reference_footer": "Das Referenzniveau ist unser eigenes Zielniveau je Dimension: der Punkt, ab dem eine Dimension ausreichend gemessen wird, um danach zu steuern. Es ist kein gemessener Marktdurchschnitt."
     },
     "mockup": {
-      "window_label": "Scorecard-Bericht · Vertraulich",
+      "window_label": "Scorecard-Bericht",
       "title": "Beispielprofil vs. Referenzniveau",
       "subtitle": "Illustratives Beispiel · keine echten Daten",
       "callout_label": "Dimensionen unter\ndem Referenzniveau",
-      "below_reference": "Unter Referenz",
-      "above_reference": "Auf/über Referenz",
+      "below_reference": "Unter",
+      "above_reference": "Auf/über",
       "reference_level": "Referenzniveau"
     },
     "variants": {

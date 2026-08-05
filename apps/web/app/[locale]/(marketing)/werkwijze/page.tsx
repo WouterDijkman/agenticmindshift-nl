@@ -125,7 +125,21 @@ export default async function WerkwijzePage(
         heading={t('hero.heading')}
         subtext={t('hero.subtext')}
         headingMaxWidth="800px"
-      />
+      >
+        {/* The first screen of a pricing page used to be a full viewport of
+            type with nothing to press. The reader arriving here has already
+            decided to look at what this costs, and the closing band that
+            answers "which route?" was four screens down. Same two actions,
+            same words — moved to where the intent is. */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', alignItems: 'center' }}>
+          <Button href="/scorecard" variant="primary" size="lg">
+            {t('cta.primary')}
+          </Button>
+          <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external>
+            {t('cta.secondary')}
+          </Button>
+        </div>
+      </AnimatedHeroShell>
 
       <AnswerFirst text={t('answer_first')} />
 

@@ -7,7 +7,6 @@ import HomepageStatsSection from './HomepageStatsSection';
 import HomepageStepsSection from './HomepageStepsSection';
 import HomepageDimensionsSection from './HomepageDimensionsSection';
 import HomepagePainSection from './HomepagePainSection';
-import HomepageShowcaseSection from './HomepageShowcaseSection';
 import HomepageFactumSection from './HomepageFactumSection';
 import CostAnchorVisual from './CostAnchorVisual';
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
@@ -79,10 +78,10 @@ export default async function HomePage() {
       ═══════════════════════════════════════════ */}
       <HomepageStepsSection />
 
-      {/* ═══════════════════════════════════════════
-          2b. PRODUCT-SHOWCASE — hoe het rapport eruitziet
-      ═══════════════════════════════════════════ */}
-      <HomepageShowcaseSection />
+      {/* De product-showcase stond hier: dezelfde rapportkaart, op 2.850px.
+          Die kaart staat nu in de hero, naast de belofte in plaats van vijf
+          schermen eronder. Het argument dat de sectie eromheen zette, staat
+          in de legenda van de kaart zelf. */}
 
       {/* ═══════════════════════════════════════════
           3. STATISTIEKEN — animated count-up

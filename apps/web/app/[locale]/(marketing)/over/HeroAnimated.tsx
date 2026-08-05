@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { Fragment, useRef } from 'react';
 import { useTranslations } from 'next-intl';
+import Button from '@/components/ui/Button';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 const WORDS = 'Wouter Dijkman'.split(' ');
@@ -144,6 +145,27 @@ export default function HeroAnimated() {
         >
           {t('hero.subtext')}
         </motion.p>
+
+        {/* A whole first screen about a person, with no way to talk to him.
+            The only action on this page sat below four sections of biography,
+            which is exactly backwards: someone who reads a founder page is
+            already most of the way to booking. The call leads here rather
+            than the Scorecard — this page argues from the man, not the
+            method. Same strings as the closing band, deliberately: a second
+            wording for the same action reads as a second offer. */}
+        <motion.div
+          style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', alignItems: 'center', marginTop: '34px' }}
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.3, ease }}
+        >
+          <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external>
+            {t('contact_cta.cta2')}
+          </Button>
+          <Button href="/scorecard" variant="secondary" size="lg">
+            {t('contact_cta.cta1')}
+          </Button>
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}

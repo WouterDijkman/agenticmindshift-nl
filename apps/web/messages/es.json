@@ -38,8 +38,8 @@
     "meta_description": "Asesoría en IA para fondos de private equity, firmas de M&A y empresas familiares del mid-market europeo. Haga la Scorecard gratuita: doce minutos, seis dimensiones, informe inmediato.",
     "hero": {
       "eyebrow": "Para socios de PE, directores de M&A y family offices",
-      "heading": "¿Cuánta rentabilidad está dejando su cartera sobre la mesa?",
-      "subtext": "Seis dimensiones que ni el IM ni el reporte mensual muestran. Doce minutos y tendrá un informe con fundamento.",
+      "heading": "Sepa en doce minutos dónde se escapa su rentabilidad.",
+      "subtext": "Seis dimensiones que ni el IM ni el reporte mensual muestran. Al instante, un informe que puede compartir internamente.",
       "cta_primary": "Iniciar el Scorecard",
       "cta_secondary": "Metodología y honorarios",
       "trust": "12 minutos · 6 dimensiones · sin cuenta · confidencial"
@@ -47,7 +47,7 @@
     "founder": {
       "eyebrow": "Quién está detrás de esto",
       "heading": "Un asesor. Seis años en el lado de la financiación y la reestructuración de los deals europeos.",
-      "body": "Wouter Dijkman fundó Agentic Mindshift tras seis años en acquisition finance y financial restructuring en Rabobank, ING y Alter Domus. Allí quedó a la vista por qué operaciones que cuadraban sobre el papel acababan encallando. La firma se mantiene deliberadamente pequeña: unos pocos socios a la vez, para que cada proyecto conserve atención personal.",
+      "body": "Wouter Dijkman trabajó en acquisition finance y financial restructuring en Rabobank, ING y Alter Domus. Allí vio por qué operaciones que cuadraban sobre el papel acababan encallando. La firma se mantiene pequeña: un puñado de socios a la vez.",
       "cta": "Más sobre Wouter →",
       "sample_note": "¿Prefiere ver antes el formato del informe? Solicite un informe de muestra anonimizado por LinkedIn o correo electrónico."
     },
@@ -78,8 +78,8 @@
     },
     "final_cta": {
       "eyebrow": "Su próximo paso",
-      "heading": "Dentro de doce minutos sabrá dónde es vulnerable su cartera.",
-      "subtext": "Sustenta su próximo comité con cifras. Sin cuenta y sin compromiso. Su informe está disponible al instante.",
+      "heading": "Respalde su próxima decisión con cifras.",
+      "subtext": "Sin cuenta, sin compromiso. Su informe está disponible de inmediato.",
       "cta_primary": "Iniciar el Scorecard",
       "cta_secondary": "Programar una llamada sin compromiso"
     },
@@ -94,35 +94,26 @@
       "subheading": "Nadie quiere decidir con media imagen. Aun así ocurre en cada operación.",
       "label_1": "Riesgo invisible",
       "title_1": "Decide con lo que le enseñan.",
-      "body_1": "La concentración de clientes y si la IA puede absorber la actividad principal de su target: nada de eso figura en el IM. Se ve cuando la operación ya está firmada, o cuando la cartera ya está bajo presión.",
+      "body_1": "Concentración de clientes. Si la IA puede asumir la actividad principal del target. Nada de eso está en el IM. Aparece tras la firma.",
       "feeling_1": "Esa duda incómoda en el comité suele tener razón. Hay más de lo que ve.",
       "label_2": "Retención del conocimiento",
       "title_2": "Cada adquisición vuelve a empezar de cero.",
-      "body_2": "Lo que dejó la operación anterior se va con el dealmaker o acaba en una carpeta que nadie abre. Su firma acumula operaciones sin aprender de ellas.",
+      "body_2": "Lo que enseñó la última operación se va con el dealmaker. O acaba en una carpeta que nadie abre.",
       "feeling_2": "Sabe que ya analizó esto antes. Solo que no recuerda dónde está.",
       "label_3": "Alerta tardía",
       "title_3": "Los problemas de cartera son visibles meses antes.",
-      "body_3": "Las cifras que flojean y los riesgos de salida se acumulan durante trimestres antes de que el informe anual los confirme. Sin una medición fija, lo detecta estructuralmente tarde.",
+      "body_3": "Las cifras rezagadas llevan trimestres antes de que el informe anual las confirme. Sin medición fija lo ve demasiado tarde.",
       "feeling_3": "El informe anual confirma lo que usted ya sospechaba hace tres trimestres."
     },
     "steps": {
       "eyebrow": "Así funciona",
       "heading": "El Método Quickscan: tres pasos, doce minutos.",
       "title_1": "Responda 15 preguntas",
-      "body_1": "Opción múltiple sobre su proceso de operaciones, informe mensual, resistencia a la IA y retención del conocimiento. Doce minutos. Sin campos abiertos.",
+      "body_1": "Opción múltiple sobre proceso de deals, reporte mensual, resiliencia ante la IA y retención de conocimiento. Sin campos abiertos.",
       "title_2": "Reciba su informe",
-      "body_2": "Una puntuación en seis dimensiones, los dos puntos prioritarios y una propuesta concreta para el siguiente paso. Al terminar.",
+      "body_2": "Una puntuación en seis dimensiones. Los dos puntos que van primero. Nada más terminar.",
       "title_3": "Determine su siguiente paso",
       "body_3": "Compártalo internamente, reserve una sesión de sparring o empiece ya. Usted marca el ritmo."
-    },
-    "showcase": {
-      "eyebrow": "El informe",
-      "heading": "No una puntuación aislada. Un informe que puede compartir internamente.",
-      "body": "Cada dimensión recibe una puntuación, con el nivel de referencia al lado: el punto en que una dimensión está lo bastante medida como para gestionarla. De un vistazo ve dónde lo alcanza y qué dos puntos van primero.",
-      "check_1": "Seis dimensiones, cada una con puntuación y nivel de referencia",
-      "check_2": "Los dos puntos de mayor impacto, destacados",
-      "check_3": "Listo para compartir en su comité, sin explicaciones adicionales",
-      "cta": "Iniciar el Scorecard"
     },
     "stats": {
       "label_1": "múltiplo de EBITDA",
@@ -441,7 +432,7 @@
     "s4_heading": "4. Honorarios y pago",
     "s4_body": "Los honorarios figuran en la página \"Metodología\" y son sin IVA, salvo indicación contraria. La facturación se realiza mensualmente por adelantado para retainers y a la entrega para proyectos. Plazo de pago: treinta días neto.",
     "s5_heading": "5. Cancelación y rescisión",
-    "s5_body": "Los retainers tienen una duración mínima de seis meses y son rescindibles mensualmente a partir de entonces con un preaviso de un mes. Los proyectos de Due Diligence impulsada por IA pueden cancelarse sin coste hasta tres días laborables después de la confirmación del encargo. Los talleres no son cancelables en los diez días laborables anteriores a la fecha acordada.",
+    "s5_body": "Los retainers tienen una duración mínima de tres meses y son rescindibles mensualmente a partir de entonces con un preaviso de un mes. Los proyectos de Due Diligence impulsada por IA pueden cancelarse sin coste hasta tres días laborables después de la confirmación del encargo. Los talleres no son cancelables en los diez días laborables anteriores a la fecha acordada.",
     "s6_heading": "6. Responsabilidad",
     "s6_body": "La responsabilidad de Agentic Mindshift se limita al importe facturado del encargo correspondiente durante un período máximo de tres meses, con un máximo de 25.000 euros. Se excluye la responsabilidad por daños indirectos, daños consecuentes, lucro cesante o IRR no obtenida.",
     "s7_heading": "7. Confidencialidad",
@@ -636,12 +627,12 @@
       "reference_footer": "El nivel de referencia es nuestro propio nivel objetivo por dimensión: el punto en que una dimensión está lo bastante medida como para gestionarla. No es una media de mercado medida."
     },
     "mockup": {
-      "window_label": "Informe de scorecard · Confidencial",
+      "window_label": "Informe de scorecard",
       "title": "Perfil de ejemplo vs. nivel de referencia",
       "subtitle": "Ejemplo ilustrativo · no son datos reales",
       "callout_label": "dimensiones por debajo\ndel nivel de referencia",
-      "below_reference": "Bajo referencia",
-      "above_reference": "En/sobre referencia",
+      "below_reference": "Bajo",
+      "above_reference": "En/sobre",
       "reference_level": "Nivel de referencia"
     },
     "variants": {

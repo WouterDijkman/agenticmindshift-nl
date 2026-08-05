@@ -4,16 +4,27 @@ import { motion } from 'framer-motion';
 import { useLocale, useTranslations } from 'next-intl';
 import Button from '@/components/ui/Button';
 import SketchCrosshair from '@/components/icons/SketchCrosshair';
+import ScorecardReportMockup from '@/components/ScorecardReportMockup';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
 /**
- * Single-column hero. There used to be a sample score card in the right
- * column; it was pulled because it competed with the CTA for the only rust
- * accent in the viewport, and because both jobs it did are already done
- * further down the page with real material — the report mockup in the
- * showcase section, the six dimensions in the dimensions section. The number
- * on it was invented, which is the same problem we removed the percentile for.
+ * Split hero: the claim on the left, the thing you actually receive on the
+ * right.
+ *
+ * An earlier version pulled the right column entirely. Two reasons were given
+ * and only one of them still holds. The good one was that the sample card
+ * carried an invented number — that is why the artefact here is the real
+ * report component, which prints "illustrative example, not real data" on its
+ * own face and is the same object the reader gets at the end of the flow. The
+ * weaker one was that a second rust accent competes with the CTA; measured
+ * against what it buys, it does not come close. The first screen was type on
+ * flat paper with the right half empty, and the single most valuable thing a
+ * landing page can put beside its headline is a picture of the deliverable.
+ *
+ * This artefact used to sit at scroll 2850, in a showcase section that has
+ * been removed. Everything that section explained is legible from the card's
+ * own legend, so the page keeps the proof and loses a screen of scrolling.
  */
 export default function AnimatedHero() {
   const locale = useLocale();
@@ -44,6 +55,8 @@ export default function AnimatedHero() {
           paddingBottom: 'clamp(88px, 12vh, 132px)',
         }}
       >
+        <div className="hero-home-split">
+        <div>
         {/* Eyebrow */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '22px' }}>
           <motion.div
@@ -74,10 +87,15 @@ export default function AnimatedHero() {
         <motion.h1
           className="type-display"
           style={{
-            fontSize: 'clamp(38px, 5.6vw, 72px)',
-            marginBottom: '22px',
+            /* 5.6vw was sized for a headline that had the whole container to
+               itself. In half the width it wrapped to five lines and pushed
+               the button off the fold. Height gets a vote for the same reason
+               it does on the Factum hero: on a first screen the short viewport
+               is the binding constraint, not the wide one. */
+            fontSize: 'clamp(34px, min(4.05vw, 7.4vh), 60px)',
+            marginBottom: '20px',
             color: 'var(--text-primary)',
-            maxWidth: '17ch',
+            maxWidth: '14ch',
           }}
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
@@ -145,6 +163,18 @@ export default function AnimatedHero() {
             <li key={fact}>{fact}</li>
           ))}
         </motion.ul>
+        </div>
+
+        {/* The deliverable, beside the promise rather than 2,850px under it. */}
+        <motion.div
+          className="hero-home-artefact showcase-mockup-wrap"
+          initial={{ opacity: 0, y: 26 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.75, ease }}
+        >
+          <ScorecardReportMockup />
+        </motion.div>
+        </div>
       </div>
 
       {/* Scroll indicator */}

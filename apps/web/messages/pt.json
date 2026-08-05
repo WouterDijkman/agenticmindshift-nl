@@ -38,8 +38,8 @@
     "meta_description": "Consultoria em IA para fundos de private equity, sociedades de M&A e empresas familiares do mid-market europeu. Faça a Scorecard gratuita: doze minutos, seis dimensões, relatório imediato.",
     "hero": {
       "eyebrow": "Para sócios de PE, diretores de M&A e family offices",
-      "heading": "Quanto retorno está a sua carteira a deixar por realizar?",
-      "subtext": "Seis dimensões que nem o IM nem o reporte mensal mostram. Doze minutos e fica com um relatório fundamentado.",
+      "heading": "Saiba em doze minutos onde a sua rentabilidade se perde.",
+      "subtext": "Seis dimensões que nem o IM nem o relatório mensal mostram. De imediato, um relatório que pode partilhar internamente.",
       "cta_primary": "Iniciar o Scorecard",
       "cta_secondary": "Metodologia e honorários",
       "trust": "12 minutos · 6 dimensões · sem conta · confidencial"
@@ -47,7 +47,7 @@
     "founder": {
       "eyebrow": "Quem está por trás disto",
       "heading": "Um consultor. Seis anos no lado do financiamento e da reestruturação de deals europeus.",
-      "body": "Wouter Dijkman fundou a Agentic Mindshift após seis anos em acquisition finance e financial restructuring no Rabobank, ING e Alter Domus. Aí tornou-se visível por que razão operações que fechavam no papel acabavam por encalhar. A firma mantém-se deliberadamente pequena: um punhado de parceiros de cada vez, para que cada projeto conserve atenção pessoal.",
+      "body": "Wouter Dijkman trabalhou em acquisition finance e financial restructuring no Rabobank, ING e Alter Domus. Foi aí que viu porque operações certas no papel acabavam por encalhar. A firma mantém-se pequena: um punhado de sócios de cada vez.",
       "cta": "Mais sobre o Wouter →",
       "sample_note": "Prefere ver primeiro o formato do relatório? Peça um relatório de exemplo anonimizado por LinkedIn ou e-mail."
     },
@@ -78,8 +78,8 @@
     },
     "final_cta": {
       "eyebrow": "O seu próximo passo",
-      "heading": "Daqui a doze minutos saberá onde a sua carteira está vulnerável.",
-      "subtext": "Sustenta o seu próximo comité com números. Sem conta e sem compromisso. O seu relatório fica disponível de imediato.",
+      "heading": "Fundamente a sua próxima decisão com números.",
+      "subtext": "Sem conta, sem compromisso. O seu relatório está disponível de imediato.",
       "cta_primary": "Iniciar o Scorecard",
       "cta_secondary": "Agendar uma chamada sem compromisso"
     },
@@ -94,35 +94,26 @@
       "subheading": "Ninguém quer decidir com meia imagem. Ainda assim, acontece em cada operação.",
       "label_1": "Risco invisível",
       "title_1": "Decide com aquilo que lhe mostram.",
-      "body_1": "A concentração de clientes e a questão de saber se a IA pode absorver a atividade principal do target: nada disso consta do IM. Só se torna visível depois de assinada a operação, ou quando a carteira já está sob pressão.",
+      "body_1": "Concentração de clientes. Se a IA pode assumir a atividade principal do target. Nada disso está no IM. Só aparece depois da assinatura.",
       "feeling_1": "Aquela dúvida incómoda no comité costuma ter razão. Há mais do que aquilo que vê.",
       "label_2": "Retenção de conhecimento",
       "title_2": "Cada aquisição recomeça do zero.",
-      "body_2": "O que a operação anterior deixou vai-se embora com o dealmaker ou acaba numa pasta que ninguém abre. A sua firma acumula operações sem aprender com elas.",
+      "body_2": "O que a última operação ensinou sai com o dealmaker. Ou fica numa pasta que ninguém abre.",
       "feeling_2": "Sabe que já analisou isto antes. Só não sabe onde ficou.",
       "label_3": "Alerta tardio",
       "title_3": "Os problemas de carteira são visíveis meses antes.",
-      "body_3": "Os números que abrandam e os riscos de saída acumulam-se durante trimestres antes de o relatório anual os confirmar. Sem uma medição fixa, deteta-os estruturalmente tarde.",
+      "body_3": "Os números em atraso duram trimestres antes de o relatório anual os confirmar. Sem medição fixa vê tarde demais.",
       "feeling_3": "O relatório anual confirma o que o senhor já suspeitava há três trimestres."
     },
     "steps": {
       "eyebrow": "Como funciona",
       "heading": "O Método Quickscan: três passos, doze minutos.",
       "title_1": "Responda a 15 perguntas",
-      "body_1": "Escolha múltipla sobre o seu processo de operações, relatório mensal, resistência à IA e retenção de conhecimento. Doze minutos. Sem campos abertos.",
+      "body_1": "Escolha múltipla sobre processo de deals, relatório mensal, resiliência à IA e retenção de conhecimento. Sem campos abertos.",
       "title_2": "Receba o seu relatório",
-      "body_2": "Uma pontuação em seis dimensões, os dois pontos prioritários e uma proposta concreta para o passo seguinte. Logo após concluir.",
+      "body_2": "Uma pontuação em seis dimensões. Os dois pontos que vêm primeiro. Logo após terminar.",
       "title_3": "Defina o seu próximo passo",
       "body_3": "Partilhe-o internamente, marque uma sessão de sparring ou comece já. O ritmo é o seu."
-    },
-    "showcase": {
-      "eyebrow": "O relatório",
-      "heading": "Não uma pontuação isolada. Um relatório que pode partilhar internamente.",
-      "body": "Cada dimensão recebe uma pontuação, com o nível de referência ao lado: o ponto em que uma dimensão está suficientemente medida para se poder gerir. Num relance vê onde o atinge e que dois pontos vêm primeiro.",
-      "check_1": "Seis dimensões, cada uma com pontuação e nível de referência",
-      "check_2": "Os dois pontos de maior impacto, destacados",
-      "check_3": "Pronto a partilhar no seu comité, sem explicações adicionais",
-      "cta": "Iniciar o Scorecard"
     },
     "stats": {
       "label_1": "múltiplo de EBITDA",
@@ -441,7 +432,7 @@
     "s4_heading": "4. Honorários e pagamento",
     "s4_body": "Os honorários estão indicados na página \"Metodologia\" e são sem IVA, salvo indicação em contrário. A faturação é feita mensalmente antecipadamente para retainers e na entrega para projetos. Prazo de pagamento: trinta dias líquidos.",
     "s5_heading": "5. Cancelamento e rescisão",
-    "s5_body": "Os retainers têm uma duração mínima de seis meses e são rescindíveis mensalmente a partir daí com um pré-aviso de um mês. Os projetos de Due Diligence impulsionada por IA podem ser cancelados sem custo até três dias úteis após a confirmação do encargo. Os workshops não são canceláveis nos dez dias úteis anteriores à data acordada.",
+    "s5_body": "Os retainers têm uma duração mínima de três meses e são rescindíveis mensalmente a partir daí com um pré-aviso de um mês. Os projetos de Due Diligence impulsionada por IA podem ser cancelados sem custo até três dias úteis após a confirmação do encargo. Os workshops não são canceláveis nos dez dias úteis anteriores à data acordada.",
     "s6_heading": "6. Responsabilidade",
     "s6_body": "A responsabilidade da Agentic Mindshift limita-se ao valor faturado do encargo em causa durante um período máximo de três meses, com um máximo de 25.000 euros. Exclui-se a responsabilidade por danos indiretos, danos consequentes, lucros cessantes ou IRR não obtida.",
     "s7_heading": "7. Confidencialidade",
@@ -636,12 +627,12 @@
       "reference_footer": "O nível de referência é o nosso próprio nível-alvo por dimensão: o ponto em que uma dimensão está suficientemente medida para se poder gerir. Não é uma média de mercado medida."
     },
     "mockup": {
-      "window_label": "Relatório de scorecard · Confidencial",
+      "window_label": "Relatório de scorecard",
       "title": "Perfil de exemplo vs. nível de referência",
       "subtitle": "Exemplo ilustrativo · não são dados reais",
       "callout_label": "dimensões abaixo\ndo nível de referência",
-      "below_reference": "Abaixo da referência",
-      "above_reference": "Na/acima da referência",
+      "below_reference": "Abaixo",
+      "above_reference": "Na/acima",
       "reference_level": "Nível de referência"
     },
     "variants": {

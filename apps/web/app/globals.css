@@ -1069,38 +1069,6 @@ nav, header, .nav-link, .eyebrow-ui {
   align-items: center;
 }
 
-.showcase-checklist {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.showcase-checklist li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-family: var(--font-ui);
-  font-size: 0.9375rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-.showcase-check {
-  flex-shrink: 0;
-  width: 22px;
-  height: 22px;
-  border-radius: 999px;
-  background: var(--accent-cta-soft);
-  color: var(--accent-cta-ink);
-  font-size: 0.75rem;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1px;
-}
-
 .showcase-mockup-wrap {
   position: relative;
 }
@@ -1696,6 +1664,121 @@ nav, header, .nav-link, .eyebrow-ui {
 }
 
 /* ================================================================== */
+/* HOMEPAGE HERO SPLIT — claim left, deliverable right                 */
+/* The copy column keeps the larger share: the headline is the reason  */
+/* anyone stays. The artefact sits in the space the type was already   */
+/* leaving empty rather than competing for it. Uneven on purpose.      */
+/* ================================================================== */
+.hero-home-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(40px, 5vw, 76px);
+  align-items: center;
+}
+
+/* The floating "2 / 6" annotation is absolutely positioned against the
+   wrap, so the column needs headroom or it rides up under the header. */
+.hero-home-artefact {
+  margin-top: 26px;
+}
+
+/* In the scorecard showcase grid the callout hangs off the top-left corner
+   into open space. In the hero that corner is not open — it is 26px from the
+   headline column, and at top:-26px the sticker sits squarely across the
+   card's own title bar, hiding "Scorecard-rapport · Vertrouwelijk".
+   Top-right instead. Both the title bar and the card title are set left, so
+   that corner is the one part of the card with nothing under it. The bottom
+   corner was tried first and is worse: it lands on the legend, which is the
+   key the sticker's own number needs in order to mean anything. */
+.hero-home-artefact .showcase-callout {
+  top: -22px;
+  left: auto;
+  right: -20px;
+  bottom: auto;
+}
+
+/* Below this the two columns stop being a fair fight: the report card has a
+   fixed amount of detail in it and squeezing it makes the numbers unreadable,
+   which defeats the point of showing it at all. */
+@media (max-width: 1000px) {
+  .hero-home-split {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  /* Stacked, the hero is no longer one screen — holding it to 100svh would
+     only add blank space above content the reader still has to scroll to. */
+  .hero-home {
+    min-height: 0;
+  }
+  .hero-home-artefact {
+    margin-top: 36px;
+    max-width: 520px;
+  }
+  /* Stacked, the card has the column to itself again, so it falls back to
+     the same inset the showcase grid uses at this width. */
+  .hero-home-artefact .showcase-callout {
+    top: -20px;
+    right: 8px;
+    bottom: auto;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* SHORT LAPTOP SCREENS                                                */
+/* 1280x720 is the machine this is actually read on, and there the     */
+/* hero asks for 813px of a 642px budget: the report card alone is     */
+/* 635px and the Spanish copy column runs to ~560. Everything the page */
+/* has to say for itself is on this screen, so nothing here may cross  */
+/* the fold.                                                           */
+/*                                                                     */
+/* `zoom` rather than `transform: scale` on purpose — a transform      */
+/* shrinks the paint and leaves the layout box at full height, which   */
+/* is the one thing that does not help. Where zoom is unsupported the  */
+/* rule is inert and the card behaves as it does today.                */
+/*                                                                     */
+/* Height-only, and above the stacking breakpoint: at 1440x900 all     */
+/* five locales already fit, and nothing should shrink a screen that   */
+/* is already correct.                                                 */
+/* ------------------------------------------------------------------ */
+@media (min-width: 1001px) and (max-height: 800px) {
+  /* !important beats the React inline-style source. */
+  .hero-home-content {
+    padding-top: clamp(24px, 4vh, 56px) !important;
+    padding-bottom: clamp(32px, 5vh, 72px) !important;
+  }
+
+  /* The inner-page heroes have the same problem for a different reason: the
+     padding there is generous (104 + 72 at this height) and now there are
+     buttons under the subtext. Spanish /werkwijze overran by 39px. Padding
+     is the right thing to spend — it is the only element on the screen that
+     is not carrying an argument. */
+  .hero-full-content {
+    padding-top: clamp(48px, 8vh, 148px) !important;
+    padding-bottom: clamp(40px, 6vh, 104px) !important;
+  }
+
+  /* Spanish is the long headline: at 4.05vw it takes five lines here and the
+     copy column outgrows the card it is meant to sit beside. */
+  .hero-home .type-display {
+    font-size: clamp(30px, min(3.6vw, 6.4vh), 52px) !important;
+  }
+
+  .hero-home-artefact {
+    margin-top: 12px;
+    zoom: 0.84;
+  }
+
+  .hero-specs {
+    margin-top: clamp(22px, 3.2vh, 40px);
+  }
+
+  /* The cue would land on the spec strip once the screen is this short. */
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+/* ================================================================== */
 /* MOBILE HERO — remove fullscreen constraint, tighten padding        */
 /* All hero sections (.hero-full, .hero-home) carry 100svh min-height */
 /* on desktop. On mobile that creates ~300px of blank space above the  */
@@ -1728,10 +1811,14 @@ nav, header, .nav-link, .eyebrow-ui {
 /* column: it competed with the CTA for the page's only rust accent.   */
 /* ================================================================== */
 .hero-specs {
+  /* One source of truth for the horizontal gap: the separator below is
+     positioned at half of it, and the two silently drifted apart when only
+     one was edited. */
+  --specs-gap: clamp(16px, 2vw, 24px);
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 10px clamp(20px, 3vw, 36px);
+  gap: 10px var(--specs-gap);
   list-style: none;
   margin: clamp(40px, 6vh, 64px) 0 0;
   padding: 16px 0 0;
@@ -1747,11 +1834,16 @@ nav, header, .nav-link, .eyebrow-ui {
   position: relative;
 }
 /* Hairline separators instead of middots — the dots came from the source
-   string and read as punctuation noise at this size. */
+   string and read as punctuation noise at this size.
+   The separator is absolutely positioned, so it cannot know it has landed at
+   the start of a wrapped line. That is why the gap above is sized to keep all
+   four items on one row in every locale: Spanish is the longest at ~478px and
+   the left column is ~460px, so at the old 36px gap it wrapped and left a
+   stray hairline hanging in the margin before "CONFIDENCIAL". */
 .hero-specs li + li::before {
   content: '';
   position: absolute;
-  left: calc(clamp(20px, 3vw, 36px) / -2);
+  left: calc(var(--specs-gap) / -2);
   top: 0.1em;
   bottom: 0.1em;
   width: 1px;
