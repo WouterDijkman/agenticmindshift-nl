@@ -11,9 +11,11 @@ import Image from 'next/image';
  * still, layered on top of it. Hover first, then autoplay on scroll. Both worked;
  * the loops themselves were the problem, so they are gone rather than disabled.
  * With them went the client-side half of this component: no observers, no refs,
- * no state, and nothing to hydrate. The .mp4s are still in public/visuals and
- * still recorded in the lockfile, so nothing has to be regenerated if that
- * decision is ever revisited.
+ * no state, and nothing to hydrate. The .mp4s have since been deleted too — they
+ * were 12 MB of rejected work sitting in a public directory. Model, prompt, seed
+ * and size for all sixteen are still in scripts/visuals.lock.json, so the
+ * decision is reversible with `generate-visuals.mjs --videos`; it costs credits
+ * and a re-review, not a rewrite.
  *
  * Fills its positioned parent; the parent owns the aspect ratio.
  */
