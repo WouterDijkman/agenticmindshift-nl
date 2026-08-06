@@ -1,20 +1,21 @@
 import type { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
-import { getAlternates } from '@/lib/hreflang';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { pageMetadata } from '@/lib/pageMetadata';
 
 export async function generateMetadata(
   { params }: { params: Promise<{ locale: string }> }
 ): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'voorwaarden' });
-  return {
-    title: t('meta_title'),
-    description: t('meta_description'),
-    alternates: getAlternates('/voorwaarden', locale),
-  };
+  return pageMetadata(locale, 'voorwaarden', '/voorwaarden');
 }
 
-export default async function VoorwaardenPage() {
+export default async function VoorwaardenPage(
+  { params }: { params: Promise<{ locale: string }> }
+) {
+  const { locale } = await params;
+  // Static rendering: fills next-intl's locale cache so nothing below this
+  // reaches for `headers()`. See the long note in app/[locale]/layout.tsx.
+  setRequestLocale(locale);
   const t = await getTranslations('voorwaarden');
 
   return (

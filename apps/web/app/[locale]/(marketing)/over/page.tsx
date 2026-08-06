@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
-import { getAlternates } from '@/lib/hreflang';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { pageMetadata } from '@/lib/pageMetadata';
 import Button from '@/components/ui/Button';
 import HeroAnimated from './HeroAnimated';
 import OverCredentials from './OverCredentials';
@@ -12,18 +12,16 @@ export async function generateMetadata(
   { params }: { params: Promise<{ locale: string }> }
 ): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'over' });
-  return {
-    title: t('meta_title'),
-    description: t('meta_description'),
-    alternates: getAlternates('/over', locale),
-  };
+  return pageMetadata(locale, 'over', '/over');
 }
 
 export default async function OverPage(
   { params }: { params: Promise<{ locale: string }> }
 ) {
   const { locale } = await params;
+  // Static rendering: fills next-intl's locale cache so nothing below this
+  // reaches for `headers()`. See the long note in app/[locale]/layout.tsx.
+  setRequestLocale(locale);
   const t = await getTranslations('over');
 
   const timelineItems = [

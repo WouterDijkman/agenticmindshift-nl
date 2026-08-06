@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import { getLocale, getTranslations } from 'next-intl/server';
-import { getAlternates } from '@/lib/hreflang';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { pageMetadata } from '@/lib/pageMetadata';
 import Button from '@/components/ui/Button';
 import AnimatedHero from './AnimatedHero';
 import HomepagePainSection from './HomepagePainSection';
@@ -33,16 +33,16 @@ export async function generateMetadata(
   { params }: { params: Promise<{ locale: string }> }
 ): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'homepage' });
-  return {
-    title: t('meta_title'),
-    description: t('meta_description'),
-    alternates: getAlternates('', locale),
-  };
+  return pageMetadata(locale, 'homepage', '');
 }
 
-export default async function HomePage() {
-  const locale = await getLocale();
+export default async function HomePage(
+  { params }: { params: Promise<{ locale: string }> }
+) {
+  const { locale } = await params;
+  // Static rendering: fills next-intl's locale cache so nothing below this
+  // reaches for `headers()`. See the long note in app/[locale]/layout.tsx.
+  setRequestLocale(locale);
   const t = await getTranslations('homepage');
   const tFaq = await getTranslations('homepage.faqItems');
 
