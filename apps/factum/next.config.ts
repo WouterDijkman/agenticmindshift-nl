@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from 'next-intl/plugin';
+import { securityHeaderRule } from '@repo/ui/securityHeaders';
 import { routing } from './i18n/routing';
 
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
@@ -19,6 +20,12 @@ const nextConfig: NextConfig = {
         permanent: true
       }
     ];
+  },
+
+  /* Both sites, one rule. See packages/ui/src/securityHeaders.ts for why each
+     header is there and why there is no CSP yet. */
+  async headers() {
+    return [securityHeaderRule];
   }
 };
 
