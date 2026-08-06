@@ -846,11 +846,19 @@ T = {
         'es': 'Tamaño de deals PE y M&A europeo',
         'pt': 'Dimensão de deals PE e M&A europeu',
     },
+    # The closing sentence used to read "a data processing agreement is in
+    # place with each processor". It is not. A privacy statement is the one
+    # document on the site that is read by people checking whether it is true,
+    # so an unearned compliance claim there is worse than no claim at all —
+    # and worse than the gap it was papering over. The processors are still
+    # named, because naming them is accurate and useful. What replaces the
+    # claim is the one thing that is true and is ours to promise:
+    # confidentiality.
     'privacy.s5_body': {
-        'en': 'We use a limited number of processors: Plausible Analytics (EU) for visitor statistics, Cal.com for scheduling calls, a European hosting provider for the website and our e-mail provider for correspondence. A data processing agreement is in place with each processor.',
-        'de': 'Wir setzen eine begrenzte Zahl von Auftragsverarbeitern ein: Plausible Analytics (EU) für Besucherstatistiken, Cal.com für die Terminvereinbarung, einen europäischen Hosting-Anbieter für die Website und unseren E-Mail-Anbieter für die Korrespondenz. Mit jedem Auftragsverarbeiter besteht ein Auftragsverarbeitungsvertrag.',
-        'es': 'Utilizamos un número limitado de encargados del tratamiento: Plausible Analytics (UE) para estadísticas de visitas, Cal.com para programar llamadas, un proveedor de hosting europeo para el sitio web y nuestro proveedor de correo para la correspondencia. Con cada encargado hay un contrato de encargo de tratamiento.',
-        'pt': 'Recorremos a um número limitado de subcontratantes: Plausible Analytics (UE) para estatísticas de visitas, Cal.com para o agendamento de chamadas, um fornecedor de alojamento europeu para o site e o nosso fornecedor de e-mail para a correspondência. Com cada subcontratante existe um contrato de subcontratação.',
+        'en': 'We use a limited number of processors: Plausible Analytics (EU) for visitor statistics, Cal.com for scheduling calls, a European hosting provider for the website and our e-mail provider for correspondence. Everything you share with us is treated as confidential.',
+        'de': 'Wir setzen eine begrenzte Zahl von Auftragsverarbeitern ein: Plausible Analytics (EU) für Besucherstatistiken, Cal.com für die Terminvereinbarung, einen europäischen Hosting-Anbieter für die Website und unseren E-Mail-Anbieter für die Korrespondenz. Alles, was Sie uns anvertrauen, behandeln wir vertraulich.',
+        'es': 'Utilizamos un número limitado de encargados del tratamiento: Plausible Analytics (UE) para estadísticas de visitas, Cal.com para programar llamadas, un proveedor de hosting europeo para el sitio web y nuestro proveedor de correo para la correspondencia. Todo lo que comparta con nosotros se trata de forma confidencial.',
+        'pt': 'Recorremos a um número limitado de subcontratantes: Plausible Analytics (UE) para estatísticas de visitas, Cal.com para o agendamento de chamadas, um fornecedor de alojamento europeu para o site e o nosso fornecedor de e-mail para a correspondência. Tudo o que partilha connosco é tratado de forma confidencial.',
     },
 }
 
