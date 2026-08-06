@@ -30,7 +30,6 @@ export default async function PrivacyPage({
   return (
     <>
       <PageHeader
-        eyebrow={t('header.eyebrow')}
         title={t('header.title')}
         lead={t('header.lead')}
       />

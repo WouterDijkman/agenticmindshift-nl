@@ -30,7 +30,6 @@ export default async function ContactPage({
   return (
     <>
       <PageHeader
-        eyebrow={t('header.eyebrow')}
         title={t('header.title')}
         lead={t('header.lead')}
         cta={t('header.cta')}
@@ -42,11 +41,7 @@ export default async function ContactPage({
       <Section width="medium">
         <div className="split-grid">
           <div>
-            <SectionHeader
-              eyebrow={t('call.eyebrow')}
-              title={t('call.title')}
-              lead={t('call.lead')}
-            />
+            <SectionHeader title={t('call.title')} lead={t('call.lead')} />
             <Reveal delay={60} style={{ marginTop: 32 }}>
               <Button href={INTAKE_URL} size="lg" magnetic={false} className="plausible-event-name=Intake+CTA plausible-event-location=contact">
                 {t('call.button')}
@@ -107,8 +102,8 @@ export default async function ContactPage({
       </Section>
 
       {/* Company details — only what is on the register. */}
-      <Section width="medium">
-        <SectionHeader eyebrow={t('details.eyebrow')} title={t('details.title')} />
+      <Section width="medium" weight="tight" tone="raised">
+        <SectionHeader title={t('details.title')} />
         <Reveal delay={60} style={{ marginTop: 28 }}>
           <dl className="rule-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))' }}>
             <div>

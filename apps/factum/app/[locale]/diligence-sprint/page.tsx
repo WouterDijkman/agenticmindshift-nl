@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/pageMetadata';
 import { DISCIPLINE_COUNT } from '@/lib/site';
-import { SPRINT_FORMATS, SPRINT_INPUTS, SPRINT_LAYERS } from '@/lib/scenes';
+import { SPRINT_BAND, SPRINT_FORMATS, SPRINT_INPUTS, SPRINT_LAYERS } from '@/lib/scenes';
 import PageHeader from '@/components/PageHeader';
+import SceneBand from '@/components/SceneBand';
 import DisciplineGrid from '@/components/DisciplineGrid';
 import MediaCards from '@/components/MediaCards';
 import Reveal from '@/components/Reveal';
@@ -36,7 +37,6 @@ export default async function SprintPage({
   return (
     <>
       <PageHeader
-        eyebrow={t('header.eyebrow')}
         title={t('header.title')}
         lead={t('header.lead', numbers)}
         cta={t('header.cta')}
@@ -46,50 +46,25 @@ export default async function SprintPage({
         visual={1}
       />
 
-      {/* The reframe: this is what a well-run sell-side process looks like.
-          The line itself lives in `shared` because the homepage opens on it
-          too, and the two must never drift apart. */}
-      <Section width="medium">
-        <Reveal>
-          <blockquote className="source-quote" style={{ fontSize: 'clamp(1.125rem, 1rem + 0.8vw, 1.5rem)' }}>
-            {s('reframe.quote')}
-          </blockquote>
-          <p className="type-body measure" style={{ marginTop: 28 }}>
-            {t('reframe.body')}
-          </p>
-        </Reveal>
-      </Section>
+      {/*
+        The reframe, as a band rather than as a blockquote with a paragraph
+        under it. The line lives in `shared` because the homepage opens on it
+        too and the two must never drift apart; the paragraph that used to
+        explain it is gone, because a band with an explanation under it is not
+        a band, and the explanation restated the line.
 
-      {/* The guarantee — the strongest claim on the page belongs up front. */}
-      <Section width="medium">
-        <Reveal>
-          <div className="panel panel-raised" style={{ padding: 'clamp(26px, 4vw, 48px)' }}>
-            <span className="eyebrow eyebrow-accent" style={{ marginBottom: 18 }}>
-              {t('guarantee.eyebrow')}
-            </span>
-            <p
-              className="type-h3"
-              style={{ fontFamily: 'var(--font-display)', maxWidth: '30ch' }}
-            >
-              {t('guarantee.title')}
-            </p>
-            <p className="type-body measure" style={{ marginTop: 20 }}>
-              {t('guarantee.body')}
-            </p>
-            <p className="type-small" style={{ marginTop: 18, color: 'var(--text-quaternary)' }}>
-              {t('guarantee.note')}
-            </p>
-          </div>
-        </Reveal>
-      </Section>
+        The guarantee panel that sat immediately below this is also gone. It
+        was the same claim the CtaBand at the foot of this page already makes,
+        and the header footnote above already makes — three statements of one
+        promise inside one scroll reads as insistence rather than confidence.
+      */}
+      <SceneBand id={SPRINT_BAND} line={s('reframe.quote')} attribution={t('reframe.attr')} />
 
-      {/* The discipline roster; count comes from DISCIPLINES in lib/site.ts. */}
-      <Section width="medium">
-        <SectionHeader
-          eyebrow={t('disciplines.eyebrow')}
-          title={t('disciplines.title', numbers)}
-          lead={t('disciplines.lead')}
-        />
+      {/* The discipline roster; count comes from DISCIPLINES in lib/site.ts.
+          This is what the page is for, and it is now the only section on it
+          carrying feature weight. */}
+      <Section width="medium" tone="inset" weight="loud">
+        <SectionHeader title={t('disciplines.title', numbers)} lead={t('disciplines.lead')} />
         <div style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
           <DisciplineGrid
             items={s.raw('disciplines') as { label: string; pain: string; result: string }[]}
@@ -103,12 +78,8 @@ export default async function SprintPage({
       </Section>
 
       {/* Three synthesis layers. */}
-      <Section width="medium">
-        <SectionHeader
-          eyebrow={t('layers.eyebrow')}
-          title={t('layers.title')}
-          lead={t('layers.lead', numbers)}
-        />
+      <Section width="medium" weight="tight">
+        <SectionHeader title={t('layers.title')} lead={t('layers.lead', numbers)} />
         <div style={{ marginTop: 32 }}>
           <MediaCards
             items={t.raw('layers.items') as { title: string; body: string }[]}
@@ -121,12 +92,8 @@ export default async function SprintPage({
       {/* Delivery format — expectation-setting, not caveat. Same image-topped
           treatment as `layers` above and `inputs` below: this was the one
           three-item list on the page still rendered as a bare panel list. */}
-      <Section width="medium">
-        <SectionHeader
-          eyebrow={t('delivery.eyebrow')}
-          title={t('delivery.title')}
-          lead={t('delivery.lead')}
-        />
+      <Section width="medium" tone="raised">
+        <SectionHeader title={t('delivery.title')} lead={t('delivery.lead')} />
         <div style={{ marginTop: 32 }}>
           <MediaCards
             items={(t.raw('delivery.formats') as { label: string; items: string; body: string }[]).map(
@@ -141,12 +108,8 @@ export default async function SprintPage({
       </Section>
 
       {/* What we need from you. */}
-      <Section width="medium">
-        <SectionHeader
-          eyebrow={t('inputs.eyebrow')}
-          title={t('inputs.title')}
-          lead={t('inputs.lead')}
-        />
+      <Section width="medium" weight="tight">
+        <SectionHeader title={t('inputs.title')} lead={t('inputs.lead')} />
         <div style={{ marginTop: 32 }}>
           <MediaCards
             items={t.raw('inputs.items') as { title: string; body: string }[]}
@@ -158,7 +121,7 @@ export default async function SprintPage({
 
       {/* FAQ. */}
       <Section width="medium">
-        <SectionHeader eyebrow={t('faq.eyebrow')} title={t('faq.title')} />
+        <SectionHeader title={t('faq.title')} />
         {/* Answers go through `t()` rather than `t.raw()` so the discipline
             count in the first one stays wired to DISCIPLINES in lib/site.ts.
             Raw arrays skip ICU, which is how a hardcoded "thirteen" survived

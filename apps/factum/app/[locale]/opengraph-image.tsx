@@ -18,7 +18,14 @@ export default async function OpengraphImage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  /* The kicker used to be `home.hero.eyebrow`, which no longer exists — the
+     eyebrow was removed from every heading on the site. A share card is a
+     different medium from a page, though: it arrives with no surrounding
+     context, so one line saying what the company does earns its place above
+     the headline. `meta.home.title` is exactly that line and is already
+     maintained as the page's own title tag. */
   const t = await getTranslations({ locale, namespace: 'home.hero' });
+  const meta = await getTranslations({ locale, namespace: 'meta.home' });
 
   const [newsreader, inter, interBold] = await Promise.all([
     readFile(join(process.cwd(), 'assets/Newsreader-Medium.ttf')),
@@ -76,7 +83,7 @@ export default async function OpengraphImage({
               marginBottom: 28
             }}
           >
-            {t('eyebrow')}
+            {meta('title')}
           </div>
           <div
             style={{

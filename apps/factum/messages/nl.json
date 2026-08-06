@@ -244,63 +244,41 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Due diligence door de hele dealcyclus",
       "title": "Teken geen getal dat u niet gelezen hebt",
-      "lead": "Due diligence neemt een steekproef en rapporteert na weken. Wat is overgeslagen, ligt er nog steeds. Factum leest alles, in dagen, met de bronpassage achter elke bevinding.",
-      "cta": "Plan een intakegesprek van 30 minuten",
-      "secondary": "Bekijk hoe een bevinding eruitziet"
+      "lead": "Due diligence neemt een steekproef en rapporteert na weken. Factum leest alles, in dagen, met de bronpassage achter elke bevinding.",
+      "cta": "Plan een intakegesprek van 30 minuten"
     },
     "problem": {
-      "eyebrow": "Het probleem",
       "title": "Het getal ligt vast voordat de dataroom gelezen is",
       "lead": "Niet uit onzorgvuldigheid. Er was nooit tijd om alles te lezen.",
       "points": [
         {
           "title": "U werkt met een steekproef",
-          "body": "Klassiek boekenonderzoek leest een fractie van de dataroom, omdat het tijdpad een fractie toelaat. De rest zit er nog steeds in."
-        },
-        {
-          "title": "Wie het eerst vindt, bezit het",
-          "body": "Een bevinding in hun handen is een drukmiddel. Dezelfde bevinding in die van u is een positie."
+          "body": "Klassiek boekenonderzoek leest een fractie van de dataroom. De rest zit er nog steeds in."
         },
         {
           "title": "Eén discipline is geen due diligence",
           "body": "Een quality-of-earnings-analyse dekt de earnings. Wat misgaat zit tussen disciplines in, waar niemand keek."
-        },
-        {
-          "title": "U komt het na closing tegen",
-          "body": "Het gat tussen wat beoordeeld is en wat getekend is, is waar verrassingen na closing zitten."
         }
       ]
     },
+    "reframe": {
+      "attr": "Waarom een tweede lezing"
+    },
+    "guide": {
+      "title": "Doorgelicht zoals een bank dat doet, gebouwd zoals productiesoftware hoort te zijn",
+      "lead": "De blik van een bankier op risico. De discipline van een engineer voor systemen die niet stilletjes mogen falen.",
+      "link": "Maak kennis met het team"
+    },
+    "specimen": {
+      "title": "Eén bevinding, en de clausule waar hij vandaan komt",
+      "lead": "Opgesteld op een fictieve target. De vorm is de echte."
+    },
     "pipeline": {
-      "eyebrow": "Hoe het draait",
       "title": "Dezelfde vijf stappen, elk mandaat",
       "lead": "Iedereen kan een AI-tool op een dataroom richten. Het gaat om wat er elke keer gebeurt, of iemand nu meekijkt of niet.",
       "refusalTitle": "De lus weigert automatisch goed te keuren",
       "refusalNote": "Elke harde blokkade gaat naar een persoon.",
-      "stages": [
-        {
-          "title": "Gefundeerde retrieval",
-          "body": "Elke module gaat zelf de dataroom in en haalt de passages op die zijn vraag beantwoorden."
-        },
-        {
-          "title": "Opstellen",
-          "body": "Het schema weigert elke claim zonder document en passage erachter."
-        },
-        {
-          "title": "Generate-critique-retry",
-          "body": "Een reviewer-agent bekritiseert het concept en stuurt het terug."
-        },
-        {
-          "title": "Vierlaagse groundingcheck",
-          "body": "Index, citaat, entailment, second opinion."
-        },
-        {
-          "title": "Menselijke goedkeuringspoort",
-          "body": "Eén verplichte menselijke stap. Die draait elke keer."
-        }
-      ],
       "refusals": [
         "Verzonnen of gehallucineerde bronverwijzingen",
         "Privacylekken",
@@ -308,86 +286,45 @@
         "Concepten onder de reviewerdrempel"
       ]
     },
-    "plan": {
-      "eyebrow": "Zo begint het",
-      "title": "Drie stappen, en de eerste is een gesprek",
-      "lead": "Geen voorstel voordat we allebei weten dat het past.",
-      "steps": [
-        {
-          "title": "Plan een gesprek van 30 minuten",
-          "body": "We bepalen samen of dit bij uw situatie past."
-        },
-        {
-          "title": "Teken de NDA, wijs ons dan de dataroom aan",
-          "body": "Een NDA voordat er één document beweegt. U bepaalt de scope. Toegang loopt onder een verwerkersovereenkomst, in de EU, met zero retention."
-        },
-        {
-          "title": "Lees de bevindingen in dagen",
-          "body": "Elke bevinding noemt zijn bron. Een persoon met naam keurde die goed voordat u hem zag."
-        }
-      ]
+    "trust": {
+      "title": "Ingebouwd in hoe de pipeline draait",
+      "lead": "Elk punt hieronder is een mechanisme. Geen daarvan is een certificering.",
+      "link": "Lees de governancepagina"
     },
     "coverage": {
-      "eyebrow": "Dekking",
       "title": "De hele dataroom, geen steekproef",
-      "lead": "Elke discipline draait in dezelfde pass. Wat de één vindt, ligt bij de volgende op tafel — in plaats van in een tweede fase die er nooit komt.",
+      "lead": "Elke discipline, één pass. Wat de één vindt, ligt bij de volgende op tafel.",
       "note": "Op volgorde van afhankelijkheid: later werk wacht op de bevindingen die het nodig heeft.",
       "ctaLine": "Dit is de slag die uw team in twee weken niet haalt."
     },
-    "sprint": {
-      "eyebrow": "De opdracht",
-      "title": "De Diligence Sprint",
-      "lead": "Eén opdracht, elke discipline, plus de synthese daarbovenop. Draai hem op een target, op een onderneming die u al houdt, of op uw eigen bedrijf.",
-      "link": "Wat de sprint dekt"
-    },
     "cycle": {
-      "eyebrow": "Door de cyclus heen",
       "title": "Vijf momenten, één bewijsbasis",
       "lead": "Dezelfde room wordt opnieuw gelezen zodra iemand nieuw erop moet vertrouwen. Lees hem één keer, goed.",
       "stages": [
         {
           "title": "Kopen",
-          "body": "U prijst op wat de verkoper u wilde laten zien. Bevindingen landen terwijl ze prijs en structuur nog kunnen bewegen."
+          "body": "Bevindingen landen terwijl ze prijs en structuur nog kunnen bewegen."
         },
         {
           "title": "Financieren",
-          "body": "De financier doet hoe dan ook zijn eigen lezing. Geef hem een bewijsbasis die al onderbouwd is, zodat zijn ronde bevestigt in plaats van opnieuw begint."
+          "body": "De financier leest hem toch. Geef hem een basis die al onderbouwd is."
         },
         {
           "title": "Houden",
-          "body": "Convenantruimte schuift stilletjes. KPI-drift en vroege signalen, plus de waardehefbomen waar een risicolijst nooit naar kijkt."
+          "body": "Convenantruimte en KPI-drift, plus de hefbomen waar een risicolijst nooit naar kijkt."
         },
         {
           "title": "Verkopen",
-          "body": "De adviseurs van de koper vinden het. Draai hun slag eerst aan uw eigen kant, nu er nog tijd is om te repareren wat eruit komt."
+          "body": "Draai de slag van de koper eerst aan uw eigen kant, nu er nog tijd is."
         },
         {
           "title": "Herstructureren",
-          "body": "Opties sluiten sneller dan besluiten vallen. Continuïteit, crediteurenpositie en convenantruimte, terwijl er nog te kiezen valt."
+          "body": "Continuïteit, crediteurenpositie en convenantruimte, terwijl er nog te kiezen valt."
         }
       ],
-      "note": "Herstructureringswerk volgt de lokale jurisdictie. De rest van de cyclus is jurisdictieonafhankelijk.",
-      "ctaLine": "Eén lezing van de dataroom, bruikbaar op elk van deze vijf momenten."
-    },
-    "trust": {
-      "eyebrow": "Governance",
-      "title": "Ingebouwd in hoe de pipeline draait",
-      "lead": "Elk punt hieronder is een mechanisme. Geen daarvan is een certificering.",
-      "link": "Lees de governancepagina"
-    },
-    "cta": {
-      "title": "Begin met een gesprek, niet met een voorstel",
-      "body": "Dertig minuten om te zien of dit bij uw situatie past. Zo niet, dan zeggen we dat.",
-      "button": "Plan een intakegesprek van 30 minuten"
-    },
-    "guide": {
-      "eyebrow": "Wie het beoordeelt",
-      "title": "Doorgelicht zoals een bank dat doet, gebouwd zoals productiesoftware hoort te zijn",
-      "lead": "De blik van een bankier op risico, van binnenuit de instellingen die deals zoals de uwe financieren. De discipline van een engineer voor systemen die niet stilletjes mogen falen.",
-      "link": "Maak kennis met het team"
+      "link": "Wat de Diligence Sprint omvat"
     },
     "success": {
-      "eyebrow": "Erna",
       "title": "Wat er anders is als u tekent",
       "lead": "Geen beter rapport. Een andere positie aan tafel.",
       "points": [
@@ -397,30 +334,43 @@
         },
         {
           "title": "U weet al wat ze zullen vinden",
-          "body": "De adviseurs van de koper doorlopen deze analyse toch. Deze keer zag u het eerst, met tijd om het te verhelpen."
+          "body": "De adviseurs van de koper doorlopen deze analyse toch. Deze keer zag u het eerst."
+        }
+      ]
+    },
+    "plan": {
+      "title": "Drie stappen, en de eerste is een gesprek",
+      "lead": "Geen voorstel voordat we allebei weten dat het past.",
+      "steps": [
+        {
+          "title": "Plan een gesprek van 30 minuten",
+          "body": "We bepalen samen of dit bij uw situatie past."
         },
         {
-          "title": "Elke bevinding blijft herleidbaar tot de bron",
-          "body": "Maanden later kunt u nog steeds de passage openen waar een getal vandaan komt."
+          "title": "Teken de NDA, wijs ons dan de dataroom aan",
+          "body": "Een NDA voordat er één document beweegt. Toegang loopt onder een verwerkersovereenkomst, in de EU, met zero retention."
+        },
+        {
+          "title": "Lees de bevindingen in dagen",
+          "body": "Elke bevinding noemt zijn bron. Een persoon met naam keurde die goed voordat u hem zag."
         }
-      ],
-      "link": "Zie hoe een bevinding wordt opgebouwd"
+      ]
     },
-    "reframe": {
-      "body": "Uw adviseur leest de dataroom één keer, tegen de klok, op de vragen die hij meekreeg. Dit is een tweede lezing over het geheel, aan uw kant van de tafel, voordat iemand anders aan de beurt is."
+    "cta": {
+      "title": "Begin met een gesprek, niet met een voorstel",
+      "body": "Dertig minuten om te zien of dit bij uw situatie past. Zo niet, dan zeggen we dat.",
+      "button": "Plan een intakegesprek van 30 minuten"
     }
   },
   "platform": {
     "header": {
-      "eyebrow": "Het platform",
       "title": "Hoe we alles lezen zonder iets te verzinnen",
       "lead": "Eén agent met een groot contextvenster is geen due diligence. Dit is een dispatchgraaf, elk mandaat op dezelfde manier gedraaid.",
       "cta": "Bekijk de mechaniek in een gesprek"
     },
     "scale": {
-      "eyebrow": "De inventaris",
       "title": "Geteld uit de bron, niet geschat",
-      "lead": "Voor wie de vorm van de bouw wil zien. Elk getal hier is geteld uit de broncode van het product.",
+      "lead": "Wat er daadwerkelijk staat, geteld.",
       "tiles": {
         "modules": {
           "title": "Modules per opdracht",
@@ -453,15 +403,13 @@
       }
     },
     "coverage": {
-      "eyebrow": "De bibliotheek",
       "title": "De modulebibliotheek, in dispatchvolgorde",
       "lead": "Een module die op de output van een andere wacht, kan niet eerder starten. Die afhankelijkheid bepaalt de volgorde, niet onze voorkeur. Het label onder elke module zegt wat hij oplevert: een bevinding, een document, of een doorlopend signaal.",
       "note": "Afgeleid uit de dispatchgrafen in de broncode, niet geschat. ZDR markeert de modules waarvan de routing hard is vastgezet op een zero-retention EU-endpoint."
     },
     "pipeline": {
-      "eyebrow": "Binnen een module",
       "title": "Van upload naar een bevinding waar u iets mee kunt",
-      "lead": "Van upload tot concept-bevindingen zit er geen mens in de lus. Eén verplichte menselijke poort zit erachter.",
+      "lead": "Vijf stappen. Elke keer dezelfde vijf, of er nu iemand meekijkt of niet.",
       "stages": [
         {
           "title": "Gefundeerde retrieval",
@@ -492,9 +440,8 @@
       ]
     },
     "grounding": {
-      "eyebrow": "Grounding",
       "title": "Vier checks, elk smaller dan de vorige",
-      "lead": "Een bronverwijzing is pas bewijs als iets die heeft gelezen. Vier lagen doen dat, op volgorde.",
+      "lead": "Een claim moet alle vier overleven. Eén fout stuurt hem terug.",
       "catchLabel": "Vangt",
       "layers": [
         {
@@ -521,7 +468,6 @@
       "repair": "Claims die falen krijgen één reparatiepoging: opnieuw citeren uit de bron, dan opnieuw beoordelen. Wat dan nog faalt, gaat eruit of wordt gemarkeerd als onbevestigd."
     },
     "blocks": {
-      "eyebrow": "Harde blokkades",
       "title": "{blocks} condities die automatische goedkeuring stoppen",
       "lead": "Retries zijn gemaximeerd op twee per specialist. Deze condities beëindigen de lus hoe dan ook en sturen het concept naar een persoon.",
       "items": [
@@ -555,13 +501,7 @@
         }
       ]
     },
-    "anatomy": {
-      "eyebrow": "Het outputcontract",
-      "title": "Elke bevinding wijst terug naar een pagina",
-      "lead": "Het spoor is het product. Een bevinding die u niet naar een passage kunt terugbrengen, is een mening."
-    },
     "alternatives": {
-      "eyebrow": "De alternatieven",
       "title": "Drie andere manieren om dit te doen",
       "lead": "Vergeleken als categorieën gereedschap, niet als merknamen. Elk vinkje beantwoordt één vraag: doet deze categorie dit überhaupt.",
       "columns": [
@@ -606,7 +546,6 @@
       "note": "Categorieën, geen leveranciers. Producten veranderen per kwartaal en de meeste publieke claims erover komen van de leverancier zelf."
     },
     "limits": {
-      "eyebrow": "Grenzen",
       "title": "Wat we niet claimen over het platform",
       "lead": "Alles hierboven beschrijft een mechanisme. Niets ervan is een gecertificeerde meting.",
       "items": [
@@ -620,7 +559,6 @@
       ]
     },
     "faq": {
-      "eyebrow": "Vragen",
       "title": "De moeite waard voordat u het vraagt",
       "items": [
         {
@@ -654,22 +592,19 @@
   },
   "sprint": {
     "header": {
-      "eyebrow": "De Diligence Sprint",
       "title": "Zie wat een koper zou vinden, voordat hij het vindt",
       "lead": "Alle {disciplines} disciplines, afgestemd tot één verhaallijn. Gedraaid op een target, een onderneming die u houdt, of uw eigen bedrijf.",
       "cta": "Plan een intakegesprek van 30 minuten"
     },
     "reframe": {
-      "body": "Standaard krijgt de ene kant weken met de documenten en de opdracht om te vinden wat er mis is. De sprint draait diezelfde analyse eerst, aan uw kant van de tafel."
+      "attr": "Waarom een tweede lezing"
     },
     "disciplines": {
-      "eyebrow": "Scope",
       "title": "Per discipline afgebakend, niet per uur",
-      "lead": "Elke slag vooraf afgebakend op wat er voor die discipline toe doet.",
+      "lead": "Elk is een afgebakende slag met een eigen vraag en een eigen uitkomst.",
       "note": "Eén opdracht, één prijs. Geen à-la-cartemenu en geen upsell na ondertekening. Waar elke discipline naar kijkt, wordt in het intakegesprek tegen uw dataroom bepaald."
     },
     "layers": {
-      "eyebrow": "Synthese",
       "title": "Van losse analyses naar één oordeel",
       "lead": "Wat {disciplines} losse analyses tot één oplevering maakt, in plaats van {disciplines} losse rapporten.",
       "items": [
@@ -688,9 +623,8 @@
       ]
     },
     "delivery": {
-      "eyebrow": "Oplevering",
       "title": "Hoe het aankomt",
-      "lead": "De oplevering komt in twee pakketten, met dezelfde striktheid en dezelfde beoordeling erachter.",
+      "lead": "Drie vormen, vanaf dag één naast elkaar.",
       "formats": [
         {
           "label": "Review-dashboard",
@@ -709,16 +643,9 @@
         }
       ]
     },
-    "guarantee": {
-      "eyebrow": "De bevindingengarantie",
-      "title": "Drie materiële bevindingen, of de opdracht is gratis",
-      "body": "Materieel betekent: het verandert wat u vervolgens doet. Levert de sprint er geen drie op, dan betaalt u niets.",
-      "note": "Voor pilotmandaten zolang Factum pre-launch is. Wij dragen het risico dat dit vroeg is. Hoe een materiële bevinding wordt beoordeeld, staat in de opdrachtbevestiging."
-    },
     "inputs": {
-      "eyebrow": "Van u",
       "title": "Wat we nodig hebben om te beginnen",
-      "lead": "Geen managementworkshop, geen interviewschema, geen locatiebezoek.",
+      "lead": "Twee dingen, en geen van beide is een workshop.",
       "items": [
         {
           "title": "Toegang tot de dataroom",
@@ -731,7 +658,6 @@
       ]
     },
     "faq": {
-      "eyebrow": "Vragen",
       "title": "De vragen die het eerst komen",
       "items": [
         {
@@ -769,20 +695,17 @@
   },
   "governance": {
     "header": {
-      "eyebrow": "Governance",
       "title": "Hoe uw documenten worden behandeld, en wat we niet claimen",
       "lead": "Gegevensverwerking is ingebouwd in hoe de pipeline draait. Het is ook smaller dan de meeste securitypagina’s suggereren, dus deze pagina benoemt de grens.",
       "cta": "Stel de lastige vragen in een gesprek"
     },
     "data": {
-      "eyebrow": "Gegevensverwerking",
       "title": "Vier dingen die voor elke opdracht gelden",
-      "lead": "Elk hiervan beschrijft een mechanisme in de pipeline. Geen daarvan is een certificering."
+      "lead": "Vier mechanismen. Geen daarvan is een certificering."
     },
     "gate": {
-      "eyebrow": "De menselijke toets",
       "title": "De enige verplichte menselijke stap",
-      "lead": "De analyse draait zonder mens in de loop. De toets zit erachter, en is niet optioneel.",
+      "lead": "Een met naam genoemd persoon keurt elke output goed. Dit zijn de condities die dat afdwingen.",
       "items": [
         "Bevindingen worden voor levering teruggecheckt tegen de brondocumenten.",
         "De poort draait elke keer, automatisch.",
@@ -792,7 +715,6 @@
       ]
     },
     "transparency": {
-      "eyebrow": "AI-transparantie",
       "title": "Waar de machine ophoudt en een mens begint",
       "lead": "U moet voor elke bevinding kunnen zien wat die heeft geproduceerd en wat die heeft gecontroleerd.",
       "steps": [
@@ -806,7 +728,6 @@
       "humanLabel": "Mens"
     },
     "limits": {
-      "eyebrow": "Grenzen",
       "title": "Wat we niet claimen",
       "lead": "Het meeste van wat een koper op zo’n pagina wil zien, hebben we nog niet. Het opsommen is beter dan het suggereren.",
       "items": [
@@ -826,7 +747,6 @@
       "note": "Zonder voorstel."
     },
     "zdr": {
-      "eyebrow": "Zero retention",
       "title": "Drie modules weigeren te draaien op een model dat data bewaart",
       "lead": "Zero data retention is een routeringsregel in de code, geen belofte op een pagina. Fiscaal, juridisch en financieel zitten achter die poort.",
       "items": [
@@ -837,7 +757,6 @@
       ]
     },
     "learning": {
-      "eyebrow": "Wat het systeem leert",
       "title": "Twee geheugens, en maar één ervan wordt gedeeld",
       "lead": "We zeggen dit expliciet, omdat u hier niet naar zou moeten hoeven vragen.",
       "columns": [
@@ -863,7 +782,6 @@
       "note": "Is methodologisch leren tussen cliënten een probleem voor uw mandaat, zeg dat in het intakegesprek. Het kan voor uw account uit."
     },
     "grounding": {
-      "eyebrow": "Het gemeten getal",
       "title": "Eén benchmark, gepubliceerd met de kanttekeningen eraan vast",
       "lead": "Liever een getal met zijn grenzen dan helemaal geen getal.",
       "dialLabel": "Claims die gefundeerd zijn in een geciteerde passage of expliciet als onbevestigd zijn gemarkeerd",
@@ -876,7 +794,6 @@
       ]
     },
     "legal": {
-      "eyebrow": "Waarom het zo gebouwd is",
       "title": "Drie redenen dat dit geen chatvenster is",
       "lead": "Eén uit de rechtszaal. Eén uit uw eigen NDA. Eén uit het wetboek.",
       "items": [
@@ -896,7 +813,6 @@
       "note": "Niets hiervan is juridisch advies. Alle drie zijn redenen dat de pipeline is zoals hij is."
     },
     "terms": {
-      "eyebrow": "Wat wel geregeld is",
       "title": "De voorwaarden, voordat u erom vraagt",
       "lead": "De lijst verderop zegt wat we niet hebben. Dit zegt wat we wel hebben.",
       "items": [
@@ -930,7 +846,6 @@
   },
   "team": {
     "header": {
-      "eyebrow": "Team",
       "title": "Oordeel, niet alleen software",
       "lead": "De risicoblik van een bankier. De discipline van een engineer voor systemen die niet omvallen.",
       "cta": "Spreek de persoon die het beoordeelt"
@@ -1007,15 +922,13 @@
   },
   "partnerships": {
     "header": {
-      "eyebrow": "Partnerships",
       "title": "Meer mandaten dan uw team kan lezen",
       "lead": "U behoudt de relatie en het oordeel. Wij draaien de analyse over alle disciplines erachter, onder uw naam.",
       "cta": "Plan een scopinggesprek"
     },
     "who": {
-      "eyebrow": "Fit",
       "title": "Voor wie dit doorgaans werkt",
-      "lead": "Beschreven naar de vorm van het kantoor. De opdrachten van onze partners zijn aan hen om over te praten.",
+      "lead": "Beschreven naar het type kantoor, nooit bij naam.",
       "profiles": [
         {
           "title": "Corporate-finance-boutiques",
@@ -1036,7 +949,6 @@
       ]
     },
     "split": {
-      "eyebrow": "De verdeling",
       "title": "U houdt de relatie. Wij leveren de slag.",
       "lead": "Hetzelfde platform, alle disciplines, dezelfde toetsing. Geleverd onder uw naam.",
       "columns": [
@@ -1062,7 +974,6 @@
       "seam": "Grens"
     },
     "start": {
-      "eyebrow": "Beginnen",
       "title": "Hoe een partnership echt begint",
       "lead": "Met één echte opdracht, goed uitgevoerd, voordat iemand zich ergens aan bindt.",
       "steps": [
@@ -1081,7 +992,6 @@
       ]
     },
     "boundaries": {
-      "eyebrow": "Grenzen",
       "title": "Wat een partnership niet omvat",
       "lead": "Sommige hiervan zijn toezeggingen aan bestaande partners. De rest is de eerlijke stand van een pre-launch bedrijf.",
       "items": [
@@ -1093,7 +1003,6 @@
       ]
     },
     "faq": {
-      "eyebrow": "Vragen",
       "title": "Wat partners als eerste vragen",
       "items": [
         {
@@ -1123,13 +1032,11 @@
   },
   "contact": {
     "header": {
-      "eyebrow": "Contact",
       "title": "Eén gesprek, met de persoon die de output beoordeelt",
       "lead": "Er staat geen formulier op deze pagina. Een formulier impliceert een wachtrij en een behandelaar. Er is een agenda.",
       "cta": "Plan een intakegesprek van 30 minuten"
     },
     "call": {
-      "eyebrow": "Intake",
       "title": "Plan dertig minuten",
       "lead": "Een scopinggesprek. Als uw situatie er geen is waar dit bij helpt, is dat een sneller antwoord dan een voorstel.",
       "button": "Plan een intakegesprek",
@@ -1151,7 +1058,6 @@
       "lead": "Het intakegesprek vraagt niets anders dan het gesprek zelf. Toegang tot documenten wordt daarna schriftelijk afgesproken."
     },
     "details": {
-      "eyebrow": "Gegevens",
       "title": "Met wie u te maken heeft",
       "entityLabel": "Entiteit",
       "entityValue": "Agentic Mindshift Consultancy, Nederland. Factum Capital is de handelsnaam tot de oprichting rond is.",
@@ -1162,7 +1068,6 @@
   },
   "privacy": {
     "header": {
-      "eyebrow": "Privacy",
       "title": "Wat deze site verzamelt, en wat een opdracht doet",
       "lead": "Deze pagina gaat over de website. De gegevensverwerking binnen een opdracht is geregeld in de overeenkomst die we tekenen."
     },

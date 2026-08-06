@@ -8,8 +8,9 @@ type Row = {
 /**
  * The output contract, not a sample finding. Every field here is required
  * before the pipeline marks a finding finished. The values describe the shape
- * each field has to take; the worked example lives on /platform#anatomy, where
- * there is room to show the quote next to the claim it supports.
+ * each field has to take; the worked example lives at /#anatomy, further down
+ * the homepage, where there is room to show the quote next to the claim it
+ * supports.
  *
  * On a phone the last two rows are held back. Measured at 386px the hero copy
  * alone runs to 1,199px against an 840px fold, so this artefact — the strongest

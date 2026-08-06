@@ -18,7 +18,6 @@ import Pipeline from '@/components/Pipeline';
 import BentoGrid from '@/components/BentoGrid';
 import DispatchGraph from '@/components/DispatchGraph';
 import GroundingStack from '@/components/GroundingStack';
-import Specimen from '@/components/Specimen';
 import ComparisonMatrix, { type Verdict } from '@/components/ComparisonMatrix';
 import Disclosures from '@/components/Disclosures';
 import CtaBand from '@/components/CtaBand';
@@ -78,7 +77,6 @@ export default async function PlatformPage({
   return (
     <>
       <PageHeader
-        eyebrow={t('header.eyebrow')}
         title={t('header.title', n)}
         lead={t('header.lead')}
         cta={t('header.cta')}
@@ -117,11 +115,7 @@ export default async function PlatformPage({
       <Section id="pipeline">
         <div className="split-grid">
           <div className="split-sticky">
-            <SectionHeader
-              eyebrow={t('pipeline.eyebrow')}
-              title={t('pipeline.title')}
-              lead={t('pipeline.lead')}
-            />
+            <SectionHeader title={t('pipeline.title')} lead={t('pipeline.lead')} />
           </div>
           <Pipeline
             stages={t.raw('pipeline.stages') as { title: string; body: string; note?: string }[]}
@@ -129,14 +123,12 @@ export default async function PlatformPage({
         </div>
       </Section>
 
-      {/* The four grounding layers, drawn as a narrowing stack. */}
-      <Section id="grounding" width="wide">
-        <SectionHeader
-          eyebrow={t('grounding.eyebrow')}
-          title={t('grounding.title')}
-          lead={t('grounding.lead')}
-          align="wide"
-        />
+      {/* The four grounding layers, drawn as a narrowing stack. The one
+          feature-weight section on this page: it is the mechanism the whole
+          site's central claim rests on, and it was previously given exactly the
+          same padding as the FAQ. */}
+      <Section id="grounding" width="wide" tone="inset" weight="loud">
+        <SectionHeader title={t('grounding.title')} lead={t('grounding.lead')} align="wide" />
         <div style={{ marginTop: 'clamp(32px, 4vw, 52px)' }}>
           <GroundingStack
             layers={
@@ -156,13 +148,8 @@ export default async function PlatformPage({
       </Section>
 
       {/* The seven hard blocks. */}
-      <Section width="wide">
-        <SectionHeader
-          eyebrow={t('blocks.eyebrow')}
-          title={t('blocks.title', n)}
-          lead={t('blocks.lead')}
-          align="wide"
-        />
+      <Section width="wide" weight="tight">
+        <SectionHeader title={t('blocks.title', n)} lead={t('blocks.lead')} align="wide" />
         <div style={{ marginTop: 'clamp(28px, 4vw, 48px)' }}>
           <BentoGrid
             tiles={(t.raw('blocks.items') as { title: string; body: string }[]).map(
@@ -176,36 +163,17 @@ export default async function PlatformPage({
         </div>
       </Section>
 
-      {/* The trace, at full size — the one feature moment on this page. */}
-      <Section id="anatomy" width="wide" tone="inset">
-        <SectionHeader
-          eyebrow={t('anatomy.eyebrow')}
-          title={t('anatomy.title')}
-          lead={t('anatomy.lead')}
-          align="wide"
-        />
-        <div style={{ marginTop: 'clamp(32px, 4vw, 52px)' }}>
-          {/* The row keys are the output contract, shared with the hero schema.
-              The values are the worked example and live under `specimen`, so
-              the contract can stay abstract while this one stays concrete. */}
-          <Specimen
-            pageLabel={s('specimen.pageLabel')}
-            pageRef={s('specimen.pageRef')}
-            highlightLabel={s('specimen.highlight')}
-            findingLabel={s('specimen.findingLabel')}
-            quote={s('specimen.quote')}
-            tag={s('specimen.tag')}
-            footnote={s('specimen.footnote')}
-            rows={[
-              { key: s('schema.rows.module'), value: s('specimen.values.module') },
-              { key: s('schema.rows.finding'), value: s('specimen.values.finding') },
-              { key: s('schema.rows.evidence'), value: s('specimen.values.evidence') },
-              { key: s('schema.rows.document'), value: s('specimen.values.document') },
-              { key: s('schema.rows.review'), value: s('specimen.values.review') }
-            ]}
-          />
-        </div>
-      </Section>
+      {/*
+        `Specimen` used to sit here, under an "anatomy of a finding" heading.
+        It has moved to the homepage.
+
+        It is the most persuasive object the site owns and it was four scrolls
+        deep on a page a cold visitor rarely reaches — /platform is where
+        someone goes once they already believe there is something to look at.
+        Its departure also settles the 101 phrases this page shared with the
+        homepage: the home page now shows the output, this page keeps the
+        mechanism that produces it.
+      */}
 
       {/* The library and the running order, as one graph.
 
@@ -217,13 +185,8 @@ export default async function PlatformPage({
           post-close on its own clock. Each node now carries what it returns —
           finding, document, or ongoing signal — which is the question a buyer
           is actually asking. */}
-      <Section id="modules" width="wide">
-        <SectionHeader
-          eyebrow={t('coverage.eyebrow')}
-          title={t('coverage.title')}
-          lead={t('coverage.lead', n)}
-          align="wide"
-        />
+      <Section id="modules" width="wide" tone="raised">
+        <SectionHeader title={t('coverage.title')} lead={t('coverage.lead', n)} align="wide" />
         <div style={{ marginTop: 'clamp(32px, 4vw, 52px)' }}>
           <DispatchGraph
             labels={s.raw('modules') as string[]}
@@ -249,13 +212,8 @@ export default async function PlatformPage({
       </Section>
 
       {/* The inventory, as one grid of measured numbers. */}
-      <Section width="wide">
-        <SectionHeader
-          eyebrow={t('scale.eyebrow')}
-          title={t('scale.title')}
-          lead={t('scale.lead')}
-          align="wide"
-        />
+      <Section width="wide" weight="tight">
+        <SectionHeader title={t('scale.title')} lead={t('scale.lead')} align="wide" />
         <div style={{ marginTop: 'clamp(32px, 4vw, 52px)' }}>
           <BentoGrid
             /* The three-way split leads, because it is the answer to "what do
@@ -278,12 +236,7 @@ export default async function PlatformPage({
 
       {/* The three alternatives, scored. */}
       <Section id="alternatives" width="wide">
-        <SectionHeader
-          eyebrow={t('alternatives.eyebrow')}
-          title={t('alternatives.title')}
-          lead={t('alternatives.lead')}
-          align="wide"
-        />
+        <SectionHeader title={t('alternatives.title')} lead={t('alternatives.lead')} align="wide" />
         <div style={{ marginTop: 'clamp(32px, 4vw, 52px)' }}>
           <ComparisonMatrix
             columns={t.raw('alternatives.columns') as string[]}
@@ -311,12 +264,8 @@ export default async function PlatformPage({
       </Section>
 
       {/* What we don't claim. */}
-      <Section width="medium">
-        <SectionHeader
-          eyebrow={t('limits.eyebrow')}
-          title={t('limits.title')}
-          lead={t('limits.lead')}
-        />
+      <Section width="medium" weight="tight">
+        <SectionHeader title={t('limits.title')} lead={t('limits.lead')} />
         <Reveal delay={60} style={{ marginTop: 28 }}>
           <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
             {(t.raw('limits.items') as string[]).map((item) => (
@@ -336,7 +285,7 @@ export default async function PlatformPage({
       </Section>
 
       <Section width="medium">
-        <SectionHeader eyebrow={t('faq.eyebrow')} title={t('faq.title')} />
+        <SectionHeader title={t('faq.title')} />
         <Reveal delay={60} style={{ marginTop: 28 }}>
           <Disclosures
             items={(t.raw('faq.items') as { q: string }[]).map((item, i) => ({

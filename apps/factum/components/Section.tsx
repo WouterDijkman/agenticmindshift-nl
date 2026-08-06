@@ -4,23 +4,36 @@ import Reveal from './Reveal';
 export function Section({
   children,
   seam = true,
-  tight = false,
+  weight = 'normal',
   id,
   width = 'wide',
   tone = 'default'
 }: {
   children: ReactNode;
   seam?: boolean;
-  tight?: boolean;
   id?: string;
   width?: 'narrow' | 'medium' | 'wide';
-  /** 'inset' is the one full-width feature moment per page — use it once. */
-  tone?: 'default' | 'inset';
+  /**
+   * How much air the section gets. Not a style choice per call site — a claim
+   * about how much this section matters relative to the ones around it. The
+   * page used to run one value for all of them, which is why it read as a
+   * stack of equal trays; `loud` is for the argument the page is actually
+   * built on and should appear once, `tight` for a coda hanging off the
+   * section above it.
+   */
+  weight?: 'tight' | 'normal' | 'loud';
+  /** A change of ground. At most two non-default bands per page. */
+  tone?: 'default' | 'inset' | 'raised';
 }) {
+  const weightClass =
+    weight === 'tight' ? 'section-tight' : weight === 'loud' ? 'section-loud' : '';
+  const toneClass =
+    tone === 'inset' ? 'section-inset' : tone === 'raised' ? 'section-raised' : '';
+
   return (
     <section
       id={id}
-      className={`section ${tight ? 'section-tight' : ''} ${seam ? 'seam' : ''} ${tone === 'inset' ? 'section-inset' : ''}`}
+      className={`section ${weightClass} ${seam ? 'seam' : ''} ${toneClass}`}
       style={{ scrollMarginTop: 80 }}
     >
       {/*
@@ -40,14 +53,31 @@ export function Section({
   );
 }
 
+/**
+ * There is no `eyebrow` prop here any more, and that is the point.
+ *
+ * This site carried forty-six of them — a mono, uppercase, wine-coloured label
+ * above every single heading on every single page. It reads as a house style
+ * until you notice that the house style *is* the repetition the reader is
+ * complaining about: thirty-eight sections that all begin with the same three
+ * moves in the same order.
+ *
+ * Of the eight sites this was measured against, five ship none at all —
+ * Linear, Vercel, Cursor, Resend and Rogo have literally zero. Hebbia uses
+ * them on about half its sections and Clay on a minority. Nobody at this tier
+ * puts one on everything.
+ *
+ * Eyebrows that do real work are still allowed; they just are not a property
+ * of "a section". A panel label ("Output contract — every finding"), a refusal
+ * heading, a column label in a split — those name a specific artefact and stay
+ * as plain `.eyebrow` spans where they belong.
+ */
 export function SectionHeader({
-  eyebrow,
   title,
   lead,
   align = 'left',
   children
 }: {
-  eyebrow?: string;
   title: string;
   lead?: string;
   align?: 'left' | 'wide';
@@ -55,14 +85,9 @@ export function SectionHeader({
 }) {
   return (
     <Reveal className="measure" style={align === 'wide' ? { maxWidth: '78ch' } : undefined}>
-      {eyebrow && (
-        <span className="eyebrow eyebrow-accent" style={{ marginBottom: 18 }}>
-          {eyebrow}
-        </span>
-      )}
       <h2 className="type-h2">{title}</h2>
       {lead && (
-        <p className="type-lead" style={{ marginTop: 20 }}>
+        <p className="type-lead" style={{ marginTop: 24 }}>
           {lead}
         </p>
       )}
@@ -77,13 +102,11 @@ export function SectionHeader({
  * heading steps down to h3 rather than starting a new h2 block.
  */
 export function SubHeader({
-  eyebrow,
   title,
   lead,
   className = '',
   children
 }: {
-  eyebrow?: string;
   title: string;
   lead?: string;
   className?: string;
@@ -91,11 +114,6 @@ export function SubHeader({
 }) {
   return (
     <Reveal className={`measure ${className}`}>
-      {eyebrow && (
-        <span className="eyebrow eyebrow-accent" style={{ marginBottom: 14 }}>
-          {eyebrow}
-        </span>
-      )}
       <h3 className="type-h3">{title}</h3>
       {lead && (
         <p className="type-body" style={{ marginTop: 14 }}>

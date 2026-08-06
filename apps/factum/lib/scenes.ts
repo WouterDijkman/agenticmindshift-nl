@@ -46,13 +46,24 @@ export type SceneId =
   | 'bolt'
   | 'splice';
 
-/** Home — the problem. */
+/** Home — the problem. Two cards; it was four until the homepage was cut. */
 export const HOME_PROBLEM: SceneId[] = [
   'index', // working from a sample — a wall of card edges, one blank card drawn out
-  'loupe', // whoever finds it first — one disc of light, one fibre lit inside it
-  'caliper', // one discipline is not diligence — two lit edges, the gap between them black
-  'seal' // you find out after closing — settled dust, and the shape of what was lifted away
+  'caliper' // one discipline is not diligence — two lit edges, the gap between them black
 ];
+
+/**
+ * Home — the reframe, full width.
+ *
+ * The only scene on the site rendered at 100vw rather than inside a card, and
+ * the one where the choice of picture carries the most. `seal` is settled dust
+ * with the shape of something swept out of it: what was there, and the fact
+ * that you can still see where it was. That is the sentence it sits under.
+ *
+ * It also happens to be the frame that suffered most at card size — the whole
+ * subject is falloff and grain, and neither survives a 340px crop.
+ */
+export const HOME_BAND: SceneId = 'seal';
 
 /**
  * Home — the section that points at who runs this.
@@ -62,7 +73,13 @@ export const HOME_PROBLEM: SceneId[] = [
  */
 export const HOME_GUIDE: SceneId = 'splice';
 
-/** Shared governance copy. Rendered on the homepage and on /governance, same four both times. */
+/**
+ * /governance — the four mechanisms.
+ *
+ * These were rendered on the homepage too, from the same shared copy, with the
+ * same four photographs. Identical cards on two pages is the most literal form
+ * the repetition took. The homepage now carries the heading and a link.
+ */
 export const GOVERNANCE_POINTS: SceneId[] = [
   'tumbler', // EU-hosted — the dial of a safe
   'tape', // zero retention — the storage medium, and nothing kept on it
@@ -70,11 +87,10 @@ export const GOVERNANCE_POINTS: SceneId[] = [
   'readout' // one accountable contact — one lamp lit in a row that stays dark
 ];
 
-/** Home — what good looks like. */
+/** Home — what good looks like. Two cards; the third duplicated the specimen. */
 export const HOME_SUCCESS: SceneId[] = [
   'balance', // the price reflects the whole room — the beam hanging dead level
-  'sheaf', // you already know what they'll find — the whole stack, read end to end
-  'plotter' // every finding traces to its source — a pen drawing the line back
+  'sheaf' // you already know what they'll find — the whole stack, read end to end
 ];
 
 /** /partnerships — who this is for. */
@@ -84,6 +100,18 @@ export const PARTNER_PROFILES: SceneId[] = [
   'bolt', // restructuring — a wedge under the block, taking the weight
   'loupe' // PE and buy-side — the one lit disc, everything in it sharp
 ];
+
+/**
+ * /diligence-sprint — the reframe, full width.
+ *
+ * The second and last 100vw scene on the site. `micrometer` is the graduated
+ * reference laid down before anything is measured against it, which is the
+ * sentence: checking your own work first is not an admission, it is the
+ * baseline. It carries the same line as HOME_BAND and deliberately does not
+ * carry the same picture — a reader arriving here from the homepage should
+ * recognise the argument, not think the page failed to load.
+ */
+export const SPRINT_BAND: SceneId = 'micrometer';
 
 /** /diligence-sprint — what the sprint adds. */
 export const SPRINT_LAYERS: SceneId[] = [
@@ -114,9 +142,11 @@ const MANIFEST = new Set(slots.scenes.map((s) => s.id));
 for (const id of [
   ...HOME_PROBLEM,
   HOME_GUIDE,
+  HOME_BAND,
   ...GOVERNANCE_POINTS,
   ...HOME_SUCCESS,
   ...PARTNER_PROFILES,
+  SPRINT_BAND,
   ...SPRINT_LAYERS,
   ...SPRINT_FORMATS,
   ...SPRINT_INPUTS
@@ -133,10 +163,10 @@ for (const id of [
  * old index-based assignment produced.
  */
 for (const [page, ids] of [
-  ['home', [...HOME_PROBLEM, HOME_GUIDE, ...GOVERNANCE_POINTS, ...HOME_SUCCESS]],
+  ['home', [...HOME_PROBLEM, HOME_GUIDE, HOME_BAND, ...HOME_SUCCESS]],
   ['governance', GOVERNANCE_POINTS],
   ['partnerships', PARTNER_PROFILES],
-  ['diligence-sprint', [...SPRINT_LAYERS, ...SPRINT_FORMATS, ...SPRINT_INPUTS]]
+  ['diligence-sprint', [SPRINT_BAND, ...SPRINT_LAYERS, ...SPRINT_FORMATS, ...SPRINT_INPUTS]]
 ] as const) {
   const seen = new Set<string>();
   for (const id of ids) {

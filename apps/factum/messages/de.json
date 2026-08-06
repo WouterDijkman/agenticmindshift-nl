@@ -244,63 +244,41 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Due Diligence über den gesamten Deal-Zyklus",
       "title": "Unterschreiben Sie keine Zahl, die Sie nicht gelesen haben",
-      "lead": "Due Diligence zieht eine Stichprobe und berichtet nach Wochen. Was sie übersprungen hat, liegt weiterhin im Raum. Factum liest alles, in Tagen, mit der Quellpassage hinter jedem Befund.",
-      "cta": "Erstgespräch über 30 Minuten buchen",
-      "secondary": "So sieht ein Befund aus"
+      "lead": "Due Diligence zieht eine Stichprobe und berichtet nach Wochen. Factum liest alles, in Tagen, mit der Quellpassage hinter jedem Befund.",
+      "cta": "Erstgespräch über 30 Minuten buchen"
     },
     "problem": {
-      "eyebrow": "Das Problem",
       "title": "Die Zahl steht fest, bevor der Raum gelesen ist",
       "lead": "Nicht aus Nachlässigkeit. Es war nie genug Zeit, alles zu lesen.",
       "points": [
         {
           "title": "Sie arbeiten mit einer Stichprobe",
-          "body": "Klassische Due Diligence liest einen Bruchteil des Datenraums, weil der Zeitplan einen Bruchteil zulässt. Der Rest liegt weiter darin."
-        },
-        {
-          "title": "Wer zuerst findet, besitzt es",
-          "body": "Ein Befund in deren Händen ist ein Hebel. Derselbe Befund in Ihren ist eine Position."
+          "body": "Klassische Due Diligence liest einen Bruchteil des Datenraums. Der Rest liegt weiter darin."
         },
         {
           "title": "Eine Disziplin ist keine Due Diligence",
           "body": "Eine Quality-of-Earnings-Analyse deckt die Earnings ab. Was schiefgeht, liegt zwischen den Disziplinen, wo niemand hingesehen hat."
-        },
-        {
-          "title": "Sie erfahren es nach dem Closing",
-          "body": "Die Lücke zwischen dem Geprüften und dem Unterschriebenen ist der Ort für Überraschungen nach dem Closing."
         }
       ]
     },
+    "reframe": {
+      "attr": "Warum ein zweiter Durchgang"
+    },
+    "guide": {
+      "title": "Geprüft wie eine Bank es täte, gebaut wie Produktionssoftware es sein muss",
+      "lead": "Der Blick eines Bankers auf Risiko. Die Disziplin eines Ingenieurs für Systeme, die nicht leise versagen dürfen.",
+      "link": "Das Team kennenlernen"
+    },
+    "specimen": {
+      "title": "Ein Befund, und die Klausel, aus der er stammt",
+      "lead": "Konstruiert an einem fiktiven Target. Die Form ist die echte."
+    },
     "pipeline": {
-      "eyebrow": "Wie es läuft",
       "title": "Dieselben fünf Schritte, bei jedem Mandat",
       "lead": "Jeder kann ein KI-Tool auf einen Datenraum richten. Entscheidend ist, was jedes Mal passiert, ob jemand zusieht oder nicht.",
       "refusalTitle": "Die Schleife verweigert die automatische Freigabe",
       "refusalNote": "Jede harte Blockade geht an einen Menschen.",
-      "stages": [
-        {
-          "title": "Fundierte Retrieval",
-          "body": "Jedes Modul geht selbst in den Datenraum und holt die Passagen, die seine Frage beantworten."
-        },
-        {
-          "title": "Entwurf",
-          "body": "Das Schema weist jede Aussage ohne Dokument und Passage zurück."
-        },
-        {
-          "title": "Generate-Critique-Retry",
-          "body": "Ein Reviewer-Agent kritisiert den Entwurf und schickt ihn zurück."
-        },
-        {
-          "title": "Vierstufige Grounding-Prüfung",
-          "body": "Index, Zitat, Entailment, Zweitmeinung."
-        },
-        {
-          "title": "Menschliches Freigabetor",
-          "body": "Ein verpflichtender menschlicher Schritt. Er läuft jedes Mal."
-        }
-      ],
       "refusals": [
         "Erfundene oder halluzinierte Fundstellen",
         "Datenschutzlecks",
@@ -308,86 +286,45 @@
         "Entwürfe unter dem Reviewer-Schwellenwert"
       ]
     },
-    "plan": {
-      "eyebrow": "So fangen wir an",
-      "title": "Drei Schritte, und der erste ist ein Gespräch",
-      "lead": "Kein Angebot, bevor wir beide wissen, dass es passt.",
-      "steps": [
-        {
-          "title": "Buchen Sie 30 Minuten",
-          "body": "Wir klären, ob das zu Ihrer Situation passt."
-        },
-        {
-          "title": "NDA unterschreiben, dann den Datenraum zeigen",
-          "body": "Ein NDA, bevor sich ein einziges Dokument bewegt. Sie legen den Umfang fest. Der Zugang läuft unter einem AV-Vertrag, in der EU, mit Zero Retention."
-        },
-        {
-          "title": "Lesen Sie die Befunde in Tagen",
-          "body": "Jeder nennt seine Quelle. Eine namentlich benannte Person hat ihn freigegeben, bevor er Sie erreicht."
-        }
-      ]
+    "trust": {
+      "title": "In den Ablauf der Pipeline eingebaut",
+      "lead": "Jeder Punkt unten beschreibt einen Mechanismus. Keiner davon ist eine Zertifizierung.",
+      "link": "Die Governance-Seite lesen"
     },
     "coverage": {
-      "eyebrow": "Abdeckung",
       "title": "Der ganze Datenraum, keine Stichprobe",
-      "lead": "Jede Disziplin läuft im selben Durchgang. Was die eine findet, liegt bei der nächsten auf dem Tisch — statt in einer zweiten Phase, die nie kommt.",
+      "lead": "Jede Disziplin, ein Durchgang. Was die eine findet, liegt bei der nächsten auf dem Tisch.",
       "note": "Nach Abhängigkeit geordnet: spätere Arbeit wartet auf die Befunde, die sie braucht.",
       "ctaLine": "Das ist der Durchgang, den Ihr Team in zwei Wochen nicht schafft."
     },
-    "sprint": {
-      "eyebrow": "Das Mandat",
-      "title": "Der Diligence Sprint",
-      "lead": "Ein Mandat, jede Disziplin, plus die Synthese darüber. Auf einem Target, auf einem Unternehmen, das Sie halten, oder auf Ihrem eigenen Betrieb.",
-      "link": "Was der Sprint abdeckt"
-    },
     "cycle": {
-      "eyebrow": "Über den Zyklus",
       "title": "Fünf Momente, eine Beweisbasis",
       "lead": "Derselbe Raum wird neu gelesen, sobald jemand Neues ihm vertrauen muss. Lesen Sie ihn einmal, richtig.",
       "stages": [
         {
           "title": "Kaufen",
-          "body": "Sie bepreisen, was der Verkäufer Ihnen zeigen wollte. Befunde landen, solange sie Preis und Struktur noch bewegen können."
+          "body": "Befunde landen, solange sie Preis und Struktur noch bewegen können."
         },
         {
           "title": "Finanzieren",
-          "body": "Der Kreditgeber macht ohnehin seine eigene Prüfung. Geben Sie ihm eine bereits belegte Beweisbasis, damit sein Durchgang bestätigt statt neu anzufangen."
+          "body": "Der Kreditgeber prüft ohnehin. Geben Sie ihm eine bereits belegte Basis."
         },
         {
           "title": "Halten",
-          "body": "Covenant-Spielraum verschiebt sich leise. KPI-Drift und Frühwarnsignale, plus die Werthebel, nach denen eine Risikoliste nie sucht."
+          "body": "Covenant-Spielraum und KPI-Drift, plus die Hebel, nach denen eine Risikoliste nie sucht."
         },
         {
           "title": "Verkaufen",
-          "body": "Die Berater des Käufers werden es finden. Fahren Sie deren Durchgang zuerst auf Ihrer Seite, solange noch Zeit bleibt, das Gefundene zu beheben."
+          "body": "Fahren Sie den Durchgang des Käufers zuerst auf Ihrer Seite, solange noch Zeit bleibt."
         },
         {
           "title": "Restrukturieren",
-          "body": "Optionen schließen sich schneller, als Entscheidungen fallen. Fortführung, Gläubigerposition und Covenant-Spielraum, solange noch zu wählen ist."
+          "body": "Fortführung, Gläubigerposition und Covenant-Spielraum, solange noch zu wählen ist."
         }
       ],
-      "note": "Restrukturierungsarbeit folgt dem lokalen Rechtsraum. Der Rest des Zyklus ist rechtsraumunabhängig.",
-      "ctaLine": "Ein Durchgang durch den Datenraum, nutzbar an jedem dieser fünf Punkte."
-    },
-    "trust": {
-      "eyebrow": "Governance",
-      "title": "In den Ablauf der Pipeline eingebaut",
-      "lead": "Jeder Punkt unten beschreibt einen Mechanismus. Keiner davon ist eine Zertifizierung.",
-      "link": "Die Governance-Seite lesen"
-    },
-    "cta": {
-      "title": "Beginnen Sie mit einem Gespräch, nicht mit einem Angebot",
-      "body": "Dreißig Minuten, um zu sehen, ob das zu Ihrer Situation passt. Wenn nicht, sagen wir das.",
-      "button": "Erstgespräch über 30 Minuten buchen"
-    },
-    "guide": {
-      "eyebrow": "Wer es liest",
-      "title": "Geprüft wie eine Bank es täte, gebaut wie Produktionssoftware es sein muss",
-      "lead": "Der Blick eines Bankers auf Risiko, aus dem Inneren der Institute, die Deals wie Ihren finanzieren. Die Disziplin eines Ingenieurs für Systeme, die nicht leise versagen dürfen.",
-      "link": "Das Team kennenlernen"
+      "link": "Was der Diligence Sprint umfasst"
     },
     "success": {
-      "eyebrow": "Danach",
       "title": "Was sich ändert, wenn Sie unterschreiben",
       "lead": "Kein besserer Bericht. Eine andere Position am Tisch.",
       "points": [
@@ -397,30 +334,43 @@
         },
         {
           "title": "Sie wissen schon, was sie finden werden",
-          "body": "Die Berater des Käufers führen diese Prüfung ohnehin durch. Diesmal haben Sie es zuerst gesehen, mit Zeit zum Beheben."
+          "body": "Die Berater des Käufers führen diese Prüfung ohnehin durch. Diesmal haben Sie es zuerst gesehen."
+        }
+      ]
+    },
+    "plan": {
+      "title": "Drei Schritte, und der erste ist ein Gespräch",
+      "lead": "Kein Angebot, bevor wir beide wissen, dass es passt.",
+      "steps": [
+        {
+          "title": "Buchen Sie 30 Minuten",
+          "body": "Wir klären, ob das zu Ihrer Situation passt."
         },
         {
-          "title": "Jede Feststellung bleibt bis zur Quelle rückverfolgbar",
-          "body": "Monate später können Sie noch immer die Passage öffnen, aus der eine Zahl stammt."
+          "title": "NDA unterschreiben, dann den Datenraum zeigen",
+          "body": "Ein NDA, bevor sich ein einziges Dokument bewegt. Der Zugang läuft unter einem AV-Vertrag, in der EU, mit Zero Retention."
+        },
+        {
+          "title": "Lesen Sie die Befunde in Tagen",
+          "body": "Jeder nennt seine Quelle. Eine namentlich benannte Person hat ihn freigegeben, bevor er Sie erreicht."
         }
-      ],
-      "link": "Sehen, wie eine Feststellung entsteht"
+      ]
     },
-    "reframe": {
-      "body": "Ihr Berater liest den Datenraum einmal, gegen die Uhr, auf die Fragen, die man ihm gestellt hat. Dies ist ein zweiter Durchgang über alles, auf Ihrer Seite des Tisches, bevor jemand anders an die Reihe kommt."
+    "cta": {
+      "title": "Beginnen Sie mit einem Gespräch, nicht mit einem Angebot",
+      "body": "Dreißig Minuten, um zu sehen, ob das zu Ihrer Situation passt. Wenn nicht, sagen wir das.",
+      "button": "Erstgespräch über 30 Minuten buchen"
     }
   },
   "platform": {
     "header": {
-      "eyebrow": "Die Plattform",
       "title": "Wie wir alles lesen, ohne etwas zu erfinden",
       "lead": "Ein Agent mit großem Kontextfenster ist keine Due Diligence. Das hier ist ein Dispatch-Graph, bei jedem Mandat gleich gefahren.",
       "cta": "Die Mechanik im Gespräch ansehen"
     },
     "scale": {
-      "eyebrow": "Der Bestand",
       "title": "Aus der Quelle gezählt, nicht geschätzt",
-      "lead": "Für Leser, die die Form des Baus sehen wollen. Jede Zahl hier ist aus dem Produkt-Quellcode gezählt.",
+      "lead": "Was tatsächlich gebaut ist, gezählt.",
       "tiles": {
         "modules": {
           "title": "Module pro Mandat",
@@ -453,15 +403,13 @@
       }
     },
     "coverage": {
-      "eyebrow": "Die Bibliothek",
       "title": "Die Modulbibliothek, in Dispatch-Reihenfolge",
       "lead": "Ein Modul, das auf den Output eines anderen wartet, kann nicht früher starten. Diese Abhängigkeit bestimmt die Reihenfolge, nicht unsere Präferenz. Das Label unter jedem Modul sagt, was es liefert: einen Befund, ein Dokument oder ein laufendes Signal.",
       "note": "Aus den Dispatch-Graphen im Produktquellcode abgeleitet, nicht geschätzt. ZDR markiert die Module, deren Routing hart auf einen Zero-Retention-EU-Endpunkt gesetzt ist."
     },
     "pipeline": {
-      "eyebrow": "Innerhalb eines Moduls",
       "title": "Vom Upload zu einem Befund, mit dem Sie arbeiten können",
-      "lead": "Vom Upload bis zu den Entwürfen ist kein Mensch in der Schleife. Ein verpflichtendes menschliches Tor sitzt dahinter.",
+      "lead": "Fünf Stufen. Jedes Mal dieselben fünf, ob jemand zusieht oder nicht.",
       "stages": [
         {
           "title": "Fundierte Retrieval",
@@ -492,9 +440,8 @@
       ]
     },
     "grounding": {
-      "eyebrow": "Grounding",
       "title": "Vier Prüfungen, jede enger als die vorige",
-      "lead": "Ein Nachweis ist erst ein Beleg, wenn etwas ihn gelesen hat. Vier Ebenen tun das, der Reihe nach.",
+      "lead": "Eine Aussage muss alle vier überstehen. Ein Fehler schickt sie zurück.",
       "catchLabel": "Fängt",
       "layers": [
         {
@@ -521,7 +468,6 @@
       "repair": "Aussagen, die durchfallen, bekommen einen Reparaturversuch: neu aus der Quelle zitieren, dann neu bewerten. Was dann noch durchfällt, entfällt oder wird als unbestätigt markiert."
     },
     "blocks": {
-      "eyebrow": "Harte Blockaden",
       "title": "{blocks} Bedingungen, die die Auto-Freigabe stoppen",
       "lead": "Retries sind auf zwei je Spezialist begrenzt. Diese Bedingungen beenden die Schleife in jedem Fall und leiten den Entwurf an eine Person.",
       "items": [
@@ -555,13 +501,7 @@
         }
       ]
     },
-    "anatomy": {
-      "eyebrow": "Der Output-Vertrag",
-      "title": "Jeder Befund zeigt auf eine Seite zurück",
-      "lead": "Die Spur ist das Produkt. Ein Befund, den Sie nicht auf eine Passage zurückführen können, ist eine Meinung."
-    },
     "alternatives": {
-      "eyebrow": "Die Alternativen",
       "title": "Drei andere Wege, das zu tun",
       "lead": "Verglichen als Werkzeugkategorien, nicht als Produktnamen. Jede Markierung beantwortet eine Frage: tut diese Kategorie das überhaupt.",
       "columns": [
@@ -606,7 +546,6 @@
       "note": "Kategorien, keine Anbieter. Produkte ändern sich quartalsweise, und die meisten öffentlichen Aussagen darüber stammen vom Anbieter selbst."
     },
     "limits": {
-      "eyebrow": "Grenzen",
       "title": "Was wir über die Plattform nicht behaupten",
       "lead": "Alles oben beschreibt einen Mechanismus. Nichts davon ist eine zertifizierte Kennzahl.",
       "items": [
@@ -620,7 +559,6 @@
       ]
     },
     "faq": {
-      "eyebrow": "Fragen",
       "title": "Bevor Sie fragen",
       "items": [
         {
@@ -654,22 +592,19 @@
   },
   "sprint": {
     "header": {
-      "eyebrow": "Der Diligence Sprint",
       "title": "Sehen Sie, was ein Käufer finden würde, bevor er es tut",
       "lead": "Alle {disciplines} Disziplinen, zu einem einzigen Narrativ zusammengeführt. Gefahren auf einem Target, einem Unternehmen, das Sie halten, oder Ihrem eigenen Betrieb.",
       "cta": "Erstgespräch über 30 Minuten buchen"
     },
     "reframe": {
-      "body": "Standardmäßig bekommt eine Seite Wochen mit den Dokumenten und den Auftrag zu finden, was nicht stimmt. Der Sprint fährt denselben Durchgang zuerst, auf Ihrer Seite des Tisches."
+      "attr": "Warum ein zweiter Durchgang"
     },
     "disciplines": {
-      "eyebrow": "Umfang",
       "title": "Abgegrenzt pro Disziplin, nicht pro Stunde",
-      "lead": "Jeder Durchgang vordefiniert auf das, worauf es in dieser Disziplin ankommt.",
+      "lead": "Jede ist ein abgegrenzter Durchgang mit eigener Frage und eigenem Ergebnis.",
       "note": "Ein Mandat, ein Preis. Keine À-la-carte-Karte und kein Upsell nach Unterschrift. Worauf jede Disziplin schaut, wird im Erstgespräch anhand Ihres Datenraums festgelegt."
     },
     "layers": {
-      "eyebrow": "Synthese",
       "title": "Von einzelnen Analysen zu einem Urteil",
       "lead": "Was {disciplines} getrennte Analysen zu einem einzigen Ergebnis macht, statt zu {disciplines} getrennten Berichten.",
       "items": [
@@ -688,9 +623,8 @@
       ]
     },
     "delivery": {
-      "eyebrow": "Lieferung",
       "title": "Wie es ankommt",
-      "lead": "Das Ergebnis kommt in zwei Paketen, mit derselben Strenge und derselben Prüfung hinter beiden.",
+      "lead": "Drei Formate, ab Tag eins nebeneinander.",
       "formats": [
         {
           "label": "Prüf-Dashboard",
@@ -709,16 +643,9 @@
         }
       ]
     },
-    "guarantee": {
-      "eyebrow": "Die Befundgarantie",
-      "title": "Drei wesentliche Feststellungen, oder das Mandat ist kostenlos",
-      "body": "Wesentlich heißt: Es verändert, was Sie als Nächstes tun. Fördert der Sprint keine drei zutage, zahlen Sie nichts.",
-      "note": "Für Pilotmandate, solange Factum vor dem Launch steht. Wir tragen das Risiko, dass dies früh ist. Wie eine wesentliche Feststellung bewertet wird, steht im Mandatsschreiben."
-    },
     "inputs": {
-      "eyebrow": "Von Ihnen",
       "title": "Was wir zum Start brauchen",
-      "lead": "Kein Management-Workshop, kein Interviewplan, kein Vor-Ort-Besuch.",
+      "lead": "Zwei Dinge, und keines davon ist ein Workshop.",
       "items": [
         {
           "title": "Zugang zum Datenraum",
@@ -731,7 +658,6 @@
       ]
     },
     "faq": {
-      "eyebrow": "Fragen",
       "title": "Die, die zuerst kommen",
       "items": [
         {
@@ -769,20 +695,17 @@
   },
   "governance": {
     "header": {
-      "eyebrow": "Governance",
       "title": "Wie Ihre Dokumente behandelt werden, und was wir nicht behaupten",
       "lead": "Datenverarbeitung ist in den Ablauf der Pipeline eingebaut. Sie ist zugleich enger, als die meisten Sicherheitsseiten nahelegen. Diese Seite benennt die Grenze.",
       "cta": "Die unbequemen Fragen im Gespräch stellen"
     },
     "data": {
-      "eyebrow": "Datenverarbeitung",
       "title": "Vier Dinge, die für jedes Mandat gelten",
-      "lead": "Jedes davon beschreibt einen Mechanismus in der Pipeline. Keines ist eine Zertifizierung."
+      "lead": "Vier Mechanismen. Keiner davon ist eine Zertifizierung."
     },
     "gate": {
-      "eyebrow": "Die menschliche Freigabe",
       "title": "Der eine verpflichtende menschliche Schritt",
-      "lead": "Die Analyse läuft ohne Menschen in der Schleife. Die Freigabe sitzt dahinter, und sie ist nicht optional.",
+      "lead": "Eine namentlich genannte Person gibt jedes Ergebnis frei. Dies sind die Bedingungen, die das erzwingen.",
       "items": [
         "Befunde werden vor der Lieferung gegen die Quelldokumente zurückgeprüft.",
         "Das Tor läuft jedes Mal, automatisch.",
@@ -792,7 +715,6 @@
       ]
     },
     "transparency": {
-      "eyebrow": "KI-Transparenz",
       "title": "Wo die Maschine endet und ein Mensch beginnt",
       "lead": "Sie sollten für jede Feststellung erkennen können, was sie erzeugt und was sie geprüft hat.",
       "steps": [
@@ -806,7 +728,6 @@
       "humanLabel": "Mensch"
     },
     "limits": {
-      "eyebrow": "Grenzen",
       "title": "Was wir nicht behaupten",
       "lead": "Das meiste, was ein Käufer auf einer solchen Seite sucht, haben wir noch nicht. Wir listen es lieber auf, als es anzudeuten.",
       "items": [
@@ -826,7 +747,6 @@
       "note": "Kein Angebot im Anhang."
     },
     "zdr": {
-      "eyebrow": "Zero Retention",
       "title": "Drei Module weigern sich, auf einem speichernden Modell zu laufen",
       "lead": "Zero Data Retention ist eine Routing-Regel im Code, kein Versprechen auf einer Seite. Steuern, Recht und Finanzen hängen an dieser Regel.",
       "items": [
@@ -837,7 +757,6 @@
       ]
     },
     "learning": {
-      "eyebrow": "Was das System lernt",
       "title": "Zwei Gedächtnisse, und nur eines wird geteilt",
       "lead": "Wir sagen das ausdrücklich, weil Sie danach nicht fragen müssen sollten.",
       "columns": [
@@ -863,7 +782,6 @@
       "note": "Ist mandantenübergreifendes Methodenlernen für Ihr Mandat ein Problem, sagen Sie das im Erstgespräch. Für Ihr Konto lässt es sich abschalten."
     },
     "grounding": {
-      "eyebrow": "Die gemessene Zahl",
       "title": "Ein Benchmark, veröffentlicht mit angehängten Vorbehalten",
       "lead": "Lieber eine Zahl mit ihren Grenzen als gar keine Zahl.",
       "dialLabel": "Aussagen, die in einer zitierten Passage fundiert oder ausdrücklich als unbestätigt markiert sind",
@@ -876,7 +794,6 @@
       ]
     },
     "legal": {
-      "eyebrow": "Warum es so gebaut ist",
       "title": "Drei Gründe, warum das kein Chatfenster ist",
       "lead": "Einer aus dem Gerichtssaal. Einer aus Ihrem eigenen NDA. Einer aus dem Gesetzbuch.",
       "items": [
@@ -896,7 +813,6 @@
       "note": "Nichts davon ist Rechtsberatung. Alle drei sind Gründe, warum die Pipeline so aussieht, wie sie aussieht."
     },
     "terms": {
-      "eyebrow": "Was geregelt ist",
       "title": "Die Konditionen, bevor Sie fragen müssen",
       "lead": "Die Liste weiter unten sagt, was wir nicht haben. Das hier sagt, was wir haben.",
       "items": [
@@ -930,7 +846,6 @@
   },
   "team": {
     "header": {
-      "eyebrow": "Team",
       "title": "Urteilsvermögen, nicht nur Software",
       "lead": "Der Blick eines Bankers auf Risiko. Die Disziplin eines Ingenieurs für Systeme, die nicht brechen.",
       "cta": "Mit der prüfenden Person sprechen"
@@ -1007,15 +922,13 @@
   },
   "partnerships": {
     "header": {
-      "eyebrow": "Partnerschaften",
       "title": "Mehr Mandate, als Ihr Team lesen kann",
       "lead": "Sie behalten die Beziehung und das Urteilsvermögen. Wir führen die Analyse über alle Disziplinen dahinter aus, unter Ihrem Namen.",
       "cta": "Ein Scoping-Gespräch buchen"
     },
     "who": {
-      "eyebrow": "Passung",
       "title": "Für wen das meist funktioniert",
-      "lead": "Beschrieben über die Form der Gesellschaft. Über die Mandate unserer Partner sprechen die Partner selbst.",
+      "lead": "Beschrieben nach Art der Firma, nie namentlich.",
       "profiles": [
         {
           "title": "Corporate-Finance-Boutiquen",
@@ -1036,7 +949,6 @@
       ]
     },
     "split": {
-      "eyebrow": "Die Aufteilung",
       "title": "Sie behalten die Beziehung. Wir liefern die Analyse.",
       "lead": "Dieselbe Plattform, alle Disziplinen, dieselbe Prüfstufe. Geliefert unter Ihrem Namen.",
       "columns": [
@@ -1062,7 +974,6 @@
       "seam": "Grenze"
     },
     "start": {
-      "eyebrow": "Erste Schritte",
       "title": "Wie eine Partnerschaft tatsächlich beginnt",
       "lead": "Mit einem echten Mandat, sauber durchgeführt, bevor sich jemand bindet.",
       "steps": [
@@ -1081,7 +992,6 @@
       ]
     },
     "boundaries": {
-      "eyebrow": "Grenzen",
       "title": "Was eine Partnerschaft nicht enthält",
       "lead": "Einiges sind Zusagen an bestehende Partner. Der Rest ist der ehrliche Stand eines Unternehmens vor dem Launch.",
       "items": [
@@ -1093,7 +1003,6 @@
       ]
     },
     "faq": {
-      "eyebrow": "Fragen",
       "title": "Was Partner zuerst fragen",
       "items": [
         {
@@ -1123,13 +1032,11 @@
   },
   "contact": {
     "header": {
-      "eyebrow": "Kontakt",
       "title": "Ein Gespräch, mit der Person, die das Ergebnis prüft",
       "lead": "Auf dieser Seite gibt es kein Formular. Ein Formular unterstellt eine Warteschlange und einen Bearbeiter. Es gibt einen Kalender.",
       "cta": "Erstgespräch über 30 Minuten buchen"
     },
     "call": {
-      "eyebrow": "Erstgespräch",
       "title": "Dreißig Minuten buchen",
       "lead": "Ein Scoping-Gespräch. Wenn Ihre Situation keine ist, bei der das hilft, ist das eine schnellere Antwort als ein Angebot.",
       "button": "Erstgespräch buchen",
@@ -1151,7 +1058,6 @@
       "lead": "Das Erstgespräch braucht nichts außer dem Gespräch. Der Zugang zu Dokumenten wird danach schriftlich vereinbart."
     },
     "details": {
-      "eyebrow": "Details",
       "title": "Mit wem Sie es zu tun haben",
       "entityLabel": "Rechtsträger",
       "entityValue": "Agentic Mindshift Consultancy, Niederlande. Factum Capital ist der Handelsname, bis die Gründung abgeschlossen ist.",
@@ -1162,7 +1068,6 @@
   },
   "privacy": {
     "header": {
-      "eyebrow": "Datenschutz",
       "title": "Was diese Website erhebt, und was ein Mandat tut",
       "lead": "Diese Seite behandelt die Website. Der Umgang mit Mandatsdaten richtet sich nach der Vereinbarung, die wir unterzeichnen."
     },

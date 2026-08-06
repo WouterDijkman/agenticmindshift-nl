@@ -195,29 +195,57 @@ p { margin: 0; }
 .container-medium { max-width: calc(var(--container-medium) + 112px); }
 .container-wide  { max-width: calc(var(--container-wide) + 112px); }
 
+/*
+   Section rhythm.
+
+   Every section on this site used to carry one padding value —
+   clamp(40px, 5.5vw, 84px) — on one flat ground. Thirty-six of thirty-nine.
+   That is the mechanical cause of the page feeling monotonous: no section is
+   allowed to matter more than its neighbour, so none of them do.
+
+   The reference set varies padding by importance rather than by breakpoint.
+   Vercel runs 160px on a standard section and 212px on the closing CTA;
+   Linear uses `padding-block: 96px 160px` — asymmetric, more air below a
+   section than above it, which stops a long page reading as a stack of
+   equal-height trays.
+
+   Three weights, and a section has to earn the larger ones:
+     .section          normal
+     .section-tight    a coda hanging off the section above it
+     .section-loud     a feature moment — one per page, at most two
+*/
 .section {
-  padding-block: clamp(40px, 5.5vw, 84px);
+  padding-block: clamp(56px, 7vw, 104px) clamp(72px, 9vw, 148px);
   position: relative;
 }
-.section-tight { padding-block: clamp(32px, 4vw, 60px); }
+.section-tight { padding-block: clamp(24px, 3vw, 44px) clamp(48px, 6vw, 88px); }
+.section-loud  { padding-block: clamp(88px, 11vw, 176px) clamp(96px, 12vw, 200px); }
 
-/* A feature moment: the one section per page that gets a real change of
-   ground rather than another eyebrow-h2-lead block on flat --surface-0.
-   Darker than the base, not lighter — every card system on the site already
-   claims --surface-1/-2 as its own tone, so a lighter band would erase them.
-   Going darker means a Specimen or Dial panel sitting inside reads with more
-   contrast, never less. */
+/*
+   Ground changes.
+
+   Hebbia flags the theme on the section element itself — `theme-dark` next to
+   `theme-sand` — and drives every colour inside it, buttons included, off
+   `--section-background-color`. On a site that is navy from top to bottom,
+   band inversion is the cheapest rhythm device available, and the only one
+   that works without inventing a second palette.
+
+   `inset` goes darker than the base, not lighter: every card system here
+   already claims --surface-1/-2, so a lighter band would erase them. `raised`
+   goes one step up the navy ladder for a band that should read as a surface
+   you are standing on rather than a hole you are looking into.
+*/
 .section-inset {
   background: var(--surface-inset);
 }
-.section-inset::before {
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--hairline-strong) 12%,
-    var(--hairline-strong) 88%,
-    transparent
-  );
+.section-raised {
+  background: var(--surface-1);
+}
+/* Full-bleed bands own their own top edge; a seam hairline on top of a
+   colour change draws the join twice. */
+.section-inset.seam::before,
+.section-raised.seam::before {
+  display: none;
 }
 
 /* Section seams are drawn hairlines, not borders, so they can animate in. */
@@ -245,25 +273,46 @@ p { margin: 0; }
 
 /* ============================================================
    Type scale — fully fluid, no breakpoint jumps
+
+   Line-height and tracking are functions of size, not constants. Linear runs
+   a nine-step ladder from 1.4/-0.012em at 17px to 1.0/-0.022em at 72px; the
+   steps below are the same idea at this site's four sizes. A constant
+   line-height across a 6× size range is the tell that a scale was picked once
+   and never looked at large.
+
+   The h2 used to top out at 3rem against a 1rem body — a 3:1 ratio. Measured
+   against the reference set (Vercel 8:1, Resend 7.5:1, Clay 6:1) that is the
+   flattest part of the page, and flatness is most of what "boring" means when
+   the type itself is fine. It now reaches 4.25rem, which puts the section
+   heading in the same weight class as the hero rather than looking like a
+   large paragraph. The display size is unchanged: it was never the problem.
    ============================================================ */
 .type-display {
   font-size: clamp(2.5rem, 1.55rem + 4.6vw, 5.875rem);
   line-height: 1.02;
-  letter-spacing: -0.022em;
+  letter-spacing: -0.026em;
   font-weight: 400;
   font-variation-settings: "opsz" 60;
   text-wrap: balance;
 }
 .type-h2 {
-  font-size: clamp(1.875rem, 1.35rem + 2.2vw, 3rem);
-  line-height: 1.08;
-  letter-spacing: -0.018em;
+  font-size: clamp(2.125rem, 1.3rem + 3.5vw, 4.25rem);
+  line-height: 1.04;
+  letter-spacing: -0.022em;
+  font-weight: 410;
+  font-variation-settings: "opsz" 48;
   text-wrap: balance;
+  /* Linear caps the measure in the markup itself (`max-width: 18ch`). At
+     4.25rem a 62ch heading is four full lines, which reads as a paragraph set
+     large rather than as a heading. */
+  max-width: 20ch;
 }
 .type-h3 {
-  font-size: clamp(1.375rem, 1.15rem + 0.9vw, 1.875rem);
-  line-height: 1.18;
-  letter-spacing: -0.012em;
+  font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.125rem);
+  line-height: 1.14;
+  letter-spacing: -0.016em;
+  text-wrap: balance;
+  max-width: 26ch;
 }
 .type-h4 {
   font-family: var(--font-body);
@@ -479,6 +528,62 @@ p { margin: 0; }
   mix-blend-mode: darken;
 }
 
+/* ------------------------------------------------------------
+   Scene band — one photograph, full width, as a section
+
+   The first place on this site where a still is looked at rather than
+   glanced past. Everything else renders these at 33vw inside a card, which
+   throws away the grain and the falloff that are the whole point of a macro.
+
+   Height is viewport-relative but capped: tall enough to register as an
+   image, short enough that it stays a breath between two arguments instead
+   of a second hero. The band bleeds past the container on purpose — it is
+   the only element on the site that touches both edges of the screen, which
+   is exactly what makes it register as a change of gear.
+   ------------------------------------------------------------ */
+.scene-band {
+  position: relative;
+  overflow: hidden;
+  min-height: clamp(300px, 46vh, 520px);
+  display: flex;
+  align-items: flex-end;
+  padding-block: clamp(36px, 5vw, 72px);
+  isolation: isolate;
+}
+/* The band's own scrim, not the card one: type sits on this, so contrast is
+   measured against the bottom of the gradient rather than its average. The
+   left-hand wash keeps the line readable over a light subject without
+   flattening the picture across its whole width. */
+.scene-band .scene-scrim {
+  background:
+    linear-gradient(to right, rgba(6, 20, 40, 0.86) 0%, rgba(6, 20, 40, 0.34) 52%, rgba(6, 20, 40, 0) 78%),
+    linear-gradient(rgba(6, 20, 40, 0.30) 0%, rgba(6, 20, 40, 0.10) 38%, rgba(6, 20, 40, 0.88) 100%);
+  mix-blend-mode: normal;
+}
+.scene-band-inner {
+  position: relative;
+  z-index: 3;
+}
+.scene-band-line {
+  font-family: var(--font-display);
+  color: var(--text-display);
+  font-weight: 400;
+  font-variation-settings: "opsz" 44;
+  font-size: clamp(1.5rem, 1.05rem + 1.9vw, 2.75rem);
+  line-height: 1.14;
+  letter-spacing: -0.018em;
+  max-width: 24ch;
+  text-wrap: balance;
+}
+.scene-band-attr {
+  display: block;
+  margin-top: 16px;
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
 /* ============================================================
    Handoff track — a sequence with a labelled boundary in it
    ============================================================ */
@@ -553,6 +658,58 @@ p { margin: 0; }
 /* ============================================================
    Discipline grid — scope as a board of marks
    ============================================================ */
+/* ------------------------------------------------------------
+   Discipline index — the same ten, as a set rather than as an argument
+
+   Serif at display weight, numbered in mono, on a hairline grid. The point is
+   that the reader takes it in as one object: ten cells, all present, no
+   scrolling, nothing to read. The full version with a failure and an outcome
+   under each name lives on /diligence-sprint, where it is what the visitor
+   came for.
+   ------------------------------------------------------------ */
+.discipline-index {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+  /* Cells share their hairline rather than each drawing one — doubled seams at
+     every internal join is the difference between a table and a grid of boxes. */
+  gap: 1px;
+  background: var(--hairline);
+  border: 1px solid var(--hairline);
+}
+@media (min-resolution: 2dppx) {
+  .discipline-index { gap: 0.5px; }
+}
+.discipline-index-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  background: var(--surface-0);
+  padding: clamp(16px, 2vw, 24px) clamp(14px, 1.8vw, 22px);
+  transition: background var(--dur-hover) var(--ease-fn);
+}
+.discipline-index-item:hover { background: var(--surface-1); }
+.discipline-index-num {
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  color: var(--wine-text);
+  flex: none;
+}
+.discipline-index-label {
+  font-family: var(--font-display);
+  color: var(--text-display);
+  font-weight: 420;
+  font-variation-settings: "opsz" 28;
+  font-size: clamp(1.0625rem, 0.98rem + 0.4vw, 1.3125rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+@media (prefers-reduced-motion: reduce) {
+  .discipline-index-item { transition: none; }
+}
+
 .discipline-grid {
   /* Grid with an explicit column count, not flex.
    *

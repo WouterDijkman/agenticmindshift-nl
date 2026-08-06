@@ -51,7 +51,6 @@ export default async function GovernancePage({
   return (
     <>
       <PageHeader
-        eyebrow={t('header.eyebrow')}
         title={t('header.title')}
         lead={t('header.lead')}
         cta={t('header.cta')}
@@ -63,11 +62,7 @@ export default async function GovernancePage({
 
       {/* Data handling. */}
       <Section width="medium">
-        <SectionHeader
-          eyebrow={t('data.eyebrow')}
-          title={t('data.title')}
-          lead={t('data.lead')}
-        />
+        <SectionHeader title={t('data.title')} lead={t('data.lead')} />
         <div style={{ marginTop: 32 }}>
           <MediaCards
             items={s.raw('governancePoints') as { title: string; body: string }[]}
@@ -78,14 +73,10 @@ export default async function GovernancePage({
       </Section>
 
       {/* The human gate. */}
-      <Section width="medium">
+      <Section width="medium" weight="tight">
         <div className="split-grid">
           <div>
-            <SectionHeader
-              eyebrow={t('gate.eyebrow')}
-              title={t('gate.title')}
-              lead={t('gate.lead')}
-            />
+            <SectionHeader title={t('gate.title')} lead={t('gate.lead')} />
           </div>
           <Reveal delay={60}>
             <div className="panel" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
@@ -114,10 +105,10 @@ export default async function GovernancePage({
       </Section>
 
       {/* Zero retention as a routing gate, not a promise. */}
-      <Section id="zdr" width="medium">
+      <Section id="zdr" width="medium" tone="raised" weight="tight">
         <div className="split-grid">
           <div>
-            <SectionHeader eyebrow={t('zdr.eyebrow')} title={t('zdr.title')} lead={t('zdr.lead')} />
+            <SectionHeader title={t('zdr.title')} lead={t('zdr.lead')} />
           </div>
           <Reveal delay={60}>
             <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
@@ -140,11 +131,7 @@ export default async function GovernancePage({
 
       {/* What the system learns, and which side of the tenancy line it sits on. */}
       <Section id="learning" width="medium">
-        <SectionHeader
-          eyebrow={t('learning.eyebrow')}
-          title={t('learning.title')}
-          lead={t('learning.lead')}
-        />
+        <SectionHeader title={t('learning.title')} lead={t('learning.lead')} />
         <div style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
           <TenancySplit
             columns={
@@ -160,12 +147,8 @@ export default async function GovernancePage({
       </Section>
 
       {/* The one measured number, welded to its caveat — the feature moment on this page. */}
-      <Section id="grounding" width="medium" tone="inset">
-        <SectionHeader
-          eyebrow={t('grounding.eyebrow')}
-          title={t('grounding.title')}
-          lead={t('grounding.lead')}
-        />
+      <Section id="grounding" width="medium" tone="inset" weight="loud">
+        <SectionHeader title={t('grounding.title')} lead={t('grounding.lead')} />
         <div className="split-grid" style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
           <Reveal>
             <Dial
@@ -194,12 +177,8 @@ export default async function GovernancePage({
       </Section>
 
       {/* Why the pipeline has this shape: one court, one NDA, one statute. */}
-      <Section id="why-the-gate" width="medium">
-        <SectionHeader
-          eyebrow={t('legal.eyebrow')}
-          title={t('legal.title')}
-          lead={t('legal.lead')}
-        />
+      <Section id="why-the-gate" width="medium" weight="tight">
+        <SectionHeader title={t('legal.title')} lead={t('legal.lead')} />
         <Reveal delay={60} style={{ marginTop: 28 }}>
           <div className="split-grid-thirds">
             {(t.raw('legal.items') as { title: string; body: string }[]).map((item) => (
@@ -226,12 +205,8 @@ export default async function GovernancePage({
         Those questions now have real answers, so they get stated first and the
         limits list shrinks to what genuinely is still missing.
       */}
-      <Section id="terms" width="medium">
-        <SectionHeader
-          eyebrow={t('terms.eyebrow')}
-          title={t('terms.title')}
-          lead={t('terms.lead')}
-        />
+      <Section id="terms" width="medium" tone="raised">
+        <SectionHeader title={t('terms.title')} lead={t('terms.lead')} />
         <Reveal delay={60} style={{ marginTop: 28 }}>
           <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
             {(t.raw('terms.items') as { title: string; body: string }[]).map((item, i) => (
@@ -257,12 +232,8 @@ export default async function GovernancePage({
       </Section>
 
       {/* AI transparency. */}
-      <Section width="medium">
-        <SectionHeader
-          eyebrow={t('transparency.eyebrow')}
-          title={t('transparency.title')}
-          lead={t('transparency.lead')}
-        />
+      <Section width="medium" weight="tight">
+        <SectionHeader title={t('transparency.title')} lead={t('transparency.lead')} />
         <Reveal delay={60} className="measure" style={{ marginTop: 24 }}>
           <HandoffTrack
             steps={t.raw('transparency.steps') as string[]}
@@ -275,11 +246,7 @@ export default async function GovernancePage({
 
       {/* What we do not claim — this replaces the certifications we don't have. */}
       <Section width="medium">
-        <SectionHeader
-          eyebrow={t('limits.eyebrow')}
-          title={t('limits.title')}
-          lead={t('limits.lead')}
-        />
+        <SectionHeader title={t('limits.title')} lead={t('limits.lead')} />
         <Reveal delay={60} style={{ marginTop: 28 }}>
           <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
             {(t.raw('limits.items') as string[]).map((item) => (

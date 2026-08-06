@@ -34,7 +34,6 @@ const TONE_COLOR: Record<'wine' | 'mono', string> = {
 };
 
 export default function PageHeader({
-  eyebrow,
   title,
   lead,
   cta,
@@ -44,7 +43,6 @@ export default function PageHeader({
   aside,
   visual = 0
 }: {
-  eyebrow: string;
   title: string;
   lead?: string;
   /**
@@ -88,9 +86,8 @@ export default function PageHeader({
       <div className="container-wide fit-screen" style={{ position: 'relative', zIndex: 1 }}>
         <div className={aside ? 'hero-split' : undefined}>
           <div>
-            <span className="eyebrow eyebrow-accent" style={{ marginBottom: 'var(--fit-gap-md)' }}>
-              {eyebrow}
-            </span>
+            {/* No eyebrow. It said the page's own name above the page's own
+                H1 on all six inner pages — see the note on SectionHeader. */}
             <h1
               className="type-display"
               style={{

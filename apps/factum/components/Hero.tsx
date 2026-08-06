@@ -16,7 +16,6 @@ import SegmentField from './SegmentField';
  * at card size, where they are looked *at* rather than read *through*.
  */
 export default function Hero({
-  eyebrow,
   title,
   lead,
   cta,
@@ -25,13 +24,18 @@ export default function Hero({
   footnote,
   aside
 }: {
-  eyebrow: string;
   title: string;
   lead: string;
   cta: string;
   secondary: string;
   secondaryHref: string;
-  footnote: string;
+  /**
+   * Proof directly under the button. Optional, because on the homepage the
+   * `GuaranteeBand` states the same promise at full size a hundred pixels
+   * below — and small print restating the band it sits above is the shape of
+   * repetition, not of reassurance. The inner pages have no band and keep it.
+   */
+  footnote?: string;
   /**
    * Optional artefact beside the copy. Without it the hero is type on flat navy:
    * measured at 1440 it was 373 characters over 723px, and it read — accurately
@@ -47,13 +51,10 @@ export default function Hero({
       <div className="container-wide fit-screen" style={{ position: 'relative', zIndex: 1 }}>
         <div className={aside ? 'hero-split' : undefined}>
           <div>
-            <span
-              className="eyebrow eyebrow-accent hero-enter"
-              style={{ marginBottom: 'var(--fit-gap-md)' }}
-            >
-              {eyebrow}
-            </span>
-
+            {/* The eyebrow that sat here is gone, along with the other
+                forty-five. Five of the eight sites this was measured against
+                ship none at all, and a category label above an H1 that already
+                states the category is the clearest case of the lot. */}
             <h1 className="type-display hero-settle" style={{ maxWidth: '20ch' }}>
               {title}
             </h1>
@@ -93,14 +94,16 @@ export default function Hero({
               </Link>
             </div>
 
-            <div
-              className="hero-enter"
-              style={
-                { marginTop: 'var(--fit-gap-sm)', '--enter-delay': '290ms' } as CSSProperties
-              }
-            >
-              <CtaProof>{footnote}</CtaProof>
-            </div>
+            {footnote && (
+              <div
+                className="hero-enter"
+                style={
+                  { marginTop: 'var(--fit-gap-sm)', '--enter-delay': '290ms' } as CSSProperties
+                }
+              >
+                <CtaProof>{footnote}</CtaProof>
+              </div>
+            )}
           </div>
 
           {aside && (

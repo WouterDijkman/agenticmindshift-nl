@@ -35,7 +35,6 @@ export default async function PartnershipsPage({
   return (
     <>
       <PageHeader
-        eyebrow={t('header.eyebrow')}
         title={t('header.title')}
         lead={t('header.lead')}
         cta={t('header.cta')}
@@ -46,12 +45,8 @@ export default async function PartnershipsPage({
       />
 
       {/* Who this is for — described by shape of firm, never by name. */}
-      <Section width="medium">
-        <SectionHeader
-          eyebrow={t('who.eyebrow')}
-          title={t('who.title')}
-          lead={t('who.lead')}
-        />
+      <Section width="medium" tone="inset" weight="loud">
+        <SectionHeader title={t('who.title')} lead={t('who.lead')} />
         <div style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
           <MediaCards
             items={t.raw('who.profiles') as { title: string; body: string }[]}
@@ -63,11 +58,7 @@ export default async function PartnershipsPage({
 
       {/* What the partner keeps, what we supply. */}
       <Section width="medium">
-        <SectionHeader
-          eyebrow={t('split.eyebrow')}
-          title={t('split.title')}
-          lead={t('split.lead')}
-        />
+        <SectionHeader title={t('split.title')} lead={t('split.lead')} />
         <Reveal delay={60} style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
           <SplitDiagram
             columns={t.raw('split.columns') as { label: string; items: string[] }[]}
@@ -77,24 +68,16 @@ export default async function PartnershipsPage({
       </Section>
 
       {/* How an engagement starts. */}
-      <Section width="medium">
-        <SectionHeader
-          eyebrow={t('start.eyebrow')}
-          title={t('start.title')}
-          lead={t('start.lead')}
-        />
+      <Section width="medium" tone="raised" weight="tight">
+        <SectionHeader title={t('start.title')} lead={t('start.lead')} />
         <div style={{ marginTop: 'clamp(30px, 4vw, 48px)' }}>
           <Stepper steps={t.raw('start.steps') as { title: string; body: string }[]} />
         </div>
       </Section>
 
       {/* Boundaries — the honest version of an exclusivity conversation. */}
-      <Section width="medium">
-        <SectionHeader
-          eyebrow={t('boundaries.eyebrow')}
-          title={t('boundaries.title')}
-          lead={t('boundaries.lead')}
-        />
+      <Section width="medium" weight="tight">
+        <SectionHeader title={t('boundaries.title')} lead={t('boundaries.lead')} />
         <Reveal delay={60} style={{ marginTop: 28 }}>
           <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
             {(t.raw('boundaries.items') as string[]).map((item) => (
@@ -114,7 +97,7 @@ export default async function PartnershipsPage({
       </Section>
 
       <Section width="medium">
-        <SectionHeader eyebrow={t('faq.eyebrow')} title={t('faq.title')} />
+        <SectionHeader title={t('faq.title')} />
         <Reveal delay={60} style={{ marginTop: 28 }}>
           <Disclosures items={t.raw('faq.items') as { q: string; a: string }[]} />
         </Reveal>
