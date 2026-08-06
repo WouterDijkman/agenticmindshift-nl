@@ -73,17 +73,14 @@
       "card_cta": "Meer over deze route",
       "title_1": "AI Sparring & Strategie",
       "body_1": "Eén vraag over AI in uw deal, uw proces of uw eerstvolgende beslissing. Twintig minuten, één samenvatting, geen vervolg als u dat niet wilt.",
-      "price_1": "Vrijblijvend",
       "note_1": "20 minuten · geen factuur",
       "title_2": "AI-advies",
       "body_2": "Waar AI in uw praktijk rendeert en waar niet. Analyse van uw processen, een onderbouwd plan en de businesscase eronder.",
-      "price_2": "Vanaf €4.500",
       "note_2": "Per traject of in retainer",
       "title_3": "Implementatie & adoptie",
       "body_3": "Van plan naar gebruik. Inrichting van de workflows, masterclasses en training, tot uw team er zelf mee werkt.",
-      "price_3": "Op offerte",
       "note_3": "Scope en tarief na de intake",
-      "foot": "Alle bedragen zijn exclusief btw. Het eerste gesprek is altijd vrijblijvend."
+      "foot": "Het eerste gesprek is altijd vrijblijvend."
     },
     "plan": {
       "eyebrow": "Zo begint het",
@@ -116,13 +113,13 @@
       "heading": "Eén gesprek van twintig minuten.",
       "subtext": "U bepaalt het onderwerp. Geen agenda, geen verplichting, geen mailreeks.",
       "cta_primary": "Plan een gesprek van 20 minuten",
-      "cta_secondary": "Bekijk werkwijze & tarieven"
+      "cta_secondary": "Bekijk de werkwijze"
     },
     "faqItems": {
       "wat_q": "Wat doet Agentic Mindshift precies?",
       "wat_a": "Wij brengen AI in de praktijk van private-equityfondsen en M&A-kantoren. Dat gaat van één sparringsessie, via advies over waar AI rendeert, tot de implementatie en de adoptie door uw team.",
       "investering_q": "Wat kost het?",
-      "investering_a": "De sparringsessie is vrijblijvend. AI-advies start bij €4.500 per traject of loopt in retainer. Implementatie en adoptie gaan op offerte, na de intake. Alle bedragen zijn exclusief btw.",
+      "investering_a": "De sparringsessie is vrijblijvend. Voor advies en implementatie leggen wij scope en tarief vast in het voorstel, na de intake. Zo betaalt u voor een afgebakende opdracht, niet voor een inschatting vooraf.",
       "anders_q": "Wat maakt Agentic Mindshift anders?",
       "anders_a": "Zes jaar in acquisition finance en financial restructuring. Het advies komt uit de dealpraktijk; de AI versnelt het. En het kantoor blijft klein: een handvol partners tegelijk.",
       "start_q": "Hoe snel kunnen we starten?",
@@ -138,8 +135,8 @@
     "card_01_title": "Sparringsessie",
     "card_01_body": "Twintig minuten om te bepalen of er een goede aansluiting is. Geen voorbereiding nodig, geen factuur.",
     "card_01_cta": "Plan een gesprek",
-    "card_02_title": "Werkwijze en investering",
-    "card_02_body": "Drie routes, met de bedragen erbij. Handig als u eerst wilt weten wat iets kost.",
+    "card_02_title": "Werkwijze",
+    "card_02_body": "Drie routes, met wat elke route inhoudt en hoe snel u start.",
     "card_02_cta": "Bekijk de routes",
     "card_03_title": "Direct bericht",
     "card_03_body": "Voor specifieke vragen, of als u liever schriftelijk begint. Antwoord binnen twee werkdagen.",
@@ -201,7 +198,7 @@
     "werkwijze_link": {
       "eyebrow": "Werkwijze",
       "body": "Drie routes: één sparringsessie, een adviestraject, of implementatie bij uw team.",
-      "cta": "Bekijk werkwijze & investering →"
+      "cta": "Bekijk de werkwijze →"
     },
     "contact_cta": {
       "eyebrow": "Direct contact",
@@ -213,14 +210,14 @@
     }
   },
   "werkwijze": {
-    "meta_title": "Werkwijze & Investering",
-    "meta_description": "Drie manieren om met Agentic Mindshift te werken: AI Sparring & Strategie, AI-advies, en implementatie en adoptie. Tarieven en doorlooptijd op één pagina.",
+    "meta_title": "Werkwijze",
+    "meta_description": "Drie manieren om met Agentic Mindshift te werken: AI Sparring & Strategie, AI-advies, en implementatie en adoptie. Wat elke route inhoudt en hoe snel u start.",
     "hero": {
-      "eyebrow": "Werkwijze & Investering",
+      "eyebrow": "Werkwijze",
       "heading": "Drie routes, drie situaties, één eerste gesprek.",
-      "subtext": "Wat elke route inhoudt, wat hij kost en hoe snel u start. Zonder offertetraject vooraf."
+      "subtext": "Wat elke route inhoudt, wat hij oplevert en hoe snel u start."
     },
-    "answer_first": "Agentic Mindshift levert AI-advies aan private-equityfondsen en M&A-kantoren in de Europese mid-market. U kiest uit drie routes: een vrijblijvende sparringsessie, AI-advies vanaf €4.500 per traject, en implementatie en adoptie op offerte. Elke route begint vrijblijvend en eindigt met een concreet resultaat.",
+    "answer_first": "Agentic Mindshift levert AI-advies aan private-equityfondsen en M&A-kantoren in de Europese mid-market. U kiest uit drie routes: een vrijblijvende sparringsessie, een adviestraject, en implementatie en adoptie. Elke route begint vrijblijvend en eindigt met een concreet resultaat.",
     "steps": {
       "eyebrow": "Van interesse naar samenwerking",
       "heading": "Drie stappen",
@@ -233,43 +230,39 @@
       "step_3_body": "Na akkoord starten wij binnen een week. U ontvangt direct het eerste concrete resultaat of wordt ingepland voor de eerste sessie."
     },
     "offerings": {
-      "eyebrow": "Investering",
+      "eyebrow": "De routes",
       "heading": "Welke situatie past bij u?",
       "subtext": "Drie situaties, drie routes. Herkent u uw vraag niet direct? Eén gesprek volstaat om de juiste route te bepalen.",
       "guarantee_title": "Garantie",
-      "guarantee_body": "De sparringsessie kost twintig minuten en geen factuur. Na akkoord op een traject start u binnen zeven werkdagen, met het eerste concrete resultaat in de eerste week.",
-      "investment_label": "Investering"
+      "guarantee_body": "De sparringsessie kost twintig minuten en geen factuur. Na akkoord op een traject start u binnen zeven werkdagen, met het eerste concrete resultaat in de eerste week."
     },
     "offering_1": {
       "badge": "Instap · vrijblijvend",
       "title": "AI Sparring & Strategie",
       "situation": "U wilt snel weten wat AI betekent voor uw bedrijf, uw deal of uw eerstvolgende beslissing.",
-      "price_note": "20 minuten · vrijblijvend · geen factuur",
+      "terms": "20 minuten · vrijblijvend · geen factuur",
       "cta": "Boek een sessie →"
     },
     "offering_2": {
       "badge": "Projectmatig of retainer",
       "title": "AI-advies",
       "situation": "U wilt weten waar AI in uw praktijk rendeert en waar niet. Analyse van uw processen, een onderbouwd plan en de businesscase eronder.",
-      "price_note": "Per traject of doorlopend in retainer",
-      "cta": "Bespreek uw vraagstuk →",
-      "price": "Vanaf €4.500"
+      "terms": "Per traject of doorlopend in retainer",
+      "cta": "Bespreek uw vraagstuk →"
     },
     "offering_3": {
       "badge": "Projectmatig of retainer",
       "title": "Implementatie & adoptie",
       "situation": "Het plan ligt er. Nu moet uw team er dagelijks mee werken: inrichting van de workflows, masterclasses en training tot de adoptie staat.",
-      "price_note": "Scope en tarief worden na de intake vastgelegd",
-      "cta": "Plan een kennismaking →",
-      "price": "Op offerte"
+      "terms": "Scope en tarief worden na de intake vastgelegd",
+      "cta": "Plan een kennismaking →"
     },
-    "pricing_note": "* Alle bedragen zijn exclusief btw. De eerste kennismaking is altijd vrijblijvend.",
     "risk": {
       "title": "Geen risico",
       "body": "De sparringsessie kost twintig minuten zonder factuur. Na akkoord start u binnen zeven werkdagen met het eerste concrete resultaat."
     },
     "faq": {
-      "eyebrow": "Eerlijk over de investering",
+      "eyebrow": "Eerlijk antwoord",
       "heading": "Wat partners meestal als eerste willen weten",
       "q1": "Wat als het niets voor ons blijkt?",
       "a1": "Begin met een sparringsessie: één vraag, één samenvatting, geen vervolg.",
@@ -305,7 +298,7 @@
     "s4_heading": "4. Bewaartermijnen",
     "s4_body": "Correspondentie en afspraakgegevens bewaren wij maximaal 24 maanden na het laatste contact, tenzij u verzoekt deze eerder te verwijderen. Hostinglogs worden na dertig dagen verwijderd. Gegevens die bij een lopende opdracht horen, bewaren wij zolang de wettelijke bewaartermijnen dat vereisen.",
     "s5_heading": "5. Verwerkers",
-    "s5_body": "Wij maken gebruik van een beperkt aantal verwerkers: Supabase (Europese regio) voor datapersistentie, Resend voor het verzenden van e-mails, Plausible Analytics (EU) voor bezoekstatistieken en een Europese hostingpartij voor de website. Met elke verwerker is een verwerkersovereenkomst gesloten.",
+    "s5_body": "Wij maken gebruik van een beperkt aantal verwerkers: Plausible Analytics (EU) voor bezoekstatistieken, Cal.com voor het inplannen van gesprekken, een Europese hostingpartij voor de website en onze e-mailprovider voor correspondentie. Met elke verwerker is een verwerkersovereenkomst gesloten.",
     "s6_heading": "6. Doorgifte buiten de EU",
     "s6_body": "Standaard worden uw gegevens binnen de Europese Unie opgeslagen en verwerkt. Mocht doorgifte buiten de EU plaatsvinden, dan gebeurt dat uitsluitend op basis van de standaardcontractbepalingen van de Europese Commissie.",
     "s7_heading": "7. Uw rechten",
@@ -328,7 +321,7 @@
     "s3_heading": "3. Aard van de opdracht",
     "s3_body": "Opdrachten worden uitgevoerd als inspanningsverplichting, tenzij uitdrukkelijk anders overeengekomen. De inhoud van adviezen, rapporten en sparringsessies vormt geen investerings- of financieel advies in de zin van de Wet op het financieel toezicht.",
     "s4_heading": "4. Tarieven en betaling",
-    "s4_body": "Tarieven zijn vermeld op de pagina \"Werkwijze\" en gelden exclusief btw, tenzij anders aangegeven. Facturatie geschiedt maandelijks vooraf voor retainer-trajecten en bij oplevering voor projecten. Betalingstermijn: dertig dagen netto.",
+    "s4_body": "Tarieven worden per opdracht schriftelijk vastgelegd in de opdrachtbevestiging en gelden exclusief btw, tenzij anders aangegeven. Facturatie geschiedt maandelijks vooraf voor retainer-trajecten en bij oplevering voor projecten. Betalingstermijn: dertig dagen netto.",
     "s5_heading": "5. Annulering en opzegging",
     "s5_body": "Retainer-trajecten kennen een minimumlooptijd van drie maanden en zijn daarna maandelijks opzegbaar met een opzegtermijn van eveneens een maand. Losse sparringsessies kunnen tot drie werkdagen voor de afgesproken datum kosteloos worden verzet of geannuleerd. Workshops en trainingen zijn niet annuleerbaar binnen tien werkdagen voor de afgesproken datum.",
     "s6_heading": "6. Aansprakelijkheid",

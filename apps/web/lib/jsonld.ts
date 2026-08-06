@@ -45,7 +45,7 @@ function getRouteNames(locale: SiteLocale): [string, string, string] {
  *
  * What is NOT in this table, deliberately:
  *  - Identifiers and facts (KvK, address, e-mail, founding date, alumniOf,
- *    sameAs, prices) — language-independent.
+ *    sameAs) — language-independent.
  *  - schema.org enum values such as contactType: 'customer service' — those are
  *    vocabulary, not prose, and must stay English.
  *  - The three service NAMES. Those come from getRouteNames(locale), i.e. the
@@ -334,17 +334,12 @@ export function getPersonLd(locale: string) {
  * ProfessionalService — for /werkwijze.
  * More authoritative schema type for B2B advisory in Google's YMYL category.
  *
- * Names and prices come from the route ladder, i.e. from the same message
- * catalog the pricing page renders.
+ * Route names come from the route ladder, i.e. from the same message catalog
+ * /werkwijze renders, so the two cannot disagree.
  */
 export function getProfessionalServiceLd(locale: string) {
   const { loc, c } = copy(locale);
   const names = getRouteNames(loc);
-  /* Ladder order: sparring, advies, implementatie. The third rung used to be
-     AI-driven DD at a 10.000 floor; that work moved to Factum Capital and is
-     no longer sold here, so no price is asserted for implementation until
-     there is a real one. */
-  const lowPrices = [null, '4500', null] as const;
 
   return {
     '@context': 'https://schema.org',
@@ -369,11 +364,15 @@ export function getProfessionalServiceLd(locale: string) {
     ],
     serviceType: c.advisoryServiceType,
     description: c.advisoryDescription(names),
+    /* Offers carry no price. The site stopped quoting amounts, and structured
+       data is the one place where a stale number keeps being served long after
+       the page stops showing it — Google caches it, answer engines repeat it.
+       An Offer without a price is valid schema; an Offer with the wrong price
+       is a quote we did not give. What each route costs is settled in the
+       proposal, which is what `description` says. */
     offers: names.map((name, i) => ({
       '@type': 'Offer',
       name,
-      priceCurrency: 'EUR',
-      ...(lowPrices[i] === null ? { price: '0' } : { lowPrice: lowPrices[i] }),
       description: c.offerDescriptions[i],
     })),
   };

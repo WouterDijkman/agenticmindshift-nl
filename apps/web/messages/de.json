@@ -73,17 +73,14 @@
       "card_cta": "Mehr zu diesem Weg",
       "title_1": "KI-Sparring & Strategie",
       "body_1": "Eine Frage zu KI in Ihrem Deal, Ihrem Prozess oder Ihrer nächsten Entscheidung. Zwanzig Minuten, eine Zusammenfassung, keine Fortsetzung, wenn Sie das nicht wollen.",
-      "price_1": "Unverbindlich",
       "note_1": "20 Minuten · keine Rechnung",
       "title_2": "KI-Beratung",
       "body_2": "Wo KI in Ihrer Praxis rentiert und wo nicht. Analyse Ihrer Prozesse, ein begründeter Plan und der Business Case darunter.",
-      "price_2": "Ab 4.500 €",
       "note_2": "Pro Projekt oder als Retainer",
       "title_3": "Implementierung & Adoption",
       "body_3": "Vom Plan zur Nutzung. Einrichtung der Workflows, Masterclasses und Training, bis Ihr Team selbst damit arbeitet.",
-      "price_3": "Auf Anfrage",
       "note_3": "Umfang und Honorar nach dem Intake",
-      "foot": "Alle Beträge zzgl. MwSt. Das erste Gespräch ist immer unverbindlich."
+      "foot": "Das erste Gespräch ist immer unverbindlich."
     },
     "plan": {
       "eyebrow": "So fängt es an",
@@ -116,13 +113,13 @@
       "heading": "Ein Gespräch, zwanzig Minuten.",
       "subtext": "Sie bestimmen das Thema. Keine Agenda, keine Verpflichtung, keine Mailstrecke.",
       "cta_primary": "20-minütiges Gespräch buchen",
-      "cta_secondary": "Vorgehen & Honorare ansehen"
+      "cta_secondary": "Arbeitsweise ansehen"
     },
     "faqItems": {
       "wat_q": "Was genau macht Agentic Mindshift?",
       "wat_a": "Wir bringen KI in die Praxis von Private-Equity-Fonds und M&A-Häusern. Das reicht von einer einzelnen Sparringsession über Beratung dazu, wo KI rentiert, bis zur Implementierung und der Adoption durch Ihr Team.",
       "investering_q": "Was kostet das?",
-      "investering_a": "Die Sparringsession ist unverbindlich. KI-Beratung beginnt bei 4.500 € pro Projekt oder läuft als Retainer. Implementierung und Adoption werden nach dem Intake angeboten. Alle Beträge zzgl. MwSt.",
+      "investering_a": "Das Sparring ist unverbindlich und kostenfrei. Für Beratung und Implementierung halten wir Umfang und Honorar im Angebot fest, nach dem Intake. Sie zahlen für ein abgegrenztes Mandat, nicht für eine Schätzung vorab.",
       "anders_q": "Was unterscheidet Agentic Mindshift?",
       "anders_a": "Sechs Jahre in Acquisition Finance und Financial Restructuring. Die Beratung kommt aus der Dealpraxis; die KI beschleunigt sie. Und das Büro bleibt klein: eine Handvoll Partner gleichzeitig.",
       "start_q": "Wie schnell können wir starten?",
@@ -138,8 +135,8 @@
     "card_01_title": "Sparringsession",
     "card_01_body": "Zwanzig Minuten, um zu klären, ob es passt. Keine Vorbereitung nötig, keine Rechnung.",
     "card_01_cta": "Gespräch buchen",
-    "card_02_title": "Vorgehen und Investition",
-    "card_02_body": "Drei Wege, mit den Beträgen daneben. Praktisch, wenn Sie zuerst wissen wollen, was etwas kostet.",
+    "card_02_title": "Arbeitsweise",
+    "card_02_body": "Drei Wege, was jeder umfasst und wie schnell Sie starten.",
     "card_02_cta": "Die Wege ansehen",
     "card_03_title": "Direkte Nachricht",
     "card_03_body": "Für konkrete Fragen oder wenn Sie lieber schriftlich beginnen. Antwort innerhalb von zwei Werktagen.",
@@ -173,7 +170,7 @@
       "cred_2_sub": "Der ganze Zyklus, von der Finanzierung bis zur Krise",
       "cred_3_value": "€1–25M",
       "cred_3_label": "Mid-Market-Fokus",
-      "cred_3_sub": "Niederländische PE- und M&A-Dealgrößen",
+      "cred_3_sub": "Europäische PE- und M&A-Dealgrößen",
       "cred_4_value": "Founder-led",
       "cred_4_label": "Selektiv & hands-on",
       "cred_4_sub": "Eine Handvoll Partner zur gleichen Zeit, ohne Zwischenebenen"
@@ -201,7 +198,7 @@
     "werkwijze_link": {
       "eyebrow": "Arbeitsweise",
       "body": "Drei Wege: eine einzelne Sparringsession, ein Beratungsprojekt oder die Implementierung bei Ihrem Team.",
-      "cta": "Arbeitsweise & Investition ansehen →"
+      "cta": "Arbeitsweise ansehen →"
     },
     "contact_cta": {
       "eyebrow": "Direkter Kontakt",
@@ -213,14 +210,14 @@
     }
   },
   "werkwijze": {
-    "meta_title": "Arbeitsweise & Investition",
-    "meta_description": "Drei Wege, mit Agentic Mindshift zu arbeiten: KI-Sparring & Strategie, KI-Beratung sowie Implementierung und Adoption. Honorare und Laufzeiten auf einer Seite.",
+    "meta_title": "Arbeitsweise",
+    "meta_description": "Drei Wege der Zusammenarbeit mit Agentic Mindshift: KI-Sparring & Strategie, KI-Beratung sowie Implementierung und Adoption. Was jeder Weg umfasst und wie schnell Sie starten.",
     "hero": {
-      "eyebrow": "Arbeitsweise & Investition",
+      "eyebrow": "Arbeitsweise",
       "heading": "Drei Wege, drei Situationen, ein erstes Gespräch.",
-      "subtext": "Was jeder Weg umfasst, was er kostet und wie schnell Sie starten. Ohne vorgeschaltetes Angebotsverfahren."
+      "subtext": "Was jeder Weg umfasst, was er liefert und wie schnell Sie starten."
     },
-    "answer_first": "Agentic Mindshift liefert KI-Beratung an Private-Equity-Fonds und M&A-Häuser im europäischen Mid-Market. Sie wählen aus drei Wegen: eine unverbindliche Sparringsession, KI-Beratung ab 4.500 € pro Projekt sowie Implementierung und Adoption auf Anfrage. Jeder Weg beginnt unverbindlich und endet mit einem konkreten Ergebnis.",
+    "answer_first": "Agentic Mindshift bietet KI-Beratung für Private-Equity-Fonds und M&A-Häuser im europäischen Mid-Market. Sie wählen einen von drei Wegen: ein unverbindliches Sparring, ein Beratungsmandat oder Implementierung und Adoption. Jeder Weg beginnt unverbindlich und endet mit einem konkreten Ergebnis.",
     "steps": {
       "eyebrow": "Von Interesse zur Zusammenarbeit",
       "heading": "Drei Schritte",
@@ -233,43 +230,39 @@
       "step_3_body": "Nach Zusage starten wir innerhalb einer Woche. Sie erhalten direkt das erste konkrete Ergebnis oder werden für die erste Session eingeplant."
     },
     "offerings": {
-      "eyebrow": "Investition",
+      "eyebrow": "Die Wege",
       "heading": "Welche Situation passt zu Ihnen?",
       "subtext": "Drei Situationen, drei Wege. Erkennen Sie Ihre Frage nicht sofort wieder? Ein Gespräch genügt, um den passenden Weg zu bestimmen.",
       "guarantee_title": "Garantie",
-      "guarantee_body": "Die Sparringsession kostet zwanzig Minuten und keine Rechnung. Nach Zusage zu einem Projekt starten Sie innerhalb von sieben Werktagen, mit dem ersten konkreten Ergebnis in der ersten Woche.",
-      "investment_label": "Investition"
+      "guarantee_body": "Die Sparringsession kostet zwanzig Minuten und keine Rechnung. Nach Zusage zu einem Projekt starten Sie innerhalb von sieben Werktagen, mit dem ersten konkreten Ergebnis in der ersten Woche."
     },
     "offering_1": {
       "badge": "Einstieg · unverbindlich",
       "title": "KI-Sparring & Strategie",
       "situation": "Sie möchten schnell wissen, was KI für Ihr Unternehmen, Ihren Deal oder Ihre nächste Entscheidung bedeutet.",
-      "price_note": "20 Minuten · unverbindlich · keine Rechnung",
+      "terms": "20 Minuten · unverbindlich · keine Rechnung",
       "cta": "Sitzung buchen →"
     },
     "offering_2": {
       "badge": "Projektbasiert oder Retainer",
       "title": "KI-Beratung",
       "situation": "Sie wollen wissen, wo KI in Ihrer Praxis rentiert und wo nicht. Analyse Ihrer Prozesse, ein begründeter Plan und der Business Case darunter.",
-      "price_note": "Pro Auftrag oder fortlaufend als Retainer",
-      "cta": "Ihre Frage besprechen →",
-      "price": "Ab €4.500"
+      "terms": "Pro Projekt oder laufend als Retainer",
+      "cta": "Ihre Frage besprechen →"
     },
     "offering_3": {
       "badge": "Projektbasiert oder Retainer",
       "title": "Implementierung & Adoption",
       "situation": "Der Plan liegt vor. Jetzt muss Ihr Team täglich damit arbeiten: Einrichtung der Workflows, Masterclasses und Training, bis die Adoption steht.",
-      "price_note": "Umfang und Honorar werden nach dem Intake festgelegt",
-      "cta": "Kennenlernen buchen →",
-      "price": "Auf Anfrage"
+      "terms": "Umfang und Honorar werden nach dem Intake festgelegt",
+      "cta": "Kennenlernen buchen →"
     },
-    "pricing_note": "* Alle Beträge zzgl. MwSt. Das erste Kennenlernen ist stets unverbindlich.",
     "risk": {
       "title": "Kein Risiko",
       "body": "Die Sparringsession kostet zwanzig Minuten ohne Rechnung. Nach Zusage starten Sie innerhalb von sieben Werktagen mit dem ersten konkreten Ergebnis."
     },
     "faq": {
-      "eyebrow": "Ehrlich über die Investition",
+      "eyebrow": "Klare Antworten",
       "heading": "Was Partner meist zuerst wissen wollen",
       "q1": "Was, wenn es sich als nicht das Richtige für uns herausstellt?",
       "a1": "Beginnen Sie mit einer Sparringsession: eine Frage, eine Zusammenfassung, keine Fortsetzung.",
@@ -305,7 +298,7 @@
     "s4_heading": "4. Speicherdauer",
     "s4_body": "Korrespondenz und Termindaten bewahren wir maximal 24 Monate nach dem letzten Kontakt auf, sofern Sie nicht eine frühere Löschung verlangen. Hosting-Logs werden nach dreißig Tagen gelöscht. Daten, die zu einem laufenden Auftrag gehören, bewahren wir so lange auf, wie es die gesetzlichen Aufbewahrungsfristen verlangen.",
     "s5_heading": "5. Auftragsverarbeiter",
-    "s5_body": "Wir nutzen eine begrenzte Anzahl von Auftragsverarbeitern: Supabase (europäische Region) für die Datenpersistenz, Resend für den E-Mail-Versand, Plausible Analytics (EU) für Besuchsstatistiken und einen europäischen Hosting-Anbieter für die Website. Mit jedem Auftragsverarbeiter wurde ein Auftragsverarbeitungsvertrag geschlossen.",
+    "s5_body": "Wir setzen eine begrenzte Zahl von Auftragsverarbeitern ein: Plausible Analytics (EU) für Besucherstatistiken, Cal.com für die Terminvereinbarung, einen europäischen Hosting-Anbieter für die Website und unseren E-Mail-Anbieter für die Korrespondenz. Mit jedem Auftragsverarbeiter besteht ein Auftragsverarbeitungsvertrag.",
     "s6_heading": "6. Übermittlungen außerhalb der EU",
     "s6_body": "Standardmäßig werden Ihre Daten innerhalb der Europäischen Union gespeichert und verarbeitet. Sollte eine Übermittlung außerhalb der EU erfolgen, geschieht dies ausschließlich auf der Grundlage der Standardvertragsklauseln der Europäischen Kommission.",
     "s7_heading": "7. Ihre Rechte",
@@ -328,7 +321,7 @@
     "s3_heading": "3. Art des Auftrags",
     "s3_body": "Aufträge werden als Bemühensverpflichtung ausgeführt, sofern nicht ausdrücklich anders vereinbart. Der Inhalt von Beratung, Berichten und Sparringsessions stellt keine Anlage- oder Finanzberatung im Sinne des niederländischen Finanzaufsichtsgesetzes dar.",
     "s4_heading": "4. Honorare und Zahlung",
-    "s4_body": "Die Honorare sind auf der Seite „Arbeitsweise“ angegeben und verstehen sich zzgl. MwSt., sofern nicht anders angegeben. Die Rechnungsstellung erfolgt monatlich im Voraus für Retainer-Aufträge und bei Lieferung für Projekte. Zahlungsfrist: dreißig Tage netto.",
+    "s4_body": "Honorare werden je Mandat schriftlich in der Auftragsbestätigung festgelegt und verstehen sich zzgl. Umsatzsteuer, sofern nicht anders angegeben. Die Rechnungsstellung erfolgt bei Retainer-Mandaten monatlich im Voraus und bei Projekten nach Lieferung. Zahlungsziel: dreißig Tage netto.",
     "s5_heading": "5. Kündigung und Stornierung",
     "s5_body": "Retainer-Aufträge haben eine Mindestlaufzeit von drei Monaten und sind danach monatlich mit einer Kündigungsfrist von ebenfalls einem Monat kündbar. Einzelne Sparringsessions können bis zu drei Werktage vor dem vereinbarten Termin kostenlos verschoben oder storniert werden. Workshops und Schulungen können innerhalb von zehn Werktagen vor dem vereinbarten Termin nicht storniert werden.",
     "s6_heading": "6. Haftung",

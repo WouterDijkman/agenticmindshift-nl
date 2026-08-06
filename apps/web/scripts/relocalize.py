@@ -56,12 +56,6 @@ ROUTE_3 = {
     'es': 'Implementación y adopción',
     'pt': 'Implementação e adoção',
 }
-ON_QUOTE = {
-    'en': 'On quotation',
-    'de': 'Auf Anfrage',
-    'es': 'Presupuesto a medida',
-    'pt': 'Sob proposta',
-}
 
 # ── The table ────────────────────────────────────────────────────────────────
 # key -> {locale: text}. Only keys whose NL text changed in this pass, plus the
@@ -198,9 +192,6 @@ T = {
         'es': 'Una pregunta sobre IA en su deal, su proceso o su próxima decisión. Veinte minutos, un resumen, sin continuación si no la quiere.',
         'pt': 'Uma pergunta sobre IA no seu deal, no seu processo ou na sua próxima decisão. Vinte minutos, um resumo, sem continuação se não a quiser.',
     },
-    'homepage.services.price_1': {
-        'en': 'No obligation', 'de': 'Unverbindlich', 'es': 'Sin compromiso', 'pt': 'Sem compromisso',
-    },
     'homepage.services.note_1': {
         'en': '20 minutes · no invoice',
         'de': '20 Minuten · keine Rechnung',
@@ -213,9 +204,6 @@ T = {
         'de': 'Wo KI in Ihrer Praxis rentiert und wo nicht. Analyse Ihrer Prozesse, ein begründeter Plan und der Business Case darunter.',
         'es': 'Dónde rinde la IA en su práctica y dónde no. Análisis de sus procesos, un plan fundamentado y el business case que lo sostiene.',
         'pt': 'Onde a IA rende na sua prática e onde não. Análise dos seus processos, um plano fundamentado e o business case por baixo.',
-    },
-    'homepage.services.price_2': {
-        'en': 'From €4,500', 'de': 'Ab 4.500 €', 'es': 'Desde 4.500 €', 'pt': 'A partir de 4.500 €',
     },
     'homepage.services.note_2': {
         'en': 'Per engagement or on retainer',
@@ -230,7 +218,6 @@ T = {
         'es': 'Del plan al uso. Configuración de los flujos de trabajo, masterclasses y formación, hasta que su equipo trabaje solo con ello.',
         'pt': 'Do plano ao uso. Configuração dos fluxos de trabalho, masterclasses e formação, até a sua equipa trabalhar sozinha com isso.',
     },
-    'homepage.services.price_3': ON_QUOTE,
     'homepage.services.note_3': {
         'en': 'Scope and rate after the intake',
         'de': 'Umfang und Honorar nach dem Intake',
@@ -238,10 +225,10 @@ T = {
         'pt': 'Âmbito e valor após a reunião inicial',
     },
     'homepage.services.foot': {
-        'en': 'All amounts exclude VAT. The first conversation is always without obligation.',
-        'de': 'Alle Beträge zzgl. MwSt. Das erste Gespräch ist immer unverbindlich.',
-        'es': 'Todos los importes excluyen IVA. La primera conversación es siempre sin compromiso.',
-        'pt': 'Todos os valores excluem IVA. A primeira conversa é sempre sem compromisso.',
+        'en': 'The first conversation is always without obligation.',
+        'de': 'Das erste Gespräch ist immer unverbindlich.',
+        'es': 'La primera conversación es siempre sin compromiso.',
+        'pt': 'A primeira conversa é sempre sem compromisso.',
     },
 
     # The `homepage.factum.*` block used to live here. The homepage once had its
@@ -586,7 +573,21 @@ T = {
         'es': 'El plan ya está. Ahora su equipo tiene que trabajar con él a diario: configuración de los flujos, masterclasses y formación hasta que la adopción se sostenga.',
         'pt': 'O plano está feito. Agora a sua equipa tem de trabalhar com ele diariamente: configuração dos fluxos, masterclasses e formação até a adoção se aguentar.',
     },
-    'werkwijze.offering_3.price_note': {
+    # These three were `price_note`, a subtitle under the amount. The amount is
+    # gone and the note took the slot, so the key says what it holds.
+    'werkwijze.offering_1.terms': {
+        'en': '20 minutes · no obligation · no invoice',
+        'de': '20 Minuten · unverbindlich · keine Rechnung',
+        'es': '20 minutos · sin compromiso · sin factura',
+        'pt': '20 minutos · sem compromisso · sem fatura',
+    },
+    'werkwijze.offering_2.terms': {
+        'en': 'Per engagement or ongoing on retainer',
+        'de': 'Pro Projekt oder laufend als Retainer',
+        'es': 'Por proyecto o de forma continua en retainer',
+        'pt': 'Por projeto ou de forma contínua em retainer',
+    },
+    'werkwijze.offering_3.terms': {
         'en': 'Scope and rate are set after the intake',
         'de': 'Umfang und Honorar werden nach dem Intake festgelegt',
         'es': 'El alcance y la tarifa se fijan tras la reunión inicial',
@@ -598,7 +599,6 @@ T = {
         'es': 'Reservar una toma de contacto →',
         'pt': 'Marcar um primeiro contacto →',
     },
-    'werkwijze.offering_3.price': ON_QUOTE,
     'werkwijze.risk.body': {
         'en': 'The sparring session costs twenty minutes and no invoice. Once agreed you start within seven working days, with the first concrete result.',
         'de': 'Die Sparringsession kostet zwanzig Minuten ohne Rechnung. Nach Zusage starten Sie innerhalb von sieben Werktagen mit dem ersten konkreten Ergebnis.',
@@ -740,6 +740,117 @@ T = {
         'de': 'Zu factumcapital.eu',
         'es': 'Ir a factumcapital.eu',
         'pt': 'Ir para factumcapital.eu',
+    },
+
+    # ── price removal pass ────────────────────────────────────────────────
+    # The site stopped quoting amounts. That is not a Dutch-only change: the
+    # word "Investering" was in every locale's page title, "€4.500" in every
+    # meta description, "excl. btw" in every footnote. Those keys keep their
+    # NL-side key name but their text is new, and build()'s precedence is
+    # table → existing → error, so a changed NL string with no entry here
+    # would leave four locales quoting a price nobody sells any more.
+    #
+    # Two keys in this block are not about price at all; they ride along
+    # because their NL text changed in the same pass:
+    #  - voorwaarden.s4_body still states rates are ex-VAT, because that is a
+    #    contractual term about how an agreed rate is read, not a quote.
+    #  - privacy.s5_body named Supabase and Resend as processors. Both were
+    #    deleted with the Scorecard, so naming them was a live inaccuracy in
+    #    a document that has to be accurate.
+
+    'homepage.final_cta.cta_secondary': {
+        'en': 'See how we work',
+        'de': 'Arbeitsweise ansehen',
+        'es': 'Ver cómo trabajamos',
+        'pt': 'Ver como trabalhamos',
+    },
+    'contact.card_02_title': {
+        'en': 'How we work',
+        'de': 'Arbeitsweise',
+        'es': 'Cómo trabajamos',
+        'pt': 'Como trabalhamos',
+    },
+    'contact.card_02_body': {
+        'en': 'Three routes, what each one covers and how quickly you start.',
+        'de': 'Drei Wege, was jeder umfasst und wie schnell Sie starten.',
+        'es': 'Tres rutas, qué incluye cada una y con qué rapidez empieza.',
+        'pt': 'Três percursos, o que cada um inclui e com que rapidez começa.',
+    },
+    'over.werkwijze_link.cta': {
+        'en': 'See how we work →',
+        'de': 'Arbeitsweise ansehen →',
+        'es': 'Ver cómo trabajamos →',
+        'pt': 'Ver como trabalhamos →',
+    },
+    'werkwijze.meta_title': {
+        'en': 'How we work',
+        'de': 'Arbeitsweise',
+        'es': 'Cómo trabajamos',
+        'pt': 'Como trabalhamos',
+    },
+    'werkwijze.meta_description': {
+        'en': 'Three ways to work with Agentic Mindshift: AI Sparring & Strategy, AI Advisory, and implementation and adoption. What each route covers and how quickly you start.',
+        'de': 'Drei Wege der Zusammenarbeit mit Agentic Mindshift: KI-Sparring & Strategie, KI-Beratung sowie Implementierung und Adoption. Was jeder Weg umfasst und wie schnell Sie starten.',
+        'es': 'Tres formas de trabajar con Agentic Mindshift: sparring y estrategia de IA, asesoramiento en IA, e implementación y adopción. Qué incluye cada ruta y con qué rapidez empieza.',
+        'pt': 'Três formas de trabalhar com a Agentic Mindshift: sparring e estratégia de IA, consultoria em IA, e implementação e adoção. O que cada percurso inclui e com que rapidez começa.',
+    },
+    'werkwijze.hero.eyebrow': {
+        'en': 'How we work',
+        'de': 'Arbeitsweise',
+        'es': 'Cómo trabajamos',
+        'pt': 'Como trabalhamos',
+    },
+    'werkwijze.hero.subtext': {
+        'en': 'What each route covers, what it delivers and how quickly you start.',
+        'de': 'Was jeder Weg umfasst, was er liefert und wie schnell Sie starten.',
+        'es': 'Qué incluye cada ruta, qué entrega y con qué rapidez empieza.',
+        'pt': 'O que cada percurso inclui, o que entrega e com que rapidez começa.',
+    },
+    'werkwijze.offerings.eyebrow': {
+        'en': 'The routes',
+        'de': 'Die Wege',
+        'es': 'Las rutas',
+        'pt': 'Os percursos',
+    },
+    'werkwijze.faq.eyebrow': {
+        'en': 'Straight answers',
+        'de': 'Klare Antworten',
+        'es': 'Respuestas claras',
+        'pt': 'Respostas claras',
+    },
+    'werkwijze.answer_first': {
+        'en': 'Agentic Mindshift delivers AI advisory to private equity funds and M&A firms in the European mid-market. You pick one of three routes: a no-obligation sparring session, an advisory engagement, or implementation and adoption. Every route starts without obligation and ends with a concrete result.',
+        'de': 'Agentic Mindshift bietet KI-Beratung für Private-Equity-Fonds und M&A-Häuser im europäischen Mid-Market. Sie wählen einen von drei Wegen: ein unverbindliches Sparring, ein Beratungsmandat oder Implementierung und Adoption. Jeder Weg beginnt unverbindlich und endet mit einem konkreten Ergebnis.',
+        'es': 'Agentic Mindshift ofrece asesoramiento en IA a fondos de private equity y firmas de M&A del mid-market europeo. Elige entre tres rutas: una sesión de sparring sin compromiso, un proyecto de asesoramiento, o implementación y adopción. Toda ruta empieza sin compromiso y termina con un resultado concreto.',
+        'pt': 'A Agentic Mindshift presta consultoria em IA a fundos de private equity e escritórios de M&A do mid-market europeu. Escolhe entre três percursos: uma sessão de sparring sem compromisso, um projeto de consultoria, ou implementação e adoção. Cada percurso começa sem compromisso e termina com um resultado concreto.',
+    },
+    'homepage.faqItems.investering_a': {
+        'en': 'The sparring session is free of charge. For advisory and implementation we set scope and rate in the proposal, after the intake. You pay for a defined engagement, not for an estimate made up front.',
+        'de': 'Das Sparring ist unverbindlich und kostenfrei. Für Beratung und Implementierung halten wir Umfang und Honorar im Angebot fest, nach dem Intake. Sie zahlen für ein abgegrenztes Mandat, nicht für eine Schätzung vorab.',
+        'es': 'La sesión de sparring es gratuita. Para asesoramiento e implementación fijamos alcance y tarifa en la propuesta, tras la reunión inicial. Paga por un encargo delimitado, no por una estimación hecha de antemano.',
+        'pt': 'A sessão de sparring é gratuita. Para consultoria e implementação fixamos âmbito e valor na proposta, após a reunião inicial. Paga por um trabalho delimitado, não por uma estimativa feita à partida.',
+    },
+    'voorwaarden.s4_body': {
+        'en': 'Rates are set out in writing per engagement in the engagement confirmation and are exclusive of VAT unless stated otherwise. Invoicing is monthly in advance for retainer engagements and on delivery for projects. Payment term: thirty days net.',
+        'de': 'Honorare werden je Mandat schriftlich in der Auftragsbestätigung festgelegt und verstehen sich zzgl. Umsatzsteuer, sofern nicht anders angegeben. Die Rechnungsstellung erfolgt bei Retainer-Mandaten monatlich im Voraus und bei Projekten nach Lieferung. Zahlungsziel: dreißig Tage netto.',
+        'es': 'Las tarifas se fijan por escrito para cada encargo en la confirmación del encargo y se entienden sin IVA, salvo indicación en contrario. La facturación es mensual por adelantado en los encargos con retainer y a la entrega en los proyectos. Plazo de pago: treinta días netos.',
+        'pt': 'Os valores são fixados por escrito para cada trabalho na confirmação de adjudicação e não incluem IVA, salvo indicação em contrário. A faturação é mensal e antecipada nos trabalhos em retainer e na entrega nos projetos. Prazo de pagamento: trinta dias líquidos.',
+    },
+    # Not a price, but found by the same sweep: the deal-size credential read
+    # "Niederländische PE- und M&A-Dealgrößen" in German while nl/en/es/pt all
+    # said European. A German visitor was shown a narrower track record than
+    # the one that exists, on the one page that exists to establish it.
+    'over.credentials.cred_3_sub': {
+        'en': 'European PE and M&A deal size',
+        'de': 'Europäische PE- und M&A-Dealgrößen',
+        'es': 'Tamaño de deals PE y M&A europeo',
+        'pt': 'Dimensão de deals PE e M&A europeu',
+    },
+    'privacy.s5_body': {
+        'en': 'We use a limited number of processors: Plausible Analytics (EU) for visitor statistics, Cal.com for scheduling calls, a European hosting provider for the website and our e-mail provider for correspondence. A data processing agreement is in place with each processor.',
+        'de': 'Wir setzen eine begrenzte Zahl von Auftragsverarbeitern ein: Plausible Analytics (EU) für Besucherstatistiken, Cal.com für die Terminvereinbarung, einen europäischen Hosting-Anbieter für die Website und unseren E-Mail-Anbieter für die Korrespondenz. Mit jedem Auftragsverarbeiter besteht ein Auftragsverarbeitungsvertrag.',
+        'es': 'Utilizamos un número limitado de encargados del tratamiento: Plausible Analytics (UE) para estadísticas de visitas, Cal.com para programar llamadas, un proveedor de hosting europeo para el sitio web y nuestro proveedor de correo para la correspondencia. Con cada encargado hay un contrato de encargo de tratamiento.',
+        'pt': 'Recorremos a um número limitado de subcontratantes: Plausible Analytics (UE) para estatísticas de visitas, Cal.com para o agendamento de chamadas, um fornecedor de alojamento europeu para o site e o nosso fornecedor de e-mail para a correspondência. Com cada subcontratante existe um contrato de subcontratação.',
     },
 }
 

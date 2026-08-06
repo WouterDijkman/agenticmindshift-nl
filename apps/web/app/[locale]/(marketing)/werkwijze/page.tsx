@@ -39,12 +39,15 @@ export async function generateMetadata(
    once, as <FactumBanner /> — which is the whole of the relationship the
    user asked for: "verwijzing naar factumcapital.eu met banner". */
 
+/* No amounts anywhere on this page. What survives the price is `terms`: the
+   shape of the engagement — twenty minutes and no invoice, per project or in
+   retainer, scoped after the intake. That is the part a buyer actually needs
+   before the first call, and unlike a number it does not go stale. */
 interface Offering {
   badge: string;
   title: string;
   situation: string;
-  price?: string;
-  priceNote: string;
+  terms: string;
   ctaLabel: string;
   ctaHref: string;
   featured?: boolean;
@@ -69,7 +72,7 @@ export default async function WerkwijzePage(
       badge: t('offering_1.badge'),
       title: t('offering_1.title'),
       situation: t('offering_1.situation'),
-      priceNote: t('offering_1.price_note'),
+      terms: t('offering_1.terms'),
       ctaLabel: t('offering_1.cta'),
       ctaHref: INTAKE_URL,
       Icon: SketchSparring,
@@ -78,8 +81,7 @@ export default async function WerkwijzePage(
       badge: t('offering_2.badge'),
       title: t('offering_2.title'),
       situation: t('offering_2.situation'),
-      price: t('offering_2.price'),
-      priceNote: t('offering_2.price_note'),
+      terms: t('offering_2.terms'),
       ctaLabel: t('offering_2.cta'),
       ctaHref: INTAKE_URL,
       Icon: SketchConsultancy,
@@ -97,8 +99,7 @@ export default async function WerkwijzePage(
       badge: t('offering_3.badge'),
       title: t('offering_3.title'),
       situation: t('offering_3.situation'),
-      price: t('offering_3.price'),
-      priceNote: t('offering_3.price_note'),
+      terms: t('offering_3.terms'),
       ctaLabel: t('offering_3.cta'),
       ctaHref: INTAKE_URL,
       featured: true,
@@ -252,37 +253,8 @@ export default async function WerkwijzePage(
                   style={{
                     paddingTop: '20px',
                     borderTop: '1px solid var(--border-subtle)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '6px',
                   }}
                 >
-                  <p
-                    style={{
-                      fontSize: '10px',
-                      fontWeight: 700,
-                      letterSpacing: '0.15em',
-                      textTransform: 'uppercase',
-                      color: 'var(--text-muted)',
-                      margin: 0,
-                    }}
-                  >
-                    {t('offerings.investment_label')}
-                  </p>
-                  {o.price && (
-                    <p
-                      style={{
-                        fontSize: 'clamp(1.5rem, 2.5vw, 1.875rem)',
-                        fontWeight: 700,
-                        letterSpacing: '-0.02em',
-                        lineHeight: 1.1,
-                        color: 'var(--text-primary)',
-                        margin: 0,
-                      }}
-                    >
-                      {o.price}
-                    </p>
-                  )}
                   <p
                     style={{
                       fontSize: '0.875rem',
@@ -291,7 +263,7 @@ export default async function WerkwijzePage(
                       lineHeight: 1.5,
                     }}
                   >
-                    {o.priceNote}
+                    {o.terms}
                   </p>
                 </div>
 
@@ -310,17 +282,9 @@ export default async function WerkwijzePage(
             ))}
           </div>
 
-          <p
-            style={{
-              fontSize: '0.8125rem',
-              color: 'var(--text-muted)',
-              marginTop: '16px',
-              textAlign: 'right',
-              letterSpacing: '0.04em',
-            }}
-          >
-            {t('pricing_note')}
-          </p>
+          {/* A right-aligned footnote used to sit here reading "all amounts
+              exclude VAT". With no amounts on the page there is nothing left
+              for it to qualify. */}
 
           {/* Risk reversal */}
           <div

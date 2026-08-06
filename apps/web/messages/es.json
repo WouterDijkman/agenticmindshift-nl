@@ -73,17 +73,14 @@
       "card_cta": "Más sobre esta ruta",
       "title_1": "Sparring y estrategia de IA",
       "body_1": "Una pregunta sobre IA en su deal, su proceso o su próxima decisión. Veinte minutos, un resumen, sin continuación si no la quiere.",
-      "price_1": "Sin compromiso",
       "note_1": "20 minutos · sin factura",
       "title_2": "Asesoramiento en IA",
       "body_2": "Dónde rinde la IA en su práctica y dónde no. Análisis de sus procesos, un plan fundamentado y el business case que lo sostiene.",
-      "price_2": "Desde 4.500 €",
       "note_2": "Por proyecto o en retainer",
       "title_3": "Implementación y adopción",
       "body_3": "Del plan al uso. Configuración de los flujos de trabajo, masterclasses y formación, hasta que su equipo trabaje solo con ello.",
-      "price_3": "Presupuesto a medida",
       "note_3": "Alcance y tarifa tras la reunión inicial",
-      "foot": "Todos los importes excluyen IVA. La primera conversación es siempre sin compromiso."
+      "foot": "La primera conversación es siempre sin compromiso."
     },
     "plan": {
       "eyebrow": "Así empieza",
@@ -116,13 +113,13 @@
       "heading": "Una conversación de veinte minutos.",
       "subtext": "Usted marca el tema. Sin agenda, sin compromiso, sin secuencia de correos.",
       "cta_primary": "Reserva una llamada de 20 minutos",
-      "cta_secondary": "Ver método y tarifas"
+      "cta_secondary": "Ver cómo trabajamos"
     },
     "faqItems": {
       "wat_q": "¿Qué hace exactamente Agentic Mindshift?",
       "wat_a": "Ponemos la IA a trabajar en la práctica de fondos de private equity y firmas de M&A. Va desde una sesión de sparring, pasando por el asesoramiento sobre dónde rinde la IA, hasta la implementación y la adopción por parte de su equipo.",
       "investering_q": "¿Cuánto cuesta?",
-      "investering_a": "La sesión de sparring es sin compromiso. El asesoramiento en IA arranca en 4.500 € por proyecto o va en retainer. La implementación y la adopción se presupuestan tras la reunión inicial. Todos los importes excluyen IVA.",
+      "investering_a": "La sesión de sparring es gratuita. Para asesoramiento e implementación fijamos alcance y tarifa en la propuesta, tras la reunión inicial. Paga por un encargo delimitado, no por una estimación hecha de antemano.",
       "anders_q": "¿Qué hace diferente a Agentic Mindshift?",
       "anders_a": "Seis años en acquisition finance y financial restructuring. El consejo sale de la práctica de deals; la IA lo acelera. Y la firma se mantiene pequeña: un puñado de clientes a la vez.",
       "start_q": "¿Con qué rapidez podemos empezar?",
@@ -138,8 +135,8 @@
     "card_01_title": "Sesión de sparring",
     "card_01_body": "Veinte minutos para ver si encajamos. Sin preparación, sin factura.",
     "card_01_cta": "Reservar una llamada",
-    "card_02_title": "Método e inversión",
-    "card_02_body": "Tres rutas, con los importes al lado. Útil si primero quiere saber cuánto cuesta algo.",
+    "card_02_title": "Cómo trabajamos",
+    "card_02_body": "Tres rutas, qué incluye cada una y con qué rapidez empieza.",
     "card_02_cta": "Ver las rutas",
     "card_03_title": "Mensaje directo",
     "card_03_body": "Para preguntas concretas, o si prefiere empezar por escrito. Respuesta en dos días hábiles.",
@@ -201,7 +198,7 @@
     "werkwijze_link": {
       "eyebrow": "Metodología",
       "body": "Tres rutas: una sesión de sparring, un proyecto de asesoramiento, o la implementación con su equipo.",
-      "cta": "Ver metodología e inversión →"
+      "cta": "Ver cómo trabajamos →"
     },
     "contact_cta": {
       "eyebrow": "Contacto directo",
@@ -213,14 +210,14 @@
     }
   },
   "werkwijze": {
-    "meta_title": "Metodología e Inversión",
-    "meta_description": "Tres maneras de trabajar con Agentic Mindshift: sparring y estrategia de IA, asesoramiento en IA, e implementación y adopción. Tarifas y plazos en una sola página.",
+    "meta_title": "Cómo trabajamos",
+    "meta_description": "Tres formas de trabajar con Agentic Mindshift: sparring y estrategia de IA, asesoramiento en IA, e implementación y adopción. Qué incluye cada ruta y con qué rapidez empieza.",
     "hero": {
-      "eyebrow": "Metodología e Inversión",
+      "eyebrow": "Cómo trabajamos",
       "heading": "Tres rutas, tres situaciones, una primera conversación.",
-      "subtext": "Qué incluye cada ruta, cuánto cuesta y con qué rapidez empieza. Sin proceso de presupuesto previo."
+      "subtext": "Qué incluye cada ruta, qué entrega y con qué rapidez empieza."
     },
-    "answer_first": "Agentic Mindshift presta asesoramiento en IA a fondos de private equity y firmas de M&A del mid-market europeo. Elija entre tres rutas: una sesión de sparring sin compromiso, asesoramiento en IA desde 4.500 € por proyecto, e implementación y adopción con presupuesto a medida. Cada ruta empieza sin compromiso y termina con un resultado concreto.",
+    "answer_first": "Agentic Mindshift ofrece asesoramiento en IA a fondos de private equity y firmas de M&A del mid-market europeo. Elige entre tres rutas: una sesión de sparring sin compromiso, un proyecto de asesoramiento, o implementación y adopción. Toda ruta empieza sin compromiso y termina con un resultado concreto.",
     "steps": {
       "eyebrow": "Del interés a la colaboración",
       "heading": "Tres pasos",
@@ -233,43 +230,39 @@
       "step_3_body": "Tras el acuerdo empezamos en una semana. Recibe de inmediato el primer resultado concreto o queda programado para la primera sesión."
     },
     "offerings": {
-      "eyebrow": "Inversión",
+      "eyebrow": "Las rutas",
       "heading": "¿Qué situación le corresponde?",
       "subtext": "Tres situaciones, tres rutas. ¿No reconoce su pregunta de inmediato? Basta una conversación para determinar la ruta adecuada.",
       "guarantee_title": "Garantía",
-      "guarantee_body": "La sesión de sparring cuesta veinte minutos y ninguna factura. Aceptado un proyecto, empieza en siete días laborables, con el primer resultado concreto en esa primera semana.",
-      "investment_label": "Inversión"
+      "guarantee_body": "La sesión de sparring cuesta veinte minutos y ninguna factura. Aceptado un proyecto, empieza en siete días laborables, con el primer resultado concreto en esa primera semana."
     },
     "offering_1": {
       "badge": "Introducción · sin compromiso",
       "title": "Sparring y estrategia de IA",
       "situation": "Quiere saber rápidamente qué significa la IA para su empresa, su operación o su próxima decisión.",
-      "price_note": "20 minutos · sin compromiso · sin factura",
+      "terms": "20 minutos · sin compromiso · sin factura",
       "cta": "Reservar una sesión →"
     },
     "offering_2": {
       "badge": "Por proyecto o retainer",
       "title": "Asesoramiento en IA",
       "situation": "Quiere saber dónde rinde la IA en su práctica y dónde no. Análisis de sus procesos, un plan fundamentado y el business case que lo sostiene.",
-      "price_note": "Por proyecto o en retainer continuo",
-      "cta": "Hable sobre su proyecto →",
-      "price": "Desde €4.500"
+      "terms": "Por proyecto o de forma continua en retainer",
+      "cta": "Hable sobre su proyecto →"
     },
     "offering_3": {
       "badge": "Por proyecto o retainer",
       "title": "Implementación y adopción",
       "situation": "El plan ya está. Ahora su equipo tiene que trabajar con él a diario: configuración de los flujos, masterclasses y formación hasta que la adopción se sostenga.",
-      "price_note": "El alcance y la tarifa se fijan tras la reunión inicial",
-      "cta": "Reservar una toma de contacto →",
-      "price": "Presupuesto a medida"
+      "terms": "El alcance y la tarifa se fijan tras la reunión inicial",
+      "cta": "Reservar una toma de contacto →"
     },
-    "pricing_note": "* Todos los importes excluyen IVA. La primera toma de contacto siempre es sin compromiso.",
     "risk": {
       "title": "Sin riesgo",
       "body": "La sesión de sparring cuesta veinte minutos sin factura. Aceptado el encargo, empieza en siete días laborables con el primer resultado concreto."
     },
     "faq": {
-      "eyebrow": "Honesto sobre la inversión",
+      "eyebrow": "Respuestas claras",
       "heading": "Lo que los socios preguntan primero",
       "q1": "¿Y si no es para nosotros?",
       "a1": "Empiece con una sesión de sparring: una pregunta, un resumen, sin continuación.",
@@ -305,7 +298,7 @@
     "s4_heading": "4. Plazos de conservación",
     "s4_body": "Conservamos la correspondencia y los datos de las citas un máximo de 24 meses desde el último contacto, salvo que solicite su supresión antes. Los registros de alojamiento se eliminan a los treinta días. Los datos vinculados a un encargo en curso se conservan mientras lo exijan los plazos legales de conservación.",
     "s5_heading": "5. Encargados del tratamiento",
-    "s5_body": "Utilizamos un número limitado de encargados: Supabase (región europea) para la persistencia de datos, Resend para el envío de emails, Plausible Analytics (UE) para estadísticas de visitas y un hosting europeo para el sitio web. Se ha firmado un acuerdo de encargo del tratamiento con cada uno.",
+    "s5_body": "Utilizamos un número limitado de encargados del tratamiento: Plausible Analytics (UE) para estadísticas de visitas, Cal.com para programar llamadas, un proveedor de hosting europeo para el sitio web y nuestro proveedor de correo para la correspondencia. Con cada encargado hay un contrato de encargo de tratamiento.",
     "s6_heading": "6. Transferencias fuera de la UE",
     "s6_body": "Por defecto, sus datos se almacenan y procesan dentro de la Unión Europea. Si se produjera alguna transferencia fuera de la UE, se realizará exclusivamente sobre la base de las cláusulas contractuales tipo de la Comisión Europea.",
     "s7_heading": "7. Sus derechos",
@@ -328,7 +321,7 @@
     "s3_heading": "3. Naturaleza del encargo",
     "s3_body": "Los encargos se ejecutan como obligación de medios, salvo acuerdo expreso en contrario. El contenido de los asesoramientos, informes y sesiones de sparring no constituye asesoramiento de inversión ni financiero en el sentido de la Ley neerlandesa de supervisión financiera.",
     "s4_heading": "4. Honorarios y pago",
-    "s4_body": "Los honorarios figuran en la página \"Metodología\" y son sin IVA, salvo indicación contraria. La facturación se realiza mensualmente por adelantado para retainers y a la entrega para proyectos. Plazo de pago: treinta días neto.",
+    "s4_body": "Las tarifas se fijan por escrito para cada encargo en la confirmación del encargo y se entienden sin IVA, salvo indicación en contrario. La facturación es mensual por adelantado en los encargos con retainer y a la entrega en los proyectos. Plazo de pago: treinta días netos.",
     "s5_heading": "5. Cancelación y rescisión",
     "s5_body": "Los retainers tienen una duración mínima de tres meses y son rescindibles mensualmente a partir de entonces con un preaviso de un mes. Las sesiones de sparring sueltas pueden reprogramarse o cancelarse sin coste hasta tres días laborables antes de la fecha acordada. Los talleres y las formaciones no son cancelables en los diez días laborables anteriores a la fecha acordada.",
     "s6_heading": "6. Responsabilidad",

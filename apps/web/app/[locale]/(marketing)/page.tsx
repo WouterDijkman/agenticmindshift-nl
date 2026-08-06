@@ -93,8 +93,8 @@ export default async function HomePage() {
           2. DE GIDS — wie hierachter staat.
              Moved above the offer. A reader who has just been shown three
              problems wants to know who is claiming to solve them before he
-             is shown a price list; the old order asked him to read the
-             price list first and take the credentials on faith.
+             is shown the offer; the old order asked him to read the routes
+             first and take the credentials on faith.
       ═══════════════════════════════════════════ */}
       <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(56px, 7vw, 80px)' }}>
         <div className="container-medium">
@@ -123,7 +123,7 @@ export default async function HomePage() {
       <hr style={{ border: 'none', borderTop: '1px solid var(--border-subtle)', margin: 0 }} />
 
       {/* ═══════════════════════════════════════════
-          3. DE DRIE ROUTES — het aanbod, met prijs
+          3. DE DRIE ROUTES — het aanbod, zonder bedragen
       ═══════════════════════════════════════════ */}
       <HomepageServicesSection />
 

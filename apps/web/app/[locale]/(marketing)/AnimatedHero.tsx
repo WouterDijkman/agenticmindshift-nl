@@ -21,9 +21,12 @@ const ROUTES = [1, 2, 3] as const;
  * met a quiz and had to infer the business behind it.
  *
  * So the deliverable beside the headline is now the offer itself: three
- * routes, each with its price anchor. It answers "what is this and what does
- * it cost" inside the first screen, which is the whole job of a first screen
- * for a consultancy that does not have a product to photograph.
+ * routes, named, inside the first screen. That is the whole job of a first
+ * screen for a consultancy with no product to photograph.
+ *
+ * Each route carried a price anchor here too. The site no longer quotes
+ * amounts, so the row is the route and the shape of the engagement, and the
+ * number is settled in the proposal.
  */
 export default function AnimatedHero() {
   const locale = useLocale();
@@ -187,7 +190,6 @@ export default function AnimatedHero() {
                         <span className="hero-route-title">{s(`title_${n}`)}</span>
                         <span className="hero-route-note">{s(`note_${n}`)}</span>
                       </span>
-                      <span className="hero-route-price">{s(`price_${n}`)}</span>
                     </a>
                   </li>
                 ))}

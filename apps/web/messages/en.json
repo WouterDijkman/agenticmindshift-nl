@@ -73,17 +73,14 @@
       "card_cta": "More on this route",
       "title_1": "AI Sparring & Strategy",
       "body_1": "One question about AI in your deal, your process or your next decision. Twenty minutes, one summary, no follow-up unless you want it.",
-      "price_1": "No obligation",
       "note_1": "20 minutes · no invoice",
       "title_2": "AI Advisory",
       "body_2": "Where AI pays off in your practice and where it does not. Analysis of your processes, a reasoned plan, and the business case underneath it.",
-      "price_2": "From €4,500",
       "note_2": "Per engagement or on retainer",
       "title_3": "Implementation & adoption",
       "body_3": "From plan to use. Setting up the workflows, masterclasses and training, until your team works with it on its own.",
-      "price_3": "On quotation",
       "note_3": "Scope and rate after the intake",
-      "foot": "All amounts exclude VAT. The first conversation is always without obligation."
+      "foot": "The first conversation is always without obligation."
     },
     "plan": {
       "eyebrow": "How it starts",
@@ -116,13 +113,13 @@
       "heading": "One conversation, twenty minutes.",
       "subtext": "You set the subject. No agenda, no obligation, no email sequence.",
       "cta_primary": "Book a 20-minute call",
-      "cta_secondary": "See approach & rates"
+      "cta_secondary": "See how we work"
     },
     "faqItems": {
       "wat_q": "What exactly does Agentic Mindshift do?",
       "wat_a": "We put AI to work in the practice of private equity funds and M&A firms. That runs from a single sparring session, through advice on where AI pays off, to the implementation and your team’s adoption of it.",
       "investering_q": "What does it cost?",
-      "investering_a": "The sparring session is without obligation. AI advisory starts at €4,500 per engagement, or runs on retainer. Implementation and adoption are quoted after the intake. All amounts exclude VAT.",
+      "investering_a": "The sparring session is free of charge. For advisory and implementation we set scope and rate in the proposal, after the intake. You pay for a defined engagement, not for an estimate made up front.",
       "anders_q": "What makes Agentic Mindshift different?",
       "anders_a": "Six years in acquisition finance and financial restructuring. The advice comes out of deal practice; the AI speeds it up. And the firm stays small: a handful of partners at a time.",
       "start_q": "How quickly can we start?",
@@ -138,8 +135,8 @@
     "card_01_title": "Sparring session",
     "card_01_body": "Twenty minutes to establish whether there is a good fit. No preparation needed, no invoice.",
     "card_01_cta": "Book a call",
-    "card_02_title": "Approach and investment",
-    "card_02_body": "Three routes, with the amounts alongside. Useful if you want to know what something costs first.",
+    "card_02_title": "How we work",
+    "card_02_body": "Three routes, what each one covers and how quickly you start.",
     "card_02_cta": "See the routes",
     "card_03_title": "Direct message",
     "card_03_body": "For specific questions, or if you prefer to start in writing. Reply within two working days.",
@@ -201,7 +198,7 @@
     "werkwijze_link": {
       "eyebrow": "How we work",
       "body": "Three routes: a single sparring session, an advisory engagement, or implementation with your team.",
-      "cta": "View how we work & investment →"
+      "cta": "See how we work →"
     },
     "contact_cta": {
       "eyebrow": "Get in touch",
@@ -213,14 +210,14 @@
     }
   },
   "werkwijze": {
-    "meta_title": "How We Work & Investment",
-    "meta_description": "Three ways to work with Agentic Mindshift: AI Sparring & Strategy, AI Advisory, and implementation and adoption. Rates and timelines on one page.",
+    "meta_title": "How we work",
+    "meta_description": "Three ways to work with Agentic Mindshift: AI Sparring & Strategy, AI Advisory, and implementation and adoption. What each route covers and how quickly you start.",
     "hero": {
-      "eyebrow": "How We Work & Investment",
+      "eyebrow": "How we work",
       "heading": "Three routes, three situations, one first conversation.",
-      "subtext": "What each route involves, what it costs and how quickly you start. Without a quotation process up front."
+      "subtext": "What each route covers, what it delivers and how quickly you start."
     },
-    "answer_first": "Agentic Mindshift delivers AI advisory to private equity funds and M&A firms in the European mid-market. You choose from three routes: a no-obligation sparring session, AI advisory from €4,500 per engagement, and implementation and adoption on quotation. Every route begins without obligation and ends with a concrete result.",
+    "answer_first": "Agentic Mindshift delivers AI advisory to private equity funds and M&A firms in the European mid-market. You pick one of three routes: a no-obligation sparring session, an advisory engagement, or implementation and adoption. Every route starts without obligation and ends with a concrete result.",
     "steps": {
       "eyebrow": "From interest to collaboration",
       "heading": "Three steps",
@@ -233,43 +230,39 @@
       "step_3_body": "Once agreed, we start within a week. You either receive the first concrete result straight away or are scheduled for the first session."
     },
     "offerings": {
-      "eyebrow": "Investment",
+      "eyebrow": "The routes",
       "heading": "Which situation fits you?",
       "subtext": "Three situations, three routes. Don’t recognise your question straight away? One conversation is enough to settle which route fits.",
       "guarantee_title": "Guarantee",
-      "guarantee_body": "The sparring session costs twenty minutes and no invoice. Once an engagement is agreed you start within seven working days, with the first concrete result in that first week.",
-      "investment_label": "Investment"
+      "guarantee_body": "The sparring session costs twenty minutes and no invoice. Once an engagement is agreed you start within seven working days, with the first concrete result in that first week."
     },
     "offering_1": {
       "badge": "Entry · no obligation",
       "title": "AI Sparring & Strategy",
       "situation": "You want to quickly understand what AI means for your business, your deal or your next decision.",
-      "price_note": "20 minutes · no obligation · no invoice",
+      "terms": "20 minutes · no obligation · no invoice",
       "cta": "Book a session →"
     },
     "offering_2": {
       "badge": "Project-based or retainer",
       "title": "AI Advisory",
       "situation": "You want to know where AI pays off in your practice and where it does not. Analysis of your processes, a reasoned plan, and the business case underneath it.",
-      "price_note": "Per engagement or on an ongoing retainer",
-      "cta": "Discuss your question →",
-      "price": "From €4,500"
+      "terms": "Per engagement or ongoing on retainer",
+      "cta": "Discuss your question →"
     },
     "offering_3": {
       "badge": "Per engagement or retainer",
       "title": "Implementation & adoption",
       "situation": "The plan is in place. Now your team has to work with it daily: setting up the workflows, masterclasses and training until adoption holds.",
-      "price_note": "Scope and rate are set after the intake",
-      "cta": "Book an introduction →",
-      "price": "On quotation"
+      "terms": "Scope and rate are set after the intake",
+      "cta": "Book an introduction →"
     },
-    "pricing_note": "* All amounts exclude VAT. The first conversation is always without obligation.",
     "risk": {
       "title": "No risk",
       "body": "The sparring session costs twenty minutes and no invoice. Once agreed you start within seven working days, with the first concrete result."
     },
     "faq": {
-      "eyebrow": "Honest about the investment",
+      "eyebrow": "Straight answers",
       "heading": "What partners usually ask first",
       "q1": "What if it turns out not to be right for us?",
       "a1": "Start with a sparring session: one question, one summary, no follow-up.",
@@ -305,7 +298,7 @@
     "s4_heading": "4. Retention periods",
     "s4_body": "We keep correspondence and appointment details for a maximum of 24 months after the last contact, unless you ask us to delete them sooner. Hosting logs are deleted after thirty days. Data belonging to an ongoing engagement is kept for as long as statutory retention periods require.",
     "s5_heading": "5. Processors",
-    "s5_body": "We use a limited number of processors: Supabase (European region) for data persistence, Resend for sending emails, Plausible Analytics (EU) for visit statistics and a European hosting provider for the website. A data processing agreement has been concluded with each processor.",
+    "s5_body": "We use a limited number of processors: Plausible Analytics (EU) for visitor statistics, Cal.com for scheduling calls, a European hosting provider for the website and our e-mail provider for correspondence. A data processing agreement is in place with each processor.",
     "s6_heading": "6. Transfers outside the EU",
     "s6_body": "By default your data is stored and processed within the European Union. Should transfer outside the EU occur, it takes place exclusively on the basis of the standard contractual clauses of the European Commission.",
     "s7_heading": "7. Your rights",
@@ -328,7 +321,7 @@
     "s3_heading": "3. Nature of the engagement",
     "s3_body": "Engagements are performed as a best-efforts obligation, unless expressly agreed otherwise. The content of advice, reports and sparring sessions does not constitute investment or financial advice within the meaning of the Dutch Financial Supervision Act.",
     "s4_heading": "4. Fees and payment",
-    "s4_body": "Fees are listed on the \"How We Work\" page and are exclusive of VAT unless stated otherwise. Invoicing takes place monthly in advance for retainer engagements and upon delivery for projects. Payment term: thirty days net.",
+    "s4_body": "Rates are set out in writing per engagement in the engagement confirmation and are exclusive of VAT unless stated otherwise. Invoicing is monthly in advance for retainer engagements and on delivery for projects. Payment term: thirty days net.",
     "s5_heading": "5. Cancellation and termination",
     "s5_body": "Retainer engagements have a minimum duration of three months and are thereafter terminable monthly with a notice period of one month. Single sparring sessions may be rescheduled or cancelled without charge up to three working days before the agreed date. Workshops and training are non-cancellable within ten working days before the agreed date.",
     "s6_heading": "6. Liability",

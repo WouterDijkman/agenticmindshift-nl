@@ -741,26 +741,17 @@ nav, header, .nav-link, .eyebrow-ui {
   margin: 0;
   flex: 1;
 }
-/* The price sits on the card, above the link rather than behind it. Rule on
+/* The terms of the engagement, above the link rather than behind it. Rule on
    top so it reads as a separate register from the body copy — a fact, not a
-   further sentence. */
-.wb-card-price {
+   further sentence. This was a bold price with the terms as a subordinate
+   line under it; with the amount gone the terms take the slot, at the weight
+   the subordinate line had. */
+.wb-card-terms {
   margin: 16px 0 0;
   padding-top: 14px;
   border-top: 1px solid var(--border-subtle);
   font-family: var(--font-ui);
-  font-size: 0.9375rem;
-  font-weight: 700;
-  letter-spacing: -0.005em;
-  color: var(--text-primary);
-}
-.wb-card-price-note {
-  display: block;
-  margin-top: 3px;
-  font-family: inherit;
   font-size: 0.8125rem;
-  font-weight: 400;
-  letter-spacing: normal;
   line-height: 1.5;
   color: var(--text-muted);
 }
@@ -1794,8 +1785,8 @@ nav, header, .nav-link, .eyebrow-ui {
   margin-top: 26px;
 }
 
-/* Below this the two columns stop being a fair fight: the route panel has
-   three prices in it and squeezing it puts each one on its own line. */
+/* Below this the two columns stop being a fair fight: squeezing the route
+   panel puts each route name on its own line. */
 @media (max-width: 1000px) {
   .hero-home-split {
     grid-template-columns: 1fr;
@@ -1814,9 +1805,9 @@ nav, header, .nav-link, .eyebrow-ui {
 
 /* ================================================================== */
 /* HERO ROUTE PANEL — the offer, inside the first screen               */
-/* Three rows, each a name and a price. It is a price list, so it is   */
-/* set like one: hairline rules, no card shadow, no rust until hover.  */
-/* The one thing it must not do is out-shout the CTA beside it.        */
+/* Three rows, each a route and the shape of the engagement. Set like  */
+/* an index: hairline rules, no card shadow, no rust until hover. The  */
+/* one thing it must not do is out-shout the CTA beside it.            */
 /* ================================================================== */
 .hero-routes {
   background: var(--bg-elevated);
@@ -1843,7 +1834,8 @@ nav, header, .nav-link, .eyebrow-ui {
 }
 .hero-route {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  /* Was a third `auto` column holding the price. */
+  grid-template-columns: auto minmax(0, 1fr);
   align-items: baseline;
   gap: 14px;
   padding: 16px 0;
@@ -1876,15 +1868,6 @@ nav, header, .nav-link, .eyebrow-ui {
   line-height: 1.5;
   color: var(--text-muted);
 }
-.hero-route-price {
-  font-family: var(--font-ui);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  color: var(--text-secondary);
-  white-space: nowrap;
-  text-align: right;
-}
 .hero-route:hover .hero-route-title {
   color: var(--accent-cta-ink);
 }
@@ -1896,18 +1879,8 @@ nav, header, .nav-link, .eyebrow-ui {
   line-height: 1.55;
   color: var(--text-muted);
 }
-/* The price stacks under the name rather than shrinking to fit beside it —
-   at this width "Vanaf €4.500" beside a two-line route name leaves each of
-   them about eleven characters. */
-@media (max-width: 420px) {
-  .hero-route {
-    grid-template-columns: auto minmax(0, 1fr);
-  }
-  .hero-route-price {
-    grid-column: 2;
-    text-align: left;
-  }
-}
+/* A 420px breakpoint used to stack the price under the route name. With
+   the price column gone the two-column grid already fits. */
 @media (prefers-reduced-motion: reduce) {
   .hero-route-title {
     transition: none;

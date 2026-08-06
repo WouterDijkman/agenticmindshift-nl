@@ -35,9 +35,12 @@ const headingVariants = {
  *
  * This section did not exist. The three routes lived only on /werkwijze, so a
  * homepage visitor had to click through to a page called "Werkwijze" to find
- * out what was actually for sale. The price sits on the card rather than
- * behind the link, because a partner who cannot find a number assumes the
- * number is bad.
+ * out what was actually for sale.
+ *
+ * The card carried a price until the site stopped quoting them. What is left
+ * is the engagement shape — twenty minutes and no invoice, per project or in
+ * retainer, scoped after the intake — which is what the buyer needs in order
+ * to pick a route. The amount is settled in the proposal.
  */
 export default function HomepageServicesSection() {
   const locale = useLocale();
@@ -94,10 +97,7 @@ export default function HomepageServicesSection() {
               <div className="wb-card-body">
                 <p className="wb-card-title">{t(`title_${n}`)}</p>
                 <p className="wb-card-text">{t(`body_${n}`)}</p>
-                <p className="wb-card-price">
-                  {t(`price_${n}`)}
-                  <span className="wb-card-price-note">{t(`note_${n}`)}</span>
-                </p>
+                <p className="wb-card-terms">{t(`note_${n}`)}</p>
                 <span className="wb-card-cta">
                   {t('card_cta')} <span aria-hidden="true">→</span>
                 </span>
