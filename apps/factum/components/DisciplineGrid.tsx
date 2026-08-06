@@ -3,7 +3,6 @@ import {
   SketchChip,
   SketchClipboard,
   SketchDueDiligence,
-  SketchGear,
   SketchKnowledge,
   SketchPortfolio,
   SketchReport,
@@ -28,11 +27,10 @@ const ICONS: SketchIcon[] = [
   SketchScale, // legal
   SketchClipboard, // tax
   SketchSparring, // hr
-  SketchGear, // it
+  SketchChip, // technology — the chip, not the gear: this row absorbed `ai`
   SketchKnowledge, // esg
   SketchSpeed, // operational
-  SketchDueDiligence, // valuation
-  SketchChip // ai
+  SketchDueDiligence // valuation
 ];
 
 export type Discipline = {
@@ -44,7 +42,7 @@ export type Discipline = {
 };
 
 /**
- * The scope, as ten pairs of "what goes wrong" and "what you get back".
+ * The scope, as nine pairs of "what goes wrong" and "what you get back".
  *
  * This was a board of thirteen labelled marks — Financial, Commercial, Legal —
  * and it had the failure mode every capability list has: it is a list of our
@@ -58,9 +56,10 @@ export type Discipline = {
  * as the anchor — it is still how a buyer's own checklist is organised — but it
  * has stopped being the whole content of the tile.
  *
- * Ten tiles, two columns, so each pair has room to be a sentence rather than a
- * chip. The five-column board it replaces could hold a word and nothing else,
- * which is what made it a capability list in the first place.
+ * Nine tiles, three columns, so each pair has room to be a sentence rather than
+ * a chip and the last row still fills. The five-column board it replaces could
+ * hold a word and nothing else, which is what made it a capability list in the
+ * first place.
  */
 export default function DisciplineGrid({ items }: { items: Discipline[] }) {
   // The prose elsewhere prints DISCIPLINE_COUNT next to this grid. When the two

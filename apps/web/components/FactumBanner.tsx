@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import { factumUrl } from '@/lib/factum';
 
 /**
  * One banner, pointing out.
@@ -11,7 +12,7 @@ import { useTranslations } from 'next-intl';
  * countdown and CTA block, and the platform's own site at factumcapital.eu.
  * The middle one was a second product page for a product that already has
  * one, and it drifted — it was still advertising 31 modules and a
- * four-moment cycle months after the roster was cut to 23 across five.
+ * four-moment cycle months after the roster was cut to 22 across five.
  *
  * The teaser page is gone and /factum-capital now redirects to the real site.
  * This is the only place either page mentions Factum, and it is a signpost
@@ -19,8 +20,14 @@ import { useTranslations } from 'next-intl';
  *
  * The link is external and deliberately full-width dark, so it reads as
  * leaving this site rather than as another internal section.
+ *
+ * `rel` carries `noopener` but no longer `noreferrer`. This is a link between
+ * two properties we own, and stripping the Referer header meant Factum's
+ * analytics recorded every arrival from here as direct traffic — hiding the
+ * one referral path either site has.
  */
 export default function FactumBanner() {
+  const locale = useLocale();
   const t = useTranslations('factum_banner');
 
   return (
@@ -36,9 +43,9 @@ export default function FactumBanner() {
     >
       <div className="container-medium">
         <motion.a
-          href="https://factumcapital.eu"
+          href={factumUrl(locale)}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
           className="factum-banner plausible-event-name=Factum+Outbound plausible-event-location=banner"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}

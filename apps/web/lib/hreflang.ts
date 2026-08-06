@@ -38,12 +38,25 @@ export const OG_LOCALES: Record<string, string> = {
 /**
  * Every locale variant of `path`, plus x-default.
  *
- * x-default is the page for a reader whose language is none of the five, so it
- * points at English. It used to point at Dutch, which was defensible only
- * while the proxy also fell back to Dutch. It does not any more — `/` now
- * resolves to English for anyone outside the five language areas — and the two
- * have to agree, or the crawler is told one thing and the visitor shown
- * another.
+ * x-default is the page Search shows a reader whose language is none of the
+ * five, so it points at English. That reason stands on its own: a Finn is far
+ * likelier to read English than Dutch.
+ *
+ * It is deliberately *not* the bare `/`, and that is worth spelling out
+ * because the obvious argument runs the other way. `/` now renders rather than
+ * redirects (see `proxy.ts`), so it is a real page and could in principle be
+ * named here. Two reasons not to. First, hreflang annotations are supposed to
+ * name canonical URLs, and `/` is not one — it serves the Dutch homepage and
+ * canonicals to `/nl`. Naming a non-canonical URL invites Google to re-map or
+ * ignore the annotation. Second, `/` is *Dutch* on this app, so pointing
+ * x-default at it would hand the world's non-Dutch, non-German, non-Spanish,
+ * non-Portuguese readers a Dutch page — which is the thing this line exists to
+ * prevent.
+ *
+ * The residual asymmetry is real and small: a Finn who types the bare domain
+ * gets Dutch, while a Finn who arrives from Search gets `/en`. Nobody types a
+ * domain they have not heard of; Search is the entrance that matters, and the
+ * header switcher is one click for the other case.
  */
 export function getLanguageAlternates(path: string) {
   const languages: Record<string, string> = {};

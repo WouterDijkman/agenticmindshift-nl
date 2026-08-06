@@ -12,6 +12,7 @@ import { Section, SectionHeader } from '@/components/Section';
 import Disclosures from '@/components/Disclosures';
 import CtaBand from '@/components/CtaBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export async function generateMetadata({
   params
@@ -36,6 +37,8 @@ export default async function SprintPage({
 
   return (
     <>
+      <Breadcrumb path="/diligence-sprint" />
+
       <PageHeader
         title={t('header.title')}
         lead={t('header.lead', numbers)}
@@ -63,7 +66,11 @@ export default async function SprintPage({
       {/* The discipline roster; count comes from DISCIPLINES in lib/site.ts.
           This is what the page is for, and it is now the only section on it
           carrying feature weight. */}
-      <Section width="medium" tone="inset" weight="loud">
+      {/* Wide, not medium. The grid runs three columns now that the roster is
+          nine, and three columns inside the medium container is 250px a tile —
+          two sentences at four words a line, which is what five columns was
+          abandoned for in the first place. */}
+      <Section width="wide" tone="inset" weight="loud">
         <SectionHeader title={t('disciplines.title', numbers)} lead={t('disciplines.lead')} />
         <div style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
           <DisciplineGrid

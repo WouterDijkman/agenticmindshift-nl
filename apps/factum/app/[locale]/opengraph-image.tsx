@@ -3,10 +3,14 @@ import { getTranslations } from 'next-intl/server';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { routing } from '@/i18n/routing';
+import { OG_IMAGE_ALT, OG_IMAGE_SIZE, OG_IMAGE_CONTENT_TYPE } from '@/lib/ogImage';
 
-export const size = { width: 1200, height: 630 };
-export const contentType = 'image/png';
-export const alt = 'Factum Capital';
+// Next reads these three as named exports of the route file, so they have to be
+// declared here — but the values live in lib/ogImage.ts, because every page
+// also has to restate the image in its own `openGraph`. See that file for why.
+export const size = OG_IMAGE_SIZE;
+export const contentType = OG_IMAGE_CONTENT_TYPE;
+export const alt = OG_IMAGE_ALT;
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

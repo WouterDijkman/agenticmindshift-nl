@@ -291,7 +291,13 @@ export function getOrganizationLd(locale: string) {
       areaServed: 'Europe',
       availableLanguage: ['Dutch', 'English', 'German', 'Spanish', 'Portuguese'],
     },
-    sameAs: ['https://www.linkedin.com/in/wwdijkman/'],
+    // Factum Capital is this company's trading name for the diligence platform
+    // and carries the reverse edge in its own Organization block. Asserting it
+    // from both sides matters more than it looks: a brand search currently
+    // returns Wouter's LinkedIn and neither website, so the search engine has
+    // not connected the two domains at all. One-directional claims from the
+    // newer, weaker domain are the ones easiest to ignore.
+    sameAs: ['https://www.linkedin.com/in/wwdijkman/', 'https://www.factumcapital.eu'],
   };
 }
 

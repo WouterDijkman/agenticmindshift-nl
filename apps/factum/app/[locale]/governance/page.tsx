@@ -11,6 +11,7 @@ import Dial from '@/components/Dial';
 import TenancySplit from '@/components/TenancySplit';
 import CtaBand from '@/components/CtaBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
+import Breadcrumb from '@/components/Breadcrumb';
 import {
   GROUNDING_AUDIT_DATE,
   GROUNDING_RATE,
@@ -50,6 +51,8 @@ export default async function GovernancePage({
 
   return (
     <>
+      <Breadcrumb path="/governance" />
+
       <PageHeader
         title={t('header.title')}
         lead={t('header.lead')}

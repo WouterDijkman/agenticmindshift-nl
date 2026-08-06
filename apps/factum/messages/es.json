@@ -1,32 +1,32 @@
 {
   "meta": {
     "home": {
-      "title": "Análisis con rigor de due diligence a lo largo del ciclo de la operación",
-      "description": "Diez disciplinas sobre el data room completo. Reconciliadas entre sí. Revisadas por una persona antes de que usted las vea."
+      "title": "Due diligence con IA: M&A y private equity",
+      "description": "Nueve disciplinas sobre el data room completo. Reconciliadas entre sí. Revisadas por una persona antes de que usted las vea."
     },
     "platform": {
-      "title": "La plataforma",
-      "description": "23 módulos de due diligence en diez disciplinas. Cada hallazgo cita un documento. Cada entregable pasa por un control humano."
+      "title": "Plataforma de due diligence con IA",
+      "description": "22 módulos de due diligence en nueve disciplinas. Cada hallazgo cita un documento. Cada entregable pasa por un control humano."
     },
     "sprint": {
-      "title": "El Diligence Sprint",
-      "description": "Diez revisiones especializadas sobre un data room, reconciliadas en una única narrativa, con un registro vivo de lagunas."
+      "title": "Revisión completa del data room en días",
+      "description": "Nueve pasadas especializadas sobre un data room, reconciliadas en una sola narrativa, con seguimiento de lagunas en vivo."
     },
     "governance": {
-      "title": "Gobernanza y tratamiento de datos",
+      "title": "Gobernanza de IA y tratamiento de datos",
       "description": "Cómo se procesan los documentos, qué hace el control humano y qué no afirma Factum."
     },
     "team": {
-      "title": "Quién está detrás de esto",
-      "description": "La lectura del riesgo de un banquero. La disciplina de un ingeniero para sistemas que no se rompen."
+      "title": "El equipo detrás de Factum",
+      "description": "Un banquero de leveraged finance y un ingeniero de datos. Uno de los dos aprueba cada entregable."
     },
     "partnerships": {
-      "title": "Alianzas",
+      "title": "Capacidad de diligence para asesores",
       "description": "Capacidad analítica con rigor de due diligence detrás de sus propias relaciones con clientes."
     },
     "contact": {
-      "title": "Hable con nosotros",
-      "description": "Una llamada inicial con la persona que revisa cada entregable. Sin formulario, sin cola."
+      "title": "Reservar una demo",
+      "description": "Reserve una demo de treinta minutos con la persona que revisa cada entregable."
     },
     "privacy": {
       "title": "Privacidad",
@@ -45,12 +45,12 @@
     "team": "Equipo",
     "partnerships": "Alianzas",
     "contact": "Contacto",
-    "cta": "Reservar una llamada",
+    "cta": "Reservar una demo",
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú"
   },
   "footer": {
-    "blurb": "Análisis con rigor de due diligence en todo el ciclo. Fundamentado en sus documentos. Revisado por una persona identificada. Entregado en días.",
+    "blurb": "Due diligence con IA para M&A y private equity. Cada hallazgo cita un documento. Cada entregable revisado por una persona con nombre.",
     "sitemap": "Mapa del sitio",
     "company": "Empresa",
     "privacy": "Privacidad",
@@ -91,9 +91,9 @@
         "result": "Quién está atado por contrato, quién no, y cuánto cuestan de verdad pensiones y convenio."
       },
       {
-        "label": "TI",
-        "pain": "La deuda técnica no figura en ningún balance.",
-        "result": "Dónde los sistemas no sostienen el plan de negocio, y qué cuesta repararlos."
+        "label": "Tecnología (TI e IA)",
+        "pain": "La deuda técnica no figura en ningún balance, y «impulsado por IA» suele ser una licencia sobre el modelo de otro.",
+        "result": "Qué corre de verdad, qué cuesta repararlo, y qué entra en el Reglamento de IA."
       },
       {
         "label": "ESG",
@@ -109,11 +109,6 @@
         "label": "Valoración",
         "pain": "La oferta sale de un modelo que todavía no conocía los hallazgos.",
         "result": "Qué le hacen los hallazgos al precio, calculado en lugar de supuesto."
-      },
-      {
-        "label": "IA",
-        "pain": "«Impulsado por IA» en el material de venta suele ser una licencia sobre el modelo de otro.",
-        "result": "Qué corre de verdad, de quién depende, y si entra en el Reglamento de IA."
       }
     ],
     "schema": {
@@ -157,10 +152,9 @@
       "Financial DD",
       "Commercial DD",
       "HR DD",
-      "IT DD",
+      "DD de tecnología",
       "ESG DD",
       "Operational DD",
-      "AI DD",
       "Cribado de IM",
       "Monitorización Vigil",
       "Tax DD",
@@ -236,29 +230,29 @@
       "governance": "Cómo se tratan los documentos",
       "platform": "Cómo funciona la plataforma",
       "sprint": "Qué cubre el sprint",
-      "intake": "Reserve una llamada"
+      "intake": "Reservar una demo"
     },
     "reframe": {
-      "quote": "Revisar primero su propio trabajo no es señal de que algo vaya mal. Así es un proceso bien llevado."
+      "quote": "Correr la pasada del comprador primero en su propio lado es lo que caracteriza a un proceso bien llevado."
     }
   },
   "home": {
     "hero": {
-      "title": "No firme una cifra que no ha leído",
-      "lead": "La due diligence toma una muestra y entrega el informe semanas después. Factum lo lee todo, en días, con el pasaje de origen detrás de cada hallazgo.",
-      "cta": "Reserve una llamada de 30 minutos"
+      "title": "Lea todo el data room en días",
+      "lead": "Due diligence con IA para M&A y private equity. La due diligence habitual lee una muestra y entrega en semanas. Nosotros lo leemos todo, y cada hallazgo cita el documento y la página que lo respalda.",
+      "cta": "Reservar una demo"
     },
     "problem": {
-      "title": "La cifra se fija antes de leer la sala",
-      "lead": "No por descuido. Porque nunca hubo tiempo para leerlo todo.",
+      "title": "La mayoría de las due diligence nunca lee el data room entero",
+      "lead": "Nunca hay tiempo suficiente. Así que el precio se fija sobre una muestra de los documentos.",
       "points": [
         {
           "title": "Está trabajando sobre una muestra",
           "body": "La diligencia tradicional lee una fracción del data room. El resto sigue ahí dentro."
         },
         {
-          "title": "Una disciplina no es due diligence",
-          "body": "Un análisis de quality of earnings cubre las earnings. Lo que sale mal está entre disciplinas, donde nadie miraba."
+          "title": "El riesgo está entre las disciplinas",
+          "body": "Una lectura de quality of earnings cubre el resultado. Las sorpresas caras están donde dos especialistas dieron por hecho que miraba el otro."
         }
       ]
     },
@@ -266,18 +260,18 @@
       "attr": "Por qué una segunda pasada"
     },
     "guide": {
-      "title": "Suscrito como lo haría un banco, construido como debe estarlo el software de producción",
-      "lead": "La lectura de riesgo de un banquero. La disciplina de un ingeniero para sistemas que no pueden fallar en silencio.",
+      "title": "Un banquero de leveraged finance y un ingeniero de datos",
+      "lead": "Wouter estructuró financiación de adquisiciones y leveraged finance en ING. Daniel construye pipelines de datos regulados. Uno de los dos aprueba cada entregable antes de que llegue a usted.",
       "link": "Conozca al equipo"
     },
     "specimen": {
-      "title": "Un hallazgo, y la cláusula de la que sale",
-      "lead": "Construido sobre un target ficticio. La forma es la real."
+      "title": "Qué aspecto tiene un hallazgo",
+      "lead": "Un ejemplo trabajado sobre un target ficticio. El formato es el que usted recibe."
     },
     "pipeline": {
-      "title": "Los mismos cinco pasos, en cada mandato",
-      "lead": "Cualquiera puede apuntar una herramienta de IA a una sala de datos. Lo que importa es qué ocurre siempre, mire alguien o no.",
-      "refusalTitle": "El bucle se niega a aprobar automáticamente",
+      "title": "Cada mandato recorre los mismos cinco pasos",
+      "lead": "Cualquiera puede apuntar una herramienta de IA a un data room. La pregunta es qué pasa cuando el modelo se equivoca.",
+      "refusalTitle": "El pipeline se detiene y llama a una persona",
       "refusalNote": "Cada bloqueo duro pasa a una persona.",
       "refusals": [
         "Citas fabricadas o alucinadas",
@@ -287,19 +281,19 @@
       ]
     },
     "trust": {
-      "title": "Integrado en cómo funciona el pipeline",
-      "lead": "Cada punto describe un mecanismo. Ninguno es una certificación.",
+      "title": "Adónde van sus documentos y quién puede verlos",
+      "lead": "Alojamiento en la UE, retención cero en el proveedor del modelo, seudonimización antes del análisis y un revisor con nombre. Cuatro mecanismos, ninguna certificación.",
       "link": "Ver la página de gobernanza"
     },
     "coverage": {
-      "title": "El data room entero, no una muestra",
-      "lead": "Todas las disciplinas, una pasada. Lo que encuentra una queda sobre la mesa para la siguiente.",
-      "note": "Ordenado por dependencias: el trabajo posterior espera a los hallazgos que necesita.",
-      "ctaLine": "Esta es la lectura que su equipo no alcanza en dos semanas."
+      "title": "Nueve disciplinas, una pasada sobre el mismo data room",
+      "lead": "Lo que encuentra una disciplina queda sobre la mesa para la siguiente.",
+      "note": "Ordenado por dependencia: el trabajo posterior espera los hallazgos que necesita.",
+      "ctaLine": "Su equipo no puede cubrir esto en dos semanas."
     },
     "cycle": {
-      "title": "Cinco momentos, una base de evidencia",
-      "lead": "La misma sala se vuelve a leer cada vez que alguien nuevo tiene que confiar en ella. Léala una vez, bien.",
+      "title": "La misma base de evidencia, cinco veces en el ciclo de la operación",
+      "lead": "El data room se vuelve a leer cada vez que alguien nuevo tiene que fiarse de él. Léalo una vez, bien.",
       "stages": [
         {
           "title": "Comprar",
@@ -325,8 +319,8 @@
       "link": "Qué cubre el Diligence Sprint"
     },
     "success": {
-      "title": "Qué cambia cuando usted firma",
-      "lead": "No un informe mejor. Una posición distinta en la mesa.",
+      "title": "Qué cambia cuando firma",
+      "lead": "Llega a la mesa con todo el data room detrás.",
       "points": [
         {
           "title": "El precio refleja toda la sala",
@@ -339,12 +333,12 @@
       ]
     },
     "plan": {
-      "title": "Tres pasos, y el primero es una conversación",
+      "title": "Tres pasos para empezar",
       "lead": "No hay propuesta hasta que ambos sepamos que encaja.",
       "steps": [
         {
-          "title": "Reserve 30 minutos",
-          "body": "Vemos si esto encaja con su situación."
+          "title": "Reserve una demo de treinta minutos",
+          "body": "Le recorremos la plataforma sobre una ejecución real y después vemos si encaja con su situación."
         },
         {
           "title": "Firme el NDA y luego indíquenos el data room",
@@ -357,20 +351,20 @@
       ]
     },
     "cta": {
-      "title": "Empiece con una llamada, no con una propuesta",
-      "body": "Treinta minutos para ver si esto encaja con su situación. Si no encaja, se lo diremos.",
-      "button": "Reserve una llamada de 30 minutos"
+      "title": "Véalo funcionar y después decida",
+      "body": "Treinta minutos: primero la plataforma, después su propia situación. Si no encaja, se lo diremos.",
+      "button": "Reservar una demo"
     }
   },
   "platform": {
     "header": {
-      "title": "Cómo lo leemos todo sin inventarnos nada",
-      "lead": "Un agente con una ventana de contexto grande no es due diligence. Esto es un grafo de despacho, ejecutado igual en cada mandato.",
-      "cta": "Vea la mecánica en una llamada"
+      "title": "Cómo lee la plataforma un data room",
+      "lead": "{modules} módulos con alcance predefinido, en un orden de dependencias fijo, con cuatro comprobaciones de anclaje y un control humano obligatorio. La misma ejecución en cada mandato.",
+      "cta": "Reservar una demo"
     },
     "scale": {
-      "title": "Contado desde el código, no estimado",
-      "lead": "Lo que está realmente construido, contado.",
+      "title": "La plataforma en cifras",
+      "lead": "Contado desde el código fuente del producto, sin estimaciones.",
       "tiles": {
         "modules": {
           "title": "Módulos por encargo",
@@ -390,7 +384,7 @@
         },
         "waves": {
           "title": "Olas de despacho",
-          "body": "Ordenadas por dependencia, no por preferencia. La ola 1 abre con nueve módulos a la vez."
+          "body": "Ordenadas por dependencia. La ola 1 abre con ocho módulos a la vez."
         },
         "zdr": {
           "title": "Con retención cero obligatoria",
@@ -408,7 +402,7 @@
       "note": "Derivado de los grafos de despacho del código fuente, no estimado. ZDR marca los módulos cuyo enrutado está fijado a un endpoint europeo de retención cero."
     },
     "pipeline": {
-      "title": "Del archivo subido a un hallazgo accionable",
+      "title": "De la carga al hallazgo terminado",
       "lead": "Cinco etapas. Las mismas cinco cada vez, mire alguien o no.",
       "stages": [
         {
@@ -559,7 +553,7 @@
       ]
     },
     "faq": {
-      "title": "Vale la pena responderlas antes de que pregunte",
+      "title": "Preguntas que recibimos",
       "items": [
         {
           "q": "¿No es esto un chatbot de IA con pasos de más?",
@@ -567,7 +561,7 @@
         },
         {
           "q": "¿Por qué olas y no todo a la vez?",
-          "a": "Fiscal no puede razonar sin las lecturas financiera y legal. Valoración no puede fijar precio sin fiscal. El grafo de dependencias marca el orden; la ola 1 sigue lanzando nueve módulos en paralelo."
+          "a": "Fiscal no puede razonar sin las lecturas financiera y legal. Valoración no puede fijar precio sin fiscal. El grafo de dependencias marca el orden; la ola 1 sigue lanzando ocho módulos en paralelo."
         },
         {
           "q": "¿Qué pasa cuando el modelo no lo sabe?",
@@ -584,28 +578,28 @@
       ]
     },
     "cta": {
-      "title": "Vea la mecánica en una llamada",
-      "body": "Con gusto repasamos primero el grafo de despacho real.",
-      "button": "Reservar una llamada",
-      "note": "Treinta minutos, sin propuesta adjunta."
+      "title": "Véalo correr sobre un grafo de despacho real",
+      "body": "Abrimos el grafo de despacho, ejecutamos un módulo y seguimos un hallazgo hasta su pasaje de origen.",
+      "button": "Reservar una demo",
+      "note": "Treinta minutos: primero la plataforma, después su propia situación."
     }
   },
   "sprint": {
     "header": {
       "title": "Vea lo que un comprador encontraría, antes que él",
       "lead": "Las {disciplines} disciplinas, reconciliadas en una sola narrativa. Ejecútelo sobre un target, una empresa de su cartera o su propio negocio.",
-      "cta": "Reserve una llamada de 30 minutos"
+      "cta": "Reservar una demo"
     },
     "reframe": {
       "attr": "Por qué una segunda pasada"
     },
     "disciplines": {
-      "title": "Delimitado por disciplina, no por hora",
+      "title": "Las {disciplines} disciplinas, un alcance fijo",
       "lead": "Cada una es una pasada acotada con su propia pregunta y su propio resultado.",
-      "note": "Un encargo, un precio. Sin menú a la carta y sin ampliaciones después de firmar. Qué mira cada disciplina se fija contra su data room en la llamada inicial."
+      "note": "Un encargo, un precio. Sin menú a la carta y sin ampliaciones después de firmar. Qué mira cada disciplina se fija en la demo contra su data room."
     },
     "layers": {
-      "title": "De análisis sueltos a un solo veredicto",
+      "title": "Qué lo convierte en un solo entregable",
       "lead": "Lo que convierte {disciplines} análisis separados en un solo entregable, en lugar de {disciplines} informes sueltos.",
       "items": [
         {
@@ -628,7 +622,7 @@
       "formats": [
         {
           "label": "Panel de revisión",
-          "items": "Financiera, fiscal, TI y continuidad de la empresa",
+          "items": "Financiero, fiscal, tecnología y empresa en funcionamiento",
           "body": "Un panel en vivo, navegable. Siga cualquier hallazgo hasta su pasaje de origen."
         },
         {
@@ -645,11 +639,11 @@
     },
     "inputs": {
       "title": "Qué necesitamos para empezar",
-      "lead": "Dos cosas, y ninguna es un taller.",
+      "lead": "Dos cosas. Sin taller y sin semana de arranque.",
       "items": [
         {
           "title": "Acceso al data room",
-          "body": "Estados financieros, legal, fiscal, RR. HH., contratos y propiedad intelectual, según lo acordado en la llamada inicial."
+          "body": "Estados financieros, legal, fiscal, RR. HH., contratos y propiedad intelectual, según lo acordado en la demo."
         },
         {
           "title": "Respuestas al registro de lagunas",
@@ -658,7 +652,7 @@
       ]
     },
     "faq": {
-      "title": "Las que surgen primero",
+      "title": "Preguntas que recibimos",
       "items": [
         {
           "q": "¿Sustituye esto a un informe de quality of earnings?",
@@ -670,7 +664,7 @@
         },
         {
           "q": "¿Cuánto cuesta?",
-          "a": "Un precio único para todo el alcance, fijado en la llamada inicial según el tamaño y el estado de su data room. Sin menú por niveles."
+          "a": "Un precio único para todo el alcance, fijado en la demo según el tamaño y el estado de su data room. Sin menú por niveles."
         },
         {
           "q": "¿Qué pasa con nuestros documentos?",
@@ -678,7 +672,7 @@
         },
         {
           "q": "¿Puedo ver un informe de ejemplo?",
-          "a": "Uno real, no. Los documentos de los clientes son confidenciales y ningún cliente ha optado por ser nombrado. En una llamada le enseñamos el panel en vivo, el esquema de salida y cómo un hallazgo se rastrea hasta su origen."
+          "a": "Uno real, no. Los documentos de los clientes son confidenciales y ningún cliente ha optado por ser nombrado. En la demo le enseñamos el panel en vivo, el esquema de salida y cómo un hallazgo se rastrea hasta su origen."
         },
         {
           "q": "¿Quién revisa realmente el entregable?",
@@ -688,8 +682,8 @@
     },
     "cta": {
       "title": "Vea si un sprint encaja con su situación",
-      "body": "Una conversación de alcance: qué hay en el data room, qué falta y si un sprint es el instrumento adecuado.",
-      "button": "Reserve una llamada inicial",
+      "body": "Quince minutos de plataforma y quince de su data room: qué hay, qué falta y si un sprint es el instrumento adecuado.",
+      "button": "Reservar una demo",
       "note": "Un número limitado de mandatos piloto, de un solo dígito."
     }
   },
@@ -697,7 +691,7 @@
     "header": {
       "title": "Cómo se tratan sus documentos, y qué no afirmamos",
       "lead": "El tratamiento de datos está integrado en cómo funciona el pipeline. También es más limitado de lo que dan a entender la mayoría de las páginas de seguridad, así que esta declara el límite.",
-      "cta": "Haga las preguntas incómodas en una llamada"
+      "cta": "Reservar una demo"
     },
     "data": {
       "title": "Cuatro cosas ciertas en todos los encargos",
@@ -715,7 +709,7 @@
       ]
     },
     "transparency": {
-      "title": "Dónde termina la máquina y empieza una persona",
+      "title": "Qué hace la máquina y qué hace la persona",
       "lead": "Usted debería poder saber, para cualquier hallazgo, qué lo produjo y qué lo comprobó.",
       "steps": [
         "Cada módulo extrae por su cuenta evidencia de los documentos que usted ha cargado.",
@@ -738,13 +732,13 @@
         "Sin notificación de brechas ni compromiso de recuperación en esta página.",
         "Sin tasa de exactitud auditada. El único benchmark de esta página es interno y de un solo conjunto de datos."
       ],
-      "note": "Si su proceso exige alguno de estos puntos por escrito, plantéelo en la llamada inicial. En cualquier caso hay una respuesta real."
+      "note": "Si su proceso exige alguno de estos puntos por escrito, plantéelo en la demo. En cualquier caso hay una respuesta real."
     },
     "cta": {
-      "title": "Haga las preguntas incómodas en la llamada",
+      "title": "Traiga las preguntas incómodas a la demo",
       "body": "La lista anterior es deliberadamente poco favorecedora. Si algo de ella le bloquea, mejor saberlo en treinta minutos.",
-      "button": "Reserve una llamada inicial",
-      "note": "Sin propuesta adjunta."
+      "button": "Reservar una demo",
+      "note": "Treinta minutos: primero la plataforma, después su propia situación."
     },
     "zdr": {
       "title": "Tres módulos se niegan a correr sobre un modelo que retiene",
@@ -757,8 +751,8 @@
       ]
     },
     "learning": {
-      "title": "Dos memorias, y solo una se comparte",
-      "lead": "Lo decimos sin rodeos, porque no debería tener que preguntarlo.",
+      "title": "Dos memorias. Una es compartida, la otra nunca sale de su entorno.",
+      "lead": "Qué aprendemos entre clientes y qué se queda con usted.",
       "columns": [
         {
           "label": "Compartido entre clientes",
@@ -779,7 +773,7 @@
           ]
         }
       ],
-      "note": "Si el aprendizaje metodológico entre clientes es un problema para su mandato, dígalo en la llamada. Puede desactivarse para su cuenta."
+      "note": "Si el aprendizaje metodológico entre clientes es un problema para su mandato, dígalo en la demo. Puede desactivarse para su cuenta."
     },
     "grounding": {
       "title": "Un benchmark, publicado con sus salvedades pegadas",
@@ -794,7 +788,7 @@
       ]
     },
     "legal": {
-      "title": "Tres razones por las que esto no es una ventana de chat",
+      "title": "Por qué esto no es una ventana de chat",
       "lead": "Una de los tribunales. Otra de su propio NDA. Otra del boletín oficial.",
       "items": [
         {
@@ -813,8 +807,8 @@
       "note": "Nada de esto es asesoramiento jurídico. Las tres cosas son razones por las que la pipeline tiene la forma que tiene."
     },
     "terms": {
-      "title": "Las condiciones, antes de que tenga que pedirlas",
-      "lead": "La lista de más abajo dice lo que no tenemos. Esta dice lo que sí.",
+      "title": "Las condiciones",
+      "lead": "Qué contiene el contrato de encargo, antes de que tenga que pedirlo.",
       "items": [
         {
           "title": "Primero un NDA",
@@ -846,9 +840,9 @@
   },
   "team": {
     "header": {
-      "title": "Criterio, no solo software",
-      "lead": "La lectura del riesgo de un banquero. La disciplina de un ingeniero para sistemas que no se rompen.",
-      "cta": "Hable con quien revisa el entregable"
+      "title": "Las personas detrás del entregable",
+      "lead": "Wouter estructuró financiación de adquisiciones y leveraged finance en ING. Daniel construye pipelines de datos regulados. Uno de los dos aprueba cada entregable.",
+      "cta": "Reservar una demo"
     },
     "historyLabel": "Trayectoria",
     "people": [
@@ -915,16 +909,34 @@
     "closing": "El mismo rigor, aplicado al acuerdo que tiene delante.",
     "cta": {
       "title": "Hablará con la persona que revisa el entregable",
-      "body": "Mientras Factum está en prelanzamiento, la llamada inicial, el control de revisión y la explicación detallada son la misma persona.",
-      "button": "Reserve una llamada inicial",
-      "note": "Treinta minutos."
+      "body": "Mientras Factum está en prelanzamiento, la demo, el control de revisión y la explicación detallada son la misma persona.",
+      "button": "Reservar una demo",
+      "note": "Treinta minutos: primero la plataforma, después su propia situación."
+    },
+    "roles": {
+      "title": "Quién firma qué",
+      "lead": "Dos personas, y ningún equipo de analistas detrás.",
+      "items": [
+        {
+          "label": "Wouter Dijkman",
+          "body": "Fija el alcance con usted y aprueba cada hallazgo antes de que salga. Nada le llega sin leer."
+        },
+        {
+          "label": "Daniel Dropuljic",
+          "body": "Lleva la infraestructura: alojamiento en la UE, enrutado sin retención y el ajuste de conservación en cada proveedor."
+        },
+        {
+          "label": "Nadie más",
+          "body": "Sin equipo deslocalizado, sin júniores rotando. Si un mandato es mayor que dos personas y la plataforma, lo decimos antes de firmar."
+        }
+      ]
     }
   },
   "partnerships": {
     "header": {
       "title": "Más mandatos de los que su equipo puede leer",
       "lead": "Usted conserva la relación y el criterio. Nosotros ejecutamos detrás el análisis de todas las disciplinas, bajo su nombre.",
-      "cta": "Reserve una llamada de alcance"
+      "cta": "Reservar una demo"
     },
     "who": {
       "title": "Para quién suele funcionar",
@@ -978,8 +990,8 @@
       "lead": "Con un encargo real, ejecutado como es debido, antes de que nadie se comprometa a nada.",
       "steps": [
         {
-          "title": "Una llamada de alcance",
-          "body": "Cómo son sus encargos y dónde recae la carga analítica. Treinta minutos."
+          "title": "Una demo, y un vistazo a su cartera",
+          "body": "Le enseñamos la plataforma y después mapeamos cómo son sus encargos y dónde está la carga analítica. Treinta minutos."
         },
         {
           "title": "Un mandato, ejecutado de principio a fin",
@@ -1026,20 +1038,20 @@
     "cta": {
       "title": "Empiece con un mandato",
       "body": "Aplíquelo a un encargo real y lea el resultado.",
-      "button": "Reserve una llamada de alcance",
-      "note": "Treinta minutos, y una respuesta directa sobre el encaje."
+      "button": "Reservar una demo",
+      "note": "Treinta minutos: primero la plataforma, después su propia situación."
     }
   },
   "contact": {
     "header": {
-      "title": "Una llamada, con la persona que revisa el entregable",
-      "lead": "En esta página no hay formulario. Un formulario implica una cola y alguien que la gestiona. Hay un calendario.",
-      "cta": "Reserve una llamada de 30 minutos"
+      "title": "Reserve una demo con la persona que revisa el entregable",
+      "lead": "Sin formulario. Elija un hueco libre en el calendario y le enseñamos la plataforma en marcha.",
+      "cta": "Reservar una demo"
     },
     "call": {
       "title": "Reserve treinta minutos",
-      "lead": "Una conversación de alcance. Si su situación no es de las que esto ayuda, esa es una respuesta más rápida que una propuesta.",
-      "button": "Reserve una llamada inicial",
+      "lead": "Un recorrido por la plataforma y después su propia situación. Si este no es el instrumento adecuado, esa es una respuesta más rápida que una propuesta.",
+      "button": "Reservar una demo",
       "note": "Elija cualquier hueco libre."
     },
     "agenda": {
@@ -1048,14 +1060,14 @@
         "En qué punto del ciclo está: comprar, financiar, mantener o vender.",
         "Qué hay hoy en el data room y qué falta.",
         "Qué disciplinas concentran el riesgo real en su situación.",
-        "Si un sprint encaja, o si es demasiado pronto.",
+        "Si un sprint encaja en su situación o si es demasiado pronto.",
         "Cuánto costaría, dimensionado contra el data room real."
       ]
     },
     "documents": {
       "eyebrow": "Antes de enviar nada",
-      "title": "No envíe documentos para reservar una llamada",
-      "lead": "La llamada inicial no necesita más que la conversación. El acceso a los documentos se acuerda después, por escrito."
+      "title": "No envíe documentos para reservar una demo",
+      "lead": "La demo no necesita nada más que la conversación. El acceso a documentos se acuerda después, por escrito."
     },
     "details": {
       "title": "Con quién está tratando",
@@ -1064,6 +1076,27 @@
       "kvkLabel": "Cámara de Comercio",
       "languagesLabel": "Idiomas de trabajo",
       "languagesValue": "Inglés y neerlandés"
+    },
+    "faq": {
+      "title": "Lo que preguntan antes de reservar",
+      "items": [
+        {
+          "q": "¿Tengo que preparar algo?",
+          "a": "No. Si tiene una operación en curso, tráigala. Si no, hacemos la demo sobre un data room construido."
+        },
+        {
+          "q": "¿Con quién voy a hablar?",
+          "a": "Con Wouter Dijkman. Factum está en prelanzamiento, así que quien enseña la plataforma es quien aprueba cada hallazgo."
+        },
+        {
+          "q": "Ya estamos a medio proceso con un asesor. ¿Es tarde?",
+          "a": "Normalmente no. Un sprint entra como segunda lectura, o sobre las disciplinas que nadie tenía encargadas."
+        },
+        {
+          "q": "¿Qué pasa con lo que cuente en la demo?",
+          "a": "Queda confidencial desde el primer mensaje. No se mueve ningún documento antes de firmar un NDA."
+        }
+      ]
     }
   },
   "privacy": {
@@ -1083,10 +1116,10 @@
         ]
       },
       {
-        "title": "Reservar una llamada",
+        "title": "Reservar una demo",
         "body": [
           "El enlace de reserva le lleva a Cal.com, un servicio de agenda de terceros. Lo que introduzca allí se trata según sus condiciones y se comparte con nosotros para poder celebrar la reunión.",
-          "La usamos para preparar la llamada y hacer seguimiento. No la añadimos a ninguna lista de marketing."
+          "La usamos para preparar la demo y hacer seguimiento. No la añadimos a ninguna lista de marketing."
         ]
       },
       {
@@ -1100,7 +1133,7 @@
       {
         "title": "Sus derechos",
         "body": [
-          "Conforme al RGPD, puede preguntar qué datos personales tenemos, pedir que se corrijan o se supriman, u oponerse a su uso. Plantéelo en la llamada inicial o responda a cualquier correo nuestro.",
+          "Conforme al RGPD, puede preguntar qué datos personales tenemos, pedir que se corrijan o se supriman, u oponerse a su uso. Plantéelo en la demo o responda a cualquier correo nuestro.",
           "Si no queda satisfecho, puede reclamar ante la Autoriteit Persoonsgegevens, la autoridad neerlandesa de protección de datos."
         ]
       },

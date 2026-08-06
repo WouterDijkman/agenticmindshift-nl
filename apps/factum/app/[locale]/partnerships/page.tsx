@@ -11,6 +11,7 @@ import { Section, SectionHeader } from '@/components/Section';
 import Disclosures from '@/components/Disclosures';
 import CtaBand from '@/components/CtaBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export async function generateMetadata({
   params
@@ -34,6 +35,8 @@ export default async function PartnershipsPage({
 
   return (
     <>
+      <Breadcrumb path="/partnerships" />
+
       <PageHeader
         title={t('header.title')}
         lead={t('header.lead')}

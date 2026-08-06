@@ -22,6 +22,7 @@ export default function MediaCards({
   scenes: SceneId[];
   /** `'number'` counts the cards; any other string is used verbatim on each. */
   chip?: 'number' | (string & {});
+  /** Cap the row at two columns, for lists whose cards carry more prose. */
   wide?: boolean;
 }) {
   // Copy lists are translated, so a locale that gained or lost a bullet would
@@ -30,8 +31,18 @@ export default function MediaCards({
     throw new Error(`MediaCards: ${items.length} items but only ${scenes.length} scenes`);
   }
 
+  /**
+   * The grid is told how many columns to run rather than sizing itself against
+   * a minimum track. `auto-fit` fitted what it could and left the remainder
+   * stranded — three cards came out two-across at 768 with one alone on a
+   * second row, on two sections of /diligence-sprint. `.card-grid-n` only ever
+   * uses divisors of n, so a row is never short. Capped at four; a longer list
+   * than that wants a different component.
+   */
+  const columns = Math.min(items.length, wide ? 2 : 4);
+
   return (
-    <div className={`card-grid ${wide ? 'card-grid-2' : ''} stagger`}>
+    <div className={`card-grid card-grid-${columns} stagger`}>
       {items.map((item, i) => (
         <Reveal key={item.title} className="media-card">
           <SceneCard

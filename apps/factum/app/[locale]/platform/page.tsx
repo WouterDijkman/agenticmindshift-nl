@@ -23,6 +23,7 @@ import Disclosures from '@/components/Disclosures';
 import CtaBand from '@/components/CtaBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
 import FindingSchema from '@/components/FindingSchema';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export async function generateMetadata({
   params
@@ -76,6 +77,8 @@ export default async function PlatformPage({
 
   return (
     <>
+      <Breadcrumb path="/platform" />
+
       <PageHeader
         title={t('header.title', n)}
         lead={t('header.lead')}

@@ -1,6 +1,6 @@
 import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
-import { resolveLocale, LOCALE_COOKIE, LOCALE_VARY_HEADER } from '@repo/ui/locale';
+import { LOCALE_COOKIE } from '@repo/ui/locale';
 import { routing } from './i18n/routing';
 
 const intlMiddleware = createMiddleware(routing);
@@ -18,48 +18,73 @@ export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // The bare `/` is the only URL with no answer in it, so it is the only one
-  // resolved from the request. Anything that already names a locale is served
-  // as asked: redirecting there would break deep links, hreflang, and the
-  // crawl of four fifths of the site.
+  // resolved here at all. Anything that already names a locale is served as
+  // asked: redirecting there would break deep links, hreflang, and the crawl
+  // of four fifths of the site.
   //
-  // The old version of this block had three defects. It fell back to Dutch for
-  // an unrecognised country, so a Finn got a language they cannot read rather
-  // than the English the brief asks for. It had no Accept-Language step, so
-  // with no geo header — local, self-hosted, or behind a proxy that strips it
-  // — every visitor got the same answer. And it sent no Vary, which is the
-  // one that bites in production rather than in review.
+  // `/` used to 307 to a *guessed* locale — cookie, then edge geo, then
+  // Accept-Language. Measured against the live site that produced
+  // `307 → /nl` with `Vary: x-vercel-ip-country, cf-ipcountry,
+  // accept-language, cookie`, which has two problems that no amount of
+  // correct Vary handling fixes:
+  //
+  //   1. The most-linked, most-shared, most-crawled URL on the domain never
+  //      returned any HTML. Every crawler paid a round trip before it saw a
+  //      word, and anything that does not follow redirects saw nothing.
+  //   2. Which language a crawler got depended on which country it crawled
+  //      from. Google's own localisation guidance warns against exactly this:
+  //      Googlebot crawls predominantly from the US, so the site's
+  //      highest-authority page was being sampled in whichever language the
+  //      geo table happened to give a US IP.
+  //
+  // So `/` now *renders* rather than redirects. It is a rewrite, not a
+  // redirect: the URL in the address bar stays `/`, the response is a 200 with
+  // the Dutch homepage in it, and `generateMetadata` receives `locale: 'nl'`
+  // and therefore emits `canonical: https://…/nl`. That canonical is the
+  // duplicate-content answer — `/` and `/nl` are the same page and only one of
+  // them is the indexable one.
+  //
+  // The one signal still honoured is the cookie, and only the cookie. It is
+  // written in exactly one place, the language switcher's click handler, so it
+  // is a recorded *choice* rather than a guess about a stranger — which is
+  // both the thing Google's guidance permits and the thing that keeps the
+  // switcher's promise across a return visit to the bare domain. Crawlers send
+  // no cookies, so they always take the rewrite branch and always see Dutch;
+  // there is no path here where a bot and a human are served different content
+  // for the same request.
   if (pathname === '/') {
-    const { locale } = resolveLocale({
-      getHeader: (name) => request.headers.get(name),
-      cookieLocale: request.cookies.get(LOCALE_COOKIE)?.value,
-      supported: routing.locales,
-    });
-
     const url = request.nextUrl.clone();
-    url.pathname = `/${locale}`;
+    const chosen = request.cookies.get(LOCALE_COOKIE)?.value;
 
-    // 307, not a permanent redirect. A 308 is cached by the browser against
-    // the origin, so the first visit would pin every later visit from that
-    // machine — including after a deliberate language switch — to whichever
-    // country the visitor happened to be in that day.
-    const response = NextResponse.redirect(url, 307);
+    // A recorded choice, and not the language `/` already serves. Send them on.
+    if (
+      chosen &&
+      chosen !== routing.defaultLocale &&
+      routing.locales.includes(chosen as (typeof routing.locales)[number])
+    ) {
+      url.pathname = `/${chosen}`;
+      // 307, not 308. A permanent redirect is cached by the browser against
+      // the origin, so one visit would pin `/` for that machine forever —
+      // including after a later switch back, and including after the cookie
+      // expires.
+      const response = NextResponse.redirect(url, 307);
+      response.headers.set('Vary', 'Cookie');
+      response.headers.set('Cache-Control', 'no-store');
+      return response;
+    }
 
-    // Without this a CDN caches one visitor's redirect and hands it to the
-    // next one from another continent. It fails silently: correct in dev,
-    // correct on the first hit, wrong at scale.
-    response.headers.set('Vary', LOCALE_VARY_HEADER);
-
-    // Geo is re-read on every visit, so this answer must never be reused. Vary
-    // is not enough on its own: a shared cache that does not understand an
-    // unknown Vary key may hand one country's redirect to everyone behind it.
-    response.headers.set('Cache-Control', 'no-store');
-
-    // Deliberately no cookie. This is a guess, and writing it down made the
-    // guess outrank every later guess for a year — one visit from an airport
-    // abroad and the site kept speaking that country's language. Only the
-    // language switcher writes the cookie, because a click is the only signal
-    // here that actually means "I want this language".
-    return response;
+    // Everyone else — every first-time visitor, every crawler — gets the
+    // homepage itself.
+    url.pathname = `/${routing.defaultLocale}`;
+    // No `Vary: Cookie` on this branch, and not for want of trying. Next owns
+    // `Vary` on a rendered response — it overwrites whatever the proxy or
+    // `next.config.ts` `headers()` sets with its own RSC list (`rsc,
+    // next-router-state-tree, …`), which was verified by curl both ways. What
+    // makes that safe rather than merely unavoidable: the proxy runs on every
+    // request to a matched path, ahead of any cache lookup, so the branch above
+    // is re-evaluated for each visitor even when this body is served from the
+    // edge. A shared cache never gets to answer `/` on its own.
+    return NextResponse.rewrite(url);
   }
 
   const response = intlMiddleware(request);

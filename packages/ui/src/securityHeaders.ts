@@ -1,7 +1,7 @@
 /**
  * Response headers both sites set on every path.
  *
- * Shared for the same reason `resolveLocale` is: two apps, one rule, and a
+ * Shared for the same reason `LOCALE_COOKIE` is: two apps, one rule, and a
  * copy that drifts is invisible until someone thinks to run a curl against
  * the other domain. The rationale below is the whole of it — there is no
  * per-app variation, because neither app has forms, sessions, cookies beyond

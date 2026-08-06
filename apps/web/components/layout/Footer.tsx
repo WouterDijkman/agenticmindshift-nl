@@ -1,8 +1,10 @@
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
+import { factumUrl } from '@/lib/factum';
 
 export default async function Footer() {
+  const locale = await getLocale();
   const t = await getTranslations('footer');
   const tNav = await getTranslations('nav');
 
@@ -13,8 +15,9 @@ export default async function Footer() {
   ];
 
   // Factum has its own site, so it leaves the internal column and becomes an
-  // outbound link. `Link` from @/i18n/navigation would prefix it with a locale.
-  const externalLinks = [{ href: 'https://factumcapital.eu', label: tNav('factum_capital') }];
+  // outbound link. `Link` from @/i18n/navigation would prefix it with a locale
+  // of *this* site; `factumUrl` carries the locale across to the other one.
+  const externalLinks = [{ href: factumUrl(locale), label: tNav('factum_capital') }];
 
   const legalLinks = [
     { href: '/privacy', label: t('privacy') },

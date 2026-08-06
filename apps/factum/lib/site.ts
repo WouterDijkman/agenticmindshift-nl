@@ -81,10 +81,12 @@ export const MODULES: readonly FactumModule[] = [
   { slug: 'financial', wave: 1, kind: 'analysis', zdr: true },
   { slug: 'commercial', wave: 1, kind: 'analysis' },
   { slug: 'hr', wave: 1, kind: 'analysis' },
-  { slug: 'it', wave: 1, kind: 'analysis' },
+  // `it` and `ai-dd` were separate modules until they were folded together.
+  // Both read the same folder: the AI claim in an IM is a claim about the
+  // technology estate, and you cannot assess it without opening the systems.
+  { slug: 'technology', wave: 1, kind: 'analysis' },
   { slug: 'esg', wave: 1, kind: 'analysis' },
   { slug: 'operational', wave: 1, kind: 'analysis' },
-  { slug: 'ai-dd', wave: 1, kind: 'analysis' },
   { slug: 'im-screener', wave: 1, kind: 'analysis' },
   { slug: 'vigil', wave: 1, kind: 'monitoring' },
   // Wave 2 — read wave 1 output before they can reason.
@@ -134,7 +136,15 @@ export const MONITORING_MODULE_COUNT = MODULES.filter((m) => m.kind === 'monitor
  *   — `vigil` is monitoring that starts after closing, and listing it beside
  *     Legal implied a buyer could ask for it during diligence.
  *
- * What is left is ten things we read the data room *for*. Append only:
+ * A fourth pair was merged rather than removed. `it` and `ai` were adjacent
+ * rows asking one question from two ends: an "AI-driven" claim in an IM is a
+ * claim about the technology estate, and it cannot be assessed without opening
+ * the systems folder anyway. Two tiles that both mean "we read engineering"
+ * looked like padding, and a lone row labelled `AI` in 2026 reads as a
+ * bandwagon rather than a discipline. They are now `technology`, in the slot
+ * `it` held.
+ *
+ * What is left is nine things we read the data room *for*. Append only:
  * inserting mid-list would re-pair every entry with the wrong icon, since
  * `DisciplineGrid` maps them by position.
  */
@@ -144,11 +154,10 @@ export const DISCIPLINES = [
   'legal',
   'tax',
   'hr',
-  'it',
+  'technology',
   'esg',
   'operational',
-  'valuation',
-  'ai'
+  'valuation'
 ] as const;
 
 export const DISCIPLINE_COUNT = DISCIPLINES.length;

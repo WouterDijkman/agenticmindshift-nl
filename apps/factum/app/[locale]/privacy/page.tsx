@@ -5,6 +5,7 @@ import { KVK } from '@/lib/site';
 import PageHeader from '@/components/PageHeader';
 import Reveal from '@/components/Reveal';
 import { Section } from '@/components/Section';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export async function generateMetadata({
   params
@@ -29,6 +30,8 @@ export default async function PrivacyPage({
 
   return (
     <>
+      <Breadcrumb path="/privacy" />
+
       <PageHeader
         title={t('header.title')}
         lead={t('header.lead')}

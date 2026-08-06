@@ -6,6 +6,8 @@ import { INTAKE_URL, KVK } from '@/lib/site';
 import PageHeader from '@/components/PageHeader';
 import Reveal from '@/components/Reveal';
 import { Section, SectionHeader } from '@/components/Section';
+import Disclosures from '@/components/Disclosures';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export async function generateMetadata({
   params
@@ -29,6 +31,8 @@ export default async function ContactPage({
 
   return (
     <>
+      <Breadcrumb path="/contact" />
+
       <PageHeader
         title={t('header.title')}
         lead={t('header.lead')}
@@ -99,6 +103,23 @@ export default async function ContactPage({
             </div>
           </Reveal>
         </div>
+      </Section>
+
+      {/*
+        The four objections that stop someone putting a slot in a calendar.
+
+        This page ran to 195 words in two sections while every other page on the
+        site runs six to twelve — it showed a button and a registration number
+        and answered nothing. Preparation, who is on the other end, whether it
+        is too late, and what happens to what they say: all four are objections,
+        and one answered here is one that does not have to eat the first ten
+        minutes of the demo.
+      */}
+      <Section width="medium" weight="tight">
+        <SectionHeader title={t('faq.title')} />
+        <Reveal delay={60} style={{ marginTop: 28 }}>
+          <Disclosures items={t.raw('faq.items') as { q: string; a: string }[]} />
+        </Reveal>
       </Section>
 
       {/* Company details — only what is on the register. */}

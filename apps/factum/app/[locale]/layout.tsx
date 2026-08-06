@@ -6,7 +6,8 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { fontVariables } from '@/lib/fonts';
 import { getAlternates } from '@/lib/hreflang';
-import { organizationSchema } from '@/lib/jsonld';
+import { siteSchema } from '@/lib/jsonld';
+import { sharedOpenGraph } from '@/lib/pageMetadata';
 import { SITE_URL } from '@/lib/site';
 /* Side-effect only: throws at build if the module roster in lib/site.ts and the
    five message files have drifted apart, or if an agent count has crept back
@@ -36,16 +37,27 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(SITE_URL),
-    title: {
-      default: t('home.title'),
-      template: '%s — Factum Capital'
-    },
+    // Fallback only, for any route that doesn't call `pageMetadata` — the
+    // catch-all, mainly. There used to be a `template: '%s — Factum Capital'`
+    // here as well, and it had a hole in it: Next's title template applies to
+    // *child* route segments, and `page.tsx` sits in the same segment as this
+    // layout. So every interior page picked up the brand suffix and the
+    // homepage, the one page a stranger is most likely to land on, did not.
+    // `pageMetadata` now appends it with `title.absolute`, uniformly, and the
+    // template is gone so there is only one place that decides. A bare string
+    // rather than `{ default }`, because Next's types require `default` and
+    // `template` to travel together.
+    title: `${t('home.title')} — Factum Capital`,
     description: t('home.description'),
     alternates: getAlternates('', locale),
     openGraph: {
-      type: 'website',
-      siteName: 'Factum Capital',
-      locale,
+      // Shared with every page through lib/pageMetadata.ts. Next replaces a
+      // duplicate `openGraph` key wholesale, so a page cannot inherit half of
+      // this — it has to restate all of it, which it does by calling the same
+      // function. One implementation, so the two cannot drift apart.
+      ...sharedOpenGraph(locale),
+      // Correct for the locale root, and the fallback for anything below it
+      // that does not call pageMetadata().
       url: `${SITE_URL}/${locale}`
     },
     twitter: { card: 'summary_large_image' },
@@ -76,7 +88,7 @@ export default async function LocaleLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema(locale, meta('home.description')))
+            __html: JSON.stringify(siteSchema(locale, meta('home.description')))
           }}
         />
         {/* .reveal starts at opacity 0 and is armed by JS; without it the page is blank below the fold. */}

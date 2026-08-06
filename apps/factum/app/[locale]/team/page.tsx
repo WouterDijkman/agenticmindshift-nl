@@ -3,10 +3,12 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/pageMetadata';
 import PageHeader from '@/components/PageHeader';
 import Reveal from '@/components/Reveal';
-import { Section } from '@/components/Section';
+import { Section, SectionHeader } from '@/components/Section';
 import PersonCard from '@/components/PersonCard';
+import StageList from '@/components/StageList';
 import CtaBand from '@/components/CtaBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export async function generateMetadata({
   params
@@ -38,6 +40,8 @@ export default async function TeamPage({
 
   return (
     <>
+      <Breadcrumb path="/team" />
+
       <PageHeader
         title={t('header.title')}
         lead={t('header.lead')}
@@ -74,6 +78,28 @@ export default async function TeamPage({
             {t('closing')}
           </blockquote>
         </Reveal>
+      </Section>
+
+      {/*
+        Accountability, which is the only thing a team page owes a buyer.
+
+        The two cards above say where these people worked. They do not say who
+        is answerable for what once an engagement is running, and that gap was
+        most of why this page came to 281 words in two sections while every
+        other page runs six to twelve. The third row is the one that matters:
+        there is no bench behind us, and a mandate too big for two people plus
+        the platform gets said so before anything is signed.
+      */}
+      <Section width="medium" tone="raised" weight="tight">
+        <SectionHeader title={t('roles.title')} lead={t('roles.lead')} />
+        <div style={{ marginTop: 'clamp(24px, 3vw, 36px)' }}>
+          <StageList
+            items={(t.raw('roles.items') as { label: string; body: string }[]).map((role) => ({
+              title: role.label,
+              body: role.body
+            }))}
+          />
+        </div>
       </Section>
 
       <CtaBand

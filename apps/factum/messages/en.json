@@ -1,32 +1,32 @@
 {
   "meta": {
     "home": {
-      "title": "Diligence-grade analysis across the deal cycle",
-      "description": "Ten disciplines over the full data room. Reconciled against each other. Reviewed by a person before you see it."
+      "title": "AI due diligence for M&A and private equity",
+      "description": "Nine disciplines over the full data room. Reconciled against each other. Reviewed by a person before you see it."
     },
     "platform": {
-      "title": "The platform",
-      "description": "23 due-diligence modules across ten disciplines. Every finding cites a document. Every output passes a human gate."
+      "title": "AI due diligence platform",
+      "description": "22 due-diligence modules across nine disciplines. Every finding cites a document. Every output passes a human gate."
     },
     "sprint": {
-      "title": "The Diligence Sprint",
-      "description": "Ten specialist passes over one data room, reconciled into a single narrative, with a live data-gap tracker."
+      "title": "Full data-room review in days",
+      "description": "Nine specialist passes over one data room, reconciled into a single narrative, with a live data-gap tracker."
     },
     "governance": {
-      "title": "Governance and data handling",
+      "title": "AI governance and data handling",
       "description": "How documents are processed, what the human gate does, and what Factum does not claim."
     },
     "team": {
-      "title": "Who is behind this",
-      "description": "A banker’s read on risk. An engineer’s discipline for systems that don’t break."
+      "title": "The team behind Factum",
+      "description": "A leveraged-finance banker and a data engineer. One of them approves every output."
     },
     "partnerships": {
-      "title": "Partnerships",
+      "title": "Diligence capacity for advisers",
       "description": "Diligence-grade analytical capacity behind your own client relationships."
     },
     "contact": {
-      "title": "Talk to us",
-      "description": "One intake call with the person who reviews every output. No form, no queue."
+      "title": "Book a demo",
+      "description": "Book a thirty-minute demo with the person who reviews every output."
     },
     "privacy": {
       "title": "Privacy",
@@ -45,12 +45,12 @@
     "team": "Team",
     "partnerships": "Partnerships",
     "contact": "Contact",
-    "cta": "Book an intake call",
+    "cta": "Book a demo",
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
   },
   "footer": {
-    "blurb": "Diligence-grade analysis across the deal cycle. Grounded in your documents. Reviewed by a named person. Delivered in days.",
+    "blurb": "AI due diligence for M&A and private equity. Every finding cited to a document. Every output reviewed by a named person.",
     "sitemap": "Sitemap",
     "company": "Company",
     "privacy": "Privacy",
@@ -91,9 +91,9 @@
         "result": "Who is contractually tied in, who isn’t, and what pension and collective labour agreements really cost."
       },
       {
-        "label": "IT",
-        "pain": "Technical debt appears on nobody’s balance sheet.",
-        "result": "Where the systems won’t carry the business case, and what fixing them costs."
+        "label": "Technology (IT & AI)",
+        "pain": "Technical debt is on nobody’s balance sheet, and “AI-driven” is usually a licence on someone else’s model.",
+        "result": "What actually runs, what it costs to fix, and what falls under the AI Act."
       },
       {
         "label": "ESG",
@@ -109,11 +109,6 @@
         "label": "Valuation",
         "pain": "The bid comes out of a model that hadn’t seen the findings yet.",
         "result": "What the findings do to the price, calculated through rather than assumed."
-      },
-      {
-        "label": "AI",
-        "pain": "“AI-driven” in the IM is usually a licence on somebody else’s model.",
-        "result": "What actually runs, who it depends on, and whether it falls under the AI Act."
       }
     ],
     "schema": {
@@ -157,10 +152,9 @@
       "Financial DD",
       "Commercial DD",
       "HR DD",
-      "IT DD",
+      "Technology DD",
       "ESG DD",
       "Operational DD",
-      "AI DD",
       "IM screener",
       "Vigil monitoring",
       "Tax DD",
@@ -236,29 +230,29 @@
       "governance": "How documents are handled",
       "platform": "How the platform works",
       "sprint": "What the sprint covers",
-      "intake": "Book a call"
+      "intake": "Book a demo"
     },
     "reframe": {
-      "quote": "Checking your own work first isn’t a sign that something is wrong. It is what a well-run process looks like."
+      "quote": "Running the buyer’s pass on your own side first is what a well-run process looks like."
     }
   },
   "home": {
     "hero": {
-      "title": "Nobody should sign a number they haven’t read",
-      "lead": "Diligence samples the data room and reports in weeks. Factum reads all of it in days, with the source passage behind every finding.",
-      "cta": "Book a 30-minute intake call"
+      "title": "Read the entire data room in days",
+      "lead": "AI-driven due diligence for M&A and private equity. Conventional diligence samples the room and reports in weeks. We read all of it, and every finding cites the document and page behind it.",
+      "cta": "Book a demo"
     },
     "problem": {
-      "title": "The number gets set before the room is read",
-      "lead": "Not because anyone was careless. Because there was never enough time to read all of it.",
+      "title": "Most diligence never reads the whole data room",
+      "lead": "There is never enough time. So the price gets set on a sample of the documents.",
       "points": [
         {
           "title": "You are working from a sample",
           "body": "Traditional diligence reads a fraction of the room. The rest is still in there."
         },
         {
-          "title": "One discipline is not diligence",
-          "body": "A quality-of-earnings read covers earnings. What goes wrong sits between disciplines, where nobody was looking."
+          "title": "The risk sits between disciplines",
+          "body": "A quality-of-earnings read covers earnings. The expensive surprises sit where two specialists each assumed the other was looking."
         }
       ]
     },
@@ -266,18 +260,18 @@
       "attr": "Why a second pass"
     },
     "guide": {
-      "title": "Underwritten like a bank would, built like production software has to be",
-      "lead": "A banker’s read on risk. An engineer’s discipline for systems that can’t fail quietly.",
+      "title": "A leveraged-finance banker and a data engineer",
+      "lead": "Wouter structured acquisition and leveraged finance at ING. Daniel builds regulated data pipelines. One of them approves every output before it reaches you.",
       "link": "Meet the team"
     },
     "specimen": {
-      "title": "One finding, and the clause it came from",
-      "lead": "Constructed on a fictional target. The shape is the real one."
+      "title": "What a finding looks like",
+      "lead": "A worked example on a fictional target. The format is the one you receive."
     },
     "pipeline": {
-      "title": "The same five steps, every mandate",
-      "lead": "Anyone can point an AI tool at a data room. What matters is what happens every time, whether or not anyone is watching.",
-      "refusalTitle": "The loop refuses to auto-approve",
+      "title": "Every mandate runs the same five steps",
+      "lead": "Anyone can point an AI tool at a data room. The question is what happens when the model gets something wrong.",
+      "refusalTitle": "The pipeline stops and calls a person",
       "refusals": [
         "Fabricated or hallucinated citations",
         "Privacy leaks",
@@ -287,19 +281,19 @@
       "refusalNote": "Every hard-block condition routes to a person."
     },
     "trust": {
-      "title": "Built into how the pipeline runs",
-      "lead": "Each point below is a mechanism. None of them is a certification.",
+      "title": "Where your documents go, and who can see them",
+      "lead": "EU hosting, zero retention at the model provider, pseudonymization before analysis, and one named reviewer. Four mechanisms, no certification.",
       "link": "Read the governance page"
     },
     "coverage": {
-      "title": "The whole data room, not a sample of it",
-      "lead": "Every discipline, one pass. What one of them finds is on the table for the next.",
+      "title": "Nine disciplines, one pass over the same room",
+      "lead": "What one discipline finds is on the table for the next one.",
       "note": "Dependency-ordered: later work waits for the findings it depends on.",
-      "ctaLine": "This is the pass your team cannot get through in two weeks."
+      "ctaLine": "Your team cannot get through this in two weeks."
     },
     "cycle": {
-      "title": "Five moments, one evidence base",
-      "lead": "The same room gets re-read every time somebody new has to trust it. Read it once, properly.",
+      "title": "The same evidence base, five times in the deal cycle",
+      "lead": "The room gets re-read every time somebody new has to trust it. Read it once, properly.",
       "stages": [
         {
           "title": "Acquiring",
@@ -325,8 +319,8 @@
       "link": "What the Diligence Sprint covers"
     },
     "success": {
-      "title": "What’s different when you sign",
-      "lead": "Not a better report. A different position at the table.",
+      "title": "What changes when you sign",
+      "lead": "You arrive at the table with the whole room behind you.",
       "points": [
         {
           "title": "The price reflects the whole room",
@@ -339,12 +333,12 @@
       ]
     },
     "plan": {
-      "title": "Three steps, and the first one is a conversation",
+      "title": "Three steps to get started",
       "lead": "No proposal until we both know it fits.",
       "steps": [
         {
-          "title": "Book a 30-minute call",
-          "body": "We work out whether this suits your situation."
+          "title": "Book a thirty-minute demo",
+          "body": "We walk you through the platform on a live run, then work out whether it suits your situation."
         },
         {
           "title": "Sign the NDA, then point us at the room",
@@ -357,20 +351,20 @@
       ]
     },
     "cta": {
-      "title": "Start with a call, not a proposal",
-      "body": "Thirty minutes to see whether this fits your situation. If it does not, we will say so.",
-      "button": "Book a 30-minute intake call"
+      "title": "See it running, then decide",
+      "body": "Thirty minutes: a walkthrough of the platform, then your own situation. If it does not fit, we will say so.",
+      "button": "Book a demo"
     }
   },
   "platform": {
     "header": {
-      "title": "How we read all of it without inventing any of it",
-      "lead": "One agent with a large context window is not diligence. This is a dispatch graph, run the same way every mandate.",
-      "cta": "See the mechanics on a call"
+      "title": "How the platform reads a data room",
+      "lead": "{modules} pre-scoped modules, in a fixed dependency order, with four grounding checks and a mandatory human gate. The same run, every mandate.",
+      "cta": "Book a demo"
     },
     "scale": {
-      "title": "Counted from the source, not estimated",
-      "lead": "What is actually built, counted.",
+      "title": "The platform in numbers",
+      "lead": "Counted from the product source, not estimated.",
       "tiles": {
         "modules": {
           "title": "Modules per engagement",
@@ -390,7 +384,7 @@
         },
         "waves": {
           "title": "Dispatch waves",
-          "body": "Ordered by dependency, not by preference. Wave 1 opens with nine modules at once."
+          "body": "Ordered by dependency. Wave 1 opens with eight modules at once."
         },
         "zdr": {
           "title": "Zero-retention gated",
@@ -408,7 +402,7 @@
       "note": "Derived from the dispatch graphs in the product source, not estimated. ZDR marks the modules whose provider routing is hard-gated to a zero-retention EU endpoint."
     },
     "pipeline": {
-      "title": "From upload to a finding you can act on",
+      "title": "From upload to a finished finding",
       "lead": "Five stages. The same five, every time, whether or not anyone is watching.",
       "stages": [
         {
@@ -559,7 +553,7 @@
       ]
     },
     "faq": {
-      "title": "Worth answering before you ask",
+      "title": "Questions we get",
       "items": [
         {
           "q": "Isn’t this just an AI chatbot with extra steps?",
@@ -567,7 +561,7 @@
         },
         {
           "q": "Why waves instead of running everything at once?",
-          "a": "Tax cannot reason without the financial and legal reads. Valuation cannot price without tax. The dependency graph sets the order; wave 1 still runs nine modules in parallel."
+          "a": "Tax cannot reason without the financial and legal reads. Valuation cannot price without tax. The dependency graph sets the order; wave 1 still runs eight modules in parallel."
         },
         {
           "q": "What happens when the model doesn’t know?",
@@ -584,28 +578,28 @@
       ]
     },
     "cta": {
-      "title": "See the mechanics on a call",
-      "body": "Happy to walk through the actual dispatch graph first.",
-      "button": "Book an intake call",
-      "note": "Thirty minutes, no proposal attached."
+      "title": "See it run on a real dispatch graph",
+      "body": "We open the dispatch graph, run a module, and follow one finding back to its source passage.",
+      "button": "Book a demo",
+      "note": "Thirty minutes: a walkthrough of the platform, then your own situation."
     }
   },
   "sprint": {
     "header": {
       "title": "See what a buyer would find, before they do",
       "lead": "All {disciplines} disciplines, reconciled into one narrative. Run it on a target, a company you hold, or your own business.",
-      "cta": "Book a 30-minute intake call"
+      "cta": "Book a demo"
     },
     "reframe": {
       "attr": "Why a second pass"
     },
     "disciplines": {
-      "title": "Scoped per discipline, not per hour",
+      "title": "All {disciplines} disciplines, one fixed scope",
       "lead": "Each one is a scoped pass with its own question and its own output.",
-      "note": "One engagement, one price. No à la carte menu and no upsell after signing. What each discipline looks at is set against your data room on the intake call."
+      "note": "One engagement, one price. No à la carte menu and no upsell after signing. What each discipline looks at is set against your data room in the demo."
     },
     "layers": {
-      "title": "From separate reads to one verdict",
+      "title": "What makes it one deliverable",
       "lead": "What turns {disciplines} separate reads into one deliverable, instead of {disciplines} separate reports.",
       "items": [
         {
@@ -628,7 +622,7 @@
       "formats": [
         {
           "label": "Review dashboard",
-          "items": "Financial, tax, IT and going-concern",
+          "items": "Financial, tax, technology and going-concern",
           "body": "A live, click-through dashboard. Follow any finding back to its source passage."
         },
         {
@@ -645,11 +639,11 @@
     },
     "inputs": {
       "title": "What we need to start",
-      "lead": "Two things, and neither of them is a workshop.",
+      "lead": "Two things. No workshop, no kick-off week.",
       "items": [
         {
           "title": "Data-room access",
-          "body": "Financials, legal, tax, HR, contracts and IP, as agreed on the intake call."
+          "body": "Financials, legal, tax, HR, contracts and IP, as agreed in the demo."
         },
         {
           "title": "Answers to the data-gap tracker",
@@ -658,7 +652,7 @@
       ]
     },
     "faq": {
-      "title": "The ones that come up first",
+      "title": "Questions we get",
       "items": [
         {
           "q": "Does this replace a quality-of-earnings report?",
@@ -670,7 +664,7 @@
         },
         {
           "q": "What does it cost?",
-          "a": "One price for the whole scope, set on the intake call against the size and state of your data room. No tiered menu."
+          "a": "One price for the whole scope, set in the demo against the size and state of your data room. No tiered menu."
         },
         {
           "q": "What happens to our documents?",
@@ -678,7 +672,7 @@
         },
         {
           "q": "Can I see an example report?",
-          "a": "Not a real one. Client documents are confidential and no client has elected to be named. On a call we can show you the live dashboard, the output schema, and how a finding traces back to its source."
+          "a": "Not a real one. Client documents are confidential and no client has elected to be named. In the demo we show you the live dashboard, the output schema, and how a finding traces back to its source."
         },
         {
           "q": "Who actually reviews the output?",
@@ -688,8 +682,8 @@
     },
     "cta": {
       "title": "See whether a sprint fits your situation",
-      "body": "A scoping conversation: what is in the room, what is missing, and whether a sprint is the right instrument.",
-      "button": "Book an intake call",
+      "body": "Fifteen minutes of the platform, fifteen on your data room: what is in it, what is missing, and whether a sprint is the right instrument.",
+      "button": "Book a demo",
       "note": "A limited number of pilot mandates, counted in single digits."
     }
   },
@@ -697,7 +691,7 @@
     "header": {
       "title": "How your documents are handled, and what we don’t claim",
       "lead": "Data handling is built into how the pipeline runs. It is also narrower than most security pages imply, so this page states the boundary.",
-      "cta": "Ask the awkward questions on a call"
+      "cta": "Book a demo"
     },
     "data": {
       "title": "Four things that are true of every engagement",
@@ -715,7 +709,7 @@
       ]
     },
     "transparency": {
-      "title": "Where the machine ends and a person starts",
+      "title": "What the machine does, and what the person does",
       "lead": "You should be able to tell, for any finding, what produced it and what checked it.",
       "steps": [
         "Each module retrieves evidence from your uploaded documents on its own.",
@@ -738,13 +732,13 @@
         "No breach-notification or disaster-recovery commitment stated here.",
         "No audited accuracy rate. The one benchmark on this page is internal and single-dataset."
       ],
-      "note": "If your process needs any of these in writing, raise it on the intake call. There is a real answer either way."
+      "note": "If your process needs any of these in writing, raise it in the demo. There is a real answer either way."
     },
     "cta": {
-      "title": "Ask the awkward questions on the call",
+      "title": "Bring the awkward questions to the demo",
       "body": "The list above is deliberately unflattering. If something on it blocks you, better to find that out in thirty minutes.",
-      "button": "Book an intake call",
-      "note": "No proposal attached."
+      "button": "Book a demo",
+      "note": "Thirty minutes: a walkthrough of the platform, then your own situation."
     },
     "zdr": {
       "title": "Three modules refuse to run off a retaining model",
@@ -757,8 +751,8 @@
       ]
     },
     "learning": {
-      "title": "Two memories, and only one of them is shared",
-      "lead": "Stating this plainly, because it is the kind of thing you should not have to ask about.",
+      "title": "Two memories. One is shared, one never leaves your tenant.",
+      "lead": "What we learn across clients, and what stays with you.",
       "columns": [
         {
           "label": "Shared across clients",
@@ -779,7 +773,7 @@
           ]
         }
       ],
-      "note": "If cross-client methodology learning is a problem for your mandate, say so on the intake call. It can be switched off for your account."
+      "note": "If cross-client methodology learning is a problem for your mandate, say so in the demo. It can be switched off for your account."
     },
     "grounding": {
       "title": "One benchmark, published with its caveats attached",
@@ -794,7 +788,7 @@
       ]
     },
     "legal": {
-      "title": "Three reasons this is not a chat window",
+      "title": "Why this is not a chat window",
       "lead": "One from the courts. One from your own NDA. One from the statute book.",
       "items": [
         {
@@ -813,8 +807,8 @@
       "note": "None of this is legal advice. All three are reasons the pipeline is shaped the way it is."
     },
     "terms": {
-      "title": "The terms, before you have to ask",
-      "lead": "The list further down says what we don’t have. This says what we do.",
+      "title": "The terms",
+      "lead": "What is in the engagement agreement, before you have to ask for it.",
       "items": [
         {
           "title": "An NDA first",
@@ -846,9 +840,9 @@
   },
   "team": {
     "header": {
-      "title": "Judgment, not just software",
-      "lead": "A banker’s read on risk. An engineer’s discipline for systems that don’t break.",
-      "cta": "Speak to the person who reviews it"
+      "title": "The people behind the output",
+      "lead": "Wouter structured acquisition and leveraged finance at ING. Daniel builds regulated data pipelines. One of them approves every output.",
+      "cta": "Book a demo"
     },
     "historyLabel": "Background",
     "people": [
@@ -915,16 +909,34 @@
     "closing": "The same scrutiny, turned on the deal in front of you.",
     "cta": {
       "title": "You’ll speak to the person who reviews the output",
-      "body": "While Factum is pre-launch, the intake call, the review gate and the walkthrough are the same person.",
-      "button": "Book an intake call",
-      "note": "Thirty minutes."
+      "body": "While Factum is pre-launch, the demo, the review gate and the walkthrough are the same person.",
+      "button": "Book a demo",
+      "note": "Thirty minutes: a walkthrough of the platform, then your own situation."
+    },
+    "roles": {
+      "title": "Who signs off on what",
+      "lead": "Two people, and no analyst pool behind them.",
+      "items": [
+        {
+          "label": "Wouter Dijkman",
+          "body": "Sets the scope with you, and approves every finding before it leaves. Nothing reaches you unread."
+        },
+        {
+          "label": "Daniel Dropuljic",
+          "body": "Owns the infrastructure: EU hosting, zero-retention routing, and the retention setting at every provider."
+        },
+        {
+          "label": "Nobody else",
+          "body": "No offshore team, no rotating juniors. If a mandate is bigger than two people and the platform, we say so before you sign."
+        }
+      ]
     }
   },
   "partnerships": {
     "header": {
       "title": "More mandates than your team can read",
       "lead": "You keep the relationship and the judgment. We run the read across every discipline behind it, under your name.",
-      "cta": "Book a scoping call"
+      "cta": "Book a demo"
     },
     "who": {
       "title": "Who this tends to work for",
@@ -978,8 +990,8 @@
       "lead": "With one real engagement, run properly, before anyone commits to anything.",
       "steps": [
         {
-          "title": "A scoping call",
-          "body": "What your engagements look like and where the analytical load sits. Thirty minutes."
+          "title": "A demo, and a look at your pipeline",
+          "body": "We show you the platform, then map what your engagements look like and where the analytical load sits. Thirty minutes."
         },
         {
           "title": "One mandate, run end to end",
@@ -1026,20 +1038,20 @@
     "cta": {
       "title": "Start with one mandate",
       "body": "Point it at a live engagement and read the output.",
-      "button": "Book a scoping call",
-      "note": "Thirty minutes, and a straight answer on fit."
+      "button": "Book a demo",
+      "note": "Thirty minutes: a walkthrough of the platform, then your own situation."
     }
   },
   "contact": {
     "header": {
-      "title": "One call, with the person who reviews the output",
-      "lead": "There is no form on this page. A form implies a queue and a handler. There is a calendar.",
-      "cta": "Book a 30-minute intake call"
+      "title": "Book a demo with the person who reviews the output",
+      "lead": "No form. Pick an open slot in the calendar and we will show you the platform running.",
+      "cta": "Book a demo"
     },
     "call": {
       "title": "Book thirty minutes",
-      "lead": "A scoping conversation. If your situation isn’t one this helps, that is a faster answer than a proposal.",
-      "button": "Book an intake call",
+      "lead": "A walkthrough of the platform, then your own situation. If this is not the right instrument for you, that is a faster answer than a proposal.",
+      "button": "Book a demo",
       "note": "Pick any open slot."
     },
     "agenda": {
@@ -1048,14 +1060,14 @@
         "Where you are in the cycle: acquiring, financing, holding or selling.",
         "What is in the data room today, and what is missing.",
         "Which disciplines carry the real risk in your situation.",
-        "Whether a sprint fits, or whether it is too early.",
+        "Whether a sprint fits your situation, or whether it is too early.",
         "What it would cost, scoped against the actual room."
       ]
     },
     "documents": {
       "eyebrow": "Before you send anything",
-      "title": "Don’t send documents to book a call",
-      "lead": "The intake call needs nothing but the conversation. Document access is agreed afterwards, in writing."
+      "title": "Don’t send documents to book a demo",
+      "lead": "The demo needs nothing but the conversation. Document access is agreed afterwards, in writing."
     },
     "details": {
       "title": "Who you’re dealing with",
@@ -1064,6 +1076,27 @@
       "kvkLabel": "Chamber of Commerce",
       "languagesLabel": "Working languages",
       "languagesValue": "English and Dutch"
+    },
+    "faq": {
+      "title": "What people ask before they book",
+      "items": [
+        {
+          "q": "Do I need to prepare anything?",
+          "a": "No. If you have a live deal, bring it. If you don’t, we run the demo on a constructed data room instead."
+        },
+        {
+          "q": "Who will I be speaking to?",
+          "a": "Wouter Dijkman. Factum is pre-launch, so the person who shows you the platform is the person who approves every finding it produces."
+        },
+        {
+          "q": "We are already mid-process with an adviser. Is it too late?",
+          "a": "Usually not. A sprint runs alongside as a second read, or on the disciplines nobody was scoped for."
+        },
+        {
+          "q": "What happens to what I say in the demo?",
+          "a": "It stays confidential from the first message. No documents move until an NDA is signed."
+        }
+      ]
     }
   },
   "privacy": {
@@ -1083,10 +1116,10 @@
         ]
       },
       {
-        "title": "Booking a call",
+        "title": "Booking a demo",
         "body": [
           "The booking link takes you to Cal.com, a third-party scheduling service. What you enter there is processed under their terms and shared with us so we can hold the meeting.",
-          "We use it to prepare for the call and to follow up. We do not add it to a marketing list."
+          "We use it to prepare for the demo and to follow up. We do not add it to a marketing list."
         ]
       },
       {
@@ -1100,7 +1133,7 @@
       {
         "title": "Your rights",
         "body": [
-          "Under the GDPR you can ask what personal data we hold, have it corrected or deleted, or object to how it is used. Raise it on the intake call or reply to any email from us.",
+          "Under the GDPR you can ask what personal data we hold, have it corrected or deleted, or object to how it is used. Raise it in the demo or reply to any email from us.",
           "If you are not satisfied, you can complain to the Autoriteit Persoonsgegevens, the Dutch data protection authority."
         ]
       },

@@ -429,12 +429,37 @@ p { margin: 0; }
    category list stops reading as another paragraph. The `wb-card-*` names
    are fixed by @repo/ui CardVisual; only the styling here is Factum's.
    ============================================================ */
+/* Column count comes from the item count, not from `auto-fit`.
+ *
+ * Left to size itself against a minimum track, the grid picked whatever fitted
+ * and then had to put the remainder somewhere: three cards came out two-across
+ * at 768 with a single card alone on the second row, twice on
+ * /diligence-sprint. A row of image-topped cards is a set, and a set with one
+ * member sitting on its own underneath reads as an accident.
+ *
+ * So `MediaCards` writes `card-grid-2|3|4` from `items.length` and each variant
+ * only ever uses divisors of its own count. The breakpoint per variant is the
+ * width at which that many cards still hold a legible image and two lines of
+ * prose. */
 .card-grid {
   display: grid;
   gap: clamp(14px, 1.8vw, 22px);
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  grid-template-columns: minmax(0, 1fr);
 }
-.card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }
+@media (min-width: 700px) {
+  .card-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 900px) {
+  .card-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+/* Four splits two ways, so it gets both: paired on a tablet, in one row once
+   there is width for four images side by side. */
+@media (min-width: 640px) {
+  .card-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1180px) {
+  .card-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
 
 .media-card {
   display: flex;
@@ -659,10 +684,10 @@ p { margin: 0; }
    Discipline grid — scope as a board of marks
    ============================================================ */
 /* ------------------------------------------------------------
-   Discipline index — the same ten, as a set rather than as an argument
+   Discipline index — the same nine, as a set rather than as an argument
 
    Serif at display weight, numbered in mono, on a hairline grid. The point is
-   that the reader takes it in as one object: ten cells, all present, no
+   that the reader takes it in as one object: nine cells, all present, no
    scrolling, nothing to read. The full version with a failure and an outcome
    under each name lives on /diligence-sprint, where it is what the visitor
    came for.
@@ -672,12 +697,21 @@ p { margin: 0; }
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+  /* Three columns at a stated breakpoint, not `auto-fit`. Sizing itself, the
+     grid chose six columns at 1440 and four at 1024 — nine items laid out 6+3
+     and 4+4+1 — so the bottom row ran short at every width anyone uses. On a
+     block whose entire job is to show a complete set, a short last row reads
+     as an incomplete set. Nine divides by three and by nothing else that fits
+     on a screen, so three it is, and one below that. */
+  grid-template-columns: minmax(0, 1fr);
   /* Cells share their hairline rather than each drawing one — doubled seams at
      every internal join is the difference between a table and a grid of boxes. */
   gap: 1px;
   background: var(--hairline);
   border: 1px solid var(--hairline);
+}
+@media (min-width: 600px) {
+  .discipline-index { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (min-resolution: 2dppx) {
   .discipline-index { gap: 0.5px; }
@@ -724,10 +758,16 @@ p { margin: 0; }
    * renders as page background and never as a highlighted "missing" rectangle.
    * The list contributes only the top/left edges.
    *
-   * One column, then two. It was five, back when a tile held a single word.
-   * Each tile now carries a risk and a finding — two full sentences — and at
-   * five across they set to three words a line. Ten entries divide evenly by
-   * two, so no row is ever short. */
+   * One column, then three. It was five, back when a tile held a single word;
+   * each tile now carries a risk and a finding — two full sentences — and at
+   * five across they set to three words a line. It was then two, for as long as
+   * the roster was ten. The roster is nine since IT and AI merged, and nine in
+   * two columns leaves a lone tile on a fifth row, so three columns it is: an
+   * exact 3x3 with no cell left over.
+   *
+   * The jump from one column to three skips the tablet range on purpose. Three
+   * columns inside a 700px container is 230px a tile, which puts two sentences
+   * back at three words a line — the thing five columns was abandoned for. */
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   margin: 0;
@@ -736,8 +776,8 @@ p { margin: 0; }
   border-top: 1px solid var(--hairline);
   border-left: 1px solid var(--hairline);
 }
-@media (min-width: 720px) {
-  .discipline-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 900px) {
+  .discipline-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 .discipline-tile {
   position: relative;
@@ -848,13 +888,21 @@ p { margin: 0; }
 /* ============================================================
    Stepper — a short sequence on a horizontal rail
    ============================================================ */
+/* Three columns, stated, because every sequence on this site is three steps
+   long. `auto-fit` was picking the count off the container and getting it
+   wrong: three steps came out three-across at 1440 and two-across-plus-one at
+   1100, and the rail that runs through the nodes then drew a second time
+   halfway down the block. A rail is only legible as a rail when it is one row. */
 .stepper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(20px, 3vw, 40px);
   margin: 0;
   padding: 0;
   list-style: none;
+}
+@media (min-width: 820px) {
+  .stepper { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 .stepper-step { position: relative; padding-top: 46px; }
 /* The rail runs through the node and stops at the last step. */
@@ -885,7 +933,7 @@ p { margin: 0; }
 }
 .stepper-title { margin-bottom: 8px; }
 
-@media (max-width: 700px) {
+@media (max-width: 819px) {
   /* Stacked, a rail between rows would run through the prose. */
   .stepper-step::before { display: none; }
 }
@@ -965,8 +1013,31 @@ p { margin: 0; }
   display: grid;
   gap: clamp(32px, 5vw, 80px);
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-  align-items: start;
+  /* Stretch, not start.
+   *
+   * Measured on the homepage the two columns came out 597px against 359px and
+   * 461px against 364px, so aligning them to the top left 100–240px hanging
+   * under the shorter one and the block read as unfinished. Centring was worse:
+   * on /platform the pair is 263px against 1115px, and a centred heading floats
+   * 400px down the page next to nothing.
+   *
+   * Stretching costs nothing where the short column is text — block flow still
+   * starts at the top — and lets the two rules below give the photograph and
+   * the panel the whole height of the row instead of a fixed slice of it. It
+   * also makes `.split-sticky` work, which it could not under `start`. */
+  align-items: stretch;
 }
+/* The photograph fills its column rather than holding 16:9 and leaving the
+   rest of the row empty. Only inside a split — in a card grid the fixed ratio
+   is what keeps a row of cards level. */
+.split-grid > .media-card { display: flex; }
+.split-grid > .media-card > .wb-card-media {
+  aspect-ratio: auto;
+  flex: 1;
+  min-height: 260px;
+}
+/* Same argument for a panel sitting opposite a column of prose. */
+.split-grid > * > .panel { height: 100%; }
 .split-grid-even { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 .split-grid-thirds {
   display: grid;
@@ -985,6 +1056,25 @@ p { margin: 0; }
   .split-grid { grid-template-columns: 1fr; }
   .split-sticky { position: static; }
 }
+
+/* ============================================================
+   Stage list — one row per item, label left, consequence right
+   ============================================================ */
+/* The homepage deal cycle was a `Stepper`, and it was the wrong object twice
+   over. The page already spends a stepper on the reader's own three steps two
+   sections below, so it made the same visual statement twice; and five items
+   never fit a rail that lays itself out three or four across, so the bottom row
+   came up short at every width measured. A cycle has no end either, and
+   numbering it 01–05 said it did.
+   A row per item is exact at any width and needs no column arithmetic. */
+.stage-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--hairline);
+}
+.stage-list > .stage-row { border-bottom: 1px solid var(--hairline); }
+.stage-label { color: var(--text-display); }
 
 .stage-row {
   display: grid;
@@ -1619,11 +1709,48 @@ details.disclosure > div { padding-bottom: 24px; }
   margin: 16px 0 0;
   padding: 0;
   display: grid;
-  /* auto-fill, not auto-fit: a two-module wave should keep node-sized
-     nodes rather than stretch two cards across the full width, which
-     would draw it as large as the nine-module wave above it. */
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  /* An explicit column count, and one that divides the widest wave.
+   *
+   * This was `auto-fill` with a 150px minimum, on the argument that a
+   * two-module wave should keep node-sized nodes rather than stretch two cards
+   * across the full width. That argument still holds and empty tracks still do
+   * the job — but letting the container pick the count gave seven columns at
+   * 1440, and wave one has eight modules, so the widest wave on the page drew
+   * itself as seven nodes and one stranded underneath.
+   *
+   * Eight columns at desktop puts every wave on a single row, which is what a
+   * wave is: one parallel dispatch. Below that the count halves rather than
+   * drifting, and the two exceptions to an even break — the five-module wave at
+   * four across, the odd-sized waves at two across — are handled by the two
+   * rules further down. No wave wraps unevenly at any width. */
+  grid-template-columns: minmax(0, 1fr);
   gap: 8px;
+}
+@media (min-width: 560px) {
+  .dispatch-nodes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 560px) and (max-width: 899px) {
+  /* Three of the five waves hold an odd number of modules. Paired two-up, the
+     odd one takes the whole last row rather than half of it. Scoped to the
+     two-column range: at four across, a double-width straggler would be more
+     conspicuous than a single-width one. */
+  .dispatch-node:last-child:nth-child(odd) { grid-column: span 2; }
+}
+@media (min-width: 900px) {
+  .dispatch-nodes { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  /* Four divides the eight- and four-module waves and leaves the two- and
+     three-module ones short of a full row, which is the point: a wave is as
+     wide as it is big. The five-module wave was the one case that broke —
+     four across and a fifth alone underneath, which looks like a mistake
+     rather than like a batch. Given its own count as a column count it fits on
+     one row like the rest. Bounded at 1199 because the attribute selector
+     outranks the plain class, and above that every wave is one row of eight. */
+  .dispatch-nodes[data-n='5'] { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+@media (min-width: 1200px) {
+  .dispatch-nodes { grid-template-columns: repeat(8, minmax(0, 1fr)); }
 }
 .dispatch-node {
   display: flex;
@@ -1702,7 +1829,6 @@ details.disclosure > div { padding-bottom: 24px; }
 
 @media (max-width: 560px) {
   .dispatch-wave { grid-template-columns: 7px minmax(0, 1fr); column-gap: 14px; }
-  .dispatch-nodes { grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); }
   .dispatch-tally { flex-basis: 100%; }
 }
 
@@ -1844,6 +1970,10 @@ details.disclosure > div { padding-bottom: 24px; }
   .bento { grid-template-columns: repeat(2, 1fr); }
   .bento-tile { grid-column: span 1; }
   .bento-tile[style*="--span: 6"], .bento-tile[style*="--span:6"] { grid-column: span 2; }
+  /* Both bentos on /platform hold seven tiles, which is exact across six
+     columns and one short across two. The odd tile takes the whole last row
+     rather than sitting alone in half of it. */
+  .bento-tile:last-child:nth-child(odd) { grid-column: span 2; }
 }
 @media (max-width: 560px) {
   .bento { grid-template-columns: 1fr; }

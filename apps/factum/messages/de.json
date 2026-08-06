@@ -1,32 +1,32 @@
 {
   "meta": {
     "home": {
-      "title": "Analyse auf Due-Diligence-Niveau über den gesamten Deal-Zyklus",
-      "description": "Zehn Disziplinen über den gesamten Datenraum. Gegeneinander abgeglichen. Von einer Person geprüft, bevor Sie es sehen."
+      "title": "KI-Due-Diligence für M&A und Private Equity",
+      "description": "Neun Disziplinen über den gesamten Datenraum. Gegeneinander abgeglichen. Von einer Person geprüft, bevor Sie es sehen."
     },
     "platform": {
-      "title": "Die Plattform",
-      "description": "23 Due-Diligence-Module über zehn Disziplinen. Jede Feststellung belegt ein Dokument. Jedes Ergebnis passiert eine menschliche Freigabe."
+      "title": "KI-Due-Diligence-Plattform",
+      "description": "22 Due-Diligence-Module über neun Disziplinen. Jede Feststellung belegt ein Dokument. Jedes Ergebnis passiert eine menschliche Freigabe."
     },
     "sprint": {
-      "title": "Der Diligence Sprint",
-      "description": "Zehn fachspezifische Durchgänge über einen Datenraum, zu einem Narrativ zusammengeführt, mit laufendem Datenlücken-Tracker."
+      "title": "Vollständige Datenraum-Prüfung in Tagen",
+      "description": "Neun Fachdurchgänge über einen Datenraum, zu einer Darstellung zusammengeführt, mit laufendem Datenlücken-Tracker."
     },
     "governance": {
-      "title": "Governance und Datenverarbeitung",
+      "title": "KI-Governance und Datenverarbeitung",
       "description": "Wie Dokumente verarbeitet werden, was die menschliche Freigabe leistet und was Factum nicht behauptet."
     },
     "team": {
-      "title": "Wer dahintersteht",
-      "description": "Der Blick eines Bankers auf Risiko. Die Disziplin eines Ingenieurs für Systeme, die nicht brechen."
+      "title": "Das Team hinter Factum",
+      "description": "Ein Leveraged-Finance-Banker und ein Data Engineer. Einer von beiden gibt jedes Ergebnis frei."
     },
     "partnerships": {
-      "title": "Partnerschaften",
+      "title": "Diligence-Kapazität für Berater",
       "description": "Analytische Kapazität auf Due-Diligence-Niveau hinter Ihren eigenen Mandantenbeziehungen."
     },
     "contact": {
-      "title": "Sprechen Sie uns an",
-      "description": "Ein Erstgespräch mit der Person, die jedes Ergebnis prüft. Kein Formular, keine Warteschlange."
+      "title": "Demo buchen",
+      "description": "Buchen Sie eine dreißigminütige Demo mit der Person, die jedes Ergebnis prüft."
     },
     "privacy": {
       "title": "Datenschutz",
@@ -45,12 +45,12 @@
     "team": "Team",
     "partnerships": "Partnerschaften",
     "contact": "Kontakt",
-    "cta": "Erstgespräch buchen",
+    "cta": "Demo buchen",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen"
   },
   "footer": {
-    "blurb": "Analyse auf Due-Diligence-Niveau über den gesamten Deal-Zyklus. Belegt aus Ihren Dokumenten. Geprüft von einer namentlich benannten Person. Fertig in Tagen.",
+    "blurb": "KI-Due-Diligence für M&A und Private Equity. Jede Feststellung belegt ein Dokument. Jedes Ergebnis von einer namentlich genannten Person geprüft.",
     "sitemap": "Sitemap",
     "company": "Unternehmen",
     "privacy": "Datenschutz",
@@ -91,9 +91,9 @@
         "result": "Wer vertraglich gebunden ist, wer nicht, und was Pensionszusagen und Tarifbindung wirklich kosten."
       },
       {
-        "label": "IT",
-        "pain": "Technische Schulden stehen in keiner Bilanz.",
-        "result": "Wo die Systeme den Business Case nicht tragen, und was es kostet, das zu beheben."
+        "label": "Technologie (IT & KI)",
+        "pain": "Technische Schulden stehen in keiner Bilanz, und „KI-getrieben“ heißt meist: Lizenz auf ein fremdes Modell.",
+        "result": "Was wirklich läuft, was die Behebung kostet, und was unter den AI Act fällt."
       },
       {
         "label": "ESG",
@@ -109,11 +109,6 @@
         "label": "Bewertung",
         "pain": "Das Gebot stammt aus einem Modell, das die Befunde noch nicht kannte.",
         "result": "Was die Befunde mit dem Preis machen, durchgerechnet statt unterstellt."
-      },
-      {
-        "label": "KI",
-        "pain": "„KI-getrieben“ im Information Memorandum ist meist eine Lizenz auf das Modell eines anderen.",
-        "result": "Was wirklich läuft, wovon es abhängt, und ob es unter den AI Act fällt."
       }
     ],
     "schema": {
@@ -157,10 +152,9 @@
       "Financial DD",
       "Commercial DD",
       "HR DD",
-      "IT DD",
+      "Technologie DD",
       "ESG DD",
       "Operational DD",
-      "AI DD",
       "IM-Screener",
       "Vigil-Monitoring",
       "Tax DD",
@@ -236,29 +230,29 @@
       "governance": "Wie Dokumente behandelt werden",
       "platform": "Wie die Plattform arbeitet",
       "sprint": "Was der Sprint abdeckt",
-      "intake": "Gespräch buchen"
+      "intake": "Demo buchen"
     },
     "reframe": {
-      "quote": "Die eigene Arbeit zuerst zu prüfen ist kein Zeichen dafür, dass etwas nicht stimmt. So sieht ein gut geführter Prozess aus."
+      "quote": "Den Durchgang des Käufers zuerst auf der eigenen Seite zu fahren, ist gelebte Prozessdisziplin."
     }
   },
   "home": {
     "hero": {
-      "title": "Unterschreiben Sie keine Zahl, die Sie nicht gelesen haben",
-      "lead": "Due Diligence zieht eine Stichprobe und berichtet nach Wochen. Factum liest alles, in Tagen, mit der Quellpassage hinter jedem Befund.",
-      "cta": "Erstgespräch über 30 Minuten buchen"
+      "title": "Den gesamten Datenraum in Tagen lesen",
+      "lead": "KI-gestützte Due Diligence für M&A und Private Equity. Übliche Due Diligence liest eine Stichprobe und berichtet in Wochen. Wir lesen alles, und jede Feststellung nennt Dokument und Seite dahinter.",
+      "cta": "Demo buchen"
     },
     "problem": {
-      "title": "Die Zahl steht fest, bevor der Raum gelesen ist",
-      "lead": "Nicht aus Nachlässigkeit. Es war nie genug Zeit, alles zu lesen.",
+      "title": "Die meiste Due Diligence liest den Datenraum nie ganz",
+      "lead": "Die Zeit reicht nie. Also entsteht der Preis auf einer Stichprobe der Dokumente.",
       "points": [
         {
           "title": "Sie arbeiten mit einer Stichprobe",
           "body": "Klassische Due Diligence liest einen Bruchteil des Datenraums. Der Rest liegt weiter darin."
         },
         {
-          "title": "Eine Disziplin ist keine Due Diligence",
-          "body": "Eine Quality-of-Earnings-Analyse deckt die Earnings ab. Was schiefgeht, liegt zwischen den Disziplinen, wo niemand hingesehen hat."
+          "title": "Das Risiko liegt zwischen den Disziplinen",
+          "body": "Ein Quality-of-Earnings-Read deckt die Erträge ab. Die teuren Überraschungen liegen dort, wo zwei Spezialisten je den anderen zuständig glaubten."
         }
       ]
     },
@@ -266,18 +260,18 @@
       "attr": "Warum ein zweiter Durchgang"
     },
     "guide": {
-      "title": "Geprüft wie eine Bank es täte, gebaut wie Produktionssoftware es sein muss",
-      "lead": "Der Blick eines Bankers auf Risiko. Die Disziplin eines Ingenieurs für Systeme, die nicht leise versagen dürfen.",
+      "title": "Ein Leveraged-Finance-Banker und ein Data Engineer",
+      "lead": "Wouter hat bei der ING Akquisitions- und Leveraged Finance strukturiert. Daniel baut regulierte Datenpipelines. Einer von beiden gibt jedes Ergebnis frei, bevor es Sie erreicht.",
       "link": "Das Team kennenlernen"
     },
     "specimen": {
-      "title": "Ein Befund, und die Klausel, aus der er stammt",
-      "lead": "Konstruiert an einem fiktiven Target. Die Form ist die echte."
+      "title": "Wie eine Feststellung aussieht",
+      "lead": "Ein durchgerechnetes Beispiel an einem fiktiven Target. Das Format ist das, das Sie erhalten."
     },
     "pipeline": {
-      "title": "Dieselben fünf Schritte, bei jedem Mandat",
-      "lead": "Jeder kann ein KI-Tool auf einen Datenraum richten. Entscheidend ist, was jedes Mal passiert, ob jemand zusieht oder nicht.",
-      "refusalTitle": "Die Schleife verweigert die automatische Freigabe",
+      "title": "Jedes Mandat durchläuft dieselben fünf Schritte",
+      "lead": "Ein KI-Werkzeug auf einen Datenraum richten kann jeder. Die Frage ist, was passiert, wenn das Modell sich irrt.",
+      "refusalTitle": "Die Pipeline hält an und ruft einen Menschen",
       "refusalNote": "Jede harte Blockade geht an einen Menschen.",
       "refusals": [
         "Erfundene oder halluzinierte Fundstellen",
@@ -287,19 +281,19 @@
       ]
     },
     "trust": {
-      "title": "In den Ablauf der Pipeline eingebaut",
-      "lead": "Jeder Punkt unten beschreibt einen Mechanismus. Keiner davon ist eine Zertifizierung.",
+      "title": "Wohin Ihre Dokumente gehen und wer sie sehen kann",
+      "lead": "EU-Hosting, Zero Retention beim Modellanbieter, Pseudonymisierung vor der Analyse und eine namentlich genannte prüfende Person. Vier Mechanismen, keine Zertifizierung.",
       "link": "Die Governance-Seite lesen"
     },
     "coverage": {
-      "title": "Der ganze Datenraum, keine Stichprobe",
-      "lead": "Jede Disziplin, ein Durchgang. Was die eine findet, liegt bei der nächsten auf dem Tisch.",
-      "note": "Nach Abhängigkeit geordnet: spätere Arbeit wartet auf die Befunde, die sie braucht.",
-      "ctaLine": "Das ist der Durchgang, den Ihr Team in zwei Wochen nicht schafft."
+      "title": "Neun Disziplinen, ein Durchgang über denselben Raum",
+      "lead": "Was eine Disziplin findet, liegt für die nächste auf dem Tisch.",
+      "note": "Nach Abhängigkeit geordnet: spätere Arbeit wartet auf die Feststellungen, die sie braucht.",
+      "ctaLine": "Ihr Team schafft das nicht in zwei Wochen."
     },
     "cycle": {
-      "title": "Fünf Momente, eine Beweisbasis",
-      "lead": "Derselbe Raum wird neu gelesen, sobald jemand Neues ihm vertrauen muss. Lesen Sie ihn einmal, richtig.",
+      "title": "Dieselbe Belegbasis, fünfmal im Deal-Zyklus",
+      "lead": "Der Raum wird jedes Mal neu gelesen, wenn jemand Neues ihm vertrauen muss. Einmal richtig lesen.",
       "stages": [
         {
           "title": "Kaufen",
@@ -326,7 +320,7 @@
     },
     "success": {
       "title": "Was sich ändert, wenn Sie unterschreiben",
-      "lead": "Kein besserer Bericht. Eine andere Position am Tisch.",
+      "lead": "Sie kommen mit dem gesamten Datenraum im Rücken an den Tisch.",
       "points": [
         {
           "title": "Der Preis spiegelt den ganzen Raum wider",
@@ -339,12 +333,12 @@
       ]
     },
     "plan": {
-      "title": "Drei Schritte, und der erste ist ein Gespräch",
+      "title": "Drei Schritte bis zum Start",
       "lead": "Kein Angebot, bevor wir beide wissen, dass es passt.",
       "steps": [
         {
-          "title": "Buchen Sie 30 Minuten",
-          "body": "Wir klären, ob das zu Ihrer Situation passt."
+          "title": "Dreißigminütige Demo buchen",
+          "body": "Wir führen Sie an einem echten Lauf durch die Plattform und klären danach, ob sie zu Ihrer Situation passt."
         },
         {
           "title": "NDA unterschreiben, dann den Datenraum zeigen",
@@ -357,20 +351,20 @@
       ]
     },
     "cta": {
-      "title": "Beginnen Sie mit einem Gespräch, nicht mit einem Angebot",
-      "body": "Dreißig Minuten, um zu sehen, ob das zu Ihrer Situation passt. Wenn nicht, sagen wir das.",
-      "button": "Erstgespräch über 30 Minuten buchen"
+      "title": "Erst laufen sehen, dann entscheiden",
+      "body": "Dreißig Minuten: erst die Plattform, dann Ihre eigene Situation. Passt es nicht, sagen wir das.",
+      "button": "Demo buchen"
     }
   },
   "platform": {
     "header": {
-      "title": "Wie wir alles lesen, ohne etwas zu erfinden",
-      "lead": "Ein Agent mit großem Kontextfenster ist keine Due Diligence. Das hier ist ein Dispatch-Graph, bei jedem Mandat gleich gefahren.",
-      "cta": "Die Mechanik im Gespräch ansehen"
+      "title": "Wie die Plattform einen Datenraum liest",
+      "lead": "{modules} vorab abgegrenzte Module, in fester Abhängigkeitsfolge, mit vier Belegprüfungen und einer verpflichtenden menschlichen Freigabe. Jedes Mandat derselbe Lauf.",
+      "cta": "Demo buchen"
     },
     "scale": {
-      "title": "Aus der Quelle gezählt, nicht geschätzt",
-      "lead": "Was tatsächlich gebaut ist, gezählt.",
+      "title": "Die Plattform in Zahlen",
+      "lead": "Aus dem Produktquellcode gezählt, nicht geschätzt.",
       "tiles": {
         "modules": {
           "title": "Module pro Mandat",
@@ -390,7 +384,7 @@
         },
         "waves": {
           "title": "Dispatch-Wellen",
-          "body": "Nach Abhängigkeit geordnet, nicht nach Präferenz. Welle 1 öffnet mit neun Modulen gleichzeitig."
+          "body": "Nach Abhängigkeit geordnet. Welle 1 öffnet mit acht Modulen gleichzeitig."
         },
         "zdr": {
           "title": "Zero-Retention-gesichert",
@@ -408,7 +402,7 @@
       "note": "Aus den Dispatch-Graphen im Produktquellcode abgeleitet, nicht geschätzt. ZDR markiert die Module, deren Routing hart auf einen Zero-Retention-EU-Endpunkt gesetzt ist."
     },
     "pipeline": {
-      "title": "Vom Upload zu einem Befund, mit dem Sie arbeiten können",
+      "title": "Vom Upload zur fertigen Feststellung",
       "lead": "Fünf Stufen. Jedes Mal dieselben fünf, ob jemand zusieht oder nicht.",
       "stages": [
         {
@@ -559,7 +553,7 @@
       ]
     },
     "faq": {
-      "title": "Bevor Sie fragen",
+      "title": "Fragen, die uns gestellt werden",
       "items": [
         {
           "q": "Ist das nicht einfach ein KI-Chatbot mit Zwischenschritten?",
@@ -567,7 +561,7 @@
         },
         {
           "q": "Warum Wellen statt alles gleichzeitig?",
-          "a": "Steuern kann ohne den Finanz- und Rechts-Read nicht argumentieren. Bewertung kann ohne Steuern nicht bepreisen. Der Abhängigkeitsgraph setzt die Reihenfolge; Welle 1 fährt trotzdem neun Module parallel."
+          "a": "Steuern kann ohne den Finanz- und Rechts-Read nicht argumentieren. Bewertung kann ohne Steuern nicht bepreisen. Der Abhängigkeitsgraph setzt die Reihenfolge; Welle 1 fährt trotzdem acht Module parallel."
         },
         {
           "q": "Was passiert, wenn das Modell es nicht weiß?",
@@ -584,28 +578,28 @@
       ]
     },
     "cta": {
-      "title": "Die Mechanik im Gespräch ansehen",
-      "body": "Wir gehen gern zuerst den tatsächlichen Dispatch-Graph durch.",
-      "button": "Erstgespräch buchen",
-      "note": "Dreißig Minuten, ohne Angebot im Anhang."
+      "title": "Sehen Sie es an einem echten Dispatch-Graphen laufen",
+      "body": "Wir öffnen den Dispatch-Graphen, lassen ein Modul laufen und verfolgen eine Feststellung zurück zur Quellstelle.",
+      "button": "Demo buchen",
+      "note": "Dreißig Minuten: erst die Plattform, dann Ihre eigene Situation."
     }
   },
   "sprint": {
     "header": {
       "title": "Sehen Sie, was ein Käufer finden würde, bevor er es tut",
       "lead": "Alle {disciplines} Disziplinen, zu einem einzigen Narrativ zusammengeführt. Gefahren auf einem Target, einem Unternehmen, das Sie halten, oder Ihrem eigenen Betrieb.",
-      "cta": "Erstgespräch über 30 Minuten buchen"
+      "cta": "Demo buchen"
     },
     "reframe": {
       "attr": "Warum ein zweiter Durchgang"
     },
     "disciplines": {
-      "title": "Abgegrenzt pro Disziplin, nicht pro Stunde",
+      "title": "Alle {disciplines} Disziplinen, ein fester Umfang",
       "lead": "Jede ist ein abgegrenzter Durchgang mit eigener Frage und eigenem Ergebnis.",
-      "note": "Ein Mandat, ein Preis. Keine À-la-carte-Karte und kein Upsell nach Unterschrift. Worauf jede Disziplin schaut, wird im Erstgespräch anhand Ihres Datenraums festgelegt."
+      "note": "Ein Mandat, ein Preis. Keine À-la-carte-Karte und kein Upsell nach Unterschrift. Worauf jede Disziplin schaut, wird in der Demo anhand Ihres Datenraums festgelegt."
     },
     "layers": {
-      "title": "Von einzelnen Analysen zu einem Urteil",
+      "title": "Was daraus ein Ergebnis macht",
       "lead": "Was {disciplines} getrennte Analysen zu einem einzigen Ergebnis macht, statt zu {disciplines} getrennten Berichten.",
       "items": [
         {
@@ -628,7 +622,7 @@
       "formats": [
         {
           "label": "Prüf-Dashboard",
-          "items": "Finanzen, Steuern, IT und Fortführung",
+          "items": "Finanzen, Steuern, Technologie und Fortführung",
           "body": "Ein interaktives Dashboard zum Durchklicken. Jede Feststellung lässt sich bis zur Quellpassage zurückverfolgen."
         },
         {
@@ -645,11 +639,11 @@
     },
     "inputs": {
       "title": "Was wir zum Start brauchen",
-      "lead": "Zwei Dinge, und keines davon ist ein Workshop.",
+      "lead": "Zwei Dinge. Kein Workshop, keine Kick-off-Woche.",
       "items": [
         {
           "title": "Zugang zum Datenraum",
-          "body": "Finanzen, Recht, Steuern, Personal, Verträge und IP, wie im Erstgespräch vereinbart."
+          "body": "Finanzen, Recht, Steuern, Personal, Verträge und IP, wie in der Demo vereinbart."
         },
         {
           "title": "Antworten auf den Datenlücken-Tracker",
@@ -658,7 +652,7 @@
       ]
     },
     "faq": {
-      "title": "Die, die zuerst kommen",
+      "title": "Fragen, die uns gestellt werden",
       "items": [
         {
           "q": "Ersetzt das einen Quality-of-Earnings-Bericht?",
@@ -670,7 +664,7 @@
         },
         {
           "q": "Was kostet es?",
-          "a": "Ein Preis für den gesamten Umfang, festgelegt im Erstgespräch anhand von Größe und Zustand Ihres Datenraums. Keine gestaffelte Karte."
+          "a": "Ein Preis für den gesamten Umfang, in der Demo anhand von Größe und Zustand Ihres Datenraums festgelegt. Keine gestaffelte Karte."
         },
         {
           "q": "Was passiert mit unseren Dokumenten?",
@@ -678,7 +672,7 @@
         },
         {
           "q": "Kann ich einen Beispielbericht sehen?",
-          "a": "Keinen echten. Mandantendokumente sind vertraulich, und kein Mandant hat sich für eine Nennung entschieden. Im Gespräch zeigen wir Ihnen das Live-Dashboard, das Output-Schema und wie sich eine Feststellung auf ihre Quelle zurückführen lässt."
+          "a": "Keinen echten. Mandantendokumente sind vertraulich, und kein Mandant hat sich für eine Nennung entschieden. In der Demo zeigen wir Ihnen das Live-Dashboard, das Output-Schema und wie sich eine Feststellung auf ihre Quelle zurückführen lässt."
         },
         {
           "q": "Wer prüft das Ergebnis tatsächlich?",
@@ -688,8 +682,8 @@
     },
     "cta": {
       "title": "Prüfen, ob ein Sprint zu Ihrer Situation passt",
-      "body": "Ein Scoping-Gespräch: was im Datenraum liegt, was fehlt und ob ein Sprint das richtige Instrument ist.",
-      "button": "Erstgespräch buchen",
+      "body": "Eine Viertelstunde Plattform, eine Viertelstunde Ihr Datenraum: was darin liegt, was fehlt und ob ein Sprint das richtige Instrument ist.",
+      "button": "Demo buchen",
       "note": "Eine begrenzte Zahl an Pilotmandaten, im einstelligen Bereich."
     }
   },
@@ -697,7 +691,7 @@
     "header": {
       "title": "Wie Ihre Dokumente behandelt werden, und was wir nicht behaupten",
       "lead": "Datenverarbeitung ist in den Ablauf der Pipeline eingebaut. Sie ist zugleich enger, als die meisten Sicherheitsseiten nahelegen. Diese Seite benennt die Grenze.",
-      "cta": "Die unbequemen Fragen im Gespräch stellen"
+      "cta": "Demo buchen"
     },
     "data": {
       "title": "Vier Dinge, die für jedes Mandat gelten",
@@ -715,7 +709,7 @@
       ]
     },
     "transparency": {
-      "title": "Wo die Maschine endet und ein Mensch beginnt",
+      "title": "Was die Maschine tut und was der Mensch tut",
       "lead": "Sie sollten für jede Feststellung erkennen können, was sie erzeugt und was sie geprüft hat.",
       "steps": [
         "Jedes Modul zieht selbstständig Belege aus Ihren hochgeladenen Dokumenten.",
@@ -738,13 +732,13 @@
         "Keine Meldepflicht- oder Notfallwiederherstellungszusage auf dieser Seite.",
         "Keine auditierte Genauigkeitsquote. Der eine Benchmark auf dieser Seite ist intern und beruht auf einem Datensatz."
       ],
-      "note": "Wenn Ihr Prozess eines davon schriftlich verlangt, sprechen Sie es im Erstgespräch an. Es gibt so oder so eine echte Antwort."
+      "note": "Wenn Ihr Prozess eines davon schriftlich verlangt, sprechen Sie es in der Demo an. Es gibt so oder so eine echte Antwort."
     },
     "cta": {
-      "title": "Stellen Sie die unbequemen Fragen im Gespräch",
+      "title": "Bringen Sie die unangenehmen Fragen mit in die Demo",
       "body": "Die Liste oben ist bewusst unvorteilhaft. Wenn etwas darauf Sie blockiert, findet man das besser in dreißig Minuten heraus.",
-      "button": "Erstgespräch buchen",
-      "note": "Kein Angebot im Anhang."
+      "button": "Demo buchen",
+      "note": "Dreißig Minuten: erst die Plattform, dann Ihre eigene Situation."
     },
     "zdr": {
       "title": "Drei Module weigern sich, auf einem speichernden Modell zu laufen",
@@ -757,8 +751,8 @@
       ]
     },
     "learning": {
-      "title": "Zwei Gedächtnisse, und nur eines wird geteilt",
-      "lead": "Wir sagen das ausdrücklich, weil Sie danach nicht fragen müssen sollten.",
+      "title": "Zwei Gedächtnisse. Eines ist geteilt, eines verlässt Ihren Mandanten nie.",
+      "lead": "Was wir über Mandate hinweg lernen und was bei Ihnen bleibt.",
       "columns": [
         {
           "label": "Mandantenübergreifend geteilt",
@@ -779,7 +773,7 @@
           ]
         }
       ],
-      "note": "Ist mandantenübergreifendes Methodenlernen für Ihr Mandat ein Problem, sagen Sie das im Erstgespräch. Für Ihr Konto lässt es sich abschalten."
+      "note": "Ist mandantenübergreifendes Methodenlernen für Ihr Mandat ein Problem, sagen Sie das in der Demo. Für Ihr Konto lässt es sich abschalten."
     },
     "grounding": {
       "title": "Ein Benchmark, veröffentlicht mit angehängten Vorbehalten",
@@ -794,7 +788,7 @@
       ]
     },
     "legal": {
-      "title": "Drei Gründe, warum das kein Chatfenster ist",
+      "title": "Warum dies kein Chatfenster ist",
       "lead": "Einer aus dem Gerichtssaal. Einer aus Ihrem eigenen NDA. Einer aus dem Gesetzbuch.",
       "items": [
         {
@@ -813,8 +807,8 @@
       "note": "Nichts davon ist Rechtsberatung. Alle drei sind Gründe, warum die Pipeline so aussieht, wie sie aussieht."
     },
     "terms": {
-      "title": "Die Konditionen, bevor Sie fragen müssen",
-      "lead": "Die Liste weiter unten sagt, was wir nicht haben. Das hier sagt, was wir haben.",
+      "title": "Die Bedingungen",
+      "lead": "Was im Mandatsvertrag steht, bevor Sie danach fragen müssen.",
       "items": [
         {
           "title": "Zuerst ein NDA",
@@ -846,9 +840,9 @@
   },
   "team": {
     "header": {
-      "title": "Urteilsvermögen, nicht nur Software",
-      "lead": "Der Blick eines Bankers auf Risiko. Die Disziplin eines Ingenieurs für Systeme, die nicht brechen.",
-      "cta": "Mit der prüfenden Person sprechen"
+      "title": "Die Menschen hinter dem Ergebnis",
+      "lead": "Wouter hat bei der ING Akquisitions- und Leveraged Finance strukturiert. Daniel baut regulierte Datenpipelines. Einer von beiden gibt jedes Ergebnis frei.",
+      "cta": "Demo buchen"
     },
     "historyLabel": "Werdegang",
     "people": [
@@ -915,16 +909,34 @@
     "closing": "Dieselbe Sorgfalt, gerichtet auf den Deal vor Ihnen.",
     "cta": {
       "title": "Sie sprechen mit der Person, die das Ergebnis prüft",
-      "body": "Solange Factum vor dem Launch steht, sind Erstgespräch, Prüfstufe und Durchsprache dieselbe Person.",
-      "button": "Erstgespräch buchen",
-      "note": "Dreißig Minuten."
+      "body": "Solange Factum vor dem Launch steht, sind Demo, Prüfstufe und Durchsprache dieselbe Person.",
+      "button": "Demo buchen",
+      "note": "Dreißig Minuten: erst die Plattform, dann Ihre eigene Situation."
+    },
+    "roles": {
+      "title": "Wer wofür unterschreibt",
+      "lead": "Zwei Personen, und kein Analystenpool dahinter.",
+      "items": [
+        {
+          "label": "Wouter Dijkman",
+          "body": "Legt den Umfang mit Ihnen fest und gibt jede Feststellung frei, bevor sie das Haus verlässt. Nichts erreicht Sie ungelesen."
+        },
+        {
+          "label": "Daniel Dropuljic",
+          "body": "Verantwortet die Infrastruktur: EU-Hosting, Zero-Retention-Routing und die Aufbewahrungseinstellung bei jedem Anbieter."
+        },
+        {
+          "label": "Sonst niemand",
+          "body": "Kein Offshore-Team, keine wechselnden Junioren. Ist ein Mandat größer als zwei Personen plus Plattform, sagen wir das vor der Unterschrift."
+        }
+      ]
     }
   },
   "partnerships": {
     "header": {
       "title": "Mehr Mandate, als Ihr Team lesen kann",
       "lead": "Sie behalten die Beziehung und das Urteilsvermögen. Wir führen die Analyse über alle Disziplinen dahinter aus, unter Ihrem Namen.",
-      "cta": "Ein Scoping-Gespräch buchen"
+      "cta": "Demo buchen"
     },
     "who": {
       "title": "Für wen das meist funktioniert",
@@ -978,8 +990,8 @@
       "lead": "Mit einem echten Mandat, sauber durchgeführt, bevor sich jemand bindet.",
       "steps": [
         {
-          "title": "Ein Scoping-Gespräch",
-          "body": "Wie Ihre Mandate aussehen und wo die analytische Last liegt. Dreißig Minuten."
+          "title": "Eine Demo, und ein Blick auf Ihre Pipeline",
+          "body": "Wir zeigen Ihnen die Plattform und erfassen dann, wie Ihre Mandate aussehen und wo die analytische Last liegt. Dreißig Minuten."
         },
         {
           "title": "Ein Mandat, von Anfang bis Ende",
@@ -1026,20 +1038,20 @@
     "cta": {
       "title": "Beginnen Sie mit einem Mandat",
       "body": "Richten Sie es auf ein laufendes Mandat und lesen Sie das Ergebnis.",
-      "button": "Scoping-Gespräch buchen",
-      "note": "Dreißig Minuten und eine ehrliche Antwort zur Passung."
+      "button": "Demo buchen",
+      "note": "Dreißig Minuten: erst die Plattform, dann Ihre eigene Situation."
     }
   },
   "contact": {
     "header": {
-      "title": "Ein Gespräch, mit der Person, die das Ergebnis prüft",
-      "lead": "Auf dieser Seite gibt es kein Formular. Ein Formular unterstellt eine Warteschlange und einen Bearbeiter. Es gibt einen Kalender.",
-      "cta": "Erstgespräch über 30 Minuten buchen"
+      "title": "Buchen Sie eine Demo mit der Person, die das Ergebnis prüft",
+      "lead": "Kein Formular. Wählen Sie einen freien Termin im Kalender, und wir zeigen Ihnen die Plattform im Betrieb.",
+      "cta": "Demo buchen"
     },
     "call": {
       "title": "Dreißig Minuten buchen",
-      "lead": "Ein Scoping-Gespräch. Wenn Ihre Situation keine ist, bei der das hilft, ist das eine schnellere Antwort als ein Angebot.",
-      "button": "Erstgespräch buchen",
+      "lead": "Erst ein Rundgang durch die Plattform, dann Ihre eigene Situation. Ist dies nicht das richtige Instrument, ist das eine schnellere Antwort als ein Angebot.",
+      "button": "Demo buchen",
       "note": "Wählen Sie einen freien Termin."
     },
     "agenda": {
@@ -1048,14 +1060,14 @@
         "Wo Sie im Zyklus stehen: kaufen, finanzieren, halten oder verkaufen.",
         "Was heute im Datenraum liegt und was fehlt.",
         "Welche Disziplinen in Ihrer Situation das eigentliche Risiko tragen.",
-        "Ob ein Sprint passt oder ob es zu früh ist.",
+        "Ob ein Sprint zu Ihrer Situation passt oder ob es zu früh ist.",
         "Was es kosten würde, bemessen am tatsächlichen Datenraum."
       ]
     },
     "documents": {
       "eyebrow": "Bevor Sie etwas senden",
-      "title": "Senden Sie keine Dokumente, um ein Gespräch zu buchen",
-      "lead": "Das Erstgespräch braucht nichts außer dem Gespräch. Der Zugang zu Dokumenten wird danach schriftlich vereinbart."
+      "title": "Schicken Sie keine Dokumente, um eine Demo zu buchen",
+      "lead": "Für die Demo braucht es nichts außer dem Gespräch. Der Dokumentenzugang wird danach schriftlich vereinbart."
     },
     "details": {
       "title": "Mit wem Sie es zu tun haben",
@@ -1064,6 +1076,27 @@
       "kvkLabel": "Handelsregister",
       "languagesLabel": "Arbeitssprachen",
       "languagesValue": "Englisch und Niederländisch"
+    },
+    "faq": {
+      "title": "Was Interessenten vorher fragen",
+      "items": [
+        {
+          "q": "Muss ich etwas vorbereiten?",
+          "a": "Nein. Wenn Sie einen laufenden Deal haben, bringen Sie ihn mit. Sonst läuft die Demo auf einem konstruierten Datenraum."
+        },
+        {
+          "q": "Mit wem spreche ich?",
+          "a": "Mit Wouter Dijkman. Factum ist vor dem Start, also zeigt dieselbe Person die Plattform, die jede Feststellung freigibt."
+        },
+        {
+          "q": "Wir sind mit einem Berater schon mitten im Prozess. Zu spät?",
+          "a": "Meist nicht. Ein Sprint läuft als Zweitlesung mit — oder auf den Disziplinen, für die niemand beauftragt ist."
+        },
+        {
+          "q": "Was passiert mit dem, was ich in der Demo sage?",
+          "a": "Es bleibt vertraulich, ab der ersten Nachricht. Dokumente wechseln erst nach unterzeichneter NDA."
+        }
+      ]
     }
   },
   "privacy": {
@@ -1083,10 +1116,10 @@
         ]
       },
       {
-        "title": "Ein Gespräch buchen",
+        "title": "Eine Demo buchen",
         "body": [
           "Der Buchungslink führt zu Cal.com, einem externen Terminplanungsdienst. Was Sie dort eingeben, wird nach deren Bedingungen verarbeitet und mit uns geteilt, damit wir den Termin halten können.",
-          "Wir nutzen diese Daten, um uns auf das Gespräch vorzubereiten und nachzufassen. Wir nehmen sie nicht in einen Marketingverteiler auf."
+          "Wir nutzen diese Daten, um die Demo vorzubereiten und nachzufassen. Wir nehmen sie nicht in einen Marketingverteiler auf."
         ]
       },
       {
@@ -1100,7 +1133,7 @@
       {
         "title": "Ihre Rechte",
         "body": [
-          "Nach der DSGVO können Sie Auskunft über Ihre personenbezogenen Daten verlangen, sie berichtigen oder löschen lassen oder der Nutzung widersprechen. Sprechen Sie es im Erstgespräch an oder antworten Sie auf eine E-Mail von uns.",
+          "Nach der DSGVO können Sie Auskunft über Ihre personenbezogenen Daten verlangen, sie berichtigen oder löschen lassen oder der Nutzung widersprechen. Sprechen Sie es in der Demo an oder antworten Sie auf eine E-Mail von uns.",
           "Sind Sie nicht zufrieden, können Sie sich bei der Autoriteit Persoonsgegevens beschweren, der niederländischen Datenschutzbehörde."
         ]
       },

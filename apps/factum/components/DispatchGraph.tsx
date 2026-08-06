@@ -77,7 +77,16 @@ export default function DispatchGraph({
               <p className="dispatch-lead">{wave.body}</p>
             </Reveal>
 
-            <ul className="dispatch-nodes">
+            {/*
+              The wave's own size, handed to the stylesheet. Between 900 and
+              1199 the node grid runs four columns, which divides every wave but
+              the five-module one — and that one drew four nodes with a fifth
+              stranded alone underneath, which reads as a wrap rather than as a
+              batch. `.dispatch-nodes[data-n="5"]` gets five columns in that
+              band, so every wave is either one full row or an even split of
+              them.
+            */}
+            <ul className="dispatch-nodes" data-n={nodes.length}>
               {nodes.map(({ m, index }, i) => (
                 <Reveal
                   as="li"

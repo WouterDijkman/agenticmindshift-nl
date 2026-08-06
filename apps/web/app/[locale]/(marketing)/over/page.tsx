@@ -7,6 +7,7 @@ import OverCredentials from './OverCredentials';
 import AnswerFirst from '@/components/AnswerFirst';
 import JsonLd from '@/components/JsonLd';
 import { getOrganizationLd, getPersonLd, getBreadcrumbLd } from '@/lib/jsonld';
+import { factumUrl } from '@/lib/factum';
 
 export async function generateMetadata(
   { params }: { params: Promise<{ locale: string }> }
@@ -97,11 +98,12 @@ export default async function OverPage(
                 <p>{t('bio.para1')}</p>
                 <p>
                   {t('bio.para2_prefix')}{' '}
-                  {/* Factum has its own site; `Link` would prefix a locale. */}
+                  {/* Factum has its own site; `Link` would prefix a locale of
+                      this one. `factumUrl` carries it across instead. */}
                   <a
-                    href="https://factumcapital.eu"
+                    href={factumUrl(locale)}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener"
                     className="plausible-event-name=Factum+Outbound plausible-event-location=about-bio"
                     style={{ color: 'var(--accent-cta-ink)', textDecoration: 'underline', textUnderlineOffset: '3px' }}
                   >
