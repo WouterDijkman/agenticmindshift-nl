@@ -1087,6 +1087,28 @@ p { margin: 0; }
   .stage-row { grid-template-columns: 1fr; }
 }
 
+/* `DefinitionList` — a stage row plus a numeral and a labelled second line.
+   Used only by the two reference pages, /method and /limits-of-ai, where every
+   row has a consequence attached to it: what happens when a contract field
+   cannot be filled, and who does the work the machine will not do. */
+.def-index {
+  color: var(--wine-text);
+  margin-right: 10px;
+}
+.def-note {
+  display: grid;
+  gap: 4px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--hairline-faint);
+}
+.def-note-label {
+  color: var(--text-quaternary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.def-note > .type-small { color: var(--text-secondary); }
+
 .glow {
   position: absolute;
   border-radius: 50%;

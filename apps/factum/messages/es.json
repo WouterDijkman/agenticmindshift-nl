@@ -12,6 +12,14 @@
       "title": "Revisión completa del data room en días",
       "description": "Nueve pasadas especializadas sobre un data room, reconciliadas en una sola narrativa, con seguimiento de lagunas en vivo."
     },
+    "method": {
+      "title": "Cómo funciona la due diligence con IA",
+      "description": "El orden en que se ejecutan los módulos, el contrato que debe cumplir cada hallazgo y lo que revisa una persona con nombre antes de entregar nada."
+    },
+    "aiLimits": {
+      "title": "Límites de la IA en due diligence",
+      "description": "Cinco cosas que ningún modelo hace en un data room, por qué la revisión humana es obligatoria y tres preguntas para cualquier proveedor de IA."
+    },
     "governance": {
       "title": "Gobernanza de IA y tratamiento de datos",
       "description": "Cómo se procesan los documentos, qué hace el control humano y qué no afirma Factum."
@@ -41,6 +49,8 @@
     "primary": "Principal",
     "platform": "Plataforma",
     "sprint": "Diligence Sprint",
+    "method": "El método",
+    "aiLimits": "Límites de la IA",
     "governance": "Gobernanza",
     "team": "Equipo",
     "partnerships": "Alianzas",
@@ -52,6 +62,7 @@
   "footer": {
     "blurb": "Due diligence con IA para M&A y private equity. Cada hallazgo cita un documento. Cada entregable revisado por una persona con nombre.",
     "sitemap": "Mapa del sitio",
+    "reference": "Referencia",
     "company": "Empresa",
     "privacy": "Privacidad",
     "kvk": "KvK {number}",
@@ -230,6 +241,8 @@
       "governance": "Cómo se tratan los documentos",
       "platform": "Cómo funciona la plataforma",
       "sprint": "Qué cubre el sprint",
+      "method": "El método, de principio a fin",
+      "limits": "Lo que la IA no puede hacer",
       "intake": "Reservar una demo"
     },
     "reframe": {
@@ -836,6 +849,207 @@
         }
       ],
       "note": "Pídalo por escrito. Bajo DORA, un fondo por encima del umbral debe nombrar a cada tercero TIC en un registro que se presenta ante su supervisor — nosotros incluidos."
+    }
+  },
+  "method": {
+    "header": {
+      "title": "El método, de principio a fin",
+      "lead": "La versión larga. Qué se ejecuta y en qué orden, el contrato que debe cumplir cada hallazgo y lo que revisa una persona antes de que algo llegue a sus manos.",
+      "cta": "Reservar una demo"
+    },
+    "waves": {
+      "title": "{modules} módulos, {waves} oleadas, un orden",
+      "lead": "Nada se ejecuta antes de tiempo. Un módulo arranca cuando termina el trabajo del que depende. Por eso la ejecución tiene forma y no cola.",
+      "steps": [
+        {
+          "title": "Oleada uno — las lecturas independientes",
+          "body": "{w1} módulos abren a la vez. Financiero, comercial, RR. HH., tecnología, ESG y operaciones entran en paralelo al data room, junto al filtro del memorando informativo y la configuración de la monitorización. Ninguno necesita la respuesta de otro módulo para empezar."
+        },
+        {
+          "title": "Oleada dos — las lecturas que tienen que esperar",
+          "body": "Fiscal y legal. Ambas razonan sobre consecuencias: una posición fiscal es consecuencia de la estructura que acaba de describir la lectura financiera, y una exposición legal suele ser consecuencia de una condición comercial. Ejecutarlas antes produce respuestas seguras a la pregunta equivocada."
+        },
+        {
+          "title": "Oleada tres — síntesis",
+          "body": "{w3} módulos leen a través de todo lo anterior. La valoración recalcula el precio atravesando los hallazgos en lugar de rodearlos. Deal economics, cartera e integración post-fusión toman el mismo conjunto de hallazgos y le hacen una pregunta distinta."
+        },
+        {
+          "title": "Oleada cuatro — los documentos",
+          "body": "{w4} entregables, montados a partir de las oleadas anteriores: vendor due diligence, el memorando para el comité de inversión, el teaser o CIM, el memorando de financiación y la fábrica de documentos para lo demás."
+        },
+        {
+          "title": "Oleada cinco — después de la operación",
+          "body": "{w5} módulos con su propio reloj. Preparación para la salida, salud de la cartera y el informe periódico al comité de inversión. No forman parte del sprint ni esperan a él."
+        }
+      ],
+      "note": "Las oleadas uno y dos son la due diligence. Todo lo que viene después es lo que usted hace con ella."
+    },
+    "contract": {
+      "title": "El contrato de salida, campo a campo",
+      "lead": "Cinco campos. Un hallazgo que no puede rellenar los cinco no se entrega como hallazgo.",
+      "failLabel": "Cuando el campo queda vacío",
+      "items": [
+        {
+          "title": "Módulo",
+          "body": "Cuál de los {modules} lo produjo. Delimitado de antemano, así que la pregunta estaba escrita antes de abrir el data room, no improvisada con lo que hubiera dentro.",
+          "fail": "No hay carril de texto libre. Sin módulo, no hay hallazgo."
+        },
+        {
+          "title": "Hallazgo",
+          "body": "Una afirmación, en una frase. Las afirmaciones compuestas se separan, porque una frase con dos solo se puede comprobar a medias.",
+          "fail": "Demasiado vago para comprobarlo cuenta como incorrecto."
+        },
+        {
+          "title": "Cita literal",
+          "body": "El pasaje que lo sostiene, citado palabra por palabra. Ni resumido, ni pulido, ni recortado para que quepa.",
+          "fail": "Una paráfrasis presentada como cita no pasa la comprobación textual y vuelve atrás."
+        },
+        {
+          "title": "Documento y pasaje de origen",
+          "body": "Nombre de archivo y página, para que pueda abrirlo usted mismo. Es el campo que hace que un hallazgo sea discutible en lugar de autoritario.",
+          "fail": "Una referencia que no lleva a un pasaje real es un bloqueo duro, no un aviso."
+        },
+        {
+          "title": "Revisión humana",
+          "body": "La persona que lo aprobó, con nombre, antes de entregarlo. Cada hallazgo, cada mandato.",
+          "fail": "No hay vía rápida para una semana cargada."
+        }
+      ],
+      "note": "Una afirmación que no pasa una comprobación tiene un intento de reparación: volver a citar desde la fuente y volver a juzgar. Lo que sigue fallando se elimina o se entrega marcado como no confirmado. No confirmado es un resultado legítimo. Una afirmación descartada en silencio no lo es."
+    },
+    "trail": {
+      "title": "Qué queda registrado, y en qué orden",
+      "lead": "Un hallazgo es una cadena. Cada eslabón queda registrado, y esa es la única razón por la que una pregunta dentro de tres meses tiene respuesta.",
+      "steps": [
+        "El documento entra y se indexa. Los valores financieros y personales confidenciales se seudonimizan antes de que los vea ningún modelo.",
+        "El módulo recupera los pasajes que responden a su propia pregunta, y solo esos.",
+        "El borrador se escribe contra el contrato anterior. Una afirmación sin un pasaje detrás no llega a escribirse.",
+        "Una pasada de revisión critica el borrador y lo devuelve. Dos reintentos y el bucle se detiene: lo toma una persona.",
+        "Cuatro comprobaciones de fundamento en secuencia: el índice de referencias, la cita en sí, si la afirmación se deduce del pasaje, y una segunda opinión que bloquea ante la duda.",
+        "Una persona con nombre revisa, concilia y aprueba. La seudonimización se revierte aquí y en ningún momento anterior.",
+        "Usted recibe el hallazgo con su referencia documental adjunta, y sigue siendo abrible después."
+      ],
+      "note": "El ejemplo trabajado — una cláusula en la página 14 de un contrato marco ficticio y el hallazgo que produjo — está en la página de inicio.",
+      "link": "Ver el ejemplo trabajado"
+    },
+    "gate": {
+      "title": "Lo que hace realmente la persona que revisa",
+      "lead": "“Human in the loop” es una frase hecha. Esta es la secuencia que hay detrás.",
+      "items": [
+        "Abre el documento citado y lee el pasaje frente a la afirmación construida sobre él.",
+        "Decide la materialidad: qué hallazgos cambian lo que usted paga, o si firma.",
+        "Resuelve los conflictos entre módulos. Que dos disciplinas lean un mismo hecho de forma distinta es en sí un hallazgo, no un error que limar.",
+        "Marca lo que no se pudo confirmar, y explica por qué.",
+        "Revierte la seudonimización en la salida final, y solo ahí.",
+        "Firma. Una persona con nombre, responsable del documento que usted recibe."
+      ],
+      "note": "{blocks} clases de fallo terminan el bucle automático antes de tiempo y envían el borrador a esa persona, sea cual sea la puntuación.",
+      "link": "Cómo se tratan los documentos"
+    },
+    "stops": {
+      "title": "Dónde se detiene el método",
+      "lead": "Todo lo anterior es trabajo del que se puede responsabilizar a una máquina. Buena parte de la due diligence no lo es, y fingir lo contrario es como estos sistemas pierden la sala.",
+      "link": "Lo que la IA no puede hacer en due diligence"
+    },
+    "cta": {
+      "title": "Vea el método sobre un data room real",
+      "body": "Abrimos la pipeline, ejecutamos un módulo y seguimos un hallazgo hasta su pasaje de origen.",
+      "button": "Reservar una demo",
+      "note": "Treinta minutos: primero la plataforma, después su propia situación."
+    }
+  },
+  "aiLimits": {
+    "header": {
+      "title": "Lo que la IA no puede hacer en due diligence",
+      "lead": "Vendemos una pipeline de IA. Esta página trata de la parte del trabajo que no hace, y de quién la hace en su lugar.",
+      "cta": "Reservar una demo"
+    },
+    "limits": {
+      "title": "Cinco cosas que ningún modelo hace en un data room",
+      "lead": "No son problemas de ajuste. Son categorías de trabajo que quedan fuera de lo que es un modelo de lenguaje.",
+      "humanLabel": "Quién lo hace",
+      "items": [
+        {
+          "title": "Decidir qué importa",
+          "body": "Un modelo encuentra todas las cláusulas de cambio de control del data room. No puede decirle cuál mata la operación. La materialidad es un juicio sobre su estructura, su precio y su apetito, y nada de eso está en el data room.",
+          "human": "La persona que revisa ordena los hallazgos según la operación que usted está haciendo de verdad."
+        },
+        {
+          "title": "Citar el documento que no está",
+          "body": "La recuperación lee lo que se ha subido. Lo más caro en due diligence suele ser una ausencia: el contrato que nadie archivó, el año que falta en la exportación de nóminas. Una ausencia no tiene pasaje que citar, así que ningún sistema fundamentado puede levantarla como hallazgo.",
+          "human": "El registro de brechas de información es la lista viva de una persona: lo que se pidió y nunca llegó. Se entrega junto a los hallazgos."
+        },
+        {
+          "title": "Leer lo que nadie escribió",
+          "body": "Sesiones con el equipo directivo, la visita a las instalaciones, una llamada de referencia con un cliente, una comprobación de integridad sobre un accionista. De ahí salen los hallazgos que más mueven las ofertas, y ninguno empieza como documento.",
+          "human": "Su propio equipo, o sus asesores. Esta plataforma no lo hace ni da a entender lo contrario."
+        },
+        {
+          "title": "Distinguir lo débil de lo oculto",
+          "body": "Un número puede ser flojo porque el negocio lo es, o porque el vendedor ha moldeado el proceso. Sobre el papel los dos se ven igual. Separarlos exige saber cómo se comportan los vendedores, no qué dice el expediente.",
+          "human": "Alguien que haya llevado el otro lado de la mesa. En nuestro caso, un banquero de leveraged finance."
+        },
+        {
+          "title": "Responder de ello",
+          "body": "Un modelo no puede ser Representative bajo su NDA, no puede responder ante su comité de inversión y no puede firmar. La responsabilidad no es una función que se le añada a un sistema. Se adhiere a una persona, o no existe.",
+          "human": "Una persona con nombre aprueba cada entrega y responde por ella."
+        }
+      ],
+      "note": "Si un proveedor afirma que su sistema hace alguna de las cinco, pregunte qué página citó."
+    },
+    "gate": {
+      "title": "Por eso la revisión humana es obligatoria",
+      "lead": "El paso humano no es una manta de seguridad sobre un producto terminado. Es donde se hacen de verdad cuatro de los cinco puntos anteriores.",
+      "items": [
+        "Un nombre y una fecha en cada entrega, no una puntuación de confianza.",
+        "Materialidad decidida frente a su operación, no frente a un benchmark.",
+        "Afirmaciones no confirmadas marcadas como tales en lugar de descartadas en silencio.",
+        "Una persona con quien discrepar."
+      ],
+      "link": "Cómo se tratan los documentos"
+    },
+    "machine": {
+      "title": "Y en qué es realmente mejor la máquina",
+      "lead": "La versión honesta de este argumento va en las dos direcciones.",
+      "items": [
+        {
+          "title": "Lo lee todo",
+          "body": "Un equipo contra reloj lee una muestra y lo llama cobertura. La página 900 recibe la misma atención que la 9."
+        },
+        {
+          "title": "No se cansa",
+          "body": "El mismo esquema, las mismas comprobaciones y el mismo estándar de prueba al final de la ejecución que al principio. La consistencia es lo que peor se le da a una persona y lo que a una máquina le sale gratis."
+        },
+        {
+          "title": "Corre en paralelo",
+          "body": "{first} módulos abriendo a la vez en lugar de hacer cola: de ahí salen los días, no de que una respuesta concreta llegue antes."
+        }
+      ]
+    },
+    "ask": {
+      "title": "Tres preguntas para cualquier proveedor de due diligence con IA",
+      "lead": "Nosotros incluidos. Las respuestas dicen más que la demo.",
+      "items": [
+        {
+          "title": "¿Quién firma?",
+          "body": "Si la respuesta es un panel, no firma nadie. Pida un nombre, y pregunte qué pasa cuando ese nombre se equivoca."
+        },
+        {
+          "title": "¿Qué pasa con una afirmación que no se puede citar?",
+          "body": "Hay tres respuestas honestas: se elimina, se marca, o se muestra con su hueco de evidencia a la vista. Un sistema sin respuesta le está enseñando conjeturas sin etiquetar."
+        },
+        {
+          "title": "¿Qué hace cuando falta un documento?",
+          "body": "El silencio es la respuesta equivocada. Un documento que falta debería producir una línea en una lista, no la ausencia de un hallazgo."
+        }
+      ],
+      "link": "El método, de principio a fin"
+    },
+    "cta": {
+      "title": "Háganos las tres preguntas",
+      "body": "Treinta minutos con la persona cuyo nombre va en la entrega. Traiga las incómodas.",
+      "button": "Reservar una demo",
+      "note": "Treinta minutos: primero la plataforma, después su propia situación."
     }
   },
   "team": {

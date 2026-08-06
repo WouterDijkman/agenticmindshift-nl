@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import { pageMetadata } from '@/lib/pageMetadata';
 import {
   ANALYSIS_MODULE_COUNT,
@@ -24,6 +25,7 @@ import CtaBand from '@/components/CtaBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
 import FindingSchema from '@/components/FindingSchema';
 import Breadcrumb from '@/components/Breadcrumb';
+import { ArrowRight } from '@/components/Icons';
 
 export async function generateMetadata({
   params
@@ -119,6 +121,16 @@ export default async function PlatformPage({
         <div className="split-grid">
           <div className="split-sticky">
             <SectionHeader title={t('pipeline.title')} lead={t('pipeline.lead')} />
+            {/* This page stops at the mechanism on purpose; the dependency
+                order, the contract field by field and the reviewer's own
+                sequence are on /method, which exists so this one can stay
+                short. */}
+            <Reveal delay={80} style={{ marginTop: 26 }}>
+              <Link href="/method" className="link-quiet">
+                {s('links.method')}
+                <ArrowRight />
+              </Link>
+            </Reveal>
           </div>
           <Pipeline
             stages={t.raw('pipeline.stages') as { title: string; body: string; note?: string }[]}

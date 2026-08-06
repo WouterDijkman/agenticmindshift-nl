@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import { pageMetadata } from '@/lib/pageMetadata';
 import { DISCIPLINE_COUNT } from '@/lib/site';
 import { SPRINT_BAND, SPRINT_FORMATS, SPRINT_INPUTS, SPRINT_LAYERS } from '@/lib/scenes';
@@ -13,6 +14,7 @@ import Disclosures from '@/components/Disclosures';
 import CtaBand from '@/components/CtaBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
 import Breadcrumb from '@/components/Breadcrumb';
+import { ArrowRight } from '@/components/Icons';
 
 export async function generateMetadata({
   params
@@ -81,6 +83,14 @@ export default async function SprintPage({
           <p className="type-small" style={{ marginTop: 22, color: 'var(--text-quaternary)', maxWidth: '70ch' }}>
             {t('disciplines.note')}
           </p>
+          {/* What a sprint covers is here; the order it runs in and the
+              contract each finding has to satisfy are on /method. */}
+          <div style={{ marginTop: 18 }}>
+            <Link href="/method" className="link-quiet">
+              {s('links.method')}
+              <ArrowRight />
+            </Link>
+          </div>
         </Reveal>
       </Section>
 

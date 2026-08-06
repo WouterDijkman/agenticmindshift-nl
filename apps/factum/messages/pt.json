@@ -12,6 +12,14 @@
       "title": "Revisão completa do data room em dias",
       "description": "Nove passagens especializadas sobre um data room, reconciliadas numa só narrativa, com registo de lacunas em direto."
     },
+    "method": {
+      "title": "Como funciona a due diligence com IA",
+      "description": "A ordem por que os módulos correm, o contrato que cada constatação tem de cumprir e o que uma pessoa com nome verifica antes de qualquer entrega."
+    },
+    "aiLimits": {
+      "title": "Limites da IA em due diligence",
+      "description": "Cinco coisas que nenhum modelo faz num data room, por que a revisão humana é obrigatória e três perguntas para qualquer fornecedor de IA."
+    },
     "governance": {
       "title": "Governação de IA e tratamento de dados",
       "description": "Como os documentos são processados, o que faz o controlo humano, e o que a Factum não afirma."
@@ -41,6 +49,8 @@
     "primary": "Principal",
     "platform": "Plataforma",
     "sprint": "Diligence Sprint",
+    "method": "O método",
+    "aiLimits": "Limites da IA",
     "governance": "Governação",
     "team": "Equipa",
     "partnerships": "Parcerias",
@@ -52,6 +62,7 @@
   "footer": {
     "blurb": "Due diligence com IA para M&A e private equity. Cada constatação cita um documento. Cada resultado revisto por uma pessoa identificada.",
     "sitemap": "Mapa do site",
+    "reference": "Referência",
     "company": "Empresa",
     "privacy": "Privacidade",
     "kvk": "KvK {number}",
@@ -230,6 +241,8 @@
       "governance": "Como os documentos são tratados",
       "platform": "Como funciona a plataforma",
       "sprint": "O que o sprint cobre",
+      "method": "O método, do início ao fim",
+      "limits": "O que a IA não consegue fazer",
       "intake": "Marcar uma demo"
     },
     "reframe": {
@@ -836,6 +849,207 @@
         }
       ],
       "note": "Peça-o por escrito. Ao abrigo do DORA, um fundo acima do limiar tem de nomear cada terceiro de TIC num registo entregue ao seu supervisor — nós incluídos."
+    }
+  },
+  "method": {
+    "header": {
+      "title": "O método, do início ao fim",
+      "lead": "A versão longa. O que corre e por que ordem, o contrato que cada constatação tem de cumprir, e o que uma pessoa verifica antes de alguma coisa lhe chegar.",
+      "cta": "Marcar uma demo"
+    },
+    "waves": {
+      "title": "{modules} módulos, {waves} vagas, uma ordem",
+      "lead": "Nada corre cedo demais. Um módulo arranca quando termina o trabalho de que depende. É por isso que a execução tem forma e não fila.",
+      "steps": [
+        {
+          "title": "Vaga um — as leituras independentes",
+          "body": "{w1} módulos abrem ao mesmo tempo. Financeiro, comercial, recursos humanos, tecnologia, ESG e operações entram em paralelo no data room, a par do filtro ao memorando informativo e da configuração da monitorização. Nenhum precisa da resposta de outro módulo para começar."
+        },
+        {
+          "title": "Vaga dois — as leituras que têm de esperar",
+          "body": "Fiscal e jurídica. Ambas raciocinam sobre consequências: uma posição fiscal é consequência da estrutura que a leitura financeira acabou de descrever, e uma exposição jurídica é normalmente consequência de uma condição comercial. Corrê-las primeiro produz respostas seguras à pergunta errada."
+        },
+        {
+          "title": "Vaga três — síntese",
+          "body": "{w3} módulos leem através de tudo o que está acima. A avaliação recalcula o preço atravessando as constatações em vez de as contornar. Deal economics, carteira e integração pós-fusão pegam no mesmo conjunto e fazem-lhe outra pergunta."
+        },
+        {
+          "title": "Vaga quatro — os documentos",
+          "body": "{w4} entregáveis, montados a partir das vagas acima: vendor due diligence, o memorando para o comité de investimento, o teaser ou CIM, o memorando de financiamento e a fábrica de documentos para o resto."
+        },
+        {
+          "title": "Vaga cinco — depois do negócio",
+          "body": "{w5} módulos com relógio próprio. Preparação para a saída, saúde da carteira e o relatório periódico ao comité de investimento. Não fazem parte do sprint nem esperam por ele."
+        }
+      ],
+      "note": "As vagas um e dois são a due diligence. Tudo o que vem depois é o que faz com ela."
+    },
+    "contract": {
+      "title": "O contrato de saída, campo a campo",
+      "lead": "Cinco campos. Uma constatação que não consiga preencher os cinco não é entregue como constatação.",
+      "failLabel": "Quando o campo fica vazio",
+      "items": [
+        {
+          "title": "Módulo",
+          "body": "Qual dos {modules} a produziu. Delimitado à partida, ou seja, a pergunta estava escrita antes de o data room ser aberto — não improvisada a partir do que lá estivesse.",
+          "fail": "Não há via de texto livre. Sem módulo, não há constatação."
+        },
+        {
+          "title": "Constatação",
+          "body": "Uma afirmação, numa frase. As afirmações compostas são separadas, porque uma frase com duas só pode ser verificada a meio.",
+          "fail": "Vago demais para verificar conta como errado."
+        },
+        {
+          "title": "Citação literal",
+          "body": "A passagem que a sustenta, citada palavra por palavra. Não resumida, não polida, não encurtada para caber.",
+          "fail": "Uma paráfrase apresentada como citação chumba na verificação textual e volta para trás."
+        },
+        {
+          "title": "Documento e passagem de origem",
+          "body": "Nome do ficheiro e página, para que a possa abrir. É o campo que torna uma constatação discutível em vez de autoritária.",
+          "fail": "Uma referência que não resolve numa passagem real é um bloqueio duro, não um aviso."
+        },
+        {
+          "title": "Revisão humana",
+          "body": "A pessoa que a aprovou, com nome, antes da entrega. Cada constatação, cada mandato.",
+          "fail": "Não há via rápida para uma semana cheia."
+        }
+      ],
+      "note": "Uma afirmação que chumba numa verificação tem uma tentativa de reparação: citar de novo a partir da fonte e voltar a julgar. O que continuar a chumbar é cortado ou entregue marcado como não confirmado. Não confirmado é um resultado legítimo. Uma afirmação descartada em silêncio não é."
+    },
+    "trail": {
+      "title": "O que fica registado, e por que ordem",
+      "lead": "Uma constatação é uma cadeia. Cada elo fica registado, e é a única razão pela qual uma pergunta daqui a três meses tem resposta.",
+      "steps": [
+        "O documento entra e é indexado. Os valores financeiros e pessoais confidenciais são pseudonimizados antes de qualquer modelo os ver.",
+        "O módulo recupera as passagens que respondem à sua própria pergunta, e apenas essas.",
+        "O rascunho é escrito contra o contrato acima. Uma afirmação sem passagem por trás não chega a ser escrita.",
+        "Uma passagem de revisão critica o rascunho e devolve-o. Duas tentativas e o ciclo pára: passa para uma pessoa.",
+        "Quatro verificações de fundamentação em sequência: o índice de referências, a citação em si, se a afirmação decorre da passagem, e uma segunda opinião que bloqueia na dúvida.",
+        "Uma pessoa com nome revê, concilia e aprova. A pseudonimização é revertida aqui e em mais lado nenhum antes disso.",
+        "Recebe a constatação com a referência ao documento anexada, e continua a poder abri-la depois."
+      ],
+      "note": "O exemplo trabalhado — uma cláusula na página 14 de um contrato-quadro fictício e a constatação que dele resultou — está na página inicial.",
+      "link": "Ver o exemplo trabalhado"
+    },
+    "gate": {
+      "title": "O que a pessoa que revê faz de facto",
+      "lead": "“Human in the loop” é uma expressão. Isto é a sequência por trás dela.",
+      "items": [
+        "Abre o documento citado e lê a passagem contra a afirmação construída sobre ela.",
+        "Decide a materialidade — que constatações mudam o que paga, ou se assina.",
+        "Resolve conflitos entre módulos. Duas disciplinas a ler o mesmo facto de forma diferente é, em si, uma constatação, não um erro a alisar.",
+        "Marca o que não pôde ser confirmado, e diz porquê.",
+        "Reverte a pseudonimização na saída final, e só aí.",
+        "Assina. Uma pessoa com nome, responsável pelo documento que recebe."
+      ],
+      "note": "{blocks} classes de falha terminam o ciclo automático mais cedo e encaminham o rascunho para essa pessoa, independentemente da pontuação.",
+      "link": "Como os documentos são tratados"
+    },
+    "stops": {
+      "title": "Onde o método pára",
+      "lead": "Tudo o que está acima é trabalho pelo qual uma máquina pode ser responsabilizada. Boa parte da due diligence não é, e fingir o contrário é como estes sistemas perdem a sala.",
+      "link": "O que a IA não consegue fazer em due diligence"
+    },
+    "cta": {
+      "title": "Veja o método correr num data room real",
+      "body": "Abrimos a pipeline, corremos um módulo e seguimos uma constatação até à passagem de origem.",
+      "button": "Marcar uma demo",
+      "note": "Trinta minutos: primeiro a plataforma, depois a sua própria situação."
+    }
+  },
+  "aiLimits": {
+    "header": {
+      "title": "O que a IA não consegue fazer em due diligence",
+      "lead": "Vendemos uma pipeline de IA. Esta página é sobre a parte do trabalho que ela não faz, e sobre quem a faz em vez dela.",
+      "cta": "Marcar uma demo"
+    },
+    "limits": {
+      "title": "Cinco coisas que nenhum modelo faz num data room",
+      "lead": "Não são problemas de afinação. São categorias de trabalho que ficam fora daquilo que um modelo de linguagem é.",
+      "humanLabel": "Quem o faz",
+      "items": [
+        {
+          "title": "Decidir o que importa",
+          "body": "Um modelo encontra todas as cláusulas de mudança de controlo no data room. Não lhe consegue dizer qual delas mata o negócio. A materialidade é um juízo sobre a sua estrutura, o seu preço e o seu apetite, e nada disso está no data room.",
+          "human": "Quem revê ordena as constatações face ao negócio que está mesmo a fazer."
+        },
+        {
+          "title": "Citar o documento que não existe",
+          "body": "A recuperação lê o que foi carregado. O mais caro em due diligence é muitas vezes uma ausência — o contrato que ninguém arquivou, o ano em falta na exportação salarial. Uma ausência não tem passagem para citar, por isso nenhum sistema fundamentado a pode levantar como constatação.",
+          "human": "O registo de lacunas de informação é a lista viva de uma pessoa: o que foi pedido e nunca chegou. É entregue ao lado das constatações."
+        },
+        {
+          "title": "Ler o que ninguém escreveu",
+          "body": "Sessões com a gestão, a visita às instalações, uma chamada de referência com um cliente, uma verificação de integridade a um acionista. É daí que saem as constatações que mais mexem com as propostas, e nenhuma começa como documento.",
+          "human": "A sua equipa, ou os seus assessores. Esta plataforma não o faz nem sugere o contrário."
+        },
+        {
+          "title": "Distinguir o fraco do escondido",
+          "body": "Um número pode ser fraco porque o negócio é fraco, ou porque o vendedor moldou o processo. No papel os dois são iguais. Separá-los exige saber como se comportam os vendedores, não o que diz o dossiê.",
+          "human": "Alguém que já esteve do outro lado da mesa. No nosso caso, um banqueiro de leveraged finance."
+        },
+        {
+          "title": "Ser responsável",
+          "body": "Um modelo não pode ser Representative ao abrigo do seu NDA, não pode responder perante o seu comité de investimento e não pode assinar. A responsabilidade não é uma função que se acrescente a um sistema. Prende-se a uma pessoa, ou não existe.",
+          "human": "Uma pessoa com nome aprova cada entrega e responde por ela."
+        }
+      ],
+      "note": "Se um fornecedor afirmar que o sistema dele faz alguma das cinco, pergunte que página é que citou."
+    },
+    "gate": {
+      "title": "É por isso que a revisão humana é obrigatória",
+      "lead": "O passo humano não é um cobertor de segurança por cima de um produto acabado. É onde quatro dos cinco pontos acima são mesmo feitos.",
+      "items": [
+        "Um nome e uma data em cada entrega, não uma pontuação de confiança.",
+        "Materialidade decidida face ao seu negócio, não face a um benchmark.",
+        "Afirmações não confirmadas marcadas como tal em vez de descartadas em silêncio.",
+        "Uma pessoa com quem discordar."
+      ],
+      "link": "Como os documentos são tratados"
+    },
+    "machine": {
+      "title": "E aquilo em que a máquina é genuinamente melhor",
+      "lead": "A versão honesta deste argumento vai nos dois sentidos.",
+      "items": [
+        {
+          "title": "Lê tudo",
+          "body": "Uma equipa com o prazo em cima lê uma amostra e chama-lhe cobertura. A página 900 recebe a mesma atenção que a 9."
+        },
+        {
+          "title": "Não se cansa",
+          "body": "O mesmo esquema, as mesmas verificações e o mesmo padrão de prova no fim da execução e no início. A consistência é aquilo em que as pessoas são piores e as máquinas são gratuitas."
+        },
+        {
+          "title": "Corre em paralelo",
+          "body": "{first} módulos a abrir ao mesmo tempo em vez de ficarem em fila: é daí que vêm os dias, não de uma resposta isolada chegar mais depressa."
+        }
+      ]
+    },
+    "ask": {
+      "title": "Três perguntas para qualquer fornecedor de due diligence com IA",
+      "lead": "Nós incluídos. As respostas dizem mais do que a demo.",
+      "items": [
+        {
+          "title": "Quem assina?",
+          "body": "Se a resposta for um painel, não assina ninguém. Peça um nome, e pergunte o que acontece quando esse nome se engana."
+        },
+        {
+          "title": "O que acontece a uma afirmação que não se consegue citar?",
+          "body": "Há três respostas honestas: é cortada, é assinalada, ou é mostrada com a lacuna de prova à vista. Um sistema sem resposta está a mostrar-lhe palpites por assinalar."
+        },
+        {
+          "title": "O que faz quando falta um documento?",
+          "body": "O silêncio é a resposta errada. Um documento em falta deve produzir uma linha numa lista, não a ausência de uma constatação."
+        }
+      ],
+      "link": "O método, do início ao fim"
+    },
+    "cta": {
+      "title": "Faça-nos as três perguntas",
+      "body": "Trinta minutos com a pessoa cujo nome vai na entrega. Traga as incómodas.",
+      "button": "Marcar uma demo",
+      "note": "Trinta minutos: primeiro a plataforma, depois a sua própria situação."
     }
   },
   "team": {

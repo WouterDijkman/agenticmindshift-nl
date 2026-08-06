@@ -12,6 +12,14 @@
       "title": "Full data-room review in days",
       "description": "Nine specialist passes over one data room, reconciled into a single narrative, with a live data-gap tracker."
     },
+    "method": {
+      "title": "How AI due diligence actually works",
+      "description": "The order the modules run in, the contract every finding has to satisfy, and what a named reviewer checks before anything is delivered."
+    },
+    "aiLimits": {
+      "title": "What AI cannot do in due diligence",
+      "description": "Five things no model does on a data room, why the human gate is mandatory, and three questions to ask any AI diligence vendor."
+    },
     "governance": {
       "title": "AI governance and data handling",
       "description": "How documents are processed, what the human gate does, and what Factum does not claim."
@@ -41,6 +49,8 @@
     "primary": "Primary",
     "platform": "Platform",
     "sprint": "Diligence Sprint",
+    "method": "The method",
+    "aiLimits": "Limits of AI",
     "governance": "Governance",
     "team": "Team",
     "partnerships": "Partnerships",
@@ -52,6 +62,7 @@
   "footer": {
     "blurb": "AI due diligence for M&A and private equity. Every finding cited to a document. Every output reviewed by a named person.",
     "sitemap": "Sitemap",
+    "reference": "Reference",
     "company": "Company",
     "privacy": "Privacy",
     "kvk": "KvK {number}",
@@ -230,6 +241,8 @@
       "governance": "How documents are handled",
       "platform": "How the platform works",
       "sprint": "What the sprint covers",
+      "method": "The method, end to end",
+      "limits": "What AI cannot do",
       "intake": "Book a demo"
     },
     "reframe": {
@@ -836,6 +849,207 @@
         }
       ],
       "note": "Ask for it in writing. Under DORA, a fund above the threshold has to name every ICT third party in a register filed with its supervisor — including us."
+    }
+  },
+  "method": {
+    "header": {
+      "title": "The method, end to end",
+      "lead": "The long version. What runs in which order, the contract every finding has to satisfy, and what a person checks before anything reaches you.",
+      "cta": "Book a demo"
+    },
+    "waves": {
+      "title": "{modules} modules, {waves} waves, one order",
+      "lead": "Nothing runs early. A module starts when the work it depends on is finished, which is why the run has a shape rather than a queue.",
+      "steps": [
+        {
+          "title": "Wave one — the independent reads",
+          "body": "{w1} modules open at the same moment. Financial, commercial, HR, technology, ESG and operational go into the data room in parallel, alongside the information-memorandum screener and the monitoring set-up. None of them needs another module’s answer to start."
+        },
+        {
+          "title": "Wave two — the reads that have to wait",
+          "body": "Tax and legal. Both reason about consequences: a tax position is a consequence of the structure the financial read has just described, and a legal exposure is usually a consequence of a commercial term. Running them first produces confident answers to the wrong question."
+        },
+        {
+          "title": "Wave three — synthesis",
+          "body": "{w3} modules read across everything above them. Valuation recalculates the price through the findings rather than around them. Deal economics, portfolio and post-merger integration take the same body of findings and ask a different question of it."
+        },
+        {
+          "title": "Wave four — the documents",
+          "body": "{w4} deliverables, assembled from the waves above: vendor due diligence, the investment-committee memo, the teaser or CIM, the financing memorandum, and the document factory for whatever else the process needs."
+        },
+        {
+          "title": "Wave five — after the deal",
+          "body": "{w5} modules on their own clock. Exit readiness, portfolio health and the periodic investment-committee report. They are not part of the sprint and do not wait for it."
+        }
+      ],
+      "note": "Waves one and two are the diligence pass. Everything after them is what you do with it."
+    },
+    "contract": {
+      "title": "The output contract, field by field",
+      "lead": "Five fields. A finding that cannot fill all five is not delivered as a finding.",
+      "failLabel": "When it can’t be filled",
+      "items": [
+        {
+          "title": "Module",
+          "body": "Which of the {modules} produced it. Pre-scoped, so the question was written before the data room was opened rather than improvised from what happened to be in it.",
+          "fail": "There is no free-text lane. No module, no finding."
+        },
+        {
+          "title": "Finding",
+          "body": "One claim, in one sentence. Compound claims are split, because a sentence with two claims in it can only ever be half-checked.",
+          "fail": "Too vague to check is treated the same as wrong."
+        },
+        {
+          "title": "Verbatim excerpt",
+          "body": "The supporting passage, quoted word for word. Not summarised, not tidied, not shortened to fit.",
+          "fail": "A paraphrase presented as a quote fails the lexical check and goes back."
+        },
+        {
+          "title": "Source document and passage",
+          "body": "File name and page, so you can open it yourself. This is the field that makes a finding arguable instead of authoritative.",
+          "fail": "A citation that does not resolve to a real passage is a hard block, not a warning."
+        },
+        {
+          "title": "Human review",
+          "body": "The person who approved it, by name, before release. Every finding, every mandate.",
+          "fail": "There is no fast lane for a busy week."
+        }
+      ],
+      "note": "A claim that fails a check gets one repair attempt: re-quote from source, then re-judge. What still fails is either cut or delivered marked unconfirmed. Unconfirmed is a legitimate output. A quietly dropped claim is not."
+    },
+    "trail": {
+      "title": "What gets recorded, and in what order",
+      "lead": "A finding is a chain. Every link is written down, which is the only reason a question three months from now has an answer.",
+      "steps": [
+        "The document enters the room and is indexed. Confidential financial and personal values are pseudonymised before any model sees them.",
+        "The module retrieves the passages that answer its own question, and only those.",
+        "The draft is written against the contract above. A claim with no passage behind it does not get written.",
+        "A reviewing pass critiques the draft and sends it back. Two retries, then the loop stops and a person takes it.",
+        "Four grounding checks run in sequence: the citation index, the quote itself, whether the claim follows from the passage, and a second opinion that fails closed.",
+        "A named person reviews, reconciles and approves. Pseudonymised values are reversed here and nowhere earlier.",
+        "You receive the finding with its document reference attached, and it stays openable afterwards."
+      ],
+      "note": "The worked example — a clause on page 14 of a fictional master services agreement, and the finding it produced — is on the homepage.",
+      "link": "See the worked example"
+    },
+    "gate": {
+      "title": "What the reviewer actually does",
+      "lead": "“Human in the loop” is a phrase. This is the sequence behind it.",
+      "items": [
+        "Opens the cited document and reads the passage against the claim built on it.",
+        "Decides materiality — which findings change what you pay, or whether you sign at all.",
+        "Resolves conflicts between modules. Two disciplines reading one fact differently is itself a finding, not an error to smooth over.",
+        "Marks what could not be confirmed, and says why.",
+        "Reverses the pseudonymisation in the final output, and only there.",
+        "Signs. One named person, accountable for the document you receive."
+      ],
+      "note": "{blocks} failure classes end the automated loop early and route the draft to that person regardless of how it scored.",
+      "link": "How documents are handled"
+    },
+    "stops": {
+      "title": "Where the method stops",
+      "lead": "Everything above is work a machine can be held to. A good part of diligence is not, and pretending otherwise is how these systems lose the room.",
+      "link": "What AI cannot do in due diligence"
+    },
+    "cta": {
+      "title": "Watch the method run on a real room",
+      "body": "We open the pipeline, run a module, and follow one finding back to its source passage.",
+      "button": "Book a demo",
+      "note": "Thirty minutes: a walkthrough of the platform, then your own situation."
+    }
+  },
+  "aiLimits": {
+    "header": {
+      "title": "What AI cannot do in due diligence",
+      "lead": "We sell an AI pipeline. This page is about the part of the job it does not do, and who does that instead.",
+      "cta": "Book a demo"
+    },
+    "limits": {
+      "title": "Five things no model does on a data room",
+      "lead": "These are not tuning problems. They are categories of work that sit outside what a language model is.",
+      "humanLabel": "Who does it",
+      "items": [
+        {
+          "title": "Decide what matters",
+          "body": "A model can find every change-of-control clause in the room. It cannot tell you which one kills the deal. Materiality is a judgement about your structure, your price and your appetite, and none of those is in the data room.",
+          "human": "The reviewer ranks findings against the deal you are actually doing."
+        },
+        {
+          "title": "Cite the document that isn’t there",
+          "body": "Retrieval reads what was uploaded. The most expensive thing in diligence is often an absence — the contract nobody filed, the year missing from the payroll export. An absence has no passage to quote, so no grounded system can raise it as a finding.",
+          "human": "The data-gap tracker is a person’s running list of what was asked for and never arrived. It is delivered alongside the findings."
+        },
+        {
+          "title": "Read what nobody wrote down",
+          "body": "Management sessions, the site visit, a customer reference call, an integrity check on a shareholder. These produce the findings that move bids most often, and none of them starts as a document.",
+          "human": "Your own team, or your advisers. This platform does not do it and does not imply otherwise."
+        },
+        {
+          "title": "Tell soft from hidden",
+          "body": "A number can be weak because the business is weak, or because the seller shaped the process. On the page the two look identical. Telling them apart takes knowledge of how sellers behave, not of what the file says.",
+          "human": "Someone who has run the other side of the table. On our side that is a leveraged-finance banker."
+        },
+        {
+          "title": "Be accountable",
+          "body": "A model cannot be a Representative under your NDA, cannot answer to your investment committee, and cannot sign. Accountability is not a capability you add to a system. It attaches to a person or it does not exist.",
+          "human": "One named person approves every output and stands behind it."
+        }
+      ],
+      "note": "If a vendor claims their system does any of the five, ask which page it cited."
+    },
+    "gate": {
+      "title": "Which is why the gate is mandatory",
+      "lead": "The human step is not a safety blanket bolted onto a finished product. It is where four of the five above actually get done.",
+      "items": [
+        "A name and a date on every output, not a confidence score.",
+        "Materiality decided against your deal, not against a benchmark.",
+        "Unconfirmed claims marked unconfirmed rather than quietly dropped.",
+        "One person to argue with when you disagree."
+      ],
+      "link": "How documents are handled"
+    },
+    "machine": {
+      "title": "And what the machine is genuinely better at",
+      "lead": "The honest version of this argument runs both ways.",
+      "items": [
+        {
+          "title": "It reads all of it",
+          "body": "A team under deadline reads a sample and calls it coverage. Page 900 gets the same attention as page 9."
+        },
+        {
+          "title": "It does not get tired",
+          "body": "The same schema, the same checks and the same standard of evidence at the end of the run as at the start. Consistency is what people are worst at and machines are free at."
+        },
+        {
+          "title": "It runs in parallel",
+          "body": "{first} modules opening at once instead of queueing behind each other is where the days come from — not from any single answer arriving faster."
+        }
+      ]
+    },
+    "ask": {
+      "title": "Three questions for any AI diligence vendor",
+      "lead": "Including us. The answers tell you more than the demo does.",
+      "items": [
+        {
+          "title": "Who signs?",
+          "body": "If the answer is a dashboard, nobody does. Ask for a name, and ask what happens when that name is wrong."
+        },
+        {
+          "title": "What happens to a claim that can’t be cited?",
+          "body": "There are three honest answers: it is cut, it is flagged, or it is shown with its evidence gap visible. A system with no answer is showing you unmarked guesses."
+        },
+        {
+          "title": "What does it do when a document is missing?",
+          "body": "Silence is the wrong answer. A missing document should produce an item on a list, not the absence of a finding."
+        }
+      ],
+      "link": "The method, end to end"
+    },
+    "cta": {
+      "title": "Ask us the three questions",
+      "body": "Thirty minutes with the person whose name goes on the output. Bring the awkward ones.",
+      "button": "Book a demo",
+      "note": "Thirty minutes: a walkthrough of the platform, then your own situation."
     }
   },
   "team": {

@@ -7,6 +7,10 @@ const PATHS = [
   { path: '/platform', priority: 0.9 },
   { path: '/diligence-sprint', priority: 0.9 },
   { path: '/governance', priority: 0.7 },
+  // The two long-form reference pages. Not in the header, so this and the
+  // footer group are what a crawler has to go on.
+  { path: '/method', priority: 0.7 },
+  { path: '/limits-of-ai', priority: 0.7 },
   { path: '/team', priority: 0.6 },
   { path: '/partnerships', priority: 0.6 },
   { path: '/contact', priority: 0.5 },

@@ -1,6 +1,6 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import { breadcrumbSchema } from '@/lib/jsonld';
-import { NAV } from '@/lib/site';
+import { NAV, REFERENCE_NAV } from '@/lib/site';
 
 /**
  * The breadcrumb trail for one interior page, as JSON-LD and nothing else.
@@ -13,9 +13,10 @@ import { NAV } from '@/lib/site';
  *
  * The page's own name is looked up rather than passed in, so the crumb and the
  * header link cannot drift apart and no locale needs a second set of strings.
- * `NAV` covers five of the seven interior pages; `/contact` has a `nav` key but
- * sits in the header CTA rather than the list, and `/privacy` only exists in
- * the footer. Both are named explicitly below — a lookup that silently returned
+ * `NAV` covers the five header pages and `REFERENCE_NAV` the two that are
+ * deliberately not in the header; `/contact` has a `nav` key but sits in the
+ * header CTA rather than the list, and `/privacy` only exists in the footer.
+ * Both of those are named explicitly below — a lookup that silently returned
  * the raw slug would publish "privacy" as a page title in five languages.
  */
 export default async function Breadcrumb({ path }: { path: string }) {
@@ -23,7 +24,7 @@ export default async function Breadcrumb({ path }: { path: string }) {
   const nav = await getTranslations('nav');
   const footer = await getTranslations('footer');
 
-  const navKey = NAV.find((item) => item.href === path)?.key;
+  const navKey = [...NAV, ...REFERENCE_NAV].find((item) => item.href === path)?.key;
 
   let name: string;
   if (navKey) {

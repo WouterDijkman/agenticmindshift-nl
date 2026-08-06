@@ -12,6 +12,14 @@
       "title": "Volledige dataroomreview in dagen",
       "description": "Negen specialistische reads over één dataroom, samengebracht tot één verhaal, met een live datagap-tracker."
     },
+    "method": {
+      "title": "Hoe AI-due-diligence echt werkt",
+      "description": "De volgorde waarin de modules draaien, het contract waar elke bevinding aan moet voldoen, en wat een reviewer controleert voordat er iets wordt geleverd."
+    },
+    "aiLimits": {
+      "title": "Wat AI niet kan in due diligence",
+      "description": "Vijf dingen die geen enkel model doet in een dataroom, waarom de menselijke controle verplicht is, en drie vragen voor elke AI-leverancier."
+    },
     "governance": {
       "title": "AI-governance en gegevensverwerking",
       "description": "Hoe documenten worden verwerkt, wat de menselijke toets doet, en wat Factum niet claimt."
@@ -41,6 +49,8 @@
     "primary": "Hoofdnavigatie",
     "platform": "Platform",
     "sprint": "Diligence Sprint",
+    "method": "De methode",
+    "aiLimits": "Grenzen van AI",
     "governance": "Governance",
     "team": "Team",
     "partnerships": "Partnerships",
@@ -52,6 +62,7 @@
   "footer": {
     "blurb": "AI due diligence voor M&A en private equity. Elke bevinding verwijst naar een document. Elke output beoordeeld door een met naam genoemd persoon.",
     "sitemap": "Sitemap",
+    "reference": "Achtergrond",
     "company": "Bedrijf",
     "privacy": "Privacy",
     "kvk": "KvK {number}",
@@ -230,6 +241,8 @@
       "governance": "Hoe documenten worden behandeld",
       "platform": "Hoe het platform werkt",
       "sprint": "Wat de sprint dekt",
+      "method": "De methode, van begin tot eind",
+      "limits": "Wat AI niet kan",
       "intake": "Plan een demo"
     },
     "reframe": {
@@ -836,6 +849,207 @@
         }
       ],
       "note": "Vraag het op schrift. Onder DORA moet een fonds boven de drempel elke ICT-derde partij benoemen in een register dat bij de toezichthouder wordt ingediend — ons inbegrepen."
+    }
+  },
+  "method": {
+    "header": {
+      "title": "De methode, van begin tot eind",
+      "lead": "De lange versie. Wat in welke volgorde draait, het contract waar elke bevinding aan moet voldoen, en wat een mens controleert voordat er iets bij u terechtkomt.",
+      "cta": "Plan een demo"
+    },
+    "waves": {
+      "title": "{modules} modules, {waves} golven, één volgorde",
+      "lead": "Niets draait te vroeg. Een module start zodra het werk waar hij van afhangt klaar is. Daarom heeft de run een vorm en geen wachtrij.",
+      "steps": [
+        {
+          "title": "Golf één — de onafhankelijke passages",
+          "body": "{w1} modules openen tegelijk. Financieel, commercieel, HR, technologie, ESG en operationeel gaan parallel de dataroom in, naast de screener op het informatiememorandum en de opzet voor monitoring. Geen van hen heeft het antwoord van een andere module nodig om te beginnen."
+        },
+        {
+          "title": "Golf twee — de passages die moeten wachten",
+          "body": "Fiscaal en juridisch. Beide redeneren over gevolgen: een fiscale positie is een gevolg van de structuur die de financiële passage net heeft beschreven, en een juridische blootstelling is meestal een gevolg van een commerciële voorwaarde. Ze eerder draaien levert stellige antwoorden op de verkeerde vraag."
+        },
+        {
+          "title": "Golf drie — synthese",
+          "body": "{w3} modules lezen dwars door alles heen wat erboven ligt. Waardering herrekent de prijs dóór de bevindingen heen in plaats van eromheen. Deal economics, portfolio en post-merger integratie nemen dezelfde bevindingen en stellen er een andere vraag aan."
+        },
+        {
+          "title": "Golf vier — de documenten",
+          "body": "{w4} deliverables, samengesteld uit de golven hierboven: vendor due diligence, het IC-memo, de teaser of CIM, het financieringsmemorandum en de documentfabriek voor wat het proces verder nodig heeft."
+        },
+        {
+          "title": "Golf vijf — na de deal",
+          "body": "{w5} modules op hun eigen klok. Exit readiness, portefeuillegezondheid en de periodieke IC-rapportage. Ze horen niet bij de sprint en wachten er niet op."
+        }
+      ],
+      "note": "Golf één en twee zijn de due diligence zelf. Alles daarna is wat u ermee doet."
+    },
+    "contract": {
+      "title": "Het outputcontract, veld voor veld",
+      "lead": "Vijf velden. Een bevinding die ze niet alle vijf kan invullen, wordt niet als bevinding geleverd.",
+      "failLabel": "Als het veld leeg blijft",
+      "items": [
+        {
+          "title": "Module",
+          "body": "Welke van de {modules} hem heeft geproduceerd. Vooraf afgebakend, dus de vraag stond op papier voordat de dataroom openging — niet geïmproviseerd op wat er toevallig in bleek te zitten.",
+          "fail": "Er is geen vrije-tekstbaan. Geen module, geen bevinding."
+        },
+        {
+          "title": "Bevinding",
+          "body": "Eén claim, in één zin. Samengestelde claims worden gesplitst, want een zin met twee claims erin kun je maar half controleren.",
+          "fail": "Te vaag om te controleren telt hetzelfde als onjuist."
+        },
+        {
+          "title": "Letterlijk citaat",
+          "body": "De onderbouwende passage, woord voor woord geciteerd. Niet samengevat, niet opgepoetst, niet ingekort om te passen.",
+          "fail": "Een parafrase die als citaat wordt gepresenteerd zakt voor de tekstcontrole en gaat terug."
+        },
+        {
+          "title": "Brondocument en passage",
+          "body": "Bestandsnaam en pagina, zodat u het zelf kunt openen. Dit is het veld dat een bevinding bespreekbaar maakt in plaats van gezaghebbend.",
+          "fail": "Een verwijzing die niet naar een echte passage leidt is een harde blokkade, geen waarschuwing."
+        },
+        {
+          "title": "Menselijke controle",
+          "body": "De persoon die hem heeft goedgekeurd, met naam, vóór levering. Elke bevinding, elk mandaat.",
+          "fail": "Er is geen snelle route voor een drukke week."
+        }
+      ],
+      "note": "Een claim die zakt voor een controle krijgt één herstelpoging: opnieuw citeren uit de bron, dan opnieuw beoordelen. Wat dan nog zakt wordt geschrapt of geleverd met het label onbevestigd. Onbevestigd is een legitieme uitkomst. Een stilletjes geschrapte claim niet."
+    },
+    "trail": {
+      "title": "Wat er wordt vastgelegd, en in welke volgorde",
+      "lead": "Een bevinding is een keten. Elke schakel wordt vastgelegd, en dat is de enige reden dat een vraag over drie maanden nog een antwoord heeft.",
+      "steps": [
+        "Het document komt binnen en wordt geïndexeerd. Vertrouwelijke financiële en persoonlijke waarden worden gepseudonimiseerd voordat enig model ze ziet.",
+        "De module haalt de passages op die zijn eigen vraag beantwoorden, en alleen die.",
+        "Het concept wordt geschreven tegen het contract hierboven. Een claim zonder passage erachter wordt niet geschreven.",
+        "Een controleronde bekritiseert het concept en stuurt het terug. Twee pogingen, daarna stopt de lus en neemt een mens het over.",
+        "Vier funderingscontroles op volgorde: de verwijzingsindex, het citaat zelf, of de claim volgt uit de passage, en een tweede oordeel dat dichtvalt bij twijfel.",
+        "Een persoon met naam beoordeelt, verzoent en keurt goed. Pseudonimisering wordt hier teruggedraaid en nergens eerder.",
+        "U krijgt de bevinding met de documentverwijzing eraan vast, en die blijft daarna te openen."
+      ],
+      "note": "Het uitgewerkte voorbeeld — een clausule op pagina 14 van een fictieve raamovereenkomst, en de bevinding die eruit volgde — staat op de homepage.",
+      "link": "Bekijk het uitgewerkte voorbeeld"
+    },
+    "gate": {
+      "title": "Wat de reviewer werkelijk doet",
+      "lead": "“Human in the loop” is een uitdrukking. Dit is de volgorde erachter.",
+      "items": [
+        "Opent het geciteerde document en leest de passage naast de claim die erop is gebouwd.",
+        "Bepaalt materialiteit — welke bevindingen veranderen wat u betaalt, of óf u tekent.",
+        "Lost conflicten tussen modules op. Twee disciplines die één feit anders lezen is zelf een bevinding, geen fout om glad te strijken.",
+        "Markeert wat niet bevestigd kon worden, en waarom.",
+        "Draait de pseudonimisering terug in de eindoutput, en alleen daar.",
+        "Tekent. Eén persoon met naam, aanspreekbaar op het document dat u ontvangt."
+      ],
+      "note": "{blocks} faalklassen beëindigen de geautomatiseerde lus voortijdig en sturen het concept naar die persoon, ongeacht de score.",
+      "link": "Hoe documenten worden behandeld"
+    },
+    "stops": {
+      "title": "Waar de methode ophoudt",
+      "lead": "Alles hierboven is werk waarop een machine aanspreekbaar is. Een flink deel van due diligence is dat niet, en doen alsof van wel is hoe dit soort systemen de zaal verliest.",
+      "link": "Wat AI niet kan in due diligence"
+    },
+    "cta": {
+      "title": "Zie de methode draaien op een echte dataroom",
+      "body": "We openen de pipeline, draaien een module en volgen één bevinding terug naar de bronpassage.",
+      "button": "Plan een demo",
+      "note": "Dertig minuten: eerst het platform, dan uw eigen situatie."
+    }
+  },
+  "aiLimits": {
+    "header": {
+      "title": "Wat AI niet kan in due diligence",
+      "lead": "Wij verkopen een AI-pipeline. Deze pagina gaat over het deel van het werk dat hij niet doet, en wie het dan wel doet.",
+      "cta": "Plan een demo"
+    },
+    "limits": {
+      "title": "Vijf dingen die geen model doet in een dataroom",
+      "lead": "Dit zijn geen afstelproblemen. Het zijn categorieën werk die buiten liggen wat een taalmodel is.",
+      "humanLabel": "Wie het doet",
+      "items": [
+        {
+          "title": "Bepalen wat ertoe doet",
+          "body": "Een model vindt elke change-of-control-clausule in de dataroom. Het kan u niet zeggen welke de deal sloopt. Materialiteit is een oordeel over uw structuur, uw prijs en uw risicobereidheid, en geen van die drie staat in de dataroom.",
+          "human": "De reviewer rangschikt de bevindingen tegen de deal die u werkelijk doet."
+        },
+        {
+          "title": "Citeren uit het document dat er niet is",
+          "body": "Retrieval leest wat is geüpload. Het duurste in due diligence is vaak een afwezigheid — het contract dat niemand heeft opgeborgen, het jaar dat ontbreekt in de loonexport. Een afwezigheid heeft geen passage om te citeren, dus geen enkel gefundeerd systeem kan haar als bevinding opvoeren.",
+          "human": "De datagap-tracker is de lopende lijst van een mens: wat is opgevraagd en nooit gekomen. Die wordt naast de bevindingen geleverd."
+        },
+        {
+          "title": "Lezen wat niemand heeft opgeschreven",
+          "body": "Managementsessies, het bedrijfsbezoek, een referentiegesprek met een klant, een integriteitscheck op een aandeelhouder. Dit levert de bevindingen op die biedingen het vaakst verschuiven, en geen ervan begint als document.",
+          "human": "Uw eigen team, of uw adviseurs. Dit platform doet het niet en suggereert niet van wel."
+        },
+        {
+          "title": "Zwak onderscheiden van verborgen",
+          "body": "Een cijfer kan zwak zijn omdat het bedrijf zwak is, of omdat de verkoper het proces heeft gestuurd. Op papier zien die twee er identiek uit. Ze uit elkaar houden vraagt kennis van hoe verkopers zich gedragen, niet van wat er in het dossier staat.",
+          "human": "Iemand die de andere kant van de tafel heeft gedraaid. Bij ons is dat een leveraged-finance-bankier."
+        },
+        {
+          "title": "Aanspreekbaar zijn",
+          "body": "Een model kan geen Representative zijn onder uw NDA, kan zich niet verantwoorden tegenover uw investeringscommissie en kan niets tekenen. Aanspreekbaarheid is geen functie die u aan een systeem toevoegt. Ze hangt aan een persoon, of ze bestaat niet.",
+          "human": "Eén persoon met naam keurt elke output goed en staat ervoor in."
+        }
+      ],
+      "note": "Zegt een leverancier dat zijn systeem een van deze vijf doet, vraag dan welke pagina het citeerde."
+    },
+    "gate": {
+      "title": "Daarom is de menselijke controle verplicht",
+      "lead": "De menselijke stap is geen veiligheidsdeken over een af product. Het is de plek waar vier van de vijf punten hierboven daadwerkelijk gebeuren.",
+      "items": [
+        "Een naam en een datum op elke output, geen betrouwbaarheidsscore.",
+        "Materialiteit bepaald tegen uw deal, niet tegen een benchmark.",
+        "Onbevestigde claims gemarkeerd als onbevestigd in plaats van stilletjes geschrapt.",
+        "Eén persoon om mee van mening te verschillen."
+      ],
+      "link": "Hoe documenten worden behandeld"
+    },
+    "machine": {
+      "title": "En waar de machine wél beter in is",
+      "lead": "De eerlijke versie van dit argument gaat twee kanten op.",
+      "items": [
+        {
+          "title": "Hij leest alles",
+          "body": "Een team onder tijdsdruk leest een steekproef en noemt dat dekking. Pagina 900 krijgt dezelfde aandacht als pagina 9."
+        },
+        {
+          "title": "Hij wordt niet moe",
+          "body": "Hetzelfde schema, dezelfde controles en dezelfde bewijsstandaard aan het eind van de run als aan het begin. Consistentie is waar mensen het slechtst in zijn en machines gratis."
+        },
+        {
+          "title": "Hij draait parallel",
+          "body": "{first} modules die tegelijk openen in plaats van op elkaar te wachten: daar komen de dagen vandaan — niet doordat één antwoord sneller binnenkomt."
+        }
+      ]
+    },
+    "ask": {
+      "title": "Drie vragen voor elke AI-duediligenceleverancier",
+      "lead": "Wij inbegrepen. De antwoorden zeggen meer dan de demo.",
+      "items": [
+        {
+          "title": "Wie tekent?",
+          "body": "Is het antwoord een dashboard, dan tekent niemand. Vraag om een naam, en vraag wat er gebeurt als die naam het mis heeft."
+        },
+        {
+          "title": "Wat gebeurt er met een claim die niet te citeren is?",
+          "body": "Er zijn drie eerlijke antwoorden: hij wordt geschrapt, gemarkeerd, of getoond met het bewijsgat zichtbaar. Een systeem zonder antwoord laat u ongemarkeerde gokken zien."
+        },
+        {
+          "title": "Wat doet het als een document ontbreekt?",
+          "body": "Stilte is het verkeerde antwoord. Een ontbrekend document hoort een regel op een lijst op te leveren, niet de afwezigheid van een bevinding."
+        }
+      ],
+      "link": "De methode, van begin tot eind"
+    },
+    "cta": {
+      "title": "Stel ons de drie vragen",
+      "body": "Dertig minuten met de persoon wiens naam onder de output staat. Neem de lastige mee.",
+      "button": "Plan een demo",
+      "note": "Dertig minuten: eerst het platform, dan uw eigen situatie."
     }
   },
   "team": {

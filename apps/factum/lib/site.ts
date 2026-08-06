@@ -32,6 +32,26 @@ export const NAV = [
 /** Footer sitemap — the same set again, at lower emphasis. */
 export const FOOTER_NAV = NAV;
 
+/**
+ * The two reference pages, deliberately not in the header.
+ *
+ * /method and /limits-of-ai are long, and they are written for someone who has
+ * already decided the proposition is interesting and now wants to check it.
+ * That reader arrives from a link inside an argument, not from a nav bar — and
+ * a seven-item header would cost every other visitor a slower scan to serve
+ * them. They get their own footer group instead, which is a site-wide link on
+ * every page, plus contextual links from the sections whose claims they back:
+ * /platform and /diligence-sprint point at /method, /governance points at
+ * /limits-of-ai, and the two point at each other.
+ *
+ * `Breadcrumb` reads this list as well, so both pages emit a proper crumb name
+ * rather than falling through to the "return null" branch.
+ */
+export const REFERENCE_NAV = [
+  { href: '/method', key: 'method' },
+  { href: '/limits-of-ai', key: 'aiLimits' }
+] as const;
+
 export const LOCALE_NAMES: Record<string, string> = {
   en: 'English',
   nl: 'Nederlands',
@@ -117,6 +137,20 @@ export const ZDR_MODULE_COUNT = MODULES.filter((m) => m.zdr).length;
 export const ANALYSIS_MODULE_COUNT = MODULES.filter((m) => m.kind === 'analysis').length;
 export const DELIVERABLE_MODULE_COUNT = MODULES.filter((m) => m.kind === 'deliverable').length;
 export const MONITORING_MODULE_COUNT = MODULES.filter((m) => m.kind === 'monitoring').length;
+
+/**
+ * How many modules open in each wave, indexed from wave 1.
+ *
+ * /method states these counts in prose ("eight modules open at once"), and a
+ * number typed into a message file is a number that goes stale the next time
+ * the roster moves — which is exactly how the site once printed a module total
+ * a quarter too high. Derived here, passed into ICU, so a wave gaining a module
+ * updates the sentence.
+ */
+export const WAVE_SIZES: readonly number[] = Array.from(
+  { length: WAVE_COUNT },
+  (_, i) => MODULES.filter((m) => m.wave === i + 1).length
+);
 /**
  * The disciplines a Sprint analyses, in the order `DisciplineGrid` draws them.
  *

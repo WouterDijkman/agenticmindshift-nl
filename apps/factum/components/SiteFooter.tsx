@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { AM_URL, FOOTER_NAV, KVK } from '@/lib/site';
+import { AM_URL, FOOTER_NAV, KVK, REFERENCE_NAV } from '@/lib/site';
 
 export default async function SiteFooter() {
   const t = await getTranslations('footer');
@@ -43,6 +43,24 @@ export default async function SiteFooter() {
                     {tn('contact')}
                   </Link>
                 </li>
+              </ul>
+            </nav>
+
+            {/* The two long-form pages. They are kept out of the header on
+                purpose (see REFERENCE_NAV), so this group is the only
+                site-wide link either of them gets. */}
+            <nav aria-label={t('reference')}>
+              <span className="eyebrow" style={{ marginBottom: 14 }}>
+                {t('reference')}
+              </span>
+              <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: 9 }}>
+                {REFERENCE_NAV.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href} className="type-small nav-link">
+                      {tn(item.key)}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </nav>
 

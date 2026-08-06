@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import { pageMetadata } from '@/lib/pageMetadata';
 import { GOVERNANCE_POINTS } from '@/lib/scenes';
 import PageHeader from '@/components/PageHeader';
@@ -12,6 +13,7 @@ import TenancySplit from '@/components/TenancySplit';
 import CtaBand from '@/components/CtaBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
 import Breadcrumb from '@/components/Breadcrumb';
+import { ArrowRight } from '@/components/Icons';
 import {
   GROUNDING_AUDIT_DATE,
   GROUNDING_RATE,
@@ -268,6 +270,16 @@ export default async function GovernancePage({
           <p className="type-small" style={{ marginTop: 22, color: 'var(--text-quaternary)' }}>
             {t('limits.note')}
           </p>
+          {/* This list is what *we* have not built yet. The neighbouring
+              question — what this class of tool does not do at all — has its
+              own page, and a reader who has got this far is the one asking
+              it. */}
+          <div style={{ marginTop: 20 }}>
+            <Link href="/limits-of-ai" className="link-quiet">
+              {s('links.limits')}
+              <ArrowRight />
+            </Link>
+          </div>
         </Reveal>
       </Section>
 

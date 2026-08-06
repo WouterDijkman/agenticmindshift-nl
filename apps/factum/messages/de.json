@@ -12,6 +12,14 @@
       "title": "Vollständige Datenraum-Prüfung in Tagen",
       "description": "Neun Fachdurchgänge über einen Datenraum, zu einer Darstellung zusammengeführt, mit laufendem Datenlücken-Tracker."
     },
+    "method": {
+      "title": "Wie KI-Due-Diligence wirklich läuft",
+      "description": "Die Reihenfolge der Module, der Vertrag, den jede Feststellung erfüllen muss, und was ein namentlich benannter Prüfer kontrolliert, bevor etwas ausgeliefert wird."
+    },
+    "aiLimits": {
+      "title": "Was KI in der Due Diligence nicht kann",
+      "description": "Fünf Dinge, die kein Modell im Datenraum leistet, warum die menschliche Freigabe Pflicht ist, und drei Fragen an jeden KI-Anbieter."
+    },
     "governance": {
       "title": "KI-Governance und Datenverarbeitung",
       "description": "Wie Dokumente verarbeitet werden, was die menschliche Freigabe leistet und was Factum nicht behauptet."
@@ -41,6 +49,8 @@
     "primary": "Hauptnavigation",
     "platform": "Plattform",
     "sprint": "Diligence Sprint",
+    "method": "Die Methode",
+    "aiLimits": "Grenzen von KI",
     "governance": "Governance",
     "team": "Team",
     "partnerships": "Partnerschaften",
@@ -52,6 +62,7 @@
   "footer": {
     "blurb": "KI-Due-Diligence für M&A und Private Equity. Jede Feststellung belegt ein Dokument. Jedes Ergebnis von einer namentlich genannten Person geprüft.",
     "sitemap": "Sitemap",
+    "reference": "Hintergrund",
     "company": "Unternehmen",
     "privacy": "Datenschutz",
     "kvk": "KvK {number}",
@@ -230,6 +241,8 @@
       "governance": "Wie Dokumente behandelt werden",
       "platform": "Wie die Plattform arbeitet",
       "sprint": "Was der Sprint abdeckt",
+      "method": "Die Methode, von Anfang bis Ende",
+      "limits": "Was KI nicht kann",
       "intake": "Demo buchen"
     },
     "reframe": {
@@ -836,6 +849,207 @@
         }
       ],
       "note": "Verlangen Sie es schriftlich. Nach DORA muss ein Fonds oberhalb der Schwelle jeden IKT-Drittanbieter in einem Register benennen, das bei der Aufsicht eingereicht wird — uns eingeschlossen."
+    }
+  },
+  "method": {
+    "header": {
+      "title": "Die Methode, von Anfang bis Ende",
+      "lead": "Die lange Fassung. Was in welcher Reihenfolge läuft, der Vertrag, den jede Feststellung erfüllen muss, und was ein Mensch prüft, bevor irgendetwas bei Ihnen ankommt.",
+      "cta": "Demo buchen"
+    },
+    "waves": {
+      "title": "{modules} Module, {waves} Wellen, eine Reihenfolge",
+      "lead": "Nichts läuft zu früh. Ein Modul startet, wenn die Arbeit, von der es abhängt, fertig ist. Deshalb hat der Lauf eine Form und keine Warteschlange.",
+      "steps": [
+        {
+          "title": "Welle eins — die unabhängigen Durchgänge",
+          "body": "{w1} Module öffnen im selben Moment. Financial, Commercial, HR, Technologie, ESG und Operations gehen parallel in den Datenraum, dazu der Screener für das Informationsmemorandum und das Monitoring-Setup. Keines braucht die Antwort eines anderen Moduls, um anzufangen."
+        },
+        {
+          "title": "Welle zwei — die Durchgänge, die warten müssen",
+          "body": "Steuern und Recht. Beide argumentieren über Folgen: eine Steuerposition ist die Folge der Struktur, die der Financial-Durchgang gerade beschrieben hat, und ein rechtliches Risiko ist meist die Folge einer kommerziellen Klausel. Führt man sie zuerst aus, bekommt man selbstbewusste Antworten auf die falsche Frage."
+        },
+        {
+          "title": "Welle drei — Synthese",
+          "body": "{w3} Module lesen quer über alles darüber. Die Bewertung rechnet den Preis durch die Feststellungen hindurch statt an ihnen vorbei. Deal Economics, Portfolio und Post-Merger-Integration nehmen dieselben Feststellungen und stellen ihnen eine andere Frage."
+        },
+        {
+          "title": "Welle vier — die Dokumente",
+          "body": "{w4} Lieferergebnisse, aus den Wellen darüber zusammengesetzt: Vendor Due Diligence, das IC-Memo, Teaser oder CIM, das Finanzierungsmemorandum und die Dokumentfabrik für alles Weitere, was der Prozess braucht."
+        },
+        {
+          "title": "Welle fünf — nach dem Abschluss",
+          "body": "{w5} Module mit eigener Uhr. Exit Readiness, Portfoliogesundheit und der periodische IC-Bericht. Sie gehören nicht zum Sprint und warten nicht auf ihn."
+        }
+      ],
+      "note": "Welle eins und zwei sind die Due Diligence selbst. Alles danach ist, was Sie damit tun."
+    },
+    "contract": {
+      "title": "Der Ausgabevertrag, Feld für Feld",
+      "lead": "Fünf Felder. Eine Feststellung, die nicht alle fünf füllen kann, wird nicht als Feststellung geliefert.",
+      "failLabel": "Wenn das Feld leer bleibt",
+      "items": [
+        {
+          "title": "Modul",
+          "body": "Welches der {modules} sie erzeugt hat. Vorab abgegrenzt, die Frage stand also fest, bevor der Datenraum geöffnet wurde — nicht improvisiert aus dem, was zufällig darin lag.",
+          "fail": "Es gibt keine Freitextspur. Kein Modul, keine Feststellung."
+        },
+        {
+          "title": "Feststellung",
+          "body": "Eine Aussage, in einem Satz. Zusammengesetzte Aussagen werden getrennt, denn ein Satz mit zwei Aussagen lässt sich nur halb prüfen.",
+          "fail": "Zu vage zum Prüfen zählt wie falsch."
+        },
+        {
+          "title": "Wörtliches Zitat",
+          "body": "Die belegende Passage, Wort für Wort zitiert. Nicht zusammengefasst, nicht geglättet, nicht passend gekürzt.",
+          "fail": "Eine als Zitat ausgegebene Paraphrase fällt durch die Textprüfung und geht zurück."
+        },
+        {
+          "title": "Quelldokument und Passage",
+          "body": "Dateiname und Seite, damit Sie es selbst öffnen können. Dieses Feld macht eine Feststellung diskutierbar statt autoritativ.",
+          "fail": "Ein Verweis, der auf keine echte Passage führt, ist eine harte Sperre, keine Warnung."
+        },
+        {
+          "title": "Menschliche Prüfung",
+          "body": "Die Person, die sie freigegeben hat, namentlich, vor der Auslieferung. Jede Feststellung, jedes Mandat.",
+          "fail": "Es gibt keine Überholspur für eine volle Woche."
+        }
+      ],
+      "note": "Eine Aussage, die durch eine Prüfung fällt, bekommt einen Reparaturversuch: neu aus der Quelle zitieren, dann neu bewerten. Was dann noch fällt, wird gestrichen oder als unbestätigt gekennzeichnet ausgeliefert. Unbestätigt ist ein legitimes Ergebnis. Eine still verschwundene Aussage nicht."
+    },
+    "trail": {
+      "title": "Was festgehalten wird, und in welcher Reihenfolge",
+      "lead": "Eine Feststellung ist eine Kette. Jedes Glied wird festgehalten, und nur deshalb hat eine Frage in drei Monaten noch eine Antwort.",
+      "steps": [
+        "Das Dokument kommt an und wird indexiert. Vertrauliche Finanz- und Personendaten werden pseudonymisiert, bevor sie ein Modell sieht.",
+        "Das Modul ruft die Passagen ab, die seine eigene Frage beantworten, und nur diese.",
+        "Der Entwurf wird gegen den Vertrag oben geschrieben. Eine Aussage ohne Passage dahinter wird gar nicht erst geschrieben.",
+        "Ein Prüfdurchgang kritisiert den Entwurf und schickt ihn zurück. Zwei Versuche, dann endet die Schleife und ein Mensch übernimmt.",
+        "Vier Fundierungsprüfungen nacheinander: der Verweisindex, das Zitat selbst, ob die Aussage aus der Passage folgt, und ein zweites Urteil, das im Zweifel sperrt.",
+        "Eine namentlich benannte Person prüft, gleicht ab und gibt frei. Die Pseudonymisierung wird hier aufgehoben und nirgends früher.",
+        "Sie erhalten die Feststellung mit dem Dokumentverweis daran, und der bleibt danach offenbar."
+      ],
+      "note": "Das ausgearbeitete Beispiel — eine Klausel auf Seite 14 eines fiktiven Rahmenvertrags und die Feststellung, die daraus entstand — steht auf der Startseite.",
+      "link": "Das ausgearbeitete Beispiel ansehen"
+    },
+    "gate": {
+      "title": "Was der Prüfer tatsächlich tut",
+      "lead": "„Human in the loop“ ist eine Formel. Das hier ist die Reihenfolge dahinter.",
+      "items": [
+        "Öffnet das zitierte Dokument und liest die Passage gegen die Aussage, die darauf aufbaut.",
+        "Entscheidet über Wesentlichkeit — welche Feststellungen ändern, was Sie zahlen, oder ob Sie unterschreiben.",
+        "Löst Konflikte zwischen Modulen auf. Zwei Disziplinen, die einen Sachverhalt unterschiedlich lesen, sind selbst eine Feststellung und kein Fehler zum Glattbügeln.",
+        "Markiert, was nicht bestätigt werden konnte, und warum.",
+        "Hebt die Pseudonymisierung in der Endausgabe auf, und nur dort.",
+        "Unterschreibt. Eine benannte Person, verantwortlich für das Dokument, das Sie bekommen."
+      ],
+      "note": "{blocks} Fehlerklassen beenden die automatische Schleife vorzeitig und leiten den Entwurf an diese Person, unabhängig von der Bewertung.",
+      "link": "Wie Dokumente behandelt werden"
+    },
+    "stops": {
+      "title": "Wo die Methode aufhört",
+      "lead": "Alles oben ist Arbeit, an der sich eine Maschine messen lassen kann. Ein guter Teil der Due Diligence ist das nicht, und so zu tun als ob, ist die Art, wie solche Systeme den Raum verlieren.",
+      "link": "Was KI in der Due Diligence nicht kann"
+    },
+    "cta": {
+      "title": "Sehen Sie die Methode an einem echten Datenraum",
+      "body": "Wir öffnen die Pipeline, lassen ein Modul laufen und verfolgen eine Feststellung zurück bis zur Quellpassage.",
+      "button": "Demo buchen",
+      "note": "Dreißig Minuten: erst die Plattform, dann Ihre eigene Situation."
+    }
+  },
+  "aiLimits": {
+    "header": {
+      "title": "Was KI in der Due Diligence nicht kann",
+      "lead": "Wir verkaufen eine KI-Pipeline. Diese Seite handelt von dem Teil der Arbeit, den sie nicht erledigt, und davon, wer ihn stattdessen macht.",
+      "cta": "Demo buchen"
+    },
+    "limits": {
+      "title": "Fünf Dinge, die kein Modell im Datenraum leistet",
+      "lead": "Das sind keine Justierungsprobleme. Es sind Arbeitsarten, die außerhalb dessen liegen, was ein Sprachmodell ist.",
+      "humanLabel": "Wer es macht",
+      "items": [
+        {
+          "title": "Entscheiden, was zählt",
+          "body": "Ein Modell findet jede Change-of-Control-Klausel im Raum. Es kann Ihnen nicht sagen, welche den Deal killt. Wesentlichkeit ist ein Urteil über Ihre Struktur, Ihren Preis und Ihre Risikobereitschaft — und nichts davon liegt im Datenraum.",
+          "human": "Der Prüfer ordnet die Feststellungen nach dem Deal, den Sie tatsächlich machen."
+        },
+        {
+          "title": "Das Dokument zitieren, das nicht da ist",
+          "body": "Retrieval liest, was hochgeladen wurde. Das Teuerste in der Due Diligence ist oft eine Abwesenheit — der Vertrag, den niemand abgelegt hat, das Jahr, das im Lohnexport fehlt. Eine Abwesenheit hat keine Passage zum Zitieren, also kann kein fundiertes System sie als Feststellung melden.",
+          "human": "Der Data-Gap-Tracker ist die laufende Liste eines Menschen: was angefordert wurde und nie kam. Sie wird zusammen mit den Feststellungen geliefert."
+        },
+        {
+          "title": "Lesen, was niemand aufgeschrieben hat",
+          "body": "Management-Sessions, der Standortbesuch, ein Referenzgespräch mit einem Kunden, eine Integritätsprüfung zu einem Gesellschafter. Daraus entstehen die Feststellungen, die Gebote am häufigsten bewegen, und keine davon beginnt als Dokument.",
+          "human": "Ihr eigenes Team oder Ihre Berater. Diese Plattform macht das nicht und behauptet es auch nicht."
+        },
+        {
+          "title": "Schwach von verborgen unterscheiden",
+          "body": "Eine Zahl kann schwach sein, weil das Geschäft schwach ist, oder weil der Verkäufer den Prozess gesteuert hat. Auf dem Papier sehen beide gleich aus. Sie auseinanderzuhalten verlangt Wissen darüber, wie sich Verkäufer verhalten, nicht darüber, was in der Akte steht.",
+          "human": "Jemand, der die andere Seite des Tisches geführt hat. Bei uns ist das ein Leveraged-Finance-Banker."
+        },
+        {
+          "title": "Verantwortlich sein",
+          "body": "Ein Modell kann kein Representative unter Ihrer NDA sein, kann sich nicht vor Ihrem Investmentkomitee verantworten und kann nichts unterschreiben. Verantwortlichkeit ist keine Funktion, die man einem System hinzufügt. Sie hängt an einer Person, oder sie existiert nicht.",
+          "human": "Eine namentlich benannte Person gibt jede Ausgabe frei und steht dafür ein."
+        }
+      ],
+      "note": "Behauptet ein Anbieter, sein System könne eines dieser fünf Dinge, fragen Sie, welche Seite es zitiert hat."
+    },
+    "gate": {
+      "title": "Genau deshalb ist die Freigabe Pflicht",
+      "lead": "Der menschliche Schritt ist keine Sicherheitsdecke über einem fertigen Produkt. Er ist die Stelle, an der vier der fünf Punkte oben tatsächlich erledigt werden.",
+      "items": [
+        "Ein Name und ein Datum auf jeder Ausgabe, kein Konfidenzwert.",
+        "Wesentlichkeit an Ihrem Deal entschieden, nicht an einem Benchmark.",
+        "Unbestätigte Aussagen als unbestätigt gekennzeichnet statt still gestrichen.",
+        "Eine Person, mit der Sie streiten können."
+      ],
+      "link": "Wie Dokumente behandelt werden"
+    },
+    "machine": {
+      "title": "Und worin die Maschine wirklich besser ist",
+      "lead": "Die ehrliche Fassung dieses Arguments geht in beide Richtungen.",
+      "items": [
+        {
+          "title": "Sie liest alles",
+          "body": "Ein Team unter Termindruck liest eine Stichprobe und nennt das Abdeckung. Seite 900 bekommt dieselbe Aufmerksamkeit wie Seite 9."
+        },
+        {
+          "title": "Sie wird nicht müde",
+          "body": "Dasselbe Schema, dieselben Prüfungen und derselbe Beweismaßstab am Ende des Laufs wie am Anfang. Konsistenz ist das, worin Menschen am schlechtesten sind und Maschinen umsonst."
+        },
+        {
+          "title": "Sie läuft parallel",
+          "body": "{first} Module, die gleichzeitig öffnen, statt aufeinander zu warten — daher kommen die Tage, nicht daher, dass eine einzelne Antwort schneller da ist."
+        }
+      ]
+    },
+    "ask": {
+      "title": "Drei Fragen an jeden KI-Due-Diligence-Anbieter",
+      "lead": "Uns eingeschlossen. Die Antworten sagen mehr als die Demo.",
+      "items": [
+        {
+          "title": "Wer unterschreibt?",
+          "body": "Lautet die Antwort „ein Dashboard“, unterschreibt niemand. Fragen Sie nach einem Namen — und danach, was passiert, wenn dieser Name sich irrt."
+        },
+        {
+          "title": "Was passiert mit einer Aussage ohne Beleg?",
+          "body": "Es gibt drei ehrliche Antworten: sie wird gestrichen, sie wird gekennzeichnet, oder sie wird mit sichtbarer Beleglücke gezeigt. Ein System ohne Antwort zeigt Ihnen ungekennzeichnete Vermutungen."
+        },
+        {
+          "title": "Was tut es, wenn ein Dokument fehlt?",
+          "body": "Schweigen ist die falsche Antwort. Ein fehlendes Dokument sollte einen Eintrag auf einer Liste erzeugen, nicht das Ausbleiben einer Feststellung."
+        }
+      ],
+      "link": "Die Methode, von Anfang bis Ende"
+    },
+    "cta": {
+      "title": "Stellen Sie uns die drei Fragen",
+      "body": "Dreißig Minuten mit der Person, deren Name auf der Ausgabe steht. Bringen Sie die unangenehmen mit.",
+      "button": "Demo buchen",
+      "note": "Dreißig Minuten: erst die Plattform, dann Ihre eigene Situation."
     }
   },
   "team": {
