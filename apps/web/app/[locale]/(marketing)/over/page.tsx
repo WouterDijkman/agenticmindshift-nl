@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { getAlternates } from '@/lib/hreflang';
-import { Link } from '@/i18n/navigation';
 import Button from '@/components/ui/Button';
 import HeroAnimated from './HeroAnimated';
 import OverCredentials from './OverCredentials';
@@ -32,7 +31,10 @@ export default async function OverPage(
     { year: t('timeline.item_2_year'), label: t('timeline.item_2_label'), sub: t('timeline.item_2_sub'), delay: 60, future: false },
     { year: t('timeline.item_3_year'), label: t('timeline.item_3_label'), sub: t('timeline.item_3_sub'), delay: 120, future: false },
     { year: t('timeline.item_4_year'), label: t('timeline.item_4_label'), sub: t('timeline.item_4_sub'), delay: 180, future: false },
-    { year: t('timeline.item_5_year'), label: t('timeline.item_5_label'), sub: t('timeline.item_5_sub'), delay: 240, future: true },
+    /* Factum shipped. It carried a "verwacht" badge for months after
+       factumcapital.eu went live, which made the newest entry on the
+       timeline the one thing on it that was out of date. */
+    { year: t('timeline.item_5_year'), label: t('timeline.item_5_label'), sub: t('timeline.item_5_sub'), delay: 240, future: false },
   ];
 
   return (
@@ -97,12 +99,16 @@ export default async function OverPage(
                 <p>{t('bio.para1')}</p>
                 <p>
                   {t('bio.para2_prefix')}{' '}
-                  <Link
-                    href="/factum-capital"
+                  {/* Factum has its own site; `Link` would prefix a locale. */}
+                  <a
+                    href="https://factumcapital.eu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="plausible-event-name=Factum+Outbound plausible-event-location=about-bio"
                     style={{ color: 'var(--accent-cta-ink)', textDecoration: 'underline', textUnderlineOffset: '3px' }}
                   >
                     Factum Capital
-                  </Link>
+                  </a>
                   {t('bio.para2_suffix')}
                 </p>
                 <p style={{ fontStyle: 'italic', color: 'var(--text-muted)' }}>
@@ -247,14 +253,15 @@ export default async function OverPage(
           overflow: 'hidden',
         }}
       >
-        <div className="container-medium" style={{ textAlign: 'center', position: 'relative' }}>
+        {/* Was centred; see the note on the same band in /werkwijze. */}
+        <div className="container-medium" style={{ position: 'relative', maxWidth: '760px' }}>
           <div className="reveal" style={{ position: 'relative' }}>
             <p className="eyebrow" style={{ marginBottom: '28px', color: 'var(--text-muted)' }}>
               {t('contact_cta.eyebrow')}
             </p>
             <h2
               className="type-h2"
-              style={{ color: 'var(--text-primary)', marginBottom: '16px', maxWidth: '560px', marginInline: 'auto' }}
+              style={{ color: 'var(--text-primary)', marginBottom: '16px', maxWidth: '18ch' }}
             >
               {t('contact_cta.heading')}
             </h2>
@@ -263,20 +270,19 @@ export default async function OverPage(
                 fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
                 color: 'var(--text-muted)',
                 marginBottom: '44px',
-                maxWidth: '400px',
-                marginInline: 'auto',
+                maxWidth: '52ch',
                 lineHeight: 1.75,
               }}
             >
               {t('contact_cta.subtext')}
             </p>
             <div
-              style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center', alignItems: 'center', marginBottom: '20px' }}
+              style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', alignItems: 'center', marginBottom: '20px' }}
             >
-              <Button href="/scorecard" variant="primary" size="lg" className="plausible-event-name=Scorecard+CTA plausible-event-location=about-final">
+              <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=about-final">
                 {t('contact_cta.cta1')}
               </Button>
-              <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=about-final">
+              <Button href="/werkwijze" variant="secondary" size="lg">
                 {t('contact_cta.cta2')}
               </Button>
             </div>

@@ -6,18 +6,16 @@ export interface FaqItem {
 
 // Stable order of the homepage FAQ accordion. Question + answer text live in
 // the message catalogue under `homepage.faqItems` (keys `<id>_q` / `<id>_a`).
-// The 'wie' item additionally renders a link to /over — handled in page.tsx
-// via the `homepage.faqItems.wie_link` key.
-export const faqItemIds = [
-  'duur',
-  'voor-wie',
-  'vertrouwelijk',
-  'onderbouwing',
-  'wie',
-  'sales-pitch',
-  'investering',
-  'voorbeeld',
-] as const;
+//
+// Order is deliberate: what it is, then what it costs. Those two are the
+// reason anyone opens an FAQ, and burying the price under four process
+// questions reads as a dodge.
+//
+// Was seven. Three went because the page now answers them before the reader
+// gets here: 'wie' and 'voor-wie' are the guide section and the hero subline,
+// and 'factum' is the banner directly above. An FAQ that re-answers the page
+// is length pretending to be helpfulness.
+export const faqItemIds = ['wat', 'investering', 'anders', 'start'] as const;
 
 export type FaqItemId = (typeof faqItemIds)[number];
 

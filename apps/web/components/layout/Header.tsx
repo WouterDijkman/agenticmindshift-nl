@@ -10,12 +10,17 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
+// The Scorecard used to lead this list and own the header button. It was a
+// free questionnaire being asked to carry the proposition of a consultancy;
+// the header now offers the thing the firm actually wants, which is a
+// twenty-minute conversation.
 const navLinks = [
-  { href: '/scorecard', labelKey: 'scorecard', badged: false },
   { href: '/werkwijze', labelKey: 'werkwijze', badged: false },
   { href: '/over', labelKey: 'over', badged: false },
   { href: '/contact', labelKey: 'contact', badged: false },
 ] as const;
+
+const INTAKE_URL = 'https://cal.com/wwdijkman/intake-call';
 
 export default function Header() {
   const t = useTranslations('nav');
@@ -140,8 +145,8 @@ export default function Header() {
 
         <div className="hidden lg:flex items-center gap-4">
           <LanguageSwitcher />
-          <Button href="/scorecard" variant="primary" size="md" className="plausible-event-name=Scorecard+CTA plausible-event-location=header">
-            {t('start_scorecard')}
+          <Button href={INTAKE_URL} variant="primary" size="md" external className="plausible-event-name=Intake+CTA plausible-event-location=header">
+            {t('cta')}
           </Button>
         </div>
 
@@ -249,8 +254,8 @@ export default function Header() {
             ))}
           </nav>
           <div className="mt-auto flex flex-col gap-4">
-            <Button href="/scorecard" variant="primary" size="lg" className="w-full plausible-event-name=Scorecard+CTA plausible-event-location=header-mobile">
-              {t('start_scorecard')}
+            <Button href={INTAKE_URL} variant="primary" size="lg" external className="w-full plausible-event-name=Intake+CTA plausible-event-location=header-mobile">
+              {t('cta')}
             </Button>
           </div>
         </div>

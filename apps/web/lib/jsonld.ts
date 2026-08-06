@@ -1,8 +1,42 @@
 import type { FaqItem } from './faq';
-import { normalizeReportLocale, type ReportLocale } from './report/locale';
-import { getRouteLadder } from './pdf/offerRoutes';
+
+import nl from '@/messages/nl.json';
+import en from '@/messages/en.json';
+import de from '@/messages/de.json';
+import es from '@/messages/es.json';
+import pt from '@/messages/pt.json';
 
 const SITE_URL = 'https://www.agenticmindshift.nl';
+
+/* These three lived in the report pipeline (lib/report/locale.ts) and the PDF
+   route ladder (lib/pdf/offerRoutes.ts). Both were scorecard-only and are
+   gone; structured data was their last consumer, so they moved here rather
+   than leaving two modules alive for one caller. */
+export type SiteLocale = 'nl' | 'en' | 'de' | 'es' | 'pt';
+
+const SITE_LOCALES: SiteLocale[] = ['nl', 'en', 'de', 'es', 'pt'];
+
+function normalizeLocale(value: unknown): SiteLocale {
+  return typeof value === 'string' && (SITE_LOCALES as string[]).includes(value)
+    ? (value as SiteLocale)
+    : 'nl';
+}
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
+const MESSAGES: Record<SiteLocale, any> = { nl, en, de, es, pt };
+
+/**
+ * The three route names, read from the same catalog /werkwijze renders, so
+ * structured data can never drift from what the visitor is shown.
+ */
+function getRouteNames(locale: SiteLocale): [string, string, string] {
+  const w = MESSAGES[locale]?.werkwijze ?? MESSAGES.nl.werkwijze;
+  return [
+    w.offering_1?.title ?? MESSAGES.nl.werkwijze.offering_1.title,
+    w.offering_2?.title ?? MESSAGES.nl.werkwijze.offering_2.title,
+    w.offering_3?.title ?? MESSAGES.nl.werkwijze.offering_3.title,
+  ];
+}
 
 /**
  * Structured data is copy too. A German visitor's page used to ship Dutch
@@ -14,7 +48,7 @@ const SITE_URL = 'https://www.agenticmindshift.nl';
  *    sameAs, prices) — language-independent.
  *  - schema.org enum values such as contactType: 'customer service' — those are
  *    vocabulary, not prose, and must stay English.
- *  - The four service NAMES. Those come from getRouteLadder(locale), i.e. the
+ *  - The three service NAMES. Those come from getRouteNames(locale), i.e. the
  *    same message catalog the public pricing page renders, so structured data
  *    cannot drift away from what the visitor actually reads.
  */
@@ -24,207 +58,179 @@ interface JsonLdCopy {
   personJobTitle: string;
   personDescription: string;
   personKnowsAbout: string[];
-  scorecardName: string;
-  scorecardDescription: string;
-  scorecardOffer: string;
   advisoryServiceType: string;
-  /** Takes the four localized route names so the routes are never retyped. */
+  /** Takes the three localized route names so the routes are never retyped. */
   advisoryDescription: (routes: string[]) => string;
-  /** Descriptions of the four route offers, in ladder order. */
-  offerDescriptions: [string, string, string, string];
+  /** Descriptions of the three route offers, in ladder order. */
+  offerDescriptions: [string, string, string];
   breadcrumbHome: string;
 }
 
-const COPY: Record<ReportLocale, JsonLdCopy> = {
+const COPY: Record<SiteLocale, JsonLdCopy> = {
   nl: {
     organizationDescription:
-      'AI-advies voor Europese private-equityfondsen, M&A-kantoren en familiebedrijven in de mid-market. Founder: Wouter Dijkman.',
+      'AI-advies voor Europese private-equityfondsen en M&A-kantoren in de mid-market. Founder: Wouter Dijkman.',
     organizationKnowsAbout: [
       'Private equity',
       'M&A due diligence',
       'AI-implementatie',
       'Financial restructuring',
-      'Portfolio monitoring',
+      'AI-adoptie en training',
       'AI-strategie',
     ],
     personJobTitle: 'Founder & AI-adviseur',
     personDescription:
-      'Voormalig PE- en M&A-professional met ervaring bij Rabobank, ING en Alter Domus. Adviseert Europese mid-marketfondsen en M&A-kantoren over AI-strategie en AI-gedreven due diligence.',
+      'Voormalig PE- en M&A-professional met ervaring bij Rabobank, ING en Alter Domus. Adviseert Europese mid-marketfondsen en M&A-kantoren over AI-strategie, AI-advies en implementatie.',
     personKnowsAbout: [
       'Private equity',
       'M&A transaction advisory',
-      'AI-gedreven due diligence',
-      'Portfolio monitoring',
+      'AI-strategie voor dealteams',
+      'AI-adoptie en training',
       'Financial restructuring in Europa',
       'IBR/WHOA',
     ],
-    scorecardName: 'AI Scorecard — assessment van twaalf minuten',
-    scorecardDescription:
-      'Een gratis assessment van twaalf minuten op zes AI-dimensies, voor Europese PE-fondsen, M&A-kantoren en family offices.',
-    scorecardOffer: 'Gratis — geen account nodig',
-    advisoryServiceType: 'AI-gedreven due diligence en portfolio-intelligence',
-    advisoryDescription: ([a, b, c, d]) =>
-      `AI-gedreven due diligence en portfolio-intelligence voor Europese PE-fondsen en M&A-kantoren. Vier routes: ${a}, ${b}, ${c} en ${d} via Factum Capital (31 modules).`,
+    advisoryServiceType: 'AI-advies voor M&A en private equity',
+    advisoryDescription: ([a, b, c]) =>
+      `AI-advies voor Europese PE-fondsen en M&A-kantoren in de mid-market. Drie routes: ${a}, ${b} en ${c}.`,
     offerDescriptions: [
       'Gratis kennismakingsgesprek van 20 minuten — geen verplichtingen',
       'Per traject of doorlopend in retainer',
-      '€1.099 per dag, minimaal 3 maanden, exclusief btw',
-      'Vanaf €10.000 per deal via Factum Capital (31 modules)',
+      'Scope en tarief worden na de intake vastgelegd',
     ],
     breadcrumbHome: 'Home',
   },
   en: {
     organizationDescription:
-      'AI advisory for European private equity funds, M&A firms and family businesses in the mid-market. Founder: Wouter Dijkman.',
+      'AI advisory for European private equity funds and M&A firms in the mid-market. Founder: Wouter Dijkman.',
     organizationKnowsAbout: [
       'Private equity',
       'M&A due diligence',
       'AI implementation',
       'Financial restructuring',
-      'Portfolio monitoring',
+      'AI adoption and training',
       'AI strategy',
     ],
     personJobTitle: 'Founder & AI Advisor',
     personDescription:
-      'Former PE and M&A professional with experience at Rabobank, ING and Alter Domus. Advises European mid-market funds and M&A firms on AI strategy and AI-driven due diligence.',
+      'Former PE and M&A professional with experience at Rabobank, ING and Alter Domus. Advises European mid-market funds and M&A firms on AI strategy, AI advisory and implementation.',
     personKnowsAbout: [
       'Private equity',
       'M&A transaction advisory',
-      'AI-driven due diligence',
-      'Portfolio monitoring',
+      'AI strategy for deal teams',
+      'AI adoption and training',
       'Financial restructuring in Europe',
       'IBR/WHOA',
     ],
-    scorecardName: 'AI Scorecard — twelve-minute assessment',
-    scorecardDescription:
-      'A free twelve-minute assessment across six AI dimensions, for European PE funds, M&A firms and family offices.',
-    scorecardOffer: 'Free — no account required',
-    advisoryServiceType: 'AI-driven due diligence and portfolio intelligence',
-    advisoryDescription: ([a, b, c, d]) =>
-      `AI-driven due diligence and portfolio intelligence for European PE funds and M&A firms. Four routes: ${a}, ${b}, ${c} and ${d} via Factum Capital (31 modules).`,
+    advisoryServiceType: 'AI advisory for M&A and private equity',
+    advisoryDescription: ([a, b, c]) =>
+      `AI advisory for European PE funds and M&A firms in the mid-market. Three routes: ${a}, ${b} and ${c}.`,
     offerDescriptions: [
       'Free 20-minute introductory call — no obligations',
       'Per project or ongoing on retainer',
-      '€1,099 per day, minimum three months, excluding VAT',
-      'From €10,000 per deal via Factum Capital (31 modules)',
+      'Scope and rate are set after the intake',
     ],
     breadcrumbHome: 'Home',
   },
   de: {
     organizationDescription:
-      'KI-Beratung für europäische Private-Equity-Fonds, M&A-Häuser und Familienunternehmen im Mid-Market. Gründer: Wouter Dijkman.',
+      'KI-Beratung für europäische Private-Equity-Fonds und M&A-Häuser im Mid-Market. Gründer: Wouter Dijkman.',
     organizationKnowsAbout: [
       'Private Equity',
       'M&A Due Diligence',
       'KI-Implementierung',
       'Financial Restructuring',
-      'Portfolio-Monitoring',
+      'KI-Adoption und Training',
       'KI-Strategie',
     ],
     personJobTitle: 'Gründer & KI-Berater',
     personDescription:
-      'Ehemaliger PE- und M&A-Professional mit Stationen bei Rabobank, ING und Alter Domus. Berät europäische Mid-Market-Fonds und M&A-Häuser zu KI-Strategie und KI-gestützter Due Diligence.',
+      'Ehemaliger PE- und M&A-Professional mit Stationen bei Rabobank, ING und Alter Domus. Berät europäische Mid-Market-Fonds und M&A-Häuser zu KI-Strategie, KI-Beratung und Implementierung.',
     personKnowsAbout: [
       'Private Equity',
       'M&A Transaction Advisory',
-      'KI-gestützte Due Diligence',
-      'Portfolio-Monitoring',
+      'KI-Strategie für Dealteams',
+      'KI-Adoption und Training',
       'Financial Restructuring in Europa',
       'IBR/WHOA',
     ],
-    scorecardName: 'AI Scorecard — Assessment in zwölf Minuten',
-    scorecardDescription:
-      'Ein kostenloses Assessment in zwölf Minuten über sechs KI-Dimensionen, für europäische PE-Fonds, M&A-Häuser und Family Offices.',
-    scorecardOffer: 'Kostenlos — kein Konto erforderlich',
-    advisoryServiceType: 'KI-gestützte Due Diligence und Portfolio-Intelligence',
-    advisoryDescription: ([a, b, c, d]) =>
-      `KI-gestützte Due Diligence und Portfolio-Intelligence für europäische PE-Fonds und M&A-Häuser. Vier Wege: ${a}, ${b}, ${c} und ${d} über Factum Capital (31 Module).`,
+    advisoryServiceType: 'KI-Beratung für M&A und Private Equity',
+    advisoryDescription: ([a, b, c]) =>
+      `KI-Beratung für europäische PE-Fonds und M&A-Häuser im Mid-Market. Drei Wege: ${a}, ${b} und ${c}.`,
     offerDescriptions: [
       'Kostenloses Kennenlerngespräch von 20 Minuten — unverbindlich',
       'Pro Projekt oder laufend als Retainer',
-      '1.099 € pro Tag, mindestens drei Monate, zzgl. MwSt.',
-      'Ab 10.000 € pro Deal über Factum Capital (31 Module)',
+      'Umfang und Honorar werden nach dem Intake festgelegt',
     ],
     breadcrumbHome: 'Startseite',
   },
   es: {
     organizationDescription:
-      'Asesoramiento en IA para fondos de private equity, firmas de M&A y empresas familiares europeas del mid-market. Fundador: Wouter Dijkman.',
+      'Asesoramiento en IA para fondos de private equity y firmas de M&A europeos del mid-market. Fundador: Wouter Dijkman.',
     organizationKnowsAbout: [
       'Private equity',
       'Due diligence de M&A',
       'Implementación de IA',
       'Reestructuración financiera',
-      'Monitorización de cartera',
+      'Adopción y formación en IA',
       'Estrategia de IA',
     ],
     personJobTitle: 'Fundador y asesor de IA',
     personDescription:
-      'Antiguo profesional de PE y M&A con experiencia en Rabobank, ING y Alter Domus. Asesora a fondos y firmas de M&A europeos del mid-market en estrategia de IA y due diligence impulsada por IA.',
+      'Antiguo profesional de PE y M&A con experiencia en Rabobank, ING y Alter Domus. Asesora a fondos y firmas de M&A europeos del mid-market en estrategia de IA, asesoramiento e implementación.',
     personKnowsAbout: [
       'Private equity',
       'Asesoramiento en transacciones de M&A',
-      'Due diligence con IA',
-      'Monitorización de cartera',
+      'Estrategia de IA para equipos de deal',
+      'Adopción y formación en IA',
       'Reestructuración financiera en Europa',
       'IBR/WHOA',
     ],
-    scorecardName: 'AI Scorecard — evaluación de doce minutos',
-    scorecardDescription:
-      'Una evaluación gratuita de doce minutos sobre seis dimensiones de IA, para fondos de PE, firmas de M&A y family offices europeos.',
-    scorecardOffer: 'Gratuito — sin necesidad de cuenta',
-    advisoryServiceType: 'Due diligence e inteligencia de cartera con IA',
-    advisoryDescription: ([a, b, c, d]) =>
-      `Due diligence e inteligencia de cartera con IA para fondos de PE y firmas de M&A europeos. Cuatro rutas: ${a}, ${b}, ${c} y ${d} a través de Factum Capital (31 módulos).`,
+    advisoryServiceType: 'Asesoramiento en IA para M&A y private equity',
+    advisoryDescription: ([a, b, c]) =>
+      `Asesoramiento en IA para fondos de PE y firmas de M&A europeos del mid-market. Tres rutas: ${a}, ${b} y ${c}.`,
     offerDescriptions: [
       'Llamada introductoria gratuita de 20 minutos, sin compromiso',
       'Por proyecto o de forma continua con retainer',
-      '1.099 € por día, mínimo tres meses, IVA no incluido',
-      'Desde 10.000 € por operación a través de Factum Capital (31 módulos)',
+      'El alcance y la tarifa se fijan tras la reunión inicial',
     ],
     breadcrumbHome: 'Inicio',
   },
   pt: {
     organizationDescription:
-      'Consultoria em IA para fundos de private equity, escritórios de M&A e empresas familiares europeias do mid-market. Fundador: Wouter Dijkman.',
+      'Consultoria em IA para fundos de private equity e escritórios de M&A europeus do mid-market. Fundador: Wouter Dijkman.',
     organizationKnowsAbout: [
       'Private equity',
       'Due diligence de M&A',
       'Implementação de IA',
       'Reestruturação financeira',
-      'Monitorização de carteira',
+      'Adoção e formação em IA',
       'Estratégia de IA',
     ],
     personJobTitle: 'Fundador e consultor de IA',
     personDescription:
-      'Antigo profissional de PE e M&A com experiência no Rabobank, ING e Alter Domus. Aconselha fundos e escritórios de M&A europeus do mid-market em estratégia de IA e due diligence assistida por IA.',
+      'Antigo profissional de PE e M&A com experiência no Rabobank, ING e Alter Domus. Aconselha fundos e escritórios de M&A europeus do mid-market em estratégia de IA, consultoria e implementação.',
     personKnowsAbout: [
       'Private equity',
       'Assessoria em transações de M&A',
-      'Due diligence com IA',
-      'Monitorização de carteira',
+      'Estratégia de IA para equipas de deal',
+      'Adoção e formação em IA',
       'Reestruturação financeira na Europa',
       'IBR/WHOA',
     ],
-    scorecardName: 'AI Scorecard — avaliação de doze minutos',
-    scorecardDescription:
-      'Uma avaliação gratuita de doze minutos sobre seis dimensões de IA, para fundos de PE, escritórios de M&A e family offices europeus.',
-    scorecardOffer: 'Gratuito — sem necessidade de conta',
-    advisoryServiceType: 'Due diligence e inteligência de carteira com IA',
-    advisoryDescription: ([a, b, c, d]) =>
-      `Due diligence e inteligência de carteira com IA para fundos de PE e escritórios de M&A europeus. Quatro percursos: ${a}, ${b}, ${c} e ${d} através da Factum Capital (31 módulos).`,
+    advisoryServiceType: 'Consultoria em IA para M&A e private equity',
+    advisoryDescription: ([a, b, c]) =>
+      `Consultoria em IA para fundos de PE e escritórios de M&A europeus do mid-market. Três percursos: ${a}, ${b} e ${c}.`,
     offerDescriptions: [
       'Chamada introdutória gratuita de 20 minutos — sem compromisso',
       'Por projeto ou de forma contínua em retainer',
-      '1.099 € por dia, mínimo de três meses, IVA não incluído',
-      'A partir de 10.000 € por transação através da Factum Capital (31 módulos)',
+      'O âmbito e o valor são definidos após a reunião inicial',
     ],
     breadcrumbHome: 'Início',
   },
 };
 
-function copy(locale: string): { loc: ReportLocale; c: JsonLdCopy } {
-  const loc = normalizeReportLocale(locale);
+function copy(locale: string): { loc: SiteLocale; c: JsonLdCopy } {
+  const loc = normalizeLocale(locale);
   return { loc, c: COPY[loc] };
 }
 
@@ -319,30 +325,10 @@ export function getPersonLd(locale: string) {
   };
 }
 
-/**
- * Service — the scorecard, linked to the Organization via @id
- */
-export function getServiceLd(locale: string) {
-  const { c } = copy(locale);
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    '@id': `${SITE_URL}/#service-scorecard`,
-    name: c.scorecardName,
-    provider: {
-      '@type': 'Organization',
-      '@id': `${SITE_URL}/#organization`,
-    },
-    areaServed: { '@type': 'Place', name: 'Europe' },
-    description: c.scorecardDescription,
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'EUR',
-      description: c.scorecardOffer,
-    },
-  };
-}
+/* getServiceLd() described the Scorecard as a free Service. The questionnaire
+   is gone, so the emitter went with it — a Service node for a route that
+   404s is worse than no Service node at all. The three routes we do sell are
+   already covered by getProfessionalServiceLd()'s offer catalogue. */
 
 /**
  * ProfessionalService — for /werkwijze.
@@ -353,16 +339,22 @@ export function getServiceLd(locale: string) {
  */
 export function getProfessionalServiceLd(locale: string) {
   const { loc, c } = copy(locale);
-  const ladder = getRouteLadder(loc);
-  const names = ladder.map((r) => r.name);
-  /** Ladder order: sparring, advies, fractional, dd. */
-  const lowPrices = [null, '4500', '1099', '10000'] as const;
+  const names = getRouteNames(loc);
+  /* Ladder order: sparring, advies, implementatie. The third rung used to be
+     AI-driven DD at a 10.000 floor; that work moved to Factum Capital and is
+     no longer sold here, so no price is asserted for implementation until
+     there is a real one. */
+  const lowPrices = [null, '4500', null] as const;
 
   return {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     '@id': `${SITE_URL}/#service-ai-advisory`,
-    name: names[3],
+    /* This used to be `names[2]`, so the whole service node was named after
+       whatever the third rung happened to be — for a long time "AI-driven Due
+       Diligence & Portfolio", a route this site no longer sells. The node
+       covers all three rungs, so it takes the practice name, not a rung's. */
+    name: c.advisoryServiceType,
     provider: {
       '@type': 'Organization',
       '@id': `${SITE_URL}/#organization`,

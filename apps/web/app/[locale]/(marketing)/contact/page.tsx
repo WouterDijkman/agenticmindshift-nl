@@ -6,6 +6,8 @@ import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
 import JsonLd from '@/components/JsonLd';
 import { getPersonLd } from '@/lib/jsonld';
 
+const INTAKE_URL = 'https://cal.com/wwdijkman/intake-call';
+
 export async function generateMetadata(
   { params }: { params: Promise<{ locale: string }> }
 ): Promise<Metadata> {
@@ -34,11 +36,11 @@ export default async function ContactPage() {
         headingMaxWidth="720px"
       >
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
-          <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=contact-hero">
-            {t('card_02_cta')}
-          </Button>
-          <Button href="/scorecard" variant="secondary" size="lg" className="plausible-event-name=Scorecard+CTA plausible-event-location=contact-hero">
+          <Button href={INTAKE_URL} variant="primary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=contact-hero">
             {t('card_01_cta')}
+          </Button>
+          <Button href="/werkwijze" variant="secondary" size="lg">
+            {t('card_02_cta')}
           </Button>
         </div>
       </AnimatedHeroShell>
@@ -57,11 +59,19 @@ export default async function ContactPage() {
             }}
           >
             {([
+              /* Card 01 used to be the Scorecard, which meant two of the
+                 three "ways to reach us" were forms rather than a person.
+                 It is now the conversation, and 02 answers the question
+                 that stops people booking one: what does this cost. */
               {
                 n: '01',
                 title: t('card_01_title'),
                 body: t('card_01_body'),
-                cta: <Button href="/scorecard" variant="primary" size="md" className="plausible-event-name=Scorecard+CTA plausible-event-location=contact-card">{t('card_01_cta')}</Button>,
+                cta: (
+                  <Button href={INTAKE_URL} variant="primary" size="md" external className="plausible-event-name=Intake+CTA plausible-event-location=contact-card">
+                    {t('card_01_cta')}
+                  </Button>
+                ),
                 delay: 0,
               },
               {
@@ -69,7 +79,7 @@ export default async function ContactPage() {
                 title: t('card_02_title'),
                 body: t('card_02_body'),
                 cta: (
-                  <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="md" external className="plausible-event-name=Intake+CTA plausible-event-location=contact-card">
+                  <Button href="/werkwijze" variant="secondary" size="md">
                     {t('card_02_cta')}
                   </Button>
                 ),

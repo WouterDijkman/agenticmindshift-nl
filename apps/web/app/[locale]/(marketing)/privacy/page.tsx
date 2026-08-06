@@ -44,10 +44,12 @@ export default async function PrivacyPage() {
 
         <h2 className="text-xl mt-4">{t('s3_heading')}</h2>
         <ul className="list-disc pl-6 flex flex-col gap-2">
+          {/* Was four grounds. Two of them were the scorecard report and the
+              Factum waitlist — the only two forms the site had. Both are gone,
+              so three remain and none of them is a funnel. */}
           <li>{t('s3_li1')}</li>
           <li>{t('s3_li2')}</li>
           <li>{t('s3_li3')}</li>
-          <li>{t('s3_li4')}</li>
         </ul>
 
         <h2 className="text-xl mt-4">{t('s4_heading')}</h2>

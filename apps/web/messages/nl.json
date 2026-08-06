@@ -2,21 +2,19 @@
   "meta": {
     "site_name": "Agentic Mindshift",
     "site_title": "Agentic Mindshift — AI-advies voor Europese PE en M&A",
-    "site_description": "AI-advies voor PE-fondsen, M&A-kantoren en familiebedrijven in de Europese mid-market. Doe de gratis Scorecard: twaalf minuten, zes dimensies, direct een rapport."
+    "site_description": "AI-advies voor private-equityfondsen en M&A-kantoren in de Europese mid-market. Sparring en strategie, advies, implementatie en adoptie. Uit de dealpraktijk zelf."
   },
   "nav": {
-    "scorecard": "Scorecard",
     "werkwijze": "Werkwijze",
     "over": "Over",
     "factum_capital": "Factum Capital",
     "contact": "Contact",
-    "start_scorecard": "Start de Scorecard",
     "open_menu": "Open menu",
     "close_menu": "Sluit menu",
     "close": "Sluit",
     "main_menu": "Hoofdmenu",
-    "badge_soon": "binnenkort",
-    "choose_language": "Taal kiezen"
+    "choose_language": "Taal kiezen",
+    "cta": "Plan een gesprek van 20 minuten"
   },
   "footer": {
     "tagline": "AI-advies voor Europese PE- en M&A-kantoren. Concreet, vertrouwelijk, meetbaar.",
@@ -27,70 +25,27 @@
     "over_wouter": "Over Wouter",
     "privacy": "Privacy",
     "voorwaarden": "Voorwaarden",
-    "cta_title": "Benieuwd naar uw blinde vlekken?",
-    "cta_sub": "Vijftien vragen. Twaalf minuten. Geen account.",
-    "start_scorecard": "Start de Scorecard",
+    "cta_title": "Eén gesprek van twintig minuten.",
+    "cta_sub": "Geen voorbereiding, geen factuur, geen mailreeks.",
     "copyright": "© 2026 Agentic Mindshift — opgericht oktober 2025.",
-    "tagline_bottom": "Factum Capital · AI-platform in ontwikkeling"
+    "tagline_bottom": "Factum Capital · AI-platform voor M&A en herstructurering",
+    "cta": "Plan een gesprek van 20 minuten"
   },
   "homepage": {
-    "meta_title": "AI-advies voor Private Equity & M&A",
-    "meta_description": "AI-advies voor PE-fondsen, M&A-kantoren en familiebedrijven in de Europese mid-market. Doe de gratis Scorecard: twaalf minuten, zes dimensies, direct een rapport.",
+    "meta_title": "AI-advies voor private equity en M&A",
+    "meta_description": "AI-advies voor PE-fondsen en M&A-kantoren in de Europese mid-market. Drie routes: sparring en strategie, AI-advies, implementatie en adoptie.",
     "hero": {
-      "eyebrow": "Voor PE-partners, M&A-directors en family offices",
-      "heading": "Weet in twaalf minuten waar uw rendement weglekt.",
-      "subtext": "Zes dimensies die het IM en de maandrapportage niet laten zien. Direct een rapport dat u intern kunt delen.",
-      "cta_primary": "Start de Scorecard",
-      "cta_secondary": "Werkwijze & tarieven",
-      "trust": "12 minuten · 6 dimensies · geen account · vertrouwelijk"
-    },
-    "founder": {
-      "eyebrow": "Wie hierachter staat",
-      "heading": "Eén adviseur. Zes jaar aan de financierings- en herstructureringskant van Europese deals.",
-      "body": "Wouter Dijkman werkte in acquisition finance en financial restructuring bij Rabobank, ING en Alter Domus. Daar zag hij waarom deals die op papier klopten alsnog vastliepen. Het kantoor blijft klein: een handvol partners tegelijk.",
-      "cta": "Meer over Wouter →",
-      "sample_note": "Wilt u eerst het rapportformat zien? Vraag een geanonimiseerd voorbeeldrapport op via LinkedIn of e-mail."
-    },
-    "transformation": {
-      "eyebrow": "Het verschil",
-      "heading": "Van onderbuik naar onderbouwing.",
-      "without_label": "Zonder de Scorecard",
-      "with_label": "Na de Scorecard",
-      "without_1": "IC-beslissingen op gevoel en ervaring.",
-      "without_2": "De maandrapportage is een ritueel, geen stuurmiddel.",
-      "without_3": "Deal-lessen verdwijnen bij elke teamwissel.",
-      "without_4": "Nergens staat op papier of AI het verdienmodel van een deelneming kan overnemen.",
-      "with_1": "Zes dimensies met een score, naast het niveau waar u wilt staan.",
-      "with_2": "De twee punten die het meeste opleveren.",
-      "with_3": "Een rapport dat u intern kunt delen zonder extra uitleg.",
-      "with_4": "U onderbouwt uw volgende IC met cijfers."
-    },
-    "faq": {
-      "eyebrow": "Vragen",
-      "heading": "Eerlijk antwoord op de vragen die u nu hebt.",
-      "subtext": "Geen verkooppraatjes. Directe antwoorden.",
-      "cta": "Start de Scorecard"
-    },
-    "stakes": {
-      "eyebrow": "De kosten van niets doen",
-      "heading": "Elk kwartaal zonder meting kost meer dan de meting zelf.",
-      "body": "De Scorecard kost twaalf minuten. Niets doen kost kwartalen."
-    },
-    "final_cta": {
-      "eyebrow": "Uw volgende stap",
-      "heading": "Onderbouw uw volgende beslissing met cijfers.",
-      "subtext": "Geen account, geen verplichting. Uw rapport is direct beschikbaar.",
-      "cta_primary": "Start de Scorecard",
-      "cta_secondary": "Plan een vrijblijvende kennismaking"
-    },
-    "mid_cta": {
-      "heading": "Twaalf minuten. Zes dimensies. Direct inzicht.",
-      "subtext": "Multiple choice. Geen account. Rapport direct na afronding.",
-      "cta": "Start de Scorecard"
+      "eyebrow": "Wouter Dijkman · acquisition finance & restructuring",
+      "heading": "AI in uw dealpraktijk, ingericht door iemand die de deals zelf deed.",
+      "subtext": "Agentic Mindshift richt AI in bij private-equityfondsen en M&A-kantoren in de Europese mid-market. Drie routes: sparring en strategie, AI-advies, implementatie en adoptie.",
+      "cta_primary": "Plan een gesprek van 20 minuten",
+      "cta_secondary": "Bekijk de drie routes",
+      "trust": "Eerste gesprek vrijblijvend · 20 minuten · geen factuur",
+      "routes_label": "Drie routes"
     },
     "pain": {
-      "eyebrow": "Herkenbaar?",
-      "heading": "Drie problemen die rendement kosten. Zelden hardop benoemd.",
+      "eyebrow": "Het probleem",
+      "heading": "Drie dingen kosten rendement. Zelden hardop benoemd.",
       "subheading": "Niemand wil beslissen op een half beeld. Toch gebeurt het bij elke deal opnieuw.",
       "label_1": "Onzichtbaar risico",
       "title_1": "U beslist op basis van wat u ziet.",
@@ -105,102 +60,87 @@
       "body_3": "Achterblijvende cijfers spelen al kwartalen voordat de jaarrapportage ze bevestigt. Zonder vaste meting ziet u het te laat.",
       "feeling_3": "De jaarrapportage bevestigt wat u drie kwartalen geleden al vermoedde."
     },
-    "steps": {
-      "eyebrow": "Zo werkt het",
-      "heading": "De Quickscan Methode: drie stappen, twaalf minuten.",
-      "title_1": "Beantwoord 15 vragen",
-      "body_1": "Multiple choice over dealproces, maandrapportage, AI-volwassenheid en kennisborging. Geen open velden.",
-      "title_2": "Ontvang uw rapport",
-      "body_2": "Een score op zes dimensies. De twee punten die voorrang verdienen. Direct na afronding.",
-      "title_3": "Bepaal uw volgende stap",
-      "body_3": "Intern delen, een sparringsessie inplannen of direct starten. U bepaalt het tempo."
+    "founder": {
+      "eyebrow": "Wie hierachter staat",
+      "heading": "Zes jaar aan de financieringskant van deals als die van u.",
+      "body": "Wouter Dijkman werkte in acquisition finance en financial restructuring bij Rabobank, ING en Alter Domus. Daar zag hij waarom deals die op papier klopten alsnog vastliepen. Nu richt hij AI in bij fondsen en kantoren die datzelfde risico lopen. Het kantoor blijft klein: een handvol partners tegelijk.",
+      "cta": "Meer over Wouter →"
     },
-    "stats": {
-      "label_1": "EBITDA-multiple",
-      "sub_1": "mogelijk rendementsverlies per deelneming door een verkeerd ingeschatte overnameprijs",
-      "label_2": "werkdagen",
-      "sub_2": "per maandrapportage aan handmatig cijfers verzamelen. Tijd die niet naar deals gaat",
-      "label_3": "minuten",
-      "sub_3": "om zes dimensies van uw portefeuille te meten en te scoren"
+    "services": {
+      "eyebrow": "Wat wij doen",
+      "heading": "Drie routes. U kiest wat bij uw vraag past.",
+      "subheading": "Elke route begint met een vrijblijvend gesprek en eindigt met een concreet resultaat.",
+      "card_cta": "Meer over deze route",
+      "title_1": "AI Sparring & Strategie",
+      "body_1": "Eén vraag over AI in uw deal, uw proces of uw eerstvolgende beslissing. Twintig minuten, één samenvatting, geen vervolg als u dat niet wilt.",
+      "price_1": "Vrijblijvend",
+      "note_1": "20 minuten · geen factuur",
+      "title_2": "AI-advies",
+      "body_2": "Waar AI in uw praktijk rendeert en waar niet. Analyse van uw processen, een onderbouwd plan en de businesscase eronder.",
+      "price_2": "Vanaf €4.500",
+      "note_2": "Per traject of in retainer",
+      "title_3": "Implementatie & adoptie",
+      "body_3": "Van plan naar gebruik. Inrichting van de workflows, masterclasses en training, tot uw team er zelf mee werkt.",
+      "price_3": "Op offerte",
+      "note_3": "Scope en tarief na de intake",
+      "foot": "Alle bedragen zijn exclusief btw. Het eerste gesprek is altijd vrijblijvend."
     },
-    "factum": {
-      "eyebrow": "Het platform erachter",
-      "heading": "Zelf verder met het platform?",
-      "body": "De Scorecard draait op Factum Capital, ons AI-platform voor due diligence en portfolio-analyse. Adviseurs en deal-teams die zelf met de modules willen werken, vinden het daar.",
-      "cta": "Bekijk Factum Capital"
+    "plan": {
+      "eyebrow": "Zo begint het",
+      "heading": "Drie stappen. De eerste is een gesprek.",
+      "step_1_title": "Gesprek van twintig minuten",
+      "step_1_body": "U plant een gesprek. Voorbereiding is niet nodig; de relevante punten komen vanzelf aan bod.",
+      "step_2_title": "Voorstel binnen twee werkdagen",
+      "step_2_body": "Scope, doorlooptijd, tarief en wat het oplevert. Geen open einden.",
+      "step_3_title": "Start binnen zeven dagen",
+      "step_3_body": "Na akkoord starten wij binnen een week, met het eerste concrete resultaat in die week."
     },
-    "dimensions": {
-      "eyebrow": "Zes dimensies",
-      "heading": "De zes plekken waar rendement weglekt.",
-      "subheading": "De Scorecard scoort ze alle zes en legt uw profiel naast het referentieniveau.",
-      "legend_example": "Voorbeeldprofiel",
-      "card_cta": "Meet deze dimensie →",
-      "title_1": "Doorlooptijd",
-      "body_1": "Hoeveel werkdagen zitten er tussen het IM en een oordeel waarop u kunt beslissen?",
-      "title_2": "Portefeuille-inzicht",
-      "body_2": "Stuurt uw maandrapportage bij, of bevestigt ze achteraf wat u al vermoedde?",
-      "title_3": "Oordeelsvorming",
-      "body_3": "Hoeveel van uw analyse is data, en hoeveel is de relatie met het management?",
-      "title_4": "AI-volwassenheid",
-      "body_4": "Hoeveel van uw analysewerk kan AI vandaag al overnemen, zonder kwaliteitsverlies?",
-      "title_5": "Teamcapaciteit",
-      "body_5": "Hoeveel deals blijven liggen door handmatig zoekwerk en rapportage?",
-      "title_6": "Kennisborging",
-      "body_6": "Als uw associate vertrekt, verdwijnt dan ook het geheugen van drie tot vijf dossiers?",
-      "radar_aria_label": "Radargrafiek van een voorbeeldprofiel op zes dimensies, naast het referentieniveau",
-      "legend_reference": "Referentieniveau"
+    "success": {
+      "eyebrow": "Wat er verandert",
+      "heading": "Waar u staat als het werkt.",
+      "title_1": "Het oordeel komt eerder",
+      "body_1": "De analyse ligt er voordat de IC-vergadering hem nodig heeft.",
+      "title_2": "De portefeuille praat terug",
+      "body_2": "Afwijkingen komen boven in de maand dat ze ontstaan, niet in de jaarrapportage.",
+      "title_3": "Kennis blijft in huis",
+      "body_3": "Wat een dossier opleverde ligt vast, ook als de dealmaker vertrekt."
     },
-    "costAnchor": {
-      "title": "De rekensom",
-      "row_1_label": "Eén gemiste correctie op de overnameprijs",
-      "row_1_amount": "€2.500.000",
-      "row_1_note": "0,5× op een €5M EBITDA-target",
-      "row_2_label": "Onderbouwde DD · per deal",
-      "row_2_amount": "€10.000",
-      "row_2_note": "250× kleiner dan die correctie",
-      "row_3_label": "De Scorecard",
-      "row_3_amount": "Gratis",
-      "row_3_note": "12 minuten · geen account",
-      "foot": "Rekenvoorbeeld; bedragen op schaal. Meten kost een fractie van wat één blinde vlek kost."
+    "faq": {
+      "eyebrow": "Vragen",
+      "heading": "Eerlijk antwoord op de vragen die u nu hebt.",
+      "subtext": "Geen verkooppraatjes. Directe antwoorden.",
+      "cta": "Plan een gesprek van 20 minuten"
+    },
+    "final_cta": {
+      "eyebrow": "Uw volgende stap",
+      "heading": "Eén gesprek van twintig minuten.",
+      "subtext": "U bepaalt het onderwerp. Geen agenda, geen verplichting, geen mailreeks.",
+      "cta_primary": "Plan een gesprek van 20 minuten",
+      "cta_secondary": "Bekijk werkwijze & tarieven"
     },
     "faqItems": {
-      "duur_q": "Hoe lang duurt de Scorecard echt?",
-      "duur_a": "Gemiddeld twaalf minuten. Vier secties, vijftien vragen. U kunt tussentijds stoppen: uw antwoorden blijven lokaal bewaard en staan er weer zodra u de pagina opent.",
-      "voor-wie_q": "Voor welk type partij is de Scorecard ontworpen?",
-      "voor-wie_a": "Voor Europese regionale PE-fondsen, M&A-kantoren en ondernemers in de lower-mid market, met deals van €1M tot €25M. Buiten dat segment levert de Scorecard weinig op.",
-      "vertrouwelijk_q": "Hoe vertrouwelijk is dit?",
-      "vertrouwelijk_a": "Volledig. Uw antwoorden worden niet gedeeld, niet verkocht en uitsluitend geanonimiseerd gebruikt. U kunt de scorecard anoniem invullen; uw naam vragen wij pas wanneer u het rapport wilt ontvangen.",
-      "onderbouwing_q": "Wat is de onderbouwing van de zes dimensies?",
-      "onderbouwing_a": "De dimensies komen uit de praktijk: acquisition finance en financial restructuring. Het referentieniveau per dimensie is ons eigen streefniveau, het punt waarop een dimensie voldoende gemeten wordt om op te sturen. Het is geen gemeten marktgemiddelde. Dat beweren wij ook niet.",
-      "wie_q": "Wie staat er achter Agentic Mindshift?",
-      "wie_a": "Wouter Dijkman, founder. Acquisition finance en financial restructuring, Europese mid-market.",
-      "wie_link": "Meer op de Over-pagina →",
-      "sales-pitch_q": "Is dit weer een verkapte sales pitch?",
-      "sales-pitch_a": "Nee. U ziet uw scores direct, zonder formulier. Laat u een e-mailadres achter voor het rapport, dan volgen twee opvolgmails, op dag 3 en dag 7. Eén klik om te stoppen.",
-      "investering_q": "Wat zijn de investeringsniveaus voor de verschillende trajecten?",
-      "investering_a": "Er zijn vier routes. Een gratis AI Sparring Sessie van twintig minuten. AI-advies & Implementatie vanaf €4.500 per traject of in retainer. Een Fractional AI Officer voor €1.099 per dag, minimaal drie maanden. En AI-gedreven Due Diligence & Portfolio vanaf €10.000 per deal, of vanaf €6.500 per maand doorlopend. Alle bedragen zijn exclusief btw. De volledige toelichting staat op /werkwijze.",
-      "voorbeeld_q": "Ik wil de Scorecard niet invullen, maar wel het rapport zien. Kan dat?",
-      "voorbeeld_a": "Stuur een bericht via LinkedIn of e-mail. Wij sturen dan een geanonimiseerd voorbeeldrapport toe."
+      "wat_q": "Wat doet Agentic Mindshift precies?",
+      "wat_a": "Wij brengen AI in de praktijk van private-equityfondsen en M&A-kantoren. Dat gaat van één sparringsessie, via advies over waar AI rendeert, tot de implementatie en de adoptie door uw team.",
+      "investering_q": "Wat kost het?",
+      "investering_a": "De sparringsessie is vrijblijvend. AI-advies start bij €4.500 per traject of loopt in retainer. Implementatie en adoptie gaan op offerte, na de intake. Alle bedragen zijn exclusief btw.",
+      "anders_q": "Wat maakt Agentic Mindshift anders?",
+      "anders_a": "Zes jaar in acquisition finance en financial restructuring. Het advies komt uit de dealpraktijk; de AI versnelt het. En het kantoor blijft klein: een handvol partners tegelijk.",
+      "start_q": "Hoe snel kunnen we starten?",
+      "start_a": "Na het eerste gesprek krijgt u binnen twee werkdagen een voorstel met scope, doorlooptijd en tarief. Na akkoord starten wij binnen zeven dagen."
     }
-  },
-  "common": {
-    "start_scorecard": "Start de Scorecard",
-    "cta_conversation": "Liever een gesprek?",
-    "no_account": "Geen account vereist",
-    "minutes_12": "twaalf minuten"
   },
   "contact": {
     "meta_title": "Contact",
     "meta_description": "Drie manieren om Wouter Dijkman van Agentic Mindshift te bereiken.",
     "eyebrow": "Contact",
     "heading": "Stel eerst een vraag. Beslissen komt later.",
-    "subtext": "Begin met de Scorecard voor direct inzicht, of plan een vrijblijvend gesprek van twintig minuten. U bepaalt de agenda.",
-    "card_01_title": "Scorecard",
-    "card_01_body": "Twaalf minuten. Vier pagina's rapport. Het snelste startpunt om uw portefeuille meetbaar te maken.",
-    "card_01_cta": "Start de Scorecard",
-    "card_02_title": "Sparringsessie",
-    "card_02_body": "Twintig minuten om te bepalen of er een goede aansluiting is. U bepaalt de agenda.",
-    "card_02_cta": "Vrijblijvende kennismaking plannen",
+    "subtext": "Plan een gesprek van twintig minuten, of lees eerst wat een traject kost. U bepaalt de agenda.",
+    "card_01_title": "Sparringsessie",
+    "card_01_body": "Twintig minuten om te bepalen of er een goede aansluiting is. Geen voorbereiding nodig, geen factuur.",
+    "card_01_cta": "Plan een gesprek",
+    "card_02_title": "Werkwijze en investering",
+    "card_02_body": "Drie routes, met de bedragen erbij. Handig als u eerst wilt weten wat iets kost.",
+    "card_02_cta": "Bekijk de routes",
     "card_03_title": "Direct bericht",
     "card_03_body": "Voor specifieke vragen, of als u liever schriftelijk begint. Antwoord binnen twee werkdagen.",
     "card_03_cta": "Stuur een e-mail"
@@ -213,12 +153,12 @@
       "role": "Founder Agentic Mindshift",
       "subtext": "Zes jaar aan de financierings- en herstructureringskant van Europese deals. Die ervaring gebruik ik om PE-partners te laten zien waar hun rendement weglekt, voordat de jaarcijfers het bevestigen."
     },
-    "answer_first": "Agentic Mindshift is opgericht door Wouter Dijkman, met zes jaar acquisition finance en financial restructuring bij Rabobank, ING en Alter Domus. Het kantoor adviseert Europese mid-market fondsen, M&A-kantoren en familiebedrijven over AI-strategie en AI-gedreven due diligence, vanuit de dealpraktijk zelf.",
+    "answer_first": "Agentic Mindshift is opgericht door Wouter Dijkman, met zes jaar acquisition finance en financial restructuring bij Rabobank, ING en Alter Domus. Het kantoor adviseert Europese mid-market PE-fondsen en M&A-kantoren over AI-strategie, AI-advies en implementatie, vanuit de dealpraktijk zelf.",
     "bio": {
       "eyebrow": "Achtergrond",
       "quote": "Ik heb deals gezien die op papier sluitend waren en toch vastliepen. Niemand durfde de ongemakkelijke aanname hardop te betwijfelen. Daar werk ik aan. Met betere vragen, niet met meer data.",
       "para1": "Drie jaar financial restructuring, drie jaar acquisition finance. Beide kanten van de Europese mid-market. Die combinatie laat precies zien waar aannames niet uitkomen, en waar de maandrapportage tegenvallers verbergt in plaats van meldt.",
-      "para2_prefix": "In oktober 2025 is Agentic Mindshift gestart. In november 2025 volgde AI for Business aan Nyenrode. In ontwikkeling is",
+      "para2_prefix": "In oktober 2025 is Agentic Mindshift gestart. In november 2025 volgde AI for Business aan Nyenrode. Sinds 2026 draait",
       "para2_suffix": ": een AI-platform waarmee deal-teams hun DD-proces, maandrapportage en oordeelsvorming vast inrichten.",
       "para3": "Ik houd dit bewust selectief: een handvol partners tegelijk, zodat elk traject de aandacht krijgt die een deal verdient."
     },
@@ -254,139 +194,98 @@
       "item_4_year": "November 2025",
       "item_4_label": "AI for Business",
       "item_4_sub": "Nyenrode Business Universiteit · AI in de financiële praktijk",
-      "item_5_year": "In ontwikkeling",
+      "item_5_year": "2026",
       "item_5_label": "Lancering Factum Capital",
       "item_5_sub": "AI-platform voor M&A en herstructurering"
     },
     "werkwijze_link": {
       "eyebrow": "Werkwijze",
-      "body": "Vier manieren om samen te werken, van één sessie tot een vaste AI-rol in uw MT.",
+      "body": "Drie routes: één sparringsessie, een adviestraject, of implementatie bij uw team.",
       "cta": "Bekijk werkwijze & investering →"
     },
     "contact_cta": {
       "eyebrow": "Direct contact",
       "heading": "Eén gesprek. Twintig minuten. U bepaalt het onderwerp.",
       "subtext": "Geen agenda, geen verplichting. Een gesprek zet geen mailreeks in gang.",
-      "cta1": "Start de Scorecard",
-      "cta2": "Plan een vrijblijvende kennismaking",
+      "cta1": "Plan een gesprek",
+      "cta2": "Bekijk de routes",
       "cta3": "Verbind via LinkedIn"
     }
   },
   "werkwijze": {
     "meta_title": "Werkwijze & Investering",
-    "meta_description": "Vier manieren om met Agentic Mindshift te werken: van een korte sparringsessie tot een Fractional AI Officer en AI-gedreven due diligence per deal of in volume.",
+    "meta_description": "Drie manieren om met Agentic Mindshift te werken: AI Sparring & Strategie, AI-advies, en implementatie en adoptie. Tarieven en doorlooptijd op één pagina.",
     "hero": {
       "eyebrow": "Werkwijze & Investering",
-      "heading": "Van eerste kennismaking tot een vaste AI-rol in uw MT. U kiest wat bij uw vraag past.",
-      "subtext": "Vier routes, vier situaties. Elke route begint met een vrijblijvend gesprek en eindigt met een concreet resultaat."
+      "heading": "Drie routes, drie situaties, één eerste gesprek.",
+      "subtext": "Wat elke route inhoudt, wat hij kost en hoe snel u start. Zonder offertetraject vooraf."
     },
-    "answer_first": "Agentic Mindshift levert AI-advies en AI-gedreven due diligence aan private-equityfondsen, M&A-kantoren en familiebedrijven in de Europese mid-market. U kiest uit vier routes, van een gratis sparringsessie tot een vaste Fractional AI Officer. Elke route begint vrijblijvend en eindigt met een concreet resultaat.",
+    "answer_first": "Agentic Mindshift levert AI-advies aan private-equityfondsen en M&A-kantoren in de Europese mid-market. U kiest uit drie routes: een vrijblijvende sparringsessie, AI-advies vanaf €4.500 per traject, en implementatie en adoptie op offerte. Elke route begint vrijblijvend en eindigt met een concreet resultaat.",
     "steps": {
       "eyebrow": "Van interesse naar samenwerking",
       "heading": "Drie stappen",
       "subtext": "Geen lange selectieprocedure. Van eerste contact tot lopende samenwerking is het meestal twee weken.",
-      "step_1_title": "Scorecard of sparring",
-      "step_1_body": "U vult de Scorecard in (12 min) of plant een sparringsessie van twintig minuten. Voorbereiding is niet nodig; de relevante punten komen vanzelf aan bod.",
-      "step_2_title": "Intake en voorstel",
-      "step_2_body": "Binnen twee werkdagen krijgt u een voorstel: scope, doorlooptijd, tarief en wat het oplevert. Geen open einden.",
-      "step_3_title": "Start binnen een week",
-      "step_3_body": "Na akkoord starten wij binnen zeven dagen. U ontvangt direct het eerste concrete resultaat of wordt ingepland voor de eerste sessie. Geen wachttijd."
+      "step_1_title": "Gesprek van twintig minuten",
+      "step_1_body": "U plant een gesprek. Voorbereiding is niet nodig; de relevante punten komen vanzelf aan bod.",
+      "step_2_title": "Voorstel binnen twee werkdagen",
+      "step_2_body": "Scope, doorlooptijd, tarief en wat het oplevert. Geen open einden.",
+      "step_3_title": "Start binnen zeven dagen",
+      "step_3_body": "Na akkoord starten wij binnen een week. U ontvangt direct het eerste concrete resultaat of wordt ingepland voor de eerste sessie."
     },
     "offerings": {
       "eyebrow": "Investering",
       "heading": "Welke situatie past bij u?",
-      "subtext": "Vier situaties, vier routes. Herkent u uw vraag niet direct? Eén gesprek volstaat om de juiste route te bepalen.",
+      "subtext": "Drie situaties, drie routes. Herkent u uw vraag niet direct? Eén gesprek volstaat om de juiste route te bepalen.",
       "guarantee_title": "Garantie",
-      "guarantee_body": "De Scorecard is gratis. De Sparring Sessie kost twintig minuten en geen factuur. Na akkoord op een traject start u binnen zeven werkdagen, met het eerste concrete resultaat. Alleen de Fractional AI Officer kent een minimumlooptijd van drie maanden; alle overige routes gaan per opdracht.",
-      "most_chosen": "Meest gekozen",
+      "guarantee_body": "De sparringsessie kost twintig minuten en geen factuur. Na akkoord op een traject start u binnen zeven werkdagen, met het eerste concrete resultaat in de eerste week.",
       "investment_label": "Investering"
     },
     "offering_1": {
       "badge": "Instap · vrijblijvend",
-      "title": "AI Sparring Sessie",
+      "title": "AI Sparring & Strategie",
       "situation": "U wilt snel weten wat AI betekent voor uw bedrijf, uw deal of uw eerstvolgende beslissing.",
       "price_note": "20 minuten · vrijblijvend · geen factuur",
       "cta": "Boek een sessie →"
     },
     "offering_2": {
       "badge": "Projectmatig of retainer",
-      "title": "AI-advies & Implementatie",
-      "situation": "U wilt AI concreet inzetten in uw processen en uw team: implementatie, masterclasses en training.",
+      "title": "AI-advies",
+      "situation": "U wilt weten waar AI in uw praktijk rendeert en waar niet. Analyse van uw processen, een onderbouwd plan en de businesscase eronder.",
       "price_note": "Per traject of doorlopend in retainer",
       "cta": "Bespreek uw vraagstuk →",
       "price": "Vanaf €4.500"
     },
     "offering_3": {
-      "badge": "Embedded · doorlopend",
-      "title": "Fractional AI Officer",
-      "situation": "U wilt AI op MT-niveau zonder fulltime aanstelling. Strategie, leverancierskeuze en teamtraining in één hand.",
-      "price_note": "Minimaal 3 maanden · zitting in het MT en operationeel eigenaarschap",
-      "cta": "Bespreek de fit →",
-      "price": "€1.099 / dag · excl. btw"
-    },
-    "offering_4": {
-      "badge": "Per deal of doorlopend",
-      "title": "AI-gedreven Due Diligence & Portfolio",
-      "situation": "U doet M&A-deals of beheert een portefeuille. Elke DD-dimensie — financial, tax, legal, deal economics en portfolio-health — onderbouwd met AI-analyse, op één gedeeld dossier.",
-      "price_note": "Of vanaf €6.500 per maand voor doorlopend zicht op de portefeuille",
+      "badge": "Projectmatig of retainer",
+      "title": "Implementatie & adoptie",
+      "situation": "Het plan ligt er. Nu moet uw team er dagelijks mee werken: inrichting van de workflows, masterclasses en training tot de adoptie staat.",
+      "price_note": "Scope en tarief worden na de intake vastgelegd",
       "cta": "Plan een kennismaking →",
-      "powered_by_tagline": "AI-gedreven analyse over alle Factum-modules",
-      "price": "Vanaf €10.000 per deal"
+      "price": "Op offerte"
     },
     "pricing_note": "* Alle bedragen zijn exclusief btw. De eerste kennismaking is altijd vrijblijvend.",
     "risk": {
       "title": "Geen risico",
-      "body": "De Scorecard is gratis en de Sparring Sessie kost twintig minuten zonder factuur. Na akkoord start u binnen zeven werkdagen met het eerste concrete resultaat. Op de Fractional AI Officer na, die minimaal drie maanden loopt, gaat elke route per opdracht."
+      "body": "De sparringsessie kost twintig minuten zonder factuur. Na akkoord start u binnen zeven werkdagen met het eerste concrete resultaat."
     },
     "faq": {
       "eyebrow": "Eerlijk over de investering",
       "heading": "Wat partners meestal als eerste willen weten",
       "q1": "Wat als het niets voor ons blijkt?",
-      "a1": "Begin met een AI Sparring Sessie: één vraag, één samenvatting, geen vervolg.",
+      "a1": "Begin met een sparringsessie: één vraag, één samenvatting, geen vervolg.",
       "q2": "Wat maakt Agentic Mindshift anders?",
       "a2": "Zes jaar in acquisition finance en financial restructuring. Het advies komt uit de dealpraktijk; de AI versnelt het.",
-      "q3": "Hoe weet ik of de investering rendeert?",
-      "a3": "Rekenvoorbeeld: één gemiste correctie op de overnameprijs weegt al snel op tegen jaren advieskosten. En één tijdig gesignaleerde afwijking in de maandrapportage dekt vaak de jaarkosten van doorlopend portefeuillezicht. De bedragen staan op de homepage.",
-      "q4": "Zitten we vast aan een lange looptijd?",
-      "a4": "Sparring, advies en DD gaan per opdracht. De Fractional AI Officer loopt minimaal drie maanden, omdat dat ritme tijd nodig heeft.",
-      "q5": "Meerdere deals tegelijk?",
-      "a5": "Ja. Bij meerdere deals gelden staffeltarieven; die stemmen wij tijdens de kennismaking af op uw dealflow. Het schaalvoordeel zit in inwerktijd en opstartwerk.",
-      "investering_a": "Er zijn vier routes. Een gratis AI Sparring Sessie van twintig minuten. AI-advies & Implementatie vanaf €4.500 per traject of in retainer. Een Fractional AI Officer voor €1.099 per dag, minimaal drie maanden. En AI-gedreven Due Diligence & Portfolio vanaf €10.000 per deal, of vanaf €6.500 per maand doorlopend. Alle bedragen zijn exclusief btw. De volledige toelichting staat op /werkwijze."
+      "q3": "Zitten we vast aan een lange looptijd?",
+      "a3": "Sparring, advies en implementatie gaan per opdracht. Er is geen minimale looptijd en geen opzegtermijn.",
+      "q4": "En AI-gedreven due diligence op een deal?",
+      "a4": "Dat werk loopt via Factum Capital, ons AI-platform, op factumcapital.eu. Wij verwijzen u door en blijven aangehaakt."
     },
     "cta": {
       "eyebrow": "Begin hier",
-      "heading": "Niet zeker welke route past? De Scorecard wijst de weg.",
-      "subtext": "Twaalf minuten. Uw profiel laat zien welke route het meeste oplevert. De scores ziet u direct, zonder formulier.",
-      "primary": "Start de Scorecard",
-      "secondary": "Plan een vrijblijvende kennismaking"
+      "heading": "Niet zeker welke route past?",
+      "subtext": "Eén gesprek van twintig minuten volstaat om dat te bepalen.",
+      "primary": "Plan een gesprek van 20 minuten"
     }
-  },
-  "factum_capital": {
-    "meta_title": "Factum Capital — AI-platform voor AI-gedreven Due Diligence & Portfolio",
-    "meta_description": "Factum Capital is het AI-platform achter de AI-gedreven Due Diligence & Portfolio van Agentic Mindshift. Vijf momenten: kopen, financieren, houden, verkopen en herstructureren.",
-    "hero": {
-      "eyebrow": "Het platform achter onze AI-gedreven Due Diligence",
-      "heading": "Eén platform voor elke fase van uw deal- en portfoliopraktijk.",
-      "subtext": "Vijf momenten — kopen, financieren, houden, verkopen en herstructureren — op één gedeeld dossier. De SaaS-versie voor uw eigen team is in ontwikkeling.",
-      "countdown_label": "Lancering over"
-    },
-    "answer_first": "Factum Capital is het AI-platform voor due diligence en portfolio-analyse van Agentic Mindshift: 23 modules die financiële, commerciële, juridische en AI-due-diligence versnellen voor private-equityfondsen en M&A-kantoren. Van eerste screening tot na closing staan de onderbouwde bevindingen er in dagen.",
-    "description": {
-      "eyebrow": "Het systeem",
-      "quote": "Eén platform, vijf momenten. Factum doet de analyse. Agentic Mindshift levert de dienst en schakelt gecertificeerde adviseurs in waar een handtekening nodig is.",
-      "para1": "23 modules, van Financial DD en AI Due Diligence tot vendor due diligence en exit readiness. Op elk moment dezelfde structuur. De SaaS-versie is in ontwikkeling.",
-      "para2": "Via Agentic Mindshift krijgt u de volledige analyse plus gecertificeerde adviseurs: RA's, RB's, advocaten, financieel adviseurs en restructuring consultants. Eén gedeeld dossier scheelt dubbel werk en doorlooptijd."
-    },
-    "cta": {
-      "eyebrow": "Begin hier",
-      "heading": "Uw Scorecard-profiel laat zien welk moment als eerste telt.",
-      "subtext": "Twaalf minuten. Zes dimensies. Een rapport dat laat zien waar u staat en wat voorgaat.",
-      "primary": "Start de Scorecard",
-      "secondary_1": "Werkwijze & investering",
-      "secondary_2": "Plan een kennismaking"
-    },
-    "site_cta": "Bekijk het volledige platform",
-    "site_note": "Factum Capital heeft inmiddels een eigen site. Alle 23 modules, de vijf momenten en het volledige aanbod staan op factumcapital.eu."
   },
   "privacy": {
     "meta_title": "Privacy",
@@ -398,14 +297,13 @@
     "s1_heading": "1. Verantwoordelijke",
     "s1_body": "Verantwoordelijke voor de verwerking is Agentic Mindshift, gevestigd in Nederland. Contactpersoon: Wouter Dijkman, te bereiken via wouter@agenticmindshift.nl.",
     "s2_heading": "2. Welke gegevens verzamelen wij",
-    "s2_body": "Wij verzamelen alleen de gegevens die u zelf actief invult: uw naam, zakelijk e-mailadres, bedrijfsnaam, functietitel, optioneel telefoonnummer, en uw antwoorden op de scorecard. Daarnaast verwerken we technische gegevens als IP-adres en user-agent in standaard hostinglogs.",
+    "s2_body": "Deze site heeft geen formulieren. Wij verzamelen alleen gegevens die u zelf naar ons stuurt: de inhoud van uw e-mail, en de naam, het e-mailadres en de afspraakgegevens die u opgeeft wanneer u via onze agendalink een gesprek inplant. Daarnaast verwerken we technische gegevens als IP-adres en user-agent in standaard hostinglogs.",
     "s3_heading": "3. Doelen en grondslag",
-    "s3_li1": "Het genereren en versturen van uw persoonlijke scorecard-rapport — uitvoering van overeenkomst.",
-    "s3_li2": "Twee opvolg-e-mails (na drie en zeven dagen) met inhoudelijke reflectie en een uitnodiging voor een sparring-sessie — gerechtvaardigd belang.",
-    "s3_li3": "Het beheren van een wachtlijst voor Factum Capital — uitvoering van overeenkomst dan wel uw uitdrukkelijke toestemming.",
-    "s3_li4": "Het analyseren van geaggregeerde, niet-herleidbare scorecard-uitkomsten ter verbetering van de referentieniveaus — gerechtvaardigd belang.",
+    "s3_li1": "Het inplannen en voeren van een kennismakingsgesprek — uitvoering van overeenkomst.",
+    "s3_li2": "Het beantwoorden van uw e-mail en de opvolging daarvan — gerechtvaardigd belang.",
+    "s3_li3": "Het beveiligen en in de lucht houden van de website — gerechtvaardigd belang.",
     "s4_heading": "4. Bewaartermijnen",
-    "s4_body": "Uw scorecard-antwoorden en rapportgegevens bewaren wij maximaal 36 maanden, tenzij u verzoekt deze eerder te verwijderen. Wachtlijstgegevens voor Factum Capital worden bewaard tot zes maanden na lancering, daarna geanonimiseerd.",
+    "s4_body": "Correspondentie en afspraakgegevens bewaren wij maximaal 24 maanden na het laatste contact, tenzij u verzoekt deze eerder te verwijderen. Hostinglogs worden na dertig dagen verwijderd. Gegevens die bij een lopende opdracht horen, bewaren wij zolang de wettelijke bewaartermijnen dat vereisen.",
     "s5_heading": "5. Verwerkers",
     "s5_body": "Wij maken gebruik van een beperkt aantal verwerkers: Supabase (Europese regio) voor datapersistentie, Resend voor het verzenden van e-mails, Plausible Analytics (EU) voor bezoekstatistieken en een Europese hostingpartij voor de website. Met elke verwerker is een verwerkersovereenkomst gesloten.",
     "s6_heading": "6. Doorgifte buiten de EU",
@@ -413,7 +311,7 @@
     "s7_heading": "7. Uw rechten",
     "s7_body": "U heeft het recht op inzage, rectificatie, verwijdering, beperking van verwerking, dataportabiliteit en bezwaar. Een verzoek kunt u richten aan wouter@agenticmindshift.nl. Daarnaast kunt u een klacht indienen bij de Autoriteit Persoonsgegevens.",
     "s8_heading": "8. Cookies",
-    "s8_body": "De website maakt uitsluitend gebruik van functionele cookies en lokale opslag (localStorage) voor het tussentijds opslaan van uw scorecard-antwoorden. Er worden geen trackingcookies of advertentiecookies gebruikt. Bezoeken worden geteld met Plausible Analytics: geen cookie, geen fingerprint, geen profiel over websites heen. Geregistreerd worden pagina, verwijzende site, land en apparaattype. Voor die telling wordt niets op uw apparaat gezet, en de lokale opslag hierboven is functioneel. Daarom staat er geen cookiebanner op deze site.",
+    "s8_body": "De website plaatst geen cookies. Bezoeken worden geteld met Plausible Analytics: geen cookie, geen fingerprint, geen profiel over websites heen. Geregistreerd worden pagina, verwijzende site, land en apparaattype. Voor die telling wordt niets op uw apparaat gezet. Daarom staat er geen cookiebanner op deze site. Plant u een gesprek via onze agendalink, dan gelden op die pagina de voorwaarden van die aanbieder.",
     "s9_heading": "9. Wijzigingen",
     "s9_body": "Wij behouden ons het recht voor dit statement aan te passen. De meest actuele versie staat altijd op deze pagina."
   },
@@ -424,15 +322,15 @@
     "heading": "Algemene voorwaarden",
     "last_modified": "Laatste wijziging: 13 mei 2026",
     "s1_heading": "1. Definities",
-    "s1_body": "In deze voorwaarden wordt verstaan onder \"Agentic Mindshift\": de eenmanszaak van Wouter Dijkman, gevestigd in Nederland. Onder \"opdrachtgever\" wordt verstaan de natuurlijke of rechtspersoon die een opdracht verstrekt of gebruikmaakt van de website of scorecard.",
+    "s1_body": "In deze voorwaarden wordt verstaan onder \"Agentic Mindshift\": de eenmanszaak van Wouter Dijkman, gevestigd in Nederland. Onder \"opdrachtgever\" wordt verstaan de natuurlijke of rechtspersoon die een opdracht verstrekt of gebruikmaakt van de website.",
     "s2_heading": "2. Toepasselijkheid",
-    "s2_body": "Deze voorwaarden zijn van toepassing op elk gebruik van de website agenticmindshift.nl, op de Scorecard, en op alle opdrachten waarbij Agentic Mindshift als opdrachtnemer optreedt. Afwijkingen gelden alleen indien schriftelijk overeengekomen.",
+    "s2_body": "Deze voorwaarden zijn van toepassing op elk gebruik van de website agenticmindshift.nl en op alle opdrachten waarbij Agentic Mindshift als opdrachtnemer optreedt. Afwijkingen gelden alleen indien schriftelijk overeengekomen.",
     "s3_heading": "3. Aard van de opdracht",
-    "s3_body": "Opdrachten worden uitgevoerd als inspanningsverplichting, tenzij uitdrukkelijk anders overeengekomen. De scorecard biedt een diagnostisch hulpmiddel en geen investerings- of financieel advies. De inhoud van rapporten en sparring-sessies vormt geen advies in de zin van de Wet op het financieel toezicht.",
+    "s3_body": "Opdrachten worden uitgevoerd als inspanningsverplichting, tenzij uitdrukkelijk anders overeengekomen. De inhoud van adviezen, rapporten en sparringsessies vormt geen investerings- of financieel advies in de zin van de Wet op het financieel toezicht.",
     "s4_heading": "4. Tarieven en betaling",
     "s4_body": "Tarieven zijn vermeld op de pagina \"Werkwijze\" en gelden exclusief btw, tenzij anders aangegeven. Facturatie geschiedt maandelijks vooraf voor retainer-trajecten en bij oplevering voor projecten. Betalingstermijn: dertig dagen netto.",
     "s5_heading": "5. Annulering en opzegging",
-    "s5_body": "Retainer-trajecten kennen een minimumlooptijd van drie maanden en zijn daarna maandelijks opzegbaar met een opzegtermijn van eveneens een maand. AI-gedreven Due Diligence-trajecten kunnen tot drie werkdagen na opdrachtbevestiging kosteloos worden geannuleerd. Workshops zijn niet annuleerbaar binnen tien werkdagen voor de afgesproken datum.",
+    "s5_body": "Retainer-trajecten kennen een minimumlooptijd van drie maanden en zijn daarna maandelijks opzegbaar met een opzegtermijn van eveneens een maand. Losse sparringsessies kunnen tot drie werkdagen voor de afgesproken datum kosteloos worden verzet of geannuleerd. Workshops en trainingen zijn niet annuleerbaar binnen tien werkdagen voor de afgesproken datum.",
     "s6_heading": "6. Aansprakelijkheid",
     "s6_body": "De aansprakelijkheid van Agentic Mindshift is beperkt tot het factuurbedrag van de betreffende opdracht over een periode van maximaal drie maanden, met een maximum van 25.000 euro. Aansprakelijkheid voor indirecte schade, gevolgschade, gederfde winst of gemiste IRR is uitgesloten.",
     "s7_heading": "7. Vertrouwelijkheid",
@@ -442,330 +340,10 @@
     "s9_heading": "9. Toepasselijk recht",
     "s9_body": "Op deze voorwaarden en op alle opdrachten is Nederlands recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechter in het arrondissement van vestiging."
   },
-  "scorecard": {
-    "meta_title": "Scorecard — zes dimensies, twaalf minuten",
-    "meta_description": "Vijftien vragen over uw dealproces, maandrapportage, AI-volwassenheid en kennisborging. Twaalf minuten, en u heeft een rapport dat uw blinde vlekken meetbaar maakt.",
-    "landing": {
-      "eyebrow": "Scorecard · Zes dimensies · Twaalf minuten",
-      "heading": "Waar lekt uw rendement weg?",
-      "subtext": "Vijftien vragen, twaalf minuten. Daarna weet u per dimensie hoever u van het referentieniveau af zit.",
-      "start_cta": "Start de Scorecard",
-      "no_account": "Geen account nodig. Uw antwoorden worden tussentijds bewaard.",
-      "trust": "Gemaakt voor PE-partners, M&A-directors en family offices in de Europese mid-market.",
-      "confidentiality_title": "Vertrouwelijkheid",
-      "confidentiality_body": "Uw antwoorden gebruiken wij uitsluitend om uw rapport op te stellen. U kunt de scorecard anoniem invullen.",
-      "blind_spots_note": "De meeste partners ontdekken hun blinde vlekken pas als het te laat is. Deze meting kost twaalf minuten.",
-      "preview_eyebrow": "Wat u ontvangt",
-      "preview_heading": "Dit is uw rapport, direct na de laatste vraag.",
-      "preview_body": "Zes dimensies, elk met een score en het referentieniveau ernaast. De twee punten met de hoogste impact worden uitgelicht, zodat u weet waar u begint.",
-      "final_eyebrow": "Uw volgende stap",
-      "final_heading": "Over twaalf minuten weet u waar uw portefeuille kwetsbaar zit.",
-      "final_body": "Geen account. Geen verplichting. Rapport direct na afronding.",
-      "final_cta_2": "Liever een gesprek?"
-    },
-    "navigation": {
-      "back_to_start": "← Terug naar start",
-      "next_section_2": "Verder naar sectie 2",
-      "next_section_3": "Verder naar sectie 3",
-      "next_section_4": "Verder naar sectie 4",
-      "to_results": "Naar mijn resultaten",
-      "answer_all": "Beantwoord alle vier de vragen om verder te kunnen.",
-      "prev_section": "Vorige sectie",
-      "answer_all_s1": "Beantwoord alle vier de vragen om verder te kunnen.",
-      "answer_all_s2": "Beantwoord alle drie de vragen om verder te kunnen.",
-      "answer_all_s3": "Beantwoord alle vier de vragen om verder te kunnen.",
-      "answer_all_s4": "Beantwoord alle vier de vragen om uw resultaat te zien.",
-      "question_counter": "Vraag {index} / 15",
-      "keyboard_tip": "Tip: u kunt ook de toetsen A tot en met E gebruiken.",
-      "progress_label": "Vraag {current} van {total}"
-    },
-    "resultaat": {
-      "eyebrow": "Scorecard voltooid",
-      "heading": "Uw score. Direct, zonder formulier.",
-      "subtext": "Hieronder staan uw zes dimensiescores en de twee punten die voorrang verdienen. Geen account, geen e-mailadres.",
-      "incomplete_eyebrow": "Scorecard onvolledig",
-      "incomplete_heading": "Nog {remaining} {questions} te gaan",
-      "incomplete_body": "U heeft {answered} van de {total} vragen beantwoord. Rond de scorecard eerst af; daarna stellen wij uw rapport op.",
-      "back_to_scorecard": "Terug naar de scorecard",
-      "report_contents_eyebrow": "Wat er in het rapport staat",
-      "report_item_1": "Een analyse per dimensie, op uw antwoorden gebaseerd",
-      "report_item_2": "Alle zes dimensies, met het referentieniveau ernaast",
-      "report_item_3": "Uw twee zwakste dimensies, met uitleg",
-      "report_item_4": "Een aanbevolen vervolgstap",
-      "report_item_5": "Een persoonlijke link en een PDF in uw inbox",
-      "form_heading": "Wilt u het geschreven rapport erbij?",
-      "optional_section_label": "Extra context — maakt het rapport scherper",
-      "field_name": "Naam",
-      "field_email": "Zakelijk e-mailadres",
-      "field_company": "Bedrijf",
-      "field_jobtitle": "Functietitel (optioneel)",
-      "field_phone": "Telefoon (optioneel)",
-      "field_website": "Bedrijfswebsite (optioneel)",
-      "field_website_placeholder": "www.uwbedrijf.nl",
-      "field_company_context": "Korte toelichting op uw bedrijf of fonds (optioneel)",
-      "field_company_context_placeholder": "Bijvoorbeeld: mid-market PE-fonds, 12 portfoliobedrijven, B2B services in de Benelux. Of: familiebedrijf in machinebouw, 80 medewerkers, exit binnen 3 jaar.",
-      "field_company_context_hint": "Hoe specifieker, hoe scherper het rapport. Vult u een website in, dan leest onze AI die pagina's mee.",
-      "submit_button": "Stuur het rapport",
-      "submit_loading": "Rapport genereren...",
-      "privacy_notice": "Wij sturen het rapport, plus twee opvolgmails op dag 3 en dag 7. Eén klik om af te melden. Verder niets.",
-      "privacy_link": "privacystatement",
-      "error_generic": "Er is iets misgegaan. Probeer het later opnieuw.",
-      "error_create": "We konden uw rapport niet aanmaken. Controleer de velden en probeer het opnieuw.",
-      "score_caption": "Uw totaalscore telt vijftien antwoorden op, met een maximum van 75 punten.",
-      "question_singular": "vraag",
-      "question_plural": "vragen",
-      "dimensions_heading": "Uw zes dimensies",
-      "weakest_eyebrow": "Twee punten die voorrang verdienen",
-      "weakest_body": "{first} en {second} scoren het laagst. Daar lekt rendement het snelst weg.",
-      "optional_eyebrow": "Optioneel",
-      "report_lead": "Wij stellen een rapport op met een analyse per dimensie en een aanbevolen vervolgstap. In uw browser en als PDF.",
-      "next_eyebrow": "Liever direct sparren?",
-      "next_body": "Twintig minuten over uw eigen situatie. Zonder gegevens achter te laten.",
-      "next_cta": "Plan een vrijblijvende kennismaking"
-    },
-    "section_cards": {
-      "s1_title": "Uw analytische aanpak vandaag",
-      "s1_q": "4 vragen",
-      "s2_title": "Uw deal- en analysecyclus",
-      "s2_q": "3 vragen",
-      "s3_title": "Portefeuille, financiering en monitoring",
-      "s3_q": "4 vragen",
-      "s4_title": "Uw team en kennis",
-      "s4_q": "4 vragen"
-    },
-    "sections": {
-      "s1_label": "Sectie 1 van 4",
-      "s1_tagline": "Start. Twaalf minuten.",
-      "s1_title": "Uw analytische aanpak vandaag",
-      "s1_desc": "Hoe systematisch werkt u bij deals, financiering en portfolio review? Deze sectie bepaalt waar u nu staat.",
-      "s2_label": "Sectie 2 van 4",
-      "s2_tagline": "Goed bezig, een kwart klaar.",
-      "s2_title": "Uw deal-cyclus",
-      "s2_desc": "Doorlooptijd tot het IC, het risico dat AI de kernactiviteit overneemt, en hoe u tot een oordeel komt. Drie plekken waar rendement weglekt.",
-      "s3_label": "Sectie 3 van 4",
-      "s3_tagline": "Halverwege. Het interessantste deel.",
-      "s3_title": "Portefeuille, financiering en monitoring",
-      "s3_desc": "Portefeuillerapportage, financieringsmemo's, vroegsignalering. Kunt u op tijd bijsturen? Deze sectie meet de structuur achter uw informatie.",
-      "s4_label": "Sectie 4 van 4",
-      "s4_tagline": "Laatste sectie. Bijna uw rapport.",
-      "s4_title": "Uw team en kennis",
-      "s4_desc": "Als een associate vertrekt, verdwijnt het geheugen van drie tot vijf dossiers. Deze sectie meet of uw organisatie daartegen bestand is."
-    },
-    "rapport": {
-      "eyebrow": "Persoonlijk rapport",
-      "no_answers_heading": "Geen rapport gevonden",
-      "no_answers_body": "Wij vinden geen scorecard-antwoorden in deze browser. Vul de scorecard opnieuw in, dan stellen wij uw rapport op.",
-      "heading": "Uw Deal & Portfolio Intelligence Rapport",
-      "subtext": "U heeft nu inzicht dat de meeste partijen pas krijgen als het te laat is: bij de jaarrapportage, bij een afwijzing van de bank, of bij de deal die net niet doorging. Hieronder ziet u waar uw fundament sterk is, waar het weglekt, en welk Factum Capital-moment nu telt.",
-      "hint": "Totaalscore · dimensies · referentieniveau · aanbevolen vervolgstap",
-      "total_heading": "Totaalscore",
-      "total_body_1": "Uw totaalscore telt de vijftien antwoorden op, met een maximum van 75 punten. Het is een globale indicator. De werkelijke informatie zit in de zes dimensies.",
-      "total_body_2": "Uw twee zwakste dimensies staan hieronder gemarkeerd. Daar lekt rendement het snelst weg, meestal doordat er niet structureel gemeten wordt.",
-      "dimensions_heading": "Per dimensie",
-      "interpretation_heading": "Interpretatie",
-      "interventions_heading": "Drie concrete interventies",
-      "offer_eyebrow": "Aanbevolen vervolgstap",
-      "offer_match_body": "Dit traject past het beste bij uw profiel. Wilt u het eerst toetsen? Begin vrijblijvend met een Sparring Sessie.",
-      "offer_investment": "Investering:",
-      "offer_excl_vat": "Exclusief btw. De eerste sessie is altijd vrijblijvend.",
-      "offer_cta_1": "Plan een vrijblijvende kennismaking",
-      "offer_cta_2": "Bekijk alle trajecten & investering",
-      "pdf_note": "U krijgt dit rapport ook als PDF in uw inbox.",
-      "link_trajecten": "Bekijk alle trajecten →",
-      "link_kennismaking": "Plan een vrijblijvende kennismaking →",
-      "link_contact": "Bespreek uw situatie →",
-      "print_btn": "Printen of opslaan als PDF",
-      "download_pdf": "PDF downloaden",
-      "value_eyebrow": "Wat er op het spel staat",
-      "value_basis_label": "Grondslag",
-      "roadmap_eyebrow": "Uw actieplan",
-      "roadmap_outcome_label": "Resultaat",
-      "deep": {
-        "loading_eyebrow": "AI-analyse bezig",
-        "loading_body": "Wij analyseren uw antwoorden en uw bedrijfscontext. Dit duurt ongeveer 20 tot 30 seconden.",
-        "nolead_eyebrow": "Diepteanalyse niet beschikbaar",
-        "nolead_body": "De AI-analyse komt beschikbaar zodra uw gegevens zijn opgeslagen. De scores hierboven zijn wel correct berekend.",
-        "error_eyebrow": "Analyse tijdelijk niet beschikbaar",
-        "error_body": "De diepteanalyse kon niet worden gegenereerd. Probeer het opnieuw of neem contact op.",
-        "retry": "Opnieuw proberen",
-        "report_eyebrow": "AI-adviesrapport",
-        "context_eyebrow": "Bedrijfscontext",
-        "sector": "Sector",
-        "profile": "Profiel",
-        "found_online": "Online gevonden:",
-        "services_eyebrow": "Diensten × AI-kansen",
-        "services_exposure_high": "Hoge impact",
-        "services_exposure_medium": "Gemiddelde impact",
-        "services_exposure_low": "Lage impact",
-        "services_ai_label": "AI-kans",
-        "team_eyebrow": "Teamopbouw",
-        "team_implication_label": "Wat dit betekent",
-        "dimensions_eyebrow": "Dimensie-analyse",
-        "quickwin_label": "Quick win",
-        "insights_eyebrow": "Kernobservaties",
-        "trajectory_eyebrow": "Aanbevolen traject",
-        "expected_label": "Verwacht resultaat",
-        "firststep_label": "Eerste stap",
-        "generated": "Rapport gegenereerd via {model} op {date}",
-        "prio_critical": "Kritiek",
-        "prio_attention": "Aandacht",
-        "prio_adequate": "Voldoende",
-        "prio_strong": "Sterk",
-        "urgency_high": "Directe actie vereist",
-        "urgency_medium": "Ruimte voor verbetering",
-        "urgency_low": "Goede basis"
-      },
-      "high_heading": "{name}, uw aanpak valt op. Laten we het hebben over wat u anders doet.",
-      "high_body_1": "U hoort bij de kleine groep partners die al structureel meet wat de meesten pas achteraf zien. Dat is geen kleinigheid.",
-      "high_score_body": "Uw score is {score} van 75. Op vrijwel elke dimensie zit u op of boven het referentieniveau. Dat is het profiel van iemand die al op data stuurt.",
-      "high_body_3": "Een lijst met verbeterpunten heeft bij deze score weinig toegevoegde waarde. U doet wat u zou moeten doen.",
-      "high_body_4": "Wat ik u wel graag zou aanbieden: een vertrouwelijk gesprek onder vakgenoten over uw aanpak. Geen agenda, geen vervolg.",
-      "high_next_eyebrow": "Volgende stap",
-      "high_next_body": "Stuur een bericht via LinkedIn wanneer u daarover wilt sparren. Op uw initiatief.",
-      "high_cta_1": "Verbind op LinkedIn",
-      "high_cta_2": "Bekijk de trajecten",
-      "attention_point": "(aandachtspunt)",
-      "band_ad_hoc": "Ad hoc — nog nauwelijks gemeten",
-      "band_building": "In opbouw — eerste structuur aanwezig",
-      "band_structured": "Gestructureerd — het proces staat, de meting nog niet",
-      "band_instrumented": "Op orde — u stuurt op data",
-      "reference_heading": "Referentieniveau",
-      "reference_stat": "{n} van de zes dimensies liggen op of boven het referentieniveau.",
-      "reference_tooltip_label": "Verschil met het referentieniveau",
-      "reference_footer": "Het referentieniveau is ons eigen streefniveau per dimensie: het punt waarop een dimensie voldoende gemeten wordt om op te sturen. Het is geen gemeten marktgemiddelde."
-    },
-    "mockup": {
-      "window_label": "Scorecard-rapport",
-      "title": "Voorbeeldprofiel vs. referentieniveau",
-      "subtitle": "Illustratief voorbeeld · geen echte data",
-      "callout_label": "dimensies onder\nreferentieniveau",
-      "below_reference": "Onder",
-      "above_reference": "Op/boven",
-      "reference_level": "Referentieniveau"
-    },
-    "variants": {
-      "A": {
-        "offerName": "AI-gedreven Due Diligence & Portfolio",
-        "interpretation": "Uw score op Portefeuille-inzicht is {score} van 20 punten. Op deze dimensie verliezen de meeste partijen in de Europese lower-mid market rendement, vaak zonder het te merken. Uw MBR-cyclus draait, maar u ziet problemen te laat: de variantie-analyse gaat niet diep genoeg om bij te sturen voordat het kwartaal weg is. Onze portfolio-intelligence dienst, die op Factum Capital draait, is precies hiervoor gebouwd.",
-        "price": "Vanaf €6.500 / maand · min. 3 maanden · excl. btw",
-        "interventions": {
-          "0": {
-            "title": "Herontwerp uw MBR-rapportagestructuur",
-            "body": "Bepaal per portfoliobedrijf de drie tot vijf indicatoren die vroeg alarm slaan, los van de gewone P&L-variantie."
-          },
-          "1": {
-            "title": "Analyseer variantie op de operationele bron, niet op rapportageniveau",
-            "body": "Tot welk operationeel niveau is de oorzaak herleidbaar? Twee maanden werk, blijvende impact."
-          },
-          "2": {
-            "title": "Vergelijk maandelijks met vergelijkbare bedrijven",
-            "body": "Tien minuten per portfoliobedrijf per maand, desnoods handmatig. Het ritme telt zwaarder dan de techniek."
-          }
-        }
-      },
-      "B": {
-        "offerName": "AI-gedreven Due Diligence & Portfolio",
-        "interpretation": "Uw score op AI-volwassenheid is {score} van 25 punten. U rekent het risico dat AI werk overneemt nog niet standaard mee in uw deal-analyse, en uw onderbouwing verschilt per dossier. De kans dat een van uw drie recentste acquisities binnen 24 maanden marge verliest, is groter dan u nu denkt. Onze AI Due Diligence, die op Factum Capital draait, levert die onderbouwing voor uw volgende deal, inclusief gecertificeerde adviseurs voor de formele sign-off.",
-        "price": "Vanaf €10.000 per deal · 2–3 weken · excl. btw",
-        "interventions": {
-          "0": {
-            "title": "AI-substitutie-framework per functiegroep",
-            "body": "Schat per type rol hoeveel procent van het werk binnen 24 maanden door AI te doen is."
-          },
-          "1": {
-            "title": "Sensitivity-analyse op marge-erosie",
-            "body": "Drie scenario's: 5%, 15% en 30% erosie. Reken door naar de entry-multiple."
-          },
-          "2": {
-            "title": "Vraag in de DD ook naar de analytische structuur",
-            "body": "Welke data levert het target zelf aan? Hoeveel van de rapportage is geautomatiseerd? Dat bepaalt mede de kwaliteit van het Factum-dossier."
-          }
-        }
-      },
-      "C": {
-        "offerName": "Fractional AI Officer",
-        "interpretation": "Uw score op Kennisborging is {score} van 10 punten. Kennis lekt op twee manieren weg: via externe rapporten die nergens landen, en via mensen die vertrekken. Zit een deelneming in financiële stress, dan is dat lek extra duur. Als Fractional AI Officer signaleer ik op tijd wanneer een doorlichting nodig is.",
-        "price": "€1.099 / dag · min. 3 maanden · excl. btw",
-        "interventions": {
-          "0": {
-            "title": "Eén centrale kennisbank met dossier-output",
-            "body": "Doorzoekbaar, zodat het bij de volgende situatie meteen bruikbaar is."
-          },
-          "1": {
-            "title": "Sector-specifieke playbooks per type situatie",
-            "body": "Voor uw vijf meest voorkomende scenario's: een levend document met aannames, modellen en leerpunten."
-          },
-          "2": {
-            "title": "Vroege stresstesten per deelneming",
-            "body": "Twee vroege indicatoren per bedrijf die aangeven of een diepere doorlichting nodig is, voordat het te laat is."
-          }
-        }
-      },
-      "D": {
-        "offerName": "AI-advies & Implementatie",
-        "interpretation": "Uw scores op Teamcapaciteit en Doorlooptijd laten een patroon zien: uw team is gekwalificeerd, maar loopt vast in handmatig werk. Partijen die dit gestructureerd aanpakken, halen aanzienlijk meer uit dezelfde bezetting, zonder uitbreiding. Een gericht advies- of implementatietraject lost dit op.",
-        "price": "Vanaf €4.500 per traject of retainer · excl. btw",
-        "interventions": {
-          "0": {
-            "title": "AI-augmented analyse-protocol",
-            "body": "Meer deals analyseren met dezelfde bezetting, zonder in te leveren op kwaliteit. Van screening tot financieringsmemo."
-          },
-          "1": {
-            "title": "Template-bibliotheek voor dossiers en memo's",
-            "body": "Modulaire bouwstenen die u per situatie samenstelt, zodat elk dossier niet vanaf nul begint."
-          },
-          "2": {
-            "title": "Kijk elke maand kort naar uw capaciteit",
-            "body": "Welk analytisch werk had AI of structuur kunnen overnemen? Tien minuten, blijvend inzicht."
-          }
-        }
-      },
-      "E": {
-        "offerName": "AI-gedreven Due Diligence & Portfolio",
-        "interpretation": "Uw score op Portefeuille-inzicht is {score} van 20 punten. Uw financierings- en dealdossiers zijn nog niet op alle relevante dimensies opgebouwd. Dat kost doorlooptijd, levert extra herzieningsrondes op en verzwakt uw onderhandelingspositie. Onze financieringsmemo-dienst, die op Factum Capital draait, levert de onderbouwing en schakelt gecertificeerde adviseurs in die tekenen waar dat moet.",
-        "price": "Vanaf €10.000 per deal · of vanaf €6.500/mnd portfolio-intelligence · excl. btw",
-        "interventions": {
-          "0": {
-            "title": "Structureer uw financieringsmemo op vaste dimensies",
-            "body": "Een bankklaar memo heeft minstens vijf lagen: historische performance, aannames voor de toekomst, marktpositie, risicoprofiel en de kwaliteit van het management."
-          },
-          "1": {
-            "title": "Zet er een sectorvergelijking naast, desnoods handmatig",
-            "body": "Tien vergelijkbare bedrijven op drie ratio's. Twee uur werk. Het verschil tussen 'wij geloven in deze onderneming' en 'de markt bevestigt dit profiel'."
-          },
-          "2": {
-            "title": "Koppel uw analytisch dossier aan gecertificeerde adviseurs",
-            "body": "Een bankklare presentatie vraagt om een formele financieel adviseur of accountant. Bouw het dossier zo op dat die adviseur in twee uur kan instappen, niet in twee weken."
-          }
-        }
-      },
-      "F": {
-        "offerName": "AI Sparring Sessie",
-        "interpretation": "Uw scorecard laat zien dat u aan het begin staat van het structureren van uw aanpak. Dat is precies het juiste moment voor één gerichte eerste stap. Een AI Sparring Sessie duurt twintig minuten, richt zich op uw eigen vraag, en levert een schriftelijke samenvatting op.",
-        "price": "",
-        "interventions": {
-          "0": {
-            "title": "Definieer uw meest urgente blinde vlek",
-            "body": "Welke beslissing staat er aan, en welke informatie mist u om die goed te nemen? Daar begint het."
-          },
-          "1": {
-            "title": "Toets uw aannames voordat u handelt",
-            "body": "De sessie legt uw aannames bloot. Eén gesprek kan een dure fout voorkomen."
-          },
-          "2": {
-            "title": "Kies daarna het juiste vervolgtraject",
-            "body": "Na één sessie weet u welke aanpak past: portfolio-intelligence, due diligence, fractional of advies."
-          }
-        }
-      }
-    },
-    "close_scorecard": "Sluit scorecard"
-  },
-  "validation": {
-    "name_min": "Vul uw naam in.",
-    "email_invalid": "Vul een geldig e-mailadres in.",
-    "company_min": "Vul de naam van uw organisatie in.",
-    "website_invalid": "Dit adres klopt niet. Bijvoorbeeld: www.uwbedrijf.nl",
-    "context_max": "Maximaal 500 tekens."
+  "factum_banner": {
+    "eyebrow": "Het platform erachter",
+    "heading": "Factum Capital",
+    "body": "AI-gedreven due diligence en portfolio-monitoring lopen via Factum Capital, ons AI-platform. 23 modules, vijf momenten: kopen, financieren, houden, verkopen en herstructureren.",
+    "cta": "Ga naar factumcapital.eu"
   }
 }

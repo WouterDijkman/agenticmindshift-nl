@@ -36,34 +36,15 @@
  * which the marketing layout imports on the server.
  */
 export type SceneId =
-  | 'hourglass'
-  | 'chart'
-  | 'chairs'
   | 'keys'
-  | 'intray'
-  | 'binders'
   | 'underneath'
   | 'archivebox'
   | 'decline'
-  | 'form'
   | 'report'
   | 'diary'
   | 'twocups'
   | 'proposal'
   | 'deskready';
-
-/**
- * Home — de zes dimensies. Order matches DIMENSION_META (01–06) in
- * HomepageDimensionsSection.
- */
-export const HOME_DIMENSIONS: SceneId[] = [
-  'hourglass', // 01 Doorlooptijd — werkdagen tussen IM en oordeel: the sand already more than half gone
-  'chart', // 02 Portefeuille-inzicht — a matrix of the portfolio, patchily filled: whole runs of it blank
-  'chairs', // 03 Oordeelsvorming — data én de relatie met management: the second chair, empty and in shade
-  'keys', // 04 AI-volwassenheid — the tool is on the desk; not one key is marked
-  'intray', // 05 Teamcapaciteit — wat blijft liggen: the tray stacked past full and leaning
-  'binders' // 06 Kennisborging — the gap in the row where several were taken away
-];
 
 /** Home — de drie pijnpunten. Order matches PAIN in HomepagePainSection. */
 export const HOME_PAIN: SceneId[] = [
@@ -72,35 +53,44 @@ export const HOME_PAIN: SceneId[] = [
   'decline' // Te late signalering — the run of output kept coming, over the edge and onto the floor, uncollected
 ];
 
-/** Home — de Quickscan, drie stappen. Order matches STEPS in HomepageStepsSection. */
-export const HOME_STEPS: SceneId[] = [
-  'form', // Beantwoord 15 vragen — multiple choice, geen open velden: rows of empty boxes, nothing to write
-  'report', // Ontvang uw rapport — bound, closed, and yours to open
-  'diary' // Bepaal uw volgende stap — the diary open at a blank page, pen in the gutter
+/**
+ * Home — de drie routes. Order matches SERVICES in HomepageServicesSection.
+ *
+ * These three carry the offer, so they get the three pictures that show a
+ * thing being handed over rather than a thing going wrong: a conversation,
+ * a tool, a bound document.
+ */
+export const HOME_SERVICES: SceneId[] = [
+  'twocups', // AI Sparring & Strategie — two cups, and a conversation either way
+  'report', // AI-advies — the plan, bound, closed, and yours to open
+  'keys' // Implementatie & adoptie — the tool is on the desk; not one key is marked yet
 ];
+
+/* HOME_AREAS placed six more pictures under "waar AI het verschil maakt".
+   Those six paragraphs were the Scorecard's six dimensions wearing a new hat,
+   and they restated the three routes above them at twice the length — the
+   single biggest reason the homepage read as too much. The section is gone and
+   the six frames (hourglass, chart, chairs, form, intray, binders) were struck
+   from the slot manifest with their .jpgs, per the note in scenes.manifest.ts.
+   They are in git if a paragraph ever earns them back. */
 
 /** /werkwijze — van interesse naar samenwerking. Order matches WerkwijzeOnboardingSteps. */
 export const WERKWIJZE_STEPS: SceneId[] = [
-  'twocups', // Scorecard of sparring — two cups, two routes, and a conversation either way
+  'diary', // Sparringsessie — the diary open at a blank page, pen in the gutter
   'proposal', // Intake en voorstel — scope, doorlooptijd, tarief: the stack squared, the pen across it
   'deskready' // Start binnen een week — the desk cleared, notebook and pen set square, ready
 ];
 
 /** Every id this site places, in one array, for the manifest cross-check. */
-export const ALL_PLACED: SceneId[] = [
-  ...HOME_DIMENSIONS,
-  ...HOME_PAIN,
-  ...HOME_STEPS,
-  ...WERKWIJZE_STEPS
-];
+export const ALL_PLACED: SceneId[] = [...HOME_PAIN, ...HOME_SERVICES, ...WERKWIJZE_STEPS];
 
 /**
- * No page may show the same photograph twice. The homepage carries twelve of the
- * fifteen in one scroll, which is where a repeat would be most obvious and least
+ * No page may show the same photograph twice. The homepage carries six of the
+ * nine in one scroll, which is where a repeat would be most obvious and least
  * excusable. Reuse across pages would be fine; there happens to be none.
  */
 for (const [page, ids] of [
-  ['home', [...HOME_DIMENSIONS, ...HOME_PAIN, ...HOME_STEPS]],
+  ['home', [...HOME_PAIN, ...HOME_SERVICES]],
   ['werkwijze', WERKWIJZE_STEPS]
 ] as const) {
   const seen = new Set<string>();

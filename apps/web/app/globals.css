@@ -741,6 +741,29 @@ nav, header, .nav-link, .eyebrow-ui {
   margin: 0;
   flex: 1;
 }
+/* The price sits on the card, above the link rather than behind it. Rule on
+   top so it reads as a separate register from the body copy — a fact, not a
+   further sentence. */
+.wb-card-price {
+  margin: 16px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+  font-family: var(--font-ui);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  color: var(--text-primary);
+}
+.wb-card-price-note {
+  display: block;
+  margin-top: 3px;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
 .wb-card-cta {
   display: inline-flex;
   align-items: center;
@@ -760,6 +783,87 @@ nav, header, .nav-link, .eyebrow-ui {
 }
 @media (prefers-reduced-motion: reduce) {
   .wb-card-cta span {
+    transition: none;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Factum banner — the one outbound signpost                            */
+/* Sits inside a [data-surface="dark"] section, so the foreground        */
+/* tokens are already cream. It is a whole-block link: the hairline      */
+/* box lifts on hover rather than only the CTA text, because the         */
+/* target is another site and a half-live row understates that.          */
+/* ------------------------------------------------------------------ */
+.factum-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(20px, 3vw, 48px);
+  padding: clamp(24px, 3vw, 34px) clamp(24px, 3vw, 38px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  background: rgba(247, 242, 235, 0.03);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 220ms ease, background 220ms ease;
+}
+.factum-banner:hover {
+  border-color: var(--border-medium);
+  background: rgba(247, 242, 235, 0.06);
+}
+.factum-banner-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.factum-banner-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--text-muted);
+}
+.factum-banner-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.375rem, 2.4vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+.factum-banner-body {
+  margin-top: 10px;
+  max-width: 58ch;
+  font-size: clamp(0.9375rem, 1.4vw, 1.0625rem);
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+.factum-banner-cta {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--accent-cta-ink);
+}
+.factum-banner-cta span {
+  display: inline-block;
+  transition: transform 200ms ease;
+}
+.factum-banner:hover .factum-banner-cta span {
+  transform: translate(3px, -3px);
+}
+@media (max-width: 780px) {
+  .factum-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .factum-banner,
+  .factum-banner-cta span {
     transition: none;
   }
 }
@@ -1635,8 +1739,9 @@ nav, header, .nav-link, .eyebrow-ui {
 
 /* ================================================================== */
 /* MOBILE SECTION BREATHING ROOM                                       */
-/* Marketing pages sit inside <main>; scorecard uses a <div> wrapper,  */
-/* so "main section" safely targets only marketing page sections.       */
+/* Scoped to <main> because the scorecard route used a <div> wrapper and  */
+/* had to be excluded. That route is gone; the selector stays scoped so   */
+/* the rule cannot reach into a header or footer section.                 */
 /* ================================================================== */
 @media (max-width: 640px) {
   /* Hero sections have their own padding via .hero-full-content / .hero-home-content */
@@ -1673,9 +1778,9 @@ nav, header, .nav-link, .eyebrow-ui {
 }
 
 /* ================================================================== */
-/* HOMEPAGE HERO SPLIT — claim left, deliverable right                 */
+/* HOMEPAGE HERO SPLIT — claim left, offer right                       */
 /* The copy column keeps the larger share: the headline is the reason  */
-/* anyone stays. The artefact sits in the space the type was already   */
+/* anyone stays. The panel sits in the space the type was already      */
 /* leaving empty rather than competing for it. Uneven on purpose.      */
 /* ================================================================== */
 .hero-home-split {
@@ -1685,30 +1790,12 @@ nav, header, .nav-link, .eyebrow-ui {
   align-items: center;
 }
 
-/* The floating "2 / 6" annotation is absolutely positioned against the
-   wrap, so the column needs headroom or it rides up under the header. */
 .hero-home-artefact {
   margin-top: 26px;
 }
 
-/* In the scorecard showcase grid the callout hangs off the top-left corner
-   into open space. In the hero that corner is not open — it is 26px from the
-   headline column, and at top:-26px the sticker sits squarely across the
-   card's own title bar, hiding "Scorecard-rapport · Vertrouwelijk".
-   Top-right instead. Both the title bar and the card title are set left, so
-   that corner is the one part of the card with nothing under it. The bottom
-   corner was tried first and is worse: it lands on the legend, which is the
-   key the sticker's own number needs in order to mean anything. */
-.hero-home-artefact .showcase-callout {
-  top: -22px;
-  left: auto;
-  right: -20px;
-  bottom: auto;
-}
-
-/* Below this the two columns stop being a fair fight: the report card has a
-   fixed amount of detail in it and squeezing it makes the numbers unreadable,
-   which defeats the point of showing it at all. */
+/* Below this the two columns stop being a fair fight: the route panel has
+   three prices in it and squeezing it puts each one on its own line. */
 @media (max-width: 1000px) {
   .hero-home-split {
     grid-template-columns: 1fr;
@@ -1723,27 +1810,117 @@ nav, header, .nav-link, .eyebrow-ui {
     margin-top: 36px;
     max-width: 520px;
   }
-  /* Stacked, the card has the column to itself again, so it falls back to
-     the same inset the showcase grid uses at this width. */
-  .hero-home-artefact .showcase-callout {
-    top: -20px;
-    right: 8px;
-    bottom: auto;
+}
+
+/* ================================================================== */
+/* HERO ROUTE PANEL — the offer, inside the first screen               */
+/* Three rows, each a name and a price. It is a price list, so it is   */
+/* set like one: hairline rules, no card shadow, no rust until hover.  */
+/* The one thing it must not do is out-shout the CTA beside it.        */
+/* ================================================================== */
+.hero-routes {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: clamp(20px, 2.2vw, 28px);
+}
+.hero-routes-label {
+  font-family: var(--font-ui);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 4px;
+}
+.hero-routes-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.hero-routes-list li + li {
+  border-top: 1px solid var(--border-subtle);
+}
+.hero-route {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 14px;
+  padding: 16px 0;
+  text-decoration: none;
+  color: inherit;
+}
+.hero-route-n {
+  font-family: var(--font-ui);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+.hero-route-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.hero-route-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.005em;
+  color: var(--text-primary);
+  transition: color 180ms ease;
+}
+.hero-route-note {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+.hero-route-price {
+  font-family: var(--font-ui);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  text-align: right;
+}
+.hero-route:hover .hero-route-title {
+  color: var(--accent-cta-ink);
+}
+.hero-routes-foot {
+  margin: 14px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.75rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+/* The price stacks under the name rather than shrinking to fit beside it —
+   at this width "Vanaf €4.500" beside a two-line route name leaves each of
+   them about eleven characters. */
+@media (max-width: 420px) {
+  .hero-route {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .hero-route-price {
+    grid-column: 2;
+    text-align: left;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-route-title {
+    transition: none;
   }
 }
 
 /* ------------------------------------------------------------------ */
 /* SHORT LAPTOP SCREENS                                                */
 /* 1280x720 is the machine this is actually read on, and there the     */
-/* hero asks for 813px of a 642px budget: the report card alone is     */
-/* 635px and the Spanish copy column runs to ~560. Everything the page */
-/* has to say for itself is on this screen, so nothing here may cross  */
-/* the fold.                                                           */
-/*                                                                     */
-/* `zoom` rather than `transform: scale` on purpose — a transform      */
-/* shrinks the paint and leaves the layout box at full height, which   */
-/* is the one thing that does not help. Where zoom is unsupported the  */
-/* rule is inert and the card behaves as it does today.                */
+/* hero used to ask for 813px of a 642px budget. The 635px report card */
+/* that caused most of that overrun is gone — the route panel is about */
+/* 300px — but the Spanish copy column still runs to ~560 and the      */
+/* padding is still generous, so the height guard stays.               */
 /*                                                                     */
 /* Height-only, and above the stacking breakpoint: at 1440x900 all     */
 /* five locales already fit, and nothing should shrink a screen that   */
@@ -1774,7 +1951,6 @@ nav, header, .nav-link, .eyebrow-ui {
 
   .hero-home-artefact {
     margin-top: 12px;
-    zoom: 0.84;
   }
 
   .hero-specs {

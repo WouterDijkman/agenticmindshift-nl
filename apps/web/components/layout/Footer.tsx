@@ -7,12 +7,14 @@ export default async function Footer() {
   const tNav = await getTranslations('nav');
 
   const navLinks = [
-    { href: '/scorecard', label: tNav('scorecard') },
     { href: '/werkwijze', label: tNav('werkwijze') },
     { href: '/over', label: t('over_wouter') },
-    { href: '/factum-capital', label: tNav('factum_capital') },
     { href: '/contact', label: tNav('contact') },
   ];
+
+  // Factum has its own site, so it leaves the internal column and becomes an
+  // outbound link. `Link` from @/i18n/navigation would prefix it with a locale.
+  const externalLinks = [{ href: 'https://factumcapital.eu', label: tNav('factum_capital') }];
 
   const legalLinks = [
     { href: '/privacy', label: t('privacy') },
@@ -77,6 +79,18 @@ export default async function Footer() {
                   </Link>
                 </li>
               ))}
+              {externalLinks.map((l) => (
+                <li key={l.href}>
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-link"
+                  >
+                    {l.label} <span aria-hidden="true">↗</span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -98,10 +112,15 @@ export default async function Footer() {
           <div className="footer-cta-card">
             <p className="footer-cta-title">{t('cta_title')}</p>
             <p className="footer-cta-sub">{t('cta_sub')}</p>
-            <Link href="/scorecard" className="footer-cta-button plausible-event-name=Scorecard+CTA plausible-event-location=footer">
-              {t('start_scorecard')}
+            <a
+              href="https://cal.com/wwdijkman/intake-call"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-cta-button plausible-event-name=Intake+CTA plausible-event-location=footer"
+            >
+              {t('cta')}
               <span aria-hidden="true">&nbsp;→</span>
-            </Link>
+            </a>
           </div>
         </div>
 

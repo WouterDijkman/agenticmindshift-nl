@@ -7,34 +7,9 @@
   },
   "scenes": [
     {
-      "id": "hourglass",
-      "subject": "a plain glass hourglass standing on a bare pale desk, pale sand rather more than half run through into the lower bulb, the daylight passing through the glass and laying one long soft shadow away to the right, the desk otherwise completely empty",
-      "negative": "gold, brass, ornate, antique, carved wood, sundial, clock face, watch, egg timer, kitchen, coloured sand, beach, glitter, sparkle"
-    },
-    {
-      "id": "chart",
-      "subject": "a single sheet of pale uncoated paper lying flat on a bare desk, printed flat on it a plain grid of small squares about six rows deep and eight across, scattered squares filled in solid soft grey and all the others left completely empty, the filled ones falling in no pattern at all with whole runs of empty squares between them, one row almost entirely empty, nothing whatsoever else printed on the sheet, a slim pen resting on the desk beside it, daylight from the left",
-      "negative": "text, title, heading, caption, labels, legend, numbers, percentages, bar chart, bars, columns, rising bars, growth chart, line graph, pie chart, 3d, extruded, raised blocks, objects standing up off the paper, qr code, barcode, crossword, sudoku, chessboard, draughts board, calendar, pixel art, game board, mosaic tiles, keyboard, coloured squares, heatmap colours, rainbow, screen, monitor, laptop, dashboard"
-    },
-    {
-      "id": "chairs",
-      "subject": "two empty chairs drawn up facing one another across the corner of a bare pale meeting table, the chair on the left standing in full daylight and the chair on the right falling into even cool shade, the table top completely clear, plain pale wood and pale upholstery, nothing else in the room in frame",
-      "negative": "people, person seated, office clutter, laptop, papers, coffee cup, plant, window view, conference room full of chairs, boardroom table long shot, dining room, restaurant, leather executive chair, wheels"
-    },
-    {
       "id": "keys",
       "subject": "a slim pale keyboard filling most of the frame, photographed close and low from one end so the rows of keys run away from the camera, the top of every key a smooth unbroken blank surface of plain pale plastic with absolutely nothing printed, moulded or engraved on it, the near keys sharp and lit and the far end of the keyboard falling into soft shade, standing on a bare pale desk",
       "negative": "letters, letters on keys, alphabet, characters, symbols, punctuation, arrows, key legends, printed keycaps, engraved keycaps, qwerty, function row, backlit keys, rgb, glowing keys, screen, monitor, laptop, laptop screen, mouse, cables, gaming, black keyboard, typewriter, piano, piano keys, calculator, cash register, wide desk shot, whole room"
-    },
-    {
-      "id": "intray",
-      "subject": "a plain wire desk tray stacked far past full with plain unmarked documents, the pile leaning noticeably to one side and overhanging the edges of the tray, a second smaller heap of papers on the bare pale desk beside it, daylight from the left throwing a long soft shadow",
-      "negative": "printed text, writing, forms, invoices, newspaper, magazines, books, binders, sticky notes, coloured paper, folders with tabs, mess of pens, coffee cup, plant, office background, filing cabinet"
-    },
-    {
-      "id": "binders",
-      "subject": "a shelf of upright ring binders with a large empty space in the middle of the row, easily wide enough for three or four more binders, the bare shelf board and the plain wall behind it clearly visible right through that empty space, a group of binders pressed together at the left of the picture and another group at the right, the last binder on each side leaning over into the emptiness, every spine entirely plain and blank, daylight raking along the spines from the left",
-      "negative": "printed spine labels, titles, years, index letters, colour coding, coloured binders, full shelf, complete row, unbroken row, binders filling the shelf, one binder pulled out, one binder turned sideways, book, library, bookshelf full of books, archive room wide shot, clutter"
     },
     {
       "id": "underneath",
@@ -50,11 +25,6 @@
       "id": "decline",
       "subject": "the near edge of a bare pale desk seen close and from the side, filling the upper part of the picture, with one single unbroken strip of plain pale paper running along the desk top, turning over that edge and hanging down in one long clean fall to the floor, where the end of it has settled into a few wide loose loops lying quietly on the pale floor, one continuous unbroken ribbon of paper throughout, entirely blank with nothing printed on it, soft daylight from the left",
       "negative": "shredded paper, shredder, tangle, tangled heap, many separate strips, torn strips, receipt, chart, graph, toilet paper, kitchen roll, bandage, streamer, confetti, tape measure, film strip, fabric, cloth, scroll, printer, typewriter, wide empty room, long trestle table"
-    },
-    {
-      "id": "form",
-      "subject": "a single printed form lying flat on a bare pale desk, showing only evenly spaced rows of small empty square checkboxes and short plain rules where words would be, with no actual words, letters or numbers printed anywhere on it, a slim pen lying across the lower corner of the sheet, daylight from the left",
-      "negative": "text, questions, printed words, letters, numbers, ticks, crosses, filled boxes, signature, official form, tax form, exam paper, questionnaire with text, barcode, logo, letterhead, clipboard"
     },
     {
       "id": "report",

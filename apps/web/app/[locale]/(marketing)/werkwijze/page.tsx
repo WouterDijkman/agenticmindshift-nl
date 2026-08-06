@@ -2,21 +2,22 @@ import type { Metadata } from 'next';
 import type { ComponentType } from 'react';
 import { getTranslations } from 'next-intl/server';
 import { getAlternates } from '@/lib/hreflang';
-import { Link } from '@/i18n/navigation';
 import Button from '@/components/ui/Button';
 import SketchDivider from '@/components/icons/SketchDivider';
 import {
   SketchSparring,
   SketchConsultancy,
-  SketchFractional,
-  SketchDueDiligence,
+  SketchGear,
 } from '@/components/icons/SketchIcons';
 import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
 import JsonLd from '@/components/JsonLd';
 import { getProfessionalServiceLd, getBreadcrumbLd } from '@/lib/jsonld';
 import WerkwijzeOnboardingSteps from './WerkwijzeOnboardingSteps';
+import FactumBanner from '@/components/FactumBanner';
 import AnswerFirst from '@/components/AnswerFirst';
+
+const INTAKE_URL = 'https://cal.com/wwdijkman/intake-call';
 
 type SketchIconComponent = ComponentType<{ size?: number; color?: string; opacity?: number; strokeWidth?: number }>;
 
@@ -32,11 +33,11 @@ export async function generateMetadata(
   };
 }
 
-interface PoweredBy {
-  label: string;
-  href: string;
-  tagline: string;
-}
+/* A `PoweredBy` badge used to sit on rung three, linking out to Factum from
+   inside the price card. No rung is delivered on Factum's platform any more,
+   so the badge has no card to sit on. Factum still appears on this page —
+   once, as <FactumBanner /> — which is the whole of the relationship the
+   user asked for: "verwijzing naar factumcapital.eu met banner". */
 
 interface Offering {
   badge: string;
@@ -47,7 +48,6 @@ interface Offering {
   ctaLabel: string;
   ctaHref: string;
   featured?: boolean;
-  poweredBy?: PoweredBy;
   Icon: SketchIconComponent;
 }
 
@@ -57,6 +57,13 @@ export default async function WerkwijzePage(
   const { locale } = await params;
   const t = await getTranslations('werkwijze');
 
+  /**
+   * Three routes, not four. The Fractional AI Officer — a seat in the
+   * management team at a day rate — has been withdrawn: it is the same work
+   * as route 2, sold as a headcount line instead of an engagement, and
+   * holding it out as a separate product was the single biggest reason the
+   * offer read as four overlapping things rather than one ladder.
+   */
   const offerings: Offering[] = [
     {
       badge: t('offering_1.badge'),
@@ -64,7 +71,7 @@ export default async function WerkwijzePage(
       situation: t('offering_1.situation'),
       priceNote: t('offering_1.price_note'),
       ctaLabel: t('offering_1.cta'),
-      ctaHref: 'https://cal.com/wwdijkman/intake-call',
+      ctaHref: INTAKE_URL,
       Icon: SketchSparring,
     },
     {
@@ -74,9 +81,18 @@ export default async function WerkwijzePage(
       price: t('offering_2.price'),
       priceNote: t('offering_2.price_note'),
       ctaLabel: t('offering_2.cta'),
-      ctaHref: 'https://cal.com/wwdijkman/intake-call',
+      ctaHref: INTAKE_URL,
       Icon: SketchConsultancy,
     },
+    /* Rung three used to be AI-driven Due Diligence & Portfolio, sold here
+       and delivered on Factum's platform — hence the `poweredBy` badge. That
+       work is Factum's to sell now; this site points at it and stops. The
+       rung is implementation and adoption, which is ours end to end, so the
+       borrowed-credibility badge came off with the DD copy.
+
+       The icon changed with it. SketchDueDiligence is a magnifying glass with
+       a tick in the lens — examination, a verdict on someone else's numbers.
+       Implementation is a gear: the thing being fitted and turned. */
     {
       badge: t('offering_3.badge'),
       title: t('offering_3.title'),
@@ -84,24 +100,9 @@ export default async function WerkwijzePage(
       price: t('offering_3.price'),
       priceNote: t('offering_3.price_note'),
       ctaLabel: t('offering_3.cta'),
-      ctaHref: 'https://cal.com/wwdijkman/intake-call',
+      ctaHref: INTAKE_URL,
       featured: true,
-      Icon: SketchFractional,
-    },
-    {
-      badge: t('offering_4.badge'),
-      title: t('offering_4.title'),
-      situation: t('offering_4.situation'),
-      price: t('offering_4.price'),
-      priceNote: t('offering_4.price_note'),
-      ctaLabel: t('offering_4.cta'),
-      ctaHref: 'https://cal.com/wwdijkman/intake-call',
-      poweredBy: {
-        label: 'Factum Capital',
-        href: '/factum-capital',
-        tagline: t('offering_4.powered_by_tagline'),
-      },
-      Icon: SketchDueDiligence,
+      Icon: SketchGear,
     },
   ];
 
@@ -110,7 +111,6 @@ export default async function WerkwijzePage(
     { id: 'q2', question: t('faq.q2'), answer: t('faq.a2') },
     { id: 'q3', question: t('faq.q3'), answer: t('faq.a3') },
     { id: 'q4', question: t('faq.q4'), answer: t('faq.a4') },
-    { id: 'q5', question: t('faq.q5'), answer: t('faq.a5') },
   ];
 
   return (
@@ -129,14 +129,14 @@ export default async function WerkwijzePage(
         {/* The first screen of a pricing page used to be a full viewport of
             type with nothing to press. The reader arriving here has already
             decided to look at what this costs, and the closing band that
-            answers "which route?" was four screens down. Same two actions,
-            same words — moved to where the intent is. */}
+            answers "which route?" was four screens down. Same action, same
+            words — moved to where the intent is.
+
+            One button now, not two: the pair was "Start de Scorecard" beside
+            "Plan een gesprek", and the free questionnaire has been withdrawn. */}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', alignItems: 'center' }}>
-          <Button href="/scorecard" variant="primary" size="lg" className="plausible-event-name=Scorecard+CTA plausible-event-location=pricing-top">
+          <Button href={INTAKE_URL} variant="primary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=pricing-top">
             {t('cta.primary')}
-          </Button>
-          <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=pricing-top">
-            {t('cta.secondary')}
           </Button>
         </div>
       </AnimatedHeroShell>
@@ -212,37 +212,22 @@ export default async function WerkwijzePage(
                   <o.Icon size={52} strokeWidth={1.4} />
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px' }}>
-                  <span
-                    style={{
-                      fontSize: '10px',
-                      fontWeight: 800,
-                      letterSpacing: '0.18em',
-                      textTransform: 'uppercase',
-                      color: 'var(--accent-cta-ink)',
-                      lineHeight: 1,
-                    }}
-                  >
-                    {o.badge}
-                  </span>
-                  {o.featured && (
-                    <span
-                      style={{
-                        fontSize: '9px',
-                        fontWeight: 800,
-                        letterSpacing: '0.14em',
-                        textTransform: 'uppercase',
-                        color: 'var(--accent-primary)',
-                        background: 'var(--accent-cta)',
-                        padding: '4px 8px',
-                        lineHeight: 1,
-                        flexShrink: 0,
-                      }}
-                    >
-                      {t('offerings.most_chosen')}
-                    </span>
-                  )}
-                </div>
+                {/* A "most chosen" badge used to sit opposite this one. The
+                    firm was founded in October 2025 and publishes no client
+                    list, so the badge was a popularity claim with nothing
+                    behind it. The dark card already carries the emphasis. */}
+                <span
+                  style={{
+                    fontSize: '10px',
+                    fontWeight: 800,
+                    letterSpacing: '0.18em',
+                    textTransform: 'uppercase',
+                    color: 'var(--accent-cta-ink)',
+                    lineHeight: 1,
+                  }}
+                >
+                  {o.badge}
+                </span>
 
                 <h3
                   className="type-h3"
@@ -250,62 +235,6 @@ export default async function WerkwijzePage(
                 >
                   {o.title}
                 </h3>
-
-                {o.poweredBy && (
-                  <Link
-                    href={o.poweredBy.href as '/factum-capital'}
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: '4px',
-                      padding: '12px 14px',
-                      background: o.featured ? 'var(--accent-primary-soft)' : 'var(--bg-secondary)',
-                      borderLeft: '3px solid var(--accent-cta)',
-                      border: '1px solid var(--border-subtle)',
-                      borderLeftWidth: '3px',
-                      borderLeftColor: 'var(--accent-cta)',
-                      textDecoration: 'none',
-                      width: '100%',
-                    }}
-                  >
-                    <span
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '8px',
-                        fontSize: '10px',
-                        fontWeight: 800,
-                        letterSpacing: '0.18em',
-                        textTransform: 'uppercase',
-                        color: 'var(--accent-cta-ink)',
-                        lineHeight: 1,
-                      }}
-                    >
-                      <span>Powered by</span>
-                      <span
-                        style={{
-                          fontSize: '0.9375rem',
-                          fontWeight: 700,
-                          letterSpacing: '-0.01em',
-                          color: 'var(--text-primary)',
-                          textTransform: 'none',
-                        }}
-                      >
-                        {o.poweredBy.label}
-                      </span>
-                      <span style={{ color: 'var(--accent-cta-ink)' }}>→</span>
-                    </span>
-                    <span
-                      style={{
-                        fontSize: '0.875rem',
-                        color: 'var(--text-muted)',
-                        lineHeight: 1.4,
-                      }}
-                    >
-                      {o.poweredBy.tagline}
-                    </span>
-                  </Link>
-                )}
 
                 <p
                   style={{
@@ -435,7 +364,9 @@ export default async function WerkwijzePage(
         </div>
       </section>
 
-      <SketchDivider />
+      {/* Route 3 runs on Factum. This is the only place the page explains
+          that, and it sits directly under the card that says "Powered by". */}
+      <FactumBanner />
 
       {/* ═══════════════════════════════════════════
           OBJECTION HANDLING — collapsible accordion
@@ -473,14 +404,17 @@ export default async function WerkwijzePage(
           overflow: 'hidden',
         }}
       >
-        <div className="container-medium" style={{ textAlign: 'center', position: 'relative' }}>
+        {/* Was centred. Centred prose sets a new left edge on every line, so
+            the eye has to re-find the start of each one — fine for three
+            words, not for a paragraph. */}
+        <div className="container-medium" style={{ position: 'relative', maxWidth: '760px' }}>
           <div className="reveal">
             <p className="eyebrow" style={{ marginBottom: '28px', color: 'var(--text-muted)' }}>
               {t('cta.eyebrow')}
             </p>
             <h2
               className="type-h2"
-              style={{ color: 'var(--text-primary)', marginBottom: '16px', maxWidth: '600px', marginInline: 'auto' }}
+              style={{ color: 'var(--text-primary)', marginBottom: '16px', maxWidth: '18ch' }}
             >
               {t('cta.heading')}
             </h2>
@@ -489,19 +423,15 @@ export default async function WerkwijzePage(
                 fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
                 color: 'var(--text-muted)',
                 marginBottom: '44px',
-                maxWidth: '440px',
-                marginInline: 'auto',
+                maxWidth: '52ch',
                 lineHeight: 1.75,
               }}
             >
               {t('cta.subtext')}
             </p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>
-              <Button href="/scorecard" variant="primary" size="lg" className="plausible-event-name=Scorecard+CTA plausible-event-location=pricing-final">
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+              <Button href={INTAKE_URL} variant="primary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=pricing-final">
                 {t('cta.primary')}
-              </Button>
-              <Button href="https://cal.com/wwdijkman/intake-call" variant="secondary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=pricing-final">
-                {t('cta.secondary')}
               </Button>
             </div>
           </div>

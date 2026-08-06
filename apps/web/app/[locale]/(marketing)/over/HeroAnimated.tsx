@@ -149,10 +149,9 @@ export default function HeroAnimated() {
         {/* A whole first screen about a person, with no way to talk to him.
             The only action on this page sat below four sections of biography,
             which is exactly backwards: someone who reads a founder page is
-            already most of the way to booking. The call leads here rather
-            than the Scorecard — this page argues from the man, not the
-            method. Same strings as the closing band, deliberately: a second
-            wording for the same action reads as a second offer. */}
+            already most of the way to booking. Same strings as the closing
+            band, deliberately: a second wording for the same action reads as
+            a second offer. */}
         <motion.div
           style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', alignItems: 'center', marginTop: '34px' }}
           initial={{ opacity: 0, y: 14 }}
@@ -160,10 +159,10 @@ export default function HeroAnimated() {
           transition={{ duration: 0.6, delay: 1.3, ease }}
         >
           <Button href="https://cal.com/wwdijkman/intake-call" variant="primary" size="lg" external className="plausible-event-name=Intake+CTA plausible-event-location=about-hero">
-            {t('contact_cta.cta2')}
-          </Button>
-          <Button href="/scorecard" variant="secondary" size="lg" className="plausible-event-name=Scorecard+CTA plausible-event-location=about-hero">
             {t('contact_cta.cta1')}
+          </Button>
+          <Button href="/werkwijze" variant="secondary" size="lg">
+            {t('contact_cta.cta2')}
           </Button>
         </motion.div>
       </div>
