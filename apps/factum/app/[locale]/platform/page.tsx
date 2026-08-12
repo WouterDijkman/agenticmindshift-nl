@@ -83,7 +83,11 @@ export default async function PlatformPage({
 
       <PageHeader
         title={t('header.title', n)}
-        lead={t('header.lead')}
+        /* `n` is not optional here — the lead opens on {modules}. Without the
+           arguments ICU leaves the placeholder standing and the first line of
+           the page reads "{modules} pre-scoped modules", which is what shipped
+           in all five locales. A title-only check does not look at the lead. */
+        lead={t('header.lead', n)}
         cta={t('header.cta')}
         secondary={s('links.sprint')}
         secondaryHref="/diligence-sprint"
