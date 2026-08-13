@@ -215,11 +215,11 @@ p { margin: 0; }
      .section-loud     a feature moment — one per page, at most two
 */
 .section {
-  padding-block: clamp(56px, 7vw, 104px) clamp(72px, 9vw, 148px);
+  padding-block: clamp(76px, 8.5vw, 132px) clamp(96px, 11vw, 184px);
   position: relative;
 }
-.section-tight { padding-block: clamp(24px, 3vw, 44px) clamp(48px, 6vw, 88px); }
-.section-loud  { padding-block: clamp(88px, 11vw, 176px) clamp(96px, 12vw, 200px); }
+.section-tight { padding-block: clamp(32px, 3.6vw, 56px) clamp(64px, 7.5vw, 112px); }
+.section-loud  { padding-block: clamp(112px, 13vw, 208px) clamp(124px, 14.5vw, 244px); }
 
 /*
    Ground changes.
@@ -1117,6 +1117,17 @@ p { margin: 0; }
   z-index: 0;
 }
 
+/*
+   A 90px blur means a 90px-margin off-screen buffer around a 620x340 box that
+   the phone has to hold and re-raster. The radius is tuned for a 620px-wide
+   halo on a desktop band; on a 390px screen the element is clipped to well
+   under half that, so the same softness arrives at a third of the radius. Cut
+   rather than dropped — this is the only warmth on the closing band.
+*/
+@media (max-width: 700px) {
+  .glow { filter: blur(32px); }
+}
+
 /* ============================================================
    Buttons — @repo/ui Button hooks into .btn-primary / .btn-secondary
    ============================================================ */
@@ -1231,23 +1242,45 @@ p { margin: 0; }
 .reveal { opacity: 1; }
 
 @media (prefers-reduced-motion: no-preference) {
-  .reveal {
+  /*
+     The hidden state is gated on an attribute that an inline script in the
+     layout sets before first paint — and that the *same* inline script clears
+     on a timer, without React. Two things were wrong here, and both read as
+     "the page is mostly blank on my phone":
+
+     1. `.reveal` defaulted to invisible and only came back if a React client
+        component mounted and an IntersectionObserver fired. Any break in that
+        chain — hydration throwing, the bundle not arriving, the observer
+        starved — left content at opacity 0 forever. The <noscript> block only
+        covers JS being switched off, which is not the case that bites.
+     2. `will-change: opacity, transform` promoted every reveal to its own
+        compositor layer, and only released it on `data-done`, i.e. after the
+        element had already appeared. Everything below the fold therefore held
+        a layer for the whole session: 34-69 per route, on pages up to
+        15,000px, ~25MB of layer surface. A desktop GPU absorbs that. A phone
+        hits its budget and stops rastering, which looks exactly like blank
+        sections that snap back when a layout change forces a re-raster.
+
+     Both are gone. Opacity and transform composite fine without being asked
+     to, and the timer means the worst case is "it all fades in at once"
+     instead of "nothing is there".
+  */
+  html[data-reveal="on"] .reveal {
     opacity: 0;
     transform: translate3d(0, 18px, 0);
+  }
+  .reveal {
     transition: opacity calc(var(--dur-reveal) * 0.6) var(--ease-out-expo),
       transform var(--dur-reveal) var(--ease-out-expo);
     transition-delay: var(--reveal-delay, 0ms);
-    /* Scroll animations are not exempt from CLS — reserve the box. */
-    will-change: opacity, transform;
   }
-  .reveal[data-shown="true"] {
+  html[data-reveal="on"] .reveal[data-shown="true"] {
     opacity: 1;
     transform: none;
   }
   /* Play once, then disarm permanently. Replaying on scroll-back reads cheap. */
   .reveal[data-done="true"] {
     transition: none;
-    will-change: auto;
   }
 
   /* Children of a .stagger enter in sequence without hand-numbered delays.
@@ -1980,11 +2013,14 @@ details.disclosure > div { padding-bottom: 24px; }
   transform-origin: left center;
 }
 @media (prefers-reduced-motion: no-preference) {
-  .bento-stat-rule {
+  /* Gated on the same arming attribute as .reveal itself — otherwise the rule
+     stays at scaleX(0), i.e. invisible, whenever the reveal never gets its
+     data-shown (the fail-safe path). */
+  html[data-reveal="on"] .bento-stat-rule {
     transform: scaleX(0);
     transition: transform var(--dur-reveal) var(--ease-out-expo);
   }
-  .reveal[data-shown="true"] .bento-stat-rule { transform: scaleX(1); }
+  html[data-reveal="on"] .reveal[data-shown="true"] .bento-stat-rule { transform: scaleX(1); }
 }
 .bento-accent .bento-stat-rule { background: var(--accent-cta-soft); }
 
@@ -2422,6 +2458,29 @@ details.disclosure > div { padding-bottom: 24px; }
    drifts, so this only fires if a future caller opts out. */
 .segfield[data-drift='false'] .segfield-glint {
   display: none;
+}
+
+/*
+   The single most expensive thing on the page for a phone: a 60px blur over an
+   element inset -40% of its parent, screened onto what is underneath, moving
+   forever. Blur and blend each need their own buffer, the -40% inset makes
+   both of those buffers larger than the frame they decorate, and the animation
+   keeps them live for the whole session.
+
+   The gradient underneath already falls off softly, so on mobile the blur goes
+   and the stops widen to compensate. `screen` stays: it is what keeps the
+   glint additive over the plate instead of a flat orange patch, and it is far
+   cheaper than the blur it sits next to.
+*/
+@media (max-width: 700px) {
+  .segfield-glint {
+    filter: none;
+    background: radial-gradient(
+      52% 68% at 50% 50%,
+      color-mix(in srgb, var(--accent-cta) 40%, transparent) 0%,
+      transparent 74%
+    );
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

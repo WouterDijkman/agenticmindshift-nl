@@ -28,7 +28,7 @@ export default function GuaranteeBand({
   note: string;
 }) {
   return (
-    <section className="seam" style={{ paddingBlock: 'clamp(36px, 5vw, 64px)' }}>
+    <section className="seam" style={{ paddingBlock: 'clamp(48px, 6vw, 84px)' }}>
       <div className="container-wide">
         <Reveal className="guarantee-band">
           <span className="eyebrow eyebrow-accent">{label}</span>

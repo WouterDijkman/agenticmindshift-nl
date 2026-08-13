@@ -559,19 +559,28 @@ nav, header, .nav-link, .eyebrow-ui {
 /* ------------------------------------------------------------------ */
 /* Scroll-reveal                                                       */
 /* ------------------------------------------------------------------ */
-.reveal {
+/* The hidden state is gated on an attribute that an inline script in the root
+   layout sets before first paint and releases on a timer four seconds later.
+   Without that gate, an element that never receives `.revealed` — hydration
+   threw, the bundle never landed, the observer was starved — stays at opacity
+   0 for good, and that is most of the page. Reasoning in full at the script. */
+html[data-reveal="on"] .reveal {
   opacity: 0;
   transform: translateY(28px);
+}
+.reveal {
   transition: opacity 680ms cubic-bezier(0.22, 1, 0.36, 1),
               transform 680ms cubic-bezier(0.22, 1, 0.36, 1);
 }
-.reveal.revealed {
+html[data-reveal="on"] .reveal.revealed {
   opacity: 1;
   transform: translateY(0);
 }
-/* Ensure pre-reduced-motion users see content */
+/* Ensure pre-reduced-motion users see content. The script does not arm at all
+   under `reduce`, so this is belt-and-braces — matched on `html` only so it
+   cannot lose the specificity contest with the gate above. */
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  html .reveal {
     opacity: 1;
     transform: none;
     transition: none;

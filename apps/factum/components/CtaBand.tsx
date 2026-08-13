@@ -26,7 +26,7 @@ export default function CtaBand({
   aside?: ReactNode;
 }) {
   return (
-    <section className="seam grain-overlay" style={{ paddingBlock: 'clamp(64px, 8vw, 112px)' }}>
+    <section className="seam grain-overlay" style={{ paddingBlock: 'clamp(88px, 10vw, 152px)' }}>
       <span
         className="glow"
         style={{

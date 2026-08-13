@@ -112,6 +112,33 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${suse.variable} ${fraunces.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
+        {/*
+          Arms the scroll reveals, and guarantees they cannot stay armed.
+
+          `.reveal` sits at opacity 0 until ScrollRevealInit mounts and its
+          IntersectionObserver fires. That put nearly every word on the site
+          behind one client component: hydration throwing, the bundle not
+          arriving, the observer starved on a slow phone — any of those left a
+          visitor looking at a blank page with no way to recover.
+
+          So the hidden state is switched on here, inline, before first paint,
+          and switched off again by a timeout in the same script. No React, no
+          bundle, no imports: if this line ran at all, the release is already
+          scheduled. ScrollRevealInit cancels the timer once it is genuinely
+          observing, so normally the reveals play as intended, and abnormally
+          the content fades in by itself within four seconds. Failing towards
+          "visible" is the only acceptable direction.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              '(function(){var d=document.documentElement;' +
+              "if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;" +
+              "d.setAttribute('data-reveal','on');" +
+              'window.__revealFailsafe=setTimeout(function(){' +
+              "d.setAttribute('data-reveal','off')},4000)})();"
+          }}
+        />
         <NextIntlClientProvider messages={messages}>
           <MotionProvider>{children}</MotionProvider>
         </NextIntlClientProvider>

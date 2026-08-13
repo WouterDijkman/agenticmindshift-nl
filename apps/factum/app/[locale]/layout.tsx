@@ -85,16 +85,41 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={fontVariables}>
       <body>
+        {/*
+          Arms the scroll reveals, and guarantees they cannot stay armed.
+
+          `.reveal` is invisible until something says otherwise — the only way
+          to animate it in without first flashing the final state. That made
+          the whole page below the fold hostage to one client component
+          mounting: if hydration threw, if the bundle never arrived, if the
+          observer was starved on a slow phone, the visitor got a blank page
+          and no way back. A <noscript> block does not help, because the
+          failure happens with JS very much enabled.
+
+          So the hidden state is switched on here, inline, before first paint,
+          and switched off again by a timeout in the same script. No React, no
+          bundle, no imports: if this line ran at all, the release is already
+          scheduled. RevealObserver cancels the timer once it is genuinely
+          observing, so in the normal case the reveals play as intended, and in
+          every abnormal case the content fades in by itself within four
+          seconds. Failing towards "visible" is the only acceptable direction.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              '(function(){var d=document.documentElement;' +
+              "if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;" +
+              "d.setAttribute('data-reveal','on');" +
+              'window.__revealFailsafe=setTimeout(function(){' +
+              "d.setAttribute('data-reveal','off')},4000)})();"
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(siteSchema(locale, meta('home.description')))
           }}
         />
-        {/* .reveal starts at opacity 0 and is armed by JS; without it the page is blank below the fold. */}
-        <noscript>
-          <style>{'.reveal{opacity:1!important;transform:none!important}'}</style>
-        </noscript>
         <a href="#main" className="skip-link">
           {t('skipToContent')}
         </a>
