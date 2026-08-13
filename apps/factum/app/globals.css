@@ -2134,6 +2134,9 @@ details.disclosure > div { padding-bottom: 24px; }
   border-bottom: 1px solid var(--hairline-faint);
 }
 .matrix-cell-ours { background: var(--surface-1); }
+/* Only the stacked layout needs the column name inside the cell; the table has
+   a header row for it. */
+.matrix-cell-col { display: none; }
 .matrix-mark {
   display: inline-block;
   width: 16px;
@@ -2162,6 +2165,53 @@ details.disclosure > div { padding-bottom: 24px; }
   color: var(--text-quaternary);
 }
 .matrix-legend li { display: flex; align-items: center; gap: 8px; }
+
+/* Below the table's 620px minimum plus the container gutters there is no
+   honest way to keep four columns. Sideways scrolling is not a fallback here:
+   the header row scrolls off vertically as you read down, so a swiped-to
+   column is a grid of unlabelled circles. One block per criterion instead,
+   every mark next to the name of the column it belongs to. */
+@media (max-width: 700px) {
+  .matrix-wrap { overflow-x: visible; }
+  .matrix { min-width: 0; display: block; }
+  .matrix thead { display: none; }
+  .matrix tbody { display: block; }
+  .matrix tbody tr {
+    display: block;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--hairline-faint);
+  }
+  .matrix tbody tr:last-child { border-bottom: none; }
+  .matrix-row-label {
+    display: block;
+    padding: 0 0 12px;
+    border-bottom: none;
+    font-size: 1rem;
+    color: var(--text-display);
+  }
+  .matrix-cell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    /* The `yes` mark carries a 4px halo. Flush right it hangs into the gutter,
+       so hold the marks a few pixels in. */
+    padding: 8px 5px 8px 0;
+    border-bottom: none;
+    text-align: left;
+  }
+  /* The tinted column cannot survive restacking — it read as "our column" only
+     because it was a vertical stripe. Weight the label instead. */
+  .matrix-cell-ours { background: none; }
+  .matrix-cell-col {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--text-tertiary);
+  }
+  .matrix-cell-ours .matrix-cell-col { color: var(--text-display); }
+  /* The mark sits in a flex line now; stop it being stretched or squeezed. */
+  .matrix-mark { flex: none; }
+}
 
 /* ============================================================
    Tenancy split — which memory crosses the client boundary.
@@ -2559,5 +2609,98 @@ details.disclosure > div { padding-bottom: 24px; }
   .cta-split {
     grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
     align-items: center;
+  }
+}
+
+/* ============================================================
+   Phone ergonomics.
+
+   Two things the layout got away with on a mouse and does not on a thumb.
+   ============================================================ */
+
+/* The footer link columns. On a phone this footer is the only route to
+   /method, /limits-of-ai and /contact — they are deliberately kept out of the
+   header — and each link was a 17px-tall target, which is a coin flip to hit.
+   Pad the anchors into rows you can actually tap and drop the flex gap, so the
+   column keeps roughly the rhythm it had. */
+/* Sitemap, Reference and Company: six links, two, three. Left to wrap, the two
+   short groups cannot fill the row the long one starts, so a phone gets an empty
+   quadrant beside Reference and Company pushed down a whole row. Place them
+   instead — Sitemap down the left, the two short groups stacked on the right. */
+.footer-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(32px, 5vw, 72px);
+}
+@media (max-width: 700px) {
+  .footer-groups {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 20px;
+    align-items: start;
+    /* It is a flex item of the row above, so it would otherwise be sized by its
+       content and the two columns would huddle on the left. */
+    width: 100%;
+  }
+  /* By source order: 1 Sitemap, 2 Reference, 3 Company. Spelled out positionally
+     because the packing is the whole point — adding a fourth group means
+     revisiting this block, not just appending markup. */
+  .footer-groups > :nth-child(1) { grid-area: 1 / 1 / span 2 / auto; }
+  .footer-groups > :nth-child(2) { grid-area: 1 / 2; }
+  .footer-groups > :nth-child(3) { grid-area: 2 / 2; }
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 9px;
+}
+@media (max-width: 700px) {
+  .footer-links { gap: 0; }
+  .footer-links a,
+  .footer-meta {
+    display: flex;
+    align-items: center;
+    min-height: 42px;
+  }
+}
+
+/* Mono micro-labels. 9px is fine detail on a 27-inch display and unreadable
+   held at arm's length, so they step up a size on small screens. They are
+   uppercase and widely tracked, which is what lets them stay this small at
+   all. */
+@media (max-width: 700px) {
+  .dispatch-node-zdr,
+  .gstack-catch-label,
+  .bento-tag,
+  .specimen-tag,
+  .specimen-badge,
+  .tenancy-label,
+  .matrix-legend {
+    font-size: 0.6875rem;
+  }
+}
+
+/* Standalone text links sit 28px tall, and the wordmark 31px, because both are
+   sized by their type. On a thumb that is a near-miss. Grow the hit area with
+   a pseudo-element rather than with padding: padding would either push the
+   underline off the baseline or shift the link against the button beside it,
+   and this moves nothing. Touch pointers only — on a mouse the visible box is
+   already the right target. */
+@media (pointer: coarse) {
+  /* `a.wordmark`, not `.wordmark`: the footer puts the same class on a plain
+     div, where an overhanging pseudo-element would sit on top of the blurb
+     underneath it for no benefit. */
+  .link-quiet,
+  a.wordmark {
+    position: relative;
+  }
+  .link-quiet::after,
+  a.wordmark::after {
+    content: "";
+    position: absolute;
+    inset: -9px -4px;
   }
 }

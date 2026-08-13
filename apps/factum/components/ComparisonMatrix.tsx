@@ -10,6 +10,16 @@ export type Verdict = 'yes' | 'partial' | 'no' | 'na';
  * of what is publicly claimed about them is vendor-published. What is defensible
  * is the architectural question — does this category of tool do this thing at
  * all — and that is what the marks answer.
+ *
+ * Below 700px the table restacks into one block per criterion — see the
+ * `.matrix` rules in globals.css. It used to stay a table and scroll sideways
+ * inside `overflow-x: auto`, which on a 390px phone showed the criterion column
+ * and a single anonymous circle: the header row had scrolled off the top and
+ * the other three columns off the right, so no mark could be attributed to
+ * anything. `matrix-cell-col` carries the column name down into each cell for
+ * that layout. It is a real element rather than a `::before`, because the
+ * stacked rows are `display: block` and lose their table semantics — the name
+ * has to be in the DOM for a screen reader to read it next to the mark.
  */
 export default function ComparisonMatrix({
   columns,
@@ -52,6 +62,7 @@ export default function ComparisonMatrix({
                   key={columns[i]}
                   className={`matrix-cell matrix-${verdict} ${i === last ? 'matrix-cell-ours' : ''}`}
                 >
+                  <span className="matrix-cell-col">{columns[i]}</span>
                   <span className="matrix-mark" aria-hidden="true" />
                   <span className="sr-only">{legend[verdict]}</span>
                 </td>

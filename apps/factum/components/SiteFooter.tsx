@@ -25,12 +25,15 @@ export default async function SiteFooter() {
             <p className="type-small">{t('blurb')}</p>
           </div>
 
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'clamp(32px, 5vw, 72px)' }}>
+          {/* Three groups of wildly different lengths — six links, two, three.
+              Wrapping them leaves a hole on a phone, so `.footer-groups` places
+              them explicitly below 700px. Order matters there; see globals.css. */}
+          <div className="footer-groups">
             <nav aria-label={t('sitemap')}>
               <span className="eyebrow" style={{ marginBottom: 14 }}>
                 {t('sitemap')}
               </span>
-              <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: 9 }}>
+              <ul className="footer-links">
                 {FOOTER_NAV.map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} className="type-small nav-link">
@@ -53,7 +56,7 @@ export default async function SiteFooter() {
               <span className="eyebrow" style={{ marginBottom: 14 }}>
                 {t('reference')}
               </span>
-              <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: 9 }}>
+              <ul className="footer-links">
                 {REFERENCE_NAV.map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} className="type-small nav-link">
@@ -68,13 +71,15 @@ export default async function SiteFooter() {
               <span className="eyebrow" style={{ marginBottom: 14 }}>
                 {t('company')}
               </span>
-              <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: 9 }}>
+              <ul className="footer-links">
                 <li>
                   <Link href="/privacy" className="type-small nav-link">
                     {t('privacy')}
                   </Link>
                 </li>
-                <li className="type-small mono" style={{ color: 'var(--text-quaternary)' }}>
+                {/* Not a link, so it needs the row height spelled out or it
+                    breaks the rhythm of the padded ones next to it. */}
+                <li className="type-small mono footer-meta" style={{ color: 'var(--text-quaternary)' }}>
                   {t('kvk', { number: KVK })}
                 </li>
                 <li>
