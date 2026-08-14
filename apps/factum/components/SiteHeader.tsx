@@ -24,10 +24,34 @@ export default function SiteHeader() {
     setMenuOpen(false);
   }, [pathname]);
 
+  /**
+   * Scroll lock while the menu is open — on the *root* element, not on body.
+   *
+   * `document.body.style.overflow = 'hidden'` is the reflex, and it silently
+   * eats this header. `.site-header` is `position: sticky`, which resolves
+   * against the nearest scrollport; giving body a non-visible overflow makes
+   * body itself a scroll container, so the header re-anchors to a box whose
+   * scrollTop is 0 and is drawn at the top of the *document*. Open the menu
+   * 2200px down the page and the bar is rendered 2200px above the viewport:
+   *
+   *   body overflow:hidden   header top = -2200   ** gone
+   *   html overflow:hidden   header top =     0   held, and scroll still locked
+   *
+   * Measured on the live site at 390px, Pixel 7 UA. The reported symptom was
+   * "the top bar should be fixed when I press on a link there": you scroll
+   * down, tap the hamburger to reach a link, and the bar you just tapped is
+   * gone, with page content showing through the overlay's top 68px.
+   *
+   * Locking the root keeps the viewport as the scrollport, so sticky is
+   * unaffected, and `overflow: hidden` on the root still stops the user from
+   * scrolling. Restoring to '' hands control back to the stylesheet, which
+   * sets `overflow-x: hidden` on html.
+   */
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    const root = document.documentElement;
+    root.style.overflow = menuOpen ? 'hidden' : '';
     return () => {
-      document.body.style.overflow = '';
+      root.style.overflow = '';
     };
   }, [menuOpen]);
 

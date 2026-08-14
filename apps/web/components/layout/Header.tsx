@@ -36,11 +36,20 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  /**
+   * Scroll lock on the *root* element, not on body. This header is
+   * `sticky top-0`, and sticky resolves against the nearest scrollport: give
+   * body a non-visible overflow and body becomes that scrollport, with a
+   * scrollTop of 0, so the bar is painted at the top of the document rather
+   * than the top of the screen. Measured on the sibling site: opening the menu
+   * 2200px down moved the header to `top: -2200`. Locking the root keeps the
+   * viewport as the scrollport and still stops the page scrolling.
+   */
   useEffect(() => {
-    if (mobileOpen) document.body.style.overflow = 'hidden';
-    else document.body.style.overflow = '';
+    const root = document.documentElement;
+    root.style.overflow = mobileOpen ? 'hidden' : '';
     return () => {
-      document.body.style.overflow = '';
+      root.style.overflow = '';
     };
   }, [mobileOpen]);
 

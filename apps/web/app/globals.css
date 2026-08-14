@@ -141,7 +141,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  /* `clip`, not `hidden`. `overflow-x: hidden` forces overflow-y to `auto`,
+     which makes body a scroll container — and `position: sticky` resolves
+     against the nearest scrollport, so the sticky site header started
+     anchoring to a box that never scrolls and was drawn at the top of the
+     document instead of the top of the screen. Measured at 390px:
+
+       body overflow-x:hidden   y0->top 0, y600->top -600, y4000->top -4000
+       body overflow-x:clip     y0->top 0, y600->top    0, y4000->top     0
+
+     It also broke `window.scrollY`, which this header reads to decide when to
+     go opaque, and which every scroll-position script on the site reads.
+     `clip` clips the same decorative bleed without creating a scroll
+     container, so the viewport stays the scrollport. html keeps its own
+     `overflow-x: hidden` above; that one is the viewport's and is harmless. */
+  overflow-x: clip;
   max-width: 100vw;
   overflow-wrap: break-word;
 }
