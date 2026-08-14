@@ -56,7 +56,8 @@ export default function SiteHeader() {
   }, [menuOpen]);
 
   return (
-    <header className="site-header" data-scrolled={scrolled}>
+    <>
+      <header className="site-header" data-scrolled={scrolled}>
       <div
         className="container-wide"
         style={{
@@ -127,7 +128,32 @@ export default function SiteHeader() {
           </button>
         </div>
       </div>
+      </header>
 
+      {/*
+        Outside the <header>, deliberately.
+
+        `.site-header[data-scrolled="true"]` sets `backdrop-filter`, and any
+        non-`none` filter, backdrop-filter or transform makes an element the
+        containing block for its `position: fixed` descendants. So the moment you
+        scrolled past 8px, this panel stopped resolving against the viewport and
+        started resolving against the 68px-tall header box: `inset: 68px 0 0`
+        collapsed to top 68, bottom 68, and the panel was drawn as a 49px sliver
+        (0 content + its own 48px of padding) with the links spilling out over the
+        page behind it. Measured live at 390px, Pixel 7 UA:
+
+          y=0     header backdrop none    panel 68..844  h=776   full screen
+          y=600   header backdrop blur    panel 68..117  h= 49   ** sliver
+          y=2200  header backdrop blur    panel 68..117  h= 49   ** sliver
+
+        That is the reported "the dropdown menu doesnt appear in view fully, it
+        just comes up partly" — and it only reproduces once the page is scrolled,
+        which is why opening the menu at the top of the page always looked right.
+
+        As a sibling the panel resolves against the viewport again at every scroll
+        position. It sits below the 68px bar, so it never overlaps it; z-index 59
+        keeps the bar (60) on top anyway, so the close button stays reachable.
+      */}
       {menuOpen && (
         <div
           id="mobile-menu"
@@ -135,6 +161,7 @@ export default function SiteHeader() {
           style={{
             position: 'fixed',
             inset: '68px 0 0',
+            zIndex: 59,
             background: 'var(--surface-0)',
             borderTop: '1px solid var(--hairline)',
             padding: '8px clamp(20px, 5vw, 56px) 40px',
@@ -166,6 +193,6 @@ export default function SiteHeader() {
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }

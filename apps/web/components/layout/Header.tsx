@@ -54,6 +54,7 @@ export default function Header() {
   }, [mobileOpen]);
 
   return (
+    <>
     <header
       className="sticky top-0 z-50"
       style={{
@@ -214,8 +215,24 @@ export default function Header() {
         </button>
         </div>{/* end mobile group */}
       </div>{/* end container-extra */}
+    </header>
 
-      {/* Mobile drawer */}
+      {/*
+        Mobile drawer — a sibling of <header>, not a child.
+
+        This header sets `backdropFilter: blur(16px)` once `scrolled` flips, and a
+        non-`none` backdrop-filter makes the element the containing block for its
+        `position: fixed` descendants. Nested, the drawer's `top: 0; bottom: 0`
+        therefore resolved against the 78px header box instead of the viewport, so
+        past the first 8px of scroll the panel was 78px tall instead of full
+        height — it "comes up partly". The sibling Factum header had the identical
+        bug, measured there at 776px tall unscrolled versus 49px scrolled.
+
+        Hoisting it out restores the viewport as the containing block. The z-index
+        bump on `.drawer-backdrop`/`.drawer-panel` in globals.css keeps the old
+        paint order: previously both sat inside the header's stacking context and
+        so drew over the bar; now they need to clear the header's own z-50.
+      */}
       <div
         className={`lg:hidden drawer-backdrop ${mobileOpen ? 'open' : ''}`}
         onClick={() => setMobileOpen(false)}
@@ -269,6 +286,6 @@ export default function Header() {
           </div>
         </div>
       </aside>
-    </header>
+    </>
   );
 }
