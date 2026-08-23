@@ -1,5 +1,6 @@
 import { Button } from '@repo/ui/Button';
-import { INTAKE_URL } from '@/lib/site';
+import { getLocale } from 'next-intl/server';
+import { auditUrl } from '@/lib/site';
 import Reveal from './Reveal';
 
 /**
@@ -21,7 +22,7 @@ import Reveal from './Reveal';
  * inline, footer band, sticky header — can be told apart. Which one actually
  * does the work is currently unknown.
  */
-export default function InlineCta({
+export default async function InlineCta({
   line,
   cta,
   location
@@ -32,13 +33,15 @@ export default function InlineCta({
   /** Plausible event location, e.g. "home-coverage". */
   location: string;
 }) {
+  const audit = auditUrl(await getLocale());
+
   return (
     <Reveal className="inline-cta">
       <p className="inline-cta-line">{line}</p>
       <Button
-        href={INTAKE_URL}
+        href={audit}
         magnetic={false}
-        className={`plausible-event-name=Intake+CTA plausible-event-location=${location}`}
+        className={`plausible-event-name=Audit+CTA plausible-event-location=${location}`}
       >
         {cta}
       </Button>

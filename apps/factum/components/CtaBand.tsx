@@ -1,17 +1,20 @@
 import { Button } from '@repo/ui/Button';
-import { INTAKE_URL } from '@/lib/site';
+import { getLocale } from 'next-intl/server';
+import { auditUrl } from '@/lib/site';
 import Reveal from './Reveal';
 
 import type { ReactNode } from 'react';
 
 /** One primary action per screen — this band never carries a second button. */
-export default function CtaBand({
+export default async function CtaBand({
+  ctaHref,
   title,
   body,
   cta,
   note,
   aside
 }: {
+  ctaHref?: string;
   title: string;
   body: string;
   cta: string;
@@ -25,6 +28,8 @@ export default function CtaBand({
    */
   aside?: ReactNode;
 }) {
+  const audit = ctaHref ?? auditUrl(await getLocale());
+
   return (
     <section className="seam grain-overlay" style={{ paddingBlock: 'clamp(88px, 10vw, 152px)' }}>
       <span
@@ -47,7 +52,7 @@ export default function CtaBand({
               {body}
             </p>
             <div style={{ marginTop: 36 }}>
-              <Button href={INTAKE_URL} size="lg" magnetic={false} className="plausible-event-name=Intake+CTA plausible-event-location=cta-band">
+              <Button href={audit} size="lg" magnetic={false} className="plausible-event-name=Audit+CTA plausible-event-location=cta-band">
                 {cta}
               </Button>
             </div>

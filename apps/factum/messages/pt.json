@@ -2,15 +2,15 @@
   "meta": {
     "home": {
       "title": "Due diligence com IA: M&A e private equity",
-      "description": "Nove disciplinas sobre o data room completo. Reconciliadas entre si. Revistas por uma pessoa antes de lhe chegarem."
+      "description": "Dez disciplinas sobre o data room completo. Reconciliadas entre si. Revistas por uma pessoa antes de lhe chegarem. Feito para aquisições até cerca de 10 M€ de EBITDA."
     },
     "platform": {
       "title": "Plataforma de due diligence com IA",
-      "description": "22 módulos de due diligence em nove disciplinas. Cada constatação cita um documento. Cada output passa por um controlo humano."
+      "description": "{modules} módulos de due diligence em dez disciplinas. Cada constatação cita um documento. Cada output passa por um controlo humano."
     },
     "sprint": {
       "title": "Revisão completa do data room em dias",
-      "description": "Nove passagens especializadas sobre um data room, reconciliadas numa só narrativa, com registo de lacunas em direto."
+      "description": "Dez leituras especializadas sobre um data room, reconciliadas numa só narrativa, com um registo em direto do que falta."
     },
     "method": {
       "title": "Como funciona a due diligence com IA",
@@ -33,7 +33,7 @@
       "description": "Capacidade analítica ao nível de due diligence por trás das suas relações com clientes."
     },
     "contact": {
-      "title": "Marcar uma demo",
+      "title": "Marque uma demo",
       "description": "Marque uma demo de trinta minutos com a pessoa que revê cada resultado."
     },
     "privacy": {
@@ -55,7 +55,7 @@
     "team": "Equipa",
     "partnerships": "Parcerias",
     "contact": "Contacto",
-    "cta": "Marcar uma demo",
+    "cta": "Inicie um sprint",
     "openMenu": "Abrir menu",
     "closeMenu": "Fechar menu"
   },
@@ -78,22 +78,22 @@
     "disciplines": [
       {
         "label": "Financeira",
-        "pain": "O EBITDA do memorando de informação já vem normalizado pelo vendedor.",
-        "result": "Que ajustamentos se aguentam, quais não, e o que isso faz ao preço."
+        "pain": "O EBITDA do memorando de informação já vem normalizado pelo vendedor, e o fundo de maneio escapa por sítios que o resumo não menciona.",
+        "result": "Que ajustamentos se aguentam, quais não, e que base de custos fica de pé depois do closing."
       },
       {
         "label": "Comercial",
-        "pain": "A concentração da receita raramente chega à página de resumo.",
-        "result": "Que clientes sustentam a receita, em que condições, e quem pode sair."
+        "pain": "A concentração de clientes e o abandono raramente chegam à página de resumo.",
+        "result": "Que clientes sustentam a receita, o que o preço aguenta de facto, e quanta retenção existe por baixo do crescimento."
       },
       {
         "label": "Jurídica",
-        "pain": "As cláusulas de mudança de controlo estão nos anexos que ninguém lê até ao fim.",
-        "result": "Todas as cláusulas que disparam com a própria operação, com número e página."
+        "pain": "As cláusulas que mexem com a margem estão nos anexos que ninguém lê até ao fim.",
+        "result": "Todas as cláusulas que disparam com a operação ou com a margem, com número e página, e o que delas se pode renegociar."
       },
       {
         "label": "Fiscal",
-        "pain": "Uma posição fiscal que não se aguenta só dá sinal anos mais tarde.",
+        "pain": "Uma posição latente só dá sinal anos depois do closing.",
         "result": "Onde a estrutura carrega risco, e o que daí tem de constar do contrato de compra e venda."
       },
       {
@@ -102,9 +102,14 @@
         "result": "Quem está contratualmente preso, quem não está, e quanto custam mesmo pensões e convenção coletiva."
       },
       {
-        "label": "Tecnologia (TI e IA)",
-        "pain": "A dívida técnica não aparece em balanço nenhum, e «assente em IA» é quase sempre uma licença sobre o modelo de outra pessoa.",
-        "result": "O que corre de facto, quanto custa corrigir, e o que cai sob o Regulamento de IA da UE."
+        "label": "TI e tecnologia",
+        "pain": "A dívida técnica não aparece em balanço nenhum, e as licenças continuam a correr em contratos que ninguém contou.",
+        "result": "O que corre de facto, quanto custa corrigir, e que licenças se consolidam depois do closing."
+      },
+      {
+        "label": "IA",
+        "pain": "«Assente em IA» é quase sempre uma licença sobre o modelo de outra pessoa, e de quem são os dados fica sem resposta.",
+        "result": "De quem é o modelo e de quem são os dados, o que cai sob o Regulamento de IA da UE, e que processos se automatizam mesmo."
       },
       {
         "label": "ESG",
@@ -113,13 +118,13 @@
       },
       {
         "label": "Operacional",
-        "pain": "A margem escapa por processos que ninguém pôs em números.",
-        "result": "Por onde se perde a margem, e que alavancas existem mesmo depois do closing."
+        "pain": "Os prazos de execução e as dependências de uma só pessoa não constam de quadro nenhum.",
+        "result": "Por onde se perde a margem, que elo sustenta o trabalho sozinho, e o que rende automatizar esses processos."
       },
       {
-        "label": "Avaliação",
+        "label": "Avaliação e economia da operação",
         "pain": "A proposta sai de um modelo que ainda não conhecia as constatações.",
-        "result": "O que as constatações fazem ao preço, calculado em vez de assumido."
+        "result": "O que as constatações fazem ao preço, e que margem isso deixa à mesa de negociação."
       }
     ],
     "schema": {
@@ -163,25 +168,26 @@
       "Financial DD",
       "Commercial DD",
       "HR DD",
-      "DD de tecnologia",
+      "IT DD",
+      "AI DD",
       "ESG DD",
       "Operational DD",
-      "Triagem de IM",
-      "Monitorização Vigil",
+      "IM screener",
+      "Vigil monitoring",
       "Tax DD",
       "Legal DD",
       "Deal economics",
-      "Avaliação",
-      "Gestão de carteira",
-      "Integração pós-fusão",
+      "Valuation",
+      "Portfolio management",
+      "Post-merger integration",
       "Vendor due diligence",
-      "Memorando para o comité",
+      "IC memo",
       "Teaser / CIM",
-      "Memorando de financiamento",
-      "Fábrica de documentos",
-      "Preparação para a saída",
-      "Saúde da carteira",
-      "Relatório para o comité"
+      "Financing memorandum",
+      "Document factory",
+      "Exit readiness",
+      "Portfolio health",
+      "IC report"
     ],
     "waves": [
       {
@@ -202,7 +208,11 @@
       },
       {
         "title": "Pós-closing",
-        "body": "Monitorização e reporte. Corre ao seu próprio ritmo, depois da operação."
+        "body": "Preparação para a saída e saúde da carteira. Correm ao seu próprio ritmo, depois da operação."
+      },
+      {
+        "title": "Reporte periódico",
+        "body": "O relatório ao comité de investimento lê esses dois módulos, por isso espera por eles."
       }
     ],
     "chart": {
@@ -216,7 +226,7 @@
       }
     },
     "specimen": {
-      "pageLabel": "Sala de dados",
+      "pageLabel": "Data room",
       "pageRef": "TargetCo — Contrato-quadro de serviços, p. 14",
       "highlight": "Passagem citada",
       "findingLabel": "A constatação que daí resultou",
@@ -243,17 +253,17 @@
       "sprint": "O que o sprint cobre",
       "method": "O método, do início ao fim",
       "limits": "O que a IA não consegue fazer",
-      "intake": "Marcar uma demo"
+      "intake": "Inicie um sprint"
     },
     "reframe": {
-      "quote": "Correr a passagem do comprador primeiro do seu próprio lado é o que caracteriza um processo bem conduzido."
+      "quote": "Correr a leitura do comprador primeiro do seu próprio lado é o que caracteriza um processo bem conduzido."
     }
   },
   "home": {
     "hero": {
       "title": "Leia o data room inteiro em dias",
-      "lead": "Due diligence com IA para M&A e private equity. A due diligence habitual lê uma amostra e reporta em semanas. Nós lemos tudo, e cada constatação cita o documento e a página que a sustenta.",
-      "cta": "Marcar uma demo"
+      "lead": "Um motor próprio de risco e inteligência de M&A, feito para ler um data room inteiro. A diligência convencional faz-lhe uma amostra e reporta ao fim de semanas. Nós lemos tudo, e cada constatação cita o documento e a página.",
+      "cta": "Inicie um sprint"
     },
     "problem": {
       "title": "A maioria das due diligences nunca lê o data room todo",
@@ -270,7 +280,7 @@
       ]
     },
     "reframe": {
-      "attr": "Porquê uma segunda passagem"
+      "attr": "Porquê uma segunda leitura"
     },
     "guide": {
       "title": "Um banqueiro de leveraged finance e um engenheiro de dados",
@@ -299,7 +309,7 @@
       "link": "Ler a página de governação"
     },
     "coverage": {
-      "title": "Nove disciplinas, uma passagem sobre o mesmo data room",
+      "title": "Dez disciplinas, uma leitura sobre o mesmo data room",
       "lead": "O que uma disciplina encontra fica em cima da mesa para a seguinte.",
       "note": "Ordenado por dependência: o trabalho seguinte espera pelas constatações de que precisa.",
       "ctaLine": "A sua equipa não consegue fazer isto em duas semanas."
@@ -322,7 +332,7 @@
         },
         {
           "title": "Vender",
-          "body": "Faça a passagem do comprador primeiro do seu lado, enquanto há tempo para corrigir."
+          "body": "Faça a leitura do comprador primeiro do seu lado, enquanto há tempo para corrigir."
         },
         {
           "title": "Reestruturar",
@@ -341,7 +351,7 @@
         },
         {
           "title": "Já sabe o que vão encontrar",
-          "body": "Os assessores do comprador fazem esta passagem de qualquer forma. Desta vez, viu-a primeiro."
+          "body": "Os assessores do comprador fazem esta leitura de qualquer forma. Desta vez, viu-a primeiro."
         }
       ]
     },
@@ -366,14 +376,14 @@
     "cta": {
       "title": "Veja-o a correr e decida depois",
       "body": "Trinta minutos: primeiro a plataforma, depois a sua própria situação. Se não encaixar, dizemos.",
-      "button": "Marcar uma demo"
+      "button": "Inicie um sprint"
     }
   },
   "platform": {
     "header": {
       "title": "Como a plataforma lê um data room",
       "lead": "{modules} módulos com âmbito pré-definido, numa ordem de dependências fixa, com quatro verificações de ancoragem e um controlo humano obrigatório. A mesma execução em cada mandato.",
-      "cta": "Marcar uma demo"
+      "cta": "Inicie um sprint"
     },
     "scale": {
       "title": "A plataforma em números",
@@ -397,7 +407,7 @@
         },
         "waves": {
           "title": "Ondas de despacho",
-          "body": "Ordenadas por dependência. A onda 1 abre com oito módulos ao mesmo tempo."
+          "body": "Ordenadas por dependência. A onda 1 abre com {w1} módulos ao mesmo tempo."
         },
         "zdr": {
           "title": "Com retenção zero obrigatória",
@@ -508,11 +518,16 @@
         }
       ]
     },
+    "dimensions": {
+      "title": "Para que o motor lê o data room",
+      "lead": "Um módulo é uma peça da máquina. Uma dimensão é uma pergunta que já tem, e hoje recebe uma factura por cada uma. As {disciplines} percorrem o mesmo data room numa só leitura, por isso o que uma encontra fica em cima da mesa para a seguinte.",
+      "note": "Uma dimensão sem as outras não é due diligence. A lista vem do código do produto, não de um folheto."
+    },
     "alternatives": {
       "title": "Outras três formas de fazer isto",
       "lead": "Comparadas como categorias de ferramenta, não como produtos com nome. Cada marca responde a uma pergunta: esta categoria faz isto sequer?",
       "columns": [
-        "Sala de dados virtual",
+        "Data room virtual",
         "Ferramentas de DD com IA",
         "IA de uso geral",
         "Factum"
@@ -560,7 +575,7 @@
         "Sem afirmar que a porta humana é opcional. É obrigatória.",
         "Ainda sem casos públicos concluídos.",
         "Sem historial uniforme. O módulo financeiro correu de ponta a ponta numa operação real e foi verificado contra os documentos fonte. A camada de reconciliação é mais recente.",
-        "Sem due diligence técnica ao nível do produto. Revisão de código-fonte, avaliação de arquitetura e testes de escalabilidade ficam fora da passagem padrão.",
+        "Sem due diligence técnica ao nível do produto. Revisão de código-fonte, avaliação de arquitetura e testes de escalabilidade ficam fora da leitura padrão.",
         "Sem investigação de integridade ou reputação. As verificações de antecedentes sobre pessoas e contrapartes correm fora desta plataforma.",
         "Sem disponibilidade geral. A Factum está em fase anterior ao lançamento."
       ]
@@ -586,14 +601,14 @@
         },
         {
           "q": "Qual é a rapidez?",
-          "a": "A passagem pela pipeline demora horas. O resultado terminado e revisto demora dias. Não damos data de entrega antes de ver a sala de dados."
+          "a": "A execução da pipeline demora horas. O resultado terminado e revisto demora dias. Não damos data de entrega antes de ver o data room."
         }
       ]
     },
     "cta": {
       "title": "Veja-o correr sobre um grafo de despacho real",
       "body": "Abrimos o grafo de despacho, corremos um módulo e seguimos uma constatação até à passagem de origem.",
-      "button": "Marcar uma demo",
+      "button": "Inicie um sprint",
       "note": "Trinta minutos: primeiro a plataforma, depois a sua própria situação."
     }
   },
@@ -601,14 +616,14 @@
     "header": {
       "title": "Veja o que um comprador encontraria, antes dele",
       "lead": "Todas as {disciplines} disciplinas, reconciliadas numa só narrativa. Corra-o sobre um target, uma empresa que detém, ou o seu próprio negócio.",
-      "cta": "Marcar uma demo"
+      "cta": "Marque uma demo"
     },
     "reframe": {
-      "attr": "Porquê uma segunda passagem"
+      "attr": "Porquê uma segunda leitura"
     },
     "disciplines": {
       "title": "As {disciplines} disciplinas, um âmbito fixo",
-      "lead": "Cada uma é uma passagem delimitada com a sua própria pergunta e o seu próprio resultado.",
+      "lead": "Cada uma é uma leitura delimitada com a sua própria pergunta e o seu próprio resultado.",
       "note": "Um mandato, um preço. Sem menu à la carte e sem upsell depois da assinatura. O que cada disciplina analisa é definido na demo face ao seu data room."
     },
     "layers": {
@@ -673,7 +688,7 @@
         },
         {
           "q": "Quanto tempo demora?",
-          "a": "Dias, não semanas. A passagem do pipeline corre em horas; a revisão humana e a reconciliação vêm depois. Não nos comprometemos com uma data antes de ver o data room."
+          "a": "Dias, não semanas. A pipeline corre em horas; a revisão humana e a reconciliação vêm depois. Não nos comprometemos com uma data antes de ver o data room."
         },
         {
           "q": "Quanto custa?",
@@ -696,7 +711,7 @@
     "cta": {
       "title": "Ver se um sprint encaixa na sua situação",
       "body": "Quinze minutos de plataforma e quinze do seu data room: o que lá está, o que falta, e se um sprint é o instrumento certo.",
-      "button": "Marcar uma demo",
+      "button": "Marque uma demo",
       "note": "Um número limitado de mandatos-piloto, contados na casa das unidades."
     }
   },
@@ -704,7 +719,7 @@
     "header": {
       "title": "Como os seus documentos são tratados, e o que não afirmamos",
       "lead": "O tratamento de dados está integrado na forma como o pipeline funciona. É também mais estreito do que a maioria das páginas de segurança dá a entender, pelo que esta página declara o limite.",
-      "cta": "Marcar uma demo"
+      "cta": "Inicie um sprint"
     },
     "data": {
       "title": "Quatro coisas verdadeiras em todos os mandatos",
@@ -727,7 +742,7 @@
       "steps": [
         "Cada módulo recupera, por si, provas dos documentos que carrega.",
         "Um segundo agente revisor critica cada rascunho.",
-        "Uma passagem separada confirma as afirmações contra o texto de origem.",
+        "Uma verificação separada confirma as afirmações contra o texto de origem.",
         "Uma pessoa revê o resultado.",
         "As afirmações que não podem ser ligadas a uma passagem são assinaladas como não confirmadas."
       ],
@@ -750,7 +765,7 @@
     "cta": {
       "title": "Traga as perguntas incómodas para a demo",
       "body": "A lista acima é deliberadamente pouco lisonjeira. Se algo nela o impedir, é melhor descobri-lo em trinta minutos.",
-      "button": "Marcar uma demo",
+      "button": "Inicie um sprint",
       "note": "Trinta minutos: primeiro a plataforma, depois a sua própria situação."
     },
     "zdr": {
@@ -796,7 +811,7 @@
       "items": [
         "Um conjunto de dados, uma execução. Nenhum terceiro o verificou.",
         "O restante não é «{remainder}% errado». É a parte que as verificações não conseguiram fundamentar nem marcar de forma conclusiva.",
-        "Outra sala de dados dará outro número.",
+        "Outra data room dará outro número.",
         "É por isto que a porta humana é obrigatória e não opcional."
       ]
     },
@@ -855,7 +870,7 @@
     "header": {
       "title": "O método, do início ao fim",
       "lead": "A versão longa. O que corre e por que ordem, o contrato que cada constatação tem de cumprir, e o que uma pessoa verifica antes de alguma coisa lhe chegar.",
-      "cta": "Marcar uma demo"
+      "cta": "Inicie um sprint"
     },
     "waves": {
       "title": "{modules} módulos, {waves} vagas, uma ordem",
@@ -863,7 +878,7 @@
       "steps": [
         {
           "title": "Vaga um — as leituras independentes",
-          "body": "{w1} módulos abrem ao mesmo tempo. Financeiro, comercial, recursos humanos, tecnologia, ESG e operações entram em paralelo no data room, a par do filtro ao memorando informativo e da configuração da monitorização. Nenhum precisa da resposta de outro módulo para começar."
+          "body": "{w1} módulos abrem ao mesmo tempo. Financeiro, comercial, recursos humanos, TI, IA, ESG e operações entram em paralelo no data room, a par do filtro ao memorando informativo e da configuração da monitorização. Nenhum precisa da resposta de outro módulo para começar."
         },
         {
           "title": "Vaga dois — as leituras que têm de esperar",
@@ -879,7 +894,11 @@
         },
         {
           "title": "Vaga cinco — depois do negócio",
-          "body": "{w5} módulos com relógio próprio. Preparação para a saída, saúde da carteira e o relatório periódico ao comité de investimento. Não fazem parte do sprint nem esperam por ele."
+          "body": "{w5} módulos com relógio próprio: preparação para a saída e saúde da carteira. Não fazem parte do sprint nem esperam por ele."
+        },
+        {
+          "title": "Vaga seis — o relatório periódico",
+          "body": "O relatório ao comité de investimento fica sozinho na última vaga, porque os módulos da mesma vaga correm ao mesmo tempo. Ao lado dos outros dois leria os capítulos da ronda anterior, ou nada numa primeira execução."
         }
       ],
       "note": "As vagas um e dois são a due diligence. Tudo o que vem depois é o que faz com ela."
@@ -924,7 +943,7 @@
         "O documento entra e é indexado. Os valores financeiros e pessoais confidenciais são pseudonimizados antes de qualquer modelo os ver.",
         "O módulo recupera as passagens que respondem à sua própria pergunta, e apenas essas.",
         "O rascunho é escrito contra o contrato acima. Uma afirmação sem passagem por trás não chega a ser escrita.",
-        "Uma passagem de revisão critica o rascunho e devolve-o. Duas tentativas e o ciclo pára: passa para uma pessoa.",
+        "Uma ronda de revisão critica o rascunho e devolve-o. Duas tentativas e o ciclo pára: passa para uma pessoa.",
         "Quatro verificações de fundamentação em sequência: o índice de referências, a citação em si, se a afirmação decorre da passagem, e uma segunda opinião que bloqueia na dúvida.",
         "Uma pessoa com nome revê, concilia e aprova. A pseudonimização é revertida aqui e em mais lado nenhum antes disso.",
         "Recebe a constatação com a referência ao documento anexada, e continua a poder abri-la depois."
@@ -954,7 +973,7 @@
     "cta": {
       "title": "Veja o método correr num data room real",
       "body": "Abrimos a pipeline, corremos um módulo e seguimos uma constatação até à passagem de origem.",
-      "button": "Marcar uma demo",
+      "button": "Inicie um sprint",
       "note": "Trinta minutos: primeiro a plataforma, depois a sua própria situação."
     }
   },
@@ -962,7 +981,7 @@
     "header": {
       "title": "O que a IA não consegue fazer em due diligence",
       "lead": "Vendemos uma pipeline de IA. Esta página é sobre a parte do trabalho que ela não faz, e sobre quem a faz em vez dela.",
-      "cta": "Marcar uma demo"
+      "cta": "Inicie um sprint"
     },
     "limits": {
       "title": "Cinco coisas que nenhum modelo faz num data room",
@@ -1048,7 +1067,7 @@
     "cta": {
       "title": "Faça-nos as três perguntas",
       "body": "Trinta minutos com a pessoa cujo nome vai na entrega. Traga as incómodas.",
-      "button": "Marcar uma demo",
+      "button": "Inicie um sprint",
       "note": "Trinta minutos: primeiro a plataforma, depois a sua própria situação."
     }
   },
@@ -1056,7 +1075,7 @@
     "header": {
       "title": "As pessoas por trás do resultado",
       "lead": "Wouter estruturou financiamento de aquisições e leveraged finance no ING. Daniel constrói pipelines de dados regulados. Um deles aprova cada resultado.",
-      "cta": "Marcar uma demo"
+      "cta": "Inicie um sprint"
     },
     "historyLabel": "Percurso",
     "people": [
@@ -1124,7 +1143,7 @@
     "cta": {
       "title": "Falará com a pessoa que revê o output",
       "body": "Enquanto a Factum está em pré-lançamento, a demo, o controlo de revisão e a apresentação são a mesma pessoa.",
-      "button": "Marcar uma demo",
+      "button": "Inicie um sprint",
       "note": "Trinta minutos: primeiro a plataforma, depois a sua própria situação."
     },
     "roles": {
@@ -1133,7 +1152,7 @@
       "items": [
         {
           "label": "Wouter Dijkman",
-          "body": "Define o âmbito consigo e aprova cada conclusão antes de sair. Nada lhe chega por ler."
+          "body": "Define o âmbito consigo e aprova cada constatação antes de sair. Nada lhe chega por ler."
         },
         {
           "label": "Daniel Dropuljic",
@@ -1150,7 +1169,7 @@
     "header": {
       "title": "Mais mandatos do que a sua equipa consegue ler",
       "lead": "Mantém a relação e o critério. Nós corremos a análise de todas as disciplinas por trás, sob o seu nome.",
-      "cta": "Marcar uma demo"
+      "cta": "Inicie um sprint"
     },
     "who": {
       "title": "Para quem isto costuma funcionar",
@@ -1190,7 +1209,7 @@
         {
           "label": "Fornecemos nós",
           "items": [
-            "A passagem completa sobre o data room, todas as disciplinas",
+            "A leitura completa sobre o data room, todas as disciplinas",
             "A reconciliação entre disciplinas como passo fixo",
             "Constatações ligadas a um documento e a uma passagem, sempre",
             "Um revisor identificado a responder pelo output"
@@ -1252,7 +1271,7 @@
     "cta": {
       "title": "Comece com um mandato",
       "body": "Aponte-o a um mandato real e leia o output.",
-      "button": "Marcar uma demo",
+      "button": "Inicie um sprint",
       "note": "Trinta minutos: primeiro a plataforma, depois a sua própria situação."
     }
   },
@@ -1260,7 +1279,7 @@
     "header": {
       "title": "Marque uma demo com a pessoa que revê o resultado",
       "lead": "Sem formulário. Escolha um horário livre no calendário e mostramos-lhe a plataforma a funcionar.",
-      "cta": "Marcar uma demo"
+      "cta": "Inicie um sprint"
     },
     "call": {
       "title": "Marque trinta minutos",
@@ -1300,7 +1319,7 @@
         },
         {
           "q": "Com quem vou falar?",
-          "a": "Com o Wouter Dijkman. A Factum está em pré-lançamento, por isso quem mostra a plataforma é quem aprova cada conclusão."
+          "a": "Com o Wouter Dijkman. A Factum está em pré-lançamento, por isso quem mostra a plataforma é quem aprova cada constatação."
         },
         {
           "q": "Já estamos a meio de um processo com um assessor. É tarde?",

@@ -2,23 +2,23 @@
   "meta": {
     "home": {
       "title": "AI due diligence voor M&A en private equity",
-      "description": "Negen disciplines over de volledige dataroom. Onderling afgestemd. Beoordeeld door een persoon voordat u iets ziet."
+      "description": "Tien disciplines over de volledige data room. Onderling afgestemd. Beoordeeld door een persoon voordat u iets ziet. Gebouwd voor overnames tot ongeveer €10M EBITDA."
     },
     "platform": {
-      "title": "AI-duediligenceplatform",
-      "description": "22 due-diligencemodules over negen disciplines. Elke bevinding verwijst naar een document. Elke output passeert een menselijke toets."
+      "title": "AI-platform voor due diligence",
+      "description": "{modules} modules voor due diligence, over tien disciplines. Elke bevinding verwijst naar een document. Elke output passeert een menselijke toets."
     },
     "sprint": {
-      "title": "Volledige dataroomreview in dagen",
-      "description": "Negen specialistische reads over één dataroom, samengebracht tot één verhaal, met een live datagap-tracker."
+      "title": "De hele data room beoordeeld in dagen",
+      "description": "Tien specialistische rondes over één data room, samengebracht tot één verhaal, met een lopende lijst van wat er ontbreekt."
     },
     "method": {
-      "title": "Hoe AI-due-diligence echt werkt",
+      "title": "Hoe due diligence met AI echt werkt",
       "description": "De volgorde waarin de modules draaien, het contract waar elke bevinding aan moet voldoen, en wat een reviewer controleert voordat er iets wordt geleverd."
     },
     "aiLimits": {
       "title": "Wat AI niet kan in due diligence",
-      "description": "Vijf dingen die geen enkel model doet in een dataroom, waarom de menselijke controle verplicht is, en drie vragen voor elke AI-leverancier."
+      "description": "Vijf dingen die geen enkel model doet in een data room, waarom de menselijke controle verplicht is, en drie vragen voor elke AI-leverancier."
     },
     "governance": {
       "title": "AI-governance en gegevensverwerking",
@@ -26,11 +26,11 @@
     },
     "team": {
       "title": "Het team achter Factum",
-      "description": "Een leveraged-finance bankier en een data-engineer. Een van beiden keurt elke output goed."
+      "description": "Een bankier uit leveraged finance en een data-engineer. Een van beiden keurt elke output goed."
     },
     "partnerships": {
-      "title": "Diligencecapaciteit voor adviseurs",
-      "description": "Analytische capaciteit op diligence-niveau achter uw eigen klantrelaties."
+      "title": "Analysecapaciteit voor adviseurs",
+      "description": "Analysecapaciteit op het niveau van een diligenceteam, achter uw eigen klantrelaties."
     },
     "contact": {
       "title": "Plan een demo",
@@ -55,7 +55,7 @@
     "team": "Team",
     "partnerships": "Partnerships",
     "contact": "Contact",
-    "cta": "Plan een demo",
+    "cta": "Start een sprint",
     "openMenu": "Menu openen",
     "closeMenu": "Menu sluiten"
   },
@@ -78,22 +78,22 @@
     "disciplines": [
       {
         "label": "Financieel",
-        "pain": "De EBITDA in het informatiememorandum is genormaliseerd door de verkoper.",
-        "result": "U ziet welke correcties standhouden, welke niet, en wat dat met de prijs doet."
+        "pain": "De EBITDA in het informatiememorandum is genormaliseerd door de verkoper, en werkkapitaal lekt weg op plekken die de samenvatting niet noemt.",
+        "result": "Welke correcties standhouden, welke niet, en welke kostenbasis er na closing overblijft."
       },
       {
         "label": "Commercieel",
-        "pain": "Omzetconcentratie staat zelden in de samenvatting.",
-        "result": "Welke klanten de omzet dragen, op welke voorwaarden, en wie er weg kan lopen."
+        "pain": "Klantconcentratie en verloop staan zelden in de samenvatting.",
+        "result": "Welke klanten de omzet dragen, wat de prijszetting werkelijk verdraagt, en hoeveel retentie er onder de groei zit."
       },
       {
         "label": "Juridisch",
-        "pain": "Change-of-control-clausules zitten in de bijlagen die niemand uitleest.",
-        "result": "Elke clausule die op de transactie zelf afgaat, met artikelnummer en pagina."
+        "pain": "De clausules die de marge raken zitten in de bijlagen die niemand uitleest.",
+        "result": "Elke clausule die op de transactie of op de marge afgaat, met artikelnummer en pagina, plus wat ervan te heronderhandelen valt."
       },
       {
         "label": "Fiscaal",
-        "pain": "Een fiscale positie die niet houdt, meldt zich pas jaren later.",
+        "pain": "Een latentie meldt zich pas jaren na closing.",
         "result": "Waar de structuur risico draagt, en wat daarvoor in de koopovereenkomst hoort."
       },
       {
@@ -102,9 +102,14 @@
         "result": "Wie contractueel vastzit, wie niet, en wat pensioen en cao werkelijk kosten."
       },
       {
-        "label": "Technologie (IT & AI)",
-        "pain": "Technische schuld staat op geen enkele balans, en “AI-gedreven” is meestal een licentie op het model van iemand anders.",
-        "result": "Wat er echt draait, wat herstel kost, en wat onder de AI Act valt."
+        "label": "IT & technologie",
+        "pain": "Technische schuld staat op geen enkele balans, en licenties lopen door in contracten die niemand heeft geteld.",
+        "result": "Wat er echt draait, wat herstel kost, en welke licenties na closing te consolideren zijn."
+      },
+      {
+        "label": "AI",
+        "pain": "“AI-gedreven” is vaak een licentie op het model van iemand anders, en wie de data bezit blijft onbeantwoord.",
+        "result": "Van wie het model en de data zijn, wat onder de AI Act valt, en welke processen zich werkelijk laten automatiseren."
       },
       {
         "label": "ESG",
@@ -113,13 +118,13 @@
       },
       {
         "label": "Operationeel",
-        "pain": "Marge lekt weg in processen die niemand in cijfers heeft gezet.",
-        "result": "Waar de marge weglekt, en welke hefbomen na closing echt bestaan."
+        "pain": "Doorlooptijden en afhankelijkheden van één persoon staan in geen enkel overzicht.",
+        "result": "Waar de marge weglekt, welke schakel als enige het werk draagt, en wat automatisering van die processen oplevert."
       },
       {
-        "label": "Waardering",
+        "label": "Waardering & dealeconomie",
         "pain": "Het bod komt uit een model dat de bevindingen nog niet kende.",
-        "result": "Wat de bevindingen samen met de prijs doen, doorgerekend in plaats van aangenomen."
+        "result": "Wat de bevindingen samen met de prijs doen, en welke ruimte dat aan de onderhandelingstafel geeft."
       }
     ],
     "schema": {
@@ -152,7 +157,7 @@
       },
       {
         "title": "Gepseudonimiseerd vóór verwerking",
-        "body": "Vertrouwelijke gegevens worden gepseudonimiseerd vóór de analyse. Pas in de uiteindelijke output teruggezet."
+        "body": "Vertrouwelijke gegevens worden gepseudonimiseerd vóór de analyse. Ze worden pas in de uiteindelijke output teruggezet."
       },
       {
         "title": "Eén aanspreekpunt dat verantwoordelijk is",
@@ -163,33 +168,34 @@
       "Financial DD",
       "Commercial DD",
       "HR DD",
-      "Technologie DD",
+      "IT DD",
+      "AI DD",
       "ESG DD",
       "Operational DD",
-      "IM-screener",
-      "Vigil-monitoring",
+      "IM screener",
+      "Vigil monitoring",
       "Tax DD",
       "Legal DD",
       "Deal economics",
-      "Waardering",
-      "Portefeuillebeheer",
-      "Post-merger integratie",
+      "Valuation",
+      "Portfolio management",
+      "Post-merger integration",
       "Vendor due diligence",
-      "IC-memo",
+      "IC memo",
       "Teaser / CIM",
-      "Financieringsmemorandum",
-      "Documentfabriek",
+      "Financing memorandum",
+      "Document factory",
       "Exit readiness",
-      "Portefeuillegezondheid",
-      "IC-rapport"
+      "Portfolio health",
+      "IC report"
     ],
     "waves": [
       {
-        "title": "Onafhankelijke reads",
+        "title": "Onafhankelijke rondes",
         "body": "Deze modules hebben niets bovenstrooms nodig. Ze starten allemaal tegelijk."
       },
       {
-        "title": "Afhankelijke reads",
+        "title": "Afhankelijke rondes",
         "body": "Fiscaal en juridisch kunnen pas redeneren met de eerste golf in handen."
       },
       {
@@ -197,17 +203,21 @@
         "body": "Waardering, deal economics en portefeuille lezen alles daarvoor."
       },
       {
-        "title": "Deliverables",
+        "title": "Opleveringen",
         "body": "De documenten die u krijgt, samengesteld uit de golven hierboven."
       },
       {
         "title": "Na closing",
-        "body": "Monitoring en rapportage. Loopt op een eigen klok, na de deal."
+        "body": "Exit readiness en portefeuillegezondheid. Lopen op een eigen klok, na de deal."
+      },
+      {
+        "title": "Periodieke rapportage",
+        "body": "De IC-rapportage leest die twee modules, dus wacht ze die eerst af."
       }
     ],
     "chart": {
       "zdr": "ZDR",
-      "zdrTitle": "Zero-retention routing afgedwongen. Zonder die route start de run niet.",
+      "zdrTitle": "Zero-retention routing wordt afgedwongen. Zonder die route start de run niet.",
       "modulesLabel": "modules",
       "kinds": {
         "analysis": "Bevinding",
@@ -216,11 +226,11 @@
       }
     },
     "specimen": {
-      "pageLabel": "Dataroom",
+      "pageLabel": "Data room",
       "pageRef": "TargetCo — Raamovereenkomst, p. 14",
       "highlight": "Geciteerde passage",
       "findingLabel": "De bevinding die eruit volgde",
-      "footnote": "Een geconstrueerd voorbeeld op een fictieve target. Hier staat geen cliëntdocument. Uw mandaat levert dezelfde vijf velden, op uw eigen dataroom.",
+      "footnote": "Een geconstrueerd voorbeeld op een fictieve target. Hier staat geen cliëntdocument. Uw mandaat levert dezelfde vijf velden, op uw eigen data room.",
       "quote": "Afnemer kan deze overeenkomst opzeggen met een schriftelijke termijn van dertig (30) dagen bij een wijziging van zeggenschap over Leverancier.",
       "tag": "Illustratief",
       "values": {
@@ -243,29 +253,29 @@
       "sprint": "Wat de sprint dekt",
       "method": "De methode, van begin tot eind",
       "limits": "Wat AI niet kan",
-      "intake": "Plan een demo"
+      "intake": "Start een sprint"
     },
     "reframe": {
-      "quote": "De read van de koper eerst op uw eigen dossier draaien: zo ziet een goed geleid proces eruit."
+      "quote": "De analyse van de koper eerst op uw eigen dossier draaien: zo ziet een goed geleid proces eruit."
     }
   },
   "home": {
     "hero": {
-      "title": "Lees de hele dataroom in dagen",
-      "lead": "AI-gedreven due diligence voor M&A en private equity. Gebruikelijke due diligence leest een steekproef en rapporteert in weken. Wij lezen alles, en elke bevinding verwijst naar het document en de pagina erachter.",
-      "cta": "Plan een demo"
+      "title": "Lees de hele data room in dagen",
+      "lead": "Een eigen M&A-risico- en intelligence-engine, gebouwd om een hele data room te lezen. Conventionele diligence neemt er een steekproef uit en rapporteert na weken. Wij lezen alles, en bij elke bevinding staat het document en de pagina.",
+      "cta": "Start een sprint"
     },
     "problem": {
-      "title": "De meeste due diligence leest de dataroom nooit helemaal",
+      "title": "De meeste due diligence leest de data room nooit helemaal",
       "lead": "Er is nooit genoeg tijd. Dus wordt de prijs bepaald op een steekproef van de documenten.",
       "points": [
         {
           "title": "U werkt met een steekproef",
-          "body": "Klassiek boekenonderzoek leest een fractie van de dataroom. De rest zit er nog steeds in."
+          "body": "Klassieke due diligence leest een fractie van de data room. De rest zit er nog steeds in."
         },
         {
           "title": "Het risico zit tussen de disciplines",
-          "body": "Een quality-of-earnings read dekt de winst. De dure verrassingen zitten waar twee specialisten allebei dachten dat de ander keek."
+          "body": "Een quality of earnings kijkt naar de winst. De dure verrassingen zitten waar twee specialisten allebei dachten dat de ander keek."
         }
       ]
     },
@@ -274,7 +284,7 @@
     },
     "guide": {
       "title": "Een leveraged-finance bankier en een data-engineer",
-      "lead": "Wouter structureerde acquisitie- en leveraged finance bij ING. Daniel bouwt gereguleerde datapijplijnen. Een van beiden keurt elke output goed voordat u die ziet.",
+      "lead": "Wouter structureerde acquisition finance en leveraged finance bij ING. Daniel bouwt gereguleerde datapijplijnen. Een van beiden keurt elke output goed voordat u die ziet.",
       "link": "Maak kennis met het team"
     },
     "specimen": {
@@ -283,14 +293,14 @@
     },
     "pipeline": {
       "title": "Elk mandaat doorloopt dezelfde vijf stappen",
-      "lead": "Iedereen kan een AI-tool op een dataroom richten. De vraag is wat er gebeurt als het model iets fout heeft.",
+      "lead": "Iedereen kan een AI-tool op een data room richten. De vraag is wat er gebeurt als het model iets fout heeft.",
       "refusalTitle": "De pijplijn stopt en roept een persoon",
       "refusalNote": "Elke harde blokkade gaat naar een persoon.",
       "refusals": [
         "Verzonnen of gehallucineerde bronverwijzingen",
         "Privacylekken",
-        "Scope-weigeringen",
-        "Concepten onder de reviewerdrempel"
+        "Weigeringen buiten de scope",
+        "Concepten onder de drempel van de reviewer"
       ]
     },
     "trust": {
@@ -299,14 +309,14 @@
       "link": "Lees de governancepagina"
     },
     "coverage": {
-      "title": "Negen disciplines, één read over dezelfde dataroom",
+      "title": "Tien disciplines, één ronde over dezelfde data room",
       "lead": "Wat de ene discipline vindt, ligt op tafel voor de volgende.",
       "note": "Geordend op afhankelijkheid: later werk wacht op de bevindingen die het nodig heeft.",
       "ctaLine": "Uw team krijgt dit niet in twee weken rond."
     },
     "cycle": {
       "title": "Dezelfde bewijsbasis, vijf keer in de dealcyclus",
-      "lead": "De dataroom wordt opnieuw gelezen zodra iemand nieuws erop moet vertrouwen. Lees hem één keer, goed.",
+      "lead": "De data room wordt opnieuw gelezen zodra iemand nieuws erop moet vertrouwen. Lees hem één keer, goed.",
       "stages": [
         {
           "title": "Kopen",
@@ -322,7 +332,7 @@
         },
         {
           "title": "Verkopen",
-          "body": "Draai de slag van de koper eerst aan uw eigen kant, nu er nog tijd is."
+          "body": "Doe de analyse van de koper eerst zelf, nu er nog tijd voor is."
         },
         {
           "title": "Herstructureren",
@@ -333,10 +343,10 @@
     },
     "success": {
       "title": "Wat er verandert als u tekent",
-      "lead": "U komt aan tafel met de hele dataroom achter u.",
+      "lead": "U komt aan tafel met de hele data room achter u.",
       "points": [
         {
-          "title": "De prijs weerspiegelt de hele dataroom",
+          "title": "De prijs weerspiegelt de hele data room",
           "body": "Elke discipline, afgestemd, voordat het bedrag vaststaat."
         },
         {
@@ -354,7 +364,7 @@
           "body": "We lopen het platform met u door op een echte run, en bepalen daarna of het bij uw situatie past."
         },
         {
-          "title": "Teken de NDA, wijs ons dan de dataroom aan",
+          "title": "Teken de NDA, wijs ons dan de data room aan",
           "body": "Een NDA voordat er één document beweegt. Toegang loopt onder een verwerkersovereenkomst, in de EU, met zero retention."
         },
         {
@@ -366,14 +376,14 @@
     "cta": {
       "title": "Zie het draaien, beslis daarna",
       "body": "Dertig minuten: eerst het platform, dan uw eigen situatie. Past het niet, dan zeggen we dat.",
-      "button": "Plan een demo"
+      "button": "Start een sprint"
     }
   },
   "platform": {
     "header": {
-      "title": "Hoe het platform een dataroom leest",
+      "title": "Hoe het platform een data room leest",
       "lead": "{modules} vooraf afgebakende modules, in een vaste afhankelijkheidsvolgorde, met vier onderbouwingscontroles en een verplichte menselijke toets. Elke keer dezelfde run.",
-      "cta": "Plan een demo"
+      "cta": "Start een sprint"
     },
     "scale": {
       "title": "Het platform in cijfers",
@@ -385,7 +395,7 @@
         },
         "analysis": {
           "title": "Leveren bevindingen",
-          "body": "Ze lezen de dataroom uit en leveren claims met de bronpassage eronder."
+          "body": "Ze lezen de data room uit en leveren claims met de bronpassage eronder."
         },
         "deliverables": {
           "title": "Stellen documenten samen",
@@ -397,10 +407,10 @@
         },
         "waves": {
           "title": "Dispatchgolven",
-          "body": "Geordend op afhankelijkheid. Golf 1 opent met acht modules tegelijk."
+          "body": "Geordend op afhankelijkheid. Golf 1 opent met {w1} modules tegelijk."
         },
         "zdr": {
-          "title": "Zero-retention gated",
+          "title": "Zero retention afgedwongen",
           "body": "Fiscaal, juridisch en financieel weigeren te draaien op een model dat data bewaart."
         },
         "blocks": {
@@ -419,8 +429,8 @@
       "lead": "Vijf stappen. Elke keer dezelfde vijf, of er nu iemand meekijkt of niet.",
       "stages": [
         {
-          "title": "Gefundeerde retrieval",
-          "body": "De module gaat de dataroom in en haalt de passages op die zijn vraag beantwoorden.",
+          "title": "Onderbouwd ophalen",
+          "body": "De module gaat de data room in en haalt de passages op die zijn vraag beantwoorden.",
           "note": "Vertrouwelijke financiële en persoonsgegevens worden gepseudonimiseerd voordat ze deze laag bereiken."
         },
         {
@@ -428,7 +438,7 @@
           "body": "Een claim zonder document en passage erachter is geen bevinding."
         },
         {
-          "title": "Generate-critique-retry",
+          "title": "Opstellen, bekritiseren, opnieuw",
           "body": "Een reviewer-agent bekritiseert het concept en stuurt het terug. Maximaal twee retries per specialist."
         },
         {
@@ -508,11 +518,16 @@
         }
       ]
     },
+    "dimensions": {
+      "title": "Waar de engine de data room voor leest",
+      "lead": "Een module is een stuk machine. Een dimensie is een vraag die u al heeft, en waarvoor u nu per stuk een factuur krijgt. Alle {disciplines} lopen in één ronde over dezelfde data room, dus wat de ene vindt ligt op tafel voor de volgende.",
+      "note": "Eén dimensie zonder de andere is geen diligence. De lijst komt uit de broncode van het product, niet uit een brochure."
+    },
     "alternatives": {
       "title": "Drie andere manieren om dit te doen",
       "lead": "Vergeleken als categorieën gereedschap, niet als merknamen. Elk vinkje beantwoordt één vraag: doet deze categorie dit überhaupt.",
       "columns": [
-        "Virtuele dataroom",
+        "Virtuele data room",
         "AI-DD-tools",
         "Algemene AI",
         "Factum"
@@ -537,7 +552,7 @@
           "label": "Reconciliatie tussen disciplines"
         },
         {
-          "label": "Levert de deliverable, niet een antwoord"
+          "label": "Levert het document, niet een antwoord"
         },
         {
           "label": "Zero retention bij de modelaanbieder"
@@ -560,7 +575,7 @@
         "Geen claim dat de menselijke poort optioneel is. Die is verplicht.",
         "Nog geen afgeronde publieke cases.",
         "Geen uniform trackrecord. De financiële module heeft end-to-end op een live deal gedraaid en is geverifieerd tegen brondocumenten. De reconciliatielaag is jonger.",
-        "Geen technische due diligence op productniveau. Broncode-review, architectuurbeoordeling en schaalbaarheidstests zitten niet in de standaardslag.",
+        "Geen technische due diligence op productniveau. Broncode-review, architectuurbeoordeling en schaalbaarheidstests zitten niet in de standaardronde.",
         "Geen integriteits- of reputatieonderzoek. Achtergrondchecks op personen en tegenpartijen lopen buiten dit platform om.",
         "Geen algemene beschikbaarheid. Factum is pre-launch."
       ]
@@ -574,7 +589,7 @@
         },
         {
           "q": "Waarom golven en niet alles tegelijk?",
-          "a": "Fiscaal kan niet redeneren zonder de financiële en juridische reads. Waardering kan niet prijzen zonder fiscaal. De afhankelijkheidsgraaf bepaalt de volgorde; golf 1 draait nog steeds acht modules parallel."
+          "a": "Fiscaal kan niet redeneren zonder de financiële en juridische rondes. Waardering kan niet prijzen zonder fiscaal. De afhankelijkheidsgraaf bepaalt de volgorde; golf 1 draait nog steeds acht modules parallel."
         },
         {
           "q": "Wat gebeurt er als het model het niet weet?",
@@ -582,18 +597,18 @@
         },
         {
           "q": "Hoe weet ik dat het platform bevindingen van dit gewicht kan dragen?",
-          "a": "De financiële module is het meest cijfermatig blootgestelde deel van elke read. Die heeft end-to-end op een live deal gedraaid en is onafhankelijk geverifieerd tegen brondocumenten. Nieuwere lagen hebben minder historie, en we zeggen erbij welke dat zijn."
+          "a": "De financiële module is het meest cijfermatig blootgestelde deel van elke analyse. Die heeft end-to-end op een live deal gedraaid en is onafhankelijk geverifieerd tegen brondocumenten. Nieuwere lagen hebben minder historie, en we zeggen erbij welke dat zijn."
         },
         {
           "q": "Hoe snel is het?",
-          "a": "De pipeline-pass draait in uren. De afgeronde, beoordeelde output kost dagen. We noemen geen leverdatum voordat we de dataroom hebben gezien."
+          "a": "De pipeline-pass draait in uren. De afgeronde, beoordeelde output kost dagen. We noemen geen leverdatum voordat we de data room hebben gezien."
         }
       ]
     },
     "cta": {
       "title": "Zie het draaien op een echte dispatch-graaf",
       "body": "We openen de dispatch-graaf, draaien een module, en volgen één bevinding terug naar de bronpassage.",
-      "button": "Plan een demo",
+      "button": "Start een sprint",
       "note": "Dertig minuten: eerst het platform, dan uw eigen situatie."
     }
   },
@@ -608,11 +623,11 @@
     },
     "disciplines": {
       "title": "Alle {disciplines} disciplines, één vaste scope",
-      "lead": "Elk is een afgebakende slag met een eigen vraag en een eigen uitkomst.",
-      "note": "Eén opdracht, één prijs. Geen à-la-cartemenu en geen upsell na ondertekening. Waar elke discipline naar kijkt, bepalen we in de demo tegen uw dataroom."
+      "lead": "Elke discipline is een afgebakende ronde met een eigen vraag en een eigen uitkomst.",
+      "note": "Eén opdracht, één prijs. Geen à-la-cartemenu en geen upsell na ondertekening. Waar elke discipline naar kijkt, bepalen we in het gesprek tegen uw data room."
     },
     "layers": {
-      "title": "Wat er één deliverable van maakt",
+      "title": "Wat er één oplevering van maakt",
       "lead": "Wat {disciplines} losse analyses tot één oplevering maakt, in plaats van {disciplines} losse rapporten.",
       "items": [
         {
@@ -624,7 +639,7 @@
           "body": "De bevindingen van elke discipline opgelost tot één samenhangende verhaallijn, met een persoon met naam achter het resultaat."
         },
         {
-          "title": "Live data-gap tracker",
+          "title": "Lopende lijst van wat ontbreekt",
           "body": "De lopende vragenlijst, bijgewerkt terwijl gaten worden gedicht."
         }
       ]
@@ -645,8 +660,8 @@
         },
         {
           "label": "Naast beide",
-          "items": "De data-gap tracker",
-          "body": "Een gestructureerde lijst met datagaten, geleverd terwijl er nog tijd is om ze te dichten."
+          "items": "De lijst van wat ontbreekt",
+          "body": "Een gestructureerde lijst van wat er in de data room ontbreekt, geleverd terwijl er nog tijd is om het op te vragen."
         }
       ]
     },
@@ -655,11 +670,11 @@
       "lead": "Twee dingen. Geen workshop, geen kick-offweek.",
       "items": [
         {
-          "title": "Toegang tot de dataroom",
-          "body": "Financiën, juridisch, fiscaal, HR, contracten en IP, zoals afgesproken in de demo."
+          "title": "Toegang tot de data room",
+          "body": "Financiën, juridisch, fiscaal, HR, contracten en IP, zoals afgesproken in het gesprek."
         },
         {
-          "title": "Antwoorden op de data-gap tracker",
+          "title": "Antwoorden op de lijst van wat ontbreekt",
           "body": "Uw antwoorden dichten de gaten. Eén ronde om ze te verwerken en de geraakte analyses opnieuw te draaien, zit inbegrepen."
         }
       ]
@@ -673,11 +688,11 @@
         },
         {
           "q": "Hoe lang duurt het?",
-          "a": "Dagen, geen weken. De pipeline-slag draait in uren; de menselijke beoordeling en de afstemming volgen daarna. We committeren ons niet aan een datum voordat we de dataroom hebben gezien."
+          "a": "Dagen, geen weken. De pipeline draait in uren; de menselijke beoordeling en de afstemming volgen daarna. We committeren ons niet aan een datum voordat we de data room hebben gezien."
         },
         {
           "q": "Wat kost het?",
-          "a": "Eén prijs voor de hele scope, bepaald in de demo aan de hand van de omvang en de staat van uw dataroom. Geen menu met niveaus."
+          "a": "Eén prijs voor de hele scope, bepaald in het gesprek aan de hand van de omvang en de staat van uw data room. Geen menu met niveaus."
         },
         {
           "q": "Wat gebeurt er met onze documenten?",
@@ -685,7 +700,7 @@
         },
         {
           "q": "Kan ik een voorbeeldrapport zien?",
-          "a": "Geen echt rapport. Klantdocumenten zijn vertrouwelijk en geen enkele klant heeft ervoor gekozen bij naam genoemd te worden. In de demo laten we u het live dashboard zien, het outputschema, en hoe een bevinding terugleidt naar de bron."
+          "a": "Geen echt rapport. Klantdocumenten zijn vertrouwelijk en geen enkele klant heeft ervoor gekozen bij naam genoemd te worden. In het gesprek laten we u het live dashboard zien, het outputschema, en hoe een bevinding terugleidt naar de bron."
         },
         {
           "q": "Wie beoordeelt de output eigenlijk?",
@@ -695,16 +710,16 @@
     },
     "cta": {
       "title": "Kijk of een sprint bij uw situatie past",
-      "body": "Een kwartier het platform, een kwartier uw dataroom: wat erin zit, wat ontbreekt, en of een sprint het juiste instrument is.",
+      "body": "Een kwartier het platform, een kwartier uw data room: wat erin zit, wat ontbreekt, en of een sprint het juiste instrument is.",
       "button": "Plan een demo",
-      "note": "Een beperkt aantal pilotmandaten, een handvol."
+      "note": "Een handvol pilotmandaten."
     }
   },
   "governance": {
     "header": {
       "title": "Hoe uw documenten worden behandeld, en wat we niet claimen",
       "lead": "Gegevensverwerking is ingebouwd in hoe de pipeline draait. Het is ook smaller dan de meeste securitypagina’s suggereren, dus deze pagina benoemt de grens.",
-      "cta": "Plan een demo"
+      "cta": "Start een sprint"
     },
     "data": {
       "title": "Vier dingen die voor elke opdracht gelden",
@@ -727,7 +742,7 @@
       "steps": [
         "Elke module haalt zelfstandig bewijs uit uw geüploade documenten.",
         "Een tweede reviewer-agent bekritiseert elk concept.",
-        "Een aparte slag controleert beweringen tegen de brontekst.",
+        "Een aparte ronde controleert beweringen tegen de brontekst.",
         "Een persoon beoordeelt het resultaat.",
         "Beweringen die niet aan een passage te koppelen zijn, worden gemarkeerd als onbevestigd."
       ],
@@ -750,7 +765,7 @@
     "cta": {
       "title": "Neem de lastige vragen mee naar de demo",
       "body": "De lijst hierboven is bewust weinig flatteus. Blokkeert iets daarvan u, dan ontdekt u dat liever in dertig minuten.",
-      "button": "Plan een demo",
+      "button": "Start een sprint",
       "note": "Dertig minuten: eerst het platform, dan uw eigen situatie."
     },
     "zdr": {
@@ -796,7 +811,7 @@
       "items": [
         "Eén dataset, één run. Geen derde partij heeft het gecontroleerd.",
         "De rest is niet “{remainder}% fout”. Het is het deel dat de checks niet sluitend konden funderen of markeren.",
-        "Een andere dataroom levert een ander getal op.",
+        "Een andere data room levert een ander getal op.",
         "Dit is waarom de menselijke poort verplicht is en niet optioneel."
       ]
     },
@@ -805,12 +820,12 @@
       "lead": "Eén uit de rechtszaal. Eén uit uw eigen NDA. Eén uit het wetboek.",
       "items": [
         {
-          "title": "Een publieke AI-tool is geen private",
+          "title": "Een publieke AI-tool is geen privéomgeving",
           "body": "In United States v. Heppner oordeelde een federale rechter dat de uitwisselingen van een verdachte met een publieke AI-assistent geen verschoningsrecht en geen work product genoten, en gaf ze aan het openbaar ministerie. Waar het werk draait, bepaalt wie het later mag lezen."
         },
         {
           "title": "Uw NDA dekt de tool mogelijk niet",
-          "body": "De meeste M&A-NDA’s staan verstrekking alleen toe aan benoemde Representatives: medewerkers, adviseurs, financiers. Een AI-platform hoort daar zelden bij. De dataroom in een consumententool zetten kan de schending zelf zijn."
+          "body": "De meeste M&A-NDA’s staan verstrekking alleen toe aan benoemde Representatives: medewerkers, adviseurs, financiers. Een AI-platform hoort daar zelden bij. De data room in een consumententool zetten kan de schending zelf zijn."
         },
         {
           "title": "De EU AI Act loopt op een klok",
@@ -855,7 +870,7 @@
     "header": {
       "title": "De methode, van begin tot eind",
       "lead": "De lange versie. Wat in welke volgorde draait, het contract waar elke bevinding aan moet voldoen, en wat een mens controleert voordat er iets bij u terechtkomt.",
-      "cta": "Plan een demo"
+      "cta": "Start een sprint"
     },
     "waves": {
       "title": "{modules} modules, {waves} golven, één volgorde",
@@ -863,7 +878,7 @@
       "steps": [
         {
           "title": "Golf één — de onafhankelijke passages",
-          "body": "{w1} modules openen tegelijk. Financieel, commercieel, HR, technologie, ESG en operationeel gaan parallel de dataroom in, naast de screener op het informatiememorandum en de opzet voor monitoring. Geen van hen heeft het antwoord van een andere module nodig om te beginnen."
+          "body": "{w1} modules openen tegelijk. Financieel, commercieel, HR, IT, AI, ESG en operationeel gaan parallel de data room in, naast de screener op het informatiememorandum en de opzet voor monitoring. Geen van hen heeft het antwoord van een andere module nodig om te beginnen."
         },
         {
           "title": "Golf twee — de passages die moeten wachten",
@@ -875,11 +890,15 @@
         },
         {
           "title": "Golf vier — de documenten",
-          "body": "{w4} deliverables, samengesteld uit de golven hierboven: vendor due diligence, het IC-memo, de teaser of CIM, het financieringsmemorandum en de documentfabriek voor wat het proces verder nodig heeft."
+          "body": "{w4} opleveringen, samengesteld uit de golven hierboven: vendor due diligence, het IC-memo, de teaser of CIM, het financieringsmemorandum en de documentfabriek voor wat het proces verder nodig heeft."
         },
         {
           "title": "Golf vijf — na de deal",
-          "body": "{w5} modules op hun eigen klok. Exit readiness, portefeuillegezondheid en de periodieke IC-rapportage. Ze horen niet bij de sprint en wachten er niet op."
+          "body": "{w5} modules op hun eigen klok: exit readiness en portefeuillegezondheid. Ze horen niet bij de sprint en wachten er niet op."
+        },
+        {
+          "title": "Golf zes — de periodieke rapportage",
+          "body": "De IC-rapportage staat alleen in de laatste golf, omdat modules binnen één golf gelijktijdig draaien. Naast exit readiness en portefeuillegezondheid zou ze de hoofdstukken van de vorige ronde lezen, of bij een eerste run helemaal niets."
         }
       ],
       "note": "Golf één en twee zijn de due diligence zelf. Alles daarna is wat u ermee doet."
@@ -891,12 +910,12 @@
       "items": [
         {
           "title": "Module",
-          "body": "Welke van de {modules} hem heeft geproduceerd. Vooraf afgebakend, dus de vraag stond op papier voordat de dataroom openging — niet geïmproviseerd op wat er toevallig in bleek te zitten.",
+          "body": "Welke van de {modules} hem heeft geproduceerd. Vooraf afgebakend, dus de vraag stond op papier voordat de data room openging — niet geïmproviseerd op wat er toevallig in bleek te zitten.",
           "fail": "Er is geen vrije-tekstbaan. Geen module, geen bevinding."
         },
         {
           "title": "Bevinding",
-          "body": "Eén claim, in één zin. Samengestelde claims worden gesplitst, want een zin met twee claims erin kun je maar half controleren.",
+          "body": "Eén claim, in één zin. Samengestelde claims worden gesplitst, want een zin met twee claims erin valt maar half te controleren.",
           "fail": "Te vaag om te controleren telt hetzelfde als onjuist."
         },
         {
@@ -952,9 +971,9 @@
       "link": "Wat AI niet kan in due diligence"
     },
     "cta": {
-      "title": "Zie de methode draaien op een echte dataroom",
+      "title": "Zie de methode draaien op een echte data room",
       "body": "We openen de pipeline, draaien een module en volgen één bevinding terug naar de bronpassage.",
-      "button": "Plan een demo",
+      "button": "Start een sprint",
       "note": "Dertig minuten: eerst het platform, dan uw eigen situatie."
     }
   },
@@ -962,22 +981,22 @@
     "header": {
       "title": "Wat AI niet kan in due diligence",
       "lead": "Wij verkopen een AI-pipeline. Deze pagina gaat over het deel van het werk dat hij niet doet, en wie het dan wel doet.",
-      "cta": "Plan een demo"
+      "cta": "Start een sprint"
     },
     "limits": {
-      "title": "Vijf dingen die geen model doet in een dataroom",
+      "title": "Vijf dingen die geen model doet in een data room",
       "lead": "Dit zijn geen afstelproblemen. Het zijn categorieën werk die buiten liggen wat een taalmodel is.",
       "humanLabel": "Wie het doet",
       "items": [
         {
           "title": "Bepalen wat ertoe doet",
-          "body": "Een model vindt elke change-of-control-clausule in de dataroom. Het kan u niet zeggen welke de deal sloopt. Materialiteit is een oordeel over uw structuur, uw prijs en uw risicobereidheid, en geen van die drie staat in de dataroom.",
+          "body": "Een model vindt elke change-of-control-clausule in de data room. Het kan u niet zeggen welke de deal sloopt. Materialiteit is een oordeel over uw structuur, uw prijs en uw risicobereidheid, en geen van die drie staat in de data room.",
           "human": "De reviewer rangschikt de bevindingen tegen de deal die u werkelijk doet."
         },
         {
           "title": "Citeren uit het document dat er niet is",
           "body": "Retrieval leest wat is geüpload. Het duurste in due diligence is vaak een afwezigheid — het contract dat niemand heeft opgeborgen, het jaar dat ontbreekt in de loonexport. Een afwezigheid heeft geen passage om te citeren, dus geen enkel gefundeerd systeem kan haar als bevinding opvoeren.",
-          "human": "De datagap-tracker is de lopende lijst van een mens: wat is opgevraagd en nooit gekomen. Die wordt naast de bevindingen geleverd."
+          "human": "De lijst met ontbrekende stukken wordt door een mens bijgehouden: wat is opgevraagd en nooit gekomen. Die komt naast de bevindingen mee."
         },
         {
           "title": "Lezen wat niemand heeft opgeschreven",
@@ -1018,7 +1037,7 @@
         },
         {
           "title": "Hij wordt niet moe",
-          "body": "Hetzelfde schema, dezelfde controles en dezelfde bewijsstandaard aan het eind van de run als aan het begin. Consistentie is waar mensen het slechtst in zijn en machines gratis."
+          "body": "Hetzelfde schema, dezelfde controles en dezelfde bewijsstandaard aan het eind van de run als aan het begin. Consistentie is waar mensen het slechtst in zijn, en waar een machine geen moeite voor hoeft te doen."
         },
         {
           "title": "Hij draait parallel",
@@ -1047,16 +1066,16 @@
     },
     "cta": {
       "title": "Stel ons de drie vragen",
-      "body": "Dertig minuten met de persoon wiens naam onder de output staat. Neem de lastige mee.",
-      "button": "Plan een demo",
+      "body": "Dertig minuten met de persoon wiens naam onder de output staat. Neem de lastige vragen mee.",
+      "button": "Start een sprint",
       "note": "Dertig minuten: eerst het platform, dan uw eigen situatie."
     }
   },
   "team": {
     "header": {
       "title": "De mensen achter de output",
-      "lead": "Wouter structureerde acquisitie- en leveraged finance bij ING. Daniel bouwt gereguleerde datapijplijnen. Een van beiden keurt elke output goed.",
-      "cta": "Plan een demo"
+      "lead": "Wouter structureerde acquisition finance en leveraged finance bij ING. Daniel bouwt gereguleerde datapijplijnen. Een van beiden keurt elke output goed.",
+      "cta": "Start een sprint"
     },
     "historyLabel": "Achtergrond",
     "people": [
@@ -1124,7 +1143,7 @@
     "cta": {
       "title": "U spreekt de persoon die de output beoordeelt",
       "body": "Zolang Factum pre-launch is, zijn de demo, de beoordelingstoets en de doorloop dezelfde persoon.",
-      "button": "Plan een demo",
+      "button": "Start een sprint",
       "note": "Dertig minuten: eerst het platform, dan uw eigen situatie."
     },
     "roles": {
@@ -1133,7 +1152,7 @@
       "items": [
         {
           "label": "Wouter Dijkman",
-          "body": "Bepaalt de scope met jou en keurt elke bevinding goed voordat die de deur uitgaat. Niets bereikt je ongelezen."
+          "body": "Bepaalt de scope met u en keurt elke bevinding goed voordat die de deur uitgaat. Niets bereikt u ongelezen."
         },
         {
           "label": "Daniel Dropuljic",
@@ -1141,7 +1160,7 @@
         },
         {
           "label": "Verder niemand",
-          "body": "Geen offshoreteam, geen wisselende juniors. Is een mandaat groter dan twee mensen en het platform, dan zeggen we dat voordat je tekent."
+          "body": "Geen offshoreteam, geen wisselende juniors. Is een mandaat groter dan twee mensen en het platform, dan zeggen we dat voordat u tekent."
         }
       ]
     }
@@ -1150,7 +1169,7 @@
     "header": {
       "title": "Meer mandaten dan uw team kan lezen",
       "lead": "U behoudt de relatie en het oordeel. Wij draaien de analyse over alle disciplines erachter, onder uw naam.",
-      "cta": "Plan een demo"
+      "cta": "Start een sprint"
     },
     "who": {
       "title": "Voor wie dit doorgaans werkt",
@@ -1175,7 +1194,7 @@
       ]
     },
     "split": {
-      "title": "U houdt de relatie. Wij leveren de slag.",
+      "title": "U houdt de relatie. Wij doen het werk.",
       "lead": "Hetzelfde platform, alle disciplines, dezelfde toetsing. Geleverd onder uw naam.",
       "columns": [
         {
@@ -1190,7 +1209,7 @@
         {
           "label": "Wij leveren",
           "items": [
-            "De volledige slag over de dataroom, elke discipline",
+            "De volledige ronde over de data room, elke discipline",
             "Disciplineoverstijgende afstemming als vaste stap",
             "Bevindingen gekoppeld aan een document en een passage, elke keer",
             "Een beoordelaar met naam die achter de output staat"
@@ -1204,7 +1223,7 @@
       "lead": "Met één echte opdracht, goed uitgevoerd, voordat iemand zich ergens aan bindt.",
       "steps": [
         {
-          "title": "Een demo, en een blik op je pijplijn",
+          "title": "Een demo, en een blik op uw pijplijn",
           "body": "We laten het platform zien en brengen daarna in kaart hoe uw opdrachten eruitzien en waar de analytische last zit. Dertig minuten."
         },
         {
@@ -1241,7 +1260,7 @@
         },
         {
           "q": "Kunnen jullie ook maar een deel van de scope draaien?",
-          "a": "De volledige slag ligt vast, omdat de waarde in de afstemming tussen disciplines zit. Wat varieert, is de diepgang van de uitwerking."
+          "a": "De volledige ronde ligt vast, omdat de waarde in de afstemming tussen disciplines zit. Wat varieert, is de diepgang van de uitwerking."
         },
         {
           "q": "Hoe exclusief is dit?",
@@ -1252,7 +1271,7 @@
     "cta": {
       "title": "Begin met één mandaat",
       "body": "Richt het op een lopende opdracht en lees de output.",
-      "button": "Plan een demo",
+      "button": "Start een sprint",
       "note": "Dertig minuten: eerst het platform, dan uw eigen situatie."
     }
   },
@@ -1260,7 +1279,7 @@
     "header": {
       "title": "Plan een demo met de persoon die de output beoordeelt",
       "lead": "Geen formulier. Kies een vrij moment in de agenda en we laten het platform draaien zien.",
-      "cta": "Plan een demo"
+      "cta": "Start een sprint"
     },
     "call": {
       "title": "Plan dertig minuten",
@@ -1272,7 +1291,7 @@
       "label": "Wat we bespreken",
       "items": [
         "Waar u staat in de cyclus: kopen, financieren, houden of verkopen.",
-        "Wat er vandaag in de dataroom zit, en wat ontbreekt.",
+        "Wat er vandaag in de data room zit, en wat ontbreekt.",
         "Welke disciplines het echte risico dragen in uw situatie.",
         "Of een sprint bij uw situatie past, of dat het te vroeg is.",
         "Wat het zou kosten, afgebakend tegen de werkelijke room."
@@ -1296,7 +1315,7 @@
       "items": [
         {
           "q": "Moet ik iets voorbereiden?",
-          "a": "Nee. Heb je een lopende deal, neem die mee. Zo niet, dan draaien we de demo op een geconstrueerde dataroom."
+          "a": "Nee. Heeft u een lopende deal, neem die dan mee. Zo niet, dan draaien we de demo op een geconstrueerde data room."
         },
         {
           "q": "Met wie spreek ik?",

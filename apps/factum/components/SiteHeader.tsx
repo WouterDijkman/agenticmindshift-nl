@@ -4,12 +4,28 @@ import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Button } from '@repo/ui/Button';
 import { Link, usePathname } from '@/i18n/navigation';
-import { INTAKE_URL, NAV } from '@/lib/site';
+import { useLocale } from 'next-intl';
+import { auditUrl, INTAKE_URL, NAV } from '@/lib/site';
 import LanguageSwitcher from './LanguageSwitcher';
+
+const SPRINT_PATH = '/diligence-sprint';
 
 export default function SiteHeader() {
   const t = useTranslations('nav');
+  const locale = useLocale();
+
   const pathname = usePathname();
+  /**
+   * The header button normally sends you to the sprint page. On the sprint
+   * page that is a link to the page you are already reading, so the one
+   * action in the chrome does nothing. There it becomes the conversation,
+   * which is the next real step from that page anyway.
+   *
+   * `usePathname` here is next-intl's, which strips the locale prefix, so the
+   * comparison is against the bare route. Comparing against `/${locale}/...`
+   * silently never matches and the dead link survives the fix.
+   */
+  const ctaHref = pathname === SPRINT_PATH ? INTAKE_URL : auditUrl(locale);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -94,7 +110,7 @@ export default function SiteHeader() {
             <LanguageSwitcher />
           </div>
           <div className="nav-desktop">
-            <Button href={INTAKE_URL} size="md" magnetic={false} className="text-sm plausible-event-name=Intake+CTA plausible-event-location=header">
+            <Button href={ctaHref} size="md" magnetic={false} className="text-sm plausible-event-name=Audit+CTA plausible-event-location=header">
               {t('cta')}
             </Button>
           </div>
@@ -186,7 +202,7 @@ export default function SiteHeader() {
             ))}
           </nav>
           <div style={{ marginTop: 28, display: 'flex', flexDirection: 'column', gap: 20 }}>
-            <Button href={INTAKE_URL} size="lg" magnetic={false} className="w-full plausible-event-name=Intake+CTA plausible-event-location=header-mobile">
+            <Button href={ctaHref} size="lg" magnetic={false} className="w-full plausible-event-name=Audit+CTA plausible-event-location=header-mobile">
               {t('cta')}
             </Button>
             <LanguageSwitcher />

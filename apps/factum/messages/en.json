@@ -2,15 +2,15 @@
   "meta": {
     "home": {
       "title": "AI due diligence for M&A and private equity",
-      "description": "Nine disciplines over the full data room. Reconciled against each other. Reviewed by a person before you see it."
+      "description": "Ten disciplines over the full data room. Reconciled against each other. Reviewed by a person before you see it. Built for acquisitions up to roughly €10M EBITDA."
     },
     "platform": {
       "title": "AI due diligence platform",
-      "description": "22 due-diligence modules across nine disciplines. Every finding cites a document. Every output passes a human gate."
+      "description": "{modules} due-diligence modules across ten disciplines. Every finding cites a document. Every output passes a human gate."
     },
     "sprint": {
       "title": "Full data-room review in days",
-      "description": "Nine specialist passes over one data room, reconciled into a single narrative, with a live data-gap tracker."
+      "description": "Ten specialist passes over one data room, reconciled into a single narrative, with a live data-gap tracker."
     },
     "method": {
       "title": "How AI due diligence actually works",
@@ -55,7 +55,7 @@
     "team": "Team",
     "partnerships": "Partnerships",
     "contact": "Contact",
-    "cta": "Book a demo",
+    "cta": "Start a sprint",
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
   },
@@ -78,22 +78,22 @@
     "disciplines": [
       {
         "label": "Financial",
-        "pain": "The EBITDA in the information memorandum has already been normalised by the seller.",
-        "result": "Which adjustments hold, which don’t, and what that does to the price."
+        "pain": "The EBITDA in the information memorandum has already been normalised by the seller, and working capital leaks in places the summary never mentions.",
+        "result": "Which adjustments hold, which don’t, and what cost base is left standing after closing."
       },
       {
         "label": "Commercial",
-        "pain": "Revenue concentration rarely makes the summary page.",
-        "result": "Which customers carry the revenue, on what terms, and who is free to walk."
+        "pain": "Customer concentration and churn rarely make the summary page.",
+        "result": "Which customers carry the revenue, what the pricing will actually bear, and how much retention sits underneath the growth."
       },
       {
         "label": "Legal",
-        "pain": "Change-of-control clauses sit in the schedules nobody reads to the end.",
-        "result": "Every clause that triggers on the transaction itself, with clause number and page."
+        "pain": "The clauses that reach the margin sit in the schedules nobody reads to the end.",
+        "result": "Every clause that triggers on the transaction or on the margin, with clause number and page, and what of it can be renegotiated."
       },
       {
         "label": "Tax",
-        "pain": "A tax position that doesn’t hold announces itself years later.",
+        "pain": "A deferred position announces itself years after closing.",
         "result": "Where the structure carries risk, and what belongs in the purchase agreement because of it."
       },
       {
@@ -102,9 +102,14 @@
         "result": "Who is contractually tied in, who isn’t, and what pension and collective labour agreements really cost."
       },
       {
-        "label": "Technology (IT & AI)",
-        "pain": "Technical debt is on nobody’s balance sheet, and “AI-driven” is usually a licence on someone else’s model.",
-        "result": "What actually runs, what it costs to fix, and what falls under the AI Act."
+        "label": "IT & technology",
+        "pain": "Technical debt is on nobody’s balance sheet, and licences run on inside contracts nobody has counted.",
+        "result": "What actually runs, what it costs to fix, and which licences consolidate after closing."
+      },
+      {
+        "label": "AI",
+        "pain": "“AI-driven” is usually a licence on someone else’s model, and who owns the data goes unanswered.",
+        "result": "Whose model and whose data, what falls under the AI Act, and which processes genuinely automate."
       },
       {
         "label": "ESG",
@@ -113,13 +118,13 @@
       },
       {
         "label": "Operational",
-        "pain": "Margin leaks through processes nobody has put a number on.",
-        "result": "Where the margin goes, and which levers genuinely exist after closing."
+        "pain": "Lead times and single points of failure appear on no overview.",
+        "result": "Where the margin goes, which link carries the work on its own, and what automating those processes returns."
       },
       {
-        "label": "Valuation",
+        "label": "Valuation & deal economics",
         "pain": "The bid comes out of a model that hadn’t seen the findings yet.",
-        "result": "What the findings do to the price, calculated through rather than assumed."
+        "result": "What the findings do to the price, and what room that leaves at the negotiating table."
       }
     ],
     "schema": {
@@ -163,7 +168,8 @@
       "Financial DD",
       "Commercial DD",
       "HR DD",
-      "Technology DD",
+      "IT DD",
+      "AI DD",
       "ESG DD",
       "Operational DD",
       "IM screener",
@@ -202,7 +208,11 @@
       },
       {
         "title": "Post-close",
-        "body": "Monitoring and reporting. Runs on its own clock, after the deal."
+        "body": "Exit readiness and portfolio health. They run on their own clock, after the deal."
+      },
+      {
+        "title": "Periodic reporting",
+        "body": "The investment-committee report reads those two modules, so it waits for them."
       }
     ],
     "chart": {
@@ -243,7 +253,7 @@
       "sprint": "What the sprint covers",
       "method": "The method, end to end",
       "limits": "What AI cannot do",
-      "intake": "Book a demo"
+      "intake": "Start a sprint"
     },
     "reframe": {
       "quote": "Running the buyer’s pass on your own side first is what a well-run process looks like."
@@ -252,8 +262,8 @@
   "home": {
     "hero": {
       "title": "Read the entire data room in days",
-      "lead": "AI-driven due diligence for M&A and private equity. Conventional diligence samples the room and reports in weeks. We read all of it, and every finding cites the document and page behind it.",
-      "cta": "Book a demo"
+      "lead": "A proprietary M&A risk and intelligence engine, built to read a whole data room. Conventional diligence samples it and reports in weeks. We read all of it, and every finding cites the document and page behind it.",
+      "cta": "Start a sprint"
     },
     "problem": {
       "title": "Most diligence never reads the whole data room",
@@ -299,7 +309,7 @@
       "link": "Read the governance page"
     },
     "coverage": {
-      "title": "Nine disciplines, one pass over the same room",
+      "title": "Ten disciplines, one pass over the same room",
       "lead": "What one discipline finds is on the table for the next one.",
       "note": "Dependency-ordered: later work waits for the findings it depends on.",
       "ctaLine": "Your team cannot get through this in two weeks."
@@ -366,14 +376,14 @@
     "cta": {
       "title": "See it running, then decide",
       "body": "Thirty minutes: a walkthrough of the platform, then your own situation. If it does not fit, we will say so.",
-      "button": "Book a demo"
+      "button": "Start a sprint"
     }
   },
   "platform": {
     "header": {
       "title": "How the platform reads a data room",
       "lead": "{modules} pre-scoped modules, in a fixed dependency order, with four grounding checks and a mandatory human gate. The same run, every mandate.",
-      "cta": "Book a demo"
+      "cta": "Start a sprint"
     },
     "scale": {
       "title": "The platform in numbers",
@@ -397,7 +407,7 @@
         },
         "waves": {
           "title": "Dispatch waves",
-          "body": "Ordered by dependency. Wave 1 opens with eight modules at once."
+          "body": "Ordered by dependency. Wave 1 opens with {w1} modules at once."
         },
         "zdr": {
           "title": "Zero-retention gated",
@@ -508,6 +518,11 @@
         }
       ]
     },
+    "dimensions": {
+      "title": "What the engine is read for",
+      "lead": "A module is a piece of the machine. A dimension is a question you already have, and today you get a separate invoice for each one. All {disciplines} run over the same data room in one pass, so what one finds is on the table for the next.",
+      "note": "One dimension without the others is not diligence. The list is derived from the product source, not from a brochure."
+    },
     "alternatives": {
       "title": "Three other ways to do this",
       "lead": "Compared as categories of tool, not as named products. Marks answer one question each: does this category of tool do this thing at all.",
@@ -593,7 +608,7 @@
     "cta": {
       "title": "See it run on a real dispatch graph",
       "body": "We open the dispatch graph, run a module, and follow one finding back to its source passage.",
-      "button": "Book a demo",
+      "button": "Start a sprint",
       "note": "Thirty minutes: a walkthrough of the platform, then your own situation."
     }
   },
@@ -704,7 +719,7 @@
     "header": {
       "title": "How your documents are handled, and what we don’t claim",
       "lead": "Data handling is built into how the pipeline runs. It is also narrower than most security pages imply, so this page states the boundary.",
-      "cta": "Book a demo"
+      "cta": "Start a sprint"
     },
     "data": {
       "title": "Four things that are true of every engagement",
@@ -750,7 +765,7 @@
     "cta": {
       "title": "Bring the awkward questions to the demo",
       "body": "The list above is deliberately unflattering. If something on it blocks you, better to find that out in thirty minutes.",
-      "button": "Book a demo",
+      "button": "Start a sprint",
       "note": "Thirty minutes: a walkthrough of the platform, then your own situation."
     },
     "zdr": {
@@ -855,7 +870,7 @@
     "header": {
       "title": "The method, end to end",
       "lead": "The long version. What runs in which order, the contract every finding has to satisfy, and what a person checks before anything reaches you.",
-      "cta": "Book a demo"
+      "cta": "Start a sprint"
     },
     "waves": {
       "title": "{modules} modules, {waves} waves, one order",
@@ -863,7 +878,7 @@
       "steps": [
         {
           "title": "Wave one — the independent reads",
-          "body": "{w1} modules open at the same moment. Financial, commercial, HR, technology, ESG and operational go into the data room in parallel, alongside the information-memorandum screener and the monitoring set-up. None of them needs another module’s answer to start."
+          "body": "{w1} modules open at the same moment. Financial, commercial, HR, IT, AI, ESG and operational go into the data room in parallel, alongside the information-memorandum screener and the monitoring set-up. None of them needs another module’s answer to start."
         },
         {
           "title": "Wave two — the reads that have to wait",
@@ -879,7 +894,11 @@
         },
         {
           "title": "Wave five — after the deal",
-          "body": "{w5} modules on their own clock. Exit readiness, portfolio health and the periodic investment-committee report. They are not part of the sprint and do not wait for it."
+          "body": "{w5} modules on their own clock: exit readiness and portfolio health. They are not part of the sprint and do not wait for it."
+        },
+        {
+          "title": "Wave six — the periodic report",
+          "body": "The investment-committee report sits alone in the last wave, because modules inside one wave run at the same time. Next to exit readiness and portfolio health it would read the previous round’s chapters, or nothing at all on a first run."
         }
       ],
       "note": "Waves one and two are the diligence pass. Everything after them is what you do with it."
@@ -954,7 +973,7 @@
     "cta": {
       "title": "Watch the method run on a real room",
       "body": "We open the pipeline, run a module, and follow one finding back to its source passage.",
-      "button": "Book a demo",
+      "button": "Start a sprint",
       "note": "Thirty minutes: a walkthrough of the platform, then your own situation."
     }
   },
@@ -962,7 +981,7 @@
     "header": {
       "title": "What AI cannot do in due diligence",
       "lead": "We sell an AI pipeline. This page is about the part of the job it does not do, and who does that instead.",
-      "cta": "Book a demo"
+      "cta": "Start a sprint"
     },
     "limits": {
       "title": "Five things no model does on a data room",
@@ -1048,7 +1067,7 @@
     "cta": {
       "title": "Ask us the three questions",
       "body": "Thirty minutes with the person whose name goes on the output. Bring the awkward ones.",
-      "button": "Book a demo",
+      "button": "Start a sprint",
       "note": "Thirty minutes: a walkthrough of the platform, then your own situation."
     }
   },
@@ -1056,7 +1075,7 @@
     "header": {
       "title": "The people behind the output",
       "lead": "Wouter structured acquisition and leveraged finance at ING. Daniel builds regulated data pipelines. One of them approves every output.",
-      "cta": "Book a demo"
+      "cta": "Start a sprint"
     },
     "historyLabel": "Background",
     "people": [
@@ -1124,7 +1143,7 @@
     "cta": {
       "title": "You’ll speak to the person who reviews the output",
       "body": "While Factum is pre-launch, the demo, the review gate and the walkthrough are the same person.",
-      "button": "Book a demo",
+      "button": "Start a sprint",
       "note": "Thirty minutes: a walkthrough of the platform, then your own situation."
     },
     "roles": {
@@ -1150,7 +1169,7 @@
     "header": {
       "title": "More mandates than your team can read",
       "lead": "You keep the relationship and the judgment. We run the read across every discipline behind it, under your name.",
-      "cta": "Book a demo"
+      "cta": "Start a sprint"
     },
     "who": {
       "title": "Who this tends to work for",
@@ -1252,7 +1271,7 @@
     "cta": {
       "title": "Start with one mandate",
       "body": "Point it at a live engagement and read the output.",
-      "button": "Book a demo",
+      "button": "Start a sprint",
       "note": "Thirty minutes: a walkthrough of the platform, then your own situation."
     }
   },
@@ -1260,7 +1279,7 @@
     "header": {
       "title": "Book a demo with the person who reviews the output",
       "lead": "No form. Pick an open slot in the calendar and we will show you the platform running.",
-      "cta": "Book a demo"
+      "cta": "Start a sprint"
     },
     "call": {
       "title": "Book thirty minutes",

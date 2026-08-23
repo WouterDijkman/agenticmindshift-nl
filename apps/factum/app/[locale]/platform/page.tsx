@@ -10,6 +10,7 @@ import {
   MODULE_COUNT,
   MONITORING_MODULE_COUNT,
   WAVE_COUNT,
+  WAVE_SIZES,
   ZDR_MODULE_COUNT
 } from '@/lib/site';
 import PageHeader from '@/components/PageHeader';
@@ -20,6 +21,7 @@ import BentoGrid from '@/components/BentoGrid';
 import DispatchGraph from '@/components/DispatchGraph';
 import GroundingStack from '@/components/GroundingStack';
 import ComparisonMatrix, { type Verdict } from '@/components/ComparisonMatrix';
+import DisciplineIndex from '@/components/DisciplineIndex';
 import Disclosures from '@/components/Disclosures';
 import CtaBand from '@/components/CtaBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
@@ -69,7 +71,13 @@ export default async function PlatformPage({
     waves: WAVE_COUNT,
     disciplines: DISCIPLINE_COUNT,
     zdr: ZDR_MODULE_COUNT,
-    blocks: HARD_BLOCK_COUNT
+    blocks: HARD_BLOCK_COUNT,
+    // The wave-1 width, because the dispatch-waves tile states it in words.
+    // It was typed into all five message files as "eight" and went stale the
+    // moment the technology module split into IT and AI, which is the same way
+    // this site once shipped a module total a quarter too high. Derived here it
+    // cannot drift from the roster it describes.
+    w1: WAVE_SIZES[0]
   };
 
   const tile = (key: string) => ({
@@ -199,11 +207,46 @@ export default async function PlatformPage({
           This was a bar chart ranked by sub-agent count. It answered "how big
           is each module" — our fact, not the reader's — and the dependency
           structure had to be inferred from the wave bands. The graph states it
-          instead: nine modules opening at once, two waiting on them, a
+          instead: a first wave opening at once, two modules waiting on it, a
           synthesis layer reading across everything, deliverables, and
           post-close on its own clock. Each node now carries what it returns —
           finding, document, or ongoing signal — which is the question a buyer
           is actually asking. */}
+      {/*
+        The dimensions, above the module library.
+
+        The order matters and it is the whole of the repositioning on this
+        page. A module is a piece of machinery; a dimension is a question the
+        buyer already has and already receives a separate invoice for. Leading
+        with the machine left the reader to do the translation, and the
+        one-stop-shop claim is then unverifiable: you cannot check a list of
+        modules for whether your own ten questions are in it.
+
+        The compact index rather than the full grid, because
+        /diligence-sprint carries the reasoning and the two pages were
+        measured sharing 31% of their content once already.
+      */}
+      <Section id="dimensions" width="wide">
+        <SectionHeader
+          title={t('dimensions.title')}
+          lead={t('dimensions.lead', { disciplines: DISCIPLINE_COUNT })}
+          align="wide"
+        />
+        <div style={{ marginTop: 'clamp(28px, 3.5vw, 44px)' }}>
+          <DisciplineIndex
+            items={s.raw('disciplines') as { label: string; pain: string; result: string }[]}
+          />
+        </div>
+        <Reveal>
+          <p
+            className="type-small"
+            style={{ marginTop: 24, color: 'var(--text-quaternary)', maxWidth: '70ch' }}
+          >
+            {t('dimensions.note')}
+          </p>
+        </Reveal>
+      </Section>
+
       <Section id="modules" width="wide" tone="raised">
         <SectionHeader title={t('coverage.title')} lead={t('coverage.lead', n)} align="wide" />
         <div style={{ marginTop: 'clamp(32px, 4vw, 52px)' }}>

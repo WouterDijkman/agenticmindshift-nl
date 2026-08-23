@@ -12,6 +12,7 @@ import Reveal from '@/components/Reveal';
 import { Section, SectionHeader } from '@/components/Section';
 import Disclosures from '@/components/Disclosures';
 import CtaBand from '@/components/CtaBand';
+import { INTAKE_URL } from '@/lib/site';
 import GuaranteePanel from '@/components/GuaranteePanel';
 import Breadcrumb from '@/components/Breadcrumb';
 import { ArrowRight } from '@/components/Icons';
@@ -42,6 +43,7 @@ export default async function SprintPage({
       <Breadcrumb path="/diligence-sprint" />
 
       <PageHeader
+        ctaHref={INTAKE_URL}
         title={t('header.title')}
         lead={t('header.lead', numbers)}
         cta={t('header.cta')}
@@ -68,10 +70,13 @@ export default async function SprintPage({
       {/* The discipline roster; count comes from DISCIPLINES in lib/site.ts.
           This is what the page is for, and it is now the only section on it
           carrying feature weight. */}
-      {/* Wide, not medium. The grid runs three columns now that the roster is
-          nine, and three columns inside the medium container is 250px a tile —
-          two sentences at four words a line, which is what five columns was
-          abandoned for in the first place. */}
+      {/* Wide, not medium. The grid runs two columns now that the roster is
+          ten, and the wide container is what makes that worth having: two
+          columns inside the medium container leaves each tile around 380px,
+          where the pair of sentences under the label sets at roughly six words
+          a line. Wide gives a tile closer to 520px, which is the width at
+          which a sentence stops reading as a column of fragments. That was the
+          whole reason the five-across board was abandoned. */}
       <Section width="wide" tone="inset" weight="loud">
         <SectionHeader title={t('disciplines.title', numbers)} lead={t('disciplines.lead')} />
         <div style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
@@ -154,6 +159,7 @@ export default async function SprintPage({
       </Section>
 
       <CtaBand
+        ctaHref={INTAKE_URL}
         title={t('cta.title')}
         body={t('cta.body')}
         cta={t('cta.button')}

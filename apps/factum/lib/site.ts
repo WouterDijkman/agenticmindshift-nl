@@ -1,6 +1,27 @@
 export const SITE_URL = 'https://www.factumcapital.eu';
-export const INTAKE_URL = 'https://cal.com/wwdijkman/intake-call';
 export const AM_URL = 'https://www.agenticmindshift.nl';
+
+/**
+ * Where a reader who is convinced actually goes: the page that describes the
+ * engagement.
+ *
+ * This briefly pointed at an audit page on agenticmindshift.nl, on the theory
+ * that Factum is the engine and you buy at the practice. That theory does not
+ * survive the corporate structure: the engagements belong to Factum, which is
+ * co-owned, and routing them through the consultancy routes the revenue past
+ * the other owner. The two brands are separating rather than nesting.
+ *
+ * So the buying action stays on this site. The locale argument is kept because
+ * the destination is a localised route either way.
+ */
+export const auditUrl = (locale: string) => `/${locale}/diligence-sprint`;
+
+/**
+ * The conversation, still here but secondary. Contact keeps it, because a page
+ * whose whole job is "how do I reach you" should offer the low-commitment
+ * route as well as the high-commitment one.
+ */
+export const INTAKE_URL = 'https://cal.com/wwdijkman/intake-call';
 
 /**
  * Agentic Mindshift Consultancy's registration. Factum Capital is not yet a
@@ -101,10 +122,20 @@ export const MODULES: readonly FactumModule[] = [
   { slug: 'financial', wave: 1, kind: 'analysis', zdr: true },
   { slug: 'commercial', wave: 1, kind: 'analysis' },
   { slug: 'hr', wave: 1, kind: 'analysis' },
-  // `it` and `ai-dd` were separate modules until they were folded together.
-  // Both read the same folder: the AI claim in an IM is a claim about the
-  // technology estate, and you cannot assess it without opening the systems.
-  { slug: 'technology', wave: 1, kind: 'analysis' },
+  // `it` and `ai-dd` ran as one `technology` module for a while and were split
+  // back apart on 20 August 2026, in the product first and here second. The
+  // merge argument was that both read the same folder, which is true and turned
+  // out not to be the point: they answer different questions off it. `it` reads
+  // the systems inventory and the licence schedule, `ai-dd` reads the model
+  // contracts and the data-processing agreements. Merged, the second set went
+  // unasked.
+  //
+  // These two slugs and this order are load-bearing beyond this file. The wave
+  // diagram draws `shared.modules` in every messages/<locale>.json positionally
+  // against this array, so an entry inserted here without the matching label
+  // inserted there silently relabels every module below it.
+  { slug: 'it', wave: 1, kind: 'analysis' },
+  { slug: 'ai-dd', wave: 1, kind: 'analysis' },
   { slug: 'esg', wave: 1, kind: 'analysis' },
   { slug: 'operational', wave: 1, kind: 'analysis' },
   { slug: 'im-screener', wave: 1, kind: 'analysis' },
@@ -126,11 +157,32 @@ export const MODULES: readonly FactumModule[] = [
   // Wave 5 — post-close, independent of the pre-close waves.
   { slug: 'exit-readiness', wave: 5, kind: 'analysis' },
   { slug: 'portfolio-health', wave: 5, kind: 'monitoring' },
-  { slug: 'ic-report', wave: 5, kind: 'deliverable' }
+  // Wave 6 — the periodic IC report, on its own because it reads the two
+  // modules above as input. Modules inside one wave dispatch concurrently, so
+  // while this sat in wave 5 it read the previous run's chapters, or nothing at
+  // all on a first run. Only a strictly later wave gives the ordering.
+  //
+  // The site carried it in wave 5 until 20 August 2026, which understated the
+  // run by one wave. It is worth showing rather than smoothing over, because it
+  // is the clearest instance of the claim /method already makes: nothing runs
+  // early, and a module waits when it depends on another module's output. A
+  // reader who checks that claim against the diagram should find it holds.
+  { slug: 'ic-report', wave: 6, kind: 'deliverable' }
 ];
 
 export const MODULE_COUNT = MODULES.length;
-export const WAVE_COUNT = 5;
+export const WAVE_COUNT = 6;
+
+/**
+ * The first wave that runs after closing.
+ *
+ * `DispatchGraph` draws these waves with a dashed rail, because they do not
+ * read the pre-close waves and do not belong to the Sprint. It used to test
+ * `n === 5`, which silently stopped being right the moment a sixth wave
+ * appeared: wave 6 is post-close too and would have drawn as though it were
+ * part of the diligence run.
+ */
+export const POST_CLOSE_FIRST_WAVE = 5;
 export const ZDR_MODULE_COUNT = MODULES.filter((m) => m.zdr).length;
 
 /** Module counts per kind, for the copy that names the three-way split. */
@@ -170,17 +222,31 @@ export const WAVE_SIZES: readonly number[] = Array.from(
  *   — `vigil` is monitoring that starts after closing, and listing it beside
  *     Legal implied a buyer could ask for it during diligence.
  *
- * A fourth pair was merged rather than removed. `it` and `ai` were adjacent
- * rows asking one question from two ends: an "AI-driven" claim in an IM is a
- * claim about the technology estate, and it cannot be assessed without opening
- * the systems folder anyway. Two tiles that both mean "we read engineering"
- * looked like padding, and a lone row labelled `AI` in 2026 reads as a
- * bandwagon rather than a discipline. They are now `technology`, in the slot
- * `it` held.
+ * A fourth pair was merged and then, on 20 August 2026, unmerged. `it` and `ai`
+ * ran as one `technology` row for a while, on the reasoning that an "AI-driven"
+ * claim in an IM is a claim about the technology estate, that it cannot be
+ * assessed without opening the systems folder anyway, and that a lone row
+ * labelled `AI` in 2026 reads as a bandwagon rather than a discipline.
  *
- * What is left is nine things we read the data room *for*. Append only:
- * inserting mid-list would re-pair every entry with the wrong icon, since
- * `DisciplineGrid` maps them by position.
+ * That last worry was the real one, and what answers it is what the row says
+ * rather than whether the row exists. The two questions are settled in
+ * different folders. `it` is an estate question answered by the systems
+ * inventory and the licence schedule: what runs, what repair costs, which
+ * licences consolidate after closing. `ai` is an ownership and exposure
+ * question answered by the model contracts and the data-processing agreements:
+ * whether the model belongs to the company or is rented from someone who can
+ * reprice it, who holds rights to the training data, what the AI Act attaches,
+ * and which processes genuinely automate. Folded together, the second set went
+ * unasked, because the tile read as "we read engineering" and stopped there.
+ *
+ * The merged tile could not carry both either. Its copy had to name technical
+ * debt, licensing, model ownership and the AI Act in one sentence, which is how
+ * it ended up naming none of them properly.
+ *
+ * What is left is ten things we read the data room *for*. Inserting mid-list
+ * re-pairs every later entry with the wrong icon, since `DisciplineGrid` maps
+ * them by position, so `ai` arriving at slot seven meant the ICONS array in
+ * that file was rebuilt by hand in the same change rather than appended to.
  */
 export const DISCIPLINES = [
   'financial',
@@ -188,7 +254,8 @@ export const DISCIPLINES = [
   'legal',
   'tax',
   'hr',
-  'technology',
+  'it',
+  'ai',
   'esg',
   'operational',
   'valuation'

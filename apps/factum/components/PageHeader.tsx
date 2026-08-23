@@ -1,7 +1,8 @@
 import type { CSSProperties, ReactNode } from 'react';
 import { Button } from '@repo/ui/Button';
 import { Link } from '@/i18n/navigation';
-import { INTAKE_URL } from '@/lib/site';
+import { getLocale } from 'next-intl/server';
+import { auditUrl } from '@/lib/site';
 import CtaProof from './CtaProof';
 import { ArrowRight } from './Icons';
 import SegmentField from './SegmentField';
@@ -33,7 +34,8 @@ const TONE_COLOR: Record<'wine' | 'mono', string> = {
   mono: 'var(--text-display)'
 };
 
-export default function PageHeader({
+export default async function PageHeader({
+  ctaHref,
   title,
   lead,
   cta,
@@ -43,6 +45,7 @@ export default function PageHeader({
   aside,
   visual = 0
 }: {
+  ctaHref?: string;
   title: string;
   lead?: string;
   /**
@@ -80,6 +83,8 @@ export default function PageHeader({
   const preset = HEADER_PRESETS[((visual % HEADER_PRESETS.length) + HEADER_PRESETS.length) % HEADER_PRESETS.length];
   const color = preset.tone ? TONE_COLOR[preset.tone] : undefined;
 
+  const audit = ctaHref ?? auditUrl(await getLocale());
+
   return (
     <header style={{ position: 'relative', overflow: 'hidden' }}>
       <SegmentField value={preset.value} style={color ? { color } : undefined} />
@@ -115,7 +120,7 @@ export default function PageHeader({
                   gap: 'clamp(20px, 3vw, 36px)'
                 }}
               >
-                <Button href={INTAKE_URL} size="lg" magnetic={false} className="plausible-event-name=Intake+CTA plausible-event-location=page-header">
+                <Button href={audit} size="lg" magnetic={false} className="plausible-event-name=Audit+CTA plausible-event-location=page-header">
                   {cta}
                 </Button>
                 {secondary && secondaryHref && (

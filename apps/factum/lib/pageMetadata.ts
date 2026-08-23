@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { getAlternates } from './hreflang';
 import { getOgImage } from './ogImage';
+import { DISCIPLINE_COUNT, MODULE_COUNT, WAVE_COUNT } from './site';
 
 /**
  * Every page carries its own title, description and reciprocal hreflang set.
@@ -65,6 +66,25 @@ export function sharedOpenGraph(locale: string) {
   };
 }
 
+/**
+ * The roster counts, available to every description.
+ *
+ * Descriptions are the one place on the site where a number could sit outside
+ * ICU and go unnoticed: nothing on the page renders them, so a stale total
+ * survives every visual check and only shows up in a search result. The
+ * /platform description read "22 modules" for as long as the roster held 22,
+ * and stayed at 22 when the technology module split into IT and AI.
+ *
+ * Passed to every key rather than only the ones that use an argument. next-intl
+ * ignores values a message does not reference, and a description that later
+ * wants a count should not have to touch this function to get one.
+ */
+const ROSTER_ARGS = {
+  modules: MODULE_COUNT,
+  disciplines: DISCIPLINE_COUNT,
+  waves: WAVE_COUNT
+};
+
 export async function pageMetadata(
   locale: string,
   key: string,
@@ -72,16 +92,17 @@ export async function pageMetadata(
 ): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'meta' });
   const title = `${t(`${key}.title`)} — ${BRAND}`;
+  const description = t(`${key}.description`, ROSTER_ARGS);
   const alternates = getAlternates(path, locale);
 
   return {
     title: { absolute: title },
-    description: t(`${key}.description`),
+    description,
     alternates,
     openGraph: {
       ...sharedOpenGraph(locale),
       title,
-      description: t(`${key}.description`),
+      description,
       // Read off the canonical rather than rebuilt from `path`, so og:url and
       // rel=canonical are the same string by construction.
       url: alternates.canonical

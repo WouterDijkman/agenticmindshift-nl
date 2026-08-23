@@ -1,7 +1,34 @@
-import { MODULES } from '@/lib/site';
+import type { CSSProperties } from 'react';
+import { MODULES, POST_CLOSE_FIRST_WAVE } from '@/lib/site';
 import Reveal from './Reveal';
 
 type Wave = { title: string; body: string };
+
+/**
+ * The column count that divides `n` exactly and sits closest to `target`.
+ *
+ * The node grid never wraps unevenly, which means the column count has to be a
+ * divisor of the wave's size rather than a round number. Below 1200 the grid
+ * aims at four across; a four-module wave takes four, a five-module wave takes
+ * five rather than four-and-a-stranded-one, a nine-module wave takes three.
+ *
+ * This used to be a single hand-written rule for the five-module wave. That
+ * held while five was the only size that failed to divide, and it stopped
+ * holding the moment the technology module split in two and made wave one nine
+ * wide. Computing the divisor means the next such change carries itself.
+ *
+ * Ties go to the larger count, so a wave stays as wide as it can: at target
+ * four, a six-module wave takes three rows of two only if two is genuinely
+ * closer, and otherwise takes two rows of three.
+ */
+function evenColumns(n: number, target: number) {
+  let best = 1;
+  for (let c = 1; c <= n; c++) {
+    if (n % c !== 0) continue;
+    if (Math.abs(c - target) <= Math.abs(best - target)) best = c;
+  }
+  return best;
+}
 
 /**
  * The dispatch graph: the *shape* of a run, not a ranked list of modules.
@@ -36,7 +63,7 @@ export default function DispatchGraph({
 }: {
   /** Module names, index-aligned with MODULES. */
   labels: string[];
-  /** Five waves in dispatch order, each with the dependency it describes. */
+  /** The waves in dispatch order, each with the dependency it describes. */
   waves: Wave[];
   /** Unit noun for the per-wave tally, e.g. "modules". */
   modulesLabel: string;
@@ -51,16 +78,26 @@ export default function DispatchGraph({
     return { n, wave, nodes };
   });
 
+  // The widest wave sets the desktop column count for every wave, so the tracks
+  // line up down the page and the widest one still lands on a single row. Read
+  // off MODULES rather than typed in: it was typed in, as eight, and the module
+  // split that made wave one nine wide left the ninth node stranded on its own
+  // row at desktop.
+  const widest = Math.max(...rows.map((r) => r.nodes.length));
+
   return (
-    <ol className="dispatch">
+    <ol className="dispatch" style={{ '--dispatch-cols': widest } as CSSProperties}>
       {rows.map(({ n, wave, nodes }) => (
         <li
           key={n}
           className="dispatch-wave"
-          /* Wave 5 is post-close: it does not read the pre-close waves, so its
-             rail is dashed rather than solid. The wave's own body line already
-             says so in every locale, which is why the dash needs no legend. */
-          data-detached={n === 5 ? 'true' : undefined}
+          /* The post-close waves do not read the pre-close waves, so their rail
+             is dashed rather than solid. Each wave's own body line already says
+             so in every locale, which is why the dash needs no legend.
+             Thresholded rather than tested against a single wave number: this
+             read `n === 5` while five waves existed, and a sixth post-close
+             wave would have drawn as part of the diligence run. */
+          data-detached={n >= POST_CLOSE_FIRST_WAVE ? 'true' : undefined}
         >
           <span className="dispatch-rail" aria-hidden="true" />
 
@@ -78,23 +115,25 @@ export default function DispatchGraph({
             </Reveal>
 
             {/*
-              The wave's own size, handed to the stylesheet. Between 900 and
-              1199 the node grid runs four columns, which divides every wave but
-              the five-module one — and that one drew four nodes with a fifth
-              stranded alone underneath, which reads as a wrap rather than as a
-              batch. `.dispatch-nodes[data-n="5"]` gets five columns in that
-              band, so every wave is either one full row or an even split of
-              them.
+              Between 900 and 1199 the grid aims at four across, and each wave
+              takes the divisor of its own size nearest to that. A four-module
+              wave runs four wide, a five-module wave five, a nine-module wave
+              three rows of three. So every wave is one full row or an even
+              split of them, never a row with a straggler underneath.
             */}
-            <ul className="dispatch-nodes" data-n={nodes.length}>
+            <ul
+              className="dispatch-nodes"
+              style={{ '--cols-mid': evenColumns(nodes.length, 4) } as CSSProperties}
+            >
               {nodes.map(({ m, index }, i) => (
                 <Reveal
                   as="li"
                   key={m.slug}
                   className="dispatch-node"
                   /* Stepped per node rather than via .stagger, whose ladder
-                     stops at five children — wave 1 has nine, and the last
-                     four would otherwise land as one block. */
+                     stops at five children. The widest wave carries more than
+                     that, so everything past the fifth node would otherwise
+                     land as one block. */
                   delay={110 + i * 40}
                 >
                   <span className="dispatch-node-name">

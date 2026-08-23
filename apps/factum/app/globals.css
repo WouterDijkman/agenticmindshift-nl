@@ -684,25 +684,35 @@ p { margin: 0; }
    Discipline grid — scope as a board of marks
    ============================================================ */
 /* ------------------------------------------------------------
-   Discipline index — the same nine, as a set rather than as an argument
+   Discipline index — the same ten, as a set rather than as an argument
 
    Serif at display weight, numbered in mono, on a hairline grid. The point is
-   that the reader takes it in as one object: nine cells, all present, no
-   scrolling, nothing to read. The full version with a failure and an outcome
-   under each name lives on /diligence-sprint, where it is what the visitor
-   came for.
+   that the reader takes it in as one object: every cell present, no scrolling,
+   nothing to read. The full version with a failure and an outcome under each
+   name lives on /diligence-sprint, where it is what the visitor came for.
    ------------------------------------------------------------ */
 .discipline-index {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  /* Three columns at a stated breakpoint, not `auto-fit`. Sizing itself, the
-     grid chose six columns at 1440 and four at 1024 — nine items laid out 6+3
-     and 4+4+1 — so the bottom row ran short at every width anyone uses. On a
-     block whose entire job is to show a complete set, a short last row reads
-     as an incomplete set. Nine divides by three and by nothing else that fits
-     on a screen, so three it is, and one below that. */
+  /* Stated column counts, not `auto-fit`. Sizing itself, the grid chose six
+     columns at 1440 and four at 1024, so the bottom row ran short at every
+     width anyone uses. On a block whose entire job is to show a complete set,
+     a short last row reads as an incomplete set, which is the one thing this
+     block may not do.
+
+     So the count divides the roster exactly at every breakpoint, the same rule
+     `.discipline-grid` follows further down. Ten divides by two and by five:
+     two rows of five once there is room for a five-across label, five rows of
+     two below that, one column on a phone. It was three columns while the
+     roster was nine, and it went back to two-and-five when IT and AI split
+     apart on 20 August 2026.
+
+     Five across waits until 1180 rather than the 1024 `auto-fit` reached for.
+     At 1024 a fifth column leaves the label about 136px, and the longest of
+     them ("Waardering & dealeconomie") breaks across three lines while its
+     neighbours sit on one, which makes a set of equals look ragged. */
   grid-template-columns: minmax(0, 1fr);
   /* Cells share their hairline rather than each drawing one — doubled seams at
      every internal join is the difference between a table and a grid of boxes. */
@@ -711,7 +721,10 @@ p { margin: 0; }
   border: 1px solid var(--hairline);
 }
 @media (min-width: 600px) {
-  .discipline-index { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .discipline-index { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1180px) {
+  .discipline-index { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 }
 @media (min-resolution: 2dppx) {
   .discipline-index { gap: 0.5px; }
@@ -758,16 +771,22 @@ p { margin: 0; }
    * renders as page background and never as a highlighted "missing" rectangle.
    * The list contributes only the top/left edges.
    *
-   * One column, then three. It was five, back when a tile held a single word;
+   * One column, then two. It was five, back when a tile held a single word;
    * each tile now carries a risk and a finding — two full sentences — and at
-   * five across they set to three words a line. It was then two, for as long as
-   * the roster was ten. The roster is nine since IT and AI merged, and nine in
-   * two columns leaves a lone tile on a fifth row, so three columns it is: an
-   * exact 3x3 with no cell left over.
+   * five across they set to three words a line. The column count has tracked
+   * the roster size ever since, on one rule: pick the count that divides it
+   * exactly, because a lone tile on a final row reads as an unfinished list.
+   * Ten disciplines took two columns, nine took three (an exact 3x3), and the
+   * roster is ten again since IT and AI split back apart on 20 August 2026, so
+   * two it is: five rows of two, nothing left over.
    *
-   * The jump from one column to three skips the tablet range on purpose. Three
-   * columns inside a 700px container is 230px a tile, which puts two sentences
-   * back at three words a line — the thing five columns was abandoned for. */
+   * Two across is the more comfortable measure of the two anyway. The 3x3 was
+   * the tighter fit that nine happened to allow, not the better one.
+   *
+   * The jump from one column straight to the wide layout skips the tablet range
+   * on purpose. Narrow multi-column inside a 700px container puts two sentences
+   * back at three words a line, which is the thing five columns was abandoned
+   * for. */
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   margin: 0;
@@ -777,7 +796,7 @@ p { margin: 0; }
   border-left: 1px solid var(--hairline);
 }
 @media (min-width: 900px) {
-  .discipline-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .discipline-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 .discipline-tile {
   position: relative;
@@ -1690,18 +1709,28 @@ details.disclosure > div { padding-bottom: 24px; }
    line past the last node into nothing. Pin it to its marker instead. */
 .dispatch-wave:last-child .dispatch-rail { align-self: start; height: 46px; }
 
-/* Break the rail before the detached wave. Without this the dashed segment
-   butts straight onto the solid one and reads as "the line continues, only
-   fainter" — the opposite of the claim. The gap is the edge being absent. */
-.dispatch-wave:has(+ [data-detached]) .dispatch-rail {
+/* Break the rail where the run stops and the post-close block starts. Without
+   this the dashed segment butts straight onto the solid one and reads as "the
+   line continues, only fainter", the opposite of the claim. The gap is the
+   edge being absent.
+
+   `:not([data-detached])` narrows it to the one crossing. While there was a
+   single post-close wave the selector could not tell "the last attached wave"
+   from "any wave before a detached one", and the two happened to coincide. They
+   stopped coinciding at six waves: wave five is detached and is followed by
+   another detached wave, so the rail broke between five and six as well. That
+   edge is real — the IC report reads exit readiness and portfolio health, which
+   is the entire reason it waits a wave — and the copy says so, so the diagram
+   cannot deny it. */
+.dispatch-wave:not([data-detached]):has(+ [data-detached]) .dispatch-rail {
   align-self: start;
   height: calc(100% - 24px);
 }
 
-/* Dashed rather than a second colour: wave 5 does not read the pre-close
-   waves. Each wave's own body line says so in all five locales, so the
-   dash carries no meaning the copy does not already carry — it needs no
-   legend, which is why it can be this quiet. */
+/* Dashed rather than a second colour: the post-close waves do not read the
+   pre-close ones. Each wave's own body line says so in all five locales, so the
+   dash carries no meaning the copy does not already carry. It needs no legend,
+   which is why it can be this quiet. */
 .dispatch-wave[data-detached] .dispatch-rail {
   background: repeating-linear-gradient(
     to bottom,
@@ -1719,7 +1748,7 @@ details.disclosure > div { padding-bottom: 24px; }
   height: 7px;
   margin-left: -3.5px;
   border-radius: 50%;
-  /* Wine, not CTA orange. Five lit dots down the page would spend the one
+  /* Wine, not CTA orange. A lit dot per wave down the page would spend the one
      colour the site reserves for the one action per viewport. */
   background: var(--wine);
   box-shadow: 0 0 0 4px var(--wine-soft);
@@ -1764,20 +1793,24 @@ details.disclosure > div { padding-bottom: 24px; }
   margin: 16px 0 0;
   padding: 0;
   display: grid;
-  /* An explicit column count, and one that divides the widest wave.
+  /* An explicit column count, counted off the waves rather than written down.
    *
    * This was `auto-fill` with a 150px minimum, on the argument that a
    * two-module wave should keep node-sized nodes rather than stretch two cards
    * across the full width. That argument still holds and empty tracks still do
-   * the job — but letting the container pick the count gave seven columns at
-   * 1440, and wave one has eight modules, so the widest wave on the page drew
-   * itself as seven nodes and one stranded underneath.
+   * the job, but letting the container pick the count gave seven columns at
+   * 1440 against a widest wave of eight, so that wave drew itself as seven
+   * nodes and one stranded underneath.
    *
-   * Eight columns at desktop puts every wave on a single row, which is what a
-   * wave is: one parallel dispatch. Below that the count halves rather than
-   * drifting, and the two exceptions to an even break — the five-module wave at
-   * four across, the odd-sized waves at two across — are handled by the two
-   * rules further down. No wave wraps unevenly at any width. */
+   * The count then became a literal 8, which was right until the technology
+   * module split into IT and AI and made wave one nine wide, reproducing the
+   * exact fault the literal was introduced to fix. Both `--dispatch-cols` (the
+   * widest wave) and `--cols-mid` (each wave's own even split) now come from
+   * DispatchGraph, which reads them off MODULES. A module moving wave moves the
+   * grid with it.
+   *
+   * The fallbacks are what the current roster yields, so the grid still stands
+   * up if the properties ever fail to arrive. */
   grid-template-columns: minmax(0, 1fr);
   gap: 8px;
 }
@@ -1785,27 +1818,24 @@ details.disclosure > div { padding-bottom: 24px; }
   .dispatch-nodes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (min-width: 560px) and (max-width: 899px) {
-  /* Three of the five waves hold an odd number of modules. Paired two-up, the
-     odd one takes the whole last row rather than half of it. Scoped to the
-     two-column range: at four across, a double-width straggler would be more
-     conspicuous than a single-width one. */
+  /* Several waves hold an odd number of modules. Paired two-up, the odd one
+     takes the whole last row rather than half of it. Scoped to the two-column
+     range: at four across, a double-width straggler would be more conspicuous
+     than a single-width one. */
   .dispatch-node:last-child:nth-child(odd) { grid-column: span 2; }
 }
 @media (min-width: 900px) {
-  .dispatch-nodes { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-}
-@media (min-width: 900px) and (max-width: 1199px) {
-  /* Four divides the eight- and four-module waves and leaves the two- and
-     three-module ones short of a full row, which is the point: a wave is as
-     wide as it is big. The five-module wave was the one case that broke —
-     four across and a fifth alone underneath, which looks like a mistake
-     rather than like a batch. Given its own count as a column count it fits on
-     one row like the rest. Bounded at 1199 because the attribute selector
-     outranks the plain class, and above that every wave is one row of eight. */
-  .dispatch-nodes[data-n='5'] { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .dispatch-nodes {
+    /* Four across where the wave divides by four, and otherwise the divisor
+       nearest to it: five wide for a five-module wave, three rows of three for
+       a nine-module one. A wave is as wide as it is big, and never a full row
+       with a leftover underneath. */
+    grid-template-columns: repeat(var(--cols-mid, 4), minmax(0, 1fr));
+  }
 }
 @media (min-width: 1200px) {
-  .dispatch-nodes { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+  /* One row per wave, every track the same width down the page. */
+  .dispatch-nodes { grid-template-columns: repeat(var(--dispatch-cols, 9), minmax(0, 1fr)); }
 }
 .dispatch-node {
   display: flex;

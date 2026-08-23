@@ -1,7 +1,8 @@
 import type { CSSProperties, ReactNode } from 'react';
 import { Button } from '@repo/ui/Button';
 import { Link } from '@/i18n/navigation';
-import { INTAKE_URL } from '@/lib/site';
+import { getLocale } from 'next-intl/server';
+import { auditUrl } from '@/lib/site';
 import { ArrowRight } from './Icons';
 import CtaProof from './CtaProof';
 import SegmentField from './SegmentField';
@@ -15,7 +16,7 @@ import SegmentField from './SegmentField';
  * read as restless behind display type — the generated scenes earn their keep
  * at card size, where they are looked *at* rather than read *through*.
  */
-export default function Hero({
+export default async function Hero({
   title,
   lead,
   cta,
@@ -44,6 +45,8 @@ export default function Hero({
    */
   aside?: ReactNode;
 }) {
+  const audit = auditUrl(await getLocale());
+
   return (
     <section style={{ position: 'relative', overflow: 'hidden' }}>
       <SegmentField value="{abdeg}" />
@@ -85,7 +88,7 @@ export default function Hero({
                 } as CSSProperties
               }
             >
-              <Button href={INTAKE_URL} size="lg" magnetic={false} className="plausible-event-name=Intake+CTA plausible-event-location=home-hero">
+              <Button href={audit} size="lg" magnetic={false} className="plausible-event-name=Audit+CTA plausible-event-location=home-hero">
                 {cta}
               </Button>
               <Link href={secondaryHref} className="link-quiet">

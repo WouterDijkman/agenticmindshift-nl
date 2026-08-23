@@ -3,6 +3,7 @@ import {
   SketchChip,
   SketchClipboard,
   SketchDueDiligence,
+  SketchGear,
   SketchKnowledge,
   SketchPortfolio,
   SketchReport,
@@ -16,10 +17,16 @@ import Reveal from './Reveal';
 type SketchIcon = ComponentType<{ size?: number; opacity?: number; strokeWidth?: number }>;
 
 /**
- * One mark per discipline, in the order `DISCIPLINES` lists them. New
- * disciplines are appended, never inserted mid-list — inserting would shift
- * every later entry onto a different icon by index, since the mapping here
- * is positional rather than keyed by name.
+ * One mark per discipline, in the order `DISCIPLINES` lists them. The mapping
+ * is positional rather than keyed by name, so a discipline inserted mid-list
+ * shifts every later entry onto its neighbour's icon. Appending is safe;
+ * inserting means rebuilding this array in the same change.
+ *
+ * That happened on 20 August 2026, when `technology` split back into `it` and
+ * `ai` and the three rows after it moved down one. The chip had been standing
+ * in for the merged row on the reasoning that a chip beats a gear when the row
+ * also has to mean AI. Split, each takes the mark it wanted in the first place:
+ * the gear for the estate question, the chip for the model question.
  */
 const ICONS: SketchIcon[] = [
   SketchReport, // financial
@@ -27,7 +34,8 @@ const ICONS: SketchIcon[] = [
   SketchScale, // legal
   SketchClipboard, // tax
   SketchSparring, // hr
-  SketchChip, // technology — the chip, not the gear: this row absorbed `ai`
+  SketchGear, // it
+  SketchChip, // ai
   SketchKnowledge, // esg
   SketchSpeed, // operational
   SketchDueDiligence // valuation
@@ -42,7 +50,7 @@ export type Discipline = {
 };
 
 /**
- * The scope, as nine pairs of "what goes wrong" and "what you get back".
+ * The scope, as ten pairs of "what goes wrong" and "what you get back".
  *
  * This was a board of thirteen labelled marks — Financial, Commercial, Legal —
  * and it had the failure mode every capability list has: it is a list of our
@@ -56,10 +64,14 @@ export type Discipline = {
  * as the anchor — it is still how a buyer's own checklist is organised — but it
  * has stopped being the whole content of the tile.
  *
- * Nine tiles, three columns, so each pair has room to be a sentence rather than
- * a chip and the last row still fills. The five-column board it replaces could
- * hold a word and nothing else, which is what made it a capability list in the
- * first place.
+ * Ten tiles, three columns, so each pair has room to be a sentence rather than
+ * a chip. The five-column board it replaces could hold a word and nothing else,
+ * which is what made it a capability list in the first place.
+ *
+ * The column count is not fixed at three. It tracks the roster size so the last
+ * row always fills, and splitting `technology` into `it` and `ai` moved the
+ * roster from nine to ten, which moved the grid from three columns to two. The
+ * reasoning lives with the rule, in `.discipline-grid` in globals.css.
  */
 export default function DisciplineGrid({ items }: { items: Discipline[] }) {
   // The prose elsewhere prints DISCIPLINE_COUNT next to this grid. When the two
