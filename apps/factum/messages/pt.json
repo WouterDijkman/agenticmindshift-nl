@@ -39,6 +39,10 @@
     "privacy": {
       "title": "Privacidade",
       "description": "Como este site e os nossos mandatos tratam os dados pessoais."
+    },
+    "preSale": {
+      "title": "Diligência pré-venda — encontre-o antes do comprador",
+      "description": "A leitura do comprador, primeiro sobre a sua própria empresa. Cada dimensão, mais uma lista identificada do que falta no seu data room, enquanto ainda há tempo de agir."
     }
   },
   "a11y": {
@@ -57,7 +61,8 @@
     "contact": "Contacto",
     "cta": "Inicie um sprint",
     "openMenu": "Abrir menu",
-    "closeMenu": "Fechar menu"
+    "closeMenu": "Fechar menu",
+    "preSale": "Pré-venda"
   },
   "footer": {
     "blurb": "Due diligence com IA para M&A e private equity. Cada constatação cita um documento. Cada resultado revisto por uma pessoa identificada.",
@@ -713,6 +718,98 @@
       "body": "Quinze minutos de plataforma e quinze do seu data room: o que lá está, o que falta, e se um sprint é o instrumento certo.",
       "button": "Marque uma demo",
       "note": "Um número limitado de mandatos-piloto, contados na casa das unidades."
+    }
+  },
+  "preSale": {
+    "header": {
+      "title": "Encontre-o antes do comprador",
+      "lead": "Um comprador vai correr esta análise sobre a sua empresa, quer o faça quer não. A única questão é se vê as constatações primeiro, enquanto ainda pode fazer alguma coisa com elas.",
+      "cta": "Inicie um sprint"
+    },
+    "who": {
+      "title": "Quem o corre",
+      "lead": "Três situações, uma razão.",
+      "profiles": [
+        {
+          "title": "Proprietários a caminho de uma saída",
+          "body": "A dois ou cinco anos, ou já em processo. A distância entre o preço que tem em mente e o preço que um comprador vai defender é feita de constatações que ainda não viu."
+        },
+        {
+          "title": "Assessores do lado vendedor",
+          "body": "Está prestes a pôr uma empresa à frente de céticos profissionais. Saber o que vão encontrar vale mais do que esperar que não olhem."
+        },
+        {
+          "title": "Quem já perdeu um processo tarde",
+          "body": "As operações raramente morrem por preço. Morrem por algo que apareceu tarde e deixou todos os outros números sob suspeita."
+        }
+      ]
+    },
+    "mirror": {
+      "title": "A leitura do comprador, apontada a si",
+      "lead": "As mesmas dimensões, o mesmo data room, o mesmo padrão de prova. O que muda é quem tem o resultado na mão.",
+      "steps": [
+        {
+          "title": "Lemos como um comprador leria",
+          "body": "Não como um vendedor a rever os próprios trabalhos. Ao motor não se diz de que lado está, e as constatações saem iguais de qualquer forma."
+        },
+        {
+          "title": "É o primeiro a vê-las",
+          "body": "Cada constatação com o documento e a página por trás, para que possa verificar em vez de acreditar na nossa palavra."
+        },
+        {
+          "title": "Decide antes de alguém perguntar",
+          "body": "Corrigir, incorporar no preço, ou preparar a resposta. As três batem ser apanhado numa ronda de perguntas."
+        }
+      ]
+    },
+    "gaps": {
+      "title": "O que falta no seu data room",
+      "lead": "O primeiro movimento de um comprador é pedir o que não está lá. Essa lista chega primeiro a si, identificada.",
+      "items": [
+        "Os documentos que um comprador vai pedir e que o seu data room não contém.",
+        "Os anos incompletos numa exportação, onde uma lacuna se lê pior do que é.",
+        "Os contratos referidos dentro de outros contratos e nunca carregados.",
+        "As lacunas que já conhece, para poder escolher como as apresenta em vez de ser questionado sobre elas."
+      ],
+      "note": "Vemos que algo falta. Se foi deixado de fora de propósito não nos compete dizer, e não o dizemos."
+    },
+    "boundaries": {
+      "title": "O que um sprint pré-venda não é",
+      "lead": "A versão honesta, para não ser uma conversa mais tarde.",
+      "items": [
+        "Não é um parecer de vendor due diligence. Isso é um trabalho de auditoria assinado e este não o é.",
+        "Não é uma garantia de preço. Podemos dizer-lhe o que um comprador vai encontrar; o que faz com isso é com ele.",
+        "Não é uma fairness opinion, nem uma avaliação que se aguente sozinha perante um banco.",
+        "Não é um serviço de limpeza. Nomeamos o que falta; obtê-lo é consigo ou com o seu assessor.",
+        "Não fica isolado do seu próprio assessor por omissão. Se quiser mantê-lo à parte, diga-o antes de começarmos."
+      ]
+    },
+    "faq": {
+      "title": "O que os vendedores perguntam primeiro",
+      "items": [
+        {
+          "q": "Quanto tempo antes do processo devemos correr isto?",
+          "a": "Cedo o suficiente para que a resposta a uma constatação ainda possa ser «já corrigimos». Assim que o data room está no ar, a versão honesta passa a ser «sabemos, e este é o contexto». As duas funcionam. A primeira vale mais."
+        },
+        {
+          "q": "O comprador fica a saber que fizemos isto?",
+          "a": "Só se lho disser. Alguns vendedores dizem, porque chegar com as suas próprias constatações e o contexto é uma posição forte. É a sua decisão, não a nossa."
+        },
+        {
+          "q": "E se encontrarmos algo sério?",
+          "a": "Então foi você que o encontrou, meses antes de alguém com interesse em usá-lo. É essa a razão para o correr, não uma razão para o deixar."
+        },
+        {
+          "q": "É o mesmo produto que o sprint do lado comprador?",
+          "a": "O mesmo motor, as mesmas dimensões e o mesmo contrato de output. Muda a pergunta a que o apontamos e a lista que recebe no fim."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Corra-o primeiro sobre a sua própria empresa",
+      "body": "Trinta minutos na plataforma, depois a sua própria situação e o seu próprio calendário.",
+      "button": "Inicie um sprint",
+      "note": "Um punhado de trabalhos piloto."
     }
   },
   "governance": {

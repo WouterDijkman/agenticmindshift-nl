@@ -111,6 +111,20 @@ export const PARTNER_PROFILES: SceneId[] = [
  * carry the same picture — a reader arriving here from the homepage should
  * recognise the argument, not think the page failed to load.
  */
+/**
+ * Pre-sale. Three pictures for three sellers, and the middle one is the page.
+ *
+ * `seal` is the only still in the set that is *about* an absence: dust settled
+ * everywhere and one clean rectangle where something used to be. That is the
+ * whole argument of this page in one frame, so it carries the profile about
+ * what a buyer asks for and cannot find.
+ */
+export const PRESALE_PROFILES: SceneId[] = [
+  'loupe', // owners heading for an exit — the one lit disc, everything in it sharp
+  'seal', // sell-side advisers — the shape of the thing that is no longer there
+  'bolt' // after a failed process — the wedge already taking the weight
+];
+
 export const SPRINT_BAND: SceneId = 'micrometer';
 
 /** /diligence-sprint — what the sprint adds. */

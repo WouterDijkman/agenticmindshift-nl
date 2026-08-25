@@ -39,6 +39,10 @@
     "privacy": {
       "title": "Privacy",
       "description": "How this website and our engagements handle personal data."
+    },
+    "preSale": {
+      "title": "Pre-sale diligence — find it before the buyer does",
+      "description": "The buyer’s read, run on your own company first. Every dimension, plus a named list of what your data room is missing, while there is still time to act on it."
     }
   },
   "a11y": {
@@ -57,7 +61,8 @@
     "contact": "Contact",
     "cta": "Start a sprint",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "preSale": "Pre-sale"
   },
   "footer": {
     "blurb": "AI due diligence for M&A and private equity. Every finding cited to a document. Every output reviewed by a named person.",
@@ -713,6 +718,98 @@
       "body": "Fifteen minutes of the platform, fifteen on your data room: what is in it, what is missing, and whether a sprint is the right instrument.",
       "button": "Book a demo",
       "note": "A limited number of pilot mandates, counted in single digits."
+    }
+  },
+  "preSale": {
+    "header": {
+      "title": "Find it before the buyer does",
+      "lead": "A buyer will run this analysis on your company whether you do or not. The only question is whether you see the findings first, while you can still do something about them.",
+      "cta": "Start a sprint"
+    },
+    "who": {
+      "title": "Who runs this",
+      "lead": "Three situations, one reason.",
+      "profiles": [
+        {
+          "title": "Owners heading for an exit",
+          "body": "Two to five years out, or already in a process. The gap between the price you have in mind and the price a buyer will defend is made of findings you have not seen."
+        },
+        {
+          "title": "Sell-side advisers",
+          "body": "You are about to put a company in front of professional sceptics. Knowing what they will find is worth more than hoping they will not look."
+        },
+        {
+          "title": "Anyone who has lost a process late",
+          "body": "Deals rarely die on price. They die on something that surfaced late and made every other number look suspect."
+        }
+      ]
+    },
+    "mirror": {
+      "title": "The buyer’s read, pointed at you",
+      "lead": "Same dimensions, same data room, same standard of proof. What differs is who is holding the result.",
+      "steps": [
+        {
+          "title": "We read it the way a buyer would",
+          "body": "Not as a seller checking his own homework. The engine is not told which side it is on, and the findings come out the same either way."
+        },
+        {
+          "title": "You see them first",
+          "body": "Every finding with the document and the page behind it, so you can check it rather than take our word for it."
+        },
+        {
+          "title": "You decide before anyone asks",
+          "body": "Fix it, price it in, or prepare the answer. All three beat being surprised in a question-and-answer round."
+        }
+      ]
+    },
+    "gaps": {
+      "title": "What your data room is missing",
+      "lead": "A buyer’s first move is to ask for what is not there. You get that list first, by name.",
+      "items": [
+        "The documents a buyer will ask for and your room does not contain.",
+        "The years that are incomplete in an export, where a gap reads as something worse than it is.",
+        "The contracts referenced inside other contracts and never uploaded.",
+        "The gaps you already know about, so you can decide how to present them rather than be asked."
+      ],
+      "note": "We can see that something is absent. Whether it was left out on purpose is not ours to say, and we do not say it."
+    },
+    "boundaries": {
+      "title": "What a pre-sale sprint is not",
+      "lead": "The honest version, so it is not a conversation later.",
+      "items": [
+        "Not a vendor due diligence opinion. That is a signed attest engagement and this is not one.",
+        "Not a guarantee of price. We can tell you what a buyer will find; what he does with it is his.",
+        "Not a fairness opinion, and not a valuation that stands on its own in front of a bank.",
+        "Not a clean-up service. We name what is missing; obtaining it is yours or your adviser’s.",
+        "Not walled off from your own adviser by default. If you want it kept separate, say so before we start."
+      ]
+    },
+    "faq": {
+      "title": "What sellers ask first",
+      "items": [
+        {
+          "q": "How long before the process should we run this?",
+          "a": "Early enough that the answer to a finding can still be “we fixed it”. Once the data room is live, the honest framing becomes “we know, and here is the context”. Both work. The first one is worth more."
+        },
+        {
+          "q": "Will the buyer know we did this?",
+          "a": "Only if you tell them. Some sellers do, because arriving with your own findings and their context is a strong position. That is your call, not ours."
+        },
+        {
+          "q": "What if we find something serious?",
+          "a": "Then you found it, months before somebody with an incentive to use it did. That is the reason to run it, not a reason not to."
+        },
+        {
+          "q": "Is this the same product as the buy-side sprint?",
+          "a": "The same engine, the same dimensions and the same output contract. What differs is the question we point it at and the list you get at the end."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Run it on your own company first",
+      "body": "Thirty minutes on the platform, then your own situation and your own timeline.",
+      "button": "Start a sprint",
+      "note": "A handful of pilot mandates."
     }
   },
   "governance": {

@@ -39,6 +39,10 @@
     "privacy": {
       "title": "Privacidad",
       "description": "Cómo tratan los datos personales este sitio web y nuestros encargos."
+    },
+    "preSale": {
+      "title": "Diligencia pre-sale — encuéntrelo antes que el comprador",
+      "description": "La lectura del comprador, primero sobre su propia empresa. Cada dimensión, más una lista con nombre de lo que falta en su data room, mientras aún hay tiempo de actuar."
     }
   },
   "a11y": {
@@ -57,7 +61,8 @@
     "contact": "Contacto",
     "cta": "Inicie un sprint",
     "openMenu": "Abrir menú",
-    "closeMenu": "Cerrar menú"
+    "closeMenu": "Cerrar menú",
+    "preSale": "Pre-sale"
   },
   "footer": {
     "blurb": "Due diligence con IA para M&A y private equity. Cada hallazgo cita un documento. Cada entregable revisado por una persona con nombre.",
@@ -713,6 +718,98 @@
       "body": "Quince minutos de plataforma y quince de su data room: qué hay, qué falta y si un sprint es el instrumento adecuado.",
       "button": "Reserve una demo",
       "note": "Un número limitado de mandatos piloto, de un solo dígito."
+    }
+  },
+  "preSale": {
+    "header": {
+      "title": "Encuéntrelo antes que el comprador",
+      "lead": "Un comprador correrá este análisis sobre su empresa, lo haga usted o no. La única pregunta es si ve los hallazgos primero, mientras todavía puede hacer algo con ellos.",
+      "cta": "Inicie un sprint"
+    },
+    "who": {
+      "title": "Quién lo corre",
+      "lead": "Tres situaciones, una razón.",
+      "profiles": [
+        {
+          "title": "Propietarios camino de una salida",
+          "body": "A dos o cinco años vista, o ya en proceso. La distancia entre el precio que tiene en la cabeza y el precio que un comprador defenderá está hecha de hallazgos que aún no ha visto."
+        },
+        {
+          "title": "Asesores del lado vendedor",
+          "body": "Está a punto de poner una empresa delante de escépticos profesionales. Saber qué van a encontrar vale más que confiar en que no miren."
+        },
+        {
+          "title": "Quien ya perdió un proceso tarde",
+          "body": "Las operaciones rara vez mueren por precio. Mueren por algo que salió tarde y dejó todas las demás cifras bajo sospecha."
+        }
+      ]
+    },
+    "mirror": {
+      "title": "La lectura del comprador, apuntada a usted",
+      "lead": "Las mismas dimensiones, el mismo data room, el mismo listón de prueba. Lo que cambia es quién tiene el resultado en la mano.",
+      "steps": [
+        {
+          "title": "Leemos como leería un comprador",
+          "body": "No como un vendedor repasando sus propios deberes. Al motor no se le dice de qué lado está, y los hallazgos salen igual en cualquier caso."
+        },
+        {
+          "title": "Usted los ve primero",
+          "body": "Cada hallazgo con el documento y la página detrás, para que pueda comprobarlo en vez de creernos."
+        },
+        {
+          "title": "Usted decide antes de que se lo pregunten",
+          "body": "Arreglarlo, ponerlo en precio, o preparar la respuesta. Las tres cosas superan a que le pillen en una ronda de preguntas."
+        }
+      ]
+    },
+    "gaps": {
+      "title": "Lo que falta en su data room",
+      "lead": "El primer movimiento de un comprador es pedir lo que no está. Esa lista la recibe usted primero, con nombre.",
+      "items": [
+        "Los documentos que un comprador va a pedir y que su data room no contiene.",
+        "Los años incompletos en una exportación, donde un vacío se lee peor de lo que es.",
+        "Los contratos que otros contratos mencionan y que nunca se subieron.",
+        "Los vacíos que usted ya conoce, para que elija cómo presentarlos en lugar de que se los pregunten."
+      ],
+      "note": "Vemos que algo falta. Si se dejó fuera a propósito no nos corresponde a nosotros decirlo, y no lo decimos."
+    },
+    "boundaries": {
+      "title": "Lo que un sprint pre-sale no es",
+      "lead": "La versión honesta, para que no sea una conversación más adelante.",
+      "items": [
+        "No es una opinión de vendor due diligence. Eso es un encargo de auditoría firmado y esto no lo es.",
+        "No es una garantía de precio. Podemos decirle qué encontrará un comprador; qué hace con ello es cosa suya.",
+        "No es una fairness opinion, ni una valoración que se sostenga sola ante un banco.",
+        "No es un servicio de limpieza. Nombramos lo que falta; conseguirlo es cosa suya o de su asesor.",
+        "No queda aislado de su propio asesor por defecto. Si quiere mantenerlo aparte, dígalo antes de empezar."
+      ]
+    },
+    "faq": {
+      "title": "Lo que preguntan primero los vendedores",
+      "items": [
+        {
+          "q": "¿Cuánto antes del proceso deberíamos correrlo?",
+          "a": "Lo bastante pronto como para que la respuesta a un hallazgo aún pueda ser «ya lo hemos arreglado». Una vez el data room está en marcha, la versión honesta pasa a ser «lo sabemos, y este es el contexto». Las dos funcionan. La primera vale más."
+        },
+        {
+          "q": "¿Se enterará el comprador de que lo hicimos?",
+          "a": "Solo si usted se lo dice. Algunos vendedores lo hacen, porque llegar con sus propios hallazgos y el contexto es una posición fuerte. Es su decisión, no la nuestra."
+        },
+        {
+          "q": "¿Y si encontramos algo serio?",
+          "a": "Entonces lo encontró usted, meses antes que alguien con un interés en usarlo. Esa es la razón para correrlo, no para dejarlo."
+        },
+        {
+          "q": "¿Es el mismo producto que el sprint del lado comprador?",
+          "a": "El mismo motor, las mismas dimensiones y el mismo contrato de salida. Cambia la pregunta a la que lo apuntamos y la lista que recibe al final."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Córralo primero sobre su propia empresa",
+      "body": "Treinta minutos en la plataforma, después su propia situación y su propio calendario.",
+      "button": "Inicie un sprint",
+      "note": "Un puñado de encargos piloto."
     }
   },
   "governance": {

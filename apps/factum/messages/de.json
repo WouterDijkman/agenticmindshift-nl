@@ -39,6 +39,10 @@
     "privacy": {
       "title": "Datenschutz",
       "description": "Wie diese Website und unsere Mandate mit personenbezogenen Daten umgehen."
+    },
+    "preSale": {
+      "title": "Pre-Sale Diligence — finden, bevor der Käufer es findet",
+      "description": "Die Prüfung des Käufers, zuerst am eigenen Unternehmen. Jede Dimension, dazu eine benannte Liste dessen, was Ihrem Data Room fehlt, solange noch Zeit bleibt, daran etwas zu ändern."
     }
   },
   "a11y": {
@@ -57,7 +61,8 @@
     "contact": "Kontakt",
     "cta": "Sprint starten",
     "openMenu": "Menü öffnen",
-    "closeMenu": "Menü schließen"
+    "closeMenu": "Menü schließen",
+    "preSale": "Pre-Sale"
   },
   "footer": {
     "blurb": "KI-Due-Diligence für M&A und Private Equity. Jede Feststellung belegt ein Dokument. Jedes Ergebnis von einer namentlich genannten Person geprüft.",
@@ -713,6 +718,98 @@
       "body": "Eine Viertelstunde Plattform, eine Viertelstunde Ihr Data Room: was darin liegt, was fehlt und ob ein Sprint das richtige Instrument ist.",
       "button": "Demo vereinbaren",
       "note": "Eine begrenzte Zahl an Pilotmandaten, im einstelligen Bereich."
+    }
+  },
+  "preSale": {
+    "header": {
+      "title": "Finden, bevor der Käufer es findet",
+      "lead": "Ein Käufer fährt diese Analyse an Ihrem Unternehmen, ob Sie es selbst tun oder nicht. Die einzige Frage ist, ob Sie die Feststellungen zuerst sehen, solange Sie noch handeln können.",
+      "cta": "Sprint starten"
+    },
+    "who": {
+      "title": "Wer das fährt",
+      "lead": "Drei Situationen, ein Grund.",
+      "profiles": [
+        {
+          "title": "Eigentümer auf dem Weg zum Exit",
+          "body": "Zwei bis fünf Jahre entfernt oder schon im Prozess. Die Lücke zwischen dem Preis, den Sie im Kopf haben, und dem Preis, den ein Käufer verteidigt, besteht aus Feststellungen, die Sie noch nicht gesehen haben."
+        },
+        {
+          "title": "Verkaufsseitige Berater",
+          "body": "Sie stellen gleich ein Unternehmen vor berufsmäßige Skeptiker. Zu wissen, was sie finden werden, ist mehr wert als die Hoffnung, dass sie nicht hinsehen."
+        },
+        {
+          "title": "Wer einen Prozess schon einmal spät verloren hat",
+          "body": "Transaktionen scheitern selten am Preis. Sie scheitern an etwas, das spät auftauchte und jede andere Zahl verdächtig machte."
+        }
+      ]
+    },
+    "mirror": {
+      "title": "Die Prüfung des Käufers, auf Sie gerichtet",
+      "lead": "Dieselben Dimensionen, derselbe Data Room, derselbe Beweisstandard. Anders ist nur, wer das Ergebnis in der Hand hat.",
+      "steps": [
+        {
+          "title": "Wir lesen, wie ein Käufer liest",
+          "body": "Nicht wie ein Verkäufer, der die eigenen Hausaufgaben kontrolliert. Die Engine erfährt nicht, auf welcher Seite sie steht, und die Feststellungen fallen so oder so gleich aus."
+        },
+        {
+          "title": "Sie sehen sie zuerst",
+          "body": "Zu jeder Feststellung Dokument und Seite, damit Sie nachrechnen können, statt uns beim Wort zu nehmen."
+        },
+        {
+          "title": "Sie entscheiden, bevor jemand fragt",
+          "body": "Beheben, einpreisen oder die Antwort vorbereiten. Alle drei schlagen es, in einer Fragerunde überrascht zu werden."
+        }
+      ]
+    },
+    "gaps": {
+      "title": "Was Ihrem Data Room fehlt",
+      "lead": "Der erste Zug eines Käufers ist die Frage nach dem, was nicht da ist. Diese Liste bekommen Sie zuerst, mit Namen.",
+      "items": [
+        "Die Dokumente, nach denen ein Käufer fragen wird und die Ihr Data Room nicht enthält.",
+        "Die Jahre, die in einem Export unvollständig sind, wo eine Lücke schlimmer aussieht, als sie ist.",
+        "Die Verträge, auf die andere Verträge verweisen und die nie hochgeladen wurden.",
+        "Die Lücken, die Sie selbst kennen, damit Sie wählen können, wie Sie sie darstellen, statt danach gefragt zu werden."
+      ],
+      "note": "Wir sehen, dass etwas fehlt. Ob es absichtlich weggelassen wurde, steht uns nicht zu, und wir sagen es auch nicht."
+    },
+    "boundaries": {
+      "title": "Was ein Pre-Sale-Sprint nicht ist",
+      "lead": "Die ehrliche Fassung, damit daraus später kein Gespräch wird.",
+      "items": [
+        "Keine Vendor-Due-Diligence-Erklärung. Das ist ein unterzeichnetes Prüfungsmandat, und dies ist keines.",
+        "Keine Preisgarantie. Wir können Ihnen sagen, was ein Käufer findet; was er damit macht, ist seine Sache.",
+        "Keine Fairness Opinion und keine Bewertung, die vor einer Bank für sich allein steht.",
+        "Kein Aufräumdienst. Wir benennen, was fehlt; das Beschaffen liegt bei Ihnen oder Ihrem Berater.",
+        "Nicht standardmäßig von Ihrem eigenen Berater abgeschirmt. Wenn Sie es getrennt halten wollen, sagen Sie das vor dem Start."
+      ]
+    },
+    "faq": {
+      "title": "Was Verkäufer zuerst fragen",
+      "items": [
+        {
+          "q": "Wie lange vor dem Prozess sollten wir das fahren?",
+          "a": "Früh genug, dass die Antwort auf eine Feststellung noch „das haben wir behoben“ lauten kann. Sobald der Data Room live ist, wird die ehrliche Fassung „wir wissen es, und hier ist der Kontext“. Beides funktioniert. Das erste ist mehr wert."
+        },
+        {
+          "q": "Merkt der Käufer, dass wir das gemacht haben?",
+          "a": "Nur wenn Sie es sagen. Manche Verkäufer tun es, weil es eine starke Position ist, mit den eigenen Feststellungen und deren Kontext anzukommen. Das ist Ihre Entscheidung, nicht unsere."
+        },
+        {
+          "q": "Und wenn wir etwas Ernstes finden?",
+          "a": "Dann haben Sie es gefunden, Monate bevor jemand mit einem Interesse daran es getan hätte. Das ist der Grund, es zu fahren, kein Grund, es zu lassen."
+        },
+        {
+          "q": "Ist das dasselbe Produkt wie der Sprint auf der Käuferseite?",
+          "a": "Dieselbe Engine, dieselben Dimensionen und derselbe Output-Kontrakt. Anders ist die Frage, auf die wir ihn richten, und die Liste, die Sie am Ende bekommen."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Fahren Sie ihn zuerst am eigenen Unternehmen",
+      "body": "Dreißig Minuten auf der Plattform, danach Ihre eigene Situation und Ihr eigener Zeitplan.",
+      "button": "Sprint starten",
+      "note": "Eine Handvoll Pilotmandate."
     }
   },
   "governance": {

@@ -39,6 +39,10 @@
     "privacy": {
       "title": "Privacy",
       "description": "Hoe deze website en onze opdrachten omgaan met persoonsgegevens."
+    },
+    "preSale": {
+      "title": "Pre-sale diligence — vind het voordat de koper het vindt",
+      "description": "De read van de koper, eerst op uw eigen bedrijf. Elke dimensie, plus een lijst met naam en toenaam van wat uw data room mist, terwijl er nog tijd is om er iets aan te doen."
     }
   },
   "a11y": {
@@ -57,7 +61,8 @@
     "contact": "Contact",
     "cta": "Start een sprint",
     "openMenu": "Menu openen",
-    "closeMenu": "Menu sluiten"
+    "closeMenu": "Menu sluiten",
+    "preSale": "Pre-sale"
   },
   "footer": {
     "blurb": "AI due diligence voor M&A en private equity. Elke bevinding verwijst naar een document. Elke output beoordeeld door een met naam genoemd persoon.",
@@ -712,6 +717,98 @@
       "title": "Kijk of een sprint bij uw situatie past",
       "body": "Een kwartier het platform, een kwartier uw data room: wat erin zit, wat ontbreekt, en of een sprint het juiste instrument is.",
       "button": "Plan een demo",
+      "note": "Een handvol pilotmandaten."
+    }
+  },
+  "preSale": {
+    "header": {
+      "title": "Vind het voordat de koper het vindt",
+      "lead": "Een koper draait deze analyse op uw bedrijf, of u het nu zelf doet of niet. De enige vraag is of u de bevindingen als eerste ziet, terwijl u er nog iets aan kunt doen.",
+      "cta": "Start een sprint"
+    },
+    "who": {
+      "title": "Wie dit draait",
+      "lead": "Drie situaties, één reden.",
+      "profiles": [
+        {
+          "title": "Eigenaren op weg naar een exit",
+          "body": "Twee tot vijf jaar vooruit, of al in een proces. Het gat tussen de prijs die u in gedachten heeft en de prijs die een koper verdedigt, bestaat uit bevindingen die u nog niet heeft gezien."
+        },
+        {
+          "title": "Verkopende adviseurs",
+          "body": "U zet zo een bedrijf voor beroepsmatige sceptici neer. Weten wat zij gaan vinden is meer waard dan hopen dat ze niet kijken."
+        },
+        {
+          "title": "Wie ooit laat een proces verloor",
+          "body": "Deals sneuvelen zelden op prijs. Ze sneuvelen op iets dat laat bovenkwam en elk ander getal verdacht maakte."
+        }
+      ]
+    },
+    "mirror": {
+      "title": "De read van de koper, op u gericht",
+      "lead": "Dezelfde dimensies, dezelfde data room, dezelfde bewijsstandaard. Wat verschilt is wie de uitkomst in handen heeft.",
+      "steps": [
+        {
+          "title": "Wij lezen zoals een koper leest",
+          "body": "Niet als een verkoper die zijn eigen huiswerk nakijkt. De engine krijgt niet te horen aan welke kant hij staat, en de bevindingen komen er hoe dan ook hetzelfde uit."
+        },
+        {
+          "title": "U ziet ze als eerste",
+          "body": "Bij elke bevinding het document en de pagina, zodat u het kunt narekenen in plaats van ons op ons woord te geloven."
+        },
+        {
+          "title": "U beslist voordat iemand het vraagt",
+          "body": "Repareren, inprijzen, of het antwoord voorbereiden. Alle drie zijn beter dan verrast worden in een vragenronde."
+        }
+      ]
+    },
+    "gaps": {
+      "title": "Wat er in uw data room ontbreekt",
+      "lead": "De eerste zet van een koper is vragen om wat er niet in zit. U krijgt die lijst als eerste, met naam en toenaam.",
+      "items": [
+        "De documenten waar een koper om gaat vragen en die uw data room niet bevat.",
+        "De jaren die onvolledig zijn in een export, waar een gat erger leest dan het is.",
+        "De contracten waar andere contracten naar verwijzen en die nooit zijn aangeleverd.",
+        "De gaten die u zelf al kent, zodat u kunt kiezen hoe u ze presenteert in plaats van erop bevraagd te worden."
+      ],
+      "note": "Wij zien dát er iets ontbreekt. Of het er bewust uit is gelaten, is niet aan ons, en dat zeggen wij dan ook niet."
+    },
+    "boundaries": {
+      "title": "Wat een pre-sale sprint niet is",
+      "lead": "De eerlijke versie, zodat het later geen gesprek wordt.",
+      "items": [
+        "Geen vendor due diligence-verklaring. Dat is een getekende assurance-opdracht en dit is er geen.",
+        "Geen garantie op de prijs. Wij kunnen u zeggen wat een koper vindt; wat hij ermee doet is aan hem.",
+        "Geen fairness opinion, en geen waardering die op zichzelf voor een bank overeind blijft.",
+        "Geen opschoondienst. Wij benoemen wat er ontbreekt; het ophalen is aan u of aan uw adviseur.",
+        "Niet standaard afgeschermd van uw eigen adviseur. Wilt u het apart houden, zeg dat vóór de start."
+      ]
+    },
+    "faq": {
+      "title": "Wat verkopers als eerste vragen",
+      "items": [
+        {
+          "q": "Hoe lang vóór het proces moeten we dit draaien?",
+          "a": "Vroeg genoeg dat het antwoord op een bevinding nog “dat hebben we opgelost” kan zijn. Zodra de data room live is, wordt de eerlijke framing “we weten het, en dit is de context”. Allebei werkt. De eerste is meer waard."
+        },
+        {
+          "q": "Merkt de koper dat we dit hebben gedaan?",
+          "a": "Alleen als u het vertelt. Sommige verkopers doen dat, omdat aankomen met uw eigen bevindingen én de context een sterke positie is. Dat is uw keuze, niet de onze."
+        },
+        {
+          "q": "En als we iets ernstigs vinden?",
+          "a": "Dan heeft u het gevonden, maanden voordat iemand met een belang om het te gebruiken dat deed. Dat is de reden om het te draaien, geen reden om het te laten."
+        },
+        {
+          "q": "Is dit hetzelfde product als de sprint aan de koperskant?",
+          "a": "Dezelfde engine, dezelfde dimensies en hetzelfde outputcontract. Wat verschilt is de vraag waar we hem op richten en de lijst die u aan het eind krijgt."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Draai hem eerst op uw eigen bedrijf",
+      "body": "Dertig minuten op het platform, daarna uw eigen situatie en uw eigen tijdlijn.",
+      "button": "Start een sprint",
       "note": "Een handvol pilotmandaten."
     }
   },

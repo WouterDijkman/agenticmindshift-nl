@@ -10,24 +10,7 @@ Wat er wél is doorgevoerd staat onderaan.
 
 ## Kan wanneer je wilt — kost alleen werk
 
-### 1. `/pre-sale` — de sellside-adviseur als eigen pagina
-
-ICP 3 uit het document, en de scherpst geformuleerde van de drie: bescherm de
-transactiewaarde, vind je eigen zwakke plekken voordat de koper ze vindt.
-
-Staat nu als **één bijzin** in de lead van `/diligence-sprint` ("of op uw eigen
-bedrijf voordat een koper het bij u doet"). Die bijzin is in deze ronde wel
-aangescherpt, dus de positie bestaat — hij heeft alleen geen eigen deur.
-
-Zeven blokken, opzet ligt klaar in `PLAN-POSITIONERING-FACTUM.md` deel E4. Vijf
-talen. `/partnerships` is het model: die pagina doet hetzelfde voor ICP 2 en
-werkt goed.
-
-**Eerst beslissen:** één deur met drie kamers (sellside krijgt een pagina naast
-partnerships) of drie ICP-landingspagina's met de homepage als verdeelpunt. Ik
-adviseer de eerste; de tweede kan er altijd overheen.
-
-### 2. Een echte interface-mockup op de site
+### 1. Een echte interface-mockup op de site
 
 Het gat waar het document het meest gelijk in heeft. **De site laat het product
 nergens zien.** Geen screenshot, geen mockup, geen frame. Op een site waarvan de
@@ -37,12 +20,15 @@ bewijzen, is dat vreemd.
 `Specimen` op de homepage komt het dichtst in de buurt, maar dat is een
 geconstrueerd tekstvoorbeeld, geen interface.
 
-**Eerst beslissen:** een frame van de echte interface, en zo ja op welke data.
-Een geconstrueerd dossier zoals `Specimen` nu, of een echte run met de namen
-eruit. Dat tweede is overtuigender en vraagt een beslissing over wat er
-herkenbaar in beeld mag.
+**Wacht bewust.** Beslist op 2026-08-24: het product gaat pas de site op als we
+het zelf getest hebben. Dat is de juiste volgorde — een interface tonen die nog
+niet af is, is precies de belofte die je bij de eerste demo niet waar kunt maken.
 
-### 3. Een diagram voor de negatieve ruimte
+Als het zover is: beslis dan of het een geconstrueerd dossier wordt zoals
+`Specimen` nu, of een echte run met de namen eruit. Dat tweede is overtuigender
+en vraagt een beslissing over wat er herkenbaar in beeld mag.
+
+### 2. Een diagram voor de negatieve ruimte
 
 De tekst zegt nu wat er nooit is aangeleverd. Er is geen beeld dat het laat zien.
 Wat het vraagt: de data room als raster met de gaten gemarkeerd.
@@ -53,7 +39,7 @@ rechthoek waar iets heeft gestaan). `seal` is eigenlijk de negatieve ruimte in
 één beeld en draagt nu een citaat op de homepage-band. Die kan verschoven worden
 zonder iets nieuws te maken.
 
-### 4. `Specimen` de lijn laten tekenen
+### 3. `Specimen` de lijn laten tekenen
 
 Clausule links, bevinding rechts, en niets ertussen. Die verbinding is precies
 wat pijler 3 belooft dat je aan tafel laat zien, en het is het enige object op de
@@ -63,7 +49,7 @@ site dat het kan tonen. Kleine ingreep, groot effect.
 
 ## Kan pas als het product er is
 
-### 5. Alle fase-2 copy uit het document
+### 4. Alle fase-2 copy uit het document
 
 Voor elke ICP staat er een self-serve blok. Daarin:
 
@@ -81,16 +67,16 @@ géén white-label claim van certificering.
 Zodra een van deze dingen echt draait, is de copy uit het document een prima
 startpunt.
 
-### 6. Eén regel op `/platform` over waar het heen gaat
+### 5. Eén regel op `/platform` over waar het heen gaat
 
-Tussenvorm voor punt 5: richting benoemen zonder aanbod doen. Vraagt jouw
+Tussenvorm voor punt 4: richting benoemen zonder aanbod doen. Vraagt jouw
 akkoord, want een roadmap-belofte op een pre-launch site is een risico op zich.
 
 ---
 
 ## Bewust niet gedaan, en dat blijft zo tenzij je me overrulet
 
-### 7. De absolute claims
+### 6. De absolute claims
 
 Het document belooft "100% menselijke verificatie", "geen hallucinaties" en
 "foutloze rapporten". De site zegt het tegenovergestelde en dat is met opzet:
@@ -105,12 +91,12 @@ De kracht is wel overgenomen, zonder de absoluutheid: elke bewering staat aan ee
 document en een pagina, of hij staat er als onbevestigd bij. Even hard, wel waar,
 en controleerbaar terwijl je het zegt.
 
-### 8. "Verdrievoudig uw dealcapaciteit"
+### 7. "Verdrievoudig uw dealcapaciteit"
 
 Verzonnen factor. Er is nog geen afgeronde case. Het argument eronder is sterk
 genoeg zonder getal, en staat al zo op `/partnerships`.
 
-### 9. Het visuele voorstel
+### 8. Het visuele voorstel
 
 Wit plus antraciet, crimson accent, Roboto. Botst met de design lock
 (`#081930` / `#844E58` / `#F14C1D`, Newsreader + Inter + IBM Plex Mono) en met je
@@ -131,6 +117,27 @@ visuele taal naast de macrofotografie, en twee talen door elkaar ziet er slechte
 uit dan één consequent volgehouden.
 
 ---
+
+## Gedaan
+
+### `/pre-sale` — de verkoperskant heeft een eigen deur · 2026-08-24
+
+ICP 3 uit het document. Stond als één bijzin in de lead van
+`/diligence-sprint`; is nu een pagina met een eigen plek in de navigatie, in
+vijf talen, in de sitemap en met breadcrumb.
+
+Zeven blokken: wie het draait (drie soorten verkoper), de read van de koper op
+u gericht, **wat er in uw data room ontbreekt**, wat een pre-sale sprint níet is,
+FAQ, en de CTA met de garantie ernaast.
+
+Gebouwd met de bestaande componenten van `/partnerships` en drie bestaande
+stills. Geen nieuwe styling, geen nieuwe assets. `seal` draagt het middelste
+profiel: stof met één schone rechthoek waar iets heeft gestaan, en dat is de
+negatieve ruimte in één beeld.
+
+De grens staat er expliciet bij: wij zien dát er iets ontbreekt, niet of het er
+bewust uit is gelaten. Dat tweede zou een claim over iemands bedoeling zijn, en
+daar zit geen bewijs voor in een data room.
 
 ## Wat er op 2026-08-24 wél is doorgevoerd
 

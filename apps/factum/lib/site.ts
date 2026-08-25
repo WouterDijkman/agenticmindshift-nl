@@ -45,6 +45,7 @@ export const KVK = '99495945';
 export const NAV = [
   { href: '/platform', key: 'platform' },
   { href: '/diligence-sprint', key: 'sprint' },
+  { href: '/pre-sale', key: 'preSale' },
   { href: '/governance', key: 'governance' },
   { href: '/partnerships', key: 'partnerships' },
   { href: '/team', key: 'team' }
