@@ -2,7 +2,7 @@
   "meta": {
     "home": {
       "title": "AI due diligence for M&A and private equity",
-      "description": "Ten disciplines over the full data room. Reconciled against each other. Reviewed by a person before you see it. Built for acquisitions up to roughly €10M EBITDA."
+      "description": "Every dimension over the whole data room, reconciled against each other, with the document and page behind every finding. Built for acquisitions up to roughly €10M EBITDA."
     },
     "platform": {
       "title": "AI due diligence platform",
@@ -261,17 +261,17 @@
   },
   "home": {
     "hero": {
-      "title": "Read the entire data room in days",
-      "lead": "A proprietary M&A risk and intelligence engine, built to read a whole data room. Conventional diligence samples it and reports in weeks. We read all of it, and every finding cites the document and page behind it.",
+      "title": "Know what is in the room before you name a price",
+      "lead": "Every dimension, over the whole data room, in days. Every finding cites the document and the page, so you can prove it at the table while you are sitting there.",
       "cta": "Start a sprint"
     },
     "problem": {
-      "title": "Most diligence never reads the whole data room",
-      "lead": "There is never enough time. So the price gets set on a sample of the documents.",
+      "title": "The room you are reading was assembled by the seller",
+      "lead": "There is never time to read all of it, and what was never uploaded leaves no trace at all. The price gets set on both.",
       "points": [
         {
           "title": "You are working from a sample",
-          "body": "Traditional diligence reads a fraction of the room. The rest is still in there."
+          "body": "Conventional diligence reads a fraction of the room. The rest is still in there, and it does not stop being true because nobody opened it."
         },
         {
           "title": "The risk sits between disciplines",
@@ -374,8 +374,8 @@
       ]
     },
     "cta": {
-      "title": "See it running, then decide",
-      "body": "Thirty minutes: a walkthrough of the platform, then your own situation. If it does not fit, we will say so.",
+      "title": "Run it on a deal you have open now",
+      "body": "Thirty minutes on the platform, then your own situation. If a sprint is not the right instrument, we will say so.",
       "button": "Start a sprint"
     }
   },
@@ -615,7 +615,7 @@
   "sprint": {
     "header": {
       "title": "See what a buyer would find, before they do",
-      "lead": "All {disciplines} disciplines, reconciled into one narrative. Run it on a target, a company you hold, or your own business.",
+      "lead": "All {disciplines} disciplines, reconciled into one narrative. Run it on a target you are buying, or on your own company before a buyer runs it on you.",
       "cta": "Book a demo"
     },
     "reframe": {
@@ -639,8 +639,8 @@
           "body": "Every discipline’s findings resolved into one coherent narrative, with a named person behind the result."
         },
         {
-          "title": "Live data-gap tracker",
-          "body": "The running question list, updated as gaps close."
+          "title": "What never arrived",
+          "body": "The running list of what was asked for and not delivered. A gap you can name is a question for the seller; a gap you cannot is a surprise after closing."
         }
       ]
     },
@@ -660,8 +660,8 @@
         },
         {
           "label": "Alongside both",
-          "items": "The data-gap tracker",
-          "body": "A structured gap list, delivered while there is still time to close the gaps."
+          "items": "The list of what never arrived",
+          "body": "Named, structured and delivered while there is still time to ask for it."
         }
       ]
     },
@@ -674,7 +674,7 @@
           "body": "Financials, legal, tax, HR, contracts and IP, as agreed in the demo."
         },
         {
-          "title": "Answers to the data-gap tracker",
+          "title": "Answers on what never arrived",
           "body": "Your answers close the gaps. One round to fold them in and re-run affected analysis is included."
         }
       ]

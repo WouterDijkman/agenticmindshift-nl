@@ -2,7 +2,7 @@
   "meta": {
     "home": {
       "title": "Due diligence con IA: M&A y private equity",
-      "description": "Diez disciplinas sobre el data room completo. Reconciliadas entre sí. Revisadas por una persona antes de que usted las vea. Pensado para adquisiciones de hasta unos 10 M€ de EBITDA."
+      "description": "Cada dimensión sobre todo el data room, reconciliadas entre sí, con el documento y la página detrás de cada hallazgo. Pensado para adquisiciones de hasta unos 10 M€ de EBITDA."
     },
     "platform": {
       "title": "Plataforma de due diligence con IA",
@@ -261,17 +261,17 @@
   },
   "home": {
     "hero": {
-      "title": "Lea todo el data room en días",
-      "lead": "Un motor propio de riesgo e inteligencia de M&A, hecho para leer un data room entero. La diligencia convencional lo muestrea e informa al cabo de semanas. Nosotros lo leemos todo, y cada hallazgo cita el documento y la página.",
+      "title": "Sepa qué hay en el data room antes de poner un precio",
+      "lead": "Cada dimensión, sobre todo el data room, en días. Cada hallazgo cita el documento y la página, para que pueda probarlo en la mesa mientras está sentado en ella.",
       "cta": "Inicie un sprint"
     },
     "problem": {
-      "title": "La mayoría de las due diligence nunca lee el data room entero",
-      "lead": "Nunca hay tiempo suficiente. Así que el precio se fija sobre una muestra de los documentos.",
+      "title": "El data room que usted lee lo montó el vendedor",
+      "lead": "Nunca hay tiempo para leerlo entero, y lo que nunca se subió no deja rastro alguno. El precio se fija sobre las dos cosas.",
       "points": [
         {
           "title": "Está trabajando sobre una muestra",
-          "body": "La diligencia tradicional lee una fracción del data room. El resto sigue ahí dentro."
+          "body": "La diligencia convencional lee una fracción del data room. El resto sigue dentro, y no deja de ser cierto porque nadie lo abriera."
         },
         {
           "title": "El riesgo está entre las disciplinas",
@@ -374,8 +374,8 @@
       ]
     },
     "cta": {
-      "title": "Véalo funcionar y después decida",
-      "body": "Treinta minutos: primero la plataforma, después su propia situación. Si no encaja, se lo diremos.",
+      "title": "Córralo sobre una operación que tenga abierta ahora",
+      "body": "Treinta minutos en la plataforma, después su propia situación. Si un sprint no es el instrumento adecuado, se lo diremos.",
       "button": "Inicie un sprint"
     }
   },
@@ -615,7 +615,7 @@
   "sprint": {
     "header": {
       "title": "Vea lo que un comprador encontraría, antes que él",
-      "lead": "Las {disciplines} disciplinas, reconciliadas en una sola narrativa. Ejecútelo sobre un target, una empresa de su cartera o su propio negocio.",
+      "lead": "Las {disciplines} disciplinas, reconciliadas en una sola narrativa. Córralo sobre un target que está comprando, o sobre su propia empresa antes de que lo haga un comprador.",
       "cta": "Reserve una demo"
     },
     "reframe": {
@@ -639,8 +639,8 @@
           "body": "Los hallazgos de cada disciplina resueltos en una sola narrativa coherente, con una persona identificada detrás del resultado."
         },
         {
-          "title": "Registro vivo de lagunas de información",
-          "body": "La lista de preguntas en curso, actualizada a medida que se cierran las lagunas."
+          "title": "Lo que nunca llegó",
+          "body": "La lista viva de lo que se pidió y no llegó. Un vacío que puede nombrar es una pregunta para el vendedor; uno que no conoce es una sorpresa tras el cierre."
         }
       ]
     },
@@ -660,8 +660,8 @@
         },
         {
           "label": "Junto a ambos",
-          "items": "El registro de lagunas de información",
-          "body": "Una lista estructurada de lagunas, entregada mientras todavía hay tiempo de cerrarlas."
+          "items": "La lista de lo que nunca llegó",
+          "body": "Con nombre, estructurada y entregada mientras aún hay tiempo de pedirlo."
         }
       ]
     },
@@ -674,7 +674,7 @@
           "body": "Estados financieros, legal, fiscal, RR. HH., contratos y propiedad intelectual, según lo acordado en la demo."
         },
         {
-          "title": "Respuestas al registro de lagunas",
+          "title": "Respuestas sobre lo que nunca llegó",
           "body": "Sus respuestas cierran las lagunas. Se incluye una ronda para incorporarlas y volver a ejecutar el análisis afectado."
         }
       ]

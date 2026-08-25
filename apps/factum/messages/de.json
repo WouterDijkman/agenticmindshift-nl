@@ -2,7 +2,7 @@
   "meta": {
     "home": {
       "title": "KI-Due-Diligence für M&A und Private Equity",
-      "description": "Zehn Disziplinen über den gesamten Data Room. Gegeneinander abgeglichen. Von einer Person geprüft, bevor Sie es sehen. Gebaut für Übernahmen bis rund 10 Mio. € EBITDA."
+      "description": "Jede Dimension über den gesamten Data Room, gegeneinander abgeglichen, mit Dokument und Seite hinter jeder Feststellung. Gebaut für Übernahmen bis rund 10 Mio. € EBITDA."
     },
     "platform": {
       "title": "KI-Due-Diligence-Plattform",
@@ -261,17 +261,17 @@
   },
   "home": {
     "hero": {
-      "title": "Den gesamten Data Room in Tagen lesen",
-      "lead": "Eine eigene M&A-Risiko- und Intelligence-Engine, gebaut, um einen ganzen Data Room zu lesen. Konventionelle Due Diligence nimmt eine Stichprobe und berichtet nach Wochen. Wir lesen alles, und zu jedem Feststellung stehen Dokument und Seite.",
+      "title": "Wissen, was im Data Room liegt, bevor Sie einen Preis nennen",
+      "lead": "Jede Dimension, über den ganzen Data Room, in Tagen. Zu jeder Feststellung stehen Dokument und Seite, damit Sie sie am Tisch belegen können, während Sie dort sitzen.",
       "cta": "Sprint starten"
     },
     "problem": {
-      "title": "Die meiste Due Diligence liest den Data Room nie ganz",
-      "lead": "Die Zeit reicht nie. Also entsteht der Preis auf einer Stichprobe der Dokumente.",
+      "title": "Der Data Room, den Sie lesen, wurde vom Verkäufer zusammengestellt",
+      "lead": "Die Zeit reicht nie für alles, und was nie hochgeladen wurde, hinterlässt gar keine Spur. Der Preis entsteht auf beidem.",
       "points": [
         {
           "title": "Sie arbeiten mit einer Stichprobe",
-          "body": "Klassische Due Diligence liest einen Bruchteil des Data Rooms. Der Rest liegt weiter darin."
+          "body": "Klassische Due Diligence liest einen Bruchteil des Data Rooms. Der Rest liegt weiter darin, und er wird nicht weniger wahr, weil niemand ihn geöffnet hat."
         },
         {
           "title": "Das Risiko liegt zwischen den Disziplinen",
@@ -374,8 +374,8 @@
       ]
     },
     "cta": {
-      "title": "Erst laufen sehen, dann entscheiden",
-      "body": "Dreißig Minuten: erst die Plattform, dann Ihre eigene Situation. Passt es nicht, sagen wir das.",
+      "title": "Fahren Sie ihn auf einem laufenden Dossier",
+      "body": "Dreißig Minuten auf der Plattform, danach Ihre eigene Situation. Ist ein Sprint nicht das richtige Instrument, sagen wir das.",
       "button": "Sprint starten"
     }
   },
@@ -615,7 +615,7 @@
   "sprint": {
     "header": {
       "title": "Sehen Sie, was ein Käufer finden würde, bevor er es tut",
-      "lead": "Alle {disciplines} Disziplinen, zu einem einzigen Narrativ zusammengeführt. Gefahren auf einem Target, einem Unternehmen, das Sie halten, oder Ihrem eigenen Betrieb.",
+      "lead": "Alle {disciplines} Disziplinen, zu einer Darstellung zusammengeführt. Gefahren an einem Target, das Sie kaufen, oder an Ihrem eigenen Unternehmen, bevor ein Käufer es dort fährt.",
       "cta": "Demo vereinbaren"
     },
     "reframe": {
@@ -639,8 +639,8 @@
           "body": "Die Feststellungen jeder Disziplin, zu einem kohärenten Narrativ zusammengeführt, mit einer namentlich benannten Person hinter dem Ergebnis."
         },
         {
-          "title": "Laufende Liste der fehlenden Unterlagen",
-          "body": "Die laufende Fragenliste, aktualisiert, während Lücken geschlossen werden."
+          "title": "Was nie geliefert wurde",
+          "body": "Die laufende Liste dessen, was angefragt und nicht gekommen ist. Eine Lücke, die Sie benennen können, ist eine Frage an den Verkäufer; eine, die Sie nicht kennen, ist eine Überraschung nach dem Closing."
         }
       ]
     },
@@ -660,8 +660,8 @@
         },
         {
           "label": "Zu beidem",
-          "items": "Die Liste der fehlenden Unterlagen",
-          "body": "Eine strukturierte Lückenliste, geliefert, solange noch Zeit bleibt, die Lücken zu schließen."
+          "items": "Die Liste dessen, was nie geliefert wurde",
+          "body": "Benannt, strukturiert und geliefert, solange noch Zeit bleibt, danach zu fragen."
         }
       ]
     },
@@ -674,7 +674,7 @@
           "body": "Finanzen, Recht, Steuern, Personal, Verträge und IP, wie in der Demo vereinbart."
         },
         {
-          "title": "Antworten auf die Liste der fehlenden Unterlagen",
+          "title": "Antworten auf das, was nie geliefert wurde",
           "body": "Ihre Antworten schließen die Lücken. Eine Runde, um sie einzuarbeiten und betroffene Analysen erneut laufen zu lassen, ist enthalten."
         }
       ]

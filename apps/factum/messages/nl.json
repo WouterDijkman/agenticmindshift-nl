@@ -2,7 +2,7 @@
   "meta": {
     "home": {
       "title": "AI due diligence voor M&A en private equity",
-      "description": "Tien disciplines over de volledige data room. Onderling afgestemd. Beoordeeld door een persoon voordat u iets ziet. Gebouwd voor overnames tot ongeveer €10M EBITDA."
+      "description": "Elke dimensie over de hele data room, onderling afgestemd, met bij elke bevinding het document en de pagina. Gebouwd voor overnames tot ongeveer €10M EBITDA."
     },
     "platform": {
       "title": "AI-platform voor due diligence",
@@ -261,17 +261,17 @@
   },
   "home": {
     "hero": {
-      "title": "Lees de hele data room in dagen",
-      "lead": "Een eigen M&A-risico- en intelligence-engine, gebouwd om een hele data room te lezen. Conventionele diligence neemt er een steekproef uit en rapporteert na weken. Wij lezen alles, en bij elke bevinding staat het document en de pagina.",
+      "title": "Weet wat er ligt voordat u een prijs noemt",
+      "lead": "Elke dimensie, over de hele data room, in dagen. Bij elke bevinding staat het document en de pagina, zodat u het aan tafel kunt bewijzen terwijl u er zit.",
       "cta": "Start een sprint"
     },
     "problem": {
-      "title": "De meeste due diligence leest de data room nooit helemaal",
-      "lead": "Er is nooit genoeg tijd. Dus wordt de prijs bepaald op een steekproef van de documenten.",
+      "title": "De data room die u leest is samengesteld door de verkoper",
+      "lead": "Er is nooit tijd om alles te lezen, en wat er nooit in is gezet laat helemaal geen spoor na. De prijs komt op allebei tot stand.",
       "points": [
         {
           "title": "U werkt met een steekproef",
-          "body": "Klassieke due diligence leest een fractie van de data room. De rest zit er nog steeds in."
+          "body": "Klassieke due diligence leest een fractie van de data room. De rest zit er nog steeds in, en dat wordt niet minder waar omdat niemand het opende."
         },
         {
           "title": "Het risico zit tussen de disciplines",
@@ -374,8 +374,8 @@
       ]
     },
     "cta": {
-      "title": "Zie het draaien, beslis daarna",
-      "body": "Dertig minuten: eerst het platform, dan uw eigen situatie. Past het niet, dan zeggen we dat.",
+      "title": "Draai hem op een dossier dat nu openstaat",
+      "body": "Dertig minuten op het platform, daarna uw eigen situatie. Is een sprint niet het juiste instrument, dan zeggen we dat.",
       "button": "Start een sprint"
     }
   },
@@ -615,7 +615,7 @@
   "sprint": {
     "header": {
       "title": "Zie wat een koper zou vinden, voordat hij het vindt",
-      "lead": "Alle {disciplines} disciplines, afgestemd tot één verhaallijn. Gedraaid op een target, een onderneming die u houdt, of uw eigen bedrijf.",
+      "lead": "Alle {disciplines} disciplines, afgestemd tot één verhaallijn. Gedraaid op een target dat u koopt, of op uw eigen bedrijf voordat een koper het bij u doet.",
       "cta": "Plan een demo"
     },
     "reframe": {
@@ -639,8 +639,8 @@
           "body": "De bevindingen van elke discipline opgelost tot één samenhangende verhaallijn, met een persoon met naam achter het resultaat."
         },
         {
-          "title": "Lopende lijst van wat ontbreekt",
-          "body": "De lopende vragenlijst, bijgewerkt terwijl gaten worden gedicht."
+          "title": "Wat nooit is aangeleverd",
+          "body": "De lopende lijst van wat is opgevraagd en niet is gekomen. Een gat dat u kunt benoemen is een vraag aan de verkoper; een gat dat u niet kent is een verrassing na closing."
         }
       ]
     },
@@ -660,8 +660,8 @@
         },
         {
           "label": "Naast beide",
-          "items": "De lijst van wat ontbreekt",
-          "body": "Een gestructureerde lijst van wat er in de data room ontbreekt, geleverd terwijl er nog tijd is om het op te vragen."
+          "items": "De lijst van wat nooit is aangeleverd",
+          "body": "Met naam, gestructureerd, en geleverd terwijl er nog tijd is om het op te vragen."
         }
       ]
     },
@@ -674,7 +674,7 @@
           "body": "Financiën, juridisch, fiscaal, HR, contracten en IP, zoals afgesproken in het gesprek."
         },
         {
-          "title": "Antwoorden op de lijst van wat ontbreekt",
+          "title": "Antwoorden op wat nooit is aangeleverd",
           "body": "Uw antwoorden dichten de gaten. Eén ronde om ze te verwerken en de geraakte analyses opnieuw te draaien, zit inbegrepen."
         }
       ]

@@ -2,7 +2,7 @@
   "meta": {
     "home": {
       "title": "Due diligence com IA: M&A e private equity",
-      "description": "Dez disciplinas sobre o data room completo. Reconciliadas entre si. Revistas por uma pessoa antes de lhe chegarem. Feito para aquisições até cerca de 10 M€ de EBITDA."
+      "description": "Cada dimensão sobre todo o data room, reconciliadas entre si, com o documento e a página por trás de cada constatação. Feito para aquisições até cerca de 10 M€ de EBITDA."
     },
     "platform": {
       "title": "Plataforma de due diligence com IA",
@@ -261,17 +261,17 @@
   },
   "home": {
     "hero": {
-      "title": "Leia o data room inteiro em dias",
-      "lead": "Um motor próprio de risco e inteligência de M&A, feito para ler um data room inteiro. A diligência convencional faz-lhe uma amostra e reporta ao fim de semanas. Nós lemos tudo, e cada constatação cita o documento e a página.",
+      "title": "Saiba o que está no data room antes de dar um preço",
+      "lead": "Cada dimensão, sobre todo o data room, em dias. Cada constatação cita o documento e a página, para que a possa provar à mesa enquanto lá está sentado.",
       "cta": "Inicie um sprint"
     },
     "problem": {
-      "title": "A maioria das due diligences nunca lê o data room todo",
-      "lead": "Nunca há tempo suficiente. Por isso o preço fixa-se sobre uma amostra dos documentos.",
+      "title": "O data room que está a ler foi montado pelo vendedor",
+      "lead": "Nunca há tempo para ler tudo, e o que nunca foi carregado não deixa rasto nenhum. O preço forma-se sobre as duas coisas.",
       "points": [
         {
           "title": "Está a trabalhar sobre uma amostra",
-          "body": "A diligência tradicional lê uma fração da data room. O resto continua lá dentro."
+          "body": "A diligência convencional lê uma fracção do data room. O resto continua lá dentro, e não deixa de ser verdade por ninguém o ter aberto."
         },
         {
           "title": "O risco está entre as disciplinas",
@@ -374,8 +374,8 @@
       ]
     },
     "cta": {
-      "title": "Veja-o a correr e decida depois",
-      "body": "Trinta minutos: primeiro a plataforma, depois a sua própria situação. Se não encaixar, dizemos.",
+      "title": "Corra-o sobre um processo que tenha aberto agora",
+      "body": "Trinta minutos na plataforma, depois a sua própria situação. Se um sprint não for o instrumento certo, dizemos isso.",
       "button": "Inicie um sprint"
     }
   },
@@ -615,7 +615,7 @@
   "sprint": {
     "header": {
       "title": "Veja o que um comprador encontraria, antes dele",
-      "lead": "Todas as {disciplines} disciplinas, reconciliadas numa só narrativa. Corra-o sobre um target, uma empresa que detém, ou o seu próprio negócio.",
+      "lead": "As {disciplines} disciplinas, reconciliadas numa só narrativa. Corrido sobre um target que está a comprar, ou sobre a sua própria empresa antes de um comprador o fazer.",
       "cta": "Marque uma demo"
     },
     "reframe": {
@@ -639,8 +639,8 @@
           "body": "As constatações de cada disciplina resolvidas numa narrativa coerente, com uma pessoa identificada a responder pelo resultado."
         },
         {
-          "title": "Registo de lacunas de dados sempre atualizado",
-          "body": "A lista de perguntas em curso, atualizada à medida que as lacunas se fecham."
+          "title": "O que nunca chegou",
+          "body": "A lista viva do que foi pedido e não chegou. Uma lacuna que consegue nomear é uma pergunta para o vendedor; uma que desconhece é uma surpresa depois do fecho."
         }
       ]
     },
@@ -660,8 +660,8 @@
         },
         {
           "label": "Junto de ambos",
-          "items": "O registo de lacunas de dados",
-          "body": "Uma lista estruturada de lacunas, entregue enquanto ainda há tempo para as fechar."
+          "items": "A lista do que nunca chegou",
+          "body": "Identificada, estruturada e entregue enquanto ainda há tempo de a pedir."
         }
       ]
     },
@@ -674,7 +674,7 @@
           "body": "Contas, jurídico, fiscal, RH, contratos e propriedade intelectual, conforme acordado na demo."
         },
         {
-          "title": "Respostas ao registo de lacunas de dados",
+          "title": "Respostas sobre o que nunca chegou",
           "body": "As suas respostas fecham as lacunas. Está incluída uma ronda para as integrar e voltar a correr a análise afetada."
         }
       ]
