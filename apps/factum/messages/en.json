@@ -6,11 +6,11 @@
     },
     "platform": {
       "title": "AI due diligence platform",
-      "description": "{modules} due-diligence modules across eight disciplines. Every finding cites a document. Every output passes a human gate."
+      "description": "{modules} due-diligence modules across {disciplines} disciplines. Every finding cites a document. Every output passes a human gate."
     },
     "sprint": {
       "title": "Full data-room review in days",
-      "description": "Ten specialist passes over one data room, reconciled into a single narrative, with a live data-gap tracker."
+      "description": "{disciplines} specialist passes over one data room, reconciled into a single narrative, with a live data-gap tracker."
     },
     "method": {
       "title": "How AI due diligence actually works",
@@ -151,8 +151,8 @@
         "body": "The model provider does not keep your documents or train on them."
       },
       {
-        "title": "Pseudonymized before processing",
-        "body": "Confidential data is pseudonymized before analysis. Reversed only in the final output."
+        "title": "Pseudonymised before processing",
+        "body": "Confidential data is pseudonymised before analysis. Reversed only in the final output."
       },
       {
         "title": "One accountable point of contact",
@@ -218,10 +218,10 @@
         "review": "Approved by W. Dijkman before release."
       }
     },
-    "ctaProof": "Three material findings your team didn’t already have, or the engagement is free — on pilot mandates.",
+    "ctaProof": "Three material findings your team did not already have, or the engagement is free — on pilot mandates.",
     "guarantee": {
       "label": "The Findings Guarantee",
-      "claim": "Three material findings your own team had not already identified, or the engagement is free.",
+      "claim": "Three material findings your team did not already have, or the engagement is free.",
       "note": "For pilot mandates. We carry the risk of this being early, not you."
     },
     "links": {
@@ -239,12 +239,12 @@
   "home": {
     "hero": {
       "title": "Know what is in the room before you name a price",
-      "lead": "Every dimension, over the whole data room, in days. Every finding cites the document and the page, so you can prove it at the table while you are sitting there.",
+      "lead": "Every dimension, over the whole data room, in days. Every finding cites the document and the page, so you can prove it at the table, not just claim it.",
       "cta": "Start a sprint"
     },
     "problem": {
       "title": "The room you are reading was assembled by the seller",
-      "lead": "There is never time to read all of it, and what was never uploaded leaves no trace at all. The price gets set on both.",
+      "lead": "There is never time to read all of it, and what was never uploaded leaves no trace at all. The price gets set regardless of either.",
       "points": [
         {
           "title": "You are working from a sample",
@@ -271,7 +271,7 @@
     "pipeline": {
       "title": "Every mandate runs the same five steps",
       "lead": "Anyone can point an AI tool at a data room. The question is what happens when the model gets something wrong.",
-      "refusalTitle": "The pipeline stops and calls a person",
+      "refusalTitle": "The pipeline stops and routes to a person",
       "refusals": [
         "Fabricated or hallucinated citations",
         "Privacy leaks",
@@ -282,7 +282,7 @@
     },
     "trust": {
       "title": "Where your documents go, and who can see them",
-      "lead": "EU hosting, zero retention at the model provider, pseudonymization before analysis, and one named reviewer. Four mechanisms, no certification.",
+      "lead": "EU hosting, zero retention at the model provider, pseudonymisation before analysis, and one named reviewer. Four mechanisms, no certification.",
       "link": "Read the governance page"
     },
     "coverage": {
@@ -396,7 +396,7 @@
         {
           "title": "Grounded retrieval",
           "body": "The module goes into the data room and pulls the passages that answer its question.",
-          "note": "Confidential financial and personal data is pseudonymized before it reaches this layer."
+          "note": "Confidential financial and personal data is pseudonymised before it reaches this layer."
         },
         {
           "title": "Drafting against the schema",
@@ -404,7 +404,7 @@
         },
         {
           "title": "Generate-critique-retry",
-          "body": "A reviewer agent critiques the draft and sends it back. Up to two retries per specialist."
+          "body": "A critic agent critiques the draft and sends it back. Up to two retries per specialist."
         },
         {
           "title": "Four-layer grounding check",
@@ -417,7 +417,7 @@
         {
           "title": "Human review and approval",
           "body": "A named person reviews the findings before release.",
-          "note": "Pseudonymization is reversed only here, in the final delivered output."
+          "note": "Pseudonymisation is reversed only here, in the final delivered output."
         }
       ]
     },
@@ -443,14 +443,14 @@
         },
         {
           "title": "Second-opinion verify",
-          "body": "A local natural-language-inference model re-runs the judgment. This layer fails closed.",
+          "body": "A local natural-language-inference model re-runs the judgement. This layer fails closed.",
           "catches": "Whatever the first three let through."
         }
       ],
       "repair": "Claims that fail get one repair attempt: re-quote from source, then re-judge. Claims that still fail are cut or marked unconfirmed."
     },
     "blocks": {
-      "title": "{blocks} conditions that stop auto-approval",
+      "title": "{blocks} hard-block conditions",
       "lead": "Retries are capped at two per specialist. These conditions end the loop regardless and route the draft to a person.",
       "items": [
         {
@@ -488,7 +488,7 @@
       ]
     },
     "dimensions": {
-      "title": "What the engine is read for",
+      "title": "What the engine is actually for",
       "lead": "A module is a piece of the machine. A dimension is a question you already have, and today you get a separate invoice for each one. All {disciplines} run over the same data room in one pass, so what one finds is on the table for the next.",
       "note": "One dimension without the others is not diligence. The list is derived from the product source, not from a brochure."
     },
@@ -562,7 +562,7 @@
         },
         {
           "q": "What happens when the model doesn’t know?",
-          "a": "It has to say so. A finding is either backed by a citation that survived four checks or flagged as unconfirmed. Fabricated sources are one of the {blocks} hard blocks."
+          "a": "It has to say so. A finding is either backed by a citation that survived four checks or flagged as unconfirmed. Fabricated sources are one of the {blocks} hard-block conditions."
         },
         {
           "q": "How do I know the platform can carry findings this material?",
@@ -625,7 +625,7 @@
         {
           "label": "Synthesized report",
           "items": "The same findings, reconciled",
-          "body": "One written report: every discipline's findings resolved into a single narrative."
+          "body": "One written report: every discipline’s findings resolved into a single narrative."
         },
         {
           "label": "Alongside both",
@@ -665,7 +665,7 @@
         },
         {
           "q": "What happens to our documents?",
-          "a": "Confidential data is pseudonymized before analysis and reversed only in the final output. Analysis runs on Google Vertex AI in an EU region under a Data Processing Agreement. The model provider does not keep your documents or train on them."
+          "a": "Confidential data is pseudonymised before analysis and reversed only in the final output. Analysis runs on Google Vertex AI in an EU region under a Data Processing Agreement. The model provider does not keep your documents or train on them."
         },
         {
           "q": "Can I see an example report?",
@@ -681,7 +681,7 @@
       "title": "See whether a sprint fits your situation",
       "body": "Fifteen minutes of the platform, fifteen on your data room: what is in it, what is missing, and whether a sprint is the right instrument.",
       "button": "Book a demo",
-      "note": "A limited number of pilot mandates, counted in single digits."
+      "note": "A handful of pilot mandates."
     }
   },
   "preSale": {
@@ -792,9 +792,9 @@
       "items": [
         "Findings are checked back against the source documents before delivery.",
         "The gate runs every time, automatically.",
-        "{blocks} failure classes route to a person instead of auto-approving.",
+        "{blocks} hard-block conditions route to a person instead of auto-approving.",
         "A named person reviews, reconciles and stands behind the output.",
-        "Pseudonymized values are reversed only here, in the final output."
+        "Pseudonymised values are reversed only here, in the final output."
       ]
     },
     "transparency": {
@@ -802,7 +802,7 @@
       "lead": "You should be able to tell, for any finding, what produced it and what checked it.",
       "steps": [
         "Each module retrieves evidence from your uploaded documents on its own.",
-        "A second reviewer agent critiques each draft.",
+        "A second critic agent critiques each draft.",
         "A separate pass fact-checks claims against the source text.",
         "A person reviews the result.",
         "Claims that can’t be tied to a passage are flagged as unconfirmed."
@@ -943,7 +943,7 @@
         },
         {
           "title": "Wave two — legal",
-          "body": "Reads HR and commercial before it reasons: an employment exposure or a contractual claim usually turns on facts those two reads have already established. Its own wave since 4 September 2026, so tax in wave three can actually read its finished output rather than a promise the run couldn't keep."
+          "body": "Reads HR and commercial before it reasons: an employment exposure or a contractual claim usually turns on facts those two reads have already established. It runs in its own wave so tax, in wave three, can read its finished output rather than a promise the run couldn’t keep."
         },
         {
           "title": "Wave three — tax",
@@ -1019,7 +1019,7 @@
         "Reverses the pseudonymisation in the final output, and only there.",
         "Signs. One named person, accountable for the document you receive."
       ],
-      "note": "{blocks} failure classes end the automated loop early and route the draft to that person regardless of how it scored.",
+      "note": "{blocks} hard-block conditions end the automated loop early and route the draft to that person regardless of how it scored.",
       "link": "How documents are handled"
     },
     "stops": {
@@ -1074,7 +1074,7 @@
       "note": "If a vendor claims their system does any of the five, ask which page it cited."
     },
     "gate": {
-      "title": "Which is why the gate is mandatory",
+      "title": "Why the gate is mandatory",
       "lead": "The human step is not a safety blanket bolted onto a finished product. It is where four of the five above actually get done.",
       "items": [
         "A name and a date on every output, not a confidence score.",
@@ -1225,7 +1225,7 @@
   "partnerships": {
     "header": {
       "title": "More mandates than your team can read",
-      "lead": "You keep the relationship and the judgment. We run the read across every discipline behind it, under your name.",
+      "lead": "You keep the relationship and the judgement. We run the read across every discipline behind it, under your name.",
       "cta": "Start a sprint"
     },
     "who": {
@@ -1258,7 +1258,7 @@
           "label": "You keep",
           "items": [
             "The client relationship and the mandate",
-            "The advisory judgment and the recommendation",
+            "The advisory judgement and the recommendation",
             "The commercial terms with your client",
             "Control of what is delivered under your name"
           ]
@@ -1416,7 +1416,7 @@
         "title": "Documents you share with us",
         "body": [
           "No documents are shared through this website. Access is agreed separately, in writing.",
-          "During an engagement, confidential data is pseudonymized before analysis and reversed only in the final output. Analysis runs on Google Vertex AI in an EU region under a Data Processing Agreement. The model provider does not keep your documents or train on them.",
+          "During an engagement, confidential data is pseudonymised before analysis and reversed only in the final output. Analysis runs on Google Vertex AI in an EU region under a Data Processing Agreement. The model provider does not keep your documents or train on them.",
           "Retention and deletion terms on our own side are set in the engagement agreement."
         ]
       },

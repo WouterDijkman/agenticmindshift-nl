@@ -10,7 +10,7 @@
     },
     "sprint": {
       "title": "De hele data room beoordeeld in dagen",
-      "description": "Tien specialistische rondes over één data room, samengebracht tot één verhaal, met een lopende lijst van wat er ontbreekt."
+      "description": "{disciplines} specialistische rondes over één data room, samengebracht tot één verhaal, met een lopende lijst van wat er ontbreekt."
     },
     "method": {
       "title": "Hoe due diligence met AI echt werkt",
@@ -18,11 +18,11 @@
     },
     "aiLimits": {
       "title": "Wat AI niet kan in due diligence",
-      "description": "Vijf dingen die geen enkel model doet in een data room, waarom de menselijke controle verplicht is, en drie vragen voor elke AI-leverancier."
+      "description": "Vijf dingen die geen enkel model doet in een data room, waarom de menselijke poort verplicht is, en drie vragen voor elke AI-leverancier."
     },
     "governance": {
       "title": "AI-governance en gegevensverwerking",
-      "description": "Hoe documenten worden verwerkt, wat de menselijke toets doet, en wat Factum niet claimt."
+      "description": "Hoe documenten worden verwerkt, wat de menselijke poort doet, en wat Factum niet claimt."
     },
     "team": {
       "title": "Het team achter Factum",
@@ -208,7 +208,7 @@
       "highlight": "Geciteerde passage",
       "findingLabel": "De bevinding die eruit volgde",
       "footnote": "Een geconstrueerd voorbeeld op een fictieve target. Hier staat geen cliëntdocument. Uw mandaat levert dezelfde vijf velden, op uw eigen data room.",
-      "quote": "Afnemer kan deze overeenkomst opzeggen met een schriftelijke termijn van dertig (30) dagen bij een wijziging van zeggenschap over Leverancier.",
+      "quote": "Afnemer kan deze overeenkomst schriftelijk opzeggen met inachtneming van een termijn van dertig (30) dagen bij een wijziging van zeggenschap over Leverancier.",
       "tag": "Illustratief",
       "values": {
         "module": "Contracten — change of control",
@@ -233,7 +233,7 @@
       "intake": "Start een sprint"
     },
     "reframe": {
-      "quote": "De analyse van de koper eerst op uw eigen dossier draaien: zo ziet een goed geleid proces eruit."
+      "quote": "De analyse van de koper eerst op uw eigen data room draaien: zo ziet een goed geleid proces eruit."
     }
   },
   "home": {
@@ -244,7 +244,7 @@
     },
     "problem": {
       "title": "De data room die u leest is samengesteld door de verkoper",
-      "lead": "Er is nooit tijd om alles te lezen, en wat er nooit in is gezet laat helemaal geen spoor na. De prijs komt op allebei tot stand.",
+      "lead": "Er is nooit tijd om alles te lezen, en wat er nooit in is gezet laat helemaal geen spoor na. Beide bepalen mee wat de prijs wordt.",
       "points": [
         {
           "title": "U werkt met een steekproef",
@@ -261,7 +261,7 @@
     },
     "guide": {
       "title": "Een leveraged-finance bankier en een data-engineer",
-      "lead": "Wouter structureerde acquisition finance en leveraged finance bij ING. Daniel bouwt gereguleerde datapijplijnen. Een van beiden keurt elke output goed voordat u die ziet.",
+      "lead": "Wouter zat bij ING in Acquisition & Leveraged Finance, waar hij het krediet achter dit soort transacties structureerde. Daniel bouwt gereguleerde datapijplijnen. Een van beiden keurt elke output goed voordat u die ziet.",
       "link": "Maak kennis met het team"
     },
     "specimen": {
@@ -274,7 +274,7 @@
       "refusalTitle": "De pijplijn stopt en roept een persoon",
       "refusalNote": "Elke harde blokkade gaat naar een persoon.",
       "refusals": [
-        "Verzonnen of gehallucineerde bronverwijzingen",
+        "Gehallucineerde bronverwijzingen",
         "Privacylekken",
         "Weigeringen buiten de scope",
         "Concepten onder de drempel van de reviewer"
@@ -359,7 +359,7 @@
   "platform": {
     "header": {
       "title": "Hoe het platform een data room leest",
-      "lead": "{modules} vooraf afgebakende modules, in een vaste afhankelijkheidsvolgorde, met vier onderbouwingscontroles en een verplichte menselijke toets. Elke keer dezelfde run.",
+      "lead": "{modules} vooraf afgebakende modules, in een vaste afhankelijkheidsvolgorde, met vier groundingchecks en een verplichte menselijke poort. Elke keer dezelfde run.",
       "cta": "Start een sprint"
     },
     "scale": {
@@ -372,7 +372,7 @@
         },
         "waves": {
           "title": "Dispatchgolven",
-          "body": "Geordend op afhankelijkheid. Golf 1 opent met {w1} modules tegelijk."
+          "body": "Geordend op afhankelijkheid. Golf één opent met {w1} modules tegelijk."
         },
         "zdr": {
           "title": "Zero retention afgedwongen",
@@ -399,15 +399,15 @@
           "note": "Vertrouwelijke financiële en persoonsgegevens worden gepseudonimiseerd voordat ze deze laag bereiken."
         },
         {
-          "title": "Opstellen binnen het schema",
+          "title": "Concept binnen het schema",
           "body": "Een claim zonder document en passage erachter is geen bevinding."
         },
         {
           "title": "Opstellen, bekritiseren, opnieuw",
-          "body": "Een reviewer-agent bekritiseert het concept en stuurt het terug. Maximaal twee retries per specialist."
+          "body": "Een critic-agent bekritiseert het concept en stuurt het terug. Maximaal twee retries per specialist."
         },
         {
-          "title": "Vierlaagse groundingcheck",
+          "title": "Vier groundingchecks",
           "body": "Index, citaat, entailment, second opinion. Elke laag vangt wat de vorige miste."
         },
         {
@@ -422,7 +422,7 @@
       ]
     },
     "grounding": {
-      "title": "Vier checks, elk smaller dan de vorige",
+      "title": "Vier groundingchecks, elk smaller dan de vorige",
       "lead": "Een claim moet alle vier overleven. Eén fout stuurt hem terug.",
       "catchLabel": "Vangt",
       "layers": [
@@ -483,13 +483,13 @@
         },
         {
           "title": "Lage reviewerscore",
-          "body": "De critic-agent scoorde het concept onder de drempel."
+          "body": "De reviewer-agent scoorde het concept onder de drempel."
         }
       ]
     },
     "dimensions": {
       "title": "Waar de engine de data room voor leest",
-      "lead": "Een module is een stuk machine. Een dimensie is een vraag die u al heeft, en waarvoor u nu per stuk een factuur krijgt. Alle {disciplines} lopen in één ronde over dezelfde data room, dus wat de ene vindt ligt op tafel voor de volgende.",
+      "lead": "Een module is een stuk machine. Een dimensie is een vraag die u toch al heeft — en waar u nu per specialist apart voor betaalt. Alle {disciplines} lopen in één ronde over dezelfde data room, dus wat de ene vindt ligt op tafel voor de volgende.",
       "note": "Eén dimensie zonder de andere is geen diligence. De lijst komt uit de broncode van het product, niet uit een brochure."
     },
     "alternatives": {
@@ -558,7 +558,7 @@
         },
         {
           "q": "Waarom golven en niet alles tegelijk?",
-          "a": "Fiscaal kan niet redeneren zonder de financiële en juridische rondes. Waardering kan niet prijzen zonder fiscaal. De afhankelijkheidsgraaf bepaalt de volgorde; golf 1 draait nog steeds {w1} modules parallel."
+          "a": "Fiscaal kan niet redeneren zonder de financiële en juridische rondes. Waardering kan niet prijzen zonder fiscaal. De afhankelijkheidsgraaf bepaalt de volgorde; golf één draait nog steeds {w1} modules parallel."
         },
         {
           "q": "Wat gebeurt er als het model het niet weet?",
@@ -779,7 +779,7 @@
   "governance": {
     "header": {
       "title": "Hoe uw documenten worden behandeld, en wat we niet claimen",
-      "lead": "Gegevensverwerking is ingebouwd in hoe de pipeline draait. Het is ook smaller dan de meeste securitypagina’s suggereren, dus deze pagina benoemt de grens.",
+      "lead": "Gegevensverwerking is ingebouwd in hoe de pipeline draait. Het dekt ook minder dan de meeste securitypagina’s suggereren, dus deze pagina benoemt de grens.",
       "cta": "Start een sprint"
     },
     "data": {
@@ -787,12 +787,12 @@
       "lead": "Vier mechanismen. Geen daarvan is een certificering."
     },
     "gate": {
-      "title": "De enige verplichte menselijke stap",
+      "title": "De enige verplichte menselijke poort",
       "lead": "Een met naam genoemd persoon keurt elke output goed. Dit zijn de condities die dat afdwingen.",
       "items": [
         "Bevindingen worden voor levering teruggecheckt tegen de brondocumenten.",
         "De poort draait elke keer, automatisch.",
-        "{blocks} faalklassen gaan naar een persoon in plaats van automatisch goedgekeurd te worden.",
+        "{blocks} harde blokkades gaan naar een persoon in plaats van automatisch goedgekeurd te worden.",
         "Een persoon met naam beoordeelt, verzoent en staat achter de output.",
         "Gepseudonimiseerde waarden worden alleen hier teruggedraaid, in de uiteindelijke output."
       ]
@@ -802,7 +802,7 @@
       "lead": "U moet voor elke bevinding kunnen zien wat die heeft geproduceerd en wat die heeft gecontroleerd.",
       "steps": [
         "Elke module haalt zelfstandig bewijs uit uw geüploade documenten.",
-        "Een tweede reviewer-agent bekritiseert elk concept.",
+        "Een tweede critic-agent bekritiseert elk concept.",
         "Een aparte ronde controleert beweringen tegen de brontekst.",
         "Een persoon beoordeelt het resultaat.",
         "Beweringen die niet aan een passage te koppelen zijn, worden gemarkeerd als onbevestigd."
@@ -889,7 +889,7 @@
           "body": "De meeste M&A-NDA’s staan verstrekking alleen toe aan benoemde Representatives: medewerkers, adviseurs, financiers. Een AI-platform hoort daar zelden bij. De data room in een consumententool zetten kan de schending zelf zijn."
         },
         {
-          "title": "De EU AI Act loopt op een klok",
+          "title": "De EU AI Act heeft een deadline",
           "body": "Verplichtingen voor general-purpose AI gelden sinds 2 augustus 2025. De transparantieplichten uit artikel 50 volgen op 2 augustus 2026. Een gedocumenteerde menselijke poort is makkelijker in dat regime te plaatsen dan een chatsessie die niemand heeft gelogd."
         }
       ],
@@ -943,7 +943,7 @@
         },
         {
           "title": "Golf twee — juridisch",
-          "body": "Leest HR en commercieel voordat het redeneert: een arbeidsrechtelijke blootstelling of een contractuele claim hangt meestal af van feiten die die twee al hebben vastgesteld. Sinds 4 september 2026 een eigen golf, zodat fiscaal in golf drie zijn afgeronde output ook echt kan lezen in plaats van een belofte die de run niet kon waarmaken."
+          "body": "Leest HR en commercieel voordat het redeneert: een arbeidsrechtelijke blootstelling of een contractuele claim hangt meestal af van feiten die die twee al hebben vastgesteld. Het draait in een eigen golf, zodat fiscaal in golf drie de afgeronde output ook echt kan lezen in plaats van een belofte die de run niet kon waarmaken."
         },
         {
           "title": "Golf drie — fiscaal",
@@ -967,7 +967,7 @@
       "items": [
         {
           "title": "Module",
-          "body": "Welke van de {modules} hem heeft geproduceerd. Vooraf afgebakend, dus de vraag stond op papier voordat de data room openging — niet geïmproviseerd op wat er toevallig in bleek te zitten.",
+          "body": "Welke van de {modules} hem heeft geproduceerd. Vooraf afgebakend, dus de vraag stond op papier voordat de data room openging — niet geïmproviseerd naar aanleiding van wat er toevallig in bleek te zitten.",
           "fail": "Er is geen vrije-tekstbaan. Geen module, geen bevinding."
         },
         {
@@ -1000,8 +1000,8 @@
         "Het document komt binnen en wordt geïndexeerd. Vertrouwelijke financiële en persoonlijke waarden worden gepseudonimiseerd voordat enig model ze ziet.",
         "De module haalt de passages op die zijn eigen vraag beantwoorden, en alleen die.",
         "Het concept wordt geschreven tegen het contract hierboven. Een claim zonder passage erachter wordt niet geschreven.",
-        "Een controleronde bekritiseert het concept en stuurt het terug. Twee pogingen, daarna stopt de lus en neemt een mens het over.",
-        "Vier funderingscontroles op volgorde: de verwijzingsindex, het citaat zelf, of de claim volgt uit de passage, en een tweede oordeel dat dichtvalt bij twijfel.",
+        "De critic-agent bekritiseert het concept en stuurt het terug. Twee pogingen, daarna stopt de lus en neemt een mens het over.",
+        "Vier groundingchecks op volgorde: de verwijzingsindex, het citaat zelf, of de claim volgt uit de passage, en een tweede oordeel dat faalt gesloten bij twijfel.",
         "Een persoon met naam beoordeelt, verzoent en keurt goed. Pseudonimisering wordt hier teruggedraaid en nergens eerder.",
         "U krijgt de bevinding met de documentverwijzing eraan vast, en die blijft daarna te openen."
       ],
@@ -1019,7 +1019,7 @@
         "Draait de pseudonimisering terug in de eindoutput, en alleen daar.",
         "Tekent. Eén persoon met naam, aanspreekbaar op het document dat u ontvangt."
       ],
-      "note": "{blocks} faalklassen beëindigen de geautomatiseerde lus voortijdig en sturen het concept naar die persoon, ongeacht de score.",
+      "note": "{blocks} harde blokkades beëindigen de geautomatiseerde lus voortijdig en sturen het concept naar die persoon, ongeacht de score.",
       "link": "Hoe documenten worden behandeld"
     },
     "stops": {
@@ -1052,7 +1052,7 @@
         },
         {
           "title": "Citeren uit het document dat er niet is",
-          "body": "Retrieval leest wat is geüpload. Het duurste in due diligence is vaak een afwezigheid — het contract dat niemand heeft opgeborgen, het jaar dat ontbreekt in de loonexport. Een afwezigheid heeft geen passage om te citeren, dus geen enkel gefundeerd systeem kan haar als bevinding opvoeren.",
+          "body": "Retrieval leest wat is geüpload. Het duurste in due diligence is vaak een afwezigheid — het contract dat niemand heeft opgeborgen, het jaar dat ontbreekt in de loonexport. Een afwezigheid heeft geen passage om te citeren, dus geen enkel gefundeerd systeem kan die als bevinding opvoeren.",
           "human": "De lijst met ontbrekende stukken wordt door een mens bijgehouden: wat is opgevraagd en nooit gekomen. Die komt naast de bevindingen mee."
         },
         {
@@ -1061,7 +1061,7 @@
           "human": "Uw eigen team, of uw adviseurs. Dit platform doet het niet en suggereert niet van wel."
         },
         {
-          "title": "Zwak onderscheiden van verborgen",
+          "title": "Zwak onderscheiden van verhuld zwak",
           "body": "Een cijfer kan zwak zijn omdat het bedrijf zwak is, of omdat de verkoper het proces heeft gestuurd. Op papier zien die twee er identiek uit. Ze uit elkaar houden vraagt kennis van hoe verkopers zich gedragen, niet van wat er in het dossier staat.",
           "human": "Iemand die de andere kant van de tafel heeft gedraaid. Bij ons is dat een leveraged-finance-bankier."
         },
@@ -1074,8 +1074,8 @@
       "note": "Zegt een leverancier dat zijn systeem een van deze vijf doet, vraag dan welke pagina het citeerde."
     },
     "gate": {
-      "title": "Daarom is de menselijke controle verplicht",
-      "lead": "De menselijke stap is geen veiligheidsdeken over een af product. Het is de plek waar vier van de vijf punten hierboven daadwerkelijk gebeuren.",
+      "title": "Daarom is de menselijke poort verplicht",
+      "lead": "De menselijke poort is geen veiligheidsdeken over een af product. Het is de plek waar vier van de vijf punten hierboven daadwerkelijk gebeuren.",
       "items": [
         "Een naam en een datum op elke output, geen betrouwbaarheidsscore.",
         "Materialiteit bepaald tegen uw deal, niet tegen een benchmark.",
@@ -1131,7 +1131,7 @@
   "team": {
     "header": {
       "title": "De mensen achter de output",
-      "lead": "Wouter structureerde acquisition finance en leveraged finance bij ING. Daniel bouwt gereguleerde datapijplijnen. Een van beiden keurt elke output goed.",
+      "lead": "Wouter zat bij ING in Acquisition & Leveraged Finance, waar hij het krediet achter dit soort transacties structureerde. Daniel bouwt gereguleerde datapijplijnen. Een van beiden keurt elke output goed.",
       "cta": "Start een sprint"
     },
     "historyLabel": "Achtergrond",
@@ -1171,7 +1171,7 @@
       {
         "name": "Daniel Dropuljic",
         "title": "Technical Lead, Factum",
-        "bio": "Daniel bouwt de systemen achter de diligence-engine van Factum. Als oprichter van Dandro Solutions ontwerpt hij datapipelines die meer dan 50.000 records per dag verwerken voor internationale zorgklanten, onder de AVG en FHIR.",
+        "bio": "Daniel bouwt de systemen achter de diligence-engine van Factum. Als oprichter van Dandro Solutions ontwerpt hij datapipelines die meer dan 50.000 records per dag verwerken voor internationale zorgklanten, onder de AVG, volgens de FHIR-standaard.",
         "history": [
           {
             "org": "Dandro Solutions",
@@ -1217,7 +1217,7 @@
         },
         {
           "label": "Verder niemand",
-          "body": "Geen offshoreteam, geen wisselende juniors. Is een mandaat groter dan twee mensen en het platform, dan zeggen we dat voordat u tekent."
+          "body": "Geen offshoreteam, geen wisselende juniors. Vraagt een mandaat meer dan wat twee mensen en het platform aankunnen, dan zeggen we dat voordat u tekent."
         }
       ]
     }
@@ -1297,7 +1297,7 @@
       "title": "Wat een partnership niet omvat",
       "lead": "Sommige hiervan zijn toezeggingen aan bestaande partners. De rest is de eerlijke stand van een pre-launch bedrijf.",
       "items": [
-        "Geen white-label claim van certificering of audit. We kunnen niet achter een keurmerk staan dat we niet hebben.",
+        "Geen certificering die u als uw eigen keurmerk kunt doorzetten. We staan niet achter een keurmerk dat we niet hebben.",
         "Geen onbeperkte capaciteit. Een partnership dat de beoordelingstoets voorbijloopt is erger dan geen partnership.",
         "Geen algemeen beleid voor verwijsvergoedingen. Waar assurance- of onafhankelijkheidsregels gelden, wordt dat per relatie getoetst.",
         "Geen aanspraak op uw klant. Niets wat wij voor u draaien wordt een casestudy zonder uw schriftelijke akkoord.",

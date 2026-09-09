@@ -10,7 +10,7 @@
     },
     "sprint": {
       "title": "Revisão completa do data room em dias",
-      "description": "Dez leituras especializadas sobre um data room, reconciliadas numa só narrativa, com um registo em direto do que falta."
+      "description": "{disciplines} leituras especializadas sobre um data room, reconciliadas numa só narrativa, com um registo em direto do que falta."
     },
     "method": {
       "title": "Como funciona a due diligence com IA",
@@ -29,7 +29,7 @@
       "description": "Um banqueiro de leveraged finance e um engenheiro de dados. Um deles aprova cada resultado."
     },
     "partnerships": {
-      "title": "Capacidade de diligence para consultores",
+      "title": "Capacidade de due diligence para consultores",
       "description": "Capacidade analítica ao nível de due diligence por trás das suas relações com clientes."
     },
     "contact": {
@@ -41,7 +41,7 @@
       "description": "Como este site e os nossos mandatos tratam os dados pessoais."
     },
     "preSale": {
-      "title": "Diligência pré-venda — encontre-o antes do comprador",
+      "title": "Due diligence pré-venda — encontre-o antes do comprador",
       "description": "A leitura do comprador, primeiro sobre a sua própria empresa. Cada dimensão, mais uma lista identificada do que falta no seu data room, enquanto ainda há tempo de agir."
     }
   },
@@ -207,7 +207,7 @@
       "pageRef": "TargetCo — Contrato-quadro de serviços, p. 14",
       "highlight": "Passagem citada",
       "findingLabel": "A constatação que daí resultou",
-      "footnote": "Um exemplo construído sobre uma target fictícia. Não há aqui qualquer documento de cliente. O seu mandato produz estes mesmos cinco campos, sobre a sua própria data room.",
+      "footnote": "Um exemplo construído sobre um target fictício. Não há aqui qualquer documento de cliente. O seu mandato produz estes mesmos cinco campos, sobre o seu próprio data room.",
       "quote": "O Cliente pode resolver este Contrato mediante aviso escrito de trinta (30) dias em caso de mudança de controlo do Fornecedor.",
       "tag": "Ilustrativo",
       "values": {
@@ -248,7 +248,7 @@
       "points": [
         {
           "title": "Está a trabalhar sobre uma amostra",
-          "body": "A diligência convencional lê uma fracção do data room. O resto continua lá dentro, e não deixa de ser verdade por ninguém o ter aberto."
+          "body": "A due diligence convencional lê uma fração do data room. O resto continua lá dentro, e não deixa de ser verdade por ninguém o ter aberto."
         },
         {
           "title": "O risco está entre as disciplinas",
@@ -271,7 +271,7 @@
     "pipeline": {
       "title": "Cada mandato percorre os mesmos cinco passos",
       "lead": "Qualquer um pode apontar uma ferramenta de IA a um data room. A questão é o que acontece quando o modelo se engana.",
-      "refusalTitle": "O pipeline pára e chama uma pessoa",
+      "refusalTitle": "A pipeline pára e chama uma pessoa",
       "refusalNote": "Cada bloqueio duro passa a uma pessoa.",
       "refusals": [
         "Citações fabricadas ou alucinadas",
@@ -286,7 +286,7 @@
       "link": "Ler a página de governação"
     },
     "coverage": {
-      "title": "Dez disciplinas, uma leitura sobre o mesmo data room",
+      "title": "Oito disciplinas, uma leitura sobre o mesmo data room",
       "lead": "O que uma disciplina encontra fica em cima da mesa para a seguinte.",
       "note": "Ordenado por dependência: o trabalho seguinte espera pelas constatações de que precisa.",
       "ctaLine": "A sua equipa não consegue fazer isto em duas semanas."
@@ -341,7 +341,7 @@
           "body": "Percorremos consigo a plataforma numa execução real e depois vemos se encaixa na sua situação."
         },
         {
-          "title": "Assine o NDA e depois indique-nos a data room",
+          "title": "Assine o NDA e depois indique-nos o data room",
           "body": "Um NDA antes de um único documento se mover. O acesso corre ao abrigo de um DPA, na UE, com retenção zero."
         },
         {
@@ -792,7 +792,7 @@
       "items": [
         "As constatações são confrontadas com os documentos fonte antes da entrega.",
         "A porta corre sempre, automaticamente.",
-        "{blocks} classes de falha vão para uma pessoa em vez de serem aprovadas automaticamente.",
+        "{blocks} bloqueios duros vão para uma pessoa em vez de serem aprovados automaticamente.",
         "Uma pessoa com nome revê, reconcilia e responde pelo resultado.",
         "Os valores pseudonimizados só são revertidos aqui, no entregável final."
       ]
@@ -872,7 +872,7 @@
       "items": [
         "Um conjunto de dados, uma execução. Nenhum terceiro o verificou.",
         "O restante não é «{remainder}% errado». É a parte que as verificações não conseguiram fundamentar nem marcar de forma conclusiva.",
-        "Outra data room dará outro número.",
+        "Outro data room dará outro número.",
         "É por isto que a porta humana é obrigatória e não opcional."
       ]
     },
@@ -886,7 +886,7 @@
         },
         {
           "title": "O seu NDA pode não cobrir a ferramenta",
-          "body": "A maioria dos NDA de M&A só permite divulgação a Representatives designados: colaboradores, assessores, financiadores. Uma plataforma de IA raramente é um deles. Colocar a data room numa ferramenta de consumo pode ser a própria violação."
+          "body": "A maioria dos NDA de M&A só permite divulgação a Representatives designados: colaboradores, assessores, financiadores. Uma plataforma de IA raramente é um deles. Colocar o data room numa ferramenta de uso genérico pode ser a própria violação."
         },
         {
           "title": "O Regulamento de IA da UE corre sobre um relógio",
@@ -943,7 +943,7 @@
         },
         {
           "title": "Vaga dois — jurídica",
-          "body": "Lê RH e comercial antes de raciocinar: uma exposição laboral ou uma reclamação contratual costuma assentar em factos que essas duas leituras já estabeleceram. Vaga própria desde 4 de setembro de 2026, para que o fiscal na vaga três possa mesmo ler a sua saída concluída, e não uma promessa que a execução não conseguia cumprir."
+          "body": "Lê RH e comercial antes de raciocinar: uma exposição laboral ou uma reclamação contratual costuma assentar em factos que essas duas leituras já estabeleceram. Corre na sua própria vaga, para que o fiscal, na vaga três, possa mesmo ler a sua saída concluída, e não uma promessa que a execução não conseguia cumprir."
         },
         {
           "title": "Vaga três — fiscal",
@@ -972,7 +972,7 @@
         },
         {
           "title": "Constatação",
-          "body": "Uma afirmação, numa frase. As afirmações compostas são separadas, porque uma frase com duas só pode ser verificada a meio.",
+          "body": "Uma afirmação, numa frase. As afirmações compostas são separadas, porque uma frase com duas afirmações só permite verificar metade.",
           "fail": "Vago demais para verificar conta como errado."
         },
         {
@@ -1014,12 +1014,12 @@
       "items": [
         "Abre o documento citado e lê a passagem contra a afirmação construída sobre ela.",
         "Decide a materialidade — que constatações mudam o que paga, ou se assina.",
-        "Resolve conflitos entre módulos. Duas disciplinas a ler o mesmo facto de forma diferente é, em si, uma constatação, não um erro a alisar.",
+        "Resolve conflitos entre módulos. Duas disciplinas a ler o mesmo facto de forma diferente é, em si, uma constatação, não um erro a corrigir.",
         "Marca o que não pôde ser confirmado, e diz porquê.",
         "Reverte a pseudonimização na saída final, e só aí.",
         "Assina. Uma pessoa com nome, responsável pelo documento que recebe."
       ],
-      "note": "{blocks} classes de falha terminam o ciclo automático mais cedo e encaminham o rascunho para essa pessoa, independentemente da pontuação.",
+      "note": "{blocks} bloqueios duros terminam o ciclo automático mais cedo e encaminham o rascunho para essa pessoa, independentemente da pontuação.",
       "link": "Como os documentos são tratados"
     },
     "stops": {

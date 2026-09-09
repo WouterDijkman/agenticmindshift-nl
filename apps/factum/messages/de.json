@@ -10,7 +10,7 @@
     },
     "sprint": {
       "title": "Der gesamte Data Room geprüft, in Tagen",
-      "description": "Zehn Fachdurchgänge über einen Data Room, zu einer Darstellung zusammengeführt, mit einer laufenden Liste dessen, was fehlt."
+      "description": "{disciplines} Fachdurchgänge über einen Data Room, zu einer Darstellung zusammengeführt, mit einer laufenden Liste dessen, was fehlt."
     },
     "method": {
       "title": "Wie KI-Due-Diligence wirklich läuft",
@@ -172,12 +172,12 @@
     ],
     "waves": [
       {
-        "title": "Unabhängige Reads",
+        "title": "Unabhängige Durchgänge",
         "body": "Diese Module brauchen keine Vorstufe. Sie starten alle gleichzeitig."
       },
       {
         "title": "Recht",
-        "body": "Liest Personal und Kommerziell, bevor es argumentiert — ein arbeitsrechtliches Risiko oder ein Vertragsanspruch hängt meist an Tatsachen, die diese beiden Reads schon festgestellt haben."
+        "body": "Liest Personal und Kommerziell, bevor es argumentiert — ein arbeitsrechtliches Risiko oder ein Vertragsanspruch hängt meist an Tatsachen, die diese beiden Durchgänge schon festgestellt haben."
       },
       {
         "title": "Steuern",
@@ -233,7 +233,7 @@
       "intake": "Sprint starten"
     },
     "reframe": {
-      "quote": "Den Durchgang des Käufers zuerst auf der eigenen Seite zu fahren, ist gelebte Prozessdisziplin."
+      "quote": "Den Durchgang des Käufers zuerst auf der eigenen Seite durchzuführen, ist gelebte Prozessdisziplin."
     }
   },
   "home": {
@@ -277,7 +277,7 @@
         "Erfundene oder halluzinierte Fundstellen",
         "Datenschutzlecks",
         "Scope-Verweigerungen",
-        "Entwürfe unter dem Prüferschwelle"
+        "Entwürfe unter der Prüferschwelle"
       ]
     },
     "trust": {
@@ -351,7 +351,7 @@
       ]
     },
     "cta": {
-      "title": "Fahren Sie ihn auf einem laufenden Dossier",
+      "title": "Führen Sie ihn auf einem laufenden Dossier durch",
       "body": "Dreißig Minuten auf der Plattform, danach Ihre eigene Situation. Ist ein Sprint nicht das richtige Instrument, sagen wir das.",
       "button": "Sprint starten"
     }
@@ -359,7 +359,7 @@
   "platform": {
     "header": {
       "title": "Wie die Plattform einen Data Room liest",
-      "lead": "{modules} vorab abgegrenzte Module, in fester Abhängigkeitsfolge, mit vier Belegprüfungen und einer verpflichtenden menschlichen Freigabe. Jedes Mandat derselbe Lauf.",
+      "lead": "{modules} vorab abgegrenzte Module, in fester Abhängigkeitsfolge, mit vier Grounding-Prüfungen und einer verpflichtenden menschlichen Freigabe. Jedes Mandat derselbe Lauf.",
       "cta": "Sprint starten"
     },
     "scale": {
@@ -400,14 +400,14 @@
         },
         {
           "title": "Entwurf im Schema",
-          "body": "Eine Aussage ohne Dokument und Passage dahinter ist kein Feststellung."
+          "body": "Eine Aussage ohne Dokument und Passage dahinter ist keine Feststellung."
         },
         {
           "title": "Generate-Critique-Retry",
           "body": "Ein Prüfer-Agent kritisiert den Entwurf und schickt ihn zurück. Maximal zwei Retries je Spezialist."
         },
         {
-          "title": "Vierstufige Grounding-Prüfung",
+          "title": "Vier Grounding-Prüfungen",
           "body": "Index, Zitat, Entailment, Zweitmeinung. Jede Stufe fängt, was die vorige übersah."
         },
         {
@@ -422,7 +422,7 @@
       ]
     },
     "grounding": {
-      "title": "Vier Prüfungen, jede enger als die vorige",
+      "title": "Vier Grounding-Prüfungen, jede enger als die vorige",
       "lead": "Eine Aussage muss alle vier überstehen. Ein Fehler schickt sie zurück.",
       "catchLabel": "Fängt",
       "layers": [
@@ -463,7 +463,7 @@
         },
         {
           "title": "Unbestätigt nach Reparatur",
-          "body": "Die Fabrikationsprüfung findet nach beiden Wiederholungen noch immer eine Aussage ohne Beleg."
+          "body": "Die Erfindungsprüfung findet nach beiden Wiederholungen noch immer eine Aussage ohne Beleg."
         },
         {
           "title": "Scope-Verweigerung",
@@ -546,7 +546,7 @@
         "Keine einheitliche Historie. Das Finanzmodul lief end-to-end an einem realen Deal und wurde gegen Quelldokumente verifiziert. Die Abgleichebene ist jünger.",
         "Keine technische Due Diligence auf Produktebene. Quellcode-Review, Architekturbewertung und Skalierbarkeitstests sind nicht Teil des Standarddurchgangs.",
         "Keine Integritäts- oder Reputationsprüfung. Hintergrundchecks zu Personen und Gegenparteien laufen außerhalb dieser Plattform.",
-        "Keine allgemeine Verfügbarkeit. Factum ist Pre-Launch."
+        "Keine allgemeine Verfügbarkeit. Factum steht vor dem Launch."
       ]
     },
     "faq": {
@@ -562,11 +562,11 @@
         },
         {
           "q": "Was passiert, wenn das Modell es nicht weiß?",
-          "a": "Dann muss es das sagen. Ein Feststellung ist entweder durch einen Nachweis gedeckt, der vier Prüfungen überstanden hat, oder als unbestätigt markiert. Erfundene Quellen sind eine der {blocks} harten Blockaden."
+          "a": "Dann muss es das sagen. Eine Feststellung ist entweder durch einen Nachweis gedeckt, der vier Prüfungen überstanden hat, oder als unbestätigt markiert. Erfundene Quellen sind eine der {blocks} harten Blockaden."
         },
         {
           "q": "Woher weiß ich, dass die Plattform Feststellungen dieser Tragweite trägt?",
-          "a": "Das Finanzmodul ist der numerisch exponierteste Teil jedes Reads. Es lief end-to-end an einem realen Deal und wurde unabhängig gegen Quelldokumente verifiziert. Neuere Ebenen haben weniger Historie, und wir sagen dazu, welche das sind."
+          "a": "Das Finanzmodul ist der numerisch exponierteste Teil jedes Durchgangs. Es wurde bei einem realen Deal vollständig durchgeführt und unabhängig gegen Quelldokumente verifiziert. Neuere Ebenen haben weniger Historie, und wir sagen dazu, welche das sind."
         },
         {
           "q": "Wie schnell ist es?",
@@ -584,7 +584,7 @@
   "sprint": {
     "header": {
       "title": "Sehen Sie, was ein Käufer finden würde, bevor er es tut",
-      "lead": "Alle {disciplines} Disziplinen, zu einer Darstellung zusammengeführt. Gefahren an einem Target, das Sie kaufen, oder an Ihrem eigenen Unternehmen, bevor ein Käufer es dort fährt.",
+      "lead": "Alle {disciplines} Disziplinen, zu einer Darstellung zusammengeführt. Durchgeführt an einem Target, das Sie kaufen, oder an Ihrem eigenen Unternehmen, bevor ein Käufer es dort selbst durchführt.",
       "cta": "Demo vereinbaren"
     },
     "reframe": {
@@ -700,7 +700,7 @@
         },
         {
           "title": "Verkaufsseitige Berater",
-          "body": "Sie stellen gleich ein Unternehmen vor berufsmäßige Skeptiker. Zu wissen, was sie finden werden, ist mehr wert als die Hoffnung, dass sie nicht hinsehen."
+          "body": "Sie präsentieren das Unternehmen gleich berufsmäßigen Skeptikern. Zu wissen, was sie finden werden, ist mehr wert als die Hoffnung, dass sie nicht hinsehen."
         },
         {
           "title": "Wer einen Prozess schon einmal spät verloren hat",
@@ -752,7 +752,7 @@
       "title": "Was Verkäufer zuerst fragen",
       "items": [
         {
-          "q": "Wie lange vor dem Prozess sollten wir das fahren?",
+          "q": "Wie lange vor dem Prozess sollten wir das durchführen?",
           "a": "Früh genug, dass die Antwort auf eine Feststellung noch „das haben wir behoben“ lauten kann. Sobald der Data Room live ist, wird die ehrliche Fassung „wir wissen es, und hier ist der Kontext“. Beides funktioniert. Das erste ist mehr wert."
         },
         {
@@ -761,7 +761,7 @@
         },
         {
           "q": "Und wenn wir etwas Ernstes finden?",
-          "a": "Dann haben Sie es gefunden, Monate bevor jemand mit einem Interesse daran es getan hätte. Das ist der Grund, es zu fahren, kein Grund, es zu lassen."
+          "a": "Dann haben Sie es gefunden, Monate bevor jemand mit einem Interesse daran es getan hätte. Das ist der Grund, es durchzuführen, kein Grund, es zu lassen."
         },
         {
           "q": "Ist das dasselbe Produkt wie der Sprint auf der Käuferseite?",
@@ -770,7 +770,7 @@
       ]
     },
     "cta": {
-      "title": "Fahren Sie ihn zuerst am eigenen Unternehmen",
+      "title": "Führen Sie ihn zuerst am eigenen Unternehmen durch",
       "body": "Dreißig Minuten auf der Plattform, danach Ihre eigene Situation und Ihr eigener Zeitplan.",
       "button": "Sprint starten",
       "note": "Eine Handvoll Pilotmandate."
@@ -788,11 +788,11 @@
     },
     "gate": {
       "title": "Der eine verpflichtende menschliche Schritt",
-      "lead": "Eine namentlich genannte Person gibt jedes Ergebnis frei. Dies sind die Bedingungen, die das erzwingen.",
+      "lead": "Eine namentlich benannte Person gibt jedes Ergebnis frei. Dies sind die Bedingungen, die das erzwingen.",
       "items": [
         "Feststellungen werden vor der Lieferung gegen die Quelldokumente zurückgeprüft.",
         "Das Tor läuft jedes Mal, automatisch.",
-        "{blocks} Fehlerklassen gehen an eine Person, statt automatisch freigegeben zu werden.",
+        "{blocks} harte Blockaden gehen an eine Person, statt automatisch freigegeben zu werden.",
         "Eine namentlich benannte Person prüft, gleicht ab und steht für den Output ein.",
         "Pseudonymisierte Werte werden nur hier aufgelöst, im finalen Output."
       ]
@@ -886,7 +886,7 @@
         },
         {
           "title": "Ihr NDA deckt das Tool womöglich nicht",
-          "body": "Die meisten M&A-NDAs erlauben die Weitergabe nur an benannte Representatives: Mitarbeiter, Berater, Finanzierer. Eine KI-Plattform gehört selten dazu. Den Data Room in ein Consumer-Tool zu geben, kann selbst der Verstoß sein."
+          "body": "Die meisten M&A-NDAs erlauben die Weitergabe nur an benannte Representatives: Mitarbeiter, Berater, Finanzierer. Eine KI-Plattform gehört selten dazu. Den Data Room einem frei zugänglichen KI-Tool zu übergeben, kann bereits selbst den Verstoß darstellen."
         },
         {
           "title": "Der EU AI Act läuft auf einer Uhr",
@@ -943,7 +943,7 @@
         },
         {
           "title": "Welle zwei — Recht",
-          "body": "Liest HR und Commercial, bevor es argumentiert: ein arbeitsrechtliches Risiko oder ein Vertragsanspruch hängt meist an Tatsachen, die diese beiden Durchgänge schon festgestellt haben. Seit dem 4. September 2026 eine eigene Welle, damit Steuern in Welle drei ihre fertige Ausgabe tatsächlich lesen kann statt eines Versprechens, das der Lauf nicht halten konnte."
+          "body": "Liest HR und Commercial, bevor es argumentiert: ein arbeitsrechtliches Risiko oder ein Vertragsanspruch hängt meist an Tatsachen, die diese beiden Durchgänge schon festgestellt haben. Es läuft in einer eigenen Welle, damit Steuern in Welle drei die fertige Ausgabe tatsächlich lesen kann statt eines Versprechens, das der Lauf nicht halten konnte."
         },
         {
           "title": "Welle drei — Steuern",
@@ -1001,7 +1001,7 @@
         "Das Modul ruft die Passagen ab, die seine eigene Frage beantworten, und nur diese.",
         "Der Entwurf wird gegen den Vertrag oben geschrieben. Eine Aussage ohne Passage dahinter wird gar nicht erst geschrieben.",
         "Ein Prüfdurchgang kritisiert den Entwurf und schickt ihn zurück. Zwei Versuche, dann endet die Schleife und ein Mensch übernimmt.",
-        "Vier Fundierungsprüfungen nacheinander: der Verweisindex, das Zitat selbst, ob die Aussage aus der Passage folgt, und ein zweites Urteil, das im Zweifel sperrt.",
+        "Vier Grounding-Prüfungen nacheinander: der Verweisindex, das Zitat selbst, ob die Aussage aus der Passage folgt, und ein zweites Urteil, das im Zweifel sperrt.",
         "Eine namentlich benannte Person prüft, gleicht ab und gibt frei. Die Pseudonymisierung wird hier aufgehoben und nirgends früher.",
         "Sie erhalten die Feststellung mit dem Dokumentverweis daran, und der bleibt danach offenbar."
       ],
@@ -1017,9 +1017,9 @@
         "Löst Konflikte zwischen Modulen auf. Zwei Disziplinen, die einen Sachverhalt unterschiedlich lesen, sind selbst eine Feststellung und kein Fehler zum Glattbügeln.",
         "Markiert, was nicht bestätigt werden konnte, und warum.",
         "Hebt die Pseudonymisierung in der Endausgabe auf, und nur dort.",
-        "Unterschreibt. Eine benannte Person, verantwortlich für das Dokument, das Sie bekommen."
+        "Unterschreibt. Eine namentlich benannte Person, verantwortlich für das Dokument, das Sie bekommen."
       ],
-      "note": "{blocks} Fehlerklassen beenden die automatische Schleife vorzeitig und leiten den Entwurf an diese Person, unabhängig von der Bewertung.",
+      "note": "{blocks} harte Blockaden beenden die automatische Schleife vorzeitig und leiten den Entwurf an diese Person, unabhängig von der Bewertung.",
       "link": "Wie Dokumente behandelt werden"
     },
     "stops": {

@@ -10,7 +10,7 @@
     },
     "sprint": {
       "title": "Revisión completa del data room en días",
-      "description": "Diez pasadas especializadas sobre un data room, reconciliadas en una sola narrativa, con seguimiento de lagunas en vivo."
+      "description": "{disciplines} pasadas especializadas sobre un data room, reconciliadas en una sola narrativa, con seguimiento de lagunas en vivo."
     },
     "method": {
       "title": "Cómo funciona la due diligence con IA",
@@ -207,7 +207,7 @@
       "pageRef": "TargetCo — Contrato marco de servicios, p. 14",
       "highlight": "Pasaje citado",
       "findingLabel": "El hallazgo que produjo",
-      "footnote": "Un ejemplo construido sobre una target ficticia. Aquí no hay ningún documento de cliente. Su mandato produce estos mismos cinco campos, sobre su propia data room.",
+      "footnote": "Un ejemplo construido sobre un target ficticio. Aquí no hay ningún documento de cliente. Su mandato produce estos mismos cinco campos, sobre su propia data room.",
       "quote": "El Cliente podrá resolver este Contrato con un preaviso escrito de treinta (30) días en caso de cambio de control del Proveedor.",
       "tag": "Ilustrativo",
       "values": {
@@ -286,7 +286,7 @@
       "link": "Ver la página de gobernanza"
     },
     "coverage": {
-      "title": "Diez disciplinas, una pasada sobre el mismo data room",
+      "title": "Ocho disciplinas, una pasada sobre el mismo data room",
       "lead": "Lo que encuentra una disciplina queda sobre la mesa para la siguiente.",
       "note": "Ordenado por dependencia: el trabajo posterior espera los hallazgos que necesita.",
       "ctaLine": "Su equipo no puede cubrir esto en dos semanas."
@@ -301,7 +301,7 @@
         },
         {
           "title": "Financiar",
-          "body": "El financiador lo lee igualmente. Dele una base ya soportada."
+          "body": "El financiador lo lee igualmente. Dele una base ya fundamentada."
         },
         {
           "title": "Mantener",
@@ -450,7 +450,7 @@
       "repair": "Las afirmaciones que fallan reciben un intento de reparación: volver a citar desde la fuente y volver a juzgar. Lo que sigue fallando se elimina o se marca como no confirmado."
     },
     "blocks": {
-      "title": "{blocks} condiciones que detienen la aprobación automática",
+      "title": "{blocks} bloqueos duros",
       "lead": "Los reintentos están limitados a dos por especialista. Estas condiciones cierran el circuito igualmente y envían el borrador a una persona.",
       "items": [
         {
@@ -483,7 +483,7 @@
         },
         {
           "title": "Puntuación baja del revisor",
-          "body": "El agente crítico puntuó el borrador por debajo del umbral."
+          "body": "El agente revisor puntuó el borrador por debajo del umbral."
         }
       ]
     },
@@ -653,7 +653,7 @@
       "items": [
         {
           "q": "¿Sustituye esto a un informe de quality of earnings?",
-          "a": "Es más amplio, y no es un servicio de atestiguamiento. Un quality of earnings cubre una dimensión en cuatro a diez semanas. Esto ejecuta {disciplines} disciplinas y las reconcilia. Una opinión firmada por un auditor sigue siendo un encargo aparte."
+          "a": "Es más amplio, y no es un servicio de aseguramiento. Un quality of earnings cubre una dimensión en cuatro a diez semanas. Esto ejecuta {disciplines} disciplinas y las reconcilia. Una opinión firmada por un auditor sigue siendo un encargo aparte."
         },
         {
           "q": "¿Cuánto tiempo lleva?",
@@ -681,7 +681,7 @@
       "title": "Vea si un sprint encaja con su situación",
       "body": "Quince minutos de plataforma y quince de su data room: qué hay, qué falta y si un sprint es el instrumento adecuado.",
       "button": "Reserve una demo",
-      "note": "Un número limitado de mandatos piloto, de un solo dígito."
+      "note": "Un puñado de mandatos piloto."
     }
   },
   "preSale": {
@@ -787,12 +787,12 @@
       "lead": "Cuatro mecanismos. Ninguno es una certificación."
     },
     "gate": {
-      "title": "El único paso humano obligatorio",
+      "title": "La única puerta humana obligatoria",
       "lead": "Una persona con nombre aprueba cada salida. Estas son las condiciones que lo obligan.",
       "items": [
         "Los hallazgos se contrastan con los documentos fuente antes de la entrega.",
         "La puerta se ejecuta siempre, de forma automática.",
-        "{blocks} clases de fallo van a una persona en lugar de aprobarse automáticamente.",
+        "{blocks} bloqueos duros van a una persona en lugar de aprobarse automáticamente.",
         "Una persona con nombre revisa, reconcilia y responde por el resultado.",
         "Los valores seudonimizados solo se revierten aquí, en el entregable final."
       ]
@@ -889,7 +889,7 @@
           "body": "La mayoría de los NDA de M&A solo permiten revelar información a Representatives designados: empleados, asesores, financiadores. Una plataforma de IA rara vez lo es. Meter el data room en una herramienta de consumo puede ser el incumplimiento en sí."
         },
         {
-          "title": "El Reglamento de IA de la UE corre sobre un reloj",
+          "title": "El Reglamento de IA de la UE avanza contrarreloj",
           "body": "Las obligaciones para IA de uso general se aplican desde el 2 de agosto de 2025. Los deberes de transparencia del artículo 50 llegan el 2 de agosto de 2026. Una puerta humana documentada encaja mejor en ese régimen que una sesión de chat que nadie registró."
         }
       ],
@@ -943,7 +943,7 @@
         },
         {
           "title": "Oleada dos — legal",
-          "body": "Lee RR. HH. y comercial antes de razonar: una exposición laboral o una reclamación contractual suele depender de hechos que esas dos lecturas ya han establecido. Su propia oleada desde el 4 de septiembre de 2026, para que fiscal en la oleada tres pueda leer de verdad su resultado terminado, no una promesa que la ejecución no podía cumplir."
+          "body": "Lee RR. HH. y comercial antes de razonar: una exposición laboral o una reclamación contractual suele depender de hechos que esas dos lecturas ya han establecido. Se ejecuta en su propia oleada, para que fiscal, en la oleada tres, pueda leer de verdad su resultado terminado, no una promesa que la ejecución no podía cumplir."
         },
         {
           "title": "Oleada tres — fiscal",
@@ -1001,7 +1001,7 @@
         "El módulo recupera los pasajes que responden a su propia pregunta, y solo esos.",
         "El borrador se escribe contra el contrato anterior. Una afirmación sin un pasaje detrás no llega a escribirse.",
         "Una pasada de revisión critica el borrador y lo devuelve. Dos reintentos y el bucle se detiene: lo toma una persona.",
-        "Cuatro comprobaciones de fundamento en secuencia: el índice de referencias, la cita en sí, si la afirmación se deduce del pasaje, y una segunda opinión que bloquea ante la duda.",
+        "Cuatro comprobaciones de fundamento en secuencia: el índice de cita, la cita en sí, si la afirmación se deduce del pasaje, y una segunda opinión que bloquea ante la duda.",
         "Una persona con nombre revisa, concilia y aprueba. La seudonimización se revierte aquí y en ningún momento anterior.",
         "Usted recibe el hallazgo con su referencia documental adjunta, y sigue siendo abrible después."
       ],
@@ -1019,7 +1019,7 @@
         "Revierte la seudonimización en la salida final, y solo ahí.",
         "Firma. Una persona con nombre, responsable del documento que usted recibe."
       ],
-      "note": "{blocks} clases de fallo terminan el bucle automático antes de tiempo y envían el borrador a esa persona, sea cual sea la puntuación.",
+      "note": "{blocks} bloqueos duros terminan el bucle automático antes de tiempo y envían el borrador a esa persona, sea cual sea la puntuación.",
       "link": "Cómo se tratan los documentos"
     },
     "stops": {
@@ -1075,7 +1075,7 @@
     },
     "gate": {
       "title": "Por eso la revisión humana es obligatoria",
-      "lead": "El paso humano no es una manta de seguridad sobre un producto terminado. Es donde se hacen de verdad cuatro de los cinco puntos anteriores.",
+      "lead": "La puerta humana no es una red de seguridad sobre un producto terminado. Es donde se hacen de verdad cuatro de los cinco puntos anteriores.",
       "items": [
         "Un nombre y una fecha en cada entrega, no una puntuación de confianza.",
         "Materialidad decidida frente a su operación, no frente a un benchmark.",
@@ -1299,7 +1299,7 @@
       "items": [
         "Ninguna afirmación de certificación o auditoría en marca blanca. No podemos responder de un sello que no tenemos.",
         "Ninguna capacidad ilimitada. Una alianza que desborde el control de revisión es peor que no tener alianza.",
-        "Ninguna política general de comisiones por derivación. Cuando apliquen normas de atestiguamiento o independencia, se comprueba en cada relación.",
+        "Ninguna política general de comisiones por derivación. Cuando apliquen normas de aseguramiento o independencia, se comprueba en cada relación.",
         "Ninguna reclamación sobre su cliente. Nada de lo que ejecutemos para usted se convierte en caso de estudio sin su acuerdo por escrito.",
         "Ningún mandato en conflicto donde ya nos hayamos comprometido en exclusiva. Cuando exista una exclusividad, lo diremos."
       ]
