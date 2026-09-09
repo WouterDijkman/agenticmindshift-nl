@@ -703,14 +703,15 @@ p { margin: 0; }
      block may not do.
 
      So the count divides the roster exactly at every breakpoint, the same rule
-     `.discipline-grid` follows further down. Ten divides by two and by five:
-     two rows of five once there is room for a five-across label, five rows of
-     two below that, one column on a phone. It was three columns while the
-     roster was nine, and it went back to two-and-five when IT and AI split
-     apart on 20 August 2026.
+     `.discipline-grid` follows further down. Eight divides by two and by four:
+     two rows of four once there is room for a wider label, four rows of two
+     below that, one column on a phone. It was five-across at ten, back when
+     the roster still carried IT and ESG (removed 3 September 2026, alongside
+     `it` and `esg` leaving `DISCIPLINES` in lib/site.ts) — five no longer
+     divides the roster, so four it is.
 
-     Five across waits until 1180 rather than the 1024 `auto-fit` reached for.
-     At 1024 a fifth column leaves the label about 136px, and the longest of
+     Four across waits until 1180 rather than the 1024 `auto-fit` reached for.
+     At 1024 a fourth column leaves the label about 170px, and the longest of
      them ("Waardering & dealeconomie") breaks across three lines while its
      neighbours sit on one, which makes a set of equals look ragged. */
   grid-template-columns: minmax(0, 1fr);
@@ -724,7 +725,7 @@ p { margin: 0; }
   .discipline-index { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (min-width: 1180px) {
-  .discipline-index { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .discipline-index { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 @media (min-resolution: 2dppx) {
   .discipline-index { gap: 0.5px; }
@@ -776,9 +777,11 @@ p { margin: 0; }
    * five across they set to three words a line. The column count has tracked
    * the roster size ever since, on one rule: pick the count that divides it
    * exactly, because a lone tile on a final row reads as an unfinished list.
-   * Ten disciplines took two columns, nine took three (an exact 3x3), and the
-   * roster is ten again since IT and AI split back apart on 20 August 2026, so
-   * two it is: five rows of two, nothing left over.
+   * Ten disciplines took two columns, nine took three (an exact 3x3), ten
+   * again at two when IT and AI split back apart on 20 August 2026 — and two
+   * still divides the eight left once IT and ESG were lifted out of the
+   * roster on 3 September 2026, so two stays: four rows of two, nothing left
+   * over.
    *
    * Two across is the more comfortable measure of the two anyway. The 3x3 was
    * the tighter fit that nine happened to allow, not the better one.

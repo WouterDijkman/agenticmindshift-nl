@@ -6,7 +6,7 @@
     },
     "platform": {
       "title": "KI-Due-Diligence-Plattform",
-      "description": "{modules} Due-Diligence-Module über zehn Disziplinen. Jede Feststellung belegt ein Dokument. Jedes Ergebnis passiert eine menschliche Freigabe."
+      "description": "{modules} Due-Diligence-Module über acht Disziplinen. Jede Feststellung belegt ein Dokument. Jedes Ergebnis passiert eine menschliche Freigabe."
     },
     "sprint": {
       "title": "Der gesamte Data Room geprüft, in Tagen",
@@ -107,19 +107,9 @@
         "result": "Wer vertraglich gebunden ist, wer nicht, und was Pensionszusagen und Tarifbindung wirklich kosten."
       },
       {
-        "label": "IT & Technologie",
-        "pain": "Technische Schulden stehen in keiner Bilanz, und Lizenzen laufen in Verträgen weiter, die niemand gezählt hat.",
-        "result": "Was wirklich läuft, was die Behebung kostet, und welche Lizenzen sich nach dem Closing zusammenlegen lassen."
-      },
-      {
         "label": "KI",
         "pain": "„KI-getrieben“ heißt meist eine Lizenz auf ein fremdes Modell, und wem die Daten gehören, bleibt offen.",
         "result": "Wessen Modell und wessen Daten, was unter den AI Act fällt, und welche Prozesse sich wirklich automatisieren lassen."
-      },
-      {
-        "label": "ESG",
-        "pain": "Berichtspflichten wandern mit dem Unternehmen zum Käufer.",
-        "result": "Was künftig berichtet werden muss, und welche Investition das verlangt."
       },
       {
         "label": "Operativ",
@@ -145,8 +135,8 @@
       "values": {
         "module": "Vordefiniert, eines aus der Bibliothek",
         "finding": "Eine Aussage, in einem Satz",
-        "evidence": "Wörtlich zitiert",
-        "document": "Dateiname und Seite",
+        "evidence": "Wörtlich zitiert, pro Zitat",
+        "document": "Dateiname und Seite, pro Zitat",
         "review": "Vor Freigabe erforderlich"
       },
       "more": "+2 Felder, auf einem breiteren Bildschirm"
@@ -173,26 +163,12 @@
       "Financial DD",
       "Commercial DD",
       "HR DD",
-      "IT DD",
-      "AI DD",
-      "ESG DD",
       "Operational DD",
-      "IM screener",
-      "Vigil monitoring",
-      "Tax DD",
+      "AI DD",
       "Legal DD",
+      "Tax DD",
       "Deal economics",
-      "Valuation",
-      "Portfolio management",
-      "Post-merger integration",
-      "Vendor due diligence",
-      "IC memo",
-      "Teaser / CIM",
-      "Financing memorandum",
-      "Document factory",
-      "Exit readiness",
-      "Portfolio health",
-      "IC report"
+      "Valuation"
     ],
     "waves": [
       {
@@ -200,24 +176,20 @@
         "body": "Diese Module brauchen keine Vorstufe. Sie starten alle gleichzeitig."
       },
       {
-        "title": "Abhängige Reads",
-        "body": "Steuern und Recht können erst argumentieren, wenn die erste Welle vorliegt."
+        "title": "Recht",
+        "body": "Liest Personal und Kommerziell, bevor es argumentiert — ein arbeitsrechtliches Risiko oder ein Vertragsanspruch hängt meist an Tatsachen, die diese beiden Reads schon festgestellt haben."
       },
       {
-        "title": "Synthese",
-        "body": "Bewertung, Deal Economics und Portfolio lesen alles Vorherige."
+        "title": "Steuern",
+        "body": "Liest Finanzen und Recht, bevor es argumentiert — eine Steuerposition ist eine Folge der Struktur, die der Financial-Durchgang gerade beschrieben hat, und überschneidet sich oft mit dem, was Recht dort gefunden hat."
       },
       {
-        "title": "Deliverables",
-        "body": "Die Dokumente, die Sie erhalten, gebaut aus den Wellen darüber."
+        "title": "Deal Economics",
+        "body": "Liest alles Vorherige und stellt die Frage, was der Deal tatsächlich einbringt."
       },
       {
-        "title": "Nach dem Closing",
-        "body": "Exit Readiness und Portfoliogesundheit. Sie laufen nach dem Deal auf eigener Uhr."
-      },
-      {
-        "title": "Periodisches Reporting",
-        "body": "Der IC-Bericht liest diese beiden Module und wartet deshalb auf sie."
+        "title": "Bewertung",
+        "body": "Liest Deal Economics obendrauf auf alles davor, und rechnet den Preis durch die Feststellungen hindurch statt an ihnen vorbei."
       }
     ],
     "chart": {
@@ -314,7 +286,7 @@
       "link": "Die Governance-Seite lesen"
     },
     "coverage": {
-      "title": "Zehn Disziplinen, ein Durchgang über denselben Data Room",
+      "title": "Acht Disziplinen, ein Durchgang über denselben Data Room",
       "lead": "Was eine Disziplin findet, liegt für die nächste auf dem Tisch.",
       "note": "Nach Abhängigkeit geordnet: spätere Arbeit wartet auf die Feststellungen, die sie braucht.",
       "ctaLine": "Ihr Team schafft das nicht in zwei Wochen."
@@ -396,19 +368,7 @@
       "tiles": {
         "modules": {
           "title": "Module pro Mandat",
-          "body": "Jedes vorab auf eine Disziplin oder ein Deliverable zugeschnitten. Alle laufen, bei jedem Mandat."
-        },
-        "analysis": {
-          "title": "Liefern Feststellungen",
-          "body": "Sie lesen den Data Room aus und liefern Aussagen mit der Quellpassage darunter."
-        },
-        "deliverables": {
-          "title": "Bauen Dokumente",
-          "body": "IC-Memo, Vendor Due Diligence, Teaser, Finanzierungsmemorandum. Gebaut auf den Feststellungen darüber."
-        },
-        "monitoring": {
-          "title": "Laufen nach dem Closing weiter",
-          "body": "Covenant-Spielraum und Frühwarnsignale, auf eigener Uhr."
+          "body": "Jedes vorab auf eine Disziplin zugeschnitten. Alle laufen, bei jedem Mandat."
         },
         "waves": {
           "title": "Dispatch-Wellen",
@@ -500,6 +460,10 @@
         {
           "title": "Erfundene Quelle",
           "body": "Ein Nachweis, der nicht auf eine echte Passage führt."
+        },
+        {
+          "title": "Unbestätigt nach Reparatur",
+          "body": "Die Fabrikationsprüfung findet nach beiden Wiederholungen noch immer eine Aussage ohne Beleg."
         },
         {
           "title": "Scope-Verweigerung",
@@ -594,7 +558,7 @@
         },
         {
           "q": "Warum Wellen statt alles gleichzeitig?",
-          "a": "Steuern kann ohne den Finanz- und Rechtsdurchgang nicht argumentieren. Bewertung kann ohne Steuern nicht bepreisen. Der Abhängigkeitsgraph setzt die Reihenfolge; Welle 1 fährt weiterhin acht Module parallel."
+          "a": "Steuern kann ohne den Finanz- und Rechtsdurchgang nicht argumentieren. Bewertung kann ohne Steuern nicht bepreisen. Der Abhängigkeitsgraph setzt die Reihenfolge; Welle 1 fährt weiterhin {w1} Module parallel."
         },
         {
           "q": "Was passiert, wenn das Modell es nicht weiß?",
@@ -651,17 +615,17 @@
     },
     "delivery": {
       "title": "Wie es ankommt",
-      "lead": "Drei Formate, ab Tag eins nebeneinander.",
+      "lead": "Das Dashboard und der Bericht, dazu die laufende Liste dessen, was nie geliefert wurde.",
       "formats": [
         {
-          "label": "Prüf-Dashboard",
-          "items": "Finanzen, Steuern, Technologie und Fortführung",
+          "label": "Live-Dashboard",
+          "items": "Jede Disziplin",
           "body": "Ein interaktives Dashboard zum Durchklicken. Jede Feststellung lässt sich bis zur Quellpassage zurückverfolgen."
         },
         {
-          "label": "Schriftlicher Bericht",
-          "items": "Die übrigen Disziplinen",
-          "body": "Ein strukturierter schriftlicher Bericht, eingefügt in dasselbe Narrativ."
+          "label": "Zusammengeführter Bericht",
+          "items": "Dieselben Feststellungen, zu einem Narrativ zusammengeführt",
+          "body": "Ein schriftlicher Bericht: die Feststellungen jeder Disziplin, zu einem Narrativ zusammengeführt."
         },
         {
           "label": "Zu beidem",
@@ -975,30 +939,26 @@
       "steps": [
         {
           "title": "Welle eins — die unabhängigen Durchgänge",
-          "body": "{w1} Module öffnen im selben Moment. Financial, Commercial, HR, IT, AI, ESG und Operations gehen parallel in den Data Room, dazu der Screener für das Informationsmemorandum und das Monitoring-Setup. Keines braucht die Antwort eines anderen Moduls, um anzufangen."
+          "body": "{w1} Module öffnen im selben Moment. Financial, Commercial, HR, Operations und AI gehen parallel in den Data Room. Keines braucht die Antwort eines anderen Moduls, um anzufangen."
         },
         {
-          "title": "Welle zwei — die Durchgänge, die warten müssen",
-          "body": "Steuern und Recht. Beide argumentieren über Folgen: eine Steuerposition ist die Folge der Struktur, die der Financial-Durchgang gerade beschrieben hat, und ein rechtliches Risiko ist meist die Folge einer kommerziellen Klausel. Führt man sie zuerst aus, bekommt man selbstbewusste Antworten auf die falsche Frage."
+          "title": "Welle zwei — Recht",
+          "body": "Liest HR und Commercial, bevor es argumentiert: ein arbeitsrechtliches Risiko oder ein Vertragsanspruch hängt meist an Tatsachen, die diese beiden Durchgänge schon festgestellt haben. Seit dem 4. September 2026 eine eigene Welle, damit Steuern in Welle drei ihre fertige Ausgabe tatsächlich lesen kann statt eines Versprechens, das der Lauf nicht halten konnte."
         },
         {
-          "title": "Welle drei — Synthese",
-          "body": "{w3} Module lesen quer über alles darüber. Die Bewertung rechnet den Preis durch die Feststellungen hindurch statt an ihnen vorbei. Deal Economics, Portfolio und Post-Merger-Integration nehmen dieselben Feststellungen und stellen ihnen eine andere Frage."
+          "title": "Welle drei — Steuern",
+          "body": "Liest Financial und Recht, bevor es argumentiert: eine Steuerposition ist die Folge der Struktur, die der Financial-Durchgang gerade beschrieben hat, und überschneidet sich oft mit dem, was Recht in dieser Struktur fand."
         },
         {
-          "title": "Welle vier — die Dokumente",
-          "body": "{w4} Lieferergebnisse, aus den Wellen darüber zusammengesetzt: Vendor Due Diligence, das IC-Memo, Teaser oder CIM, das Finanzierungsmemorandum und die Dokumentfabrik für alles Weitere, was der Prozess braucht."
+          "title": "Welle vier — Deal Economics",
+          "body": "Liest alles aus Welle eins bis drei und stellt die Frage, was der Deal tatsächlich einbringt, nicht was er wert ist."
         },
         {
-          "title": "Welle fünf — nach dem Closing",
-          "body": "{w5} Module mit eigener Uhr: Exit Readiness und Portfoliogesundheit. Sie gehören nicht zum Sprint und warten nicht auf ihn."
-        },
-        {
-          "title": "Welle sechs — der periodische Bericht",
-          "body": "Der IC-Bericht steht allein in der letzten Welle, weil Module innerhalb einer Welle gleichzeitig laufen. Neben Exit Readiness und Portfoliogesundheit würde er die Kapitel der vorherigen Runde lesen, beim ersten Lauf gar nichts."
+          "title": "Welle fünf — Bewertung",
+          "body": "Die letzte Welle, die noch etwas trägt. Liest Deal Economics obendrauf auf alles davor, und rechnet den Preis durch die Feststellungen hindurch statt an ihnen vorbei."
         }
       ],
-      "note": "Welle eins und zwei sind die Due Diligence selbst. Alles danach ist, was Sie damit tun."
+      "note": "Alle fünf Wellen zusammen sind die Due Diligence selbst. Das Dashboard und der Bericht entstehen aus dem, was sie liefern."
     },
     "contract": {
       "title": "Der Ausgabevertrag, Feld für Feld",

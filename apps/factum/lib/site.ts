@@ -99,6 +99,31 @@ export const LOCALE_NAMES: Record<string, string> = {
  * Listed in dispatch order, which is also the order the wave diagram draws.
  * `zdr` marks the modules whose provider routing is hard-gated to a
  * zero-retention EU endpoint in code (`ZDR_REQUIRED_MODULES`), not by setting.
+ *
+ * Re-derived 8 September 2026 against the live registry, which had drifted
+ * from what this array said, in two separate ways found on two separate
+ * passes.
+ *
+ * First pass: the six deliverable modules (vdd, ic-memo, teaser, fin-memo,
+ * document-factory, ic-report) moved to the separate `factum-deliverables`
+ * repo, and six more (vigil, portfolio, pmi, exit-readiness, portfolio-health,
+ * im-screener) were retired from the product proposition — both on 21 August
+ * 2026. What the client actually receives from a Sprint is one live dashboard
+ * and one synthesized written report, not a roster of separate deliverable
+ * modules.
+ *
+ * Second pass, caught only because it was asked about directly: `it` and
+ * `esg` were ALSO lifted out on 3 September 2026, to `factum-it-dd` and
+ * `factum-esg-dd` respectively — the same pattern as the first pass, one
+ * module category at a time. And on 4 September 2026 (L7-4 in the product's
+ * own history) the wave plan itself changed: legal, tax, deal-economics and
+ * valuation each got their own wave instead of sharing wave 2/3, because
+ * two modules in the same wave can never actually read each other's output
+ * (signals only publish once a module has fully finished) — the old shared
+ * waves were a dependency the run could never keep. What's left is 9 modules
+ * across 5 waves that carry anything (wave 6 stays reserved, empty, for the
+ * same numbering-continuity reason the deliverable/retired waves above were
+ * kept rather than renumbered).
  */
 export type FactumModule = {
   /** Product slug. Stable, and the key the wave diagram draws from. */
@@ -106,12 +131,10 @@ export type FactumModule = {
   /** Dispatch wave, 1–5. */
   readonly wave: number;
   /**
-   * What the module hands back. Analysis produces findings, deliverables
-   * produce documents, monitoring keeps running after closing. Every module is
-   * in exactly one, and that is what decides when it runs — the distinction the
-   * roster always had in the product and never showed on the site, which is why
-   * a monitoring product sat in a row of thirteen analysis disciplines as
-   * though it were the same kind of thing.
+   * What the module hands back. Every module here is a finding-producing
+   * analysis module — the `deliverable` and `monitoring` kinds are kept in the
+   * type for the day a module of that kind exists again, but nothing in
+   * `MODULES` currently uses them. See the header comment above for why.
    */
   readonly kind: 'analysis' | 'deliverable' | 'monitoring';
   /** Provider routing hard-gated to zero-retention EU inference. */
@@ -120,70 +143,32 @@ export type FactumModule = {
 
 export const MODULES: readonly FactumModule[] = [
   // Wave 1 — no upstream dependencies, run fully in parallel.
-  { slug: 'financial', wave: 1, kind: 'analysis', zdr: true },
-  { slug: 'commercial', wave: 1, kind: 'analysis' },
-  { slug: 'hr', wave: 1, kind: 'analysis' },
-  // `it` and `ai-dd` ran as one `technology` module for a while and were split
-  // back apart on 20 August 2026, in the product first and here second. The
-  // merge argument was that both read the same folder, which is true and turned
-  // out not to be the point: they answer different questions off it. `it` reads
-  // the systems inventory and the licence schedule, `ai-dd` reads the model
-  // contracts and the data-processing agreements. Merged, the second set went
-  // unasked.
   //
-  // These two slugs and this order are load-bearing beyond this file. The wave
+  // These slugs and this order are load-bearing beyond this file. The wave
   // diagram draws `shared.modules` in every messages/<locale>.json positionally
   // against this array, so an entry inserted here without the matching label
   // inserted there silently relabels every module below it.
-  { slug: 'it', wave: 1, kind: 'analysis' },
-  { slug: 'ai-dd', wave: 1, kind: 'analysis' },
-  { slug: 'esg', wave: 1, kind: 'analysis' },
+  { slug: 'financial', wave: 1, kind: 'analysis', zdr: true },
+  { slug: 'commercial', wave: 1, kind: 'analysis' },
+  { slug: 'hr', wave: 1, kind: 'analysis' },
   { slug: 'operational', wave: 1, kind: 'analysis' },
-  { slug: 'im-screener', wave: 1, kind: 'analysis' },
-  { slug: 'vigil', wave: 1, kind: 'monitoring' },
-  // Wave 2 — read wave 1 output before they can reason.
-  { slug: 'tax', wave: 2, kind: 'analysis', zdr: true },
+  { slug: 'ai-dd', wave: 1, kind: 'analysis' },
+  // Wave 2 — reads wave 1 (hr, commercial) only. Its own wave since 4
+  // September 2026, so tax (wave 3) can actually read its finished output.
   { slug: 'legal', wave: 2, kind: 'analysis', zdr: true },
-  // Wave 3 — synthesis across waves 1 and 2.
-  { slug: 'deal-economics', wave: 3, kind: 'analysis' },
-  { slug: 'valuation', wave: 3, kind: 'analysis' },
-  { slug: 'portfolio', wave: 3, kind: 'analysis' },
-  { slug: 'pmi', wave: 3, kind: 'analysis' },
-  // Wave 4 — assemble client-facing deliverables from everything upstream.
-  { slug: 'vdd', wave: 4, kind: 'deliverable' },
-  { slug: 'ic-memo', wave: 4, kind: 'deliverable' },
-  { slug: 'teaser', wave: 4, kind: 'deliverable' },
-  { slug: 'fin-memo', wave: 4, kind: 'deliverable' },
-  { slug: 'document-factory', wave: 4, kind: 'deliverable' },
-  // Wave 5 — post-close, independent of the pre-close waves.
-  { slug: 'exit-readiness', wave: 5, kind: 'analysis' },
-  { slug: 'portfolio-health', wave: 5, kind: 'monitoring' },
-  // Wave 6 — the periodic IC report, on its own because it reads the two
-  // modules above as input. Modules inside one wave dispatch concurrently, so
-  // while this sat in wave 5 it read the previous run's chapters, or nothing at
-  // all on a first run. Only a strictly later wave gives the ordering.
-  //
-  // The site carried it in wave 5 until 20 August 2026, which understated the
-  // run by one wave. It is worth showing rather than smoothing over, because it
-  // is the clearest instance of the claim /method already makes: nothing runs
-  // early, and a module waits when it depends on another module's output. A
-  // reader who checks that claim against the diagram should find it holds.
-  { slug: 'ic-report', wave: 6, kind: 'deliverable' }
+  // Wave 3 — reads wave 1 (financial) and wave 2 (legal).
+  { slug: 'tax', wave: 3, kind: 'analysis', zdr: true },
+  // Wave 4 — synthesis across waves 1–3.
+  { slug: 'deal-economics', wave: 4, kind: 'analysis' },
+  // Wave 5 — the last wave that carries anything: reads deal-economics (wave
+  // 4) on top of everything before it. What comes out of waves 1–5 is what
+  // the dashboard and the report are built from.
+  { slug: 'valuation', wave: 5, kind: 'analysis' }
 ];
 
 export const MODULE_COUNT = MODULES.length;
-export const WAVE_COUNT = 6;
+export const WAVE_COUNT = 5;
 
-/**
- * The first wave that runs after closing.
- *
- * `DispatchGraph` draws these waves with a dashed rail, because they do not
- * read the pre-close waves and do not belong to the Sprint. It used to test
- * `n === 5`, which silently stopped being right the moment a sixth wave
- * appeared: wave 6 is post-close too and would have drawn as though it were
- * part of the diligence run.
- */
-export const POST_CLOSE_FIRST_WAVE = 5;
 export const ZDR_MODULE_COUNT = MODULES.filter((m) => m.zdr).length;
 
 /** Module counts per kind, for the copy that names the three-way split. */
@@ -244,10 +229,15 @@ export const WAVE_SIZES: readonly number[] = Array.from(
  * debt, licensing, model ownership and the AI Act in one sentence, which is how
  * it ended up naming none of them properly.
  *
- * What is left is ten things we read the data room *for*. Inserting mid-list
- * re-pairs every later entry with the wrong icon, since `DisciplineGrid` maps
- * them by position, so `ai` arriving at slot seven meant the ICONS array in
- * that file was rebuilt by hand in the same change rather than appended to.
+ * That "ten things" lasted two weeks. `it` and `esg` were themselves lifted
+ * out on 3 September 2026, to `factum-it-dd` and `factum-esg-dd` — see the
+ * header comment on `MODULES` above, same pattern, same reasoning about a
+ * lone row reading as a bandwagon rather than answering a real question on
+ * its own. What's left is eight. Inserting or removing mid-list re-pairs
+ * every later entry with the wrong icon, since `DisciplineGrid` maps them by
+ * position — `ICONS` in that file was rebuilt by hand in the same change
+ * rather than left to drift, which is exactly the mistake this array's own
+ * history is a record of not fixing quickly enough the first two times.
  */
 export const DISCIPLINES = [
   'financial',
@@ -255,9 +245,7 @@ export const DISCIPLINES = [
   'legal',
   'tax',
   'hr',
-  'it',
   'ai',
-  'esg',
   'operational',
   'valuation'
 ] as const;
@@ -286,5 +274,14 @@ export const GROUNDING_AUDIT_DATE = '15 July 2026';
 /** The open part of the dial. Named so the copy can refuse to round it away. */
 export const GROUNDING_REMAINDER = (100 - GROUNDING_RATE).toFixed(1);
 
-/** Hard-block conditions that stop a sub-agent draft being auto-approved. */
-export const HARD_BLOCK_COUNT = 7;
+/**
+ * Hard-block conditions that stop a sub-agent draft being auto-approved.
+ *
+ * Eight, not seven: `agent-review-graph.ts` throws a distinct `HardBlockError`
+ * for `FABRICATED_SOURCE` (a citation that resolves to nothing) and for
+ * `FABRICATION_CHECK_FAILED` (the deterministic checker still finds a
+ * reject-severity issue after both repair attempts) — two code paths, not one.
+ * `platform.blocks.items` carries eight entries to match; re-count both if
+ * either changes.
+ */
+export const HARD_BLOCK_COUNT = 8;

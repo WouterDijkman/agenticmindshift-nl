@@ -6,7 +6,7 @@
     },
     "platform": {
       "title": "AI-platform voor due diligence",
-      "description": "{modules} modules voor due diligence, over tien disciplines. Elke bevinding verwijst naar een document. Elke output passeert een menselijke toets."
+      "description": "{modules} modules voor due diligence, over acht disciplines. Elke bevinding verwijst naar een document. Elke output passeert een menselijke toets."
     },
     "sprint": {
       "title": "De hele data room beoordeeld in dagen",
@@ -107,19 +107,9 @@
         "result": "Wie contractueel vastzit, wie niet, en wat pensioen en cao werkelijk kosten."
       },
       {
-        "label": "IT & technologie",
-        "pain": "Technische schuld staat op geen enkele balans, en licenties lopen door in contracten die niemand heeft geteld.",
-        "result": "Wat er echt draait, wat herstel kost, en welke licenties na closing te consolideren zijn."
-      },
-      {
         "label": "AI",
         "pain": "“AI-gedreven” is vaak een licentie op het model van iemand anders, en wie de data bezit blijft onbeantwoord.",
         "result": "Van wie het model en de data zijn, wat onder de AI Act valt, en welke processen zich werkelijk laten automatiseren."
-      },
-      {
-        "label": "ESG",
-        "pain": "Rapportageverplichtingen verhuizen mee naar de koper.",
-        "result": "Wat er straks gerapporteerd moet worden, en wat dat aan investering vraagt."
       },
       {
         "label": "Operationeel",
@@ -145,8 +135,8 @@
       "values": {
         "module": "Vooraf afgebakend, één uit de bibliotheek",
         "finding": "Eén claim, in één zin",
-        "evidence": "Woordelijk geciteerd",
-        "document": "Bestandsnaam en pagina",
+        "evidence": "Woordelijk geciteerd, per citaat",
+        "document": "Bestandsnaam en pagina, per citaat",
         "review": "Vereist vóór vrijgave"
       },
       "more": "+2 velden, op een breder scherm"
@@ -173,26 +163,12 @@
       "Financial DD",
       "Commercial DD",
       "HR DD",
-      "IT DD",
-      "AI DD",
-      "ESG DD",
       "Operational DD",
-      "IM screener",
-      "Vigil monitoring",
-      "Tax DD",
+      "AI DD",
       "Legal DD",
+      "Tax DD",
       "Deal economics",
-      "Valuation",
-      "Portfolio management",
-      "Post-merger integration",
-      "Vendor due diligence",
-      "IC memo",
-      "Teaser / CIM",
-      "Financing memorandum",
-      "Document factory",
-      "Exit readiness",
-      "Portfolio health",
-      "IC report"
+      "Valuation"
     ],
     "waves": [
       {
@@ -200,24 +176,20 @@
         "body": "Deze modules hebben niets bovenstrooms nodig. Ze starten allemaal tegelijk."
       },
       {
-        "title": "Afhankelijke rondes",
-        "body": "Fiscaal en juridisch kunnen pas redeneren met de eerste golf in handen."
+        "title": "Juridisch",
+        "body": "Leest HR en commercieel voordat het redeneert — een arbeidsrechtelijke blootstelling of een contractuele claim hangt meestal af van wat die twee al hebben vastgesteld."
       },
       {
-        "title": "Synthese",
-        "body": "Waardering, deal economics en portefeuille lezen alles daarvoor."
+        "title": "Fiscaal",
+        "body": "Leest financieel en juridisch voordat het redeneert — een fiscale positie is een gevolg van de structuur die de financiële passage net heeft beschreven, en overlapt vaak met wat juridisch in die structuur vond."
       },
       {
-        "title": "Opleveringen",
-        "body": "De documenten die u krijgt, samengesteld uit de golven hierboven."
+        "title": "Deal economics",
+        "body": "Leest alles wat erboven ligt en stelt de vraag wat de deal werkelijk oplevert."
       },
       {
-        "title": "Na closing",
-        "body": "Exit readiness en portefeuillegezondheid. Lopen op een eigen klok, na de deal."
-      },
-      {
-        "title": "Periodieke rapportage",
-        "body": "De IC-rapportage leest die twee modules, dus wacht ze die eerst af."
+        "title": "Waardering",
+        "body": "Leest deal economics bovenop alles daarvoor, en herrekent de prijs dóór de bevindingen heen in plaats van eromheen."
       }
     ],
     "chart": {
@@ -314,7 +286,7 @@
       "link": "Lees de governancepagina"
     },
     "coverage": {
-      "title": "Tien disciplines, één ronde over dezelfde data room",
+      "title": "Acht disciplines, één ronde over dezelfde data room",
       "lead": "Wat de ene discipline vindt, ligt op tafel voor de volgende.",
       "note": "Geordend op afhankelijkheid: later werk wacht op de bevindingen die het nodig heeft.",
       "ctaLine": "Uw team krijgt dit niet in twee weken rond."
@@ -396,19 +368,7 @@
       "tiles": {
         "modules": {
           "title": "Modules per opdracht",
-          "body": "Elk vooraf afgebakend op een discipline of een oplevering. Ze draaien allemaal, elk mandaat."
-        },
-        "analysis": {
-          "title": "Leveren bevindingen",
-          "body": "Ze lezen de data room uit en leveren claims met de bronpassage eronder."
-        },
-        "deliverables": {
-          "title": "Stellen documenten samen",
-          "body": "IC-memo, vendor due diligence, teaser, financieringsmemorandum. Gebouwd op de bevindingen erboven."
-        },
-        "monitoring": {
-          "title": "Lopen door na closing",
-          "body": "Convenantruimte en vroege signalen, op een eigen klok."
+          "body": "Elk vooraf afgebakend op een discipline. Ze draaien allemaal, elk mandaat."
         },
         "waves": {
           "title": "Dispatchgolven",
@@ -500,6 +460,10 @@
         {
           "title": "Verzonnen bron",
           "body": "Een bronverwijzing die niet naar een echte passage leidt."
+        },
+        {
+          "title": "Onbevestigd na reparatie",
+          "body": "De fabricatiecheck vindt na beide retries nog steeds een claim zonder dekking."
         },
         {
           "title": "Scope-weigering",
@@ -594,7 +558,7 @@
         },
         {
           "q": "Waarom golven en niet alles tegelijk?",
-          "a": "Fiscaal kan niet redeneren zonder de financiële en juridische rondes. Waardering kan niet prijzen zonder fiscaal. De afhankelijkheidsgraaf bepaalt de volgorde; golf 1 draait nog steeds acht modules parallel."
+          "a": "Fiscaal kan niet redeneren zonder de financiële en juridische rondes. Waardering kan niet prijzen zonder fiscaal. De afhankelijkheidsgraaf bepaalt de volgorde; golf 1 draait nog steeds {w1} modules parallel."
         },
         {
           "q": "Wat gebeurt er als het model het niet weet?",
@@ -651,17 +615,17 @@
     },
     "delivery": {
       "title": "Hoe het aankomt",
-      "lead": "Drie vormen, vanaf dag één naast elkaar.",
+      "lead": "Het dashboard en het rapport, plus de lopende lijst van wat nooit is aangeleverd.",
       "formats": [
         {
-          "label": "Review-dashboard",
-          "items": "Financieel, fiscaal, technologie en continuïteit",
+          "label": "Live dashboard",
+          "items": "Elke discipline",
           "body": "Een live, doorklikbaar dashboard. Volg elke bevinding terug naar de bronpassage."
         },
         {
-          "label": "Geschreven rapport",
-          "items": "De overige disciplines",
-          "body": "Een gestructureerd geschreven rapport, afgestemd tot dezelfde verhaallijn."
+          "label": "Samengevat rapport",
+          "items": "Dezelfde bevindingen, tot één verhaal teruggebracht",
+          "body": "Eén geschreven rapport: de bevindingen van elke discipline tot één verhaallijn herleid."
         },
         {
           "label": "Naast beide",
@@ -975,30 +939,26 @@
       "steps": [
         {
           "title": "Golf één — de onafhankelijke passages",
-          "body": "{w1} modules openen tegelijk. Financieel, commercieel, HR, IT, AI, ESG en operationeel gaan parallel de data room in, naast de screener op het informatiememorandum en de opzet voor monitoring. Geen van hen heeft het antwoord van een andere module nodig om te beginnen."
+          "body": "{w1} modules openen tegelijk. Financieel, commercieel, HR, operationeel en AI gaan parallel de data room in. Geen van hen heeft het antwoord van een andere module nodig om te beginnen."
         },
         {
-          "title": "Golf twee — de passages die moeten wachten",
-          "body": "Fiscaal en juridisch. Beide redeneren over gevolgen: een fiscale positie is een gevolg van de structuur die de financiële passage net heeft beschreven, en een juridische blootstelling is meestal een gevolg van een commerciële voorwaarde. Ze eerder draaien levert stellige antwoorden op de verkeerde vraag."
+          "title": "Golf twee — juridisch",
+          "body": "Leest HR en commercieel voordat het redeneert: een arbeidsrechtelijke blootstelling of een contractuele claim hangt meestal af van feiten die die twee al hebben vastgesteld. Sinds 4 september 2026 een eigen golf, zodat fiscaal in golf drie zijn afgeronde output ook echt kan lezen in plaats van een belofte die de run niet kon waarmaken."
         },
         {
-          "title": "Golf drie — synthese",
-          "body": "{w3} modules lezen dwars door alles heen wat erboven ligt. Waardering herrekent de prijs dóór de bevindingen heen in plaats van eromheen. Deal economics, portfolio en post-merger integratie nemen dezelfde bevindingen en stellen er een andere vraag aan."
+          "title": "Golf drie — fiscaal",
+          "body": "Leest financieel en juridisch voordat het redeneert: een fiscale positie is een gevolg van de structuur die de financiële passage net heeft beschreven, en overlapt vaak met wat juridisch in die structuur vond."
         },
         {
-          "title": "Golf vier — de documenten",
-          "body": "{w4} opleveringen, samengesteld uit de golven hierboven: vendor due diligence, het IC-memo, de teaser of CIM, het financieringsmemorandum en de documentfabriek voor wat het proces verder nodig heeft."
+          "title": "Golf vier — deal economics",
+          "body": "Leest alles uit golf één tot en met drie en stelt de vraag wat de deal werkelijk oplevert, niet wat hij waard is."
         },
         {
-          "title": "Golf vijf — na de deal",
-          "body": "{w5} modules op hun eigen klok: exit readiness en portefeuillegezondheid. Ze horen niet bij de sprint en wachten er niet op."
-        },
-        {
-          "title": "Golf zes — de periodieke rapportage",
-          "body": "De IC-rapportage staat alleen in de laatste golf, omdat modules binnen één golf gelijktijdig draaien. Naast exit readiness en portefeuillegezondheid zou ze de hoofdstukken van de vorige ronde lezen, of bij een eerste run helemaal niets."
+          "title": "Golf vijf — waardering",
+          "body": "De laatste golf die nog iets draagt. Leest deal economics bovenop alles daarvoor, en herrekent de prijs dóór de bevindingen heen in plaats van eromheen."
         }
       ],
-      "note": "Golf één en twee zijn de due diligence zelf. Alles daarna is wat u ermee doet."
+      "note": "Alle vijf golven samen zijn de due diligence zelf. Het dashboard en het rapport zijn opgebouwd uit wat ze opleveren."
     },
     "contract": {
       "title": "Het outputcontract, veld voor veld",

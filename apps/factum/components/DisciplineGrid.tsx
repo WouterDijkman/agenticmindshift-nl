@@ -3,8 +3,6 @@ import {
   SketchChip,
   SketchClipboard,
   SketchDueDiligence,
-  SketchGear,
-  SketchKnowledge,
   SketchPortfolio,
   SketchReport,
   SketchScale,
@@ -18,15 +16,17 @@ type SketchIcon = ComponentType<{ size?: number; opacity?: number; strokeWidth?:
 
 /**
  * One mark per discipline, in the order `DISCIPLINES` lists them. The mapping
- * is positional rather than keyed by name, so a discipline inserted mid-list
- * shifts every later entry onto its neighbour's icon. Appending is safe;
- * inserting means rebuilding this array in the same change.
+ * is positional rather than keyed by name, so a discipline inserted or
+ * removed mid-list shifts every later entry onto its neighbour's icon.
+ * Appending is safe; inserting or removing means rebuilding this array in the
+ * same change.
  *
  * That happened on 20 August 2026, when `technology` split back into `it` and
- * `ai` and the three rows after it moved down one. The chip had been standing
- * in for the merged row on the reasoning that a chip beats a gear when the row
- * also has to mean AI. Split, each takes the mark it wanted in the first place:
- * the gear for the estate question, the chip for the model question.
+ * `ai`, and again on 8 September 2026, when `it` (and its gear mark) and `esg`
+ * (its knowledge mark) were both removed from `DISCIPLINES` — the modules
+ * moved to `factum-it-dd` and `factum-esg-dd` on 3 September 2026, and this
+ * array had drifted from that for five days before anyone checked it against
+ * `lib/site.ts` directly.
  */
 const ICONS: SketchIcon[] = [
   SketchReport, // financial
@@ -34,9 +34,7 @@ const ICONS: SketchIcon[] = [
   SketchScale, // legal
   SketchClipboard, // tax
   SketchSparring, // hr
-  SketchGear, // it
   SketchChip, // ai
-  SketchKnowledge, // esg
   SketchSpeed, // operational
   SketchDueDiligence // valuation
 ];

@@ -107,19 +107,9 @@
         "result": "Quem está contratualmente preso, quem não está, e quanto custam mesmo pensões e convenção coletiva."
       },
       {
-        "label": "TI e tecnologia",
-        "pain": "A dívida técnica não aparece em balanço nenhum, e as licenças continuam a correr em contratos que ninguém contou.",
-        "result": "O que corre de facto, quanto custa corrigir, e que licenças se consolidam depois do closing."
-      },
-      {
         "label": "IA",
         "pain": "«Assente em IA» é quase sempre uma licença sobre o modelo de outra pessoa, e de quem são os dados fica sem resposta.",
         "result": "De quem é o modelo e de quem são os dados, o que cai sob o Regulamento de IA da UE, e que processos se automatizam mesmo."
-      },
-      {
-        "label": "ESG",
-        "pain": "As obrigações de reporte mudam de mãos com a empresa.",
-        "result": "O que passa a ter de ser reportado, e que investimento isso exige."
       },
       {
         "label": "Operacional",
@@ -145,8 +135,8 @@
       "values": {
         "module": "Pré-definido, um dos da biblioteca",
         "finding": "Uma afirmação, numa frase",
-        "evidence": "Citado literalmente",
-        "document": "Nome do ficheiro e página",
+        "evidence": "Citado literalmente, por citação",
+        "document": "Nome do ficheiro e página, por citação",
         "review": "Obrigatória antes da entrega"
       },
       "more": "+2 campos, num ecrã mais largo"
@@ -173,26 +163,12 @@
       "Financial DD",
       "Commercial DD",
       "HR DD",
-      "IT DD",
-      "AI DD",
-      "ESG DD",
       "Operational DD",
-      "IM screener",
-      "Vigil monitoring",
-      "Tax DD",
+      "AI DD",
       "Legal DD",
+      "Tax DD",
       "Deal economics",
-      "Valuation",
-      "Portfolio management",
-      "Post-merger integration",
-      "Vendor due diligence",
-      "IC memo",
-      "Teaser / CIM",
-      "Financing memorandum",
-      "Document factory",
-      "Exit readiness",
-      "Portfolio health",
-      "IC report"
+      "Valuation"
     ],
     "waves": [
       {
@@ -200,24 +176,20 @@
         "body": "Estes módulos não dependem de nada a montante. Arrancam todos ao mesmo tempo."
       },
       {
-        "title": "Leituras dependentes",
-        "body": "Fiscal e jurídico só conseguem raciocinar com a primeira onda em mãos."
+        "title": "Jurídica",
+        "body": "Lê RH e comercial antes de raciocinar — uma exposição laboral ou uma reclamação contratual costuma assentar em factos que essas duas leituras já estabeleceram."
       },
       {
-        "title": "Síntese",
-        "body": "Avaliação, deal economics e carteira leem tudo o que veio antes."
+        "title": "Fiscal",
+        "body": "Lê financeira e jurídica antes de raciocinar — uma posição fiscal é consequência da estrutura que a leitura financeira acabou de descrever, e sobrepõe-se muitas vezes ao que a jurídica encontrou nessa estrutura."
       },
       {
-        "title": "Entregáveis",
-        "body": "Os documentos que recebe, montados a partir das ondas acima."
+        "title": "Deal economics",
+        "body": "Lê tudo o que veio antes e pergunta o que o negócio realmente rende."
       },
       {
-        "title": "Pós-closing",
-        "body": "Preparação para a saída e saúde da carteira. Correm ao seu próprio ritmo, depois da operação."
-      },
-      {
-        "title": "Reporte periódico",
-        "body": "O relatório ao comité de investimento lê esses dois módulos, por isso espera por eles."
+        "title": "Avaliação",
+        "body": "Lê deal economics por cima de tudo o que veio antes, e recalcula o preço atravessando as constatações em vez de as contornar."
       }
     ],
     "chart": {
@@ -396,19 +368,7 @@
       "tiles": {
         "modules": {
           "title": "Módulos por mandato",
-          "body": "Cada um delimitado à partida a uma disciplina ou a um entregável. Correm todos, em cada mandato."
-        },
-        "analysis": {
-          "title": "Entregam constatações",
-          "body": "Leem o data room e devolvem afirmações com a passagem de origem por baixo."
-        },
-        "deliverables": {
-          "title": "Montam documentos",
-          "body": "Memorando para o comité, vendor due diligence, teaser, memorando de financiamento. Construídos sobre as constatações acima."
-        },
-        "monitoring": {
-          "title": "Continuam após o closing",
-          "body": "Folga nos covenants e sinais precoces, ao seu próprio ritmo."
+          "body": "Cada um delimitado à partida a uma disciplina. Correm todos, em cada mandato."
         },
         "waves": {
           "title": "Ondas de despacho",
@@ -500,6 +460,10 @@
         {
           "title": "Fonte fabricada",
           "body": "Uma citação que não resolve para uma passagem real."
+        },
+        {
+          "title": "Não confirmado após reparação",
+          "body": "A verificação de fabricação continua a encontrar uma afirmação sem suporte depois das duas tentativas."
         },
         {
           "title": "Recusa por âmbito",
@@ -594,7 +558,7 @@
         },
         {
           "q": "Porquê ondas em vez de tudo ao mesmo tempo?",
-          "a": "O fiscal não consegue raciocinar sem as leituras financeira e jurídica. A avaliação não consegue precificar sem o fiscal. O grafo de dependências define a ordem; a onda 1 continua a lançar oito módulos em paralelo."
+          "a": "O fiscal não consegue raciocinar sem as leituras financeira e jurídica. A avaliação não consegue precificar sem o fiscal. O grafo de dependências define a ordem; a onda 1 continua a lançar {w1} módulos em paralelo."
         },
         {
           "q": "O que acontece quando o modelo não sabe?",
@@ -651,17 +615,17 @@
     },
     "delivery": {
       "title": "Como chega",
-      "lead": "Três formatos, lado a lado desde o primeiro dia.",
+      "lead": "O dashboard e o relatório, mais a lista viva do que nunca chegou.",
       "formats": [
         {
-          "label": "Dashboard de revisão",
-          "items": "Financeiro, fiscal, tecnologia e continuidade",
+          "label": "Dashboard em direto",
+          "items": "Todas as disciplinas",
           "body": "Um dashboard interativo. Siga qualquer constatação até à passagem de origem."
         },
         {
-          "label": "Relatório escrito",
-          "items": "As restantes disciplinas",
-          "body": "Um relatório escrito estruturado, reconciliado na mesma narrativa."
+          "label": "Relatório reconciliado",
+          "items": "As mesmas constatações, reconciliadas",
+          "body": "Um relatório escrito: as constatações de cada disciplina reconciliadas numa única narrativa."
         },
         {
           "label": "Junto de ambos",
@@ -975,30 +939,26 @@
       "steps": [
         {
           "title": "Vaga um — as leituras independentes",
-          "body": "{w1} módulos abrem ao mesmo tempo. Financeiro, comercial, recursos humanos, TI, IA, ESG e operações entram em paralelo no data room, a par do filtro ao memorando informativo e da configuração da monitorização. Nenhum precisa da resposta de outro módulo para começar."
+          "body": "{w1} módulos abrem ao mesmo tempo. Financeiro, comercial, recursos humanos, operações e IA entram em paralelo no data room. Nenhum precisa da resposta de outro módulo para começar."
         },
         {
-          "title": "Vaga dois — as leituras que têm de esperar",
-          "body": "Fiscal e jurídica. Ambas raciocinam sobre consequências: uma posição fiscal é consequência da estrutura que a leitura financeira acabou de descrever, e uma exposição jurídica é normalmente consequência de uma condição comercial. Corrê-las primeiro produz respostas seguras à pergunta errada."
+          "title": "Vaga dois — jurídica",
+          "body": "Lê RH e comercial antes de raciocinar: uma exposição laboral ou uma reclamação contratual costuma assentar em factos que essas duas leituras já estabeleceram. Vaga própria desde 4 de setembro de 2026, para que o fiscal na vaga três possa mesmo ler a sua saída concluída, e não uma promessa que a execução não conseguia cumprir."
         },
         {
-          "title": "Vaga três — síntese",
-          "body": "{w3} módulos leem através de tudo o que está acima. A avaliação recalcula o preço atravessando as constatações em vez de as contornar. Deal economics, carteira e integração pós-fusão pegam no mesmo conjunto e fazem-lhe outra pergunta."
+          "title": "Vaga três — fiscal",
+          "body": "Lê financeiro e jurídica antes de raciocinar: uma posição fiscal é consequência da estrutura que a leitura financeira acabou de descrever, e sobrepõe-se muitas vezes ao que a jurídica encontrou nessa estrutura."
         },
         {
-          "title": "Vaga quatro — os documentos",
-          "body": "{w4} entregáveis, montados a partir das vagas acima: vendor due diligence, o memorando para o comité de investimento, o teaser ou CIM, o memorando de financiamento e a fábrica de documentos para o resto."
+          "title": "Vaga quatro — deal economics",
+          "body": "Lê tudo o que veio nas vagas um a três e pergunta o que o negócio realmente rende, não quanto vale."
         },
         {
-          "title": "Vaga cinco — depois do negócio",
-          "body": "{w5} módulos com relógio próprio: preparação para a saída e saúde da carteira. Não fazem parte do sprint nem esperam por ele."
-        },
-        {
-          "title": "Vaga seis — o relatório periódico",
-          "body": "O relatório ao comité de investimento fica sozinho na última vaga, porque os módulos da mesma vaga correm ao mesmo tempo. Ao lado dos outros dois leria os capítulos da ronda anterior, ou nada numa primeira execução."
+          "title": "Vaga cinco — avaliação",
+          "body": "A última vaga que ainda entrega algo. Lê deal economics por cima de tudo o que veio antes, e recalcula o preço atravessando as constatações em vez de as contornar."
         }
       ],
-      "note": "As vagas um e dois são a due diligence. Tudo o que vem depois é o que faz com ela."
+      "note": "As cinco vagas juntas são a due diligence. O dashboard e o relatório são construídos a partir do que entregam."
     },
     "contract": {
       "title": "O contrato de saída, campo a campo",

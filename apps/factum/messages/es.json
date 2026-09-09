@@ -6,7 +6,7 @@
     },
     "platform": {
       "title": "Plataforma de due diligence con IA",
-      "description": "{modules} módulos de due diligence en diez disciplinas. Cada hallazgo cita un documento. Cada entregable pasa por un control humano."
+      "description": "{modules} módulos de due diligence en ocho disciplinas. Cada hallazgo cita un documento. Cada entregable pasa por un control humano."
     },
     "sprint": {
       "title": "Revisión completa del data room en días",
@@ -107,19 +107,9 @@
         "result": "Quién está atado por contrato, quién no, y cuánto cuestan de verdad pensiones y convenio."
       },
       {
-        "label": "TI y tecnología",
-        "pain": "La deuda técnica no figura en ningún balance, y las licencias siguen corriendo en contratos que nadie ha contado.",
-        "result": "Qué corre de verdad, qué cuesta repararlo, y qué licencias se pueden consolidar tras el cierre."
-      },
-      {
         "label": "IA",
         "pain": "«Impulsado por IA» suele ser una licencia sobre el modelo de otro, y de quién son los datos queda sin responder.",
         "result": "De quién es el modelo y de quién los datos, qué entra en el Reglamento de IA, y qué procesos se automatizan de verdad."
-      },
-      {
-        "label": "ESG",
-        "pain": "Las obligaciones de reporte viajan con la empresa hasta el comprador.",
-        "result": "Qué habrá que reportar, y qué inversión exige llegar a hacerlo."
       },
       {
         "label": "Operativa",
@@ -145,8 +135,8 @@
       "values": {
         "module": "Predefinido, uno de la biblioteca",
         "finding": "Una afirmación, en una frase",
-        "evidence": "Citado literalmente",
-        "document": "Nombre del archivo y página",
+        "evidence": "Citado literalmente, por cita",
+        "document": "Nombre del archivo y página, por cita",
         "review": "Obligatoria antes de la entrega"
       },
       "more": "+2 campos, en una pantalla más ancha"
@@ -173,26 +163,12 @@
       "Financial DD",
       "Commercial DD",
       "HR DD",
-      "IT DD",
-      "AI DD",
-      "ESG DD",
       "Operational DD",
-      "IM screener",
-      "Vigil monitoring",
-      "Tax DD",
+      "AI DD",
       "Legal DD",
+      "Tax DD",
       "Deal economics",
-      "Valuation",
-      "Portfolio management",
-      "Post-merger integration",
-      "Vendor due diligence",
-      "IC memo",
-      "Teaser / CIM",
-      "Financing memorandum",
-      "Document factory",
-      "Exit readiness",
-      "Portfolio health",
-      "IC report"
+      "Valuation"
     ],
     "waves": [
       {
@@ -200,24 +176,20 @@
         "body": "Estos módulos no necesitan nada aguas arriba. Arrancan todos a la vez."
       },
       {
-        "title": "Lecturas dependientes",
-        "body": "Fiscal y legal solo pueden razonar con la primera ola en la mano."
+        "title": "Legal",
+        "body": "Lee RR. HH. y comercial antes de razonar: una exposición laboral o una reclamación contractual suele depender de hechos que esas dos lecturas ya han establecido."
       },
       {
-        "title": "Síntesis",
-        "body": "Valoración, deal economics y cartera leen todo lo anterior."
+        "title": "Fiscal",
+        "body": "Lee financiero y legal antes de razonar: una posición fiscal es consecuencia de la estructura que la lectura financiera acaba de describir, y a menudo se solapa con lo que legal encontró en ella."
       },
       {
-        "title": "Entregables",
-        "body": "Los documentos que usted recibe, montados a partir de las olas anteriores."
+        "title": "Deal economics",
+        "body": "Lee todo lo anterior y pregunta qué rinde realmente la operación."
       },
       {
-        "title": "Post-cierre",
-        "body": "Preparación para la salida y salud de la cartera. Corren a su propio ritmo, después de la operación."
-      },
-      {
-        "title": "Reporting periódico",
-        "body": "El informe al comité de inversión lee esos dos módulos, así que los espera."
+        "title": "Valoración",
+        "body": "Lee deal economics encima de todo lo anterior, y recalcula el precio atravesando los hallazgos en lugar de rodearlos."
       }
     ],
     "chart": {
@@ -396,19 +368,7 @@
       "tiles": {
         "modules": {
           "title": "Módulos por encargo",
-          "body": "Cada uno acotado de antemano a una disciplina o a un entregable. Corren todos, en cada mandato."
-        },
-        "analysis": {
-          "title": "Entregan hallazgos",
-          "body": "Leen el data room y devuelven afirmaciones con el pasaje de origen debajo."
-        },
-        "deliverables": {
-          "title": "Montan documentos",
-          "body": "Memo para el comité, vendor due diligence, teaser, memorando de financiación. Construidos sobre los hallazgos de arriba."
-        },
-        "monitoring": {
-          "title": "Siguen tras el cierre",
-          "body": "Margen de covenants y señales tempranas, a su propio ritmo."
+          "body": "Cada uno acotado de antemano a una disciplina. Corren todos, en cada mandato."
         },
         "waves": {
           "title": "Olas de despacho",
@@ -500,6 +460,10 @@
         {
           "title": "Fuente fabricada",
           "body": "Una cita que no resuelve a un pasaje real."
+        },
+        {
+          "title": "Sin confirmar tras la reparación",
+          "body": "El control de fabricación sigue encontrando una afirmación sin respaldo después de los dos reintentos."
         },
         {
           "title": "Rechazo por alcance",
@@ -594,7 +558,7 @@
         },
         {
           "q": "¿Por qué olas y no todo a la vez?",
-          "a": "Fiscal no puede razonar sin las lecturas financiera y legal. Valoración no puede fijar precio sin fiscal. El grafo de dependencias marca el orden; la ola 1 sigue lanzando ocho módulos en paralelo."
+          "a": "Fiscal no puede razonar sin las lecturas financiera y legal. Valoración no puede fijar precio sin fiscal. El grafo de dependencias marca el orden; la ola 1 sigue lanzando {w1} módulos en paralelo."
         },
         {
           "q": "¿Qué pasa cuando el modelo no lo sabe?",
@@ -651,17 +615,17 @@
     },
     "delivery": {
       "title": "Cómo se entrega",
-      "lead": "Tres formatos, en paralelo desde el primer día.",
+      "lead": "El panel y el informe, más la lista viva de lo que nunca llegó.",
       "formats": [
         {
-          "label": "Panel de revisión",
-          "items": "Financiero, fiscal, tecnología y empresa en funcionamiento",
+          "label": "Panel en vivo",
+          "items": "Todas las disciplinas",
           "body": "Un panel en vivo, navegable. Siga cualquier hallazgo hasta su pasaje de origen."
         },
         {
-          "label": "Informe escrito",
-          "items": "Las disciplinas restantes",
-          "body": "Un informe escrito estructurado, reconciliado en la misma narrativa."
+          "label": "Informe reconciliado",
+          "items": "Los mismos hallazgos, reconciliados",
+          "body": "Un informe escrito: los hallazgos de cada disciplina reconciliados en una sola narrativa."
         },
         {
           "label": "Junto a ambos",
@@ -975,30 +939,26 @@
       "steps": [
         {
           "title": "Oleada uno — las lecturas independientes",
-          "body": "{w1} módulos abren a la vez. Financiero, comercial, RR. HH., TI, IA, ESG y operaciones entran en paralelo al data room, junto al filtro del memorando informativo y la configuración de la monitorización. Ninguno necesita la respuesta de otro módulo para empezar."
+          "body": "{w1} módulos abren a la vez. Financiero, comercial, RR. HH., operaciones e IA entran en paralelo al data room. Ninguno necesita la respuesta de otro módulo para empezar."
         },
         {
-          "title": "Oleada dos — las lecturas que tienen que esperar",
-          "body": "Fiscal y legal. Ambas razonan sobre consecuencias: una posición fiscal es consecuencia de la estructura que acaba de describir la lectura financiera, y una exposición legal suele ser consecuencia de una condición comercial. Ejecutarlas antes produce respuestas seguras a la pregunta equivocada."
+          "title": "Oleada dos — legal",
+          "body": "Lee RR. HH. y comercial antes de razonar: una exposición laboral o una reclamación contractual suele depender de hechos que esas dos lecturas ya han establecido. Su propia oleada desde el 4 de septiembre de 2026, para que fiscal en la oleada tres pueda leer de verdad su resultado terminado, no una promesa que la ejecución no podía cumplir."
         },
         {
-          "title": "Oleada tres — síntesis",
-          "body": "{w3} módulos leen a través de todo lo anterior. La valoración recalcula el precio atravesando los hallazgos en lugar de rodearlos. Deal economics, cartera e integración post-fusión toman el mismo conjunto de hallazgos y le hacen una pregunta distinta."
+          "title": "Oleada tres — fiscal",
+          "body": "Lee financiero y legal antes de razonar: una posición fiscal es consecuencia de la estructura que acaba de describir la lectura financiera, y a menudo se solapa con lo que legal encontró en ella."
         },
         {
-          "title": "Oleada cuatro — los documentos",
-          "body": "{w4} entregables, montados a partir de las oleadas anteriores: vendor due diligence, el memorando para el comité de inversión, el teaser o CIM, el memorando de financiación y la fábrica de documentos para lo demás."
+          "title": "Oleada cuatro — deal economics",
+          "body": "Lee todo lo de las oleadas uno a tres y pregunta qué rinde realmente la operación, no cuánto vale."
         },
         {
-          "title": "Oleada cinco — después de la operación",
-          "body": "{w5} módulos con su propio reloj: preparación para la salida y salud de la cartera. No forman parte del sprint ni esperan a él."
-        },
-        {
-          "title": "Oleada seis — el informe periódico",
-          "body": "El informe al comité de inversión va solo en la última oleada, porque los módulos de una misma oleada corren a la vez. Junto a los otros dos leería los capítulos de la ronda anterior, o nada en una primera ejecución."
+          "title": "Oleada cinco — valoración",
+          "body": "La última oleada que aporta algo. Lee deal economics encima de todo lo anterior, y recalcula el precio atravesando los hallazgos en lugar de rodearlos."
         }
       ],
-      "note": "Las oleadas uno y dos son la due diligence. Todo lo que viene después es lo que usted hace con ella."
+      "note": "Las cinco oleadas juntas son la due diligence. El panel y el informe se construyen con lo que entregan."
     },
     "contract": {
       "title": "El contrato de salida, campo a campo",

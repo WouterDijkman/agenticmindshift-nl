@@ -120,6 +120,66 @@ uit dan één consequent volgehouden.
 
 ## Gedaan
 
+### De moduleroster ijlde weer na, in twee stappen · 2026-09-08
+
+`lib/site.ts`'s `MODULES` beschrijft zichzelf als "derived from the product
+source rather than from a strategy document", maar was sinds 21 augustus niet
+meer nagekeken tegen `MODULE_WAVES` in `src/lib/dispatch/module-registry.ts`.
+
+**Eerste pas.** Op 21 augustus zijn zes opleveringsmodules (vdd, ic-memo,
+teaser, fin-memo, document-factory, ic-report) verhuisd naar het aparte repo
+`factum-deliverables`, en zes andere (vigil, portfolio, pmi, exit-readiness,
+portfolio-health, im-screener) uit de productpropositie gehaald. De site bleef
+23 modules in 6 golven tonen. Bevestigd met Wouter: het product levert vandaag
+één live dashboard en één gesynthetiseerd geschreven rapport, geen losse
+opleveringsmodules meer.
+
+**Tweede pas, alleen gevonden doordat Wouter er expliciet naar vroeg.** Op 3
+september zijn óók `it` en `esg` uit de moduleroster gelicht (naar
+`factum-it-dd`/`factum-esg-dd`), en op 4 september is de golfindeling zelf
+veranderd: legal, tax, deal-economics en valuation kregen elk hun eigen golf
+in plaats van gedeelde golf 2/3, omdat twee modules in dezelfde golf elkaars
+output nooit konden lezen (signalen publiceren pas als een module helemaal
+klaar is). De eerste pas had dit gemist — hij keek naar `MODULE_WAVES`'
+golfstructuur maar niet naar `ModuleSlug` zelf, waar `it`/`esg` al ontbraken.
+Wat overblijft: **9 modules, 5 golven die iets dragen** (golf 6 blijft
+gereserveerd), **8 disciplines** (`DISCIPLINES` verloor `it` en `esg` net als
+`MODULES`).
+
+**Wat is aangepast, cumulatief over beide passen:**
+
+| Bestand | Wijziging |
+|---|---|
+| `lib/site.ts` | `MODULES` teruggebracht naar de 9 echte modules over 5 golven (golf 1: financial/commercial/hr/operational/ai-dd; golf 2: legal; golf 3: tax; golf 4: deal-economics; golf 5: valuation); `DISCIPLINES` van 10 naar 8 (`it`/`esg` eruit); `WAVE_COUNT` 6→5; `POST_CLOSE_FIRST_WAVE` verwijderd; `HARD_BLOCK_COUNT` 7→8 (`agent-review-graph.ts` heeft aparte `FABRICATED_SOURCE`- en `FABRICATION_CHECK_FAILED`-blokkades) |
+| `components/DisciplineGrid.tsx` | `ICONS` teruggebracht van 10 naar 8 marks, `SketchGear`(it)/`SketchKnowledge`(esg) eruit, positioneel gelijk gehouden met `DISCIPLINES` |
+| `components/DispatchGraph.tsx` | de dashed-rail-logica voor post-close golven verwijderd |
+| `app/globals.css` | `.discipline-index`'s brede breakpoint van 5 naar 4 kolommen (8 disciplines deelt niet meer exact door 5); `.discipline-grid` blijft op 2 kolommen (8 deelt nog steeds exact door 2) |
+| `app/[locale]/platform/page.tsx` | "deliverables"/"monitoring"-tegels uit de cijferblok; achtste hard-block-item toegevoegd aan de tegel-spans |
+| `app/[locale]/method/page.tsx` | `numbers` uitgebreid naar `w1`..`w5` (was `w1`..`w3`) voor de 5 golfstappen |
+| `messages/{nl,en,de,es,pt}.json` | `shared.modules` (23→9, herordend naar de echte golfvolgorde), `shared.waves` (6→5, elk van golf 2-5 nu één module) en `shared.disciplines` (10→8, `it`/`esg`-rijen eruit) getrimd, positioneel gelijk gehouden zoals `roster.manifest.ts` vereist; het statische "Ten/Tien/Zehn/Diez/Dez disciplines"-opschrift (2× per taal: metadata-omschrijving + coverage-titel) hardgecodeerd naar acht — dit gebruikte geen ICU-variabele en zou anders zijn blijven staan; `platform.scale.tiles.deliverables`/`.monitoring` verwijderd; `platform.blocks.items` kreeg een achtste item; `method.waves.steps` herschreven naar 5 stappen (golf 2 = alleen legal, golf 3 = alleen tax, golf 4 = deal economics, golf 5 = valuation); `method.waves.note` en `sprint.delivery` herschreven naar "één dashboard, één rapport, plus de openstaande-vragenlijst"; een hardgecodeerd "acht/eight/ocho/oito modules"-getal in de FAQ (golf 1) vervangen door de `{w1}`-ICU-variabele |
+
+**Gecontroleerd, niet aangepast:** `governance`'s "The other {other} modules"
+en alle `{modules}`/`{waves}`/`{blocks}`/`{w1}`..`{w5}`-ICU-plekken rekenen
+zich vanzelf om zodra `lib/site.ts` klopt.
+
+`node_modules/.bin/tsc --noEmit` schoon. `shared.modules`/`shared.waves`/
+`shared.disciplines`-lengtes handmatig geverifieerd tegen
+`MODULE_COUNT`/`WAVE_COUNT`/`DISCIPLINE_COUNT` voor alle vijf talen (elk
+9/5/8) — dezelfde toets die `lib/roster.manifest.ts` bij de volgende
+build/cold-start zelf ook doet. Geen `next build` gedraaid: er draaide al een
+dev-server van een andere sessie in deze map.
+
+**Les voor de volgende keer dit soort telling nakijkt:** kijk naar
+`ModuleSlug` én `MODULE_WAVES` samen, niet naar de golfstructuur alleen — de
+eerste pas keek alleen naar welke golven leeg waren en miste daardoor dat de
+roster zelf ook was gekrompen.
+
+**Nog niet gedaan, met opzet:** een moedertaalspreker-controle op de
+Duitse/Spaanse/Portugese vertalingen hierboven. De structuur en cijfers zijn
+correct (build-guard-getoetst), de formulering is een directe, zorgvuldige
+vertaling maar niet door een native speaker nagelezen. Doe dat voordat dit
+live gaat als het nog niet is gebeurd.
+
 ### `/pre-sale` — de verkoperskant heeft een eigen deur · 2026-08-24
 
 ICP 3 uit het document. Stond als één bijzin in de lead van

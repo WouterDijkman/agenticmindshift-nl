@@ -3,12 +3,9 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { pageMetadata } from '@/lib/pageMetadata';
 import {
-  ANALYSIS_MODULE_COUNT,
-  DELIVERABLE_MODULE_COUNT,
   DISCIPLINE_COUNT,
   HARD_BLOCK_COUNT,
   MODULE_COUNT,
-  MONITORING_MODULE_COUNT,
   WAVE_COUNT,
   WAVE_SIZES,
   ZDR_MODULE_COUNT
@@ -179,11 +176,15 @@ export default async function PlatformPage({
         <SectionHeader title={t('blocks.title', n)} lead={t('blocks.lead')} align="wide" />
         <div style={{ marginTop: 'clamp(28px, 4vw, 48px)' }}>
           <BentoGrid
+            /* Eight items: two lead tiles at span 3 (one row of 6), the
+               remaining six at span 2 (two more rows of three, 6 each) —
+               chosen because 8 doesn't split into even span-3 rows the way 7
+               did. Re-check this if the item count changes again. */
             tiles={(t.raw('blocks.items') as { title: string; body: string }[]).map(
               (item, i) => ({
                 ...item,
                 tag: String(i + 1).padStart(2, '0'),
-                span: (i < 2 ? 3 : i < 5 ? 2 : 3) as 2 | 3
+                span: (i < 2 ? 3 : 2) as 2 | 3
               })
             )}
           />
@@ -278,17 +279,16 @@ export default async function PlatformPage({
         <SectionHeader title={t('scale.title')} lead={t('scale.lead')} align="wide" />
         <div style={{ marginTop: 'clamp(32px, 4vw, 52px)' }}>
           <BentoGrid
-            /* The three-way split leads, because it is the answer to "what do
-               I actually get" — findings, documents, and something that keeps
-               running after the deal. The totals underneath are the evidence
-               for it. The old lead tile counted sub-agents, which measured our
-               plumbing rather than the reader's output. */
+            /* Used to lead with a three-way split — findings, documents, and
+               something that keeps running after the deal — back when the
+               roster held modules of all three kinds. It doesn't anymore (see
+               lib/site.ts): every module today returns a finding, and the
+               dashboard plus the synthesized report are built from those, not
+               from a separate deliverable-producing wave. Four tiles, no
+               tile claiming a count of zero. */
             tiles={[
               { ...tile('modules'), stat: String(MODULE_COUNT), span: 3, accent: true },
-              { ...tile('analysis'), stat: String(ANALYSIS_MODULE_COUNT), span: 3 },
-              { ...tile('deliverables'), stat: String(DELIVERABLE_MODULE_COUNT), span: 2 },
-              { ...tile('monitoring'), stat: String(MONITORING_MODULE_COUNT), span: 2 },
-              { ...tile('waves'), stat: String(WAVE_COUNT), span: 2 },
+              { ...tile('waves'), stat: String(WAVE_COUNT), span: 3 },
               { ...tile('zdr'), stat: String(ZDR_MODULE_COUNT), span: 3 },
               { ...tile('blocks'), stat: String(HARD_BLOCK_COUNT), span: 3 }
             ]}

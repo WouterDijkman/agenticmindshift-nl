@@ -6,7 +6,7 @@
     },
     "platform": {
       "title": "AI due diligence platform",
-      "description": "{modules} due-diligence modules across ten disciplines. Every finding cites a document. Every output passes a human gate."
+      "description": "{modules} due-diligence modules across eight disciplines. Every finding cites a document. Every output passes a human gate."
     },
     "sprint": {
       "title": "Full data-room review in days",
@@ -107,19 +107,9 @@
         "result": "Who is contractually tied in, who isn’t, and what pension and collective labour agreements really cost."
       },
       {
-        "label": "IT & technology",
-        "pain": "Technical debt is on nobody’s balance sheet, and licences run on inside contracts nobody has counted.",
-        "result": "What actually runs, what it costs to fix, and which licences consolidate after closing."
-      },
-      {
         "label": "AI",
         "pain": "“AI-driven” is usually a licence on someone else’s model, and who owns the data goes unanswered.",
         "result": "Whose model and whose data, what falls under the AI Act, and which processes genuinely automate."
-      },
-      {
-        "label": "ESG",
-        "pain": "Reporting obligations move to the buyer along with the company.",
-        "result": "What has to be reported from here, and what that takes in investment."
       },
       {
         "label": "Operational",
@@ -145,8 +135,8 @@
       "values": {
         "module": "Pre-scoped, one of the library",
         "finding": "One claim, in one sentence",
-        "evidence": "Quoted word for word",
-        "document": "File name and page",
+        "evidence": "Quoted word for word, per citation",
+        "document": "File name and page, per citation",
         "review": "Required before release"
       },
       "more": "+2 fields, on a wider screen"
@@ -173,26 +163,12 @@
       "Financial DD",
       "Commercial DD",
       "HR DD",
-      "IT DD",
-      "AI DD",
-      "ESG DD",
       "Operational DD",
-      "IM screener",
-      "Vigil monitoring",
-      "Tax DD",
+      "AI DD",
       "Legal DD",
+      "Tax DD",
       "Deal economics",
-      "Valuation",
-      "Portfolio management",
-      "Post-merger integration",
-      "Vendor due diligence",
-      "IC memo",
-      "Teaser / CIM",
-      "Financing memorandum",
-      "Document factory",
-      "Exit readiness",
-      "Portfolio health",
-      "IC report"
+      "Valuation"
     ],
     "waves": [
       {
@@ -200,24 +176,20 @@
         "body": "These modules need nothing upstream of them. They all start at once."
       },
       {
-        "title": "Dependent reads",
-        "body": "Tax and legal can only reason with the first wave in hand."
+        "title": "Legal",
+        "body": "Reads HR and commercial before it reasons — an employment exposure or a contractual claim usually turns on facts those two reads have already established."
       },
       {
-        "title": "Synthesis",
-        "body": "Valuation, deal economics and portfolio read across everything before them."
+        "title": "Tax",
+        "body": "Reads financial and legal before it reasons — a tax position is a consequence of the structure the financial read has just described, and often overlaps with what legal found in it."
       },
       {
-        "title": "Deliverables",
-        "body": "The documents you actually receive, assembled from the waves above."
+        "title": "Deal economics",
+        "body": "Reads across everything above it and asks what the deal actually returns."
       },
       {
-        "title": "Post-close",
-        "body": "Exit readiness and portfolio health. They run on their own clock, after the deal."
-      },
-      {
-        "title": "Periodic reporting",
-        "body": "The investment-committee report reads those two modules, so it waits for them."
+        "title": "Valuation",
+        "body": "Reads deal economics on top of everything before it, and recalculates the price through the findings rather than around them."
       }
     ],
     "chart": {
@@ -314,7 +286,7 @@
       "link": "Read the governance page"
     },
     "coverage": {
-      "title": "Ten disciplines, one pass over the same room",
+      "title": "Eight disciplines, one pass over the same room",
       "lead": "What one discipline finds is on the table for the next one.",
       "note": "Dependency-ordered: later work waits for the findings it depends on.",
       "ctaLine": "Your team cannot get through this in two weeks."
@@ -396,19 +368,7 @@
       "tiles": {
         "modules": {
           "title": "Modules per engagement",
-          "body": "Each one pre-scoped to a discipline or a deliverable. They all run, every mandate."
-        },
-        "analysis": {
-          "title": "Return findings",
-          "body": "They read the data room out and return claims with the source passage underneath."
-        },
-        "deliverables": {
-          "title": "Assemble documents",
-          "body": "IC memo, vendor due diligence, teaser, financing memorandum. Built on the findings above."
-        },
-        "monitoring": {
-          "title": "Keep running after close",
-          "body": "Covenant headroom and early warning signals, on their own clock."
+          "body": "Each one pre-scoped to a discipline. They all run, every mandate."
         },
         "waves": {
           "title": "Dispatch waves",
@@ -500,6 +460,10 @@
         {
           "title": "Fabricated source",
           "body": "A citation that does not resolve to a real passage."
+        },
+        {
+          "title": "Unsupported after repair",
+          "body": "The fabrication check still finds an unsupported claim after both retries have run."
         },
         {
           "title": "Scope refusal",
@@ -594,7 +558,7 @@
         },
         {
           "q": "Why waves instead of running everything at once?",
-          "a": "Tax cannot reason without the financial and legal reads. Valuation cannot price without tax. The dependency graph sets the order; wave 1 still runs eight modules in parallel."
+          "a": "Tax cannot reason without the financial and legal reads. Valuation cannot price without tax. The dependency graph sets the order; wave 1 still runs {w1} modules in parallel."
         },
         {
           "q": "What happens when the model doesn’t know?",
@@ -651,17 +615,17 @@
     },
     "delivery": {
       "title": "How it arrives",
-      "lead": "Three formats, running side by side from day one.",
+      "lead": "The dashboard and the report, plus the running list of what never arrived.",
       "formats": [
         {
-          "label": "Review dashboard",
-          "items": "Financial, tax, technology and going-concern",
+          "label": "Live dashboard",
+          "items": "Every discipline",
           "body": "A live, click-through dashboard. Follow any finding back to its source passage."
         },
         {
-          "label": "Written report",
-          "items": "The remaining disciplines",
-          "body": "A structured written report, reconciled into the same narrative."
+          "label": "Synthesized report",
+          "items": "The same findings, reconciled",
+          "body": "One written report: every discipline's findings resolved into a single narrative."
         },
         {
           "label": "Alongside both",
@@ -975,30 +939,26 @@
       "steps": [
         {
           "title": "Wave one — the independent reads",
-          "body": "{w1} modules open at the same moment. Financial, commercial, HR, IT, AI, ESG and operational go into the data room in parallel, alongside the information-memorandum screener and the monitoring set-up. None of them needs another module’s answer to start."
+          "body": "{w1} modules open at the same moment. Financial, commercial, HR, operational and AI go into the data room in parallel. None of them needs another module’s answer to start."
         },
         {
-          "title": "Wave two — the reads that have to wait",
-          "body": "Tax and legal. Both reason about consequences: a tax position is a consequence of the structure the financial read has just described, and a legal exposure is usually a consequence of a commercial term. Running them first produces confident answers to the wrong question."
+          "title": "Wave two — legal",
+          "body": "Reads HR and commercial before it reasons: an employment exposure or a contractual claim usually turns on facts those two reads have already established. Its own wave since 4 September 2026, so tax in wave three can actually read its finished output rather than a promise the run couldn't keep."
         },
         {
-          "title": "Wave three — synthesis",
-          "body": "{w3} modules read across everything above them. Valuation recalculates the price through the findings rather than around them. Deal economics, portfolio and post-merger integration take the same body of findings and ask a different question of it."
+          "title": "Wave three — tax",
+          "body": "Reads financial and legal before it reasons: a tax position is a consequence of the structure the financial read has just described, and often overlaps with what legal found in the corporate structure."
         },
         {
-          "title": "Wave four — the documents",
-          "body": "{w4} deliverables, assembled from the waves above: vendor due diligence, the investment-committee memo, the teaser or CIM, the financing memorandum, and the document factory for whatever else the process needs."
+          "title": "Wave four — deal economics",
+          "body": "Reads across everything in waves one to three and asks what the deal actually returns, not what it is worth."
         },
         {
-          "title": "Wave five — after the deal",
-          "body": "{w5} modules on their own clock: exit readiness and portfolio health. They are not part of the sprint and do not wait for it."
-        },
-        {
-          "title": "Wave six — the periodic report",
-          "body": "The investment-committee report sits alone in the last wave, because modules inside one wave run at the same time. Next to exit readiness and portfolio health it would read the previous round’s chapters, or nothing at all on a first run."
+          "title": "Wave five — valuation",
+          "body": "The last wave that carries anything. Reads deal economics on top of everything before it, and recalculates the price through the findings rather than around them."
         }
       ],
-      "note": "Waves one and two are the diligence pass. Everything after them is what you do with it."
+      "note": "All five waves are the diligence pass. The dashboard and the report are built from what they return."
     },
     "contract": {
       "title": "The output contract, field by field",

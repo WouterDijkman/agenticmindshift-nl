@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import { MODULES, POST_CLOSE_FIRST_WAVE } from '@/lib/site';
+import { MODULES } from '@/lib/site';
 import Reveal from './Reveal';
 
 type Wave = { title: string; body: string };
@@ -36,9 +36,8 @@ function evenColumns(n: number, target: number) {
  * This replaces a bar chart ranked by size. The chart answered "how big is each
  * module", which is our fact; the graph answers "what happens when I hand over
  * a data room", which is the reader's question. A first wave opening at once,
- * two modules that have to wait, a synthesis layer that reads across
- * everything, the documents falling out of the end, and a post-close wave on
- * its own clock — that is the argument for the whole platform, and it is a
+ * two modules that have to wait, and a synthesis layer that reads across
+ * everything — that is the argument for the whole platform, and it is a
  * picture, not a paragraph.
  *
  * Every value is derived from `MODULES` in `lib/site.ts`, which is itself
@@ -49,9 +48,8 @@ function evenColumns(n: number, target: number) {
  * Each node used to carry a fan-out meter and a sub-agent count. Both are gone.
  * The meter ranked modules by how many agents they spawn, which is a fact about
  * our implementation that a reader cannot check, cannot use, and would be wrong
- * about within a quarter. In its place each node says which of the three things
- * it hands back — a finding, a document, or a running watch — because that is
- * what decides whether the reader gets it during diligence or after closing.
+ * about within a quarter. In its place each node says what it hands back — a
+ * finding, for every module currently in the roster.
  */
 export default function DispatchGraph({
   labels,
@@ -88,17 +86,7 @@ export default function DispatchGraph({
   return (
     <ol className="dispatch" style={{ '--dispatch-cols': widest } as CSSProperties}>
       {rows.map(({ n, wave, nodes }) => (
-        <li
-          key={n}
-          className="dispatch-wave"
-          /* The post-close waves do not read the pre-close waves, so their rail
-             is dashed rather than solid. Each wave's own body line already says
-             so in every locale, which is why the dash needs no legend.
-             Thresholded rather than tested against a single wave number: this
-             read `n === 5` while five waves existed, and a sixth post-close
-             wave would have drawn as part of the diligence run. */
-          data-detached={n >= POST_CLOSE_FIRST_WAVE ? 'true' : undefined}
-        >
+        <li key={n} className="dispatch-wave">
           <span className="dispatch-rail" aria-hidden="true" />
 
           <div className="dispatch-body">
