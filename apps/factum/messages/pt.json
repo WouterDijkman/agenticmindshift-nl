@@ -124,7 +124,7 @@
     ],
     "schema": {
       "label": "Contrato de output — todas as constatações",
-      "footnote": "O esquema que cada constatação tem de cumprir. Por trás de cada uma, fontes do data room ou da base de conhecimento (lei, IFRS, jurisprudência, estudos de mercado), com a sua localização, e um revisor identificado — ainda abríveis meses depois.",
+      "footnote": "O esquema que cada constatação tem de cumprir. Por trás de cada uma, fontes do data room ou da base de conhecimento (lei, IFRS, jurisprudência, estudos de mercado), com a sua localização, e um revisor identificado, ainda abríveis meses depois.",
       "rows": {
         "module": "Módulo",
         "finding": "Constatação",
@@ -179,11 +179,11 @@
       },
       {
         "title": "Jurídica",
-        "body": "Lê RH e comercial antes de raciocinar — uma exposição laboral ou uma reclamação contratual costuma assentar em factos que essas duas leituras já estabeleceram."
+        "body": "Lê RH e comercial antes de raciocinar: uma exposição laboral ou uma reclamação contratual costuma assentar em factos que essas duas leituras já estabeleceram."
       },
       {
         "title": "Fiscal",
-        "body": "Lê financeira e jurídica antes de raciocinar — uma posição fiscal é consequência da estrutura que a leitura financeira acabou de descrever, e sobrepõe-se muitas vezes ao que a jurídica encontrou nessa estrutura."
+        "body": "Lê financeira e jurídica antes de raciocinar: uma posição fiscal é consequência da estrutura que a leitura financeira acabou de descrever, e sobrepõe-se muitas vezes ao que a jurídica encontrou nessa estrutura."
       },
       {
         "title": "Deal economics",
@@ -220,7 +220,7 @@
         "review": "Aprovado por W. Dijkman antes da entrega."
       }
     },
-    "ctaProof": "Três constatações materiais que a sua equipa ainda não tinha, ou o mandato é gratuito — em mandatos-piloto.",
+    "ctaProof": "Três constatações materiais que a sua equipa ainda não tinha, ou o mandato é gratuito, em mandatos-piloto.",
     "guarantee": {
       "label": "A garantia de constatações",
       "claim": "Três constatações materiais que a sua equipa ainda não tinha identificado, ou o mandato é gratuito.",

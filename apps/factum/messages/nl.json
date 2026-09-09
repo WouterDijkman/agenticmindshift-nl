@@ -124,7 +124,7 @@
     ],
     "schema": {
       "label": "Outputcontract — elke bevinding",
-      "footnote": "Het schema waaraan elke bevinding moet voldoen. Achter elke bevinding brondocumenten uit de data room of de kennisbank (wet, IFRS, jurisprudentie, marktonderzoek), met vindplaats, en een benoemde reviewer — maanden later nog te openen.",
+      "footnote": "Het schema waaraan elke bevinding moet voldoen. Achter elke bevinding brondocumenten uit de data room of de kennisbank (wet, IFRS, jurisprudentie, marktonderzoek), met vindplaats, en een benoemde reviewer, nog maanden later te openen.",
       "rows": {
         "module": "Module",
         "finding": "Bevinding",
@@ -179,11 +179,11 @@
       },
       {
         "title": "Juridisch",
-        "body": "Leest HR en commercieel voordat het redeneert — een arbeidsrechtelijke blootstelling of een contractuele claim hangt meestal af van wat die twee al hebben vastgesteld."
+        "body": "Leest HR en commercieel voordat het redeneert: een arbeidsrechtelijke blootstelling of een contractuele claim hangt meestal af van wat die twee al hebben vastgesteld."
       },
       {
         "title": "Fiscaal",
-        "body": "Leest financieel en juridisch voordat het redeneert — een fiscale positie is een gevolg van de structuur die de financiële passage net heeft beschreven, en overlapt vaak met wat juridisch in die structuur vond."
+        "body": "Leest financieel en juridisch voordat het redeneert: een fiscale positie is een gevolg van de structuur die de financiële passage net heeft beschreven, en overlapt vaak met wat juridisch in die structuur vond."
       },
       {
         "title": "Deal economics",
@@ -220,7 +220,7 @@
         "review": "Vrijgegeven door W. Dijkman."
       }
     },
-    "ctaProof": "Drie materiële bevindingen die uw team nog niet had, of de opdracht is gratis — bij pilotmandaten.",
+    "ctaProof": "Drie materiële bevindingen die uw team nog niet had, of de opdracht is gratis, bij pilotmandaten.",
     "guarantee": {
       "label": "De bevindingengarantie",
       "claim": "Drie materiële bevindingen die uw eigen team nog niet had geïdentificeerd, of de opdracht is gratis.",
@@ -491,7 +491,7 @@
     },
     "dimensions": {
       "title": "Waar de engine de data room voor leest",
-      "lead": "Een module is een stuk machine. Een dimensie is een vraag die u toch al heeft — en waar u nu per specialist apart voor betaalt. Alle {disciplines} lopen in één ronde over dezelfde data room, dus wat de ene vindt ligt op tafel voor de volgende.",
+      "lead": "Een module is een stuk machine. Een dimensie is een vraag die u toch al heeft, en waar u nu per specialist apart voor betaalt. Alle {disciplines} lopen in één ronde over dezelfde data room, dus wat de ene vindt ligt op tafel voor de volgende.",
       "note": "Eén dimensie zonder de andere is geen diligence. De lijst komt uit de broncode van het product, niet uit een brochure."
     },
     "alternatives": {
@@ -977,7 +977,7 @@
       "items": [
         {
           "title": "Module",
-          "body": "Welke van de {modules} hem heeft geproduceerd. Vooraf afgebakend, dus de vraag stond op papier voordat de data room openging — niet geïmproviseerd naar aanleiding van wat er toevallig in bleek te zitten.",
+          "body": "Welke van de {modules} hem heeft geproduceerd. Vooraf afgebakend, dus de vraag stond op papier voordat de data room openging, niet geïmproviseerd naar aanleiding van wat er toevallig in bleek te zitten.",
           "fail": "Er is geen vrije-tekstbaan. Geen module, geen bevinding."
         },
         {
@@ -1062,7 +1062,7 @@
         },
         {
           "title": "Citeren uit het document dat er niet is",
-          "body": "Retrieval leest wat is geüpload. Het duurste in due diligence is vaak een afwezigheid — het contract dat niemand heeft opgeborgen, het jaar dat ontbreekt in de loonexport. Een afwezigheid heeft geen passage om te citeren, dus geen enkel gefundeerd systeem kan die als bevinding opvoeren.",
+          "body": "Retrieval leest wat is geüpload. Het duurste in due diligence is vaak een afwezigheid: het contract dat niemand heeft opgeborgen, het jaar dat ontbreekt in de loonexport. Een afwezigheid heeft geen passage om te citeren, dus geen enkel gefundeerd systeem kan die als bevinding opvoeren.",
           "human": "De lijst met ontbrekende stukken wordt door een mens bijgehouden: wat is opgevraagd en nooit gekomen. Die komt naast de bevindingen mee."
         },
         {

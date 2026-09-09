@@ -124,7 +124,7 @@
     ],
     "schema": {
       "label": "Contrato de salida — cada hallazgo",
-      "footnote": "El esquema que todo hallazgo debe cumplir. Detrás de cada uno, fuentes del data room o de la base de conocimiento (ley, IFRS, jurisprudencia, estudios de mercado), con su ubicación, y un revisor con nombre — abribles meses después.",
+      "footnote": "El esquema que todo hallazgo debe cumplir. Detrás de cada uno, fuentes del data room o de la base de conocimiento (ley, IFRS, jurisprudencia, estudios de mercado), con su ubicación, y un revisor con nombre, abribles meses después.",
       "rows": {
         "module": "Módulo",
         "finding": "Hallazgo",
@@ -220,7 +220,7 @@
         "review": "Aprobado por W. Dijkman antes de la entrega."
       }
     },
-    "ctaProof": "Tres hallazgos materiales que su equipo aún no tenía, o el encargo es gratuito — en mandatos piloto.",
+    "ctaProof": "Tres hallazgos materiales que su equipo aún no tenía, o el encargo es gratuito, en mandatos piloto.",
     "guarantee": {
       "label": "La garantía de hallazgos",
       "claim": "Tres hallazgos materiales que su equipo no hubiera identificado ya, o el encargo es gratuito.",

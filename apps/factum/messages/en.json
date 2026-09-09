@@ -2,7 +2,7 @@
   "meta": {
     "home": {
       "title": "AI due diligence for M&A and private equity",
-      "description": "Every dimension over the whole data room, reconciled against each other, with the source and locus behind every finding. Built for acquisitions up to roughly €10M EBITDA."
+      "description": "Every dimension over the whole data room, reconciled against each other, with the source and location behind every finding. Built for acquisitions up to roughly €10M EBITDA."
     },
     "platform": {
       "title": "AI due diligence platform",
@@ -124,13 +124,13 @@
     ],
     "schema": {
       "label": "Output contract — every finding",
-      "footnote": "The schema every finding has to satisfy. Source material behind each one — the data room or the knowledge base (statute, IFRS, case law, market research) — with its locus, and a named reviewer, still openable months later.",
+      "footnote": "The schema every finding has to satisfy. Source material behind each one, from the data room or the knowledge base (statute, IFRS, case law, market research), with its exact location, and a named reviewer, still openable months later.",
       "rows": {
         "module": "Module",
         "finding": "Finding",
         "evidence": "Verbatim excerpt",
         "severity": "Severity",
-        "document": "Source and locus",
+        "document": "Source and location",
         "review": "Human review"
       },
       "values": {
@@ -179,11 +179,11 @@
       },
       {
         "title": "Legal",
-        "body": "Reads HR and commercial before it reasons — an employment exposure or a contractual claim usually turns on facts those two reads have already established."
+        "body": "Reads HR and commercial before it reasons: an employment exposure or a contractual claim usually turns on facts those two reads have already established."
       },
       {
         "title": "Tax",
-        "body": "Reads financial and legal before it reasons — a tax position is a consequence of the structure the financial read has just described, and often overlaps with what legal found in it."
+        "body": "Reads financial and legal before it reasons: a tax position is a consequence of the structure the financial read has just described, and often overlaps with what legal found in it."
       },
       {
         "title": "Deal economics",
@@ -220,7 +220,7 @@
         "review": "Approved by W. Dijkman before release."
       }
     },
-    "ctaProof": "Three material findings your team did not already have, or the engagement is free — on pilot mandates.",
+    "ctaProof": "Three material findings your team did not already have, or the engagement is free, on pilot mandates.",
     "guarantee": {
       "label": "The Findings Guarantee",
       "claim": "Three material findings your team did not already have, or the engagement is free.",
@@ -241,7 +241,7 @@
   "home": {
     "hero": {
       "title": "Know what is in the room before you name a price",
-      "lead": "Every dimension, over the whole data room, in days. Every finding cites its source and locus, so you can prove it at the table, not just claim it.",
+      "lead": "Every dimension, over the whole data room, in days. Every finding cites its source and location, so you can prove it at the table, not just claim it.",
       "cta": "Start a sprint"
     },
     "problem": {
@@ -728,7 +728,7 @@
         },
         {
           "title": "You see them first",
-          "body": "Every finding with its source and locus behind it, so you can check it rather than take our word for it."
+          "body": "Every finding with its source and location behind it, so you can check it rather than take our word for it."
         },
         {
           "title": "You decide before anyone asks",

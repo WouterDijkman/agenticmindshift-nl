@@ -124,7 +124,7 @@
     ],
     "schema": {
       "label": "Output-Kontrakt — jede Feststellung",
-      "footnote": "Das Schema, dem jede Erkenntnis genügen muss. Dahinter stehen Quellen aus dem Data Room oder der Wissensdatenbank (Gesetz, IFRS, Rechtsprechung, Marktforschung) mit Fundstelle, und ein namentlich benannter Prüfer — noch Monate später aufrufbar.",
+      "footnote": "Das Schema, dem jede Erkenntnis genügen muss. Dahinter stehen Quellen aus dem Data Room oder der Wissensdatenbank (Gesetz, IFRS, Rechtsprechung, Marktforschung) mit Fundstelle, und ein namentlich benannter Prüfer, noch Monate später aufrufbar.",
       "rows": {
         "module": "Modul",
         "finding": "Feststellung",
@@ -179,11 +179,11 @@
       },
       {
         "title": "Recht",
-        "body": "Liest Personal und Kommerziell, bevor es argumentiert — ein arbeitsrechtliches Risiko oder ein Vertragsanspruch hängt meist an Tatsachen, die diese beiden Durchgänge schon festgestellt haben."
+        "body": "Liest Personal und Kommerziell, bevor es argumentiert: ein arbeitsrechtliches Risiko oder ein Vertragsanspruch hängt meist an Tatsachen, die diese beiden Durchgänge schon festgestellt haben."
       },
       {
         "title": "Steuern",
-        "body": "Liest Finanzen und Recht, bevor es argumentiert — eine Steuerposition ist eine Folge der Struktur, die der Financial-Durchgang gerade beschrieben hat, und überschneidet sich oft mit dem, was Recht dort gefunden hat."
+        "body": "Liest Finanzen und Recht, bevor es argumentiert: eine Steuerposition ist eine Folge der Struktur, die der Financial-Durchgang gerade beschrieben hat, und überschneidet sich oft mit dem, was Recht dort gefunden hat."
       },
       {
         "title": "Deal Economics",
@@ -220,7 +220,7 @@
         "review": "Freigegeben von W. Dijkman."
       }
     },
-    "ctaProof": "Drei wesentliche Feststellungen, die Ihr Team noch nicht hatte, oder das Mandat ist kostenlos — bei Pilotmandaten.",
+    "ctaProof": "Drei wesentliche Feststellungen, die Ihr Team noch nicht hatte, oder das Mandat ist kostenlos, bei Pilotmandaten.",
     "guarantee": {
       "label": "Die Feststellungsgarantie",
       "claim": "Drei wesentliche Feststellungen, die Ihr eigenes Team noch nicht kannte, oder das Mandat ist kostenlos.",
