@@ -288,7 +288,7 @@
     "coverage": {
       "title": "Acht disciplines, één ronde over dezelfde data room",
       "lead": "Wat de ene discipline vindt, ligt op tafel voor de volgende.",
-      "note": "Geordend op afhankelijkheid: later werk wacht op de bevindingen die het nodig heeft.",
+      "note": "Geordend op afhankelijkheid: later werk wacht op de bevindingen die het nodig heeft. Vindt legal een contractueel risico, dan nemen financial en tax het binnen dezelfde ronde al mee.",
       "ctaLine": "Uw team krijgt dit niet in twee weken rond."
     },
     "cycle": {
@@ -554,7 +554,7 @@
       "items": [
         {
           "q": "Is dit niet gewoon een AI-chatbot met extra stappen?",
-          "a": "Een chatsessie is één contextvenster dat u stuurt. Dit zijn {modules} vooraf afgebakende modules in een vaste afhankelijkheidsvolgorde, met vier groundingchecks en een verplichte menselijke poort. Het verschil is wat er gebeurt als niemand kijkt."
+          "a": "Een algemeen AI-model is een zwitsers zakmes: het kan van alles een beetje, ook een data room doorzoeken. Factum is een chirurgisch scalpel: gebouwd voor precies dit ene snijvlak. Dit zijn {modules} vooraf afgebakende modules in een vaste afhankelijkheidsvolgorde, met vier groundingchecks en een verplichte menselijke poort. Het verschil is wat er gebeurt als niemand kijkt."
         },
         {
           "q": "Waarom golven en niet alles tegelijk?",
@@ -571,6 +571,14 @@
         {
           "q": "Hoe snel is het?",
           "a": "De pipeline-pass draait in uren. De afgeronde, beoordeelde output kost dagen. We noemen geen leverdatum voordat we de data room hebben gezien."
+        },
+        {
+          "q": "Hoe vaak citeert AI gewoon verkeerd?",
+          "a": "Vaker dan u denkt. PwC publiceerde onlangs een rapport met een verzonnen framework en verzonnen bronnen; Deloitte betaalde een overheidsopdracht terug om dezelfde reden. Elke citatie hier doorloopt vier controles voordat hij de pagina haalt."
+        },
+        {
+          "q": "Voor welke dealgrootte is dit gebouwd?",
+          "a": "Voor de deals en add-ons waar een volledig DD-traject normaal niet rendabel is. Zodra het daar staat, is opschalen naar elke dealgrootte een kwestie van meer documenten, niet een ander systeem."
         }
       ]
     },
@@ -878,11 +886,11 @@
     },
     "legal": {
       "title": "Waarom dit geen chatvenster is",
-      "lead": "Eén uit de rechtszaal. Eén uit uw eigen NDA. Eén uit het wetboek.",
+      "lead": "Eén uit de kleine lettertjes. Eén uit uw eigen NDA. Eén uit het wetboek.",
       "items": [
         {
           "title": "Een publieke AI-tool is geen privéomgeving",
-          "body": "In United States v. Heppner oordeelde een federale rechter dat de uitwisselingen van een verdachte met een publieke AI-assistent geen verschoningsrecht en geen work product genoten, en gaf ze aan het openbaar ministerie. Waar het werk draait, bepaalt wie het later mag lezen."
+          "body": "De eigen voorwaarden van een publieke AI-tool staan de leverancier meestal toe wat u typt te bewaren en op juridisch bevel af te geven, waar die leverancier ook zit. Geen vertrouwelijkheidsclausule of verschoningsrecht draait dat terug zodra het is gebeurd."
         },
         {
           "title": "Uw NDA dekt de tool mogelijk niet",

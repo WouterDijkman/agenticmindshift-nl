@@ -288,7 +288,7 @@
     "coverage": {
       "title": "Acht Disziplinen, ein Durchgang über denselben Data Room",
       "lead": "Was eine Disziplin findet, liegt für die nächste auf dem Tisch.",
-      "note": "Nach Abhängigkeit geordnet: spätere Arbeit wartet auf die Feststellungen, die sie braucht.",
+      "note": "Nach Abhängigkeit geordnet: spätere Arbeit wartet auf die Feststellungen, die sie braucht. Findet Legal ein vertragliches Risiko, greifen Financial und Tax es noch im selben Durchgang auf.",
       "ctaLine": "Ihr Team schafft das nicht in zwei Wochen."
     },
     "cycle": {
@@ -554,7 +554,7 @@
       "items": [
         {
           "q": "Ist das nicht einfach ein KI-Chatbot mit Zwischenschritten?",
-          "a": "Eine Chat-Sitzung ist ein Kontextfenster, das Sie steuern. Das hier sind {modules} vorab zugeschnittene Module in fester Abhängigkeitsreihenfolge, mit vier Grounding-Prüfungen und einem verpflichtenden menschlichen Tor. Der Unterschied zeigt sich, wenn niemand hinsieht."
+          "a": "Ein allgemeines KI-Modell ist ein Schweizer Taschenmesser: Es kann von allem ein bisschen, auch einen Data Room durchsuchen. Factum ist ein chirurgisches Skalpell: gebaut für genau diesen einen Schnitt. Das hier sind {modules} vorab zugeschnittene Module in fester Abhängigkeitsreihenfolge, mit vier Grounding-Prüfungen und einem verpflichtenden menschlichen Tor. Der Unterschied zeigt sich, wenn niemand hinsieht."
         },
         {
           "q": "Warum Wellen statt alles gleichzeitig?",
@@ -571,6 +571,14 @@
         {
           "q": "Wie schnell ist es?",
           "a": "Der Pipeline-Durchlauf braucht Stunden. Der fertige, geprüfte Output braucht Tage. Wir nennen kein Lieferdatum, bevor wir den Data Room gesehen haben."
+        },
+        {
+          "q": "Wie oft zitiert KI einfach falsch?",
+          "a": "Öfter, als Sie denken. PwC veröffentlichte kürzlich einen Bericht mit einem erfundenen Framework und erfundenen Quellen; Deloitte erstattete einem öffentlichen Auftraggeber einen Auftrag aus demselben Grund. Jedes Zitat hier durchläuft vier Prüfungen, bevor es auf die Seite kommt."
+        },
+        {
+          "q": "Für welche Dealgröße ist das gebaut?",
+          "a": "Für die Deals und Add-ons, bei denen sich ein vollständiger DD-Prozess normalerweise nicht rechnet. Sobald es dort trägt, ist das Skalieren auf jede Dealgröße eine Frage von mehr Dokumenten, kein anderes System."
         }
       ]
     },
@@ -878,11 +886,11 @@
     },
     "legal": {
       "title": "Warum dies kein Chatfenster ist",
-      "lead": "Einer aus dem Gerichtssaal. Einer aus Ihrem eigenen NDA. Einer aus dem Gesetzbuch.",
+      "lead": "Einer aus dem Kleingedruckten. Einer aus Ihrem eigenen NDA. Einer aus dem Gesetzbuch.",
       "items": [
         {
           "title": "Ein öffentliches KI-Tool ist kein privates",
-          "body": "In United States v. Heppner entschied ein Bundesgericht, dass der Austausch eines Angeklagten mit einem öffentlichen KI-Assistenten weder dem Anwaltsgeheimnis noch dem Work-Product-Schutz unterlag, und gab ihn an die Staatsanwaltschaft. Wo die Arbeit läuft, entscheidet, wer sie später lesen darf."
+          "body": "Die eigenen Nutzungsbedingungen eines öffentlichen KI-Tools erlauben dem Anbieter meist, das Eingegebene zu speichern und auf gerichtliche Anordnung herauszugeben, unabhängig davon, wo der Anbieter sitzt. Keine Vertraulichkeitsvereinbarung und kein Anwaltsgeheimnis macht das rückgängig, sobald es passiert ist."
         },
         {
           "title": "Ihr NDA deckt das Tool womöglich nicht",

@@ -288,7 +288,7 @@
     "coverage": {
       "title": "Oito disciplinas, uma leitura sobre o mesmo data room",
       "lead": "O que uma disciplina encontra fica em cima da mesa para a seguinte.",
-      "note": "Ordenado por dependência: o trabalho seguinte espera pelas constatações de que precisa.",
+      "note": "Ordenado por dependência: o trabalho seguinte espera pelas constatações de que precisa. Se o jurídico identifica um risco contratual, o financeiro e o fiscal incorporam-no na mesma ronda.",
       "ctaLine": "A sua equipa não consegue fazer isto em duas semanas."
     },
     "cycle": {
@@ -554,7 +554,7 @@
       "items": [
         {
           "q": "Isto não é apenas um chatbot de IA com passos a mais?",
-          "a": "Uma sessão de chat é uma janela de contexto que o utilizador conduz. Isto são {modules} módulos delimitados à partida, despachados numa ordem de dependência fixa, com quatro verificações de fundamentação e uma porta humana obrigatória. A diferença é o que acontece quando ninguém está a ver."
+          "a": "Um modelo de IA generalista é um canivete suíço: faz um bocadinho de tudo, incluindo ler um data room. O Factum é um bisturi cirúrgico: construído para este corte exato. Isto são {modules} módulos delimitados à partida, despachados numa ordem de dependência fixa, com quatro verificações de fundamentação e uma porta humana obrigatória. A diferença é o que acontece quando ninguém está a ver."
         },
         {
           "q": "Porquê ondas em vez de tudo ao mesmo tempo?",
@@ -571,6 +571,14 @@
         {
           "q": "Qual é a rapidez?",
           "a": "A execução da pipeline demora horas. O resultado terminado e revisto demora dias. Não damos data de entrega antes de ver o data room."
+        },
+        {
+          "q": "Com que frequência é que a IA cita mal, sem mais?",
+          "a": "Mais do que pensa. A PwC publicou recentemente um relatório com um enquadramento e fontes inventados; a Deloitte devolveu o valor de um contrato público pelo mesmo motivo. Aqui, cada citação passa por quatro verificações antes de chegar à página."
+        },
+        {
+          "q": "Para que dimensão de operação é que isto foi construído?",
+          "a": "Para as operações e add-ons em que uma due diligence completa normalmente não compensa. Assim que funciona aí, escalar para qualquer dimensão de operação é uma questão de mais documentos, não de outro sistema."
         }
       ]
     },
@@ -878,11 +886,11 @@
     },
     "legal": {
       "title": "Porque é que isto não é uma janela de chat",
-      "lead": "Uma dos tribunais. Outra do seu próprio NDA. Outra da lei.",
+      "lead": "Uma da letra miúda. Outra do seu próprio NDA. Outra da lei.",
       "items": [
         {
           "title": "Uma ferramenta de IA pública não é privada",
-          "body": "Em United States v. Heppner, um tribunal federal decidiu que as trocas de um arguido com um assistente de IA público não estavam cobertas pelo sigilo profissional nem pela doutrina do work product, e entregou-as à acusação. Onde o trabalho corre decide quem o pode ler depois."
+          "body": "As próprias condições de utilização de uma ferramenta de IA pública costumam permitir ao fornecedor conservar o que escreve e entregá-lo mediante ordem judicial, seja qual for a sua sede. Nenhum acordo de confidencialidade ou sigilo profissional reverte isso depois de acontecer."
         },
         {
           "title": "O seu NDA pode não cobrir a ferramenta",
