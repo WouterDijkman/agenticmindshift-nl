@@ -2,7 +2,7 @@
   "meta": {
     "home": {
       "title": "AI due diligence voor M&A en private equity",
-      "description": "Elke dimensie over de hele data room, onderling afgestemd, met bij elke bevinding het document en de pagina. Gebouwd voor overnames tot ongeveer €10M EBITDA."
+      "description": "Elke dimensie over de hele data room, onderling afgestemd, met bij elke bevinding de bron en de vindplaats. Gebouwd voor overnames tot ongeveer €10M EBITDA."
     },
     "platform": {
       "title": "AI-platform voor due diligence",
@@ -124,22 +124,24 @@
     ],
     "schema": {
       "label": "Outputcontract — elke bevinding",
-      "footnote": "Het schema waaraan elke bevinding moet voldoen. Achter elke bevinding een document, een passage en een benoemde reviewer — maanden later nog te openen.",
+      "footnote": "Het schema waaraan elke bevinding moet voldoen. Achter elke bevinding brondocumenten uit de data room of de kennisbank (wet, IFRS, jurisprudentie, marktonderzoek), met vindplaats, en een benoemde reviewer — maanden later nog te openen.",
       "rows": {
         "module": "Module",
         "finding": "Bevinding",
         "evidence": "Letterlijk citaat",
-        "document": "Brondocument en passage",
+        "severity": "Ernst",
+        "document": "Bron en vindplaats",
         "review": "Menselijke beoordeling"
       },
       "values": {
         "module": "Vooraf afgebakend, één uit de bibliotheek",
         "finding": "Eén claim, in één zin",
         "evidence": "Woordelijk geciteerd, per citaat",
-        "document": "Bestandsnaam en pagina, per citaat",
+        "severity": "Eén van vijf niveaus, van Info tot Kritiek",
+        "document": "Data room of kennisbank, per citaat",
         "review": "Vereist vóór vrijgave"
       },
-      "more": "+2 velden, op een breder scherm"
+      "more": "+3 velden, op een breder scherm"
     },
     "governancePoints": [
       {
@@ -239,7 +241,7 @@
   "home": {
     "hero": {
       "title": "Weet wat er ligt voordat u een prijs noemt",
-      "lead": "Elke dimensie, over de hele data room, in dagen. Bij elke bevinding staat het document en de pagina, zodat u het aan tafel kunt bewijzen terwijl u er zit.",
+      "lead": "Elke dimensie, over de hele data room, in dagen. Bij elke bevinding staat de bron en de vindplaats, zodat u het aan tafel kunt bewijzen terwijl u er zit.",
       "cta": "Start een sprint"
     },
     "problem": {
@@ -726,7 +728,7 @@
         },
         {
           "title": "U ziet ze als eerste",
-          "body": "Bij elke bevinding het document en de pagina, zodat u het kunt narekenen in plaats van ons op ons woord te geloven."
+          "body": "Bij elke bevinding de bron en de vindplaats, zodat u het kunt narekenen in plaats van ons op ons woord te geloven."
         },
         {
           "title": "U beslist voordat iemand het vraagt",

@@ -12,13 +12,15 @@ type Row = {
  * the homepage, where there is room to show the quote next to the claim it
  * supports.
  *
- * On a phone the last two rows are held back. Measured at 386px the hero copy
+ * On a phone the last rows are held back. Measured at 386px the hero copy
  * alone runs to 1,199px against an 840px fold, so this artefact — the strongest
  * evidence on the page — lands straddling the fold and the reader meets it
  * half-cut. Three rows fit the first screen after the fold, whole. The badge
- * still reads 5/5 because the contract still has five fields; `moreLabel` says
- * out loud that two are not printed here, so the shortening is visible rather
- * than a quiet omission.
+ * always reads N/N (rows.length twice) because it names the field count, not a
+ * passed check; `moreLabel` says out loud how many are not printed here, so
+ * the shortening is visible rather than a quiet omission. Keep that label's
+ * count in every locale in sync with `rows.length - MOBILE_ROWS` by hand —
+ * it's plain translated text, not derived from the array.
  */
 const MOBILE_ROWS = 3;
 

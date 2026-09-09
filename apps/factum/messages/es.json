@@ -2,7 +2,7 @@
   "meta": {
     "home": {
       "title": "Due diligence con IA: M&A y private equity",
-      "description": "Cada dimensión sobre todo el data room, reconciliadas entre sí, con el documento y la página detrás de cada hallazgo. Pensado para adquisiciones de hasta unos 10 M€ de EBITDA."
+      "description": "Cada dimensión sobre todo el data room, reconciliadas entre sí, con la fuente y su ubicación detrás de cada hallazgo. Pensado para adquisiciones de hasta unos 10 M€ de EBITDA."
     },
     "platform": {
       "title": "Plataforma de due diligence con IA",
@@ -124,22 +124,24 @@
     ],
     "schema": {
       "label": "Contrato de salida — cada hallazgo",
-      "footnote": "El esquema que todo hallazgo debe cumplir. Detrás de cada uno, un documento, un pasaje y un revisor con nombre — abribles meses después.",
+      "footnote": "El esquema que todo hallazgo debe cumplir. Detrás de cada uno, fuentes del data room o de la base de conocimiento (ley, IFRS, jurisprudencia, estudios de mercado), con su ubicación, y un revisor con nombre — abribles meses después.",
       "rows": {
         "module": "Módulo",
         "finding": "Hallazgo",
         "evidence": "Extracto literal",
-        "document": "Documento y pasaje de origen",
+        "severity": "Gravedad",
+        "document": "Fuente y ubicación",
         "review": "Revisión humana"
       },
       "values": {
         "module": "Predefinido, uno de la biblioteca",
         "finding": "Una afirmación, en una frase",
         "evidence": "Citado literalmente, por cita",
-        "document": "Nombre del archivo y página, por cita",
+        "severity": "Uno de cinco niveles, de Info a Crítico",
+        "document": "Data room o base de conocimiento, por cita",
         "review": "Obligatoria antes de la entrega"
       },
-      "more": "+2 campos, en una pantalla más ancha"
+      "more": "+3 campos, en una pantalla más ancha"
     },
     "governancePoints": [
       {
@@ -239,7 +241,7 @@
   "home": {
     "hero": {
       "title": "Sepa qué hay en el data room antes de poner un precio",
-      "lead": "Cada dimensión, sobre todo el data room, en días. Cada hallazgo cita el documento y la página, para que pueda probarlo en la mesa mientras está sentado en ella.",
+      "lead": "Cada dimensión, sobre todo el data room, en días. Cada hallazgo cita su fuente y su ubicación, para que pueda probarlo en la mesa mientras está sentado en ella.",
       "cta": "Inicie un sprint"
     },
     "problem": {
@@ -726,7 +728,7 @@
         },
         {
           "title": "Usted los ve primero",
-          "body": "Cada hallazgo con el documento y la página detrás, para que pueda comprobarlo en vez de creernos."
+          "body": "Cada hallazgo con su fuente y su ubicación detrás, para que pueda comprobarlo en vez de creernos."
         },
         {
           "title": "Usted decide antes de que se lo pregunten",

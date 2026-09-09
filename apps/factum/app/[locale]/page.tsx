@@ -92,6 +92,7 @@ export default async function HomePage({
               { key: s('schema.rows.module'), value: s('schema.values.module') },
               { key: s('schema.rows.finding'), value: s('schema.values.finding') },
               { key: s('schema.rows.evidence'), value: s('schema.values.evidence') },
+              { key: s('schema.rows.severity'), value: s('schema.values.severity') },
               { key: s('schema.rows.document'), value: s('schema.values.document') },
               { key: s('schema.rows.review'), value: s('schema.values.review') }
             ]}

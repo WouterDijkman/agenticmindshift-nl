@@ -2,7 +2,7 @@
   "meta": {
     "home": {
       "title": "KI-Due-Diligence für M&A und Private Equity",
-      "description": "Jede Dimension über den gesamten Data Room, gegeneinander abgeglichen, mit Dokument und Seite hinter jeder Feststellung. Gebaut für Übernahmen bis rund 10 Mio. € EBITDA."
+      "description": "Jede Dimension über den gesamten Data Room, gegeneinander abgeglichen, mit Quelle und Fundstelle hinter jeder Feststellung. Gebaut für Übernahmen bis rund 10 Mio. € EBITDA."
     },
     "platform": {
       "title": "KI-Due-Diligence-Plattform",
@@ -124,22 +124,24 @@
     ],
     "schema": {
       "label": "Output-Kontrakt — jede Feststellung",
-      "footnote": "Das Schema, dem jede Erkenntnis genügen muss. Hinter jeder stehen ein Dokument, eine Passage und ein namentlich benannter Prüfer — noch Monate später aufrufbar.",
+      "footnote": "Das Schema, dem jede Erkenntnis genügen muss. Dahinter stehen Quellen aus dem Data Room oder der Wissensdatenbank (Gesetz, IFRS, Rechtsprechung, Marktforschung) mit Fundstelle, und ein namentlich benannter Prüfer — noch Monate später aufrufbar.",
       "rows": {
         "module": "Modul",
         "finding": "Feststellung",
         "evidence": "Wörtliches Zitat",
-        "document": "Quelldokument und Passage",
+        "severity": "Schweregrad",
+        "document": "Quelle und Fundstelle",
         "review": "Menschliche Prüfung"
       },
       "values": {
         "module": "Vordefiniert, eines aus der Bibliothek",
         "finding": "Eine Aussage, in einem Satz",
         "evidence": "Wörtlich zitiert, pro Zitat",
-        "document": "Dateiname und Seite, pro Zitat",
+        "severity": "Eine von fünf Stufen, von Info bis Kritisch",
+        "document": "Data Room oder Wissensdatenbank, pro Zitat",
         "review": "Vor Freigabe erforderlich"
       },
-      "more": "+2 Felder, auf einem breiteren Bildschirm"
+      "more": "+3 Felder, auf einem breiteren Bildschirm"
     },
     "governancePoints": [
       {
@@ -239,7 +241,7 @@
   "home": {
     "hero": {
       "title": "Wissen, was im Data Room liegt, bevor Sie einen Preis nennen",
-      "lead": "Jede Dimension, über den ganzen Data Room, in Tagen. Zu jeder Feststellung stehen Dokument und Seite, damit Sie sie am Tisch belegen können, während Sie dort sitzen.",
+      "lead": "Jede Dimension, über den ganzen Data Room, in Tagen. Zu jeder Feststellung stehen Quelle und Fundstelle, damit Sie sie am Tisch belegen können, während Sie dort sitzen.",
       "cta": "Sprint starten"
     },
     "problem": {
@@ -726,7 +728,7 @@
         },
         {
           "title": "Sie sehen sie zuerst",
-          "body": "Zu jeder Feststellung Dokument und Seite, damit Sie nachrechnen können, statt uns beim Wort zu nehmen."
+          "body": "Zu jeder Feststellung Quelle und Fundstelle, damit Sie nachrechnen können, statt uns beim Wort zu nehmen."
         },
         {
           "title": "Sie entscheiden, bevor jemand fragt",

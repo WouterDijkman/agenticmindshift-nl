@@ -2,7 +2,7 @@
   "meta": {
     "home": {
       "title": "Due diligence com IA: M&A e private equity",
-      "description": "Cada dimensão sobre todo o data room, reconciliadas entre si, com o documento e a página por trás de cada constatação. Feito para aquisições até cerca de 10 M€ de EBITDA."
+      "description": "Cada dimensão sobre todo o data room, reconciliadas entre si, com a fonte e a sua localização por trás de cada constatação. Feito para aquisições até cerca de 10 M€ de EBITDA."
     },
     "platform": {
       "title": "Plataforma de due diligence com IA",
@@ -124,22 +124,24 @@
     ],
     "schema": {
       "label": "Contrato de output — todas as constatações",
-      "footnote": "O esquema que cada constatação tem de cumprir. Por trás de cada uma, um documento, uma passagem e um revisor identificado — ainda abríveis meses depois.",
+      "footnote": "O esquema que cada constatação tem de cumprir. Por trás de cada uma, fontes do data room ou da base de conhecimento (lei, IFRS, jurisprudência, estudos de mercado), com a sua localização, e um revisor identificado — ainda abríveis meses depois.",
       "rows": {
         "module": "Módulo",
         "finding": "Constatação",
         "evidence": "Excerto literal",
-        "document": "Documento e passagem de origem",
+        "severity": "Gravidade",
+        "document": "Fonte e localização",
         "review": "Revisão humana"
       },
       "values": {
         "module": "Pré-definido, um dos da biblioteca",
         "finding": "Uma afirmação, numa frase",
         "evidence": "Citado literalmente, por citação",
-        "document": "Nome do ficheiro e página, por citação",
+        "severity": "Um de cinco níveis, de Info a Crítico",
+        "document": "Data room ou base de conhecimento, por citação",
         "review": "Obrigatória antes da entrega"
       },
-      "more": "+2 campos, num ecrã mais largo"
+      "more": "+3 campos, num ecrã mais largo"
     },
     "governancePoints": [
       {
@@ -239,7 +241,7 @@
   "home": {
     "hero": {
       "title": "Saiba o que está no data room antes de dar um preço",
-      "lead": "Cada dimensão, sobre todo o data room, em dias. Cada constatação cita o documento e a página, para que a possa provar à mesa enquanto lá está sentado.",
+      "lead": "Cada dimensão, sobre todo o data room, em dias. Cada constatação cita a sua fonte e localização, para que a possa provar à mesa enquanto lá está sentado.",
       "cta": "Inicie um sprint"
     },
     "problem": {
@@ -726,7 +728,7 @@
         },
         {
           "title": "É o primeiro a vê-las",
-          "body": "Cada constatação com o documento e a página por trás, para que possa verificar em vez de acreditar na nossa palavra."
+          "body": "Cada constatação com a sua fonte e localização por trás, para que possa verificar em vez de acreditar na nossa palavra."
         },
         {
           "title": "Decide antes de alguém perguntar",
