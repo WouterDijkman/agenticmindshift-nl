@@ -240,7 +240,7 @@
   },
   "home": {
     "hero": {
-      "title": "Weet wat er ligt voordat u een prijs noemt",
+      "title": "Weet wat er ligt voordat u tekent",
       "lead": "Elke dimensie, over de hele data room, in dagen. Bij elke bevinding staat de bron en de vindplaats, zodat u het aan tafel kunt bewijzen terwijl u er zit.",
       "cta": "Start een sprint"
     },
@@ -292,33 +292,6 @@
       "lead": "Wat de ene discipline vindt, ligt op tafel voor de volgende.",
       "note": "Geordend op afhankelijkheid: later werk wacht op de bevindingen die het nodig heeft. Vindt legal een contractueel risico, dan nemen financial en tax het binnen dezelfde ronde al mee.",
       "ctaLine": "Uw team krijgt dit niet in twee weken rond."
-    },
-    "cycle": {
-      "title": "Dezelfde bewijsbasis, vijf keer in de dealcyclus",
-      "lead": "De data room wordt opnieuw gelezen zodra iemand nieuws erop moet vertrouwen. Lees hem één keer, goed.",
-      "stages": [
-        {
-          "title": "Kopen",
-          "body": "Bevindingen landen terwijl ze prijs en structuur nog kunnen bewegen."
-        },
-        {
-          "title": "Financieren",
-          "body": "De financier leest hem toch. Geef hem een basis die al onderbouwd is."
-        },
-        {
-          "title": "Houden",
-          "body": "Convenantruimte en KPI-drift, plus de hefbomen waar een risicolijst nooit naar kijkt."
-        },
-        {
-          "title": "Verkopen",
-          "body": "Doe de analyse van de koper eerst zelf, nu er nog tijd voor is."
-        },
-        {
-          "title": "Herstructureren",
-          "body": "Continuïteit, crediteurenpositie en convenantruimte, terwijl er nog te kiezen valt."
-        }
-      ],
-      "link": "Wat de Diligence Sprint omvat"
     },
     "success": {
       "title": "Wat er verandert als u tekent",
@@ -1149,7 +1122,7 @@
       {
         "name": "Wouter Dijkman",
         "title": "Oprichter, Factum",
-        "bio": "Meer dan vijf jaar binnen de instellingen die deze deals financieren. Bij ING: Acquisition & Leveraged Finance, waar hij het krediet achter precies dit soort transacties structureerde en toetste. Daarvoor financiële herstructurering bij Rabobank. Daarnaast leidt hij Agentic Mindshift, zijn eigen AI-consultancy.",
+        "bio": "Meer dan vijf jaar binnen de instellingen die deze deals financieren. Bij ING: Acquisition & Leveraged Finance, waar hij het krediet achter precies dit soort transacties structureerde en toetste. Daarvoor financiële herstructurering bij Rabobank.",
         "history": [
           {
             "org": "Factum Capital",
@@ -1357,7 +1330,7 @@
     "agenda": {
       "label": "Wat we bespreken",
       "items": [
-        "Waar u staat in de cyclus: kopen, financieren, houden of verkopen.",
+        "Of u koopt, verkoopt, of al middenin een traject zit.",
         "Wat er vandaag in de data room zit, en wat ontbreekt.",
         "Welke disciplines het echte risico dragen in uw situatie.",
         "Of een sprint bij uw situatie past, of dat het te vroeg is.",

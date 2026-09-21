@@ -240,7 +240,7 @@
   },
   "home": {
     "hero": {
-      "title": "Wissen, was im Data Room liegt, bevor Sie einen Preis nennen",
+      "title": "Wissen, was im Data Room liegt, bevor Sie unterschreiben",
       "lead": "Jede Dimension, über den ganzen Data Room, in Tagen. Zu jeder Feststellung stehen Quelle und Fundstelle, damit Sie sie am Tisch belegen können, während Sie dort sitzen.",
       "cta": "Sprint starten"
     },
@@ -292,33 +292,6 @@
       "lead": "Was eine Disziplin findet, liegt für die nächste auf dem Tisch.",
       "note": "Nach Abhängigkeit geordnet: spätere Arbeit wartet auf die Feststellungen, die sie braucht. Findet Legal ein vertragliches Risiko, greifen Financial und Tax es noch im selben Durchgang auf.",
       "ctaLine": "Ihr Team schafft das nicht in zwei Wochen."
-    },
-    "cycle": {
-      "title": "Dieselbe Belegbasis, fünfmal im Deal-Zyklus",
-      "lead": "Der Data Room wird jedes Mal neu gelesen, wenn jemand Neues ihm vertrauen muss. Einmal richtig lesen.",
-      "stages": [
-        {
-          "title": "Kaufen",
-          "body": "Feststellungen landen, solange sie Preis und Struktur noch bewegen können."
-        },
-        {
-          "title": "Finanzieren",
-          "body": "Der Kreditgeber prüft ohnehin. Geben Sie ihm eine bereits belegte Basis."
-        },
-        {
-          "title": "Halten",
-          "body": "Covenant-Spielraum und KPI-Drift, plus die Hebel, nach denen eine Risikoliste nie sucht."
-        },
-        {
-          "title": "Verkaufen",
-          "body": "Führen Sie die Prüfung des Käufers zuerst selbst durch, solange noch Zeit bleibt."
-        },
-        {
-          "title": "Restrukturieren",
-          "body": "Fortführung, Gläubigerposition und Covenant-Spielraum, solange noch zu wählen ist."
-        }
-      ],
-      "link": "Was der Diligence Sprint umfasst"
     },
     "success": {
       "title": "Was sich ändert, wenn Sie unterschreiben",
@@ -1149,7 +1122,7 @@
       {
         "name": "Wouter Dijkman",
         "title": "Gründer, Factum",
-        "bio": "Mehr als fünf Jahre in den Institutionen, die diese Deals finanzieren. Bei der ING: Acquisition & Leveraged Finance, wo er die Kredite hinter genau solchen Transaktionen strukturierte und prüfte. Davor finanzielle Restrukturierung bei der Rabobank. Er führt außerdem Agentic Mindshift, seine eigene KI-Beratung.",
+        "bio": "Mehr als fünf Jahre in den Institutionen, die diese Deals finanzieren. Bei der ING: Acquisition & Leveraged Finance, wo er die Kredite hinter genau solchen Transaktionen strukturierte und prüfte. Davor finanzielle Restrukturierung bei der Rabobank.",
         "history": [
           {
             "org": "Factum Capital",
@@ -1357,7 +1330,7 @@
     "agenda": {
       "label": "Worüber wir sprechen",
       "items": [
-        "Wo Sie im Zyklus stehen: kaufen, finanzieren, halten oder verkaufen.",
+        "Ob Sie kaufen, verkaufen, oder bereits mitten im Prozess stehen.",
         "Was heute im Data Room liegt und was fehlt.",
         "Welche Disziplinen in Ihrer Situation das eigentliche Risiko tragen.",
         "Ob ein Sprint zu Ihrer Situation passt oder ob es zu früh ist.",

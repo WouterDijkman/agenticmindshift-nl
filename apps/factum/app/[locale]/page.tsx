@@ -14,7 +14,6 @@ import Specimen from '@/components/Specimen';
 import DisciplineIndex from '@/components/DisciplineIndex';
 import InlineCta from '@/components/InlineCta';
 import Stepper from '@/components/Stepper';
-import StageList from '@/components/StageList';
 import GuaranteeBand from '@/components/GuaranteeBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
 import CtaBand from '@/components/CtaBand';
@@ -31,8 +30,7 @@ export async function generateMetadata({
 
 /**
  * The homepage ran to 1,416 words across seven sections, and used the same
- * three components to do it: three `MediaCards` grids, two `Stepper` rails
- * (the deal cycle is a `StageList` now, for the reasons in that file),
+ * three components to do it: three `MediaCards` grids, two `Stepper` rails,
  * and an eyebrow-h2-lead opening on every one. The two things it repeated
  * hardest were not even its own — the ten-discipline grid also fills half of
  * /diligence-sprint (the two pages shared 31% of their content), and the four
@@ -280,22 +278,6 @@ export default async function HomePage({
           cta={s('links.intake')}
           location="home-coverage"
         />
-      </Section>
-
-      {/* Where in the cycle the same engagement lands, and the link to the
-          engagement itself. These were two sections; the second one was a
-          heading, a link and nothing else. */}
-      <Section width="medium" tone="raised">
-        <SectionHeader title={t('cycle.title')} lead={t('cycle.lead')} />
-        <div style={{ marginTop: 'clamp(24px, 3vw, 36px)' }}>
-          <StageList items={t.raw('cycle.stages') as { title: string; body: string }[]} />
-        </div>
-        <Reveal delay={80} style={{ marginTop: 28 }}>
-          <Link href="/diligence-sprint" className="link-quiet">
-            {t('cycle.link')}
-            <ArrowRight />
-          </Link>
-        </Reveal>
       </Section>
 
       {/* What's different afterwards. Two cards; the third made the same point

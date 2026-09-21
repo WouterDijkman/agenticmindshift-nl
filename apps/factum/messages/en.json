@@ -240,7 +240,7 @@
   },
   "home": {
     "hero": {
-      "title": "Know what is in the room before you name a price",
+      "title": "Know what is in the room before you sign",
       "lead": "Every dimension, over the whole data room, in days. Every finding cites its source and location, so you can prove it at the table, not just claim it.",
       "cta": "Start a sprint"
     },
@@ -292,33 +292,6 @@
       "lead": "What one discipline finds is on the table for the next one.",
       "note": "Dependency-ordered: later work waits for the findings it depends on. If legal flags a contractual risk, financial and tax pick it up in the same pass.",
       "ctaLine": "Your team cannot get through this in two weeks."
-    },
-    "cycle": {
-      "title": "The same evidence base, five times in the deal cycle",
-      "lead": "The room gets re-read every time somebody new has to trust it. Read it once, properly.",
-      "stages": [
-        {
-          "title": "Acquiring",
-          "body": "Findings land while they can still move price and structure."
-        },
-        {
-          "title": "Financing",
-          "body": "The lender reads it anyway. Give them a base that is already sourced."
-        },
-        {
-          "title": "Holding",
-          "body": "Covenant headroom and KPI drift, plus the levers a risk list never looks for."
-        },
-        {
-          "title": "Selling",
-          "body": "Run the buyer’s pass on your own side first, while there is time to fix it."
-        },
-        {
-          "title": "Restructuring",
-          "body": "Going concern, creditor position and covenant headroom, while there is still something to choose."
-        }
-      ],
-      "link": "What the Diligence Sprint covers"
     },
     "success": {
       "title": "What changes when you sign",
@@ -1149,7 +1122,7 @@
       {
         "name": "Wouter Dijkman",
         "title": "Founder, Factum",
-        "bio": "More than five years inside the institutions that fund these deals. At ING, Acquisition & Leveraged Finance — structuring and vetting the credit behind exactly this kind of transaction. Before that, financial restructuring at Rabobank. He also runs Agentic Mindshift, his own AI consultancy.",
+        "bio": "More than five years inside the institutions that fund these deals. At ING, Acquisition & Leveraged Finance — structuring and vetting the credit behind exactly this kind of transaction. Before that, financial restructuring at Rabobank.",
         "history": [
           {
             "org": "Factum Capital",
@@ -1357,7 +1330,7 @@
     "agenda": {
       "label": "What we cover",
       "items": [
-        "Where you are in the cycle: acquiring, financing, holding or selling.",
+        "Whether you're buying, selling, or already mid-process.",
         "What is in the data room today, and what is missing.",
         "Which disciplines carry the real risk in your situation.",
         "Whether a sprint fits your situation, or whether it is too early.",
