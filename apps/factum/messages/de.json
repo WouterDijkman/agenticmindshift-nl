@@ -888,7 +888,7 @@
         },
         {
           "title": "Mit wem Sie kontrahieren",
-          "body": "Factum Capital ist noch keine eigene Rechtsperson. Mandate werden von Agentic Mindshift Consultancy, Niederlande, KvK {kvk}, kontrahiert. Die Gründung liegt beim Notar."
+          "body": "Factum Capital ist noch keine eigene Rechtsperson. Mandate werden unter KvK {kvk}, Niederlande, kontrahiert. Die Gründung liegt beim Notar."
         },
         {
           "title": "Haftung, begrenzt",
@@ -896,7 +896,7 @@
         },
         {
           "title": "Berufshaftpflicht",
-          "body": "Die Deckung läuft über Agentic Mindshift Consultancy, die kontrahierende Einheit. Factums eigene Police folgt auf die Gründung."
+          "body": "Die Deckung läuft über die aktuell kontrahierende Einheit, KvK {kvk}. Factums eigene Police folgt auf die Gründung."
         },
         {
           "title": "Was wir aufbewahren, und warum",
@@ -1340,7 +1340,7 @@
     "details": {
       "title": "Mit wem Sie es zu tun haben",
       "entityLabel": "Rechtsträger",
-      "entityValue": "Agentic Mindshift Consultancy, Niederlande. Factum Capital ist der Handelsname, bis die Gründung abgeschlossen ist.",
+      "entityValue": "Factum Capital, Niederlande. Noch keine eigene Rechtsperson — die Gründung läuft.",
       "kvkLabel": "Handelsregister",
       "languagesLabel": "Arbeitssprachen",
       "languagesValue": "Englisch und Niederländisch"
@@ -1412,6 +1412,6 @@
         ]
       }
     ],
-    "controller": "Verantwortlicher ist Agentic Mindshift Consultancy, eingetragen bei der niederländischen Handelskammer unter der Nummer {kvk} und auftretend unter dem Namen Factum Capital. Diese Seite ist eine Zusammenfassung in einfacher Sprache."
+    "controller": "Verantwortlicher ist die unter der Nummer {kvk} bei der niederländischen Handelskammer eingetragene Einheit, auftretend unter dem Namen Factum Capital. Diese Seite ist eine Zusammenfassung in einfacher Sprache."
   }
 }

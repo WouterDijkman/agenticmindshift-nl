@@ -888,7 +888,7 @@
         },
         {
           "title": "Met wie u contracteert",
-          "body": "Factum Capital is nog geen zelfstandige rechtspersoon. Opdrachten worden gecontracteerd door Agentic Mindshift Consultancy, Nederland, KvK {kvk}. De oprichting ligt bij de notaris."
+          "body": "Factum Capital is nog geen zelfstandige rechtspersoon. Opdrachten worden gecontracteerd onder KvK {kvk}, Nederland. De oprichting ligt bij de notaris."
         },
         {
           "title": "Aansprakelijkheid, gemaximeerd",
@@ -896,7 +896,7 @@
         },
         {
           "title": "Beroepsaansprakelijkheid",
-          "body": "De dekking loopt via Agentic Mindshift Consultancy, de contracterende partij. Factums eigen polis volgt op de oprichting."
+          "body": "De dekking loopt via de huidige contracterende partij, KvK {kvk}. Factums eigen polis volgt op de oprichting."
         },
         {
           "title": "Wat we bewaren, en waarom",
@@ -1340,7 +1340,7 @@
     "details": {
       "title": "Met wie u te maken heeft",
       "entityLabel": "Entiteit",
-      "entityValue": "Agentic Mindshift Consultancy, Nederland. Factum Capital is de handelsnaam tot de oprichting rond is.",
+      "entityValue": "Factum Capital, Nederland. Nog geen zelfstandige rechtspersoon — de oprichting is in gang.",
       "kvkLabel": "Kamer van Koophandel",
       "languagesLabel": "Werktalen",
       "languagesValue": "Engels en Nederlands"
@@ -1412,6 +1412,6 @@
         ]
       }
     ],
-    "controller": "De verwerkingsverantwoordelijke is Agentic Mindshift Consultancy, ingeschreven bij de Kamer van Koophandel onder nummer {kvk} en handelend onder de naam Factum Capital. Deze pagina is een samenvatting in gewone taal."
+    "controller": "De verwerkingsverantwoordelijke is ingeschreven bij de Kamer van Koophandel onder nummer {kvk}, handelend onder de naam Factum Capital. Deze pagina is een samenvatting in gewone taal."
   }
 }

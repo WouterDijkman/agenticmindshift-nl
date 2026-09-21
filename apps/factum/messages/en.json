@@ -888,7 +888,7 @@
         },
         {
           "title": "Who you contract with",
-          "body": "Factum Capital is not yet a separate legal entity. Engagements are contracted by Agentic Mindshift Consultancy, Netherlands, KvK {kvk}. Incorporation is with the notary."
+          "body": "Factum Capital is not yet a separate legal entity. Engagements are contracted under KvK {kvk}, Netherlands. Incorporation is with the notary."
         },
         {
           "title": "Liability, capped",
@@ -896,7 +896,7 @@
         },
         {
           "title": "Professional indemnity",
-          "body": "Cover runs through Agentic Mindshift Consultancy, the contracting entity. Factum’s own policy follows its incorporation."
+          "body": "Cover runs through the current contracting entity, KvK {kvk}. Factum’s own policy follows its incorporation."
         },
         {
           "title": "What we keep, and why",
@@ -1340,7 +1340,7 @@
     "details": {
       "title": "Who you’re dealing with",
       "entityLabel": "Entity",
-      "entityValue": "Agentic Mindshift Consultancy, Netherlands. Factum Capital is its trading name until incorporation completes.",
+      "entityValue": "Factum Capital, Netherlands. Not yet a separate legal entity — incorporation is in progress.",
       "kvkLabel": "Chamber of Commerce",
       "languagesLabel": "Working languages",
       "languagesValue": "English and Dutch"
@@ -1412,6 +1412,6 @@
         ]
       }
     ],
-    "controller": "The controller is Agentic Mindshift Consultancy, registered with the Dutch Chamber of Commerce under number {kvk} and trading as Factum Capital. This page is a plain-language summary."
+    "controller": "The controller is registered with the Dutch Chamber of Commerce under number {kvk}, trading as Factum Capital. This page is a plain-language summary."
   }
 }

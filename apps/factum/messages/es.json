@@ -888,7 +888,7 @@
         },
         {
           "title": "Con quién contrata",
-          "body": "Factum Capital todavía no es una persona jurídica independiente. Los encargos los contrata Agentic Mindshift Consultancy, Países Bajos, KvK {kvk}. La constitución está en manos del notario."
+          "body": "Factum Capital todavía no es una persona jurídica independiente. Los encargos se contratan bajo el número de KvK {kvk}, Países Bajos. La constitución está en manos del notario."
         },
         {
           "title": "Responsabilidad, con tope",
@@ -896,7 +896,7 @@
         },
         {
           "title": "Responsabilidad civil profesional",
-          "body": "La cobertura corre a través de Agentic Mindshift Consultancy, la entidad contratante. La póliza propia de Factum sigue a su constitución."
+          "body": "La cobertura corre a través de la entidad contratante actual, KvK {kvk}. La póliza propia de Factum sigue a su constitución."
         },
         {
           "title": "Qué conservamos, y por qué",
@@ -1340,7 +1340,7 @@
     "details": {
       "title": "Con quién está tratando",
       "entityLabel": "Entidad",
-      "entityValue": "Agentic Mindshift Consultancy, Países Bajos. Factum Capital es su nombre comercial hasta que se complete la constitución.",
+      "entityValue": "Factum Capital, Países Bajos. Todavía no es una persona jurídica independiente — la constitución está en curso.",
       "kvkLabel": "Cámara de Comercio",
       "languagesLabel": "Idiomas de trabajo",
       "languagesValue": "Inglés y neerlandés"
@@ -1412,6 +1412,6 @@
         ]
       }
     ],
-    "controller": "El responsable del tratamiento es Agentic Mindshift Consultancy, inscrita en la Cámara de Comercio neerlandesa con el número {kvk} y que opera bajo el nombre Factum Capital. Esta página es un resumen en lenguaje claro."
+    "controller": "El responsable del tratamiento es la entidad inscrita en la Cámara de Comercio neerlandesa con el número {kvk}, que opera bajo el nombre Factum Capital. Esta página es un resumen en lenguaje claro."
   }
 }

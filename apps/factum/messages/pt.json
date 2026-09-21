@@ -888,7 +888,7 @@
         },
         {
           "title": "Com quem contrata",
-          "body": "A Factum Capital ainda não é uma pessoa jurídica autónoma. Os mandatos são contratados pela Agentic Mindshift Consultancy, Países Baixos, KvK {kvk}. A constituição está com o notário."
+          "body": "A Factum Capital ainda não é uma pessoa jurídica autónoma. Os mandatos são contratados sob o número KvK {kvk}, Países Baixos. A constituição está com o notário."
         },
         {
           "title": "Responsabilidade, com limite",
@@ -896,7 +896,7 @@
         },
         {
           "title": "Responsabilidade civil profissional",
-          "body": "A cobertura corre através da Agentic Mindshift Consultancy, a entidade contratante. A apólice própria da Factum segue-se à sua constituição."
+          "body": "A cobertura corre através da entidade contratante atual, KvK {kvk}. A apólice própria da Factum segue-se à sua constituição."
         },
         {
           "title": "O que guardamos, e porquê",
@@ -1340,7 +1340,7 @@
     "details": {
       "title": "Com quem está a lidar",
       "entityLabel": "Entidade",
-      "entityValue": "Agentic Mindshift Consultancy, Países Baixos. Factum Capital é o nome comercial até a constituição estar concluída.",
+      "entityValue": "Factum Capital, Países Baixos. Ainda não é uma pessoa jurídica autónoma — a constituição está em curso.",
       "kvkLabel": "Câmara de Comércio",
       "languagesLabel": "Línguas de trabalho",
       "languagesValue": "Inglês e neerlandês"
@@ -1412,6 +1412,6 @@
         ]
       }
     ],
-    "controller": "O responsável pelo tratamento é a Agentic Mindshift Consultancy, registada na Câmara de Comércio neerlandesa sob o número {kvk} e que opera sob o nome Factum Capital. Esta página é um resumo em linguagem simples."
+    "controller": "O responsável pelo tratamento é a entidade registada na Câmara de Comércio neerlandesa sob o número {kvk}, que opera sob o nome Factum Capital. Esta página é um resumo em linguagem simples."
   }
 }

@@ -1,5 +1,4 @@
 export const SITE_URL = 'https://www.factumcapital.eu';
-export const AM_URL = 'https://www.agenticmindshift.nl';
 
 /**
  * Where a reader who is convinced actually goes: the page that describes the
@@ -24,10 +23,10 @@ export const auditUrl = (locale: string) => `/${locale}/diligence-sprint`;
 export const INTAKE_URL = 'https://cal.com/wwdijkman/intake-call';
 
 /**
- * Agentic Mindshift Consultancy's registration. Factum Capital is not yet a
- * separate legal entity, so this is the number engagements are contracted
- * under — which is why /governance says so in as many words rather than
- * letting a footer imply a company that does not exist yet.
+ * The registration engagements are currently contracted under. Factum
+ * Capital is not yet a separate legal entity, so /governance and /privacy
+ * state this as a bare number rather than naming a company that does not
+ * exist yet.
  */
 export const KVK = '99495945';
 

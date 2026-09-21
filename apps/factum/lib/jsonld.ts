@@ -1,4 +1,4 @@
-import { AM_URL, KVK, SITE_URL } from './site';
+import { KVK, SITE_URL } from './site';
 
 /**
  * Structured data, emitted once per page as a linked `@graph`.
@@ -10,8 +10,8 @@ import { AM_URL, KVK, SITE_URL } from './site';
  * It is an *entity* problem, which is a different and more basic thing: as of
  * this writing a search for the company name returns Wouter's LinkedIn profile
  * and neither of our two websites. The search engine has not worked out that
- * Factum Capital, Agentic Mindshift Consultancy and two named people are one
- * organisation, and there is nothing on the web telling it so.
+ * Factum Capital and two named people are one organisation, and there is
+ * nothing on the web telling it so.
  *
  * A `@graph` with internal `@id` references says it directly: the WebSite is
  * published by the Organization, the Organization was founded by two People,
@@ -65,10 +65,9 @@ function organization(description: string) {
     '@type': 'Organization',
     '@id': ORG_ID,
     name: 'Factum Capital',
-    // The KvK registration belongs to Agentic Mindshift Consultancy; Factum is
-    // its trading name until incorporation. Publishing the number under the
-    // trading name alone would assert a registration that doesn't exist.
-    legalName: 'Agentic Mindshift Consultancy',
+    // No `legalName`: Factum Capital is not yet a separate legal entity, and
+    // publishing a legal name here would assert a registration that doesn't
+    // exist. The bare KvK number below is the one fact that's actually true.
     url: SITE_URL,
     description,
     identifier: {
@@ -81,10 +80,7 @@ function organization(description: string) {
       addressCountry: 'NL'
     },
     founder: [{ '@id': WOUTER_ID }, { '@id': DANIEL_ID }],
-    // The consultancy that trades under this name. agenticmindshift.nl asserts
-    // the reverse edge in its own Organization block, so the claim is made from
-    // both sides rather than only from the newer, weaker domain.
-    sameAs: [AM_URL, 'https://www.linkedin.com/in/wwdijkman/']
+    sameAs: ['https://www.linkedin.com/in/wwdijkman/']
   };
 }
 
