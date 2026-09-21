@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { AM_URL, FOOTER_NAV, KVK, REFERENCE_NAV } from '@/lib/site';
+import { FOOTER_NAV, KVK, REFERENCE_NAV } from '@/lib/site';
 
 export default async function SiteFooter() {
   const t = await getTranslations('footer');
@@ -81,16 +81,6 @@ export default async function SiteFooter() {
                     breaks the rhythm of the padded ones next to it. */}
                 <li className="type-small mono footer-meta" style={{ color: 'var(--text-quaternary)' }}>
                   {t('kvk', { number: KVK })}
-                </li>
-                <li>
-                  <a
-                    href={AM_URL}
-                    className="type-small nav-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Agentic Mindshift
-                  </a>
                 </li>
               </ul>
             </div>
