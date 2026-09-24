@@ -14,7 +14,8 @@ const PATHS = [
   { path: '/limits-of-ai', priority: 0.7 },
   { path: '/team', priority: 0.6 },
   { path: '/partnerships', priority: 0.6 },
-  { path: '/contact', priority: 0.5 },
+  // The conversion page: every primary button on the site lands here.
+  { path: '/contact', priority: 0.8 },
   { path: '/privacy', priority: 0.3 }
 ];
 

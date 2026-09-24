@@ -31,6 +31,7 @@ const ORG_ID = `${SITE_URL}/#organization`;
 const SITE_ID = `${SITE_URL}/#website`;
 const WOUTER_ID = `${SITE_URL}/#wouter-dijkman`;
 const DANIEL_ID = `${SITE_URL}/#daniel-dropuljic`;
+const SERVICE_ID = `${SITE_URL}/#diligence-sprint`;
 
 /**
  * The two founders, as the /team page already describes them.
@@ -80,7 +81,46 @@ function organization(description: string) {
       addressCountry: 'NL'
     },
     founder: [{ '@id': WOUTER_ID }, { '@id': DANIEL_ID }],
-    sameAs: ['https://www.linkedin.com/in/wwdijkman/']
+    sameAs: ['https://www.linkedin.com/in/wwdijkman/'],
+    // What the organisation is *about*, in the terms a generative engine
+    // assembles an answer from. Plain topic strings, not invented facts: each
+    // one names a page section that already exists on the site.
+    knowsAbout: [
+      'AI due diligence for M&A and private equity',
+      'Data room review',
+      'Financial due diligence',
+      'Commercial due diligence',
+      'Legal due diligence',
+      'Tax due diligence',
+      'Pre-sale due diligence',
+      'AI governance and data handling in due diligence'
+    ],
+    areaServed: { '@type': 'Place', name: 'Europe' }
+  };
+}
+
+/**
+ * The one thing that is sold, as a `Service` node the rest of the graph can
+ * point at. A generative engine answering "who does AI due diligence for
+ * lower-mid private equity in Europe" needs a provider, a service type, an
+ * area and a mechanism it can attribute; the Organization node alone gives it
+ * a name and a country. Only facts already stated on the site: the name of the
+ * engagement, what it covers, where analysis runs, and the guarantee with its
+ * condition attached. No price, because the site states none.
+ */
+function service(locale: string) {
+  return {
+    '@type': 'Service',
+    '@id': SERVICE_ID,
+    name: 'Diligence Sprint',
+    serviceType: 'AI-driven due diligence for M&A and private equity',
+    provider: { '@id': ORG_ID },
+    url: `${SITE_URL}/${locale}/diligence-sprint`,
+    areaServed: { '@type': 'Place', name: 'Europe' },
+    availableLanguage: ['en', 'nl'],
+    description:
+      'Eight disciplines run over the whole data room in dependency order. Every finding carries a verbatim excerpt, its source document and location, a severity, and the name of the reviewer who approved it. Analysis runs on Google Vertex AI in an EU region with zero retention at the model provider. Findings Guarantee on pilot mandates: three material findings the client did not already have, or the engagement is free.',
+    termsOfService: `${SITE_URL}/${locale}/governance`
   };
 }
 
@@ -106,6 +146,7 @@ export function siteSchema(locale: string, description: string) {
     '@graph': [
       organization(description),
       website(locale, 'Factum Capital'),
+      service(locale),
       ...people()
     ]
   };

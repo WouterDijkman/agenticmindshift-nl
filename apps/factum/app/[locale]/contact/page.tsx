@@ -34,6 +34,7 @@ export default async function ContactPage({
       <Breadcrumb path="/contact" />
 
       <PageHeader
+        ctaHref={INTAKE_URL}
         title={t('header.title')}
         lead={t('header.lead')}
         cta={t('header.cta')}

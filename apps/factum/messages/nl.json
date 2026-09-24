@@ -5,11 +5,11 @@
       "description": "Elke dimensie over de hele data room, onderling afgestemd, met bij elke bevinding de bron en de vindplaats. Gebouwd voor overnames tot ongeveer €10M EBITDA."
     },
     "platform": {
-      "title": "AI-platform voor due diligence",
+      "title": "AI-review van de data room: hoe het werkt",
       "description": "{modules} modules voor due diligence, over acht disciplines. Elke bevinding verwijst naar een document. Elke output passeert een menselijke toets."
     },
     "sprint": {
-      "title": "De hele data room beoordeeld in dagen",
+      "title": "Volledige dataroomreview in dagen",
       "description": "{disciplines} specialistische rondes over één data room, samengebracht tot één verhaal, met een lopende lijst van wat er ontbreekt."
     },
     "method": {
@@ -21,7 +21,7 @@
       "description": "Vijf dingen die geen enkel model doet in een data room, waarom de menselijke poort verplicht is, en drie vragen voor elke AI-leverancier."
     },
     "governance": {
-      "title": "AI-governance en gegevensverwerking",
+      "title": "Data room en AI-governance",
       "description": "Hoe documenten worden verwerkt, wat de menselijke poort doet, en wat Factum niet claimt."
     },
     "team": {
@@ -29,19 +29,19 @@
       "description": "Een bankier uit leveraged finance en een data-engineer. Een van beiden keurt elke output goed."
     },
     "partnerships": {
-      "title": "Analysecapaciteit voor adviseurs",
+      "title": "Diligencecapaciteit voor adviseurs",
       "description": "Analysecapaciteit op het niveau van een diligenceteam, achter uw eigen klantrelaties."
     },
     "contact": {
-      "title": "Plan een demo",
-      "description": "Plan een demo van dertig minuten met de persoon die elke output beoordeelt."
+      "title": "Deel een data room onder NDA",
+      "description": "Dertig minuten om de NDA en de data room af te spreken. De NDA gaat dezelfde dag de deur uit; documenten bewegen pas na ondertekening."
     },
     "privacy": {
       "title": "Privacy",
       "description": "Hoe deze website en onze opdrachten omgaan met persoonsgegevens."
     },
     "preSale": {
-      "title": "Pre-sale diligence — vind het voordat de koper het vindt",
+      "title": "Pre-sale due diligence voor verkopers",
       "description": "De read van de koper, eerst op uw eigen bedrijf. Elke dimensie, plus een lijst met naam en toenaam van wat uw data room mist, terwijl er nog tijd is om er iets aan te doen."
     }
   },
@@ -59,7 +59,7 @@
     "team": "Team",
     "partnerships": "Partnerships",
     "contact": "Contact",
-    "cta": "Start een sprint",
+    "cta": "Deel een data room",
     "openMenu": "Menu openen",
     "closeMenu": "Menu sluiten",
     "preSale": "Pre-sale"
@@ -238,7 +238,7 @@
       "sprint": "Wat de sprint dekt",
       "method": "De methode, van begin tot eind",
       "limits": "Wat AI niet kan",
-      "intake": "Start een sprint"
+      "intake": "Deel een data room"
     },
     "reframe": {
       "quote": "De analyse van de koper eerst op uw eigen data room draaien: zo ziet een goed geleid proces eruit."
@@ -248,7 +248,7 @@
     "hero": {
       "title": "Weet wat er ligt voordat u tekent",
       "lead": "Elke dimensie, over de hele data room, in dagen. Bij elke bevinding staat de bron en de vindplaats, zodat u het aan tafel kunt bewijzen terwijl u er zit.",
-      "cta": "Start een sprint"
+      "cta": "Deel een data room"
     },
     "problem": {
       "title": "De data room die u leest is samengesteld door de verkoper",
@@ -318,30 +318,30 @@
       "lead": "Geen voorstel voordat we allebei weten dat het past.",
       "steps": [
         {
-          "title": "Plan een demo van dertig minuten",
-          "body": "We lopen het platform met u door op een echte run, en bepalen daarna of het bij uw situatie past."
+          "title": "Kies de data room",
+          "body": "Een lopende deal, of een die u vorig jaar sloot. Een afgeronde deal legt niets bloot dat nog loopt, en u kunt wat wij vinden naast leggen wat uw team destijds vond."
         },
         {
-          "title": "Teken de NDA, wijs ons dan de data room aan",
-          "body": "Een NDA voordat er één document beweegt. Toegang loopt onder een verwerkersovereenkomst, in de EU, met zero retention."
+          "title": "Teken de NDA voordat er één document beweegt",
+          "body": "Dertig minuten om scope en jurisdictie af te spreken, daarna gaat de NDA dezelfde dag de deur uit. Toegang loopt onder een verwerkersovereenkomst, in de EU, met zero retention."
         },
         {
-          "title": "Lees de bevindingen in dagen",
-          "body": "Elke bevinding noemt zijn bron. Een persoon met naam keurde die goed voordat u hem zag."
+          "title": "Lees de bevindingen met ons door, op een call",
+          "body": "Dagen later. Elke bevinding noemt bron en vindplaats, goedgekeurd door een persoon met naam. Die call is de demo: uw data room, geen rondleiding."
         }
       ]
     },
     "cta": {
-      "title": "Draai hem op een dossier dat nu openstaat",
-      "body": "Dertig minuten op het platform, daarna uw eigen situatie. Is een sprint niet het juiste instrument, dan zeggen we dat.",
-      "button": "Start een sprint"
+      "title": "Draai hem op een dossier dat nu openstaat, of op een dat al is gesloten",
+      "body": "Deel de data room onder NDA, wij draaien de volledige pass, en u krijgt de bevindingen op een call, bron voor bron. Is een sprint niet het juiste instrument, dan zeggen we dat.",
+      "button": "Deel een data room"
     }
   },
   "platform": {
     "header": {
       "title": "Hoe het platform een data room leest",
       "lead": "{modules} vooraf afgebakende modules, in een vaste afhankelijkheidsvolgorde, met vier groundingchecks en een verplichte menselijke poort. Elke keer dezelfde run.",
-      "cta": "Start een sprint"
+      "cta": "Deel een data room"
     },
     "scale": {
       "title": "Het platform in cijfers",
@@ -564,17 +564,17 @@
       ]
     },
     "cta": {
-      "title": "Zie het draaien op een echte dispatch-graaf",
-      "body": "We openen de dispatch-graaf, draaien een module, en volgen één bevinding terug naar de bronpassage.",
-      "button": "Start een sprint",
-      "note": "Dertig minuten: eerst het platform, dan uw eigen situatie."
+      "title": "Zie het draaien op uw eigen data room",
+      "body": "Deel een data room onder NDA. Wij draaien de volledige pass en volgen elke bevinding met u terug naar de bronpassage, op een call.",
+      "button": "Deel een data room",
+      "note": "Eerst een NDA, dezelfde dag verstuurd. Een deal die u vorig jaar sloot werkt ook."
     }
   },
   "sprint": {
     "header": {
       "title": "Zie wat een koper zou vinden, voordat hij het vindt",
       "lead": "Alle {disciplines} disciplines, afgestemd tot één verhaallijn. Gedraaid op een target dat u koopt, of op uw eigen bedrijf voordat een koper het bij u doet.",
-      "cta": "Plan een demo"
+      "cta": "Deel een data room"
     },
     "reframe": {
       "attr": "Waarom een tweede lezing"
@@ -582,7 +582,7 @@
     "disciplines": {
       "title": "Alle {disciplines} disciplines, één vaste scope",
       "lead": "Elke discipline is een afgebakende ronde met een eigen vraag en een eigen uitkomst.",
-      "note": "Eén opdracht, één prijs. Geen à-la-cartemenu en geen upsell na ondertekening. Waar elke discipline naar kijkt, bepalen we in het gesprek tegen uw data room."
+      "note": "Eén opdracht, één prijs. Geen à-la-cartemenu en geen upsell na ondertekening. Waar elke discipline naar kijkt, bepalen we op de call tegen uw data room."
     },
     "layers": {
       "title": "Wat er één oplevering van maakt",
@@ -629,7 +629,7 @@
       "items": [
         {
           "title": "Toegang tot de data room",
-          "body": "Financiën, juridisch, fiscaal, HR, contracten en IP, zoals afgesproken in het gesprek."
+          "body": "Financiën, juridisch, fiscaal, HR, contracten en IP, zoals afgesproken op de call."
         },
         {
           "title": "Antwoorden op wat nooit is aangeleverd",
@@ -650,7 +650,7 @@
         },
         {
           "q": "Wat kost het?",
-          "a": "Eén prijs voor de hele scope, bepaald in het gesprek aan de hand van de omvang en de staat van uw data room. Geen menu met niveaus."
+          "a": "Eén prijs voor de hele scope, bepaald op de call aan de hand van de omvang en de staat van uw data room. Geen menu met niveaus."
         },
         {
           "q": "Wat gebeurt er met onze documenten?",
@@ -658,7 +658,7 @@
         },
         {
           "q": "Kan ik een voorbeeldrapport zien?",
-          "a": "Geen echt rapport. Klantdocumenten zijn vertrouwelijk en geen enkele klant heeft ervoor gekozen bij naam genoemd te worden. In het gesprek laten we u het live dashboard zien, het outputschema, en hoe een bevinding terugleidt naar de bron."
+          "a": "Geen echte. Documenten van klanten zijn vertrouwelijk en geen klant heeft ervoor gekozen genoemd te worden. Het uitgewerkte voorbeeld op de homepage laat het format zien. Het eerste echte rapport dat u ziet is uw eigen, op een call, dagen na de NDA."
         },
         {
           "q": "Wie beoordeelt de output eigenlijk?",
@@ -667,9 +667,9 @@
       ]
     },
     "cta": {
-      "title": "Kijk of een sprint bij uw situatie past",
-      "body": "Een kwartier het platform, een kwartier uw data room: wat erin zit, wat ontbreekt, en of een sprint het juiste instrument is.",
-      "button": "Plan een demo",
+      "title": "Wijs een data room aan",
+      "body": "Dertig minuten om de NDA en de data room af te spreken, lopend of gesloten. Dagen later leest u de bevindingen op een call, bron voor bron.",
+      "button": "Deel een data room",
       "note": "Een handvol pilotmandaten."
     }
   },
@@ -677,7 +677,7 @@
     "header": {
       "title": "Vind het voordat de koper het vindt",
       "lead": "Een koper draait deze analyse op uw bedrijf, of u het nu zelf doet of niet. De enige vraag is of u de bevindingen als eerste ziet, terwijl u er nog iets aan kunt doen.",
-      "cta": "Start een sprint"
+      "cta": "Deel een data room"
     },
     "who": {
       "title": "Wie dit draait",
@@ -760,8 +760,8 @@
     },
     "cta": {
       "title": "Draai hem eerst op uw eigen bedrijf",
-      "body": "Dertig minuten op het platform, daarna uw eigen situatie en uw eigen tijdlijn.",
-      "button": "Start een sprint",
+      "body": "Deel uw eigen data room onder NDA. De bevindingen komen in dagen terug, op een call, voordat een koper ze ziet.",
+      "button": "Deel een data room",
       "note": "Een handvol pilotmandaten."
     }
   },
@@ -769,7 +769,7 @@
     "header": {
       "title": "Hoe uw documenten worden behandeld, en wat we niet claimen",
       "lead": "Gegevensverwerking is ingebouwd in hoe de pipeline draait. Het dekt ook minder dan de meeste securitypagina’s suggereren, dus deze pagina benoemt de grens.",
-      "cta": "Start een sprint"
+      "cta": "Deel een data room"
     },
     "data": {
       "title": "Vier dingen die voor elke opdracht gelden",
@@ -810,13 +810,13 @@
         "Geen meldplicht- of uitwijktoezegging op deze pagina.",
         "Geen geauditeerd accuratessepercentage. De ene benchmark op deze pagina is intern en één dataset."
       ],
-      "note": "Vereist uw proces een van deze punten op schrift, breng het dan op in de demo. Er is hoe dan ook een echt antwoord."
+      "note": "Vereist uw proces een van deze punten op schrift, breng het dan op tijdens de call. Er is hoe dan ook een echt antwoord."
     },
     "cta": {
-      "title": "Neem de lastige vragen mee naar de demo",
-      "body": "De lijst hierboven is bewust weinig flatteus. Blokkeert iets daarvan u, dan ontdekt u dat liever in dertig minuten.",
-      "button": "Start een sprint",
-      "note": "Dertig minuten: eerst het platform, dan uw eigen situatie."
+      "title": "Neem de lastige vragen mee naar de call",
+      "body": "De lijst hierboven is bewust weinig flatteus. Blokkeert iets daarvan u, dan ontdekt u dat liever vóór de NDA dan erna.",
+      "button": "Deel een data room",
+      "note": "Eerst een NDA, dezelfde dag verstuurd. Een deal die u vorig jaar sloot werkt ook."
     },
     "zdr": {
       "title": "Drie modules weigeren te draaien op een model dat data bewaart",
@@ -851,7 +851,7 @@
           ]
         }
       ],
-      "note": "Is methodologisch leren tussen cliënten een probleem voor uw mandaat, zeg dat in de demo. Het kan voor uw account uit."
+      "note": "Is methodologisch leren tussen cliënten een probleem voor uw mandaat, zeg dat op de call. Het kan voor uw account uit."
     },
     "grounding": {
       "title": "Eén benchmark, gepubliceerd met de kanttekeningen eraan vast",
@@ -920,7 +920,7 @@
     "header": {
       "title": "De methode, van begin tot eind",
       "lead": "De lange versie. Wat in welke volgorde draait, het contract waar elke bevinding aan moet voldoen, en wat een mens controleert voordat er iets bij u terechtkomt.",
-      "cta": "Start een sprint"
+      "cta": "Deel een data room"
     },
     "waves": {
       "title": "{modules} modules, {waves} golven, één volgorde",
@@ -1026,17 +1026,17 @@
       "link": "Wat AI niet kan in due diligence"
     },
     "cta": {
-      "title": "Zie de methode draaien op een echte data room",
-      "body": "We openen de pipeline, draaien een module en volgen één bevinding terug naar de bronpassage.",
-      "button": "Start een sprint",
-      "note": "Dertig minuten: eerst het platform, dan uw eigen situatie."
+      "title": "Zie de methode draaien op uw eigen data room",
+      "body": "Deel een data room onder NDA. Wij draaien elke golf en nemen u mee door de bevindingen op een call, bron voor bron.",
+      "button": "Deel een data room",
+      "note": "Eerst een NDA, dezelfde dag verstuurd. Een deal die u vorig jaar sloot werkt ook."
     }
   },
   "aiLimits": {
     "header": {
       "title": "Wat AI niet kan in due diligence",
       "lead": "Wij verkopen een AI-pipeline. Deze pagina gaat over het deel van het werk dat hij niet doet, en wie het dan wel doet.",
-      "cta": "Start een sprint"
+      "cta": "Deel een data room"
     },
     "limits": {
       "title": "Vijf dingen die geen model doet in een data room",
@@ -1122,15 +1122,15 @@
     "cta": {
       "title": "Stel ons de drie vragen",
       "body": "Dertig minuten met de persoon wiens naam onder de output staat. Neem de lastige vragen mee.",
-      "button": "Start een sprint",
-      "note": "Dertig minuten: eerst het platform, dan uw eigen situatie."
+      "button": "Deel een data room",
+      "note": "Eerst een NDA, dezelfde dag verstuurd. Een deal die u vorig jaar sloot werkt ook."
     }
   },
   "team": {
     "header": {
       "title": "De mensen achter de output",
       "lead": "Wouter zat bij ING in Acquisition & Leveraged Finance, waar hij het krediet achter dit soort transacties structureerde. Daniel bouwt gereguleerde datapijplijnen. Een van beiden keurt elke output goed.",
-      "cta": "Start een sprint"
+      "cta": "Deel een data room"
     },
     "historyLabel": "Achtergrond",
     "people": [
@@ -1192,9 +1192,9 @@
     "closing": "Dezelfde strengheid, gericht op de deal die voor u ligt.",
     "cta": {
       "title": "U spreekt de persoon die de output beoordeelt",
-      "body": "Zolang Factum pre-launch is, zijn de demo, de beoordelingstoets en de doorloop dezelfde persoon.",
-      "button": "Start een sprint",
-      "note": "Dertig minuten: eerst het platform, dan uw eigen situatie."
+      "body": "Zolang Factum pre-launch is, zijn de call, de beoordelingstoets en de doorloop van de bevindingen dezelfde persoon.",
+      "button": "Deel een data room",
+      "note": "Eerst een NDA, dezelfde dag verstuurd. Een deal die u vorig jaar sloot werkt ook."
     },
     "roles": {
       "title": "Wie tekent waarvoor",
@@ -1219,7 +1219,7 @@
     "header": {
       "title": "Meer mandaten dan uw team kan lezen",
       "lead": "U behoudt de relatie en het oordeel. Wij draaien de analyse over alle disciplines erachter, onder uw naam.",
-      "cta": "Start een sprint"
+      "cta": "Deel een data room"
     },
     "who": {
       "title": "Voor wie dit doorgaans werkt",
@@ -1273,8 +1273,8 @@
       "lead": "Met één echte opdracht, goed uitgevoerd, voordat iemand zich ergens aan bindt.",
       "steps": [
         {
-          "title": "Een demo, en een blik op uw pijplijn",
-          "body": "We laten het platform zien en brengen daarna in kaart hoe uw opdrachten eruitzien en waar de analytische last zit. Dertig minuten."
+          "title": "Een call, en een blik op uw pijplijn",
+          "body": "We spreken de NDA af en brengen daarna in kaart hoe uw opdrachten eruitzien en waar de analytische last zit. Dertig minuten."
         },
         {
           "title": "Eén mandaat, van begin tot eind gedraaid",
@@ -1321,36 +1321,36 @@
     "cta": {
       "title": "Begin met één mandaat",
       "body": "Richt het op een lopende opdracht en lees de output.",
-      "button": "Start een sprint",
-      "note": "Dertig minuten: eerst het platform, dan uw eigen situatie."
+      "button": "Deel een data room",
+      "note": "Eerst een NDA, dezelfde dag verstuurd. Een deal die u vorig jaar sloot werkt ook."
     }
   },
   "contact": {
     "header": {
-      "title": "Plan een demo met de persoon die de output beoordeelt",
-      "lead": "Geen formulier. Kies een vrij moment in de agenda en we laten het platform draaien zien.",
-      "cta": "Start een sprint"
+      "title": "Deel een data room. Eerst de NDA.",
+      "lead": "Geen formulier. Kies een moment, we spreken scope en jurisdictie af, en de NDA gaat dezelfde dag de deur uit. De bevindingen, op een call, zijn de demo.",
+      "cta": "Kies een moment"
     },
     "call": {
       "title": "Plan dertig minuten",
-      "lead": "Eerst een rondleiding door het platform, dan uw eigen situatie. Is dit niet het juiste instrument, dan is dat een sneller antwoord dan een voorstel.",
-      "button": "Plan een demo",
+      "lead": "De call gaat over de NDA en de data room: wat erin zit, welke disciplines ertoe doen, en of een sprint het juiste instrument is. Een deal die u vorig jaar sloot werkt ook, en legt niets bloot dat nog loopt.",
+      "button": "Kies een moment",
       "note": "Kies een vrij moment."
     },
     "agenda": {
       "label": "Wat we bespreken",
       "items": [
         "Of u koopt, verkoopt, of al middenin een traject zit.",
+        "Welke data room: een lopende deal, of een die al is gesloten.",
         "Wat er vandaag in de data room zit, en wat ontbreekt.",
-        "Welke disciplines het echte risico dragen in uw situatie.",
-        "Of een sprint bij uw situatie past, of dat het te vroeg is.",
+        "De NDA, de verwerkersovereenkomst, en waar uw documenten heen gaan.",
         "Wat het zou kosten, afgebakend tegen de werkelijke room."
       ]
     },
     "documents": {
       "eyebrow": "Voordat u iets stuurt",
-      "title": "Stuur geen documenten om een demo te plannen",
-      "lead": "Voor de demo is niets nodig behalve het gesprek. Toegang tot documenten spreken we daarna schriftelijk af."
+      "title": "Stuur geen documenten voordat de NDA is getekend",
+      "lead": "Er beweegt niets voordat hij is ondertekend. Hij gaat dezelfde dag als de call de deur uit; u tekent mee, en pas dan krijgen wij toegang."
     },
     "details": {
       "title": "Met wie u te maken heeft",
@@ -1364,19 +1364,19 @@
       "title": "Wat mensen vragen voordat ze plannen",
       "items": [
         {
-          "q": "Moet ik iets voorbereiden?",
-          "a": "Nee. Heeft u een lopende deal, neem die dan mee. Zo niet, dan draaien we de demo op een geconstrueerde data room."
+          "q": "Heb ik een lopende deal nodig?",
+          "a": "Nee. Een deal die u vorig jaar sloot werkt ook, vaak beter: er ligt niets bloot dat nog loopt, en u kunt wat wij vinden naast leggen wat uw team destijds vond."
         },
         {
           "q": "Met wie spreek ik?",
-          "a": "Wouter Dijkman. Factum is pre-launch, dus wie de demo geeft is ook wie elke bevinding goedkeurt."
+          "a": "Wouter Dijkman. Factum is pre-launch, dus wie u aan de lijn heeft is ook wie elke bevinding goedkeurt die u ontvangt."
         },
         {
           "q": "We zitten al midden in een traject met een adviseur. Te laat?",
           "a": "Meestal niet. Een sprint loopt mee als tweede lezing, of op de disciplines waarvoor niemand is ingehuurd."
         },
         {
-          "q": "Wat gebeurt er met wat ik in de demo vertel?",
+          "q": "Wat gebeurt er met wat ik op de call vertel?",
           "a": "Dat blijft vertrouwelijk, vanaf het eerste bericht. Er gaan geen documenten heen en weer voordat een NDA is getekend."
         }
       ]
@@ -1399,10 +1399,10 @@
         ]
       },
       {
-        "title": "Een demo plannen",
+        "title": "Een call plannen",
         "body": [
           "De boekingslink brengt u naar Cal.com, een externe planningsdienst. Wat u daar invult, wordt onder hun voorwaarden verwerkt en met ons gedeeld zodat we de afspraak kunnen houden.",
-          "We gebruiken die informatie om de demo voor te bereiden en op te volgen. We voegen die niet toe aan een marketinglijst."
+          "We gebruiken die informatie om de call voor te bereiden en op te volgen. We voegen die niet toe aan een marketinglijst."
         ]
       },
       {
@@ -1416,7 +1416,7 @@
       {
         "title": "Uw rechten",
         "body": [
-          "Op grond van de AVG kunt u vragen welke persoonsgegevens we van u hebben, deze laten corrigeren of verwijderen, of bezwaar maken tegen het gebruik. Breng het op in de demo of reageer op een e-mail van ons.",
+          "Op grond van de AVG kunt u vragen welke persoonsgegevens we van u hebben, deze laten corrigeren of verwijderen, of bezwaar maken tegen het gebruik. Breng het op tijdens de call of reageer op een e-mail van ons.",
           "Bent u niet tevreden, dan kunt u een klacht indienen bij de Autoriteit Persoonsgegevens, de Nederlandse toezichthouder voor gegevensbescherming."
         ]
       },

@@ -5,7 +5,7 @@
       "description": "Cada dimensión sobre todo el data room, reconciliadas entre sí, con la fuente y su ubicación detrás de cada hallazgo. Pensado para adquisiciones de hasta unos 10 M€ de EBITDA."
     },
     "platform": {
-      "title": "Plataforma de due diligence con IA",
+      "title": "Revisión del data room con IA: así funciona",
       "description": "{modules} módulos de due diligence en ocho disciplinas. Cada hallazgo cita un documento. Cada entregable pasa por un control humano."
     },
     "sprint": {
@@ -21,7 +21,7 @@
       "description": "Cinco cosas que ningún modelo hace en un data room, por qué la revisión humana es obligatoria y tres preguntas para cualquier proveedor de IA."
     },
     "governance": {
-      "title": "Gobernanza de IA y tratamiento de datos",
+      "title": "Data room y gobernanza de IA",
       "description": "Cómo se procesan los documentos, qué hace el control humano y qué no afirma Factum."
     },
     "team": {
@@ -33,15 +33,15 @@
       "description": "Capacidad analítica con rigor de due diligence detrás de sus propias relaciones con clientes."
     },
     "contact": {
-      "title": "Reserve una demo",
-      "description": "Reserve una demo de treinta minutos con la persona que revisa cada entregable."
+      "title": "Comparta un data room bajo NDA",
+      "description": "Treinta minutos para acordar el NDA y el data room. El NDA sale el mismo día; los documentos solo se mueven una vez firmado."
     },
     "privacy": {
       "title": "Privacidad",
       "description": "Cómo tratan los datos personales este sitio web y nuestros encargos."
     },
     "preSale": {
-      "title": "Diligencia pre-sale — encuéntrelo antes que el comprador",
+      "title": "Due diligence pre-sale para vendedores",
       "description": "La lectura del comprador, primero sobre su propia empresa. Cada dimensión, más una lista con nombre de lo que falta en su data room, mientras aún hay tiempo de actuar."
     }
   },
@@ -59,7 +59,7 @@
     "team": "Equipo",
     "partnerships": "Alianzas",
     "contact": "Contacto",
-    "cta": "Inicie un sprint",
+    "cta": "Comparta un data room",
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú",
     "preSale": "Pre-sale"
@@ -238,7 +238,7 @@
       "sprint": "Qué cubre el sprint",
       "method": "El método, de principio a fin",
       "limits": "Lo que la IA no puede hacer",
-      "intake": "Inicie un sprint"
+      "intake": "Comparta un data room"
     },
     "reframe": {
       "quote": "Correr la pasada del comprador primero en su propio lado es lo que caracteriza a un proceso bien llevado."
@@ -248,7 +248,7 @@
     "hero": {
       "title": "Sepa qué hay en el data room antes de firmar",
       "lead": "Cada dimensión, sobre todo el data room, en días. Cada hallazgo cita su fuente y su ubicación, para que pueda probarlo en la mesa mientras está sentado en ella.",
-      "cta": "Inicie un sprint"
+      "cta": "Comparta un data room"
     },
     "problem": {
       "title": "El data room que usted lee lo montó el vendedor",
@@ -318,30 +318,30 @@
       "lead": "No hay propuesta hasta que ambos sepamos que encaja.",
       "steps": [
         {
-          "title": "Reserve una demo de treinta minutos",
-          "body": "Le recorremos la plataforma sobre una ejecución real y después vemos si encaja con su situación."
+          "title": "Elija el data room",
+          "body": "Una operación abierta, o una que cerró el año pasado. Una operación cerrada no expone nada en curso, y le permite contrastar lo que encontramos con lo que encontró su equipo entonces."
         },
         {
-          "title": "Firme el NDA y luego indíquenos el data room",
-          "body": "Un NDA antes de que se mueva un solo documento. El acceso corre bajo un DPA, en la UE, con retención cero."
+          "title": "Firme el NDA antes de que se mueva un solo documento",
+          "body": "Treinta minutos para acordar alcance y jurisdicción; el NDA sale el mismo día. El acceso corre bajo un DPA, en la UE, con retención cero."
         },
         {
-          "title": "Lea los hallazgos en días",
-          "body": "Cada uno cita su fuente. Una persona con nombre lo aprobó antes de que llegara a usted."
+          "title": "Lea los hallazgos con nosotros, en una llamada",
+          "body": "Días después. Cada hallazgo cita su fuente y su ubicación, aprobado por una persona con nombre. Esa llamada es la demo: su data room, no un recorrido."
         }
       ]
     },
     "cta": {
-      "title": "Córralo sobre una operación que tenga abierta ahora",
-      "body": "Treinta minutos en la plataforma, después su propia situación. Si un sprint no es el instrumento adecuado, se lo diremos.",
-      "button": "Inicie un sprint"
+      "title": "Córralo sobre una operación abierta ahora, o sobre una ya cerrada",
+      "body": "Comparta el data room bajo NDA, ejecutamos la pasada completa y recibe los hallazgos en una llamada, fuente por fuente. Si un sprint no es el instrumento adecuado, se lo diremos.",
+      "button": "Comparta un data room"
     }
   },
   "platform": {
     "header": {
       "title": "Cómo lee la plataforma un data room",
       "lead": "{modules} módulos con alcance predefinido, en un orden de dependencias fijo, con cuatro comprobaciones de anclaje y un control humano obligatorio. La misma ejecución en cada mandato.",
-      "cta": "Inicie un sprint"
+      "cta": "Comparta un data room"
     },
     "scale": {
       "title": "La plataforma en cifras",
@@ -564,17 +564,17 @@
       ]
     },
     "cta": {
-      "title": "Véalo correr sobre un grafo de despacho real",
-      "body": "Abrimos el grafo de despacho, ejecutamos un módulo y seguimos un hallazgo hasta su pasaje de origen.",
-      "button": "Inicie un sprint",
-      "note": "Treinta minutos: primero la plataforma, después su propia situación."
+      "title": "Véalo correr sobre su propio data room",
+      "body": "Comparta un data room bajo NDA. Ejecutamos la pasada completa y seguimos con usted cada hallazgo hasta su pasaje de origen, en una llamada.",
+      "button": "Comparta un data room",
+      "note": "Primero el NDA, enviado el mismo día. Una operación que cerró el año pasado también sirve."
     }
   },
   "sprint": {
     "header": {
       "title": "Vea lo que un comprador encontraría, antes que él",
       "lead": "Las {disciplines} disciplinas, reconciliadas en una sola narrativa. Córralo sobre un target que está comprando, o sobre su propia empresa antes de que lo haga un comprador.",
-      "cta": "Reserve una demo"
+      "cta": "Comparta un data room"
     },
     "reframe": {
       "attr": "Por qué una segunda pasada"
@@ -582,7 +582,7 @@
     "disciplines": {
       "title": "Las {disciplines} disciplinas, un alcance fijo",
       "lead": "Cada una es una pasada acotada con su propia pregunta y su propio resultado.",
-      "note": "Un encargo, un precio. Sin menú a la carta y sin ampliaciones después de firmar. Qué mira cada disciplina se fija en la demo contra su data room."
+      "note": "Un encargo, un precio. Sin menú a la carta y sin ampliaciones después de firmar. Qué mira cada disciplina se fija en la llamada contra su data room."
     },
     "layers": {
       "title": "Qué lo convierte en un solo entregable",
@@ -629,7 +629,7 @@
       "items": [
         {
           "title": "Acceso al data room",
-          "body": "Estados financieros, legal, fiscal, RR. HH., contratos y propiedad intelectual, según lo acordado en la demo."
+          "body": "Estados financieros, legal, fiscal, RR. HH., contratos y propiedad intelectual, según lo acordado en la llamada."
         },
         {
           "title": "Respuestas sobre lo que nunca llegó",
@@ -650,7 +650,7 @@
         },
         {
           "q": "¿Cuánto cuesta?",
-          "a": "Un precio único para todo el alcance, fijado en la demo según el tamaño y el estado de su data room. Sin menú por niveles."
+          "a": "Un precio único para todo el alcance, fijado en la llamada según el tamaño y el estado de su data room. Sin menú por niveles."
         },
         {
           "q": "¿Qué pasa con nuestros documentos?",
@@ -658,7 +658,7 @@
         },
         {
           "q": "¿Puedo ver un informe de ejemplo?",
-          "a": "Uno real, no. Los documentos de los clientes son confidenciales y ningún cliente ha optado por ser nombrado. En la demo le enseñamos el panel en vivo, el esquema de salida y cómo un hallazgo se rastrea hasta su origen."
+          "a": "Uno real, no. Los documentos de los clientes son confidenciales y ningún cliente ha elegido ser nombrado. El ejemplo desarrollado en la página de inicio muestra el formato. El primero real que verá es el suyo, en una llamada, días después del NDA."
         },
         {
           "q": "¿Quién revisa realmente el entregable?",
@@ -667,9 +667,9 @@
       ]
     },
     "cta": {
-      "title": "Vea si un sprint encaja con su situación",
-      "body": "Quince minutos de plataforma y quince de su data room: qué hay, qué falta y si un sprint es el instrumento adecuado.",
-      "button": "Reserve una demo",
+      "title": "Apúntelo a un data room",
+      "body": "Treinta minutos para acordar el NDA y el data room, abierto o cerrado. Días después lee los hallazgos en una llamada, fuente por fuente.",
+      "button": "Comparta un data room",
       "note": "Un puñado de mandatos piloto."
     }
   },
@@ -677,7 +677,7 @@
     "header": {
       "title": "Encuéntrelo antes que el comprador",
       "lead": "Un comprador correrá este análisis sobre su empresa, lo haga usted o no. La única pregunta es si ve los hallazgos primero, mientras todavía puede hacer algo con ellos.",
-      "cta": "Inicie un sprint"
+      "cta": "Comparta un data room"
     },
     "who": {
       "title": "Quién lo corre",
@@ -760,8 +760,8 @@
     },
     "cta": {
       "title": "Córralo primero sobre su propia empresa",
-      "body": "Treinta minutos en la plataforma, después su propia situación y su propio calendario.",
-      "button": "Inicie un sprint",
+      "body": "Comparta su propio data room bajo NDA. Los hallazgos vuelven en días, en una llamada, antes de que los vea ningún comprador.",
+      "button": "Comparta un data room",
       "note": "Un puñado de encargos piloto."
     }
   },
@@ -769,7 +769,7 @@
     "header": {
       "title": "Cómo se tratan sus documentos, y qué no afirmamos",
       "lead": "El tratamiento de datos está integrado en cómo funciona el pipeline. También es más limitado de lo que dan a entender la mayoría de las páginas de seguridad, así que esta declara el límite.",
-      "cta": "Inicie un sprint"
+      "cta": "Comparta un data room"
     },
     "data": {
       "title": "Cuatro cosas ciertas en todos los encargos",
@@ -810,13 +810,13 @@
         "Sin notificación de brechas ni compromiso de recuperación en esta página.",
         "Sin tasa de exactitud auditada. El único benchmark de esta página es interno y de un solo conjunto de datos."
       ],
-      "note": "Si su proceso exige alguno de estos puntos por escrito, plantéelo en la demo. En cualquier caso hay una respuesta real."
+      "note": "Si su proceso exige alguno de estos puntos por escrito, plantéelo en la llamada. En cualquier caso hay una respuesta real."
     },
     "cta": {
-      "title": "Traiga las preguntas incómodas a la demo",
-      "body": "La lista anterior es deliberadamente poco favorecedora. Si algo de ella le bloquea, mejor saberlo en treinta minutos.",
-      "button": "Inicie un sprint",
-      "note": "Treinta minutos: primero la plataforma, después su propia situación."
+      "title": "Traiga las preguntas incómodas a la llamada",
+      "body": "La lista anterior es deliberadamente poco favorecedora. Si algo de ella le bloquea, mejor saberlo antes del NDA que después.",
+      "button": "Comparta un data room",
+      "note": "Primero el NDA, enviado el mismo día. Una operación que cerró el año pasado también sirve."
     },
     "zdr": {
       "title": "Tres módulos se niegan a correr sobre un modelo que retiene",
@@ -851,7 +851,7 @@
           ]
         }
       ],
-      "note": "Si el aprendizaje metodológico entre clientes es un problema para su mandato, dígalo en la demo. Puede desactivarse para su cuenta."
+      "note": "Si el aprendizaje metodológico entre clientes es un problema para su mandato, dígalo en la llamada. Puede desactivarse para su cuenta."
     },
     "grounding": {
       "title": "Un benchmark, publicado con sus salvedades pegadas",
@@ -920,7 +920,7 @@
     "header": {
       "title": "El método, de principio a fin",
       "lead": "La versión larga. Qué se ejecuta y en qué orden, el contrato que debe cumplir cada hallazgo y lo que revisa una persona antes de que algo llegue a sus manos.",
-      "cta": "Inicie un sprint"
+      "cta": "Comparta un data room"
     },
     "waves": {
       "title": "{modules} módulos, {waves} oleadas, un orden",
@@ -1026,17 +1026,17 @@
       "link": "Lo que la IA no puede hacer en due diligence"
     },
     "cta": {
-      "title": "Vea el método sobre un data room real",
-      "body": "Abrimos la pipeline, ejecutamos un módulo y seguimos un hallazgo hasta su pasaje de origen.",
-      "button": "Inicie un sprint",
-      "note": "Treinta minutos: primero la plataforma, después su propia situación."
+      "title": "Vea el método correr sobre su propio data room",
+      "body": "Comparta un data room bajo NDA. Ejecutamos cada oleada y le llevamos por los hallazgos en una llamada, fuente por fuente.",
+      "button": "Comparta un data room",
+      "note": "Primero el NDA, enviado el mismo día. Una operación que cerró el año pasado también sirve."
     }
   },
   "aiLimits": {
     "header": {
       "title": "Lo que la IA no puede hacer en due diligence",
       "lead": "Vendemos una pipeline de IA. Esta página trata de la parte del trabajo que no hace, y de quién la hace en su lugar.",
-      "cta": "Inicie un sprint"
+      "cta": "Comparta un data room"
     },
     "limits": {
       "title": "Cinco cosas que ningún modelo hace en un data room",
@@ -1122,15 +1122,15 @@
     "cta": {
       "title": "Háganos las tres preguntas",
       "body": "Treinta minutos con la persona cuyo nombre va en la entrega. Traiga las incómodas.",
-      "button": "Inicie un sprint",
-      "note": "Treinta minutos: primero la plataforma, después su propia situación."
+      "button": "Comparta un data room",
+      "note": "Primero el NDA, enviado el mismo día. Una operación que cerró el año pasado también sirve."
     }
   },
   "team": {
     "header": {
       "title": "Las personas detrás del entregable",
       "lead": "Wouter estructuró financiación de adquisiciones y leveraged finance en ING. Daniel construye pipelines de datos regulados. Uno de los dos aprueba cada entregable.",
-      "cta": "Inicie un sprint"
+      "cta": "Comparta un data room"
     },
     "historyLabel": "Trayectoria",
     "people": [
@@ -1192,9 +1192,9 @@
     "closing": "El mismo rigor, aplicado al acuerdo que tiene delante.",
     "cta": {
       "title": "Hablará con la persona que revisa el entregable",
-      "body": "Mientras Factum está en prelanzamiento, la demo, el control de revisión y la explicación detallada son la misma persona.",
-      "button": "Inicie un sprint",
-      "note": "Treinta minutos: primero la plataforma, después su propia situación."
+      "body": "Mientras Factum esté en prelanzamiento, la llamada, el control de revisión y el recorrido por los hallazgos son la misma persona.",
+      "button": "Comparta un data room",
+      "note": "Primero el NDA, enviado el mismo día. Una operación que cerró el año pasado también sirve."
     },
     "roles": {
       "title": "Quién firma qué",
@@ -1219,7 +1219,7 @@
     "header": {
       "title": "Más mandatos de los que su equipo puede leer",
       "lead": "Usted conserva la relación y el criterio. Nosotros ejecutamos detrás el análisis de todas las disciplinas, bajo su nombre.",
-      "cta": "Inicie un sprint"
+      "cta": "Comparta un data room"
     },
     "who": {
       "title": "Para quién suele funcionar",
@@ -1273,8 +1273,8 @@
       "lead": "Con un encargo real, ejecutado como es debido, antes de que nadie se comprometa a nada.",
       "steps": [
         {
-          "title": "Una demo, y un vistazo a su cartera",
-          "body": "Le enseñamos la plataforma y después mapeamos cómo son sus encargos y dónde está la carga analítica. Treinta minutos."
+          "title": "Una llamada, y un vistazo a su cartera",
+          "body": "Acordamos el NDA y después mapeamos cómo son sus encargos y dónde está la carga analítica. Treinta minutos."
         },
         {
           "title": "Un mandato, ejecutado de principio a fin",
@@ -1321,36 +1321,36 @@
     "cta": {
       "title": "Empiece con un mandato",
       "body": "Aplíquelo a un encargo real y lea el resultado.",
-      "button": "Inicie un sprint",
-      "note": "Treinta minutos: primero la plataforma, después su propia situación."
+      "button": "Comparta un data room",
+      "note": "Primero el NDA, enviado el mismo día. Una operación que cerró el año pasado también sirve."
     }
   },
   "contact": {
     "header": {
-      "title": "Reserve una demo con la persona que revisa el entregable",
-      "lead": "Sin formulario. Elija un hueco libre en el calendario y le enseñamos la plataforma en marcha.",
-      "cta": "Inicie un sprint"
+      "title": "Comparta un data room. Primero el NDA.",
+      "lead": "Sin formulario. Elija un hueco, acordamos alcance y jurisdicción, y el NDA sale el mismo día. Los hallazgos, en una llamada, son la demo.",
+      "cta": "Elija un hueco"
     },
     "call": {
       "title": "Reserve treinta minutos",
-      "lead": "Un recorrido por la plataforma y después su propia situación. Si este no es el instrumento adecuado, esa es una respuesta más rápida que una propuesta.",
-      "button": "Reservar una demo",
+      "lead": "La llamada es para el NDA y el data room: qué hay, qué disciplinas importan y si un sprint es el instrumento adecuado. Una operación que cerró el año pasado también sirve, y no expone nada en curso.",
+      "button": "Elegir un hueco",
       "note": "Elija cualquier hueco libre."
     },
     "agenda": {
       "label": "Qué tratamos",
       "items": [
         "Si está comprando, vendiendo, o ya en medio del proceso.",
+        "Qué data room: una operación abierta, o una ya cerrada.",
         "Qué hay hoy en el data room y qué falta.",
-        "Qué disciplinas concentran el riesgo real en su situación.",
-        "Si un sprint encaja en su situación o si es demasiado pronto.",
+        "El NDA, el DPA y adónde van sus documentos.",
         "Cuánto costaría, dimensionado contra el data room real."
       ]
     },
     "documents": {
       "eyebrow": "Antes de enviar nada",
-      "title": "No envíe documentos para reservar una demo",
-      "lead": "La demo no necesita nada más que la conversación. El acceso a documentos se acuerda después, por escrito."
+      "title": "No envíe documentos antes del NDA",
+      "lead": "Nada se mueve hasta que esté firmado. Sale el mismo día de la llamada; usted lo firma, y solo entonces obtenemos acceso."
     },
     "details": {
       "title": "Con quién está tratando",
@@ -1364,19 +1364,19 @@
       "title": "Lo que preguntan antes de reservar",
       "items": [
         {
-          "q": "¿Tengo que preparar algo?",
-          "a": "No. Si tiene una operación en curso, tráigala. Si no, hacemos la demo sobre un data room construido."
+          "q": "¿Necesito una operación en curso?",
+          "a": "No. Una operación que cerró el año pasado también sirve, a menudo mejor: no se expone nada en curso, y puede contrastar lo que encontramos con lo que encontró su equipo entonces."
         },
         {
           "q": "¿Con quién voy a hablar?",
-          "a": "Con Wouter Dijkman. Factum está en prelanzamiento, así que quien enseña la plataforma es quien aprueba cada hallazgo."
+          "a": "Con Wouter Dijkman. Factum está en prelanzamiento, así que la persona en la llamada es quien aprueba cada hallazgo que recibe."
         },
         {
           "q": "Ya estamos a medio proceso con un asesor. ¿Es tarde?",
           "a": "Normalmente no. Un sprint entra como segunda lectura, o sobre las disciplinas que nadie tenía encargadas."
         },
         {
-          "q": "¿Qué pasa con lo que cuente en la demo?",
+          "q": "¿Qué pasa con lo que cuente en la llamada?",
           "a": "Queda confidencial desde el primer mensaje. No se mueve ningún documento antes de firmar un NDA."
         }
       ]
@@ -1399,10 +1399,10 @@
         ]
       },
       {
-        "title": "Reservar una demo",
+        "title": "Reservar una llamada",
         "body": [
           "El enlace de reserva le lleva a Cal.com, un servicio de agenda de terceros. Lo que introduzca allí se trata según sus condiciones y se comparte con nosotros para poder celebrar la reunión.",
-          "La usamos para preparar la demo y hacer seguimiento. No la añadimos a ninguna lista de marketing."
+          "La usamos para preparar la llamada y hacer seguimiento. No la añadimos a ninguna lista de marketing."
         ]
       },
       {
@@ -1416,7 +1416,7 @@
       {
         "title": "Sus derechos",
         "body": [
-          "Conforme al RGPD, puede preguntar qué datos personales tenemos, pedir que se corrijan o se supriman, u oponerse a su uso. Plantéelo en la demo o responda a cualquier correo nuestro.",
+          "Conforme al RGPD, puede preguntar qué datos personales tenemos, pedir que se corrijan o se supriman, u oponerse a su uso. Plantéelo en la llamada o responda a cualquier correo nuestro.",
           "Si no queda satisfecho, puede reclamar ante la Autoriteit Persoonsgegevens, la autoridad neerlandesa de protección de datos."
         ]
       },

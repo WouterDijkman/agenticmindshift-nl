@@ -5,7 +5,7 @@
       "description": "Every dimension over the whole data room, reconciled against each other, with the source and location behind every finding. Built for acquisitions up to roughly €10M EBITDA."
     },
     "platform": {
-      "title": "AI due diligence platform",
+      "title": "AI data room review: how it works",
       "description": "{modules} due-diligence modules across {disciplines} disciplines. Every finding cites a document. Every output passes a human gate."
     },
     "sprint": {
@@ -21,7 +21,7 @@
       "description": "Five things no model does on a data room, why the human gate is mandatory, and three questions to ask any AI diligence vendor."
     },
     "governance": {
-      "title": "AI governance and data handling",
+      "title": "Data room confidentiality and AI governance",
       "description": "How documents are processed, what the human gate does, and what Factum does not claim."
     },
     "team": {
@@ -33,15 +33,15 @@
       "description": "Diligence-grade analytical capacity behind your own client relationships."
     },
     "contact": {
-      "title": "Book a demo",
-      "description": "Book a thirty-minute demo with the person who reviews every output."
+      "title": "Share a data room under NDA",
+      "description": "Thirty minutes to agree the NDA and the room. The NDA goes out the same day; documents move only after it is signed."
     },
     "privacy": {
       "title": "Privacy",
       "description": "How this website and our engagements handle personal data."
     },
     "preSale": {
-      "title": "Pre-sale diligence — find it before the buyer does",
+      "title": "Pre-sale due diligence for sellers",
       "description": "The buyer’s read, run on your own company first. Every dimension, plus a named list of what your data room is missing, while there is still time to act on it."
     }
   },
@@ -59,7 +59,7 @@
     "team": "Team",
     "partnerships": "Partnerships",
     "contact": "Contact",
-    "cta": "Start a sprint",
+    "cta": "Share a data room",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "preSale": "Pre-sale"
@@ -238,7 +238,7 @@
       "sprint": "What the sprint covers",
       "method": "The method, end to end",
       "limits": "What AI cannot do",
-      "intake": "Start a sprint"
+      "intake": "Share a data room"
     },
     "reframe": {
       "quote": "Running the buyer’s pass on your own side first is what a well-run process looks like."
@@ -248,7 +248,7 @@
     "hero": {
       "title": "Know what is in the room before you sign",
       "lead": "Every dimension, over the whole data room, in days. Every finding cites its source and location, so you can prove it at the table, not just claim it.",
-      "cta": "Start a sprint"
+      "cta": "Share a data room"
     },
     "problem": {
       "title": "The room you are reading was assembled by the seller",
@@ -318,30 +318,30 @@
       "lead": "No proposal until we both know it fits.",
       "steps": [
         {
-          "title": "Book a thirty-minute demo",
-          "body": "We walk you through the platform on a live run, then work out whether it suits your situation."
+          "title": "Pick the room",
+          "body": "A deal you have open, or one you closed last year. A closed deal exposes nothing in process, and lets you hold what we find against what your team found at the time."
         },
         {
-          "title": "Sign the NDA, then point us at the room",
-          "body": "An NDA before a single document moves. Access runs under a DPA, in the EU, with zero retention."
+          "title": "Sign the NDA before a single document moves",
+          "body": "Thirty minutes to agree scope and jurisdiction, then the NDA goes out the same day. Access runs under a DPA, in the EU, with zero retention."
         },
         {
-          "title": "Read the findings in days",
-          "body": "Each one cites its source. A named person approved it before it reached you."
+          "title": "Read the findings with us, on a call",
+          "body": "Days later. Each finding cites its source and location, approved by a named person. That call is the demo: your room, not a tour."
         }
       ]
     },
     "cta": {
-      "title": "Run it on a deal you have open now",
-      "body": "Thirty minutes on the platform, then your own situation. If a sprint is not the right instrument, we will say so.",
-      "button": "Start a sprint"
+      "title": "Run it on a deal you have open now, or one you closed",
+      "body": "Share the room under NDA, we run the full pass, and you get the findings on a call, source by source. If a sprint is not the right instrument, we will say so.",
+      "button": "Share a data room"
     }
   },
   "platform": {
     "header": {
       "title": "How the platform reads a data room",
       "lead": "{modules} pre-scoped modules, in a fixed dependency order, with four grounding checks and a mandatory human gate. The same run, every mandate.",
-      "cta": "Start a sprint"
+      "cta": "Share a data room"
     },
     "scale": {
       "title": "The platform in numbers",
@@ -564,17 +564,17 @@
       ]
     },
     "cta": {
-      "title": "See it run on a real dispatch graph",
-      "body": "We open the dispatch graph, run a module, and follow one finding back to its source passage.",
-      "button": "Start a sprint",
-      "note": "Thirty minutes: a walkthrough of the platform, then your own situation."
+      "title": "See it run on your own room",
+      "body": "Share a room under NDA. We run the full pass and follow each finding back to its source passage with you, on a call.",
+      "button": "Share a data room",
+      "note": "NDA first, sent the same day. A deal you closed last year works too."
     }
   },
   "sprint": {
     "header": {
       "title": "See what a buyer would find, before they do",
       "lead": "All {disciplines} disciplines, reconciled into one narrative. Run it on a target you are buying, or on your own company before a buyer runs it on you.",
-      "cta": "Book a demo"
+      "cta": "Share a data room"
     },
     "reframe": {
       "attr": "Why a second pass"
@@ -582,7 +582,7 @@
     "disciplines": {
       "title": "All {disciplines} disciplines, one fixed scope",
       "lead": "Each one is a scoped pass with its own question and its own output.",
-      "note": "One engagement, one price. No à la carte menu and no upsell after signing. What each discipline looks at is set against your data room in the demo."
+      "note": "One engagement, one price. No à la carte menu and no upsell after signing. What each discipline looks at is set against your data room on the call."
     },
     "layers": {
       "title": "What makes it one deliverable",
@@ -629,7 +629,7 @@
       "items": [
         {
           "title": "Data-room access",
-          "body": "Financials, legal, tax, HR, contracts and IP, as agreed in the demo."
+          "body": "Financials, legal, tax, HR, contracts and IP, as agreed on the call."
         },
         {
           "title": "Answers on what never arrived",
@@ -650,7 +650,7 @@
         },
         {
           "q": "What does it cost?",
-          "a": "One price for the whole scope, set in the demo against the size and state of your data room. No tiered menu."
+          "a": "One price for the whole scope, set on the call against the size and state of your data room. No tiered menu."
         },
         {
           "q": "What happens to our documents?",
@@ -658,7 +658,7 @@
         },
         {
           "q": "Can I see an example report?",
-          "a": "Not a real one. Client documents are confidential and no client has elected to be named. In the demo we show you the live dashboard, the output schema, and how a finding traces back to its source."
+          "a": "Not a real one. Client documents are confidential and no client has elected to be named. The worked example on the homepage shows the format. The first real one you see is your own, on a call, days after the NDA."
         },
         {
           "q": "Who actually reviews the output?",
@@ -667,9 +667,9 @@
       ]
     },
     "cta": {
-      "title": "See whether a sprint fits your situation",
-      "body": "Fifteen minutes of the platform, fifteen on your data room: what is in it, what is missing, and whether a sprint is the right instrument.",
-      "button": "Book a demo",
+      "title": "Point it at a room",
+      "body": "Thirty minutes to agree the NDA and the room, open or closed. Days later you read the findings on a call, source by source.",
+      "button": "Share a data room",
       "note": "A handful of pilot mandates."
     }
   },
@@ -677,7 +677,7 @@
     "header": {
       "title": "Find it before the buyer does",
       "lead": "A buyer will run this analysis on your company whether you do or not. The only question is whether you see the findings first, while you can still do something about them.",
-      "cta": "Start a sprint"
+      "cta": "Share a data room"
     },
     "who": {
       "title": "Who runs this",
@@ -760,8 +760,8 @@
     },
     "cta": {
       "title": "Run it on your own company first",
-      "body": "Thirty minutes on the platform, then your own situation and your own timeline.",
-      "button": "Start a sprint",
+      "body": "Share your own room under NDA. The findings come back in days, on a call, before any buyer sees them.",
+      "button": "Share a data room",
       "note": "A handful of pilot mandates."
     }
   },
@@ -769,7 +769,7 @@
     "header": {
       "title": "How your documents are handled, and what we don’t claim",
       "lead": "Data handling is built into how the pipeline runs. It is also narrower than most security pages imply, so this page states the boundary.",
-      "cta": "Start a sprint"
+      "cta": "Share a data room"
     },
     "data": {
       "title": "Four things that are true of every engagement",
@@ -810,13 +810,13 @@
         "No breach-notification or disaster-recovery commitment stated here.",
         "No audited accuracy rate. The one benchmark on this page is internal and single-dataset."
       ],
-      "note": "If your process needs any of these in writing, raise it in the demo. There is a real answer either way."
+      "note": "If your process needs any of these in writing, raise it on the call. There is a real answer either way."
     },
     "cta": {
-      "title": "Bring the awkward questions to the demo",
-      "body": "The list above is deliberately unflattering. If something on it blocks you, better to find that out in thirty minutes.",
-      "button": "Start a sprint",
-      "note": "Thirty minutes: a walkthrough of the platform, then your own situation."
+      "title": "Bring the awkward questions to the call",
+      "body": "The list above is deliberately unflattering. If something on it blocks you, better to find that out before the NDA than after.",
+      "button": "Share a data room",
+      "note": "NDA first, sent the same day. A deal you closed last year works too."
     },
     "zdr": {
       "title": "Three modules refuse to run off a retaining model",
@@ -851,7 +851,7 @@
           ]
         }
       ],
-      "note": "If cross-client methodology learning is a problem for your mandate, say so in the demo. It can be switched off for your account."
+      "note": "If cross-client methodology learning is a problem for your mandate, say so on the call. It can be switched off for your account."
     },
     "grounding": {
       "title": "One benchmark, published with its caveats attached",
@@ -920,7 +920,7 @@
     "header": {
       "title": "The method, end to end",
       "lead": "The long version. What runs in which order, the contract every finding has to satisfy, and what a person checks before anything reaches you.",
-      "cta": "Start a sprint"
+      "cta": "Share a data room"
     },
     "waves": {
       "title": "{modules} modules, {waves} waves, one order",
@@ -1026,17 +1026,17 @@
       "link": "What AI cannot do in due diligence"
     },
     "cta": {
-      "title": "Watch the method run on a real room",
-      "body": "We open the pipeline, run a module, and follow one finding back to its source passage.",
-      "button": "Start a sprint",
-      "note": "Thirty minutes: a walkthrough of the platform, then your own situation."
+      "title": "Watch the method run on your own room",
+      "body": "Share a room under NDA. We run every wave and take you through the findings on a call, source by source.",
+      "button": "Share a data room",
+      "note": "NDA first, sent the same day. A deal you closed last year works too."
     }
   },
   "aiLimits": {
     "header": {
       "title": "What AI cannot do in due diligence",
       "lead": "We sell an AI pipeline. This page is about the part of the job it does not do, and who does that instead.",
-      "cta": "Start a sprint"
+      "cta": "Share a data room"
     },
     "limits": {
       "title": "Five things no model does on a data room",
@@ -1122,15 +1122,15 @@
     "cta": {
       "title": "Ask us the three questions",
       "body": "Thirty minutes with the person whose name goes on the output. Bring the awkward ones.",
-      "button": "Start a sprint",
-      "note": "Thirty minutes: a walkthrough of the platform, then your own situation."
+      "button": "Share a data room",
+      "note": "NDA first, sent the same day. A deal you closed last year works too."
     }
   },
   "team": {
     "header": {
       "title": "The people behind the output",
       "lead": "Wouter structured acquisition and leveraged finance at ING. Daniel builds regulated data pipelines. One of them approves every output.",
-      "cta": "Start a sprint"
+      "cta": "Share a data room"
     },
     "historyLabel": "Background",
     "people": [
@@ -1192,9 +1192,9 @@
     "closing": "The same scrutiny, turned on the deal in front of you.",
     "cta": {
       "title": "You’ll speak to the person who reviews the output",
-      "body": "While Factum is pre-launch, the demo, the review gate and the walkthrough are the same person.",
-      "button": "Start a sprint",
-      "note": "Thirty minutes: a walkthrough of the platform, then your own situation."
+      "body": "While Factum is pre-launch, the call, the review gate and the findings walkthrough are the same person.",
+      "button": "Share a data room",
+      "note": "NDA first, sent the same day. A deal you closed last year works too."
     },
     "roles": {
       "title": "Who signs off on what",
@@ -1219,7 +1219,7 @@
     "header": {
       "title": "More mandates than your team can read",
       "lead": "You keep the relationship and the judgement. We run the read across every discipline behind it, under your name.",
-      "cta": "Start a sprint"
+      "cta": "Share a data room"
     },
     "who": {
       "title": "Who this tends to work for",
@@ -1273,8 +1273,8 @@
       "lead": "With one real engagement, run properly, before anyone commits to anything.",
       "steps": [
         {
-          "title": "A demo, and a look at your pipeline",
-          "body": "We show you the platform, then map what your engagements look like and where the analytical load sits. Thirty minutes."
+          "title": "A call, and a look at your pipeline",
+          "body": "We agree the NDA, then map what your engagements look like and where the analytical load sits. Thirty minutes."
         },
         {
           "title": "One mandate, run end to end",
@@ -1321,36 +1321,36 @@
     "cta": {
       "title": "Start with one mandate",
       "body": "Point it at a live engagement and read the output.",
-      "button": "Start a sprint",
-      "note": "Thirty minutes: a walkthrough of the platform, then your own situation."
+      "button": "Share a data room",
+      "note": "NDA first, sent the same day. A deal you closed last year works too."
     }
   },
   "contact": {
     "header": {
-      "title": "Book a demo with the person who reviews the output",
-      "lead": "No form. Pick an open slot in the calendar and we will show you the platform running.",
-      "cta": "Start a sprint"
+      "title": "Share a data room. NDA first.",
+      "lead": "No form. Pick a slot, we agree scope and jurisdiction, and the NDA goes out the same day. The findings, on a call, are the demo.",
+      "cta": "Pick a slot"
     },
     "call": {
       "title": "Book thirty minutes",
-      "lead": "A walkthrough of the platform, then your own situation. If this is not the right instrument for you, that is a faster answer than a proposal.",
-      "button": "Book a demo",
+      "lead": "The call is for the NDA and the room: what is in it, which disciplines matter, and whether a sprint is the right instrument. A deal you closed last year works too, and exposes nothing in process.",
+      "button": "Pick a slot",
       "note": "Pick any open slot."
     },
     "agenda": {
       "label": "What we cover",
       "items": [
         "Whether you're buying, selling, or already mid-process.",
+        "Which room: a deal you have open, or one you closed.",
         "What is in the data room today, and what is missing.",
-        "Which disciplines carry the real risk in your situation.",
-        "Whether a sprint fits your situation, or whether it is too early.",
+        "The NDA, the DPA, and where your documents go.",
         "What it would cost, scoped against the actual room."
       ]
     },
     "documents": {
       "eyebrow": "Before you send anything",
-      "title": "Don’t send documents to book a demo",
-      "lead": "The demo needs nothing but the conversation. Document access is agreed afterwards, in writing."
+      "title": "Don't send documents before the NDA",
+      "lead": "Nothing moves until it is signed. It goes out the same day as the call; you countersign, and only then do we get access."
     },
     "details": {
       "title": "Who you’re dealing with",
@@ -1364,19 +1364,19 @@
       "title": "What people ask before they book",
       "items": [
         {
-          "q": "Do I need to prepare anything?",
-          "a": "No. If you have a live deal, bring it. If you don’t, we run the demo on a constructed data room instead."
+          "q": "Do I need a live deal?",
+          "a": "No. A deal you closed last year works as well, often better: nothing in process is exposed, and you can hold what we find against what your team found at the time."
         },
         {
           "q": "Who will I be speaking to?",
-          "a": "Wouter Dijkman. Factum is pre-launch, so the person who shows you the platform is the person who approves every finding it produces."
+          "a": "Wouter Dijkman. Factum is pre-launch, so the person on the call is the person who approves every finding you receive."
         },
         {
           "q": "We are already mid-process with an adviser. Is it too late?",
           "a": "Usually not. A sprint runs alongside as a second read, or on the disciplines nobody was scoped for."
         },
         {
-          "q": "What happens to what I say in the demo?",
+          "q": "What happens to what I say on the call?",
           "a": "It stays confidential from the first message. No documents move until an NDA is signed."
         }
       ]
@@ -1399,10 +1399,10 @@
         ]
       },
       {
-        "title": "Booking a demo",
+        "title": "Booking a call",
         "body": [
           "The booking link takes you to Cal.com, a third-party scheduling service. What you enter there is processed under their terms and shared with us so we can hold the meeting.",
-          "We use it to prepare for the demo and to follow up. We do not add it to a marketing list."
+          "We use it to prepare for the call and to follow up. We do not add it to a marketing list."
         ]
       },
       {
@@ -1416,7 +1416,7 @@
       {
         "title": "Your rights",
         "body": [
-          "Under the GDPR you can ask what personal data we hold, have it corrected or deleted, or object to how it is used. Raise it in the demo or reply to any email from us.",
+          "Under the GDPR you can ask what personal data we hold, have it corrected or deleted, or object to how it is used. Raise it on the call or reply to any email from us.",
           "If you are not satisfied, you can complain to the Autoriteit Persoonsgegevens, the Dutch data protection authority."
         ]
       },

@@ -8,7 +8,7 @@ import { useLocale } from 'next-intl';
 import { auditUrl, INTAKE_URL, NAV } from '@/lib/site';
 import LanguageSwitcher from './LanguageSwitcher';
 
-const SPRINT_PATH = '/diligence-sprint';
+const CONTACT_PATH = '/contact';
 
 export default function SiteHeader() {
   const t = useTranslations('nav');
@@ -16,16 +16,16 @@ export default function SiteHeader() {
 
   const pathname = usePathname();
   /**
-   * The header button normally sends you to the sprint page. On the sprint
-   * page that is a link to the page you are already reading, so the one
-   * action in the chrome does nothing. There it becomes the conversation,
-   * which is the next real step from that page anyway.
+   * The header button normally sends you to /contact, the page that states
+   * the NDA step and holds the calendar. On /contact that is a link to the
+   * page you are already reading, so the one action in the chrome does
+   * nothing. There it becomes the calendar itself.
    *
    * `usePathname` here is next-intl's, which strips the locale prefix, so the
    * comparison is against the bare route. Comparing against `/${locale}/...`
    * silently never matches and the dead link survives the fix.
    */
-  const ctaHref = pathname === SPRINT_PATH ? INTAKE_URL : auditUrl(locale);
+  const ctaHref = pathname === CONTACT_PATH ? INTAKE_URL : auditUrl(locale);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 

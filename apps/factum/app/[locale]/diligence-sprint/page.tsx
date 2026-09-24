@@ -12,7 +12,6 @@ import Reveal from '@/components/Reveal';
 import { Section, SectionHeader } from '@/components/Section';
 import Disclosures from '@/components/Disclosures';
 import CtaBand from '@/components/CtaBand';
-import { INTAKE_URL } from '@/lib/site';
 import GuaranteePanel from '@/components/GuaranteePanel';
 import Breadcrumb from '@/components/Breadcrumb';
 import { ArrowRight } from '@/components/Icons';
@@ -43,7 +42,6 @@ export default async function SprintPage({
       <Breadcrumb path="/diligence-sprint" />
 
       <PageHeader
-        ctaHref={INTAKE_URL}
         title={t('header.title')}
         lead={t('header.lead', numbers)}
         cta={t('header.cta')}
@@ -158,8 +156,11 @@ export default async function SprintPage({
         </Reveal>
       </Section>
 
+      {/* No ctaHref: the button goes to /contact like every other primary
+          button on the site, so the NDA step is stated before the calendar
+          opens. This page used to jump straight to the calendar, which
+          skipped the one thing the prospect hesitates over. */}
       <CtaBand
-        ctaHref={INTAKE_URL}
         title={t('cta.title')}
         body={t('cta.body')}
         cta={t('cta.button')}

@@ -1,19 +1,24 @@
 export const SITE_URL = 'https://www.factumcapital.eu';
 
 /**
- * Where a reader who is convinced actually goes: the page that describes the
- * engagement.
+ * Where every primary button goes: the page that turns a reader into a shared
+ * data room under NDA.
  *
- * This briefly pointed at an audit page on agenticmindshift.nl, on the theory
- * that Factum is the engine and you buy at the practice. That theory does not
- * survive the corporate structure: the engagements belong to Factum, which is
- * co-owned, and routing them through the consultancy routes the revenue past
- * the other owner. The two brands are separating rather than nesting.
+ * There is exactly one conversion event on this site, and it is not a demo
+ * booking. The prospect shares a data room under NDA, Factum runs the full
+ * pass, and the walkthrough of the findings on a call is the demo. Until
+ * 24 September 2026 the button pointed at /diligence-sprint, whose own button
+ * pointed at the calendar, whose copy framed the call as a platform tour with
+ * the NDA afterwards: three hops and a promise the sales motion does not make.
  *
- * So the buying action stays on this site. The locale argument is kept because
- * the destination is a localised route either way.
+ * /contact now states the NDA step in full, at the point where the hesitation
+ * actually occurs, and holds the calendar. Two hops from any page.
+ *
+ * The engagements belong to Factum, which is co-owned; routing them through
+ * the consultancy site would route the revenue past the other owner. The
+ * buying action stays here.
  */
-export const auditUrl = (locale: string) => `/${locale}/diligence-sprint`;
+export const auditUrl = (locale: string) => `/${locale}/contact`;
 
 /**
  * The conversation, still here but secondary. Contact keeps it, because a page
