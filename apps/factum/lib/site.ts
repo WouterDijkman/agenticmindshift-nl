@@ -119,15 +119,19 @@ export const LOCALE_NAMES: Record<string, string> = {
  * valuation each got their own wave instead of sharing wave 2/3, because
  * two modules in the same wave can never actually read each other's output
  * (signals only publish once a module has fully finished) — the old shared
- * waves were a dependency the run could never keep. What's left is 9 modules
- * across 5 waves that carry anything (wave 6 stays reserved, empty, for the
- * same numbering-continuity reason the deliverable/retired waves above were
- * kept rather than renumbered).
+ * waves were a dependency the run could never keep.
+ *
+ * Re-derived again 24 September 2026 against `src/lib/dispatch/module-registry.ts`
+ * in the product repo, which was itself recomputed on 21 September 2026. The
+ * drift this time: `financial` no longer opens in wave 1. It reads legal
+ * (wave 2) before it reasons, so it sits in wave 3, and tax, deal-economics
+ * and valuation each moved down one. What's left is 9 modules across 6 waves,
+ * all of which carry something.
  */
 export type FactumModule = {
   /** Product slug. Stable, and the key the wave diagram draws from. */
   readonly slug: string;
-  /** Dispatch wave, 1–5. */
+  /** Dispatch wave, 1–6. */
   readonly wave: number;
   /**
    * What the module hands back. Every module here is a finding-producing
@@ -141,13 +145,16 @@ export type FactumModule = {
 };
 
 export const MODULES: readonly FactumModule[] = [
-  // Wave 1 — no upstream dependencies, run fully in parallel.
+  // Wave 1 — no upstream dependencies, run fully in parallel: commercial,
+  // hr, operational and ai-dd. `financial` sits first in this array for the
+  // label ordering described below, but runs in wave 3 since 21 September
+  // 2026; read the `wave` field, not the position.
   //
   // These slugs and this order are load-bearing beyond this file. The wave
   // diagram draws `shared.modules` in every messages/<locale>.json positionally
   // against this array, so an entry inserted here without the matching label
   // inserted there silently relabels every module below it.
-  { slug: 'financial', wave: 1, kind: 'analysis', zdr: true },
+  { slug: 'financial', wave: 3, kind: 'analysis', zdr: true },
   { slug: 'commercial', wave: 1, kind: 'analysis' },
   { slug: 'hr', wave: 1, kind: 'analysis' },
   { slug: 'operational', wave: 1, kind: 'analysis' },
@@ -155,18 +162,18 @@ export const MODULES: readonly FactumModule[] = [
   // Wave 2 — reads wave 1 (hr, commercial) only. Its own wave since 4
   // September 2026, so tax (wave 3) can actually read its finished output.
   { slug: 'legal', wave: 2, kind: 'analysis', zdr: true },
-  // Wave 3 — reads wave 1 (financial) and wave 2 (legal).
-  { slug: 'tax', wave: 3, kind: 'analysis', zdr: true },
-  // Wave 4 — synthesis across waves 1–3.
-  { slug: 'deal-economics', wave: 4, kind: 'analysis' },
-  // Wave 5 — the last wave that carries anything: reads deal-economics (wave
-  // 4) on top of everything before it. What comes out of waves 1–5 is what
+  // Wave 4 — reads wave 3 (financial) and wave 2 (legal).
+  { slug: 'tax', wave: 4, kind: 'analysis', zdr: true },
+  // Wave 5 — synthesis across waves 1–4.
+  { slug: 'deal-economics', wave: 5, kind: 'analysis' },
+  // Wave 6 — the last wave that carries anything: reads deal-economics (wave
+  // 5) on top of everything before it. What comes out of waves 1–6 is what
   // the dashboard and the report are built from.
-  { slug: 'valuation', wave: 5, kind: 'analysis' }
+  { slug: 'valuation', wave: 6, kind: 'analysis' }
 ];
 
 export const MODULE_COUNT = MODULES.length;
-export const WAVE_COUNT = 5;
+export const WAVE_COUNT = 6;
 
 export const ZDR_MODULE_COUNT = MODULES.filter((m) => m.zdr).length;
 

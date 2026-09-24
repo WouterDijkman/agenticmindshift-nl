@@ -182,6 +182,10 @@
         "body": "Leest HR en commercieel voordat het redeneert: een arbeidsrechtelijke blootstelling of een contractuele claim hangt meestal af van wat die twee al hebben vastgesteld."
       },
       {
+        "title": "Financieel",
+        "body": "Leest de onafhankelijke rondes en juridisch voordat het redeneert: een resultaatcijfer verschuift zodra een contractuele claim of een arbeidsrechtelijke blootstelling op tafel ligt."
+      },
+      {
         "title": "Fiscaal",
         "body": "Leest financieel en juridisch voordat het redeneert: een fiscale positie is een gevolg van de structuur die de financiële passage net heeft beschreven, en overlapt vaak met wat juridisch in die structuur vond."
       },
@@ -198,6 +202,7 @@
       "zdr": "ZDR",
       "zdrTitle": "Zero-retention routing wordt afgedwongen. Zonder die route start de run niet.",
       "modulesLabel": "modules",
+      "moduleLabel": "module",
       "kinds": {
         "analysis": "Bevinding",
         "deliverable": "Document",
@@ -209,13 +214,14 @@
       "pageRef": "TargetCo — Raamovereenkomst, p. 14",
       "highlight": "Geciteerde passage",
       "findingLabel": "De bevinding die eruit volgde",
-      "footnote": "Een geconstrueerd voorbeeld op een fictieve target. Hier staat geen cliëntdocument. Uw mandaat levert dezelfde vijf velden, op uw eigen data room.",
+      "footnote": "Een geconstrueerd voorbeeld op een fictieve target. Hier staat geen cliëntdocument. Uw mandaat levert dezelfde zes velden, op uw eigen data room.",
       "quote": "Afnemer kan deze overeenkomst schriftelijk opzeggen met inachtneming van een termijn van dertig (30) dagen bij een wijziging van zeggenschap over Leverancier.",
       "tag": "Illustratief",
       "values": {
         "module": "Contracten — change of control",
         "finding": "De grootste klant van TargetCo kan weglopen op de transactie zelf, met dertig dagen opzegtermijn en zonder afkoopsom.",
         "evidence": "Artikel 14.2, links volledig geciteerd.",
+        "severity": "Hoog. De grootste klant, dertig dagen opzegtermijn, geen afkoopsom.",
         "document": "TargetCo — Raamovereenkomst met Klant A, pagina 14.",
         "review": "Vrijgegeven door W. Dijkman."
       }
@@ -271,7 +277,7 @@
       "lead": "Een uitgewerkt voorbeeld op een fictieve target. Dit is het format dat u krijgt."
     },
     "pipeline": {
-      "title": "Elk mandaat doorloopt dezelfde vijf stappen",
+      "title": "Elk mandaat doorloopt dezelfde zes stappen",
       "lead": "Iedereen kan een AI-tool op een data room richten. De vraag is wat er gebeurt als het model iets fout heeft.",
       "refusalTitle": "De pijplijn stopt en roept een persoon",
       "refusalNote": "Elke harde blokkade gaat naar een persoon.",
@@ -366,7 +372,7 @@
     },
     "pipeline": {
       "title": "Van upload tot een afgeronde bevinding",
-      "lead": "Vijf stappen. Elke keer dezelfde vijf, of er nu iemand meekijkt of niet.",
+      "lead": "Zes stappen. Elke keer dezelfde zes, of er nu iemand meekijkt of niet.",
       "stages": [
         {
           "title": "Onderbouwd ophalen",
@@ -922,30 +928,34 @@
       "steps": [
         {
           "title": "Golf één — de onafhankelijke passages",
-          "body": "{w1} modules openen tegelijk. Financieel, commercieel, HR, operationeel en AI gaan parallel de data room in. Geen van hen heeft het antwoord van een andere module nodig om te beginnen."
+          "body": "{w1} modules openen tegelijk. Commercieel, HR, operationeel en AI gaan parallel de data room in. Geen van hen heeft het antwoord van een andere module nodig om te beginnen."
         },
         {
           "title": "Golf twee — juridisch",
           "body": "Leest HR en commercieel voordat het redeneert: een arbeidsrechtelijke blootstelling of een contractuele claim hangt meestal af van feiten die die twee al hebben vastgesteld. Het draait in een eigen golf, zodat fiscaal in golf drie de afgeronde output ook echt kan lezen in plaats van een belofte die de run niet kon waarmaken."
         },
         {
-          "title": "Golf drie — fiscaal",
+          "title": "Golf drie — financieel",
+          "body": "Leest golf één en juridisch voordat het redeneert. Een resultaatcijfer verandert zodra een contractuele claim of een arbeidsrechtelijke blootstelling op tafel ligt, dus financieel wacht op allebei in plaats van een getal te noemen dat het weer zou moeten intrekken."
+        },
+        {
+          "title": "Golf vier — fiscaal",
           "body": "Leest financieel en juridisch voordat het redeneert: een fiscale positie is een gevolg van de structuur die de financiële passage net heeft beschreven, en overlapt vaak met wat juridisch in die structuur vond."
         },
         {
-          "title": "Golf vier — deal economics",
-          "body": "Leest alles uit golf één tot en met drie en stelt de vraag wat de deal werkelijk oplevert, niet wat hij waard is."
+          "title": "Golf vijf — deal economics",
+          "body": "Leest alles uit golf één tot en met vier en stelt de vraag wat de deal werkelijk oplevert, niet wat hij waard is."
         },
         {
-          "title": "Golf vijf — waardering",
+          "title": "Golf zes — waardering",
           "body": "De laatste golf die nog iets draagt. Leest deal economics bovenop alles daarvoor, en herrekent de prijs dóór de bevindingen heen in plaats van eromheen."
         }
       ],
-      "note": "Alle vijf golven samen zijn de due diligence zelf. Het dashboard en het rapport zijn opgebouwd uit wat ze opleveren."
+      "note": "Alle zes golven samen zijn de due diligence zelf. Het dashboard en het rapport zijn opgebouwd uit wat ze opleveren."
     },
     "contract": {
       "title": "Het outputcontract, veld voor veld",
-      "lead": "Vijf velden. Een bevinding die ze niet alle vijf kan invullen, wordt niet als bevinding geleverd.",
+      "lead": "Zes velden. Een bevinding die ze niet alle zes kan invullen, wordt niet als bevinding geleverd.",
       "failLabel": "Als het veld leeg blijft",
       "items": [
         {
@@ -962,6 +972,11 @@
           "title": "Letterlijk citaat",
           "body": "De onderbouwende passage, woord voor woord geciteerd. Niet samengevat, niet opgepoetst, niet ingekort om te passen.",
           "fail": "Een parafrase die als citaat wordt gepresenteerd zakt voor de tekstcontrole en gaat terug."
+        },
+        {
+          "title": "Ernst",
+          "body": "Het gevolg voor de koper, afgezet tegen de dealwaarde, op vijf niveaus. De module die de bevinding schreef kent hem toe, en de reviewer kan hem verzetten.",
+          "fail": "Een bevinding zonder weging leest als elke andere regel op de pagina."
         },
         {
           "title": "Brondocument en passage",

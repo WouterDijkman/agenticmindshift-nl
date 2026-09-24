@@ -55,6 +55,7 @@ export default function DispatchGraph({
   labels,
   waves,
   modulesLabel,
+  moduleLabel,
   kindLabels,
   zdrLabel,
   zdrTitle
@@ -65,6 +66,8 @@ export default function DispatchGraph({
   waves: Wave[];
   /** Unit noun for the per-wave tally, e.g. "modules". */
   modulesLabel: string;
+  /** Singular of the same noun, for the waves that hold exactly one module. */
+  moduleLabel: string;
   /** One short noun per module kind: what this module hands back. */
   kindLabels: Record<'analysis' | 'deliverable' | 'monitoring', string>;
   zdrLabel: string;
@@ -94,7 +97,7 @@ export default function DispatchGraph({
               <span className="mono dispatch-num">{String(n).padStart(2, '0')}</span>
               <h3 className="dispatch-title">{wave.title}</h3>
               <span className="mono dispatch-tally">
-                {nodes.length} {modulesLabel}
+                {nodes.length} {nodes.length === 1 ? moduleLabel : modulesLabel}
               </span>
             </Reveal>
 

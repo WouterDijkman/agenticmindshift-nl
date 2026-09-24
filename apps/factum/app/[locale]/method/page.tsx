@@ -58,7 +58,8 @@ export default async function MethodPage({
     w2: WAVE_SIZES[1],
     w3: WAVE_SIZES[2],
     w4: WAVE_SIZES[3],
-    w5: WAVE_SIZES[4]
+    w5: WAVE_SIZES[4],
+    w6: WAVE_SIZES[5]
   };
 
   const waves = (t.raw('waves.steps') as { title: string }[]).map((step, i) => ({

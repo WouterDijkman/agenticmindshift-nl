@@ -180,6 +180,7 @@ export default async function HomePage({
               { key: s('schema.rows.module'), value: s('specimen.values.module') },
               { key: s('schema.rows.finding'), value: s('specimen.values.finding') },
               { key: s('schema.rows.evidence'), value: s('specimen.values.evidence') },
+              { key: s('schema.rows.severity'), value: s('specimen.values.severity') },
               { key: s('schema.rows.document'), value: s('specimen.values.document') },
               { key: s('schema.rows.review'), value: s('specimen.values.review') }
             ]}

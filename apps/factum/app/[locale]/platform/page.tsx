@@ -256,6 +256,7 @@ export default async function PlatformPage({
             labels={s.raw('modules') as string[]}
             waves={s.raw('waves') as { title: string; body: string }[]}
             modulesLabel={s('chart.modulesLabel')}
+            moduleLabel={s('chart.moduleLabel')}
             kindLabels={{
               analysis: s('chart.kinds.analysis'),
               deliverable: s('chart.kinds.deliverable'),

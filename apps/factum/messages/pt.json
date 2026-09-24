@@ -182,6 +182,10 @@
         "body": "Lê RH e comercial antes de raciocinar: uma exposição laboral ou uma reclamação contratual costuma assentar em factos que essas duas leituras já estabeleceram."
       },
       {
+        "title": "Financeira",
+        "body": "Lê as leituras independentes e a jurídica antes de raciocinar: um número de resultados mexe-se assim que há uma reclamação contratual ou uma exposição laboral em cima da mesa."
+      },
+      {
         "title": "Fiscal",
         "body": "Lê financeira e jurídica antes de raciocinar: uma posição fiscal é consequência da estrutura que a leitura financeira acabou de descrever, e sobrepõe-se muitas vezes ao que a jurídica encontrou nessa estrutura."
       },
@@ -198,6 +202,7 @@
       "zdr": "ZDR",
       "zdrTitle": "Encaminhamento de retenção zero obrigatório. Sem essa rota, a execução não arranca.",
       "modulesLabel": "módulos",
+      "moduleLabel": "módulo",
       "kinds": {
         "analysis": "Constatação",
         "deliverable": "Documento",
@@ -209,13 +214,14 @@
       "pageRef": "TargetCo — Contrato-quadro de serviços, p. 14",
       "highlight": "Passagem citada",
       "findingLabel": "A constatação que daí resultou",
-      "footnote": "Um exemplo construído sobre um target fictício. Não há aqui qualquer documento de cliente. O seu mandato produz estes mesmos cinco campos, sobre o seu próprio data room.",
+      "footnote": "Um exemplo construído sobre um target fictício. Não há aqui qualquer documento de cliente. O seu mandato produz estes mesmos seis campos, sobre o seu próprio data room.",
       "quote": "O Cliente pode resolver este Contrato mediante aviso escrito de trinta (30) dias em caso de mudança de controlo do Fornecedor.",
       "tag": "Ilustrativo",
       "values": {
         "module": "Contratos — mudança de controlo",
         "finding": "O maior cliente da TargetCo pode sair por causa da própria operação, com trinta dias de aviso e sem indemnização.",
         "evidence": "Cláusula 14.2, citada na íntegra à esquerda.",
+        "severity": "Alta. O maior cliente, trinta dias de pré-aviso, sem indemnização.",
         "document": "TargetCo — Contrato-quadro com Cliente A, página 14.",
         "review": "Aprovado por W. Dijkman antes da entrega."
       }
@@ -271,7 +277,7 @@
       "lead": "Um exemplo trabalhado sobre um alvo fictício. O formato é o que recebe."
     },
     "pipeline": {
-      "title": "Cada mandato percorre os mesmos cinco passos",
+      "title": "Cada mandato percorre os mesmos seis passos",
       "lead": "Qualquer um pode apontar uma ferramenta de IA a um data room. A questão é o que acontece quando o modelo se engana.",
       "refusalTitle": "A pipeline pára e chama uma pessoa",
       "refusalNote": "Cada bloqueio duro passa a uma pessoa.",
@@ -366,7 +372,7 @@
     },
     "pipeline": {
       "title": "Do carregamento à constatação concluída",
-      "lead": "Cinco etapas. As mesmas cinco de cada vez, esteja alguém a ver ou não.",
+      "lead": "Seis etapas. As mesmas seis de cada vez, esteja alguém a ver ou não.",
       "stages": [
         {
           "title": "Recuperação fundamentada",
@@ -922,30 +928,34 @@
       "steps": [
         {
           "title": "Vaga um — as leituras independentes",
-          "body": "{w1} módulos abrem ao mesmo tempo. Financeiro, comercial, recursos humanos, operações e IA entram em paralelo no data room. Nenhum precisa da resposta de outro módulo para começar."
+          "body": "{w1} módulos abrem ao mesmo tempo. Comercial, recursos humanos, operações e IA entram em paralelo no data room. Nenhum precisa da resposta de outro módulo para começar."
         },
         {
           "title": "Vaga dois — jurídica",
           "body": "Lê RH e comercial antes de raciocinar: uma exposição laboral ou uma reclamação contratual costuma assentar em factos que essas duas leituras já estabeleceram. Corre na sua própria vaga, para que o fiscal, na vaga três, possa mesmo ler a sua saída concluída, e não uma promessa que a execução não conseguia cumprir."
         },
         {
-          "title": "Vaga três — fiscal",
+          "title": "Vaga três — financeira",
+          "body": "Lê a vaga um e a jurídica antes de raciocinar. Um número de resultados muda assim que há uma reclamação contratual ou uma exposição laboral em cima da mesa, por isso a financeira espera por ambas em vez de dar um valor que teria de retirar."
+        },
+        {
+          "title": "Vaga quatro — fiscal",
           "body": "Lê financeiro e jurídica antes de raciocinar: uma posição fiscal é consequência da estrutura que a leitura financeira acabou de descrever, e sobrepõe-se muitas vezes ao que a jurídica encontrou nessa estrutura."
         },
         {
-          "title": "Vaga quatro — deal economics",
-          "body": "Lê tudo o que veio nas vagas um a três e pergunta o que o negócio realmente rende, não quanto vale."
+          "title": "Vaga cinco — deal economics",
+          "body": "Lê tudo o que veio nas vagas um a quatro e pergunta o que o negócio realmente rende, não quanto vale."
         },
         {
-          "title": "Vaga cinco — avaliação",
+          "title": "Vaga seis — avaliação",
           "body": "A última vaga que ainda entrega algo. Lê deal economics por cima de tudo o que veio antes, e recalcula o preço atravessando as constatações em vez de as contornar."
         }
       ],
-      "note": "As cinco vagas juntas são a due diligence. O dashboard e o relatório são construídos a partir do que entregam."
+      "note": "As seis vagas juntas são a due diligence. O dashboard e o relatório são construídos a partir do que entregam."
     },
     "contract": {
       "title": "O contrato de saída, campo a campo",
-      "lead": "Cinco campos. Uma constatação que não consiga preencher os cinco não é entregue como constatação.",
+      "lead": "Seis campos. Uma constatação que não consiga preencher os seis não é entregue como constatação.",
       "failLabel": "Quando o campo fica vazio",
       "items": [
         {
@@ -962,6 +972,11 @@
           "title": "Citação literal",
           "body": "A passagem que a sustenta, citada palavra por palavra. Não resumida, não polida, não encurtada para caber.",
           "fail": "Uma paráfrase apresentada como citação chumba na verificação textual e volta para trás."
+        },
+        {
+          "title": "Gravidade",
+          "body": "A consequência para o comprador, medida contra o valor do negócio, em cinco níveis. É atribuída pelo módulo que escreveu a constatação, e o revisor pode alterá-la.",
+          "fail": "Uma constatação sem ponderação lê-se como qualquer outra linha da página."
         },
         {
           "title": "Documento e passagem de origem",

@@ -182,6 +182,10 @@
         "body": "Liest Personal und Kommerziell, bevor es argumentiert: ein arbeitsrechtliches Risiko oder ein Vertragsanspruch hängt meist an Tatsachen, die diese beiden Durchgänge schon festgestellt haben."
       },
       {
+        "title": "Finanzen",
+        "body": "Liest die unabhängigen Durchgänge und Recht, bevor es argumentiert: eine Ergebniszahl verschiebt sich, sobald ein Vertragsanspruch oder ein arbeitsrechtliches Risiko auf dem Tisch liegt."
+      },
+      {
         "title": "Steuern",
         "body": "Liest Finanzen und Recht, bevor es argumentiert: eine Steuerposition ist eine Folge der Struktur, die der Financial-Durchgang gerade beschrieben hat, und überschneidet sich oft mit dem, was Recht dort gefunden hat."
       },
@@ -198,6 +202,7 @@
       "zdr": "ZDR",
       "zdrTitle": "Zero-Retention-Routing erzwungen. Ohne diese Route startet der Lauf nicht.",
       "modulesLabel": "Module",
+      "moduleLabel": "Modul",
       "kinds": {
         "analysis": "Feststellung",
         "deliverable": "Dokument",
@@ -209,13 +214,14 @@
       "pageRef": "TargetCo — Rahmenvertrag, S. 14",
       "highlight": "Zitierte Passage",
       "findingLabel": "Der Feststellung, der daraus entstand",
-      "footnote": "Ein konstruiertes Beispiel an einem fiktiven Target. Hier steht kein Mandantendokument. Ihr Mandat liefert dieselben fünf Felder, an Ihrem eigenen Data Room.",
+      "footnote": "Ein konstruiertes Beispiel an einem fiktiven Target. Hier steht kein Mandantendokument. Ihr Mandat liefert dieselben sechs Felder, an Ihrem eigenen Data Room.",
       "quote": "Der Kunde kann diesen Vertrag mit einer Frist von dreißig (30) Tagen schriftlich kündigen, wenn sich die Kontrolle über den Lieferanten ändert.",
       "tag": "Beispiel",
       "values": {
         "module": "Verträge — Change of Control",
         "finding": "Der größte Kunde von TargetCo kann wegen der Transaktion selbst kündigen, mit dreißig Tagen Frist und ohne Ausgleichszahlung.",
         "evidence": "Ziffer 14.2, links vollständig zitiert.",
+        "severity": "Hoch. Der größte Kunde, dreißig Tage Frist, keine Abstandszahlung.",
         "document": "TargetCo — Rahmenvertrag mit Kunde A, Seite 14.",
         "review": "Freigegeben von W. Dijkman."
       }
@@ -271,7 +277,7 @@
       "lead": "Ein durchgerechnetes Beispiel an einem fiktiven Target. Das Format ist das, das Sie erhalten."
     },
     "pipeline": {
-      "title": "Jedes Mandat durchläuft dieselben fünf Schritte",
+      "title": "Jedes Mandat durchläuft dieselben sechs Schritte",
       "lead": "Ein KI-Werkzeug auf einen Data Room richten kann jeder. Die Frage ist, was passiert, wenn das Modell sich irrt.",
       "refusalTitle": "Die Pipeline hält an und ruft einen Menschen",
       "refusalNote": "Jede harte Blockade geht an einen Menschen.",
@@ -366,7 +372,7 @@
     },
     "pipeline": {
       "title": "Vom Upload zur fertigen Feststellung",
-      "lead": "Fünf Stufen. Jedes Mal dieselben fünf, ob jemand zusieht oder nicht.",
+      "lead": "Sechs Stufen. Jedes Mal dieselben sechs, ob jemand zusieht oder nicht.",
       "stages": [
         {
           "title": "Fundierte Retrieval",
@@ -922,30 +928,34 @@
       "steps": [
         {
           "title": "Welle eins — die unabhängigen Durchgänge",
-          "body": "{w1} Module öffnen im selben Moment. Financial, Commercial, HR, Operations und AI gehen parallel in den Data Room. Keines braucht die Antwort eines anderen Moduls, um anzufangen."
+          "body": "{w1} Module öffnen im selben Moment. Commercial, HR, Operations und AI gehen parallel in den Data Room. Keines braucht die Antwort eines anderen Moduls, um anzufangen."
         },
         {
           "title": "Welle zwei — Recht",
           "body": "Liest HR und Commercial, bevor es argumentiert: ein arbeitsrechtliches Risiko oder ein Vertragsanspruch hängt meist an Tatsachen, die diese beiden Durchgänge schon festgestellt haben. Es läuft in einer eigenen Welle, damit Steuern in Welle drei die fertige Ausgabe tatsächlich lesen kann statt eines Versprechens, das der Lauf nicht halten konnte."
         },
         {
-          "title": "Welle drei — Steuern",
+          "title": "Welle drei — Finanzen",
+          "body": "Liest Welle eins und Recht, bevor es argumentiert. Eine Ergebniszahl ändert sich, sobald ein Vertragsanspruch oder ein arbeitsrechtliches Risiko auf dem Tisch liegt, also wartet Financial auf beides, statt eine Zahl zu nennen, die es zurücknehmen müsste."
+        },
+        {
+          "title": "Welle vier — Steuern",
           "body": "Liest Financial und Recht, bevor es argumentiert: eine Steuerposition ist die Folge der Struktur, die der Financial-Durchgang gerade beschrieben hat, und überschneidet sich oft mit dem, was Recht in dieser Struktur fand."
         },
         {
-          "title": "Welle vier — Deal Economics",
-          "body": "Liest alles aus Welle eins bis drei und stellt die Frage, was der Deal tatsächlich einbringt, nicht was er wert ist."
+          "title": "Welle fünf — Deal Economics",
+          "body": "Liest alles aus Welle eins bis vier und stellt die Frage, was der Deal tatsächlich einbringt, nicht was er wert ist."
         },
         {
-          "title": "Welle fünf — Bewertung",
+          "title": "Welle sechs — Bewertung",
           "body": "Die letzte Welle, die noch etwas trägt. Liest Deal Economics obendrauf auf alles davor, und rechnet den Preis durch die Feststellungen hindurch statt an ihnen vorbei."
         }
       ],
-      "note": "Alle fünf Wellen zusammen sind die Due Diligence selbst. Das Dashboard und der Bericht entstehen aus dem, was sie liefern."
+      "note": "Alle sechs Wellen zusammen sind die Due Diligence selbst. Das Dashboard und der Bericht entstehen aus dem, was sie liefern."
     },
     "contract": {
       "title": "Der Ausgabevertrag, Feld für Feld",
-      "lead": "Fünf Felder. Eine Feststellung, die nicht alle fünf füllen kann, wird nicht als Feststellung geliefert.",
+      "lead": "Sechs Felder. Eine Feststellung, die nicht alle sechs füllen kann, wird nicht als Feststellung geliefert.",
       "failLabel": "Wenn das Feld leer bleibt",
       "items": [
         {
@@ -962,6 +972,11 @@
           "title": "Wörtliches Zitat",
           "body": "Die belegende Passage, Wort für Wort zitiert. Nicht zusammengefasst, nicht geglättet, nicht passend gekürzt.",
           "fail": "Eine als Zitat ausgegebene Paraphrase fällt durch die Textprüfung und geht zurück."
+        },
+        {
+          "title": "Schweregrad",
+          "body": "Die Folge für den Käufer, gemessen am Transaktionswert, auf fünf Stufen. Das Modul, das die Feststellung geschrieben hat, vergibt ihn, und der Prüfer kann ihn verschieben.",
+          "fail": "Eine Feststellung ohne Gewichtung liest sich wie jede andere Zeile auf der Seite."
         },
         {
           "title": "Quelldokument und Passage",
