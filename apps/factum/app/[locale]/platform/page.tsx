@@ -23,6 +23,7 @@ import Disclosures from '@/components/Disclosures';
 import CtaBand from '@/components/CtaBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
 import FindingSchema from '@/components/FindingSchema';
+import FilmPanel from '@/components/FilmPanel';
 import Breadcrumb from '@/components/Breadcrumb';
 import { ArrowRight } from '@/components/Icons';
 
@@ -125,6 +126,18 @@ export default async function PlatformPage({
         claim, so they now sit below the claim. What a reader wants first is
         what happens to their documents.
       */}
+
+      {/* The film: what due diligence is for, in forty-five seconds, before the
+          mechanism. Same words as the feed version; this is the brand treatment. */}
+      <Section id="film" tone="inset">
+        <FilmPanel
+          title={t('film.title')}
+          lead={t('film.lead')}
+          note={t('film.note')}
+          src="/video/what-is-due-diligence-for.mp4"
+          poster="/video/what-is-due-diligence-for-poster.jpg"
+        />
+      </Section>
 
       {/* What happens inside one module. */}
       <Section id="pipeline">
