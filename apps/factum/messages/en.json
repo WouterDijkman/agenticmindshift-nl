@@ -858,18 +858,6 @@
       ],
       "note": "If cross-client methodology learning is a problem for your mandate, say so on the call. It can be switched off for your account."
     },
-    "grounding": {
-      "title": "One benchmark, published with its caveats attached",
-      "lead": "We would rather show a number with its limits than no number at all.",
-      "dialLabel": "Claims either grounded in a cited passage or explicitly flagged as unconfirmed",
-      "dialCaveat": "One internal dataset, measured {date}. Not audited. Not a guarantee for your deal, and not comparable to anyone else’s figure.",
-      "items": [
-        "Single dataset, single run. No third party has checked it.",
-        "The remainder is not “{remainder}% wrong”. It is the share the checks could not conclusively ground or flag.",
-        "A different data room will produce a different number.",
-        "This is why the human gate is mandatory, not optional."
-      ]
-    },
     "legal": {
       "title": "Why this is not a chat window",
       "lead": "One from the small print. One from your own NDA. One from the statute book.",

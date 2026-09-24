@@ -8,16 +8,12 @@ import HandoffTrack from '@/components/HandoffTrack';
 import MediaCards from '@/components/MediaCards';
 import Reveal from '@/components/Reveal';
 import { Section, SectionHeader } from '@/components/Section';
-import Dial from '@/components/Dial';
 import TenancySplit from '@/components/TenancySplit';
 import CtaBand from '@/components/CtaBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
 import Breadcrumb from '@/components/Breadcrumb';
 import { ArrowRight } from '@/components/Icons';
 import {
-  GROUNDING_AUDIT_DATE,
-  GROUNDING_RATE,
-  GROUNDING_REMAINDER,
   HARD_BLOCK_COUNT,
   KVK,
   MODULE_COUNT,
@@ -46,9 +42,7 @@ export default async function GovernancePage({
   const n = {
     blocks: HARD_BLOCK_COUNT,
     zdr: ZDR_MODULE_COUNT,
-    other: MODULE_COUNT - ZDR_MODULE_COUNT,
-    date: GROUNDING_AUDIT_DATE,
-    remainder: GROUNDING_REMAINDER
+    other: MODULE_COUNT - ZDR_MODULE_COUNT
   };
 
   return (
@@ -151,35 +145,6 @@ export default async function GovernancePage({
         </Reveal>
       </Section>
 
-      {/* The one measured number, welded to its caveat — the feature moment on this page. */}
-      <Section id="grounding" width="medium" tone="inset" weight="loud">
-        <SectionHeader title={t('grounding.title')} lead={t('grounding.lead')} />
-        <div className="split-grid" style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
-          <Reveal>
-            <Dial
-              value={GROUNDING_RATE}
-              label={t('grounding.dialLabel')}
-              caveat={t('grounding.dialCaveat', n)}
-            />
-          </Reveal>
-          <Reveal delay={80}>
-            <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
-              {(t.raw('grounding.items') as string[]).map((_, i) => (
-                <li
-                  key={i}
-                  className="type-body hairline-top"
-                  style={{ paddingBlock: 16, display: 'flex', gap: 14 }}
-                >
-                  <span className="mono" style={{ color: 'var(--wine-text)', paddingTop: 4 }}>
-                    —
-                  </span>
-                  {t(`grounding.items.${i}`, n)}
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-        </div>
-      </Section>
 
       {/* Why the pipeline has this shape: one court, one NDA, one statute. */}
       <Section id="why-the-gate" width="medium" weight="tight">

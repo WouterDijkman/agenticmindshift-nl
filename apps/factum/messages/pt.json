@@ -858,18 +858,6 @@
       ],
       "note": "Se a aprendizagem metodológica entre clientes for um problema para o seu mandato, diga-o na chamada. Pode ser desligada para a sua conta."
     },
-    "grounding": {
-      "title": "Um benchmark, publicado com as ressalvas coladas",
-      "lead": "Preferimos um número com os seus limites a número nenhum.",
-      "dialLabel": "Afirmações fundamentadas numa passagem citada ou explicitamente marcadas como não confirmadas",
-      "dialCaveat": "Um conjunto de dados interno, medido a {date}. Não auditado. Não é uma garantia para a sua operação nem é comparável com o número de outrem.",
-      "items": [
-        "Um conjunto de dados, uma execução. Nenhum terceiro o verificou.",
-        "O restante não é «{remainder}% errado». É a parte que as verificações não conseguiram fundamentar nem marcar de forma conclusiva.",
-        "Outro data room dará outro número.",
-        "É por isto que a porta humana é obrigatória e não opcional."
-      ]
-    },
     "legal": {
       "title": "Porque é que isto não é uma janela de chat",
       "lead": "Uma da letra miúda. Outra do seu próprio NDA. Outra da lei.",

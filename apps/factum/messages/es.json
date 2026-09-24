@@ -858,18 +858,6 @@
       ],
       "note": "Si el aprendizaje metodológico entre clientes es un problema para su mandato, dígalo en la llamada. Puede desactivarse para su cuenta."
     },
-    "grounding": {
-      "title": "Un benchmark, publicado con sus salvedades pegadas",
-      "lead": "Preferimos una cifra con sus límites a ninguna cifra.",
-      "dialLabel": "Afirmaciones fundamentadas en un pasaje citado o marcadas explícitamente como no confirmadas",
-      "dialCaveat": "Un conjunto de datos interno, medido el {date}. No auditado. No es una garantía para su operación ni comparable con la cifra de nadie más.",
-      "items": [
-        "Un conjunto de datos, una ejecución. Ningún tercero lo ha comprobado.",
-        "El resto no es «{remainder}% erróneo». Es la parte que las comprobaciones no pudieron fundamentar ni marcar de forma concluyente.",
-        "Otra data room dará otra cifra.",
-        "Por esto la puerta humana es obligatoria y no opcional."
-      ]
-    },
     "legal": {
       "title": "Por qué esto no es una ventana de chat",
       "lead": "Una de la letra pequeña. Otra de su propio NDA. Otra del boletín oficial.",

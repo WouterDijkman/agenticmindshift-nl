@@ -246,7 +246,7 @@
   },
   "home": {
     "hero": {
-      "title": "Wissen, was im Data Room liegt, bevor Sie unterschreiben",
+      "title": "Den Data Room kennen, bevor Sie unterschreiben",
       "lead": "Jede Dimension, über den ganzen Data Room, in Tagen. Zu jeder Feststellung stehen Quelle und Fundstelle, damit Sie sie am Tisch belegen können, während Sie dort sitzen.",
       "cta": "Data Room teilen"
     },
@@ -857,18 +857,6 @@
         }
       ],
       "note": "Ist mandantenübergreifendes Methodenlernen für Ihr Mandat ein Problem, sagen Sie das im Call. Für Ihr Konto lässt es sich abschalten."
-    },
-    "grounding": {
-      "title": "Ein Benchmark, veröffentlicht mit angehängten Vorbehalten",
-      "lead": "Lieber eine Zahl mit ihren Grenzen als gar keine Zahl.",
-      "dialLabel": "Aussagen, die in einer zitierten Passage fundiert oder ausdrücklich als unbestätigt markiert sind",
-      "dialCaveat": "Ein interner Datensatz, gemessen am {date}. Nicht auditiert. Keine Garantie für Ihren Deal und nicht mit fremden Zahlen vergleichbar.",
-      "items": [
-        "Ein Datensatz, ein Lauf. Kein Dritter hat es geprüft.",
-        "Der Rest ist nicht „{remainder}% falsch“. Es ist der Anteil, den die Prüfungen nicht abschließend fundieren oder markieren konnten.",
-        "Ein anderer Data Room ergibt eine andere Zahl.",
-        "Genau deshalb ist das menschliche Tor verpflichtend und nicht optional."
-      ]
     },
     "legal": {
       "title": "Warum dies kein Chatfenster ist",

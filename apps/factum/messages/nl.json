@@ -858,18 +858,6 @@
       ],
       "note": "Is methodologisch leren tussen cliënten een probleem voor uw mandaat, zeg dat op de call. Het kan voor uw account uit."
     },
-    "grounding": {
-      "title": "Eén benchmark, gepubliceerd met de kanttekeningen eraan vast",
-      "lead": "Liever een getal met zijn grenzen dan helemaal geen getal.",
-      "dialLabel": "Claims die gefundeerd zijn in een geciteerde passage of expliciet als onbevestigd zijn gemarkeerd",
-      "dialCaveat": "Eén interne dataset, gemeten {date}. Niet geauditeerd. Geen garantie voor uw deal, en niet vergelijkbaar met het cijfer van iemand anders.",
-      "items": [
-        "Eén dataset, één run. Geen derde partij heeft het gecontroleerd.",
-        "De rest is niet “{remainder}% fout”. Het is het deel dat de checks niet sluitend konden funderen of markeren.",
-        "Een andere data room levert een ander getal op.",
-        "Dit is waarom de menselijke poort verplicht is en niet optioneel."
-      ]
-    },
     "legal": {
       "title": "Waarom dit geen chatvenster is",
       "lead": "Eén uit de kleine lettertjes. Eén uit uw eigen NDA. Eén uit het wetboek.",

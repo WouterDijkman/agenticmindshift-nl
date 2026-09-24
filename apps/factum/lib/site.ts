@@ -276,16 +276,6 @@ export const COVERAGE_FULL = 9;
 export const COVERAGE_PARTIAL = 5;
 
 /**
- * Factum's own grounding audit. Published only with its caveat attached, and
- * never as a standalone statistic — it is one internal, unaudited dataset.
- */
-export const GROUNDING_RATE = 96.7;
-export const GROUNDING_AUDIT_DATE = '15 July 2026';
-
-/** The open part of the dial. Named so the copy can refuse to round it away. */
-export const GROUNDING_REMAINDER = (100 - GROUNDING_RATE).toFixed(1);
-
-/**
  * Hard-block conditions that stop a sub-agent draft being auto-approved.
  *
  * Eight, not seven: `agent-review-graph.ts` throws a distinct `HardBlockError`
