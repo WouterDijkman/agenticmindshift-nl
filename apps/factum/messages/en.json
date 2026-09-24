@@ -218,7 +218,7 @@
       "quote": "Customer may terminate this Agreement on thirty (30) days’ written notice in the event of a change of control of Supplier.",
       "tag": "Illustrative",
       "values": {
-        "module": "Contracts — change of control",
+        "module": "Legal — change of control",
         "finding": "TargetCo’s largest customer can leave over the transaction itself, at thirty days’ notice and with no break fee.",
         "evidence": "Clause 14.2, quoted in full on the left.",
         "severity": "High. The largest customer, thirty days’ notice, no break fee.",

@@ -218,7 +218,7 @@
       "quote": "Der Kunde kann diesen Vertrag mit einer Frist von dreißig (30) Tagen schriftlich kündigen, wenn sich die Kontrolle über den Lieferanten ändert.",
       "tag": "Beispiel",
       "values": {
-        "module": "Verträge — Change of Control",
+        "module": "Legal — Change of Control",
         "finding": "Der größte Kunde von TargetCo kann wegen der Transaktion selbst kündigen, mit dreißig Tagen Frist und ohne Ausgleichszahlung.",
         "evidence": "Ziffer 14.2, links vollständig zitiert.",
         "severity": "Hoch. Der größte Kunde, dreißig Tage Frist, keine Abstandszahlung.",

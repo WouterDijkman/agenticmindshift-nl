@@ -218,7 +218,7 @@
       "quote": "O Cliente pode resolver este Contrato mediante aviso escrito de trinta (30) dias em caso de mudança de controlo do Fornecedor.",
       "tag": "Ilustrativo",
       "values": {
-        "module": "Contratos — mudança de controlo",
+        "module": "Legal — mudança de controlo",
         "finding": "O maior cliente da TargetCo pode sair por causa da própria operação, com trinta dias de aviso e sem indemnização.",
         "evidence": "Cláusula 14.2, citada na íntegra à esquerda.",
         "severity": "Alta. O maior cliente, trinta dias de pré-aviso, sem indemnização.",

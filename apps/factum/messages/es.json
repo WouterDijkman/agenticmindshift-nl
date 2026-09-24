@@ -218,7 +218,7 @@
       "quote": "El Cliente podrá resolver este Contrato con un preaviso escrito de treinta (30) días en caso de cambio de control del Proveedor.",
       "tag": "Ilustrativo",
       "values": {
-        "module": "Contratos — cambio de control",
+        "module": "Legal — cambio de control",
         "finding": "El mayor cliente de TargetCo puede marcharse por la propia operación, con treinta días de preaviso y sin indemnización.",
         "evidence": "Cláusula 14.2, citada íntegra a la izquierda.",
         "severity": "Alta. El mayor cliente, treinta días de preaviso, sin indemnización.",

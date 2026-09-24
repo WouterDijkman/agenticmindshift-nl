@@ -218,7 +218,7 @@
       "quote": "Afnemer kan deze overeenkomst schriftelijk opzeggen met inachtneming van een termijn van dertig (30) dagen bij een wijziging van zeggenschap over Leverancier.",
       "tag": "Illustratief",
       "values": {
-        "module": "Contracten — change of control",
+        "module": "Legal — change of control",
         "finding": "De grootste klant van TargetCo kan weglopen op de transactie zelf, met dertig dagen opzegtermijn en zonder afkoopsom.",
         "evidence": "Artikel 14.2, links volledig geciteerd.",
         "severity": "Hoog. De grootste klant, dertig dagen opzegtermijn, geen afkoopsom.",
