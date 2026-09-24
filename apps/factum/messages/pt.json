@@ -335,6 +335,11 @@
       "title": "Corra-o sobre um processo aberto agora, ou sobre um já fechado",
       "body": "Partilhe o data room sob NDA, corremos a leitura completa e recebe as constatações numa chamada, fonte a fonte. Se um sprint não for o instrumento certo, dizemos isso.",
       "button": "Partilhe um data room"
+    },
+    "film": {
+      "title": "Para que serve a due diligence?",
+      "lead": "Quarenta e cinco segundos sobre a pergunta com que cada negócio começa: o que está realmente no data room. Trezentos documentos, um fim de semana e uma cláusula na página catorze que permite ao seu maior cliente sair na semana em que assina.",
+      "note": "O exemplo no filme é construído sobre uma empresa-alvo fictícia e di-lo no ecrã. Não aparece nenhum documento de cliente. O seu mandato produz os mesmos seis campos, sobre o seu próprio data room."
     }
   },
   "platform": {
@@ -568,11 +573,6 @@
       "body": "Partilhe um data room sob NDA. Corremos a leitura completa e seguimos consigo cada constatação até à passagem de origem, numa chamada.",
       "button": "Partilhe um data room",
       "note": "Primeiro o NDA, enviado no mesmo dia. Um negócio que fechou no ano passado também serve."
-    },
-    "film": {
-      "title": "Para que serve a due diligence?",
-      "lead": "Quarenta e cinco segundos sobre a pergunta com que cada negócio começa: o que está realmente no data room. Trezentos documentos, um fim de semana e uma cláusula na página catorze que permite ao seu maior cliente sair na semana em que assina.",
-      "note": "O exemplo no filme é construído sobre uma empresa-alvo fictícia e di-lo no ecrã. Não aparece nenhum documento de cliente. O seu mandato produz os mesmos seis campos, sobre o seu próprio data room."
     }
   },
   "sprint": {

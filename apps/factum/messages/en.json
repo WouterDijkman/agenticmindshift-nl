@@ -335,6 +335,11 @@
       "title": "Run it on a deal you have open now, or one you closed",
       "body": "Share the room under NDA, we run the full pass, and you get the findings on a call, source by source. If a sprint is not the right instrument, we will say so.",
       "button": "Share a data room"
+    },
+    "film": {
+      "title": "What is due diligence for?",
+      "lead": "Forty-five seconds on the one question every deal starts with: what is actually in the room. Three hundred documents, one weekend, and a clause on page fourteen that lets your biggest customer walk away the week you sign.",
+      "note": "The example in the film is constructed on a fictional target and says so on screen. No client document appears. Your mandate produces the same six fields, on your own room."
     }
   },
   "platform": {
@@ -568,11 +573,6 @@
       "body": "Share a room under NDA. We run the full pass and follow each finding back to its source passage with you, on a call.",
       "button": "Share a data room",
       "note": "NDA first, sent the same day. A deal you closed last year works too."
-    },
-    "film": {
-      "title": "What is due diligence for?",
-      "lead": "Forty-five seconds on the one question every deal starts with: what is actually in the room. Three hundred documents, one weekend, and a clause on page fourteen that lets your biggest customer walk away the week you sign.",
-      "note": "The example in the film is constructed on a fictional target and says so on screen. No client document appears. Your mandate produces the same six fields, on your own room."
     }
   },
   "sprint": {

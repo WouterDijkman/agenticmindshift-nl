@@ -17,6 +17,7 @@ import Stepper from '@/components/Stepper';
 import GuaranteeBand from '@/components/GuaranteeBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
 import CtaBand from '@/components/CtaBand';
+import FilmPanel from '@/components/FilmPanel';
 import { ArrowRight } from '@/components/Icons';
 
 export async function generateMetadata({
@@ -104,6 +105,19 @@ export default async function HomePage({
         guarantee={s('guarantee.claim')}
         note={s('guarantee.note')}
       />
+
+      {/* The film: what due diligence is for, in forty-five seconds, in the
+          reader's own language (one narration per locale). It sits before the
+          argument because it is the argument, spoken. */}
+      <Section id="film" tone="inset">
+        <FilmPanel
+          title={t('film.title')}
+          lead={t('film.lead')}
+          note={t('film.note')}
+          src={`/video/what-is-due-diligence-for-${locale}.mp4`}
+          poster={`/video/what-is-due-diligence-for-poster-${locale}.jpg`}
+        />
+      </Section>
 
       {/* The problem. Two cards, not four: the third and fourth were the same
           argument as the first two with different nouns, and a four-up grid is
