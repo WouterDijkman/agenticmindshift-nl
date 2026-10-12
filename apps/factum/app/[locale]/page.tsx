@@ -62,6 +62,7 @@ export default async function HomePage({
 
   const t = await getTranslations('home');
   const s = await getTranslations('shared');
+  const n = await getTranslations('nav');
 
   return (
     <>
@@ -167,17 +168,17 @@ export default async function HomePage({
       {/*
         The reframe, as the page's only full-bleed image.
 
-        This line has to arrive before the reader concludes we are arguing
-        their adviser did a bad job — the person weighing us up is often the
-        adviser. It used to be a blockquote at the bottom of the section above,
-        which is where a sentence goes to be skipped.
-
         It is also the answer to the other half of the complaint. The site owns
         nineteen macro stills and rendered every one of them at a third of the
         viewport inside a card. This is the first time one of them is the
         section rather than a decoration inside it.
       */}
-      <SceneBand id={HOME_BAND} line={s('reframe.quote')} attribution={t('reframe.attr')} />
+      {/* Both sides of the table since 12 October 2026. The line used to be
+          the sell-side reframe ("running the buyer's pass on your own side
+          first"), which a buyer on this page read as addressed to someone
+          else. The two audiences now get their own cards, with their own
+          links, in "What changes when you sign" below. */}
+      <SceneBand id={HOME_BAND} line={t('reframe.quote')} />
 
       {/* Who is behind the read. Raised band — the first change of ground on
           the page, and it lands on the section that is about people. */}
@@ -327,14 +328,21 @@ export default async function HomePage({
         />
       </Section>
 
-      {/* What's different afterwards. Two cards; the third made the same point
-          as the specimen section, with a picture instead of the evidence. */}
+      {/* What's different afterwards, once per audience. The two cards used to
+          be two outcomes, the second of them seller-only ("you already know
+          what they'll find") with nothing to say so. Each card now names its
+          reader and links to that reader's page, so this is also where the
+          homepage hands a visitor to the right half of the site. */}
       <Section width="medium">
         <SectionHeader title={t('success.title')} lead={t('success.lead')} />
         <div style={{ marginTop: 'clamp(32px, 4.5vw, 56px)' }}>
           <MediaCards
             items={t.raw('success.points') as { title: string; body: string }[]}
             scenes={HOME_SUCCESS}
+            links={[
+              { href: '/diligence-sprint', label: n('sprint') },
+              { href: '/pre-sale', label: n('preSale') }
+            ]}
           />
         </div>
       </Section>

@@ -98,10 +98,10 @@ export const HOME_SUCCESS: SceneId[] = [
  *
  * The second and last 100vw scene on the site. `micrometer` is the graduated
  * reference laid down before anything is measured against it, which is the
- * sentence: checking your own work first is not an admission, it is the
- * baseline. It carries the same line as HOME_BAND and deliberately does not
- * carry the same picture — a reader arriving here from the homepage should
- * recognise the argument, not think the page failed to load.
+ * sentence: read the whole room before you set the price. Its line is the
+ * buyer's version of HOME_BAND's, and it deliberately does not carry the same
+ * picture: a reader arriving from the homepage should recognise the argument,
+ * not think the page failed to load.
  */
 /**
  * /pre-sale, the broker page. Three readers: the sell-side broker, the broker

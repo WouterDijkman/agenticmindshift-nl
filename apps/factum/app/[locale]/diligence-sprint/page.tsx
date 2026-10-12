@@ -53,9 +53,7 @@ export default async function SprintPage({
 
       {/*
         The reframe, as a band rather than as a blockquote with a paragraph
-        under it. The line lives in `shared` because the homepage opens on it
-        too and the two must never drift apart; the paragraph that used to
-        explain it is gone, because a band with an explanation under it is not
+        under it. The paragraph that used to explain it is gone, because a band with an explanation under it is not
         a band, and the explanation restated the line.
 
         The guarantee panel that sat immediately below this is also gone. It

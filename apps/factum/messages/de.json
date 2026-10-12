@@ -6,7 +6,7 @@
     },
     "platform": {
       "title": "KI-Prüfung des Data Rooms: so läuft sie",
-      "description": "{modules} Due-Diligence-Module über acht Disziplinen. Jede Feststellung belegt ein Dokument. Jedes Ergebnis passiert eine menschliche Freigabe."
+      "description": "{modules} Due-Diligence-Module über {disciplines} Disziplinen. Jede Feststellung belegt ein Dokument. Jedes Ergebnis passiert eine menschliche Freigabe."
     },
     "sprint": {
       "title": "Buy-Side-Due-Diligence für PE und Käufer",
@@ -57,7 +57,6 @@
   "footer": {
     "blurb": "KI-Due-Diligence für M&A und Private Equity. Jede Feststellung mit einem Dokument belegt. Jeder Export von Ihrem eigenen Prüfer freigegeben.",
     "sitemap": "Sitemap",
-    "reference": "Hintergrund",
     "company": "Unternehmen",
     "privacy": "Datenschutz",
     "kvk": "KvK {number}",
@@ -178,7 +177,7 @@
       },
       {
         "title": "Steuern",
-        "body": "Liest Finanzen und Recht, bevor es argumentiert: eine Steuerposition ist eine Folge der Struktur, die der Financial-Durchgang gerade beschrieben hat, und überschneidet sich oft mit dem, was Recht dort gefunden hat."
+        "body": "Liest Finanzen und Recht, bevor es argumentiert: eine Steuerposition ist eine Folge der Struktur, die der Financial-Durchgang gerade beschrieben hat. Sie überschneidet sich oft mit dem, was Recht dort gefunden hat."
       },
       {
         "title": "Deal Economics",
@@ -229,9 +228,6 @@
       "sprint": "Was Käufer bekommen",
       "limits": "Was KI nicht kann",
       "intake": "Data Room teilen"
-    },
-    "reframe": {
-      "quote": "Den Durchgang des Käufers zuerst auf der eigenen Seite durchzuführen, ist gelebte Prozessdisziplin."
     }
   },
   "home": {
@@ -273,7 +269,7 @@
       ]
     },
     "reframe": {
-      "attr": "Warum ein zweiter Durchgang"
+      "quote": "Egal, auf welcher Seite des Tisches Sie sitzen: Lesen Sie den ganzen Data Room, bevor der Preis feststeht."
     },
     "guide": {
       "title": "Ein Leveraged-Finance-Banker und ein Data Engineer",
@@ -312,12 +308,12 @@
       "lead": "Sie kommen mit dem gesamten Data Room im Rücken an den Tisch.",
       "points": [
         {
-          "title": "Der Preis spiegelt den ganzen Data Room wider",
-          "body": "Jede Disziplin, abgeglichen, bevor der Preis feststeht."
+          "title": "Wenn Sie kaufen",
+          "body": "Der Preis spiegelt den ganzen Data Room wider. Jede Disziplin, abgeglichen, bevor der Preis feststeht."
         },
         {
-          "title": "Sie wissen schon, was sie finden werden",
-          "body": "Die Berater des Käufers führen diese Prüfung ohnehin durch. Diesmal haben Sie es zuerst gesehen."
+          "title": "Wenn Sie verkaufen oder den Verkauf begleiten",
+          "body": "Sie wissen schon, was sie finden werden. Die Berater des Käufers führen diese Prüfung ohnehin durch. Diesmal haben Sie es zuerst gesehen."
         }
       ]
     },
@@ -598,7 +594,7 @@
       "items": [
         {
           "q": "Warum überhaupt KI?",
-          "a": "Sie liest jedes Dokument im Data Room statt einer Stichprobe und findet, was ein Dokument mit einem anderen verbindet. Gerechnet wird im Code: Nachrechnungen über die Abschlüsse, das LBO-Modell und die Prüfungen für die Verkäuferseite laufen ohne Sprachmodell, und eine Zahl des Modells, die in keiner zitierten Passage steht, wird zurückgehalten. Menschen entscheiden: Ihr Prüfer kontrolliert und gibt frei."
+          "a": "Sie liest jedes Dokument im Data Room statt einer Stichprobe und findet, was ein Dokument mit einem anderen verbindet. Gerechnet wird im Code: Nachrechnungen über die Abschlüsse, das LBO-Modell und die Prüfungen für die Verkäuferseite laufen ohne Sprachmodell. Eine Zahl des Modells, die in keiner zitierten Passage steht, wird zurückgehalten. Menschen entscheiden: Ihr Prüfer kontrolliert und gibt frei."
         },
         {
           "q": "Ist das nicht einfach ein KI-Chatbot mit Zwischenschritten?",

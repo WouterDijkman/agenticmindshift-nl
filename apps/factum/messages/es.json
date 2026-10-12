@@ -6,7 +6,7 @@
     },
     "platform": {
       "title": "Revisión del data room con IA: así funciona",
-      "description": "{modules} módulos de due diligence en ocho disciplinas. Cada hallazgo cita un documento. Cada entregable pasa por un control humano."
+      "description": "{modules} módulos de due diligence en {disciplines} disciplinas. Cada hallazgo cita un documento. Cada entregable pasa por un control humano."
     },
     "sprint": {
       "title": "Due diligence para compradores y PE",
@@ -57,7 +57,6 @@
   "footer": {
     "blurb": "Due diligence con IA para M&A y private equity. Cada hallazgo citado a un documento. Cada exportación aprobada por su propio revisor.",
     "sitemap": "Mapa del sitio",
-    "reference": "Referencia",
     "company": "Empresa",
     "privacy": "Privacidad",
     "kvk": "KvK {number}",
@@ -115,7 +114,7 @@
     ],
     "schema": {
       "label": "Contrato de salida — cada hallazgo",
-      "footnote": "El esquema que todo hallazgo debe cumplir. Detrás de cada uno, fuentes del data room o de la base de conocimiento (ley, IFRS, jurisprudencia, estudios de mercado), con su ubicación, y la aprobación de su revisor, abribles meses después.",
+      "footnote": "El esquema que todo hallazgo debe cumplir. Detrás de cada uno, fuentes del data room o de la base de conocimiento (ley, IFRS, jurisprudencia, estudios de mercado), con su ubicación. Eso y la aprobación de su revisor se pueden abrir meses después.",
       "rows": {
         "module": "Módulo",
         "finding": "Hallazgo",
@@ -178,7 +177,7 @@
       },
       {
         "title": "Fiscal",
-        "body": "Lee financiero y legal antes de razonar: una posición fiscal es consecuencia de la estructura que la lectura financiera acaba de describir, y a menudo se solapa con lo que legal encontró en ella."
+        "body": "Lee financiero y legal antes de razonar: una posición fiscal es consecuencia de la estructura que la lectura financiera acaba de describir. A menudo se solapa con lo que legal encontró en ella."
       },
       {
         "title": "Deal economics",
@@ -229,9 +228,6 @@
       "sprint": "Qué reciben los compradores",
       "limits": "Lo que la IA no puede hacer",
       "intake": "Comparta un data room"
-    },
-    "reframe": {
-      "quote": "Correr la pasada del comprador primero en su propio lado es lo que caracteriza a un proceso bien llevado."
     }
   },
   "home": {
@@ -273,7 +269,7 @@
       ]
     },
     "reframe": {
-      "attr": "Por qué una segunda pasada"
+      "quote": "Esté en el lado de la mesa que esté, lea todo el data room antes de que se fije el precio."
     },
     "guide": {
       "title": "Un banquero de leveraged finance y un ingeniero de datos",
@@ -312,12 +308,12 @@
       "lead": "Llega a la mesa con todo el data room detrás.",
       "points": [
         {
-          "title": "El precio refleja toda la sala",
-          "body": "Cada disciplina, reconciliada, antes de fijar el precio."
+          "title": "Si usted compra",
+          "body": "El precio refleja toda la sala. Cada disciplina, reconciliada, antes de fijar el precio."
         },
         {
-          "title": "Ya sabe lo que van a encontrar",
-          "body": "Los asesores del comprador harán esta pasada de todos modos. Esta vez usted la vio primero."
+          "title": "Si usted vende o asesora la venta",
+          "body": "Ya sabe lo que van a encontrar. Los asesores del comprador harán esta pasada de todos modos. Esta vez usted la vio primero."
         }
       ]
     },
@@ -598,7 +594,7 @@
       "items": [
         {
           "q": "¿Por qué usar IA?",
-          "a": "Lee cada documento del data room en lugar de una muestra, y encuentra lo que conecta un documento con otro. Las cuentas las hace el código: los recálculos entre los estados financieros, el modelo LBO y las comprobaciones del lado vendedor se ejecutan sin el modelo de lenguaje, y una cifra del modelo que no está en ningún pasaje citado se retiene. Las personas deciden: su revisor comprueba y aprueba."
+          "a": "Lee cada documento del data room en lugar de una muestra, y encuentra lo que conecta un documento con otro. Las cuentas las hace el código: los recálculos entre los estados financieros, el modelo LBO y las comprobaciones del lado vendedor se ejecutan sin el modelo de lenguaje. Una cifra del modelo que no está en ningún pasaje citado se retiene. Las personas deciden: su revisor comprueba y aprueba."
         },
         {
           "q": "¿No es esto un chatbot de IA con pasos de más?",
@@ -930,7 +926,7 @@
       "items": [
         {
           "title": "Una herramienta de IA pública no es privada",
-          "body": "Las propias condiciones de uso de una herramienta de IA pública suelen permitir al proveedor conservar lo que usted escribe y entregarlo ante una orden judicial, sea cual sea su sede. Ningún acuerdo de confidencialidad ni secreto profesional revierte eso una vez ha ocurrido."
+          "body": "Las propias condiciones de uso de una herramienta de IA pública suelen permitir al proveedor conservar lo que usted escribe y entregarlo ante una orden judicial. Da igual dónde tenga su sede. Ningún acuerdo de confidencialidad ni secreto profesional revierte eso una vez ha ocurrido."
         },
         {
           "title": "Su NDA puede no cubrir la herramienta",
@@ -1198,7 +1194,7 @@
       "items": [
         {
           "q": "¿Necesito una operación en curso?",
-          "a": "No. Una operación que cerró el año pasado también sirve, a menudo mejor: no se expone nada en curso, y puede contrastar lo que encontramos con lo que encontró su equipo entonces."
+          "a": "No. Una operación que cerró el año pasado también sirve, a menudo mejor: no se expone nada en curso. Puede contrastar lo que encontramos con lo que encontró su equipo entonces."
         },
         {
           "q": "¿Con quién voy a hablar?",

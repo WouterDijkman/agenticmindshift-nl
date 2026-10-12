@@ -6,7 +6,7 @@
     },
     "platform": {
       "title": "AI-review van de data room: hoe het werkt",
-      "description": "{modules} modules voor due diligence, over acht disciplines. Elke bevinding verwijst naar een document. Elke output passeert een menselijke toets."
+      "description": "{modules} modules voor due diligence, over {disciplines} disciplines. Elke bevinding verwijst naar een document. Elke output passeert een menselijke toets."
     },
     "sprint": {
       "title": "Buy-side due diligence voor PE en kopers",
@@ -57,7 +57,6 @@
   "footer": {
     "blurb": "AI due diligence voor M&A en private equity. Elke bevinding herleid tot een document. Elke export afgetekend door uw eigen reviewer.",
     "sitemap": "Sitemap",
-    "reference": "Achtergrond",
     "company": "Bedrijf",
     "privacy": "Privacy",
     "kvk": "KvK {number}",
@@ -178,7 +177,7 @@
       },
       {
         "title": "Fiscaal",
-        "body": "Leest financieel en juridisch voordat het redeneert: een fiscale positie is een gevolg van de structuur die de financiële passage net heeft beschreven, en overlapt vaak met wat juridisch in die structuur vond."
+        "body": "Leest financieel en juridisch voordat het redeneert: een fiscale positie is een gevolg van de structuur die de financiële passage net heeft beschreven. Ze overlapt vaak met wat juridisch in die structuur vond."
       },
       {
         "title": "Deal economics",
@@ -229,9 +228,6 @@
       "sprint": "Wat kopers krijgen",
       "limits": "Wat AI niet kan",
       "intake": "Deel een data room"
-    },
-    "reframe": {
-      "quote": "De analyse van de koper eerst op uw eigen data room draaien: zo ziet een goed geleid proces eruit."
     }
   },
   "home": {
@@ -273,7 +269,7 @@
       ]
     },
     "reframe": {
-      "attr": "Waarom een tweede lezing"
+      "quote": "Aan welke kant van de tafel u ook zit: lees de hele data room voordat de prijs vaststaat."
     },
     "guide": {
       "title": "Een leveraged-finance bankier en een data-engineer",
@@ -312,12 +308,12 @@
       "lead": "U komt aan tafel met de hele data room achter u.",
       "points": [
         {
-          "title": "De prijs weerspiegelt de hele data room",
-          "body": "Elke discipline, afgestemd, voordat het bedrag vaststaat."
+          "title": "Als u koopt",
+          "body": "De prijs weerspiegelt de hele data room. Elke discipline, afgestemd, voordat het bedrag vaststaat."
         },
         {
-          "title": "U weet al wat ze zullen vinden",
-          "body": "De adviseurs van de koper doorlopen deze analyse toch. Deze keer zag u het eerst."
+          "title": "Als u verkoopt of de verkoop begeleidt",
+          "body": "U weet al wat ze zullen vinden. De adviseurs van de koper doorlopen deze analyse toch. Deze keer zag u het eerst."
         }
       ]
     },
@@ -598,7 +594,7 @@
       "items": [
         {
           "q": "Waarom überhaupt AI?",
-          "a": "Het leest elk document in de data room in plaats van een steekproef, en vindt wat het ene document aan het andere verbindt. Het rekenwerk doet code: herberekeningen over de jaarstukken, het LBO-model en de controles voor de verkoopkant draaien zonder taalmodel, en een getal dat het model schrijft en dat in geen geciteerde passage staat, wordt tegengehouden. Mensen beslissen: uw reviewer controleert en tekent af."
+          "a": "Het leest elk document in de data room in plaats van een steekproef, en vindt wat het ene document aan het andere verbindt. Het rekenwerk doet code: herberekeningen over de jaarstukken, het LBO-model en de controles voor de verkoopkant draaien zonder taalmodel. Een getal dat het model schrijft en dat in geen geciteerde passage staat, wordt tegengehouden. Mensen beslissen: uw reviewer controleert en tekent af."
         },
         {
           "q": "Is dit niet gewoon een AI-chatbot met extra stappen?",
@@ -1198,7 +1194,7 @@
       "items": [
         {
           "q": "Heb ik een lopende deal nodig?",
-          "a": "Nee. Een deal die u vorig jaar sloot werkt ook, vaak beter: er ligt niets bloot dat nog loopt, en u kunt wat wij vinden naast leggen wat uw team destijds vond."
+          "a": "Nee. Een deal die u vorig jaar sloot werkt ook, vaak beter: er ligt niets bloot dat nog loopt. U kunt wat wij vinden naast leggen wat uw team destijds vond."
         },
         {
           "q": "Met wie spreek ik?",

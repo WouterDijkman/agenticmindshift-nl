@@ -57,7 +57,6 @@
   "footer": {
     "blurb": "AI due diligence for M&A and private equity. Every finding cited to a document. Every export signed off by your own reviewer.",
     "sitemap": "Sitemap",
-    "reference": "Reference",
     "company": "Company",
     "privacy": "Privacy",
     "kvk": "KvK {number}",
@@ -115,7 +114,7 @@
     ],
     "schema": {
       "label": "Output contract — every finding",
-      "footnote": "The schema every finding has to satisfy. Source material behind each one, from the data room or the knowledge base (statute, IFRS, case law, market research), with its exact location, and your reviewer’s sign-off, still openable months later.",
+      "footnote": "The schema every finding has to satisfy. Source material behind each one, from the data room or the knowledge base (statute, IFRS, case law, market research), with its exact location. That, and your reviewer’s sign-off, can still be opened months later.",
       "rows": {
         "module": "Module",
         "finding": "Finding",
@@ -178,7 +177,7 @@
       },
       {
         "title": "Tax",
-        "body": "Reads financial and legal before it reasons: a tax position is a consequence of the structure the financial read has just described, and often overlaps with what legal found in it."
+        "body": "Reads financial and legal before it reasons: a tax position is a consequence of the structure the financial read has just described. It often overlaps with what legal found in it."
       },
       {
         "title": "Deal economics",
@@ -229,9 +228,6 @@
       "sprint": "What buyers get",
       "limits": "What AI cannot do",
       "intake": "Share a data room"
-    },
-    "reframe": {
-      "quote": "Running the buyer’s pass on your own side first is what a well-run process looks like."
     }
   },
   "home": {
@@ -273,7 +269,7 @@
       ]
     },
     "reframe": {
-      "attr": "Why a second pass"
+      "quote": "Whichever side of the table you are on, read the whole room before the price is set."
     },
     "guide": {
       "title": "A leveraged-finance banker and a data engineer",
@@ -312,12 +308,12 @@
       "lead": "You arrive at the table with the whole room behind you.",
       "points": [
         {
-          "title": "The price reflects the whole room",
-          "body": "Every discipline, reconciled, before the number is set."
+          "title": "If you are buying",
+          "body": "The price reflects the whole room. Every discipline, reconciled, before the number is set."
         },
         {
-          "title": "You already know what they’ll find",
-          "body": "The buyer’s advisers run this pass anyway. This time you saw it first."
+          "title": "If you are selling or brokering the sale",
+          "body": "You already know what they’ll find. The buyer’s advisers run this pass anyway. This time you saw it first."
         }
       ]
     },
@@ -598,7 +594,7 @@
       "items": [
         {
           "q": "Why use AI at all?",
-          "a": "It reads every document in the room instead of a sample, and finds what links one document to another. The arithmetic is done by code: recalculations across the statements, the LBO model and the sell-side checks run without the language model, and a number the model writes that is in none of the quoted passages is held back. People decide: your reviewer checks and signs off."
+          "a": "It reads every document in the room instead of a sample, and finds what links one document to another. The arithmetic is done by code: recalculations across the statements, the LBO model and the sell-side checks run without the language model. A number the model writes that is in none of the quoted passages is held back. People decide: your reviewer checks and signs off."
         },
         {
           "q": "Isn’t this just an AI chatbot with extra steps?",
@@ -1198,7 +1194,7 @@
       "items": [
         {
           "q": "Do I need a live deal?",
-          "a": "No. A deal you closed last year works as well, often better: nothing in process is exposed, and you can hold what we find against what your team found at the time."
+          "a": "No. A deal you closed last year works as well, often better: nothing in process is exposed. You can hold what we find against what your team found at the time."
         },
         {
           "q": "Who will I be speaking to?",

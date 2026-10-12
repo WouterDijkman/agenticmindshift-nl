@@ -6,7 +6,7 @@
     },
     "platform": {
       "title": "Revisão do data room com IA: como funciona",
-      "description": "{modules} módulos de due diligence em dez disciplinas. Cada constatação cita um documento. Cada output passa por um controlo humano."
+      "description": "{modules} módulos de due diligence em {disciplines} disciplinas. Cada constatação cita um documento. Cada output passa por um controlo humano."
     },
     "sprint": {
       "title": "Due diligence para compradores e PE",
@@ -57,7 +57,6 @@
   "footer": {
     "blurb": "Due diligence com IA para M&A e private equity. Cada constatação citada a um documento. Cada exportação aprovada pelo seu próprio revisor.",
     "sitemap": "Mapa do site",
-    "reference": "Referência",
     "company": "Empresa",
     "privacy": "Privacidade",
     "kvk": "KvK {number}",
@@ -115,7 +114,7 @@
     ],
     "schema": {
       "label": "Contrato de output — todas as constatações",
-      "footnote": "O esquema que cada constatação tem de cumprir. Por trás de cada uma, fontes do data room ou da base de conhecimento (lei, IFRS, jurisprudência, estudos de mercado), com a sua localização, e a aprovação do seu revisor, ainda abríveis meses depois.",
+      "footnote": "O esquema que cada constatação tem de cumprir. Por trás de cada uma, fontes do data room ou da base de conhecimento (lei, IFRS, jurisprudência, estudos de mercado), com a sua localização. Isso e a aprovação do seu revisor ainda se abrem meses depois.",
       "rows": {
         "module": "Módulo",
         "finding": "Constatação",
@@ -178,7 +177,7 @@
       },
       {
         "title": "Fiscal",
-        "body": "Lê financeira e jurídica antes de raciocinar: uma posição fiscal é consequência da estrutura que a leitura financeira acabou de descrever, e sobrepõe-se muitas vezes ao que a jurídica encontrou nessa estrutura."
+        "body": "Lê financeira e jurídica antes de raciocinar: uma posição fiscal é consequência da estrutura que a leitura financeira acabou de descrever. Sobrepõe-se muitas vezes ao que a jurídica encontrou nessa estrutura."
       },
       {
         "title": "Deal economics",
@@ -229,9 +228,6 @@
       "sprint": "O que os compradores recebem",
       "limits": "O que a IA não consegue fazer",
       "intake": "Partilhe um data room"
-    },
-    "reframe": {
-      "quote": "Correr a leitura do comprador primeiro do seu próprio lado é o que caracteriza um processo bem conduzido."
     }
   },
   "home": {
@@ -273,7 +269,7 @@
       ]
     },
     "reframe": {
-      "attr": "Porquê uma segunda leitura"
+      "quote": "Seja qual for o lado da mesa em que está, leia todo o data room antes de o preço ser fixado."
     },
     "guide": {
       "title": "Um banqueiro de leveraged finance e um engenheiro de dados",
@@ -312,12 +308,12 @@
       "lead": "Chega à mesa com o data room inteiro atrás de si.",
       "points": [
         {
-          "title": "O preço reflete toda a sala",
-          "body": "Cada disciplina, reconciliada, antes de o preço ser fixado."
+          "title": "Se está a comprar",
+          "body": "O preço reflete toda a sala. Cada disciplina, reconciliada, antes de o preço ser fixado."
         },
         {
-          "title": "Já sabe o que vão encontrar",
-          "body": "Os assessores do comprador fazem esta leitura de qualquer forma. Desta vez, viu-a primeiro."
+          "title": "Se está a vender ou a assessorar a venda",
+          "body": "Já sabe o que vão encontrar. Os assessores do comprador fazem esta leitura de qualquer forma. Desta vez, viu-a primeiro."
         }
       ]
     },
@@ -598,7 +594,7 @@
       "items": [
         {
           "q": "Porquê usar IA?",
-          "a": "Lê cada documento do data room em vez de uma amostra, e encontra o que liga um documento a outro. As contas são feitas por código: os recálculos entre as demonstrações financeiras, o modelo LBO e as verificações do lado vendedor correm sem o modelo de linguagem, e um número do modelo que não esteja em nenhuma passagem citada fica retido. As pessoas decidem: o seu revisor verifica e aprova."
+          "a": "Lê cada documento do data room em vez de uma amostra, e encontra o que liga um documento a outro. As contas são feitas por código: os recálculos entre as demonstrações financeiras, o modelo LBO e as verificações do lado vendedor correm sem o modelo de linguagem. Um número do modelo que não esteja em nenhuma passagem citada fica retido. As pessoas decidem: o seu revisor verifica e aprova."
         },
         {
           "q": "Isto não é apenas um chatbot de IA com passos a mais?",
@@ -1107,7 +1103,7 @@
       {
         "name": "Daniel Dropuljic",
         "title": "Responsável Técnico, Factum",
-        "bio": "Daniel constrói os sistemas por trás do motor de due diligence da Factum. Como fundador da Dandro Solutions, desenha pipelines de dados que processam mais de 50 000 registos por dia para clientes internacionais da área da saúde, sob o RGPD e o FHIR.",
+        "bio": "Daniel constrói os sistemas por trás do motor de due diligence da Factum. Como fundador da Dandro Solutions, desenha pipelines de dados que processam mais de 50 000 registos por dia para clientes internacionais da área da saúde. Tudo sob o RGPD e o FHIR.",
         "history": [
           {
             "org": "Dandro Solutions",
@@ -1198,7 +1194,7 @@
       "items": [
         {
           "q": "Preciso de um negócio em curso?",
-          "a": "Não. Um negócio que fechou no ano passado também serve, muitas vezes melhor: nada em processo fica exposto, e pode comparar o que encontramos com o que a sua equipa encontrou na altura."
+          "a": "Não. Um negócio que fechou no ano passado também serve, muitas vezes melhor: nada em processo fica exposto. Pode comparar o que encontramos com o que a sua equipa encontrou na altura."
         },
         {
           "q": "Com quem vou falar?",
