@@ -61,6 +61,17 @@ export function proxy(request: NextRequest) {
     return NextResponse.rewrite(url);
   }
 
+  // A two-letter prefix that is not one of our locales (`/fr`, `/it/...`) used
+  // to go through next-intl, which redirected it to `/en/fr`, a 404 one hop
+  // later. Answer it here instead: rewrite onto the English catch-all, which
+  // calls notFound(), so the URL that was asked for gets the 404 itself.
+  const first = request.nextUrl.pathname.split('/')[1] ?? '';
+  if (/^[a-z]{2}$/i.test(first) && !routing.locales.includes(first as (typeof routing.locales)[number])) {
+    const url = request.nextUrl.clone();
+    url.pathname = `/${routing.defaultLocale}/not-a-locale`;
+    return NextResponse.rewrite(url);
+  }
+
   return intlMiddleware(request);
 }
 

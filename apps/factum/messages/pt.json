@@ -64,6 +64,7 @@
     "copyright": "© {year} Factum Capital. Pré-lançamento."
   },
   "notFound": {
+    "metaTitle": "Página não encontrada",
     "title": "Esta página não está no registo",
     "body": "O link está partido ou a página mudou de sítio.",
     "home": "Voltar à página inicial",

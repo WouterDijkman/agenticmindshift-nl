@@ -64,6 +64,7 @@
     "copyright": "© {year} Factum Capital. Vor dem Launch."
   },
   "notFound": {
+    "metaTitle": "Seite nicht gefunden",
     "title": "Diese Seite ist nicht erfasst",
     "body": "Der Link ist defekt oder die Seite wurde verschoben.",
     "home": "Zurück zur Startseite",

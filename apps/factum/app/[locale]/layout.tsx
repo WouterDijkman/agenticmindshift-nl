@@ -5,7 +5,6 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { fontVariables } from '@/lib/fonts';
-import { getAlternates } from '@/lib/hreflang';
 import { siteSchema } from '@/lib/jsonld';
 import { sharedOpenGraph } from '@/lib/pageMetadata';
 import { SITE_URL } from '@/lib/site';
@@ -32,36 +31,30 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'meta' });
+  const { locale: requested } = await params;
+  // Validate before anything is derived from the segment. `/llms.txt` and
+  // `/favicon.ico` reach this layout with "llms.txt" as the locale, because
+  // the proxy skips dotted paths; they used to render with a canonical built
+  // from that string.
+  const locale = routing.locales.includes(requested as (typeof routing.locales)[number])
+    ? requested
+    : routing.defaultLocale;
+  const t = await getTranslations({ locale, namespace: 'notFound' });
 
+  // Only what is true of every page, plus the 404 fallback. No canonical, no
+  // hreflang, no og:url and no robots here, deliberately. Every real page
+  // returns its own from lib/pageMetadata.ts (which sets title, description,
+  // canonical, hreflang and og:url), and pages that should not be indexed say
+  // so themselves (/privacy). What reaches a page that does not call
+  // pageMetadata is the 404, and before 12 October 2026 the 404 inherited the
+  // homepage's title, canonical and hreflang plus `index, follow` next to the
+  // `noindex` Next adds to every not-found response. Now it carries a
+  // not-found title and Next's single `noindex`, and points at nothing.
   return {
     metadataBase: new URL(SITE_URL),
-    // Fallback only, for any route that doesn't call `pageMetadata` — the
-    // catch-all, mainly. There used to be a `template: '%s — Factum Capital'`
-    // here as well, and it had a hole in it: Next's title template applies to
-    // *child* route segments, and `page.tsx` sits in the same segment as this
-    // layout. So every interior page picked up the brand suffix and the
-    // homepage, the one page a stranger is most likely to land on, did not.
-    // `pageMetadata` now appends it with `title.absolute`, uniformly, and the
-    // template is gone so there is only one place that decides. A bare string
-    // rather than `{ default }`, because Next's types require `default` and
-    // `template` to travel together.
-    title: `Factum Capital — ${t('home.title')}`,
-    description: t('home.description'),
-    alternates: getAlternates('', locale),
-    openGraph: {
-      // Shared with every page through lib/pageMetadata.ts. Next replaces a
-      // duplicate `openGraph` key wholesale, so a page cannot inherit half of
-      // this — it has to restate all of it, which it does by calling the same
-      // function. One implementation, so the two cannot drift apart.
-      ...sharedOpenGraph(locale),
-      // Correct for the locale root, and the fallback for anything below it
-      // that does not call pageMetadata().
-      url: `${SITE_URL}/${locale}`
-    },
-    twitter: { card: 'summary_large_image' },
-    robots: { index: true, follow: true }
+    title: `${t('metaTitle')} — Factum Capital`,
+    openGraph: sharedOpenGraph(locale),
+    twitter: { card: 'summary_large_image' }
   };
 }
 

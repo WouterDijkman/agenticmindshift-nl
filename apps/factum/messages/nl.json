@@ -64,6 +64,7 @@
     "copyright": "© {year} Factum Capital. Pre-launch."
   },
   "notFound": {
+    "metaTitle": "Pagina niet gevonden",
     "title": "Deze pagina staat niet in het dossier",
     "body": "De link is kapot of de pagina is verplaatst.",
     "home": "Terug naar de homepage",

@@ -64,6 +64,7 @@
     "copyright": "© {year} Factum Capital. Prelanzamiento."
   },
   "notFound": {
+    "metaTitle": "Página no encontrada",
     "title": "Esta página no consta",
     "body": "El enlace está roto o la página se ha movido.",
     "home": "Volver a la página de inicio",

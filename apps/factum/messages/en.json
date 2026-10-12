@@ -64,6 +64,7 @@
     "copyright": "© {year} Factum Capital. Pre-launch."
   },
   "notFound": {
+    "metaTitle": "Page not found",
     "title": "This page isn’t in the record",
     "body": "The link is broken or the page has moved.",
     "home": "Back to the home page",
