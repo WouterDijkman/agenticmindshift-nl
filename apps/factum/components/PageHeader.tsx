@@ -88,7 +88,7 @@ export default async function PageHeader({
   return (
     <header style={{ position: 'relative', overflow: 'hidden' }}>
       <SegmentField value={preset.value} style={color ? { color } : undefined} />
-      <div className="container-wide fit-screen" style={{ position: 'relative', zIndex: 1 }}>
+      <div className="container-wide fit-screen fit-screen-inner" style={{ position: 'relative', zIndex: 1 }}>
         <div className={aside ? 'hero-split' : undefined}>
           <div>
             {/* No eyebrow. It said the page's own name above the page's own

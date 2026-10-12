@@ -1368,6 +1368,19 @@ p { margin: 0; }
   padding-block: clamp(24px, 4.5vh, 64px);
 }
 
+/* Inner pages get most of a screen, not all of it (12 October 2026).
+   Their headers are a title, a lead and one button: centred in a full 100svh
+   box they sat on 250-300px of empty field at 1440x900, and the first thing
+   the page is actually about started below the fold on every inner page. A
+   first-time visitor saw six near-identical title screens. At 78svh the next
+   section's edge shows again, which is the "what is on this page" cue. This
+   cannot clip the call to action: min-height only ever grows the box, and a
+   shorter box moves the centred content up, never down. The homepage Hero
+   keeps the full screen; it has the schema panel to fill it. */
+.fit-screen.fit-screen-inner {
+  min-height: calc(78svh - var(--header-h));
+}
+
 /* Width alone decides the display size everywhere else on the site. In a
    first screen the short viewport is the binding constraint, so height gets a
    vote too — `min()` takes whichever is tighter, which means phones (narrow
