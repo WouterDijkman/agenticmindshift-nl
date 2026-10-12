@@ -278,11 +278,15 @@ export const COVERAGE_PARTIAL = 5;
 /**
  * Hard-block conditions that stop a sub-agent draft being auto-approved.
  *
- * Eight, not seven: `agent-review-graph.ts` throws a distinct `HardBlockError`
- * for `FABRICATED_SOURCE` (a citation that resolves to nothing) and for
- * `FABRICATION_CHECK_FAILED` (the deterministic checker still finds a
- * reject-severity issue after both repair attempts) — two code paths, not one.
- * `platform.blocks.items` carries eight entries to match; re-count both if
- * either changes.
+ * Re-counted 12 October 2026 against `src/lib/agents/graphs/agent-review-graph.ts`
+ * on the product's canonical `main`: eight distinct `HardBlockError` reasons —
+ * PRIVACY_LEAK, FABRICATED_SOURCE, FABRICATION_CHECK_FAILED, SCOPE_REFUSAL,
+ * PERVASIVE_PLACEHOLDERS, NEAR_EMPTY_DRAFT, LOW_REVIEWER_SCORE and
+ * REVIEWER_UNAVAILABLE. The count held, the roster did not:
+ * INSUFFICIENT_EVIDENCE_DEPTH no longer throws (an under-corroborated Critical
+ * finding is demoted instead, L3-9), and REVIEWER_UNAVAILABLE is new. The
+ * fifth entry of `platform.blocks.items` was swapped to match. Re-count both if
+ * either changes. A blocked draft goes to the client's reviewer unapproved; it
+ * is never force-approved.
  */
 export const HARD_BLOCK_COUNT = 8;

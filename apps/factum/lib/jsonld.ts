@@ -1,4 +1,4 @@
-import { KVK, SITE_URL } from './site';
+import { DISCIPLINE_COUNT, KVK, SITE_URL } from './site';
 
 /**
  * Structured data, emitted once per page as a linked `@graph`.
@@ -21,7 +21,8 @@ import { KVK, SITE_URL } from './site';
  *
  * Deliberately absent: `FAQPage`. Google deprecated FAQ rich results in May
  * 2026 (last shown 7 May, docs pulled 15 June, Search Console support ending),
- * so marking up the nineteen Q/A pairs on this site would buy nothing.
+ * so marking up the Q/A pairs on this site would buy nothing. (No count here:
+ * a number in a comment goes stale the first time a FAQ gains an item.)
  *
  * Still, as before: only facts that already appear on the site. No addresses
  * beyond the country, no phone number, no founding date, no employee count.
@@ -101,7 +102,13 @@ function organization(description: string) {
 
 /**
  * The one thing that is sold, as a `Service` node the rest of the graph can
- * point at. A generative engine answering "who does AI due diligence for
+ * point at.
+ *
+ * No `areaServed` on this node, deliberately. Legal and tax analysis is tuned
+ * to Dutch law (GTM/config/offers.md, "Jurisdictie"), so "Europe" would promise
+ * EU-wide what is NL-bound for two of the disciplines. The description carries
+ * the caveat instead; the Organization keeps `areaServed: Europe`, because the
+ * company does serve European buyers with the jurisdiction-free disciplines. A generative engine answering "who does AI due diligence for
  * lower-mid private equity in Europe" needs a provider, a service type, an
  * area and a mechanism it can attribute; the Organization node alone gives it
  * a name and a country. Only facts already stated on the site: the name of the
@@ -116,10 +123,8 @@ function service(locale: string) {
     serviceType: 'AI-driven due diligence for M&A and private equity',
     provider: { '@id': ORG_ID },
     url: `${SITE_URL}/${locale}/diligence-sprint`,
-    areaServed: { '@type': 'Place', name: 'Europe' },
     availableLanguage: ['en', 'nl'],
-    description:
-      'Eight disciplines run over the whole data room in dependency order. Every finding carries a verbatim excerpt, its source document and location, a severity, and the name of the reviewer who approved it. Analysis runs on Google Vertex AI in an EU region with zero retention at the model provider. Findings Guarantee on pilot mandates: three material findings the client did not already have, or the engagement is free.',
+    description: `${DISCIPLINE_COUNT} disciplines run over the whole data room in dependency order. Every finding carries a verbatim excerpt, its source document and location, and a severity, and the client’s own reviewer signs off before any client export. By default, analysis runs on Google Vertex AI in the EU, with zero retention at the model provider. Legal and tax analysis is tuned to Dutch law. Findings Guarantee on pilot mandates: three material findings the client did not already have, or the engagement is free.`,
     termsOfService: `${SITE_URL}/${locale}/governance`
   };
 }

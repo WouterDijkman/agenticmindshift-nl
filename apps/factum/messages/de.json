@@ -146,7 +146,7 @@
     "governancePoints": [
       {
         "title": "In der EU gehostete Analyse",
-        "body": "Die gesamte Analyse läuft auf Google Vertex AI in einer EU-Region, unter einem Auftragsverarbeitungsvertrag."
+        "body": "Standardmäßig läuft die Analyse auf Google Vertex AI in der EU, unter einem Auftragsverarbeitungsvertrag. Außerhalb der EU nur, wenn Sie das für einen Deal wählen."
       },
       {
         "title": "Zero Retention beim Modellanbieter",
@@ -200,7 +200,7 @@
     ],
     "chart": {
       "zdr": "ZDR",
-      "zdrTitle": "Zero-Retention-Routing erzwungen. Ohne diese Route startet der Lauf nicht.",
+      "zdrTitle": "Zero-Retention-Routing, im Code erzwungen: Dieses Modul läuft nie auf einem Modell, das Daten speichert.",
       "modulesLabel": "Module",
       "moduleLabel": "Modul",
       "kinds": {
@@ -247,7 +247,7 @@
   "home": {
     "hero": {
       "title": "Den Data Room kennen, bevor Sie unterschreiben",
-      "lead": "Jede Dimension, über den ganzen Data Room, in Tagen. Zu jeder Feststellung stehen Quelle und Fundstelle, damit Sie sie am Tisch belegen können, während Sie dort sitzen.",
+      "lead": "{disciplines} Disziplinen, über den gesamten Data Room, in Tagen. Jede Feststellung nennt Quelle und Fundstelle, damit Sie sie am Verhandlungstisch belegen können.",
       "cta": "Data Room teilen"
     },
     "problem": {
@@ -362,7 +362,7 @@
         },
         "zdr": {
           "title": "Zero-Retention-gesichert",
-          "body": "Steuern, Recht und Finanzen weigern sich, auf einem speichernden Modell zu laufen."
+          "body": "Steuern, Recht und Finanzen laufen nie auf einem Modell, das Daten speichert."
         },
         "blocks": {
           "title": "Harte Blockaden",
@@ -372,7 +372,7 @@
     },
     "coverage": {
       "title": "Die Modulbibliothek, in Dispatch-Reihenfolge",
-      "lead": "Ein Modul, das auf den Output eines anderen wartet, kann nicht früher starten. Diese Abhängigkeit bestimmt die Reihenfolge, nicht unsere Präferenz. Das Label unter jedem Modul sagt, was es liefert: einen Feststellung, ein Dokument oder ein laufendes Signal.",
+      "lead": "Ein Modul, das auf die Ausgabe eines anderen wartet, kann nicht früher starten. Diese Abhängigkeit bestimmt die Reihenfolge. Jedes Modul liefert Feststellungen.",
       "note": "Aus den Dispatch-Graphen im Produktquellcode abgeleitet, nicht geschätzt. ZDR markiert die Module, deren Routing hart auf einen Zero-Retention-EU-Endpunkt gesetzt ist."
     },
     "pipeline": {
@@ -390,7 +390,7 @@
         },
         {
           "title": "Generate-Critique-Retry",
-          "body": "Ein Prüfer-Agent kritisiert den Entwurf und schickt ihn zurück. Maximal zwei Retries je Spezialist."
+          "body": "Ein Prüfer-Agent bewertet den Entwurf und kann ihn einmal zurückschicken, mit Feedback."
         },
         {
           "title": "Vier Grounding-Prüfungen",
@@ -437,7 +437,7 @@
     },
     "blocks": {
       "title": "{blocks} Bedingungen, die die Auto-Freigabe stoppen",
-      "lead": "Retries sind auf zwei je Spezialist begrenzt. Diese Bedingungen beenden die Schleife in jedem Fall und leiten den Entwurf an eine Person.",
+      "lead": "Ein abgelehnter Entwurf bekommt einen weiteren Versuch. Diese Bedingungen beenden die Schleife und legen den Entwurf Ihrem Prüfer vor, nicht freigegeben.",
       "items": [
         {
           "title": "Datenschutzleck",
@@ -449,15 +449,15 @@
         },
         {
           "title": "Unbestätigt nach Reparatur",
-          "body": "Die Erfindungsprüfung findet nach beiden Wiederholungen noch immer eine Aussage ohne Beleg."
+          "body": "Die Erfindungsprüfung findet nach dem weiteren Versuch noch immer eine Aussage ohne Beleg."
         },
         {
           "title": "Scope-Verweigerung",
           "body": "Das Modul kann es im eigenen Auftrag nicht beantworten und sagt das."
         },
         {
-          "title": "Zu wenig Tiefe",
-          "body": "Eine Antwort, die den Standard des Schemas nicht erreicht."
+          "title": "Prüfer nicht verfügbar",
+          "body": "Der Prüfer-Agent konnte den Entwurf nicht bewerten, also gilt er nicht als geprüft."
         },
         {
           "title": "Platzhaltertext",
@@ -529,9 +529,9 @@
         "Keine auditierte Genauigkeitsquote. Interne Benchmarks beruhen auf einem Datensatz und sind ungeprüft.",
         "Keine Behauptung, das menschliche Tor sei optional. Es ist verpflichtend.",
         "Noch keine abgeschlossenen öffentlichen Fallstudien.",
-        "Keine einheitliche Historie. Das Finanzmodul lief end-to-end an einem realen Deal und wurde gegen Quelldokumente verifiziert. Die Abgleichebene ist jünger.",
         "Keine technische Due Diligence auf Produktebene. Quellcode-Review, Architekturbewertung und Skalierbarkeitstests sind nicht Teil des Standarddurchgangs.",
         "Keine Integritäts- oder Reputationsprüfung. Hintergrundchecks zu Personen und Gegenparteien laufen außerhalb dieser Plattform.",
+        "Keine rechtsordnungsunabhängige Rechts- und Steueranalyse. Beide sind auf niederländisches Recht abgestimmt; bei einem Target anderswo sollten lokale Berater sie prüfen.",
         "Keine allgemeine Verfügbarkeit. Factum steht vor dem Launch."
       ]
     },
@@ -551,8 +551,8 @@
           "a": "Dann muss es das sagen. Eine Feststellung ist entweder durch einen Nachweis gedeckt, der vier Prüfungen überstanden hat, oder als unbestätigt markiert. Erfundene Quellen sind eine der {blocks} harten Blockaden."
         },
         {
-          "q": "Woher weiß ich, dass die Plattform Feststellungen dieser Tragweite trägt?",
-          "a": "Das Finanzmodul ist der numerisch exponierteste Teil jedes Durchgangs. Es wurde bei einem realen Deal vollständig durchgeführt und unabhängig gegen Quelldokumente verifiziert. Neuere Ebenen haben weniger Historie, und wir sagen dazu, welche das sind."
+          "q": "Woher weiß ich, dass die Feststellungen halten?",
+          "a": "Sie prüfen sie. Jede Feststellung trägt die Passage, auf der sie beruht, und Ihr eigener Prüfer gibt frei, bevor etwas exportiert wird. Eine auditierte Genauigkeitsquote gibt es noch nicht, und wir deuten keine an."
         },
         {
           "q": "Wie schnell ist es?",
@@ -560,7 +560,7 @@
         },
         {
           "q": "Wie oft zitiert KI einfach falsch?",
-          "a": "Öfter, als Sie denken. PwC veröffentlichte kürzlich einen Bericht mit einem erfundenen Framework und erfundenen Quellen; Deloitte erstattete einem öffentlichen Auftraggeber einen Auftrag aus demselben Grund. Jedes Zitat hier durchläuft vier Prüfungen, bevor es auf die Seite kommt."
+          "a": "Öfter, als man denkt. 2025 erstattete Deloitte der australischen Regierung einen Teil des Honorars für einen Bericht mit erfundenen Quellenangaben. Jede Quellenangabe hier besteht vier Prüfungen, bevor sie auf der Seite steht."
         },
         {
           "q": "Für welche Dealgröße ist das gebaut?",
@@ -587,7 +587,7 @@
     "disciplines": {
       "title": "Alle {disciplines} Disziplinen, ein fester Umfang",
       "lead": "Jede ist ein abgegrenzter Durchgang mit eigener Frage und eigenem Ergebnis.",
-      "note": "Ein Mandat, ein Preis. Keine À-la-carte-Karte und kein Upsell nach Unterschrift. Worauf jede Disziplin schaut, wird im Call anhand Ihres Data Rooms festgelegt."
+      "note": "Ein Preis für den gesamten Umfang. Was jede Disziplin betrachtet, legen wir im Gespräch anhand Ihres Data Rooms fest. Recht und Steuern sind auf niederländisches Recht abgestimmt; bei einem Target anderswo sollten lokale Berater sie prüfen."
     },
     "layers": {
       "title": "Was daraus ein Ergebnis macht",
@@ -659,11 +659,11 @@
         },
         {
           "q": "Was passiert mit unseren Dokumenten?",
-          "a": "Vertrauliche Daten werden vor der Analyse pseudonymisiert und erst im finalen Ergebnis zurückübersetzt. Die Analyse läuft auf Google Vertex AI in einer EU-Region unter einem Auftragsverarbeitungsvertrag. Der Modellanbieter speichert Ihre Dokumente nicht und trainiert nicht damit."
+          "a": "Vertrauliche Daten werden vor der Analyse pseudonymisiert und erst im finalen Ergebnis zurückübersetzt. Standardmäßig läuft die Analyse auf Google Vertex AI in der EU, unter einem Auftragsverarbeitungsvertrag. Der Modellanbieter speichert Ihre Dokumente nicht und trainiert nicht damit."
         },
         {
           "q": "Kann ich einen Beispielbericht sehen?",
-          "a": "Keinen echten. Kundendokumente sind vertraulich, und kein Kunde hat sich entschieden, genannt zu werden. Das ausgearbeitete Beispiel auf der Startseite zeigt das Format. Der erste echte, den Sie sehen, ist Ihr eigener, in einem Call, Tage nach dem NDA."
+          "a": "Keinen echten. Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Das ausgearbeitete Beispiel auf der Startseite zeigt das Format. Der erste echte, den Sie sehen, ist Ihr eigener, wenige Tage nach dem NDA."
         },
         {
           "q": "Wer prüft das Ergebnis tatsächlich?",
@@ -810,7 +810,7 @@
       "items": [
         "Keine ISO 27001, SOC 2 oder sonstige Zertifizierung. Kein Drittaudit der Pipeline.",
         "Kein Penetrationstest, kein Single Sign-on, keine Audit-Log-Zusage.",
-        "Keine veröffentlichte EU-Region. Die Analyse läuft auf Google Vertex AI in einer EU-Region; welche, nennen wir nicht.",
+        "Kein einzelnes benanntes Rechenzentrum. Standardmäßig läuft die Analyse auf dem EU-Multi-Region-Endpunkt von Vertex AI.",
         "Kein behaupteter DSGVO-Compliance-Status. Verarbeitungsbedingungen gehören in einen Mandatsvertrag.",
         "Keine Meldepflicht- oder Notfallwiederherstellungszusage auf dieser Seite.",
         "Keine auditierte Genauigkeitsquote. Der eine Benchmark auf dieser Seite ist intern und beruht auf einem Datensatz."
@@ -824,13 +824,13 @@
       "note": "Zuerst das NDA, am selben Tag versandt. Ein Deal, den Sie letztes Jahr abgeschlossen haben, geht ebenso."
     },
     "zdr": {
-      "title": "Drei Module weigern sich, auf einem speichernden Modell zu laufen",
+      "title": "Drei Module laufen nie auf einem Modell, das Daten speichert",
       "lead": "Zero Data Retention ist eine Routing-Regel im Code, kein Versprechen auf einer Seite. Steuern, Recht und Finanzen hängen an dieser Regel.",
       "items": [
-        "Das Tor ist eine harte Anforderung, geprüft vor dem Dispatch.",
-        "Es gibt kein stilles Ausweichen auf einen speichernden Anbieter.",
-        "Die Analyse läuft auf Google Vertex AI in einer EU-Region, unter Auftragsverarbeitungsvertrag.",
-        "Die anderen {other} Module laufen auf derselben Infrastruktur. Nur diese drei starten ohne das Tor nicht."
+        "Die Sperre sitzt an der einen Stelle, die jeder Modellaufruf passiert.",
+        "Ein Anbieter, der Daten speichert, wird durch einen Zero-Retention-Anbieter ersetzt, und der Austausch wird protokolliert.",
+        "Standardmäßig ist das Google Vertex AI in der EU, unter einem Auftragsverarbeitungsvertrag.",
+        "Die übrigen {other} Module laufen auf derselben Infrastruktur. Heute ist jeder Anbieter der Plattform Zero-Retention; für diese drei ist es im Code erzwungen."
       ]
     },
     "learning": {
@@ -872,7 +872,7 @@
         },
         {
           "title": "Der EU AI Act läuft auf einer Uhr",
-          "body": "Pflichten für General-Purpose-KI gelten seit dem 2. August 2025. Die Transparenzpflichten aus Artikel 50 folgen am 2. August 2026. Ein dokumentiertes menschliches Tor lässt sich in dieses Regime leichter einordnen als eine Chat-Sitzung, die niemand protokolliert hat."
+          "body": "Pflichten für General-Purpose-KI gelten seit dem 2. August 2025. Die Transparenzpflichten aus Artikel 50 gelten seit dem 2. August 2026. Ein dokumentiertes menschliches Tor lässt sich in dieses Regime leichter einordnen als eine Chat-Sitzung, die niemand protokolliert hat."
         }
       ],
       "note": "Nichts davon ist Rechtsberatung. Alle drei sind Gründe, warum die Pipeline so aussieht, wie sie aussieht."
@@ -903,7 +903,7 @@
         },
         {
           "title": "Subprozessoren",
-          "body": "Die Analyse läuft auf Google Vertex AI in einer EU-Region, unter einem AV-Vertrag. Die Terminbuchung läuft über Cal.com. Die vollständige Liste je Modul liegt auf dem Tisch, bevor Sie irgendetwas hochladen."
+          "body": "Standardmäßig läuft die Analyse auf Google Vertex AI in der EU, unter einem AV-Vertrag. Die Terminbuchung läuft über Cal.com. Diese Website zählt Besuche mit Plausible Analytics, ohne Cookies. Die vollständige Liste je Modul liegt auf dem Tisch, bevor Sie irgendetwas hochladen."
         }
       ],
       "note": "Verlangen Sie es schriftlich. Nach DORA muss ein Fonds oberhalb der Schwelle jeden IKT-Drittanbieter in einem Register benennen, das bei der Aufsicht eingereicht wird — uns eingeschlossen."
@@ -1380,7 +1380,7 @@
       "title": "Was diese Website erhebt, und was ein Mandat tut",
       "lead": "Diese Seite behandelt die Website. Der Umgang mit Mandatsdaten richtet sich nach der Vereinbarung, die wir unterzeichnen."
     },
-    "updated": "Zuletzt geprüft am 5. August 2026.",
+    "updated": "Zuletzt geprüft am 12. Oktober 2026.",
     "sections": [
       {
         "title": "Diese Website",
@@ -1402,7 +1402,7 @@
         "title": "Dokumente, die Sie mit uns teilen",
         "body": [
           "Über diese Website werden keine Dokumente geteilt. Der Zugang wird separat und schriftlich vereinbart.",
-          "Während eines Mandats werden vertrauliche Daten vor der Analyse pseudonymisiert und erst im finalen Ergebnis zurückübersetzt. Die Analyse läuft auf Google Vertex AI in einer EU-Region unter einem Auftragsverarbeitungsvertrag. Der Modellanbieter speichert Ihre Dokumente nicht und trainiert nicht damit.",
+          "Während eines Mandats werden vertrauliche Daten vor der Analyse pseudonymisiert und erst im finalen Ergebnis zurückübersetzt. Standardmäßig läuft die Analyse auf Google Vertex AI in der EU, unter einem Auftragsverarbeitungsvertrag. Der Modellanbieter speichert Ihre Dokumente nicht und trainiert nicht damit.",
           "Aufbewahrungs- und Löschfristen auf unserer Seite werden in der Mandatsvereinbarung festgelegt."
         ]
       },

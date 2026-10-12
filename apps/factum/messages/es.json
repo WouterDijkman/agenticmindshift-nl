@@ -146,7 +146,7 @@
     "governancePoints": [
       {
         "title": "Análisis alojado en la UE",
-        "body": "Todo el análisis se ejecuta en Google Vertex AI en una región de la UE, bajo un acuerdo de tratamiento de datos."
+        "body": "Por defecto, el análisis se ejecuta en Google Vertex AI en la UE, bajo un acuerdo de tratamiento de datos. Solo sale de la UE si usted lo elige para una operación."
       },
       {
         "title": "Retención cero en el proveedor del modelo",
@@ -200,7 +200,7 @@
     ],
     "chart": {
       "zdr": "ZDR",
-      "zdrTitle": "Enrutado de retención cero obligatorio. Sin esa ruta, la ejecución no arranca.",
+      "zdrTitle": "Enrutamiento de retención cero, impuesto en el código: este módulo nunca se ejecuta en un modelo que conserve datos.",
       "modulesLabel": "módulos",
       "moduleLabel": "módulo",
       "kinds": {
@@ -247,7 +247,7 @@
   "home": {
     "hero": {
       "title": "Sepa qué hay en el data room antes de firmar",
-      "lead": "Cada dimensión, sobre todo el data room, en días. Cada hallazgo cita su fuente y su ubicación, para que pueda probarlo en la mesa mientras está sentado en ella.",
+      "lead": "{disciplines} disciplinas, sobre todo el data room, en días. Cada hallazgo cita su fuente y ubicación, para que pueda demostrarlo en la mesa.",
       "cta": "Comparta un data room"
     },
     "problem": {
@@ -362,7 +362,7 @@
         },
         "zdr": {
           "title": "Con retención cero obligatoria",
-          "body": "Fiscal, legal y financiero se niegan a correr sobre un modelo que retiene datos."
+          "body": "Fiscal, legal y financiero nunca se ejecutan en un modelo que conserve datos."
         },
         "blocks": {
           "title": "Bloqueos duros",
@@ -372,7 +372,7 @@
     },
     "coverage": {
       "title": "La biblioteca de módulos, en orden de despacho",
-      "lead": "Un módulo que espera el resultado de otro no puede arrancar antes. Esa dependencia fija el orden, no nuestra preferencia. La etiqueta bajo cada módulo dice qué entrega: un hallazgo, un documento o una señal continua.",
+      "lead": "Un módulo que espera el resultado de otro no puede empezar antes. Esa dependencia fija el orden. Cada módulo devuelve hallazgos.",
       "note": "Derivado de los grafos de despacho del código fuente, no estimado. ZDR marca los módulos cuyo enrutado está fijado a un endpoint europeo de retención cero."
     },
     "pipeline": {
@@ -390,7 +390,7 @@
         },
         {
           "title": "Generar-criticar-reintentar",
-          "body": "Un agente revisor critica el borrador y lo devuelve. Máximo dos reintentos por especialista."
+          "body": "Un agente revisor evalúa el borrador y puede devolverlo una vez, con sus comentarios."
         },
         {
           "title": "Comprobación de fundamentación en cuatro capas",
@@ -437,7 +437,7 @@
     },
     "blocks": {
       "title": "{blocks} bloqueos duros",
-      "lead": "Los reintentos están limitados a dos por especialista. Estas condiciones cierran el circuito igualmente y envían el borrador a una persona.",
+      "lead": "Un borrador rechazado tiene un reintento. Estas condiciones cierran el ciclo y llevan el borrador a su revisor, sin aprobar.",
       "items": [
         {
           "title": "Fuga de privacidad",
@@ -449,15 +449,15 @@
         },
         {
           "title": "Sin confirmar tras la reparación",
-          "body": "El control de fabricación sigue encontrando una afirmación sin respaldo después de los dos reintentos."
+          "body": "El control de fabricación sigue encontrando una afirmación sin respaldo después del reintento."
         },
         {
           "title": "Rechazo por alcance",
           "body": "El módulo no puede responder dentro de su encargo, y lo dice."
         },
         {
-          "title": "Profundidad insuficiente",
-          "body": "Una respuesta que no alcanza el estándar que exige el esquema."
+          "title": "Revisor no disponible",
+          "body": "El agente revisor no pudo evaluar el borrador, así que no pasa como revisado."
         },
         {
           "title": "Texto de relleno",
@@ -529,9 +529,9 @@
         "Sin tasa de exactitud auditada. Los benchmarks internos son de un solo conjunto de datos y no están auditados.",
         "Sin afirmar que la puerta humana sea opcional. Es obligatoria.",
         "Todavía sin casos públicos cerrados.",
-        "Sin historial uniforme. El módulo financiero ha corrido de extremo a extremo en una operación real y se ha verificado contra los documentos fuente. La capa de reconciliación es más joven.",
         "Sin due diligence técnica a nivel de producto. La revisión de código fuente, la evaluación de la arquitectura y las pruebas de escalabilidad quedan fuera de la pasada estándar.",
         "Sin investigación de integridad ni reputacional. Las comprobaciones de antecedentes sobre personas y contrapartes corren fuera de esta plataforma.",
+        "Sin análisis legal y fiscal independiente de la jurisdicción. Ambos están ajustados al derecho neerlandés; para un target en otro país, que los revisen asesores locales.",
         "Sin disponibilidad general. Factum está en fase previa al lanzamiento."
       ]
     },
@@ -551,8 +551,8 @@
           "a": "Tiene que decirlo. Un hallazgo o está respaldado por una cita que ha sobrevivido a cuatro comprobaciones, o va marcado como no confirmado. Las fuentes fabricadas son uno de los {blocks} bloqueos duros."
         },
         {
-          "q": "¿Cómo sé que la plataforma aguanta hallazgos de este calibre?",
-          "a": "El módulo financiero es la parte más expuesta numéricamente de cualquier lectura. Ha corrido de extremo a extremo en una operación real y se ha verificado de forma independiente contra los documentos fuente. Las capas más nuevas tienen menos historial, y le decimos cuáles son."
+          "q": "¿Cómo sé que los hallazgos se sostienen?",
+          "a": "Los comprueba usted. Cada hallazgo lleva el pasaje en el que se apoya, y su propio revisor da el visto bueno antes de exportar nada. Aún no hay una tasa de exactitud auditada, y no insinuamos ninguna."
         },
         {
           "q": "¿Cuánto tarda?",
@@ -560,7 +560,7 @@
         },
         {
           "q": "¿Con qué frecuencia cita mal la IA sin más?",
-          "a": "Más de lo que cree. PwC publicó hace poco un informe con un marco y fuentes inventados; Deloitte devolvió el importe de un encargo público por el mismo motivo. Aquí, cada cita pasa cuatro comprobaciones antes de llegar a la página."
+          "a": "Más a menudo de lo que cree. En 2025 Deloitte devolvió parte de los honorarios al gobierno australiano por un informe con referencias inventadas. Cada cita aquí pasa cuatro comprobaciones antes de llegar a la página."
         },
         {
           "q": "¿Para qué tamaño de operación está pensado esto?",
@@ -587,7 +587,7 @@
     "disciplines": {
       "title": "Las {disciplines} disciplinas, un alcance fijo",
       "lead": "Cada una es una pasada acotada con su propia pregunta y su propio resultado.",
-      "note": "Un encargo, un precio. Sin menú a la carta y sin ampliaciones después de firmar. Qué mira cada disciplina se fija en la llamada contra su data room."
+      "note": "Un precio para todo el alcance. Lo que mira cada disciplina se fija en la llamada según su data room. Legal y fiscal están ajustados al derecho neerlandés; para un target en otro país, que los revisen asesores locales."
     },
     "layers": {
       "title": "Qué lo convierte en un solo entregable",
@@ -659,11 +659,11 @@
         },
         {
           "q": "¿Qué pasa con nuestros documentos?",
-          "a": "Los datos confidenciales se seudonimizan antes del análisis y solo se revierten en el entregable final. El análisis se ejecuta en Google Vertex AI en una región de la UE bajo un acuerdo de tratamiento de datos. El proveedor del modelo no conserva sus documentos ni entrena con ellos."
+          "a": "Los datos confidenciales se seudonimizan antes del análisis y solo se revierten en el resultado final. Por defecto, el análisis se ejecuta en Google Vertex AI en la UE, bajo un acuerdo de tratamiento de datos. El proveedor del modelo no conserva sus documentos ni entrena con ellos."
         },
         {
           "q": "¿Puedo ver un informe de ejemplo?",
-          "a": "Uno real, no. Los documentos de los clientes son confidenciales y ningún cliente ha elegido ser nombrado. El ejemplo desarrollado en la página de inicio muestra el formato. El primero real que verá es el suyo, en una llamada, días después del NDA."
+          "a": "Uno real, no. Factum está en fase previa al lanzamiento: aún no hay ningún cliente público ni caso de estudio. El ejemplo desarrollado en la página de inicio muestra el formato. El primero real que verá será el suyo, días después del NDA."
         },
         {
           "q": "¿Quién revisa realmente el entregable?",
@@ -810,7 +810,7 @@
       "items": [
         "Sin ISO 27001, SOC 2 ni ninguna otra certificación. Sin auditoría externa de la pipeline.",
         "Sin test de intrusión, inicio de sesión único ni compromiso de registro de auditoría.",
-        "Sin región de la UE publicada. El análisis corre en Google Vertex AI en una región de la UE; no decimos cuál.",
+        "Ningún centro de datos concreto con nombre. Por defecto, el análisis se ejecuta en el endpoint multirregión de la UE de Vertex AI.",
         "Sin declarar un estado de cumplimiento del RGPD. Las condiciones de tratamiento van en el contrato del encargo.",
         "Sin notificación de brechas ni compromiso de recuperación en esta página.",
         "Sin tasa de exactitud auditada. El único benchmark de esta página es interno y de un solo conjunto de datos."
@@ -824,13 +824,13 @@
       "note": "Primero el NDA, enviado el mismo día. Una operación que cerró el año pasado también sirve."
     },
     "zdr": {
-      "title": "Tres módulos se niegan a correr sobre un modelo que retiene",
+      "title": "Tres módulos nunca se ejecutan en un modelo que conserve datos",
       "lead": "La retención cero de datos es una regla de enrutado en el código, no una promesa en una página. Fiscal, legal y financiero dependen de esa puerta.",
       "items": [
-        "La puerta es un requisito duro, comprobado antes del despacho.",
-        "No hay degradación silenciosa a un proveedor que retenga.",
-        "El análisis corre en Google Vertex AI en una región de la UE, bajo un acuerdo de encargo de tratamiento.",
-        "Los otros {other} módulos corren sobre la misma infraestructura. Solo estos tres se niegan a arrancar sin la puerta."
+        "La puerta está en el único punto por el que pasa cada llamada al modelo.",
+        "Un proveedor que conserva datos se sustituye por uno de retención cero, y la sustitución queda registrada.",
+        "Por defecto es Google Vertex AI en la UE, bajo un acuerdo de tratamiento de datos.",
+        "Los otros {other} módulos se ejecutan en la misma infraestructura. Hoy todos los proveedores de la plataforma son de retención cero; para estos tres está impuesto en el código."
       ]
     },
     "learning": {
@@ -872,7 +872,7 @@
         },
         {
           "title": "El Reglamento de IA de la UE avanza contrarreloj",
-          "body": "Las obligaciones para IA de uso general se aplican desde el 2 de agosto de 2025. Los deberes de transparencia del artículo 50 llegan el 2 de agosto de 2026. Una puerta humana documentada encaja mejor en ese régimen que una sesión de chat que nadie registró."
+          "body": "Las obligaciones para IA de uso general se aplican desde el 2 de agosto de 2025. Los deberes de transparencia del artículo 50 se aplican desde el 2 de agosto de 2026. Una puerta humana documentada encaja mejor en ese régimen que una sesión de chat que nadie registró."
         }
       ],
       "note": "Nada de esto es asesoramiento jurídico. Las tres cosas son razones por las que la pipeline tiene la forma que tiene."
@@ -903,7 +903,7 @@
         },
         {
           "title": "Subencargados",
-          "body": "El análisis corre en Google Vertex AI en una región de la UE, bajo un DPA. La agenda corre en Cal.com. La lista completa por módulo está sobre la mesa antes de que suba nada."
+          "body": "Por defecto, el análisis corre en Google Vertex AI en la UE, bajo un DPA. La agenda corre en Cal.com. Este sitio web cuenta las visitas con Plausible Analytics, sin cookies. La lista completa por módulo está sobre la mesa antes de que suba nada."
         }
       ],
       "note": "Pídalo por escrito. Bajo DORA, un fondo por encima del umbral debe nombrar a cada tercero TIC en un registro que se presenta ante su supervisor — nosotros incluidos."
@@ -1380,7 +1380,7 @@
       "title": "Qué recoge este sitio, y qué recoge un encargo",
       "lead": "Esta página cubre el sitio web. El tratamiento de datos en un encargo se rige por el contrato que firmamos."
     },
-    "updated": "Última revisión: 5 de agosto de 2026.",
+    "updated": "Última revisión: 12 de octubre de 2026.",
     "sections": [
       {
         "title": "Este sitio web",
@@ -1402,7 +1402,7 @@
         "title": "Documentos que comparte con nosotros",
         "body": [
           "A través de este sitio web no se comparte ningún documento. El acceso se acuerda por separado, por escrito.",
-          "Durante un encargo, los datos confidenciales se seudonimizan antes del análisis y solo se revierten en el entregable final. El análisis se ejecuta en Google Vertex AI en una región de la UE bajo un acuerdo de tratamiento de datos. El proveedor del modelo no conserva sus documentos ni entrena con ellos.",
+          "Durante un encargo, los datos confidenciales se seudonimizan antes del análisis y solo se revierten en el entregable final. Por defecto, el análisis se ejecuta en Google Vertex AI en la UE, bajo un acuerdo de tratamiento de datos. El proveedor del modelo no conserva sus documentos ni entrena con ellos.",
           "Los plazos de retención y eliminación por nuestra parte se fijan en el contrato de encargo."
         ]
       },

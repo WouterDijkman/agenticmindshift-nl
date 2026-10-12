@@ -146,7 +146,7 @@
     "governancePoints": [
       {
         "title": "Analyse gehost in de EU",
-        "body": "Alle analyse draait op Google Vertex AI in een EU-regio, onder een verwerkersovereenkomst."
+        "body": "Standaard draait de analyse op Google Vertex AI in de EU, onder een verwerkersovereenkomst. Buiten de EU alleen als u daar per deal voor kiest."
       },
       {
         "title": "Zero retention bij de modelaanbieder",
@@ -200,7 +200,7 @@
     ],
     "chart": {
       "zdr": "ZDR",
-      "zdrTitle": "Zero-retention routing wordt afgedwongen. Zonder die route start de run niet.",
+      "zdrTitle": "Zero-retention-routering, afgedwongen in de code: deze module draait nooit op een model dat gegevens bewaart.",
       "modulesLabel": "modules",
       "moduleLabel": "module",
       "kinds": {
@@ -247,7 +247,7 @@
   "home": {
     "hero": {
       "title": "Weet wat er ligt voordat u tekent",
-      "lead": "Elke dimensie, over de hele data room, in dagen. Bij elke bevinding staat de bron en de vindplaats, zodat u het aan tafel kunt bewijzen terwijl u er zit.",
+      "lead": "{disciplines} disciplines, over de hele data room, in dagen. Elke bevinding noemt bron en vindplaats, zodat u het aan tafel kunt bewijzen.",
       "cta": "Deel een data room"
     },
     "problem": {
@@ -362,7 +362,7 @@
         },
         "zdr": {
           "title": "Zero retention afgedwongen",
-          "body": "Fiscaal, juridisch en financieel weigeren te draaien op een model dat data bewaart."
+          "body": "Fiscaal, juridisch en financieel draaien nooit op een model dat gegevens bewaart."
         },
         "blocks": {
           "title": "Harde blokkades",
@@ -372,7 +372,7 @@
     },
     "coverage": {
       "title": "De modulebibliotheek, in dispatchvolgorde",
-      "lead": "Een module die op de output van een andere wacht, kan niet eerder starten. Die afhankelijkheid bepaalt de volgorde, niet onze voorkeur. Het label onder elke module zegt wat hij oplevert: een bevinding, een document, of een doorlopend signaal.",
+      "lead": "Een module die op de output van een andere module wacht, kan niet eerder starten. Die afhankelijkheid bepaalt de volgorde. Elke module levert bevindingen op.",
       "note": "Afgeleid uit de dispatchgrafen in de broncode, niet geschat. ZDR markeert de modules waarvan de routing hard is vastgezet op een zero-retention EU-endpoint."
     },
     "pipeline": {
@@ -390,7 +390,7 @@
         },
         {
           "title": "Opstellen, bekritiseren, opnieuw",
-          "body": "Een critic-agent bekritiseert het concept en stuurt het terug. Maximaal twee retries per specialist."
+          "body": "Een critic-agent beoordeelt het concept en kan het één keer terugsturen, met feedback."
         },
         {
           "title": "Vier groundingchecks",
@@ -437,7 +437,7 @@
     },
     "blocks": {
       "title": "{blocks} condities die automatische goedkeuring stoppen",
-      "lead": "Retries zijn gemaximeerd op twee per specialist. Deze condities beëindigen de lus hoe dan ook en sturen het concept naar een persoon.",
+      "lead": "Een afgekeurd concept krijgt één nieuwe poging. Deze condities beëindigen de lus en leggen het concept niet goedgekeurd aan uw reviewer voor.",
       "items": [
         {
           "title": "Privacylek",
@@ -449,15 +449,15 @@
         },
         {
           "title": "Onbevestigd na reparatie",
-          "body": "De fabricatiecheck vindt na beide retries nog steeds een claim zonder dekking."
+          "body": "De fabricatiecheck vindt na de nieuwe poging nog steeds een claim zonder dekking."
         },
         {
           "title": "Scope-weigering",
           "body": "De module kan het niet binnen zijn opdracht beantwoorden, en zegt dat."
         },
         {
-          "title": "Te weinig diepgang",
-          "body": "Een antwoord dat de standaard van het schema niet haalt."
+          "title": "Reviewer niet beschikbaar",
+          "body": "De critic-agent kon het concept niet beoordelen, dus het gaat niet door als beoordeeld."
         },
         {
           "title": "Placeholder-tekst",
@@ -529,9 +529,9 @@
         "Geen geauditeerd accuratessepercentage. Interne benchmarks zijn één dataset en niet extern gecontroleerd.",
         "Geen claim dat de menselijke poort optioneel is. Die is verplicht.",
         "Nog geen afgeronde publieke cases.",
-        "Geen uniform trackrecord. De financiële module heeft end-to-end op een live deal gedraaid en is geverifieerd tegen brondocumenten. De reconciliatielaag is jonger.",
         "Geen technische due diligence op productniveau. Broncode-review, architectuurbeoordeling en schaalbaarheidstests zitten niet in de standaardronde.",
         "Geen integriteits- of reputatieonderzoek. Achtergrondchecks op personen en tegenpartijen lopen buiten dit platform om.",
+        "Geen juridische en fiscale analyse los van jurisdictie. Beide zijn afgestemd op Nederlands recht; laat ze bij een target elders door lokale adviseurs toetsen.",
         "Geen algemene beschikbaarheid. Factum is pre-launch."
       ]
     },
@@ -551,8 +551,8 @@
           "a": "Dan moet het dat zeggen. Een bevinding is óf gedekt door een bronverwijzing die vier checks heeft overleefd, óf gemarkeerd als onbevestigd. Verzonnen bronnen zijn één van de {blocks} harde blokkades."
         },
         {
-          "q": "Hoe weet ik dat het platform bevindingen van dit gewicht kan dragen?",
-          "a": "De financiële module is het meest cijfermatig blootgestelde deel van elke analyse. Die heeft end-to-end op een live deal gedraaid en is onafhankelijk geverifieerd tegen brondocumenten. Nieuwere lagen hebben minder historie, en we zeggen erbij welke dat zijn."
+          "q": "Hoe weet ik dat de bevindingen kloppen?",
+          "a": "U controleert ze. Elke bevinding draagt de passage waarop ze rust, en uw eigen reviewer tekent af voordat er iets wordt geëxporteerd. Er is nog geen geauditeerd accuratessepercentage, en we suggereren er ook geen."
         },
         {
           "q": "Hoe snel is het?",
@@ -560,7 +560,7 @@
         },
         {
           "q": "Hoe vaak citeert AI gewoon verkeerd?",
-          "a": "Vaker dan u denkt. PwC publiceerde onlangs een rapport met een verzonnen framework en verzonnen bronnen; Deloitte betaalde een overheidsopdracht terug om dezelfde reden. Elke citatie hier doorloopt vier controles voordat hij de pagina haalt."
+          "a": "Vaker dan u denkt. In 2025 betaalde Deloitte de Australische overheid deels terug voor een rapport met verzonnen bronverwijzingen. Elke verwijzing hier doorstaat vier controles voordat ze op de pagina komt."
         },
         {
           "q": "Voor welke dealgrootte is dit gebouwd?",
@@ -587,7 +587,7 @@
     "disciplines": {
       "title": "Alle {disciplines} disciplines, één vaste scope",
       "lead": "Elke discipline is een afgebakende ronde met een eigen vraag en een eigen uitkomst.",
-      "note": "Eén opdracht, één prijs. Geen à-la-cartemenu en geen upsell na ondertekening. Waar elke discipline naar kijkt, bepalen we op de call tegen uw data room."
+      "note": "Eén prijs voor de hele scope. Wat elke discipline bekijkt, stemmen we in het gesprek af op uw data room. Juridisch en fiscaal zijn afgestemd op Nederlands recht; laat ze bij een target elders door lokale adviseurs toetsen."
     },
     "layers": {
       "title": "Wat er één oplevering van maakt",
@@ -659,11 +659,11 @@
         },
         {
           "q": "Wat gebeurt er met onze documenten?",
-          "a": "Vertrouwelijke gegevens worden gepseudonimiseerd vóór de analyse en pas in de uiteindelijke output teruggezet. De analyse draait op Google Vertex AI in een EU-regio onder een verwerkersovereenkomst. De modelaanbieder bewaart uw documenten niet en traint er niet op."
+          "a": "Vertrouwelijke gegevens worden vóór de analyse gepseudonimiseerd en pas in de uiteindelijke output teruggezet. Standaard draait de analyse op Google Vertex AI in de EU, onder een verwerkersovereenkomst. De modelaanbieder bewaart uw documenten niet en traint er niet op."
         },
         {
           "q": "Kan ik een voorbeeldrapport zien?",
-          "a": "Geen echte. Documenten van klanten zijn vertrouwelijk en geen klant heeft ervoor gekozen genoemd te worden. Het uitgewerkte voorbeeld op de homepage laat het format zien. Het eerste echte rapport dat u ziet is uw eigen, op een call, dagen na de NDA."
+          "a": "Geen echt. Factum is pre-launch: er is nog geen publieke klant of case study. Het uitgewerkte voorbeeld op de homepage laat het format zien. Het eerste echte dat u ziet, is uw eigen, enkele dagen na de NDA."
         },
         {
           "q": "Wie beoordeelt de output eigenlijk?",
@@ -810,7 +810,7 @@
       "items": [
         "Geen ISO 27001, SOC 2 of andere certificering. Geen audit van de pipeline door derden.",
         "Geen pentest, single sign-on of toezegging over audit logs.",
-        "Geen gepubliceerde EU-regio. Analyse draait op Google Vertex AI in een EU-regio; we noemen niet welke.",
+        "Geen met naam genoemd datacenter. Standaard draait de analyse op het EU-multiregio-endpoint van Vertex AI.",
         "Geen beweerde AVG-compliancestatus. Verwerkingsvoorwaarden horen in een opdrachtovereenkomst.",
         "Geen meldplicht- of uitwijktoezegging op deze pagina.",
         "Geen geauditeerd accuratessepercentage. De ene benchmark op deze pagina is intern en één dataset."
@@ -824,13 +824,13 @@
       "note": "Eerst een NDA, dezelfde dag verstuurd. Een deal die u vorig jaar sloot werkt ook."
     },
     "zdr": {
-      "title": "Drie modules weigeren te draaien op een model dat data bewaart",
+      "title": "Drie modules draaien nooit op een model dat gegevens bewaart",
       "lead": "Zero data retention is een routeringsregel in de code, geen belofte op een pagina. Fiscaal, juridisch en financieel zitten achter die poort.",
       "items": [
-        "De poort is een harde eis, gecontroleerd vóór dispatch.",
-        "Er is geen stille afwaardering naar een aanbieder die wel bewaart.",
-        "Analyse draait op Google Vertex AI in een EU-regio, onder een verwerkersovereenkomst.",
-        "De andere {other} modules draaien op dezelfde infrastructuur. Alleen deze drie weigeren te starten zonder de poort."
+        "De poort zit op het ene punt waar elke modelaanroep doorheen gaat.",
+        "Een aanbieder die gegevens bewaart, wordt vervangen door een zero-retention-aanbieder, en die vervanging wordt gelogd.",
+        "Standaard is dat Google Vertex AI in de EU, onder een verwerkersovereenkomst.",
+        "De andere {other} modules draaien op dezelfde infrastructuur. Vandaag is elke aanbieder in het platform zero-retention; voor deze drie is dat in de code afgedwongen."
       ]
     },
     "learning": {
@@ -872,7 +872,7 @@
         },
         {
           "title": "De EU AI Act heeft een deadline",
-          "body": "Verplichtingen voor general-purpose AI gelden sinds 2 augustus 2025. De transparantieplichten uit artikel 50 volgen op 2 augustus 2026. Een gedocumenteerde menselijke poort is makkelijker in dat regime te plaatsen dan een chatsessie die niemand heeft gelogd."
+          "body": "Verplichtingen voor general-purpose AI gelden sinds 2 augustus 2025. De transparantieplichten uit artikel 50 gelden sinds 2 augustus 2026. Een gedocumenteerde menselijke poort is makkelijker in dat regime te plaatsen dan een chatsessie die niemand heeft gelogd."
         }
       ],
       "note": "Niets hiervan is juridisch advies. Alle drie zijn redenen dat de pipeline is zoals hij is."
@@ -903,7 +903,7 @@
         },
         {
           "title": "Sub-processors",
-          "body": "Analyse draait op Google Vertex AI in een EU-regio, onder een verwerkersovereenkomst. Inplannen loopt via Cal.com. De volledige lijst per module ligt op tafel voordat u iets uploadt."
+          "body": "Standaard draait de analyse op Google Vertex AI in de EU, onder een verwerkersovereenkomst. Inplannen loopt via Cal.com. Deze website telt bezoeken met Plausible Analytics, zonder cookies. De volledige lijst per module ligt op tafel voordat u iets uploadt."
         }
       ],
       "note": "Vraag het op schrift. Onder DORA moet een fonds boven de drempel elke ICT-derde partij benoemen in een register dat bij de toezichthouder wordt ingediend — ons inbegrepen."
@@ -1380,7 +1380,7 @@
       "title": "Wat deze site verzamelt, en wat een opdracht doet",
       "lead": "Deze pagina gaat over de website. De gegevensverwerking binnen een opdracht is geregeld in de overeenkomst die we tekenen."
     },
-    "updated": "Voor het laatst beoordeeld op 5 augustus 2026.",
+    "updated": "Voor het laatst beoordeeld op 12 oktober 2026.",
     "sections": [
       {
         "title": "Deze website",
@@ -1402,7 +1402,7 @@
         "title": "Documenten die u met ons deelt",
         "body": [
           "Er worden geen documenten via deze website gedeeld. Toegang wordt apart en schriftelijk afgesproken.",
-          "Tijdens een opdracht worden vertrouwelijke gegevens gepseudonimiseerd vóór de analyse en pas in de uiteindelijke output teruggezet. De analyse draait op Google Vertex AI in een EU-regio onder een verwerkersovereenkomst. De modelaanbieder bewaart uw documenten niet en traint er niet op.",
+          "Tijdens een opdracht worden vertrouwelijke gegevens gepseudonimiseerd vóór de analyse en pas in de uiteindelijke output teruggezet. Standaard draait de analyse op Google Vertex AI in de EU, onder een verwerkersovereenkomst. De modelaanbieder bewaart uw documenten niet en traint er niet op.",
           "Bewaar- en verwijdertermijnen aan onze eigen kant staan in de opdrachtovereenkomst."
         ]
       },

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { pageMetadata } from '@/lib/pageMetadata';
+import { DISCIPLINE_COUNT } from '@/lib/site';
 import { HOME_BAND, HOME_GUIDE, HOME_PROBLEM, HOME_SUCCESS } from '@/lib/scenes';
 import Hero from '@/components/Hero';
 import MediaCards from '@/components/MediaCards';
@@ -67,7 +68,10 @@ export default async function HomePage({
     <>
       <Hero
         title={t('hero.title')}
-        lead={t('hero.lead')}
+        /* The count comes from DISCIPLINES in lib/site.ts. The lead used to say
+           "Every dimension", which read as the full fourteen-dimension map;
+           Factum covers nine of those fully and five partly (COVERAGE_*). */
+        lead={t('hero.lead', { disciplines: DISCIPLINE_COUNT })}
         cta={t('hero.cta')}
         /* Was "See what a finding looks like", pointing at /platform. The
            finding it promised has since moved onto this page, so the link
