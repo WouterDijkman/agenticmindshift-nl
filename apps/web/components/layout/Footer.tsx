@@ -17,7 +17,12 @@ export default async function Footer() {
   // Factum has its own site, so it leaves the internal column and becomes an
   // outbound link. `Link` from @/i18n/navigation would prefix it with a locale
   // of *this* site; `factumUrl` carries the locale across to the other one.
-  const externalLinks = [{ href: factumUrl(locale), label: tNav('factum_capital') }];
+  //
+  // `rel` is `noopener` without `noreferrer`, as on the banner: both sites are
+  // ours, and stripping the Referer made every click from here arrive on
+  // factumcapital.eu as direct traffic. The Plausible class counts the click on
+  // this side, with the same location label as the link's utm_campaign.
+  const externalLinks = [{ href: factumUrl(locale, 'footer'), label: tNav('factum_capital') }];
 
   const legalLinks = [
     { href: '/privacy', label: t('privacy') },
@@ -87,8 +92,8 @@ export default async function Footer() {
                   <a
                     href={l.href}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="footer-link"
+                    rel="noopener"
+                    className="footer-link plausible-event-name=Factum+Outbound plausible-event-location=footer"
                   >
                     {l.label} <span aria-hidden="true">↗</span>
                   </a>
