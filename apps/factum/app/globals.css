@@ -1398,6 +1398,9 @@ p { margin: 0; }
    1440x900 the width term binds and the display size is correct as it is, and
    nothing should shrink a screen that already fits. Phones are narrow and very
    tall, so they never reach this query. */
+@media (max-height: 800px) and (min-width: 1121px) {
+  .hero-aside .schema-row { padding-block: 11px; }
+}
 @media (max-height: 800px) {
   .fit-screen .type-display {
     font-size: clamp(2rem, min(1.55rem + 4.6vw, 8.8vh), 5.875rem);
@@ -1618,8 +1621,11 @@ p { margin: 0; }
    ============================================================ */
 .schema-row {
   display: grid;
-  grid-template-columns: minmax(0, 200px) minmax(0, 1fr);
-  gap: clamp(12px, 2vw, 28px);
+  /* Key column 9.5rem, was 200px. Since the home hero shows a real finding
+     the values are sentences, not four-word labels, and a 200px key column
+     set them four lines deep and pushed the hero CTA under a 720px fold. */
+  grid-template-columns: minmax(0, 9.5rem) minmax(0, 1fr);
+  gap: clamp(12px, 2vw, 24px);
   padding-block: 16px;
   border-top: 1px solid var(--hairline-faint);
   align-items: start;
