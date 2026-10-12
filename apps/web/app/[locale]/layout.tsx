@@ -3,7 +3,7 @@ import { SUSE, Fraunces } from 'next/font/google';
 import Script from 'next/script';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
-import { routing } from '@/i18n/routing';
+import { routing, type Locale } from '@/i18n/routing';
 import MotionProvider from '@/components/motion/MotionProvider';
 import { BASE } from '@/lib/hreflang';
 import { sharedOpenGraph } from '@/lib/pageMetadata';
@@ -26,10 +26,36 @@ const fraunces = Fraunces({
   display: 'swap',
 });
 
+function isLocale(value: string): value is Locale {
+  return routing.locales.includes(value as Locale);
+}
+
+/**
+ * Only the five locales exist. Anything else in this segment is a 404, and the
+ * check has to come first — before metadata, before translations.
+ *
+ * `proxy.ts` deliberately skips every path with a dot in it (static files), so
+ * `/llms.txt` reached this layout as `locale: "llms.txt"`. `getTranslations`
+ * quietly fell back to Dutch, this function emitted `index, follow` and an
+ * og:url of `/llms.txt`, and only then did the layout call `notFound()`. The
+ * result was a 404 carrying the homepage's head: `noindex` *and* `index,
+ * follow`, plus a canonical-looking og:url (audit 12-10-2026, W8).
+ *
+ * So the locale is checked at the top of generateMetadata and again in the
+ * layout. Verified with `next start`: /llms.txt, /foo.txt and /nl/bestaat-niet
+ * return 404 with a single `noindex`, no canonical and no og:url.
+ *
+ * `dynamicParams = false` was tried as well and left out on purpose: the 404s
+ * it produces are identical, but `next start` logs an `Internal:
+ * NoFallbackError` stack trace for every one of them, which would bury real
+ * errors in the production logs under bot traffic for /llms.txt and friends.
+ */
+
 export async function generateMetadata(
   { params }: { params: Promise<{ locale: string }> }
 ): Promise<Metadata> {
   const { locale } = await params;
+  if (!isLocale(locale)) notFound();
   const t = await getTranslations({ locale, namespace: 'meta' });
   return {
     title: {
@@ -45,16 +71,17 @@ export async function generateMetadata(
       // it, which it does by calling the same function. One implementation, so
       // the layout and the pages cannot drift apart.
       ...sharedOpenGraph(locale, t('site_name')),
-      // Correct for the locale root, and a fallback for anything below it that
-      // does not call pageMetadata(). This was once the only `openGraph` in the
-      // app, which is exactly how all five interior pages came to advertise the
-      // homepage as their og:url.
-      url: `${BASE}/${locale}`,
+      // No `url` here any more. Every page sets its own og:url through
+      // pageMetadata() (or guideMetadata()), and the only thing this
+      // fallback still reached was a 404 rendered inside this layout, which
+      // it then labelled as the locale homepage.
       // OG image is provided by the file-based app/[locale]/opengraph-image.tsx (dynamic, branded).
     },
     // Upgrade to summary_large_image so LinkedIn/X show the OG image preview
     twitter: { card: 'summary_large_image', creator: '@wwdijkman' },
-    robots: { index: true, follow: true },
+    // No `robots` here either: indexable is the default, and an explicit
+    // `index, follow` in this layout used to sit next to Next's own `noindex`
+    // on every 404 rendered inside it.
     // NOTE: Do NOT set a global canonical here — each page sets its own via generateMetadata.
     // A blanket canonical here would cause every locale page to claim the same canonical URL.
   };
@@ -78,10 +105,8 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  // Validate the locale
-  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
-    notFound();
-  }
+  // Validate the locale (see generateMetadata above for why this matters).
+  if (!isLocale(locale)) notFound();
 
   /**
    * Opts this segment into static rendering, and covers the `getMessages()`
