@@ -1173,7 +1173,7 @@
     "agenda": {
       "label": "What we cover",
       "items": [
-        "Whether you're buying, selling, or already mid-process.",
+        "Whether you’re buying, selling, or already mid-process.",
         "Which room: a deal you have open, or one you closed.",
         "What is in the data room today, and what is missing.",
         "The NDA, the DPA, and where your documents go.",
@@ -1182,7 +1182,7 @@
     },
     "documents": {
       "eyebrow": "Before you send anything",
-      "title": "Don't send documents before the NDA",
+      "title": "Don’t send documents before the NDA",
       "lead": "Nothing moves until it is signed. It goes out the same day as the call; you countersign, and only then do we get access."
     },
     "details": {
