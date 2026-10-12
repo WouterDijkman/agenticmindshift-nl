@@ -236,7 +236,7 @@ export default async function HomePage(
       {/* ═══════════════════════════════════════════
           7. FAQ
       ═══════════════════════════════════════════ */}
-      <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(80px, 11vw, 136px)' }}>
+      <section className="has-sticky" style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(80px, 11vw, 136px)' }}>
         <div className="container-medium">
           <div className="faq-grid">
             {/* Left: sticky heading */}

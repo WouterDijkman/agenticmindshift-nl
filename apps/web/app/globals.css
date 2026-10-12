@@ -466,6 +466,13 @@ section {
   max-width: 100%;
   width: 100%;
 }
+/* `hidden` makes the section a scroll container, so a position:sticky child
+   sticks to the section (which never scrolls) and simply scrolls away.
+   `clip` clips the same way without becoming a scrollport. Used by the home
+   FAQ heading and the guide pages' question list. */
+section.has-sticky {
+  overflow: clip;
+}
 
 /* ------------------------------------------------------------------ */
 /* Hero grain overlay                                                  */

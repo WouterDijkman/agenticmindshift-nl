@@ -186,7 +186,7 @@ export default async function WerkwijzePage(
                 style={{
                   background: o.featured ? 'var(--surface-dark)' : 'var(--bg-primary)',
                   color: 'var(--text-primary)',
-                  padding: 'clamp(32px, 4vw, 44px)',
+                  padding: 'clamp(28px, 3vw, 36px)',
                   display: 'flex',
                   flexDirection: 'column',
                   gap: '20px',
@@ -266,7 +266,8 @@ export default async function WerkwijzePage(
                     external
                     className={`plausible-event-name=Intake+CTA plausible-event-location=pricing-tier-${i + 1}`}
                   >
-                    {o.ctaLabel}
+                    {/* Keep the arrow with its last word when the label wraps. */}
+                    {o.ctaLabel.replace(' →', '\u00a0→')}
                   </Button>
                 </div>
               </article>
