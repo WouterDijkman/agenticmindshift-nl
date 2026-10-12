@@ -26,7 +26,7 @@
     },
     "team": {
       "title": "Das Team hinter Factum",
-      "description": "Ein Leveraged-Finance-Banker und ein Data Engineer. Einer von beiden gibt jedes Ergebnis frei."
+      "description": "Ein Leveraged-Finance-Banker und ein Data Engineer: wer Factum baut, und wofür jeder von ihnen verantwortlich ist."
     },
     "partnerships": {
       "title": "Diligence-Kapazität für Berater",
@@ -65,7 +65,7 @@
     "preSale": "Pre-Sale"
   },
   "footer": {
-    "blurb": "KI-Due-Diligence für M&A und Private Equity. Jede Feststellung belegt ein Dokument. Jedes Ergebnis von einer namentlich genannten Person geprüft.",
+    "blurb": "KI-Due-Diligence für M&A und Private Equity. Jede Feststellung mit einem Dokument belegt. Jeder Export von Ihrem eigenen Prüfer freigegeben.",
     "sitemap": "Sitemap",
     "reference": "Hintergrund",
     "company": "Unternehmen",
@@ -124,7 +124,7 @@
     ],
     "schema": {
       "label": "Output-Kontrakt — jede Feststellung",
-      "footnote": "Das Schema, dem jede Erkenntnis genügen muss. Dahinter stehen Quellen aus dem Data Room oder der Wissensdatenbank (Gesetz, IFRS, Rechtsprechung, Marktforschung) mit Fundstelle, und ein namentlich benannter Prüfer, noch Monate später aufrufbar.",
+      "footnote": "Das Schema, dem jede Erkenntnis genügen muss. Dahinter stehen Quellen aus dem Data Room oder der Wissensdatenbank (Gesetz, IFRS, Rechtsprechung, Marktforschung) mit Fundstelle, und die Freigabe Ihres Prüfers, noch Monate später aufrufbar.",
       "rows": {
         "module": "Modul",
         "finding": "Feststellung",
@@ -139,7 +139,7 @@
         "evidence": "Wörtlich zitiert, pro Zitat",
         "severity": "Eine von fünf Stufen, von Info bis Kritisch",
         "document": "Data Room oder Wissensdatenbank, pro Zitat",
-        "review": "Vor Freigabe erforderlich"
+        "review": "Vor dem Export von Ihrem Prüfer freigegeben"
       },
       "more": "+3 Felder, auf einem breiteren Bildschirm"
     },
@@ -157,8 +157,8 @@
         "body": "Vertrauliche Daten werden vor der Analyse pseudonymisiert. Zurückübersetzt erst im finalen Ergebnis."
       },
       {
-        "title": "Ein verantwortlicher Ansprechpartner",
-        "body": "Eine namentlich benannte Person prüft jedes Ergebnis, bevor es Sie erreicht."
+        "title": "Ihr Prüfer gibt frei",
+        "body": "Kein Kundenexport verlässt die Plattform ohne die Freigabe Ihres eigenen Prüfers."
       }
     ],
     "modules": [
@@ -214,7 +214,7 @@
       "pageRef": "TargetCo — Rahmenvertrag, S. 14",
       "highlight": "Zitierte Passage",
       "findingLabel": "Der Feststellung, der daraus entstand",
-      "footnote": "Ein konstruiertes Beispiel an einem fiktiven Target. Hier steht kein Mandantendokument. Ihr Mandat liefert dieselben sechs Felder, an Ihrem eigenen Data Room.",
+      "footnote": "Ein konstruiertes Beispiel an einem fiktiven Target. Hier steht kein Mandantendokument. Ihr eigener Lauf liefert dieselben sechs Felder, an Ihrem eigenen Data Room.",
       "quote": "Der Kunde kann diesen Vertrag mit einer Frist von dreißig (30) Tagen schriftlich kündigen, wenn sich die Kontrolle über den Lieferanten ändert.",
       "tag": "Beispiel",
       "values": {
@@ -223,7 +223,7 @@
         "evidence": "Ziffer 14.2, links vollständig zitiert.",
         "severity": "Hoch. Der größte Kunde, dreißig Tage Frist, keine Abstandszahlung.",
         "document": "TargetCo — Rahmenvertrag mit Kunde A, Seite 14.",
-        "review": "Freigegeben von W. Dijkman."
+        "review": "Von Ihrem Prüfer namentlich freigegeben, vor dem Export."
       }
     },
     "ctaProof": "Drei wesentliche Feststellungen, die Ihr Team noch nicht hatte, oder das Mandat ist kostenlos, bei Pilotmandaten.",
@@ -269,7 +269,7 @@
     },
     "guide": {
       "title": "Ein Leveraged-Finance-Banker und ein Data Engineer",
-      "lead": "Wouter hat bei der ING Acquisition Finance und Leveraged Finance strukturiert. Daniel baut regulierte Datenpipelines. Einer von beiden gibt jedes Ergebnis frei, bevor es Sie erreicht.",
+      "lead": "Zwei Menschen, die Sie direkt erreichen. Wouter hat bei der ING Acquisition Finance und Leveraged Finance strukturiert. Daniel baut regulierte Datenpipelines.",
       "link": "Das Team kennenlernen"
     },
     "specimen": {
@@ -277,10 +277,10 @@
       "lead": "Ein durchgerechnetes Beispiel an einem fiktiven Target. Das Format ist das, das Sie erhalten."
     },
     "pipeline": {
-      "title": "Jedes Mandat durchläuft dieselben sechs Schritte",
+      "title": "Jeder Lauf durchläuft dieselben sechs Schritte",
       "lead": "Ein KI-Werkzeug auf einen Data Room richten kann jeder. Die Frage ist, was passiert, wenn das Modell sich irrt.",
-      "refusalTitle": "Die Pipeline hält an und ruft einen Menschen",
-      "refusalNote": "Jede harte Blockade geht an einen Menschen.",
+      "refusalTitle": "Die Pipeline hält an und legt es Ihrem Prüfer vor",
+      "refusalNote": "Jede harte Blockade geht an Ihren Prüfer, nie automatisch freigegeben.",
       "refusals": [
         "Erfundene oder halluzinierte Fundstellen",
         "Datenschutzlecks",
@@ -290,7 +290,7 @@
     },
     "trust": {
       "title": "Wohin Ihre Dokumente gehen und wer sie sehen kann",
-      "lead": "EU-Hosting, Zero Retention beim Modellanbieter, Pseudonymisierung vor der Analyse und eine namentlich genannte prüfende Person. Vier Mechanismen, keine Zertifizierung.",
+      "lead": "EU-Hosting als Standard, Zero Retention beim Modellanbieter, Pseudonymisierung vor der Analyse und die Freigabe Ihres eigenen Prüfers. Vier Mechanismen, keine Zertifizierung.",
       "link": "Die Governance-Seite lesen"
     },
     "coverage": {
@@ -315,7 +315,7 @@
     },
     "plan": {
       "title": "Drei Schritte bis zum Start",
-      "lead": "Kein Angebot, bevor wir beide wissen, dass es passt.",
+      "lead": "Die Demo läuft auf Ihrem eigenen Data Room. Danach arbeitet Ihr Team selbst in der Plattform.",
       "steps": [
         {
           "title": "Wählen Sie den Data Room",
@@ -326,8 +326,8 @@
           "body": "Dreißig Minuten, um Umfang und Jurisdiktion zu klären, dann geht das NDA am selben Tag raus. Der Zugang läuft unter einem AV-Vertrag, in der EU, mit Zero Retention."
         },
         {
-          "title": "Die Feststellungen gemeinsam durchgehen, in einem Call",
-          "body": "Tage später. Jede Feststellung nennt Quelle und Fundstelle, freigegeben von einer namentlich benannten Person. Dieser Call ist die Demo: Ihr Data Room, kein Rundgang."
+          "title": "Feststellungen im Call lesen, dann selbst arbeiten",
+          "body": "Tage später, jede Feststellung mit Quelle und Fundstelle: Dieser Call ist die Demo. Danach legt Ihr Team eigene Dossiers an, lädt Gäste ein und gibt die eigenen Feststellungen frei."
         }
       ]
     },
@@ -339,13 +339,13 @@
     "film": {
       "title": "Was liegt wirklich im Data Room?",
       "lead": "Jeder Deal beginnt mit dieser einen Frage. Fünfundvierzig Sekunden: dreihundert Dokumente, ein Wochenende und eine Klausel auf Seite vierzehn, mit der Ihr größter Kunde in der Woche der Unterschrift kündigen kann.",
-      "note": "Das Beispiel im Film ist konstruiert, auf einem fiktiven Zielunternehmen, und sagt das im Bild. Es erscheint kein Kundendokument. Ihr Mandat liefert dieselben sechs Felder, für Ihren eigenen Data Room."
+      "note": "Das Beispiel im Film ist konstruiert, auf einem fiktiven Zielunternehmen, und sagt das im Bild. Es erscheint kein Kundendokument. Ihr eigener Lauf liefert dieselben sechs Felder, für Ihren eigenen Data Room."
     }
   },
   "platform": {
     "header": {
       "title": "Wie die Plattform einen Data Room liest",
-      "lead": "{modules} vorab abgegrenzte Module, in fester Abhängigkeitsfolge, mit vier Grounding-Prüfungen und einer verpflichtenden menschlichen Freigabe. Jedes Mandat derselbe Lauf.",
+      "lead": "Was mit Ihren Dokumenten passiert, Schritt für Schritt. {modules} Module lesen den Data Room in fester Reihenfolge, jede Aussage wird an ihrer Quelle geprüft, und Ihr eigener Prüfer gibt frei.",
       "cta": "Data Room teilen"
     },
     "scale": {
@@ -354,7 +354,7 @@
       "tiles": {
         "modules": {
           "title": "Module pro Mandat",
-          "body": "Jedes vorab auf eine Disziplin zugeschnitten. Alle laufen, bei jedem Mandat."
+          "body": "Jedes auf eine Disziplin zugeschnitten. Der volle Durchgang führt alle aus."
         },
         "waves": {
           "title": "Dispatch-Wellen",
@@ -401,8 +401,8 @@
           "body": "Feststellungen werden gegeneinander gelesen und zu einer Darstellung zusammengeführt."
         },
         {
-          "title": "Menschliche Prüfung und Freigabe",
-          "body": "Eine namentlich benannte Person prüft die Feststellungen vor der Freigabe.",
+          "title": "Ihre Prüfung und Freigabe",
+          "body": "Ihr Prüfer kontrolliert die Feststellungen und gibt vor dem Export frei.",
           "note": "Die Pseudonymisierung wird nur hier aufgehoben, im finalen Output."
         }
       ]
@@ -513,7 +513,7 @@
           "label": "Zero Retention beim Modellanbieter"
         },
         {
-          "label": "Namentlich benannte Person zeichnet ab"
+          "label": "Menschliche Freigabe vor dem Export"
         },
         {
           "label": "Veröffentlichtes Genauigkeitsaudit",
@@ -556,7 +556,7 @@
         },
         {
           "q": "Wie schnell ist es?",
-          "a": "Der Pipeline-Durchlauf braucht Stunden. Der fertige, geprüfte Output braucht Tage. Wir nennen kein Lieferdatum, bevor wir den Data Room gesehen haben."
+          "a": "Der Pipeline-Durchgang läuft in Stunden. Die Prüfung durch Ihr Team folgt danach, in Ihrem Tempo. Ein Datum nennen wir erst, wenn wir den Data Room gesehen haben."
         },
         {
           "q": "Wie oft zitiert KI einfach falsch?",
@@ -599,7 +599,7 @@
         },
         {
           "title": "Disziplinübergreifender Abgleich",
-          "body": "Die Feststellungen jeder Disziplin, zu einem kohärenten Narrativ zusammengeführt, mit einer namentlich benannten Person hinter dem Ergebnis."
+          "body": "Die Feststellungen jeder Disziplin zu einer stimmigen Darstellung zusammengeführt, zur Freigabe durch Ihren Prüfer."
         },
         {
           "title": "Was nie geliefert wurde",
@@ -629,16 +629,16 @@
       ]
     },
     "inputs": {
-      "title": "Was wir zum Start brauchen",
+      "title": "Was es zum Start braucht",
       "lead": "Zwei Dinge. Kein Workshop, keine Kick-off-Woche.",
       "items": [
         {
-          "title": "Zugang zum Data Room",
-          "body": "Finanzen, Recht, Steuern, Personal, Verträge und IP, wie im Call vereinbart."
+          "title": "Der Data Room",
+          "body": "Von Ihrem Team hochgeladen: Finanzen, Recht, Steuern, Personal, Verträge und IP."
         },
         {
           "title": "Antworten auf das, was nie geliefert wurde",
-          "body": "Ihre Antworten schließen die Lücken. Eine Runde, um sie einzuarbeiten und betroffene Analysen erneut laufen zu lassen, ist enthalten."
+          "body": "Ihre Antworten schließen die Lücken. Laden Sie sie hoch und lassen Sie die betroffenen Analysen aus der Plattform neu laufen."
         }
       ]
     },
@@ -651,7 +651,7 @@
         },
         {
           "q": "Wie lange dauert es?",
-          "a": "Tage, keine Wochen. Der Pipeline-Durchgang läuft in Stunden; menschliche Prüfung und Abgleich folgen danach. Auf ein Datum legen wir uns nicht fest, bevor wir den Data Room gesehen haben."
+          "a": "Der Pipeline-Durchgang läuft in Stunden. Die Prüfung durch Ihr Team folgt danach, in Ihrem Tempo. Auf ein Datum legen wir uns erst fest, wenn wir den Data Room gesehen haben."
         },
         {
           "q": "Was kostet es?",
@@ -666,8 +666,8 @@
           "a": "Keinen echten. Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Das ausgearbeitete Beispiel auf der Startseite zeigt das Format. Der erste echte, den Sie sehen, ist Ihr eigener, wenige Tage nach dem NDA."
         },
         {
-          "q": "Wer prüft das Ergebnis tatsächlich?",
-          "a": "Eine namentlich benannte Person, bevor etwas auf Ihrem Tisch landet. Solange Factum vor dem Launch steht, ist das der Gründer, bei jedem Mandat."
+          "q": "Wer gibt die Feststellungen frei?",
+          "a": "Ihr eigener Prüfer, im Prüfbereich der Plattform. Kein Kundenexport verlässt die Plattform ohne diese Freigabe. Factum liefert die Plattform; Urteil und Unterschrift liegen bei Ihnen."
         }
       ]
     },
@@ -782,12 +782,12 @@
     },
     "gate": {
       "title": "Der eine verpflichtende menschliche Schritt",
-      "lead": "Eine namentlich benannte Person gibt jedes Ergebnis frei. Dies sind die Bedingungen, die das erzwingen.",
+      "lead": "Ihr eigener Prüfer gibt vor jedem Kundenexport frei. Dies sind die Regeln dahinter.",
       "items": [
-        "Feststellungen werden vor der Lieferung gegen die Quelldokumente zurückgeprüft.",
+        "Jede Feststellung wird gegen ihre Quellpassage geprüft, bevor sie Ihren Prüfer erreicht.",
         "Das Tor läuft jedes Mal, automatisch.",
-        "{blocks} harte Blockaden gehen an eine Person, statt automatisch freigegeben zu werden.",
-        "Eine namentlich benannte Person prüft, gleicht ab und steht für den Output ein.",
+        "{blocks} harte Blockaden stoppen einen Entwurf und legen ihn Ihrem Prüfer vor, nicht freigegeben.",
+        "Ihr Prüfer gibt die Zusammenfassung jedes Moduls frei, die zehn größten Risiken und jede aufschiebende Bedingung. Ohne diese Freigabe verlässt kein Kundenexport die Plattform. Der Rest geht mit dem Vermerk „nicht gesondert geprüft“ mit.",
         "Pseudonymisierte Werte werden nur hier aufgelöst, im finalen Output."
       ]
     },
@@ -798,8 +798,8 @@
         "Jedes Modul zieht selbstständig Belege aus Ihren hochgeladenen Dokumenten.",
         "Ein zweiter Prüf-Agent kritisiert jeden Entwurf.",
         "Ein separater Durchgang gleicht Aussagen gegen den Quelltext ab.",
-        "Eine Person prüft das Ergebnis.",
-        "Aussagen ohne Passage dahinter werden als unbestätigt gekennzeichnet."
+        "Aussagen ohne Passage dahinter werden als unbestätigt gekennzeichnet.",
+        "Ihr Prüfer kontrolliert das Ergebnis und gibt frei."
       ],
       "machineLabel": "Maschine",
       "humanLabel": "Mensch"
@@ -856,7 +856,7 @@
           ]
         }
       ],
-      "note": "Ist mandantenübergreifendes Methodenlernen für Ihr Mandat ein Problem, sagen Sie das im Call. Für Ihr Konto lässt es sich abschalten."
+      "note": "Ist mandantenübergreifendes Methodenlernen für Ihr Haus ein Problem, sagen Sie das im Call. Für Ihr Konto lässt es sich abschalten."
     },
     "legal": {
       "title": "Warum dies kein Chatfenster ist",
@@ -899,7 +899,7 @@
         },
         {
           "title": "Was wir aufbewahren, und warum",
-          "body": "Ihre Dokumente und Feststellungen bleiben in Ihrem eigenen Mandanten-Bereich, damit ein späteres Mandat auf ein früheres zurücklesen kann. Auf Wunsch jederzeit gelöscht. Die Frist steht im Mandatsvertrag."
+          "body": "Ihre Dokumente und Feststellungen bleiben in Ihrem eigenen Mandanten-Bereich, damit ein späteres Dossier auf ein früheres zurückgreifen kann. Auf Wunsch jederzeit gelöscht. Die Frist steht im Mandatsvertrag."
         },
         {
           "title": "Subprozessoren",
@@ -1044,7 +1044,7 @@
         {
           "title": "Das Dokument zitieren, das nicht da ist",
           "body": "Retrieval liest, was hochgeladen wurde. Das Teuerste in der Due Diligence ist oft eine Abwesenheit — der Vertrag, den niemand abgelegt hat, das Jahr, das im Lohnexport fehlt. Eine Abwesenheit hat keine Passage zum Zitieren, also kann kein fundiertes System sie als Feststellung melden.",
-          "human": "Der Data-Gap-Tracker ist die laufende Liste eines Menschen: was angefordert wurde und nie kam. Sie wird zusammen mit den Feststellungen geliefert."
+          "human": "Die Plattform gleicht den Data Room mit den Dokumenten ab, die ein Käufer erwartet, und listet auf, was fehlt. Sie anzufordern ist Sache Ihres Teams."
         },
         {
           "title": "Lesen, was niemand aufgeschrieben hat",
@@ -1054,12 +1054,12 @@
         {
           "title": "Schwach von verborgen unterscheiden",
           "body": "Eine Zahl kann schwach sein, weil das Geschäft schwach ist, oder weil der Verkäufer den Prozess gesteuert hat. Auf dem Papier sehen beide gleich aus. Sie auseinanderzuhalten verlangt Wissen darüber, wie sich Verkäufer verhalten, nicht darüber, was in der Akte steht.",
-          "human": "Jemand, der die andere Seite des Tisches geführt hat. Bei uns ist das ein Leveraged-Finance-Banker."
+          "human": "Jemand, der auf der anderen Seite des Tisches gesessen hat: Ihr eigenes Team oder Ihre Berater."
         },
         {
           "title": "Verantwortlich sein",
           "body": "Ein Modell kann kein Representative unter Ihrer NDA sein, kann sich nicht vor Ihrem Investmentkomitee verantworten und kann nichts unterschreiben. Verantwortlichkeit ist keine Funktion, die man einem System hinzufügt. Sie hängt an einer Person, oder sie existiert nicht.",
-          "human": "Eine namentlich benannte Person gibt jede Ausgabe frei und steht dafür ein."
+          "human": "Ihr eigener Prüfer, namentlich. Kein Kundenexport verlässt die Plattform ohne diese Freigabe."
         }
       ],
       "note": "Behauptet ein Anbieter, sein System könne eines dieser fünf Dinge, fragen Sie, welche Seite es zitiert hat."
@@ -1068,10 +1068,10 @@
       "title": "Genau deshalb ist die Freigabe Pflicht",
       "lead": "Der menschliche Schritt ist keine Sicherheitsdecke über einem fertigen Produkt. Er ist die Stelle, an der vier der fünf Punkte oben tatsächlich erledigt werden.",
       "items": [
-        "Ein Name und ein Datum auf jeder Ausgabe, kein Konfidenzwert.",
+        "Der Name Ihres Prüfers auf dem Export, kein Konfidenzwert.",
         "Wesentlichkeit an Ihrem Deal entschieden, nicht an einem Benchmark.",
         "Unbestätigte Aussagen als unbestätigt gekennzeichnet statt still gestrichen.",
-        "Eine Person, mit der Sie streiten können."
+        "Eine verantwortliche Person, in Ihrem eigenen Team."
       ],
       "link": "Wie Dokumente behandelt werden"
     },
@@ -1099,7 +1099,7 @@
       "items": [
         {
           "title": "Wer unterschreibt?",
-          "body": "Lautet die Antwort „ein Dashboard“, unterschreibt niemand. Fragen Sie nach einem Namen — und danach, was passiert, wenn dieser Name sich irrt."
+          "body": "Hier: Ihr eigener, namentlich benannter Prüfer. Fragen Sie jeden Anbieter, ob sein Export ohne menschliche Freigabe hinausgehen kann, und wer dieser Mensch ist."
         },
         {
           "title": "Was passiert mit einer Aussage ohne Beleg?",
@@ -1114,15 +1114,15 @@
     },
     "cta": {
       "title": "Stellen Sie uns die drei Fragen",
-      "body": "Dreißig Minuten mit der Person, deren Name auf der Ausgabe steht. Bringen Sie die unangenehmen mit.",
+      "body": "Dreißig Minuten mit einem der beiden Gründer. Bringen Sie die unbequemen mit.",
       "button": "Data Room teilen",
       "note": "Zuerst das NDA, am selben Tag versandt. Ein Deal, den Sie letztes Jahr abgeschlossen haben, geht ebenso."
     }
   },
   "team": {
     "header": {
-      "title": "Die Menschen hinter dem Ergebnis",
-      "lead": "Wouter hat bei der ING Akquisitions- und Leveraged Finance strukturiert. Daniel baut regulierte Datenpipelines. Einer von beiden gibt jedes Ergebnis frei.",
+      "title": "Die zwei Menschen hinter Factum",
+      "lead": "Wouter Dijkman und Daniel Dropuljic. Sie sprechen direkt mit ihnen: Wouter über Deals, Daniel über Daten und Infrastruktur.",
       "cta": "Data Room teilen"
     },
     "historyLabel": "Werdegang",
@@ -1184,26 +1184,26 @@
     ],
     "closing": "Dieselbe Sorgfalt, gerichtet auf den Deal vor Ihnen.",
     "cta": {
-      "title": "Sie sprechen mit der Person, die das Ergebnis prüft",
-      "body": "Solange Factum vor dem Launch steht, sind der Call, die Prüfstufe und die Durchsprache der Feststellungen dieselbe Person.",
+      "title": "Sie sprechen mit einem Gründer",
+      "body": "Solange Factum vor dem Launch steht, führt Wouter das erste Gespräch und geht die Feststellungen zu Ihrem eigenen Data Room mit Ihnen durch.",
       "button": "Data Room teilen",
       "note": "Zuerst das NDA, am selben Tag versandt. Ein Deal, den Sie letztes Jahr abgeschlossen haben, geht ebenso."
     },
     "roles": {
-      "title": "Wer wofür unterschreibt",
-      "lead": "Zwei Personen, und kein Analystenpool dahinter.",
+      "title": "Wer was tut",
+      "lead": "Zwei Menschen bauen Factum. Ihr Team arbeitet damit.",
       "items": [
         {
           "label": "Wouter Dijkman",
-          "body": "Legt den Umfang mit Ihnen fest und gibt jede Feststellung frei, bevor sie das Haus verlässt. Nichts erreicht Sie ungelesen."
+          "body": "Führt das erste Gespräch und die Demo auf Ihrem eigenen Data Room. Begleitet den Start Ihres Teams und das erste Dossier."
         },
         {
           "label": "Daniel Dropuljic",
           "body": "Verantwortet die Infrastruktur: EU-Hosting, Zero-Retention-Routing und die Aufbewahrungseinstellung bei jedem Anbieter."
         },
         {
-          "label": "Sonst niemand",
-          "body": "Kein Offshore-Team, keine wechselnden Junioren. Ist ein Mandat größer als zwei Personen plus Plattform, sagen wir das vor der Unterschrift."
+          "label": "Ihr eigenes Team",
+          "body": "Prüft die Feststellungen und gibt frei. Das Urteil über Ihren Deal bleibt bei Ihnen."
         }
       ]
     }
@@ -1362,7 +1362,11 @@
         },
         {
           "q": "Mit wem spreche ich?",
-          "a": "Mit Wouter Dijkman. Factum ist vor dem Start, also ist die Person im Call dieselbe, die jede Feststellung freigibt, die Sie erhalten."
+          "a": "Mit Wouter Dijkman, einem der beiden Gründer. Er geht die Feststellungen zu Ihrem eigenen Data Room mit Ihnen durch. Danach arbeitet Ihr Team selbst in der Plattform und gibt die eigenen Feststellungen frei."
+        },
+        {
+          "q": "Was passiert nach der Demo?",
+          "a": "Ihr Team arbeitet selbst in der Plattform. Es legt das Dossier an, lädt den Data Room hoch, lädt Mandanten oder Finanzierer als Gäste ein und prüft die Feststellungen und gibt sie frei. Wouter begleitet den Start und das erste Dossier."
         },
         {
           "q": "Wir sind mit einem Berater schon mitten im Prozess. Zu spät?",

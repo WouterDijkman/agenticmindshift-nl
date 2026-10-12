@@ -84,7 +84,7 @@ export const GOVERNANCE_POINTS: SceneId[] = [
   'tumbler', // EU-hosted — the dial of a safe
   'tape', // zero retention — the storage medium, and nothing kept on it
   'ledger', // pseudonymised — a ledger whose writing is deliberately illegible
-  'readout' // one accountable contact — one lamp lit in a row that stays dark
+  'readout' // your reviewer signs off — one lamp lit in a row that stays dark
 ];
 
 /** Home — what good looks like. Two cards; the third duplicated the specimen. */

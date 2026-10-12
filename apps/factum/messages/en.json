@@ -26,7 +26,7 @@
     },
     "team": {
       "title": "The team behind Factum",
-      "description": "A leveraged-finance banker and a data engineer. One of them approves every output."
+      "description": "A leveraged-finance banker and a data engineer: who builds Factum, and what each of them is responsible for."
     },
     "partnerships": {
       "title": "Diligence capacity for advisers",
@@ -65,7 +65,7 @@
     "preSale": "Pre-sale"
   },
   "footer": {
-    "blurb": "AI due diligence for M&A and private equity. Every finding cited to a document. Every output reviewed by a named person.",
+    "blurb": "AI due diligence for M&A and private equity. Every finding cited to a document. Every export signed off by your own reviewer.",
     "sitemap": "Sitemap",
     "reference": "Reference",
     "company": "Company",
@@ -124,7 +124,7 @@
     ],
     "schema": {
       "label": "Output contract — every finding",
-      "footnote": "The schema every finding has to satisfy. Source material behind each one, from the data room or the knowledge base (statute, IFRS, case law, market research), with its exact location, and a named reviewer, still openable months later.",
+      "footnote": "The schema every finding has to satisfy. Source material behind each one, from the data room or the knowledge base (statute, IFRS, case law, market research), with its exact location, and your reviewer’s sign-off, still openable months later.",
       "rows": {
         "module": "Module",
         "finding": "Finding",
@@ -139,7 +139,7 @@
         "evidence": "Quoted word for word, per citation",
         "severity": "One of five levels, Info to Critical",
         "document": "Data room or knowledge base, per citation",
-        "review": "Required before release"
+        "review": "Signed off by your reviewer before export"
       },
       "more": "+3 fields, on a wider screen"
     },
@@ -157,8 +157,8 @@
         "body": "Confidential data is pseudonymised before analysis. Reversed only in the final output."
       },
       {
-        "title": "One accountable point of contact",
-        "body": "A named person reviews every output before it reaches you."
+        "title": "Your reviewer signs off",
+        "body": "No client export leaves the platform without your own reviewer’s sign-off."
       }
     ],
     "modules": [
@@ -214,7 +214,7 @@
       "pageRef": "TargetCo — Master Services Agreement, p. 14",
       "highlight": "Cited passage",
       "findingLabel": "The finding it produced",
-      "footnote": "A constructed example on a fictional target. No client document appears here. Your mandate produces these same six fields, on your own room.",
+      "footnote": "A constructed example on a fictional target. No client document appears here. Your own run produces these same six fields, on your own room.",
       "quote": "Customer may terminate this Agreement on thirty (30) days’ written notice in the event of a change of control of Supplier.",
       "tag": "Illustrative",
       "values": {
@@ -223,7 +223,7 @@
         "evidence": "Clause 14.2, quoted in full on the left.",
         "severity": "High. The largest customer, thirty days’ notice, no break fee.",
         "document": "TargetCo — Master Services Agreement with Customer A, page 14.",
-        "review": "Approved by W. Dijkman before release."
+        "review": "Approved by your reviewer, by name, before export."
       }
     },
     "ctaProof": "Three material findings your team did not already have, or the engagement is free, on pilot mandates.",
@@ -269,7 +269,7 @@
     },
     "guide": {
       "title": "A leveraged-finance banker and a data engineer",
-      "lead": "Wouter structured acquisition and leveraged finance at ING. Daniel builds regulated data pipelines. One of them approves every output before it reaches you.",
+      "lead": "Two people you can reach directly. Wouter structured acquisition and leveraged finance at ING. Daniel builds regulated data pipelines.",
       "link": "Meet the team"
     },
     "specimen": {
@@ -277,20 +277,20 @@
       "lead": "A worked example on a fictional target. The format is the one you receive."
     },
     "pipeline": {
-      "title": "Every mandate runs the same six steps",
+      "title": "Every run goes through the same six steps",
       "lead": "Anyone can point an AI tool at a data room. The question is what happens when the model gets something wrong.",
-      "refusalTitle": "The pipeline stops and routes to a person",
+      "refusalTitle": "The pipeline stops and hands it to your reviewer",
       "refusals": [
         "Fabricated or hallucinated citations",
         "Privacy leaks",
         "Scope refusals",
         "Drafts below the reviewer threshold"
       ],
-      "refusalNote": "Every hard-block condition routes to a person."
+      "refusalNote": "Every hard-block condition goes to your reviewer, never auto-approved."
     },
     "trust": {
       "title": "Where your documents go, and who can see them",
-      "lead": "EU hosting, zero retention at the model provider, pseudonymisation before analysis, and one named reviewer. Four mechanisms, no certification.",
+      "lead": "EU hosting by default, zero retention at the model provider, pseudonymisation before analysis, and your own reviewer’s sign-off. Four mechanisms, no certification.",
       "link": "Read the governance page"
     },
     "coverage": {
@@ -315,7 +315,7 @@
     },
     "plan": {
       "title": "Three steps to get started",
-      "lead": "No proposal until we both know it fits.",
+      "lead": "The demo runs on your own data room. After it, your team works in the platform itself.",
       "steps": [
         {
           "title": "Pick the room",
@@ -326,8 +326,8 @@
           "body": "Thirty minutes to agree scope and jurisdiction, then the NDA goes out the same day. Access runs under a DPA, in the EU, with zero retention."
         },
         {
-          "title": "Read the findings with us, on a call",
-          "body": "Days later. Each finding cites its source and location, approved by a named person. That call is the demo: your room, not a tour."
+          "title": "Read the findings on a call, then run it yourself",
+          "body": "Days later, each finding with its source and location: that call is the demo. After it, your team sets up its own dossiers, invites guests and signs off its own findings."
         }
       ]
     },
@@ -339,13 +339,13 @@
     "film": {
       "title": "What is actually in the room?",
       "lead": "Every deal starts with that one question. Forty-five seconds: three hundred documents, one weekend, and a clause on page fourteen that lets your biggest customer walk away the week you sign.",
-      "note": "The example in the film is constructed on a fictional target and says so on screen. No client document appears. Your mandate produces the same six fields, on your own room."
+      "note": "The example in the film is constructed on a fictional target and says so on screen. No client document appears. Your own run produces the same six fields, on your own room."
     }
   },
   "platform": {
     "header": {
       "title": "How the platform reads a data room",
-      "lead": "{modules} pre-scoped modules, in a fixed dependency order, with four grounding checks and a mandatory human gate. The same run, every mandate.",
+      "lead": "What happens to your documents, step by step. {modules} modules read the room in a fixed order, every claim is checked against its source, and your own reviewer signs off.",
       "cta": "Share a data room"
     },
     "scale": {
@@ -354,7 +354,7 @@
       "tiles": {
         "modules": {
           "title": "Modules per engagement",
-          "body": "Each one pre-scoped to a discipline. They all run, every mandate."
+          "body": "Each one pre-scoped to a discipline. The full pass runs all of them."
         },
         "waves": {
           "title": "Dispatch waves",
@@ -401,8 +401,8 @@
           "body": "Findings are read against each other and resolved into one narrative."
         },
         {
-          "title": "Human review and approval",
-          "body": "A named person reviews the findings before release.",
+          "title": "Your review and sign-off",
+          "body": "Your reviewer checks the findings and signs off before export.",
           "note": "Pseudonymisation is reversed only here, in the final delivered output."
         }
       ]
@@ -513,7 +513,7 @@
           "label": "Zero retention at the model provider"
         },
         {
-          "label": "Named person signs off"
+          "label": "Human sign-off before export"
         },
         {
           "label": "Published accuracy audit",
@@ -556,7 +556,7 @@
         },
         {
           "q": "How fast is it?",
-          "a": "The pipeline pass runs in hours. The finished, reviewed output takes days. We don’t quote a delivery date before seeing the data room."
+          "a": "The pipeline pass runs in hours. Your team’s review comes after it, at your pace. We don’t quote a date before seeing the data room."
         },
         {
           "q": "How often does AI just cite something wrong?",
@@ -599,7 +599,7 @@
         },
         {
           "title": "Cross-discipline reconciliation",
-          "body": "Every discipline’s findings resolved into one coherent narrative, with a named person behind the result."
+          "body": "Every discipline’s findings resolved into one coherent narrative, for your reviewer to sign off."
         },
         {
           "title": "What never arrived",
@@ -629,16 +629,16 @@
       ]
     },
     "inputs": {
-      "title": "What we need to start",
+      "title": "What it takes to start",
       "lead": "Two things. No workshop, no kick-off week.",
       "items": [
         {
-          "title": "Data-room access",
-          "body": "Financials, legal, tax, HR, contracts and IP, as agreed on the call."
+          "title": "The data room",
+          "body": "Uploaded by your team: financials, legal, tax, HR, contracts and IP."
         },
         {
           "title": "Answers on what never arrived",
-          "body": "Your answers close the gaps. One round to fold them in and re-run affected analysis is included."
+          "body": "Your answers close the gaps. Upload them and re-run the affected analysis from the platform."
         }
       ]
     },
@@ -651,7 +651,7 @@
         },
         {
           "q": "How long does it take?",
-          "a": "Days, not weeks. The pipeline pass runs in hours; human review and reconciliation come after it. We don’t commit to a date before seeing the data room."
+          "a": "The pipeline pass runs in hours. Your team’s review comes after it, at your pace. We don’t commit to a date before seeing the data room."
         },
         {
           "q": "What does it cost?",
@@ -666,8 +666,8 @@
           "a": "Not a real one. Factum is pre-launch: there is no public client or case study yet. The worked example on the homepage shows the format. The first real one you see is your own, days after the NDA."
         },
         {
-          "q": "Who actually reviews the output?",
-          "a": "A named person, before anything reaches your desk. While Factum is pre-launch, that person is the founder, on every mandate."
+          "q": "Who signs off the findings?",
+          "a": "Your own reviewer, in the review workspace. No client export leaves the platform without that sign-off. Factum provides the platform; the judgement and the signature are yours."
         }
       ]
     },
@@ -782,12 +782,12 @@
     },
     "gate": {
       "title": "The one mandatory human step",
-      "lead": "A named person approves every output. These are the conditions that force it.",
+      "lead": "Your own reviewer signs off before any client export. These are the rules behind it.",
       "items": [
-        "Findings are checked back against the source documents before delivery.",
+        "Every finding is checked against its source passage before it reaches your reviewer.",
         "The gate runs every time, automatically.",
-        "{blocks} hard-block conditions route to a person instead of auto-approving.",
-        "A named person reviews, reconciles and stands behind the output.",
+        "{blocks} hard-block conditions stop a draft and put it in front of your reviewer, unapproved.",
+        "Your reviewer signs off each module’s summary, the top ten risks and every condition precedent. Without that, no client export leaves the platform. The rest goes along marked as not separately reviewed.",
         "Pseudonymised values are reversed only here, in the final output."
       ]
     },
@@ -798,8 +798,8 @@
         "Each module retrieves evidence from your uploaded documents on its own.",
         "A second critic agent critiques each draft.",
         "A separate pass fact-checks claims against the source text.",
-        "A person reviews the result.",
-        "Claims that can’t be tied to a passage are flagged as unconfirmed."
+        "Claims that can’t be tied to a passage are flagged as unconfirmed.",
+        "Your reviewer checks the result and signs off."
       ],
       "machineLabel": "Machine",
       "humanLabel": "Person"
@@ -856,7 +856,7 @@
           ]
         }
       ],
-      "note": "If cross-client methodology learning is a problem for your mandate, say so on the call. It can be switched off for your account."
+      "note": "If cross-client methodology learning is a problem for your firm, say so on the call. It can be switched off for your account."
     },
     "legal": {
       "title": "Why this is not a chat window",
@@ -899,7 +899,7 @@
         },
         {
           "title": "What we keep, and why",
-          "body": "Your documents and findings stay in your own tenant, so a later mandate can read across an earlier one. Deleted on request, at any point. The term is set in the engagement agreement."
+          "body": "Your documents and findings stay in your own tenant, so a later dossier can read across an earlier one. Deleted on request, at any point. The term is set in the engagement agreement."
         },
         {
           "title": "Sub-processors",
@@ -1044,7 +1044,7 @@
         {
           "title": "Cite the document that isn’t there",
           "body": "Retrieval reads what was uploaded. The most expensive thing in diligence is often an absence — the contract nobody filed, the year missing from the payroll export. An absence has no passage to quote, so no grounded system can raise it as a finding.",
-          "human": "The data-gap tracker is a person’s running list of what was asked for and never arrived. It is delivered alongside the findings."
+          "human": "The platform checks the room against the documents a buyer expects and lists what is missing. Chasing them is your team’s job."
         },
         {
           "title": "Read what nobody wrote down",
@@ -1054,12 +1054,12 @@
         {
           "title": "Tell soft from hidden",
           "body": "A number can be weak because the business is weak, or because the seller shaped the process. On the page the two look identical. Telling them apart takes knowledge of how sellers behave, not of what the file says.",
-          "human": "Someone who has run the other side of the table. On our side that is a leveraged-finance banker."
+          "human": "Someone who has sat on the other side of the table: your own team, or your advisers."
         },
         {
           "title": "Be accountable",
           "body": "A model cannot be a Representative under your NDA, cannot answer to your investment committee, and cannot sign. Accountability is not a capability you add to a system. It attaches to a person or it does not exist.",
-          "human": "One named person approves every output and stands behind it."
+          "human": "Your own reviewer, by name. No client export leaves the platform without that sign-off."
         }
       ],
       "note": "If a vendor claims their system does any of the five, ask which page it cited."
@@ -1068,10 +1068,10 @@
       "title": "Why the gate is mandatory",
       "lead": "The human step is not a safety blanket bolted onto a finished product. It is where four of the five above actually get done.",
       "items": [
-        "A name and a date on every output, not a confidence score.",
+        "Your reviewer’s name on the export, not a confidence score.",
         "Materiality decided against your deal, not against a benchmark.",
         "Unconfirmed claims marked unconfirmed rather than quietly dropped.",
-        "One person to argue with when you disagree."
+        "One accountable person, on your own team."
       ],
       "link": "How documents are handled"
     },
@@ -1099,7 +1099,7 @@
       "items": [
         {
           "title": "Who signs?",
-          "body": "If the answer is a dashboard, nobody does. Ask for a name, and ask what happens when that name is wrong."
+          "body": "Here: your own named reviewer. Ask any vendor whether its export can leave without a human sign-off, and who that human is."
         },
         {
           "title": "What happens to a claim that can’t be cited?",
@@ -1114,15 +1114,15 @@
     },
     "cta": {
       "title": "Ask us the three questions",
-      "body": "Thirty minutes with the person whose name goes on the output. Bring the awkward ones.",
+      "body": "Thirty minutes with one of the two founders. Bring the awkward ones.",
       "button": "Share a data room",
       "note": "NDA first, sent the same day. A deal you closed last year works too."
     }
   },
   "team": {
     "header": {
-      "title": "The people behind the output",
-      "lead": "Wouter structured acquisition and leveraged finance at ING. Daniel builds regulated data pipelines. One of them approves every output.",
+      "title": "The two people behind Factum",
+      "lead": "Wouter Dijkman and Daniel Dropuljic. You talk to them directly: Wouter on deals, Daniel on data and infrastructure.",
       "cta": "Share a data room"
     },
     "historyLabel": "Background",
@@ -1184,26 +1184,26 @@
     ],
     "closing": "The same scrutiny, turned on the deal in front of you.",
     "cta": {
-      "title": "You’ll speak to the person who reviews the output",
-      "body": "While Factum is pre-launch, the call, the review gate and the findings walkthrough are the same person.",
+      "title": "You’ll speak to a founder",
+      "body": "While Factum is pre-launch, Wouter runs the first call and walks you through the findings on your own data room.",
       "button": "Share a data room",
       "note": "NDA first, sent the same day. A deal you closed last year works too."
     },
     "roles": {
-      "title": "Who signs off on what",
-      "lead": "Two people, and no analyst pool behind them.",
+      "title": "Who does what",
+      "lead": "Two people build Factum. Your team runs it.",
       "items": [
         {
           "label": "Wouter Dijkman",
-          "body": "Sets the scope with you, and approves every finding before it leaves. Nothing reaches you unread."
+          "body": "Runs the first call and the demo on your own data room. Onboards your team and follows your first dossier."
         },
         {
           "label": "Daniel Dropuljic",
           "body": "Owns the infrastructure: EU hosting, zero-retention routing, and the retention setting at every provider."
         },
         {
-          "label": "Nobody else",
-          "body": "No offshore team, no rotating juniors. If a mandate is bigger than two people and the platform, we say so before you sign."
+          "label": "Your own team",
+          "body": "Reviews the findings and signs off. The judgement on your deal stays with you."
         }
       ]
     }
@@ -1362,7 +1362,11 @@
         },
         {
           "q": "Who will I be speaking to?",
-          "a": "Wouter Dijkman. Factum is pre-launch, so the person on the call is the person who approves every finding you receive."
+          "a": "Wouter Dijkman, one of the two founders. He walks you through the findings on your own data room. After that, your team works in the platform and signs off its own findings."
+        },
+        {
+          "q": "What happens after the demo?",
+          "a": "Your team works in the platform itself. It sets up the dossier, uploads the data room, invites the client or financiers as guests, and reviews and signs off the findings. Wouter onboards your team and follows your first dossier."
         },
         {
           "q": "We are already mid-process with an adviser. Is it too late?",

@@ -26,7 +26,7 @@
     },
     "team": {
       "title": "Het team achter Factum",
-      "description": "Een bankier uit leveraged finance en een data-engineer. Een van beiden keurt elke output goed."
+      "description": "Een bankier uit leveraged finance en een data-engineer: wie Factum bouwt, en waar elk van hen verantwoordelijk voor is."
     },
     "partnerships": {
       "title": "Diligencecapaciteit voor adviseurs",
@@ -65,7 +65,7 @@
     "preSale": "Pre-sale"
   },
   "footer": {
-    "blurb": "AI due diligence voor M&A en private equity. Elke bevinding verwijst naar een document. Elke output beoordeeld door een met naam genoemd persoon.",
+    "blurb": "AI due diligence voor M&A en private equity. Elke bevinding herleid tot een document. Elke export afgetekend door uw eigen reviewer.",
     "sitemap": "Sitemap",
     "reference": "Achtergrond",
     "company": "Bedrijf",
@@ -124,7 +124,7 @@
     ],
     "schema": {
       "label": "Outputcontract — elke bevinding",
-      "footnote": "Het schema waaraan elke bevinding moet voldoen. Achter elke bevinding brondocumenten uit de data room of de kennisbank (wet, IFRS, jurisprudentie, marktonderzoek), met vindplaats, en een benoemde reviewer, nog maanden later te openen.",
+      "footnote": "Het schema waaraan elke bevinding moet voldoen. Achter elke bevinding brondocumenten uit de data room of de kennisbank (wet, IFRS, jurisprudentie, marktonderzoek), met vindplaats, en de aftekening van uw reviewer, nog maanden later te openen.",
       "rows": {
         "module": "Module",
         "finding": "Bevinding",
@@ -139,7 +139,7 @@
         "evidence": "Woordelijk geciteerd, per citaat",
         "severity": "Eén van vijf niveaus, van Info tot Kritiek",
         "document": "Data room of kennisbank, per citaat",
-        "review": "Vereist vóór vrijgave"
+        "review": "Afgetekend door uw reviewer vóór export"
       },
       "more": "+3 velden, op een breder scherm"
     },
@@ -157,8 +157,8 @@
         "body": "Vertrouwelijke gegevens worden gepseudonimiseerd vóór de analyse. Ze worden pas in de uiteindelijke output teruggezet."
       },
       {
-        "title": "Eén aanspreekpunt dat verantwoordelijk is",
-        "body": "Een persoon met naam beoordeelt elke output voordat die u bereikt."
+        "title": "Uw reviewer tekent af",
+        "body": "Geen klantexport verlaat het platform zonder de aftekening van uw eigen reviewer."
       }
     ],
     "modules": [
@@ -214,7 +214,7 @@
       "pageRef": "TargetCo — Raamovereenkomst, p. 14",
       "highlight": "Geciteerde passage",
       "findingLabel": "De bevinding die eruit volgde",
-      "footnote": "Een geconstrueerd voorbeeld op een fictieve target. Hier staat geen cliëntdocument. Uw mandaat levert dezelfde zes velden, op uw eigen data room.",
+      "footnote": "Een geconstrueerd voorbeeld op een fictieve target. Hier staat geen cliëntdocument. Uw eigen run levert dezelfde zes velden, op uw eigen data room.",
       "quote": "Afnemer kan deze overeenkomst schriftelijk opzeggen met inachtneming van een termijn van dertig (30) dagen bij een wijziging van zeggenschap over Leverancier.",
       "tag": "Illustratief",
       "values": {
@@ -223,7 +223,7 @@
         "evidence": "Artikel 14.2, links volledig geciteerd.",
         "severity": "Hoog. De grootste klant, dertig dagen opzegtermijn, geen afkoopsom.",
         "document": "TargetCo — Raamovereenkomst met Klant A, pagina 14.",
-        "review": "Vrijgegeven door W. Dijkman."
+        "review": "Goedgekeurd door uw reviewer, met naam, vóór export."
       }
     },
     "ctaProof": "Drie materiële bevindingen die uw team nog niet had, of de opdracht is gratis, bij pilotmandaten.",
@@ -269,7 +269,7 @@
     },
     "guide": {
       "title": "Een leveraged-finance bankier en een data-engineer",
-      "lead": "Wouter zat bij ING in Acquisition & Leveraged Finance, waar hij het krediet achter dit soort transacties structureerde. Daniel bouwt gereguleerde datapijplijnen. Een van beiden keurt elke output goed voordat u die ziet.",
+      "lead": "Twee mensen die u rechtstreeks spreekt. Wouter structureerde bij ING acquisitie- en leveraged finance. Daniel bouwt gereguleerde datapijplijnen.",
       "link": "Maak kennis met het team"
     },
     "specimen": {
@@ -277,10 +277,10 @@
       "lead": "Een uitgewerkt voorbeeld op een fictieve target. Dit is het format dat u krijgt."
     },
     "pipeline": {
-      "title": "Elk mandaat doorloopt dezelfde zes stappen",
+      "title": "Elke run doorloopt dezelfde zes stappen",
       "lead": "Iedereen kan een AI-tool op een data room richten. De vraag is wat er gebeurt als het model iets fout heeft.",
-      "refusalTitle": "De pijplijn stopt en roept een persoon",
-      "refusalNote": "Elke harde blokkade gaat naar een persoon.",
+      "refusalTitle": "De pijplijn stopt en legt het aan uw reviewer voor",
+      "refusalNote": "Elke harde blokkade gaat naar uw reviewer, nooit automatisch goedgekeurd.",
       "refusals": [
         "Gehallucineerde bronverwijzingen",
         "Privacylekken",
@@ -290,7 +290,7 @@
     },
     "trust": {
       "title": "Waar uw documenten heen gaan, en wie ze kan zien",
-      "lead": "EU-hosting, zero retention bij de modelaanbieder, pseudonimisering vóór analyse, en één met naam genoemde beoordelaar. Vier mechanismen, geen certificering.",
+      "lead": "Standaard EU-hosting, zero retention bij de modelaanbieder, pseudonimisering vóór analyse, en de aftekening van uw eigen reviewer. Vier mechanismen, geen certificering.",
       "link": "Lees de governancepagina"
     },
     "coverage": {
@@ -315,7 +315,7 @@
     },
     "plan": {
       "title": "Drie stappen om te beginnen",
-      "lead": "Geen voorstel voordat we allebei weten dat het past.",
+      "lead": "De demo draait op uw eigen data room. Daarna werkt uw team zelf in het platform.",
       "steps": [
         {
           "title": "Kies de data room",
@@ -326,8 +326,8 @@
           "body": "Dertig minuten om scope en jurisdictie af te spreken, daarna gaat de NDA dezelfde dag de deur uit. Toegang loopt onder een verwerkersovereenkomst, in de EU, met zero retention."
         },
         {
-          "title": "Lees de bevindingen met ons door, op een call",
-          "body": "Dagen later. Elke bevinding noemt bron en vindplaats, goedgekeurd door een persoon met naam. Die call is de demo: uw data room, geen rondleiding."
+          "title": "Lees de bevindingen op een call, en werk daarna zelf",
+          "body": "Dagen later, elke bevinding met bron en vindplaats: die call is de demo. Daarna zet uw team zelf dossiers op, nodigt gasten uit en tekent de eigen bevindingen af."
         }
       ]
     },
@@ -339,13 +339,13 @@
     "film": {
       "title": "Wat ligt er werkelijk in de data room?",
       "lead": "Elke deal begint met die ene vraag. Vijfenveertig seconden: driehonderd documenten, één weekend, en een clausule op pagina veertien waarmee uw grootste klant kan vertrekken in de week dat u tekent.",
-      "note": "Het voorbeeld in de film is geconstrueerd op een fictieve target en zegt dat in beeld. Er komt geen klantdocument in voor. Uw mandaat levert dezelfde zes velden op, over uw eigen data room."
+      "note": "Het voorbeeld in de film is geconstrueerd op een fictieve target en zegt dat in beeld. Er komt geen klantdocument in voor. Uw eigen run levert dezelfde zes velden op, over uw eigen data room."
     }
   },
   "platform": {
     "header": {
       "title": "Hoe het platform een data room leest",
-      "lead": "{modules} vooraf afgebakende modules, in een vaste afhankelijkheidsvolgorde, met vier groundingchecks en een verplichte menselijke poort. Elke keer dezelfde run.",
+      "lead": "Wat er met uw documenten gebeurt, stap voor stap. {modules} modules lezen de data room in een vaste volgorde, elke claim wordt tegen de bron gecontroleerd, en uw eigen reviewer tekent af.",
       "cta": "Deel een data room"
     },
     "scale": {
@@ -354,7 +354,7 @@
       "tiles": {
         "modules": {
           "title": "Modules per opdracht",
-          "body": "Elk vooraf afgebakend op een discipline. Ze draaien allemaal, elk mandaat."
+          "body": "Elk afgebakend op één discipline. De volledige ronde draait ze allemaal."
         },
         "waves": {
           "title": "Dispatchgolven",
@@ -401,8 +401,8 @@
           "body": "Bevindingen worden tegen elkaar gelezen en tot één verhaal teruggebracht."
         },
         {
-          "title": "Menselijke review en goedkeuring",
-          "body": "Een persoon met naam beoordeelt de bevindingen voor vrijgave.",
+          "title": "Uw review en aftekening",
+          "body": "Uw reviewer controleert de bevindingen en tekent af vóór export.",
           "note": "Pseudonimisering wordt alleen hier teruggedraaid, in de uiteindelijke output."
         }
       ]
@@ -513,7 +513,7 @@
           "label": "Zero retention bij de modelaanbieder"
         },
         {
-          "label": "Persoon met naam tekent af"
+          "label": "Menselijke aftekening vóór export"
         },
         {
           "label": "Gepubliceerde accuratesse-audit",
@@ -556,7 +556,7 @@
         },
         {
           "q": "Hoe snel is het?",
-          "a": "De pipeline-pass draait in uren. De afgeronde, beoordeelde output kost dagen. We noemen geen leverdatum voordat we de data room hebben gezien."
+          "a": "De pijplijnronde draait in uren. De review door uw team volgt daarna, in uw tempo. We noemen geen datum voordat we de data room hebben gezien."
         },
         {
           "q": "Hoe vaak citeert AI gewoon verkeerd?",
@@ -599,7 +599,7 @@
         },
         {
           "title": "Disciplineoverstijgende afstemming",
-          "body": "De bevindingen van elke discipline opgelost tot één samenhangende verhaallijn, met een persoon met naam achter het resultaat."
+          "body": "De bevindingen van elke discipline samengebracht in één samenhangend verhaal, ter aftekening door uw reviewer."
         },
         {
           "title": "Wat nooit is aangeleverd",
@@ -629,16 +629,16 @@
       ]
     },
     "inputs": {
-      "title": "Wat we nodig hebben om te beginnen",
+      "title": "Wat er nodig is om te beginnen",
       "lead": "Twee dingen. Geen workshop, geen kick-offweek.",
       "items": [
         {
-          "title": "Toegang tot de data room",
-          "body": "Financiën, juridisch, fiscaal, HR, contracten en IP, zoals afgesproken op de call."
+          "title": "De data room",
+          "body": "Geüpload door uw team: financiën, juridisch, fiscaal, HR, contracten en IP."
         },
         {
           "title": "Antwoorden op wat nooit is aangeleverd",
-          "body": "Uw antwoorden dichten de gaten. Eén ronde om ze te verwerken en de geraakte analyses opnieuw te draaien, zit inbegrepen."
+          "body": "Uw antwoorden dichten de gaten. Upload ze en draai de geraakte analyses opnieuw vanuit het platform."
         }
       ]
     },
@@ -651,7 +651,7 @@
         },
         {
           "q": "Hoe lang duurt het?",
-          "a": "Dagen, geen weken. De pipeline draait in uren; de menselijke beoordeling en de afstemming volgen daarna. We committeren ons niet aan een datum voordat we de data room hebben gezien."
+          "a": "De pijplijnronde draait in uren. De review door uw team volgt daarna, in uw tempo. We leggen ons niet vast op een datum voordat we de data room hebben gezien."
         },
         {
           "q": "Wat kost het?",
@@ -666,8 +666,8 @@
           "a": "Geen echt. Factum is pre-launch: er is nog geen publieke klant of case study. Het uitgewerkte voorbeeld op de homepage laat het format zien. Het eerste echte dat u ziet, is uw eigen, enkele dagen na de NDA."
         },
         {
-          "q": "Wie beoordeelt de output eigenlijk?",
-          "a": "Een persoon met naam, voordat er iets op uw bureau ligt. Zolang Factum pre-launch is, is dat de oprichter, op elk mandaat."
+          "q": "Wie tekent de bevindingen af?",
+          "a": "Uw eigen reviewer, in de reviewomgeving. Geen klantexport verlaat het platform zonder die aftekening. Factum levert het platform; het oordeel en de handtekening zijn van u."
         }
       ]
     },
@@ -782,12 +782,12 @@
     },
     "gate": {
       "title": "De enige verplichte menselijke poort",
-      "lead": "Een met naam genoemd persoon keurt elke output goed. Dit zijn de condities die dat afdwingen.",
+      "lead": "Uw eigen reviewer tekent af vóór elke klantexport. Dit zijn de regels erachter.",
       "items": [
-        "Bevindingen worden voor levering teruggecheckt tegen de brondocumenten.",
+        "Elke bevinding wordt tegen de bronpassage gecontroleerd voordat ze uw reviewer bereikt.",
         "De poort draait elke keer, automatisch.",
-        "{blocks} harde blokkades gaan naar een persoon in plaats van automatisch goedgekeurd te worden.",
-        "Een persoon met naam beoordeelt, verzoent en staat achter de output.",
+        "{blocks} harde blokkades stoppen een concept en leggen het niet goedgekeurd aan uw reviewer voor.",
+        "Uw reviewer tekent de samenvatting van elke module af, de tien grootste risico’s en elke opschortende voorwaarde. Zonder die aftekening verlaat geen klantexport het platform. De rest gaat mee met de vermelding ‘niet afzonderlijk getoetst’.",
         "Gepseudonimiseerde waarden worden alleen hier teruggedraaid, in de uiteindelijke output."
       ]
     },
@@ -798,8 +798,8 @@
         "Elke module haalt zelfstandig bewijs uit uw geüploade documenten.",
         "Een tweede critic-agent bekritiseert elk concept.",
         "Een aparte ronde controleert beweringen tegen de brontekst.",
-        "Een persoon beoordeelt het resultaat.",
-        "Beweringen die niet aan een passage te koppelen zijn, worden gemarkeerd als onbevestigd."
+        "Beweringen die niet aan een passage te koppelen zijn, worden gemarkeerd als onbevestigd.",
+        "Uw reviewer controleert het resultaat en tekent af."
       ],
       "machineLabel": "Machine",
       "humanLabel": "Mens"
@@ -856,7 +856,7 @@
           ]
         }
       ],
-      "note": "Is methodologisch leren tussen cliënten een probleem voor uw mandaat, zeg dat op de call. Het kan voor uw account uit."
+      "note": "Is methodologisch leren tussen cliënten een probleem voor uw organisatie, zeg dat op de call. Het kan voor uw account uit."
     },
     "legal": {
       "title": "Waarom dit geen chatvenster is",
@@ -899,7 +899,7 @@
         },
         {
           "title": "Wat we bewaren, en waarom",
-          "body": "Uw documenten en bevindingen blijven in uw eigen tenant, zodat een volgend mandaat kan teruglezen op een eerder mandaat. Op verzoek verwijderd, op elk moment. De termijn staat in de opdrachtovereenkomst."
+          "body": "Uw documenten en bevindingen blijven in uw eigen tenant, zodat een volgend dossier kan teruglezen op een eerder dossier. Op verzoek verwijderd, op elk moment. De termijn staat in de opdrachtovereenkomst."
         },
         {
           "title": "Sub-processors",
@@ -1044,7 +1044,7 @@
         {
           "title": "Citeren uit het document dat er niet is",
           "body": "Retrieval leest wat is geüpload. Het duurste in due diligence is vaak een afwezigheid: het contract dat niemand heeft opgeborgen, het jaar dat ontbreekt in de loonexport. Een afwezigheid heeft geen passage om te citeren, dus geen enkel gefundeerd systeem kan die als bevinding opvoeren.",
-          "human": "De lijst met ontbrekende stukken wordt door een mens bijgehouden: wat is opgevraagd en nooit gekomen. Die komt naast de bevindingen mee."
+          "human": "Het platform legt de data room naast de documenten die een koper verwacht en somt op wat ontbreekt. Ze opvragen is het werk van uw team."
         },
         {
           "title": "Lezen wat niemand heeft opgeschreven",
@@ -1054,12 +1054,12 @@
         {
           "title": "Zwak onderscheiden van verhuld zwak",
           "body": "Een cijfer kan zwak zijn omdat het bedrijf zwak is, of omdat de verkoper het proces heeft gestuurd. Op papier zien die twee er identiek uit. Ze uit elkaar houden vraagt kennis van hoe verkopers zich gedragen, niet van wat er in het dossier staat.",
-          "human": "Iemand die de andere kant van de tafel heeft gedraaid. Bij ons is dat een leveraged-finance-bankier."
+          "human": "Iemand die aan de andere kant van de tafel heeft gezeten: uw eigen team, of uw adviseurs."
         },
         {
           "title": "Aanspreekbaar zijn",
           "body": "Een model kan geen Representative zijn onder uw NDA, kan zich niet verantwoorden tegenover uw investeringscommissie en kan niets tekenen. Aanspreekbaarheid is geen functie die u aan een systeem toevoegt. Ze hangt aan een persoon, of ze bestaat niet.",
-          "human": "Eén persoon met naam keurt elke output goed en staat ervoor in."
+          "human": "Uw eigen reviewer, met naam. Geen klantexport verlaat het platform zonder die aftekening."
         }
       ],
       "note": "Zegt een leverancier dat zijn systeem een van deze vijf doet, vraag dan welke pagina het citeerde."
@@ -1068,10 +1068,10 @@
       "title": "Daarom is de menselijke poort verplicht",
       "lead": "De menselijke poort is geen veiligheidsdeken over een af product. Het is de plek waar vier van de vijf punten hierboven daadwerkelijk gebeuren.",
       "items": [
-        "Een naam en een datum op elke output, geen betrouwbaarheidsscore.",
+        "De naam van uw reviewer op de export, geen betrouwbaarheidsscore.",
         "Materialiteit bepaald tegen uw deal, niet tegen een benchmark.",
         "Onbevestigde claims gemarkeerd als onbevestigd in plaats van stilletjes geschrapt.",
-        "Eén persoon om mee van mening te verschillen."
+        "Eén verantwoordelijke persoon, in uw eigen team."
       ],
       "link": "Hoe documenten worden behandeld"
     },
@@ -1099,7 +1099,7 @@
       "items": [
         {
           "title": "Wie tekent?",
-          "body": "Is het antwoord een dashboard, dan tekent niemand. Vraag om een naam, en vraag wat er gebeurt als die naam het mis heeft."
+          "body": "Hier: uw eigen reviewer, met naam. Vraag elke leverancier of de export zonder menselijke aftekening de deur uit kan, en wie die mens is."
         },
         {
           "title": "Wat gebeurt er met een claim die niet te citeren is?",
@@ -1114,15 +1114,15 @@
     },
     "cta": {
       "title": "Stel ons de drie vragen",
-      "body": "Dertig minuten met de persoon wiens naam onder de output staat. Neem de lastige vragen mee.",
+      "body": "Dertig minuten met een van de twee oprichters. Neem de lastige vragen mee.",
       "button": "Deel een data room",
       "note": "Eerst een NDA, dezelfde dag verstuurd. Een deal die u vorig jaar sloot werkt ook."
     }
   },
   "team": {
     "header": {
-      "title": "De mensen achter de output",
-      "lead": "Wouter zat bij ING in Acquisition & Leveraged Finance, waar hij het krediet achter dit soort transacties structureerde. Daniel bouwt gereguleerde datapijplijnen. Een van beiden keurt elke output goed.",
+      "title": "De twee mensen achter Factum",
+      "lead": "Wouter Dijkman en Daniel Dropuljic. U spreekt ze rechtstreeks: Wouter over deals, Daniel over data en infrastructuur.",
       "cta": "Deel een data room"
     },
     "historyLabel": "Achtergrond",
@@ -1184,26 +1184,26 @@
     ],
     "closing": "Dezelfde strengheid, gericht op de deal die voor u ligt.",
     "cta": {
-      "title": "U spreekt de persoon die de output beoordeelt",
-      "body": "Zolang Factum pre-launch is, zijn de call, de beoordelingstoets en de doorloop van de bevindingen dezelfde persoon.",
+      "title": "U spreekt een van de oprichters",
+      "body": "Zolang Factum pre-launch is, voert Wouter het eerste gesprek en loopt hij de bevindingen op uw eigen data room met u door.",
       "button": "Deel een data room",
       "note": "Eerst een NDA, dezelfde dag verstuurd. Een deal die u vorig jaar sloot werkt ook."
     },
     "roles": {
-      "title": "Wie tekent waarvoor",
-      "lead": "Twee mensen, en geen pool analisten erachter.",
+      "title": "Wie doet wat",
+      "lead": "Twee mensen bouwen Factum. Uw team gebruikt het.",
       "items": [
         {
           "label": "Wouter Dijkman",
-          "body": "Bepaalt de scope met u en keurt elke bevinding goed voordat die de deur uitgaat. Niets bereikt u ongelezen."
+          "body": "Voert het eerste gesprek en de demo op uw eigen data room. Begeleidt de start van uw team en volgt uw eerste dossier."
         },
         {
           "label": "Daniel Dropuljic",
           "body": "Beheert de infrastructuur: EU-hosting, zero-retention-routering en de bewaarinstelling bij elke provider."
         },
         {
-          "label": "Verder niemand",
-          "body": "Geen offshoreteam, geen wisselende juniors. Vraagt een mandaat meer dan wat twee mensen en het platform aankunnen, dan zeggen we dat voordat u tekent."
+          "label": "Uw eigen team",
+          "body": "Beoordeelt de bevindingen en tekent af. Het oordeel over uw deal blijft bij u."
         }
       ]
     }
@@ -1362,7 +1362,11 @@
         },
         {
           "q": "Met wie spreek ik?",
-          "a": "Wouter Dijkman. Factum is pre-launch, dus wie u aan de lijn heeft is ook wie elke bevinding goedkeurt die u ontvangt."
+          "a": "Wouter Dijkman, een van de twee oprichters. Hij loopt de bevindingen op uw eigen data room met u door. Daarna werkt uw team zelf in het platform en tekent het de eigen bevindingen af."
+        },
+        {
+          "q": "Wat gebeurt er na de demo?",
+          "a": "Uw team werkt zelf in het platform. Het zet het dossier op, uploadt de data room, nodigt de klant of financiers uit als gast, en beoordeelt en tekent de bevindingen af. Wouter begeleidt de start en volgt uw eerste dossier."
         },
         {
           "q": "We zitten al midden in een traject met een adviseur. Te laat?",

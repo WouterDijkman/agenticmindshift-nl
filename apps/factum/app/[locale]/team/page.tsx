@@ -86,9 +86,12 @@ export default async function TeamPage({
         The two cards above say where these people worked. They do not say who
         is answerable for what once an engagement is running, and that gap was
         most of why this page came to 281 words in two sections while every
-        other page runs six to twelve. The third row is the one that matters:
-        there is no bench behind us, and a mandate too big for two people plus
-        the platform gets said so before anything is signed.
+        other page runs six to twelve. The third row is the one that matters
+        since the move to self-service (product-facts, 28 September 2026):
+        Factum does not sign off findings. The client's own reviewer does, in
+        the review workspace, and no client export leaves without it. Wouter's
+        row describes what he does (the demo, onboarding, the first dossier),
+        never an approval.
       */}
       <Section width="medium" tone="raised" weight="tight">
         <SectionHeader title={t('roles.title')} lead={t('roles.lead')} />

@@ -49,7 +49,7 @@ const MATRIX: Verdict[][] = [
   ['no', 'no', 'no', 'yes'], // cross-discipline reconciliation
   ['no', 'partial', 'no', 'yes'], // produces the deliverable
   ['na', 'partial', 'no', 'yes'], // zero retention at the provider
-  ['na', 'no', 'no', 'yes'], // named person signs off
+  ['na', 'no', 'no', 'yes'], // human sign-off before export (the client's reviewer)
   ['no', 'no', 'no', 'no'] // published accuracy audit
 ];
 

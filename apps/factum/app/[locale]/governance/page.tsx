@@ -207,7 +207,9 @@ export default async function GovernancePage({
         <Reveal delay={60} className="measure" style={{ marginTop: 24 }}>
           <HandoffTrack
             steps={t.raw('transparency.steps') as string[]}
-            humanFrom={3}
+            /* Four machine steps, then the client's reviewer. Factum does not
+               sign off; the human zone is the customer's own reviewer. */
+            humanFrom={4}
             machineLabel={t('transparency.machineLabel')}
             humanLabel={t('transparency.humanLabel')}
           />

@@ -26,7 +26,7 @@
     },
     "team": {
       "title": "A equipa por trás da Factum",
-      "description": "Um banqueiro de leveraged finance e um engenheiro de dados. Um deles aprova cada resultado."
+      "description": "Um banqueiro de leveraged finance e um engenheiro de dados: quem constrói a Factum e por que responde cada um."
     },
     "partnerships": {
       "title": "Capacidade de diligence para consultores",
@@ -65,7 +65,7 @@
     "preSale": "Pré-venda"
   },
   "footer": {
-    "blurb": "Due diligence com IA para M&A e private equity. Cada constatação cita um documento. Cada resultado revisto por uma pessoa identificada.",
+    "blurb": "Due diligence com IA para M&A e private equity. Cada constatação citada a um documento. Cada exportação aprovada pelo seu próprio revisor.",
     "sitemap": "Mapa do site",
     "reference": "Referência",
     "company": "Empresa",
@@ -124,7 +124,7 @@
     ],
     "schema": {
       "label": "Contrato de output — todas as constatações",
-      "footnote": "O esquema que cada constatação tem de cumprir. Por trás de cada uma, fontes do data room ou da base de conhecimento (lei, IFRS, jurisprudência, estudos de mercado), com a sua localização, e um revisor identificado, ainda abríveis meses depois.",
+      "footnote": "O esquema que cada constatação tem de cumprir. Por trás de cada uma, fontes do data room ou da base de conhecimento (lei, IFRS, jurisprudência, estudos de mercado), com a sua localização, e a aprovação do seu revisor, ainda abríveis meses depois.",
       "rows": {
         "module": "Módulo",
         "finding": "Constatação",
@@ -139,7 +139,7 @@
         "evidence": "Citado literalmente, por citação",
         "severity": "Um de cinco níveis, de Info a Crítico",
         "document": "Data room ou base de conhecimento, por citação",
-        "review": "Obrigatória antes da entrega"
+        "review": "Aprovada pelo seu revisor antes da exportação"
       },
       "more": "+3 campos, num ecrã mais largo"
     },
@@ -157,8 +157,8 @@
         "body": "Os dados confidenciais são pseudonimizados antes da análise. Revertidos apenas no output final."
       },
       {
-        "title": "Um único ponto de contacto responsável",
-        "body": "Uma pessoa identificada revê todos os outputs antes de lhe chegarem."
+        "title": "O seu revisor aprova",
+        "body": "Nenhuma exportação para o cliente sai da plataforma sem a aprovação do seu próprio revisor."
       }
     ],
     "modules": [
@@ -214,7 +214,7 @@
       "pageRef": "TargetCo — Contrato-quadro de serviços, p. 14",
       "highlight": "Passagem citada",
       "findingLabel": "A constatação que daí resultou",
-      "footnote": "Um exemplo construído sobre um target fictício. Não há aqui qualquer documento de cliente. O seu mandato produz estes mesmos seis campos, sobre o seu próprio data room.",
+      "footnote": "Um exemplo construído sobre um target fictício. Não há aqui qualquer documento de cliente. A sua própria execução produz estes mesmos seis campos, sobre o seu próprio data room.",
       "quote": "O Cliente pode resolver este Contrato mediante aviso escrito de trinta (30) dias em caso de mudança de controlo do Fornecedor.",
       "tag": "Ilustrativo",
       "values": {
@@ -223,7 +223,7 @@
         "evidence": "Cláusula 14.2, citada na íntegra à esquerda.",
         "severity": "Alta. O maior cliente, trinta dias de pré-aviso, sem indemnização.",
         "document": "TargetCo — Contrato-quadro com Cliente A, página 14.",
-        "review": "Aprovado por W. Dijkman antes da entrega."
+        "review": "Aprovada pelo seu revisor, com nome, antes da exportação."
       }
     },
     "ctaProof": "Três constatações materiais que a sua equipa ainda não tinha, ou o mandato é gratuito, em mandatos-piloto.",
@@ -269,7 +269,7 @@
     },
     "guide": {
       "title": "Um banqueiro de leveraged finance e um engenheiro de dados",
-      "lead": "Wouter estruturou financiamento de aquisições e leveraged finance no ING. Daniel constrói pipelines de dados regulados. Um deles aprova cada resultado antes de lhe chegar.",
+      "lead": "Duas pessoas com quem fala diretamente. Wouter estruturou financiamento de aquisições e leveraged finance no ING. Daniel constrói pipelines de dados regulados.",
       "link": "Conhecer a equipa"
     },
     "specimen": {
@@ -277,10 +277,10 @@
       "lead": "Um exemplo trabalhado sobre um alvo fictício. O formato é o que recebe."
     },
     "pipeline": {
-      "title": "Cada mandato percorre os mesmos seis passos",
+      "title": "Cada execução percorre os mesmos seis passos",
       "lead": "Qualquer um pode apontar uma ferramenta de IA a um data room. A questão é o que acontece quando o modelo se engana.",
-      "refusalTitle": "A pipeline pára e chama uma pessoa",
-      "refusalNote": "Cada bloqueio duro passa a uma pessoa.",
+      "refusalTitle": "A pipeline pára e passa-o ao seu revisor",
+      "refusalNote": "Cada bloqueio duro vai para o seu revisor, nunca é aprovado automaticamente.",
       "refusals": [
         "Citações fabricadas ou alucinadas",
         "Fugas de privacidade",
@@ -290,7 +290,7 @@
     },
     "trust": {
       "title": "Para onde vão os seus documentos e quem os pode ver",
-      "lead": "Alojamento na UE, retenção zero no fornecedor do modelo, pseudonimização antes da análise e um revisor identificado. Quatro mecanismos, nenhuma certificação.",
+      "lead": "Alojamento na UE por defeito, retenção zero no fornecedor do modelo, pseudonimização antes da análise e a aprovação do seu próprio revisor. Quatro mecanismos, nenhuma certificação.",
       "link": "Ler a página de governação"
     },
     "coverage": {
@@ -315,7 +315,7 @@
     },
     "plan": {
       "title": "Três passos para começar",
-      "lead": "Não há proposta antes de ambos sabermos que encaixa.",
+      "lead": "A demo corre sobre o seu próprio data room. Depois, a sua equipa trabalha diretamente na plataforma.",
       "steps": [
         {
           "title": "Escolha o data room",
@@ -326,8 +326,8 @@
           "body": "Trinta minutos para acordar âmbito e jurisdição; o NDA segue no mesmo dia. O acesso corre ao abrigo de um DPA, na UE, com retenção zero."
         },
         {
-          "title": "Leia as constatações connosco, numa chamada",
-          "body": "Dias depois. Cada constatação cita a fonte e a localização, aprovada por uma pessoa com nome. Essa chamada é a demo: o seu data room, não uma visita guiada."
+          "title": "Leia as constatações numa chamada e depois use-o sozinho",
+          "body": "Dias depois, cada constatação com a fonte e a localização: essa chamada é a demo. Depois, a sua equipa cria os seus próprios dossiers, convida terceiros e aprova as suas próprias constatações."
         }
       ]
     },
@@ -339,13 +339,13 @@
     "film": {
       "title": "O que está realmente no data room?",
       "lead": "Cada negócio começa com essa única pergunta. Quarenta e cinco segundos: trezentos documentos, um fim de semana e uma cláusula na página catorze que permite ao seu maior cliente sair na semana em que assina.",
-      "note": "O exemplo no filme é construído sobre uma empresa-alvo fictícia e di-lo no ecrã. Não aparece nenhum documento de cliente. O seu mandato produz os mesmos seis campos, sobre o seu próprio data room."
+      "note": "O exemplo no filme é construído sobre uma empresa-alvo fictícia e di-lo no ecrã. Não aparece nenhum documento de cliente. A sua própria execução produz os mesmos seis campos, sobre o seu próprio data room."
     }
   },
   "platform": {
     "header": {
       "title": "Como a plataforma lê um data room",
-      "lead": "{modules} módulos com âmbito pré-definido, numa ordem de dependências fixa, com quatro verificações de ancoragem e um controlo humano obrigatório. A mesma execução em cada mandato.",
+      "lead": "O que acontece aos seus documentos, passo a passo. {modules} módulos leem o data room numa ordem fixa, cada afirmação é verificada contra a fonte e o seu próprio revisor aprova.",
       "cta": "Partilhe um data room"
     },
     "scale": {
@@ -354,7 +354,7 @@
       "tiles": {
         "modules": {
           "title": "Módulos por mandato",
-          "body": "Cada um delimitado à partida a uma disciplina. Correm todos, em cada mandato."
+          "body": "Cada um delimitado a uma disciplina. A leitura completa corre todos."
         },
         "waves": {
           "title": "Ondas de despacho",
@@ -401,8 +401,8 @@
           "body": "As constatações são lidas umas contra as outras e resolvidas num só relato."
         },
         {
-          "title": "Revisão e aprovação humana",
-          "body": "Uma pessoa com nome revê as constatações antes da entrega.",
+          "title": "A sua revisão e aprovação",
+          "body": "O seu revisor verifica as constatações e aprova antes da exportação.",
           "note": "A pseudonimização só é revertida aqui, no entregável final."
         }
       ]
@@ -513,7 +513,7 @@
           "label": "Retenção zero no fornecedor do modelo"
         },
         {
-          "label": "Uma pessoa com nome assina"
+          "label": "Aprovação humana antes da exportação"
         },
         {
           "label": "Auditoria de exatidão publicada",
@@ -556,7 +556,7 @@
         },
         {
           "q": "Qual é a rapidez?",
-          "a": "A execução da pipeline demora horas. O resultado terminado e revisto demora dias. Não damos data de entrega antes de ver o data room."
+          "a": "A passagem da pipeline demora horas. A revisão da sua equipa vem depois, ao seu ritmo. Não indicamos uma data antes de ver o data room."
         },
         {
           "q": "Com que frequência é que a IA cita mal, sem mais?",
@@ -599,7 +599,7 @@
         },
         {
           "title": "Reconciliação entre disciplinas",
-          "body": "As constatações de cada disciplina resolvidas numa narrativa coerente, com uma pessoa identificada a responder pelo resultado."
+          "body": "As constatações de cada disciplina resolvidas numa narrativa coerente, para o seu revisor aprovar."
         },
         {
           "title": "O que nunca chegou",
@@ -629,16 +629,16 @@
       ]
     },
     "inputs": {
-      "title": "O que precisamos para começar",
+      "title": "O que é preciso para começar",
       "lead": "Duas coisas. Sem workshop e sem semana de arranque.",
       "items": [
         {
-          "title": "Acesso ao data room",
-          "body": "Contas, jurídico, fiscal, RH, contratos e propriedade intelectual, conforme acordado na chamada."
+          "title": "O data room",
+          "body": "Carregado pela sua equipa: contas, jurídico, fiscal, RH, contratos e propriedade intelectual."
         },
         {
           "title": "Respostas sobre o que nunca chegou",
-          "body": "As suas respostas fecham as lacunas. Está incluída uma ronda para as integrar e voltar a correr a análise afetada."
+          "body": "As suas respostas fecham as lacunas. Carregue-as e volte a correr a análise afetada a partir da plataforma."
         }
       ]
     },
@@ -651,7 +651,7 @@
         },
         {
           "q": "Quanto tempo demora?",
-          "a": "Dias, não semanas. A pipeline corre em horas; a revisão humana e a reconciliação vêm depois. Não nos comprometemos com uma data antes de ver o data room."
+          "a": "A passagem da pipeline demora horas. A revisão da sua equipa vem depois, ao seu ritmo. Não nos comprometemos com uma data antes de ver o data room."
         },
         {
           "q": "Quanto custa?",
@@ -666,8 +666,8 @@
           "a": "Um real, não. A Factum está em fase anterior ao lançamento: ainda não há nenhum cliente público nem estudo de caso. O exemplo desenvolvido na página inicial mostra o formato. O primeiro real que verá será o seu, dias depois do NDA."
         },
         {
-          "q": "Quem revê efetivamente o output?",
-          "a": "Uma pessoa identificada, antes de algo chegar à sua secretária. Enquanto a Factum está em pré-lançamento, essa pessoa é o fundador, em todos os mandatos."
+          "q": "Quem aprova as constatações?",
+          "a": "O seu próprio revisor, no espaço de revisão. Nenhuma exportação para o cliente sai da plataforma sem essa aprovação. A Factum fornece a plataforma; o juízo e a assinatura são seus."
         }
       ]
     },
@@ -782,12 +782,12 @@
     },
     "gate": {
       "title": "O único passo humano obrigatório",
-      "lead": "Uma pessoa identificada aprova cada resultado. Estas são as condições que o obrigam.",
+      "lead": "O seu próprio revisor aprova antes de qualquer exportação para o cliente. Estas são as regras por trás.",
       "items": [
-        "As constatações são confrontadas com os documentos fonte antes da entrega.",
+        "Cada constatação é verificada contra a passagem de origem antes de chegar ao seu revisor.",
         "A porta corre sempre, automaticamente.",
-        "{blocks} bloqueios duros vão para uma pessoa em vez de serem aprovados automaticamente.",
-        "Uma pessoa com nome revê, reconcilia e responde pelo resultado.",
+        "{blocks} bloqueios duros param um rascunho e levam-no ao seu revisor, sem aprovação.",
+        "O seu revisor aprova o resumo de cada módulo, os dez principais riscos e cada condição suspensiva. Sem isso, nenhuma exportação para o cliente sai da plataforma. O resto segue com a menção «não revisto separadamente».",
         "Os valores pseudonimizados só são revertidos aqui, no entregável final."
       ]
     },
@@ -798,8 +798,8 @@
         "Cada módulo recupera, por si, provas dos documentos que carrega.",
         "Um segundo agente revisor critica cada rascunho.",
         "Uma verificação separada confirma as afirmações contra o texto de origem.",
-        "Uma pessoa revê o resultado.",
-        "As afirmações que não podem ser ligadas a uma passagem são assinaladas como não confirmadas."
+        "As afirmações que não podem ser ligadas a uma passagem são assinaladas como não confirmadas.",
+        "O seu revisor verifica o resultado e aprova."
       ],
       "machineLabel": "Máquina",
       "humanLabel": "Pessoa"
@@ -856,7 +856,7 @@
           ]
         }
       ],
-      "note": "Se a aprendizagem metodológica entre clientes for um problema para o seu mandato, diga-o na chamada. Pode ser desligada para a sua conta."
+      "note": "Se a aprendizagem metodológica entre clientes for um problema para a sua empresa, diga-o na chamada. Pode ser desligada para a sua conta."
     },
     "legal": {
       "title": "Porque é que isto não é uma janela de chat",
@@ -899,7 +899,7 @@
         },
         {
           "title": "O que guardamos, e porquê",
-          "body": "Os seus documentos e constatações ficam no seu próprio tenant, para que um mandato posterior possa reler um anterior. Eliminados a pedido, a qualquer momento. O prazo fica fixado no contrato de mandato."
+          "body": "Os seus documentos e constatações ficam no seu próprio tenant, para que um dossier posterior possa reler um anterior. Eliminados a pedido, a qualquer momento. O prazo fica fixado no contrato de mandato."
         },
         {
           "title": "Subcontratantes",
@@ -1044,7 +1044,7 @@
         {
           "title": "Citar o documento que não existe",
           "body": "A recuperação lê o que foi carregado. O mais caro em due diligence é muitas vezes uma ausência — o contrato que ninguém arquivou, o ano em falta na exportação salarial. Uma ausência não tem passagem para citar, por isso nenhum sistema fundamentado a pode levantar como constatação.",
-          "human": "O registo de lacunas de informação é a lista viva de uma pessoa: o que foi pedido e nunca chegou. É entregue ao lado das constatações."
+          "human": "A plataforma compara o data room com os documentos que um comprador espera e lista o que falta. Pedi-los é tarefa da sua equipa."
         },
         {
           "title": "Ler o que ninguém escreveu",
@@ -1054,12 +1054,12 @@
         {
           "title": "Distinguir o fraco do escondido",
           "body": "Um número pode ser fraco porque o negócio é fraco, ou porque o vendedor moldou o processo. No papel os dois são iguais. Separá-los exige saber como se comportam os vendedores, não o que diz o dossiê.",
-          "human": "Alguém que já esteve do outro lado da mesa. No nosso caso, um banqueiro de leveraged finance."
+          "human": "Alguém que já esteve do outro lado da mesa: a sua própria equipa ou os seus assessores."
         },
         {
           "title": "Ser responsável",
           "body": "Um modelo não pode ser Representative ao abrigo do seu NDA, não pode responder perante o seu comité de investimento e não pode assinar. A responsabilidade não é uma função que se acrescente a um sistema. Prende-se a uma pessoa, ou não existe.",
-          "human": "Uma pessoa com nome aprova cada entrega e responde por ela."
+          "human": "O seu próprio revisor, com nome. Nenhuma exportação para o cliente sai da plataforma sem essa aprovação."
         }
       ],
       "note": "Se um fornecedor afirmar que o sistema dele faz alguma das cinco, pergunte que página é que citou."
@@ -1068,10 +1068,10 @@
       "title": "É por isso que a revisão humana é obrigatória",
       "lead": "O passo humano não é um cobertor de segurança por cima de um produto acabado. É onde quatro dos cinco pontos acima são mesmo feitos.",
       "items": [
-        "Um nome e uma data em cada entrega, não uma pontuação de confiança.",
+        "O nome do seu revisor na exportação, não uma pontuação de confiança.",
         "Materialidade decidida face ao seu negócio, não face a um benchmark.",
         "Afirmações não confirmadas marcadas como tal em vez de descartadas em silêncio.",
-        "Uma pessoa com quem discordar."
+        "Uma pessoa responsável, na sua própria equipa."
       ],
       "link": "Como os documentos são tratados"
     },
@@ -1099,7 +1099,7 @@
       "items": [
         {
           "title": "Quem assina?",
-          "body": "Se a resposta for um painel, não assina ninguém. Peça um nome, e pergunte o que acontece quando esse nome se engana."
+          "body": "Aqui: o seu próprio revisor, com nome. Pergunte a qualquer fornecedor se a exportação pode sair sem uma aprovação humana, e quem é essa pessoa."
         },
         {
           "title": "O que acontece a uma afirmação que não se consegue citar?",
@@ -1114,15 +1114,15 @@
     },
     "cta": {
       "title": "Faça-nos as três perguntas",
-      "body": "Trinta minutos com a pessoa cujo nome vai na entrega. Traga as incómodas.",
+      "body": "Trinta minutos com um dos dois fundadores. Traga as incómodas.",
       "button": "Partilhe um data room",
       "note": "Primeiro o NDA, enviado no mesmo dia. Um negócio que fechou no ano passado também serve."
     }
   },
   "team": {
     "header": {
-      "title": "As pessoas por trás do resultado",
-      "lead": "Wouter estruturou financiamento de aquisições e leveraged finance no ING. Daniel constrói pipelines de dados regulados. Um deles aprova cada resultado.",
+      "title": "As duas pessoas por trás da Factum",
+      "lead": "Wouter Dijkman e Daniel Dropuljic. Fala diretamente com eles: Wouter sobre negócios, Daniel sobre dados e infraestrutura.",
       "cta": "Partilhe um data room"
     },
     "historyLabel": "Percurso",
@@ -1184,26 +1184,26 @@
     ],
     "closing": "O mesmo rigor, aplicado ao negócio à sua frente.",
     "cta": {
-      "title": "Falará com a pessoa que revê o output",
-      "body": "Enquanto a Factum estiver em pré-lançamento, a chamada, o controlo de revisão e a passagem pelas constatações são a mesma pessoa.",
+      "title": "Vai falar com um fundador",
+      "body": "Enquanto a Factum estiver em fase anterior ao lançamento, o Wouter conduz a primeira chamada e percorre consigo as constatações sobre o seu próprio data room.",
       "button": "Partilhe um data room",
       "note": "Primeiro o NDA, enviado no mesmo dia. Um negócio que fechou no ano passado também serve."
     },
     "roles": {
-      "title": "Quem assina o quê",
-      "lead": "Duas pessoas, e nenhuma equipa de analistas por trás.",
+      "title": "Quem faz o quê",
+      "lead": "Duas pessoas constroem a Factum. A sua equipa usa-a.",
       "items": [
         {
           "label": "Wouter Dijkman",
-          "body": "Define o âmbito consigo e aprova cada constatação antes de sair. Nada lhe chega por ler."
+          "body": "Conduz a primeira chamada e a demo sobre o seu próprio data room. Acompanha o arranque da sua equipa e o primeiro dossier."
         },
         {
           "label": "Daniel Dropuljic",
           "body": "Trata da infraestrutura: alojamento na UE, encaminhamento sem retenção e a definição de conservação em cada fornecedor."
         },
         {
-          "label": "Mais ninguém",
-          "body": "Sem equipa deslocalizada, sem juniores a rodar. Se um mandato for maior do que duas pessoas e a plataforma, dizemo-lo antes de assinar."
+          "label": "A sua própria equipa",
+          "body": "Revê as constatações e aprova. O juízo sobre o seu negócio fica consigo."
         }
       ]
     }
@@ -1362,7 +1362,11 @@
         },
         {
           "q": "Com quem vou falar?",
-          "a": "Com o Wouter Dijkman. A Factum está em pré-lançamento, por isso a pessoa na chamada é quem aprova cada constatação que recebe."
+          "a": "Com o Wouter Dijkman, um dos dois fundadores. Ele percorre consigo as constatações sobre o seu próprio data room. Depois, a sua equipa trabalha na plataforma e aprova as suas próprias constatações."
+        },
+        {
+          "q": "O que acontece depois da demo?",
+          "a": "A sua equipa trabalha diretamente na plataforma. Cria o dossier, carrega o data room, convida o cliente ou os financiadores como convidados, e revê e aprova as constatações. O Wouter acompanha o arranque e o primeiro dossier."
         },
         {
           "q": "Já estamos a meio de um processo com um assessor. É tarde?",
