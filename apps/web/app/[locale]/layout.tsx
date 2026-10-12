@@ -152,8 +152,9 @@ export default async function LocaleLayout({
           Two extensions on the bundle: `outbound-links` counts every click to
           an external host, which is how intake bookings on cal.com get
           measured; `tagged-events` reads the `plausible-event-*` classes on
-          the CTAs. The scorecard funnel itself is fired from
-          `lib/analytics.ts`, which queues until this script lands.
+          the CTAs and on the links to factumcapital.eu. There is no custom
+          event code any more: `lib/analytics.ts` served the scorecard funnel
+          and went with it.
         */}
         <Script
           defer

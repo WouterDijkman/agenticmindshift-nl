@@ -5,15 +5,6 @@ import { routing } from './i18n/routing';
 
 const intlMiddleware = createMiddleware(routing);
 
-/**
- * Everything *below* /scorecard is a funnel step (questions, result, generated
- * report). Those pages are `'use client'` so they cannot export metadata, and
- * the shared scorecard layout also wraps the indexable landing page — hence the
- * header here. A robots.txt disallow would block crawling but still permit
- * URL-only indexing; noindex will not.
- */
-const NOINDEX_PATH = /^\/[a-z]{2}\/scorecard\/.+/;
-
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
@@ -87,11 +78,7 @@ export function proxy(request: NextRequest) {
     return NextResponse.rewrite(url);
   }
 
-  const response = intlMiddleware(request);
-  if (NOINDEX_PATH.test(pathname)) {
-    response.headers.set('X-Robots-Tag', 'noindex, follow');
-  }
-  return response;
+  return intlMiddleware(request);
 }
 
 export const config = {

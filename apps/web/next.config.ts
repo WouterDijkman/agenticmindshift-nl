@@ -14,6 +14,9 @@ const nextConfig: NextConfig = {
    * those links working and tells search engines the canonical page moved off
    * this domain, which is what the FactumBanner now says in prose too.
    *
+   * The destination is the `www` host Factum actually serves. The apex 308s
+   * there, so pointing at it cost every old link one more hop.
+   *
    * The locale segment is required — next-intl prefixes every marketing route,
    * so the bare path never existed and matching it would 308 to a 404.
    */
@@ -21,7 +24,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/:locale(nl|en|de|es|pt)/factum-capital',
-        destination: 'https://factumcapital.eu',
+        destination: 'https://www.factumcapital.eu',
         permanent: true,
       },
     ];
