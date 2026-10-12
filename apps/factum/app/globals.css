@@ -1240,8 +1240,11 @@ p { margin: 0; }
 }
 
 /* German and Dutch stretch nav labels ~35%, so the collapse point is generous
-   and the labels never get a fixed width. */
-@media (max-width: 1080px) {
+   and the labels never get a fixed width. Raised from 1080px on 12 October
+   2026, when the labels became plain descriptions ("Para vendedores y
+   brokers"): at 1090px the Spanish CTA wrapped onto three lines. Measured in
+   the browser: Spanish, the widest, fits with room from about 1170px. */
+@media (max-width: 1200px) {
   .nav-desktop { display: none !important; }
   .nav-mobile-toggle { display: inline-flex !important; }
 }
