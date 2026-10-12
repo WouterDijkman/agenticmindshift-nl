@@ -9,8 +9,8 @@
       "description": "{modules} módulos de due diligence em dez disciplinas. Cada constatação cita um documento. Cada output passa por um controlo humano."
     },
     "sprint": {
-      "title": "Revisão completa do data room em dias",
-      "description": "{disciplines} leituras especializadas sobre um data room, reconciliadas numa só narrativa, com um registo em direto do que falta."
+      "title": "Due diligence para compradores e PE",
+      "description": "Para PE e compradores estratégicos: {disciplines} disciplinas sobre o data room do target, num único relatório, com a lista do que nunca chegou."
     },
     "aiLimits": {
       "title": "Limites da IA em due diligence",
@@ -43,16 +43,16 @@
   },
   "nav": {
     "primary": "Principal",
-    "platform": "Plataforma",
-    "sprint": "Diligence Sprint",
-    "aiLimits": "Limites da IA",
-    "governance": "Governação",
+    "platform": "Como funciona",
+    "sprint": "Para compradores",
+    "aiLimits": "O que a IA não consegue fazer",
+    "governance": "Dados e segurança",
     "team": "Equipa",
     "contact": "Contacto",
     "cta": "Partilhe um data room",
     "openMenu": "Abrir menu",
     "closeMenu": "Fechar menu",
-    "preSale": "Pré-venda"
+    "preSale": "Para vendedores e brokers"
   },
   "footer": {
     "blurb": "Due diligence com IA para M&A e private equity. Cada constatação citada a um documento. Cada exportação aprovada pelo seu próprio revisor.",
@@ -235,8 +235,8 @@
   },
   "home": {
     "hero": {
-      "title": "Saiba o que está no data room antes de assinar",
-      "lead": "{disciplines} disciplinas, sobre todo o data room, em dias. Cada constatação cita a fonte e a localização, para que a possa provar à mesa.",
+      "title": "Due diligence sobre todo o data room, em dias",
+      "lead": "A Factum é software de due diligence para compradores e brokers do lado vendedor. Lê cada documento do data room e dá-lhe cada constatação com o documento de origem e a página. O seu próprio revisor verifica e aprova.",
       "cta": "Partilhe um data room"
     },
     "problem": {
@@ -250,6 +250,24 @@
         {
           "title": "O risco está entre as disciplinas",
           "body": "Uma leitura de quality of earnings cobre o resultado. As surpresas caras estão onde dois especialistas assumiram que o outro estava a olhar."
+        }
+      ]
+    },
+    "why": {
+      "title": "Porquê IA?",
+      "lead": "A resposta curta, sem exageros.",
+      "steps": [
+        {
+          "title": "Lê cada documento",
+          "body": "Uma equipa com pressa lê uma amostra. O software lê todo o data room e encontra o que liga um documento a outro: uma cláusula de um contrato que muda um número nas contas."
+        },
+        {
+          "title": "O código faz as contas",
+          "body": "Os recálculos entre as demonstrações financeiras, o modelo LBO e as verificações do lado vendedor correm em código, sem o modelo de linguagem. Um número escrito pelo modelo que não esteja em nenhuma passagem citada fica retido."
+        },
+        {
+          "title": "As pessoas decidem",
+          "body": "O seu revisor verifica as constatações e aprova. Sem isso, nada sai."
         }
       ]
     },
@@ -578,6 +596,10 @@
       "title": "Perguntas que recebemos",
       "items": [
         {
+          "q": "Porquê usar IA?",
+          "a": "Lê cada documento do data room em vez de uma amostra, e encontra o que liga um documento a outro. As contas são feitas por código: os recálculos entre as demonstrações financeiras, o modelo LBO e as verificações do lado vendedor correm sem o modelo de linguagem, e um número do modelo que não esteja em nenhuma passagem citada fica retido. As pessoas decidem: o seu revisor verifica e aprova."
+        },
+        {
           "q": "Isto não é apenas um chatbot de IA com passos a mais?",
           "a": "Um modelo de IA generalista é um canivete suíço: faz um bocadinho de tudo, incluindo ler um data room. O Factum é um bisturi cirúrgico: construído para este corte exato. Isto são {modules} módulos delimitados à partida, despachados numa ordem de dependência fixa, com quatro verificações de fundamentação e uma porta humana obrigatória. A diferença é o que acontece quando ninguém está a ver."
         },
@@ -616,8 +638,8 @@
   },
   "sprint": {
     "header": {
-      "title": "Veja o que um comprador encontraria, antes dele",
-      "lead": "As {disciplines} disciplinas, reconciliadas numa só narrativa. Corrido sobre um target que está a comprar, ou sobre a sua própria empresa antes de um comprador o fazer.",
+      "title": "Due diligence para compradores, sobre todo o data room",
+      "lead": "Para private equity e compradores estratégicos. As {disciplines} disciplinas sobre o data room do target, reunidas num único relatório, com uma lista do que o vendedor nunca carregou.",
       "cta": "Partilhe um data room"
     },
     "reframe": {

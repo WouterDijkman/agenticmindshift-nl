@@ -9,8 +9,8 @@
       "description": "{modules} due-diligence modules across {disciplines} disciplines. Every finding cites a document. Every output passes a human gate."
     },
     "sprint": {
-      "title": "Full data-room review in days",
-      "description": "{disciplines} specialist passes over one data room, reconciled into a single narrative, with a live data-gap tracker."
+      "title": "Buy-side due diligence for PE and acquirers",
+      "description": "For PE and strategic acquirers: {disciplines} disciplines over the target’s data room, reconciled into one report, with a list of what never arrived."
     },
     "aiLimits": {
       "title": "What AI cannot do in due diligence",
@@ -43,16 +43,16 @@
   },
   "nav": {
     "primary": "Primary",
-    "platform": "Platform",
-    "sprint": "Diligence Sprint",
-    "aiLimits": "Limits of AI",
-    "governance": "Governance",
+    "platform": "How it works",
+    "sprint": "For buyers",
+    "aiLimits": "What AI can’t do",
+    "governance": "Data & security",
     "team": "Team",
     "contact": "Contact",
     "cta": "Share a data room",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "preSale": "Pre-sale"
+    "preSale": "For sellers & brokers"
   },
   "footer": {
     "blurb": "AI due diligence for M&A and private equity. Every finding cited to a document. Every export signed off by your own reviewer.",
@@ -235,8 +235,8 @@
   },
   "home": {
     "hero": {
-      "title": "Know what is in the room before you sign",
-      "lead": "{disciplines} disciplines, over the whole data room, in days. Every finding cites its source and location, so you can prove it at the table.",
+      "title": "Due diligence on the whole data room, in days",
+      "lead": "Factum is due diligence software for buyers and sell-side brokers. It reads every document in the data room and gives you each finding with its source document and page. Your own reviewer checks it and signs off.",
       "cta": "Share a data room"
     },
     "problem": {
@@ -250,6 +250,24 @@
         {
           "title": "The risk sits between disciplines",
           "body": "A quality-of-earnings read covers earnings. The expensive surprises sit where two specialists each assumed the other was looking."
+        }
+      ]
+    },
+    "why": {
+      "title": "Why use AI for this?",
+      "lead": "The short answer, without the hype.",
+      "steps": [
+        {
+          "title": "It reads every document",
+          "body": "A team under deadline reads a sample. The software reads the whole room, and finds what links one document to another: a clause in a contract that changes a number in the accounts."
+        },
+        {
+          "title": "Code does the arithmetic",
+          "body": "Recalculations across the statements, the LBO model and the sell-side checks run in code, without the language model. A number the model writes that is in none of the quoted passages is held back."
+        },
+        {
+          "title": "People decide",
+          "body": "Your reviewer checks the findings and signs off. Nothing leaves without that."
         }
       ]
     },
@@ -578,6 +596,10 @@
       "title": "Questions we get",
       "items": [
         {
+          "q": "Why use AI at all?",
+          "a": "It reads every document in the room instead of a sample, and finds what links one document to another. The arithmetic is done by code: recalculations across the statements, the LBO model and the sell-side checks run without the language model, and a number the model writes that is in none of the quoted passages is held back. People decide: your reviewer checks and signs off."
+        },
+        {
           "q": "Isn’t this just an AI chatbot with extra steps?",
           "a": "A general-purpose AI model is a Swiss Army knife: it does a bit of everything, including reading a data room. Factum is a surgical scalpel: built for exactly this one cut. This is {modules} pre-scoped modules in a fixed dependency order, with four grounding checks and a mandatory human gate. The difference is what happens when nobody is watching."
         },
@@ -616,8 +638,8 @@
   },
   "sprint": {
     "header": {
-      "title": "See what a buyer would find, before they do",
-      "lead": "All {disciplines} disciplines, reconciled into one narrative. Run it on a target you are buying, or on your own company before a buyer runs it on you.",
+      "title": "Due diligence for buyers, on the whole data room",
+      "lead": "For private equity and strategic acquirers. All {disciplines} disciplines over the target’s data room, reconciled into one report, with a list of what the seller never uploaded.",
       "cta": "Share a data room"
     },
     "reframe": {

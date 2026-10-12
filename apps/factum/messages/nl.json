@@ -9,8 +9,8 @@
       "description": "{modules} modules voor due diligence, over acht disciplines. Elke bevinding verwijst naar een document. Elke output passeert een menselijke toets."
     },
     "sprint": {
-      "title": "Volledige dataroomreview in dagen",
-      "description": "{disciplines} specialistische rondes over één data room, samengebracht tot één verhaal, met een lopende lijst van wat er ontbreekt."
+      "title": "Buy-side due diligence voor PE en kopers",
+      "description": "Voor PE en strategische kopers: {disciplines} disciplines over de data room van de target, in één rapport, met een lijst van wat nooit is aangeleverd."
     },
     "aiLimits": {
       "title": "Wat AI niet kan in due diligence",
@@ -43,16 +43,16 @@
   },
   "nav": {
     "primary": "Hoofdnavigatie",
-    "platform": "Platform",
-    "sprint": "Diligence Sprint",
-    "aiLimits": "Grenzen van AI",
-    "governance": "Governance",
+    "platform": "Hoe het werkt",
+    "sprint": "Voor kopers",
+    "aiLimits": "Wat AI niet kan",
+    "governance": "Data & beveiliging",
     "team": "Team",
     "contact": "Contact",
     "cta": "Deel een data room",
     "openMenu": "Menu openen",
     "closeMenu": "Menu sluiten",
-    "preSale": "Pre-sale"
+    "preSale": "Voor verkopers & brokers"
   },
   "footer": {
     "blurb": "AI due diligence voor M&A en private equity. Elke bevinding herleid tot een document. Elke export afgetekend door uw eigen reviewer.",
@@ -235,8 +235,8 @@
   },
   "home": {
     "hero": {
-      "title": "Weet wat er ligt voordat u tekent",
-      "lead": "{disciplines} disciplines, over de hele data room, in dagen. Elke bevinding noemt bron en vindplaats, zodat u het aan tafel kunt bewijzen.",
+      "title": "Due diligence op de hele data room, in dagen",
+      "lead": "Factum is due-diligencesoftware voor kopers en sell-side brokers. Het leest elk document in de data room en geeft u elke bevinding met brondocument en pagina. Uw eigen reviewer controleert en tekent af.",
       "cta": "Deel een data room"
     },
     "problem": {
@@ -250,6 +250,24 @@
         {
           "title": "Het risico zit tussen de disciplines",
           "body": "Een quality of earnings kijkt naar de winst. De dure verrassingen zitten waar twee specialisten allebei dachten dat de ander keek."
+        }
+      ]
+    },
+    "why": {
+      "title": "Waarom AI hiervoor?",
+      "lead": "Het korte antwoord, zonder hype.",
+      "steps": [
+        {
+          "title": "Het leest elk document",
+          "body": "Een team onder tijdsdruk leest een steekproef. De software leest de hele data room, en vindt wat het ene document aan het andere verbindt: een clausule in een contract die een getal in de jaarrekening verandert."
+        },
+        {
+          "title": "Code doet het rekenwerk",
+          "body": "Herberekeningen over de jaarstukken, het LBO-model en de controles voor de verkoopkant draaien in code, zonder taalmodel. Een getal dat het model schrijft en dat in geen enkele geciteerde passage staat, wordt tegengehouden."
+        },
+        {
+          "title": "Mensen beslissen",
+          "body": "Uw reviewer controleert de bevindingen en tekent af. Zonder dat gaat er niets de deur uit."
         }
       ]
     },
@@ -578,6 +596,10 @@
       "title": "Vragen die we krijgen",
       "items": [
         {
+          "q": "Waarom überhaupt AI?",
+          "a": "Het leest elk document in de data room in plaats van een steekproef, en vindt wat het ene document aan het andere verbindt. Het rekenwerk doet code: herberekeningen over de jaarstukken, het LBO-model en de controles voor de verkoopkant draaien zonder taalmodel, en een getal dat het model schrijft en dat in geen geciteerde passage staat, wordt tegengehouden. Mensen beslissen: uw reviewer controleert en tekent af."
+        },
+        {
           "q": "Is dit niet gewoon een AI-chatbot met extra stappen?",
           "a": "Een algemeen AI-model is een zwitsers zakmes: het kan van alles een beetje, ook een data room doorzoeken. Factum is een chirurgisch scalpel: gebouwd voor precies dit ene snijvlak. Dit zijn {modules} vooraf afgebakende modules in een vaste afhankelijkheidsvolgorde, met vier groundingchecks en een verplichte menselijke poort. Het verschil is wat er gebeurt als niemand kijkt."
         },
@@ -616,8 +638,8 @@
   },
   "sprint": {
     "header": {
-      "title": "Zie wat een koper zou vinden, voordat hij het vindt",
-      "lead": "Alle {disciplines} disciplines, afgestemd tot één verhaallijn. Gedraaid op een target dat u koopt, of op uw eigen bedrijf voordat een koper het bij u doet.",
+      "title": "Due diligence voor kopers, op de hele data room",
+      "lead": "Voor private equity en strategische kopers. Alle {disciplines} disciplines over de data room van de target, samengebracht in één rapport, met een lijst van wat de verkoper nooit heeft geüpload.",
       "cta": "Deel een data room"
     },
     "reframe": {

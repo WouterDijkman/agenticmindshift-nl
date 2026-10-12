@@ -9,8 +9,8 @@
       "description": "{modules} Due-Diligence-Module über acht Disziplinen. Jede Feststellung belegt ein Dokument. Jedes Ergebnis passiert eine menschliche Freigabe."
     },
     "sprint": {
-      "title": "Vollständige Datenraum-Prüfung in Tagen",
-      "description": "{disciplines} Fachdurchgänge über einen Data Room, zu einer Darstellung zusammengeführt, mit einer laufenden Liste dessen, was fehlt."
+      "title": "Buy-Side-Due-Diligence für PE und Käufer",
+      "description": "Für PE und strategische Käufer: {disciplines} Disziplinen über den Data Room des Targets, in einem Bericht, mit einer Liste dessen, was nie kam."
     },
     "aiLimits": {
       "title": "Was KI in der Due Diligence nicht kann",
@@ -43,16 +43,16 @@
   },
   "nav": {
     "primary": "Hauptnavigation",
-    "platform": "Plattform",
-    "sprint": "Diligence Sprint",
-    "aiLimits": "Grenzen von KI",
-    "governance": "Governance",
+    "platform": "So funktioniert es",
+    "sprint": "Für Käufer",
+    "aiLimits": "Was KI nicht kann",
+    "governance": "Daten & Sicherheit",
     "team": "Team",
     "contact": "Kontakt",
     "cta": "Data Room teilen",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
-    "preSale": "Pre-Sale"
+    "preSale": "Für Verkäufer & Broker"
   },
   "footer": {
     "blurb": "KI-Due-Diligence für M&A und Private Equity. Jede Feststellung mit einem Dokument belegt. Jeder Export von Ihrem eigenen Prüfer freigegeben.",
@@ -235,8 +235,8 @@
   },
   "home": {
     "hero": {
-      "title": "Den Data Room kennen, bevor Sie unterschreiben",
-      "lead": "{disciplines} Disziplinen, über den gesamten Data Room, in Tagen. Jede Feststellung nennt Quelle und Fundstelle, damit Sie sie am Verhandlungstisch belegen können.",
+      "title": "Due Diligence über den gesamten Data Room, in Tagen",
+      "lead": "Factum ist Due-Diligence-Software für Käufer und Sell-Side-Broker. Sie liest jedes Dokument im Data Room und liefert jede Feststellung mit Quelldokument und Seite. Ihr eigener Prüfer kontrolliert und gibt frei.",
       "cta": "Data Room teilen"
     },
     "problem": {
@@ -250,6 +250,24 @@
         {
           "title": "Das Risiko liegt zwischen den Disziplinen",
           "body": "Eine Quality-of-Earnings-Analyse deckt die Erträge ab. Die teuren Überraschungen liegen dort, wo zwei Spezialisten jeweils den anderen für zuständig hielten."
+        }
+      ]
+    },
+    "why": {
+      "title": "Warum KI dafür?",
+      "lead": "Die kurze Antwort, ohne Hype.",
+      "steps": [
+        {
+          "title": "Sie liest jedes Dokument",
+          "body": "Ein Team unter Zeitdruck liest eine Stichprobe. Die Software liest den gesamten Data Room und findet, was ein Dokument mit einem anderen verbindet: eine Vertragsklausel, die eine Zahl im Abschluss verändert."
+        },
+        {
+          "title": "Code rechnet",
+          "body": "Nachrechnungen über die Abschlüsse, das LBO-Modell und die Prüfungen für die Verkäuferseite laufen im Code, ohne Sprachmodell. Eine Zahl, die das Modell schreibt und die in keiner zitierten Passage steht, wird zurückgehalten."
+        },
+        {
+          "title": "Menschen entscheiden",
+          "body": "Ihr Prüfer kontrolliert die Feststellungen und gibt frei. Ohne das geht nichts hinaus."
         }
       ]
     },
@@ -578,6 +596,10 @@
       "title": "Fragen, die uns gestellt werden",
       "items": [
         {
+          "q": "Warum überhaupt KI?",
+          "a": "Sie liest jedes Dokument im Data Room statt einer Stichprobe und findet, was ein Dokument mit einem anderen verbindet. Gerechnet wird im Code: Nachrechnungen über die Abschlüsse, das LBO-Modell und die Prüfungen für die Verkäuferseite laufen ohne Sprachmodell, und eine Zahl des Modells, die in keiner zitierten Passage steht, wird zurückgehalten. Menschen entscheiden: Ihr Prüfer kontrolliert und gibt frei."
+        },
+        {
           "q": "Ist das nicht einfach ein KI-Chatbot mit Zwischenschritten?",
           "a": "Ein allgemeines KI-Modell ist ein Schweizer Taschenmesser: Es kann von allem ein bisschen, auch einen Data Room durchsuchen. Factum ist ein chirurgisches Skalpell: gebaut für genau diesen einen Schnitt. Das hier sind {modules} vorab zugeschnittene Module in fester Abhängigkeitsreihenfolge, mit vier Grounding-Prüfungen und einem verpflichtenden menschlichen Tor. Der Unterschied zeigt sich, wenn niemand hinsieht."
         },
@@ -616,8 +638,8 @@
   },
   "sprint": {
     "header": {
-      "title": "Sehen Sie, was ein Käufer finden würde, bevor er es tut",
-      "lead": "Alle {disciplines} Disziplinen, zu einer Darstellung zusammengeführt. Durchgeführt an einem Target, das Sie kaufen, oder an Ihrem eigenen Unternehmen, bevor ein Käufer es dort selbst durchführt.",
+      "title": "Due Diligence für Käufer, über den gesamten Data Room",
+      "lead": "Für Private Equity und strategische Käufer. Alle {disciplines} Disziplinen über den Data Room des Targets, zu einem Bericht zusammengeführt, mit einer Liste dessen, was der Verkäufer nie hochgeladen hat.",
       "cta": "Data Room teilen"
     },
     "reframe": {

@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { pageMetadata } from '@/lib/pageMetadata';
-import { DISCIPLINE_COUNT } from '@/lib/site';
 import { HOME_BAND, HOME_GUIDE, HOME_PROBLEM, HOME_SUCCESS } from '@/lib/scenes';
 import Hero from '@/components/Hero';
 import MediaCards from '@/components/MediaCards';
@@ -68,10 +67,15 @@ export default async function HomePage({
     <>
       <Hero
         title={t('hero.title')}
-        /* The count comes from DISCIPLINES in lib/site.ts. The lead used to say
-           "Every dimension", which read as the full fourteen-dimension map;
-           Factum covers nine of those fully and five partly (COVERAGE_*). */
-        lead={t('hero.lead', { disciplines: DISCIPLINE_COUNT })}
+        /* Plain words first (12 October 2026). A prospect said a lay reader
+           could spend a long time on this site without understanding that it
+           sells due diligence. The H1 now names the job and the lead says, in
+           three sentences: what Factum is (due diligence software), who it is
+           for (buyers and sell-side brokers), what you get (each finding with
+           its source document and page) and who signs off (your own
+           reviewer). It also no longer says "every dimension": Factum covers
+           nine of fourteen dimensions fully and five partly (COVERAGE_*). */
+        lead={t('hero.lead')}
         cta={t('hero.cta')}
         /* Was "See what a finding looks like", pointing at /platform. The
            finding it promised has since moved onto this page, so the link
@@ -133,6 +137,21 @@ export default async function HomePage({
             items={t.raw('problem.points') as { title: string; body: string }[]}
             scenes={HOME_PROBLEM}
           />
+        </div>
+      </Section>
+
+      {/* Why AI, in one plain answer. Asked for by a prospect who could not see
+          why AI belongs in due diligence. Each claim is checked against the
+          product source: whole-room reading and cross-document links (the
+          dependency waves in module-registry.ts); arithmetic in code without a
+          language model (python_service/reconcile_engine.py, lbo_engine.py,
+          src/lib/marktklaar/rekencontroles.ts); a model-written number found in
+          no quote is held back for review (findings/controle/toepassen.ts,
+          code `getal_buiten_citaat`). */}
+      <Section id="why-ai" width="medium" weight="tight">
+        <SectionHeader title={t('why.title')} lead={t('why.lead')} />
+        <div style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
+          <Stepper steps={t.raw('why.steps') as { title: string; body: string }[]} />
         </div>
       </Section>
 
