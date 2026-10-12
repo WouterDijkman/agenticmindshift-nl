@@ -129,7 +129,7 @@ export default async function GuidePage({ slug, locale }: { slug: GuideSlug; loc
       {/* The article, with its questions listed beside it on wide screens.
           The H2s are the follow-up questions a reader came with; seeing all
           of them at once is the fastest way to find the one that is theirs. */}
-      <section className="has-sticky" style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(16px, 3vw, 40px) clamp(64px, 9vw, 112px)' }}>
+      <section className="has-sticky guide-article" style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(16px, 3vw, 40px) clamp(64px, 9vw, 112px)' }}>
         <div className="container-medium guide-body">
           <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(40px, 6vw, 64px)' }}>
             {g.sections.map((s) => (

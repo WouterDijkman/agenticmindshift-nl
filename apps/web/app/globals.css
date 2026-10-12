@@ -1773,7 +1773,10 @@ html[data-reveal="on"] .reveal.revealed {
 /* ================================================================== */
 @media (max-width: 640px) {
   /* Hero sections have their own padding via .hero-full-content / .hero-home-content */
-  main section:not(.hero-full):not(.hero-home) {
+  /* The guide pages' compact hero and the article under it set their own
+     spacing; 96px on both would open a 200px gap between the answer and
+     the first question. */
+  main section:not(.hero-full):not(.hero-home):not(.hero-compact):not(.guide-article) {
     padding-block: 96px !important;
   }
 

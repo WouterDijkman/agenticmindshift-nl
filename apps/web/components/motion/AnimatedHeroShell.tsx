@@ -90,7 +90,7 @@ export default function AnimatedHeroShell({
   return (
     <section
       ref={sectionRef}
-      className={compact ? 'grain-overlay' : 'hero-full grain-overlay'}
+      className={compact ? 'hero-compact grain-overlay' : 'hero-full grain-overlay'}
       style={{
         background: 'var(--bg-primary)',
         display: 'flex',
