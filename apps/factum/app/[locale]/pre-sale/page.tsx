@@ -66,8 +66,10 @@ export default async function PreSalePage({
         title={t('header.title')}
         lead={t('header.lead')}
         cta={t('header.cta')}
-        secondary={s('links.sprint')}
-        secondaryHref="/diligence-sprint"
+        /* Was "What the sprint covers" → /diligence-sprint, the buyers' page.
+           A broker's first secondary link sent them to the other audience. */
+        secondary={s('links.platform')}
+        secondaryHref="/platform"
         footnote={s('ctaProof')}
         visual={2}
       />

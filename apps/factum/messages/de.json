@@ -226,7 +226,7 @@
     "links": {
       "governance": "Wie Dokumente behandelt werden",
       "platform": "Wie die Plattform arbeitet",
-      "sprint": "Was der Sprint abdeckt",
+      "sprint": "Was Käufer bekommen",
       "limits": "Was KI nicht kann",
       "intake": "Data Room teilen"
     },
@@ -644,7 +644,7 @@
       "cta": "Data Room teilen"
     },
     "reframe": {
-      "attr": "Warum ein zweiter Durchgang"
+      "quote": "Der Verkäufer hat den Data Room zusammengestellt. Lesen Sie ihn ganz, bevor Sie den Preis festlegen."
     },
     "disciplines": {
       "title": "Alle {disciplines} Disziplinen, ein fester Umfang",

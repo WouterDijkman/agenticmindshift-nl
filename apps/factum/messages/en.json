@@ -226,7 +226,7 @@
     "links": {
       "governance": "How documents are handled",
       "platform": "How the platform works",
-      "sprint": "What the sprint covers",
+      "sprint": "What buyers get",
       "limits": "What AI cannot do",
       "intake": "Share a data room"
     },
@@ -644,7 +644,7 @@
       "cta": "Share a data room"
     },
     "reframe": {
-      "attr": "Why a second pass"
+      "quote": "The seller assembled the data room. Read all of it before you set the price."
     },
     "disciplines": {
       "title": "All {disciplines} disciplines, one fixed scope",

@@ -226,7 +226,7 @@
     "links": {
       "governance": "Como os documentos são tratados",
       "platform": "Como funciona a plataforma",
-      "sprint": "O que o sprint cobre",
+      "sprint": "O que os compradores recebem",
       "limits": "O que a IA não consegue fazer",
       "intake": "Partilhe um data room"
     },
@@ -644,7 +644,7 @@
       "cta": "Partilhe um data room"
     },
     "reframe": {
-      "attr": "Porquê uma segunda leitura"
+      "quote": "O vendedor montou o data room. Leia-o por inteiro antes de fixar o preço."
     },
     "disciplines": {
       "title": "As {disciplines} disciplinas, um âmbito fixo",

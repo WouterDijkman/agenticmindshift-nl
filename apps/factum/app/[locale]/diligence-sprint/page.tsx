@@ -63,7 +63,12 @@ export default async function SprintPage({
         and the header footnote above already makes — three statements of one
         promise inside one scroll reads as insistence rather than confidence.
       */}
-      <SceneBand id={SPRINT_BAND} line={s('reframe.quote')} attribution={t('reframe.attr')} />
+      {/* Its own line since 12 October 2026. This band used to repeat the
+          homepage's shared reframe ("running the buyer's pass on your own side
+          first"), which is the sell-side argument, on the one page addressed
+          to buyers. The buyer's version of the same thought is that the seller
+          built the room. No attribution label: the line carries itself. */}
+      <SceneBand id={SPRINT_BAND} line={t('reframe.quote')} />
 
       {/* The discipline roster; count comes from DISCIPLINES in lib/site.ts.
           This is what the page is for, and it is now the only section on it

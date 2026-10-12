@@ -226,7 +226,7 @@
     "links": {
       "governance": "Hoe documenten worden behandeld",
       "platform": "Hoe het platform werkt",
-      "sprint": "Wat de sprint dekt",
+      "sprint": "Wat kopers krijgen",
       "limits": "Wat AI niet kan",
       "intake": "Deel een data room"
     },
@@ -644,7 +644,7 @@
       "cta": "Deel een data room"
     },
     "reframe": {
-      "attr": "Waarom een tweede lezing"
+      "quote": "De verkoper heeft de data room samengesteld. Lees hem helemaal voordat u de prijs bepaalt."
     },
     "disciplines": {
       "title": "Alle {disciplines} disciplines, één vaste scope",
