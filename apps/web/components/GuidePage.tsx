@@ -162,8 +162,8 @@ export default async function GuidePage({ slug, locale }: { slug: GuideSlug; loc
           overflow: 'hidden',
         }}
       >
-        <div className="container-medium" style={{ position: 'relative', maxWidth: '760px' }}>
-          <div className="reveal">
+        <div className="container-medium" style={{ position: 'relative' }}>
+          <div className="reveal" style={{ maxWidth: '760px' }}>
             <p className="eyebrow" style={{ marginBottom: '24px', color: 'var(--text-muted)' }}>{c.helpsEyebrow}</p>
             <h2 className="type-h2" style={{ color: 'var(--text-primary)', marginBottom: '24px' }}>
               {g.helps.heading}

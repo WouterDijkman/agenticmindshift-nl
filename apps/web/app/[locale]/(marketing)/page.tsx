@@ -289,7 +289,8 @@ export default async function HomePage(
           overflow: 'hidden',
         }}
       >
-        <div className="container-medium reveal" style={{ position: 'relative', maxWidth: '760px' }}>
+        <div className="container-medium" style={{ position: 'relative' }}>
+        <div className="reveal" style={{ maxWidth: '760px' }}>
           <p className="eyebrow" style={{ marginBottom: '28px', color: 'var(--text-muted)' }}>
             {t('final_cta.eyebrow')}
           </p>
@@ -321,6 +322,7 @@ export default async function HomePage(
               {t('final_cta.cta_secondary')}
             </Button>
           </div>
+        </div>
         </div>
       </section>
     </>

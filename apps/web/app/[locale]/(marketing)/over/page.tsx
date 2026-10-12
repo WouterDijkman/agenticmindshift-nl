@@ -257,8 +257,8 @@ export default async function OverPage(
         }}
       >
         {/* Was centred; see the note on the same band in /werkwijze. */}
-        <div className="container-medium" style={{ position: 'relative', maxWidth: '760px' }}>
-          <div className="reveal" style={{ position: 'relative' }}>
+        <div className="container-medium" style={{ position: 'relative' }}>
+          <div className="reveal" style={{ position: 'relative', maxWidth: '760px' }}>
             <p className="eyebrow" style={{ marginBottom: '28px', color: 'var(--text-muted)' }}>
               {t('contact_cta.eyebrow')}
             </p>

@@ -373,8 +373,8 @@ export default async function WerkwijzePage(
         {/* Was centred. Centred prose sets a new left edge on every line, so
             the eye has to re-find the start of each one — fine for three
             words, not for a paragraph. */}
-        <div className="container-medium" style={{ position: 'relative', maxWidth: '760px' }}>
-          <div className="reveal">
+        <div className="container-medium" style={{ position: 'relative' }}>
+          <div className="reveal" style={{ maxWidth: '760px' }}>
             <p className="eyebrow" style={{ marginBottom: '28px', color: 'var(--text-muted)' }}>
               {t('cta.eyebrow')}
             </p>
