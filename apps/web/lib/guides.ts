@@ -52,7 +52,8 @@ export interface Guide {
 }
 
 export interface GuideChrome {
-  helpsEyebrow: string;
+  /** Label of the question list beside the article (desktop only). */
+  tocLabel: string;
   relatedEyebrow: string;
   werkwijzeLink: string;
   overLink: string;
@@ -63,7 +64,7 @@ export interface GuideChrome {
 
 export const GUIDE_CHROME: Record<GuideLocale, GuideChrome> = {
   nl: {
-    helpsEyebrow: 'Agentic Mindshift',
+    tocLabel: 'Op deze pagina',
     relatedEyebrow: 'Verder lezen',
     werkwijzeLink: 'Hoe een traject verloopt',
     overLink: 'Over Wouter Dijkman',
@@ -72,7 +73,7 @@ export const GUIDE_CHROME: Record<GuideLocale, GuideChrome> = {
     readMore: 'Lees verder',
   },
   en: {
-    helpsEyebrow: 'Agentic Mindshift',
+    tocLabel: 'On this page',
     relatedEyebrow: 'Read on',
     werkwijzeLink: 'How an engagement works',
     overLink: 'About Wouter Dijkman',

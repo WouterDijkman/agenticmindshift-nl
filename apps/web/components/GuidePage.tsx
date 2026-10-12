@@ -74,6 +74,16 @@ const bodyText = {
   margin: 0,
 } as const;
 
+/** Stable anchor for a section heading, e.g. "Wie beoordeelt het rapport?" → "wie-beoordeelt-het-rapport". */
+function anchor(heading: string): string {
+  return heading
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
 function articleLd(slug: GuideSlug, locale: GuideLocale, g: Guide) {
   const url = `${SITE_URL}/${locale}/${slug}`;
   return {
@@ -102,7 +112,7 @@ export default async function GuidePage({ slug, locale }: { slug: GuideSlug; loc
       <JsonLd data={getPersonLd(locale)} />
       <JsonLd data={getBreadcrumbLd(`/${slug}`, g.shortName, locale)} />
 
-      <AnimatedHeroShell bgChar={g.bgChar} eyebrow={g.eyebrow} heading={g.h1} subtext={g.answer} headingMaxWidth="820px">
+      <AnimatedHeroShell bgChar={g.bgChar} eyebrow={g.eyebrow} heading={g.h1} subtext={g.answer} headingMaxWidth="820px" compact>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', alignItems: 'center' }}>
           <Button
             href={INTAKE_URL}
@@ -116,12 +126,15 @@ export default async function GuidePage({ slug, locale }: { slug: GuideSlug; loc
         </div>
       </AnimatedHeroShell>
 
-      <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(56px, 8vw, 96px)' }}>
-        <div className="container-medium">
-          <div style={{ maxWidth: '720px', display: 'flex', flexDirection: 'column', gap: 'clamp(40px, 6vw, 64px)' }}>
+      {/* The article, with its questions listed beside it on wide screens.
+          The H2s are the follow-up questions a reader came with; seeing all
+          of them at once is the fastest way to find the one that is theirs. */}
+      <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(16px, 3vw, 40px) clamp(64px, 9vw, 112px)' }}>
+        <div className="container-medium guide-body">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(40px, 6vw, 64px)' }}>
             {g.sections.map((s) => (
               <div key={s.heading} className="reveal" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                <h2 className="type-h3" style={{ margin: 0, color: 'var(--text-primary)' }}>
+                <h2 id={anchor(s.heading)} className="type-h3" style={{ margin: 0, color: 'var(--text-primary)' }}>
                   {s.heading}
                 </h2>
                 {s.paragraphs?.map((p) => (
@@ -147,6 +160,16 @@ export default async function GuidePage({ slug, locale }: { slug: GuideSlug; loc
               </div>
             ))}
           </div>
+          <nav className="guide-toc" aria-label={c.tocLabel}>
+            <p className="eyebrow" style={{ marginBottom: '16px' }}>{c.tocLabel}</p>
+            <ol>
+              {g.sections.map((s) => (
+                <li key={s.heading}>
+                  <a href={`#${anchor(s.heading)}`}>{s.heading}</a>
+                </li>
+              ))}
+            </ol>
+          </nav>
         </div>
       </section>
 
@@ -164,7 +187,6 @@ export default async function GuidePage({ slug, locale }: { slug: GuideSlug; loc
       >
         <div className="container-medium" style={{ position: 'relative' }}>
           <div className="reveal" style={{ maxWidth: '760px' }}>
-            <p className="eyebrow" style={{ marginBottom: '24px', color: 'var(--text-muted)' }}>{c.helpsEyebrow}</p>
             <h2 className="type-h2" style={{ color: 'var(--text-primary)', marginBottom: '24px' }}>
               {g.helps.heading}
             </h2>
@@ -210,7 +232,7 @@ export default async function GuidePage({ slug, locale }: { slug: GuideSlug; loc
               margin: 0,
               padding: 0,
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))',
               gap: '12px 32px',
             }}
           >
