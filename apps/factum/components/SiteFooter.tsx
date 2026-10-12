@@ -25,7 +25,7 @@ export default async function SiteFooter() {
             <p className="type-small">{t('blurb')}</p>
           </div>
 
-          {/* Three groups of wildly different lengths — six links, two, three.
+          {/* Three groups of wildly different lengths — five links, one, three.
               Wrapping them leaves a hole on a phone, so `.footer-groups` places
               them explicitly below 700px. Order matters there; see globals.css. */}
           <div className="footer-groups">

@@ -87,10 +87,10 @@ export default async function SprintPage({
             {t('disciplines.note')}
           </p>
           {/* What a sprint covers is here; the order it runs in and the
-              contract each finding has to satisfy are on /method. */}
+              contract each finding has to satisfy are on /platform. */}
           <div style={{ marginTop: 18 }}>
-            <Link href="/method" className="link-quiet">
-              {s('links.method')}
+            <Link href="/platform#contract" className="link-quiet">
+              {s('links.platform')}
               <ArrowRight />
             </Link>
           </div>

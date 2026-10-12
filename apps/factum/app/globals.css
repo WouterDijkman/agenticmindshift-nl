@@ -1110,7 +1110,7 @@ p { margin: 0; }
 }
 
 /* `DefinitionList` — a stage row plus a numeral and a labelled second line.
-   Used only by the two reference pages, /method and /limits-of-ai, where every
+   Used by /platform (the output contract) and /limits-of-ai, where every
    row has a consequence attached to it: what happens when a contract field
    cannot be filled, and who does the work the machine will not do. */
 .def-index {
@@ -2711,11 +2711,11 @@ details.disclosure > div { padding-bottom: 24px; }
    ============================================================ */
 
 /* The footer link columns. On a phone this footer is the only route to
-   /method, /limits-of-ai and /contact — they are deliberately kept out of the
+   /limits-of-ai, /privacy and the rest — they are deliberately kept out of the
    header — and each link was a 17px-tall target, which is a coin flip to hit.
    Pad the anchors into rows you can actually tap and drop the flex gap, so the
    column keeps roughly the rhythm it had. */
-/* Sitemap, Reference and Company: six links, two, three. Left to wrap, the two
+/* Sitemap, Reference and Company: five links, one, three. Left to wrap, the two
    short groups cannot fill the row the long one starts, so a phone gets an empty
    quadrant beside Reference and Company pushed down a whole row. Place them
    instead — Sitemap down the left, the two short groups stacked on the right. */

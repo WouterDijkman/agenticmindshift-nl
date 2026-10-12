@@ -12,10 +12,6 @@
       "title": "Volledige dataroomreview in dagen",
       "description": "{disciplines} specialistische rondes over één data room, samengebracht tot één verhaal, met een lopende lijst van wat er ontbreekt."
     },
-    "method": {
-      "title": "Hoe due diligence met AI echt werkt",
-      "description": "De volgorde waarin de modules draaien, het contract waar elke bevinding aan moet voldoen, en wat een reviewer controleert voordat er iets wordt geleverd."
-    },
     "aiLimits": {
       "title": "Wat AI niet kan in due diligence",
       "description": "Vijf dingen die geen enkel model doet in een data room, waarom de menselijke poort verplicht is, en drie vragen voor elke AI-leverancier."
@@ -49,7 +45,6 @@
     "primary": "Hoofdnavigatie",
     "platform": "Platform",
     "sprint": "Diligence Sprint",
-    "method": "De methode",
     "aiLimits": "Grenzen van AI",
     "governance": "Governance",
     "team": "Team",
@@ -231,7 +226,6 @@
       "governance": "Hoe documenten worden behandeld",
       "platform": "Hoe het platform werkt",
       "sprint": "Wat de sprint dekt",
-      "method": "De methode, van begin tot eind",
       "limits": "Wat AI niet kan",
       "intake": "Deel een data room"
     },
@@ -430,6 +424,44 @@
       ],
       "repair": "Claims die falen krijgen één reparatiepoging: opnieuw citeren uit de bron, dan opnieuw beoordelen. Wat dan nog faalt, gaat eruit of wordt gemarkeerd als onbevestigd."
     },
+    "contract": {
+      "title": "Het outputcontract, veld voor veld",
+      "lead": "Zes velden. Een bevinding die ze niet alle zes kan invullen, wordt niet als bevinding geleverd.",
+      "failLabel": "Als het veld leeg blijft",
+      "items": [
+        {
+          "title": "Module",
+          "body": "Welke van de {modules} hem heeft geproduceerd. Vooraf afgebakend, dus de vraag stond op papier voordat de data room openging.",
+          "fail": "Er is geen vrije-tekstbaan. Geen module, geen bevinding."
+        },
+        {
+          "title": "Bevinding",
+          "body": "Eén claim, in één zin. Samengestelde claims worden gesplitst, want een zin met twee claims erin valt maar half te controleren.",
+          "fail": "Te vaag om te controleren telt hetzelfde als onjuist."
+        },
+        {
+          "title": "Letterlijk citaat",
+          "body": "De onderbouwende passage, woord voor woord geciteerd. Niet samengevat, niet opgepoetst, niet ingekort om te passen.",
+          "fail": "Een parafrase die als citaat wordt gepresenteerd zakt voor de tekstcontrole en gaat terug."
+        },
+        {
+          "title": "Ernst",
+          "body": "Het gevolg, afgezet tegen de dealwaarde, op vijf niveaus. De module die de bevinding schreef, kent hem toe.",
+          "fail": "Een bevinding zonder weging leest als elke andere regel op de pagina."
+        },
+        {
+          "title": "Brondocument en passage",
+          "body": "Bestandsnaam en pagina, zodat u het zelf kunt openen. Dit is het veld dat een bevinding bespreekbaar maakt in plaats van gezaghebbend.",
+          "fail": "Een verwijzing die niet naar een echte passage leidt is een harde blokkade, geen waarschuwing."
+        },
+        {
+          "title": "Menselijke controle",
+          "body": "Uw reviewer keurt elke bevinding goed of af; een afkeuring vraagt een reden. Vóór export moeten de samenvattingen per module, de tien grootste risico’s en elke opschortende voorwaarde zijn afgetekend.",
+          "fail": "Geen aftekening, geen klantexport. Wat niet is beoordeeld, gaat mee met die vermelding."
+        }
+      ],
+      "note": "Een claim die zakt voor een controle krijgt één herstelpoging: opnieuw citeren uit de bron, dan opnieuw beoordelen. Wat dan nog zakt wordt geschrapt of geleverd met het label onbevestigd. Onbevestigd is een legitieme uitkomst. Een stilletjes geschrapte claim niet."
+    },
     "blocks": {
       "title": "{blocks} condities die automatische goedkeuring stoppen",
       "lead": "Een afgekeurd concept krijgt één nieuwe poging. Deze condities beëindigen de lus en leggen het concept niet goedgekeurd aan uw reviewer voor.",
@@ -467,6 +499,18 @@
           "body": "De reviewer-agent scoorde het concept onder de drempel."
         }
       ]
+    },
+    "review": {
+      "title": "Wat uw reviewer doet",
+      "lead": "In de reviewomgeving, voordat er iets wordt geëxporteerd.",
+      "items": [
+        "Opent de geciteerde passage en leest die naast de claim die erop is gebouwd.",
+        "Bepaalt de materialiteit: welke bevindingen de prijs veranderen, of dat u überhaupt tekent.",
+        "Weegt tegenstrijdigheden tussen modules. Twee disciplines die één feit anders lezen, is zelf een bevinding.",
+        "Ziet wat de pijplijn heeft tegengehouden, en beslist erover.",
+        "Tekent de samenvattingen per module, de tien grootste risico’s en de opschortende voorwaarden af. Pas dan kan de export de deur uit."
+      ],
+      "note": "{blocks} harde blokkades beëindigen de automatische lus vroegtijdig en leggen het concept niet goedgekeurd aan uw reviewer voor."
     },
     "dimensions": {
       "title": "Waar de engine de data room voor leest",
@@ -908,122 +952,6 @@
       "note": "Vraag het op schrift. Onder DORA moet een fonds boven de drempel elke ICT-derde partij benoemen in een register dat bij de toezichthouder wordt ingediend — ons inbegrepen."
     }
   },
-  "method": {
-    "header": {
-      "title": "De methode, van begin tot eind",
-      "lead": "De lange versie. Wat in welke volgorde draait, het contract waar elke bevinding aan moet voldoen, en wat een mens controleert voordat er iets bij u terechtkomt.",
-      "cta": "Deel een data room"
-    },
-    "waves": {
-      "title": "{modules} modules, {waves} golven, één volgorde",
-      "lead": "Niets draait te vroeg. Een module start zodra het werk waar hij van afhangt klaar is. Daarom heeft de run een vorm en geen wachtrij.",
-      "steps": [
-        {
-          "title": "Golf één — de onafhankelijke passages",
-          "body": "{w1} modules openen tegelijk. Commercieel, HR, operationeel en AI gaan parallel de data room in. Geen van hen heeft het antwoord van een andere module nodig om te beginnen."
-        },
-        {
-          "title": "Golf twee — juridisch",
-          "body": "Leest HR en commercieel voordat het redeneert: een arbeidsrechtelijke blootstelling of een contractuele claim hangt meestal af van feiten die die twee al hebben vastgesteld. Het draait in een eigen golf, zodat fiscaal in golf drie de afgeronde output ook echt kan lezen in plaats van een belofte die de run niet kon waarmaken."
-        },
-        {
-          "title": "Golf drie — financieel",
-          "body": "Leest golf één en juridisch voordat het redeneert. Een resultaatcijfer verandert zodra een contractuele claim of een arbeidsrechtelijke blootstelling op tafel ligt, dus financieel wacht op allebei in plaats van een getal te noemen dat het weer zou moeten intrekken."
-        },
-        {
-          "title": "Golf vier — fiscaal",
-          "body": "Leest financieel en juridisch voordat het redeneert: een fiscale positie is een gevolg van de structuur die de financiële passage net heeft beschreven, en overlapt vaak met wat juridisch in die structuur vond."
-        },
-        {
-          "title": "Golf vijf — deal economics",
-          "body": "Leest alles uit golf één tot en met vier en stelt de vraag wat de deal werkelijk oplevert, niet wat hij waard is."
-        },
-        {
-          "title": "Golf zes — waardering",
-          "body": "De laatste golf die nog iets draagt. Leest deal economics bovenop alles daarvoor, en herrekent de prijs dóór de bevindingen heen in plaats van eromheen."
-        }
-      ],
-      "note": "Alle zes golven samen zijn de due diligence zelf. Het dashboard en het rapport zijn opgebouwd uit wat ze opleveren."
-    },
-    "contract": {
-      "title": "Het outputcontract, veld voor veld",
-      "lead": "Zes velden. Een bevinding die ze niet alle zes kan invullen, wordt niet als bevinding geleverd.",
-      "failLabel": "Als het veld leeg blijft",
-      "items": [
-        {
-          "title": "Module",
-          "body": "Welke van de {modules} hem heeft geproduceerd. Vooraf afgebakend, dus de vraag stond op papier voordat de data room openging, niet geïmproviseerd naar aanleiding van wat er toevallig in bleek te zitten.",
-          "fail": "Er is geen vrije-tekstbaan. Geen module, geen bevinding."
-        },
-        {
-          "title": "Bevinding",
-          "body": "Eén claim, in één zin. Samengestelde claims worden gesplitst, want een zin met twee claims erin valt maar half te controleren.",
-          "fail": "Te vaag om te controleren telt hetzelfde als onjuist."
-        },
-        {
-          "title": "Letterlijk citaat",
-          "body": "De onderbouwende passage, woord voor woord geciteerd. Niet samengevat, niet opgepoetst, niet ingekort om te passen.",
-          "fail": "Een parafrase die als citaat wordt gepresenteerd zakt voor de tekstcontrole en gaat terug."
-        },
-        {
-          "title": "Ernst",
-          "body": "Het gevolg voor de koper, afgezet tegen de dealwaarde, op vijf niveaus. De module die de bevinding schreef kent hem toe, en de reviewer kan hem verzetten.",
-          "fail": "Een bevinding zonder weging leest als elke andere regel op de pagina."
-        },
-        {
-          "title": "Brondocument en passage",
-          "body": "Bestandsnaam en pagina, zodat u het zelf kunt openen. Dit is het veld dat een bevinding bespreekbaar maakt in plaats van gezaghebbend.",
-          "fail": "Een verwijzing die niet naar een echte passage leidt is een harde blokkade, geen waarschuwing."
-        },
-        {
-          "title": "Menselijke controle",
-          "body": "De persoon die hem heeft goedgekeurd, met naam, vóór levering. Elke bevinding, elk mandaat.",
-          "fail": "Er is geen snelle route voor een drukke week."
-        }
-      ],
-      "note": "Een claim die zakt voor een controle krijgt één herstelpoging: opnieuw citeren uit de bron, dan opnieuw beoordelen. Wat dan nog zakt wordt geschrapt of geleverd met het label onbevestigd. Onbevestigd is een legitieme uitkomst. Een stilletjes geschrapte claim niet."
-    },
-    "trail": {
-      "title": "Wat er wordt vastgelegd, en in welke volgorde",
-      "lead": "Een bevinding is een keten. Elke schakel wordt vastgelegd, en dat is de enige reden dat een vraag over drie maanden nog een antwoord heeft.",
-      "steps": [
-        "Het document komt binnen en wordt geïndexeerd. Vertrouwelijke financiële en persoonlijke waarden worden gepseudonimiseerd voordat enig model ze ziet.",
-        "De module haalt de passages op die zijn eigen vraag beantwoorden, en alleen die.",
-        "Het concept wordt geschreven tegen het contract hierboven. Een claim zonder passage erachter wordt niet geschreven.",
-        "De critic-agent bekritiseert het concept en stuurt het terug. Twee pogingen, daarna stopt de lus en neemt een mens het over.",
-        "Vier groundingchecks op volgorde: de verwijzingsindex, het citaat zelf, of de claim volgt uit de passage, en een tweede oordeel dat faalt gesloten bij twijfel.",
-        "Een persoon met naam beoordeelt, verzoent en keurt goed. Pseudonimisering wordt hier teruggedraaid en nergens eerder.",
-        "U krijgt de bevinding met de documentverwijzing eraan vast, en die blijft daarna te openen."
-      ],
-      "note": "Het uitgewerkte voorbeeld — een clausule op pagina 14 van een fictieve raamovereenkomst, en de bevinding die eruit volgde — staat op de homepage.",
-      "link": "Bekijk het uitgewerkte voorbeeld"
-    },
-    "gate": {
-      "title": "Wat de reviewer werkelijk doet",
-      "lead": "“Human in the loop” is een uitdrukking. Dit is de volgorde erachter.",
-      "items": [
-        "Opent het geciteerde document en leest de passage naast de claim die erop is gebouwd.",
-        "Bepaalt materialiteit — welke bevindingen veranderen wat u betaalt, of óf u tekent.",
-        "Lost conflicten tussen modules op. Twee disciplines die één feit anders lezen is zelf een bevinding, geen fout om glad te strijken.",
-        "Markeert wat niet bevestigd kon worden, en waarom.",
-        "Draait de pseudonimisering terug in de eindoutput, en alleen daar.",
-        "Tekent. Eén persoon met naam, aanspreekbaar op het document dat u ontvangt."
-      ],
-      "note": "{blocks} harde blokkades beëindigen de geautomatiseerde lus voortijdig en sturen het concept naar die persoon, ongeacht de score.",
-      "link": "Hoe documenten worden behandeld"
-    },
-    "stops": {
-      "title": "Waar de methode ophoudt",
-      "lead": "Alles hierboven is werk waarop een machine aanspreekbaar is. Een flink deel van due diligence is dat niet, en doen alsof van wel is hoe dit soort systemen de zaal verliest.",
-      "link": "Wat AI niet kan in due diligence"
-    },
-    "cta": {
-      "title": "Zie de methode draaien op uw eigen data room",
-      "body": "Deel een data room onder NDA. Wij draaien elke golf en nemen u mee door de bevindingen op een call, bron voor bron.",
-      "button": "Deel een data room",
-      "note": "Eerst een NDA, dezelfde dag verstuurd. Een deal die u vorig jaar sloot werkt ook."
-    }
-  },
   "aiLimits": {
     "header": {
       "title": "Wat AI niet kan in due diligence",
@@ -1109,7 +1037,7 @@
           "body": "Stilte is het verkeerde antwoord. Een ontbrekend document hoort een regel op een lijst op te leveren, niet de afwezigheid van een bevinding."
         }
       ],
-      "link": "De methode, van begin tot eind"
+      "link": "Wat uw reviewer controleert"
     },
     "cta": {
       "title": "Stel ons de drie vragen",

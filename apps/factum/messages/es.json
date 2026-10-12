@@ -12,10 +12,6 @@
       "title": "Revisión completa del data room en días",
       "description": "{disciplines} pasadas especializadas sobre un data room, reconciliadas en una sola narrativa, con seguimiento de lagunas en vivo."
     },
-    "method": {
-      "title": "Cómo funciona la due diligence con IA",
-      "description": "El orden en que se ejecutan los módulos, el contrato que debe cumplir cada hallazgo y lo que revisa una persona con nombre antes de entregar nada."
-    },
     "aiLimits": {
       "title": "Límites de la IA en due diligence",
       "description": "Cinco cosas que ningún modelo hace en un data room, por qué la revisión humana es obligatoria y tres preguntas para cualquier proveedor de IA."
@@ -49,7 +45,6 @@
     "primary": "Principal",
     "platform": "Plataforma",
     "sprint": "Diligence Sprint",
-    "method": "El método",
     "aiLimits": "Límites de la IA",
     "governance": "Gobernanza",
     "team": "Equipo",
@@ -231,7 +226,6 @@
       "governance": "Cómo se tratan los documentos",
       "platform": "Cómo funciona la plataforma",
       "sprint": "Qué cubre el sprint",
-      "method": "El método, de principio a fin",
       "limits": "Lo que la IA no puede hacer",
       "intake": "Comparta un data room"
     },
@@ -430,6 +424,44 @@
       ],
       "repair": "Las afirmaciones que fallan reciben un intento de reparación: volver a citar desde la fuente y volver a juzgar. Lo que sigue fallando se elimina o se marca como no confirmado."
     },
+    "contract": {
+      "title": "El contrato de salida, campo a campo",
+      "lead": "Seis campos. Un hallazgo que no puede rellenar los seis no se entrega como hallazgo.",
+      "failLabel": "Cuando el campo queda vacío",
+      "items": [
+        {
+          "title": "Módulo",
+          "body": "Cuál de los {modules} lo produjo. Delimitado de antemano, así que la pregunta estaba escrita antes de abrir el data room.",
+          "fail": "No hay carril de texto libre. Sin módulo, no hay hallazgo."
+        },
+        {
+          "title": "Hallazgo",
+          "body": "Una afirmación, en una frase. Las afirmaciones compuestas se separan, porque una frase con dos solo se puede comprobar a medias.",
+          "fail": "Demasiado vago para comprobarlo cuenta como incorrecto."
+        },
+        {
+          "title": "Cita literal",
+          "body": "El pasaje que lo sostiene, citado palabra por palabra. Ni resumido, ni pulido, ni recortado para que quepa.",
+          "fail": "Una paráfrasis presentada como cita no pasa la comprobación textual y vuelve atrás."
+        },
+        {
+          "title": "Gravedad",
+          "body": "La consecuencia, medida contra el valor de la operación, en cinco niveles. La asigna el módulo que escribió el hallazgo.",
+          "fail": "Un hallazgo sin ponderar se lee igual que cualquier otra línea de la página."
+        },
+        {
+          "title": "Documento y pasaje de origen",
+          "body": "Nombre de archivo y página, para que pueda abrirlo usted mismo. Es el campo que hace que un hallazgo sea discutible en lugar de autoritario.",
+          "fail": "Una referencia que no lleva a un pasaje real es un bloqueo duro, no un aviso."
+        },
+        {
+          "title": "Revisión humana",
+          "body": "Su revisor aprueba o rechaza cada hallazgo; un rechazo exige un motivo. Antes de exportar deben estar aprobados los resúmenes de cada módulo, los diez riesgos principales y cada condición suspensiva.",
+          "fail": "Sin aprobación, no hay exportación para el cliente. Lo no revisado va incluido con esa mención."
+        }
+      ],
+      "note": "Una afirmación que no pasa una comprobación tiene un intento de reparación: volver a citar desde la fuente y volver a juzgar. Lo que sigue fallando se elimina o se entrega marcado como no confirmado. No confirmado es un resultado legítimo. Una afirmación descartada en silencio no lo es."
+    },
     "blocks": {
       "title": "{blocks} bloqueos duros",
       "lead": "Un borrador rechazado tiene un reintento. Estas condiciones cierran el ciclo y llevan el borrador a su revisor, sin aprobar.",
@@ -467,6 +499,18 @@
           "body": "El agente revisor puntuó el borrador por debajo del umbral."
         }
       ]
+    },
+    "review": {
+      "title": "Lo que hace su revisor",
+      "lead": "En el espacio de revisión, antes de exportar nada.",
+      "items": [
+        "Abre el pasaje citado y lo lee frente a la afirmación construida sobre él.",
+        "Decide la materialidad: qué hallazgos cambian el precio, o si firmar en absoluto.",
+        "Sopesa los conflictos entre módulos. Que dos disciplinas lean un mismo hecho de forma distinta es en sí un hallazgo.",
+        "Ve lo que el pipeline retuvo y decide sobre ello.",
+        "Aprueba los resúmenes de cada módulo, los diez riesgos principales y las condiciones suspensivas. Solo entonces puede salir la exportación."
+      ],
+      "note": "{blocks} bloqueos duros cortan antes el ciclo automático y llevan el borrador a su revisor, sin aprobar."
     },
     "dimensions": {
       "title": "Para qué lee el motor el data room",
@@ -908,122 +952,6 @@
       "note": "Pídalo por escrito. Bajo DORA, un fondo por encima del umbral debe nombrar a cada tercero TIC en un registro que se presenta ante su supervisor — nosotros incluidos."
     }
   },
-  "method": {
-    "header": {
-      "title": "El método, de principio a fin",
-      "lead": "La versión larga. Qué se ejecuta y en qué orden, el contrato que debe cumplir cada hallazgo y lo que revisa una persona antes de que algo llegue a sus manos.",
-      "cta": "Comparta un data room"
-    },
-    "waves": {
-      "title": "{modules} módulos, {waves} oleadas, un orden",
-      "lead": "Nada se ejecuta antes de tiempo. Un módulo arranca cuando termina el trabajo del que depende. Por eso la ejecución tiene forma y no cola.",
-      "steps": [
-        {
-          "title": "Oleada uno — las lecturas independientes",
-          "body": "{w1} módulos abren a la vez. Comercial, RR. HH., operaciones e IA entran en paralelo al data room. Ninguno necesita la respuesta de otro módulo para empezar."
-        },
-        {
-          "title": "Oleada dos — legal",
-          "body": "Lee RR. HH. y comercial antes de razonar: una exposición laboral o una reclamación contractual suele depender de hechos que esas dos lecturas ya han establecido. Se ejecuta en su propia oleada, para que fiscal, en la oleada tres, pueda leer de verdad su resultado terminado, no una promesa que la ejecución no podía cumplir."
-        },
-        {
-          "title": "Oleada tres — financiero",
-          "body": "Lee la oleada uno y legal antes de razonar. Una cifra de resultados cambia en cuanto hay sobre la mesa una reclamación contractual o una exposición laboral, así que financiero espera a ambas en lugar de dar un número que tendría que retirar."
-        },
-        {
-          "title": "Oleada cuatro — fiscal",
-          "body": "Lee financiero y legal antes de razonar: una posición fiscal es consecuencia de la estructura que acaba de describir la lectura financiera, y a menudo se solapa con lo que legal encontró en ella."
-        },
-        {
-          "title": "Oleada cinco — deal economics",
-          "body": "Lee todo lo de las oleadas uno a cuatro y pregunta qué rinde realmente la operación, no cuánto vale."
-        },
-        {
-          "title": "Oleada seis — valoración",
-          "body": "La última oleada que aporta algo. Lee deal economics encima de todo lo anterior, y recalcula el precio atravesando los hallazgos en lugar de rodearlos."
-        }
-      ],
-      "note": "Las seis oleadas juntas son la due diligence. El panel y el informe se construyen con lo que entregan."
-    },
-    "contract": {
-      "title": "El contrato de salida, campo a campo",
-      "lead": "Seis campos. Un hallazgo que no puede rellenar los seis no se entrega como hallazgo.",
-      "failLabel": "Cuando el campo queda vacío",
-      "items": [
-        {
-          "title": "Módulo",
-          "body": "Cuál de los {modules} lo produjo. Delimitado de antemano, así que la pregunta estaba escrita antes de abrir el data room, no improvisada con lo que hubiera dentro.",
-          "fail": "No hay carril de texto libre. Sin módulo, no hay hallazgo."
-        },
-        {
-          "title": "Hallazgo",
-          "body": "Una afirmación, en una frase. Las afirmaciones compuestas se separan, porque una frase con dos solo se puede comprobar a medias.",
-          "fail": "Demasiado vago para comprobarlo cuenta como incorrecto."
-        },
-        {
-          "title": "Cita literal",
-          "body": "El pasaje que lo sostiene, citado palabra por palabra. Ni resumido, ni pulido, ni recortado para que quepa.",
-          "fail": "Una paráfrasis presentada como cita no pasa la comprobación textual y vuelve atrás."
-        },
-        {
-          "title": "Gravedad",
-          "body": "La consecuencia para el comprador, medida contra el valor de la operación, en cinco niveles. La asigna el módulo que escribió el hallazgo, y el revisor puede moverla.",
-          "fail": "Un hallazgo sin ponderar se lee igual que cualquier otra línea de la página."
-        },
-        {
-          "title": "Documento y pasaje de origen",
-          "body": "Nombre de archivo y página, para que pueda abrirlo usted mismo. Es el campo que hace que un hallazgo sea discutible en lugar de autoritario.",
-          "fail": "Una referencia que no lleva a un pasaje real es un bloqueo duro, no un aviso."
-        },
-        {
-          "title": "Revisión humana",
-          "body": "La persona que lo aprobó, con nombre, antes de entregarlo. Cada hallazgo, cada mandato.",
-          "fail": "No hay vía rápida para una semana cargada."
-        }
-      ],
-      "note": "Una afirmación que no pasa una comprobación tiene un intento de reparación: volver a citar desde la fuente y volver a juzgar. Lo que sigue fallando se elimina o se entrega marcado como no confirmado. No confirmado es un resultado legítimo. Una afirmación descartada en silencio no lo es."
-    },
-    "trail": {
-      "title": "Qué queda registrado, y en qué orden",
-      "lead": "Un hallazgo es una cadena. Cada eslabón queda registrado, y esa es la única razón por la que una pregunta dentro de tres meses tiene respuesta.",
-      "steps": [
-        "El documento entra y se indexa. Los valores financieros y personales confidenciales se seudonimizan antes de que los vea ningún modelo.",
-        "El módulo recupera los pasajes que responden a su propia pregunta, y solo esos.",
-        "El borrador se escribe contra el contrato anterior. Una afirmación sin un pasaje detrás no llega a escribirse.",
-        "Una pasada de revisión critica el borrador y lo devuelve. Dos reintentos y el bucle se detiene: lo toma una persona.",
-        "Cuatro comprobaciones de fundamento en secuencia: el índice de cita, la cita en sí, si la afirmación se deduce del pasaje, y una segunda opinión que bloquea ante la duda.",
-        "Una persona con nombre revisa, concilia y aprueba. La seudonimización se revierte aquí y en ningún momento anterior.",
-        "Usted recibe el hallazgo con su referencia documental adjunta, y sigue siendo abrible después."
-      ],
-      "note": "El ejemplo trabajado — una cláusula en la página 14 de un contrato marco ficticio y el hallazgo que produjo — está en la página de inicio.",
-      "link": "Ver el ejemplo trabajado"
-    },
-    "gate": {
-      "title": "Lo que hace realmente la persona que revisa",
-      "lead": "“Human in the loop” es una frase hecha. Esta es la secuencia que hay detrás.",
-      "items": [
-        "Abre el documento citado y lee el pasaje frente a la afirmación construida sobre él.",
-        "Decide la materialidad: qué hallazgos cambian lo que usted paga, o si firma.",
-        "Resuelve los conflictos entre módulos. Que dos disciplinas lean un mismo hecho de forma distinta es en sí un hallazgo, no un error que limar.",
-        "Marca lo que no se pudo confirmar, y explica por qué.",
-        "Revierte la seudonimización en la salida final, y solo ahí.",
-        "Firma. Una persona con nombre, responsable del documento que usted recibe."
-      ],
-      "note": "{blocks} bloqueos duros terminan el bucle automático antes de tiempo y envían el borrador a esa persona, sea cual sea la puntuación.",
-      "link": "Cómo se tratan los documentos"
-    },
-    "stops": {
-      "title": "Dónde se detiene el método",
-      "lead": "Todo lo anterior es trabajo del que se puede responsabilizar a una máquina. Buena parte de la due diligence no lo es, y fingir lo contrario es como estos sistemas pierden la sala.",
-      "link": "Lo que la IA no puede hacer en due diligence"
-    },
-    "cta": {
-      "title": "Vea el método correr sobre su propio data room",
-      "body": "Comparta un data room bajo NDA. Ejecutamos cada oleada y le llevamos por los hallazgos en una llamada, fuente por fuente.",
-      "button": "Comparta un data room",
-      "note": "Primero el NDA, enviado el mismo día. Una operación que cerró el año pasado también sirve."
-    }
-  },
   "aiLimits": {
     "header": {
       "title": "Lo que la IA no puede hacer en due diligence",
@@ -1109,7 +1037,7 @@
           "body": "El silencio es la respuesta equivocada. Un documento que falta debería producir una línea en una lista, no la ausencia de un hallazgo."
         }
       ],
-      "link": "El método, de principio a fin"
+      "link": "Lo que comprueba su revisor"
     },
     "cta": {
       "title": "Háganos las tres preguntas",

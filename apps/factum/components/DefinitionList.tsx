@@ -5,8 +5,8 @@ type Item = { title: string; body: string; note: string };
 /**
  * A numbered list where every row carries a second, labelled line.
  *
- * The two reference pages both need the same object and nothing else on the
- * site did: /method states the five fields of the output contract and, for
+ * Two pages need the same object and nothing else on the site does: /platform
+ * states the six fields of the output contract and, for
  * each, what happens when it cannot be filled; /limits-of-ai states five things
  * the machine does not do and, for each, who does it instead. In both cases the
  * second line is the point — a list of fields is a schema dump, a list of

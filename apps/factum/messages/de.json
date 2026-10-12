@@ -12,10 +12,6 @@
       "title": "Vollständige Datenraum-Prüfung in Tagen",
       "description": "{disciplines} Fachdurchgänge über einen Data Room, zu einer Darstellung zusammengeführt, mit einer laufenden Liste dessen, was fehlt."
     },
-    "method": {
-      "title": "Wie KI-Due-Diligence wirklich läuft",
-      "description": "Die Reihenfolge der Module, der Vertrag, den jede Feststellung erfüllen muss, und was ein namentlich benannter Prüfer kontrolliert, bevor etwas ausgeliefert wird."
-    },
     "aiLimits": {
       "title": "Was KI in der Due Diligence nicht kann",
       "description": "Fünf Dinge, die kein Modell im Data Room leistet, warum die menschliche Freigabe Pflicht ist, und drei Fragen an jeden KI-Anbieter."
@@ -49,7 +45,6 @@
     "primary": "Hauptnavigation",
     "platform": "Plattform",
     "sprint": "Diligence Sprint",
-    "method": "Die Methode",
     "aiLimits": "Grenzen von KI",
     "governance": "Governance",
     "team": "Team",
@@ -231,7 +226,6 @@
       "governance": "Wie Dokumente behandelt werden",
       "platform": "Wie die Plattform arbeitet",
       "sprint": "Was der Sprint abdeckt",
-      "method": "Die Methode, von Anfang bis Ende",
       "limits": "Was KI nicht kann",
       "intake": "Data Room teilen"
     },
@@ -430,6 +424,44 @@
       ],
       "repair": "Aussagen, die durchfallen, bekommen einen Reparaturversuch: neu aus der Quelle zitieren, dann neu bewerten. Was dann noch durchfällt, entfällt oder wird als unbestätigt markiert."
     },
+    "contract": {
+      "title": "Der Ausgabevertrag, Feld für Feld",
+      "lead": "Sechs Felder. Eine Feststellung, die nicht alle sechs füllen kann, wird nicht als Feststellung geliefert.",
+      "failLabel": "Wenn das Feld leer bleibt",
+      "items": [
+        {
+          "title": "Modul",
+          "body": "Welches der {modules} sie erzeugt hat. Vorab abgegrenzt, die Frage stand also fest, bevor der Data Room geöffnet wurde.",
+          "fail": "Es gibt keine Freitextspur. Kein Modul, keine Feststellung."
+        },
+        {
+          "title": "Feststellung",
+          "body": "Eine Aussage, in einem Satz. Zusammengesetzte Aussagen werden getrennt, denn ein Satz mit zwei Aussagen lässt sich nur halb prüfen.",
+          "fail": "Zu vage zum Prüfen zählt wie falsch."
+        },
+        {
+          "title": "Wörtliches Zitat",
+          "body": "Die belegende Passage, Wort für Wort zitiert. Nicht zusammengefasst, nicht geglättet, nicht passend gekürzt.",
+          "fail": "Eine als Zitat ausgegebene Paraphrase fällt durch die Textprüfung und geht zurück."
+        },
+        {
+          "title": "Schweregrad",
+          "body": "Die Folge, gemessen am Transaktionswert, auf fünf Stufen. Das Modul, das die Feststellung geschrieben hat, vergibt ihn.",
+          "fail": "Eine Feststellung ohne Gewichtung liest sich wie jede andere Zeile auf der Seite."
+        },
+        {
+          "title": "Quelldokument und Passage",
+          "body": "Dateiname und Seite, damit Sie es selbst öffnen können. Dieses Feld macht eine Feststellung diskutierbar statt autoritativ.",
+          "fail": "Ein Verweis, der auf keine echte Passage führt, ist eine harte Sperre, keine Warnung."
+        },
+        {
+          "title": "Menschliche Prüfung",
+          "body": "Ihr Prüfer gibt jede Feststellung frei oder lehnt sie ab; eine Ablehnung braucht eine Begründung. Vor dem Export müssen die Modulzusammenfassungen, die zehn größten Risiken und jede aufschiebende Bedingung freigegeben sein.",
+          "fail": "Keine Freigabe, kein Kundenexport. Was nicht geprüft wurde, geht mit diesem Vermerk mit."
+        }
+      ],
+      "note": "Eine Aussage, die durch eine Prüfung fällt, bekommt einen Reparaturversuch: neu aus der Quelle zitieren, dann neu bewerten. Was dann noch fällt, wird gestrichen oder als unbestätigt gekennzeichnet ausgeliefert. Unbestätigt ist ein legitimes Ergebnis. Eine still verschwundene Aussage nicht."
+    },
     "blocks": {
       "title": "{blocks} Bedingungen, die die Auto-Freigabe stoppen",
       "lead": "Ein abgelehnter Entwurf bekommt einen weiteren Versuch. Diese Bedingungen beenden die Schleife und legen den Entwurf Ihrem Prüfer vor, nicht freigegeben.",
@@ -467,6 +499,18 @@
           "body": "Der Critic-Agent bewertete den Entwurf unter dem Schwellenwert."
         }
       ]
+    },
+    "review": {
+      "title": "Was Ihr Prüfer tut",
+      "lead": "Im Prüfbereich der Plattform, bevor etwas exportiert wird.",
+      "items": [
+        "Öffnet die zitierte Passage und liest sie gegen die Aussage, die darauf beruht.",
+        "Entscheidet über Wesentlichkeit: welche Feststellungen den Preis ändern, oder ob Sie überhaupt unterschreiben.",
+        "Wägt Widersprüche zwischen Modulen ab. Wenn zwei Disziplinen einen Sachverhalt unterschiedlich lesen, ist das selbst eine Feststellung.",
+        "Sieht, was die Pipeline zurückgehalten hat, und entscheidet darüber.",
+        "Gibt die Modulzusammenfassungen, die zehn größten Risiken und die aufschiebenden Bedingungen frei. Erst dann kann der Export hinaus."
+      ],
+      "note": "{blocks} harte Blockaden beenden die automatische Schleife vorzeitig und legen den Entwurf Ihrem Prüfer vor, nicht freigegeben."
     },
     "dimensions": {
       "title": "Wofür die Engine den Data Room liest",
@@ -908,122 +952,6 @@
       "note": "Verlangen Sie es schriftlich. Nach DORA muss ein Fonds oberhalb der Schwelle jeden IKT-Drittanbieter in einem Register benennen, das bei der Aufsicht eingereicht wird — uns eingeschlossen."
     }
   },
-  "method": {
-    "header": {
-      "title": "Die Methode, von Anfang bis Ende",
-      "lead": "Die lange Fassung. Was in welcher Reihenfolge läuft, der Vertrag, den jede Feststellung erfüllen muss, und was ein Mensch prüft, bevor irgendetwas bei Ihnen ankommt.",
-      "cta": "Data Room teilen"
-    },
-    "waves": {
-      "title": "{modules} Module, {waves} Wellen, eine Reihenfolge",
-      "lead": "Nichts läuft zu früh. Ein Modul startet, wenn die Arbeit, von der es abhängt, fertig ist. Deshalb hat der Lauf eine Form und keine Warteschlange.",
-      "steps": [
-        {
-          "title": "Welle eins — die unabhängigen Durchgänge",
-          "body": "{w1} Module öffnen im selben Moment. Commercial, HR, Operations und AI gehen parallel in den Data Room. Keines braucht die Antwort eines anderen Moduls, um anzufangen."
-        },
-        {
-          "title": "Welle zwei — Recht",
-          "body": "Liest HR und Commercial, bevor es argumentiert: ein arbeitsrechtliches Risiko oder ein Vertragsanspruch hängt meist an Tatsachen, die diese beiden Durchgänge schon festgestellt haben. Es läuft in einer eigenen Welle, damit Steuern in Welle drei die fertige Ausgabe tatsächlich lesen kann statt eines Versprechens, das der Lauf nicht halten konnte."
-        },
-        {
-          "title": "Welle drei — Finanzen",
-          "body": "Liest Welle eins und Recht, bevor es argumentiert. Eine Ergebniszahl ändert sich, sobald ein Vertragsanspruch oder ein arbeitsrechtliches Risiko auf dem Tisch liegt, also wartet Financial auf beides, statt eine Zahl zu nennen, die es zurücknehmen müsste."
-        },
-        {
-          "title": "Welle vier — Steuern",
-          "body": "Liest Financial und Recht, bevor es argumentiert: eine Steuerposition ist die Folge der Struktur, die der Financial-Durchgang gerade beschrieben hat, und überschneidet sich oft mit dem, was Recht in dieser Struktur fand."
-        },
-        {
-          "title": "Welle fünf — Deal Economics",
-          "body": "Liest alles aus Welle eins bis vier und stellt die Frage, was der Deal tatsächlich einbringt, nicht was er wert ist."
-        },
-        {
-          "title": "Welle sechs — Bewertung",
-          "body": "Die letzte Welle, die noch etwas trägt. Liest Deal Economics obendrauf auf alles davor, und rechnet den Preis durch die Feststellungen hindurch statt an ihnen vorbei."
-        }
-      ],
-      "note": "Alle sechs Wellen zusammen sind die Due Diligence selbst. Das Dashboard und der Bericht entstehen aus dem, was sie liefern."
-    },
-    "contract": {
-      "title": "Der Ausgabevertrag, Feld für Feld",
-      "lead": "Sechs Felder. Eine Feststellung, die nicht alle sechs füllen kann, wird nicht als Feststellung geliefert.",
-      "failLabel": "Wenn das Feld leer bleibt",
-      "items": [
-        {
-          "title": "Modul",
-          "body": "Welches der {modules} sie erzeugt hat. Vorab abgegrenzt, die Frage stand also fest, bevor der Data Room geöffnet wurde — nicht improvisiert aus dem, was zufällig darin lag.",
-          "fail": "Es gibt keine Freitextspur. Kein Modul, keine Feststellung."
-        },
-        {
-          "title": "Feststellung",
-          "body": "Eine Aussage, in einem Satz. Zusammengesetzte Aussagen werden getrennt, denn ein Satz mit zwei Aussagen lässt sich nur halb prüfen.",
-          "fail": "Zu vage zum Prüfen zählt wie falsch."
-        },
-        {
-          "title": "Wörtliches Zitat",
-          "body": "Die belegende Passage, Wort für Wort zitiert. Nicht zusammengefasst, nicht geglättet, nicht passend gekürzt.",
-          "fail": "Eine als Zitat ausgegebene Paraphrase fällt durch die Textprüfung und geht zurück."
-        },
-        {
-          "title": "Schweregrad",
-          "body": "Die Folge für den Käufer, gemessen am Transaktionswert, auf fünf Stufen. Das Modul, das die Feststellung geschrieben hat, vergibt ihn, und der Prüfer kann ihn verschieben.",
-          "fail": "Eine Feststellung ohne Gewichtung liest sich wie jede andere Zeile auf der Seite."
-        },
-        {
-          "title": "Quelldokument und Passage",
-          "body": "Dateiname und Seite, damit Sie es selbst öffnen können. Dieses Feld macht eine Feststellung diskutierbar statt autoritativ.",
-          "fail": "Ein Verweis, der auf keine echte Passage führt, ist eine harte Sperre, keine Warnung."
-        },
-        {
-          "title": "Menschliche Prüfung",
-          "body": "Die Person, die sie freigegeben hat, namentlich, vor der Auslieferung. Jede Feststellung, jedes Mandat.",
-          "fail": "Es gibt keine Überholspur für eine volle Woche."
-        }
-      ],
-      "note": "Eine Aussage, die durch eine Prüfung fällt, bekommt einen Reparaturversuch: neu aus der Quelle zitieren, dann neu bewerten. Was dann noch fällt, wird gestrichen oder als unbestätigt gekennzeichnet ausgeliefert. Unbestätigt ist ein legitimes Ergebnis. Eine still verschwundene Aussage nicht."
-    },
-    "trail": {
-      "title": "Was festgehalten wird, und in welcher Reihenfolge",
-      "lead": "Eine Feststellung ist eine Kette. Jedes Glied wird festgehalten, und nur deshalb hat eine Frage in drei Monaten noch eine Antwort.",
-      "steps": [
-        "Das Dokument kommt an und wird indexiert. Vertrauliche Finanz- und Personendaten werden pseudonymisiert, bevor sie ein Modell sieht.",
-        "Das Modul ruft die Passagen ab, die seine eigene Frage beantworten, und nur diese.",
-        "Der Entwurf wird gegen den Vertrag oben geschrieben. Eine Aussage ohne Passage dahinter wird gar nicht erst geschrieben.",
-        "Ein Prüfdurchgang kritisiert den Entwurf und schickt ihn zurück. Zwei Versuche, dann endet die Schleife und ein Mensch übernimmt.",
-        "Vier Grounding-Prüfungen nacheinander: der Verweisindex, das Zitat selbst, ob die Aussage aus der Passage folgt, und ein zweites Urteil, das im Zweifel sperrt.",
-        "Eine namentlich benannte Person prüft, gleicht ab und gibt frei. Die Pseudonymisierung wird hier aufgehoben und nirgends früher.",
-        "Sie erhalten die Feststellung mit dem Dokumentverweis daran, und der bleibt danach offenbar."
-      ],
-      "note": "Das ausgearbeitete Beispiel — eine Klausel auf Seite 14 eines fiktiven Rahmenvertrags und die Feststellung, die daraus entstand — steht auf der Startseite.",
-      "link": "Das ausgearbeitete Beispiel ansehen"
-    },
-    "gate": {
-      "title": "Was der Prüfer tatsächlich tut",
-      "lead": "„Human in the loop“ ist eine Formel. Das hier ist die Reihenfolge dahinter.",
-      "items": [
-        "Öffnet das zitierte Dokument und liest die Passage gegen die Aussage, die darauf aufbaut.",
-        "Entscheidet über Wesentlichkeit — welche Feststellungen ändern, was Sie zahlen, oder ob Sie unterschreiben.",
-        "Löst Konflikte zwischen Modulen auf. Zwei Disziplinen, die einen Sachverhalt unterschiedlich lesen, sind selbst eine Feststellung und kein Fehler zum Glattbügeln.",
-        "Markiert, was nicht bestätigt werden konnte, und warum.",
-        "Hebt die Pseudonymisierung in der Endausgabe auf, und nur dort.",
-        "Unterschreibt. Eine namentlich benannte Person, verantwortlich für das Dokument, das Sie bekommen."
-      ],
-      "note": "{blocks} harte Blockaden beenden die automatische Schleife vorzeitig und leiten den Entwurf an diese Person, unabhängig von der Bewertung.",
-      "link": "Wie Dokumente behandelt werden"
-    },
-    "stops": {
-      "title": "Wo die Methode aufhört",
-      "lead": "Alles oben ist Arbeit, an der sich eine Maschine messen lassen kann. Ein guter Teil der Due Diligence ist das nicht, und so zu tun als ob, ist die Art, wie solche Systeme den Raum verlieren.",
-      "link": "Was KI in der Due Diligence nicht kann"
-    },
-    "cta": {
-      "title": "Sehen Sie die Methode an Ihrem eigenen Data Room laufen",
-      "body": "Teilen Sie einen Data Room unter NDA. Wir führen jede Welle aus und gehen die Feststellungen mit Ihnen in einem Call durch, Quelle für Quelle.",
-      "button": "Data Room teilen",
-      "note": "Zuerst das NDA, am selben Tag versandt. Ein Deal, den Sie letztes Jahr abgeschlossen haben, geht ebenso."
-    }
-  },
   "aiLimits": {
     "header": {
       "title": "Was KI in der Due Diligence nicht kann",
@@ -1109,7 +1037,7 @@
           "body": "Schweigen ist die falsche Antwort. Ein fehlendes Dokument sollte einen Eintrag auf einer Liste erzeugen, nicht das Ausbleiben einer Feststellung."
         }
       ],
-      "link": "Die Methode, von Anfang bis Ende"
+      "link": "Was Ihr Prüfer prüft"
     },
     "cta": {
       "title": "Stellen Sie uns die drei Fragen",

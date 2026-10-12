@@ -12,10 +12,6 @@
       "title": "Revisão completa do data room em dias",
       "description": "{disciplines} leituras especializadas sobre um data room, reconciliadas numa só narrativa, com um registo em direto do que falta."
     },
-    "method": {
-      "title": "Como funciona a due diligence com IA",
-      "description": "A ordem por que os módulos correm, o contrato que cada constatação tem de cumprir e o que uma pessoa com nome verifica antes de qualquer entrega."
-    },
     "aiLimits": {
       "title": "Limites da IA em due diligence",
       "description": "Cinco coisas que nenhum modelo faz num data room, por que a revisão humana é obrigatória e três perguntas para qualquer fornecedor de IA."
@@ -49,7 +45,6 @@
     "primary": "Principal",
     "platform": "Plataforma",
     "sprint": "Diligence Sprint",
-    "method": "O método",
     "aiLimits": "Limites da IA",
     "governance": "Governação",
     "team": "Equipa",
@@ -231,7 +226,6 @@
       "governance": "Como os documentos são tratados",
       "platform": "Como funciona a plataforma",
       "sprint": "O que o sprint cobre",
-      "method": "O método, do início ao fim",
       "limits": "O que a IA não consegue fazer",
       "intake": "Partilhe um data room"
     },
@@ -430,6 +424,44 @@
       ],
       "repair": "As afirmações que falham têm uma tentativa de reparação: voltar a citar a partir da fonte e voltar a julgar. O que continua a falhar é cortado ou marcado como não confirmado."
     },
+    "contract": {
+      "title": "O contrato de saída, campo a campo",
+      "lead": "Seis campos. Uma constatação que não consiga preencher os seis não é entregue como constatação.",
+      "failLabel": "Quando o campo fica vazio",
+      "items": [
+        {
+          "title": "Módulo",
+          "body": "Qual dos {modules} a produziu. Delimitado à partida, ou seja, a pergunta estava escrita antes de o data room ser aberto.",
+          "fail": "Não há via de texto livre. Sem módulo, não há constatação."
+        },
+        {
+          "title": "Constatação",
+          "body": "Uma afirmação, numa frase. As afirmações compostas são separadas, porque uma frase com duas afirmações só permite verificar metade.",
+          "fail": "Vago demais para verificar conta como errado."
+        },
+        {
+          "title": "Citação literal",
+          "body": "A passagem que a sustenta, citada palavra por palavra. Não resumida, não polida, não encurtada para caber.",
+          "fail": "Uma paráfrase apresentada como citação chumba na verificação textual e volta para trás."
+        },
+        {
+          "title": "Gravidade",
+          "body": "A consequência, medida contra o valor do negócio, em cinco níveis. É atribuída pelo módulo que escreveu a constatação.",
+          "fail": "Uma constatação sem ponderação lê-se como qualquer outra linha da página."
+        },
+        {
+          "title": "Documento e passagem de origem",
+          "body": "Nome do ficheiro e página, para que a possa abrir. É o campo que torna uma constatação discutível em vez de autoritária.",
+          "fail": "Uma referência que não resolve numa passagem real é um bloqueio duro, não um aviso."
+        },
+        {
+          "title": "Revisão humana",
+          "body": "O seu revisor aprova ou rejeita cada constatação; uma rejeição exige um motivo. Antes da exportação, os resumos de cada módulo, os dez principais riscos e cada condição suspensiva têm de estar aprovados.",
+          "fail": "Sem aprovação, não há exportação para o cliente. O que não foi revisto segue com essa menção."
+        }
+      ],
+      "note": "Uma afirmação que chumba numa verificação tem uma tentativa de reparação: citar de novo a partir da fonte e voltar a julgar. O que continuar a chumbar é cortado ou entregue marcado como não confirmado. Não confirmado é um resultado legítimo. Uma afirmação descartada em silêncio não é."
+    },
     "blocks": {
       "title": "{blocks} condições que travam a aprovação automática",
       "lead": "Um rascunho rejeitado tem uma nova tentativa. Estas condições fecham o ciclo e levam o rascunho ao seu revisor, sem aprovação.",
@@ -467,6 +499,18 @@
           "body": "O agente crítico pontuou o rascunho abaixo do limiar."
         }
       ]
+    },
+    "review": {
+      "title": "O que o seu revisor faz",
+      "lead": "No espaço de revisão, antes de qualquer exportação.",
+      "items": [
+        "Abre a passagem citada e lê-a face à afirmação construída sobre ela.",
+        "Decide a materialidade: que constatações mudam o preço, ou se deve sequer assinar.",
+        "Pondera os conflitos entre módulos. Duas disciplinas lerem o mesmo facto de forma diferente é, em si, uma constatação.",
+        "Vê o que a pipeline reteve e decide sobre isso.",
+        "Aprova os resumos de cada módulo, os dez principais riscos e as condições suspensivas. Só então a exportação pode sair."
+      ],
+      "note": "{blocks} bloqueios duros terminam mais cedo o ciclo automático e levam o rascunho ao seu revisor, sem aprovação."
     },
     "dimensions": {
       "title": "Para que o motor lê o data room",
@@ -908,122 +952,6 @@
       "note": "Peça-o por escrito. Ao abrigo do DORA, um fundo acima do limiar tem de nomear cada terceiro de TIC num registo entregue ao seu supervisor — nós incluídos."
     }
   },
-  "method": {
-    "header": {
-      "title": "O método, do início ao fim",
-      "lead": "A versão longa. O que corre e por que ordem, o contrato que cada constatação tem de cumprir, e o que uma pessoa verifica antes de alguma coisa lhe chegar.",
-      "cta": "Partilhe um data room"
-    },
-    "waves": {
-      "title": "{modules} módulos, {waves} vagas, uma ordem",
-      "lead": "Nada corre cedo demais. Um módulo arranca quando termina o trabalho de que depende. É por isso que a execução tem forma e não fila.",
-      "steps": [
-        {
-          "title": "Vaga um — as leituras independentes",
-          "body": "{w1} módulos abrem ao mesmo tempo. Comercial, recursos humanos, operações e IA entram em paralelo no data room. Nenhum precisa da resposta de outro módulo para começar."
-        },
-        {
-          "title": "Vaga dois — jurídica",
-          "body": "Lê RH e comercial antes de raciocinar: uma exposição laboral ou uma reclamação contratual costuma assentar em factos que essas duas leituras já estabeleceram. Corre na sua própria vaga, para que o fiscal, na vaga três, possa mesmo ler a sua saída concluída, e não uma promessa que a execução não conseguia cumprir."
-        },
-        {
-          "title": "Vaga três — financeira",
-          "body": "Lê a vaga um e a jurídica antes de raciocinar. Um número de resultados muda assim que há uma reclamação contratual ou uma exposição laboral em cima da mesa, por isso a financeira espera por ambas em vez de dar um valor que teria de retirar."
-        },
-        {
-          "title": "Vaga quatro — fiscal",
-          "body": "Lê financeiro e jurídica antes de raciocinar: uma posição fiscal é consequência da estrutura que a leitura financeira acabou de descrever, e sobrepõe-se muitas vezes ao que a jurídica encontrou nessa estrutura."
-        },
-        {
-          "title": "Vaga cinco — deal economics",
-          "body": "Lê tudo o que veio nas vagas um a quatro e pergunta o que o negócio realmente rende, não quanto vale."
-        },
-        {
-          "title": "Vaga seis — avaliação",
-          "body": "A última vaga que ainda entrega algo. Lê deal economics por cima de tudo o que veio antes, e recalcula o preço atravessando as constatações em vez de as contornar."
-        }
-      ],
-      "note": "As seis vagas juntas são a due diligence. O dashboard e o relatório são construídos a partir do que entregam."
-    },
-    "contract": {
-      "title": "O contrato de saída, campo a campo",
-      "lead": "Seis campos. Uma constatação que não consiga preencher os seis não é entregue como constatação.",
-      "failLabel": "Quando o campo fica vazio",
-      "items": [
-        {
-          "title": "Módulo",
-          "body": "Qual dos {modules} a produziu. Delimitado à partida, ou seja, a pergunta estava escrita antes de o data room ser aberto — não improvisada a partir do que lá estivesse.",
-          "fail": "Não há via de texto livre. Sem módulo, não há constatação."
-        },
-        {
-          "title": "Constatação",
-          "body": "Uma afirmação, numa frase. As afirmações compostas são separadas, porque uma frase com duas afirmações só permite verificar metade.",
-          "fail": "Vago demais para verificar conta como errado."
-        },
-        {
-          "title": "Citação literal",
-          "body": "A passagem que a sustenta, citada palavra por palavra. Não resumida, não polida, não encurtada para caber.",
-          "fail": "Uma paráfrase apresentada como citação chumba na verificação textual e volta para trás."
-        },
-        {
-          "title": "Gravidade",
-          "body": "A consequência para o comprador, medida contra o valor do negócio, em cinco níveis. É atribuída pelo módulo que escreveu a constatação, e o revisor pode alterá-la.",
-          "fail": "Uma constatação sem ponderação lê-se como qualquer outra linha da página."
-        },
-        {
-          "title": "Documento e passagem de origem",
-          "body": "Nome do ficheiro e página, para que a possa abrir. É o campo que torna uma constatação discutível em vez de autoritária.",
-          "fail": "Uma referência que não resolve numa passagem real é um bloqueio duro, não um aviso."
-        },
-        {
-          "title": "Revisão humana",
-          "body": "A pessoa que a aprovou, com nome, antes da entrega. Cada constatação, cada mandato.",
-          "fail": "Não há via rápida para uma semana cheia."
-        }
-      ],
-      "note": "Uma afirmação que chumba numa verificação tem uma tentativa de reparação: citar de novo a partir da fonte e voltar a julgar. O que continuar a chumbar é cortado ou entregue marcado como não confirmado. Não confirmado é um resultado legítimo. Uma afirmação descartada em silêncio não é."
-    },
-    "trail": {
-      "title": "O que fica registado, e por que ordem",
-      "lead": "Uma constatação é uma cadeia. Cada elo fica registado, e é a única razão pela qual uma pergunta daqui a três meses tem resposta.",
-      "steps": [
-        "O documento entra e é indexado. Os valores financeiros e pessoais confidenciais são pseudonimizados antes de qualquer modelo os ver.",
-        "O módulo recupera as passagens que respondem à sua própria pergunta, e apenas essas.",
-        "O rascunho é escrito contra o contrato acima. Uma afirmação sem passagem por trás não chega a ser escrita.",
-        "Uma ronda de revisão critica o rascunho e devolve-o. Duas tentativas e o ciclo pára: passa para uma pessoa.",
-        "Quatro verificações de fundamentação em sequência: o índice de referências, a citação em si, se a afirmação decorre da passagem, e uma segunda opinião que bloqueia na dúvida.",
-        "Uma pessoa com nome revê, concilia e aprova. A pseudonimização é revertida aqui e em mais lado nenhum antes disso.",
-        "Recebe a constatação com a referência ao documento anexada, e continua a poder abri-la depois."
-      ],
-      "note": "O exemplo trabalhado — uma cláusula na página 14 de um contrato-quadro fictício e a constatação que dele resultou — está na página inicial.",
-      "link": "Ver o exemplo trabalhado"
-    },
-    "gate": {
-      "title": "O que a pessoa que revê faz de facto",
-      "lead": "“Human in the loop” é uma expressão. Isto é a sequência por trás dela.",
-      "items": [
-        "Abre o documento citado e lê a passagem contra a afirmação construída sobre ela.",
-        "Decide a materialidade — que constatações mudam o que paga, ou se assina.",
-        "Resolve conflitos entre módulos. Duas disciplinas a ler o mesmo facto de forma diferente é, em si, uma constatação, não um erro a corrigir.",
-        "Marca o que não pôde ser confirmado, e diz porquê.",
-        "Reverte a pseudonimização na saída final, e só aí.",
-        "Assina. Uma pessoa com nome, responsável pelo documento que recebe."
-      ],
-      "note": "{blocks} bloqueios duros terminam o ciclo automático mais cedo e encaminham o rascunho para essa pessoa, independentemente da pontuação.",
-      "link": "Como os documentos são tratados"
-    },
-    "stops": {
-      "title": "Onde o método pára",
-      "lead": "Tudo o que está acima é trabalho pelo qual uma máquina pode ser responsabilizada. Boa parte da due diligence não é, e fingir o contrário é como estes sistemas perdem a sala.",
-      "link": "O que a IA não consegue fazer em due diligence"
-    },
-    "cta": {
-      "title": "Veja o método correr sobre o seu próprio data room",
-      "body": "Partilhe um data room sob NDA. Corremos cada vaga e levamo-lo pelas constatações numa chamada, fonte a fonte.",
-      "button": "Partilhe um data room",
-      "note": "Primeiro o NDA, enviado no mesmo dia. Um negócio que fechou no ano passado também serve."
-    }
-  },
   "aiLimits": {
     "header": {
       "title": "O que a IA não consegue fazer em due diligence",
@@ -1109,7 +1037,7 @@
           "body": "O silêncio é a resposta errada. Um documento em falta deve produzir uma linha numa lista, não a ausência de uma constatação."
         }
       ],
-      "link": "O método, do início ao fim"
+      "link": "O que o seu revisor verifica"
     },
     "cta": {
       "title": "Faça-nos as três perguntas",

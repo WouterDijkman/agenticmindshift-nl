@@ -23,6 +23,7 @@ import Disclosures from '@/components/Disclosures';
 import CtaBand from '@/components/CtaBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
 import FindingSchema from '@/components/FindingSchema';
+import DefinitionList from '@/components/DefinitionList';
 import Breadcrumb from '@/components/Breadcrumb';
 import { ArrowRight } from '@/components/Icons';
 
@@ -131,16 +132,6 @@ export default async function PlatformPage({
         <div className="split-grid">
           <div className="split-sticky">
             <SectionHeader title={t('pipeline.title')} lead={t('pipeline.lead')} />
-            {/* This page stops at the mechanism on purpose; the dependency
-                order, the contract field by field and the reviewer's own
-                sequence are on /method, which exists so this one can stay
-                short. */}
-            <Reveal delay={80} style={{ marginTop: 26 }}>
-              <Link href="/method" className="link-quiet">
-                {s('links.method')}
-                <ArrowRight />
-              </Link>
-            </Reveal>
           </div>
           <Pipeline
             stages={t.raw('pipeline.stages') as { title: string; body: string; note?: string }[]}
@@ -172,7 +163,37 @@ export default async function PlatformPage({
         </Reveal>
       </Section>
 
-      {/* The seven hard blocks. */}
+      {/* The output contract, field by field, with what happens when a field
+          cannot be filled. Moved here from /method (merged 12 October 2026,
+          /method now 308s to this page): the failure modes were the one part
+          of that page no other page carried. The sixth field is the client's
+          own reviewer; Factum does not sign off. */}
+      <Section id="contract" width="medium">
+        <SectionHeader title={t('contract.title')} lead={t('contract.lead')} />
+        <div style={{ marginTop: 'clamp(28px, 3.5vw, 44px)' }}>
+          <DefinitionList
+            items={(t.raw('contract.items') as { title: string; fail: string }[]).map(
+              (item, i) => ({
+                title: item.title,
+                // Through t() so {modules} stays wired to MODULES in lib/site.ts.
+                body: t(`contract.items.${i}.body`, n),
+                note: item.fail
+              })
+            )}
+            noteLabel={t('contract.failLabel')}
+          />
+        </div>
+        <Reveal>
+          <p
+            className="type-small"
+            style={{ marginTop: 22, color: 'var(--text-quaternary)', maxWidth: '70ch' }}
+          >
+            {t('contract.note')}
+          </p>
+        </Reveal>
+      </Section>
+
+      {/* The eight hard blocks. */}
       <Section width="wide" weight="tight">
         <SectionHeader title={t('blocks.title', n)} lead={t('blocks.lead')} align="wide" />
         <div style={{ marginTop: 'clamp(28px, 4vw, 48px)' }}>
@@ -190,6 +211,39 @@ export default async function PlatformPage({
             )}
           />
         </div>
+      </Section>
+
+      {/* What the client's reviewer does, as a sequence. Also from /method,
+          rewritten for self-service: the reviewer is the client's, in the
+          review workspace, and the export waits for that sign-off
+          (klantgoedkeuring.ts in the product). */}
+      <Section id="review" width="medium" tone="raised" weight="tight">
+        <SectionHeader title={t('review.title')} lead={t('review.lead')} />
+        <Reveal delay={60} style={{ marginTop: 28 }}>
+          <ol style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+            {(t.raw('review.items') as string[]).map((item, i) => (
+              <li
+                key={item}
+                className="type-body"
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'auto minmax(0, 1fr)',
+                  gap: 14,
+                  paddingBlock: 13,
+                  borderTop: i === 0 ? 'none' : '1px solid var(--hairline-faint)'
+                }}
+              >
+                <span className="mono" style={{ color: 'var(--wine-text)' }} aria-hidden="true">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                {item}
+              </li>
+            ))}
+          </ol>
+          <p className="type-small" style={{ marginTop: 18, color: 'var(--text-quaternary)' }}>
+            {t('review.note', n)}
+          </p>
+        </Reveal>
       </Section>
 
       {/*
@@ -345,6 +399,13 @@ export default async function PlatformPage({
               </li>
             ))}
           </ul>
+        </Reveal>
+        {/* The handover /method used to make: where the method stops. */}
+        <Reveal delay={80} style={{ marginTop: 24 }}>
+          <Link href="/limits-of-ai" className="link-quiet">
+            {s('links.limits')}
+            <ArrowRight />
+          </Link>
         </Reveal>
       </Section>
 

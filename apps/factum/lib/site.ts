@@ -59,24 +59,23 @@ export const NAV = [
 export const FOOTER_NAV = NAV;
 
 /**
- * The two reference pages, deliberately not in the header.
+ * The reference page, deliberately not in the header.
  *
- * /method and /limits-of-ai are long, and they are written for someone who has
- * already decided the proposition is interesting and now wants to check it.
- * That reader arrives from a link inside an argument, not from a nav bar — and
- * a seven-item header would cost every other visitor a slower scan to serve
- * them. They get their own footer group instead, which is a site-wide link on
- * every page, plus contextual links from the sections whose claims they back:
- * /platform and /diligence-sprint point at /method, /governance points at
- * /limits-of-ai, and the two point at each other.
+ * /limits-of-ai is long, and it is written for someone who has already decided
+ * the proposition is interesting and now wants to check it. That reader
+ * arrives from a link inside an argument, not from a nav bar. It gets its own
+ * footer group instead, plus contextual links from the sections whose claims
+ * it backs: /governance and the limits section of /platform.
  *
- * `Breadcrumb` reads this list as well, so both pages emit a proper crumb name
+ * /method used to sit here too. It was merged into /platform on 12 October
+ * 2026 and 308s there (next.config.ts): roughly 70% of it repeated /platform,
+ * and the two unique parts (the output contract's failure modes and the
+ * reviewer's steps) now live on /platform as #contract and #review.
+ *
+ * `Breadcrumb` reads this list as well, so the page emits a proper crumb name
  * rather than falling through to the "return null" branch.
  */
-export const REFERENCE_NAV = [
-  { href: '/method', key: 'method' },
-  { href: '/limits-of-ai', key: 'aiLimits' }
-] as const;
+export const REFERENCE_NAV = [{ href: '/limits-of-ai', key: 'aiLimits' }] as const;
 
 export const LOCALE_NAMES: Record<string, string> = {
   en: 'English',
@@ -190,7 +189,7 @@ export const MONITORING_MODULE_COUNT = MODULES.filter((m) => m.kind === 'monitor
 /**
  * How many modules open in each wave, indexed from wave 1.
  *
- * /method states these counts in prose ("eight modules open at once"), and a
+ * Copy states these counts in prose ("four modules open at once"), and a
  * number typed into a message file is a number that goes stale the next time
  * the roster moves — which is exactly how the site once printed a module total
  * a quarter too high. Derived here, passed into ICU, so a wave gaining a module
