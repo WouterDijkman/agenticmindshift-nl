@@ -91,17 +91,26 @@ export default async function HomePage({
            twice here and once more beside the closing button. The inner pages
            carry no band and still pass it. */
         aside={
+          /* A real finding, not the empty form (12 October 2026). This panel
+             used to show the output contract with abstract values ("Pre-scoped,
+             one of the library", "One of five levels, Info to Critical"): the
+             largest object on the first screen, and the one a lay reader could
+             not parse. It now carries the worked example's own values, so the
+             first screen shows what a buyer actually gets: a clause, the page
+             it is on, how bad it is, and who signed it off. Same six fields,
+             same "constructed example" footnote. The abstract contract stays
+             in the /platform header, where the mechanism is the subject. */
           <FindingSchema
-            label={s('schema.label')}
-            footnote={s('schema.footnote')}
+            label={s('specimen.pageRef')}
+            footnote={s('specimen.footnote')}
             moreLabel={s('schema.more')}
             rows={[
-              { key: s('schema.rows.module'), value: s('schema.values.module') },
-              { key: s('schema.rows.finding'), value: s('schema.values.finding') },
-              { key: s('schema.rows.evidence'), value: s('schema.values.evidence') },
-              { key: s('schema.rows.severity'), value: s('schema.values.severity') },
-              { key: s('schema.rows.document'), value: s('schema.values.document') },
-              { key: s('schema.rows.review'), value: s('schema.values.review') }
+              { key: s('schema.rows.module'), value: s('specimen.values.module') },
+              { key: s('schema.rows.finding'), value: s('specimen.values.finding') },
+              { key: s('schema.rows.evidence'), value: s('specimen.quote') },
+              { key: s('schema.rows.severity'), value: s('specimen.values.severity') },
+              { key: s('schema.rows.document'), value: s('specimen.values.document') },
+              { key: s('schema.rows.review'), value: s('specimen.values.review') }
             ]}
           />
         }
