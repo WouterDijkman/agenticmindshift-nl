@@ -162,25 +162,17 @@ export default async function WerkwijzePage(
                 fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
                 color: 'var(--text-secondary)',
                 lineHeight: 1.75,
-                marginBottom: '24px',
+                margin: 0,
               }}
             >
               {t('offerings.subtext')}
             </p>
-            {/* Guarantee strip */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 16px', background: 'var(--bg-secondary)', border: '1px solid var(--border-subtle)', borderLeft: '3px solid var(--accent-cta)' }}>
-              <span style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: 'var(--accent-cta-ink)', flexShrink: 0 }}>{t('offerings.guarantee_title')}</span>
-              <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.55, margin: 0 }}>
-                {t('offerings.guarantee_body')}
-              </p>
-            </div>
           </div>
 
           <div
             className="tier-grid divider-grid"
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))',
               gap: '1px',
               background: 'var(--border-medium)',
               border: '1px solid var(--border-medium)',
@@ -298,14 +290,6 @@ export default async function WerkwijzePage(
               alignItems: 'flex-start',
             }}
           >
-            <div
-              style={{
-                width: '4px',
-                alignSelf: 'stretch',
-                background: 'var(--accent-cta)',
-                flexShrink: 0,
-              }}
-            />
             <div>
               <p
                 style={{

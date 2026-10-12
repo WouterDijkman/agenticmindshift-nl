@@ -2100,3 +2100,17 @@ html[data-reveal="on"] .reveal.revealed {
     display: none !important;
   }
 }
+
+/* ================================================================== */
+/* /werkwijze route grid — three routes, three columns or one.         */
+/* auto-fit at 340px gave two columns on desktop and left the fourth   */
+/* cell as an empty grey block.                                        */
+/* ================================================================== */
+.tier-grid {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px) {
+  .tier-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
