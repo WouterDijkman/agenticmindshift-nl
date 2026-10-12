@@ -13,8 +13,9 @@ const PATHS = [
   { path: '/limits-of-ai', priority: 0.7 },
   { path: '/team', priority: 0.6 },
   // The conversion page: every primary button on the site lands here.
-  { path: '/contact', priority: 0.8 },
-  { path: '/privacy', priority: 0.3 }
+  { path: '/contact', priority: 0.8 }
+  // No /privacy: the page is `noindex, follow` (privacy/page.tsx), and a
+  // sitemap should list only URLs we ask to have indexed.
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
