@@ -2,6 +2,8 @@ import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { factumUrl } from '@/lib/factum';
+import { GUIDE_CHROME, getGuide } from '@/lib/guides';
+import { GUIDE_SLUGS, isGuideLocale } from '@/lib/guideRoutes';
 
 export default async function Footer() {
   const locale = await getLocale();
@@ -23,6 +25,12 @@ export default async function Footer() {
   // factumcapital.eu as direct traffic. The Plausible class counts the click on
   // this side, with the same location label as the link's utm_campaign.
   const externalLinks = [{ href: factumUrl(locale, 'footer'), label: tNav('factum_capital') }];
+
+  // The problem pages exist in nl and en only.
+  const guideLinks = isGuideLocale(locale)
+    ? GUIDE_SLUGS.map((slug) => ({ href: `/${slug}`, label: getGuide(slug, locale).shortName }))
+    : [];
+  const guideHeading = isGuideLocale(locale) ? GUIDE_CHROME[locale].moreEyebrow : null;
 
   const legalLinks = [
     { href: '/privacy', label: t('privacy') },
@@ -102,8 +110,22 @@ export default async function Footer() {
             </ul>
           </div>
 
-          {/* Juridisch */}
+          {/* Juridisch, and in nl/en the problem pages above it */}
           <div>
+            {guideHeading && (
+              <>
+                <p className="footer-heading">{guideHeading}</p>
+                <ul className="footer-list" style={{ marginBottom: '32px' }}>
+                  {guideLinks.map((l) => (
+                    <li key={l.href}>
+                      <Link href={l.href} className="footer-link">
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
             <p className="footer-heading">{t('legal')}</p>
             <ul className="footer-list">
               {legalLinks.map((l) => (

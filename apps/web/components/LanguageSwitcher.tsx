@@ -4,6 +4,7 @@ import { useRouter, usePathname } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import { rememberLocale } from '@repo/ui/locale';
 import { useEffect, useRef, useState } from 'react';
+import { isGuideLocale, isGuidePath } from '@/lib/guideRoutes';
 
 const LANG_LABELS: Record<string, string> = {
   nl: 'NL', en: 'EN', de: 'DE', es: 'ES', pt: 'PT',
@@ -40,7 +41,11 @@ export default function LanguageSwitcher({ tone = 'default' }: { tone?: 'default
   const switchLocale = (newLocale: string) => {
     rememberLocale(newLocale);
     setOpen(false);
-    router.replace(pathname, { locale: newLocale });
+    // The problem pages exist in nl and en only. Switching one of them to
+    // de/es/pt would land on a 404, so send the reader to /werkwijze, the
+    // nearest page that exists in every language.
+    const target = isGuidePath(pathname) && !isGuideLocale(newLocale) ? '/werkwijze' : pathname;
+    router.replace(target, { locale: newLocale });
   };
 
   return (

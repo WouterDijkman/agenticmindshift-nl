@@ -16,6 +16,7 @@ import { getProfessionalServiceLd, getBreadcrumbLd } from '@/lib/jsonld';
 import WerkwijzeOnboardingSteps from './WerkwijzeOnboardingSteps';
 import FactumBanner from '@/components/FactumBanner';
 import AnswerFirst from '@/components/AnswerFirst';
+import GuideLinks from '@/components/GuideLinks';
 
 const INTAKE_URL = 'https://cal.com/wwdijkman/intake-call';
 
@@ -326,8 +327,11 @@ export default async function WerkwijzePage(
         </div>
       </section>
 
-      {/* Route 3 runs on Factum. This is the only place the page explains
-          that, and it sits directly under the card that says "Powered by". */}
+      {/* The three problem pages (nl/en only; renders nothing elsewhere). */}
+      <GuideLinks locale={locale} background="var(--bg-secondary)" />
+
+      {/* Factum Capital is a separate business. One signpost, nothing more:
+          no route on this page runs on it. */}
       <FactumBanner />
 
       {/* ═══════════════════════════════════════════

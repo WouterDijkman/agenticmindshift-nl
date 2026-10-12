@@ -58,9 +58,12 @@ export const OG_LOCALES: Record<string, string> = {
  * domain they have not heard of; Search is the entrance that matters, and the
  * header switcher is one click for the other case.
  */
-export function getLanguageAlternates(path: string) {
+export function getLanguageAlternates(
+  path: string,
+  locales: readonly string[] = LOCALES
+) {
   const languages: Record<string, string> = {};
-  for (const loc of LOCALES) {
+  for (const loc of locales) {
     languages[LANG_TAGS[loc]] = `${BASE}/${loc}${path}`;
   }
   languages['x-default'] = `${BASE}/en${path}`;
@@ -70,12 +73,18 @@ export function getLanguageAlternates(path: string) {
 /**
  * Returns `alternates` for Next.js Metadata, including:
  * - a self-referencing canonical for `currentLocale`
- * - a `hreflang` entry for every locale
+ * - a `hreflang` entry for every locale the page exists in (all five unless
+ *   `locales` says otherwise; the nl/en-only guides pass their own list, so
+ *   no annotation ever names a URL that 404s)
  * - an `x-default` pointing to the English variant
  */
-export function getAlternates(path: string, currentLocale: string) {
+export function getAlternates(
+  path: string,
+  currentLocale: string,
+  locales: readonly string[] = LOCALES
+) {
   return {
     canonical: `${BASE}/${currentLocale}${path}`,
-    languages: getLanguageAlternates(path),
+    languages: getLanguageAlternates(path, locales),
   };
 }

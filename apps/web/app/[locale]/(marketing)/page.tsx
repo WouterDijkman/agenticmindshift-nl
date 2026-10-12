@@ -6,6 +6,7 @@ import AnimatedHero from './AnimatedHero';
 import HomepagePainSection from './HomepagePainSection';
 import HomepageServicesSection from './HomepageServicesSection';
 import FactumBanner from '@/components/FactumBanner';
+import GuideLinks from '@/components/GuideLinks';
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
 import JsonLd from '@/components/JsonLd';
 import { getLocalizedFaqItems } from '@/lib/faq';
@@ -126,6 +127,10 @@ export default async function HomePage(
           3. DE DRIE ROUTES — het aanbod, zonder bedragen
       ═══════════════════════════════════════════ */}
       <HomepageServicesSection />
+
+      {/* The three problem pages, nl/en only. A reader who recognised a
+          problem above can read the worked answer before booking a call. */}
+      <GuideLinks locale={locale} />
 
       {/* ═══════════════════════════════════════════
           4. FACTUM CAPITAL — signpost, geen tweede pitch

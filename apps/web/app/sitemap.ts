@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { BASE, LOCALES, getLanguageAlternates } from '@/lib/hreflang';
+import { GUIDE_LOCALES, GUIDE_SLUGS } from '@/lib/guideRoutes';
 
 /**
  * /scorecard is absent because it no longer exists. The questionnaire was
@@ -19,7 +20,7 @@ const pages = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return LOCALES.flatMap((locale) =>
+  const site = LOCALES.flatMap((locale) =>
     pages.map(({ path, priority, changeFrequency }) => ({
       url: `${BASE}/${locale}${path}`,
       lastModified: new Date(),
@@ -28,4 +29,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages: getLanguageAlternates(path) },
     }))
   );
+
+  // The problem pages exist in nl and en only, so they are listed in those
+  // two and their alternates name only those two (plus x-default → en).
+  const guides = GUIDE_LOCALES.flatMap((locale) =>
+    GUIDE_SLUGS.map((slug) => ({
+      url: `${BASE}/${locale}/${slug}`,
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: 'monthly' as const,
+      alternates: { languages: getLanguageAlternates(`/${slug}`, GUIDE_LOCALES) },
+    }))
+  );
+
+  return [...site, ...guides];
 }
