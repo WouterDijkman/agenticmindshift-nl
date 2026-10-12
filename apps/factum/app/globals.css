@@ -2767,12 +2767,8 @@ details.disclosure > div { padding-bottom: 24px; }
        content and the two columns would huddle on the left. */
     width: 100%;
   }
-  /* By source order: 1 Sitemap, 2 Reference, 3 Company. Spelled out positionally
-     because the packing is the whole point — adding a fourth group means
-     revisiting this block, not just appending markup. */
-  .footer-groups > :nth-child(1) { grid-area: 1 / 1 / span 2 / auto; }
-  .footer-groups > :nth-child(2) { grid-area: 1 / 2; }
-  .footer-groups > :nth-child(3) { grid-area: 2 / 2; }
+  /* By source order: 1 Sitemap, 2 Company (which now also holds the reference
+     pages). Two groups, two columns; a third group means revisiting this. */
 }
 
 .footer-links {
