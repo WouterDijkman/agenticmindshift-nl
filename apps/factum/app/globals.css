@@ -102,7 +102,6 @@
 
   /* motion */
   --ease-fn: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-expressive: cubic-bezier(0.4, 0.05, 0.22, 1.2);
   /* Expo-out: travels most of the distance immediately, then settles. Reads as
      weight rather than as a timed effect, which is the whole difference. */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -340,6 +339,9 @@ p { margin: 0; }
   line-height: 1.6;
   color: var(--text-tertiary);
 }
+/* Small notes under full-width sections ran 130+ characters a line at 1440
+   (/governance). A paragraph of small type never needs more than this. */
+p.type-small { max-width: 75ch; }
 
 .measure { max-width: 62ch; }
 .measure-tight { max-width: 48ch; }
@@ -1559,10 +1561,13 @@ p { margin: 0; }
     }
   }
 }
+/* Floor raised from 0.42 to 0.72 (12 October 2026): at 0.42 the stage body
+   measured 2.7:1 and its note 1.9:1 while scrolling, text a reader is meant
+   to be reading. 0.72 keeps the focus pull and the body above 4.5:1. */
 @keyframes stage-focus {
-  0%   { opacity: 0.42; }
+  0%   { opacity: 0.72; }
   30%, 70% { opacity: 1; }
-  100% { opacity: 0.42; }
+  100% { opacity: 0.72; }
 }
 @keyframes rail-fill {
   to { transform: scaleY(1); }
@@ -2752,7 +2757,10 @@ details.disclosure > div { padding-bottom: 24px; }
 @media (max-width: 700px) {
   .footer-groups {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* minmax(0, …), not 1fr: a bare 1fr track will not shrink below its
+       longest unbreakable label, and in pt and es the sitemap labels pushed
+       the page 30-50px wider than a 375px phone. */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px 20px;
     align-items: start;
     /* It is a flex item of the row above, so it would otherwise be sized by its
@@ -2780,7 +2788,19 @@ details.disclosure > div { padding-bottom: 24px; }
   .footer-meta {
     display: flex;
     align-items: center;
-    min-height: 42px;
+    min-height: 44px;
+  }
+  .footer-links a { white-space: normal; }
+  /* Inline text links measured 28px tall on a phone. The padding grows the
+     tap area to 44px; the underline stays on the text via background so the
+     extra height does not push the rule away from the words. */
+  .link-quiet {
+    padding-block: 9px 10px;
+    border-bottom: 0;
+    background: linear-gradient(var(--hairline-strong), var(--hairline-strong)) left calc(100% - 8px) / 100% 1px no-repeat;
+  }
+  .link-quiet:hover {
+    background-image: linear-gradient(var(--accent-cta), var(--accent-cta));
   }
 }
 
