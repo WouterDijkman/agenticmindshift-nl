@@ -114,13 +114,12 @@ export default function AnimatedHeroShell({
           bottom: '80px',
           pointerEvents: 'none',
           userSelect: 'none',
-          // final opacity baked into keyframe via CSS var? simpler: lower the
-          // strokeWidth/color already gives a faint look; the keyframe goes
-          // 0 → 1, so we set the icon's own opacity attr to its target.
-          opacity: 0.04,
+          // The fade-in keyframe ends at opacity 1 and overrode an inline
+          // 0.04 here, so the "faint" mark rendered solid navy. The target
+          // opacity lives on the icon itself, under the animated wrapper.
         }}
       >
-        <SketchCrosshair size={96} color="var(--text-primary)" strokeWidth={0.8} />
+        <SketchCrosshair size={96} color="var(--text-primary)" strokeWidth={0.8} opacity={0.14} />
       </div>
 
       {/* Decorative background glyph — parallax (kept as motion.div for the
