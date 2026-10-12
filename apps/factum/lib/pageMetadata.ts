@@ -91,7 +91,13 @@ export async function pageMetadata(
   path: string
 ): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'meta' });
-  const title = `${t(`${key}.title`)} — ${BRAND}`;
+  // The homepage leads with the brand, every other page ends with it. Google NL
+  // did not show factumcapital.eu on page one for "Factum Capital" (audit
+  // 12-10-2026, §4.5), and the homepage title started with the category and
+  // only reached the name at character 46. One brand mention either way, so
+  // nothing reads "Factum Capital … — Factum Capital".
+  const title =
+    key === 'home' ? `${BRAND} — ${t(`${key}.title`)}` : `${t(`${key}.title`)} — ${BRAND}`;
   const description = t(`${key}.description`, ROSTER_ARGS);
   const alternates = getAlternates(path, locale);
 

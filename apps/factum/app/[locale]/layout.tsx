@@ -47,7 +47,7 @@ export async function generateMetadata({
     // template is gone so there is only one place that decides. A bare string
     // rather than `{ default }`, because Next's types require `default` and
     // `template` to travel together.
-    title: `${t('home.title')} — Factum Capital`,
+    title: `Factum Capital — ${t('home.title')}`,
     description: t('home.description'),
     alternates: getAlternates('', locale),
     openGraph: {

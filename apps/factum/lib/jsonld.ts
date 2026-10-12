@@ -16,8 +16,8 @@ import { DISCIPLINE_COUNT, KVK, SITE_URL } from './site';
  * A `@graph` with internal `@id` references says it directly: the WebSite is
  * published by the Organization, the Organization was founded by two People,
  * and one of those People has a `sameAs` to the LinkedIn profile that already
- * ranks. That last edge is the whole point — it hangs the new entity off the
- * only node the graph already knows.
+ * ranks. That edge hangs the new entity off the only node the graph already
+ * knows, through the founder, which is where it belongs.
  *
  * Deliberately absent: `FAQPage`. Google deprecated FAQ rich results in May
  * 2026 (last shown 7 May, docs pulled 15 June, Search Console support ending),
@@ -50,7 +50,14 @@ function people() {
       name: 'Wouter Dijkman',
       jobTitle: 'Founder',
       worksFor: { '@id': ORG_ID },
-      sameAs: ['https://www.linkedin.com/in/wwdijkman/']
+      // Wouter's own profiles. The LinkedIn profile is a page about him, and
+      // so is the /over page on agenticmindshift.nl (his consultancy), which
+      // is what ties the two sites to one person without claiming the two
+      // companies are the same entity.
+      sameAs: [
+        'https://www.linkedin.com/in/wwdijkman/',
+        'https://www.agenticmindshift.nl/en/over'
+      ]
     },
     {
       '@type': 'Person',
@@ -67,6 +74,10 @@ function organization(description: string) {
     '@type': 'Organization',
     '@id': ORG_ID,
     name: 'Factum Capital',
+    // "Factum" is how the product is named in copy, and the bare word is what
+    // a search engine has to tell apart from Factum AG, Factum Global and the
+    // rest of page one.
+    alternateName: ['Factum'],
     // No `legalName`: Factum Capital is not yet a separate legal entity, and
     // publishing a legal name here would assert a registration that doesn't
     // exist. The bare KvK number below is the one fact that's actually true.
@@ -82,7 +93,10 @@ function organization(description: string) {
       addressCountry: 'NL'
     },
     founder: [{ '@id': WOUTER_ID }, { '@id': DANIEL_ID }],
-    sameAs: ['https://www.linkedin.com/in/wwdijkman/'],
+    // No `sameAs`. It used to hold Wouter's personal LinkedIn, which says "this
+    // organisation is the same thing as that person". It is not; the profile
+    // now sits on his Person node. Add a Factum company page here once one
+    // exists. Do not invent its URL.
     // What the organisation is *about*, in the terms a generative engine
     // assembles an answer from. Plain topic strings, not invented facts: each
     // one names a page section that already exists on the site.
