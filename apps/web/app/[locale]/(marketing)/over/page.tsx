@@ -25,16 +25,19 @@ export default async function OverPage(
   setRequestLocale(locale);
   const t = await getTranslations('over');
 
-  const timelineItems = [
-    { year: t('timeline.item_1_year'), label: t('timeline.item_1_label'), sub: t('timeline.item_1_sub'), delay: 0, future: false },
-    { year: t('timeline.item_2_year'), label: t('timeline.item_2_label'), sub: t('timeline.item_2_sub'), delay: 60, future: false },
-    { year: t('timeline.item_3_year'), label: t('timeline.item_3_label'), sub: t('timeline.item_3_sub'), delay: 120, future: false },
-    { year: t('timeline.item_4_year'), label: t('timeline.item_4_label'), sub: t('timeline.item_4_sub'), delay: 180, future: false },
-    /* Factum shipped. It carried a "verwacht" badge for months after
-       factumcapital.eu went live, which made the newest entry on the
-       timeline the one thing on it that was out of date. */
-    { year: t('timeline.item_5_year'), label: t('timeline.item_5_label'), sub: t('timeline.item_5_sub'), delay: 240, future: false },
-  ];
+  /* Six rows, matching the career on factumcapital.eu/team: Alter Domus,
+     Rabobank, ING, then the two businesses. The old version had
+     restructuring at 2017–2020 and acquisition finance at 2020–2023, so the
+     two sites disagreed about the same person (audit 12-10-2026, W1).
+     Factum is pre-launch and says so in its own label; nothing here is
+     "future", so the badge stays unused. */
+  const timelineItems = [1, 2, 3, 4, 5, 6].map((n, i) => ({
+    year: t(`timeline.item_${n}_year`),
+    label: t(`timeline.item_${n}_label`),
+    sub: t(`timeline.item_${n}_sub`),
+    delay: i * 60,
+    future: false,
+  }));
 
   return (
     <>

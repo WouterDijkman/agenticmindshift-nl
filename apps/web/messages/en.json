@@ -28,7 +28,7 @@
     "cta_title": "One conversation, twenty minutes.",
     "cta_sub": "No preparation, no invoice, no email sequence.",
     "copyright": "© 2026 Agentic Mindshift — founded October 2025.",
-    "tagline_bottom": "Factum Capital · AI due diligence for M&A and private equity",
+    "tagline_bottom": "Also by Wouter Dijkman: Factum Capital",
     "cta": "Book a 20-minute call"
   },
   "homepage": {
@@ -154,9 +154,9 @@
     "bio": {
       "eyebrow": "Background",
       "quote": "I have seen deals that added up on paper and still stalled. Nobody dared question the uncomfortable assumption out loud. That is what I work on. With better questions, not more data.",
-      "para1": "Three years of financial restructuring, three years of acquisition finance. Both sides of the European mid-market. That combination shows exactly where assumptions fail, and where monthly reporting hides setbacks instead of flagging them.",
-      "para2_prefix": "Agentic Mindshift started in October 2025. AI for Business at Nyenrode followed in November 2025. Running since 2026:",
-      "para2_suffix": ": an AI platform with which deal teams put their DD process, monthly reporting and judgement on a fixed footing.",
+      "para1": "Law at Maastricht, then six years on the financing side of deals: Alter Domus, financial restructuring at Rabobank, acquisition and leveraged finance at ING. Deals being financed and deals in trouble. That combination shows exactly where assumptions fail, and where monthly figures keep a setback hidden for months.",
+      "para2_prefix": "Agentic Mindshift started in October 2025. AI for Business at Nyenrode followed in November 2025. In 2026 I co-founded",
+      "para2_suffix": ", a separate business for AI due diligence: it reads the whole data room and cites the source of every finding. Pre-launch.",
       "para3": "I keep this deliberately selective: a handful of partners at a time, so every engagement gets the attention a deal deserves."
     },
     "credentials": {
@@ -168,9 +168,9 @@
       "cred_2_value": "2 disciplines",
       "cred_2_label": "Financing & restructuring",
       "cred_2_sub": "The full cycle, from financing to distress",
-      "cred_3_value": "€1–25M",
-      "cred_3_label": "Mid-market focus",
-      "cred_3_sub": "European PE and M&A deal size",
+      "cred_3_value": "LLM",
+      "cred_3_label": "Lawyer by training",
+      "cred_3_sub": "Corporate & Commercial Law · Maastricht University",
       "cred_4_value": "Founder-led",
       "cred_4_label": "Selective & hands-on",
       "cred_4_sub": "A handful of partners at a time, no layers in between"
@@ -179,21 +179,24 @@
       "eyebrow": "Career",
       "heading": "Timeline",
       "future_badge": "expected",
-      "item_1_year": "2017–2020",
-      "item_1_label": "Financial Restructuring",
-      "item_1_sub": "SME and mid-market portfolios in distress: intensive care and restructuring",
+      "item_1_year": "2019–2020",
+      "item_1_label": "Legal Officer",
+      "item_1_sub": "Alter Domus",
       "item_2_year": "2020–2023",
-      "item_2_label": "Acquisition Finance",
-      "item_2_sub": "LBO financing on European PE deals, mid-market €1–25M",
-      "item_3_year": "October 2025",
-      "item_3_label": "Founded Agentic Mindshift",
-      "item_3_sub": "AI advisory for European PE and M&A firms",
-      "item_4_year": "November 2025",
-      "item_4_label": "AI for Business",
-      "item_4_sub": "Nyenrode Business Universiteit · AI in financial practice",
-      "item_5_year": "2026",
-      "item_5_label": "Launch Factum Capital",
-      "item_5_sub": "AI platform for M&A and restructuring"
+      "item_2_label": "Financial Restructuring",
+      "item_2_sub": "Rabobank · SME and mid-market companies in distress: intensive care and restructuring",
+      "item_3_year": "2023–2025",
+      "item_3_label": "Acquisition & Leveraged Finance",
+      "item_3_sub": "ING · LBO financing on private equity deals",
+      "item_4_year": "October 2025",
+      "item_4_label": "Founded Agentic Mindshift",
+      "item_4_sub": "AI advisory for European PE and M&A firms",
+      "item_5_year": "November 2025",
+      "item_5_label": "AI for Business",
+      "item_5_sub": "Nyenrode Business Universiteit · AI in financial practice",
+      "item_6_year": "2026",
+      "item_6_label": "Factum Capital (pre-launch)",
+      "item_6_sub": "Co-founder · AI due diligence for buyers and sell-side brokers"
     },
     "werkwijze_link": {
       "eyebrow": "How we work",
@@ -271,7 +274,7 @@
       "q3": "Are we locked into a long term?",
       "a3": "Sparring, advisory and implementation all go per engagement. There is no minimum term and no notice period.",
       "q4": "And AI-driven due diligence on a deal?",
-      "a4": "That work runs through Factum Capital, our AI platform, at factumcapital.eu. We refer you on and stay involved."
+      "a4": "That runs through Factum Capital at factumcapital.eu, a separate business Wouter co-founded. Raise it in the first call if it is on your table."
     },
     "cta": {
       "eyebrow": "Start here",
@@ -334,9 +337,9 @@
     "s9_body": "These terms and all engagements are governed by Dutch law. Disputes are submitted to the competent court in the district of establishment."
   },
   "factum_banner": {
-    "eyebrow": "The platform behind it",
+    "eyebrow": "Due diligence on a deal?",
     "heading": "Factum Capital",
-    "body": "AI-driven due diligence for M&A and private equity runs through Factum Capital. Eight disciplines over the whole data room, every finding cited to its source and location, every output approved by a named person.",
+    "body": "A separate business Wouter co-founded. It reads the whole data room and cites every finding to its source document and location. Pre-launch.",
     "cta": "Go to factumcapital.eu"
   }
 }

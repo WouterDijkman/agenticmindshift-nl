@@ -28,7 +28,7 @@
     "cta_title": "Ein Gespräch, zwanzig Minuten.",
     "cta_sub": "Keine Vorbereitung, keine Rechnung, keine Mailstrecke.",
     "copyright": "© 2026 Agentic Mindshift — gegründet Oktober 2025.",
-    "tagline_bottom": "Factum Capital · KI-Due-Diligence für M&A und Private Equity",
+    "tagline_bottom": "Ebenfalls von Wouter Dijkman: Factum Capital",
     "cta": "20-minütiges Gespräch buchen"
   },
   "homepage": {
@@ -154,9 +154,9 @@
     "bio": {
       "eyebrow": "Hintergrund",
       "quote": "Ich habe Deals gesehen, die auf dem Papier aufgingen und dennoch scheiterten. Niemand traute sich, die unbequeme Annahme laut anzuzweifeln. Daran arbeite ich. Mit besseren Fragen, nicht mit mehr Daten.",
-      "para1": "Drei Jahre Financial Restructuring, drei Jahre Acquisition Finance. Beide Seiten des europäischen Mid-Market. Diese Kombination zeigt genau, wo Annahmen nicht aufgehen und wo das Monatsreporting Rückschläge verbirgt, statt sie zu melden.",
-      "para2_prefix": "Im Oktober 2025 startete Agentic Mindshift. Im November 2025 folgte AI for Business an der Nyenrode. Seit 2026 läuft",
-      "para2_suffix": ": eine KI-Plattform, mit der Deal-Teams ihren DD-Prozess, ihr Monatsreporting und ihre Urteilsbildung fest aufsetzen.",
+      "para1": "Jura in Maastricht, danach sechs Jahre auf der Finanzierungsseite von Deals: Alter Domus, Financial Restructuring bei der Rabobank, Acquisition und Leveraged Finance bei ING. Deals, die finanziert werden, und Deals, die in Schieflage geraten. Diese Kombination zeigt genau, wo Annahmen nicht aufgehen und wo Monatszahlen einen Rückschlag monatelang verbergen.",
+      "para2_prefix": "Im Oktober 2025 startete Agentic Mindshift. Im November 2025 folgte AI for Business an der Nyenrode. 2026 habe ich",
+      "para2_suffix": " mitgegründet, ein eigenständiges Unternehmen für KI-gestützte Due Diligence: Es liest den gesamten Data Room und nennt zu jeder Feststellung die Quelle. Noch vor dem Launch.",
       "para3": "Ich halte das bewusst selektiv: eine Handvoll Partner zugleich, damit jedes Mandat die Aufmerksamkeit erhält, die ein Deal verdient."
     },
     "credentials": {
@@ -168,9 +168,9 @@
       "cred_2_value": "2 Disziplinen",
       "cred_2_label": "Finanzierung & Restrukturierung",
       "cred_2_sub": "Der ganze Zyklus, von der Finanzierung bis zur Krise",
-      "cred_3_value": "€1–25M",
-      "cred_3_label": "Mid-Market-Fokus",
-      "cred_3_sub": "Europäische PE- und M&A-Dealgrößen",
+      "cred_3_value": "LLM",
+      "cred_3_label": "Jurist",
+      "cred_3_sub": "Corporate & Commercial Law · Universität Maastricht",
       "cred_4_value": "Founder-led",
       "cred_4_label": "Selektiv & hands-on",
       "cred_4_sub": "Eine Handvoll Partner zur gleichen Zeit, ohne Zwischenebenen"
@@ -179,21 +179,24 @@
       "eyebrow": "Karriere",
       "heading": "Zeitstrahl",
       "future_badge": "erwartet",
-      "item_1_year": "2017–2020",
-      "item_1_label": "Financial Restructuring",
-      "item_1_sub": "KMU- und Mid-Market-Portfolios in der Krise: Intensivbetreuung und Restrukturierung",
+      "item_1_year": "2019–2020",
+      "item_1_label": "Legal Officer",
+      "item_1_sub": "Alter Domus",
       "item_2_year": "2020–2023",
-      "item_2_label": "Acquisition Finance",
-      "item_2_sub": "LBO-Finanzierung bei europäischen PE-Deals, Mid-Market €1–25M",
-      "item_3_year": "Oktober 2025",
-      "item_3_label": "Gründung Agentic Mindshift",
-      "item_3_sub": "KI-Beratung für europäische PE- und M&A-Häuser",
-      "item_4_year": "November 2025",
-      "item_4_label": "AI for Business",
-      "item_4_sub": "Nyenrode Business Universiteit · KI in der Finanzpraxis",
-      "item_5_year": "2026",
-      "item_5_label": "Start Factum Capital",
-      "item_5_sub": "KI-Plattform für M&A und Restrukturierung"
+      "item_2_label": "Financial Restructuring",
+      "item_2_sub": "Rabobank · KMU und Mid-Market-Unternehmen in der Krise: Intensivbetreuung und Restrukturierung",
+      "item_3_year": "2023–2025",
+      "item_3_label": "Acquisition & Leveraged Finance",
+      "item_3_sub": "ING · LBO-Finanzierung bei Private-Equity-Deals",
+      "item_4_year": "Oktober 2025",
+      "item_4_label": "Gründung Agentic Mindshift",
+      "item_4_sub": "KI-Beratung für europäische PE- und M&A-Häuser",
+      "item_5_year": "November 2025",
+      "item_5_label": "AI for Business",
+      "item_5_sub": "Nyenrode Business Universiteit · KI in der Finanzpraxis",
+      "item_6_year": "2026",
+      "item_6_label": "Factum Capital (Pre-Launch)",
+      "item_6_sub": "Mitgründer · KI-Due-Diligence für Käufer und Sell-Side-Broker"
     },
     "werkwijze_link": {
       "eyebrow": "Arbeitsweise",
@@ -271,7 +274,7 @@
       "q3": "Binden wir uns an eine lange Laufzeit?",
       "a3": "Sparring, Beratung und Implementierung laufen pro Auftrag. Es gibt keine Mindestlaufzeit und keine Kündigungsfrist.",
       "q4": "Und KI-gestützte Due Diligence auf einem Deal?",
-      "a4": "Diese Arbeit läuft über Factum Capital, unsere KI-Plattform, auf factumcapital.eu. Wir verweisen Sie weiter und bleiben eingebunden."
+      "a4": "Das läuft über Factum Capital auf factumcapital.eu, ein eigenständiges Unternehmen, das Wouter mitgegründet hat. Sprechen Sie es im ersten Gespräch an, wenn es bei Ihnen ansteht."
     },
     "cta": {
       "eyebrow": "Hier beginnen",
@@ -334,9 +337,9 @@
     "s9_body": "Auf diese Bedingungen und alle Aufträge ist niederländisches Recht anwendbar. Streitigkeiten werden dem zuständigen Gericht im Bezirk des Sitzes vorgelegt."
   },
   "factum_banner": {
-    "eyebrow": "Die Plattform dahinter",
+    "eyebrow": "Due Diligence für einen Deal?",
     "heading": "Factum Capital",
-    "body": "KI-gestützte Due Diligence für M&A und Private Equity läuft über Factum Capital. Acht Disziplinen über den gesamten Data Room, jede Feststellung mit Quelle und Fundstelle, jedes Ergebnis von einer namentlich benannten Person freigegeben.",
+    "body": "Ein eigenständiges Unternehmen, das Wouter mitgegründet hat. Es liest den gesamten Data Room und belegt jede Feststellung mit Quelldokument und Fundstelle. Noch vor dem Launch.",
     "cta": "Zu factumcapital.eu"
   }
 }

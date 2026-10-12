@@ -28,7 +28,7 @@
     "cta_title": "Uma conversa de vinte minutos.",
     "cta_sub": "Sem preparação, sem fatura, sem sequência de e-mails.",
     "copyright": "© 2026 Agentic Mindshift — fundada em outubro de 2025.",
-    "tagline_bottom": "Factum Capital · due diligence com IA para M&A e private equity",
+    "tagline_bottom": "Também de Wouter Dijkman: Factum Capital",
     "cta": "Marque uma conversa de 20 minutos"
   },
   "homepage": {
@@ -154,9 +154,9 @@
     "bio": {
       "eyebrow": "Contexto",
       "quote": "Vi operações que fechavam no papel e mesmo assim encalharam. Ninguém se atrevia a questionar em voz alta o pressuposto incómodo. É nisso que trabalho. Com melhores perguntas, não com mais dados.",
-      "para1": "Três anos de financial restructuring, três de acquisition finance. Os dois lados do mid-market europeu. Essa combinação mostra exatamente onde os pressupostos falham e onde o reporte mensal esconde os reveses em vez de os assinalar.",
-      "para2_prefix": "A Agentic Mindshift arrancou em outubro de 2025. Em novembro de 2025 seguiu-se AI for Business na Nyenrode. Desde 2026 funciona",
-      "para2_suffix": ": uma plataforma de IA com que as equipas de operações fixam o seu processo de DD, o reporte mensal e a formação de juízo.",
+      "para1": "Direito em Maastricht e depois seis anos do lado do financiamento das operações: Alter Domus, financial restructuring no Rabobank, acquisition e leveraged finance no ING. Operações que se financiam e operações que encalham. Essa combinação mostra exatamente onde os pressupostos falham e onde os números mensais escondem um revés durante meses.",
+      "para2_prefix": "A Agentic Mindshift arrancou em outubro de 2025. Em novembro de 2025 seguiu-se AI for Business na Nyenrode. Em 2026 cofundei a",
+      "para2_suffix": ", um negócio à parte de due diligence com IA: lê todo o data room e cita a fonte de cada constatação. Ainda em pré-lançamento.",
       "para3": "Mantenho isto deliberadamente seletivo: um punhado de parceiros de cada vez, para que cada projeto receba a atenção que uma operação merece."
     },
     "credentials": {
@@ -168,9 +168,9 @@
       "cred_2_value": "2 disciplinas",
       "cred_2_label": "Financiamento & restructuring",
       "cred_2_sub": "O ciclo completo, do financiamento ao stress",
-      "cred_3_value": "€1–25M",
-      "cred_3_label": "Foco mid-market",
-      "cred_3_sub": "Dimensão de deals PE e M&A europeu",
+      "cred_3_value": "LLM",
+      "cred_3_label": "Jurista",
+      "cred_3_sub": "Corporate & Commercial Law · Universidade de Maastricht",
       "cred_4_value": "Founder-led",
       "cred_4_label": "Seletivo & hands-on",
       "cred_4_sub": "Um punhado de parceiros de cada vez, sem camadas intermédias"
@@ -179,21 +179,24 @@
       "eyebrow": "Carreira",
       "heading": "Cronologia",
       "future_badge": "previsto",
-      "item_1_year": "2017–2020",
-      "item_1_label": "Financial Restructuring",
-      "item_1_sub": "Carteiras de PME e mid-market em stress: acompanhamento intensivo e reestruturação",
+      "item_1_year": "2019–2020",
+      "item_1_label": "Legal Officer",
+      "item_1_sub": "Alter Domus",
       "item_2_year": "2020–2023",
-      "item_2_label": "Acquisition Finance",
-      "item_2_sub": "Financiamento LBO em operações de PE europeias, mid-market €1–25M",
-      "item_3_year": "Outubro 2025",
-      "item_3_label": "Fundação da Agentic Mindshift",
-      "item_3_sub": "Consultoria em IA para sociedades de PE e M&A europeias",
-      "item_4_year": "Novembro 2025",
-      "item_4_label": "AI for Business",
-      "item_4_sub": "Nyenrode Business Universiteit · IA na prática financeira",
-      "item_5_year": "2026",
-      "item_5_label": "Lançamento Factum Capital",
-      "item_5_sub": "Plataforma de IA para M&A e reestruturação"
+      "item_2_label": "Financial Restructuring",
+      "item_2_sub": "Rabobank · PME e empresas do mid-market em dificuldades: acompanhamento intensivo e reestruturação",
+      "item_3_year": "2023–2025",
+      "item_3_label": "Acquisition & Leveraged Finance",
+      "item_3_sub": "ING · financiamento LBO em operações de private equity",
+      "item_4_year": "Outubro 2025",
+      "item_4_label": "Fundação da Agentic Mindshift",
+      "item_4_sub": "Consultoria em IA para escritórios europeus de PE e M&A",
+      "item_5_year": "Novembro 2025",
+      "item_5_label": "AI for Business",
+      "item_5_sub": "Nyenrode Business Universiteit · IA na prática financeira",
+      "item_6_year": "2026",
+      "item_6_label": "Factum Capital (pré-lançamento)",
+      "item_6_sub": "Cofundador · due diligence com IA para compradores e brokers do lado vendedor"
     },
     "werkwijze_link": {
       "eyebrow": "Metodologia",
@@ -271,7 +274,7 @@
       "q3": "Ficamos presos a um prazo longo?",
       "a3": "O sparring, a consultoria e a implementação vão por encomenda. Não há prazo mínimo nem pré-aviso.",
       "q4": "E a due diligence com IA sobre uma transação?",
-      "a4": "Esse trabalho corre pela Factum Capital, a nossa plataforma de IA, em factumcapital.eu. Encaminhamos e mantemo-nos envolvidos."
+      "a4": "Isso corre pela Factum Capital, em factumcapital.eu, um negócio à parte que Wouter cofundou. Mencione-o na primeira conversa se estiver em cima da mesa."
     },
     "cta": {
       "eyebrow": "Comece aqui",
@@ -334,9 +337,9 @@
     "s9_body": "Estes termos e todos os encargos são regidos pelo direito neerlandês. Os litígios serão submetidos ao tribunal competente da sede."
   },
   "factum_banner": {
-    "eyebrow": "A plataforma por trás",
+    "eyebrow": "Due diligence de uma operação?",
     "heading": "Factum Capital",
-    "body": "A due diligence com IA para M&A e private equity corre pela Factum Capital. Oito disciplinas sobre todo o data room, cada constatação citada à fonte e localização, cada resultado aprovado por uma pessoa com nome.",
+    "body": "Um negócio à parte que Wouter cofundou. Lê todo o data room e cita cada constatação ao documento de origem e à localização. Ainda em pré-lançamento.",
     "cta": "Ir para factumcapital.eu"
   }
 }
