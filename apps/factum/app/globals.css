@@ -2674,8 +2674,12 @@ details.disclosure > div { padding-bottom: 24px; }
    reader to click.
 
    It is a strip rather than a pill because the sentence is long enough to
-   wrap on a phone and a pill that wraps stops looking like a badge. The accent
-   left edge does the work a pill would have done.
+   wrap on a phone and a pill that wraps stops looking like a badge.
+
+   No accent left edge any more (12 October 2026): a 2px orange stripe on a
+   callout is the stock "alert box" signature, and on these pages it put a
+   second CTA-orange shape directly under the CTA. The orange check mark
+   already carries the accent; the strip is now one even hairline.
    ============================================================ */
 .cta-proof {
   display: flex;
@@ -2688,8 +2692,7 @@ details.disclosure > div { padding-bottom: 24px; }
   line-height: 1.5;
   color: var(--text-secondary);
   background: var(--surface-inset);
-  border: 1px solid var(--hairline-faint);
-  border-left: 2px solid var(--accent-cta);
+  border: 1px solid var(--hairline);
   border-radius: 3px;
 }
 .cta-proof-mark {
