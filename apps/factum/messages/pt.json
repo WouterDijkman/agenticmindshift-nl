@@ -28,10 +28,6 @@
       "title": "A equipa por trás da Factum",
       "description": "Um banqueiro de leveraged finance e um engenheiro de dados: quem constrói a Factum e por que responde cada um."
     },
-    "partnerships": {
-      "title": "Capacidade de diligence para consultores",
-      "description": "Capacidade analítica ao nível de due diligence por trás das suas relações com clientes."
-    },
     "contact": {
       "title": "Partilhe um data room sob NDA",
       "description": "Trinta minutos para acordar o NDA e o data room. O NDA segue no mesmo dia; os documentos só se movem depois de assinado."
@@ -41,8 +37,8 @@
       "description": "Como este site e os nossos mandatos tratam os dados pessoais."
     },
     "preSale": {
-      "title": "Due diligence pré-venda para vendedores",
-      "description": "A leitura do comprador, primeiro sobre a sua própria empresa. Cada dimensão, mais uma lista identificada do que falta no seu data room, enquanto ainda há tempo de agir."
+      "title": "Preparação do data room para brokers",
+      "description": "Para brokers do lado vendedor: o que falta no data room do seu cliente face ao que um comprador vai pedir, e que riscos vai levantar."
     }
   },
   "a11y": {
@@ -57,7 +53,6 @@
     "aiLimits": "Limites da IA",
     "governance": "Governação",
     "team": "Equipa",
-    "partnerships": "Parcerias",
     "contact": "Contacto",
     "cta": "Partilhe um data room",
     "openMenu": "Abrir menu",
@@ -680,92 +675,96 @@
   },
   "preSale": {
     "header": {
-      "title": "Encontre-o antes do comprador",
-      "lead": "Um comprador vai correr esta análise sobre a sua empresa, quer o faça quer não. A única questão é se vê as constatações primeiro, enquanto ainda pode fazer alguma coisa com elas.",
+      "title": "Prepare o data room antes de os compradores o verem",
+      "lead": "Para brokers do lado vendedor que preparam uma venda ou um aumento de capital. A Factum lê o data room do seu cliente como um comprador o fará: o que ainda falta, o que não bate certo e que riscos um comprador vai levantar.",
       "cta": "Partilhe um data room"
     },
     "who": {
-      "title": "Quem o corre",
-      "lead": "Três situações, uma razão.",
+      "title": "Para quem",
+      "lead": "Primeiro, brokers. Também proprietários.",
       "profiles": [
         {
-          "title": "Proprietários a caminho de uma saída",
-          "body": "A dois ou cinco anos, ou já em processo. A distância entre o preço que tem em mente e o preço que um comprador vai defender é feita de constatações que ainda não viu."
+          "title": "Brokers do lado vendedor e assessores de M&A",
+          "body": "Vai levar um cliente a compradores. Quer que as lacunas sejam encontradas do seu lado da mesa, enquanto ainda há tempo para as preencher."
         },
         {
-          "title": "Assessores do lado vendedor",
-          "body": "Está prestes a pôr uma empresa à frente de céticos profissionais. Saber o que vão encontrar vale mais do que esperar que não olhem."
+          "title": "Brokers que captam capital ou dívida",
+          "body": "Um aumento de capital pede documentos diferentes dos de uma venda. A lista segue o negócio: capital, dívida, ambos ou uma saída."
         },
         {
-          "title": "Quem já perdeu um processo tarde",
-          "body": "As operações raramente morrem por preço. Morrem por algo que apareceu tarde e deixou todos os outros números sob suspeita."
+          "title": "Proprietários a preparar uma saída",
+          "body": "A dois a cinco anos, ou já num processo. A distância entre o seu preço e o preço que um comprador vai defender é feita de constatações que ainda não viu."
         }
       ]
     },
     "mirror": {
-      "title": "A leitura do comprador, apontada a si",
-      "lead": "As mesmas dimensões, o mesmo data room, o mesmo padrão de prova. O que muda é quem tem o resultado na mão.",
+      "title": "A leitura do comprador, do seu lado",
+      "lead": "A mesma plataforma, com a perspetiva do vendedor: mostra o que um comprador vai levantar, para que possa ser fundamentado ou resolvido antes.",
       "steps": [
         {
-          "title": "Lemos como um comprador leria",
-          "body": "Não como um vendedor a rever os próprios trabalhos. Ao motor não se diz de que lado está, e as constatações saem iguais de qualquer forma."
+          "title": "Configure o dossier como lado vendedor",
+          "body": "A análise escreve então para o vendedor: o que um comprador vai levantar e o que precisa de prova ou de solução antes."
         },
         {
-          "title": "É o primeiro a vê-las",
-          "body": "Cada constatação com a sua fonte e localização por trás, para que possa verificar em vez de acreditar na nossa palavra."
+          "title": "A sua equipa avalia cada ponto",
+          "body": "Cada ponto traz a fonte e a localização. A sua equipa marca o que é relevante, o que não é e o que exige mais análise."
         },
         {
-          "title": "Decide antes de alguém perguntar",
-          "body": "Corrigir, incorporar no preço, ou preparar a resposta. As três batem ser apanhado numa ronda de perguntas."
+          "title": "Pergunte ao seu cliente a partir da plataforma",
+          "body": "Os documentos em falta e as questões em aberto seguem para o seu cliente num único pedido, dentro da plataforma."
         }
       ]
     },
     "gaps": {
-      "title": "O que falta no seu data room",
-      "lead": "O primeiro movimento de um comprador é pedir o que não está lá. Essa lista chega primeiro a si, identificada.",
+      "title": "O que falta no data room",
+      "lead": "Medido face ao que um comprador ou investidor vai pedir. A lista segue o negócio: um aumento de capital pede um plano de aplicação de fundos; uma venda, a carteira de encomendas.",
       "items": [
-        "Os documentos que um comprador vai pedir e que o seu data room não contém.",
-        "Os anos incompletos numa exportação, onde uma lacuna se lê pior do que é.",
-        "Os contratos referidos dentro de outros contratos e nunca carregados.",
-        "As lacunas que já conhece, para poder escolher como as apresenta em vez de ser questionado sobre elas."
+        "Os documentos sem os quais o dossier não pode ir para o mercado.",
+        "Os detalhes que uma contraparte vai pedir a seguir, listados à parte.",
+        "Documentos que existem, mas não contêm o que um comprador precisa, como uma lista de clientes sem receita por cliente.",
+        "Números que se contradizem entre documentos, com as duas fontes."
       ],
-      "note": "Vemos que algo falta. Se foi deixado de fora de propósito não nos compete dizer, e não o dizemos."
+      "note": "A comparação é feita sobre os próprios documentos. Um contrato guardado dentro de outro ficheiro pode aparecer como em falta; por isso cada ponto passa primeiro pela sua equipa."
     },
     "boundaries": {
-      "title": "O que um sprint pré-venda não é",
-      "lead": "A versão honesta, para não ser uma conversa mais tarde.",
+      "title": "O que isto não é",
+      "lead": "A versão honesta, para que não seja uma conversa mais tarde.",
       "items": [
-        "Não é um parecer de vendor due diligence. Isso é um trabalho de auditoria assinado e este não o é.",
-        "Não é uma garantia de preço. Podemos dizer-lhe o que um comprador vai encontrar; o que faz com isso é com ele.",
-        "Não é uma fairness opinion, nem uma avaliação que se aguente sozinha perante um banco.",
-        "Não é um serviço de limpeza. Nomeamos o que falta; obtê-lo é consigo ou com o seu assessor.",
-        "Não fica isolado do seu próprio assessor por omissão. Se quiser mantê-lo à parte, diga-o antes de começarmos."
+        "Não é um relatório de vendor due diligence. Isso é um trabalho de certificação assinado, e isto não o é.",
+        "Não é uma garantia de preço. Mostra o que um comprador vai levantar; o que o comprador faz com isso é com ele.",
+        "Não é uma avaliação que se sustente sozinha perante um banco.",
+        "Não é um serviço de limpeza. Indica o que falta; obtê-lo cabe ao seu cliente.",
+        "Não é aprovado pela Factum. A sua equipa avalia cada ponto, e a exportação para Word assinala qualquer ponto ainda não avaliado."
       ]
     },
     "faq": {
-      "title": "O que os vendedores perguntam primeiro",
+      "title": "O que os brokers perguntam primeiro",
       "items": [
+        {
+          "q": "O que se obtém?",
+          "a": "Uma lista de trabalho: no máximo vinte sinais de alerta, números que se contradizem, as perguntas que um investidor vai fazer e pontos para o term sheet ou a NBO. Exporta para Word para o seu cliente."
+        },
+        {
+          "q": "Que disciplinas cobre?",
+          "a": "Os sinais de alerta vêm do financeiro, comercial e operacional, que funcionam em qualquer jurisdição. Jurídico e fiscal estão ajustados ao direito neerlandês."
+        },
         {
           "q": "Quanto tempo antes do processo devemos correr isto?",
           "a": "Cedo o suficiente para que a resposta a uma constatação ainda possa ser «já corrigimos». Assim que o data room está no ar, a versão honesta passa a ser «sabemos, e este é o contexto». As duas funcionam. A primeira vale mais."
         },
         {
-          "q": "O comprador fica a saber que fizemos isto?",
-          "a": "Só se lho disser. Alguns vendedores dizem, porque chegar com as suas próprias constatações e o contexto é uma posição forte. É a sua decisão, não a nossa."
+          "q": "Os compradores vão saber que o fizemos?",
+          "a": "Só se lhes disser. Chegar com as suas próprias constatações e o seu contexto é uma posição forte. A decisão é sua."
         },
         {
-          "q": "E se encontrarmos algo sério?",
-          "a": "Então foi você que o encontrou, meses antes de alguém com interesse em usá-lo. É essa a razão para o correr, não uma razão para o deixar."
-        },
-        {
-          "q": "É o mesmo produto que o sprint do lado comprador?",
-          "a": "O mesmo motor, as mesmas dimensões e o mesmo contrato de output. Muda a pergunta a que o apontamos e a lista que recebe no fim."
+          "q": "É o mesmo produto que a versão para compradores?",
+          "a": "A mesma plataforma e o mesmo contrato de saída, com uma leitura mais leve. A versão para compradores lê cada disciplina em profundidade; esta foi feita para deixar um dossier pronto para o mercado."
         }
       ]
     },
     "cta": {
-      "title": "Corra-o primeiro sobre a sua própria empresa",
-      "body": "Partilhe o seu próprio data room sob NDA. As constatações voltam em dias, numa chamada, antes de qualquer comprador as ver.",
+      "title": "Passe-o pelo data room de um cliente antes dos compradores",
+      "body": "Partilhe um data room sob NDA. Recebe a lista de trabalho numa chamada, antes de qualquer comprador ver o data room.",
       "button": "Partilhe um data room",
       "note": "Um punhado de trabalhos piloto."
     }
@@ -1206,116 +1205,6 @@
           "body": "Revê as constatações e aprova. O juízo sobre o seu negócio fica consigo."
         }
       ]
-    }
-  },
-  "partnerships": {
-    "header": {
-      "title": "Mais mandatos do que a sua equipa consegue ler",
-      "lead": "Mantém a relação e o critério. Nós corremos a análise de todas as disciplinas por trás, sob o seu nome.",
-      "cta": "Partilhe um data room"
-    },
-    "who": {
-      "title": "Para quem isto costuma funcionar",
-      "lead": "Descritas pelo tipo de firma, nunca pelo nome.",
-      "profiles": [
-        {
-          "title": "Boutiques de corporate finance",
-          "body": "Processos de compra e de venda em que a limitação é a carga analítica."
-        },
-        {
-          "title": "Consultores de saída e criação de valor",
-          "body": "Proprietários a dois a cinco anos da saída, que precisam primeiro de uma base defensável."
-        },
-        {
-          "title": "Práticas de reestruturação e recuperação",
-          "body": "Onde uma análise independente tem de chegar depressa e aguentar o escrutínio dos financiadores."
-        },
-        {
-          "title": "Consultores de PE e do lado comprador",
-          "body": "Processos competitivos com prazo apertado, onde a leitura ainda tem de aguentar um comité de investimento."
-        }
-      ]
-    },
-    "split": {
-      "title": "O cliente fica consigo. Nós fornecemos a análise.",
-      "lead": "A mesma plataforma, todas as disciplinas, o mesmo filtro de revisão. Entregue sob o seu nome.",
-      "columns": [
-        {
-          "label": "Fica consigo",
-          "items": [
-            "A relação com o cliente e o mandato",
-            "O critério consultivo e a recomendação",
-            "As condições comerciais com o seu cliente",
-            "O controlo do que é entregue sob o seu nome"
-          ]
-        },
-        {
-          "label": "Fornecemos nós",
-          "items": [
-            "A leitura completa sobre o data room, todas as disciplinas",
-            "A reconciliação entre disciplinas como passo fixo",
-            "Constatações ligadas a um documento e a uma passagem, sempre",
-            "Um revisor identificado a responder pelo output"
-          ]
-        }
-      ],
-      "seam": "Limite"
-    },
-    "start": {
-      "title": "Como uma parceria começa de facto",
-      "lead": "Com um mandato real, executado como deve ser, antes de alguém se comprometer com o que quer que seja.",
-      "steps": [
-        {
-          "title": "Uma chamada, e um olhar sobre a sua carteira",
-          "body": "Acordamos o NDA e depois mapeamos como são os seus mandatos e onde está a carga analítica. Trinta minutos."
-        },
-        {
-          "title": "Um mandato, executado de ponta a ponta",
-          "body": "Um mandato real, o mesmo controlo de revisão. Vê o output antes de assinar seja o que for."
-        },
-        {
-          "title": "Condições moldadas pelo que aconteceu",
-          "body": "Âmbito, preço e ritmo definidos face a um entregável real. Um primeiro esboço de parceria."
-        }
-      ]
-    },
-    "boundaries": {
-      "title": "O que uma parceria não inclui",
-      "lead": "Alguns são compromissos com parceiros existentes. O resto é o estado honesto de uma empresa em pré-lançamento.",
-      "items": [
-        "Nenhuma afirmação de certificação ou auditoria em marca branca. Não respondemos por um selo que não temos.",
-        "Nenhuma capacidade ilimitada. Uma parceria que ultrapassa o controlo de revisão é pior do que parceria nenhuma.",
-        "Nenhuma política geral de comissões de referenciação. Onde se apliquem regras de certificação ou de independência, é verificado em cada relação.",
-        "Nenhuma pretensão sobre o seu cliente. Nada do que executamos para si se torna caso de estudo sem o seu acordo escrito.",
-        "Nenhum mandato conflituante onde já assumimos exclusividade. Onde exista exclusividade, dizemo-lo."
-      ]
-    },
-    "faq": {
-      "title": "O que os parceiros perguntam primeiro",
-      "items": [
-        {
-          "q": "Também trabalham diretamente com proprietários?",
-          "a": "Sim. Onde isso possa sobrepor-se ao seu mercado, dizemo-lo antes de se tornar um problema."
-        },
-        {
-          "q": "Que nome fica no relatório?",
-          "a": "Definido no primeiro mandato. Existem ambos os modelos: entregue sob o seu nome, com a Factum como motor, ou coentregue."
-        },
-        {
-          "q": "Podem executar apenas parte do âmbito?",
-          "a": "A análise completa é fixa, porque o valor está na reconciliação entre disciplinas. O que varia é a profundidade da redação."
-        },
-        {
-          "q": "Qual é o grau de exclusividade?",
-          "a": "A exclusividade é possível numa via definida, e é um compromisso real quando a assumimos."
-        }
-      ]
-    },
-    "cta": {
-      "title": "Comece com um mandato",
-      "body": "Aponte-o a um mandato real e leia o output.",
-      "button": "Partilhe um data room",
-      "note": "Primeiro o NDA, enviado no mesmo dia. Um negócio que fechou no ano passado também serve."
     }
   },
   "contact": {

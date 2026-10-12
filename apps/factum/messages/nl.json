@@ -28,10 +28,6 @@
       "title": "Het team achter Factum",
       "description": "Een bankier uit leveraged finance en een data-engineer: wie Factum bouwt, en waar elk van hen verantwoordelijk voor is."
     },
-    "partnerships": {
-      "title": "Diligencecapaciteit voor adviseurs",
-      "description": "Analysecapaciteit op het niveau van een diligenceteam, achter uw eigen klantrelaties."
-    },
     "contact": {
       "title": "Deel een data room onder NDA",
       "description": "Dertig minuten om de NDA en de data room af te spreken. De NDA gaat dezelfde dag de deur uit; documenten bewegen pas na ondertekening."
@@ -41,8 +37,8 @@
       "description": "Hoe deze website en onze opdrachten omgaan met persoonsgegevens."
     },
     "preSale": {
-      "title": "Pre-sale due diligence voor verkopers",
-      "description": "De read van de koper, eerst op uw eigen bedrijf. Elke dimensie, plus een lijst met naam en toenaam van wat uw data room mist, terwijl er nog tijd is om er iets aan te doen."
+      "title": "Data room marktklaar voor sell-side brokers",
+      "description": "Voor sell-side brokers: wat de data room van uw klant mist tegen wat een koper vraagt, en de risico’s die een koper opwerpt, vóór de marktgang."
     }
   },
   "a11y": {
@@ -57,7 +53,6 @@
     "aiLimits": "Grenzen van AI",
     "governance": "Governance",
     "team": "Team",
-    "partnerships": "Partnerships",
     "contact": "Contact",
     "cta": "Deel een data room",
     "openMenu": "Menu openen",
@@ -680,92 +675,96 @@
   },
   "preSale": {
     "header": {
-      "title": "Vind het voordat de koper het vindt",
-      "lead": "Een koper draait deze analyse op uw bedrijf, of u het nu zelf doet of niet. De enige vraag is of u de bevindingen als eerste ziet, terwijl u er nog iets aan kunt doen.",
+      "title": "Maak de data room klaar voordat kopers hem zien",
+      "lead": "Voor sell-side brokers die een verkoop of kapitaalronde voorbereiden. Factum leest de data room van uw klant zoals een koper dat doet: wat er nog ontbreekt, wat niet klopt, en welke risico’s een koper op tafel legt.",
       "cta": "Deel een data room"
     },
     "who": {
-      "title": "Wie dit draait",
-      "lead": "Drie situaties, één reden.",
+      "title": "Voor wie",
+      "lead": "Eerst brokers. Ook eigenaren.",
       "profiles": [
         {
-          "title": "Eigenaren op weg naar een exit",
-          "body": "Twee tot vijf jaar vooruit, of al in een proces. Het gat tussen de prijs die u in gedachten heeft en de prijs die een koper verdedigt, bestaat uit bevindingen die u nog niet heeft gezien."
+          "title": "Sell-side brokers en M&A-adviseurs",
+          "body": "U gaat met een klant naar kopers. U wilt de gaten aan uw kant van de tafel vinden, zolang er nog tijd is om ze te dichten."
         },
         {
-          "title": "Verkopende adviseurs",
-          "body": "U zet zo een bedrijf voor beroepsmatige sceptici neer. Weten wat zij gaan vinden is meer waard dan hopen dat ze niet kijken."
+          "title": "Brokers die eigen of vreemd vermogen ophalen",
+          "body": "Een kapitaalronde vraagt andere stukken dan een verkoop. De checklist volgt de deal: eigen vermogen, schuld, beide, of een exit."
         },
         {
-          "title": "Wie ooit laat een proces verloor",
-          "body": "Deals sneuvelen zelden op prijs. Ze sneuvelen op iets dat laat bovenkwam en elk ander getal verdacht maakte."
+          "title": "Eigenaren die een exit voorbereiden",
+          "body": "Twee tot vijf jaar vooruit, of al in een proces. Het verschil tussen uw prijs en de prijs die een koper verdedigt, bestaat uit bevindingen die u nog niet hebt gezien."
         }
       ]
     },
     "mirror": {
-      "title": "De read van de koper, op u gericht",
-      "lead": "Dezelfde dimensies, dezelfde data room, dezelfde bewijsstandaard. Wat verschilt is wie de uitkomst in handen heeft.",
+      "title": "De lezing van de koper, vanaf uw kant",
+      "lead": "Hetzelfde platform, ingesteld op het verkoopperspectief: het laat zien wat een koper zal opwerpen, zodat u het vooraf kunt onderbouwen of oplossen.",
       "steps": [
         {
-          "title": "Wij lezen zoals een koper leest",
-          "body": "Niet als een verkoper die zijn eigen huiswerk nakijkt. De engine krijgt niet te horen aan welke kant hij staat, en de bevindingen komen er hoe dan ook hetzelfde uit."
+          "title": "Zet het dossier op verkoopkant",
+          "body": "De analyse schrijft dan voor de verkoper: wat een koper zal opwerpen, en wat vooraf bewijs of een oplossing nodig heeft."
         },
         {
-          "title": "U ziet ze als eerste",
-          "body": "Bij elke bevinding de bron en de vindplaats, zodat u het kunt narekenen in plaats van ons op ons woord te geloven."
+          "title": "Uw team beoordeelt elk punt",
+          "body": "Elk punt draagt bron en vindplaats. Uw team markeert wat relevant is, wat niet, en wat dieper moet."
         },
         {
-          "title": "U beslist voordat iemand het vraagt",
-          "body": "Repareren, inprijzen, of het antwoord voorbereiden. Alle drie zijn beter dan verrast worden in een vragenronde."
+          "title": "Vraag het uw klant vanuit het platform",
+          "body": "Ontbrekende stukken en open vragen gaan als één verzoek naar uw klant, binnen het platform."
         }
       ]
     },
     "gaps": {
-      "title": "Wat er in uw data room ontbreekt",
-      "lead": "De eerste zet van een koper is vragen om wat er niet in zit. U krijgt die lijst als eerste, met naam en toenaam.",
+      "title": "Wat de data room mist",
+      "lead": "Gemeten tegen wat een koper of investeerder gaat vragen. De lijst volgt de deal: een kapitaalronde vraagt een bestedingsplan, een verkoop het orderboek.",
       "items": [
-        "De documenten waar een koper om gaat vragen en die uw data room niet bevat.",
-        "De jaren die onvolledig zijn in een export, waar een gat erger leest dan het is.",
-        "De contracten waar andere contracten naar verwijzen en die nooit zijn aangeleverd.",
-        "De gaten die u zelf al kent, zodat u kunt kiezen hoe u ze presenteert in plaats van erop bevraagd te worden."
+        "De stukken zonder welke het dossier niet naar de markt kan.",
+        "De details die een tegenpartij daarna vraagt, apart vermeld.",
+        "Stukken die er wel zijn maar niet bevatten wat een koper nodig heeft, zoals een klantenlijst zonder omzet per klant.",
+        "Cijfers die elkaar tussen documenten tegenspreken, met beide bronnen erbij."
       ],
-      "note": "Wij zien dát er iets ontbreekt. Of het er bewust uit is gelaten, is niet aan ons, en dat zeggen wij dan ook niet."
+      "note": "Het matchen gebeurt op de documenten zelf. Een contract dat in een ander bestand zit, kan als ontbrekend verschijnen; daarom gaat elk punt eerst langs uw team."
     },
     "boundaries": {
-      "title": "Wat een pre-sale sprint niet is",
+      "title": "Wat dit niet is",
       "lead": "De eerlijke versie, zodat het later geen gesprek wordt.",
       "items": [
-        "Geen vendor due diligence-verklaring. Dat is een getekende assurance-opdracht en dit is er geen.",
-        "Geen garantie op de prijs. Wij kunnen u zeggen wat een koper vindt; wat hij ermee doet is aan hem.",
-        "Geen fairness opinion, en geen waardering die op zichzelf voor een bank overeind blijft.",
-        "Geen opschoondienst. Wij benoemen wat er ontbreekt; het ophalen is aan u of aan uw adviseur.",
-        "Niet standaard afgeschermd van uw eigen adviseur. Wilt u het apart houden, zeg dat vóór de start."
+        "Geen vendor due diligence-rapport. Dat is een getekende attestopdracht, en dit is er geen.",
+        "Geen prijsgarantie. Het laat zien wat een koper zal opwerpen; wat de koper ermee doet, is aan hem.",
+        "Geen waardering die op zichzelf staat tegenover een bank.",
+        "Geen opruimdienst. Het benoemt wat ontbreekt; het ophalen is aan uw klant.",
+        "Niet afgetekend door Factum. Uw team beoordeelt elk punt, en de Word-export markeert elk punt dat nog niet is beoordeeld."
       ]
     },
     "faq": {
-      "title": "Wat verkopers als eerste vragen",
+      "title": "Wat brokers het eerst vragen",
       "items": [
+        {
+          "q": "Wat komt eruit?",
+          "a": "Een werklijst: hooguit twintig rode vlaggen, cijfers die elkaar tegenspreken, de vragen die een investeerder gaat stellen, en punten voor de termsheet of het NBO. Exporteerbaar naar Word voor uw klant."
+        },
+        {
+          "q": "Welke disciplines dekt het?",
+          "a": "De rode vlaggen komen uit financieel, commercieel en operationeel, die in elke jurisdictie werken. Juridisch en fiscaal zijn afgestemd op Nederlands recht."
+        },
         {
           "q": "Hoe lang vóór het proces moeten we dit draaien?",
           "a": "Vroeg genoeg dat het antwoord op een bevinding nog “dat hebben we opgelost” kan zijn. Zodra de data room live is, wordt de eerlijke framing “we weten het, en dit is de context”. Allebei werkt. De eerste is meer waard."
         },
         {
-          "q": "Merkt de koper dat we dit hebben gedaan?",
-          "a": "Alleen als u het vertelt. Sommige verkopers doen dat, omdat aankomen met uw eigen bevindingen én de context een sterke positie is. Dat is uw keuze, niet de onze."
+          "q": "Weten kopers dat we dit gedaan hebben?",
+          "a": "Alleen als u het ze vertelt. Met eigen bevindingen en hun context aan tafel komen is een sterke positie. Dat is uw keuze."
         },
         {
-          "q": "En als we iets ernstigs vinden?",
-          "a": "Dan heeft u het gevonden, maanden voordat iemand met een belang om het te gebruiken dat deed. Dat is de reden om het te draaien, geen reden om het te laten."
-        },
-        {
-          "q": "Is dit hetzelfde product als de sprint aan de koperskant?",
-          "a": "Dezelfde engine, dezelfde dimensies en hetzelfde outputcontract. Wat verschilt is de vraag waar we hem op richten en de lijst die u aan het eind krijgt."
+          "q": "Is dit hetzelfde product als de versie voor kopers?",
+          "a": "Hetzelfde platform en hetzelfde outputcontract, met een lichtere lezing. De versie voor kopers leest elke discipline in de diepte; deze is gebouwd om een dossier marktklaar te maken."
         }
       ]
     },
     "cta": {
-      "title": "Draai hem eerst op uw eigen bedrijf",
-      "body": "Deel uw eigen data room onder NDA. De bevindingen komen in dagen terug, op een call, voordat een koper ze ziet.",
+      "title": "Draai het op de data room van een klant, vóór de kopers",
+      "body": "Deel een data room onder NDA. U krijgt de werklijst op een call, voordat een koper de data room ziet.",
       "button": "Deel een data room",
       "note": "Een handvol pilotmandaten."
     }
@@ -1206,116 +1205,6 @@
           "body": "Beoordeelt de bevindingen en tekent af. Het oordeel over uw deal blijft bij u."
         }
       ]
-    }
-  },
-  "partnerships": {
-    "header": {
-      "title": "Meer mandaten dan uw team kan lezen",
-      "lead": "U behoudt de relatie en het oordeel. Wij draaien de analyse over alle disciplines erachter, onder uw naam.",
-      "cta": "Deel een data room"
-    },
-    "who": {
-      "title": "Voor wie dit doorgaans werkt",
-      "lead": "Beschreven naar het type kantoor, nooit bij naam.",
-      "profiles": [
-        {
-          "title": "Corporate-finance-boutiques",
-          "body": "Buy- en sell-side processen waar de analytische belasting de beperking is."
-        },
-        {
-          "title": "Exit- en waardecreatieadviseurs",
-          "body": "Eigenaren die twee tot vijf jaar voor hun exit staan en eerst een verdedigbare nulmeting nodig hebben."
-        },
-        {
-          "title": "Herstructurerings- en turnaroundpraktijken",
-          "body": "Waar een onafhankelijke doorlichting snel moet komen en de toetsing van financiers moet doorstaan."
-        },
-        {
-          "title": "PE- en buy-side-adviseurs",
-          "body": "Concurrerende processen op een strakke klok, waar de analyse alsnog een investeringscomité moet doorstaan."
-        }
-      ]
-    },
-    "split": {
-      "title": "U houdt de relatie. Wij doen het werk.",
-      "lead": "Hetzelfde platform, alle disciplines, dezelfde toetsing. Geleverd onder uw naam.",
-      "columns": [
-        {
-          "label": "U houdt",
-          "items": [
-            "De klantrelatie en het mandaat",
-            "Het adviesoordeel en de aanbeveling",
-            "De commerciële voorwaarden met uw klant",
-            "De regie over wat er onder uw naam wordt opgeleverd"
-          ]
-        },
-        {
-          "label": "Wij leveren",
-          "items": [
-            "De volledige ronde over de data room, elke discipline",
-            "Disciplineoverstijgende afstemming als vaste stap",
-            "Bevindingen gekoppeld aan een document en een passage, elke keer",
-            "Een beoordelaar met naam die achter de output staat"
-          ]
-        }
-      ],
-      "seam": "Grens"
-    },
-    "start": {
-      "title": "Hoe een partnership echt begint",
-      "lead": "Met één echte opdracht, goed uitgevoerd, voordat iemand zich ergens aan bindt.",
-      "steps": [
-        {
-          "title": "Een call, en een blik op uw pijplijn",
-          "body": "We spreken de NDA af en brengen daarna in kaart hoe uw opdrachten eruitzien en waar de analytische last zit. Dertig minuten."
-        },
-        {
-          "title": "Eén mandaat, van begin tot eind gedraaid",
-          "body": "Eén lopende opdracht, dezelfde beoordelingstoets. U ziet de output voordat u iets tekent."
-        },
-        {
-          "title": "Voorwaarden gevormd naar wat er gebeurd is",
-          "body": "Scope, prijs en werkritme bepaald aan de hand van een echte oplevering. Een eerste opzet van een partnership."
-        }
-      ]
-    },
-    "boundaries": {
-      "title": "Wat een partnership niet omvat",
-      "lead": "Sommige hiervan zijn toezeggingen aan bestaande partners. De rest is de eerlijke stand van een pre-launch bedrijf.",
-      "items": [
-        "Geen certificering die u als uw eigen keurmerk kunt doorzetten. We staan niet achter een keurmerk dat we niet hebben.",
-        "Geen onbeperkte capaciteit. Een partnership dat de beoordelingstoets voorbijloopt is erger dan geen partnership.",
-        "Geen algemeen beleid voor verwijsvergoedingen. Waar assurance- of onafhankelijkheidsregels gelden, wordt dat per relatie getoetst.",
-        "Geen aanspraak op uw klant. Niets wat wij voor u draaien wordt een casestudy zonder uw schriftelijke akkoord.",
-        "Geen conflicterend mandaat waar we ons al exclusief hebben vastgelegd. Waar exclusiviteit bestaat, zeggen we dat."
-      ]
-    },
-    "faq": {
-      "title": "Wat partners als eerste vragen",
-      "items": [
-        {
-          "q": "Werken jullie ook rechtstreeks met eigenaren?",
-          "a": "Ja. Waar dat met uw markt kan overlappen, zeggen we dat voordat het een probleem wordt."
-        },
-        {
-          "q": "Wiens naam staat op het rapport?",
-          "a": "Dat wordt bij het eerste mandaat bepaald. Beide modellen bestaan: opgeleverd onder uw naam met Factum als engine, of samen opgeleverd."
-        },
-        {
-          "q": "Kunnen jullie ook maar een deel van de scope draaien?",
-          "a": "De volledige ronde ligt vast, omdat de waarde in de afstemming tussen disciplines zit. Wat varieert, is de diepgang van de uitwerking."
-        },
-        {
-          "q": "Hoe exclusief is dit?",
-          "a": "Exclusiviteit is mogelijk in een afgebakend segment, en het is een echte toezegging als we die doen."
-        }
-      ]
-    },
-    "cta": {
-      "title": "Begin met één mandaat",
-      "body": "Richt het op een lopende opdracht en lees de output.",
-      "button": "Deel een data room",
-      "note": "Eerst een NDA, dezelfde dag verstuurd. Een deal die u vorig jaar sloot werkt ook."
     }
   },
   "contact": {

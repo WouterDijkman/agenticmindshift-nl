@@ -10,7 +10,7 @@ import SegmentField from './SegmentField';
 /**
  * Six distinct silhouette/tone pairs, one per inner page. Ordered to match
  * the real adjacency chain a reader walks — the footer sitemap list, which
- * runs platform, diligence-sprint, governance, team, partnerships, contact —
+ * runs platform, diligence-sprint, pre-sale, governance, team, contact —
  * not alphabetical call-site order, so that no two *consecutive* pages in
  * that list (or the nav's platform/diligence-sprint/governance/team run)
  * land on the same tone. The masks are defined here rather than shared, so a
@@ -25,7 +25,7 @@ const HEADER_PRESETS: { value: string; tone?: 'wine' | 'mono' }[] = [
   { value: '{bdf}', tone: 'mono' }, // diligence-sprint
   { value: '{acdfg}' }, // governance — distinct from Hero's '{abdeg}'
   { value: '{cdeg}', tone: 'wine' }, // team
-  { value: '{abf}', tone: 'mono' }, // partnerships
+  { value: '{abf}', tone: 'mono' }, // spare (was partnerships)
   { value: '{bcdg}' } // contact
 ];
 
@@ -77,7 +77,7 @@ export default async function PageHeader({
   aside?: ReactNode;
   /** Picks this header's segment-field silhouette/tone. Index follows the
    *  footer sitemap order (platform=0, diligence-sprint=1, governance=2,
-   *  team=3, partnerships=4, contact=5) so adjacent pages never repeat. */
+   *  team=3, contact=5; pre-sale uses 2) so adjacent pages never repeat. */
   visual?: number;
 }) {
   const preset = HEADER_PRESETS[((visual % HEADER_PRESETS.length) + HEADER_PRESETS.length) % HEADER_PRESETS.length];

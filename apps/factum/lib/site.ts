@@ -38,20 +38,20 @@ export const KVK = '99495945';
 /**
  * Primary header nav.
  *
- * Partnerships sits here, not in the footer. It was moved out on the argument
- * that referral partners are a narrower audience than the buyer — true of the
- * page, wrong about the funnel. The likeliest first mandate is the
- * corporate-finance adviser at a Dutch boutique, who keeps the client
- * relationship as a shield and carries far less career risk than a PE partner
- * signing off on an unproven vendor. That reader does not scroll to the footer
- * to find out a referral route exists.
+ * Two audiences, one page each: buyers (PE and strategic acquirers) on
+ * /diligence-sprint, and sell-side brokers on /pre-sale (owner decision
+ * 12 October 2026). /partnerships is gone. It sold white-label capacity to
+ * buy-side advisers delivering diligence "under your name", a role the
+ * product no longer has: Factum is self-service and does not sign off. A
+ * broker is reached through /pre-sale, which is built on the product's
+ * sell-side perspective and its market-readiness checks; the old URL 308s
+ * there (next.config.ts).
  */
 export const NAV = [
   { href: '/platform', key: 'platform' },
   { href: '/diligence-sprint', key: 'sprint' },
   { href: '/pre-sale', key: 'preSale' },
   { href: '/governance', key: 'governance' },
-  { href: '/partnerships', key: 'partnerships' },
   { href: '/team', key: 'team' }
 ] as const;
 

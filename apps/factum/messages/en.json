@@ -28,10 +28,6 @@
       "title": "The team behind Factum",
       "description": "A leveraged-finance banker and a data engineer: who builds Factum, and what each of them is responsible for."
     },
-    "partnerships": {
-      "title": "Diligence capacity for advisers",
-      "description": "Diligence-grade analytical capacity behind your own client relationships."
-    },
     "contact": {
       "title": "Share a data room under NDA",
       "description": "Thirty minutes to agree the NDA and the room. The NDA goes out the same day; documents move only after it is signed."
@@ -41,8 +37,8 @@
       "description": "How this website and our engagements handle personal data."
     },
     "preSale": {
-      "title": "Pre-sale due diligence for sellers",
-      "description": "The buyer’s read, run on your own company first. Every dimension, plus a named list of what your data room is missing, while there is still time to act on it."
+      "title": "Sell-side data room readiness for brokers",
+      "description": "For sell-side brokers: what your client’s data room still lacks against what a buyer will ask, and the risks a buyer will raise, before it goes out."
     }
   },
   "a11y": {
@@ -57,7 +53,6 @@
     "aiLimits": "Limits of AI",
     "governance": "Governance",
     "team": "Team",
-    "partnerships": "Partnerships",
     "contact": "Contact",
     "cta": "Share a data room",
     "openMenu": "Open menu",
@@ -680,92 +675,96 @@
   },
   "preSale": {
     "header": {
-      "title": "Find it before the buyer does",
-      "lead": "A buyer will run this analysis on your company whether you do or not. The only question is whether you see the findings first, while you can still do something about them.",
+      "title": "Get the data room ready before buyers see it",
+      "lead": "For sell-side brokers preparing a sale or a capital raise. Factum reads your client’s data room the way a buyer will: what is still missing, what does not add up, and which risks a buyer will raise.",
       "cta": "Share a data room"
     },
     "who": {
-      "title": "Who runs this",
-      "lead": "Three situations, one reason.",
+      "title": "Who it is for",
+      "lead": "Brokers first. Owners too.",
       "profiles": [
         {
-          "title": "Owners heading for an exit",
-          "body": "Two to five years out, or already in a process. The gap between the price you have in mind and the price a buyer will defend is made of findings you have not seen."
+          "title": "Sell-side brokers and M&A advisers",
+          "body": "You are about to take a client to buyers. You want the gaps found on your side of the table, while there is still time to fill them."
         },
         {
-          "title": "Sell-side advisers",
-          "body": "You are about to put a company in front of professional sceptics. Knowing what they will find is worth more than hoping they will not look."
+          "title": "Brokers raising equity or debt",
+          "body": "A capital raise asks for different documents than a sale. The checklist follows the deal: equity, debt, both, or an exit."
         },
         {
-          "title": "Anyone who has lost a process late",
-          "body": "Deals rarely die on price. They die on something that surfaced late and made every other number look suspect."
+          "title": "Owners preparing an exit",
+          "body": "Two to five years out, or already in a process. The gap between your price and the price a buyer will defend is made of findings you have not seen."
         }
       ]
     },
     "mirror": {
-      "title": "The buyer’s read, pointed at you",
-      "lead": "Same dimensions, same data room, same standard of proof. What differs is who is holding the result.",
+      "title": "The buyer’s read, run from your side",
+      "lead": "The same platform, set to the sell-side perspective: it shows what a buyer will raise, so it can be backed up or fixed first.",
       "steps": [
         {
-          "title": "We read it the way a buyer would",
-          "body": "Not as a seller checking his own homework. The engine is not told which side it is on, and the findings come out the same either way."
+          "title": "Set the dossier to sell-side",
+          "body": "The analysis then writes for the seller: what a buyer will raise, and what needs evidence or a fix beforehand."
         },
         {
-          "title": "You see them first",
-          "body": "Every finding with its source and location behind it, so you can check it rather than take our word for it."
+          "title": "Your team judges each point",
+          "body": "Every point carries its source and location. Your team marks what is relevant, what is not, and what needs a closer look."
         },
         {
-          "title": "You decide before anyone asks",
-          "body": "Fix it, price it in, or prepare the answer. All three beat being surprised in a question-and-answer round."
+          "title": "Ask your client from the platform",
+          "body": "Missing documents and open questions go to your client as one request, inside the platform."
         }
       ]
     },
     "gaps": {
-      "title": "What your data room is missing",
-      "lead": "A buyer’s first move is to ask for what is not there. You get that list first, by name.",
+      "title": "What the data room is missing",
+      "lead": "Measured against what a buyer or investor will ask for. The list follows the deal: a capital raise asks for a use-of-funds plan, a sale for the order book.",
       "items": [
-        "The documents a buyer will ask for and your room does not contain.",
-        "The years that are incomplete in an export, where a gap reads as something worse than it is.",
-        "The contracts referenced inside other contracts and never uploaded.",
-        "The gaps you already know about, so you can decide how to present them rather than be asked."
+        "The documents without which the dossier cannot go to market.",
+        "The details a counterparty will ask for next, listed separately.",
+        "Documents that are there but do not carry what a buyer needs, such as a customer list without revenue per customer.",
+        "Figures that contradict each other between documents, with both sources named."
       ],
-      "note": "We can see that something is absent. Whether it was left out on purpose is not ours to say, and we do not say it."
+      "note": "Matching runs on the documents themselves. A contract filed inside another file can show as missing, which is why every point goes to your team first."
     },
     "boundaries": {
-      "title": "What a pre-sale sprint is not",
+      "title": "What this is not",
       "lead": "The honest version, so it is not a conversation later.",
       "items": [
-        "Not a vendor due diligence opinion. That is a signed attest engagement and this is not one.",
-        "Not a guarantee of price. We can tell you what a buyer will find; what he does with it is his.",
-        "Not a fairness opinion, and not a valuation that stands on its own in front of a bank.",
-        "Not a clean-up service. We name what is missing; obtaining it is yours or your adviser’s.",
-        "Not walled off from your own adviser by default. If you want it kept separate, say so before we start."
+        "Not a vendor due diligence report. That is a signed attest engagement, and this is not one.",
+        "Not a guarantee of price. It shows what a buyer will raise; what the buyer does with it is theirs.",
+        "Not a valuation that stands on its own in front of a bank.",
+        "Not a clean-up service. It names what is missing; obtaining it is your client’s job.",
+        "Not signed off by Factum. Your team judges each point, and the Word export marks any point not yet reviewed."
       ]
     },
     "faq": {
-      "title": "What sellers ask first",
+      "title": "What brokers ask first",
       "items": [
+        {
+          "q": "What comes out of it?",
+          "a": "A work list: at most twenty red flags, figures that contradict each other, the questions an investor will ask, and points for the term sheet or the NBO. It exports to Word for your client."
+        },
+        {
+          "q": "Which disciplines does it cover?",
+          "a": "The red flags come from financial, commercial and operational, which work in any jurisdiction. Legal and tax are tuned to Dutch law."
+        },
         {
           "q": "How long before the process should we run this?",
           "a": "Early enough that the answer to a finding can still be “we fixed it”. Once the data room is live, the honest framing becomes “we know, and here is the context”. Both work. The first one is worth more."
         },
         {
-          "q": "Will the buyer know we did this?",
-          "a": "Only if you tell them. Some sellers do, because arriving with your own findings and their context is a strong position. That is your call, not ours."
+          "q": "Will buyers know we did this?",
+          "a": "Only if you tell them. Arriving with your own findings and their context is a strong position. That is your call."
         },
         {
-          "q": "What if we find something serious?",
-          "a": "Then you found it, months before somebody with an incentive to use it did. That is the reason to run it, not a reason not to."
-        },
-        {
-          "q": "Is this the same product as the buy-side sprint?",
-          "a": "The same engine, the same dimensions and the same output contract. What differs is the question we point it at and the list you get at the end."
+          "q": "Is this the same product as the buyer’s version?",
+          "a": "The same platform and the same output contract, with a lighter read. The buyer’s version reads every discipline in depth; this one is built to get a dossier ready for market."
         }
       ]
     },
     "cta": {
-      "title": "Run it on your own company first",
-      "body": "Share your own room under NDA. The findings come back in days, on a call, before any buyer sees them.",
+      "title": "Run it on a client’s room before buyers do",
+      "body": "Share a data room under NDA. You get the work list on a call, before any buyer sees the room.",
       "button": "Share a data room",
       "note": "A handful of pilot mandates."
     }
@@ -1206,116 +1205,6 @@
           "body": "Reviews the findings and signs off. The judgement on your deal stays with you."
         }
       ]
-    }
-  },
-  "partnerships": {
-    "header": {
-      "title": "More mandates than your team can read",
-      "lead": "You keep the relationship and the judgement. We run the read across every discipline behind it, under your name.",
-      "cta": "Share a data room"
-    },
-    "who": {
-      "title": "Who this tends to work for",
-      "lead": "Described by the shape of the firm, never by name.",
-      "profiles": [
-        {
-          "title": "Corporate finance boutiques",
-          "body": "Buy- and sell-side processes where the analytical load is the constraint."
-        },
-        {
-          "title": "Exit and value-creation advisors",
-          "body": "Owners two to five years out, who need a defensible baseline first."
-        },
-        {
-          "title": "Restructuring and turnaround practices",
-          "body": "Where an independent review has to be fast and hold up to lenders."
-        },
-        {
-          "title": "PE and buy-side advisors",
-          "body": "Competitive processes on a tight clock, where the read still has to survive an investment committee."
-        }
-      ]
-    },
-    "split": {
-      "title": "You keep the relationship. We supply the pass.",
-      "lead": "The same platform, every discipline, the same review gate. Delivered under your name.",
-      "columns": [
-        {
-          "label": "You keep",
-          "items": [
-            "The client relationship and the mandate",
-            "The advisory judgement and the recommendation",
-            "The commercial terms with your client",
-            "Control of what is delivered under your name"
-          ]
-        },
-        {
-          "label": "We supply",
-          "items": [
-            "The full pass over the data room, every discipline",
-            "Cross-discipline reconciliation as a fixed step",
-            "Findings tied to a document and a passage, every time",
-            "A named reviewer standing behind the output"
-          ]
-        }
-      ],
-      "seam": "Boundary"
-    },
-    "start": {
-      "title": "How a partnership actually starts",
-      "lead": "With one real engagement, run properly, before anyone commits to anything.",
-      "steps": [
-        {
-          "title": "A call, and a look at your pipeline",
-          "body": "We agree the NDA, then map what your engagements look like and where the analytical load sits. Thirty minutes."
-        },
-        {
-          "title": "One mandate, run end to end",
-          "body": "One live engagement, same review gate. You see the output before signing anything."
-        },
-        {
-          "title": "Terms shaped around what happened",
-          "body": "Scope, pricing and rhythm set against a real deliverable. A first draft of a partnership."
-        }
-      ]
-    },
-    "boundaries": {
-      "title": "What a partnership does not include",
-      "lead": "Some are commitments to existing partners. The rest is the honest state of a pre-launch company.",
-      "items": [
-        "No white-labelled claim of certification or audit. We can’t stand behind a badge we don’t hold.",
-        "No unlimited capacity. A partnership that outruns the review gate is worse than no partnership.",
-        "No blanket referral-fee policy. Where attest or independence rules apply, it is checked per relationship.",
-        "No claim on your client. Nothing we run for you becomes a case study without your written agreement.",
-        "No conflicting mandate where we have already committed exclusively. Where an exclusivity exists, we say so."
-      ]
-    },
-    "faq": {
-      "title": "What partners ask first",
-      "items": [
-        {
-          "q": "Do you work directly with owners as well?",
-          "a": "Yes. Where that could overlap with your market, we’ll tell you before it becomes a problem."
-        },
-        {
-          "q": "Whose name goes on the report?",
-          "a": "Set on the first mandate. Both models exist: delivered under your name with Factum as the engine, or co-delivered."
-        },
-        {
-          "q": "Can you run only part of the scope?",
-          "a": "The full pass is fixed, because the value sits in the reconciliation between disciplines. What varies is the depth of the write-up."
-        },
-        {
-          "q": "How exclusive is this?",
-          "a": "Exclusivity is possible in a defined lane, and it is a real commitment when we make it."
-        }
-      ]
-    },
-    "cta": {
-      "title": "Start with one mandate",
-      "body": "Point it at a live engagement and read the output.",
-      "button": "Share a data room",
-      "note": "NDA first, sent the same day. A deal you closed last year works too."
     }
   },
   "contact": {

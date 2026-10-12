@@ -93,7 +93,7 @@ function organization(description: string) {
       'Commercial due diligence',
       'Legal due diligence',
       'Tax due diligence',
-      'Pre-sale due diligence',
+      'Sell-side data room readiness for brokers',
       'AI governance and data handling in due diligence'
     ],
     areaServed: { '@type': 'Place', name: 'Europe' }

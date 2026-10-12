@@ -28,10 +28,6 @@
       "title": "Das Team hinter Factum",
       "description": "Ein Leveraged-Finance-Banker und ein Data Engineer: wer Factum baut, und wofür jeder von ihnen verantwortlich ist."
     },
-    "partnerships": {
-      "title": "Diligence-Kapazität für Berater",
-      "description": "Analytische Kapazität auf Due-Diligence-Niveau hinter Ihren eigenen Mandantenbeziehungen."
-    },
     "contact": {
       "title": "Data Room unter NDA teilen",
       "description": "Dreißig Minuten, um NDA und Data Room zu klären. Das NDA geht am selben Tag raus; Dokumente bewegen sich erst nach Unterschrift."
@@ -41,8 +37,8 @@
       "description": "Wie diese Website und unsere Mandate mit personenbezogenen Daten umgehen."
     },
     "preSale": {
-      "title": "Pre-Sale Due Diligence für Verkäufer",
-      "description": "Die Prüfung des Käufers, zuerst am eigenen Unternehmen. Jede Dimension, dazu eine benannte Liste dessen, was Ihrem Data Room fehlt, solange noch Zeit bleibt, daran etwas zu ändern."
+      "title": "Data-Room-Check für Sell-Side-Broker",
+      "description": "Für Sell-Side-Broker: was im Data Room Ihres Mandanten fehlt, gemessen an den Fragen eines Käufers, und welche Risiken er anspricht."
     }
   },
   "a11y": {
@@ -57,7 +53,6 @@
     "aiLimits": "Grenzen von KI",
     "governance": "Governance",
     "team": "Team",
-    "partnerships": "Partnerschaften",
     "contact": "Kontakt",
     "cta": "Data Room teilen",
     "openMenu": "Menü öffnen",
@@ -680,92 +675,96 @@
   },
   "preSale": {
     "header": {
-      "title": "Finden, bevor der Käufer es findet",
-      "lead": "Ein Käufer fährt diese Analyse an Ihrem Unternehmen, ob Sie es selbst tun oder nicht. Die einzige Frage ist, ob Sie die Feststellungen zuerst sehen, solange Sie noch handeln können.",
+      "title": "Den Data Room fertig machen, bevor Käufer ihn sehen",
+      "lead": "Für Sell-Side-Broker, die einen Verkauf oder eine Kapitalrunde vorbereiten. Factum liest den Data Room Ihres Mandanten so, wie ein Käufer es tut: was noch fehlt, was nicht aufgeht und welche Risiken ein Käufer ansprechen wird.",
       "cta": "Data Room teilen"
     },
     "who": {
-      "title": "Wer das fährt",
-      "lead": "Drei Situationen, ein Grund.",
+      "title": "Für wen",
+      "lead": "Zuerst Broker. Auch Eigentümer.",
       "profiles": [
         {
-          "title": "Eigentümer auf dem Weg zum Exit",
-          "body": "Zwei bis fünf Jahre entfernt oder schon im Prozess. Die Lücke zwischen dem Preis, den Sie im Kopf haben, und dem Preis, den ein Käufer verteidigt, besteht aus Feststellungen, die Sie noch nicht gesehen haben."
+          "title": "Sell-Side-Broker und M&A-Berater",
+          "body": "Sie gehen mit einem Mandanten zu Käufern. Die Lücken sollen auf Ihrer Seite des Tisches auffallen, solange noch Zeit ist, sie zu schließen."
         },
         {
-          "title": "Verkaufsseitige Berater",
-          "body": "Sie präsentieren das Unternehmen gleich berufsmäßigen Skeptikern. Zu wissen, was sie finden werden, ist mehr wert als die Hoffnung, dass sie nicht hinsehen."
+          "title": "Broker, die Eigen- oder Fremdkapital einwerben",
+          "body": "Eine Kapitalrunde verlangt andere Unterlagen als ein Verkauf. Die Checkliste folgt dem Deal: Eigenkapital, Fremdkapital, beides oder ein Exit."
         },
         {
-          "title": "Wer einen Prozess schon einmal spät verloren hat",
-          "body": "Transaktionen scheitern selten am Preis. Sie scheitern an etwas, das spät auftauchte und jede andere Zahl verdächtig machte."
+          "title": "Eigentümer vor einem Exit",
+          "body": "Zwei bis fünf Jahre vorher oder schon im Prozess. Die Lücke zwischen Ihrem Preis und dem Preis, den ein Käufer verteidigt, besteht aus Feststellungen, die Sie noch nicht gesehen haben."
         }
       ]
     },
     "mirror": {
-      "title": "Die Prüfung des Käufers, auf Sie gerichtet",
-      "lead": "Dieselben Dimensionen, derselbe Data Room, derselbe Beweisstandard. Anders ist nur, wer das Ergebnis in der Hand hat.",
+      "title": "Die Sicht des Käufers, von Ihrer Seite aus",
+      "lead": "Dieselbe Plattform, auf die Verkäuferperspektive eingestellt: Sie zeigt, was ein Käufer vorbringen wird, damit es vorab belegt oder gelöst werden kann.",
       "steps": [
         {
-          "title": "Wir lesen, wie ein Käufer liest",
-          "body": "Nicht wie ein Verkäufer, der die eigenen Hausaufgaben kontrolliert. Die Engine erfährt nicht, auf welcher Seite sie steht, und die Feststellungen fallen so oder so gleich aus."
+          "title": "Das Dossier auf Sell-Side stellen",
+          "body": "Die Analyse schreibt dann für den Verkäufer: was ein Käufer vorbringen wird und was vorab einen Beleg oder eine Lösung braucht."
         },
         {
-          "title": "Sie sehen sie zuerst",
-          "body": "Zu jeder Feststellung Quelle und Fundstelle, damit Sie nachrechnen können, statt uns beim Wort zu nehmen."
+          "title": "Ihr Team bewertet jeden Punkt",
+          "body": "Jeder Punkt trägt Quelle und Fundstelle. Ihr Team markiert, was relevant ist, was nicht und was genauer geprüft werden muss."
         },
         {
-          "title": "Sie entscheiden, bevor jemand fragt",
-          "body": "Beheben, einpreisen oder die Antwort vorbereiten. Alle drei schlagen es, in einer Fragerunde überrascht zu werden."
+          "title": "Den Mandanten aus der Plattform fragen",
+          "body": "Fehlende Unterlagen und offene Fragen gehen als eine Anfrage an Ihren Mandanten, innerhalb der Plattform."
         }
       ]
     },
     "gaps": {
-      "title": "Was Ihrem Data Room fehlt",
-      "lead": "Der erste Zug eines Käufers ist die Frage nach dem, was nicht da ist. Diese Liste bekommen Sie zuerst, mit Namen.",
+      "title": "Was dem Data Room fehlt",
+      "lead": "Gemessen an dem, was ein Käufer oder Investor anfordern wird. Die Liste folgt dem Deal: Eine Kapitalrunde verlangt einen Mittelverwendungsplan, ein Verkauf das Auftragsbuch.",
       "items": [
-        "Die Dokumente, nach denen ein Käufer fragen wird und die Ihr Data Room nicht enthält.",
-        "Die Jahre, die in einem Export unvollständig sind, wo eine Lücke schlimmer aussieht, als sie ist.",
-        "Die Verträge, auf die andere Verträge verweisen und die nie hochgeladen wurden.",
-        "Die Lücken, die Sie selbst kennen, damit Sie wählen können, wie Sie sie darstellen, statt danach gefragt zu werden."
+        "Die Unterlagen, ohne die das Dossier nicht an den Markt kann.",
+        "Die Details, die eine Gegenpartei als Nächstes anfordert, gesondert aufgeführt.",
+        "Unterlagen, die vorhanden sind, aber nicht enthalten, was ein Käufer braucht, etwa eine Kundenliste ohne Umsatz je Kunde.",
+        "Zahlen, die sich zwischen Dokumenten widersprechen, mit beiden Quellen."
       ],
-      "note": "Wir sehen, dass etwas fehlt. Ob es absichtlich weggelassen wurde, steht uns nicht zu, und wir sagen es auch nicht."
+      "note": "Abgeglichen wird an den Dokumenten selbst. Ein Vertrag, der in einer anderen Datei steckt, kann als fehlend erscheinen; deshalb geht jeder Punkt zuerst an Ihr Team."
     },
     "boundaries": {
-      "title": "Was ein Pre-Sale-Sprint nicht ist",
-      "lead": "Die ehrliche Fassung, damit daraus später kein Gespräch wird.",
+      "title": "Was das nicht ist",
+      "lead": "Die ehrliche Fassung, damit es später kein Thema wird.",
       "items": [
-        "Keine Vendor-Due-Diligence-Erklärung. Das ist ein unterzeichnetes Prüfungsmandat, und dies ist keines.",
-        "Keine Preisgarantie. Wir können Ihnen sagen, was ein Käufer findet; was er damit macht, ist seine Sache.",
-        "Keine Fairness Opinion und keine Bewertung, die vor einer Bank für sich allein steht.",
-        "Kein Aufräumdienst. Wir benennen, was fehlt; das Beschaffen liegt bei Ihnen oder Ihrem Berater.",
-        "Nicht standardmäßig von Ihrem eigenen Berater abgeschirmt. Wenn Sie es getrennt halten wollen, sagen Sie das vor dem Start."
+        "Kein Vendor-Due-Diligence-Bericht. Das ist ein unterschriebenes Testatmandat, und das hier ist keins.",
+        "Keine Preisgarantie. Es zeigt, was ein Käufer vorbringen wird; was der Käufer daraus macht, ist seine Sache.",
+        "Keine Bewertung, die allein vor einer Bank besteht.",
+        "Kein Aufräumservice. Es benennt, was fehlt; es zu beschaffen ist Sache Ihres Mandanten.",
+        "Nicht von Factum freigegeben. Ihr Team bewertet jeden Punkt, und der Word-Export markiert jeden Punkt, der noch nicht bewertet ist."
       ]
     },
     "faq": {
-      "title": "Was Verkäufer zuerst fragen",
+      "title": "Was Broker zuerst fragen",
       "items": [
+        {
+          "q": "Was kommt dabei heraus?",
+          "a": "Eine Arbeitsliste: höchstens zwanzig Red Flags, Zahlen, die sich widersprechen, die Fragen, die ein Investor stellen wird, und Punkte für das Term Sheet oder das NBO. Exportierbar nach Word für Ihren Mandanten."
+        },
+        {
+          "q": "Welche Disziplinen deckt es ab?",
+          "a": "Die Red Flags kommen aus Finanzen, Kommerz und Betrieb, die in jeder Rechtsordnung funktionieren. Recht und Steuern sind auf niederländisches Recht abgestimmt."
+        },
         {
           "q": "Wie lange vor dem Prozess sollten wir das durchführen?",
           "a": "Früh genug, dass die Antwort auf eine Feststellung noch „das haben wir behoben“ lauten kann. Sobald der Data Room live ist, wird die ehrliche Fassung „wir wissen es, und hier ist der Kontext“. Beides funktioniert. Das erste ist mehr wert."
         },
         {
-          "q": "Merkt der Käufer, dass wir das gemacht haben?",
-          "a": "Nur wenn Sie es sagen. Manche Verkäufer tun es, weil es eine starke Position ist, mit den eigenen Feststellungen und deren Kontext anzukommen. Das ist Ihre Entscheidung, nicht unsere."
+          "q": "Erfahren Käufer, dass wir das gemacht haben?",
+          "a": "Nur wenn Sie es ihnen sagen. Mit eigenen Feststellungen und ihrem Kontext an den Tisch zu kommen, ist eine starke Position. Das entscheiden Sie."
         },
         {
-          "q": "Und wenn wir etwas Ernstes finden?",
-          "a": "Dann haben Sie es gefunden, Monate bevor jemand mit einem Interesse daran es getan hätte. Das ist der Grund, es durchzuführen, kein Grund, es zu lassen."
-        },
-        {
-          "q": "Ist das dasselbe Produkt wie der Sprint auf der Käuferseite?",
-          "a": "Dieselbe Engine, dieselben Dimensionen und derselbe Output-Kontrakt. Anders ist die Frage, auf die wir ihn richten, und die Liste, die Sie am Ende bekommen."
+          "q": "Ist das dasselbe Produkt wie die Version für Käufer?",
+          "a": "Dieselbe Plattform und derselbe Ausgabevertrag, mit einer leichteren Lesung. Die Käuferversion liest jede Disziplin in der Tiefe; diese ist gebaut, um ein Dossier marktreif zu machen."
         }
       ]
     },
     "cta": {
-      "title": "Führen Sie ihn zuerst am eigenen Unternehmen durch",
-      "body": "Teilen Sie Ihren eigenen Data Room unter NDA. Die Feststellungen kommen in Tagen zurück, in einem Call, bevor ein Käufer sie sieht.",
+      "title": "Erst der Data Room Ihres Mandanten, dann die Käufer",
+      "body": "Teilen Sie einen Data Room unter NDA. Sie erhalten die Arbeitsliste in einem Call, bevor ein Käufer den Data Room sieht.",
       "button": "Data Room teilen",
       "note": "Eine Handvoll Pilotmandate."
     }
@@ -1206,116 +1205,6 @@
           "body": "Prüft die Feststellungen und gibt frei. Das Urteil über Ihren Deal bleibt bei Ihnen."
         }
       ]
-    }
-  },
-  "partnerships": {
-    "header": {
-      "title": "Mehr Mandate, als Ihr Team lesen kann",
-      "lead": "Sie behalten die Beziehung und das Urteilsvermögen. Wir führen die Analyse über alle Disziplinen dahinter aus, unter Ihrem Namen.",
-      "cta": "Data Room teilen"
-    },
-    "who": {
-      "title": "Für wen das meist funktioniert",
-      "lead": "Beschrieben nach Art der Firma, nie namentlich.",
-      "profiles": [
-        {
-          "title": "Corporate-Finance-Boutiquen",
-          "body": "Buy- und Sell-Side-Prozesse, bei denen die analytische Last der Engpass ist."
-        },
-        {
-          "title": "Exit- und Wertsteigerungsberater",
-          "body": "Eigentümer zwei bis fünf Jahre vor dem Exit, die zuerst eine belastbare Ausgangslage brauchen."
-        },
-        {
-          "title": "Restrukturierungs- und Turnaround-Praxen",
-          "body": "Wo eine unabhängige Bestandsaufnahme schnell vorliegen und der Prüfung durch Kreditgeber standhalten muss."
-        },
-        {
-          "title": "PE- und Buy-Side-Berater",
-          "body": "Wettbewerbsprozesse mit engem Zeitplan, in denen die Einschätzung trotzdem einem Investment Committee standhalten muss."
-        }
-      ]
-    },
-    "split": {
-      "title": "Sie behalten die Beziehung. Wir liefern die Analyse.",
-      "lead": "Dieselbe Plattform, alle Disziplinen, dieselbe Prüfstufe. Geliefert unter Ihrem Namen.",
-      "columns": [
-        {
-          "label": "Sie behalten",
-          "items": [
-            "Die Mandantenbeziehung und das Mandat",
-            "Das beraterische Urteil und die Empfehlung",
-            "Die kommerziellen Konditionen mit Ihrem Mandanten",
-            "Die Kontrolle darüber, was unter Ihrem Namen geliefert wird"
-          ]
-        },
-        {
-          "label": "Wir liefern",
-          "items": [
-            "Den vollständigen Durchgang über den Data Room, jede Disziplin",
-            "Disziplinübergreifenden Abgleich als festen Schritt",
-            "Feststellungen, an ein Dokument und eine Passage gebunden, jedes Mal",
-            "Eine namentlich benannte Person, die für das Ergebnis einsteht"
-          ]
-        }
-      ],
-      "seam": "Grenze"
-    },
-    "start": {
-      "title": "Wie eine Partnerschaft tatsächlich beginnt",
-      "lead": "Mit einem echten Mandat, sauber durchgeführt, bevor sich jemand bindet.",
-      "steps": [
-        {
-          "title": "Ein Call, und ein Blick auf Ihre Pipeline",
-          "body": "Wir klären das NDA und erfassen dann, wie Ihre Mandate aussehen und wo die analytische Last liegt. Dreißig Minuten."
-        },
-        {
-          "title": "Ein Mandat, von Anfang bis Ende",
-          "body": "Ein laufendes Mandat, dieselbe Prüfstufe. Sie sehen das Ergebnis, bevor Sie etwas unterschreiben."
-        },
-        {
-          "title": "Konditionen entlang des Erlebten",
-          "body": "Umfang, Preis und Arbeitsrhythmus, festgelegt an einem echten Ergebnis. Ein erster Entwurf einer Partnerschaft."
-        }
-      ]
-    },
-    "boundaries": {
-      "title": "Was eine Partnerschaft nicht enthält",
-      "lead": "Einiges sind Zusagen an bestehende Partner. Der Rest ist der ehrliche Stand eines Unternehmens vor dem Launch.",
-      "items": [
-        "Keine unter Ihrem Namen erhobene Behauptung von Zertifizierung oder Audit. Für ein Siegel, das wir nicht haben, können wir nicht einstehen.",
-        "Keine unbegrenzte Kapazität. Eine Partnerschaft, die der Prüfstufe davonläuft, ist schlechter als keine.",
-        "Keine pauschale Regelung zu Vermittlungsprovisionen. Wo Prüfungs- oder Unabhängigkeitsregeln gelten, wird je Beziehung geprüft.",
-        "Kein Anspruch auf Ihren Mandanten. Nichts, was wir für Sie durchführen, wird ohne Ihre schriftliche Zustimmung zur Fallstudie.",
-        "Kein konkurrierendes Mandat, wo wir bereits Exklusivität zugesagt haben. Wo eine Exklusivität besteht, sagen wir das."
-      ]
-    },
-    "faq": {
-      "title": "Was Partner zuerst fragen",
-      "items": [
-        {
-          "q": "Arbeiten Sie auch direkt mit Eigentümern?",
-          "a": "Ja. Wo sich das mit Ihrem Markt überschneiden könnte, sagen wir es Ihnen, bevor es ein Problem wird."
-        },
-        {
-          "q": "Wessen Name steht auf dem Bericht?",
-          "a": "Wird im ersten Mandat festgelegt. Beide Modelle gibt es: Lieferung unter Ihrem Namen mit Factum als Engine, oder gemeinsame Lieferung."
-        },
-        {
-          "q": "Können Sie auch nur einen Teil des Umfangs übernehmen?",
-          "a": "Der vollständige Durchgang liegt fest, weil der Wert im Abgleich zwischen den Disziplinen liegt. Variieren kann die Tiefe der Ausarbeitung."
-        },
-        {
-          "q": "Wie exklusiv ist das?",
-          "a": "Exklusivität ist in einem definierten Feld möglich, und sie ist eine echte Zusage, wenn wir sie geben."
-        }
-      ]
-    },
-    "cta": {
-      "title": "Beginnen Sie mit einem Mandat",
-      "body": "Richten Sie es auf ein laufendes Mandat und lesen Sie das Ergebnis.",
-      "button": "Data Room teilen",
-      "note": "Zuerst das NDA, am selben Tag versandt. Ein Deal, den Sie letztes Jahr abgeschlossen haben, geht ebenso."
     }
   },
   "contact": {

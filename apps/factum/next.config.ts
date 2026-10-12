@@ -18,6 +18,16 @@ const nextConfig: NextConfig = {
         source: `/:locale(${routing.locales.join('|')})/buyer-proof-sprint`,
         destination: '/:locale/diligence-sprint',
         permanent: true
+      },
+      // /partnerships sold white-label diligence capacity to buy-side advisers
+      // "under your name". Factum no longer offers that: it is self-service,
+      // it does not sign off, and the audience is buyers and sell-side
+      // brokers (owner decision 12 October 2026). A broker's question is "is
+      // my client's room ready for market", which /pre-sale now answers.
+      {
+        source: `/:locale(${routing.locales.join('|')})/partnerships`,
+        destination: '/:locale/pre-sale',
+        permanent: true
       }
     ];
   },
