@@ -224,7 +224,7 @@ export default async function OverPage(
       </section>
 
       {/* ═══ WERKWIJZE LINK ═══ */}
-      <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(48px, 6vw, 72px)', textAlign: 'center' }}>
+      <section style={{ background: 'var(--bg-secondary)', paddingBlock: 'clamp(48px, 6vw, 72px)' }}>
         <div className="container-medium reveal">
           <p className="eyebrow" style={{ marginBottom: '12px' }}>{t('werkwijze_link.eyebrow')}</p>
           <p

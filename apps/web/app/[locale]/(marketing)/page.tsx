@@ -217,7 +217,7 @@ export default async function HomePage(
               <div
                 key={point.n}
                 className="reveal"
-                style={{ transitionDelay: `${i * 80}ms`, borderLeft: '2px solid var(--accent-cta)', paddingLeft: '20px' }}
+                style={{ transitionDelay: `${i * 80}ms`, borderTop: '2px solid var(--accent-cta)', paddingTop: '20px' }}
               >
                 <p style={{ fontSize: '1.0625rem', fontWeight: 600, color: 'var(--text-primary)', margin: '0 0 8px' }}>
                   {point.title}
