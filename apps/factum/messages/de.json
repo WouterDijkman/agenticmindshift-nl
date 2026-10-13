@@ -2,19 +2,15 @@
   "meta": {
     "home": {
       "title": "KI-Due-Diligence für M&A und Private Equity",
-      "description": "Jede Dimension über den gesamten Data Room, gegeneinander abgeglichen, mit Quelle und Fundstelle hinter jeder Feststellung. Gebaut für Übernahmen bis rund 10 Mio. € EBITDA."
+      "description": "Due-Diligence-Software für Käufer und Sell-Side-Broker. Liest den ganzen Data Room; jede Feststellung mit Quelle und Seite. Ihr Prüfer gibt frei."
     },
     "platform": {
       "title": "KI-Prüfung des Data Rooms: so läuft sie",
-      "description": "{modules} Due-Diligence-Module über acht Disziplinen. Jede Feststellung belegt ein Dokument. Jedes Ergebnis passiert eine menschliche Freigabe."
+      "description": "{modules} Due-Diligence-Module über {disciplines} Disziplinen. Jede Feststellung belegt ein Dokument. Jedes Ergebnis passiert eine menschliche Freigabe."
     },
     "sprint": {
-      "title": "Vollständige Datenraum-Prüfung in Tagen",
-      "description": "{disciplines} Fachdurchgänge über einen Data Room, zu einer Darstellung zusammengeführt, mit einer laufenden Liste dessen, was fehlt."
-    },
-    "method": {
-      "title": "Wie KI-Due-Diligence wirklich läuft",
-      "description": "Die Reihenfolge der Module, der Vertrag, den jede Feststellung erfüllen muss, und was ein namentlich benannter Prüfer kontrolliert, bevor etwas ausgeliefert wird."
+      "title": "Buy-Side-Due-Diligence für PE und Käufer",
+      "description": "Für PE und strategische Käufer: {disciplines} Disziplinen über den Data Room des Targets, in einem Bericht, mit einer Liste dessen, was nie kam."
     },
     "aiLimits": {
       "title": "Was KI in der Due Diligence nicht kann",
@@ -26,11 +22,7 @@
     },
     "team": {
       "title": "Das Team hinter Factum",
-      "description": "Ein Leveraged-Finance-Banker und ein Data Engineer. Einer von beiden gibt jedes Ergebnis frei."
-    },
-    "partnerships": {
-      "title": "Diligence-Kapazität für Berater",
-      "description": "Analytische Kapazität auf Due-Diligence-Niveau hinter Ihren eigenen Mandantenbeziehungen."
+      "description": "Ein Leveraged-Finance-Banker und ein Data Engineer: wer Factum baut, und wofür jeder von ihnen verantwortlich ist."
     },
     "contact": {
       "title": "Data Room unter NDA teilen",
@@ -41,8 +33,8 @@
       "description": "Wie diese Website und unsere Mandate mit personenbezogenen Daten umgehen."
     },
     "preSale": {
-      "title": "Pre-Sale Due Diligence für Verkäufer",
-      "description": "Die Prüfung des Käufers, zuerst am eigenen Unternehmen. Jede Dimension, dazu eine benannte Liste dessen, was Ihrem Data Room fehlt, solange noch Zeit bleibt, daran etwas zu ändern."
+      "title": "Data-Room-Check für Sell-Side-Broker",
+      "description": "Für Sell-Side-Broker: was im Data Room Ihres Mandanten fehlt, gemessen an den Fragen eines Käufers, und welche Risiken er anspricht."
     }
   },
   "a11y": {
@@ -51,29 +43,27 @@
   },
   "nav": {
     "primary": "Hauptnavigation",
-    "platform": "Plattform",
-    "sprint": "Diligence Sprint",
-    "method": "Die Methode",
-    "aiLimits": "Grenzen von KI",
-    "governance": "Governance",
+    "platform": "So funktioniert es",
+    "sprint": "Für Käufer",
+    "aiLimits": "Was KI nicht kann",
+    "governance": "Daten & Sicherheit",
     "team": "Team",
-    "partnerships": "Partnerschaften",
     "contact": "Kontakt",
     "cta": "Data Room teilen",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
-    "preSale": "Pre-Sale"
+    "preSale": "Für Verkäufer & Broker"
   },
   "footer": {
-    "blurb": "KI-Due-Diligence für M&A und Private Equity. Jede Feststellung belegt ein Dokument. Jedes Ergebnis von einer namentlich genannten Person geprüft.",
+    "blurb": "KI-Due-Diligence für M&A und Private Equity. Jede Feststellung mit einem Dokument belegt. Jeder Export von Ihrem eigenen Prüfer freigegeben.",
     "sitemap": "Sitemap",
-    "reference": "Hintergrund",
     "company": "Unternehmen",
     "privacy": "Datenschutz",
     "kvk": "KvK {number}",
     "copyright": "© {year} Factum Capital. Vor dem Launch."
   },
   "notFound": {
+    "metaTitle": "Seite nicht gefunden",
     "title": "Diese Seite ist nicht erfasst",
     "body": "Der Link ist defekt oder die Seite wurde verschoben.",
     "home": "Zurück zur Startseite",
@@ -124,7 +114,7 @@
     ],
     "schema": {
       "label": "Output-Kontrakt — jede Feststellung",
-      "footnote": "Das Schema, dem jede Erkenntnis genügen muss. Dahinter stehen Quellen aus dem Data Room oder der Wissensdatenbank (Gesetz, IFRS, Rechtsprechung, Marktforschung) mit Fundstelle, und ein namentlich benannter Prüfer, noch Monate später aufrufbar.",
+      "footnote": "Das Schema, dem jede Erkenntnis genügen muss. Dahinter stehen Quellen aus dem Data Room oder der Wissensdatenbank (Gesetz, IFRS, Rechtsprechung, Marktforschung) mit Fundstelle, und die Freigabe Ihres Prüfers, noch Monate später aufrufbar.",
       "rows": {
         "module": "Modul",
         "finding": "Feststellung",
@@ -139,14 +129,14 @@
         "evidence": "Wörtlich zitiert, pro Zitat",
         "severity": "Eine von fünf Stufen, von Info bis Kritisch",
         "document": "Data Room oder Wissensdatenbank, pro Zitat",
-        "review": "Vor Freigabe erforderlich"
+        "review": "Vor dem Export von Ihrem Prüfer freigegeben"
       },
       "more": "+3 Felder, auf einem breiteren Bildschirm"
     },
     "governancePoints": [
       {
         "title": "In der EU gehostete Analyse",
-        "body": "Die gesamte Analyse läuft auf Google Vertex AI in einer EU-Region, unter einem Auftragsverarbeitungsvertrag."
+        "body": "Standardmäßig läuft die Analyse auf Google Vertex AI in der EU, unter einem Auftragsverarbeitungsvertrag. Außerhalb der EU nur, wenn Sie das für einen Deal wählen."
       },
       {
         "title": "Zero Retention beim Modellanbieter",
@@ -157,8 +147,8 @@
         "body": "Vertrauliche Daten werden vor der Analyse pseudonymisiert. Zurückübersetzt erst im finalen Ergebnis."
       },
       {
-        "title": "Ein verantwortlicher Ansprechpartner",
-        "body": "Eine namentlich benannte Person prüft jedes Ergebnis, bevor es Sie erreicht."
+        "title": "Ihr Prüfer gibt frei",
+        "body": "Kein Kundenexport verlässt die Plattform ohne die Freigabe Ihres eigenen Prüfers."
       }
     ],
     "modules": [
@@ -187,7 +177,7 @@
       },
       {
         "title": "Steuern",
-        "body": "Liest Finanzen und Recht, bevor es argumentiert: eine Steuerposition ist eine Folge der Struktur, die der Financial-Durchgang gerade beschrieben hat, und überschneidet sich oft mit dem, was Recht dort gefunden hat."
+        "body": "Liest Finanzen und Recht, bevor es argumentiert: eine Steuerposition ist eine Folge der Struktur, die der Financial-Durchgang gerade beschrieben hat. Sie überschneidet sich oft mit dem, was Recht dort gefunden hat."
       },
       {
         "title": "Deal Economics",
@@ -200,7 +190,7 @@
     ],
     "chart": {
       "zdr": "ZDR",
-      "zdrTitle": "Zero-Retention-Routing erzwungen. Ohne diese Route startet der Lauf nicht.",
+      "zdrTitle": "Zero-Retention-Routing, im Code erzwungen: Dieses Modul läuft nie auf einem Modell, das Daten speichert.",
       "modulesLabel": "Module",
       "moduleLabel": "Modul",
       "kinds": {
@@ -214,7 +204,7 @@
       "pageRef": "TargetCo — Rahmenvertrag, S. 14",
       "highlight": "Zitierte Passage",
       "findingLabel": "Der Feststellung, der daraus entstand",
-      "footnote": "Ein konstruiertes Beispiel an einem fiktiven Target. Hier steht kein Mandantendokument. Ihr Mandat liefert dieselben sechs Felder, an Ihrem eigenen Data Room.",
+      "footnote": "Ein konstruiertes Beispiel an einem fiktiven Target. Hier steht kein Mandantendokument. Ihr eigener Lauf liefert dieselben sechs Felder, an Ihrem eigenen Data Room.",
       "quote": "Der Kunde kann diesen Vertrag mit einer Frist von dreißig (30) Tagen schriftlich kündigen, wenn sich die Kontrolle über den Lieferanten ändert.",
       "tag": "Beispiel",
       "values": {
@@ -223,7 +213,7 @@
         "evidence": "Ziffer 14.2, links vollständig zitiert.",
         "severity": "Hoch. Der größte Kunde, dreißig Tage Frist, keine Abstandszahlung.",
         "document": "TargetCo — Rahmenvertrag mit Kunde A, Seite 14.",
-        "review": "Freigegeben von W. Dijkman."
+        "review": "Von Ihrem Prüfer namentlich freigegeben, vor dem Export."
       }
     },
     "ctaProof": "Drei wesentliche Feststellungen, die Ihr Team noch nicht hatte, oder das Mandat ist kostenlos, bei Pilotmandaten.",
@@ -235,19 +225,15 @@
     "links": {
       "governance": "Wie Dokumente behandelt werden",
       "platform": "Wie die Plattform arbeitet",
-      "sprint": "Was der Sprint abdeckt",
-      "method": "Die Methode, von Anfang bis Ende",
+      "sprint": "Was Käufer bekommen",
       "limits": "Was KI nicht kann",
       "intake": "Data Room teilen"
-    },
-    "reframe": {
-      "quote": "Den Durchgang des Käufers zuerst auf der eigenen Seite durchzuführen, ist gelebte Prozessdisziplin."
     }
   },
   "home": {
     "hero": {
-      "title": "Den Data Room kennen, bevor Sie unterschreiben",
-      "lead": "Jede Dimension, über den ganzen Data Room, in Tagen. Zu jeder Feststellung stehen Quelle und Fundstelle, damit Sie sie am Tisch belegen können, während Sie dort sitzen.",
+      "title": "Due Diligence über den gesamten Data Room, in Tagen",
+      "lead": "Factum ist Due-Diligence-Software für Käufer und Sell-Side-Broker. Sie liest jedes Dokument im Data Room und liefert jede Feststellung mit Quelldokument und Seite. Ihr eigener Prüfer kontrolliert und gibt frei.",
       "cta": "Data Room teilen"
     },
     "problem": {
@@ -264,12 +250,30 @@
         }
       ]
     },
+    "why": {
+      "title": "Warum KI dafür?",
+      "lead": "Die kurze Antwort, ohne Hype.",
+      "steps": [
+        {
+          "title": "Sie liest jedes Dokument",
+          "body": "Ein Team unter Zeitdruck liest eine Stichprobe. Die Software liest den gesamten Data Room und findet, was ein Dokument mit einem anderen verbindet: eine Vertragsklausel, die eine Zahl im Jahresabschluss verändert."
+        },
+        {
+          "title": "Code rechnet",
+          "body": "Nachrechnungen über die Abschlüsse, das LBO-Modell und die Prüfungen für die Verkäuferseite laufen im Code, ohne Sprachmodell. Eine Zahl, die das Modell schreibt und die in keiner zitierten Passage steht, wird zurückgehalten."
+        },
+        {
+          "title": "Menschen entscheiden",
+          "body": "Ihr Prüfer kontrolliert die Feststellungen und gibt frei. Ohne das geht nichts hinaus."
+        }
+      ]
+    },
     "reframe": {
-      "attr": "Warum ein zweiter Durchgang"
+      "quote": "Egal, auf welcher Seite des Tisches Sie sitzen: Lesen Sie den ganzen Data Room, bevor der Preis feststeht."
     },
     "guide": {
       "title": "Ein Leveraged-Finance-Banker und ein Data Engineer",
-      "lead": "Wouter hat bei der ING Acquisition Finance und Leveraged Finance strukturiert. Daniel baut regulierte Datenpipelines. Einer von beiden gibt jedes Ergebnis frei, bevor es Sie erreicht.",
+      "lead": "Zwei Menschen, die Sie direkt erreichen. Wouter hat bei der ING Acquisition Finance und Leveraged Finance strukturiert. Daniel baut regulierte Datenpipelines.",
       "link": "Das Team kennenlernen"
     },
     "specimen": {
@@ -277,10 +281,10 @@
       "lead": "Ein durchgerechnetes Beispiel an einem fiktiven Target. Das Format ist das, das Sie erhalten."
     },
     "pipeline": {
-      "title": "Jedes Mandat durchläuft dieselben sechs Schritte",
+      "title": "Jeder Lauf durchläuft dieselben sechs Schritte",
       "lead": "Ein KI-Werkzeug auf einen Data Room richten kann jeder. Die Frage ist, was passiert, wenn das Modell sich irrt.",
-      "refusalTitle": "Die Pipeline hält an und ruft einen Menschen",
-      "refusalNote": "Jede harte Blockade geht an einen Menschen.",
+      "refusalTitle": "Die Pipeline hält an und legt es Ihrem Prüfer vor",
+      "refusalNote": "Jede harte Blockade geht an Ihren Prüfer, nie automatisch freigegeben.",
       "refusals": [
         "Erfundene oder halluzinierte Fundstellen",
         "Datenschutzlecks",
@@ -290,7 +294,7 @@
     },
     "trust": {
       "title": "Wohin Ihre Dokumente gehen und wer sie sehen kann",
-      "lead": "EU-Hosting, Zero Retention beim Modellanbieter, Pseudonymisierung vor der Analyse und eine namentlich genannte prüfende Person. Vier Mechanismen, keine Zertifizierung.",
+      "lead": "EU-Hosting als Standard, Zero Retention beim Modellanbieter, Pseudonymisierung vor der Analyse und die Freigabe Ihres eigenen Prüfers. Vier Mechanismen, keine Zertifizierung.",
       "link": "Die Governance-Seite lesen"
     },
     "coverage": {
@@ -304,18 +308,18 @@
       "lead": "Sie kommen mit dem gesamten Data Room im Rücken an den Tisch.",
       "points": [
         {
-          "title": "Der Preis spiegelt den ganzen Data Room wider",
-          "body": "Jede Disziplin, abgeglichen, bevor der Preis feststeht."
+          "title": "Wenn Sie kaufen",
+          "body": "Der Preis spiegelt den ganzen Data Room wider. Jede Disziplin, abgeglichen, bevor der Preis feststeht."
         },
         {
-          "title": "Sie wissen schon, was sie finden werden",
-          "body": "Die Berater des Käufers führen diese Prüfung ohnehin durch. Diesmal haben Sie es zuerst gesehen."
+          "title": "Wenn Sie verkaufen oder den Verkauf begleiten",
+          "body": "Sie wissen schon, was sie finden werden. Die Berater des Käufers führen diese Prüfung ohnehin durch. Diesmal haben Sie es zuerst gesehen."
         }
       ]
     },
     "plan": {
       "title": "Drei Schritte bis zum Start",
-      "lead": "Kein Angebot, bevor wir beide wissen, dass es passt.",
+      "lead": "Die Demo läuft auf Ihrem eigenen Data Room. Danach arbeitet Ihr Team selbst in der Plattform.",
       "steps": [
         {
           "title": "Wählen Sie den Data Room",
@@ -326,8 +330,8 @@
           "body": "Dreißig Minuten, um Umfang und Jurisdiktion zu klären, dann geht das NDA am selben Tag raus. Der Zugang läuft unter einem AV-Vertrag, in der EU, mit Zero Retention."
         },
         {
-          "title": "Die Feststellungen gemeinsam durchgehen, in einem Call",
-          "body": "Tage später. Jede Feststellung nennt Quelle und Fundstelle, freigegeben von einer namentlich benannten Person. Dieser Call ist die Demo: Ihr Data Room, kein Rundgang."
+          "title": "Feststellungen im Call lesen, dann selbst arbeiten",
+          "body": "Tage später, jede Feststellung mit Quelle und Fundstelle: Dieser Call ist die Demo. Danach legt Ihr Team eigene Dossiers an, lädt Gäste ein und gibt die eigenen Feststellungen frei."
         }
       ]
     },
@@ -339,13 +343,13 @@
     "film": {
       "title": "Was liegt wirklich im Data Room?",
       "lead": "Jeder Deal beginnt mit dieser einen Frage. Fünfundvierzig Sekunden: dreihundert Dokumente, ein Wochenende und eine Klausel auf Seite vierzehn, mit der Ihr größter Kunde in der Woche der Unterschrift kündigen kann.",
-      "note": "Das Beispiel im Film ist konstruiert, auf einem fiktiven Zielunternehmen, und sagt das im Bild. Es erscheint kein Kundendokument. Ihr Mandat liefert dieselben sechs Felder, für Ihren eigenen Data Room."
+      "note": "Das Beispiel im Film ist konstruiert, auf einem fiktiven Zielunternehmen, und sagt das im Bild. Es erscheint kein Kundendokument. Ihr eigener Lauf liefert dieselben sechs Felder, für Ihren eigenen Data Room."
     }
   },
   "platform": {
     "header": {
       "title": "Wie die Plattform einen Data Room liest",
-      "lead": "{modules} vorab abgegrenzte Module, in fester Abhängigkeitsfolge, mit vier Grounding-Prüfungen und einer verpflichtenden menschlichen Freigabe. Jedes Mandat derselbe Lauf.",
+      "lead": "Was mit Ihren Dokumenten passiert, Schritt für Schritt. {modules} Module lesen den Data Room in fester Reihenfolge, jede Aussage wird an ihrer Quelle geprüft, und Ihr eigener Prüfer gibt frei.",
       "cta": "Data Room teilen"
     },
     "scale": {
@@ -354,7 +358,7 @@
       "tiles": {
         "modules": {
           "title": "Module pro Mandat",
-          "body": "Jedes vorab auf eine Disziplin zugeschnitten. Alle laufen, bei jedem Mandat."
+          "body": "Jedes auf eine Disziplin zugeschnitten. Der volle Durchgang führt alle aus."
         },
         "waves": {
           "title": "Dispatch-Wellen",
@@ -362,7 +366,7 @@
         },
         "zdr": {
           "title": "Zero-Retention-gesichert",
-          "body": "Steuern, Recht und Finanzen weigern sich, auf einem speichernden Modell zu laufen."
+          "body": "Steuern, Recht und Finanzen laufen nie auf einem Modell, das Daten speichert."
         },
         "blocks": {
           "title": "Harte Blockaden",
@@ -372,7 +376,7 @@
     },
     "coverage": {
       "title": "Die Modulbibliothek, in Dispatch-Reihenfolge",
-      "lead": "Ein Modul, das auf den Output eines anderen wartet, kann nicht früher starten. Diese Abhängigkeit bestimmt die Reihenfolge, nicht unsere Präferenz. Das Label unter jedem Modul sagt, was es liefert: einen Feststellung, ein Dokument oder ein laufendes Signal.",
+      "lead": "Ein Modul, das auf die Ausgabe eines anderen wartet, kann nicht früher starten. Diese Abhängigkeit bestimmt die Reihenfolge. Jedes Modul liefert Feststellungen.",
       "note": "Aus den Dispatch-Graphen im Produktquellcode abgeleitet, nicht geschätzt. ZDR markiert die Module, deren Routing hart auf einen Zero-Retention-EU-Endpunkt gesetzt ist."
     },
     "pipeline": {
@@ -390,7 +394,7 @@
         },
         {
           "title": "Generate-Critique-Retry",
-          "body": "Ein Prüfer-Agent kritisiert den Entwurf und schickt ihn zurück. Maximal zwei Retries je Spezialist."
+          "body": "Ein Prüfer-Agent bewertet den Entwurf und kann ihn einmal zurückschicken, mit Feedback."
         },
         {
           "title": "Vier Grounding-Prüfungen",
@@ -401,8 +405,8 @@
           "body": "Feststellungen werden gegeneinander gelesen und zu einer Darstellung zusammengeführt."
         },
         {
-          "title": "Menschliche Prüfung und Freigabe",
-          "body": "Eine namentlich benannte Person prüft die Feststellungen vor der Freigabe.",
+          "title": "Ihre Prüfung und Freigabe",
+          "body": "Ihr Prüfer kontrolliert die Feststellungen und gibt vor dem Export frei.",
           "note": "Die Pseudonymisierung wird nur hier aufgehoben, im finalen Output."
         }
       ]
@@ -435,9 +439,47 @@
       ],
       "repair": "Aussagen, die durchfallen, bekommen einen Reparaturversuch: neu aus der Quelle zitieren, dann neu bewerten. Was dann noch durchfällt, entfällt oder wird als unbestätigt markiert."
     },
+    "contract": {
+      "title": "Der Ausgabevertrag, Feld für Feld",
+      "lead": "Sechs Felder. Eine Feststellung, die nicht alle sechs füllen kann, wird nicht als Feststellung geliefert.",
+      "failLabel": "Wenn das Feld leer bleibt",
+      "items": [
+        {
+          "title": "Modul",
+          "body": "Welches der {modules} sie erzeugt hat. Vorab abgegrenzt, die Frage stand also fest, bevor der Data Room geöffnet wurde.",
+          "fail": "Es gibt keine Freitextspur. Kein Modul, keine Feststellung."
+        },
+        {
+          "title": "Feststellung",
+          "body": "Eine Aussage, in einem Satz. Zusammengesetzte Aussagen werden getrennt, denn ein Satz mit zwei Aussagen lässt sich nur halb prüfen.",
+          "fail": "Zu vage zum Prüfen zählt wie falsch."
+        },
+        {
+          "title": "Wörtliches Zitat",
+          "body": "Die belegende Passage, Wort für Wort zitiert. Nicht zusammengefasst, nicht geglättet, nicht passend gekürzt.",
+          "fail": "Eine als Zitat ausgegebene Paraphrase fällt durch die Textprüfung und geht zurück."
+        },
+        {
+          "title": "Schweregrad",
+          "body": "Die Folge, gemessen am Transaktionswert, auf fünf Stufen. Das Modul, das die Feststellung geschrieben hat, vergibt ihn.",
+          "fail": "Eine Feststellung ohne Gewichtung liest sich wie jede andere Zeile auf der Seite."
+        },
+        {
+          "title": "Quelldokument und Passage",
+          "body": "Dateiname und Seite, damit Sie es selbst öffnen können. Dieses Feld macht eine Feststellung diskutierbar statt autoritativ.",
+          "fail": "Ein Verweis, der auf keine echte Passage führt, ist eine harte Sperre, keine Warnung."
+        },
+        {
+          "title": "Menschliche Prüfung",
+          "body": "Ihr Prüfer gibt jede Feststellung frei oder lehnt sie ab; eine Ablehnung braucht eine Begründung. Vor dem Export müssen die Modulzusammenfassungen, die zehn größten Risiken und jede aufschiebende Bedingung freigegeben sein.",
+          "fail": "Keine Freigabe, kein Kundenexport. Was nicht geprüft wurde, geht mit diesem Vermerk mit."
+        }
+      ],
+      "note": "Eine Aussage, die durch eine Prüfung fällt, bekommt einen Reparaturversuch: neu aus der Quelle zitieren, dann neu bewerten. Was dann noch fällt, wird gestrichen oder als unbestätigt gekennzeichnet ausgeliefert. Unbestätigt ist ein legitimes Ergebnis. Eine still verschwundene Aussage nicht."
+    },
     "blocks": {
       "title": "{blocks} Bedingungen, die die Auto-Freigabe stoppen",
-      "lead": "Retries sind auf zwei je Spezialist begrenzt. Diese Bedingungen beenden die Schleife in jedem Fall und leiten den Entwurf an eine Person.",
+      "lead": "Ein abgelehnter Entwurf bekommt einen weiteren Versuch. Diese Bedingungen beenden die Schleife und legen den Entwurf Ihrem Prüfer vor, nicht freigegeben.",
       "items": [
         {
           "title": "Datenschutzleck",
@@ -449,15 +491,15 @@
         },
         {
           "title": "Unbestätigt nach Reparatur",
-          "body": "Die Erfindungsprüfung findet nach beiden Wiederholungen noch immer eine Aussage ohne Beleg."
+          "body": "Die Erfindungsprüfung findet nach dem weiteren Versuch noch immer eine Aussage ohne Beleg."
         },
         {
           "title": "Scope-Verweigerung",
           "body": "Das Modul kann es im eigenen Auftrag nicht beantworten und sagt das."
         },
         {
-          "title": "Zu wenig Tiefe",
-          "body": "Eine Antwort, die den Standard des Schemas nicht erreicht."
+          "title": "Prüfer nicht verfügbar",
+          "body": "Der Prüfer-Agent konnte den Entwurf nicht bewerten, also gilt er nicht als geprüft."
         },
         {
           "title": "Platzhaltertext",
@@ -472,6 +514,18 @@
           "body": "Der Critic-Agent bewertete den Entwurf unter dem Schwellenwert."
         }
       ]
+    },
+    "review": {
+      "title": "Was Ihr Prüfer tut",
+      "lead": "Im Prüfbereich der Plattform, bevor etwas exportiert wird.",
+      "items": [
+        "Öffnet die zitierte Passage und liest sie gegen die Aussage, die darauf beruht.",
+        "Entscheidet über Wesentlichkeit: welche Feststellungen den Preis ändern, oder ob Sie überhaupt unterschreiben.",
+        "Wägt Widersprüche zwischen Modulen ab. Wenn zwei Disziplinen einen Sachverhalt unterschiedlich lesen, ist das selbst eine Feststellung.",
+        "Sieht, was die Pipeline zurückgehalten hat, und entscheidet darüber.",
+        "Gibt die Modulzusammenfassungen, die zehn größten Risiken und die aufschiebenden Bedingungen frei. Erst dann kann der Export hinaus."
+      ],
+      "note": "{blocks} harte Blockaden beenden die automatische Schleife vorzeitig und legen den Entwurf Ihrem Prüfer vor, nicht freigegeben."
     },
     "dimensions": {
       "title": "Wofür die Engine den Data Room liest",
@@ -513,7 +567,7 @@
           "label": "Zero Retention beim Modellanbieter"
         },
         {
-          "label": "Namentlich benannte Person zeichnet ab"
+          "label": "Menschliche Freigabe vor dem Export"
         },
         {
           "label": "Veröffentlichtes Genauigkeitsaudit",
@@ -529,15 +583,19 @@
         "Keine auditierte Genauigkeitsquote. Interne Benchmarks beruhen auf einem Datensatz und sind ungeprüft.",
         "Keine Behauptung, das menschliche Tor sei optional. Es ist verpflichtend.",
         "Noch keine abgeschlossenen öffentlichen Fallstudien.",
-        "Keine einheitliche Historie. Das Finanzmodul lief end-to-end an einem realen Deal und wurde gegen Quelldokumente verifiziert. Die Abgleichebene ist jünger.",
         "Keine technische Due Diligence auf Produktebene. Quellcode-Review, Architekturbewertung und Skalierbarkeitstests sind nicht Teil des Standarddurchgangs.",
         "Keine Integritäts- oder Reputationsprüfung. Hintergrundchecks zu Personen und Gegenparteien laufen außerhalb dieser Plattform.",
+        "Keine rechtsordnungsunabhängige Rechts- und Steueranalyse. Beide sind auf niederländisches Recht abgestimmt; bei einem Target anderswo sollten lokale Berater sie prüfen.",
         "Keine allgemeine Verfügbarkeit. Factum steht vor dem Launch."
       ]
     },
     "faq": {
       "title": "Fragen, die uns gestellt werden",
       "items": [
+        {
+          "q": "Warum überhaupt KI?",
+          "a": "Sie liest jedes Dokument im Data Room statt einer Stichprobe und findet, was ein Dokument mit einem anderen verbindet. Gerechnet wird im Code: Nachrechnungen über die Abschlüsse, das LBO-Modell und die Prüfungen für die Verkäuferseite laufen ohne Sprachmodell. Eine Zahl des Modells, die in keiner zitierten Passage steht, wird zurückgehalten. Menschen entscheiden: Ihr Prüfer kontrolliert und gibt frei."
+        },
         {
           "q": "Ist das nicht einfach ein KI-Chatbot mit Zwischenschritten?",
           "a": "Ein allgemeines KI-Modell ist ein Schweizer Taschenmesser: Es kann von allem ein bisschen, auch einen Data Room durchsuchen. Factum ist ein chirurgisches Skalpell: gebaut für genau diesen einen Schnitt. Das hier sind {modules} vorab zugeschnittene Module in fester Abhängigkeitsreihenfolge, mit vier Grounding-Prüfungen und einem verpflichtenden menschlichen Tor. Der Unterschied zeigt sich, wenn niemand hinsieht."
@@ -551,16 +609,16 @@
           "a": "Dann muss es das sagen. Eine Feststellung ist entweder durch einen Nachweis gedeckt, der vier Prüfungen überstanden hat, oder als unbestätigt markiert. Erfundene Quellen sind eine der {blocks} harten Blockaden."
         },
         {
-          "q": "Woher weiß ich, dass die Plattform Feststellungen dieser Tragweite trägt?",
-          "a": "Das Finanzmodul ist der numerisch exponierteste Teil jedes Durchgangs. Es wurde bei einem realen Deal vollständig durchgeführt und unabhängig gegen Quelldokumente verifiziert. Neuere Ebenen haben weniger Historie, und wir sagen dazu, welche das sind."
+          "q": "Woher weiß ich, dass die Feststellungen halten?",
+          "a": "Sie prüfen sie. Jede Feststellung trägt die Passage, auf der sie beruht, und Ihr eigener Prüfer gibt frei, bevor etwas exportiert wird. Eine auditierte Genauigkeitsquote gibt es noch nicht, und wir deuten keine an."
         },
         {
           "q": "Wie schnell ist es?",
-          "a": "Der Pipeline-Durchlauf braucht Stunden. Der fertige, geprüfte Output braucht Tage. Wir nennen kein Lieferdatum, bevor wir den Data Room gesehen haben."
+          "a": "Der Pipeline-Durchgang läuft in Stunden. Die Prüfung durch Ihr Team folgt danach, in Ihrem Tempo. Ein Datum nennen wir erst, wenn wir den Data Room gesehen haben."
         },
         {
           "q": "Wie oft zitiert KI einfach falsch?",
-          "a": "Öfter, als Sie denken. PwC veröffentlichte kürzlich einen Bericht mit einem erfundenen Framework und erfundenen Quellen; Deloitte erstattete einem öffentlichen Auftraggeber einen Auftrag aus demselben Grund. Jedes Zitat hier durchläuft vier Prüfungen, bevor es auf die Seite kommt."
+          "a": "Öfter, als man denkt. Jede Quellenangabe hier besteht vier Prüfungen, bevor sie auf der Seite steht."
         },
         {
           "q": "Für welche Dealgröße ist das gebaut?",
@@ -577,17 +635,17 @@
   },
   "sprint": {
     "header": {
-      "title": "Sehen Sie, was ein Käufer finden würde, bevor er es tut",
-      "lead": "Alle {disciplines} Disziplinen, zu einer Darstellung zusammengeführt. Durchgeführt an einem Target, das Sie kaufen, oder an Ihrem eigenen Unternehmen, bevor ein Käufer es dort selbst durchführt.",
+      "title": "Due Diligence für Käufer, über den gesamten Data Room",
+      "lead": "Für Private Equity und strategische Käufer. Alle {disciplines} Disziplinen über den Data Room des Targets, zu einem Bericht zusammengeführt, mit einer Liste dessen, was der Verkäufer nie hochgeladen hat.",
       "cta": "Data Room teilen"
     },
     "reframe": {
-      "attr": "Warum ein zweiter Durchgang"
+      "quote": "Der Verkäufer hat den Data Room zusammengestellt. Lesen Sie ihn ganz, bevor Sie den Preis festlegen."
     },
     "disciplines": {
       "title": "Alle {disciplines} Disziplinen, ein fester Umfang",
       "lead": "Jede ist ein abgegrenzter Durchgang mit eigener Frage und eigenem Ergebnis.",
-      "note": "Ein Mandat, ein Preis. Keine À-la-carte-Karte und kein Upsell nach Unterschrift. Worauf jede Disziplin schaut, wird im Call anhand Ihres Data Rooms festgelegt."
+      "note": "Ein Preis für den gesamten Umfang. Was jede Disziplin betrachtet, legen wir im Gespräch anhand Ihres Data Rooms fest. Recht und Steuern sind auf niederländisches Recht abgestimmt; bei einem Target anderswo sollten lokale Berater sie prüfen."
     },
     "layers": {
       "title": "Was daraus ein Ergebnis macht",
@@ -599,7 +657,7 @@
         },
         {
           "title": "Disziplinübergreifender Abgleich",
-          "body": "Die Feststellungen jeder Disziplin, zu einem kohärenten Narrativ zusammengeführt, mit einer namentlich benannten Person hinter dem Ergebnis."
+          "body": "Die Feststellungen jeder Disziplin zu einer stimmigen Darstellung zusammengeführt, zur Freigabe durch Ihren Prüfer."
         },
         {
           "title": "Was nie geliefert wurde",
@@ -629,16 +687,16 @@
       ]
     },
     "inputs": {
-      "title": "Was wir zum Start brauchen",
+      "title": "Was es zum Start braucht",
       "lead": "Zwei Dinge. Kein Workshop, keine Kick-off-Woche.",
       "items": [
         {
-          "title": "Zugang zum Data Room",
-          "body": "Finanzen, Recht, Steuern, Personal, Verträge und IP, wie im Call vereinbart."
+          "title": "Der Data Room",
+          "body": "Von Ihrem Team hochgeladen: Finanzen, Recht, Steuern, Personal, Verträge und IP."
         },
         {
           "title": "Antworten auf das, was nie geliefert wurde",
-          "body": "Ihre Antworten schließen die Lücken. Eine Runde, um sie einzuarbeiten und betroffene Analysen erneut laufen zu lassen, ist enthalten."
+          "body": "Ihre Antworten schließen die Lücken. Laden Sie sie hoch und lassen Sie die betroffenen Analysen aus der Plattform neu laufen."
         }
       ]
     },
@@ -651,7 +709,7 @@
         },
         {
           "q": "Wie lange dauert es?",
-          "a": "Tage, keine Wochen. Der Pipeline-Durchgang läuft in Stunden; menschliche Prüfung und Abgleich folgen danach. Auf ein Datum legen wir uns nicht fest, bevor wir den Data Room gesehen haben."
+          "a": "Der Pipeline-Durchgang läuft in Stunden. Die Prüfung durch Ihr Team folgt danach, in Ihrem Tempo. Auf ein Datum legen wir uns erst fest, wenn wir den Data Room gesehen haben."
         },
         {
           "q": "Was kostet es?",
@@ -659,15 +717,15 @@
         },
         {
           "q": "Was passiert mit unseren Dokumenten?",
-          "a": "Vertrauliche Daten werden vor der Analyse pseudonymisiert und erst im finalen Ergebnis zurückübersetzt. Die Analyse läuft auf Google Vertex AI in einer EU-Region unter einem Auftragsverarbeitungsvertrag. Der Modellanbieter speichert Ihre Dokumente nicht und trainiert nicht damit."
+          "a": "Vertrauliche Daten werden vor der Analyse pseudonymisiert und erst im finalen Ergebnis zurückübersetzt. Standardmäßig läuft die Analyse auf Google Vertex AI in der EU, unter einem Auftragsverarbeitungsvertrag. Der Modellanbieter speichert Ihre Dokumente nicht und trainiert nicht damit."
         },
         {
           "q": "Kann ich einen Beispielbericht sehen?",
-          "a": "Keinen echten. Kundendokumente sind vertraulich, und kein Kunde hat sich entschieden, genannt zu werden. Das ausgearbeitete Beispiel auf der Startseite zeigt das Format. Der erste echte, den Sie sehen, ist Ihr eigener, in einem Call, Tage nach dem NDA."
+          "a": "Keinen echten. Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Das ausgearbeitete Beispiel auf der Startseite zeigt das Format. Der erste echte, den Sie sehen, ist Ihr eigener, wenige Tage nach dem NDA."
         },
         {
-          "q": "Wer prüft das Ergebnis tatsächlich?",
-          "a": "Eine namentlich benannte Person, bevor etwas auf Ihrem Tisch landet. Solange Factum vor dem Launch steht, ist das der Gründer, bei jedem Mandat."
+          "q": "Wer gibt die Feststellungen frei?",
+          "a": "Ihr eigener Prüfer, im Prüfbereich der Plattform. Kein Kundenexport verlässt die Plattform ohne diese Freigabe. Factum liefert die Plattform; Urteil und Unterschrift liegen bei Ihnen."
         }
       ]
     },
@@ -680,92 +738,96 @@
   },
   "preSale": {
     "header": {
-      "title": "Finden, bevor der Käufer es findet",
-      "lead": "Ein Käufer fährt diese Analyse an Ihrem Unternehmen, ob Sie es selbst tun oder nicht. Die einzige Frage ist, ob Sie die Feststellungen zuerst sehen, solange Sie noch handeln können.",
+      "title": "Den Data Room fertig machen, bevor Käufer ihn sehen",
+      "lead": "Für Sell-Side-Broker, die einen Verkauf oder eine Kapitalrunde vorbereiten. Factum liest den Data Room Ihres Mandanten so, wie ein Käufer es tut: was noch fehlt, was nicht aufgeht und welche Risiken ein Käufer ansprechen wird.",
       "cta": "Data Room teilen"
     },
     "who": {
-      "title": "Wer das fährt",
-      "lead": "Drei Situationen, ein Grund.",
+      "title": "Für wen",
+      "lead": "Zuerst Broker. Auch Eigentümer.",
       "profiles": [
         {
-          "title": "Eigentümer auf dem Weg zum Exit",
-          "body": "Zwei bis fünf Jahre entfernt oder schon im Prozess. Die Lücke zwischen dem Preis, den Sie im Kopf haben, und dem Preis, den ein Käufer verteidigt, besteht aus Feststellungen, die Sie noch nicht gesehen haben."
+          "title": "Sell-Side-Broker und M&A-Berater",
+          "body": "Sie gehen mit einem Mandanten zu Käufern. Die Lücken sollen auf Ihrer Seite des Tisches auffallen, solange noch Zeit ist, sie zu schließen."
         },
         {
-          "title": "Verkaufsseitige Berater",
-          "body": "Sie präsentieren das Unternehmen gleich berufsmäßigen Skeptikern. Zu wissen, was sie finden werden, ist mehr wert als die Hoffnung, dass sie nicht hinsehen."
+          "title": "Broker, die Eigen- oder Fremdkapital einwerben",
+          "body": "Eine Kapitalrunde verlangt andere Unterlagen als ein Verkauf. Die Checkliste folgt dem Deal: Eigenkapital, Fremdkapital, beides oder ein Exit."
         },
         {
-          "title": "Wer einen Prozess schon einmal spät verloren hat",
-          "body": "Transaktionen scheitern selten am Preis. Sie scheitern an etwas, das spät auftauchte und jede andere Zahl verdächtig machte."
+          "title": "Eigentümer vor einem Exit",
+          "body": "Zwei bis fünf Jahre vorher oder schon im Prozess. Die Lücke zwischen Ihrem Preis und dem Preis, den ein Käufer verteidigt, besteht aus Feststellungen, die Sie noch nicht gesehen haben."
         }
       ]
     },
     "mirror": {
-      "title": "Die Prüfung des Käufers, auf Sie gerichtet",
-      "lead": "Dieselben Dimensionen, derselbe Data Room, derselbe Beweisstandard. Anders ist nur, wer das Ergebnis in der Hand hat.",
+      "title": "Die Sicht des Käufers, von Ihrer Seite aus",
+      "lead": "Dieselbe Plattform, auf die Verkäuferperspektive eingestellt: Sie zeigt, was ein Käufer vorbringen wird, damit es vorab belegt oder gelöst werden kann.",
       "steps": [
         {
-          "title": "Wir lesen, wie ein Käufer liest",
-          "body": "Nicht wie ein Verkäufer, der die eigenen Hausaufgaben kontrolliert. Die Engine erfährt nicht, auf welcher Seite sie steht, und die Feststellungen fallen so oder so gleich aus."
+          "title": "Das Dossier auf Sell-Side stellen",
+          "body": "Die Analyse schreibt dann für den Verkäufer: was ein Käufer vorbringen wird und was vorab einen Beleg oder eine Lösung braucht."
         },
         {
-          "title": "Sie sehen sie zuerst",
-          "body": "Zu jeder Feststellung Quelle und Fundstelle, damit Sie nachrechnen können, statt uns beim Wort zu nehmen."
+          "title": "Ihr Team bewertet jeden Punkt",
+          "body": "Jeder Punkt trägt Quelle und Fundstelle. Ihr Team markiert, was relevant ist, was nicht und was genauer geprüft werden muss."
         },
         {
-          "title": "Sie entscheiden, bevor jemand fragt",
-          "body": "Beheben, einpreisen oder die Antwort vorbereiten. Alle drei schlagen es, in einer Fragerunde überrascht zu werden."
+          "title": "Den Mandanten aus der Plattform fragen",
+          "body": "Fehlende Unterlagen und offene Fragen gehen als eine Anfrage an Ihren Mandanten, innerhalb der Plattform."
         }
       ]
     },
     "gaps": {
-      "title": "Was Ihrem Data Room fehlt",
-      "lead": "Der erste Zug eines Käufers ist die Frage nach dem, was nicht da ist. Diese Liste bekommen Sie zuerst, mit Namen.",
+      "title": "Was dem Data Room fehlt",
+      "lead": "Gemessen an dem, was ein Käufer oder Investor anfordern wird. Die Liste folgt dem Deal: Eine Kapitalrunde verlangt einen Mittelverwendungsplan, ein Verkauf das Auftragsbuch.",
       "items": [
-        "Die Dokumente, nach denen ein Käufer fragen wird und die Ihr Data Room nicht enthält.",
-        "Die Jahre, die in einem Export unvollständig sind, wo eine Lücke schlimmer aussieht, als sie ist.",
-        "Die Verträge, auf die andere Verträge verweisen und die nie hochgeladen wurden.",
-        "Die Lücken, die Sie selbst kennen, damit Sie wählen können, wie Sie sie darstellen, statt danach gefragt zu werden."
+        "Die Unterlagen, ohne die das Dossier nicht an den Markt kann.",
+        "Die Details, die eine Gegenpartei als Nächstes anfordert, gesondert aufgeführt.",
+        "Unterlagen, die vorhanden sind, aber nicht enthalten, was ein Käufer braucht, etwa eine Kundenliste ohne Umsatz je Kunde.",
+        "Zahlen, die sich zwischen Dokumenten widersprechen, mit beiden Quellen."
       ],
-      "note": "Wir sehen, dass etwas fehlt. Ob es absichtlich weggelassen wurde, steht uns nicht zu, und wir sagen es auch nicht."
+      "note": "Abgeglichen wird an den Dokumenten selbst. Ein Vertrag, der in einer anderen Datei steckt, kann als fehlend erscheinen; deshalb geht jeder Punkt zuerst an Ihr Team."
     },
     "boundaries": {
-      "title": "Was ein Pre-Sale-Sprint nicht ist",
-      "lead": "Die ehrliche Fassung, damit daraus später kein Gespräch wird.",
+      "title": "Was das nicht ist",
+      "lead": "Die ehrliche Fassung, damit es später kein Thema wird.",
       "items": [
-        "Keine Vendor-Due-Diligence-Erklärung. Das ist ein unterzeichnetes Prüfungsmandat, und dies ist keines.",
-        "Keine Preisgarantie. Wir können Ihnen sagen, was ein Käufer findet; was er damit macht, ist seine Sache.",
-        "Keine Fairness Opinion und keine Bewertung, die vor einer Bank für sich allein steht.",
-        "Kein Aufräumdienst. Wir benennen, was fehlt; das Beschaffen liegt bei Ihnen oder Ihrem Berater.",
-        "Nicht standardmäßig von Ihrem eigenen Berater abgeschirmt. Wenn Sie es getrennt halten wollen, sagen Sie das vor dem Start."
+        "Kein Vendor-Due-Diligence-Bericht. Das ist ein unterschriebenes Testatmandat, und das hier ist keins.",
+        "Keine Preisgarantie. Es zeigt, was ein Käufer vorbringen wird; was der Käufer daraus macht, ist seine Sache.",
+        "Keine Bewertung, die allein vor einer Bank besteht.",
+        "Kein Aufräumservice. Es benennt, was fehlt; es zu beschaffen ist Sache Ihres Mandanten.",
+        "Nicht von Factum freigegeben. Ihr Team bewertet jeden Punkt, und der Word-Export markiert jeden Punkt, der noch nicht bewertet ist."
       ]
     },
     "faq": {
-      "title": "Was Verkäufer zuerst fragen",
+      "title": "Was Broker zuerst fragen",
       "items": [
+        {
+          "q": "Was kommt dabei heraus?",
+          "a": "Eine Arbeitsliste: höchstens zwanzig Red Flags, Zahlen, die sich widersprechen, die Fragen, die ein Investor stellen wird, und Punkte für das Term Sheet oder das NBO. Exportierbar nach Word für Ihren Mandanten."
+        },
+        {
+          "q": "Welche Disziplinen deckt es ab?",
+          "a": "Die Red Flags kommen aus Finanzen, Kommerz und Betrieb, die in jeder Rechtsordnung funktionieren. Recht und Steuern sind auf niederländisches Recht abgestimmt."
+        },
         {
           "q": "Wie lange vor dem Prozess sollten wir das durchführen?",
           "a": "Früh genug, dass die Antwort auf eine Feststellung noch „das haben wir behoben“ lauten kann. Sobald der Data Room live ist, wird die ehrliche Fassung „wir wissen es, und hier ist der Kontext“. Beides funktioniert. Das erste ist mehr wert."
         },
         {
-          "q": "Merkt der Käufer, dass wir das gemacht haben?",
-          "a": "Nur wenn Sie es sagen. Manche Verkäufer tun es, weil es eine starke Position ist, mit den eigenen Feststellungen und deren Kontext anzukommen. Das ist Ihre Entscheidung, nicht unsere."
+          "q": "Erfahren Käufer, dass wir das gemacht haben?",
+          "a": "Nur wenn Sie es ihnen sagen. Mit eigenen Feststellungen und ihrem Kontext an den Tisch zu kommen, ist eine starke Position. Das entscheiden Sie."
         },
         {
-          "q": "Und wenn wir etwas Ernstes finden?",
-          "a": "Dann haben Sie es gefunden, Monate bevor jemand mit einem Interesse daran es getan hätte. Das ist der Grund, es durchzuführen, kein Grund, es zu lassen."
-        },
-        {
-          "q": "Ist das dasselbe Produkt wie der Sprint auf der Käuferseite?",
-          "a": "Dieselbe Engine, dieselben Dimensionen und derselbe Output-Kontrakt. Anders ist die Frage, auf die wir ihn richten, und die Liste, die Sie am Ende bekommen."
+          "q": "Ist das dasselbe Produkt wie die Version für Käufer?",
+          "a": "Dieselbe Plattform und derselbe Ausgabevertrag, mit einer leichteren Lesung. Die Käuferversion liest jede Disziplin in der Tiefe; diese ist gebaut, um ein Dossier marktreif zu machen."
         }
       ]
     },
     "cta": {
-      "title": "Führen Sie ihn zuerst am eigenen Unternehmen durch",
-      "body": "Teilen Sie Ihren eigenen Data Room unter NDA. Die Feststellungen kommen in Tagen zurück, in einem Call, bevor ein Käufer sie sieht.",
+      "title": "Erst der Data Room Ihres Mandanten, dann die Käufer",
+      "body": "Teilen Sie einen Data Room unter NDA. Sie erhalten die Arbeitsliste in einem Call, bevor ein Käufer den Data Room sieht.",
       "button": "Data Room teilen",
       "note": "Eine Handvoll Pilotmandate."
     }
@@ -782,12 +844,12 @@
     },
     "gate": {
       "title": "Der eine verpflichtende menschliche Schritt",
-      "lead": "Eine namentlich benannte Person gibt jedes Ergebnis frei. Dies sind die Bedingungen, die das erzwingen.",
+      "lead": "Ihr eigener Prüfer gibt vor jedem Kundenexport frei. Dies sind die Regeln dahinter.",
       "items": [
-        "Feststellungen werden vor der Lieferung gegen die Quelldokumente zurückgeprüft.",
+        "Jede Feststellung wird gegen ihre Quellpassage geprüft, bevor sie Ihren Prüfer erreicht.",
         "Das Tor läuft jedes Mal, automatisch.",
-        "{blocks} harte Blockaden gehen an eine Person, statt automatisch freigegeben zu werden.",
-        "Eine namentlich benannte Person prüft, gleicht ab und steht für den Output ein.",
+        "{blocks} harte Blockaden stoppen einen Entwurf und legen ihn Ihrem Prüfer vor, nicht freigegeben.",
+        "Ihr Prüfer gibt die Zusammenfassung jedes Moduls frei, die zehn größten Risiken und jede aufschiebende Bedingung. Ohne diese Freigabe verlässt kein Kundenexport die Plattform. Der Rest geht mit dem Vermerk „nicht gesondert geprüft“ mit.",
         "Pseudonymisierte Werte werden nur hier aufgelöst, im finalen Output."
       ]
     },
@@ -798,8 +860,8 @@
         "Jedes Modul zieht selbstständig Belege aus Ihren hochgeladenen Dokumenten.",
         "Ein zweiter Prüf-Agent kritisiert jeden Entwurf.",
         "Ein separater Durchgang gleicht Aussagen gegen den Quelltext ab.",
-        "Eine Person prüft das Ergebnis.",
-        "Aussagen ohne Passage dahinter werden als unbestätigt gekennzeichnet."
+        "Aussagen ohne Passage dahinter werden als unbestätigt gekennzeichnet.",
+        "Ihr Prüfer kontrolliert das Ergebnis und gibt frei."
       ],
       "machineLabel": "Maschine",
       "humanLabel": "Mensch"
@@ -810,7 +872,7 @@
       "items": [
         "Keine ISO 27001, SOC 2 oder sonstige Zertifizierung. Kein Drittaudit der Pipeline.",
         "Kein Penetrationstest, kein Single Sign-on, keine Audit-Log-Zusage.",
-        "Keine veröffentlichte EU-Region. Die Analyse läuft auf Google Vertex AI in einer EU-Region; welche, nennen wir nicht.",
+        "Kein einzelnes benanntes Rechenzentrum. Standardmäßig läuft die Analyse auf dem EU-Multi-Region-Endpunkt von Vertex AI.",
         "Kein behaupteter DSGVO-Compliance-Status. Verarbeitungsbedingungen gehören in einen Mandatsvertrag.",
         "Keine Meldepflicht- oder Notfallwiederherstellungszusage auf dieser Seite.",
         "Keine auditierte Genauigkeitsquote. Der eine Benchmark auf dieser Seite ist intern und beruht auf einem Datensatz."
@@ -824,13 +886,13 @@
       "note": "Zuerst das NDA, am selben Tag versandt. Ein Deal, den Sie letztes Jahr abgeschlossen haben, geht ebenso."
     },
     "zdr": {
-      "title": "Drei Module weigern sich, auf einem speichernden Modell zu laufen",
+      "title": "Drei Module laufen nie auf einem Modell, das Daten speichert",
       "lead": "Zero Data Retention ist eine Routing-Regel im Code, kein Versprechen auf einer Seite. Steuern, Recht und Finanzen hängen an dieser Regel.",
       "items": [
-        "Das Tor ist eine harte Anforderung, geprüft vor dem Dispatch.",
-        "Es gibt kein stilles Ausweichen auf einen speichernden Anbieter.",
-        "Die Analyse läuft auf Google Vertex AI in einer EU-Region, unter Auftragsverarbeitungsvertrag.",
-        "Die anderen {other} Module laufen auf derselben Infrastruktur. Nur diese drei starten ohne das Tor nicht."
+        "Die Sperre sitzt an der einen Stelle, die jeder Modellaufruf passiert.",
+        "Ein Anbieter, der Daten speichert, wird durch einen Zero-Retention-Anbieter ersetzt, und der Austausch wird protokolliert.",
+        "Standardmäßig ist das Google Vertex AI in der EU, unter einem Auftragsverarbeitungsvertrag.",
+        "Die übrigen {other} Module laufen auf derselben Infrastruktur. Heute ist jeder Anbieter der Plattform Zero-Retention; für diese drei ist es im Code erzwungen."
       ]
     },
     "learning": {
@@ -856,7 +918,7 @@
           ]
         }
       ],
-      "note": "Ist mandantenübergreifendes Methodenlernen für Ihr Mandat ein Problem, sagen Sie das im Call. Für Ihr Konto lässt es sich abschalten."
+      "note": "Ist mandantenübergreifendes Methodenlernen für Ihr Haus ein Problem, sagen Sie das im Call. Für Ihr Konto lässt es sich abschalten."
     },
     "legal": {
       "title": "Warum dies kein Chatfenster ist",
@@ -872,7 +934,7 @@
         },
         {
           "title": "Der EU AI Act läuft auf einer Uhr",
-          "body": "Pflichten für General-Purpose-KI gelten seit dem 2. August 2025. Die Transparenzpflichten aus Artikel 50 folgen am 2. August 2026. Ein dokumentiertes menschliches Tor lässt sich in dieses Regime leichter einordnen als eine Chat-Sitzung, die niemand protokolliert hat."
+          "body": "Pflichten für General-Purpose-KI gelten seit dem 2. August 2025. Die Transparenzpflichten aus Artikel 50 gelten seit dem 2. August 2026. Ein dokumentiertes menschliches Tor lässt sich in dieses Regime leichter einordnen als eine Chat-Sitzung, die niemand protokolliert hat."
         }
       ],
       "note": "Nichts davon ist Rechtsberatung. Alle drei sind Gründe, warum die Pipeline so aussieht, wie sie aussieht."
@@ -899,130 +961,14 @@
         },
         {
           "title": "Was wir aufbewahren, und warum",
-          "body": "Ihre Dokumente und Feststellungen bleiben in Ihrem eigenen Mandanten-Bereich, damit ein späteres Mandat auf ein früheres zurücklesen kann. Auf Wunsch jederzeit gelöscht. Die Frist steht im Mandatsvertrag."
+          "body": "Ihre Dokumente und Feststellungen bleiben in Ihrem eigenen Mandanten-Bereich, damit ein späteres Dossier auf ein früheres zurückgreifen kann. Auf Wunsch jederzeit gelöscht. Die Frist steht im Mandatsvertrag."
         },
         {
           "title": "Subprozessoren",
-          "body": "Die Analyse läuft auf Google Vertex AI in einer EU-Region, unter einem AV-Vertrag. Die Terminbuchung läuft über Cal.com. Die vollständige Liste je Modul liegt auf dem Tisch, bevor Sie irgendetwas hochladen."
+          "body": "Standardmäßig läuft die Analyse auf Google Vertex AI in der EU, unter einem AV-Vertrag. Die Terminbuchung läuft über Cal.com. Diese Website zählt Besuche mit Plausible Analytics, ohne Cookies. Die vollständige Liste je Modul liegt auf dem Tisch, bevor Sie irgendetwas hochladen."
         }
       ],
       "note": "Verlangen Sie es schriftlich. Nach DORA muss ein Fonds oberhalb der Schwelle jeden IKT-Drittanbieter in einem Register benennen, das bei der Aufsicht eingereicht wird — uns eingeschlossen."
-    }
-  },
-  "method": {
-    "header": {
-      "title": "Die Methode, von Anfang bis Ende",
-      "lead": "Die lange Fassung. Was in welcher Reihenfolge läuft, der Vertrag, den jede Feststellung erfüllen muss, und was ein Mensch prüft, bevor irgendetwas bei Ihnen ankommt.",
-      "cta": "Data Room teilen"
-    },
-    "waves": {
-      "title": "{modules} Module, {waves} Wellen, eine Reihenfolge",
-      "lead": "Nichts läuft zu früh. Ein Modul startet, wenn die Arbeit, von der es abhängt, fertig ist. Deshalb hat der Lauf eine Form und keine Warteschlange.",
-      "steps": [
-        {
-          "title": "Welle eins — die unabhängigen Durchgänge",
-          "body": "{w1} Module öffnen im selben Moment. Commercial, HR, Operations und AI gehen parallel in den Data Room. Keines braucht die Antwort eines anderen Moduls, um anzufangen."
-        },
-        {
-          "title": "Welle zwei — Recht",
-          "body": "Liest HR und Commercial, bevor es argumentiert: ein arbeitsrechtliches Risiko oder ein Vertragsanspruch hängt meist an Tatsachen, die diese beiden Durchgänge schon festgestellt haben. Es läuft in einer eigenen Welle, damit Steuern in Welle drei die fertige Ausgabe tatsächlich lesen kann statt eines Versprechens, das der Lauf nicht halten konnte."
-        },
-        {
-          "title": "Welle drei — Finanzen",
-          "body": "Liest Welle eins und Recht, bevor es argumentiert. Eine Ergebniszahl ändert sich, sobald ein Vertragsanspruch oder ein arbeitsrechtliches Risiko auf dem Tisch liegt, also wartet Financial auf beides, statt eine Zahl zu nennen, die es zurücknehmen müsste."
-        },
-        {
-          "title": "Welle vier — Steuern",
-          "body": "Liest Financial und Recht, bevor es argumentiert: eine Steuerposition ist die Folge der Struktur, die der Financial-Durchgang gerade beschrieben hat, und überschneidet sich oft mit dem, was Recht in dieser Struktur fand."
-        },
-        {
-          "title": "Welle fünf — Deal Economics",
-          "body": "Liest alles aus Welle eins bis vier und stellt die Frage, was der Deal tatsächlich einbringt, nicht was er wert ist."
-        },
-        {
-          "title": "Welle sechs — Bewertung",
-          "body": "Die letzte Welle, die noch etwas trägt. Liest Deal Economics obendrauf auf alles davor, und rechnet den Preis durch die Feststellungen hindurch statt an ihnen vorbei."
-        }
-      ],
-      "note": "Alle sechs Wellen zusammen sind die Due Diligence selbst. Das Dashboard und der Bericht entstehen aus dem, was sie liefern."
-    },
-    "contract": {
-      "title": "Der Ausgabevertrag, Feld für Feld",
-      "lead": "Sechs Felder. Eine Feststellung, die nicht alle sechs füllen kann, wird nicht als Feststellung geliefert.",
-      "failLabel": "Wenn das Feld leer bleibt",
-      "items": [
-        {
-          "title": "Modul",
-          "body": "Welches der {modules} sie erzeugt hat. Vorab abgegrenzt, die Frage stand also fest, bevor der Data Room geöffnet wurde — nicht improvisiert aus dem, was zufällig darin lag.",
-          "fail": "Es gibt keine Freitextspur. Kein Modul, keine Feststellung."
-        },
-        {
-          "title": "Feststellung",
-          "body": "Eine Aussage, in einem Satz. Zusammengesetzte Aussagen werden getrennt, denn ein Satz mit zwei Aussagen lässt sich nur halb prüfen.",
-          "fail": "Zu vage zum Prüfen zählt wie falsch."
-        },
-        {
-          "title": "Wörtliches Zitat",
-          "body": "Die belegende Passage, Wort für Wort zitiert. Nicht zusammengefasst, nicht geglättet, nicht passend gekürzt.",
-          "fail": "Eine als Zitat ausgegebene Paraphrase fällt durch die Textprüfung und geht zurück."
-        },
-        {
-          "title": "Schweregrad",
-          "body": "Die Folge für den Käufer, gemessen am Transaktionswert, auf fünf Stufen. Das Modul, das die Feststellung geschrieben hat, vergibt ihn, und der Prüfer kann ihn verschieben.",
-          "fail": "Eine Feststellung ohne Gewichtung liest sich wie jede andere Zeile auf der Seite."
-        },
-        {
-          "title": "Quelldokument und Passage",
-          "body": "Dateiname und Seite, damit Sie es selbst öffnen können. Dieses Feld macht eine Feststellung diskutierbar statt autoritativ.",
-          "fail": "Ein Verweis, der auf keine echte Passage führt, ist eine harte Sperre, keine Warnung."
-        },
-        {
-          "title": "Menschliche Prüfung",
-          "body": "Die Person, die sie freigegeben hat, namentlich, vor der Auslieferung. Jede Feststellung, jedes Mandat.",
-          "fail": "Es gibt keine Überholspur für eine volle Woche."
-        }
-      ],
-      "note": "Eine Aussage, die durch eine Prüfung fällt, bekommt einen Reparaturversuch: neu aus der Quelle zitieren, dann neu bewerten. Was dann noch fällt, wird gestrichen oder als unbestätigt gekennzeichnet ausgeliefert. Unbestätigt ist ein legitimes Ergebnis. Eine still verschwundene Aussage nicht."
-    },
-    "trail": {
-      "title": "Was festgehalten wird, und in welcher Reihenfolge",
-      "lead": "Eine Feststellung ist eine Kette. Jedes Glied wird festgehalten, und nur deshalb hat eine Frage in drei Monaten noch eine Antwort.",
-      "steps": [
-        "Das Dokument kommt an und wird indexiert. Vertrauliche Finanz- und Personendaten werden pseudonymisiert, bevor sie ein Modell sieht.",
-        "Das Modul ruft die Passagen ab, die seine eigene Frage beantworten, und nur diese.",
-        "Der Entwurf wird gegen den Vertrag oben geschrieben. Eine Aussage ohne Passage dahinter wird gar nicht erst geschrieben.",
-        "Ein Prüfdurchgang kritisiert den Entwurf und schickt ihn zurück. Zwei Versuche, dann endet die Schleife und ein Mensch übernimmt.",
-        "Vier Grounding-Prüfungen nacheinander: der Verweisindex, das Zitat selbst, ob die Aussage aus der Passage folgt, und ein zweites Urteil, das im Zweifel sperrt.",
-        "Eine namentlich benannte Person prüft, gleicht ab und gibt frei. Die Pseudonymisierung wird hier aufgehoben und nirgends früher.",
-        "Sie erhalten die Feststellung mit dem Dokumentverweis daran, und der bleibt danach offenbar."
-      ],
-      "note": "Das ausgearbeitete Beispiel — eine Klausel auf Seite 14 eines fiktiven Rahmenvertrags und die Feststellung, die daraus entstand — steht auf der Startseite.",
-      "link": "Das ausgearbeitete Beispiel ansehen"
-    },
-    "gate": {
-      "title": "Was der Prüfer tatsächlich tut",
-      "lead": "„Human in the loop“ ist eine Formel. Das hier ist die Reihenfolge dahinter.",
-      "items": [
-        "Öffnet das zitierte Dokument und liest die Passage gegen die Aussage, die darauf aufbaut.",
-        "Entscheidet über Wesentlichkeit — welche Feststellungen ändern, was Sie zahlen, oder ob Sie unterschreiben.",
-        "Löst Konflikte zwischen Modulen auf. Zwei Disziplinen, die einen Sachverhalt unterschiedlich lesen, sind selbst eine Feststellung und kein Fehler zum Glattbügeln.",
-        "Markiert, was nicht bestätigt werden konnte, und warum.",
-        "Hebt die Pseudonymisierung in der Endausgabe auf, und nur dort.",
-        "Unterschreibt. Eine namentlich benannte Person, verantwortlich für das Dokument, das Sie bekommen."
-      ],
-      "note": "{blocks} harte Blockaden beenden die automatische Schleife vorzeitig und leiten den Entwurf an diese Person, unabhängig von der Bewertung.",
-      "link": "Wie Dokumente behandelt werden"
-    },
-    "stops": {
-      "title": "Wo die Methode aufhört",
-      "lead": "Alles oben ist Arbeit, an der sich eine Maschine messen lassen kann. Ein guter Teil der Due Diligence ist das nicht, und so zu tun als ob, ist die Art, wie solche Systeme den Raum verlieren.",
-      "link": "Was KI in der Due Diligence nicht kann"
-    },
-    "cta": {
-      "title": "Sehen Sie die Methode an Ihrem eigenen Data Room laufen",
-      "body": "Teilen Sie einen Data Room unter NDA. Wir führen jede Welle aus und gehen die Feststellungen mit Ihnen in einem Call durch, Quelle für Quelle.",
-      "button": "Data Room teilen",
-      "note": "Zuerst das NDA, am selben Tag versandt. Ein Deal, den Sie letztes Jahr abgeschlossen haben, geht ebenso."
     }
   },
   "aiLimits": {
@@ -1044,7 +990,7 @@
         {
           "title": "Das Dokument zitieren, das nicht da ist",
           "body": "Retrieval liest, was hochgeladen wurde. Das Teuerste in der Due Diligence ist oft eine Abwesenheit — der Vertrag, den niemand abgelegt hat, das Jahr, das im Lohnexport fehlt. Eine Abwesenheit hat keine Passage zum Zitieren, also kann kein fundiertes System sie als Feststellung melden.",
-          "human": "Der Data-Gap-Tracker ist die laufende Liste eines Menschen: was angefordert wurde und nie kam. Sie wird zusammen mit den Feststellungen geliefert."
+          "human": "Die Plattform gleicht den Data Room mit den Dokumenten ab, die ein Käufer erwartet, und listet auf, was fehlt. Sie anzufordern ist Sache Ihres Teams."
         },
         {
           "title": "Lesen, was niemand aufgeschrieben hat",
@@ -1054,12 +1000,12 @@
         {
           "title": "Schwach von verborgen unterscheiden",
           "body": "Eine Zahl kann schwach sein, weil das Geschäft schwach ist, oder weil der Verkäufer den Prozess gesteuert hat. Auf dem Papier sehen beide gleich aus. Sie auseinanderzuhalten verlangt Wissen darüber, wie sich Verkäufer verhalten, nicht darüber, was in der Akte steht.",
-          "human": "Jemand, der die andere Seite des Tisches geführt hat. Bei uns ist das ein Leveraged-Finance-Banker."
+          "human": "Jemand, der auf der anderen Seite des Tisches gesessen hat: Ihr eigenes Team oder Ihre Berater."
         },
         {
           "title": "Verantwortlich sein",
           "body": "Ein Modell kann kein Representative unter Ihrer NDA sein, kann sich nicht vor Ihrem Investmentkomitee verantworten und kann nichts unterschreiben. Verantwortlichkeit ist keine Funktion, die man einem System hinzufügt. Sie hängt an einer Person, oder sie existiert nicht.",
-          "human": "Eine namentlich benannte Person gibt jede Ausgabe frei und steht dafür ein."
+          "human": "Ihr eigener Prüfer, namentlich. Kein Kundenexport verlässt die Plattform ohne diese Freigabe."
         }
       ],
       "note": "Behauptet ein Anbieter, sein System könne eines dieser fünf Dinge, fragen Sie, welche Seite es zitiert hat."
@@ -1068,10 +1014,10 @@
       "title": "Genau deshalb ist die Freigabe Pflicht",
       "lead": "Der menschliche Schritt ist keine Sicherheitsdecke über einem fertigen Produkt. Er ist die Stelle, an der vier der fünf Punkte oben tatsächlich erledigt werden.",
       "items": [
-        "Ein Name und ein Datum auf jeder Ausgabe, kein Konfidenzwert.",
+        "Der Name Ihres Prüfers auf dem Export, kein Konfidenzwert.",
         "Wesentlichkeit an Ihrem Deal entschieden, nicht an einem Benchmark.",
         "Unbestätigte Aussagen als unbestätigt gekennzeichnet statt still gestrichen.",
-        "Eine Person, mit der Sie streiten können."
+        "Eine verantwortliche Person, in Ihrem eigenen Team."
       ],
       "link": "Wie Dokumente behandelt werden"
     },
@@ -1099,7 +1045,7 @@
       "items": [
         {
           "title": "Wer unterschreibt?",
-          "body": "Lautet die Antwort „ein Dashboard“, unterschreibt niemand. Fragen Sie nach einem Namen — und danach, was passiert, wenn dieser Name sich irrt."
+          "body": "Hier: Ihr eigener, namentlich benannter Prüfer. Fragen Sie jeden Anbieter, ob sein Export ohne menschliche Freigabe hinausgehen kann, und wer dieser Mensch ist."
         },
         {
           "title": "Was passiert mit einer Aussage ohne Beleg?",
@@ -1110,19 +1056,19 @@
           "body": "Schweigen ist die falsche Antwort. Ein fehlendes Dokument sollte einen Eintrag auf einer Liste erzeugen, nicht das Ausbleiben einer Feststellung."
         }
       ],
-      "link": "Die Methode, von Anfang bis Ende"
+      "link": "Was Ihr Prüfer prüft"
     },
     "cta": {
       "title": "Stellen Sie uns die drei Fragen",
-      "body": "Dreißig Minuten mit der Person, deren Name auf der Ausgabe steht. Bringen Sie die unangenehmen mit.",
+      "body": "Dreißig Minuten mit einem der beiden Gründer. Bringen Sie die unbequemen mit.",
       "button": "Data Room teilen",
       "note": "Zuerst das NDA, am selben Tag versandt. Ein Deal, den Sie letztes Jahr abgeschlossen haben, geht ebenso."
     }
   },
   "team": {
     "header": {
-      "title": "Die Menschen hinter dem Ergebnis",
-      "lead": "Wouter hat bei der ING Akquisitions- und Leveraged Finance strukturiert. Daniel baut regulierte Datenpipelines. Einer von beiden gibt jedes Ergebnis frei.",
+      "title": "Die zwei Menschen hinter Factum",
+      "lead": "Wouter Dijkman und Daniel Dropuljic. Sie sprechen direkt mit ihnen: Wouter über Deals, Daniel über Daten und Infrastruktur.",
       "cta": "Data Room teilen"
     },
     "historyLabel": "Werdegang",
@@ -1184,138 +1130,28 @@
     ],
     "closing": "Dieselbe Sorgfalt, gerichtet auf den Deal vor Ihnen.",
     "cta": {
-      "title": "Sie sprechen mit der Person, die das Ergebnis prüft",
-      "body": "Solange Factum vor dem Launch steht, sind der Call, die Prüfstufe und die Durchsprache der Feststellungen dieselbe Person.",
+      "title": "Sie sprechen mit einem Gründer",
+      "body": "Solange Factum vor dem Launch steht, führt Wouter das erste Gespräch und geht die Feststellungen zu Ihrem eigenen Data Room mit Ihnen durch.",
       "button": "Data Room teilen",
       "note": "Zuerst das NDA, am selben Tag versandt. Ein Deal, den Sie letztes Jahr abgeschlossen haben, geht ebenso."
     },
     "roles": {
-      "title": "Wer wofür unterschreibt",
-      "lead": "Zwei Personen, und kein Analystenpool dahinter.",
+      "title": "Wer was tut",
+      "lead": "Zwei Menschen bauen Factum. Ihr Team arbeitet damit.",
       "items": [
         {
           "label": "Wouter Dijkman",
-          "body": "Legt den Umfang mit Ihnen fest und gibt jede Feststellung frei, bevor sie das Haus verlässt. Nichts erreicht Sie ungelesen."
+          "body": "Führt das erste Gespräch und die Demo auf Ihrem eigenen Data Room. Begleitet den Start Ihres Teams und das erste Dossier."
         },
         {
           "label": "Daniel Dropuljic",
           "body": "Verantwortet die Infrastruktur: EU-Hosting, Zero-Retention-Routing und die Aufbewahrungseinstellung bei jedem Anbieter."
         },
         {
-          "label": "Sonst niemand",
-          "body": "Kein Offshore-Team, keine wechselnden Junioren. Ist ein Mandat größer als zwei Personen plus Plattform, sagen wir das vor der Unterschrift."
+          "label": "Ihr eigenes Team",
+          "body": "Prüft die Feststellungen und gibt frei. Das Urteil über Ihren Deal bleibt bei Ihnen."
         }
       ]
-    }
-  },
-  "partnerships": {
-    "header": {
-      "title": "Mehr Mandate, als Ihr Team lesen kann",
-      "lead": "Sie behalten die Beziehung und das Urteilsvermögen. Wir führen die Analyse über alle Disziplinen dahinter aus, unter Ihrem Namen.",
-      "cta": "Data Room teilen"
-    },
-    "who": {
-      "title": "Für wen das meist funktioniert",
-      "lead": "Beschrieben nach Art der Firma, nie namentlich.",
-      "profiles": [
-        {
-          "title": "Corporate-Finance-Boutiquen",
-          "body": "Buy- und Sell-Side-Prozesse, bei denen die analytische Last der Engpass ist."
-        },
-        {
-          "title": "Exit- und Wertsteigerungsberater",
-          "body": "Eigentümer zwei bis fünf Jahre vor dem Exit, die zuerst eine belastbare Ausgangslage brauchen."
-        },
-        {
-          "title": "Restrukturierungs- und Turnaround-Praxen",
-          "body": "Wo eine unabhängige Bestandsaufnahme schnell vorliegen und der Prüfung durch Kreditgeber standhalten muss."
-        },
-        {
-          "title": "PE- und Buy-Side-Berater",
-          "body": "Wettbewerbsprozesse mit engem Zeitplan, in denen die Einschätzung trotzdem einem Investment Committee standhalten muss."
-        }
-      ]
-    },
-    "split": {
-      "title": "Sie behalten die Beziehung. Wir liefern die Analyse.",
-      "lead": "Dieselbe Plattform, alle Disziplinen, dieselbe Prüfstufe. Geliefert unter Ihrem Namen.",
-      "columns": [
-        {
-          "label": "Sie behalten",
-          "items": [
-            "Die Mandantenbeziehung und das Mandat",
-            "Das beraterische Urteil und die Empfehlung",
-            "Die kommerziellen Konditionen mit Ihrem Mandanten",
-            "Die Kontrolle darüber, was unter Ihrem Namen geliefert wird"
-          ]
-        },
-        {
-          "label": "Wir liefern",
-          "items": [
-            "Den vollständigen Durchgang über den Data Room, jede Disziplin",
-            "Disziplinübergreifenden Abgleich als festen Schritt",
-            "Feststellungen, an ein Dokument und eine Passage gebunden, jedes Mal",
-            "Eine namentlich benannte Person, die für das Ergebnis einsteht"
-          ]
-        }
-      ],
-      "seam": "Grenze"
-    },
-    "start": {
-      "title": "Wie eine Partnerschaft tatsächlich beginnt",
-      "lead": "Mit einem echten Mandat, sauber durchgeführt, bevor sich jemand bindet.",
-      "steps": [
-        {
-          "title": "Ein Call, und ein Blick auf Ihre Pipeline",
-          "body": "Wir klären das NDA und erfassen dann, wie Ihre Mandate aussehen und wo die analytische Last liegt. Dreißig Minuten."
-        },
-        {
-          "title": "Ein Mandat, von Anfang bis Ende",
-          "body": "Ein laufendes Mandat, dieselbe Prüfstufe. Sie sehen das Ergebnis, bevor Sie etwas unterschreiben."
-        },
-        {
-          "title": "Konditionen entlang des Erlebten",
-          "body": "Umfang, Preis und Arbeitsrhythmus, festgelegt an einem echten Ergebnis. Ein erster Entwurf einer Partnerschaft."
-        }
-      ]
-    },
-    "boundaries": {
-      "title": "Was eine Partnerschaft nicht enthält",
-      "lead": "Einiges sind Zusagen an bestehende Partner. Der Rest ist der ehrliche Stand eines Unternehmens vor dem Launch.",
-      "items": [
-        "Keine unter Ihrem Namen erhobene Behauptung von Zertifizierung oder Audit. Für ein Siegel, das wir nicht haben, können wir nicht einstehen.",
-        "Keine unbegrenzte Kapazität. Eine Partnerschaft, die der Prüfstufe davonläuft, ist schlechter als keine.",
-        "Keine pauschale Regelung zu Vermittlungsprovisionen. Wo Prüfungs- oder Unabhängigkeitsregeln gelten, wird je Beziehung geprüft.",
-        "Kein Anspruch auf Ihren Mandanten. Nichts, was wir für Sie durchführen, wird ohne Ihre schriftliche Zustimmung zur Fallstudie.",
-        "Kein konkurrierendes Mandat, wo wir bereits Exklusivität zugesagt haben. Wo eine Exklusivität besteht, sagen wir das."
-      ]
-    },
-    "faq": {
-      "title": "Was Partner zuerst fragen",
-      "items": [
-        {
-          "q": "Arbeiten Sie auch direkt mit Eigentümern?",
-          "a": "Ja. Wo sich das mit Ihrem Markt überschneiden könnte, sagen wir es Ihnen, bevor es ein Problem wird."
-        },
-        {
-          "q": "Wessen Name steht auf dem Bericht?",
-          "a": "Wird im ersten Mandat festgelegt. Beide Modelle gibt es: Lieferung unter Ihrem Namen mit Factum als Engine, oder gemeinsame Lieferung."
-        },
-        {
-          "q": "Können Sie auch nur einen Teil des Umfangs übernehmen?",
-          "a": "Der vollständige Durchgang liegt fest, weil der Wert im Abgleich zwischen den Disziplinen liegt. Variieren kann die Tiefe der Ausarbeitung."
-        },
-        {
-          "q": "Wie exklusiv ist das?",
-          "a": "Exklusivität ist in einem definierten Feld möglich, und sie ist eine echte Zusage, wenn wir sie geben."
-        }
-      ]
-    },
-    "cta": {
-      "title": "Beginnen Sie mit einem Mandat",
-      "body": "Richten Sie es auf ein laufendes Mandat und lesen Sie das Ergebnis.",
-      "button": "Data Room teilen",
-      "note": "Zuerst das NDA, am selben Tag versandt. Ein Deal, den Sie letztes Jahr abgeschlossen haben, geht ebenso."
     }
   },
   "contact": {
@@ -1362,7 +1198,11 @@
         },
         {
           "q": "Mit wem spreche ich?",
-          "a": "Mit Wouter Dijkman. Factum ist vor dem Start, also ist die Person im Call dieselbe, die jede Feststellung freigibt, die Sie erhalten."
+          "a": "Mit Wouter Dijkman, einem der beiden Gründer. Er geht die Feststellungen zu Ihrem eigenen Data Room mit Ihnen durch. Danach arbeitet Ihr Team selbst in der Plattform und gibt die eigenen Feststellungen frei."
+        },
+        {
+          "q": "Was passiert nach der Demo?",
+          "a": "Ihr Team arbeitet selbst in der Plattform. Es legt das Dossier an, lädt den Data Room hoch, lädt Mandanten oder Finanzierer als Gäste ein und prüft die Feststellungen und gibt sie frei. Wouter begleitet den Start und das erste Dossier."
         },
         {
           "q": "Wir sind mit einem Berater schon mitten im Prozess. Zu spät?",
@@ -1380,7 +1220,7 @@
       "title": "Was diese Website erhebt, und was ein Mandat tut",
       "lead": "Diese Seite behandelt die Website. Der Umgang mit Mandatsdaten richtet sich nach der Vereinbarung, die wir unterzeichnen."
     },
-    "updated": "Zuletzt geprüft am 5. August 2026.",
+    "updated": "Zuletzt geprüft am 12. Oktober 2026.",
     "sections": [
       {
         "title": "Diese Website",
@@ -1402,7 +1242,7 @@
         "title": "Dokumente, die Sie mit uns teilen",
         "body": [
           "Über diese Website werden keine Dokumente geteilt. Der Zugang wird separat und schriftlich vereinbart.",
-          "Während eines Mandats werden vertrauliche Daten vor der Analyse pseudonymisiert und erst im finalen Ergebnis zurückübersetzt. Die Analyse läuft auf Google Vertex AI in einer EU-Region unter einem Auftragsverarbeitungsvertrag. Der Modellanbieter speichert Ihre Dokumente nicht und trainiert nicht damit.",
+          "Während eines Mandats werden vertrauliche Daten vor der Analyse pseudonymisiert und erst im finalen Ergebnis zurückübersetzt. Standardmäßig läuft die Analyse auf Google Vertex AI in der EU, unter einem Auftragsverarbeitungsvertrag. Der Modellanbieter speichert Ihre Dokumente nicht und trainiert nicht damit.",
           "Aufbewahrungs- und Löschfristen auf unserer Seite werden in der Mandatsvereinbarung festgelegt."
         ]
       },

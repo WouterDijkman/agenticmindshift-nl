@@ -13,24 +13,29 @@ import GuaranteePanel from '@/components/GuaranteePanel';
 import Breadcrumb from '@/components/Breadcrumb';
 
 /**
- * The seller's door.
+ * The broker page ("Marktklaar"), rebuilt 12 October 2026.
  *
- * This position already existed on the site, as one clause in the lead of
- * /diligence-sprint: run it on a target you are buying, or on your own company
- * before a buyer runs it on you. That second half is a different buyer with a
- * different fear, and a clause is not a door.
+ * Audience: sell-side brokers and M&A advisers preparing a sale or a capital
+ * raise, with the owner as a second reader. It replaces /partnerships, which
+ * now 308s here.
  *
- * The page is the same engine described from the other side, so it deliberately
- * reuses the components /partnerships uses rather than inventing a layout. What
- * is new is only the middle: the gaps section, which is the one part of the
- * proposition that belongs to a seller more than to a buyer. A buyer wants to
- * know what a data room contains. A seller needs to know what his own is
- * missing, because that is the first thing he will be asked for.
+ * Every capability named in `preSale.*` is in the product source (canonical
+ * `main`), not in a plan document:
+ *   - the `sell-side` perspective: `src/components/deals/PerspectivePicker.tsx`
+ *     ("what a buyer will raise, so it can be substantiated or resolved");
+ *   - the market-readiness checklist per deal form (equity, debt, both, exit),
+ *     in two layers, plus the "contains no amounts" check:
+ *     `src/lib/marktklaar/dataroom-checklist.ts`, `dealvorm.ts`;
+ *   - at most twenty red flags from financial, commercial and operational:
+ *     `src/lib/marktklaar/vlaggen.ts` (MAX_VLAGGEN, MARKTKLAAR_MODULES);
+ *   - contradictions with both sources: `tegenspraken.ts`, `cijferpakket.ts`;
+ *   - investor questions and term-sheet/NBO points: `vragen.ts`, `termsheet.ts`;
+ *   - one request to the client: `klantvraag.ts`;
+ *   - the Word work list marking unreviewed points: `werklijst-docx.ts`.
  *
- * The boundary in `gaps.note` is not decoration. We can see that a document is
- * absent; we cannot see whether it was withheld. Saying the second thing would
- * be a claim about somebody's intent, and there is no evidence in a data room
- * that supports it.
+ * The note under the gaps list is the product's own known limit: matching is
+ * on the documents, so a contract filed inside another file can show as
+ * missing. That is why every point goes to the broker's team first.
  */
 
 export async function generateMetadata({
@@ -61,8 +66,10 @@ export default async function PreSalePage({
         title={t('header.title')}
         lead={t('header.lead')}
         cta={t('header.cta')}
-        secondary={s('links.sprint')}
-        secondaryHref="/diligence-sprint"
+        /* Was "What the sprint covers" → /diligence-sprint, the buyers' page.
+           A broker's first secondary link sent them to the other audience. */
+        secondary={s('links.platform')}
+        secondaryHref="/platform"
         footnote={s('ctaProof')}
         visual={2}
       />

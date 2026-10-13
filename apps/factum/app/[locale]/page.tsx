@@ -62,11 +62,20 @@ export default async function HomePage({
 
   const t = await getTranslations('home');
   const s = await getTranslations('shared');
+  const n = await getTranslations('nav');
 
   return (
     <>
       <Hero
         title={t('hero.title')}
+        /* Plain words first (12 October 2026). A prospect said a lay reader
+           could spend a long time on this site without understanding that it
+           sells due diligence. The H1 now names the job and the lead says, in
+           three sentences: what Factum is (due diligence software), who it is
+           for (buyers and sell-side brokers), what you get (each finding with
+           its source document and page) and who signs off (your own
+           reviewer). It also no longer says "every dimension": Factum covers
+           nine of fourteen dimensions fully and five partly (COVERAGE_*). */
         lead={t('hero.lead')}
         cta={t('hero.cta')}
         /* Was "See what a finding looks like", pointing at /platform. The
@@ -83,17 +92,26 @@ export default async function HomePage({
            twice here and once more beside the closing button. The inner pages
            carry no band and still pass it. */
         aside={
+          /* A real finding, not the empty form (12 October 2026). This panel
+             used to show the output contract with abstract values ("Pre-scoped,
+             one of the library", "One of five levels, Info to Critical"): the
+             largest object on the first screen, and the one a lay reader could
+             not parse. It now carries the worked example's own values, so the
+             first screen shows what a buyer actually gets: a clause, the page
+             it is on, how bad it is, and who signed it off. Same six fields,
+             same "constructed example" footnote. The abstract contract stays
+             in the /platform header, where the mechanism is the subject. */
           <FindingSchema
-            label={s('schema.label')}
-            footnote={s('schema.footnote')}
+            label={s('specimen.pageRef')}
+            footnote={s('specimen.footnote')}
             moreLabel={s('schema.more')}
             rows={[
-              { key: s('schema.rows.module'), value: s('schema.values.module') },
-              { key: s('schema.rows.finding'), value: s('schema.values.finding') },
-              { key: s('schema.rows.evidence'), value: s('schema.values.evidence') },
-              { key: s('schema.rows.severity'), value: s('schema.values.severity') },
-              { key: s('schema.rows.document'), value: s('schema.values.document') },
-              { key: s('schema.rows.review'), value: s('schema.values.review') }
+              { key: s('schema.rows.module'), value: s('specimen.values.module') },
+              { key: s('schema.rows.finding'), value: s('specimen.values.finding') },
+              { key: s('schema.rows.evidence'), value: s('specimen.quote') },
+              { key: s('schema.rows.severity'), value: s('specimen.values.severity') },
+              { key: s('schema.rows.document'), value: s('specimen.values.document') },
+              { key: s('schema.rows.review'), value: s('specimen.values.review') }
             ]}
           />
         }
@@ -132,20 +150,35 @@ export default async function HomePage({
         </div>
       </Section>
 
+      {/* Why AI, in one plain answer. Asked for by a prospect who could not see
+          why AI belongs in due diligence. Each claim is checked against the
+          product source: whole-room reading and cross-document links (the
+          dependency waves in module-registry.ts); arithmetic in code without a
+          language model (python_service/reconcile_engine.py, lbo_engine.py,
+          src/lib/marktklaar/rekencontroles.ts); a model-written number found in
+          no quote is held back for review (findings/controle/toepassen.ts,
+          code `getal_buiten_citaat`). */}
+      <Section id="why-ai" width="medium" weight="tight">
+        <SectionHeader title={t('why.title')} lead={t('why.lead')} />
+        <div style={{ marginTop: 'clamp(28px, 4vw, 44px)' }}>
+          <Stepper steps={t.raw('why.steps') as { title: string; body: string }[]} />
+        </div>
+      </Section>
+
       {/*
         The reframe, as the page's only full-bleed image.
-
-        This line has to arrive before the reader concludes we are arguing
-        their adviser did a bad job — the person weighing us up is often the
-        adviser. It used to be a blockquote at the bottom of the section above,
-        which is where a sentence goes to be skipped.
 
         It is also the answer to the other half of the complaint. The site owns
         nineteen macro stills and rendered every one of them at a third of the
         viewport inside a card. This is the first time one of them is the
         section rather than a decoration inside it.
       */}
-      <SceneBand id={HOME_BAND} line={s('reframe.quote')} attribution={t('reframe.attr')} />
+      {/* Both sides of the table since 12 October 2026. The line used to be
+          the sell-side reframe ("running the buyer's pass on your own side
+          first"), which a buyer on this page read as addressed to someone
+          else. The two audiences now get their own cards, with their own
+          links, in "What changes when you sign" below. */}
+      <SceneBand id={HOME_BAND} line={t('reframe.quote')} />
 
       {/* Who is behind the read. Raised band — the first change of ground on
           the page, and it lands on the section that is about people. */}
@@ -295,14 +328,21 @@ export default async function HomePage({
         />
       </Section>
 
-      {/* What's different afterwards. Two cards; the third made the same point
-          as the specimen section, with a picture instead of the evidence. */}
+      {/* What's different afterwards, once per audience. The two cards used to
+          be two outcomes, the second of them seller-only ("you already know
+          what they'll find") with nothing to say so. Each card now names its
+          reader and links to that reader's page, so this is also where the
+          homepage hands a visitor to the right half of the site. */}
       <Section width="medium">
         <SectionHeader title={t('success.title')} lead={t('success.lead')} />
         <div style={{ marginTop: 'clamp(32px, 4.5vw, 56px)' }}>
           <MediaCards
             items={t.raw('success.points') as { title: string; body: string }[]}
             scenes={HOME_SUCCESS}
+            links={[
+              { href: '/diligence-sprint', label: n('sprint') },
+              { href: '/pre-sale', label: n('preSale') }
+            ]}
           />
         </div>
       </Section>

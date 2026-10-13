@@ -8,15 +8,14 @@ const PATHS = [
   { path: '/diligence-sprint', priority: 0.9 },
   { path: '/pre-sale', priority: 0.8 },
   { path: '/governance', priority: 0.7 },
-  // The two long-form reference pages. Not in the header, so this and the
-  // footer group are what a crawler has to go on.
-  { path: '/method', priority: 0.7 },
+  // The long-form reference page. Not in the header, so this and the footer
+  // group are what a crawler has to go on. (/method merged into /platform.)
   { path: '/limits-of-ai', priority: 0.7 },
   { path: '/team', priority: 0.6 },
-  { path: '/partnerships', priority: 0.6 },
   // The conversion page: every primary button on the site lands here.
-  { path: '/contact', priority: 0.8 },
-  { path: '/privacy', priority: 0.3 }
+  { path: '/contact', priority: 0.8 }
+  // No /privacy: the page is `noindex, follow` (privacy/page.tsx), and a
+  // sitemap should list only URLs we ask to have indexed.
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

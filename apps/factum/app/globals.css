@@ -102,7 +102,6 @@
 
   /* motion */
   --ease-fn: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-expressive: cubic-bezier(0.4, 0.05, 0.22, 1.2);
   /* Expo-out: travels most of the distance immediately, then settles. Reads as
      weight rather than as a timed effect, which is the whole difference. */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -340,6 +339,9 @@ p { margin: 0; }
   line-height: 1.6;
   color: var(--text-tertiary);
 }
+/* Small notes under full-width sections ran 130+ characters a line at 1440
+   (/governance). A paragraph of small type never needs more than this. */
+p.type-small { max-width: 75ch; }
 
 .measure { max-width: 62ch; }
 .measure-tight { max-width: 48ch; }
@@ -1110,7 +1112,7 @@ p { margin: 0; }
 }
 
 /* `DefinitionList` — a stage row plus a numeral and a labelled second line.
-   Used only by the two reference pages, /method and /limits-of-ai, where every
+   Used by /platform (the output contract) and /limits-of-ai, where every
    row has a consequence attached to it: what happens when a contract field
    cannot be filled, and who does the work the machine will not do. */
 .def-index {
@@ -1240,8 +1242,11 @@ p { margin: 0; }
 }
 
 /* German and Dutch stretch nav labels ~35%, so the collapse point is generous
-   and the labels never get a fixed width. */
-@media (max-width: 1080px) {
+   and the labels never get a fixed width. Raised from 1080px on 12 October
+   2026, when the labels became plain descriptions ("Para vendedores y
+   brokers"): at 1090px the Spanish CTA wrapped onto three lines. Measured in
+   the browser: Spanish, the widest, fits with room from about 1170px. */
+@media (max-width: 1200px) {
   .nav-desktop { display: none !important; }
   .nav-mobile-toggle { display: inline-flex !important; }
 }
@@ -1365,6 +1370,19 @@ p { margin: 0; }
   padding-block: clamp(24px, 4.5vh, 64px);
 }
 
+/* Inner pages get most of a screen, not all of it (12 October 2026).
+   Their headers are a title, a lead and one button: centred in a full 100svh
+   box they sat on 250-300px of empty field at 1440x900, and the first thing
+   the page is actually about started below the fold on every inner page. A
+   first-time visitor saw six near-identical title screens. At 78svh the next
+   section's edge shows again, which is the "what is on this page" cue. This
+   cannot clip the call to action: min-height only ever grows the box, and a
+   shorter box moves the centred content up, never down. The homepage Hero
+   keeps the full screen; it has the schema panel to fill it. */
+.fit-screen.fit-screen-inner {
+  min-height: calc(78svh - var(--header-h));
+}
+
 /* Width alone decides the display size everywhere else on the site. In a
    first screen the short viewport is the binding constraint, so height gets a
    vote too — `min()` takes whichever is tighter, which means phones (narrow
@@ -1382,6 +1400,9 @@ p { margin: 0; }
    1440x900 the width term binds and the display size is correct as it is, and
    nothing should shrink a screen that already fits. Phones are narrow and very
    tall, so they never reach this query. */
+@media (max-height: 800px) and (min-width: 1121px) {
+  .hero-aside .schema-row { padding-block: 11px; }
+}
 @media (max-height: 800px) {
   .fit-screen .type-display {
     font-size: clamp(2rem, min(1.55rem + 4.6vw, 8.8vh), 5.875rem);
@@ -1540,10 +1561,13 @@ p { margin: 0; }
     }
   }
 }
+/* Floor raised from 0.42 to 0.72 (12 October 2026): at 0.42 the stage body
+   measured 2.7:1 and its note 1.9:1 while scrolling, text a reader is meant
+   to be reading. 0.72 keeps the focus pull and the body above 4.5:1. */
 @keyframes stage-focus {
-  0%   { opacity: 0.42; }
+  0%   { opacity: 0.72; }
   30%, 70% { opacity: 1; }
-  100% { opacity: 0.42; }
+  100% { opacity: 0.72; }
 }
 @keyframes rail-fill {
   to { transform: scaleY(1); }
@@ -1602,8 +1626,11 @@ p { margin: 0; }
    ============================================================ */
 .schema-row {
   display: grid;
-  grid-template-columns: minmax(0, 200px) minmax(0, 1fr);
-  gap: clamp(12px, 2vw, 28px);
+  /* Key column 9.5rem, was 200px. Since the home hero shows a real finding
+     the values are sentences, not four-word labels, and a 200px key column
+     set them four lines deep and pushed the hero CTA under a 720px fold. */
+  grid-template-columns: minmax(0, 9.5rem) minmax(0, 1fr);
+  gap: clamp(12px, 2vw, 24px);
   padding-block: 16px;
   border-top: 1px solid var(--hairline-faint);
   align-items: start;
@@ -2658,8 +2685,12 @@ details.disclosure > div { padding-bottom: 24px; }
    reader to click.
 
    It is a strip rather than a pill because the sentence is long enough to
-   wrap on a phone and a pill that wraps stops looking like a badge. The accent
-   left edge does the work a pill would have done.
+   wrap on a phone and a pill that wraps stops looking like a badge.
+
+   No accent left edge any more (12 October 2026): a 2px orange stripe on a
+   callout is the stock "alert box" signature, and on these pages it put a
+   second CTA-orange shape directly under the CTA. The orange check mark
+   already carries the accent; the strip is now one even hairline.
    ============================================================ */
 .cta-proof {
   display: flex;
@@ -2672,8 +2703,7 @@ details.disclosure > div { padding-bottom: 24px; }
   line-height: 1.5;
   color: var(--text-secondary);
   background: var(--surface-inset);
-  border: 1px solid var(--hairline-faint);
-  border-left: 2px solid var(--accent-cta);
+  border: 1px solid var(--hairline);
   border-radius: 3px;
 }
 .cta-proof-mark {
@@ -2711,11 +2741,11 @@ details.disclosure > div { padding-bottom: 24px; }
    ============================================================ */
 
 /* The footer link columns. On a phone this footer is the only route to
-   /method, /limits-of-ai and /contact — they are deliberately kept out of the
+   /limits-of-ai, /privacy and the rest — they are deliberately kept out of the
    header — and each link was a 17px-tall target, which is a coin flip to hit.
    Pad the anchors into rows you can actually tap and drop the flex gap, so the
    column keeps roughly the rhythm it had. */
-/* Sitemap, Reference and Company: six links, two, three. Left to wrap, the two
+/* Sitemap, Reference and Company: five links, one, three. Left to wrap, the two
    short groups cannot fill the row the long one starts, so a phone gets an empty
    quadrant beside Reference and Company pushed down a whole row. Place them
    instead — Sitemap down the left, the two short groups stacked on the right. */
@@ -2727,19 +2757,18 @@ details.disclosure > div { padding-bottom: 24px; }
 @media (max-width: 700px) {
   .footer-groups {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* minmax(0, …), not 1fr: a bare 1fr track will not shrink below its
+       longest unbreakable label, and in pt and es the sitemap labels pushed
+       the page 30-50px wider than a 375px phone. */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px 20px;
     align-items: start;
     /* It is a flex item of the row above, so it would otherwise be sized by its
        content and the two columns would huddle on the left. */
     width: 100%;
   }
-  /* By source order: 1 Sitemap, 2 Reference, 3 Company. Spelled out positionally
-     because the packing is the whole point — adding a fourth group means
-     revisiting this block, not just appending markup. */
-  .footer-groups > :nth-child(1) { grid-area: 1 / 1 / span 2 / auto; }
-  .footer-groups > :nth-child(2) { grid-area: 1 / 2; }
-  .footer-groups > :nth-child(3) { grid-area: 2 / 2; }
+  /* By source order: 1 Sitemap, 2 Company (which now also holds the reference
+     pages). Two groups, two columns; a third group means revisiting this. */
 }
 
 .footer-links {
@@ -2755,7 +2784,19 @@ details.disclosure > div { padding-bottom: 24px; }
   .footer-meta {
     display: flex;
     align-items: center;
-    min-height: 42px;
+    min-height: 44px;
+  }
+  .footer-links a { white-space: normal; }
+  /* Inline text links measured 28px tall on a phone. The padding grows the
+     tap area to 44px; the underline stays on the text via background so the
+     extra height does not push the rule away from the words. */
+  .link-quiet {
+    padding-block: 9px 10px;
+    border-bottom: 0;
+    background: linear-gradient(var(--hairline-strong), var(--hairline-strong)) left calc(100% - 8px) / 100% 1px no-repeat;
+  }
+  .link-quiet:hover {
+    background-image: linear-gradient(var(--accent-cta), var(--accent-cta));
   }
 }
 

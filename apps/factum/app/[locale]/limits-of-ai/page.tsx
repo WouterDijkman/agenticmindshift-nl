@@ -75,8 +75,8 @@ export default async function LimitsPage({
       />
 
       {/* The five limits, each with the person who does that work instead.
-          Same object as the output contract on /method, which is deliberate —
-          the two reference pages are a pair and read as one. */}
+          Same object as the output contract on /platform, which is deliberate:
+          the contract and its limits read as a pair. */}
       <Section width="medium" tone="inset" weight="loud">
         <SectionHeader title={t('limits.title')} lead={t('limits.lead')} />
         <div style={{ marginTop: 'clamp(28px, 3.5vw, 44px)' }}>
@@ -164,7 +164,7 @@ export default async function LimitsPage({
           <Stepper steps={t.raw('ask.items') as { title: string; body: string }[]} />
         </div>
         <Reveal delay={80} style={{ marginTop: 28 }}>
-          <Link href="/method" className="link-quiet">
+          <Link href="/platform#review" className="link-quiet">
             {t('ask.link')}
             <ArrowRight />
           </Link>

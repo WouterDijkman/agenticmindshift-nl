@@ -53,9 +53,7 @@ export default async function SprintPage({
 
       {/*
         The reframe, as a band rather than as a blockquote with a paragraph
-        under it. The line lives in `shared` because the homepage opens on it
-        too and the two must never drift apart; the paragraph that used to
-        explain it is gone, because a band with an explanation under it is not
+        under it. The paragraph that used to explain it is gone, because a band with an explanation under it is not
         a band, and the explanation restated the line.
 
         The guarantee panel that sat immediately below this is also gone. It
@@ -63,7 +61,12 @@ export default async function SprintPage({
         and the header footnote above already makes — three statements of one
         promise inside one scroll reads as insistence rather than confidence.
       */}
-      <SceneBand id={SPRINT_BAND} line={s('reframe.quote')} attribution={t('reframe.attr')} />
+      {/* Its own line since 12 October 2026. This band used to repeat the
+          homepage's shared reframe ("running the buyer's pass on your own side
+          first"), which is the sell-side argument, on the one page addressed
+          to buyers. The buyer's version of the same thought is that the seller
+          built the room. No attribution label: the line carries itself. */}
+      <SceneBand id={SPRINT_BAND} line={t('reframe.quote')} />
 
       {/* The discipline roster; count comes from DISCIPLINES in lib/site.ts.
           This is what the page is for, and it is now the only section on it
@@ -87,10 +90,10 @@ export default async function SprintPage({
             {t('disciplines.note')}
           </p>
           {/* What a sprint covers is here; the order it runs in and the
-              contract each finding has to satisfy are on /method. */}
+              contract each finding has to satisfy are on /platform. */}
           <div style={{ marginTop: 18 }}>
-            <Link href="/method" className="link-quiet">
-              {s('links.method')}
+            <Link href="/platform#contract" className="link-quiet">
+              {s('links.platform')}
               <ArrowRight />
             </Link>
           </div>

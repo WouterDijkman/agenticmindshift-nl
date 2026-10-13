@@ -38,20 +38,20 @@ export const KVK = '99495945';
 /**
  * Primary header nav.
  *
- * Partnerships sits here, not in the footer. It was moved out on the argument
- * that referral partners are a narrower audience than the buyer — true of the
- * page, wrong about the funnel. The likeliest first mandate is the
- * corporate-finance adviser at a Dutch boutique, who keeps the client
- * relationship as a shield and carries far less career risk than a PE partner
- * signing off on an unproven vendor. That reader does not scroll to the footer
- * to find out a referral route exists.
+ * Two audiences, one page each: buyers (PE and strategic acquirers) on
+ * /diligence-sprint, and sell-side brokers on /pre-sale (owner decision
+ * 12 October 2026). /partnerships is gone. It sold white-label capacity to
+ * buy-side advisers delivering diligence "under your name", a role the
+ * product no longer has: Factum is self-service and does not sign off. A
+ * broker is reached through /pre-sale, which is built on the product's
+ * sell-side perspective and its market-readiness checks; the old URL 308s
+ * there (next.config.ts).
  */
 export const NAV = [
   { href: '/platform', key: 'platform' },
   { href: '/diligence-sprint', key: 'sprint' },
   { href: '/pre-sale', key: 'preSale' },
   { href: '/governance', key: 'governance' },
-  { href: '/partnerships', key: 'partnerships' },
   { href: '/team', key: 'team' }
 ] as const;
 
@@ -59,24 +59,23 @@ export const NAV = [
 export const FOOTER_NAV = NAV;
 
 /**
- * The two reference pages, deliberately not in the header.
+ * The reference page, deliberately not in the header.
  *
- * /method and /limits-of-ai are long, and they are written for someone who has
- * already decided the proposition is interesting and now wants to check it.
- * That reader arrives from a link inside an argument, not from a nav bar — and
- * a seven-item header would cost every other visitor a slower scan to serve
- * them. They get their own footer group instead, which is a site-wide link on
- * every page, plus contextual links from the sections whose claims they back:
- * /platform and /diligence-sprint point at /method, /governance points at
- * /limits-of-ai, and the two point at each other.
+ * /limits-of-ai is long, and it is written for someone who has already decided
+ * the proposition is interesting and now wants to check it. That reader
+ * arrives from a link inside an argument, not from a nav bar. It gets its own
+ * footer group instead, plus contextual links from the sections whose claims
+ * it backs: /governance and the limits section of /platform.
  *
- * `Breadcrumb` reads this list as well, so both pages emit a proper crumb name
+ * /method used to sit here too. It was merged into /platform on 12 October
+ * 2026 and 308s there (next.config.ts): roughly 70% of it repeated /platform,
+ * and the two unique parts (the output contract's failure modes and the
+ * reviewer's steps) now live on /platform as #contract and #review.
+ *
+ * `Breadcrumb` reads this list as well, so the page emits a proper crumb name
  * rather than falling through to the "return null" branch.
  */
-export const REFERENCE_NAV = [
-  { href: '/method', key: 'method' },
-  { href: '/limits-of-ai', key: 'aiLimits' }
-] as const;
+export const REFERENCE_NAV = [{ href: '/limits-of-ai', key: 'aiLimits' }] as const;
 
 export const LOCALE_NAMES: Record<string, string> = {
   en: 'English',
@@ -190,7 +189,7 @@ export const MONITORING_MODULE_COUNT = MODULES.filter((m) => m.kind === 'monitor
 /**
  * How many modules open in each wave, indexed from wave 1.
  *
- * /method states these counts in prose ("eight modules open at once"), and a
+ * Copy states these counts in prose ("four modules open at once"), and a
  * number typed into a message file is a number that goes stale the next time
  * the roster moves — which is exactly how the site once printed a module total
  * a quarter too high. Derived here, passed into ICU, so a wave gaining a module
@@ -278,11 +277,15 @@ export const COVERAGE_PARTIAL = 5;
 /**
  * Hard-block conditions that stop a sub-agent draft being auto-approved.
  *
- * Eight, not seven: `agent-review-graph.ts` throws a distinct `HardBlockError`
- * for `FABRICATED_SOURCE` (a citation that resolves to nothing) and for
- * `FABRICATION_CHECK_FAILED` (the deterministic checker still finds a
- * reject-severity issue after both repair attempts) — two code paths, not one.
- * `platform.blocks.items` carries eight entries to match; re-count both if
- * either changes.
+ * Re-counted 12 October 2026 against `src/lib/agents/graphs/agent-review-graph.ts`
+ * on the product's canonical `main`: eight distinct `HardBlockError` reasons —
+ * PRIVACY_LEAK, FABRICATED_SOURCE, FABRICATION_CHECK_FAILED, SCOPE_REFUSAL,
+ * PERVASIVE_PLACEHOLDERS, NEAR_EMPTY_DRAFT, LOW_REVIEWER_SCORE and
+ * REVIEWER_UNAVAILABLE. The count held, the roster did not:
+ * INSUFFICIENT_EVIDENCE_DEPTH no longer throws (an under-corroborated Critical
+ * finding is demoted instead, L3-9), and REVIEWER_UNAVAILABLE is new. The
+ * fifth entry of `platform.blocks.items` was swapped to match. Re-count both if
+ * either changes. A blocked draft goes to the client's reviewer unapproved; it
+ * is never force-approved.
  */
 export const HARD_BLOCK_COUNT = 8;

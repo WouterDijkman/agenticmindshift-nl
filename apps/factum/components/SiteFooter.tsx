@@ -25,7 +25,7 @@ export default async function SiteFooter() {
             <p className="type-small">{t('blurb')}</p>
           </div>
 
-          {/* Three groups of wildly different lengths — six links, two, three.
+          {/* Three groups of wildly different lengths — five links, one, three.
               Wrapping them leaves a hole on a phone, so `.footer-groups` places
               them explicitly below 700px. Order matters there; see globals.css. */}
           <div className="footer-groups">
@@ -49,13 +49,14 @@ export default async function SiteFooter() {
               </ul>
             </nav>
 
-            {/* The two long-form pages. They are kept out of the header on
-                purpose (see REFERENCE_NAV), so this group is the only
-                site-wide link either of them gets. */}
-            <nav aria-label={t('reference')}>
+            <div>
               <span className="eyebrow" style={{ marginBottom: 14 }}>
-                {t('reference')}
+                {t('company')}
               </span>
+              {/* The long-form reference pages (REFERENCE_NAV) used to have a
+                  column of their own, which held a single link. They sit here
+                  now, above Privacy; this is still the only site-wide link
+                  they get, since the header leaves them out on purpose. */}
               <ul className="footer-links">
                 {REFERENCE_NAV.map((item) => (
                   <li key={item.href}>
@@ -64,14 +65,6 @@ export default async function SiteFooter() {
                     </Link>
                   </li>
                 ))}
-              </ul>
-            </nav>
-
-            <div>
-              <span className="eyebrow" style={{ marginBottom: 14 }}>
-                {t('company')}
-              </span>
-              <ul className="footer-links">
                 <li>
                   <Link href="/privacy" className="type-small nav-link">
                     {t('privacy')}

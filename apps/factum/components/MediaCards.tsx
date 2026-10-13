@@ -1,4 +1,6 @@
 import type { SceneId } from '@/lib/scenes';
+import { Link } from '@/i18n/navigation';
+import { ArrowRight } from './Icons';
 import Reveal from './Reveal';
 import SceneCard from './SceneCard';
 
@@ -15,7 +17,8 @@ export default function MediaCards({
   items,
   scenes,
   chip,
-  wide = false
+  wide = false,
+  links
 }: {
   items: { title: string; body: string }[];
   /** One scene per item, in order. Must be at least as long as `items`. */
@@ -24,6 +27,8 @@ export default function MediaCards({
   chip?: 'number' | (string & {});
   /** Cap the row at two columns, for lists whose cards carry more prose. */
   wide?: boolean;
+  /** Optional onward link per card, positional like `scenes`. */
+  links?: ({ href: string; label: string } | undefined)[];
 }) {
   // Copy lists are translated, so a locale that gained or lost a bullet would
   // otherwise silently drop the last card's image. Fail loudly instead.
@@ -39,7 +44,14 @@ export default function MediaCards({
    * uses divisors of n, so a row is never short. Capped at four; a longer list
    * than that wants a different component.
    */
-  const columns = Math.min(items.length, wide ? 2 : 4);
+  // `wide` pairs cards only when they pair evenly. Three wide cards used to
+  // come out two-and-one, with the third stranded alone under the first
+  // (/pre-sale "Who it is for"); an odd list runs three across instead.
+  const columns = wide
+    ? items.length % 2 === 0
+      ? 2
+      : Math.min(items.length, 3)
+    : Math.min(items.length, 4);
 
   return (
     <div className={`card-grid card-grid-${columns} stagger`}>
@@ -54,6 +66,14 @@ export default function MediaCards({
               {item.title}
             </h3>
             <p className="type-small">{item.body}</p>
+            {links?.[i] && (
+              <div style={{ marginTop: 16 }}>
+                <Link href={links[i]!.href} className="link-quiet">
+                  {links[i]!.label}
+                  <ArrowRight />
+                </Link>
+              </div>
+            )}
           </div>
         </Reveal>
       ))}

@@ -2,20 +2,23 @@ import type { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/site';
 
 /**
- * Same policy as agenticmindshift.nl, and for the same reason — see the long
- * note in `apps/web/app/robots.ts`.
+ * Crawler policy for factumcapital.eu, decided 12 October 2026.
  *
- * This file used to be a bare `*: allow`, which is not the neutral choice it
- * looks like. A wildcard allow says nothing about the named agents, and the
- * named agents are the ones that decide whether Factum can appear in a ChatGPT
- * or Perplexity answer at all. Spelling them out costs nothing and makes the
- * policy reviewable rather than implicit.
+ * Factum's job on the open web is that a model says the right thing about
+ * Factum. Spelling the named agents out (rather than a bare `*: allow`) keeps
+ * that policy reviewable.
  *
- * Retrieval bots are allowed outright. Google-Extended, CCBot and
- * Applebot-Extended are allowed because Factum's problem is obscurity, not
- * leakage: the company is pre-launch, has no third-party coverage, and no
- * model has any reason to know it exists. GPTBot and ClaudeBot are blocked to
- * match apps/web, which is a preference, not evidence.
+ * Retrieval bots are allowed outright: they decide whether Factum can appear,
+ * with a link, in a ChatGPT, Claude or Perplexity answer at all.
+ *
+ * Training crawlers are allowed too, GPTBot, ClaudeBot and anthropic-ai
+ * included. Until this date they were blocked, deliberately: a training crawl
+ * freezes whatever the site says on the day it runs, and the copy then still
+ * described a done-for-you service with a named approver, a refusal the code
+ * no longer makes and a track record nobody could verify (audit
+ * AUDIT-VINDBAARHEID-2026-10-12.md, §3.1 and §4.2). Those claims were corrected
+ * on this branch first; only then was training opened. If the copy and the
+ * product drift apart again, close this before fixing the copy, not after.
  */
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -32,10 +35,11 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'Google-Extended', allow: '/' },
       { userAgent: 'CCBot', allow: '/' },
       { userAgent: 'Applebot-Extended', allow: '/' },
-      // ── Pure training crawlers — blocked by preference ─────────────────
-      { userAgent: 'GPTBot', disallow: '/' },
-      { userAgent: 'ClaudeBot', disallow: '/' },
-      { userAgent: 'anthropic-ai', disallow: '/' },
+      // ── Training crawlers — allowed since 12-10-2026, after the copy ───
+      // matched the product (see the note above).
+      { userAgent: 'GPTBot', allow: '/' },
+      { userAgent: 'ClaudeBot', allow: '/' },
+      { userAgent: 'anthropic-ai', allow: '/' },
       // ── Googlebot, Bingbot and everything else ─────────────────────────
       { userAgent: '*', allow: '/' }
     ],

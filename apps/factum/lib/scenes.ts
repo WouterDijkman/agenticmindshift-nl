@@ -84,7 +84,7 @@ export const GOVERNANCE_POINTS: SceneId[] = [
   'tumbler', // EU-hosted — the dial of a safe
   'tape', // zero retention — the storage medium, and nothing kept on it
   'ledger', // pseudonymised — a ledger whose writing is deliberately illegible
-  'readout' // one accountable contact — one lamp lit in a row that stays dark
+  'readout' // your reviewer signs off — one lamp lit in a row that stays dark
 ];
 
 /** Home — what good looks like. Two cards; the third duplicated the specimen. */
@@ -93,36 +93,29 @@ export const HOME_SUCCESS: SceneId[] = [
   'sheaf' // you already know what they'll find — the whole stack, read end to end
 ];
 
-/** /partnerships — who this is for. */
-export const PARTNER_PROFILES: SceneId[] = [
-  'balance', // corporate finance boutiques — the load carried on both sides at once
-  'micrometer', // exit and value-creation — the graduated reference, the baseline first
-  'bolt', // restructuring — a wedge under the block, taking the weight
-  'loupe' // PE and buy-side — the one lit disc, everything in it sharp
-];
-
 /**
  * /diligence-sprint — the reframe, full width.
  *
  * The second and last 100vw scene on the site. `micrometer` is the graduated
  * reference laid down before anything is measured against it, which is the
- * sentence: checking your own work first is not an admission, it is the
- * baseline. It carries the same line as HOME_BAND and deliberately does not
- * carry the same picture — a reader arriving here from the homepage should
- * recognise the argument, not think the page failed to load.
+ * sentence: read the whole room before you set the price. Its line is the
+ * buyer's version of HOME_BAND's, and it deliberately does not carry the same
+ * picture: a reader arriving from the homepage should recognise the argument,
+ * not think the page failed to load.
  */
 /**
- * Pre-sale. Three pictures for three sellers, and the middle one is the page.
+ * /pre-sale, the broker page. Three readers: the sell-side broker, the broker
+ * raising capital, and the owner.
  *
  * `seal` is the only still in the set that is *about* an absence: dust settled
- * everywhere and one clean rectangle where something used to be. That is the
- * whole argument of this page in one frame, so it carries the profile about
- * what a buyer asks for and cannot find.
+ * everywhere and one clean rectangle where something used to be. It carries
+ * the capital-raise profile, whose point is that the missing document depends
+ * on the deal.
  */
 export const PRESALE_PROFILES: SceneId[] = [
-  'loupe', // owners heading for an exit — the one lit disc, everything in it sharp
-  'seal', // sell-side advisers — the shape of the thing that is no longer there
-  'bolt' // after a failed process — the wedge already taking the weight
+  'loupe', // sell-side brokers — the one lit disc, everything in it sharp
+  'seal', // brokers raising equity or debt — the shape of what is not there yet
+  'bolt' // owners preparing an exit — the wedge already taking the weight
 ];
 
 export const SPRINT_BAND: SceneId = 'micrometer';
@@ -159,7 +152,6 @@ for (const id of [
   HOME_BAND,
   ...GOVERNANCE_POINTS,
   ...HOME_SUCCESS,
-  ...PARTNER_PROFILES,
   SPRINT_BAND,
   ...SPRINT_LAYERS,
   ...SPRINT_FORMATS,
@@ -179,7 +171,6 @@ for (const id of [
 for (const [page, ids] of [
   ['home', [...HOME_PROBLEM, HOME_GUIDE, HOME_BAND, ...HOME_SUCCESS]],
   ['governance', GOVERNANCE_POINTS],
-  ['partnerships', PARTNER_PROFILES],
   ['diligence-sprint', [SPRINT_BAND, ...SPRINT_LAYERS, ...SPRINT_FORMATS, ...SPRINT_INPUTS]]
 ] as const) {
   const seen = new Set<string>();
