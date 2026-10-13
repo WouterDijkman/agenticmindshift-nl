@@ -23,6 +23,7 @@ import Disclosures from '@/components/Disclosures';
 import CtaBand from '@/components/CtaBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
 import FindingSchema from '@/components/FindingSchema';
+import Specimen from '@/components/Specimen';
 import DefinitionList from '@/components/DefinitionList';
 import Breadcrumb from '@/components/Breadcrumb';
 import { ArrowRight } from '@/components/Icons';
@@ -161,6 +162,44 @@ export default async function PlatformPage({
             {t('grounding.repair')}
           </p>
         </Reveal>
+      </Section>
+
+      {/*
+        The worked example, moved here from the homepage on 13 October 2026:
+        the home hero already shows this finding, so the page showed it twice.
+        Here it sits next to the output contract it illustrates.
+
+        Van Dijk's objection to every pre-launch B2B site is the one this
+        answers: "I'm not going to book a demo without getting a taste of what
+        the product looks like." With no client cases to show, a constructed
+        specimen on a fictional target — labelled as constructed — is the
+        closest honest equivalent, and it is worth more screen than anything
+        else here.
+      */}
+      <Section id="anatomy" tone="inset" weight="loud">
+        <SectionHeader title={t('specimen.title')} lead={t('specimen.lead')} />
+        <div style={{ marginTop: 'clamp(36px, 4.5vw, 60px)' }}>
+          {/* Row keys are the output contract, shared with the hero schema; the
+              values are the worked example. The contract stays abstract so this
+              can stay concrete. */}
+          <Specimen
+            pageLabel={s('specimen.pageLabel')}
+            pageRef={s('specimen.pageRef')}
+            highlightLabel={s('specimen.highlight')}
+            findingLabel={s('specimen.findingLabel')}
+            quote={s('specimen.quote')}
+            tag={s('specimen.tag')}
+            footnote={s('specimen.footnote')}
+            rows={[
+              { key: s('schema.rows.module'), value: s('specimen.values.module') },
+              { key: s('schema.rows.finding'), value: s('specimen.values.finding') },
+              { key: s('schema.rows.evidence'), value: s('specimen.values.evidence') },
+              { key: s('schema.rows.severity'), value: s('specimen.values.severity') },
+              { key: s('schema.rows.document'), value: s('specimen.values.document') },
+              { key: s('schema.rows.review'), value: s('specimen.values.review') }
+            ]}
+          />
+        </div>
       </Section>
 
       {/* The output contract, field by field, with what happens when a field

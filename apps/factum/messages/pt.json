@@ -276,10 +276,6 @@
       "lead": "Duas pessoas com quem fala diretamente. Wouter estruturou financiamento de aquisições e leveraged finance no ING. Daniel constrói pipelines de dados regulados.",
       "link": "Conhecer a equipa"
     },
-    "specimen": {
-      "title": "Que aspeto tem uma constatação",
-      "lead": "Um exemplo trabalhado sobre um alvo fictício. O formato é o que recebe."
-    },
     "pipeline": {
       "title": "Cada execução percorre os mesmos seis passos",
       "lead": "Qualquer um pode apontar uma ferramenta de IA a um data room. A questão é o que acontece quando o modelo se engana.",
@@ -296,12 +292,6 @@
       "title": "Para onde vão os seus documentos e quem os pode ver",
       "lead": "Alojamento na UE por defeito, retenção zero no fornecedor do modelo, pseudonimização antes da análise e a aprovação do seu próprio revisor. Quatro mecanismos, nenhuma certificação.",
       "link": "Ler a página de governação"
-    },
-    "coverage": {
-      "title": "Oito disciplinas, uma leitura sobre o mesmo data room",
-      "lead": "O que uma disciplina encontra fica em cima da mesa para a seguinte.",
-      "note": "Ordenado por dependência: o trabalho seguinte espera pelas constatações de que precisa. Se o jurídico identifica um risco contratual, o financeiro e o fiscal incorporam-no na mesma ronda.",
-      "ctaLine": "A sua equipa não consegue fazer isto em duas semanas."
     },
     "success": {
       "title": "O que muda quando assina",
@@ -343,7 +333,7 @@
     "film": {
       "title": "O que está realmente no data room?",
       "lead": "Cada negócio começa com essa única pergunta. Quarenta e cinco segundos: trezentos documentos, um fim de semana e uma cláusula na página catorze que permite ao seu maior cliente sair na semana em que assina.",
-      "note": "O exemplo no filme é construído sobre uma empresa-alvo fictícia e di-lo no ecrã. Não aparece nenhum documento de cliente. A sua própria execução produz os mesmos seis campos, sobre o seu próprio data room."
+      "note": "O exemplo no filme é construído sobre um target fictício e di-lo no ecrã. Não aparece nenhum documento de cliente. A sua própria execução produz os mesmos seis campos, sobre o seu próprio data room."
     }
   },
   "platform": {
@@ -631,6 +621,10 @@
       "body": "Partilhe um data room sob NDA. Corremos a leitura completa e seguimos consigo cada constatação até à passagem de origem, numa chamada.",
       "button": "Partilhe um data room",
       "note": "Primeiro o NDA, enviado no mesmo dia. Um negócio que fechou no ano passado também serve."
+    },
+    "specimen": {
+      "title": "Que aspeto tem uma constatação",
+      "lead": "Um exemplo trabalhado sobre um alvo fictício. O formato é o que recebe."
     }
   },
   "sprint": {
@@ -926,7 +920,7 @@
       "items": [
         {
           "title": "Uma ferramenta de IA pública não é privada",
-          "body": "As próprias condições de utilização de uma ferramenta de IA pública costumam permitir ao fornecedor conservar o que escreve e entregá-lo mediante ordem judicial, seja qual for a sua sede. Nenhum acordo de confidencialidade ou sigilo profissional reverte isso depois de acontecer."
+          "body": "As próprias condições de utilização de uma ferramenta de IA pública costumam permitir ao fornecedor conservar o que escreve e entregá-lo mediante ordem judicial, seja qual for a sua sede. Nenhum NDA ou sigilo profissional reverte isso depois de acontecer."
         },
         {
           "title": "O seu NDA pode não cobrir a ferramenta",

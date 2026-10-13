@@ -276,10 +276,6 @@
       "lead": "Two people you can reach directly. Wouter structured acquisition and leveraged finance at ING. Daniel builds regulated data pipelines.",
       "link": "Meet the team"
     },
-    "specimen": {
-      "title": "What a finding looks like",
-      "lead": "A worked example on a fictional target. The format is the one you receive."
-    },
     "pipeline": {
       "title": "Every run goes through the same six steps",
       "lead": "Anyone can point an AI tool at a data room. The question is what happens when the model gets something wrong.",
@@ -296,12 +292,6 @@
       "title": "Where your documents go, and who can see them",
       "lead": "EU hosting by default, zero retention at the model provider, pseudonymisation before analysis, and your own reviewer’s sign-off. Four mechanisms, no certification.",
       "link": "Read the governance page"
-    },
-    "coverage": {
-      "title": "Eight disciplines, one pass over the same room",
-      "lead": "What one discipline finds is on the table for the next one.",
-      "note": "Dependency-ordered: later work waits for the findings it depends on. If legal flags a contractual risk, financial and tax pick it up in the same pass.",
-      "ctaLine": "Your team cannot get through this in two weeks."
     },
     "success": {
       "title": "What changes when you sign",
@@ -631,6 +621,10 @@
       "body": "Share a room under NDA. We run the full pass and follow each finding back to its source passage with you, on a call.",
       "button": "Share a data room",
       "note": "NDA first, sent the same day. A deal you closed last year works too."
+    },
+    "specimen": {
+      "title": "What a finding looks like",
+      "lead": "A worked example on a fictional target. The format is the one you receive."
     }
   },
   "sprint": {

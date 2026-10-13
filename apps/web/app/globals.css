@@ -2145,6 +2145,39 @@ html[data-reveal="on"] .reveal.revealed {
 .guide-toc {
   display: none;
 }
+.guide-toc-mobile {
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.guide-toc-mobile summary {
+  cursor: pointer;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-cta-ink);
+}
+.guide-toc-mobile ol {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+}
+.guide-toc-mobile a {
+  display: block;
+  padding: 10px 0;
+  min-height: 44px;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+@media (min-width: 1100px) {
+  .guide-toc-mobile {
+    display: none;
+  }
+}
 @media (min-width: 1100px) {
   .guide-body {
     grid-template-columns: minmax(0, 640px) 224px;

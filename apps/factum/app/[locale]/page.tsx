@@ -10,9 +10,6 @@ import SceneBand from '@/components/SceneBand';
 import Reveal from '@/components/Reveal';
 import { Section, SectionHeader, SubHeader } from '@/components/Section';
 import FindingSchema from '@/components/FindingSchema';
-import Specimen from '@/components/Specimen';
-import DisciplineIndex from '@/components/DisciplineIndex';
-import InlineCta from '@/components/InlineCta';
 import Stepper from '@/components/Stepper';
 import GuaranteeBand from '@/components/GuaranteeBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
@@ -45,12 +42,11 @@ export async function generateMetadata({
  * that had nothing of their own — the reframe and the worked example — get the
  * page's only full-bleed photograph and its only feature-weight section.
  *
- * `Specimen` has moved here from /platform. It is the most persuasive object
- * this site owns: a real clause on the left, the finding it produced on the
- * right, a line tying them together. It was four scrolls deep on a page a cold
- * visitor never reaches. /platform keeps the mechanism — dispatch, grounding,
- * the comparison — and this page keeps the output, which also settles the 101
- * shared phrases the two of them used to have in common.
+ * The worked finding lives in the hero panel. The full `Specimen` (clause on
+ * the left, finding on the right) moved to /platform on 13 October 2026,
+ * next to the output contract it illustrates, because the homepage showed
+ * the same finding twice. The discipline index left for the same reason:
+ * /platform and /diligence-sprint both carry it.
  */
 export default async function HomePage({
   params
@@ -199,41 +195,6 @@ export default async function HomePage({
         </div>
       </Section>
 
-      {/*
-        The worked example. The one feature-weight section on the page.
-
-        Van Dijk's objection to every pre-launch B2B site is the one this
-        answers: "I'm not going to book a demo without getting a taste of what
-        the product looks like." With no client cases to show, a constructed
-        specimen on a fictional target — labelled as constructed — is the
-        closest honest equivalent, and it is worth more screen than anything
-        else here.
-      */}
-      <Section id="anatomy" tone="inset" weight="loud">
-        <SectionHeader title={t('specimen.title')} lead={t('specimen.lead')} />
-        <div style={{ marginTop: 'clamp(36px, 4.5vw, 60px)' }}>
-          {/* Row keys are the output contract, shared with the hero schema; the
-              values are the worked example. The contract stays abstract so this
-              can stay concrete. */}
-          <Specimen
-            pageLabel={s('specimen.pageLabel')}
-            pageRef={s('specimen.pageRef')}
-            highlightLabel={s('specimen.highlight')}
-            findingLabel={s('specimen.findingLabel')}
-            quote={s('specimen.quote')}
-            tag={s('specimen.tag')}
-            footnote={s('specimen.footnote')}
-            rows={[
-              { key: s('schema.rows.module'), value: s('specimen.values.module') },
-              { key: s('schema.rows.finding'), value: s('specimen.values.finding') },
-              { key: s('schema.rows.evidence'), value: s('specimen.values.evidence') },
-              { key: s('schema.rows.severity'), value: s('specimen.values.severity') },
-              { key: s('schema.rows.document'), value: s('specimen.values.document') },
-              { key: s('schema.rows.review'), value: s('specimen.values.review') }
-            ]}
-          />
-        </div>
-      </Section>
 
       {/*
         How it runs, and the governance that runs with it.
@@ -304,29 +265,6 @@ export default async function HomePage({
         </SubHeader>
       </Section>
 
-      {/* Coverage, as an index rather than as ten arguments. The arguments are
-          on /diligence-sprint, where the reader has already asked for them. */}
-      <Section weight="tight">
-        <SectionHeader title={t('coverage.title')} lead={t('coverage.lead')} align="wide" />
-        <div style={{ marginTop: 'clamp(28px, 3.5vw, 44px)' }}>
-          <DisciplineIndex
-            items={s.raw('disciplines') as { label: string; pain: string; result: string }[]}
-          />
-        </div>
-        <Reveal>
-          <p
-            className="type-small"
-            style={{ marginTop: 20, color: 'var(--text-quaternary)', maxWidth: '70ch' }}
-          >
-            {t('coverage.note')}
-          </p>
-        </Reveal>
-        <InlineCta
-          line={t('coverage.ctaLine')}
-          cta={s('links.intake')}
-          location="home-coverage"
-        />
-      </Section>
 
       {/* What's different afterwards, once per audience. The two cards used to
           be two outcomes, the second of them seller-only ("you already know

@@ -276,10 +276,6 @@
       "lead": "Twee mensen die u rechtstreeks spreekt. Wouter structureerde bij ING acquisitie- en leveraged finance. Daniel bouwt gereguleerde datapijplijnen.",
       "link": "Maak kennis met het team"
     },
-    "specimen": {
-      "title": "Hoe een bevinding eruitziet",
-      "lead": "Een uitgewerkt voorbeeld op een fictieve target. Dit is het format dat u krijgt."
-    },
     "pipeline": {
       "title": "Elke run doorloopt dezelfde zes stappen",
       "lead": "Iedereen kan een AI-tool op een data room richten. De vraag is wat er gebeurt als het model iets fout heeft.",
@@ -296,12 +292,6 @@
       "title": "Waar uw documenten heen gaan, en wie ze kan zien",
       "lead": "Standaard EU-hosting, zero retention bij de modelaanbieder, pseudonimisering vóór analyse, en de aftekening van uw eigen reviewer. Vier mechanismen, geen certificering.",
       "link": "Lees de governancepagina"
-    },
-    "coverage": {
-      "title": "Acht disciplines, één ronde over dezelfde data room",
-      "lead": "Wat de ene discipline vindt, ligt op tafel voor de volgende.",
-      "note": "Geordend op afhankelijkheid: later werk wacht op de bevindingen die het nodig heeft. Vindt legal een contractueel risico, dan nemen financial en tax het binnen dezelfde ronde al mee.",
-      "ctaLine": "Uw team krijgt dit niet in twee weken rond."
     },
     "success": {
       "title": "Wat er verandert als u tekent",
@@ -631,6 +621,10 @@
       "body": "Deel een data room onder NDA. Wij draaien de volledige pass en volgen elke bevinding met u terug naar de bronpassage, op een call.",
       "button": "Deel een data room",
       "note": "Eerst een NDA, dezelfde dag verstuurd. Een deal die u vorig jaar sloot werkt ook."
+    },
+    "specimen": {
+      "title": "Hoe een bevinding eruitziet",
+      "lead": "Een uitgewerkt voorbeeld op een fictieve target. Dit is het format dat u krijgt."
     }
   },
   "sprint": {
