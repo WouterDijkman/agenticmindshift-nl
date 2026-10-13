@@ -276,10 +276,6 @@
       "lead": "Zwei Menschen, die Sie direkt erreichen. Wouter hat bei der ING Acquisition Finance und Leveraged Finance strukturiert. Daniel baut regulierte Datenpipelines.",
       "link": "Das Team kennenlernen"
     },
-    "specimen": {
-      "title": "Wie eine Feststellung aussieht",
-      "lead": "Ein durchgerechnetes Beispiel an einem fiktiven Target. Das Format ist das, das Sie erhalten."
-    },
     "pipeline": {
       "title": "Jeder Lauf durchläuft dieselben sechs Schritte",
       "lead": "Ein KI-Werkzeug auf einen Data Room richten kann jeder. Die Frage ist, was passiert, wenn das Modell sich irrt.",
@@ -296,12 +292,6 @@
       "title": "Wohin Ihre Dokumente gehen und wer sie sehen kann",
       "lead": "EU-Hosting als Standard, Zero Retention beim Modellanbieter, Pseudonymisierung vor der Analyse und die Freigabe Ihres eigenen Prüfers. Vier Mechanismen, keine Zertifizierung.",
       "link": "Die Governance-Seite lesen"
-    },
-    "coverage": {
-      "title": "Acht Disziplinen, ein Durchgang über denselben Data Room",
-      "lead": "Was eine Disziplin findet, liegt für die nächste auf dem Tisch.",
-      "note": "Nach Abhängigkeit geordnet: spätere Arbeit wartet auf die Feststellungen, die sie braucht. Findet Legal ein vertragliches Risiko, greifen Financial und Tax es noch im selben Durchgang auf.",
-      "ctaLine": "Ihr Team schafft das nicht in zwei Wochen."
     },
     "success": {
       "title": "Was sich ändert, wenn Sie unterschreiben",
@@ -631,6 +621,10 @@
       "body": "Teilen Sie einen Data Room unter NDA. Wir führen den vollständigen Durchgang aus und verfolgen jede Feststellung mit Ihnen zurück zur Quellstelle, in einem Call.",
       "button": "Data Room teilen",
       "note": "Zuerst das NDA, am selben Tag versandt. Ein Deal, den Sie letztes Jahr abgeschlossen haben, geht ebenso."
+    },
+    "specimen": {
+      "title": "Wie eine Feststellung aussieht",
+      "lead": "Ein durchgerechnetes Beispiel an einem fiktiven Target. Das Format ist das, das Sie erhalten."
     }
   },
   "sprint": {
@@ -926,7 +920,7 @@
       "items": [
         {
           "title": "Ein öffentliches KI-Tool ist kein privates",
-          "body": "Die eigenen Nutzungsbedingungen eines öffentlichen KI-Tools erlauben dem Anbieter meist, das Eingegebene zu speichern und auf gerichtliche Anordnung herauszugeben, unabhängig davon, wo der Anbieter sitzt. Keine Vertraulichkeitsvereinbarung und kein Anwaltsgeheimnis macht das rückgängig, sobald es passiert ist."
+          "body": "Die eigenen Nutzungsbedingungen eines öffentlichen KI-Tools erlauben dem Anbieter meist, das Eingegebene zu speichern und auf gerichtliche Anordnung herauszugeben, unabhängig davon, wo der Anbieter sitzt. Kein NDA und kein Anwaltsgeheimnis macht das rückgängig, sobald es passiert ist."
         },
         {
           "title": "Ihr NDA deckt das Tool womöglich nicht",
