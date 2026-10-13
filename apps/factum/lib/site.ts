@@ -21,11 +21,15 @@ export const SITE_URL = 'https://www.factumcapital.eu';
 export const auditUrl = (locale: string) => `/${locale}/contact`;
 
 /**
+ * Factum's own 30-minute event (created 13-10-2026), separate from Agentic
+ * Mindshift's 20-minute intake-call, so cal.com shows which site a booking
+ * came from and the length matches the copy ("Thirty minutes").
+ *
  * The conversation, still here but secondary. Contact keeps it, because a page
  * whose whole job is "how do I reach you" should offer the low-commitment
  * route as well as the high-commitment one.
  */
-export const INTAKE_URL = 'https://cal.com/wwdijkman/intake-call';
+export const INTAKE_URL = 'https://cal.com/wwdijkman/factum';
 
 /**
  * The registration engagements are currently contracted under. Factum
