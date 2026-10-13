@@ -16,6 +16,7 @@ import { getProfessionalServiceLd, getBreadcrumbLd } from '@/lib/jsonld';
 import WerkwijzeOnboardingSteps from './WerkwijzeOnboardingSteps';
 import FactumBanner from '@/components/FactumBanner';
 import AnswerFirst from '@/components/AnswerFirst';
+import GuideLinks from '@/components/GuideLinks';
 
 const INTAKE_URL = 'https://cal.com/wwdijkman/intake-call';
 
@@ -161,25 +162,17 @@ export default async function WerkwijzePage(
                 fontSize: 'clamp(1.0625rem, 1.8vw, 1.25rem)',
                 color: 'var(--text-secondary)',
                 lineHeight: 1.75,
-                marginBottom: '24px',
+                margin: 0,
               }}
             >
               {t('offerings.subtext')}
             </p>
-            {/* Guarantee strip */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 16px', background: 'var(--bg-secondary)', border: '1px solid var(--border-subtle)', borderLeft: '3px solid var(--accent-cta)' }}>
-              <span style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: 'var(--accent-cta-ink)', flexShrink: 0 }}>{t('offerings.guarantee_title')}</span>
-              <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.55, margin: 0 }}>
-                {t('offerings.guarantee_body')}
-              </p>
-            </div>
           </div>
 
           <div
             className="tier-grid divider-grid"
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))',
               gap: '1px',
               background: 'var(--border-medium)',
               border: '1px solid var(--border-medium)',
@@ -193,7 +186,7 @@ export default async function WerkwijzePage(
                 style={{
                   background: o.featured ? 'var(--surface-dark)' : 'var(--bg-primary)',
                   color: 'var(--text-primary)',
-                  padding: 'clamp(32px, 4vw, 44px)',
+                  padding: 'clamp(28px, 3vw, 36px)',
                   display: 'flex',
                   flexDirection: 'column',
                   gap: '20px',
@@ -273,7 +266,8 @@ export default async function WerkwijzePage(
                     external
                     className={`plausible-event-name=Intake+CTA plausible-event-location=pricing-tier-${i + 1}`}
                   >
-                    {o.ctaLabel}
+                    {/* Keep the arrow with its last word when the label wraps. */}
+                    {o.ctaLabel.replace(' →', '\u00a0→')}
                   </Button>
                 </div>
               </article>
@@ -297,14 +291,6 @@ export default async function WerkwijzePage(
               alignItems: 'flex-start',
             }}
           >
-            <div
-              style={{
-                width: '4px',
-                alignSelf: 'stretch',
-                background: 'var(--accent-cta)',
-                flexShrink: 0,
-              }}
-            />
             <div>
               <p
                 style={{
@@ -326,8 +312,11 @@ export default async function WerkwijzePage(
         </div>
       </section>
 
-      {/* Route 3 runs on Factum. This is the only place the page explains
-          that, and it sits directly under the card that says "Powered by". */}
+      {/* The three problem pages (nl/en only; renders nothing elsewhere). */}
+      <GuideLinks locale={locale} background="var(--bg-secondary)" />
+
+      {/* Factum Capital is a separate business. One signpost, nothing more:
+          no route on this page runs on it. */}
       <FactumBanner />
 
       {/* ═══════════════════════════════════════════
@@ -369,8 +358,8 @@ export default async function WerkwijzePage(
         {/* Was centred. Centred prose sets a new left edge on every line, so
             the eye has to re-find the start of each one — fine for three
             words, not for a paragraph. */}
-        <div className="container-medium" style={{ position: 'relative', maxWidth: '760px' }}>
-          <div className="reveal">
+        <div className="container-medium" style={{ position: 'relative' }}>
+          <div className="reveal" style={{ maxWidth: '760px' }}>
             <p className="eyebrow" style={{ marginBottom: '28px', color: 'var(--text-muted)' }}>
               {t('cta.eyebrow')}
             </p>

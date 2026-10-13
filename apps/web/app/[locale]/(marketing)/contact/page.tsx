@@ -171,7 +171,9 @@ export default async function ContactPage(
                 >
                   {card.body}
                 </p>
-                {card.cta}
+                {/* Shrink-wrapped: the flex column stretched the secondary
+                    button to full width while the primary one stayed tight. */}
+                <div style={{ alignSelf: 'flex-start' }}>{card.cta}</div>
               </div>
             ))}
           </div>

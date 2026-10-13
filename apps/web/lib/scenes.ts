@@ -48,7 +48,7 @@ export type SceneId =
 
 /** Home — de drie pijnpunten. Order matches PAIN in HomepagePainSection. */
 export const HOME_PAIN: SceneId[] = [
-  'underneath', // Onzichtbaar risico — u beslist op wat u ziet: one page slipped under the stack, only its edge showing
+  'underneath', // Los AI-gebruik — AI zit al in het werk, u ziet niet waar: one page slipped under the stack, only its edge showing
   'archivebox', // Kennisretentie — the box closed, the label blank, dust already settled on the lid
   'decline' // Te late signalering — the run of output kept coming, over the edge and onto the floor, uncollected
 ];

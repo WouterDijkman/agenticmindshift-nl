@@ -29,6 +29,12 @@ interface Props {
   children?: ReactNode;
   containerClass?: string;
   headingMaxWidth?: string;
+  /**
+   * Content height instead of a full viewport, and no scroll hint. For the
+   * guide pages: a reader arriving from a search should see the first
+   * section heading without scrolling.
+   */
+  compact?: boolean;
 }
 
 const HERO_ANIM_CSS = `
@@ -71,6 +77,7 @@ export default function AnimatedHeroShell({
   children,
   containerClass = 'container-medium',
   headingMaxWidth = '800px',
+  compact = false,
 }: Props) {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -83,7 +90,7 @@ export default function AnimatedHeroShell({
   return (
     <section
       ref={sectionRef}
-      className="hero-full grain-overlay"
+      className={compact ? 'hero-compact grain-overlay' : 'hero-full grain-overlay'}
       style={{
         background: 'var(--bg-primary)',
         display: 'flex',
@@ -107,13 +114,12 @@ export default function AnimatedHeroShell({
           bottom: '80px',
           pointerEvents: 'none',
           userSelect: 'none',
-          // final opacity baked into keyframe via CSS var? simpler: lower the
-          // strokeWidth/color already gives a faint look; the keyframe goes
-          // 0 → 1, so we set the icon's own opacity attr to its target.
-          opacity: 0.04,
+          // The fade-in keyframe ends at opacity 1 and overrode an inline
+          // 0.04 here, so the "faint" mark rendered solid navy. The target
+          // opacity lives on the icon itself, under the animated wrapper.
         }}
       >
-        <SketchCrosshair size={96} color="var(--text-primary)" strokeWidth={0.8} />
+        <SketchCrosshair size={96} color="var(--text-primary)" strokeWidth={0.8} opacity={0.14} />
       </div>
 
       {/* Decorative background glyph — parallax (kept as motion.div for the
@@ -142,8 +148,8 @@ export default function AnimatedHeroShell({
       <div
         className={`hero-full-content ${containerClass}`}
         style={{
-          paddingTop: 'clamp(104px, 13vh, 148px)',
-          paddingBottom: 'clamp(72px, 9vh, 104px)',
+          paddingTop: compact ? 'clamp(72px, 10vh, 120px)' : 'clamp(104px, 13vh, 148px)',
+          paddingBottom: compact ? 'clamp(48px, 6vh, 72px)' : 'clamp(72px, 9vh, 104px)',
           position: 'relative',
         }}
       >
@@ -207,6 +213,7 @@ export default function AnimatedHeroShell({
       </div>
 
       {/* Scroll indicator */}
+      {!compact && (
       <div
         aria-hidden="true"
         className="scroll-indicator hero-anim-fade hero-anim--scroll"
@@ -220,6 +227,7 @@ export default function AnimatedHeroShell({
       >
         <SketchCrosshair size={40} color="var(--text-muted)" opacity={0.4} strokeWidth={1.1} />
       </div>
+      )}
     </section>
   );
 }

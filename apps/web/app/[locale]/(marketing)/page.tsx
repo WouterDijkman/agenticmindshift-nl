@@ -6,6 +6,7 @@ import AnimatedHero from './AnimatedHero';
 import HomepagePainSection from './HomepagePainSection';
 import HomepageServicesSection from './HomepageServicesSection';
 import FactumBanner from '@/components/FactumBanner';
+import GuideLinks from '@/components/GuideLinks';
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
 import JsonLd from '@/components/JsonLd';
 import { getLocalizedFaqItems } from '@/lib/faq';
@@ -127,6 +128,10 @@ export default async function HomePage(
       ═══════════════════════════════════════════ */}
       <HomepageServicesSection />
 
+      {/* The three problem pages, nl/en only. A reader who recognised a
+          problem above can read the worked answer before booking a call. */}
+      <GuideLinks locale={locale} />
+
       {/* ═══════════════════════════════════════════
           4. FACTUM CAPITAL — signpost, geen tweede pitch
       ═══════════════════════════════════════════ */}
@@ -212,7 +217,7 @@ export default async function HomePage(
               <div
                 key={point.n}
                 className="reveal"
-                style={{ transitionDelay: `${i * 80}ms`, borderLeft: '2px solid var(--accent-cta)', paddingLeft: '20px' }}
+                style={{ transitionDelay: `${i * 80}ms`, borderTop: '2px solid var(--accent-cta)', paddingTop: '20px' }}
               >
                 <p style={{ fontSize: '1.0625rem', fontWeight: 600, color: 'var(--text-primary)', margin: '0 0 8px' }}>
                   {point.title}
@@ -231,7 +236,7 @@ export default async function HomePage(
       {/* ═══════════════════════════════════════════
           7. FAQ
       ═══════════════════════════════════════════ */}
-      <section style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(80px, 11vw, 136px)' }}>
+      <section className="has-sticky" style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(80px, 11vw, 136px)' }}>
         <div className="container-medium">
           <div className="faq-grid">
             {/* Left: sticky heading */}
@@ -284,7 +289,8 @@ export default async function HomePage(
           overflow: 'hidden',
         }}
       >
-        <div className="container-medium reveal" style={{ position: 'relative', maxWidth: '760px' }}>
+        <div className="container-medium" style={{ position: 'relative' }}>
+        <div className="reveal" style={{ maxWidth: '760px' }}>
           <p className="eyebrow" style={{ marginBottom: '28px', color: 'var(--text-muted)' }}>
             {t('final_cta.eyebrow')}
           </p>
@@ -316,6 +322,7 @@ export default async function HomePage(
               {t('final_cta.cta_secondary')}
             </Button>
           </div>
+        </div>
         </div>
       </section>
     </>

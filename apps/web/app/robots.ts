@@ -8,22 +8,23 @@ import { MetadataRoute } from 'next';
  *                    be shown in ChatGPT search answers."
  *   PerplexityBot    Perplexity's index. Blocking it removes the citations.
  *   Claude-SearchBot Anthropic's search index, distinct from ClaudeBot.
- *   GPTBot           Training only. Blocking costs no search visibility.
+ *   GPTBot           Training only, per OpenAI. Allowed here; see below.
  *   Google-Extended  Gemini Apps and Vertex generative APIs. Explicitly *not* a
  *                    Search ranking or AI Overviews signal either way.
  *   CCBot            Common Crawl — substrate for both training and retrieval.
  *
- * This file used to block the whole training tier, on the reasoning that
- * training buys no citations. That reasoning is sound for a publisher with a
- * content moat and wrong for us: there is nothing here worth withholding, and
- * the actual problem is that the models have never heard of this company. A
- * brand search returns Wouter's LinkedIn and neither of our two websites. For a
- * firm with no press coverage, the training corpora are one of the few routes
- * into a model's idea of what exists.
+ * Every agent on this list is allowed, the training crawlers included.
+ * Decided 12-10-2026 (AUDIT-VINDBAARHEID-2026-10-12.md §4.2). This site's whole
+ * job is to be found and known by people who do not know Wouter yet. There is
+ * nothing here worth withholding: no client data, no paywalled method, only
+ * public copy about a consultancy. A model that has read this site can name the
+ * firm when someone describes the problem; a model that has not, cannot.
  *
- * So Google-Extended, CCBot and Applebot-Extended are allowed. GPTBot and
- * ClaudeBot stay blocked, which is a preference rather than a finding — whether
- * blocking training reduces citations is genuinely unresolved.
+ * Whether blocking GPTBot costs citations is unresolved in the studies we have
+ * seen, and that cuts both ways: the expected gain from allowing it is small and
+ * uncertain, the cost is nil. GPTBot, ClaudeBot and anthropic-ai therefore moved
+ * from the blocked tier into the allowed one. They used to be blocked "by
+ * preference", which was the only argument for it.
  *
  * Note that robots.txt is honoured by the crawler, not enforced by the server:
  * every one of these agents gets a 200 if it asks. The enforcement risk lives
@@ -45,14 +46,13 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'PerplexityBot', allow: '/' },
       { userAgent: 'Perplexity-User', allow: '/' },
       { userAgent: 'cohere-ai', allow: '/' },
-      // ── Corpus bots we want to be in, for entity awareness ─────────────
+      // ── Corpus and training bots — allow, for entity awareness ────────
       { userAgent: 'Google-Extended', allow: '/' },
       { userAgent: 'CCBot', allow: '/' },
       { userAgent: 'Applebot-Extended', allow: '/' },
-      // ── Pure training crawlers — blocked by preference ─────────────────
-      { userAgent: 'GPTBot', disallow: '/' },
-      { userAgent: 'ClaudeBot', disallow: '/' },
-      { userAgent: 'anthropic-ai', disallow: '/' },
+      { userAgent: 'GPTBot', allow: '/' },
+      { userAgent: 'ClaudeBot', allow: '/' },
+      { userAgent: 'anthropic-ai', allow: '/' },
       // ── Googlebot, Bingbot and everything else ─────────────────────────
       { userAgent: '*', allow: '/' },
     ],

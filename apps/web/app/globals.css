@@ -466,6 +466,13 @@ section {
   max-width: 100%;
   width: 100%;
 }
+/* `hidden` makes the section a scroll container, so a position:sticky child
+   sticks to the section (which never scrolls) and simply scrolls away.
+   `clip` clips the same way without becoming a scrollport. Used by the home
+   FAQ heading and the guide pages' question list. */
+section.has-sticky {
+  overflow: clip;
+}
 
 /* ------------------------------------------------------------------ */
 /* Hero grain overlay                                                  */
@@ -1342,7 +1349,9 @@ html[data-reveal="on"] .reveal.revealed {
 /* ================================================================== */
 .cred-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* Two by two: in four columns "2 disciplines" and "Founder-led" broke
+     over two lines in every locale. */
+  grid-template-columns: repeat(2, 1fr);
   gap: 1px;
   background: var(--border-subtle);
   border: 1px solid var(--border-subtle);
@@ -1764,7 +1773,10 @@ html[data-reveal="on"] .reveal.revealed {
 /* ================================================================== */
 @media (max-width: 640px) {
   /* Hero sections have their own padding via .hero-full-content / .hero-home-content */
-  main section:not(.hero-full):not(.hero-home) {
+  /* The guide pages' compact hero and the article under it set their own
+     spacing; 96px on both would open a 200px gap between the answer and
+     the first question. */
+  main section:not(.hero-full):not(.hero-home):not(.hero-compact):not(.guide-article) {
     padding-block: 96px !important;
   }
 
@@ -2098,5 +2110,73 @@ html[data-reveal="on"] .reveal.revealed {
   .scroll-indicator,
   .no-print {
     display: none !important;
+  }
+}
+
+/* ================================================================== */
+/* /werkwijze route grid — three routes, three columns or one.         */
+/* auto-fit at 340px gave two columns on desktop and left the fourth   */
+/* cell as an empty grey block.                                        */
+/* ================================================================== */
+.tier-grid {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px) {
+  .tier-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ================================================================== */
+/* GUIDE PAGES — article column plus a sticky list of its questions.   */
+/* Below 1100px the list is dropped; the article is short enough to    */
+/* scroll, and a list above it would push the first answer down.       */
+/* ================================================================== */
+.guide-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+.guide-body > :first-child {
+  max-width: 680px; /* ~68ch at the 19px body size */
+}
+.guide-body h2 {
+  scroll-margin-top: calc(var(--header-h) + 24px);
+}
+.guide-toc {
+  display: none;
+}
+@media (min-width: 1100px) {
+  .guide-body {
+    grid-template-columns: minmax(0, 640px) 224px;
+    justify-content: space-between;
+    column-gap: 48px;
+  }
+  .guide-toc {
+    display: block;
+    position: sticky;
+    top: calc(var(--header-h) + 40px);
+    align-self: start;
+    padding-top: 6px;
+  }
+  .guide-toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid var(--border-subtle);
+  }
+  .guide-toc a {
+    display: block;
+    padding: 7px 0 7px 16px;
+    margin-left: -1px;
+    border-left: 1px solid transparent;
+    font-size: 0.875rem;
+    line-height: 1.45;
+    color: var(--text-secondary);
+    transition: color 160ms ease, border-color 160ms ease;
+  }
+  .guide-toc a:hover,
+  .guide-toc a:focus-visible {
+    color: var(--text-primary);
+    border-left-color: var(--accent-cta);
   }
 }

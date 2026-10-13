@@ -28,12 +28,12 @@
     "cta_title": "Una conversación de veinte minutos.",
     "cta_sub": "Sin preparación, sin factura, sin secuencia de correos.",
     "copyright": "© 2026 Agentic Mindshift — fundada en octubre de 2025.",
-    "tagline_bottom": "Factum Capital · due diligence con IA para M&A y private equity",
+    "tagline_bottom": "También de Wouter Dijkman: Factum Capital",
     "cta": "Reserva una llamada de 20 minutos"
   },
   "homepage": {
-    "meta_title": "Asesoramiento en IA para private equity y M&A",
-    "meta_description": "Asesoramiento en IA para fondos de PE y firmas de M&A del mid-market europeo. Tres rutas: sparring y estrategia, asesoramiento en IA, implementación y adopción.",
+    "meta_title": "Asesoría en IA para private equity y M&A",
+    "meta_description": "Asesoramiento en IA para fondos de PE y firmas de M&A del mid-market europeo. Tres rutas: sparring y estrategia, asesoramiento, implementación y adopción.",
     "hero": {
       "eyebrow": "Wouter Dijkman · acquisition finance y restructuring",
       "heading": "IA en su práctica de deals, implantada por alguien que hizo los deals.",
@@ -46,11 +46,11 @@
     "pain": {
       "eyebrow": "El problema",
       "heading": "Tres cosas cuestan rentabilidad. Rara vez se dicen en voz alta.",
-      "subheading": "Nadie quiere decidir con media imagen. Aun así ocurre en cada operación.",
-      "label_1": "Riesgo invisible",
-      "title_1": "Decide con lo que le enseñan.",
-      "body_1": "Concentración de clientes. Si la IA puede asumir la actividad principal del target. Nada de eso está en el IM. Aparece tras la firma.",
-      "feeling_1": "Esa duda incómoda en el comité suele tener razón. Hay más de lo que ve.",
+      "subheading": "Todas las firmas las tienen. Pocas han decidido cómo abordarlas.",
+      "label_1": "IA por libre",
+      "title_1": "Cada uno usa la IA a su manera.",
+      "body_1": "Uno trabaja en ChatGPT, otro en Claude, cada uno con sus propios prompts. El resultado cambia según la persona. Nadie comprueba de dónde sale una cifra.",
+      "feeling_1": "Sabe que la IA ya está en sus memos y modelos. Solo que no ve dónde.",
       "label_2": "Retención del conocimiento",
       "title_2": "Cada adquisición vuelve a empezar de cero.",
       "body_2": "Lo que enseñó la última operación se va con el dealmaker. O acaba en una carpeta que nadie abre.",
@@ -63,7 +63,7 @@
     "founder": {
       "eyebrow": "Quién está detrás de esto",
       "heading": "Seis años en el lado de la financiación de deals como los suyos.",
-      "body": "Wouter Dijkman trabajó en acquisition finance y financial restructuring en Rabobank, ING y Alter Domus. Allí vio por qué deals que cuadraban sobre el papel acababan encallando. Ahora implanta IA en fondos y firmas que corren ese mismo riesgo. La firma se mantiene pequeña: un puñado de clientes a la vez.",
+      "body": "Wouter Dijkman trabajó en acquisition finance y financial restructuring en Rabobank, ING y Alter Domus. Allí vio por qué deals que cuadraban sobre el papel acababan encallando. Ahora implanta IA en fondos y firmas que corren ese mismo riesgo. La firma se mantiene pequeña: un puñado de socios a la vez.",
       "cta": "Más sobre Wouter →"
     },
     "services": {
@@ -121,7 +121,7 @@
       "investering_q": "¿Cuánto cuesta?",
       "investering_a": "La sesión de sparring es gratuita. Para asesoramiento e implementación fijamos alcance y tarifa en la propuesta, tras la reunión inicial. Paga por un encargo delimitado, no por una estimación hecha de antemano.",
       "anders_q": "¿Qué hace diferente a Agentic Mindshift?",
-      "anders_a": "Seis años en acquisition finance y financial restructuring. El consejo sale de la práctica de deals; la IA lo acelera. Y la firma se mantiene pequeña: un puñado de clientes a la vez.",
+      "anders_a": "Seis años en acquisition finance y financial restructuring. El consejo sale de la práctica de deals; la IA lo acelera. Y la firma se mantiene pequeña: un puñado de socios a la vez.",
       "start_q": "¿Con qué rapidez podemos empezar?",
       "start_a": "Tras la primera llamada recibe una propuesta en dos días laborables, con alcance, plazos y tarifa. Aceptada, empezamos en siete días."
     }
@@ -131,7 +131,7 @@
     "meta_description": "Tres formas de contactar con Wouter Dijkman, de Agentic Mindshift.",
     "eyebrow": "Contacto",
     "heading": "Primero pregunte. Decidir viene después.",
-    "subtext": "Reserve una llamada de veinte minutos, o lea primero cuánto cuesta un proyecto. Usted marca la agenda.",
+    "subtext": "Reserve una llamada de veinte minutos, o lea primero cómo funciona un proyecto. Usted marca la agenda.",
     "card_01_title": "Sesión de sparring",
     "card_01_body": "Veinte minutos para ver si encajamos. Sin preparación, sin factura.",
     "card_01_cta": "Reservar una llamada",
@@ -154,9 +154,9 @@
     "bio": {
       "eyebrow": "Antecedentes",
       "quote": "He visto operaciones que cuadraban sobre el papel y aun así encallaron. Nadie se atrevía a cuestionar en voz alta la premisa incómoda. En eso trabajo. Con mejores preguntas, no con más datos.",
-      "para1": "Tres años de financial restructuring, tres de acquisition finance. Los dos lados del mid-market europeo. Esa combinación muestra exactamente dónde fallan las hipótesis y dónde el reporte mensual esconde los reveses en lugar de señalarlos.",
-      "para2_prefix": "Agentic Mindshift arrancó en octubre de 2025. En noviembre de 2025 siguió AI for Business en Nyenrode. Desde 2026 funciona",
-      "para2_suffix": ": una plataforma de IA con la que los equipos de operaciones fijan su proceso de DD, su reporte mensual y su formación de criterio.",
+      "para1": "Derecho en Maastricht y después seis años en el lado de la financiación de las operaciones: Alter Domus, financial restructuring en Rabobank, acquisition y leveraged finance en ING. Operaciones que se financian y operaciones que se tuercen. Esa combinación muestra exactamente dónde fallan las hipótesis y dónde las cifras mensuales esconden un revés durante meses.",
+      "para2_prefix": "Agentic Mindshift arrancó en octubre de 2025. En noviembre de 2025 siguió AI for Business en Nyenrode. En 2026 cofundé",
+      "para2_suffix": ", un negocio aparte de due diligence con IA: lee todo el data room y cita la fuente de cada hallazgo. Aún en prelanzamiento.",
       "para3": "Lo mantengo deliberadamente selectivo: unos pocos socios a la vez, para que cada proyecto reciba la atención que merece una operación."
     },
     "credentials": {
@@ -168,9 +168,9 @@
       "cred_2_value": "2 disciplinas",
       "cred_2_label": "Financiación y reestructuración",
       "cred_2_sub": "El ciclo completo, de la financiación al estrés",
-      "cred_3_value": "€1–25M",
-      "cred_3_label": "Enfoque mid-market",
-      "cred_3_sub": "Tamaño de deals PE y M&A europeo",
+      "cred_3_value": "LLM",
+      "cred_3_label": "Jurista",
+      "cred_3_sub": "Corporate & Commercial Law · Universidad de Maastricht",
       "cred_4_value": "Founder-led",
       "cred_4_label": "Selectivo y hands-on",
       "cred_4_sub": "Un puñado de socios a la vez, sin capas intermedias"
@@ -179,21 +179,24 @@
       "eyebrow": "Trayectoria",
       "heading": "Cronología",
       "future_badge": "previsto",
-      "item_1_year": "2017–2020",
-      "item_1_label": "Financial Restructuring",
-      "item_1_sub": "Carteras de pymes y mid-market en estrés: cuidados intensivos y reestructuración",
+      "item_1_year": "2019–2020",
+      "item_1_label": "Legal Officer",
+      "item_1_sub": "Alter Domus",
       "item_2_year": "2020–2023",
-      "item_2_label": "Acquisition Finance",
-      "item_2_sub": "Financiación LBO en operaciones de PE europeas, mid-market €1–25M",
-      "item_3_year": "Octubre 2025",
-      "item_3_label": "Fundación de Agentic Mindshift",
-      "item_3_sub": "Asesoría en IA para firmas de PE y M&A europeas",
-      "item_4_year": "Noviembre 2025",
-      "item_4_label": "AI for Business",
-      "item_4_sub": "Nyenrode Business Universiteit · IA en la práctica financiera",
-      "item_5_year": "2026",
-      "item_5_label": "Lanzamiento Factum Capital",
-      "item_5_sub": "Plataforma de IA para M&A y reestructuración"
+      "item_2_label": "Financial Restructuring",
+      "item_2_sub": "Rabobank · pymes y empresas del mid-market en dificultades: cuidados intensivos y reestructuración",
+      "item_3_year": "2023–2025",
+      "item_3_label": "Acquisition & Leveraged Finance",
+      "item_3_sub": "ING · financiación LBO en operaciones de private equity",
+      "item_4_year": "Octubre 2025",
+      "item_4_label": "Fundación de Agentic Mindshift",
+      "item_4_sub": "Asesoramiento en IA para firmas europeas de PE y M&A",
+      "item_5_year": "Noviembre 2025",
+      "item_5_label": "AI for Business",
+      "item_5_sub": "Nyenrode Business Universiteit · IA en la práctica financiera",
+      "item_6_year": "2026",
+      "item_6_label": "Factum Capital (prelanzamiento)",
+      "item_6_sub": "Cofundador · due diligence con IA para compradores y brokers del lado vendedor"
     },
     "werkwijze_link": {
       "eyebrow": "Metodología",
@@ -210,8 +213,8 @@
     }
   },
   "werkwijze": {
-    "meta_title": "Cómo trabajamos",
-    "meta_description": "Tres formas de trabajar con Agentic Mindshift: sparring y estrategia de IA, asesoramiento en IA, e implementación y adopción. Qué incluye cada ruta y con qué rapidez empieza.",
+    "meta_title": "Método: asesoría en IA para PE y M&A",
+    "meta_description": "Tres formas de trabajar con Agentic Mindshift: sparring y estrategia, asesoría en IA, implementación y adopción. Qué incluye cada ruta y cuándo empieza.",
     "hero": {
       "eyebrow": "Cómo trabajamos",
       "heading": "Tres rutas, tres situaciones, una primera conversación.",
@@ -232,9 +235,7 @@
     "offerings": {
       "eyebrow": "Las rutas",
       "heading": "¿Qué situación le corresponde?",
-      "subtext": "Tres situaciones, tres rutas. ¿No reconoce su pregunta de inmediato? Basta una conversación para determinar la ruta adecuada.",
-      "guarantee_title": "Garantía",
-      "guarantee_body": "La sesión de sparring cuesta veinte minutos y ninguna factura. Aceptado un proyecto, empieza en siete días laborables, con el primer resultado concreto en esa primera semana."
+      "subtext": "Tres situaciones, tres rutas. ¿No reconoce su pregunta de inmediato? Basta una conversación para determinar la ruta adecuada."
     },
     "offering_1": {
       "badge": "Introducción · sin compromiso",
@@ -269,9 +270,9 @@
       "q2": "¿Qué hace diferente a Agentic Mindshift?",
       "a2": "Seis años en acquisition finance y financial restructuring. El criterio viene de la práctica de operaciones; la IA lo acelera.",
       "q3": "¿Quedamos atados a un plazo largo?",
-      "a3": "El sparring, el asesoramiento y la implementación van por encargo. No hay plazo mínimo ni preaviso.",
+      "a3": "El sparring y los proyectos se acuerdan por encargo, sin plazo mínimo. Un retainer dura al menos tres meses y después se puede rescindir cada mes con un mes de preaviso (véanse los términos).",
       "q4": "¿Y la due diligence con IA sobre una operación?",
-      "a4": "Ese trabajo va por Factum Capital, nuestra plataforma de IA, en factumcapital.eu. Le derivamos y seguimos implicados."
+      "a4": "Eso va por Factum Capital, en factumcapital.eu, un negocio aparte que Wouter cofundó. Menciónelo en la primera llamada si lo tiene sobre la mesa."
     },
     "cta": {
       "eyebrow": "Empiece aquí",
@@ -313,7 +314,7 @@
     "meta_description": "Términos y condiciones para encargos y uso del sitio web de Agentic Mindshift.",
     "legal_label": "Legal",
     "heading": "Términos y condiciones",
-    "last_modified": "Última modificación: 13 de mayo de 2026",
+    "last_modified": "Última modificación: 12 de octubre de 2026",
     "s1_heading": "1. Definiciones",
     "s1_body": "En estas condiciones se entiende por \"Agentic Mindshift\" la empresa individual de Wouter Dijkman, establecida en los Países Bajos. Por \"cliente\" se entiende la persona física o jurídica que encarga un trabajo o utiliza el sitio web.",
     "s2_heading": "2. Ámbito de aplicación",
@@ -327,16 +328,16 @@
     "s6_heading": "6. Responsabilidad",
     "s6_body": "La responsabilidad de Agentic Mindshift se limita al importe facturado del encargo correspondiente durante un período máximo de tres meses, con un máximo de 25.000 euros. Se excluye la responsabilidad por daños indirectos, daños consecuentes, lucro cesante o IRR no obtenida.",
     "s7_heading": "7. Confidencialidad",
-    "s7_body": "Toda la información compartida en el marco de un encargo o una sesión de sparring se trata de forma confidencial. Sin fecha de finalización. Los datos agregados y no identificables pueden usarse para mejorar los niveles de referencia.",
+    "s7_body": "Toda la información compartida en el marco de un encargo o una sesión de sparring se trata de forma confidencial. Sin fecha de finalización.",
     "s8_heading": "8. Propiedad intelectual",
     "s8_body": "Los informes, frameworks y análisis siguen siendo propiedad intelectual de Agentic Mindshift, salvo acuerdo en contrario. El cliente obtiene una licencia de uso no transferible para uso interno.",
     "s9_heading": "9. Derecho aplicable",
     "s9_body": "Estos términos y todos los encargos se rigen por el derecho neerlandés. Los litigios se someterán al tribunal competente del lugar de domicilio."
   },
   "factum_banner": {
-    "eyebrow": "La plataforma detrás",
+    "eyebrow": "¿Due diligence de una operación?",
     "heading": "Factum Capital",
-    "body": "La due diligence con IA para M&A y private equity va por Factum Capital. Ocho disciplinas sobre todo el data room, cada hallazgo citado a su fuente y ubicación, cada entregable aprobado por una persona con nombre.",
+    "body": "Una plataforma de due diligence aparte que Wouter cofundó. Lee todo el data room y cita cada hallazgo a su documento fuente y su ubicación. Aún en prelanzamiento.",
     "cta": "Ir a factumcapital.eu"
   }
 }

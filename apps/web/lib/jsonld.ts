@@ -8,6 +8,13 @@ import pt from '@/messages/pt.json';
 
 const SITE_URL = 'https://www.agenticmindshift.nl';
 
+/**
+ * Wouter's one stable identifier. Every node that means him (the Person, the
+ * Organization's `founder`, an Article's `author`) points here, so the graph
+ * describes one person rather than several look-alikes.
+ */
+export const PERSON_ID = `${SITE_URL}/#wouter-dijkman`;
+
 /* These three lived in the report pipeline (lib/report/locale.ts) and the PDF
    route ladder (lib/pdf/offerRoutes.ts). Both were scorecard-only and are
    gone; structured data was their last consumer, so they moved here rather
@@ -72,7 +79,7 @@ const COPY: Record<SiteLocale, JsonLdCopy> = {
       'AI-advies voor Europese private-equityfondsen en M&A-kantoren in de mid-market. Founder: Wouter Dijkman.',
     organizationKnowsAbout: [
       'Private equity',
-      'M&A due diligence',
+      'AI in M&A-processen',
       'AI-implementatie',
       'Financial restructuring',
       'AI-adoptie en training',
@@ -80,7 +87,7 @@ const COPY: Record<SiteLocale, JsonLdCopy> = {
     ],
     personJobTitle: 'Founder & AI-adviseur',
     personDescription:
-      'Voormalig PE- en M&A-professional met ervaring bij Rabobank, ING en Alter Domus. Adviseert Europese mid-marketfondsen en M&A-kantoren over AI-strategie, AI-advies en implementatie.',
+      'Jurist, met zes jaar aan de financierings- en herstructureringskant van deals bij Alter Domus, Rabobank en ING. Adviseert Europese mid-marketfondsen en M&A-kantoren over AI-strategie, AI-advies en implementatie.',
     personKnowsAbout: [
       'Private equity',
       'M&A transaction advisory',
@@ -104,7 +111,7 @@ const COPY: Record<SiteLocale, JsonLdCopy> = {
       'AI advisory for European private equity funds and M&A firms in the mid-market. Founder: Wouter Dijkman.',
     organizationKnowsAbout: [
       'Private equity',
-      'M&A due diligence',
+      'AI in M&A processes',
       'AI implementation',
       'Financial restructuring',
       'AI adoption and training',
@@ -112,7 +119,7 @@ const COPY: Record<SiteLocale, JsonLdCopy> = {
     ],
     personJobTitle: 'Founder & AI Advisor',
     personDescription:
-      'Former PE and M&A professional with experience at Rabobank, ING and Alter Domus. Advises European mid-market funds and M&A firms on AI strategy, AI advisory and implementation.',
+      'Lawyer by training, with six years on the financing and restructuring side of deals at Alter Domus, Rabobank and ING. Advises European mid-market funds and M&A firms on AI strategy, AI advisory and implementation.',
     personKnowsAbout: [
       'Private equity',
       'M&A transaction advisory',
@@ -136,7 +143,7 @@ const COPY: Record<SiteLocale, JsonLdCopy> = {
       'KI-Beratung für europäische Private-Equity-Fonds und M&A-Häuser im Mid-Market. Gründer: Wouter Dijkman.',
     organizationKnowsAbout: [
       'Private Equity',
-      'M&A Due Diligence',
+      'KI in M&A-Prozessen',
       'KI-Implementierung',
       'Financial Restructuring',
       'KI-Adoption und Training',
@@ -144,7 +151,7 @@ const COPY: Record<SiteLocale, JsonLdCopy> = {
     ],
     personJobTitle: 'Gründer & KI-Berater',
     personDescription:
-      'Ehemaliger PE- und M&A-Professional mit Stationen bei Rabobank, ING und Alter Domus. Berät europäische Mid-Market-Fonds und M&A-Häuser zu KI-Strategie, KI-Beratung und Implementierung.',
+      'Jurist, mit sechs Jahren auf der Finanzierungs- und Restrukturierungsseite von Deals bei Alter Domus, Rabobank und ING. Berät europäische Mid-Market-Fonds und M&A-Häuser zu KI-Strategie, KI-Beratung und Implementierung.',
     personKnowsAbout: [
       'Private Equity',
       'M&A Transaction Advisory',
@@ -168,7 +175,7 @@ const COPY: Record<SiteLocale, JsonLdCopy> = {
       'Asesoramiento en IA para fondos de private equity y firmas de M&A europeos del mid-market. Fundador: Wouter Dijkman.',
     organizationKnowsAbout: [
       'Private equity',
-      'Due diligence de M&A',
+      'IA en procesos de M&A',
       'Implementación de IA',
       'Reestructuración financiera',
       'Adopción y formación en IA',
@@ -176,7 +183,7 @@ const COPY: Record<SiteLocale, JsonLdCopy> = {
     ],
     personJobTitle: 'Fundador y asesor de IA',
     personDescription:
-      'Antiguo profesional de PE y M&A con experiencia en Rabobank, ING y Alter Domus. Asesora a fondos y firmas de M&A europeos del mid-market en estrategia de IA, asesoramiento e implementación.',
+      'Jurista, con seis años en el lado de la financiación y la reestructuración de operaciones en Alter Domus, Rabobank e ING. Asesora a fondos y firmas de M&A europeos del mid-market en estrategia de IA, asesoramiento e implementación.',
     personKnowsAbout: [
       'Private equity',
       'Asesoramiento en transacciones de M&A',
@@ -200,7 +207,7 @@ const COPY: Record<SiteLocale, JsonLdCopy> = {
       'Consultoria em IA para fundos de private equity e escritórios de M&A europeus do mid-market. Fundador: Wouter Dijkman.',
     organizationKnowsAbout: [
       'Private equity',
-      'Due diligence de M&A',
+      'IA em processos de M&A',
       'Implementação de IA',
       'Reestruturação financeira',
       'Adoção e formação em IA',
@@ -208,7 +215,7 @@ const COPY: Record<SiteLocale, JsonLdCopy> = {
     ],
     personJobTitle: 'Fundador e consultor de IA',
     personDescription:
-      'Antigo profissional de PE e M&A com experiência no Rabobank, ING e Alter Domus. Aconselha fundos e escritórios de M&A europeus do mid-market em estratégia de IA, consultoria e implementação.',
+      'Jurista, com seis anos do lado do financiamento e da reestruturação de operações na Alter Domus, no Rabobank e no ING. Aconselha fundos e escritórios de M&A europeus do mid-market em estratégia de IA, consultoria e implementação.',
     personKnowsAbout: [
       'Private equity',
       'Assessoria em transações de M&A',
@@ -271,10 +278,7 @@ export function getOrganizationLd(locale: string) {
       value: '99495945',
     },
     description: c.organizationDescription,
-    founder: {
-      '@type': 'Person',
-      '@id': `${SITE_URL}/#wouter-dijkman`,
-    },
+    founder: { '@id': PERSON_ID },
     areaServed: [
       { '@type': 'Place', name: 'Europe' },
       { '@type': 'Country', name: 'Netherlands' },
@@ -291,13 +295,12 @@ export function getOrganizationLd(locale: string) {
       areaServed: 'Europe',
       availableLanguage: ['Dutch', 'English', 'German', 'Spanish', 'Portuguese'],
     },
-    // Factum Capital is this company's trading name for the diligence platform
-    // and carries the reverse edge in its own Organization block. Asserting it
-    // from both sides matters more than it looks: a brand search currently
-    // returns Wouter's LinkedIn and neither website, so the search engine has
-    // not connected the two domains at all. One-directional claims from the
-    // newer, weaker domain are the ones easiest to ignore.
-    sameAs: ['https://www.linkedin.com/in/wwdijkman/', 'https://www.factumcapital.eu'],
+    /* No `sameAs`. It used to list factumcapital.eu and Wouter's LinkedIn,
+       and `sameAs` asserts *the same entity*. Factum Capital is a separate,
+       co-owned business, and the LinkedIn profile is a person's. Both
+       relations are now stated for what they are: Wouter is this
+       organisation's `founder` (above), and his Person node carries the
+       LinkedIn `sameAs` and a `worksFor` edge to Factum (getPersonLd). */
   };
 }
 
@@ -310,14 +313,16 @@ export function getPersonLd(locale: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    '@id': `${SITE_URL}/#wouter-dijkman`,
+    '@id': PERSON_ID,
     name: 'Wouter Dijkman',
     url: `${SITE_URL}/${loc}/over`,
     jobTitle: c.personJobTitle,
-    worksFor: {
-      '@type': 'Organization',
-      '@id': `${SITE_URL}/#organization`,
-    },
+    worksFor: [
+      { '@id': `${SITE_URL}/#organization` },
+      // A separate, co-owned business. Named and linked, never merged into
+      // this site's Organization node.
+      { '@type': 'Organization', name: 'Factum Capital', url: 'https://www.factumcapital.eu' },
+    ],
     description: c.personDescription,
     knowsAbout: c.personKnowsAbout,
     alumniOf: [
