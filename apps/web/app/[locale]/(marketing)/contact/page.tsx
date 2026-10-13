@@ -136,22 +136,12 @@ export default async function ContactPage(
                   transition: 'border-top-color 200ms ease',
                 }}
               >
+                {/* No big 01/02/03 (13 October 2026): these are three
+                    alternatives, not steps, so the title leads. `n` stays as
+                    the React key. */}
                 <p
                   style={{
-                    fontSize: 'clamp(48px, 6vw, 68px)',
-                    fontWeight: 800,
-                    letterSpacing: '-0.04em',
-                    lineHeight: 0.9,
-                    color: 'var(--accent-cta-ink)',
-                    marginBottom: '28px',
-                    opacity: 0.9,
-                  }}
-                >
-                  {card.n}
-                </p>
-                <p
-                  style={{
-                    fontSize: '1.0625rem',
+                    fontSize: 'clamp(1.125rem, 1.6vw, 1.3125rem)',
                     fontWeight: 700,
                     color: 'var(--text-primary)',
                     marginBottom: '12px',

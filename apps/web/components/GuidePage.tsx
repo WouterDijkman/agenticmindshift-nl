@@ -132,6 +132,18 @@ export default async function GuidePage({ slug, locale }: { slug: GuideSlug; loc
       <section className="has-sticky guide-article" style={{ background: 'var(--bg-primary)', paddingBlock: 'clamp(16px, 3vw, 40px) clamp(64px, 9vw, 112px)' }}>
         <div className="container-medium guide-body">
           <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(40px, 6vw, 64px)' }}>
+            {/* Below 1100px the side list is hidden, so phones get the same
+                questions as a collapsed list under the intro (13 October 2026). */}
+            <details className="guide-toc-mobile">
+              <summary>{c.tocLabel}</summary>
+              <ol>
+                {g.sections.map((s) => (
+                  <li key={s.heading}>
+                    <a href={`#${anchor(s.heading)}`}>{s.heading}</a>
+                  </li>
+                ))}
+              </ol>
+            </details>
             {g.sections.map((s) => (
               <div key={s.heading} className="reveal" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <h2 id={anchor(s.heading)} className="type-h3" style={{ margin: 0, color: 'var(--text-primary)' }}>
