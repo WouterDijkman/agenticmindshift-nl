@@ -93,10 +93,10 @@ function organization(description: string) {
       addressCountry: 'NL'
     },
     founder: [{ '@id': WOUTER_ID }, { '@id': DANIEL_ID }],
-    // No `sameAs`. It used to hold Wouter's personal LinkedIn, which says "this
-    // organisation is the same thing as that person". It is not; the profile
-    // now sits on his Person node. Add a Factum company page here once one
-    // exists. Do not invent its URL.
+    // The Factum company page on LinkedIn (URL from Wouter, 13-10-2026). It
+    // used to hold Wouter's personal LinkedIn, which says "this organisation
+    // is the same thing as that person"; that profile sits on his Person node.
+    sameAs: ['https://www.linkedin.com/company/146366099/'],
     // What the organisation is *about*, in the terms a generative engine
     // assembles an answer from. Plain topic strings, not invented facts: each
     // one names a page section that already exists on the site.
