@@ -7,7 +7,7 @@ import { routing } from '@/i18n/routing';
 import { fontVariables } from '@/lib/fonts';
 import { siteSchema } from '@/lib/jsonld';
 import { sharedOpenGraph } from '@/lib/pageMetadata';
-import { SITE_URL } from '@/lib/site';
+import { DISCIPLINE_COUNT, SITE_URL } from '@/lib/site';
 /* Side-effect only: throws at build if the module roster in lib/site.ts and the
    five message files have drifted apart, or if an agent count has crept back
    into prose. See lib/roster.manifest.ts. */
@@ -74,6 +74,7 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'a11y' });
   const meta = await getTranslations({ locale, namespace: 'meta' });
+  const structuredData = await getTranslations({ locale, namespace: 'structuredData' });
 
   return (
     <html lang={locale} className={fontVariables}>
@@ -110,7 +111,12 @@ export default async function LocaleLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(siteSchema(locale, meta('home.description')))
+            __html: JSON.stringify(
+              siteSchema(locale, meta('home.description'), {
+                type: meta('home.title'),
+                description: structuredData('serviceDescription', { disciplines: DISCIPLINE_COUNT })
+              })
+            )
           }}
         />
         <a href="#main" className="skip-link">

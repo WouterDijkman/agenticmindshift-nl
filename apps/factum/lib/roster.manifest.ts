@@ -3,7 +3,7 @@ import en from '@/messages/en.json';
 import es from '@/messages/es.json';
 import nl from '@/messages/nl.json';
 import pt from '@/messages/pt.json';
-import { DISCIPLINE_COUNT, MODULE_COUNT, WAVE_COUNT } from './site';
+import { DISCIPLINE_COUNT, HARD_BLOCK_COUNT, MODULE_COUNT, WAVE_COUNT } from './site';
 
 /**
  * Fail the build rather than the page.
@@ -73,6 +73,13 @@ for (const [locale, messages] of Object.entries(CATALOGUE)) {
       `messages/${locale}.json: shared.disciplines has ${shared.disciplines.length} entries, ` +
         `but DISCIPLINES in lib/site.ts has ${DISCIPLINE_COUNT}. DisciplineGrid maps its ` +
         `icons by position.`
+    );
+  }
+
+  if (messages.platform.blocks.items.length !== HARD_BLOCK_COUNT) {
+    throw new Error(
+      `messages/${locale}.json: platform.blocks.items has ${messages.platform.blocks.items.length} entries, ` +
+        `but HARD_BLOCK_COUNT in lib/site.ts is ${HARD_BLOCK_COUNT}.`
     );
   }
 

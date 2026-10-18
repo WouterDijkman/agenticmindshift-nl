@@ -107,7 +107,7 @@ export default async function GovernancePage({
       <Section id="zdr" width="medium" tone="raised" weight="tight">
         <div className="split-grid">
           <div>
-            <SectionHeader title={t('zdr.title')} lead={t('zdr.lead')} />
+            <SectionHeader title={t('zdr.title', n)} lead={t('zdr.lead')} />
           </div>
           <Reveal delay={60}>
             <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
