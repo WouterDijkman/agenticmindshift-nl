@@ -501,7 +501,7 @@ export const GUIDES: Record<GuideSlug, Record<GuideLocale, Guide>> = {
         {
           heading: 'Is dit juridisch advies?',
           paragraphs: [
-            'Nee. Dit is het algemene Nederlandse en Europese kader. Wouter Dijkman is jurist, maar elke NDA en elke data room is anders. Laat bij twijfel de tekst van uw NDA en uw verwerkersovereenkomst toetsen door uw eigen advocaat.',
+            'Nee. Dit is het algemene Nederlandse en Europese kader. Wouter Dijkman heeft rechten gestudeerd. Elke NDA en elke data room is anders. Laat bij twijfel de tekst van uw NDA en uw verwerkersovereenkomst toetsen door uw eigen advocaat.',
             'Wilt u daarna AI echt in het dealwerk inzetten? Zie [IM’s en teasers](/im-en-teasers) en [Maandrapportage](/maandrapportage).',
           ],
         },
@@ -574,7 +574,7 @@ export const GUIDES: Record<GuideSlug, Record<GuideLocale, Guide>> = {
         {
           heading: 'Is this legal advice?',
           paragraphs: [
-            'No. This is the general Dutch and EU frame. Wouter Dijkman is a lawyer by training, but every NDA and every data room is different. In doubt, have your own counsel review the wording of your NDA and your DPA.',
+            'No. This is the general Dutch and EU frame. Wouter Dijkman studied law. Every NDA and every data room is different. In doubt, have your own counsel review the wording of your NDA and your DPA.',
             'Ready to put AI to work in deal work itself? See [IMs and teasers](/im-en-teasers) and [Monthly reporting](/maandrapportage).',
           ],
         },

@@ -4,7 +4,7 @@ import { pageMetadata } from '@/lib/pageMetadata';
 import Button from '@/components/ui/Button';
 import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
 import JsonLd from '@/components/JsonLd';
-import { getPersonLd } from '@/lib/jsonld';
+import { getPersonLd, getBreadcrumbLd } from '@/lib/jsonld';
 
 const INTAKE_URL = 'https://cal.com/wwdijkman/intake-call';
 
@@ -27,6 +27,7 @@ export default async function ContactPage(
   return (
     <>
       <JsonLd data={getPersonLd(locale)} />
+      <JsonLd data={getBreadcrumbLd('/contact', t('heading'), locale)} />
 
       <AnimatedHeroShell
         bgChar="C"

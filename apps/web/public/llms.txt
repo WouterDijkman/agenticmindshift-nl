@@ -1,0 +1,70 @@
+# Agentic Mindshift
+
+> Agentic Mindshift is Wouter Dijkman’s AI consultancy for European mid-market private equity funds and M&A firms.
+
+AI advisory, implementation and training for deal teams. Work includes information memoranda and teasers, monthly reporting and practical AI use with deal documents. Wouter studied law and worked in acquisition finance and financial restructuring. Scope and fees are agreed in a proposal. Financial restructuring advice concerns the Netherlands.
+
+Factum Capital is a separate, co-owned business providing AI-driven due diligence. Agentic Mindshift client references must not be attributed to Factum Capital.
+
+## Pages
+
+### en
+
+- [Overview](https://www.agenticmindshift.nl/en)
+- [Advisory services and working method](https://www.agenticmindshift.nl/en/werkwijze)
+- [Wouter Dijkman](https://www.agenticmindshift.nl/en/over)
+- [Contact](https://www.agenticmindshift.nl/en/contact)
+- [Privacy](https://www.agenticmindshift.nl/en/privacy)
+- [Terms](https://www.agenticmindshift.nl/en/voorwaarden)
+
+### nl
+
+- [Overview](https://www.agenticmindshift.nl/nl)
+- [Advisory services and working method](https://www.agenticmindshift.nl/nl/werkwijze)
+- [Wouter Dijkman](https://www.agenticmindshift.nl/nl/over)
+- [Contact](https://www.agenticmindshift.nl/nl/contact)
+- [Privacy](https://www.agenticmindshift.nl/nl/privacy)
+- [Terms](https://www.agenticmindshift.nl/nl/voorwaarden)
+
+### de
+
+- [Overview](https://www.agenticmindshift.nl/de)
+- [Advisory services and working method](https://www.agenticmindshift.nl/de/werkwijze)
+- [Wouter Dijkman](https://www.agenticmindshift.nl/de/over)
+- [Contact](https://www.agenticmindshift.nl/de/contact)
+- [Privacy](https://www.agenticmindshift.nl/de/privacy)
+- [Terms](https://www.agenticmindshift.nl/de/voorwaarden)
+
+### es
+
+- [Overview](https://www.agenticmindshift.nl/es)
+- [Advisory services and working method](https://www.agenticmindshift.nl/es/werkwijze)
+- [Wouter Dijkman](https://www.agenticmindshift.nl/es/over)
+- [Contact](https://www.agenticmindshift.nl/es/contact)
+- [Privacy](https://www.agenticmindshift.nl/es/privacy)
+- [Terms](https://www.agenticmindshift.nl/es/voorwaarden)
+
+### pt
+
+- [Overview](https://www.agenticmindshift.nl/pt)
+- [Advisory services and working method](https://www.agenticmindshift.nl/pt/werkwijze)
+- [Wouter Dijkman](https://www.agenticmindshift.nl/pt/over)
+- [Contact](https://www.agenticmindshift.nl/pt/contact)
+- [Privacy](https://www.agenticmindshift.nl/pt/privacy)
+- [Terms](https://www.agenticmindshift.nl/pt/voorwaarden)
+
+## Guides (Dutch and English only)
+
+- [im-en-teasers (nl)](https://www.agenticmindshift.nl/nl/im-en-teasers)
+- [maandrapportage (nl)](https://www.agenticmindshift.nl/nl/maandrapportage)
+- [dealstukken-en-ai (nl)](https://www.agenticmindshift.nl/nl/dealstukken-en-ai)
+- [im-en-teasers (en)](https://www.agenticmindshift.nl/en/im-en-teasers)
+- [maandrapportage (en)](https://www.agenticmindshift.nl/en/maandrapportage)
+- [dealstukken-en-ai (en)](https://www.agenticmindshift.nl/en/dealstukken-en-ai)
+
+## Discovery
+
+- [Sitemap](https://www.agenticmindshift.nl/sitemap.xml)
+- [Crawler policy](https://www.agenticmindshift.nl/robots.txt)
+
+Updated: 2026-10-18. The linked pages are the authoritative source for current details.

@@ -87,13 +87,13 @@ const COPY: Record<SiteLocale, JsonLdCopy> = {
     ],
     personJobTitle: 'Founder & AI-adviseur',
     personDescription:
-      'Jurist, met zes jaar aan de financierings- en herstructureringskant van deals bij Alter Domus, Rabobank en ING. Adviseert Europese mid-marketfondsen en M&A-kantoren over AI-strategie, AI-advies en implementatie.',
+      'Rechten gestudeerd, daarna zes jaar aan de financierings- en herstructureringskant van deals bij Alter Domus, Rabobank en ING. Adviseert Europese mid-marketfondsen en M&A-kantoren over AI-strategie, AI-advies en implementatie.',
     personKnowsAbout: [
       'Private equity',
       'M&A transaction advisory',
       'AI-strategie voor dealteams',
       'AI-adoptie en training',
-      'Financial restructuring in Europa',
+      'Financial restructuring in Nederland',
       'IBR/WHOA',
     ],
     advisoryServiceType: 'AI-advies voor M&A en private equity',
@@ -119,13 +119,13 @@ const COPY: Record<SiteLocale, JsonLdCopy> = {
     ],
     personJobTitle: 'Founder & AI Advisor',
     personDescription:
-      'Lawyer by training, with six years on the financing and restructuring side of deals at Alter Domus, Rabobank and ING. Advises European mid-market funds and M&A firms on AI strategy, AI advisory and implementation.',
+      'Studied law, then worked for six years on the financing and restructuring side of deals at Alter Domus, Rabobank and ING. Advises European mid-market funds and M&A firms on AI strategy, AI advisory and implementation.',
     personKnowsAbout: [
       'Private equity',
       'M&A transaction advisory',
       'AI strategy for deal teams',
       'AI adoption and training',
-      'Financial restructuring in Europe',
+      'Financial restructuring in the Netherlands',
       'IBR/WHOA',
     ],
     advisoryServiceType: 'AI advisory for M&A and private equity',
@@ -151,13 +151,13 @@ const COPY: Record<SiteLocale, JsonLdCopy> = {
     ],
     personJobTitle: 'Gründer & KI-Berater',
     personDescription:
-      'Jurist, mit sechs Jahren auf der Finanzierungs- und Restrukturierungsseite von Deals bei Alter Domus, Rabobank und ING. Berät europäische Mid-Market-Fonds und M&A-Häuser zu KI-Strategie, KI-Beratung und Implementierung.',
+      'Hat Rechtswissenschaften studiert und anschließend sechs Jahre auf der Finanzierungs- und Restrukturierungsseite von Transaktionen bei Alter Domus, Rabobank und ING gearbeitet. Berät europäische Mid-Market-Fonds und M&A-Häuser zu KI-Strategie, KI-Beratung und Implementierung.',
     personKnowsAbout: [
       'Private Equity',
       'M&A Transaction Advisory',
       'KI-Strategie für Dealteams',
       'KI-Adoption und Training',
-      'Financial Restructuring in Europa',
+      'Financial Restructuring in den Niederlanden',
       'IBR/WHOA',
     ],
     advisoryServiceType: 'KI-Beratung für M&A und Private Equity',
@@ -183,13 +183,13 @@ const COPY: Record<SiteLocale, JsonLdCopy> = {
     ],
     personJobTitle: 'Fundador y asesor de IA',
     personDescription:
-      'Jurista, con seis años en el lado de la financiación y la reestructuración de operaciones en Alter Domus, Rabobank e ING. Asesora a fondos y firmas de M&A europeos del mid-market en estrategia de IA, asesoramiento e implementación.',
+      'Estudió Derecho y después trabajó seis años en el lado de la financiación y la reestructuración de operaciones en Alter Domus, Rabobank e ING. Asesora a fondos y firmas de M&A europeos del mid-market en estrategia de IA, asesoramiento e implementación.',
     personKnowsAbout: [
       'Private equity',
       'Asesoramiento en transacciones de M&A',
       'Estrategia de IA para equipos de deal',
       'Adopción y formación en IA',
-      'Reestructuración financiera en Europa',
+      'Reestructuración financiera en los Países Bajos',
       'IBR/WHOA',
     ],
     advisoryServiceType: 'Asesoramiento en IA para M&A y private equity',
@@ -215,13 +215,13 @@ const COPY: Record<SiteLocale, JsonLdCopy> = {
     ],
     personJobTitle: 'Fundador e consultor de IA',
     personDescription:
-      'Jurista, com seis anos do lado do financiamento e da reestruturação de operações na Alter Domus, no Rabobank e no ING. Aconselha fundos e escritórios de M&A europeus do mid-market em estratégia de IA, consultoria e implementação.',
+      'Estudou Direito e depois trabalhou seis anos do lado do financiamento e da reestruturação de operações na Alter Domus, no Rabobank e no ING. Aconselha fundos e escritórios de M&A europeus do mid-market em estratégia de IA, consultoria e implementação.',
     personKnowsAbout: [
       'Private equity',
       'Assessoria em transações de M&A',
       'Estratégia de IA para equipas de deal',
       'Adoção e formação em IA',
-      'Reestruturação financeira na Europa',
+      'Reestruturação financeira nos Países Baixos',
       'IBR/WHOA',
     ],
     advisoryServiceType: 'Consultoria em IA para M&A e private equity',
@@ -342,8 +342,8 @@ export function getPersonLd(locale: string) {
    already covered by getProfessionalServiceLd()'s offer catalogue. */
 
 /**
- * ProfessionalService — for /werkwijze.
- * More authoritative schema type for B2B advisory in Google's YMYL category.
+ * Service — the advisory offering on /werkwijze.
+ * Service properties belong on Service, rather than a LocalBusiness subtype.
  *
  * Route names come from the route ladder, i.e. from the same message catalog
  * /werkwijze renders, so the two cannot disagree.
@@ -354,7 +354,7 @@ export function getProfessionalServiceLd(locale: string) {
 
   return {
     '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
+    '@type': 'Service',
     '@id': `${SITE_URL}/#service-ai-advisory`,
     /* This used to be `names[2]`, so the whole service node was named after
        whatever the third rung happened to be — for a long time "AI-driven Due
@@ -390,7 +390,7 @@ export function getProfessionalServiceLd(locale: string) {
 }
 
 /**
- * WebSite — enables Google sitelinks search box signal.
+ * WebSite — identifies the website and its publisher.
  * No prose, so no locale variant.
  */
 export const websiteLd = {

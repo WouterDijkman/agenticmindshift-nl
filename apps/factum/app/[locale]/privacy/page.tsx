@@ -13,8 +13,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const meta = await pageMetadata(locale, 'privacy', '/privacy');
-  return { ...meta, robots: { index: false, follow: true } };
+  return pageMetadata(locale, 'privacy', '/privacy');
 }
 
 export default async function PrivacyPage({

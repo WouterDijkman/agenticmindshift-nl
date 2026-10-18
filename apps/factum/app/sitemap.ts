@@ -1,3 +1,4 @@
+import { contentLastModified } from '@/lib/seoRoutes';
 import type { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
 import { SITE_URL } from '@/lib/site';
@@ -13,16 +14,15 @@ const PATHS = [
   { path: '/limits-of-ai', priority: 0.7 },
   { path: '/team', priority: 0.6 },
   // The conversion page: every primary button on the site lands here.
-  { path: '/contact', priority: 0.8 }
-  // No /privacy: the page is `noindex, follow` (privacy/page.tsx), and a
-  // sitemap should list only URLs we ask to have indexed.
+  { path: '/contact', priority: 0.8 },
+  { path: '/privacy', priority: 0.3 }
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return PATHS.flatMap(({ path, priority }) =>
     routing.locales.map((locale) => ({
       url: `${SITE_URL}/${locale}${path}`,
-      lastModified: new Date(),
+      lastModified: contentLastModified(path, locale),
       priority,
       alternates: {
         languages: Object.fromEntries([

@@ -44,8 +44,7 @@ export async function generateMetadata({
   // Only what is true of every page, plus the 404 fallback. No canonical, no
   // hreflang, no og:url and no robots here, deliberately. Every real page
   // returns its own from lib/pageMetadata.ts (which sets title, description,
-  // canonical, hreflang and og:url), and pages that should not be indexed say
-  // so themselves (/privacy). What reaches a page that does not call
+  // canonical, hreflang and og:url), and missing pages receive Next's automatic noindex. What reaches a page that does not call
   // pageMetadata is the 404, and before 12 October 2026 the 404 inherited the
   // homepage's title, canonical and hreflang plus `index, follow` next to the
   // `noindex` Next adds to every not-found response. Now it carries a
