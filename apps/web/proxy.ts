@@ -2,6 +2,9 @@ import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
 import { LOCALE_COOKIE } from '@repo/ui/locale';
 import { routing } from './i18n/routing';
+import { resolveMarketingUrl } from '@repo/ui/seoRouting';
+import { PUBLIC_PATHS, LEGACY_PATHS } from './lib/seoRoutes';
+import { isGuideLocale, isGuidePath } from './lib/guideRoutes';
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -75,6 +78,27 @@ export function proxy(request: NextRequest) {
     // request to a matched path, ahead of any cache lookup, so the branch above
     // is re-evaluated for each visitor even when this body is served from the
     // edge. A shared cache never gets to answer `/` on its own.
+    return NextResponse.rewrite(url);
+  }
+
+  const resolved = resolveMarketingUrl(
+    request.nextUrl.pathname, routing.locales, routing.defaultLocale,
+    [...PUBLIC_PATHS, '/opengraph-image'], LEGACY_PATHS
+  );
+  if (isGuidePath(request.nextUrl.pathname.replace(/^\/(nl|en|de|es|pt)(?=\/|$)/, '')) && !isGuideLocale(resolved.locale)) {
+    const url = request.nextUrl.clone();
+    url.pathname = `/${resolved.locale}/not-a-page`;
+    return NextResponse.rewrite(url);
+  }
+  if (resolved.target) {
+    const url = new URL(resolved.target, request.url);
+    url.search = request.nextUrl.search;
+    return NextResponse.redirect(url, 308);
+  }
+  if (!resolved.known) {
+    // Missing pages (including unsupported locales) return 404 immediately.
+    const url = request.nextUrl.clone();
+    url.pathname = `/${resolved.locale}/not-a-page`;
     return NextResponse.rewrite(url);
   }
 

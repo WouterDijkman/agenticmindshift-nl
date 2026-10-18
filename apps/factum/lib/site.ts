@@ -49,7 +49,7 @@ export const KVK = '99495945';
  * product no longer has: Factum is self-service and does not sign off. A
  * broker is reached through /pre-sale, which is built on the product's
  * sell-side perspective and its market-readiness checks; the old URL 308s
- * there (next.config.ts).
+ * there (proxy.ts).
  */
 export const NAV = [
   { href: '/platform', key: 'platform' },
@@ -72,7 +72,7 @@ export const FOOTER_NAV = NAV;
  * it backs: /governance and the limits section of /platform.
  *
  * /method used to sit here too. It was merged into /platform on 12 October
- * 2026 and 308s there (next.config.ts): roughly 70% of it repeated /platform,
+ * 2026 and 308s there (proxy.ts): roughly 70% of it repeated /platform,
  * and the two unique parts (the output contract's failure modes and the
  * reviewer's steps) now live on /platform as #contract and #review.
  *

@@ -19,10 +19,8 @@ import { KVK, SITE_URL } from './site';
  * ranks. That edge hangs the new entity off the only node the graph already
  * knows, through the founder, which is where it belongs.
  *
- * Deliberately absent: `FAQPage`. Google deprecated FAQ rich results in May
- * 2026 (last shown 7 May, docs pulled 15 June, Search Console support ending),
- * so marking up the Q/A pairs on this site would buy nothing. (No count here:
- * a number in a comment goes stale the first time a FAQ gains an item.)
+ * FAQPage is emitted by Disclosures from the exact visible localized items.
+ * This describes real questions and answers without promising a rich result.
  *
  * Still, as before: only facts that already appear on the site. No addresses
  * beyond the country, no phone number, no founding date, no employee count.

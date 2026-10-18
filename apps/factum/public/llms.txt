@@ -1,0 +1,77 @@
+# Factum Capital
+
+> Factum Capital is a pre-launch AI-driven due diligence platform for acquirers and sell-side brokers.
+
+The client’s team works with its own data room and reviews the findings. Findings cite source documents and locations and include excerpts. Human review and the client reviewer’s sign-off are mandatory before client export. The platform covers commercial, HR, operational, AI, legal, financial, tax, deal economics and valuation analysis. Legal and tax analysis is tuned to Dutch law.
+
+Factum Capital is co-founded by Wouter Dijkman and Daniel Dropuljic. It has no paying clients or public client case studies yet. Agentic Mindshift clients are not Factum clients. No audited accuracy rate is claimed. Technical due diligence, code review, integrity screening and ESG are outside this product’s scope.
+
+## Pages
+
+### en
+
+- [Overview](https://www.factumcapital.eu/en)
+- [Platform and review workflow](https://www.factumcapital.eu/en/platform)
+- [For acquirers](https://www.factumcapital.eu/en/diligence-sprint)
+- [For sell-side brokers](https://www.factumcapital.eu/en/pre-sale)
+- [Governance](https://www.factumcapital.eu/en/governance)
+- [Limitations of AI](https://www.factumcapital.eu/en/limits-of-ai)
+- [Team](https://www.factumcapital.eu/en/team)
+- [Contact](https://www.factumcapital.eu/en/contact)
+- [Privacy](https://www.factumcapital.eu/en/privacy)
+
+### nl
+
+- [Overview](https://www.factumcapital.eu/nl)
+- [Platform and review workflow](https://www.factumcapital.eu/nl/platform)
+- [For acquirers](https://www.factumcapital.eu/nl/diligence-sprint)
+- [For sell-side brokers](https://www.factumcapital.eu/nl/pre-sale)
+- [Governance](https://www.factumcapital.eu/nl/governance)
+- [Limitations of AI](https://www.factumcapital.eu/nl/limits-of-ai)
+- [Team](https://www.factumcapital.eu/nl/team)
+- [Contact](https://www.factumcapital.eu/nl/contact)
+- [Privacy](https://www.factumcapital.eu/nl/privacy)
+
+### de
+
+- [Overview](https://www.factumcapital.eu/de)
+- [Platform and review workflow](https://www.factumcapital.eu/de/platform)
+- [For acquirers](https://www.factumcapital.eu/de/diligence-sprint)
+- [For sell-side brokers](https://www.factumcapital.eu/de/pre-sale)
+- [Governance](https://www.factumcapital.eu/de/governance)
+- [Limitations of AI](https://www.factumcapital.eu/de/limits-of-ai)
+- [Team](https://www.factumcapital.eu/de/team)
+- [Contact](https://www.factumcapital.eu/de/contact)
+- [Privacy](https://www.factumcapital.eu/de/privacy)
+
+### es
+
+- [Overview](https://www.factumcapital.eu/es)
+- [Platform and review workflow](https://www.factumcapital.eu/es/platform)
+- [For acquirers](https://www.factumcapital.eu/es/diligence-sprint)
+- [For sell-side brokers](https://www.factumcapital.eu/es/pre-sale)
+- [Governance](https://www.factumcapital.eu/es/governance)
+- [Limitations of AI](https://www.factumcapital.eu/es/limits-of-ai)
+- [Team](https://www.factumcapital.eu/es/team)
+- [Contact](https://www.factumcapital.eu/es/contact)
+- [Privacy](https://www.factumcapital.eu/es/privacy)
+
+### pt
+
+- [Overview](https://www.factumcapital.eu/pt)
+- [Platform and review workflow](https://www.factumcapital.eu/pt/platform)
+- [For acquirers](https://www.factumcapital.eu/pt/diligence-sprint)
+- [For sell-side brokers](https://www.factumcapital.eu/pt/pre-sale)
+- [Governance](https://www.factumcapital.eu/pt/governance)
+- [Limitations of AI](https://www.factumcapital.eu/pt/limits-of-ai)
+- [Team](https://www.factumcapital.eu/pt/team)
+- [Contact](https://www.factumcapital.eu/pt/contact)
+- [Privacy](https://www.factumcapital.eu/pt/privacy)
+
+
+## Discovery
+
+- [Sitemap](https://www.factumcapital.eu/sitemap.xml)
+- [Crawler policy](https://www.factumcapital.eu/robots.txt)
+
+Updated: 2026-10-18. The linked pages are the authoritative source for current details.

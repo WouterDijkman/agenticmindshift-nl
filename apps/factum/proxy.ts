@@ -2,6 +2,8 @@ import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
 import { LOCALE_COOKIE } from '@repo/ui/locale';
 import { routing } from './i18n/routing';
+import { resolveMarketingUrl } from '@repo/ui/seoRouting';
+import { PUBLIC_PATHS, LEGACY_PATHS } from './lib/seoRoutes';
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -61,14 +63,19 @@ export function proxy(request: NextRequest) {
     return NextResponse.rewrite(url);
   }
 
-  // A two-letter prefix that is not one of our locales (`/fr`, `/it/...`) used
-  // to go through next-intl, which redirected it to `/en/fr`, a 404 one hop
-  // later. Answer it here instead: rewrite onto the English catch-all, which
-  // calls notFound(), so the URL that was asked for gets the 404 itself.
-  const first = request.nextUrl.pathname.split('/')[1] ?? '';
-  if (/^[a-z]{2}$/i.test(first) && !routing.locales.includes(first as (typeof routing.locales)[number])) {
+  const resolved = resolveMarketingUrl(
+    request.nextUrl.pathname, routing.locales, routing.defaultLocale,
+    [...PUBLIC_PATHS, '/opengraph-image'], LEGACY_PATHS
+  );
+  if (resolved.target) {
+    const url = new URL(resolved.target, request.url);
+    url.search = request.nextUrl.search;
+    return NextResponse.redirect(url, 308);
+  }
+  if (!resolved.known) {
+    // Missing pages (including unsupported locales) return 404 immediately.
     const url = request.nextUrl.clone();
-    url.pathname = `/${routing.defaultLocale}/not-a-locale`;
+    url.pathname = `/${resolved.locale}/not-a-page`;
     return NextResponse.rewrite(url);
   }
 

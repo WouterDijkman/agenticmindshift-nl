@@ -1,3 +1,4 @@
+import { CONTENT_LAST_MODIFIED } from '@/lib/seoRoutes';
 import { MetadataRoute } from 'next';
 import { BASE, LOCALES, getLanguageAlternates } from '@/lib/hreflang';
 import { GUIDE_LOCALES, GUIDE_SLUGS } from '@/lib/guideRoutes';
@@ -7,7 +8,7 @@ import { GUIDE_LOCALES, GUIDE_SLUGS } from '@/lib/guideRoutes';
  * first unlinked from the nav and left running; it has since been deleted
  * outright, along with its API routes, its store and its PDF pipeline.
  *
- * /factum-capital is absent because it is gone — next.config.ts 308s it to
+ * /factum-capital is absent because it is gone — proxy.ts 308s it to
  * factumcapital.eu, which carries its own sitemap.
  */
 const pages = [
@@ -23,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const site = LOCALES.flatMap((locale) =>
     pages.map(({ path, priority, changeFrequency }) => ({
       url: `${BASE}/${locale}${path}`,
-      lastModified: new Date(),
+      lastModified: CONTENT_LAST_MODIFIED,
       priority,
       changeFrequency,
       alternates: { languages: getLanguageAlternates(path) },
@@ -35,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const guides = GUIDE_LOCALES.flatMap((locale) =>
     GUIDE_SLUGS.map((slug) => ({
       url: `${BASE}/${locale}/${slug}`,
-      lastModified: new Date(),
+      lastModified: CONTENT_LAST_MODIFIED,
       priority: 0.8,
       changeFrequency: 'monthly' as const,
       alternates: { languages: getLanguageAlternates(`/${slug}`, GUIDE_LOCALES) },

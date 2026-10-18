@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, ReactNode } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export interface AccordionItem {
   id: string;
@@ -60,31 +60,30 @@ export default function Accordion({ items }: AccordionProps) {
               </motion.span>
             </button>
 
-            <AnimatePresence initial={false}>
-              {isOpen && (
-                <motion.div
-                  id={`accordion-panel-${item.id}`}
-                  role="region"
-                  aria-labelledby={`accordion-trigger-${item.id}`}
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.32, ease }}
-                  style={{ overflow: 'hidden' }}
-                >
-                  <div
-                    className="px-5 pb-5 pt-1"
-                    style={{
-                      fontSize: '0.9375rem',
-                      lineHeight: 1.75,
-                      color: 'var(--text-tertiary)',
-                    }}
-                  >
-                    {item.answer}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            {/* Keep answers in the server HTML so search and AI crawlers can
+                read the same FAQ that visitors can expand. */}
+            <motion.div
+              id={`accordion-panel-${item.id}`}
+              role="region"
+              aria-labelledby={`accordion-trigger-${item.id}`}
+              aria-hidden={!isOpen}
+              inert={!isOpen}
+              initial={false}
+              animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
+              transition={{ duration: 0.32, ease }}
+              style={{ overflow: 'hidden' }}
+            >
+              <div
+                className="px-5 pb-5 pt-1"
+                style={{
+                  fontSize: '0.9375rem',
+                  lineHeight: 1.75,
+                  color: 'var(--text-tertiary)',
+                }}
+              >
+                {item.answer}
+              </div>
+            </motion.div>
           </div>
         );
       })}

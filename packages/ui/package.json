@@ -7,7 +7,8 @@
     "./Button": "./src/Button.tsx",
     "./SketchIcons": "./src/SketchIcons.tsx",
     "./locale": "./src/locale.ts",
-    "./securityHeaders": "./src/securityHeaders.ts"
+    "./securityHeaders": "./src/securityHeaders.ts",
+    "./seoRouting": "./src/seoRouting.ts"
   },
   "peerDependencies": {
     "framer-motion": "^12",

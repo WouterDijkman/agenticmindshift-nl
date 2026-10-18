@@ -1,3 +1,5 @@
+import JsonLd from '@/components/JsonLd';
+import { getBreadcrumbLd } from '@/lib/jsonld';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/pageMetadata';
@@ -20,6 +22,7 @@ export default async function VoorwaardenPage(
 
   return (
     <section className="container-narrow py-20">
+      <JsonLd data={getBreadcrumbLd('/voorwaarden', t('heading'), locale)} />
       <p
         className="text-xs uppercase mb-4"
         style={{ color: 'var(--accent-primary)', letterSpacing: '0.18em' }}
