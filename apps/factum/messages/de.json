@@ -6,7 +6,7 @@
     },
     "platform": {
       "title": "KI-Prüfung des Data Rooms: so läuft sie",
-      "description": "{modules} Due-Diligence-Module über {disciplines} Disziplinen. Jede Feststellung belegt ein Dokument. Jedes Ergebnis passiert eine menschliche Freigabe."
+      "description": "{modules} Due-Diligence-Module über {disciplines} Disziplinen. Jede Feststellung verweist auf ein Dokument. Jedes Ergebnis passiert eine menschliche Freigabe."
     },
     "sprint": {
       "title": "Buy-Side-Due-Diligence für PE und Käufer",
@@ -129,7 +129,7 @@
         "evidence": "Wörtlich zitiert, pro Zitat",
         "severity": "Eine von fünf Stufen, von Info bis Kritisch",
         "document": "Data Room oder Wissensdatenbank, pro Zitat",
-        "review": "Vor dem Export von Ihrem Prüfer freigegeben"
+        "review": "Prüfstatus; Export erfordert Ihre Freigabe"
       },
       "more": "+3 Felder, auf einem breiteren Bildschirm"
     },
@@ -152,15 +152,15 @@
       }
     ],
     "modules": [
-      "Financial DD",
-      "Commercial DD",
-      "HR DD",
-      "Operational DD",
-      "AI DD",
-      "Legal DD",
-      "Tax DD",
-      "Deal economics",
-      "Valuation"
+      "Finanz-DD",
+      "Kommerzielle DD",
+      "Personal-DD",
+      "Operative DD",
+      "KI-DD",
+      "Rechtliche DD",
+      "Steuer-DD",
+      "Dealökonomie",
+      "Bewertung"
     ],
     "waves": [
       {
@@ -180,12 +180,12 @@
         "body": "Liest Finanzen und Recht, bevor es argumentiert: eine Steuerposition ist eine Folge der Struktur, die der Financial-Durchgang gerade beschrieben hat. Sie überschneidet sich oft mit dem, was Recht dort gefunden hat."
       },
       {
-        "title": "Deal Economics",
+        "title": "Dealökonomie",
         "body": "Liest alles Vorherige und stellt die Frage, was der Deal tatsächlich einbringt."
       },
       {
         "title": "Bewertung",
-        "body": "Liest Deal Economics obendrauf auf alles davor, und rechnet den Preis durch die Feststellungen hindurch statt an ihnen vorbei."
+        "body": "Liest Dealökonomie obendrauf auf alles davor, und rechnet den Preis durch die Feststellungen hindurch statt an ihnen vorbei."
       }
     ],
     "chart": {
@@ -203,15 +203,15 @@
       "pageLabel": "Data Room",
       "pageRef": "TargetCo — Rahmenvertrag, S. 14",
       "highlight": "Zitierte Passage",
-      "findingLabel": "Der Feststellung, der daraus entstand",
+      "findingLabel": "Die daraus entstandene Feststellung",
       "footnote": "Ein konstruiertes Beispiel an einem fiktiven Target. Hier steht kein Mandantendokument. Ihr eigener Lauf liefert dieselben sechs Felder, an Ihrem eigenen Data Room.",
       "quote": "Der Kunde kann diesen Vertrag mit einer Frist von dreißig (30) Tagen schriftlich kündigen, wenn sich die Kontrolle über den Lieferanten ändert.",
       "tag": "Beispiel",
       "values": {
         "module": "Legal — Change of Control",
-        "finding": "Der größte Kunde von TargetCo kann wegen der Transaktion selbst kündigen, mit dreißig Tagen Frist und ohne Ausgleichszahlung.",
+        "finding": "Kunde A kann den Vertrag mit TargetCo bei einem Kontrollwechsel mit einer Frist von dreißig Tagen schriftlich kündigen.",
         "evidence": "Ziffer 14.2, links vollständig zitiert.",
-        "severity": "Hoch. Der größte Kunde, dreißig Tage Frist, keine Abstandszahlung.",
+        "severity": "Hoch — beispielhafte Einstufung, von Ihrem Prüfer anhand der Bedeutung dieses Kunden für die Transaktion zu bewerten.",
         "document": "TargetCo — Rahmenvertrag mit Kunde A, Seite 14.",
         "review": "Von Ihrem Prüfer namentlich freigegeben, vor dem Export."
       }
@@ -220,7 +220,7 @@
     "guarantee": {
       "label": "Die Feststellungsgarantie",
       "claim": "Drei wesentliche Feststellungen, die Ihr eigenes Team noch nicht kannte, oder das Mandat ist kostenlos.",
-      "note": "Für Pilotmandate. Wir tragen das Risiko, dass dies früh ist, nicht Sie."
+      "note": "Nur für Pilotmandate. Die Garantie gilt nicht für Demos."
     },
     "links": {
       "governance": "Wie Dokumente behandelt werden",
@@ -332,7 +332,7 @@
     },
     "film": {
       "title": "Was liegt wirklich im Data Room?",
-      "lead": "Jeder Deal beginnt mit dieser einen Frage. Fünfundvierzig Sekunden: dreihundert Dokumente, ein Wochenende und eine Klausel auf Seite vierzehn, mit der Ihr größter Kunde in der Woche der Unterschrift kündigen kann.",
+      "lead": "Ein kurzer Film: dreihundert Dokumente, ein Wochenende und eine Klausel auf Seite vierzehn, die einem Kunden bei einem Kontrollwechsel eine Kündigung mit dreißig Tagen Frist erlaubt.",
       "note": "Das Beispiel im Film ist konstruiert, auf einem fiktiven Zielunternehmen, und sagt das im Bild. Es erscheint kein Kundendokument. Ihr eigener Lauf liefert dieselben sechs Felder, für Ihren eigenen Data Room."
     }
   },
@@ -367,14 +367,14 @@
     "coverage": {
       "title": "Die Modulbibliothek, in Dispatch-Reihenfolge",
       "lead": "Ein Modul, das auf die Ausgabe eines anderen wartet, kann nicht früher starten. Diese Abhängigkeit bestimmt die Reihenfolge. Jedes Modul liefert Feststellungen.",
-      "note": "Aus den Dispatch-Graphen im Produktquellcode abgeleitet, nicht geschätzt. ZDR markiert die Module, deren Routing hart auf einen Zero-Retention-EU-Endpunkt gesetzt ist."
+      "note": "Aus den Dispatch-Graphen im Produktquellcode abgeleitet. ZDR markiert die Module, deren Routing Zero Retention erzwingt. Die Verarbeitung in der EU ist der Standard."
     },
     "pipeline": {
       "title": "Vom Upload zur fertigen Feststellung",
       "lead": "Sechs Stufen. Jedes Mal dieselben sechs, ob jemand zusieht oder nicht.",
       "stages": [
         {
-          "title": "Fundierte Retrieval",
+          "title": "Quellenbasiertes Abrufen",
           "body": "Das Modul geht in den Data Room und holt die Passagen, die seine Frage beantworten.",
           "note": "Vertrauliche Finanz- und Personendaten werden pseudonymisiert, bevor sie diese Ebene erreichen."
         },
@@ -403,7 +403,7 @@
     },
     "grounding": {
       "title": "Vier Grounding-Prüfungen, jede enger als die vorige",
-      "lead": "Eine Aussage muss alle vier überstehen. Ein Fehler schickt sie zurück.",
+      "lead": "Diese Prüfungen helfen, Beleglücken sichtbar zu machen. Ihr Prüfer entscheidet, was verwendet werden kann.",
       "catchLabel": "Fängt",
       "layers": [
         {
@@ -413,7 +413,7 @@
         },
         {
           "title": "Lexikalische Zitatprüfung",
-          "body": "Der zitierte Text muss zeichengenau in der angegebenen Passage stehen.",
+          "body": "Der zitierte Text wird mit der Quellpassage abgeglichen; Formatierungsunterschiede und Abweichungen durch PDF-Extraktion werden normalisiert.",
           "catches": "Paraphrase, die als wörtliches Zitat auftritt."
         },
         {
@@ -423,11 +423,11 @@
         },
         {
           "title": "Zweitmeinungs-Verifikation",
-          "body": "Ein lokales NLI-Modell wiederholt das Urteil. Diese Ebene schlägt geschlossen fehl.",
-          "catches": "Was die ersten drei durchgelassen haben."
+          "body": "Nach der Reparatur strittige Aussagen können ein zweites Modellurteil und eine optionale lokale NLI-Prüfung erhalten. Ohne Bestätigung durch eines der beiden bleibt die Warnung bestehen.",
+          "catches": "Mögliche Fehlablehnungen durch das erste Urteil."
         }
       ],
-      "repair": "Aussagen, die durchfallen, bekommen einen Reparaturversuch: neu aus der Quelle zitieren, dann neu bewerten. Was dann noch durchfällt, entfällt oder wird als unbestätigt markiert."
+      "repair": "Abgelehnte Aussagen können erneut aus der Quelle zitiert und geprüft werden. Verbleibende Beleglücken werden zur Prüfung gekennzeichnet."
     },
     "contract": {
       "title": "Der Ausgabevertrag, Feld für Feld",
@@ -465,7 +465,7 @@
           "fail": "Keine Freigabe, kein Kundenexport. Was nicht geprüft wurde, geht mit diesem Vermerk mit."
         }
       ],
-      "note": "Eine Aussage, die durch eine Prüfung fällt, bekommt einen Reparaturversuch: neu aus der Quelle zitieren, dann neu bewerten. Was dann noch fällt, wird gestrichen oder als unbestätigt gekennzeichnet ausgeliefert. Unbestätigt ist ein legitimes Ergebnis. Eine still verschwundene Aussage nicht."
+      "note": "Eine fehlgeschlagene Prüfung kann eine Reparatur und ein neues Urteil auslösen. Verbleibende Beleglücken werden für Ihren Prüfer markiert; der Prüfstatus einer Aussage bleibt sichtbar."
     },
     "blocks": {
       "title": "{blocks} Bedingungen, die die Auto-Freigabe stoppen",
@@ -573,8 +573,8 @@
         "Keine auditierte Genauigkeitsquote. Interne Benchmarks beruhen auf einem Datensatz und sind ungeprüft.",
         "Keine Behauptung, das menschliche Tor sei optional. Es ist verpflichtend.",
         "Noch keine abgeschlossenen öffentlichen Fallstudien.",
-        "Keine technische Due Diligence auf Produktebene. Quellcode-Review, Architekturbewertung und Skalierbarkeitstests sind nicht Teil des Standarddurchgangs.",
-        "Keine Integritäts- oder Reputationsprüfung. Hintergrundchecks zu Personen und Gegenparteien laufen außerhalb dieser Plattform.",
+        "Factum führt keine technische Due Diligence auf Produktebene, Quellcode-Reviews, Architekturbewertungen oder Skalierbarkeitstests durch.",
+        "Factum führt keine Integritäts- oder Reputationsprüfungen und keine Hintergrundprüfungen zu Personen oder Gegenparteien durch.",
         "Keine rechtsordnungsunabhängige Rechts- und Steueranalyse. Beide sind auf niederländisches Recht abgestimmt; bei einem Target anderswo sollten lokale Berater sie prüfen.",
         "Keine allgemeine Verfügbarkeit. Factum steht vor dem Launch."
       ]
@@ -596,7 +596,7 @@
         },
         {
           "q": "Was passiert, wenn das Modell es nicht weiß?",
-          "a": "Dann muss es das sagen. Eine Feststellung ist entweder durch einen Nachweis gedeckt, der vier Prüfungen überstanden hat, oder als unbestätigt markiert. Erfundene Quellen sind eine der {blocks} harten Blockaden."
+          "a": "Eine Feststellung trägt ihre Belege und ihren Prüfstatus. Beleglücken bleiben sichtbar. Erfundene Quellen sind eine der {blocks} harten Blockaden."
         },
         {
           "q": "Woher weiß ich, dass die Feststellungen halten?",
@@ -608,7 +608,7 @@
         },
         {
           "q": "Wie oft zitiert KI einfach falsch?",
-          "a": "Öfter, als man denkt. Jede Quellenangabe hier besteht vier Prüfungen, bevor sie auf der Seite steht."
+          "a": "KI kann Quellen falsch zuordnen. Factum kombiniert Zitations-, Zitat- und Entailment-Prüfungen mit gezielten Zweitmeinungen. Ihr Prüfer kontrolliert das Ergebnis."
         },
         {
           "q": "Für welche Dealgröße ist das gebaut?",
@@ -727,7 +727,7 @@
       "title": "Zeigen Sie auf einen Data Room",
       "body": "Dreißig Minuten, um NDA und Data Room zu klären, laufend oder abgeschlossen. Tage später lesen Sie die Feststellungen in einem Call, Quelle für Quelle.",
       "button": "Data Room teilen",
-      "note": "Eine begrenzte Zahl an Pilotmandaten, im einstelligen Bereich."
+      "note": "Eine Handvoll Pilotmandate."
     }
   },
   "preSale": {
@@ -840,7 +840,7 @@
       "title": "Der eine verpflichtende menschliche Schritt",
       "lead": "Ihr eigener Prüfer gibt vor jedem Kundenexport frei. Dies sind die Regeln dahinter.",
       "items": [
-        "Jede Feststellung wird gegen ihre Quellpassage geprüft, bevor sie Ihren Prüfer erreicht.",
+        "Die Pipeline prüft Aussagen anhand abgerufener Quellpassagen und erfasst Beleglücken für Ihren Prüfer.",
         "Das Tor läuft jedes Mal, automatisch.",
         "{blocks} harte Blockaden stoppen einen Entwurf und legen ihn Ihrem Prüfer vor, nicht freigegeben.",
         "Ihr Prüfer gibt die Zusammenfassung jedes Moduls frei, die zehn größten Risiken und jede aufschiebende Bedingung. Ohne diese Freigabe verlässt kein Kundenexport die Plattform. Der Rest geht mit dem Vermerk „nicht gesondert geprüft“ mit.",
@@ -869,7 +869,7 @@
         "Kein einzelnes benanntes Rechenzentrum. Standardmäßig läuft die Analyse auf dem EU-Multi-Region-Endpunkt von Vertex AI.",
         "Kein behaupteter DSGVO-Compliance-Status. Verarbeitungsbedingungen gehören in einen Mandatsvertrag.",
         "Keine Meldepflicht- oder Notfallwiederherstellungszusage auf dieser Seite.",
-        "Keine auditierte Genauigkeitsquote. Der eine Benchmark auf dieser Seite ist intern und beruht auf einem Datensatz."
+        "Keine auditierte Genauigkeitsquote. Interne Benchmarks beruhen auf einem Datensatz und sind nicht extern geprüft."
       ],
       "note": "Wenn Ihr Prozess eines davon schriftlich verlangt, sprechen Sie es im Call an. Es gibt so oder so eine echte Antwort."
     },
@@ -880,17 +880,17 @@
       "note": "Zuerst das NDA, am selben Tag versandt. Ein Deal, den Sie letztes Jahr abgeschlossen haben, geht ebenso."
     },
     "zdr": {
-      "title": "Drei Module laufen nie auf einem Modell, das Daten speichert",
+      "title": "{zdr} Module laufen nie auf einem Modell, das Daten speichert",
       "lead": "Zero Data Retention ist eine Routing-Regel im Code, kein Versprechen auf einer Seite. Steuern, Recht und Finanzen hängen an dieser Regel.",
       "items": [
         "Die Sperre sitzt an der einen Stelle, die jeder Modellaufruf passiert.",
         "Ein Anbieter, der Daten speichert, wird durch einen Zero-Retention-Anbieter ersetzt, und der Austausch wird protokolliert.",
         "Standardmäßig ist das Google Vertex AI in der EU, unter einem Auftragsverarbeitungsvertrag.",
-        "Die übrigen {other} Module laufen auf derselben Infrastruktur. Heute ist jeder Anbieter der Plattform Zero-Retention; für diese drei ist es im Code erzwungen."
+        "Die übrigen {other} Module laufen auf derselben Infrastruktur. Heute ist jeder Anbieter der Plattform Zero-Retention; für diese {zdr} ist es im Code erzwungen."
       ]
     },
     "learning": {
-      "title": "Zwei Gedächtnisse. Eines ist geteilt, eines verlässt Ihren Mandanten nie.",
+      "title": "Zwei Gedächtnisse. Eines ist geteilt, eines bleibt in Ihrem Kontobereich.",
       "lead": "Was wir über Mandate hinweg lernen und was bei Ihnen bleibt.",
       "columns": [
         {
@@ -903,7 +903,7 @@
           ]
         },
         {
-          "label": "Verlässt Ihren Mandanten nie",
+          "label": "Bleibt in Ihrem Kontobereich",
           "body": "Regeln aus Ihren eigenen Mandaten. Streng auf Ihr Konto begrenzt; der Dienst startet ohne Mandantenkennung nicht.",
           "items": [
             "Ihre Dokumente und Feststellungen",
@@ -1220,9 +1220,9 @@
         "title": "Diese Website",
         "body": [
           "Kein Kontaktformular, kein Nutzerkonto, kein Login. Es gibt hier nichts abzusenden.",
-          "Ihre Sprache ergibt sich aus der URL, auf der Sie sind. Kein Cookie, keine Erkennung über die IP-Adresse.",
+          "Ihre Sprache ergibt sich aus der URL. Die Sprachauswahl speichert Ihre Wahl für ein Jahr in einem Präferenz-Cookie, das beim nächsten Besuch der Hauptdomain verwendet wird. Keine IP-basierte Spracherkennung.",
           "Besuche werden mit Plausible Analytics gezählt: kein Cookie, kein Fingerprint, kein seitenübergreifendes Profil, Daten in der EU. Erfasst werden Seite, verweisende Website, Land und Gerätetyp.",
-          "Für diese Zählung wird nichts auf Ihrem Gerät gespeichert. Deshalb gibt es auf dieser Website kein Cookie-Banner."
+          "Die Besuchszählung verwendet keine Analyse-Cookies. Das Sprachpräferenz-Cookie wird nur gesetzt, wenn Sie selbst eine Sprache wählen."
         ]
       },
       {
@@ -1255,5 +1255,8 @@
       }
     ],
     "controller": "Verantwortlicher ist die unter der Nummer {kvk} bei der niederländischen Handelskammer eingetragene Einheit, auftretend unter dem Namen Factum Capital. Diese Seite ist eine Zusammenfassung in einfacher Sprache."
+  },
+  "structuredData": {
+    "serviceDescription": "KI-Due-Diligence über {disciplines} Disziplinen, mit Quellpassagen und verpflichtender Freigabe durch Ihren eigenen Prüfer vor dem Kundenexport. Die Analyse läuft standardmäßig in der EU, mit Zero Retention beim Modellanbieter. Rechts- und Steueranalyse sind auf niederländisches Recht abgestimmt. Nur für Pilotmandate: drei wesentliche Feststellungen, die Ihr Team noch nicht hatte, oder das Mandat ist kostenlos. Die Garantie gilt nicht für Demos."
   }
 }

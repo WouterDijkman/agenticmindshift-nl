@@ -129,7 +129,7 @@
         "evidence": "Quoted word for word, per citation",
         "severity": "One of five levels, Info to Critical",
         "document": "Data room or knowledge base, per citation",
-        "review": "Signed off by your reviewer before export"
+        "review": "Review status; export requires your sign-off"
       },
       "more": "+3 fields, on a wider screen"
     },
@@ -209,9 +209,9 @@
       "tag": "Illustrative",
       "values": {
         "module": "Legal — change of control",
-        "finding": "TargetCo’s largest customer can leave over the transaction itself, at thirty days’ notice and with no break fee.",
+        "finding": "Customer A can terminate its agreement with TargetCo on a change of control, with thirty days’ written notice.",
         "evidence": "Clause 14.2, quoted in full on the left.",
-        "severity": "High. The largest customer, thirty days’ notice, no break fee.",
+        "severity": "High — illustrative rating, subject to your reviewer’s assessment of the customer’s importance to the deal.",
         "document": "TargetCo — Master Services Agreement with Customer A, page 14.",
         "review": "Approved by your reviewer, by name, before export."
       }
@@ -220,7 +220,7 @@
     "guarantee": {
       "label": "The Findings Guarantee",
       "claim": "Three material findings your team did not already have, or the engagement is free.",
-      "note": "For pilot mandates. We carry the risk of this being early, not you."
+      "note": "For pilot mandates only. The guarantee does not apply to demos."
     },
     "links": {
       "governance": "How documents are handled",
@@ -332,7 +332,7 @@
     },
     "film": {
       "title": "What is actually in the room?",
-      "lead": "Every deal starts with that one question. Forty-five seconds: three hundred documents, one weekend, and a clause on page fourteen that lets your biggest customer walk away the week you sign.",
+      "lead": "A short film: three hundred documents, one weekend, and a clause on page fourteen allowing a customer to terminate on a change of control with thirty days’ notice.",
       "note": "The example in the film is constructed on a fictional target and says so on screen. No client document appears. Your own run produces the same six fields, on your own room."
     }
   },
@@ -367,7 +367,7 @@
     "coverage": {
       "title": "The module library, in dispatch order",
       "lead": "A module that waits on another module’s output cannot start any earlier. That dependency sets the running order. Every module hands back findings.",
-      "note": "Derived from the dispatch graphs in the product source, not estimated. ZDR marks the modules whose provider routing is hard-gated to a zero-retention EU endpoint."
+      "note": "Derived from the dispatch graphs in the product source. ZDR marks the modules whose provider routing is hard-gated to zero retention. EU residency is the default."
     },
     "pipeline": {
       "title": "From upload to a finished finding",
@@ -403,7 +403,7 @@
     },
     "grounding": {
       "title": "Four checks, each narrower than the last",
-      "lead": "A claim has to survive all four. One failure sends it back.",
+      "lead": "These checks help expose evidence gaps. Your reviewer decides what can be used.",
       "catchLabel": "Catches",
       "layers": [
         {
@@ -413,7 +413,7 @@
         },
         {
           "title": "Lexical quote check",
-          "body": "The quoted text has to appear in the cited passage, character for character.",
+          "body": "The quoted text is checked against the source passage, allowing for formatting and PDF-extraction differences.",
           "catches": "Paraphrase presented as a verbatim excerpt."
         },
         {
@@ -423,11 +423,11 @@
         },
         {
           "title": "Second-opinion verify",
-          "body": "A local natural-language-inference model re-runs the judgement. This layer fails closed.",
-          "catches": "Whatever the first three let through."
+          "body": "Claims still disputed after repair can receive a second model judgement and an optional local NLI check. Without supporting evidence from either, the warning remains.",
+          "catches": "Potential false negatives from the first judgement."
         }
       ],
-      "repair": "Claims that fail get one repair attempt: re-quote from source, then re-judge. Claims that still fail are cut or marked unconfirmed."
+      "repair": "Failed claims can be re-quoted and re-checked. Remaining evidence gaps are marked for review."
     },
     "contract": {
       "title": "The output contract, field by field",
@@ -465,7 +465,7 @@
           "fail": "No sign-off, no client export. What was not reviewed goes along marked as such."
         }
       ],
-      "note": "A claim that fails a check gets one repair attempt: re-quote from source, then re-judge. What still fails is either cut or delivered marked unconfirmed. Unconfirmed is a legitimate output. A quietly dropped claim is not."
+      "note": "A failed check can trigger repair and another judgement. Remaining evidence gaps are marked for your reviewer; a claim’s review status stays visible."
     },
     "blocks": {
       "title": "{blocks} hard-block conditions",
@@ -573,8 +573,8 @@
         "No audited accuracy rate. Internal benchmarks are single-dataset and unaudited.",
         "No claim that the human gate is optional. It is mandatory.",
         "No completed public case studies yet.",
-        "No product-level technical due diligence. Source-code review, architecture assessment and scalability testing sit outside the standard pass.",
-        "No integrity or reputational screening. Background checks on people and counterparties run outside this platform.",
+        "Factum does not perform product-level technical due diligence, source-code review, architecture assessment or scalability testing.",
+        "Factum does not perform integrity or reputational screening, or background checks on people and counterparties.",
         "No jurisdiction-free legal and tax read. Both are tuned to Dutch law; for a target elsewhere, have local counsel check them.",
         "No general availability. Factum is pre-launch."
       ]
@@ -596,7 +596,7 @@
         },
         {
           "q": "What happens when the model doesn’t know?",
-          "a": "It has to say so. A finding is either backed by a citation that survived four checks or flagged as unconfirmed. Fabricated sources are one of the {blocks} hard-block conditions."
+          "a": "A finding carries its evidence and review status. Evidence gaps remain visible. Fabricated sources are one of the {blocks} hard-block conditions."
         },
         {
           "q": "How do I know the findings hold?",
@@ -608,7 +608,7 @@
         },
         {
           "q": "How often does AI just cite something wrong?",
-          "a": "More often than you’d think. Every citation here passes four checks before it reaches the page."
+          "a": "AI can misattribute sources. Factum combines citation, quotation and entailment checks with targeted second opinions. Your reviewer checks the result."
         },
         {
           "q": "What deal size is this built for?",
@@ -840,7 +840,7 @@
       "title": "The one mandatory human step",
       "lead": "Your own reviewer signs off before any client export. These are the rules behind it.",
       "items": [
-        "Every finding is checked against its source passage before it reaches your reviewer.",
+        "The pipeline checks claims against retrieved source passages and records evidence gaps for your reviewer.",
         "The gate runs every time, automatically.",
         "{blocks} hard-block conditions stop a draft and put it in front of your reviewer, unapproved.",
         "Your reviewer signs off each module’s summary, the top ten risks and every condition precedent. Without that, no client export leaves the platform. The rest goes along marked as not separately reviewed.",
@@ -869,7 +869,7 @@
         "No single named data centre. By default, analysis runs on Vertex AI’s EU multi-region endpoint.",
         "No asserted GDPR-compliance status. Processing terms belong in an engagement agreement.",
         "No breach-notification or disaster-recovery commitment stated here.",
-        "No audited accuracy rate. The one benchmark on this page is internal and single-dataset."
+        "No audited accuracy rate. Internal benchmarks are single-dataset and unaudited."
       ],
       "note": "If your process needs any of these in writing, raise it on the call. There is a real answer either way."
     },
@@ -880,13 +880,13 @@
       "note": "NDA first, sent the same day. A deal you closed last year works too."
     },
     "zdr": {
-      "title": "Three modules never run on a model that retains data",
+      "title": "{zdr} modules never run on a model that retains data",
       "lead": "Zero data retention is a routing rule in the code, not a promise on a page. Tax, legal and financial are gated on it.",
       "items": [
         "The gate sits at the one point every model call passes through.",
         "A provider that retains data is swapped for a zero-retention one, and the swap is logged.",
         "By default that is Google Vertex AI in the EU, under a Data Processing Agreement.",
-        "The other {other} modules run on the same infrastructure. Today every provider in the platform is zero-retention; for these three it is enforced in code."
+        "The other {other} modules run on the same infrastructure. Today every provider in the platform is zero-retention; for these {zdr} it is enforced in code."
       ]
     },
     "learning": {
@@ -1220,9 +1220,9 @@
         "title": "This website",
         "body": [
           "No contact form, no account system, no login. There is nothing here to submit.",
-          "Your language comes from the URL you are on. No cookie, no IP-based detection.",
+          "Your language comes from the URL. Choosing a language in the switcher stores a preference cookie for one year, used when you return to the bare domain. No IP-based language detection.",
           "Visits are counted with Plausible Analytics: no cookie, no fingerprint, no cross-site profile, data held in the EU. It records the page, the referring site, the country and the device type.",
-          "That count writes nothing to your device. That is why this site carries no cookie banner."
+          "Visit counting uses no analytics cookies. The language-preference cookie is set only when you choose a language."
         ]
       },
       {
@@ -1255,5 +1255,8 @@
       }
     ],
     "controller": "The controller is registered with the Dutch Chamber of Commerce under number {kvk}, trading as Factum Capital. This page is a plain-language summary."
+  },
+  "structuredData": {
+    "serviceDescription": "AI due diligence across {disciplines} disciplines, with source passages and a mandatory sign-off by your own reviewer before client export. Analysis runs in the EU by default, with zero retention at the model provider. Legal and tax analysis is tuned to Dutch law. For pilot mandates only: three material findings your team did not already have, or the engagement is free. The guarantee does not apply to demos."
   }
 }

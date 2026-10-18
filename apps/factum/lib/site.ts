@@ -105,7 +105,8 @@ export const LOCALE_NAMES: Record<string, string> = {
  *
  * Listed in dispatch order, which is also the order the wave diagram draws.
  * `zdr` marks the modules whose provider routing is hard-gated to a
- * zero-retention EU endpoint in code (`ZDR_REQUIRED_MODULES`), not by setting.
+ * zero-retention provider in code (`ZDR_REQUIRED_MODULES`), not by setting.
+ * EU residency is a separate gate, enabled by default and chosen per deal.
  *
  * Re-derived 8 September 2026 against the live registry, which had drifted
  * from what this array said, in two separate ways found on two separate
@@ -148,7 +149,7 @@ export type FactumModule = {
    * `MODULES` currently uses them. See the header comment above for why.
    */
   readonly kind: 'analysis' | 'deliverable' | 'monitoring';
-  /** Provider routing hard-gated to zero-retention EU inference. */
+  /** Provider routing hard-gated to zero retention; EU residency is separate. */
   readonly zdr?: true;
 };
 
@@ -168,7 +169,7 @@ export const MODULES: readonly FactumModule[] = [
   { slug: 'operational', wave: 1, kind: 'analysis' },
   { slug: 'ai-dd', wave: 1, kind: 'analysis' },
   // Wave 2 — reads wave 1 (hr, commercial) only. Its own wave since 4
-  // September 2026, so tax (wave 3) can actually read its finished output.
+  // September 2026, so tax (wave 4) can actually read its finished output.
   { slug: 'legal', wave: 2, kind: 'analysis', zdr: true },
   // Wave 4 — reads wave 3 (financial) and wave 2 (legal).
   { slug: 'tax', wave: 4, kind: 'analysis', zdr: true },

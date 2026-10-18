@@ -129,7 +129,7 @@
         "evidence": "Citado literalmente, por cita",
         "severity": "Uno de cinco niveles, de Info a Crítico",
         "document": "Data room o base de conocimiento, por cita",
-        "review": "Aprobada por su revisor antes de exportar"
+        "review": "Estado de revisión; exportar exige su aprobación"
       },
       "more": "+3 campos, en una pantalla más ancha"
     },
@@ -152,15 +152,15 @@
       }
     ],
     "modules": [
-      "Financial DD",
-      "Commercial DD",
-      "HR DD",
-      "Operational DD",
-      "AI DD",
-      "Legal DD",
-      "Tax DD",
-      "Deal economics",
-      "Valuation"
+      "DD financiera",
+      "DD comercial",
+      "DD de RR. HH.",
+      "DD operativa",
+      "DD de IA",
+      "DD legal",
+      "DD fiscal",
+      "Economía de la operación",
+      "Valoración"
     ],
     "waves": [
       {
@@ -180,12 +180,12 @@
         "body": "Lee financiero y legal antes de razonar: una posición fiscal es consecuencia de la estructura que la lectura financiera acaba de describir. A menudo se solapa con lo que legal encontró en ella."
       },
       {
-        "title": "Deal economics",
+        "title": "Economía de la operación",
         "body": "Lee todo lo anterior y pregunta qué rinde realmente la operación."
       },
       {
         "title": "Valoración",
-        "body": "Lee deal economics encima de todo lo anterior, y recalcula el precio atravesando los hallazgos en lugar de rodearlos."
+        "body": "Lee economía de la operación encima de todo lo anterior, y recalcula el precio atravesando los hallazgos en lugar de rodearlos."
       }
     ],
     "chart": {
@@ -209,9 +209,9 @@
       "tag": "Ilustrativo",
       "values": {
         "module": "Legal — cambio de control",
-        "finding": "El mayor cliente de TargetCo puede marcharse por la propia operación, con treinta días de preaviso y sin indemnización.",
+        "finding": "El Cliente A puede resolver su contrato con TargetCo en caso de cambio de control, con un preaviso escrito de treinta días.",
         "evidence": "Cláusula 14.2, citada íntegra a la izquierda.",
-        "severity": "Alta. El mayor cliente, treinta días de preaviso, sin indemnización.",
+        "severity": "Alta — clasificación ilustrativa, que su revisor debe contrastar con la importancia de este cliente para la operación.",
         "document": "TargetCo — Contrato marco con Cliente A, página 14.",
         "review": "Aprobado por su revisor, con nombre, antes de exportar."
       }
@@ -220,7 +220,7 @@
     "guarantee": {
       "label": "La garantía de hallazgos",
       "claim": "Tres hallazgos materiales que su equipo no hubiera identificado ya, o el encargo es gratuito.",
-      "note": "Para mandatos piloto. Nosotros asumimos el riesgo de que esto sea temprano, no usted."
+      "note": "Solo para mandatos piloto. La garantía no se aplica a las demos."
     },
     "links": {
       "governance": "Cómo se tratan los documentos",
@@ -332,7 +332,7 @@
     },
     "film": {
       "title": "¿Qué hay realmente en el data room?",
-      "lead": "Cada operación empieza con esa única pregunta. Cuarenta y cinco segundos: trescientos documentos, un fin de semana y una cláusula en la página catorce que permite a su mayor cliente marcharse la semana en que usted firma.",
+      "lead": "Un breve vídeo: trescientos documentos, un fin de semana. Una cláusula en la página catorce que permite a un cliente resolver por cambio de control con treinta días de preaviso.",
       "note": "El ejemplo de la película está construido sobre un target ficticio y así lo indica en pantalla. No aparece ningún documento de cliente. Su propia ejecución produce los mismos seis campos, sobre su propio data room."
     }
   },
@@ -367,7 +367,7 @@
     "coverage": {
       "title": "La biblioteca de módulos, en orden de despacho",
       "lead": "Un módulo que espera el resultado de otro no puede empezar antes. Esa dependencia fija el orden. Cada módulo devuelve hallazgos.",
-      "note": "Derivado de los grafos de despacho del código fuente, no estimado. ZDR marca los módulos cuyo enrutado está fijado a un endpoint europeo de retención cero."
+      "note": "Derivado de los grafos de despacho del código fuente. ZDR marca los módulos cuyo enrutado exige retención cero. El procesamiento en la UE es la opción predeterminada."
     },
     "pipeline": {
       "title": "De la carga al hallazgo terminado",
@@ -403,7 +403,7 @@
     },
     "grounding": {
       "title": "Cuatro comprobaciones, cada una más estrecha que la anterior",
-      "lead": "Una afirmación tiene que superar las cuatro. Un fallo la devuelve.",
+      "lead": "Estas comprobaciones ayudan a mostrar lagunas de evidencia. Su revisor decide qué se puede utilizar.",
       "catchLabel": "Detecta",
       "layers": [
         {
@@ -413,7 +413,7 @@
         },
         {
           "title": "Comprobación léxica de la cita",
-          "body": "El texto citado debe aparecer en el pasaje, carácter por carácter.",
+          "body": "El texto citado se coteja con el pasaje de origen, normalizando diferencias de formato y extracción de PDF.",
           "catches": "Paráfrasis presentada como cita literal."
         },
         {
@@ -423,11 +423,11 @@
         },
         {
           "title": "Verificación de segunda opinión",
-          "body": "Un modelo NLI local repite el juicio. Esta capa falla en cerrado.",
-          "catches": "Lo que dejaron pasar las tres primeras."
+          "body": "Las afirmaciones aún discutidas tras la reparación pueden recibir un segundo juicio de modelo y una comprobación NLI local opcional. Sin respaldo de ninguno, el aviso permanece.",
+          "catches": "Posibles rechazos incorrectos del primer juicio."
         }
       ],
-      "repair": "Las afirmaciones que fallan reciben un intento de reparación: volver a citar desde la fuente y volver a juzgar. Lo que sigue fallando se elimina o se marca como no confirmado."
+      "repair": "Las afirmaciones rechazadas pueden volver a citarse desde la fuente y comprobarse. Las lagunas restantes se marcan para revisión."
     },
     "contract": {
       "title": "El contrato de salida, campo a campo",
@@ -465,7 +465,7 @@
           "fail": "Sin aprobación, no hay exportación para el cliente. Lo no revisado va incluido con esa mención."
         }
       ],
-      "note": "Una afirmación que no pasa una comprobación tiene un intento de reparación: volver a citar desde la fuente y volver a juzgar. Lo que sigue fallando se elimina o se entrega marcado como no confirmado. No confirmado es un resultado legítimo. Una afirmación descartada en silencio no lo es."
+      "note": "Una comprobación fallida puede activar una reparación y otro juicio. Las lagunas restantes se marcan para su revisor; el estado de revisión de cada afirmación sigue visible."
     },
     "blocks": {
       "title": "{blocks} bloqueos duros",
@@ -573,8 +573,8 @@
         "Sin tasa de exactitud auditada. Los benchmarks internos son de un solo conjunto de datos y no están auditados.",
         "Sin afirmar que la puerta humana sea opcional. Es obligatoria.",
         "Todavía sin casos públicos cerrados.",
-        "Sin due diligence técnica a nivel de producto. La revisión de código fuente, la evaluación de la arquitectura y las pruebas de escalabilidad quedan fuera de la pasada estándar.",
-        "Sin investigación de integridad ni reputacional. Las comprobaciones de antecedentes sobre personas y contrapartes corren fuera de esta plataforma.",
+        "Factum no realiza due diligence técnica a nivel de producto, revisión de código fuente, evaluación de arquitectura ni pruebas de escalabilidad.",
+        "Factum no realiza investigaciones de integridad o reputación ni comprobaciones de antecedentes sobre personas o contrapartes.",
         "Sin análisis legal y fiscal independiente de la jurisdicción. Ambos están ajustados al derecho neerlandés; para un target en otro país, que los revisen asesores locales.",
         "Sin disponibilidad general. Factum está en fase previa al lanzamiento."
       ]
@@ -596,7 +596,7 @@
         },
         {
           "q": "¿Qué pasa cuando el modelo no lo sabe?",
-          "a": "Tiene que decirlo. Un hallazgo o está respaldado por una cita que ha sobrevivido a cuatro comprobaciones, o va marcado como no confirmado. Las fuentes fabricadas son uno de los {blocks} bloqueos duros."
+          "a": "Un hallazgo lleva su evidencia y estado de revisión. Las lagunas siguen visibles. Las fuentes fabricadas son uno de los {blocks} bloqueos duros."
         },
         {
           "q": "¿Cómo sé que los hallazgos se sostienen?",
@@ -608,7 +608,7 @@
         },
         {
           "q": "¿Con qué frecuencia cita mal la IA sin más?",
-          "a": "Más a menudo de lo que cree. Cada cita aquí pasa cuatro comprobaciones antes de llegar a la página."
+          "a": "La IA puede atribuir mal las fuentes. Factum combina controles de citas, extractos e implicación con segundas opiniones específicas. Su revisor comprueba el resultado."
         },
         {
           "q": "¿Para qué tamaño de operación está pensado esto?",
@@ -840,7 +840,7 @@
       "title": "La única puerta humana obligatoria",
       "lead": "Su propio revisor aprueba antes de cualquier exportación para el cliente. Estas son las reglas detrás.",
       "items": [
-        "Cada hallazgo se contrasta con su pasaje de origen antes de llegar a su revisor.",
+        "El pipeline contrasta las afirmaciones con los pasajes recuperados y registra las lagunas de evidencia para su revisor.",
         "La puerta se ejecuta siempre, de forma automática.",
         "{blocks} bloqueos duros detienen un borrador y lo llevan a su revisor, sin aprobar.",
         "Su revisor aprueba el resumen de cada módulo, los diez riesgos principales y cada condición suspensiva. Sin eso, ninguna exportación para el cliente sale de la plataforma. El resto va incluido con la mención «no revisado por separado».",
@@ -869,7 +869,7 @@
         "Ningún centro de datos concreto con nombre. Por defecto, el análisis se ejecuta en el endpoint multirregión de la UE de Vertex AI.",
         "Sin declarar un estado de cumplimiento del RGPD. Las condiciones de tratamiento van en el contrato del encargo.",
         "Sin notificación de brechas ni compromiso de recuperación en esta página.",
-        "Sin tasa de exactitud auditada. El único benchmark de esta página es interno y de un solo conjunto de datos."
+        "Sin tasa de exactitud auditada. Los benchmarks internos se basan en un solo conjunto de datos y no están auditados."
       ],
       "note": "Si su proceso exige alguno de estos puntos por escrito, plantéelo en la llamada. En cualquier caso hay una respuesta real."
     },
@@ -880,13 +880,13 @@
       "note": "Primero el NDA, enviado el mismo día. Una operación que cerró el año pasado también sirve."
     },
     "zdr": {
-      "title": "Tres módulos nunca se ejecutan en un modelo que conserve datos",
+      "title": "{zdr} módulos nunca se ejecutan en un modelo que conserve datos",
       "lead": "La retención cero de datos es una regla de enrutado en el código, no una promesa en una página. Fiscal, legal y financiero dependen de esa puerta.",
       "items": [
         "La puerta está en el único punto por el que pasa cada llamada al modelo.",
         "Un proveedor que conserva datos se sustituye por uno de retención cero, y la sustitución queda registrada.",
         "Por defecto es Google Vertex AI en la UE, bajo un acuerdo de tratamiento de datos.",
-        "Los otros {other} módulos se ejecutan en la misma infraestructura. Hoy todos los proveedores de la plataforma son de retención cero; para estos tres está impuesto en el código."
+        "Los otros {other} módulos se ejecutan en la misma infraestructura. Hoy todos los proveedores de la plataforma son de retención cero; para estos {zdr} está impuesto en el código."
       ]
     },
     "learning": {
@@ -1220,9 +1220,9 @@
         "title": "Este sitio web",
         "body": [
           "Sin formulario de contacto, sin sistema de cuentas, sin inicio de sesión. Aquí no hay nada que enviar.",
-          "Su idioma se deriva de la URL en la que se encuentra. Sin cookie y sin detección por IP.",
+          "El idioma viene de la URL. Al elegirlo en el selector, una cookie de preferencias guarda su elección durante un año para las visitas al dominio principal. Sin detección por IP.",
           "Las visitas se cuentan con Plausible Analytics: sin cookie, sin huella digital, sin perfil entre sitios, datos en la UE. Se registran la página, el sitio de procedencia, el país y el tipo de dispositivo.",
-          "Ese recuento no guarda nada en su dispositivo. Por eso este sitio no muestra un banner de cookies."
+          "El recuento de visitas no utiliza cookies de analítica. La cookie de preferencia de idioma solo se guarda cuando usted elige un idioma."
         ]
       },
       {
@@ -1255,5 +1255,8 @@
       }
     ],
     "controller": "El responsable del tratamiento es la entidad inscrita en la Cámara de Comercio neerlandesa con el número {kvk}, que opera bajo el nombre Factum Capital. Esta página es un resumen en lenguaje claro."
+  },
+  "structuredData": {
+    "serviceDescription": "Due diligence con IA en {disciplines} disciplinas, con pasajes de origen y aprobación obligatoria de su propio revisor antes de exportar al cliente. El análisis se ejecuta por defecto en la UE, con retención cero en el proveedor del modelo. El análisis legal y fiscal está ajustado al derecho neerlandés. Solo para mandatos piloto: tres hallazgos materiales que su equipo aún no tenía, o el encargo es gratuito. La garantía no se aplica a las demos."
   }
 }

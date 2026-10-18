@@ -129,7 +129,7 @@
         "evidence": "Woordelijk geciteerd, per citaat",
         "severity": "Eén van vijf niveaus, van Info tot Kritiek",
         "document": "Data room of kennisbank, per citaat",
-        "review": "Afgetekend door uw reviewer vóór export"
+        "review": "Beoordelingsstatus; export vereist uw aftekening"
       },
       "more": "+3 velden, op een breder scherm"
     },
@@ -152,15 +152,15 @@
       }
     ],
     "modules": [
-      "Financial DD",
-      "Commercial DD",
-      "HR DD",
-      "Operational DD",
-      "AI DD",
-      "Legal DD",
-      "Tax DD",
-      "Deal economics",
-      "Valuation"
+      "Financiële DD",
+      "Commerciële DD",
+      "HR-DD",
+      "Operationele DD",
+      "AI-DD",
+      "Juridische DD",
+      "Fiscale DD",
+      "Dealeconomie",
+      "Waardering"
     ],
     "waves": [
       {
@@ -180,12 +180,12 @@
         "body": "Leest financieel en juridisch voordat het redeneert: een fiscale positie is een gevolg van de structuur die de financiële passage net heeft beschreven. Ze overlapt vaak met wat juridisch in die structuur vond."
       },
       {
-        "title": "Deal economics",
+        "title": "Dealeconomie",
         "body": "Leest alles wat erboven ligt en stelt de vraag wat de deal werkelijk oplevert."
       },
       {
         "title": "Waardering",
-        "body": "Leest deal economics bovenop alles daarvoor, en herrekent de prijs dóór de bevindingen heen in plaats van eromheen."
+        "body": "Leest dealeconomie bovenop alles daarvoor, en herrekent de prijs dóór de bevindingen heen in plaats van eromheen."
       }
     ],
     "chart": {
@@ -209,9 +209,9 @@
       "tag": "Illustratief",
       "values": {
         "module": "Legal — change of control",
-        "finding": "De grootste klant van TargetCo kan weglopen op de transactie zelf, met dertig dagen opzegtermijn en zonder afkoopsom.",
+        "finding": "Klant A kan de overeenkomst met TargetCo bij een wijziging van zeggenschap schriftelijk opzeggen met een termijn van dertig dagen.",
         "evidence": "Artikel 14.2, links volledig geciteerd.",
-        "severity": "Hoog. De grootste klant, dertig dagen opzegtermijn, geen afkoopsom.",
+        "severity": "Hoog — illustratieve weging, door uw reviewer te toetsen aan het belang van deze klant voor de deal.",
         "document": "TargetCo — Raamovereenkomst met Klant A, pagina 14.",
         "review": "Goedgekeurd door uw reviewer, met naam, vóór export."
       }
@@ -220,7 +220,7 @@
     "guarantee": {
       "label": "De bevindingengarantie",
       "claim": "Drie materiële bevindingen die uw eigen team nog niet had geïdentificeerd, of de opdracht is gratis.",
-      "note": "Voor pilotmandaten. Wij dragen het risico dat dit vroeg is, niet u."
+      "note": "Alleen voor pilotmandaten. De garantie geldt niet voor demo’s."
     },
     "links": {
       "governance": "Hoe documenten worden behandeld",
@@ -332,7 +332,7 @@
     },
     "film": {
       "title": "Wat ligt er werkelijk in de data room?",
-      "lead": "Elke deal begint met die ene vraag. Vijfenveertig seconden: driehonderd documenten, één weekend, en een clausule op pagina veertien waarmee uw grootste klant kan vertrekken in de week dat u tekent.",
+      "lead": "Een korte film: driehonderd documenten, één weekend, en een clausule op pagina veertien waarmee een klant bij een zeggenschapswijziging kan opzeggen met dertig dagen opzegtermijn.",
       "note": "Het voorbeeld in de film is geconstrueerd op een fictieve target en zegt dat in beeld. Er komt geen klantdocument in voor. Uw eigen run levert dezelfde zes velden op, over uw eigen data room."
     }
   },
@@ -367,7 +367,7 @@
     "coverage": {
       "title": "De modulebibliotheek, in dispatchvolgorde",
       "lead": "Een module die op de output van een andere module wacht, kan niet eerder starten. Die afhankelijkheid bepaalt de volgorde. Elke module levert bevindingen op.",
-      "note": "Afgeleid uit de dispatchgrafen in de broncode, niet geschat. ZDR markeert de modules waarvan de routing hard is vastgezet op een zero-retention EU-endpoint."
+      "note": "Afgeleid uit de dispatchgrafen in de broncode. ZDR markeert de modules waarvan de routing hard is vastgezet op zero retention. EU-verwerking is de standaard."
     },
     "pipeline": {
       "title": "Van upload tot een afgeronde bevinding",
@@ -403,7 +403,7 @@
     },
     "grounding": {
       "title": "Vier groundingchecks, elk smaller dan de vorige",
-      "lead": "Een claim moet alle vier overleven. Eén fout stuurt hem terug.",
+      "lead": "Deze controles helpen gaten in de onderbouwing zichtbaar te maken. Uw reviewer bepaalt wat bruikbaar is.",
       "catchLabel": "Vangt",
       "layers": [
         {
@@ -413,7 +413,7 @@
         },
         {
           "title": "Lexicale citaatcheck",
-          "body": "De geciteerde tekst moet letterlijk in de aangehaalde passage staan.",
+          "body": "De geciteerde tekst wordt vergeleken met de bronpassage, met normalisatie van opmaak en verschillen door PDF-extractie.",
           "catches": "Parafrase gepresenteerd als woordelijk citaat."
         },
         {
@@ -423,11 +423,11 @@
         },
         {
           "title": "Second-opinion verificatie",
-          "body": "Een lokaal NLI-model draait het oordeel opnieuw. Deze laag faalt gesloten.",
-          "catches": "Wat de eerste drie hebben doorgelaten."
+          "body": "Claims die na reparatie betwist blijven, kunnen een tweede modeloordeel en een optionele lokale NLI-check krijgen. Zonder steun uit een van beide blijft de waarschuwing staan.",
+          "catches": "Mogelijke onterechte afwijzingen door het eerste oordeel."
         }
       ],
-      "repair": "Claims die falen krijgen één reparatiepoging: opnieuw citeren uit de bron, dan opnieuw beoordelen. Wat dan nog faalt, gaat eruit of wordt gemarkeerd als onbevestigd."
+      "repair": "Afgekeurde claims kunnen opnieuw uit de bron worden geciteerd en gecontroleerd. Resterende gaten in de onderbouwing worden gemarkeerd voor review."
     },
     "contract": {
       "title": "Het outputcontract, veld voor veld",
@@ -465,7 +465,7 @@
           "fail": "Geen aftekening, geen klantexport. Wat niet is beoordeeld, gaat mee met die vermelding."
         }
       ],
-      "note": "Een claim die zakt voor een controle krijgt één herstelpoging: opnieuw citeren uit de bron, dan opnieuw beoordelen. Wat dan nog zakt wordt geschrapt of geleverd met het label onbevestigd. Onbevestigd is een legitieme uitkomst. Een stilletjes geschrapte claim niet."
+      "note": "Een afgekeurde controle kan reparatie en een nieuw oordeel uitlokken. Resterende gaten in de onderbouwing worden voor uw reviewer gemarkeerd; de beoordelingsstatus van een claim blijft zichtbaar."
     },
     "blocks": {
       "title": "{blocks} condities die automatische goedkeuring stoppen",
@@ -573,8 +573,8 @@
         "Geen geauditeerd accuratessepercentage. Interne benchmarks zijn één dataset en niet extern gecontroleerd.",
         "Geen claim dat de menselijke poort optioneel is. Die is verplicht.",
         "Nog geen afgeronde publieke cases.",
-        "Geen technische due diligence op productniveau. Broncode-review, architectuurbeoordeling en schaalbaarheidstests zitten niet in de standaardronde.",
-        "Geen integriteits- of reputatieonderzoek. Achtergrondchecks op personen en tegenpartijen lopen buiten dit platform om.",
+        "Factum doet geen technische due diligence op productniveau, broncode-review, architectuurbeoordeling of schaalbaarheidstests.",
+        "Factum doet geen integriteits- of reputatieonderzoek en geen achtergrondchecks op personen of tegenpartijen.",
         "Geen juridische en fiscale analyse los van jurisdictie. Beide zijn afgestemd op Nederlands recht; laat ze bij een target elders door lokale adviseurs toetsen.",
         "Geen algemene beschikbaarheid. Factum is pre-launch."
       ]
@@ -596,7 +596,7 @@
         },
         {
           "q": "Wat gebeurt er als het model het niet weet?",
-          "a": "Dan moet het dat zeggen. Een bevinding is óf gedekt door een bronverwijzing die vier checks heeft overleefd, óf gemarkeerd als onbevestigd. Verzonnen bronnen zijn één van de {blocks} harde blokkades."
+          "a": "Een bevinding draagt haar bewijs en beoordelingsstatus. Gaten in de onderbouwing blijven zichtbaar. Verzonnen bronnen zijn één van de {blocks} harde blokkades."
         },
         {
           "q": "Hoe weet ik dat de bevindingen kloppen?",
@@ -608,7 +608,7 @@
         },
         {
           "q": "Hoe vaak citeert AI gewoon verkeerd?",
-          "a": "Vaker dan u denkt. Elke verwijzing hier doorstaat vier controles voordat ze op de pagina komt."
+          "a": "AI kan naar de verkeerde bron verwijzen. Factum combineert citatie-, citaat- en entailmentcontroles met gerichte tweede beoordelingen. Uw reviewer controleert het resultaat."
         },
         {
           "q": "Voor welke dealgrootte is dit gebouwd?",
@@ -840,7 +840,7 @@
       "title": "De enige verplichte menselijke poort",
       "lead": "Uw eigen reviewer tekent af vóór elke klantexport. Dit zijn de regels erachter.",
       "items": [
-        "Elke bevinding wordt tegen de bronpassage gecontroleerd voordat ze uw reviewer bereikt.",
+        "De pijplijn controleert claims tegen opgehaalde bronpassages en legt gaten in de onderbouwing vast voor uw reviewer.",
         "De poort draait elke keer, automatisch.",
         "{blocks} harde blokkades stoppen een concept en leggen het niet goedgekeurd aan uw reviewer voor.",
         "Uw reviewer tekent de samenvatting van elke module af, de tien grootste risico’s en elke opschortende voorwaarde. Zonder die aftekening verlaat geen klantexport het platform. De rest gaat mee met de vermelding ‘niet afzonderlijk getoetst’.",
@@ -869,7 +869,7 @@
         "Geen met naam genoemd datacenter. Standaard draait de analyse op het EU-multiregio-endpoint van Vertex AI.",
         "Geen beweerde AVG-compliancestatus. Verwerkingsvoorwaarden horen in een opdrachtovereenkomst.",
         "Geen meldplicht- of uitwijktoezegging op deze pagina.",
-        "Geen geauditeerd accuratessepercentage. De ene benchmark op deze pagina is intern en één dataset."
+        "Geen geauditeerd accuratessepercentage. Interne benchmarks zijn gebaseerd op één dataset en niet extern gecontroleerd."
       ],
       "note": "Vereist uw proces een van deze punten op schrift, breng het dan op tijdens de call. Er is hoe dan ook een echt antwoord."
     },
@@ -880,13 +880,13 @@
       "note": "Eerst een NDA, dezelfde dag verstuurd. Een deal die u vorig jaar sloot werkt ook."
     },
     "zdr": {
-      "title": "Drie modules draaien nooit op een model dat gegevens bewaart",
+      "title": "{zdr} modules draaien nooit op een model dat gegevens bewaart",
       "lead": "Zero data retention is een routeringsregel in de code, geen belofte op een pagina. Fiscaal, juridisch en financieel zitten achter die poort.",
       "items": [
         "De poort zit op het ene punt waar elke modelaanroep doorheen gaat.",
         "Een aanbieder die gegevens bewaart, wordt vervangen door een zero-retention-aanbieder, en die vervanging wordt gelogd.",
         "Standaard is dat Google Vertex AI in de EU, onder een verwerkersovereenkomst.",
-        "De andere {other} modules draaien op dezelfde infrastructuur. Vandaag is elke aanbieder in het platform zero-retention; voor deze drie is dat in de code afgedwongen."
+        "De andere {other} modules draaien op dezelfde infrastructuur. Vandaag is elke aanbieder in het platform zero-retention; voor deze {zdr} is dat in de code afgedwongen."
       ]
     },
     "learning": {
@@ -1220,9 +1220,9 @@
         "title": "Deze website",
         "body": [
           "Geen contactformulier, geen accountsysteem, geen login. Er is hier niets te versturen.",
-          "Uw taal komt uit de URL waarop u zich bevindt. Geen cookie, geen detectie via IP.",
+          "Uw taal komt uit de URL. Kiest u een taal via de taalkeuze, dan bewaart een voorkeurscookie die keuze één jaar voor terugkeer naar het hoofddomein. Geen taaldetectie via IP.",
           "Bezoeken worden geteld met Plausible Analytics: geen cookie, geen fingerprint, geen profiel over websites heen, data binnen de EU. Geregistreerd worden pagina, verwijzende site, land en apparaattype.",
-          "Voor die telling wordt niets op uw apparaat gezet. Daarom staat er geen cookiebanner op deze site."
+          "De bezoekentelling gebruikt geen analytische cookies. De taalvoorkeurscookie wordt alleen gezet wanneer u zelf een taal kiest."
         ]
       },
       {
@@ -1255,5 +1255,8 @@
       }
     ],
     "controller": "De verwerkingsverantwoordelijke is ingeschreven bij de Kamer van Koophandel onder nummer {kvk}, handelend onder de naam Factum Capital. Deze pagina is een samenvatting in gewone taal."
+  },
+  "structuredData": {
+    "serviceDescription": "AI due diligence over {disciplines} disciplines, met bronpassages en verplichte aftekening door uw eigen reviewer vóór klantexport. De analyse draait standaard in de EU, met zero retention bij de modelaanbieder. Juridische en fiscale analyse zijn afgestemd op Nederlands recht. Alleen voor pilotmandaten: drie materiële bevindingen die uw team nog niet had, of de opdracht is gratis. De garantie geldt niet voor demo’s."
   }
 }

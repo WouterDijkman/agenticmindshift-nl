@@ -1,4 +1,4 @@
-import { DISCIPLINE_COUNT, KVK, SITE_URL } from './site';
+import { KVK, SITE_URL } from './site';
 
 /**
  * Structured data, emitted once per page as a linked `@graph`.
@@ -129,16 +129,16 @@ function organization(description: string) {
  * engagement, what it covers, where analysis runs, and the guarantee with its
  * condition attached. No price, because the site states none.
  */
-function service(locale: string) {
+function service(locale: string, copy: { type: string; description: string }) {
   return {
     '@type': 'Service',
     '@id': SERVICE_ID,
     name: 'Diligence Sprint',
-    serviceType: 'AI-driven due diligence for M&A and private equity',
+    serviceType: copy.type,
     provider: { '@id': ORG_ID },
     url: `${SITE_URL}/${locale}/diligence-sprint`,
     availableLanguage: ['en', 'nl'],
-    description: `${DISCIPLINE_COUNT} disciplines run over the whole data room in dependency order. Every finding carries a verbatim excerpt, its source document and location, and a severity, and the client’s own reviewer signs off before any client export. By default, analysis runs on Google Vertex AI in the EU, with zero retention at the model provider. Legal and tax analysis is tuned to Dutch law. Findings Guarantee on pilot mandates: three material findings the client did not already have, or the engagement is free.`,
+    description: copy.description,
     termsOfService: `${SITE_URL}/${locale}/governance`
   };
 }
@@ -159,13 +159,17 @@ function website(locale: string, name: string) {
  * carries it. `Organization`, `WebSite` and the two `Person` nodes never vary
  * by page, so there is nothing for a page to pass in but its language.
  */
-export function siteSchema(locale: string, description: string) {
+export function siteSchema(
+  locale: string,
+  description: string,
+  serviceCopy: { type: string; description: string }
+) {
   return {
     '@context': 'https://schema.org',
     '@graph': [
       organization(description),
       website(locale, 'Factum Capital'),
-      service(locale),
+      service(locale, serviceCopy),
       ...people()
     ]
   };
