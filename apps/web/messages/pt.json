@@ -128,7 +128,7 @@
   },
   "contact": {
     "meta_title": "Contacto",
-    "meta_description": "Marque uma chamada gratuita de vinte minutos com Wouter Dijkman, veja como funciona um mandato ou envie um email. Resposta em dois dias úteis.",
+    "meta_description": "Marque uma chamada gratuita de vinte minutos com Wouter Dijkman, veja como funciona um projeto ou envie um email. Resposta em dois dias úteis.",
     "eyebrow": "Contacto",
     "heading": "Primeiro pergunte. Decidir vem depois.",
     "subtext": "Marque uma conversa de vinte minutos, ou leia primeiro como funciona um projeto. A agenda é sua.",
@@ -305,7 +305,7 @@
     "s7_heading": "7. Os seus direitos",
     "s7_body": "Tem direito de acesso, retificação, apagamento, limitação do tratamento, portabilidade dos dados e oposição. Pode dirigir o seu pedido a wouter@agenticmindshift.nl. Pode também apresentar uma reclamação à autoridade de proteção de dados competente.",
     "s8_heading": "8. Cookies",
-    "s8_body": "O site não coloca cookies. As visitas são contadas com o Plausible Analytics: sem cookie, sem fingerprint, sem perfil entre sites. São registados a página, o site de origem, o país e o tipo de dispositivo. Para essa contagem nada é colocado no seu dispositivo. Por isso não há banner de cookies neste site. Se marcar uma conversa através do nosso link de agenda, nessa página aplicam-se as condições desse fornecedor.",
+    "s8_body": "O site coloca um único cookie, e apenas quando escolhe um idioma no seletor: guarda essa escolha durante um ano. As visitas são contadas com o Plausible Analytics: sem cookie, sem fingerprint, sem perfil entre sites. São registados a página, o site de origem, o país e o tipo de dispositivo. Para essa contagem nada é colocado no seu dispositivo. Por isso não há banner de cookies neste site. Se marcar uma conversa através do nosso link de agenda, nessa página aplicam-se as condições desse fornecedor.",
     "s9_heading": "9. Alterações",
     "s9_body": "Reservamo-nos o direito de alterar esta declaração. A versão mais atualizada estará sempre nesta página."
   },

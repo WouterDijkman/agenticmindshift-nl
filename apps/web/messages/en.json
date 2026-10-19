@@ -128,7 +128,7 @@
   },
   "contact": {
     "meta_title": "Contact",
-    "meta_description": "Book a free twenty-minute call with Wouter Dijkman, see how an engagement works, or send an email. Reply within two working days.",
+    "meta_description": "Book a free twenty-minute call with Wouter Dijkman, see how an engagement works, or send an email. We reply within two working days.",
     "eyebrow": "Contact",
     "heading": "Ask a question first. Deciding comes later.",
     "subtext": "Book a twenty-minute call, or first see how an engagement works. You set the agenda.",
@@ -305,7 +305,7 @@
     "s7_heading": "7. Your rights",
     "s7_body": "You have the right to access, rectification, erasure, restriction of processing, data portability and objection. A request can be directed to wouter@agenticmindshift.nl. You may also lodge a complaint with the supervisory authority.",
     "s8_heading": "8. Cookies",
-    "s8_body": "The website sets no cookies. Visits are counted with Plausible Analytics: no cookie, no fingerprint, no profile across websites. What is recorded is page, referring site, country and device type. Nothing is placed on your device for that count. That is why there is no cookie banner on this site. If you book a call through our scheduling link, that provider’s terms apply on their page.",
+    "s8_body": "The website sets one cookie, and only when you choose a language in the language switcher: it remembers that choice for one year. Visits are counted with Plausible Analytics: no cookie, no fingerprint, no profile across websites. What is recorded is page, referring site, country and device type. Nothing is placed on your device for that count. That is why there is no cookie banner on this site. If you book a call through our scheduling link, that provider’s terms apply on their page.",
     "s9_heading": "9. Changes",
     "s9_body": "We reserve the right to amend this statement. The most current version is always on this page."
   },
