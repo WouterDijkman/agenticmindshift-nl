@@ -31,7 +31,7 @@ export function proxy(request: NextRequest) {
   //      highest-authority page was being sampled in whichever language the
   //      geo table happened to give a US IP.
   //
-  // So `/` now *renders* rather than redirects. It is a rewrite, not a
+  // From August to October 2026 `/` *rendered* rather than redirected. It is a rewrite, not a
   // redirect: the URL in the address bar stays `/`, the response is a 200 with
   // the Dutch homepage in it, and `generateMetadata` receives `locale: 'nl'`
   // and therefore emits `canonical: https://…/nl`. That canonical is the
@@ -67,18 +67,16 @@ export function proxy(request: NextRequest) {
       return response;
     }
 
-    // Everyone else — every first-time visitor, every crawler — gets the
-    // homepage itself.
+    // Everyone else — every first-time visitor, every crawler — goes to
+    // `/nl` with a permanent redirect. This replaces the rewrite described
+    // above. Search Console (URL inspection of `/nl`, 19-10-2026) showed
+    // Google ignoring the `/nl` canonical on the rewritten `/` and indexing
+    // `/` instead: "Duplicate, Google chose different canonical than user".
+    // A fixed 308 keeps both reasons the old 307 was dropped out of play: it
+    // is the same answer for every crawler from every country, and it costs
+    // one hop to a page that renders. URL, canonical and hreflang now agree.
     url.pathname = `/${routing.defaultLocale}`;
-    // No `Vary: Cookie` on this branch, and not for want of trying. Next owns
-    // `Vary` on a rendered response — it overwrites whatever the proxy or
-    // `next.config.ts` `headers()` sets with its own RSC list (`rsc,
-    // next-router-state-tree, …`), which was verified by curl both ways. What
-    // makes that safe rather than merely unavoidable: the proxy runs on every
-    // request to a matched path, ahead of any cache lookup, so the branch above
-    // is re-evaluated for each visitor even when this body is served from the
-    // edge. A shared cache never gets to answer `/` on its own.
-    return NextResponse.rewrite(url);
+    return NextResponse.redirect(url, 308);
   }
 
   const resolved = resolveMarketingUrl(

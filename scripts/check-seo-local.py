@@ -121,8 +121,13 @@ for host,(app,port,default,count) in SITES.items():
             h=Head(html)
             assert not any(x.get('rel')=='canonical' for x in h.links),(host,missing,'canonical')
             assert any('noindex' in m.get('content','') for m in h.meta),(host,missing,'no noindex')
-        status,_,html=get(host,'/'); assert status==200
-        assert [x.get('href') for x in Head(html).links if x.get('rel')=='canonical']==[f'https://{host}/{default}']
+        status,headers,html=get(host,'/')
+        if app=='web':
+            # `/` is a permanent redirect to `/nl` since 19-10-2026.
+            assert status==308 and urlparse(headers.get('location','')).path==f'/{default}',(host,'/',status)
+        else:
+            assert status==200
+            assert [x.get('href') for x in Head(html).links if x.get('rel')=='canonical']==[f'https://{host}/{default}']
     print(f'{app}: {count} sitemap pages: 200, indexable, self-canonical, hreflang, localized titles/descriptions, JSON-LD; robots/llms/key checks passed')
 
 if not ARTIFACTS:
