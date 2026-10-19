@@ -13,10 +13,10 @@ Factum Capital is co-founded by Wouter Dijkman and Daniel Dropuljic. It has no p
 - Every finding carries the supporting passage, quoted word for word, with its source document and location.
 - Eight hard-block conditions end the automated loop early and put the draft in front of the client's reviewer, unapproved.
 - Analysis runs on EU endpoints by default, with zero retention at the model provider and pseudonymisation before analysis.
-- Findings Guarantee, for pilot mandates only: three material findings the client's team did not already have, or the engagement is free.
-- Dutch Chamber of Commerce (KvK) number: 99495945.
+- Findings Guarantee, for pilot mandates only: three material findings the client's team did not already have, or the engagement is free. The guarantee does not apply to demos.
+- Engagements are currently contracted under Dutch Chamber of Commerce (KvK) registration 99495945. Factum Capital is not yet a separate legal entity.
 
-## Also searched as
+## Terminology by language
 
 - English: AI due diligence, AI data room review, AI-assisted due diligence for private equity and M&A, sell-side data room readiness.
 - Dutch: AI due diligence, AI-review van de dataroom, dataroom marktklaar voor sell-side brokers.
