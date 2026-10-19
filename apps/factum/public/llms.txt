@@ -6,6 +6,24 @@ The client’s team works with its own data room and reviews the findings. Findi
 
 Factum Capital is co-founded by Wouter Dijkman and Daniel Dropuljic. It has no paying clients or public client case studies yet. Agentic Mindshift clients are not Factum clients. No audited accuracy rate is claimed. Technical due diligence, code review, integrity screening and ESG are outside this product’s scope.
 
+## Key facts
+
+- Nine analysis modules run in six dependent waves. Wave 1 runs commercial, HR, operational and AI in parallel; legal, financial, tax, deal economics and valuation follow, each reading the waves before it.
+- Eight disciplines on the customer-facing list: financial, commercial, legal, tax, HR, AI, operational and valuation (valuation includes deal economics).
+- Every finding carries the supporting passage, quoted word for word, with its source document and location.
+- Eight hard-block conditions end the automated loop early and put the draft in front of the client's reviewer, unapproved.
+- Analysis runs on EU endpoints by default, with zero retention at the model provider and pseudonymisation before analysis.
+- Findings Guarantee, for pilot mandates only: three material findings the client's team did not already have, or the engagement is free.
+- Dutch Chamber of Commerce (KvK) number: 99495945.
+
+## Also searched as
+
+- English: AI due diligence, AI data room review, AI-assisted due diligence for private equity and M&A, sell-side data room readiness.
+- Dutch: AI due diligence, AI-review van de dataroom, dataroom marktklaar voor sell-side brokers.
+- German: KI-gestützte Due Diligence (analysis of a data room with AI, not due diligence of AI systems), KI-Prüfung des Data Rooms.
+- Spanish: due diligence con IA, revisión del data room con IA.
+- Portuguese: due diligence com IA, revisão do data room com IA.
+
 ## Pages
 
 ### en
@@ -74,4 +92,4 @@ Factum Capital is co-founded by Wouter Dijkman and Daniel Dropuljic. It has no p
 - [Sitemap](https://www.factumcapital.eu/sitemap.xml)
 - [Crawler policy](https://www.factumcapital.eu/robots.txt)
 
-Updated: 2026-10-18. The linked pages are the authoritative source for current details.
+Updated: 2026-10-19. The linked pages are the authoritative source for current details.
