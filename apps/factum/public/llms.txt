@@ -14,7 +14,7 @@ Factum Capital is co-founded by Wouter Dijkman and Daniel Dropuljic. It has no p
 - Eight hard-block conditions end the automated loop early and put the draft in front of the client's reviewer, unapproved.
 - Analysis runs on EU endpoints by default, with zero retention at the model provider and pseudonymisation before analysis.
 - Findings Guarantee, for pilot mandates only: three material findings the client's team did not already have, or the engagement is free. The guarantee does not apply to demos.
-- Engagements are currently contracted under Dutch Chamber of Commerce (KvK) registration 99495945. Factum Capital is not yet a separate legal entity.
+- The Factum Capital B.V. entities are in incorporation (in oprichting). Until they are registered, engagements are contracted under Dutch Chamber of Commerce (KvK) registration 99495945.
 
 ## Terminology by language
 
