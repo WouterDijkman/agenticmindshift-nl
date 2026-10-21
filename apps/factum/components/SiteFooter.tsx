@@ -1,11 +1,19 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { FOOTER_NAV, KVK, REFERENCE_NAV } from '@/lib/site';
+import { GUIDE_SLUGS, isGuideLocale } from '@/lib/guideRoutes';
+import { getGuide } from '@/lib/guides';
 
 export default async function SiteFooter() {
   const t = await getTranslations('footer');
   const tn = await getTranslations('nav');
   const year = new Date().getFullYear();
+  const locale = await getLocale();
+  // The en/nl decision pages. Listed here because, like the reference page,
+  // the header leaves them out; de/es/pt have no such pages.
+  const guides = isGuideLocale(locale)
+    ? GUIDE_SLUGS.map((slug) => ({ href: `/${slug}`, label: getGuide(slug, locale).shortName }))
+    : [];
 
   return (
     <footer className="hairline-top" style={{ paddingBlock: 'clamp(48px, 6vw, 72px)' }}>
@@ -62,6 +70,13 @@ export default async function SiteFooter() {
                   <li key={item.href}>
                     <Link href={item.href} className="type-small nav-link">
                       {tn(item.key)}
+                    </Link>
+                  </li>
+                ))}
+                {guides.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href} className="type-small nav-link">
+                      {item.label}
                     </Link>
                   </li>
                 ))}

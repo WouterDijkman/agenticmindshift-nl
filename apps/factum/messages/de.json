@@ -624,7 +624,37 @@
     },
     "specimen": {
       "title": "Wie eine Feststellung aussieht",
-      "lead": "Ein durchgerechnetes Beispiel an einem fiktiven Target. Das Format ist das, das Sie erhalten."
+      "lead": "Drei durchgerechnete Beispiele an einem fiktiven Target. Wählen Sie eine Disziplin: Passage und Feststellung wechseln gemeinsam. Das Format ist das, das Sie erhalten.",
+      "tabsLabel": "Disziplin wählen",
+      "firstTab": "Legal",
+      "examples": [
+        {
+          "tab": "Commercial",
+          "pageRef": "TargetCo — Umsatz je Kunde, GJ 2025, Zeile 3",
+          "quote": "Kunde A — Umsatz GJ 2025: 4,1 Mio. € — Anteil am Gesamtumsatz (11,6 Mio. €): 35 %",
+          "values": {
+            "module": "Commercial — Kundenkonzentration",
+            "finding": "Kunde A trägt 35 % des Umsatzes von TargetCo und ist derselbe Kunde, der bei einem Kontrollwechsel kündigen kann (Legal, Ziffer 14.2).",
+            "evidence": "Zeile 3 des Umsatzexports, links zitiert.",
+            "severity": "Hoch — beispielhafte Einstufung; die Verbindung zum Kündigungsrecht erhöht sie.",
+            "document": "TargetCo — Umsatz je Kunde, GJ 2025, Zeile 3.",
+            "review": "Wartet auf Ihren Prüfer. Export erst nach Freigabe möglich."
+          }
+        },
+        {
+          "tab": "HR",
+          "pageRef": "TargetCo — Arbeitsvertrag, Mitarbeiter B (CTO), S. 6",
+          "quote": "Jede Partei kann diesen Vertrag mit einer Frist von einem (1) Monat kündigen. Ein nachvertragliches Wettbewerbsverbot besteht nicht.",
+          "values": {
+            "module": "HR — Schlüsselpersonen",
+            "finding": "Der CTO von TargetCo kann mit einer Frist von einem Monat gehen, ohne nachvertragliches Wettbewerbsverbot.",
+            "evidence": "§ 9, links zitiert.",
+            "severity": "Mittel — beispielhafte Einstufung; hängt davon ab, wie stark der Businessplan auf dieser Person ruht.",
+            "document": "TargetCo — Arbeitsvertrag mit Mitarbeiter B (CTO), Seite 6.",
+            "review": "Von Ihrem Prüfer namentlich abgelehnt oder freigegeben. Vorher verlässt nichts das Haus."
+          }
+        }
+      ]
     }
   },
   "sprint": {

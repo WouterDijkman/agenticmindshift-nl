@@ -12,10 +12,15 @@ import { SITE_URL } from './site';
  * URLs, and `/` is not one: it serves the English homepage and canonicals to
  * `/en`. Same page, one name for it.
  */
-export function getAlternates(path: string, currentLocale: string) {
+export function getAlternates(
+  path: string,
+  currentLocale: string,
+  // The en/nl-only guides pass their own list, so no hreflang points at a 404.
+  locales: readonly string[] = routing.locales
+) {
   const languages: Record<string, string> = {};
 
-  for (const locale of routing.locales) {
+  for (const locale of locales) {
     languages[locale] = `${SITE_URL}/${locale}${path}`;
   }
   languages['x-default'] = `${SITE_URL}/${routing.defaultLocale}${path}`;

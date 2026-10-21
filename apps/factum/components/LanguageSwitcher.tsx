@@ -6,6 +6,7 @@ import { Link, usePathname } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import { rememberLocale } from '@repo/ui/locale';
 import { LOCALE_NAMES } from '@/lib/site';
+import { isGuideLocale, isGuidePath } from '@/lib/guideRoutes';
 import { Chevron } from './Icons';
 
 /** Autonyms, never flags — a flag is a country, not a language. */
@@ -78,7 +79,9 @@ export default function LanguageSwitcher() {
           {routing.locales.map((loc) => (
             <li key={loc} role="option" aria-selected={loc === locale}>
               <Link
-                href={pathname}
+                /* The guides exist in en and nl only; de/es/pt would land on a
+                   404, so those go to the platform page instead. */
+                href={isGuidePath(pathname) && !isGuideLocale(loc) ? '/platform' : pathname}
                 locale={loc}
                 /* This click is the only thing on the site that writes the
                    locale cookie. next-intl used to write it on every request,

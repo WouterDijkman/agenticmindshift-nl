@@ -23,10 +23,13 @@ import Disclosures from '@/components/Disclosures';
 import CtaBand from '@/components/CtaBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
 import FindingSchema from '@/components/FindingSchema';
-import Specimen from '@/components/Specimen';
+import SpecimenExplorer from '@/components/SpecimenExplorer';
 import DefinitionList from '@/components/DefinitionList';
 import Breadcrumb from '@/components/Breadcrumb';
 import { ArrowRight } from '@/components/Icons';
+
+/** The output contract's six fields, in row order. */
+const ROW_KEYS = ['module', 'finding', 'evidence', 'severity', 'document', 'review'] as const;
 
 export async function generateMetadata({
   params
@@ -182,21 +185,24 @@ export default async function PlatformPage({
           {/* Row keys are the output contract, shared with the hero schema; the
               values are the worked example. The contract stays abstract so this
               can stay concrete. */}
-          <Specimen
+          <SpecimenExplorer
+            tabsLabel={t('specimen.tabsLabel')}
             pageLabel={s('specimen.pageLabel')}
-            pageRef={s('specimen.pageRef')}
             highlightLabel={s('specimen.highlight')}
             findingLabel={s('specimen.findingLabel')}
-            quote={s('specimen.quote')}
             tag={s('specimen.tag')}
             footnote={s('specimen.footnote')}
-            rows={[
-              { key: s('schema.rows.module'), value: s('specimen.values.module') },
-              { key: s('schema.rows.finding'), value: s('specimen.values.finding') },
-              { key: s('schema.rows.evidence'), value: s('specimen.values.evidence') },
-              { key: s('schema.rows.severity'), value: s('specimen.values.severity') },
-              { key: s('schema.rows.document'), value: s('specimen.values.document') },
-              { key: s('schema.rows.review'), value: s('specimen.values.review') }
+            rowKeys={ROW_KEYS.map((k) => s(`schema.rows.${k}`))}
+            examples={[
+              {
+                tab: t('specimen.firstTab'),
+                pageRef: s('specimen.pageRef'),
+                quote: s('specimen.quote'),
+                values: ROW_KEYS.map((k) => s(`specimen.values.${k}`))
+              },
+              ...(t.raw('specimen.examples') as { tab: string; pageRef: string; quote: string; values: Record<string, string> }[]).map(
+                (x) => ({ tab: x.tab, pageRef: x.pageRef, quote: x.quote, values: ROW_KEYS.map((k) => x.values[k]) })
+              )
             ]}
           />
         </div>

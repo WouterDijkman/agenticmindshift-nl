@@ -2,6 +2,7 @@ import { contentLastModified } from '@/lib/seoRoutes';
 import type { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
 import { SITE_URL } from '@/lib/site';
+import { GUIDE_LOCALES, GUIDE_PATHS } from '@/lib/guideRoutes';
 
 const PATHS = [
   { path: '', priority: 1 },
@@ -19,7 +20,22 @@ const PATHS = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return PATHS.flatMap(({ path, priority }) =>
+  // The decision pages exist in en and nl only, so they list only those two.
+  const guides = GUIDE_PATHS.flatMap((path) =>
+    GUIDE_LOCALES.map((locale) => ({
+      url: `${SITE_URL}/${locale}${path}`,
+      lastModified: contentLastModified(path, locale),
+      priority: 0.6,
+      alternates: {
+        languages: Object.fromEntries([
+          ...GUIDE_LOCALES.map((alt) => [alt, `${SITE_URL}/${alt}${path}`]),
+          ['x-default', `${SITE_URL}/${routing.defaultLocale}${path}`]
+        ])
+      }
+    }))
+  );
+
+  const pages = PATHS.flatMap(({ path, priority }) =>
     routing.locales.map((locale) => ({
       url: `${SITE_URL}/${locale}${path}`,
       lastModified: contentLastModified(path, locale),
@@ -32,4 +48,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }
     }))
   );
+
+  return [...pages, ...guides];
 }

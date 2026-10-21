@@ -4,6 +4,7 @@ import { LOCALE_COOKIE } from '@repo/ui/locale';
 import { routing } from './i18n/routing';
 import { resolveMarketingUrl } from '@repo/ui/seoRouting';
 import { PUBLIC_PATHS, LEGACY_PATHS } from './lib/seoRoutes';
+import { isGuideLocale, isGuidePath } from './lib/guideRoutes';
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -67,6 +68,17 @@ export function proxy(request: NextRequest) {
     request.nextUrl.pathname, routing.locales, routing.defaultLocale,
     [...PUBLIC_PATHS, '/opengraph-image'], LEGACY_PATHS
   );
+  // The guides exist in en and nl only: de/es/pt get the real 404, same as
+  // apps/web does for its nl/en guides.
+  if (
+    resolved.known &&
+    isGuidePath(request.nextUrl.pathname.replace(/^\/(en|nl|de|es|pt)(?=\/|$)/, '')) &&
+    !isGuideLocale(resolved.locale)
+  ) {
+    const url = request.nextUrl.clone();
+    url.pathname = `/${resolved.locale}/not-a-page`;
+    return NextResponse.rewrite(url);
+  }
   if (resolved.target) {
     const url = new URL(resolved.target, request.url);
     url.search = request.nextUrl.search;
