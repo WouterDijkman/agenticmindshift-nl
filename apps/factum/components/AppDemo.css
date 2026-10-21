@@ -346,7 +346,8 @@
 .ad-mark {
   margin: 12px 0;
   padding: 10px 12px;
-  border-left: 3px solid var(--ad-accent);
+  border: 1px solid color-mix(in srgb, var(--ad-accent) 35%, transparent);
+  border-radius: 2px;
   background: var(--ad-accent-soft);
   color: var(--ad-ink);
   font-size: 0.8125rem;
