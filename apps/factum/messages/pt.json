@@ -622,39 +622,9 @@
       "button": "Partilhe um data room",
       "note": "Primeiro o NDA, enviado no mesmo dia. Um negócio que fechou no ano passado também serve."
     },
-    "specimen": {
-      "title": "Que aspeto tem uma constatação",
-      "lead": "Três exemplos trabalhados sobre um mesmo alvo fictício. Escolha uma disciplina: a passagem e a constatação mudam em conjunto. O formato é o que recebe.",
-      "tabsLabel": "Escolha uma disciplina",
-      "firstTab": "Legal",
-      "examples": [
-        {
-          "tab": "Comercial",
-          "pageRef": "TargetCo — Receita por cliente, exercício 2025, linha 3",
-          "quote": "Cliente A — receita 2025: 4,1 M€ — peso na receita total (11,6 M€): 35%",
-          "values": {
-            "module": "Comercial — concentração de clientes",
-            "finding": "O Cliente A representa 35% da receita da TargetCo e é o mesmo cliente que pode resolver o contrato em caso de mudança de controlo (Legal, cláusula 14.2).",
-            "evidence": "Linha 3 da exportação de receitas, citada à esquerda.",
-            "severity": "Alta — classificação ilustrativa; a ligação ao direito de resolução agrava-a.",
-            "document": "TargetCo — Receita por cliente, exercício 2025, linha 3.",
-            "review": "A aguardar o seu revisor. Não pode ser exportada antes da aprovação."
-          }
-        },
-        {
-          "tab": "RH",
-          "pageRef": "TargetCo — Contrato de trabalho, Colaborador B (CTO), p. 6",
-          "quote": "Qualquer das partes pode fazer cessar este contrato mediante aviso prévio de um (1) mês. Não se aplica qualquer pacto de não concorrência após a cessação.",
-          "values": {
-            "module": "RH — pessoas-chave",
-            "finding": "O CTO da TargetCo pode sair com um aviso prévio de um mês, sem pacto de não concorrência posterior.",
-            "evidence": "Cláusula 9, citada à esquerda.",
-            "severity": "Média — classificação ilustrativa; depende de quanto o plano de negócio assenta nesta pessoa.",
-            "document": "TargetCo — Contrato de trabalho com Colaborador B (CTO), página 6.",
-            "review": "Rejeitada ou aprovada pelo seu revisor, com nome. Nada sai antes disso."
-          }
-        }
-      ]
+    "demo": {
+      "title": "Dentro do espaço de revisão",
+      "lead": "Um dossiê construído sobre uma empresa alemã fictícia: {findings} constatações em {domains} disciplinas. Abra uma, confirme a fonte, decida."
     }
   },
   "sprint": {

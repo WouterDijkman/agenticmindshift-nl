@@ -23,13 +23,12 @@ import Disclosures from '@/components/Disclosures';
 import CtaBand from '@/components/CtaBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
 import FindingSchema from '@/components/FindingSchema';
-import SpecimenExplorer from '@/components/SpecimenExplorer';
+import AppDemo from '@/components/AppDemo';
 import DefinitionList from '@/components/DefinitionList';
 import Breadcrumb from '@/components/Breadcrumb';
 import { ArrowRight } from '@/components/Icons';
-
-/** The output contract's six fields, in row order. */
-const ROW_KEYS = ['module', 'finding', 'evidence', 'severity', 'document', 'review'] as const;
+import { getDemo } from '@/lib/demo';
+import { DEMO_DOMAINS, DEMO_FINDINGS } from '@/lib/demoData';
 
 export async function generateMetadata({
   params
@@ -121,6 +120,29 @@ export default async function PlatformPage({
       />
 
       {/*
+        The demo, first thing under the header (21 October 2026).
+
+        It replaces SpecimenExplorer, which sat below the grounding section and
+        showed three one-paragraph cards. The objection: it did not show how
+        deep a real finding goes, and it was too far down to be seen. This is
+        the review workspace itself, on a constructed dossier about a fictional
+        company, in the four disciplines most buyers ask for first. It says it
+        is constructed in the band, on the screen and in the footnote.
+
+        `anatomy` stays as an anchor because older links point at it.
+      */}
+      <Section id="demo" weight="loud">
+        <div id="anatomy" style={{ scrollMarginTop: 80 }} aria-hidden="true" />
+        <SectionHeader
+          title={t('demo.title')}
+          lead={t('demo.lead', { findings: DEMO_FINDINGS.length, domains: DEMO_DOMAINS.length })}
+        />
+        <div style={{ marginTop: 'clamp(28px, 3.5vw, 44px)' }}>
+          <AppDemo locale={locale} copy={getDemo(locale)} />
+        </div>
+      </Section>
+
+      {/*
         Mechanism first, inventory last.
 
         This page used to open on a bento of six counted figures under the
@@ -165,47 +187,6 @@ export default async function PlatformPage({
             {t('grounding.repair')}
           </p>
         </Reveal>
-      </Section>
-
-      {/*
-        The worked example, moved here from the homepage on 13 October 2026:
-        the home hero already shows this finding, so the page showed it twice.
-        Here it sits next to the output contract it illustrates.
-
-        Van Dijk's objection to every pre-launch B2B site is the one this
-        answers: "I'm not going to book a demo without getting a taste of what
-        the product looks like." With no client cases to show, a constructed
-        specimen on a fictional target — labelled as constructed — is the
-        closest honest equivalent, and it is worth more screen than anything
-        else here.
-      */}
-      <Section id="anatomy" tone="inset" weight="loud">
-        <SectionHeader title={t('specimen.title')} lead={t('specimen.lead')} />
-        <div style={{ marginTop: 'clamp(36px, 4.5vw, 60px)' }}>
-          {/* Row keys are the output contract, shared with the hero schema; the
-              values are the worked example. The contract stays abstract so this
-              can stay concrete. */}
-          <SpecimenExplorer
-            tabsLabel={t('specimen.tabsLabel')}
-            pageLabel={s('specimen.pageLabel')}
-            highlightLabel={s('specimen.highlight')}
-            findingLabel={s('specimen.findingLabel')}
-            tag={s('specimen.tag')}
-            footnote={s('specimen.footnote')}
-            rowKeys={ROW_KEYS.map((k) => s(`schema.rows.${k}`))}
-            examples={[
-              {
-                tab: t('specimen.firstTab'),
-                pageRef: s('specimen.pageRef'),
-                quote: s('specimen.quote'),
-                values: ROW_KEYS.map((k) => s(`specimen.values.${k}`))
-              },
-              ...(t.raw('specimen.examples') as { tab: string; pageRef: string; quote: string; values: Record<string, string> }[]).map(
-                (x) => ({ tab: x.tab, pageRef: x.pageRef, quote: x.quote, values: ROW_KEYS.map((k) => x.values[k]) })
-              )
-            ]}
-          />
-        </div>
       </Section>
 
       {/* The output contract, field by field, with what happens when a field

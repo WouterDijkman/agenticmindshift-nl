@@ -622,39 +622,9 @@
       "button": "Deel een data room",
       "note": "Eerst een NDA, dezelfde dag verstuurd. Een deal die u vorig jaar sloot werkt ook."
     },
-    "specimen": {
-      "title": "Hoe een bevinding eruitziet",
-      "lead": "Drie uitgewerkte voorbeelden op één fictieve target. Kies een discipline: de passage en de bevinding veranderen samen. Dit is het format dat u krijgt.",
-      "tabsLabel": "Kies een discipline",
-      "firstTab": "Legal",
-      "examples": [
-        {
-          "tab": "Commercieel",
-          "pageRef": "TargetCo — Omzet per klant, boekjaar 2025, rij 3",
-          "quote": "Klant A — omzet 2025: € 4,1 mln — aandeel in totale omzet (€ 11,6 mln): 35%",
-          "values": {
-            "module": "Commercieel — klantconcentratie",
-            "finding": "Klant A draagt 35% van de omzet van TargetCo, en is dezelfde klant die bij een wijziging van zeggenschap kan opzeggen (Legal, artikel 14.2).",
-            "evidence": "Rij 3 van de omzetexport, links geciteerd.",
-            "severity": "Hoog — illustratieve weging; de koppeling met het opzegrecht maakt hem zwaarder.",
-            "document": "TargetCo — Omzet per klant, boekjaar 2025, rij 3.",
-            "review": "Wacht op uw reviewer. Kan pas worden geëxporteerd na aftekening."
-          }
-        },
-        {
-          "tab": "HR",
-          "pageRef": "TargetCo — Arbeidsovereenkomst, Medewerker B (CTO), p. 6",
-          "quote": "Elk van partijen kan deze overeenkomst opzeggen met inachtneming van een termijn van één (1) maand. Na het einde van de overeenkomst geldt geen concurrentiebeding.",
-          "values": {
-            "module": "HR — sleutelpersonen",
-            "finding": "De CTO van TargetCo kan vertrekken met een opzegtermijn van één maand, zonder concurrentiebeding daarna.",
-            "evidence": "Artikel 9, links geciteerd.",
-            "severity": "Middel — illustratieve weging; hangt af van hoeveel het ondernemingsplan op deze persoon rust.",
-            "document": "TargetCo — Arbeidsovereenkomst met Medewerker B (CTO), pagina 6.",
-            "review": "Afgewezen of goedgekeurd door uw reviewer, met naam. Daarvoor gaat er niets de deur uit."
-          }
-        }
-      ]
+    "demo": {
+      "title": "In de beoordelingswerkplek",
+      "lead": "Een geconstrueerd dossier over een fictief Duits bedrijf: {findings} bevindingen in {domains} disciplines. Open er een, controleer de bron, besluit."
     }
   },
   "sprint": {

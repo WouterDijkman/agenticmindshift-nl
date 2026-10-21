@@ -622,39 +622,9 @@
       "button": "Comparta un data room",
       "note": "Primero el NDA, enviado el mismo día. Una operación que cerró el año pasado también sirve."
     },
-    "specimen": {
-      "title": "Qué aspecto tiene un hallazgo",
-      "lead": "Tres ejemplos trabajados sobre un mismo target ficticio. Elija una disciplina: el pasaje y el hallazgo cambian a la vez. El formato es el que usted recibe.",
-      "tabsLabel": "Elija una disciplina",
-      "firstTab": "Legal",
-      "examples": [
-        {
-          "tab": "Comercial",
-          "pageRef": "TargetCo — Ingresos por cliente, ejercicio 2025, fila 3",
-          "quote": "Cliente A — ingresos 2025: 4,1 M€ — porcentaje de los ingresos totales (11,6 M€): 35 %",
-          "values": {
-            "module": "Comercial — concentración de clientes",
-            "finding": "El Cliente A aporta el 35 % de los ingresos de TargetCo y es el mismo cliente que puede resolver en caso de cambio de control (Legal, cláusula 14.2).",
-            "evidence": "Fila 3 de la exportación de ingresos, citada a la izquierda.",
-            "severity": "Alta — clasificación ilustrativa; el vínculo con el derecho de resolución la eleva.",
-            "document": "TargetCo — Ingresos por cliente, ejercicio 2025, fila 3.",
-            "review": "Pendiente de su revisor. No se puede exportar hasta su aprobación."
-          }
-        },
-        {
-          "tab": "RR. HH.",
-          "pageRef": "TargetCo — Contrato de trabajo, Empleado B (CTO), p. 6",
-          "quote": "Cualquiera de las partes podrá resolver este contrato con un preaviso de un (1) mes. No se aplica ningún pacto de no competencia tras la extinción.",
-          "values": {
-            "module": "RR. HH. — personas clave",
-            "finding": "El CTO de TargetCo puede marcharse con un preaviso de un mes, sin pacto de no competencia posterior.",
-            "evidence": "Artículo 9, citado a la izquierda.",
-            "severity": "Media — clasificación ilustrativa; depende de cuánto descanse el plan de negocio en esta persona.",
-            "document": "TargetCo — Contrato de trabajo con Empleado B (CTO), página 6.",
-            "review": "Rechazado o aprobado por su revisor, con nombre. Nada sale antes."
-          }
-        }
-      ]
+    "demo": {
+      "title": "Dentro del espacio de revisión",
+      "lead": "Un expediente construido sobre una empresa alemana ficticia: {findings} hallazgos en {domains} disciplinas. Abra uno, compruebe la fuente, decida."
     }
   },
   "sprint": {

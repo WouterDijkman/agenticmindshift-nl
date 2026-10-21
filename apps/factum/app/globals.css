@@ -2189,41 +2189,6 @@ details.disclosure > div { padding-bottom: 24px; }
 .specimen-row-hit { color: var(--text-body); }
 .specimen-foot { margin-top: 18px; color: var(--text-quaternary); }
 
-/* The clickable version (SpecimenExplorer): one tab per constructed finding. */
-.specimen-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-.specimen-tab {
-  padding: 9px 14px;
-  font-size: 0.6875rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-tertiary);
-  background: transparent;
-  border: 1px solid var(--hairline-strong);
-  border-radius: 2px;
-  cursor: pointer;
-  transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
-}
-.specimen-tab:hover { color: var(--text-body); }
-.specimen-tab[aria-selected='true'] {
-  color: var(--text-display);
-  border-color: var(--accent-cta);
-  background: var(--accent-cta-soft);
-}
-.specimen-tab:focus-visible { outline: 2px solid var(--accent-cta); outline-offset: 2px; }
-.specimen-quote-live { animation: specimen-cite 900ms ease-out; }
-@keyframes specimen-cite {
-  from { background: rgba(241, 76, 29, 0.32); }
-  to { background: var(--accent-cta-soft); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .specimen-quote-live { animation: none; }
-}
-
 @media (max-width: 860px) {
   .specimen { grid-template-columns: 1fr; }
   .specimen-tie { width: 1px; height: 40px; justify-self: center; background: linear-gradient(180deg, var(--accent-cta-soft), var(--hairline-strong)); }

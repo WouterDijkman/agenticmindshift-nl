@@ -622,39 +622,9 @@
       "button": "Share a data room",
       "note": "NDA first, sent the same day. A deal you closed last year works too."
     },
-    "specimen": {
-      "title": "What a finding looks like",
-      "lead": "Three worked examples on one fictional target. Pick a discipline: the passage and the finding change together. The format is the one you receive.",
-      "tabsLabel": "Pick a discipline",
-      "firstTab": "Legal",
-      "examples": [
-        {
-          "tab": "Commercial",
-          "pageRef": "TargetCo — Revenue by customer, FY2025, row 3",
-          "quote": "Customer A — revenue FY2025: €4.1m — share of total revenue (€11.6m): 35%",
-          "values": {
-            "module": "Commercial — customer concentration",
-            "finding": "Customer A carries 35% of TargetCo’s revenue, and is the same customer that can terminate on a change of control (Legal, clause 14.2).",
-            "evidence": "Row 3 of the revenue export, quoted on the left.",
-            "severity": "High — illustrative rating; the link to the termination right is what raises it.",
-            "document": "TargetCo — Revenue by customer, FY2025, row 3.",
-            "review": "Awaiting your reviewer. It cannot be exported until signed off."
-          }
-        },
-        {
-          "tab": "HR",
-          "pageRef": "TargetCo — Employment agreement, Employee B (CTO), p. 6",
-          "quote": "Either party may terminate this agreement with one (1) month’s notice. No non-compete obligation applies after termination.",
-          "values": {
-            "module": "HR — key people",
-            "finding": "TargetCo’s CTO can leave on one month’s notice, with no non-compete after leaving.",
-            "evidence": "Article 9, quoted on the left.",
-            "severity": "Medium — illustrative rating; depends on how far the business plan rests on this person.",
-            "document": "TargetCo — Employment agreement with Employee B (CTO), page 6.",
-            "review": "Rejected or approved by your reviewer, by name. Nothing leaves before that."
-          }
-        }
-      ]
+    "demo": {
+      "title": "Inside the review workspace",
+      "lead": "A constructed dossier on a fictional German company: {findings} findings across {domains} disciplines. Open one, check the source, decide."
     }
   },
   "sprint": {
