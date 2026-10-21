@@ -14,6 +14,9 @@ export const OG_IMAGE_ALT = 'Factum Capital';
 export const OG_IMAGE_SIZE = { width: 1200, height: 630 };
 export const OG_IMAGE_CONTENT_TYPE = 'image/png';
 
+/** Pages with a card of their own: the ones Wouter features on LinkedIn. */
+export const OG_CARD_PATHS = ['/platform', '/data-room-checklist', '/due-diligence-timeline', '/when-not-to-use-factum'];
+
 /**
  * The share card for one locale, as an Open Graph image descriptor.
  *
@@ -22,9 +25,11 @@ export const OG_IMAGE_CONTENT_TYPE = 'image/png';
  * without it, and reproducing it here would mean keeping a build artefact in
  * source.
  */
-export function getOgImage(locale: string) {
+export function getOgImage(locale: string, path = '') {
   return {
-    url: `${SITE_URL}/${locale}/opengraph-image`,
+    // Pages with their own card (OG_CARD_PATHS) pass their path; the rest
+    // share the homepage card.
+    url: `${SITE_URL}/${locale}${OG_CARD_PATHS.includes(path) ? path : ''}/opengraph-image`,
     width: OG_IMAGE_SIZE.width,
     height: OG_IMAGE_SIZE.height,
     alt: OG_IMAGE_ALT,

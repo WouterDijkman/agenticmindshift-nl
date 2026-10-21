@@ -54,7 +54,7 @@ export const OG_LOCALES: Record<string, string> = {
  * lost it, along with `twitter:image`, which Next auto-fills from the Open
  * Graph images. Measured with curl across all 40 routes, not inferred.
  */
-export function sharedOpenGraph(locale: string) {
+export function sharedOpenGraph(locale: string, path = '') {
   return {
     type: 'website' as const,
     siteName: BRAND,
@@ -62,7 +62,7 @@ export function sharedOpenGraph(locale: string) {
     alternateLocale: routing.locales
       .filter((l) => l !== locale)
       .map((l) => OG_LOCALES[l] ?? l),
-    images: [getOgImage(locale)]
+    images: [getOgImage(locale, path)]
   };
 }
 
@@ -106,7 +106,7 @@ export async function pageMetadata(
     description,
     alternates,
     openGraph: {
-      ...sharedOpenGraph(locale),
+      ...sharedOpenGraph(locale, path),
       title,
       description,
       // Read off the canonical rather than rebuilt from `path`, so og:url and

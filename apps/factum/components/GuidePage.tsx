@@ -73,7 +73,7 @@ export function guideMetadata(slug: GuideSlug, locale: GuideLocale): Metadata {
     description,
     alternates,
     openGraph: {
-      ...sharedOpenGraph(locale),
+      ...sharedOpenGraph(locale, `/${slug}`),
       type: 'article',
       // Only the languages this page exists in.
       alternateLocale: GUIDE_LOCALES.filter((l) => l !== locale).map((l) => OG_LOCALES[l]),
