@@ -68,8 +68,7 @@ export function proxy(request: NextRequest) {
     request.nextUrl.pathname, routing.locales, routing.defaultLocale,
     [...PUBLIC_PATHS, '/opengraph-image'], LEGACY_PATHS
   );
-  // The guides exist in en and nl only: de/es/pt get the real 404, same as
-  // apps/web does for its nl/en guides.
+  // Safety net: a guide path in a locale without guide copy gets the real 404.
   if (
     resolved.known &&
     isGuidePath(request.nextUrl.pathname.replace(/^\/(en|nl|de|es|pt)(?=\/|$)/, '')) &&

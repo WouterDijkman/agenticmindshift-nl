@@ -16,8 +16,8 @@ if ARTIFACTS: sys.argv.remove('--artifacts')
 ROOT = Path(__file__).resolve().parent.parent
 LOCALES = ['nl', 'en', 'de', 'es', 'pt']
 SITES = {
-    'www.agenticmindshift.nl': ('web', int(sys.argv[1]) if len(sys.argv)>1 else 3100, 'nl', 36),
-    'www.factumcapital.eu': ('factum', int(sys.argv[2]) if len(sys.argv)>2 else 3101, 'en', 51)
+    'www.agenticmindshift.nl': ('web', int(sys.argv[1]) if len(sys.argv)>1 else 3100, 'nl', 45),
+    'www.factumcapital.eu': ('factum', int(sys.argv[2]) if len(sys.argv)>2 else 3101, 'en', 60)
 }
 class NoRedirect(HTTPRedirectHandler):
     def redirect_request(self, *args, **kwargs): return None
@@ -99,8 +99,7 @@ for host,(app,port,default,count) in SITES.items():
         assert modified in ['2026-10-13', '2026-10-18', '2026-10-21']
         langs={x.attrib['hreflang']:x.attrib['href'] for x in item.findall('x:link',ns)}
         assert 'x-default' in langs
-        guides={'web':['im-en-teasers','maandrapportage','dealstukken-en-ai'],'factum':['data-room-checklist','due-diligence-timeline','when-not-to-use-factum']}[app]
-        expected=['nl','en'] if urlparse(url).path.split('/')[-1] in guides else LOCALES
+        expected=LOCALES  # every page in all five locales (21-10-2026)
         assert set(langs)==set(expected+['x-default'])
         items.append((host,url,langs))
     assert len(items)==count,(host,len(items))

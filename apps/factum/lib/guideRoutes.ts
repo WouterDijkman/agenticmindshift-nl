@@ -5,12 +5,12 @@
  * component and needs to know these paths, but it must not pull the page copy
  * into the browser bundle to find out. Same split as apps/web.
  *
- * English and Dutch only (SEO/AI audit 19-10-2026, #4: one strong NL/EN page
- * first, translate on demand). de/es/pt return 404 for these paths, list no
- * hreflang for them and are left out of the sitemap. Slugs are English in
- * both languages, as everywhere on this site.
+ * All five locales: every page on this site exists in every language
+ * (Wouter, 21-10-2026). The list and the isGuideLocale guard stay so the
+ * routing, sitemap and switcher code reads the same as apps/web. Slugs are
+ * English in every language, as everywhere on this site.
  */
-export const GUIDE_LOCALES = ['en', 'nl'] as const;
+export const GUIDE_LOCALES = ['en', 'nl', 'de', 'es', 'pt'] as const;
 export type GuideLocale = (typeof GUIDE_LOCALES)[number];
 
 export const GUIDE_SLUGS = ['data-room-checklist', 'due-diligence-timeline', 'when-not-to-use-factum'] as const;

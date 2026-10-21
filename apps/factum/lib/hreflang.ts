@@ -15,7 +15,8 @@ import { SITE_URL } from './site';
 export function getAlternates(
   path: string,
   currentLocale: string,
-  // The en/nl-only guides pass their own list, so no hreflang points at a 404.
+  // A page that exists in fewer locales passes its own list, so no hreflang
+  // points at a 404.
   locales: readonly string[] = routing.locales
 ) {
   const languages: Record<string, string> = {};

@@ -9,8 +9,8 @@ export default async function SiteFooter() {
   const tn = await getTranslations('nav');
   const year = new Date().getFullYear();
   const locale = await getLocale();
-  // The en/nl decision pages. Listed here because, like the reference page,
-  // the header leaves them out; de/es/pt have no such pages.
+  // The decision pages. Listed here because, like the reference page, the
+  // header leaves them out.
   const guides = isGuideLocale(locale)
     ? GUIDE_SLUGS.map((slug) => ({ href: `/${slug}`, label: getGuide(slug, locale).shortName }))
     : [];

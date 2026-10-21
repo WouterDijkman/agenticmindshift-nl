@@ -5,11 +5,11 @@
  * component and needs to know these paths, but it must not pull several
  * thousand words of page copy into the browser bundle to find out.
  *
- * The guides exist in Dutch and English only. The other three locales return
- * 404 for these paths, list no hreflang for them, and are left out of the
- * sitemap. Slugs are Dutch in both languages, as everywhere on this site.
+ * The guides exist in all five locales (Wouter, 21-10-2026: every page in
+ * every language). Slugs are Dutch in every language, as everywhere on this
+ * site.
  */
-export const GUIDE_LOCALES = ['nl', 'en'] as const;
+export const GUIDE_LOCALES = ['nl', 'en', 'de', 'es', 'pt'] as const;
 export type GuideLocale = (typeof GUIDE_LOCALES)[number];
 
 export const GUIDE_SLUGS = ['im-en-teasers', 'maandrapportage', 'dealstukken-en-ai'] as const;

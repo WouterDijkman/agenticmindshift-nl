@@ -1,4 +1,7 @@
 import type { GuideLocale, GuideSlug } from './guideRoutes';
+import { CHROME_DE, GUIDES_DE } from './guides.de';
+import { CHROME_ES, GUIDES_ES } from './guides.es';
+import { CHROME_PT, GUIDES_PT } from './guides.pt';
 
 /**
  * Copy for the three problem pages, in Dutch and English.
@@ -63,6 +66,9 @@ export interface GuideChrome {
 }
 
 export const GUIDE_CHROME: Record<GuideLocale, GuideChrome> = {
+  de: CHROME_DE,
+  es: CHROME_ES,
+  pt: CHROME_PT,
   nl: {
     tocLabel: 'Op deze pagina',
     relatedEyebrow: 'Verder lezen',
@@ -85,7 +91,8 @@ export const GUIDE_CHROME: Record<GuideLocale, GuideChrome> = {
 
 const PUBLISHED = '2026-10-12';
 
-export const GUIDES: Record<GuideSlug, Record<GuideLocale, Guide>> = {
+/* Dutch (the original) and English here; de/es/pt in guides.{de,es,pt}.ts. */
+export const GUIDES: Record<GuideSlug, Record<'nl' | 'en', Guide>> = {
   /* ─────────────────────────────────────────────────────────────────────
      (a) One way of working for IMs and teasers
      ───────────────────────────────────────────────────────────────────── */
@@ -593,6 +600,8 @@ export const GUIDES: Record<GuideSlug, Record<GuideLocale, Guide>> = {
   },
 };
 
+const OTHER: Record<'de' | 'es' | 'pt', Record<GuideSlug, Guide>> = { de: GUIDES_DE, es: GUIDES_ES, pt: GUIDES_PT };
+
 export function getGuide(slug: GuideSlug, locale: GuideLocale): Guide {
-  return GUIDES[slug][locale];
+  return locale === 'nl' || locale === 'en' ? GUIDES[slug][locale] : OTHER[locale][slug];
 }

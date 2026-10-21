@@ -4,8 +4,8 @@ import { setRequestLocale } from 'next-intl/server';
 import GuidePage, { guideMetadata } from '@/components/GuidePage';
 import { GUIDE_LOCALES, isGuideLocale } from '@/lib/guideRoutes';
 
-/* nl and en only. de/es/pt are not prerendered and hit notFound() below,
-   before any metadata is produced (see lib/guideRoutes.ts). No
+/* All five locales (lib/guideRoutes.ts). The guard below stays as a
+   safety net for a locale that has no copy yet. No
    `dynamicParams = false`: see the note in app/[locale]/layout.tsx. */
 
 export function generateStaticParams() {

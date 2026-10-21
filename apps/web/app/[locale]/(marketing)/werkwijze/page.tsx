@@ -312,7 +312,7 @@ export default async function WerkwijzePage(
         </div>
       </section>
 
-      {/* The three problem pages (nl/en only; renders nothing elsewhere). */}
+      {/* The three problem pages (all five locales). */}
       <GuideLinks locale={locale} background="var(--bg-secondary)" />
 
       {/* Factum Capital is a separate business. One signpost, nothing more:

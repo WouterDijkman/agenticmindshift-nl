@@ -5,9 +5,7 @@ import { GUIDE_SLUGS, isGuideLocale } from '@/lib/guideRoutes';
 /**
  * The three problem pages, as one clearly titled block. Placed on /werkwijze
  * and the homepage, and listed in the footer, so the pages are findable
- * without a header nav item that would only exist in two of five languages.
- *
- * Renders nothing in de/es/pt, where the pages do not exist.
+ * without a header nav item.
  */
 export default function GuideLinks({ locale, background = 'var(--bg-primary)' }: { locale: string; background?: string }) {
   if (!isGuideLocale(locale)) return null;

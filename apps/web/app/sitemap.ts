@@ -31,8 +31,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  // The problem pages exist in nl and en only, so they are listed in those
-  // two and their alternates name only those two (plus x-default → en).
+  // The problem pages, in every locale that has their copy (all five since
+  // 21-10-2026), with alternates for exactly those locales.
   const guides = GUIDE_LOCALES.flatMap((locale) =>
     GUIDE_SLUGS.map((slug) => ({
       url: `${BASE}/${locale}/${slug}`,

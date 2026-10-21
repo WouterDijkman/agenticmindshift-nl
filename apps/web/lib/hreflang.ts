@@ -74,8 +74,8 @@ export function getLanguageAlternates(
  * Returns `alternates` for Next.js Metadata, including:
  * - a self-referencing canonical for `currentLocale`
  * - a `hreflang` entry for every locale the page exists in (all five unless
- *   `locales` says otherwise; the nl/en-only guides pass their own list, so
- *   no annotation ever names a URL that 404s)
+ *   `locales` says otherwise; a page with fewer locales passes its own list,
+ *   so no annotation ever names a URL that 404s)
  * - an `x-default` pointing to the English variant
  */
 export function getAlternates(

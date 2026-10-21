@@ -42,7 +42,7 @@ export default function LanguageSwitcher({ tone = 'default' }: { tone?: 'default
     rememberLocale(newLocale);
     setOpen(false);
     // The problem pages exist in nl and en only. Switching one of them to
-    // de/es/pt would land on a 404, so send the reader to /werkwijze, the
+    // Safety net: a locale without guide copy would 404, so send the reader to /werkwijze, the
     // nearest page that exists in every language.
     const target = isGuidePath(pathname) && !isGuideLocale(newLocale) ? '/werkwijze' : pathname;
     router.replace(target, { locale: newLocale });

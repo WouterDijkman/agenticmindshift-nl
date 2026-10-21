@@ -53,8 +53,8 @@ for (const app of ['web','factum']) {
   }
   for (const locale of ['nl','en','de','es','pt']) {
     for (const page of [...PUBLIC_PATHS,'/opengraph-image']) {
-      const guides=app==='web'?['/im-en-teasers','/maandrapportage','/dealstukken-en-ai']:['/data-room-checklist','/due-diligence-timeline','/when-not-to-use-factum'];
-      const unsupported=['de','es','pt'].includes(locale) && guides.includes(page);
+      // Every page exists in all five locales (21-10-2026), so nothing is unsupported.
+      const unsupported=false;
       const final=`/${locale}${page==='/'?'':page}`;
       const r=request(final);
       assert.equal(r.status,200,final);

@@ -53,7 +53,7 @@ Factum Capital is a separate, co-owned business providing AI-driven due diligenc
 - [Privacy](https://www.agenticmindshift.nl/pt/privacy)
 - [Terms](https://www.agenticmindshift.nl/pt/voorwaarden)
 
-## Guides (Dutch and English only)
+## Guides (all five languages)
 
 - [im-en-teasers (nl)](https://www.agenticmindshift.nl/nl/im-en-teasers)
 - [maandrapportage (nl)](https://www.agenticmindshift.nl/nl/maandrapportage)
@@ -61,6 +61,15 @@ Factum Capital is a separate, co-owned business providing AI-driven due diligenc
 - [im-en-teasers (en)](https://www.agenticmindshift.nl/en/im-en-teasers)
 - [maandrapportage (en)](https://www.agenticmindshift.nl/en/maandrapportage)
 - [dealstukken-en-ai (en)](https://www.agenticmindshift.nl/en/dealstukken-en-ai)
+- [im-en-teasers (de)](https://www.agenticmindshift.nl/de/im-en-teasers)
+- [maandrapportage (de)](https://www.agenticmindshift.nl/de/maandrapportage)
+- [dealstukken-en-ai (de)](https://www.agenticmindshift.nl/de/dealstukken-en-ai)
+- [im-en-teasers (es)](https://www.agenticmindshift.nl/es/im-en-teasers)
+- [maandrapportage (es)](https://www.agenticmindshift.nl/es/maandrapportage)
+- [dealstukken-en-ai (es)](https://www.agenticmindshift.nl/es/dealstukken-en-ai)
+- [im-en-teasers (pt)](https://www.agenticmindshift.nl/pt/im-en-teasers)
+- [maandrapportage (pt)](https://www.agenticmindshift.nl/pt/maandrapportage)
+- [dealstukken-en-ai (pt)](https://www.agenticmindshift.nl/pt/dealstukken-en-ai)
 
 ## Discovery
 

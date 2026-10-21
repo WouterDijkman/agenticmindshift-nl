@@ -79,8 +79,8 @@ export default function LanguageSwitcher() {
           {routing.locales.map((loc) => (
             <li key={loc} role="option" aria-selected={loc === locale}>
               <Link
-                /* The guides exist in en and nl only; de/es/pt would land on a
-                   404, so those go to the platform page instead. */
+                /* Safety net: a locale without guide copy would 404, so it
+                   goes to the platform page instead. */
                 href={isGuidePath(pathname) && !isGuideLocale(loc) ? '/platform' : pathname}
                 locale={loc}
                 /* This click is the only thing on the site that writes the

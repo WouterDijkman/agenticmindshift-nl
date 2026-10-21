@@ -1,7 +1,11 @@
 import type { GuideLocale, GuideSlug } from './guideRoutes';
+import { CHROME_DE, GUIDES_DE } from './guides.de';
+import { CHROME_ES, GUIDES_ES } from './guides.es';
+import { CHROME_PT, GUIDES_PT } from './guides.pt';
 
 /**
- * Copy for the three decision pages, in English and Dutch.
+ * Copy for the three decision pages. English and Dutch here; German, Spanish
+ * and Portuguese in guides.de.ts, guides.es.ts and guides.pt.ts.
  *
  * Why here and not in messages/*.json: the catalogues are shared by all five
  * locales and validated against each other at build. These pages exist in two
@@ -58,7 +62,10 @@ export interface GuideChrome {
 
 export const GUIDE_CHROME: Record<GuideLocale, GuideChrome> = {
   en: { tocLabel: 'On this page', relatedLabel: 'Read on', guidesLabel: 'Guides' },
-  nl: { tocLabel: 'Op deze pagina', relatedLabel: 'Verder lezen', guidesLabel: 'Gidsen' }
+  nl: { tocLabel: 'Op deze pagina', relatedLabel: 'Verder lezen', guidesLabel: 'Gidsen' },
+  de: CHROME_DE,
+  es: CHROME_ES,
+  pt: CHROME_PT
 };
 
 const PUBLISHED = '2026-10-21';
@@ -449,7 +456,10 @@ const GUIDES: Record<GuideLocale, Record<GuideSlug, Guide>> = {
       },
       datePublished: PUBLISHED
     }
-  }
+  },
+  de: GUIDES_DE,
+  es: GUIDES_ES,
+  pt: GUIDES_PT
 };
 
 export function getGuide(slug: GuideSlug, locale: GuideLocale): Guide {

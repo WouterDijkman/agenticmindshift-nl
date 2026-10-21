@@ -20,7 +20,7 @@ const PATHS = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // The decision pages exist in en and nl only, so they list only those two.
+  // The decision pages, in every locale that has their copy (all five).
   const guides = GUIDE_PATHS.flatMap((path) =>
     GUIDE_LOCALES.map((locale) => ({
       url: `${SITE_URL}/${locale}${path}`,
