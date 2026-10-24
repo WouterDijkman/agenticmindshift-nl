@@ -8,6 +8,13 @@ import { isGuideLocale, isGuidePath } from './lib/guideRoutes';
 import { OG_CARD_PATHS } from './lib/ogImage';
 
 const intlMiddleware = createMiddleware(routing);
+// Public OAuth application disclosures are reachable without adding them to
+// the marketing route catalog or sitemap. Each page supplies noindex metadata.
+const APPLICATION_INFORMATION_PATHS = [
+  '/gtm-automation',
+  '/gtm-automation/privacy',
+  '/gtm-automation/terms'
+] as const;
 
 // No auto-redirect on any path that already names a locale. Serving a language
 // the URL didn't ask for breaks deep links and crawling, so only the bare `/`
@@ -67,7 +74,7 @@ export function proxy(request: NextRequest) {
 
   const resolved = resolveMarketingUrl(
     request.nextUrl.pathname, routing.locales, routing.defaultLocale,
-    [...PUBLIC_PATHS, '/opengraph-image', ...OG_CARD_PATHS.map((p) => `${p}/opengraph-image`)], LEGACY_PATHS
+    [...PUBLIC_PATHS, ...APPLICATION_INFORMATION_PATHS, '/opengraph-image', ...OG_CARD_PATHS.map((p) => `${p}/opengraph-image`)], LEGACY_PATHS
   );
   // Safety net: a guide path in a locale without guide copy gets the real 404.
   if (
