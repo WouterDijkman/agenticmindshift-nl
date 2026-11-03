@@ -233,7 +233,7 @@
   "home": {
     "hero": {
       "title": "Due diligence op de hele data room, in dagen",
-      "lead": "Factum is due-diligencesoftware voor kopers en sell-side brokers. Het leest elk document in de data room en geeft u elke bevinding met brondocument en pagina. Uw eigen reviewer controleert en tekent af.",
+      "lead": "Factum is software voor AI due diligence, voor kopers en sell-side brokers. De AI leest elk document in de data room van het bedrijf dat u koopt of verkoopt. U krijgt elke bevinding met brondocument en pagina. Uw eigen reviewer controleert en tekent af.",
       "cta": "Deel een data room"
     },
     "problem": {
@@ -582,6 +582,10 @@
     "faq": {
       "title": "Vragen die we krijgen",
       "items": [
+        {
+          "q": "Wat bedoelen jullie met AI due diligence?",
+          "a": "Due diligence op het bedrijf dat u koopt of verkoopt, uitgevoerd met AI. De AI van Factum leest de data room van dat bedrijf, elk document erin. Elke bevinding noemt brondocument en pagina. Het eigen AI-gebruik van het bedrijf is een van de disciplines die Factum dekt. Uw eigen reviewer controleert elke bevinding en tekent af."
+        },
         {
           "q": "Waarom überhaupt AI?",
           "a": "Het leest elk document in de data room in plaats van een steekproef, en vindt wat het ene document aan het andere verbindt. Het rekenwerk doet code: herberekeningen over de jaarstukken, het LBO-model en de controles voor de verkoopkant draaien zonder taalmodel. Een getal dat het model schrijft en dat in geen geciteerde passage staat, wordt tegengehouden. Mensen beslissen: uw reviewer controleert en tekent af."

@@ -233,7 +233,7 @@
   "home": {
     "hero": {
       "title": "Due diligence on the whole data room, in days",
-      "lead": "Factum is due diligence software for buyers and sell-side brokers. It reads every document in the data room and gives you each finding with its source document and page. Your own reviewer checks it and signs off.",
+      "lead": "Factum is AI due diligence software for buyers and sell-side brokers. Its AI reads every document in the data room of the company you are buying or selling. You get each finding with its source document and page. Your own reviewer checks it and signs off.",
       "cta": "Share a data room"
     },
     "problem": {
@@ -582,6 +582,10 @@
     "faq": {
       "title": "Questions we get",
       "items": [
+        {
+          "q": "What do you mean by AI due diligence?",
+          "a": "Due diligence on the company you are buying or selling, carried out with AI. Factum’s AI reads that company’s data room, every document in it. Each finding cites its source document and page. The company’s own use of AI is one of the disciplines Factum covers. Your own reviewer checks each finding and signs off."
+        },
         {
           "q": "Why use AI at all?",
           "a": "It reads every document in the room instead of a sample, and finds what links one document to another. The arithmetic is done by code: recalculations across the statements, the LBO model and the sell-side checks run without the language model. A number the model writes that is in none of the quoted passages is held back. People decide: your reviewer checks and signs off."

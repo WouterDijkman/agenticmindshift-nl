@@ -75,14 +75,10 @@ for (const app of ['web','factum']) {
     assert.ok(r.headers.get('x-middleware-rewrite').endsWith('/not-a-page')); assertions++;
   }
   const rootResponse=request('/');
-  if (app==='web') {
-    // agenticmindshift.nl: `/` is a permanent redirect to `/nl` since 19-10-2026.
-    assert.equal(rootResponse.status,308);
-    assert.equal(new URL(rootResponse.headers.get('location')).pathname,`/${def}`);
-  } else {
-    assert.equal(rootResponse.status,200);
-    assert.equal(new URL(rootResponse.headers.get('x-middleware-rewrite')).pathname,`/${def}`);
-  }
+  // Both sites: `/` is a permanent redirect to the default locale
+  // (agenticmindshift.nl since 19-10-2026, factumcapital.eu since 03-11-2026).
+  assert.equal(rootResponse.status,308);
+  assert.equal(new URL(rootResponse.headers.get('location')).pathname,`/${def}`);
   const { LOCALE_COOKIE }=load(path.join(root,'packages/ui/src/locale.ts'));
   const chosen=request('/',`${LOCALE_COOKIE}=de`); assert.equal(chosen.status,307);
   assert.equal(new URL(chosen.headers.get('location')).pathname,'/de');

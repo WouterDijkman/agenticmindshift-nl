@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { SUSE, Fraunces } from 'next/font/google';
 import Script from 'next/script';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing, type Locale } from '@/i18n/routing';
@@ -187,6 +188,10 @@ export default async function LocaleLayout({
           src="https://plausible.io/js/script.outbound-links.tagged-events.js"
           strategy="afterInteractive"
         />
+        {/* Real-user Core Web Vitals (SEO audit 03-11-2026): CrUX has too
+            little traffic to report field data. Data appears only once Speed
+            Insights is enabled for the project in the Vercel dashboard. */}
+        <SpeedInsights />
       </body>
     </html>
   );

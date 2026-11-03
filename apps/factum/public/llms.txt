@@ -18,8 +18,8 @@ Factum Capital is co-founded by Wouter Dijkman and Daniel Dropuljic. It has no p
 
 ## Terminology by language
 
-- English: AI due diligence, AI data room review, AI-assisted due diligence for private equity and M&A, sell-side data room readiness.
-- Dutch: AI due diligence, AI-review van de dataroom, dataroom marktklaar voor sell-side brokers.
+- English: AI due diligence (due diligence on a company being bought or sold, with AI reading its data room), AI data room review, AI-assisted due diligence for private equity and M&A, sell-side data room readiness.
+- Dutch: AI due diligence (due diligence op een bedrijf dat wordt gekocht of verkocht, waarbij AI de data room leest), AI-review van de dataroom, dataroom marktklaar voor sell-side brokers.
 - German: KI-gestützte Due Diligence (analysis of a data room with AI, not due diligence of AI systems), KI-Prüfung des Data Rooms.
 - Spanish: due diligence con IA, revisión del data room con IA.
 - Portuguese: due diligence com IA, revisão do data room com IA.

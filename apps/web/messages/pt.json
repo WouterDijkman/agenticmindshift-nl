@@ -226,57 +226,57 @@
       "heading": "Três passos",
       "subtext": "Sem processos de seleção longos. Do primeiro contacto à colaboração em curso costumam passar duas semanas.",
       "step_1_title": "Conversa de vinte minutos",
-      "step_1_body": "Marca uma conversa. Não é preciso preparação; os pontos relevantes surgem sozinhos.",
+      "step_1_body": "Marca uma conversa. Não precisa de preparar nada; os pontos relevantes surgem naturalmente.",
       "step_2_title": "Proposta em dois dias úteis",
-      "step_2_body": "Âmbito, prazos, valor e o que produz. Sem pontas soltas.",
+      "step_2_body": "Âmbito, prazo, honorários e o que vai receber. Sem pontas soltas.",
       "step_3_title": "Início em sete dias",
-      "step_3_body": "Após o acordo começamos numa semana. Recebe de imediato o primeiro resultado concreto ou fica agendado para a primeira sessão."
+      "step_3_body": "Após o acordo, começamos no prazo de uma semana. Recebe de imediato o primeiro resultado concreto ou fica com a primeira sessão agendada."
     },
     "offerings": {
       "eyebrow": "Os percursos",
-      "heading": "Qual situação corresponde à sua?",
-      "subtext": "Três situações, três percursos. Não reconhece logo a sua questão? Basta uma conversa para determinar o percurso certo."
+      "heading": "Que situação se aplica a si?",
+      "subtext": "Três situações, três percursos. Não reconhece logo a sua questão? Basta uma conversa para encontrar o percurso certo."
     },
     "offering_1": {
-      "badge": "Introdução · sem compromisso",
+      "badge": "Primeiro passo · sem compromisso",
       "title": "Sparring e estratégia de IA",
-      "situation": "Quer saber rapidamente o que a IA significa para a sua empresa, operação ou próxima decisão.",
+      "situation": "Quer saber rapidamente o que a IA significa para a sua empresa, a sua transação ou a sua próxima decisão.",
       "terms": "20 minutos · sem compromisso · sem fatura",
       "cta": "Reservar uma sessão →"
     },
     "offering_2": {
       "badge": "Por projeto ou retainer",
       "title": "Consultoria em IA",
-      "situation": "Quer saber onde a IA rende na sua prática e onde não. Análise dos seus processos, um plano fundamentado e o business case por baixo.",
+      "situation": "Quer saber onde a IA compensa na sua atividade e onde não compensa. Uma análise dos seus processos, um plano fundamentado e o business case que o sustenta.",
       "terms": "Por projeto ou de forma contínua em retainer",
-      "cta": "Fale sobre o seu projeto →"
+      "cta": "Fale-nos da sua questão →"
     },
     "offering_3": {
       "badge": "Por projeto ou retainer",
       "title": "Implementação e adoção",
-      "situation": "O plano está feito. Agora a sua equipa tem de trabalhar com ele diariamente: configuração dos fluxos, masterclasses e formação até a adoção se aguentar.",
-      "terms": "O âmbito e o valor são definidos após a reunião inicial",
+      "situation": "O plano está feito. Agora a sua equipa tem de trabalhar com ele todos os dias: configuração dos fluxos de trabalho, masterclasses e formação até a adoção estar consolidada.",
+      "terms": "O âmbito e os honorários são definidos após a reunião inicial",
       "cta": "Marcar um primeiro contacto →"
     },
     "risk": {
       "title": "Sem risco",
-      "body": "A sessão de sparring custa vinte minutos sem fatura. Aceite o trabalho, começa em sete dias úteis com o primeiro resultado concreto."
+      "body": "A sessão de sparring custa-lhe vinte minutos e não é faturada. Após o acordo, começa em sete dias úteis com o primeiro resultado concreto."
     },
     "faq": {
-      "eyebrow": "Respostas claras",
+      "eyebrow": "Respostas honestas",
       "heading": "O que os sócios perguntam primeiro",
       "q1": "E se não for para nós?",
-      "a1": "Comece com uma sessão de sparring: uma pergunta, um resumo, sem continuação.",
+      "a1": "Comece com uma sessão de sparring: uma pergunta, um resumo, sem seguimento obrigatório.",
       "q2": "O que torna a Agentic Mindshift diferente?",
-      "a2": "Seis anos em acquisition finance e financial restructuring. O critério vem da prática de operações; a IA acelera-o.",
+      "a2": "Seis anos em acquisition finance e financial restructuring. O aconselhamento vem da prática de transações; a IA acelera-o.",
       "q3": "Ficamos presos a um prazo longo?",
-      "a3": "O sparring e os projetos são acordados por encomenda, sem prazo mínimo. Um retainer dura pelo menos três meses e depois pode ser denunciado mensalmente com um mês de pré-aviso (ver os termos).",
+      "a3": "O sparring e os projetos são acordados caso a caso, sem prazo mínimo. Um retainer dura pelo menos três meses e depois pode ser cancelado mensalmente, com um mês de pré-aviso (ver os termos).",
       "q4": "E a due diligence com IA sobre uma transação?",
-      "a4": "Isso corre pela Factum Capital, em factumcapital.eu, um negócio à parte que Wouter cofundou. Mencione-o na primeira conversa se estiver em cima da mesa."
+      "a4": "Isso é feito através da Factum Capital, em factumcapital.eu, uma empresa independente que o Wouter cofundou. Mencione-o na primeira conversa se for relevante para si."
     },
     "cta": {
       "eyebrow": "Comece aqui",
-      "heading": "Não sabe que percurso encaixa?",
+      "heading": "Não sabe qual é o percurso certo?",
       "subtext": "Basta uma conversa de vinte minutos para o determinar.",
       "primary": "Marque uma conversa de 20 minutos"
     }

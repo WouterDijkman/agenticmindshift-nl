@@ -30,17 +30,20 @@ const APPLICATION_INFORMATION_PATHS = [
 // depended on the country it crawled from, which is the pattern Google's
 // localisation guidance tells you not to build.
 //
-// So `/` renders instead. A rewrite, not a redirect: the address bar keeps
-// `/`, the response is a 200 carrying the English homepage, and because
-// `generateMetadata` is handed `locale: 'en'` the page emits
-// `canonical: https://…/en` on its own. That settles the duplicate between `/`
-// and `/en` in one direction, with no second self-canonical to contradict it.
+// From August to November 2026 `/` *rendered*: a rewrite to the English
+// homepage, a 200 at `/` with `canonical: https://…/en`. agenticmindshift.nl ran
+// the same rewrite and Search Console showed Google ignoring the canonical and
+// indexing `/` itself ("Duplicate, Google chose different canonical than
+// user"), so that site moved to a fixed 308 on 19-10-2026. This site follows
+// (SEO audit 03-11-2026): `/` is now a permanent redirect to `/en`. It is the
+// same answer for every crawler from every country and costs one hop to a page
+// that renders. URL, canonical and hreflang agree.
 //
 // The cookie is the one signal still read, because it is the only one that is
 // a choice rather than a guess: it is written in exactly one place, the
 // language switcher's click handler. Crawlers send no cookies and so always
-// take the rewrite branch — a bot and a human making the same request get the
-// same bytes.
+// take the 308 branch — a bot and a human making the same request get the
+// same answer.
 export function proxy(request: NextRequest) {
   if (request.nextUrl.pathname === '/') {
     const url = request.nextUrl.clone();
@@ -60,16 +63,10 @@ export function proxy(request: NextRequest) {
       return response;
     }
 
+    // Everyone else — every first-time visitor, every crawler — goes to `/en`
+    // with a permanent redirect.
     url.pathname = `/${routing.defaultLocale}`;
-    // No `Vary: Cookie` on this branch, and not for want of trying. Next owns
-    // `Vary` on a rendered response — it overwrites whatever the proxy or
-    // `next.config.ts` `headers()` sets with its own RSC list (`rsc,
-    // next-router-state-tree, …`), which was verified by curl both ways. What
-    // makes that safe rather than merely unavoidable: the proxy runs on every
-    // request to a matched path, ahead of any cache lookup, so the branch above
-    // is re-evaluated for each visitor even when this body is served from the
-    // edge. A shared cache never gets to answer `/` on its own.
-    return NextResponse.rewrite(url);
+    return NextResponse.redirect(url, 308);
   }
 
   const resolved = resolveMarketingUrl(

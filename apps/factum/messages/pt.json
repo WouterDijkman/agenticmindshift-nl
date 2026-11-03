@@ -233,7 +233,7 @@
   "home": {
     "hero": {
       "title": "Due diligence sobre todo o data room, em dias",
-      "lead": "A Factum é software de due diligence para compradores e brokers do lado vendedor. Lê cada documento do data room e dá-lhe cada constatação com o documento de origem e a página. O seu próprio revisor verifica e aprova.",
+      "lead": "A Factum é software de due diligence com IA para compradores e brokers do lado vendedor. A IA lê cada documento do data room da empresa que está a comprar ou a vender. Recebe cada constatação com o documento de origem e a página. O seu próprio revisor verifica e aprova.",
       "cta": "Partilhe um data room"
     },
     "problem": {
@@ -582,6 +582,10 @@
     "faq": {
       "title": "Perguntas que recebemos",
       "items": [
+        {
+          "q": "O que significa due diligence com IA na Factum?",
+          "a": "Due diligence sobre a empresa que está a comprar ou a vender, feita com IA. A IA da Factum lê o data room dessa empresa, cada documento que contém. Cada constatação cita o documento de origem e a página. O uso que a própria empresa faz da IA é uma das disciplinas que a Factum cobre. O seu próprio revisor verifica cada constatação e aprova-a."
+        },
         {
           "q": "Porquê usar IA?",
           "a": "Lê cada documento do data room em vez de uma amostra, e encontra o que liga um documento a outro. As contas são feitas por código: os recálculos entre as demonstrações financeiras, o modelo LBO e as verificações do lado vendedor correm sem o modelo de linguagem. Um número do modelo que não esteja em nenhuma passagem citada fica retido. As pessoas decidem: o seu revisor verifica e aprova."

@@ -96,8 +96,19 @@ export async function pageMetadata(
 
   const alternates = getAlternates(path, locale);
 
+  // The homepage leads with the brand; every other page keeps the layout's
+  // `%s | Agentic Mindshift` template. Search Console (audit 03-11-2026) showed
+  // "agentic mindshift" never appearing as a query while the home title
+  // started with the service and reached the name only after the pipe.
+  // Factum made the same change on 13-10-2026. `absolute` so the template
+  // cannot append a second brand mention.
+  const title =
+    path === ''
+      ? { absolute: `${tMeta('site_name')} — ${t('meta_title')}` }
+      : t('meta_title');
+
   return {
-    title: t('meta_title'),
+    title,
     description: t('meta_description'),
     alternates,
     openGraph: {

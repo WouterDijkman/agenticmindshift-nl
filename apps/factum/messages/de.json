@@ -233,7 +233,7 @@
   "home": {
     "hero": {
       "title": "Due Diligence über den gesamten Data Room, in Tagen",
-      "lead": "Factum ist Due-Diligence-Software für Käufer und Sell-Side-Broker. Sie liest jedes Dokument im Data Room und liefert jede Feststellung mit Quelldokument und Seite. Ihr eigener Prüfer kontrolliert und gibt frei.",
+      "lead": "Factum ist Software für KI-gestützte Due Diligence, für Käufer und Sell-Side-Broker. Die KI liest jedes Dokument im Data Room des Unternehmens, das Sie kaufen oder verkaufen. Sie erhalten jede Feststellung mit Quelldokument und Seite. Ihr eigener Prüfer kontrolliert und gibt frei.",
       "cta": "Data Room teilen"
     },
     "problem": {
@@ -582,6 +582,10 @@
     "faq": {
       "title": "Fragen, die uns gestellt werden",
       "items": [
+        {
+          "q": "Was bedeutet KI-Due-Diligence bei Factum?",
+          "a": "Due Diligence für das Unternehmen, das Sie kaufen oder verkaufen, durchgeführt mit KI. Die KI von Factum liest den Data Room dieses Unternehmens, jedes Dokument darin. Jede Feststellung nennt Quelldokument und Seite. Der eigene KI-Einsatz des Unternehmens ist eine der Disziplinen, die Factum abdeckt. Ihr eigener Prüfer kontrolliert jede Feststellung und gibt sie frei."
+        },
         {
           "q": "Warum überhaupt KI?",
           "a": "Sie liest jedes Dokument im Data Room statt einer Stichprobe und findet, was ein Dokument mit einem anderen verbindet. Gerechnet wird im Code: Nachrechnungen über die Abschlüsse, das LBO-Modell und die Prüfungen für die Verkäuferseite laufen ohne Sprachmodell. Eine Zahl des Modells, die in keiner zitierten Passage steht, wird zurückgehalten. Menschen entscheiden: Ihr Prüfer kontrolliert und gibt frei."

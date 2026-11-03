@@ -225,17 +225,17 @@
       "eyebrow": "Von Interesse zur Zusammenarbeit",
       "heading": "Drei Schritte",
       "subtext": "Kein langes Auswahlverfahren. Vom ersten Kontakt bis zur laufenden Zusammenarbeit vergehen meist zwei Wochen.",
-      "step_1_title": "Gespräch von zwanzig Minuten",
+      "step_1_title": "Ein Gespräch von zwanzig Minuten",
       "step_1_body": "Sie buchen ein Gespräch. Vorbereitung ist nicht nötig; die relevanten Punkte kommen von selbst zur Sprache.",
       "step_2_title": "Vorschlag innerhalb von zwei Werktagen",
-      "step_2_body": "Umfang, Laufzeit, Honorar und was dabei herauskommt. Keine offenen Enden.",
+      "step_2_body": "Umfang, Laufzeit, Honorar und was am Ende vorliegt. Keine offenen Fragen.",
       "step_3_title": "Start innerhalb von sieben Tagen",
-      "step_3_body": "Nach Zusage starten wir innerhalb einer Woche. Sie erhalten direkt das erste konkrete Ergebnis oder werden für die erste Session eingeplant."
+      "step_3_body": "Nach Ihrer Zusage starten wir innerhalb einer Woche. Sie erhalten sofort das erste konkrete Ergebnis oder einen Termin für die erste Session."
     },
     "offerings": {
       "eyebrow": "Die Wege",
       "heading": "Welche Situation passt zu Ihnen?",
-      "subtext": "Drei Situationen, drei Wege. Erkennen Sie Ihre Frage nicht sofort wieder? Ein Gespräch genügt, um den passenden Weg zu bestimmen."
+      "subtext": "Drei Situationen, drei Wege. Finden Sie Ihre Frage nicht sofort wieder? Ein Gespräch genügt, um den passenden Weg zu finden."
     },
     "offering_1": {
       "badge": "Einstieg · unverbindlich",
@@ -247,31 +247,31 @@
     "offering_2": {
       "badge": "Projektbasiert oder Retainer",
       "title": "KI-Beratung",
-      "situation": "Sie wollen wissen, wo KI in Ihrer Praxis rentiert und wo nicht. Analyse Ihrer Prozesse, ein begründeter Plan und der Business Case darunter.",
+      "situation": "Sie wollen wissen, wo sich KI in Ihrer Praxis rechnet und wo nicht. Eine Analyse Ihrer Prozesse, ein begründeter Plan und der Business Case dazu.",
       "terms": "Pro Projekt oder laufend als Retainer",
       "cta": "Ihre Frage besprechen →"
     },
     "offering_3": {
       "badge": "Projektbasiert oder Retainer",
       "title": "Implementierung & Adoption",
-      "situation": "Der Plan liegt vor. Jetzt muss Ihr Team täglich damit arbeiten: Einrichtung der Workflows, Masterclasses und Training, bis die Adoption steht.",
-      "terms": "Umfang und Honorar werden nach dem Intake festgelegt",
+      "situation": "Der Plan steht. Jetzt muss Ihr Team täglich damit arbeiten: Einrichtung der Workflows, Masterclasses und Training, bis die Adoption sitzt.",
+      "terms": "Umfang und Honorar legen wir nach dem Erstgespräch fest",
       "cta": "Kennenlernen buchen →"
     },
     "risk": {
       "title": "Kein Risiko",
-      "body": "Die Sparringsession kostet zwanzig Minuten ohne Rechnung. Nach Zusage starten Sie innerhalb von sieben Werktagen mit dem ersten konkreten Ergebnis."
+      "body": "Die Sparringsession kostet Sie zwanzig Minuten, eine Rechnung gibt es nicht. Nach Ihrer Zusage starten Sie innerhalb von sieben Werktagen mit dem ersten konkreten Ergebnis."
     },
     "faq": {
-      "eyebrow": "Klare Antworten",
+      "eyebrow": "Ehrliche Antworten",
       "heading": "Was Partner meist zuerst wissen wollen",
-      "q1": "Was, wenn es sich als nicht das Richtige für uns herausstellt?",
-      "a1": "Beginnen Sie mit einer Sparringsession: eine Frage, eine Zusammenfassung, keine Fortsetzung.",
+      "q1": "Und wenn es doch nichts für uns ist?",
+      "a1": "Beginnen Sie mit einer Sparringsession: eine Frage, eine Zusammenfassung, kein Folgeauftrag.",
       "q2": "Was macht Agentic Mindshift anders?",
       "a2": "Sechs Jahre in Acquisition Finance und Financial Restructuring. Die Beratung kommt aus der Dealpraxis; die KI beschleunigt sie.",
       "q3": "Binden wir uns an eine lange Laufzeit?",
       "a3": "Sparring und Projekte vereinbaren wir pro Auftrag, ohne Mindestlaufzeit. Ein Retainer läuft mindestens drei Monate und ist danach monatlich mit einem Monat Frist kündbar (siehe AGB).",
-      "q4": "Und KI-gestützte Due Diligence auf einem Deal?",
+      "q4": "Und KI-gestützte Due Diligence für einen Deal?",
       "a4": "Das läuft über Factum Capital auf factumcapital.eu, ein eigenständiges Unternehmen, das Wouter mitgegründet hat. Sprechen Sie es im ersten Gespräch an, wenn es bei Ihnen ansteht."
     },
     "cta": {
