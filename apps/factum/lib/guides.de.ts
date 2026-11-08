@@ -209,5 +209,147 @@ export const GUIDES_DE: Record<GuideSlug, Guide> = {
       note: 'Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Der erste echte Bericht, den Sie sehen, ist Ihr eigener.'
     },
     datePublished: PUBLISHED
+  },
+  'ai-due-diligence-vs-data-room-ai': {
+    metaTitle: 'KI-Due-Diligence vs. KI im Data Room',
+    metaDescription:
+      'KI im Data Room hilft, den Raum zu führen: ordnen, schwärzen, suchen, Q&A. KI-gestützte Due Diligence liest jedes Dokument für Käufer oder Sell-Side-Berater, mit Quelle je Feststellung.',
+    shortName: 'KI-Due-Diligence vs. KI im Data Room',
+    h1: 'KI-Due-Diligence oder KI im Data Room: Was ist der Unterschied?',
+    answer:
+      'KI im Data Room hilft, den Raum zu führen: Sie ordnet, schwärzt und durchsucht die Dokumente und organisiert das Q&A, für die Partei, die den Prozess leitet. Eine Plattform für KI-gestützte Due Diligence arbeitet für den Käufer oder für den Sell-Side-Berater, der den Data Room vorbereitet. Sie liest jedes Dokument im Data Room und liefert Feststellungen, jede mit Quelldokument und Fundstelle. Factum gehört zur zweiten Art. Ihr eigener Prüfer entscheidet, was zählt, und gibt frei.',
+    table: {
+      heading: 'Im Vergleich',
+      corner: 'Frage',
+      columns: ['KI im Data Room', 'Plattform für KI-Due-Diligence'],
+      rows: [
+        {
+          label: 'Für wen',
+          cells: [
+            'Die Partei, die den Data Room führt, meist der Verkäufer und sein Berater, und alle, die darin arbeiten',
+            'Den Käufer, oder den Sell-Side-Berater, der den Data Room so gelesen haben will, wie ein Käufer ihn liest'
+          ]
+        },
+        {
+          label: 'Wofür',
+          cells: [
+            'Den Data Room führen: Ordnung, Zugriff, Schwärzung, Suche, Fragen und Antworten',
+            'Das Target beurteilen: was die Dokumente für den Deal bedeuten'
+          ]
+        },
+        {
+          label: 'Was gelesen wird',
+          cells: [
+            'Dokumente beim Hochladen, um sie zu indexieren, zu verschlagworten, zu schwärzen und durchsuchbar zu machen',
+            'Jedes Dokument im Data Room, über {disciplines} Disziplinen, gegeneinander abgeglichen'
+          ]
+        },
+        {
+          label: 'Was Sie bekommen',
+          cells: [
+            'Einen geordneten, durchsuchbaren Data Room und ein geführtes Q&A-Protokoll',
+            'Feststellungen mit Schweregrad, Zahlen, die sich widersprechen, und eine Liste dessen, was fehlt'
+          ]
+        },
+        {
+          label: 'Quellenangabe',
+          cells: [
+            'Je nach Anbieter und Funktion unterschiedlich',
+            'Jede Feststellung zitiert die belegende Passage wörtlich, mit Quelldokument und Fundstelle'
+          ]
+        },
+        {
+          label: 'Wer gibt frei',
+          cells: [
+            'Nichts freizugeben: Sie verwaltet den Data Room, sie prüft nicht das Target',
+            'Ihr eigener Prüfer. Kein Export ohne diese Freigabe. Factum unterschreibt nichts.'
+          ]
+        }
+      ],
+      note: 'Die Funktionen von Data Rooms unterscheiden sich je Anbieter und ändern sich oft. Fragen Sie Ihren Anbieter, was er bietet.'
+    },
+    sections: [
+      {
+        heading: 'Was macht KI im Data Room?',
+        paragraphs: [
+          'Anbieter virtueller Data Rooms haben KI in den Raum selbst eingebaut. Sie hilft dem, der den Prozess leitet, den Data Room in Ordnung und in Bewegung zu halten.'
+        ],
+        bullets: [
+          'Ordnen: Uploads sortieren und in eine Struktur indexieren.',
+          'Schwärzen: personenbezogene Daten und sensible Passagen finden, bevor Dokumente geteilt werden.',
+          'Suchen: die Dokumente finden, in denen ein Begriff oder eine Frage vorkommt.',
+          'Q&A: Fragen der Bieter weiterleiten, bei der Antwort helfen, verfolgen, was noch offen ist.'
+        ],
+        after: ['Es geht um den Data Room selbst: was darin liegt, wer was sieht, welche Fragen offen sind.']
+      },
+      {
+        heading: 'Was macht eine Plattform für KI-Due-Diligence?',
+        paragraphs: [
+          'Sie liest den Data Room für den, der das Target beurteilen muss. Factum liest jedes Dokument im Data Room, über {disciplines} Disziplinen, und gleicht sie gegeneinander ab: einen Vertrag mit dem Umsatz, den er tragen soll, die Managementberichte mit dem Jahresabschluss.',
+          'Jede Feststellung zitiert die belegende Passage wörtlich, mit Quelldokument und Fundstelle, sodass Ihr Prüfer sie an der Quelle kontrollieren kann. Was im Data Room sein sollte und fehlt, kommt auf eine eigene Liste.'
+        ]
+      },
+      {
+        heading: 'Wann brauchen Sie was?',
+        bullets: [
+          'Sie leiten einen Verkaufsprozess und wollen den Data Room geordnet, geschwärzt und die Fragen im Griff: KI im Data Room.',
+          'Sie kaufen und müssen wissen, was die Dokumente über das Target sagen: KI-gestützte Due Diligence.',
+          'Sie beraten den Verkäufer und wollen den Data Room so gelesen haben, wie ein Käufer ihn liest, bevor ein Käufer es tut: KI-gestützte Due Diligence auf dem Data Room des Verkäufers. Siehe [Factum für Verkäufer und Broker](/pre-sale).'
+        ],
+        after: ['Die meisten Deals nutzen beides. Der Data Room verwahrt die Dokumente; Factum liest sie.']
+      },
+      {
+        heading: 'Wie arbeiten beide zusammen?',
+        paragraphs: [
+          'Der Data Room bleibt, wo der Prozess läuft: Zugriff, Versionen, Fragen und Antworten. Ihr Team lädt die Dokumente aus dem Data Room in Factum hoch. Factum liefert die Feststellungen, und Ihr Prüfer geht sie in der Plattform durch. Wie ein Durchgang aufgesetzt wird, steht auf [der Plattformseite](/platform).'
+        ]
+      },
+      {
+        heading: 'Was keines von beiden ersetzt',
+        paragraphs: [
+          'Einen unterschriebenen Bericht. Ein Quality-of-Earnings- oder Vendor-Due-Diligence-Bericht entsteht in einem separaten Mandat mit einem Wirtschaftsprüfer oder Berater, der ihn unterschreibt. Factum erbringt keine Assurance-Leistungen; Ihr Prüfer gibt die Feststellungen für Ihren eigenen Gebrauch frei. Mehr dazu in [wann Factum nicht passt](/when-not-to-use-factum).'
+        ]
+      }
+    ],
+    faq: {
+      heading: 'Häufige Fragen',
+      items: [
+        {
+          q: 'Ist ein Data Room mit KI-Funktionen dasselbe wie KI-gestützte Due Diligence?',
+          a: 'Nein. KI im Data Room hilft, den Raum zu führen: ordnen, schwärzen, suchen und Q&A. KI-gestützte Due Diligence liest jedes Dokument für den Käufer oder den Sell-Side-Berater und liefert Feststellungen zum Target, jede mit Quelldokument und Fundstelle.'
+        },
+        {
+          q: 'Ersetzt Factum unseren virtuellen Data Room?',
+          a: 'Nein. Der Data Room bleibt, wo der Prozess läuft. Ihr Team lädt die Dokumente in Factum hoch; Factum liest sie und liefert Feststellungen für Ihren Prüfer.'
+        },
+        {
+          q: 'Wer gibt die Feststellungen frei?',
+          a: 'Ihr eigener Prüfer. Die menschliche Prüfung ist Pflicht: Kein Export verlässt die Plattform ohne die Freigabe Ihres Prüfers. Factum unterschreibt nichts und erbringt keine Assurance-Leistungen.'
+        },
+        {
+          q: 'Welche Disziplinen deckt Factum ab?',
+          a: '{disciplines} Disziplinen: Finanzen, Kommerziell, Recht, Steuern, Personal, KI, Operativ sowie Bewertung und Dealökonomie, zu einem Bericht abgeglichen.'
+        },
+        {
+          q: 'Funktioniert es auch für Deals außerhalb der Niederlande?',
+          a: 'Die Analyse von Finanzen, Kommerz und Betrieb funktioniert in jeder Rechtsordnung. Recht und Steuern sind auf niederländisches Recht abgestimmt; bei einem Target anderswo sollten lokale Rechtsberater diese Feststellungen prüfen.'
+        },
+        {
+          q: 'Können wir es vor einem laufenden Deal testen?',
+          a: 'Ja. Ein Deal, den Sie letztes Jahr abgeschlossen haben, eignet sich als Test: Nichts aus einem laufenden Prozess liegt offen, und Sie können die Feststellungen mit dem vergleichen, was Ihr Team damals fand. Factum steht vor dem Launch, der erste echte Bericht, den Sie sehen, ist also Ihr eigener.'
+        }
+      ]
+    },
+    helps: {
+      heading: 'Wo Factum passt',
+      bullets: [
+        'Für Private Equity und andere Käufer, und für Sell-Side-Broker.',
+        'Der ganze Data Room gelesen, jede Feststellung mit Dokument und Fundstelle belegt.',
+        '{disciplines} Disziplinen in einem Durchgang, zu einem Bericht abgeglichen.',
+        'Ihr Team prüft die Feststellungen und gibt in der Plattform frei.'
+      ],
+      note: 'Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Recht und Steuern sind auf niederländisches Recht abgestimmt.'
+    },
+    datePublished: '2026-11-08'
   }
 };

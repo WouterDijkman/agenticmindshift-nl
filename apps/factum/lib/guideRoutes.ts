@@ -13,7 +13,7 @@
 export const GUIDE_LOCALES = ['en', 'nl', 'de', 'es', 'pt'] as const;
 export type GuideLocale = (typeof GUIDE_LOCALES)[number];
 
-export const GUIDE_SLUGS = ['data-room-checklist', 'due-diligence-timeline', 'when-not-to-use-factum'] as const;
+export const GUIDE_SLUGS = ['data-room-checklist', 'due-diligence-timeline', 'when-not-to-use-factum', 'ai-due-diligence-vs-data-room-ai'] as const;
 export type GuideSlug = (typeof GUIDE_SLUGS)[number];
 
 export const GUIDE_PATHS = GUIDE_SLUGS.map((s) => `/${s}`);

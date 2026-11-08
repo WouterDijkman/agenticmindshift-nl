@@ -15,7 +15,7 @@ export const OG_IMAGE_SIZE = { width: 1200, height: 630 };
 export const OG_IMAGE_CONTENT_TYPE = 'image/png';
 
 /** Pages with a card of their own: the ones Wouter features on LinkedIn. */
-export const OG_CARD_PATHS = ['/platform', '/data-room-checklist', '/due-diligence-timeline', '/when-not-to-use-factum'];
+export const OG_CARD_PATHS = ['/platform', '/data-room-checklist', '/due-diligence-timeline', '/when-not-to-use-factum', '/ai-due-diligence-vs-data-room-ai'];
 
 /**
  * The share card for one locale, as an Open Graph image descriptor.

@@ -4,7 +4,7 @@ import { CHROME_ES, GUIDES_ES } from './guides.es';
 import { CHROME_PT, GUIDES_PT } from './guides.pt';
 
 /**
- * Copy for the three decision pages. English and Dutch here; German, Spanish
+ * Copy for the four decision pages. English and Dutch here; German, Spanish
  * and Portuguese in guides.de.ts, guides.es.ts and guides.pt.ts.
  *
  * Why here and not in messages/*.json: the catalogues are shared by all five
@@ -40,6 +40,18 @@ export interface GuideSection {
   after?: string[];
 }
 
+/** A two-column comparison, rendered as a text table (stacks on a phone). */
+export interface GuideTable {
+  heading: string;
+  /** Header of the label column (screen readers; hidden visually on a phone). */
+  corner: string;
+  /** The two things compared. The second is Factum's category and is emphasised. */
+  columns: [string, string];
+  rows: { label: string; cells: [string, string] }[];
+  /** One line under the table. */
+  note?: string;
+}
+
 export interface Guide {
   /** Without the brand suffix; GuidePage appends it like pageMetadata does. */
   metaTitle: string;
@@ -49,7 +61,11 @@ export interface Guide {
   h1: string;
   /** The answer to the page's question, as the header lead. */
   answer: string;
+  /** Optional comparison table, shown before the sections. */
+  table?: GuideTable;
   sections: GuideSection[];
+  /** Optional FAQ after the sections; emitted as FAQPage by Disclosures. Plain text, no links. */
+  faq?: { heading: string; items: { q: string; a: string }[] };
   helps: { heading: string; bullets: string[]; note: string };
   datePublished: string;
 }
@@ -262,6 +278,148 @@ const GUIDES: Record<GuideLocale, Record<GuideSlug, Guide>> = {
         note: 'Factum is pre-launch: there is no public client or case study yet. The first real report you see is your own.'
       },
       datePublished: PUBLISHED
+    },
+    'ai-due-diligence-vs-data-room-ai': {
+      metaTitle: 'AI due diligence vs. data room AI',
+      metaDescription:
+        'Data room AI helps run the room: organising, redaction, search, Q&A. AI due diligence reads every document for the buyer or sell-side adviser and cites each finding.',
+      shortName: 'AI due diligence vs. data room AI',
+      h1: 'AI due diligence vs. data room AI: what is the difference?',
+      answer:
+        'Data room AI helps run the room: it organises, redacts and searches the documents and manages the Q&A for the party that runs the process. An AI due diligence platform works for the buyer, or for the sell-side adviser preparing the room. It reads every document in the room and returns findings, each citing its source document and location. Factum is the second kind. Your own reviewer decides what matters and signs off.',
+      table: {
+        heading: 'Side by side',
+        corner: 'Question',
+        columns: ['Data room AI', 'AI due diligence platform'],
+        rows: [
+          {
+            label: 'Who it works for',
+            cells: [
+              'The party that runs the room, usually the seller and its adviser, and everyone working in it',
+              'The buyer, or the sell-side adviser who wants the room read the way a buyer will read it'
+            ]
+          },
+          {
+            label: 'What it is for',
+            cells: [
+              'Running the room: order, access, redaction, search, questions and answers',
+              'Judging the target: what the documents mean for the deal'
+            ]
+          },
+          {
+            label: 'What it reads',
+            cells: [
+              'Documents as they are uploaded, to index, tag, redact and search them',
+              'Every document in the room, across {disciplines} disciplines, held against each other'
+            ]
+          },
+          {
+            label: 'What you get',
+            cells: [
+              'A tidy, searchable room and a managed Q&A log',
+              'Findings with a severity, figures that contradict each other, and a list of what is missing'
+            ]
+          },
+          {
+            label: 'Sourcing',
+            cells: [
+              'Differs per provider and feature',
+              'Each finding quotes the supporting passage word for word, with its source document and location'
+            ]
+          },
+          {
+            label: 'Who signs off',
+            cells: [
+              'Nothing to sign: it manages the room, it does not review the target',
+              'Your own reviewer. No export leaves without that sign-off. Factum signs nothing.'
+            ]
+          }
+        ],
+        note: 'Data room features differ per provider and change often. Ask yours what it offers.'
+      },
+      sections: [
+        {
+          heading: 'What does data room AI do?',
+          paragraphs: [
+            'Virtual data room providers have built AI into the room itself. It helps whoever runs the process keep the room in order and keep it moving.'
+          ],
+          bullets: [
+            'Organising: sorting and indexing uploads into a structure.',
+            'Redacting: finding personal data and sensitive passages before documents are shared.',
+            'Searching: finding the documents that mention a term or touch a question.',
+            'Q&A: routing questions from bidders, helping answer them, tracking what is still open.'
+          ],
+          after: ['The job is the room: what is in it, who sees what, which questions are open.']
+        },
+        {
+          heading: 'What does an AI due diligence platform do?',
+          paragraphs: [
+            'It reads the room for the person who has to judge the target. Factum reads every document in the data room, across {disciplines} disciplines, and holds them against each other: a contract against the revenue it is meant to carry, the management accounts against the annual accounts.',
+            'Every finding quotes the supporting passage word for word, with its source document and location, so your reviewer can check it at the source. What should be in the room and is not goes on a separate list.'
+          ]
+        },
+        {
+          heading: 'When do you need which?',
+          bullets: [
+            'You run a sale process and want the room organised, redacted and the questions under control: data room AI.',
+            'You are buying and need to know what the documents say about the target: AI due diligence.',
+            'You advise the seller and want the room read the way a buyer will read it, before a buyer does: AI due diligence on the seller’s room. See [Factum for sellers and brokers](/pre-sale).'
+          ],
+          after: ['Most deals use both. The data room holds the documents; Factum reads them.']
+        },
+        {
+          heading: 'How do the two work together?',
+          paragraphs: [
+            'The data room stays where the process runs: access, versions, questions and answers. Your team uploads the documents from the room into Factum. Factum returns the findings, and your reviewer goes through them in the platform. How a run is set up is on [the platform page](/platform).'
+          ]
+        },
+        {
+          heading: 'What neither replaces',
+          paragraphs: [
+            'A signed report. A quality-of-earnings or vendor due diligence report comes from a separate engagement with an accountant or adviser who signs it. Factum gives no assurance; your reviewer signs off the findings for your own use. More in [when Factum is the wrong tool](/when-not-to-use-factum).'
+          ]
+        }
+      ],
+      faq: {
+        heading: 'Frequently asked questions',
+        items: [
+          {
+            q: 'Is a data room with AI features the same as AI due diligence?',
+            a: 'No. Data room AI helps run the room: organising, redaction, search and Q&A. AI due diligence reads every document for the buyer or the sell-side adviser and returns findings about the target, each citing its source document and location.'
+          },
+          {
+            q: 'Does Factum replace our virtual data room?',
+            a: 'No. The data room stays where the process runs. Your team uploads the documents into Factum, which reads them and returns findings for your reviewer.'
+          },
+          {
+            q: 'Who signs off the findings?',
+            a: 'Your own reviewer. Human review is mandatory: no export leaves the platform without your reviewer’s sign-off. Factum signs nothing and gives no assurance.'
+          },
+          {
+            q: 'Which disciplines does Factum cover?',
+            a: '{disciplines} disciplines: financial, commercial, legal, tax, HR, AI, operational, and valuation with deal economics, reconciled into one report.'
+          },
+          {
+            q: 'Does it work for deals outside the Netherlands?',
+            a: 'The financial, commercial and operational reads work in any jurisdiction. Legal and tax are tuned to Dutch law; for a target elsewhere, have local counsel check those findings.'
+          },
+          {
+            q: 'Can we test it before a live deal?',
+            a: 'Yes. A deal you closed last year works as the test: nothing in process is exposed, and you can hold the findings against what your team found then. Factum is pre-launch, so the first real report you see is your own.'
+          }
+        ]
+      },
+      helps: {
+        heading: 'Where Factum fits',
+        bullets: [
+          'For private equity and other acquirers, and for sell-side brokers.',
+          'The whole data room read, with each finding cited to its document and location.',
+          '{disciplines} disciplines in one pass, reconciled into one report.',
+          'Your team reviews the findings and signs off in the platform.'
+        ],
+        note: 'Factum is pre-launch: there is no public client or case study yet. Legal and tax are tuned to Dutch law.'
+      },
+      datePublished: '2026-11-08'
     }
   },
   nl: {
@@ -455,6 +613,148 @@ const GUIDES: Record<GuideLocale, Record<GuideSlug, Guide>> = {
         note: 'Factum is pre-launch: er is nog geen publieke klant of case study. Het eerste echte rapport dat u ziet, is uw eigen.'
       },
       datePublished: PUBLISHED
+    },
+    'ai-due-diligence-vs-data-room-ai': {
+      metaTitle: 'AI-due diligence vs. AI in de data room',
+      metaDescription:
+        'AI in de data room helpt bij het beheer: ordenen, anonimiseren, zoeken, Q&A. AI-due diligence leest elk document voor koper of sell-side adviseur, met bron per bevinding.',
+      shortName: 'AI-due diligence vs. AI in de data room',
+      h1: 'AI-due diligence of AI in de data room: wat is het verschil?',
+      answer:
+        'AI in de data room helpt de data room te beheren: ze ordent, anonimiseert en doorzoekt de stukken en regelt de Q&A, voor de partij die het proces leidt. Een AI-due-diligenceplatform werkt voor de koper, of voor de sell-side adviseur die de data room klaarzet. Het leest elk document in de data room en levert bevindingen, elk met het brondocument en de vindplaats. Factum is het tweede. Uw eigen reviewer bepaalt wat ertoe doet en tekent af.',
+      table: {
+        heading: 'Naast elkaar',
+        corner: 'Vraag',
+        columns: ['AI in de data room', 'AI-due-diligenceplatform'],
+        rows: [
+          {
+            label: 'Voor wie',
+            cells: [
+              'De partij die de data room beheert, meestal de verkoper en zijn adviseur, en iedereen die erin werkt',
+              'De koper, of de sell-side adviseur die de data room gelezen wil hebben zoals een koper dat doet'
+            ]
+          },
+          {
+            label: 'Waarvoor',
+            cells: [
+              'De data room draaien: ordening, toegang, anonimisering, zoeken, vragen en antwoorden',
+              'Het target beoordelen: wat de stukken betekenen voor de deal'
+            ]
+          },
+          {
+            label: 'Wat het leest',
+            cells: [
+              'Stukken zodra ze worden geüpload, om ze te indexeren, te labelen, te anonimiseren en doorzoekbaar te maken',
+              'Elk document in de data room, over {disciplines} disciplines, naast elkaar gelegd'
+            ]
+          },
+          {
+            label: 'Wat u krijgt',
+            cells: [
+              'Een geordende, doorzoekbare data room en een bijgehouden Q&A-log',
+              'Bevindingen met een ernst, cijfers die elkaar tegenspreken, en een lijst van wat ontbreekt'
+            ]
+          },
+          {
+            label: 'Bronvermelding',
+            cells: [
+              'Verschilt per aanbieder en functie',
+              'Elke bevinding citeert de passage letterlijk, met het brondocument en de vindplaats'
+            ]
+          },
+          {
+            label: 'Wie tekent af',
+            cells: [
+              'Niets af te tekenen: het beheert de data room, het beoordeelt het target niet',
+              'Uw eigen reviewer. Geen export zonder die aftekening. Factum tekent niets.'
+            ]
+          }
+        ],
+        note: 'Functies van data rooms verschillen per aanbieder en veranderen vaak. Vraag uw aanbieder wat er is.'
+      },
+      sections: [
+        {
+          heading: 'Wat doet AI in de data room?',
+          paragraphs: [
+            'Aanbieders van virtuele data rooms hebben AI in de data room zelf gebouwd. Die helpt wie het proces leidt om de data room op orde en in beweging te houden.'
+          ],
+          bullets: [
+            'Ordenen: uploads sorteren en indexeren in een structuur.',
+            'Anonimiseren: persoonsgegevens en gevoelige passages vinden voordat stukken worden gedeeld.',
+            'Zoeken: de stukken vinden waarin een term of een vraag terugkomt.',
+            'Q&A: vragen van bieders doorsturen, helpen beantwoorden, bijhouden wat nog openstaat.'
+          ],
+          after: ['Het gaat om de data room zelf: wat erin zit, wie wat ziet, welke vragen openstaan.']
+        },
+        {
+          heading: 'Wat doet een AI-due-diligenceplatform?',
+          paragraphs: [
+            'Het leest de data room voor wie het target moet beoordelen. Factum leest elk document in de data room, over {disciplines} disciplines, en legt ze naast elkaar: een contract naast de omzet die het moet dragen, de managementrapportage naast de jaarrekening.',
+            'Elke bevinding citeert de onderbouwende passage letterlijk, met het brondocument en de vindplaats, zodat uw reviewer haar bij de bron kan controleren. Wat in de data room had moeten zitten en ontbreekt, komt op een aparte lijst.'
+          ]
+        },
+        {
+          heading: 'Wanneer hebt u wat nodig?',
+          bullets: [
+            'U leidt een verkoopproces en wilt de data room geordend, geanonimiseerd en de vragen onder controle: AI in de data room.',
+            'U koopt en wilt weten wat de stukken zeggen over het target: AI-due diligence.',
+            'U adviseert de verkoper en wilt de data room gelezen hebben zoals een koper dat doet, voordat een koper dat doet: AI-due diligence op de data room van de verkoper. Zie [Factum voor verkopers en brokers](/pre-sale).'
+          ],
+          after: ['De meeste deals gebruiken allebei. De data room bewaart de stukken; Factum leest ze.']
+        },
+        {
+          heading: 'Hoe werken de twee samen?',
+          paragraphs: [
+            'De data room blijft waar het proces loopt: toegang, versies, vragen en antwoorden. Uw team uploadt de stukken uit de data room in Factum. Factum levert de bevindingen, en uw reviewer loopt ze door in het platform. Hoe een ronde wordt opgezet, staat op [de platformpagina](/platform).'
+          ]
+        },
+        {
+          heading: 'Wat geen van beide vervangt',
+          paragraphs: [
+            'Een ondertekend rapport. Een quality-of-earnings- of vendor due diligence-rapport komt uit een aparte opdracht aan een accountant of adviseur die het ondertekent. Factum geeft geen assurance; uw reviewer tekent de bevindingen af voor eigen gebruik. Meer in [wanneer Factum niet past](/when-not-to-use-factum).'
+          ]
+        }
+      ],
+      faq: {
+        heading: 'Veelgestelde vragen',
+        items: [
+          {
+            q: 'Is een data room met AI-functies hetzelfde als AI-due diligence?',
+            a: 'Nee. AI in de data room helpt de data room te beheren: ordenen, anonimiseren, zoeken en Q&A. AI-due diligence leest elk document voor de koper of de sell-side adviseur en levert bevindingen over het target, elk met het brondocument en de vindplaats.'
+          },
+          {
+            q: 'Vervangt Factum onze virtuele data room?',
+            a: 'Nee. De data room blijft waar het proces loopt. Uw team uploadt de stukken in Factum, dat ze leest en bevindingen levert voor uw reviewer.'
+          },
+          {
+            q: 'Wie tekent de bevindingen af?',
+            a: 'Uw eigen reviewer. Menselijke review is verplicht: geen export verlaat het platform zonder de aftekening van uw reviewer. Factum tekent niets en geeft geen assurance.'
+          },
+          {
+            q: 'Welke disciplines dekt Factum?',
+            a: '{disciplines} disciplines: financieel, commercieel, juridisch, fiscaal, HR, AI, operationeel, en waardering en dealeconomie, afgestemd tot één rapport.'
+          },
+          {
+            q: 'Werkt het ook voor deals buiten Nederland?',
+            a: 'De financiële, commerciële en operationele analyse werkt in elk rechtsgebied. Juridisch en fiscaal zijn afgestemd op Nederlands recht; laat die bevindingen bij een target elders door lokale advocaten controleren.'
+          },
+          {
+            q: 'Kunnen we het testen voor een lopende deal?',
+            a: 'Ja. Een deal die u vorig jaar sloot, werkt als test: niets uit een lopend proces ligt op tafel, en u legt de bevindingen naast wat uw team destijds vond. Factum is pre-launch, dus het eerste echte rapport dat u ziet, is uw eigen.'
+          }
+        ]
+      },
+      helps: {
+        heading: 'Waar Factum past',
+        bullets: [
+          'Voor private equity en andere kopers, en voor sell-side brokers.',
+          'De hele data room gelezen, met bij elke bevinding het document en de vindplaats.',
+          '{disciplines} disciplines in één ronde, afgestemd tot één rapport.',
+          'Uw team beoordeelt de bevindingen en tekent af in het platform.'
+        ],
+        note: 'Factum is pre-launch: er is nog geen publieke klant of case study. Juridisch en fiscaal zijn afgestemd op Nederlands recht.'
+      },
+      datePublished: '2026-11-08'
     }
   },
   de: GUIDES_DE,

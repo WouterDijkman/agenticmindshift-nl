@@ -2262,6 +2262,20 @@ details.disclosure > div { padding-bottom: 24px; }
 }
 .matrix-legend li { display: flex; align-items: center; gap: 8px; }
 
+/* Text variant (the comparison guide): words instead of marks. */
+.matrix-text .matrix-corner { width: 22%; }
+.matrix-text .matrix-head { text-align: left; padding-right: 20px; }
+.matrix-text .matrix-row-label { vertical-align: top; }
+.matrix-text .matrix-cell {
+  text-align: left;
+  vertical-align: top;
+  padding: 16px 20px 16px 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+.matrix-text .matrix-cell-ours { padding-left: 16px; color: var(--text-primary); }
+
 /* Below the table's 620px minimum plus the container gutters there is no
    honest way to keep four columns. Sideways scrolling is not a fallback here:
    the header row scrolls off vertically as you read down, so a swiped-to
@@ -2307,6 +2321,10 @@ details.disclosure > div { padding-bottom: 24px; }
   .matrix-cell-ours .matrix-cell-col { color: var(--text-display); }
   /* The mark sits in a flex line now; stop it being stretched or squeezed. */
   .matrix-mark { flex: none; }
+  /* Text cells are too long for a flex line: column name above, text below. */
+  .matrix-text .matrix-cell { display: block; padding: 8px 0; }
+  .matrix-text .matrix-cell-ours { padding-left: 0; }
+  .matrix-text .matrix-cell-col { margin-bottom: 4px; }
 }
 
 /* ============================================================

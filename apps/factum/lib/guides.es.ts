@@ -207,5 +207,147 @@ export const GUIDES_ES: Record<GuideSlug, Guide> = {
       note: 'Factum está en fase previa al lanzamiento: aún no hay ningún cliente público ni caso de estudio. El primer informe real que verá será el suyo.'
     },
     datePublished: PUBLISHED
+  },
+  'ai-due-diligence-vs-data-room-ai': {
+    metaTitle: 'Due diligence con IA frente a la IA del data room',
+    metaDescription:
+      'La IA del data room ayuda a gestionarlo: ordenar, anonimizar, buscar, Q&A. La due diligence con IA lee cada documento para el comprador o el asesor vendedor y cita cada hallazgo.',
+    shortName: 'Due diligence con IA frente a la IA del data room',
+    h1: 'Due diligence con IA o IA del data room: ¿en qué se diferencian?',
+    answer:
+      'La IA del data room ayuda a gestionar la sala: ordena, anonimiza y busca en los documentos y organiza el Q&A, para la parte que dirige el proceso. Una plataforma de due diligence con IA trabaja para el comprador, o para el asesor de la parte vendedora que prepara el data room. Lee cada documento del data room y devuelve hallazgos, cada uno con su documento fuente y su ubicación. Factum es lo segundo. Su propio revisor decide qué importa y da el visto bueno.',
+    table: {
+      heading: 'Frente a frente',
+      corner: 'Pregunta',
+      columns: ['IA del data room', 'Plataforma de due diligence con IA'],
+      rows: [
+        {
+          label: 'Para quién trabaja',
+          cells: [
+            'La parte que gestiona el data room, normalmente el vendedor y su asesor, y todos los que trabajan en él',
+            'El comprador, o el asesor de la parte vendedora que quiere el data room leído como lo leerá un comprador'
+          ]
+        },
+        {
+          label: 'Para qué sirve',
+          cells: [
+            'Gestionar el data room: orden, accesos, anonimización, búsqueda, preguntas y respuestas',
+            'Valorar el target: qué significan los documentos para la operación'
+          ]
+        },
+        {
+          label: 'Qué lee',
+          cells: [
+            'Los documentos a medida que se suben, para indexarlos, etiquetarlos, anonimizarlos y hacerlos buscables',
+            'Cada documento del data room, en {disciplines} disciplinas, contrastados entre sí'
+          ]
+        },
+        {
+          label: 'Qué obtiene',
+          cells: [
+            'Un data room ordenado y buscable, y un registro de Q&A al día',
+            'Hallazgos con su gravedad, cifras que se contradicen y una lista de lo que falta'
+          ]
+        },
+        {
+          label: 'Fuentes',
+          cells: [
+            'Depende del proveedor y de la función',
+            'Cada hallazgo cita literalmente el pasaje que lo respalda, con su documento fuente y su ubicación'
+          ]
+        },
+        {
+          label: 'Quién da el visto bueno',
+          cells: [
+            'Nada que aprobar: gestiona el data room, no revisa el target',
+            'Su propio revisor. Ninguna exportación sale sin esa aprobación. Factum no firma nada.'
+          ]
+        }
+      ],
+      note: 'Las funciones de los data rooms varían según el proveedor y cambian a menudo. Pregunte al suyo qué ofrece.'
+    },
+    sections: [
+      {
+        heading: '¿Qué hace la IA del data room?',
+        paragraphs: [
+          'Los proveedores de data rooms virtuales han integrado IA en la propia sala. Ayuda a quien dirige el proceso a mantener el data room en orden y en marcha.'
+        ],
+        bullets: [
+          'Ordenar: clasificar e indexar lo que se sube en una estructura.',
+          'Anonimizar: encontrar datos personales y pasajes sensibles antes de compartir los documentos.',
+          'Buscar: encontrar los documentos en los que aparece un término o una pregunta.',
+          'Q&A: encaminar las preguntas de los ofertantes, ayudar a responderlas, seguir lo que sigue abierto.'
+        ],
+        after: ['Su trabajo es la sala: qué contiene, quién ve qué, qué preguntas siguen abiertas.']
+      },
+      {
+        heading: '¿Qué hace una plataforma de due diligence con IA?',
+        paragraphs: [
+          'Lee el data room para quien tiene que valorar el target. Factum lee cada documento del data room, en {disciplines} disciplinas, y los contrasta entre sí: un contrato frente a los ingresos que debería sostener, las cuentas de gestión frente a las cuentas anuales.',
+          'Cada hallazgo cita literalmente el pasaje que lo respalda, con su documento fuente y su ubicación, para que su revisor pueda comprobarlo en la fuente. Lo que debería estar en el data room y no está va a una lista aparte.'
+        ]
+      },
+      {
+        heading: '¿Cuándo necesita cada una?',
+        bullets: [
+          'Dirige un proceso de venta y quiere el data room ordenado, anonimizado y las preguntas bajo control: IA del data room.',
+          'Compra y necesita saber qué dicen los documentos sobre el target: due diligence con IA.',
+          'Asesora al vendedor y quiere el data room leído como lo leerá un comprador, antes de que lo haga: due diligence con IA sobre el data room del vendedor. Vea [Factum para vendedores y brokers](/pre-sale).'
+        ],
+        after: ['La mayoría de las operaciones usan ambas. El data room guarda los documentos; Factum los lee.']
+      },
+      {
+        heading: '¿Cómo funcionan juntas?',
+        paragraphs: [
+          'El data room sigue donde transcurre el proceso: accesos, versiones, preguntas y respuestas. Su equipo sube los documentos del data room a Factum. Factum devuelve los hallazgos, y su revisor los repasa en la plataforma. Cómo se prepara una pasada está en [la página de la plataforma](/platform).'
+        ]
+      },
+      {
+        heading: 'Lo que ninguna sustituye',
+        paragraphs: [
+          'Un informe firmado. Un informe de quality of earnings o de vendor due diligence sale de un encargo aparte a un auditor o asesor que lo firma. Factum no da aseguramiento; su revisor aprueba los hallazgos para su propio uso. Más en [cuándo Factum no encaja](/when-not-to-use-factum).'
+        ]
+      }
+    ],
+    faq: {
+      heading: 'Preguntas frecuentes',
+      items: [
+        {
+          q: '¿Un data room con funciones de IA es lo mismo que la due diligence con IA?',
+          a: 'No. La IA del data room ayuda a gestionar la sala: ordenar, anonimizar, buscar y Q&A. La due diligence con IA lee cada documento para el comprador o el asesor de la parte vendedora y devuelve hallazgos sobre el target, cada uno con su documento fuente y su ubicación.'
+        },
+        {
+          q: '¿Sustituye Factum a nuestro data room virtual?',
+          a: 'No. El data room sigue donde transcurre el proceso. Su equipo sube los documentos a Factum, que los lee y devuelve hallazgos para su revisor.'
+        },
+        {
+          q: '¿Quién aprueba los hallazgos?',
+          a: 'Su propio revisor. La revisión humana es obligatoria: ninguna exportación sale de la plataforma sin la aprobación de su revisor. Factum no firma nada y no da aseguramiento.'
+        },
+        {
+          q: '¿Qué disciplinas cubre Factum?',
+          a: '{disciplines} disciplinas: financiera, comercial, legal, fiscal, RR. HH., IA, operativa, y valoración y economía de la operación, conciliadas en un solo informe.'
+        },
+        {
+          q: '¿Funciona para operaciones fuera de los Países Bajos?',
+          a: 'Las lecturas financiera, comercial y operativa funcionan en cualquier jurisdicción. Legal y fiscal están ajustados al derecho neerlandés; para un target en otro país, que asesores jurídicos locales revisen esos hallazgos.'
+        },
+        {
+          q: '¿Podemos probarlo antes de una operación en curso?',
+          a: 'Sí. Una operación que cerró el año pasado sirve de prueba: nada de un proceso en curso queda expuesto, y puede comparar los hallazgos con lo que su equipo encontró entonces. Factum está en fase previa al lanzamiento, así que el primer informe real que verá será el suyo.'
+        }
+      ]
+    },
+    helps: {
+      heading: 'Dónde encaja Factum',
+      bullets: [
+        'Para private equity y otros compradores, y para sell-side brokers.',
+        'Todo el data room leído, con cada hallazgo citado a su documento y su ubicación.',
+        '{disciplines} disciplinas en una sola pasada, conciliadas en un solo informe.',
+        'Su equipo revisa los hallazgos y da el visto bueno en la plataforma.'
+      ],
+      note: 'Factum está en fase previa al lanzamiento: aún no hay ningún cliente público ni caso de estudio. Legal y fiscal están ajustados al derecho neerlandés.'
+    },
+    datePublished: '2026-11-08'
   }
 };

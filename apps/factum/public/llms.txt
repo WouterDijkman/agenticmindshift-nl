@@ -37,6 +37,7 @@ Factum Capital is co-founded by Wouter Dijkman and Daniel Dropuljic. It has no p
 - [Data room checklist before a sale](https://www.factumcapital.eu/en/data-room-checklist)
 - [How long due diligence takes](https://www.factumcapital.eu/en/due-diligence-timeline)
 - [When Factum is the wrong tool](https://www.factumcapital.eu/en/when-not-to-use-factum)
+- [AI due diligence vs. data room AI](https://www.factumcapital.eu/en/ai-due-diligence-vs-data-room-ai)
 - [Team](https://www.factumcapital.eu/en/team)
 - [Contact](https://www.factumcapital.eu/en/contact)
 - [Privacy](https://www.factumcapital.eu/en/privacy)
@@ -52,6 +53,7 @@ Factum Capital is co-founded by Wouter Dijkman and Daniel Dropuljic. It has no p
 - [Data room checklist before a sale](https://www.factumcapital.eu/nl/data-room-checklist)
 - [How long due diligence takes](https://www.factumcapital.eu/nl/due-diligence-timeline)
 - [When Factum is the wrong tool](https://www.factumcapital.eu/nl/when-not-to-use-factum)
+- [AI due diligence vs. data room AI](https://www.factumcapital.eu/nl/ai-due-diligence-vs-data-room-ai)
 - [Team](https://www.factumcapital.eu/nl/team)
 - [Contact](https://www.factumcapital.eu/nl/contact)
 - [Privacy](https://www.factumcapital.eu/nl/privacy)
@@ -67,6 +69,7 @@ Factum Capital is co-founded by Wouter Dijkman and Daniel Dropuljic. It has no p
 - [Data room checklist before a sale](https://www.factumcapital.eu/de/data-room-checklist)
 - [How long due diligence takes](https://www.factumcapital.eu/de/due-diligence-timeline)
 - [When Factum is the wrong tool](https://www.factumcapital.eu/de/when-not-to-use-factum)
+- [AI due diligence vs. data room AI](https://www.factumcapital.eu/de/ai-due-diligence-vs-data-room-ai)
 - [Team](https://www.factumcapital.eu/de/team)
 - [Contact](https://www.factumcapital.eu/de/contact)
 - [Privacy](https://www.factumcapital.eu/de/privacy)
@@ -82,6 +85,7 @@ Factum Capital is co-founded by Wouter Dijkman and Daniel Dropuljic. It has no p
 - [Data room checklist before a sale](https://www.factumcapital.eu/es/data-room-checklist)
 - [How long due diligence takes](https://www.factumcapital.eu/es/due-diligence-timeline)
 - [When Factum is the wrong tool](https://www.factumcapital.eu/es/when-not-to-use-factum)
+- [AI due diligence vs. data room AI](https://www.factumcapital.eu/es/ai-due-diligence-vs-data-room-ai)
 - [Team](https://www.factumcapital.eu/es/team)
 - [Contact](https://www.factumcapital.eu/es/contact)
 - [Privacy](https://www.factumcapital.eu/es/privacy)
@@ -97,6 +101,7 @@ Factum Capital is co-founded by Wouter Dijkman and Daniel Dropuljic. It has no p
 - [Data room checklist before a sale](https://www.factumcapital.eu/pt/data-room-checklist)
 - [How long due diligence takes](https://www.factumcapital.eu/pt/due-diligence-timeline)
 - [When Factum is the wrong tool](https://www.factumcapital.eu/pt/when-not-to-use-factum)
+- [AI due diligence vs. data room AI](https://www.factumcapital.eu/pt/ai-due-diligence-vs-data-room-ai)
 - [Team](https://www.factumcapital.eu/pt/team)
 - [Contact](https://www.factumcapital.eu/pt/contact)
 - [Privacy](https://www.factumcapital.eu/pt/privacy)
@@ -107,4 +112,4 @@ Factum Capital is co-founded by Wouter Dijkman and Daniel Dropuljic. It has no p
 - [Sitemap](https://www.factumcapital.eu/sitemap.xml)
 - [Crawler policy](https://www.factumcapital.eu/robots.txt)
 
-Updated: 2026-10-19. The linked pages are the authoritative source for current details.
+Updated: 2026-11-08. The linked pages are the authoritative source for current details.

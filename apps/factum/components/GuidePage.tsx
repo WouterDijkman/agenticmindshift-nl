@@ -7,12 +7,13 @@ import { Section } from '@/components/Section';
 import Reveal from '@/components/Reveal';
 import CtaBand from '@/components/CtaBand';
 import GuaranteePanel from '@/components/GuaranteePanel';
+import Disclosures from '@/components/Disclosures';
 import { ArrowRight } from '@/components/Icons';
 import { breadcrumbSchema } from '@/lib/jsonld';
 import { getAlternates } from '@/lib/hreflang';
 import { OG_LOCALES, sharedOpenGraph } from '@/lib/pageMetadata';
 import { DISCIPLINE_COUNT, SITE_URL } from '@/lib/site';
-import { GUIDE_CHROME, getGuide, type Guide } from '@/lib/guides';
+import { GUIDE_CHROME, getGuide, type Guide, type GuideTable } from '@/lib/guides';
 import { GUIDE_LOCALES, GUIDE_SLUGS, type GuideLocale, type GuideSlug } from '@/lib/guideRoutes';
 
 /**
@@ -101,6 +102,48 @@ function articleSchema(slug: GuideSlug, locale: GuideLocale, g: Guide) {
   };
 }
 
+/** `[label](/path)` → `label`, for text that is emitted as plain text. */
+function plain(text: string): string {
+  return fill(text).replace(/\[([^\]]+)\]\((\/[^)]*)\)/g, '$1');
+}
+
+/**
+ * A two-column comparison in text. Uses the `.matrix` table of /platform so
+ * it restacks the same way below 700px; `.matrix-text` swaps the marks for
+ * words and left-aligns them.
+ */
+function TextTable({ table }: { table: GuideTable }) {
+  return (
+    <Reveal className="matrix-wrap">
+      <table className="matrix matrix-text">
+        <thead>
+          <tr>
+            <th scope="col" className="matrix-corner"><span className="sr-only">{table.corner}</span></th>
+            {table.columns.map((column, i) => (
+              <th key={column} scope="col" className={`matrix-head ${i === 1 ? 'matrix-head-ours' : ''}`}>
+                {column}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {table.rows.map((row) => (
+            <tr key={row.label}>
+              <th scope="row" className="matrix-row-label">{row.label}</th>
+              {row.cells.map((cell, i) => (
+                <td key={table.columns[i]} className={`matrix-cell ${i === 1 ? 'matrix-cell-ours' : ''}`}>
+                  <span className="matrix-cell-col">{table.columns[i]}</span>
+                  <span>{rich(cell)}</span>
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </Reveal>
+  );
+}
+
 const listStyle = {
   margin: 0,
   paddingLeft: '1.2em',
@@ -131,15 +174,28 @@ export default async function GuidePage({ slug, locale }: { slug: GuideSlug; loc
         <nav aria-label={c.tocLabel} className="panel panel-inset" style={{ padding: 'clamp(18px, 2.5vw, 26px)', marginBottom: 'clamp(40px, 5vw, 64px)' }}>
           <span className="eyebrow" style={{ marginBottom: 12 }}>{c.tocLabel}</span>
           <ol className="type-body" style={{ ...listStyle, gap: 6 }}>
-            {g.sections.map((s) => (
-              <li key={s.heading}>
-                <a href={`#${anchor(s.heading)}`} className="nav-link" style={{ whiteSpace: 'normal' }}>{s.heading}</a>
-              </li>
-            ))}
+            {[g.table?.heading, ...g.sections.map((s) => s.heading), g.faq?.heading]
+              .filter((h): h is string => Boolean(h))
+              .map((h) => (
+                <li key={h}>
+                  <a href={`#${anchor(h)}`} className="nav-link" style={{ whiteSpace: 'normal' }}>{h}</a>
+                </li>
+              ))}
           </ol>
         </nav>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(40px, 5vw, 60px)' }}>
+          {g.table && (
+            <div>
+              <h2 id={anchor(g.table.heading)} className="type-h3" style={{ scrollMarginTop: 96, marginBottom: 24 }}>
+                {g.table.heading}
+              </h2>
+              <TextTable table={g.table} />
+              {g.table.note && (
+                <p className="type-small" style={{ marginTop: 16, color: 'var(--text-quaternary)' }}>{rich(g.table.note)}</p>
+              )}
+            </div>
+          )}
           {g.sections.map((s) => (
             <Reveal key={s.heading} className="measure" style={{ maxWidth: '68ch' }}>
               <h2 id={anchor(s.heading)} className="type-h3" style={{ scrollMarginTop: 96, marginBottom: 16 }}>
@@ -161,6 +217,14 @@ export default async function GuidePage({ slug, locale }: { slug: GuideSlug; loc
               </div>
             </Reveal>
           ))}
+          {g.faq && (
+            <div>
+              <h2 id={anchor(g.faq.heading)} className="type-h3" style={{ scrollMarginTop: 96, marginBottom: 16 }}>
+                {g.faq.heading}
+              </h2>
+              <Disclosures items={g.faq.items.map(({ q, a }) => ({ q: plain(q), a: plain(a) }))} />
+            </div>
+          )}
         </div>
       </Section>
 
