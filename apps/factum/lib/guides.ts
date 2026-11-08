@@ -424,9 +424,9 @@ const GUIDES: Record<GuideLocale, Record<GuideSlug, Guide>> = {
   },
   nl: {
     'data-room-checklist': {
-      metaTitle: 'Checklist data room voor de verkoop',
+      metaTitle: 'Data room request list: checklist voor de verkoop',
       metaDescription:
-        'Wat een koper in een data room verwacht, per discipline: de stukken, de gaten die het meest kosten en wanneer u begint. Voor verkopers en sell-side brokers.',
+        'De request list van een koper, per discipline: welke stukken in de data room horen, de gaten die het meest kosten en wanneer u begint. Voor verkopers en sell-side brokers.',
       shortName: 'Checklist data room',
       h1: 'Wat hoort er in een data room vóór de verkoop?',
       answer:

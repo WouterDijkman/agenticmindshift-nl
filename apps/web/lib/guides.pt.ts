@@ -200,9 +200,9 @@ export const GUIDES_PT: Record<GuideSlug, Guide> = {
 
   /* (c) Deal documents in ChatGPT under an NDA and the GDPR (RGPD) */
   'dealstukken-en-ai': {
-    metaTitle: 'Documentos de deals no ChatGPT: NDA e RGPD',
+    metaTitle: 'Documentos sob NDA no ChatGPT? 3 verificações',
     metaDescription:
-      'A sua equipa pode colocar documentos do data room no ChatGPT ou no Claude? O que exigem o NDA, o RGPD e as definições do fornecedor. Quadro NL e UE.',
+      'Sim, se três coisas estiverem tratadas: o NDA permite, um acordo de subcontratação e as definições certas. Uma conta gratuita raramente chega. Lista para equipas de deals.',
     shortName: 'Documentos de deals e IA',
     teaser: 'O que o NDA, o RGPD e as definições do fornecedor exigem antes de os documentos entrarem numa ferramenta de IA.',
     eyebrow: 'NDA · RGPD · Quadro neerlandês e da UE',

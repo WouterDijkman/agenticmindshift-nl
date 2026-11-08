@@ -2,10 +2,10 @@
   "meta": {
     "home": {
       "title": "AI due diligence voor M&A en private equity",
-      "description": "Due-diligencesoftware voor kopers en sell-side brokers. Leest de hele data room; elke bevinding met bron en pagina. Uw eigen reviewer tekent af."
+      "description": "Due diligence met kunstmatige intelligentie voor kopers en sell-side brokers. Leest de hele data room; elke bevinding met brondocument en vindplaats. Uw eigen reviewer tekent af."
     },
     "platform": {
-      "title": "AI-review van de data room: hoe het werkt",
+      "title": "Data room met kunstmatige intelligentie: zo werkt de review",
       "description": "{modules} modules voor due diligence, over {disciplines} disciplines. Elke bevinding verwijst naar een document. Elke output passeert een menselijke toets."
     },
     "sprint": {

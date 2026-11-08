@@ -452,9 +452,9 @@ export const GUIDES: Record<GuideSlug, Record<'nl' | 'en', Guide>> = {
      ───────────────────────────────────────────────────────────────────── */
   'dealstukken-en-ai': {
     nl: {
-      metaTitle: 'Dealstukken in ChatGPT: NDA en AVG',
+      metaTitle: 'Mag een NDA-stuk in ChatGPT? Drie checks',
       metaDescription:
-        'Mag uw dealteam stukken uit de data room in ChatGPT of Claude zetten? Wat de NDA, de AVG en de instellingen van de aanbieder vragen. NL- en EU-kader.',
+        'Ja, als drie dingen geregeld zijn: de NDA, een verwerkersovereenkomst en de juiste instellingen. Een gratis account haalt die meestal niet. Checklist voor dealteams.',
       shortName: 'Dealstukken en AI',
       teaser: 'Wat de NDA, de AVG en de instellingen van de aanbieder vragen voordat stukken in een AI-tool gaan.',
       eyebrow: 'NDA · AVG · Nederlands en EU-kader',
@@ -525,9 +525,9 @@ export const GUIDES: Record<GuideSlug, Record<'nl' | 'en', Guide>> = {
       datePublished: PUBLISHED,
     },
     en: {
-      metaTitle: 'Deal documents in ChatGPT: NDA and GDPR',
+      metaTitle: 'Can NDA documents go into ChatGPT? 3 checks',
       metaDescription:
-        'Can your deal team put data room documents into ChatGPT or Claude? What the NDA, the GDPR and the provider’s settings require. Dutch and EU frame.',
+        'Yes, if three things are in place: the NDA allows it, a data processing agreement, and the right settings. A free account usually fails. Checklist for deal teams.',
       shortName: 'Deal documents and AI',
       teaser: 'What the NDA, the GDPR and the provider’s settings require before documents go into an AI tool.',
       eyebrow: 'NDA · GDPR · Dutch and EU frame',

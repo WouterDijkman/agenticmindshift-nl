@@ -204,9 +204,9 @@ export const GUIDES_DE: Record<GuideSlug, Guide> = {
      (c) Deal documents in ChatGPT under an NDA and the GDPR
      ───────────────────────────────────────────────────────────────────── */
   'dealstukken-en-ai': {
-    metaTitle: 'Dealunterlagen in ChatGPT: NDA und DSGVO',
+    metaTitle: 'Dürfen NDA-Unterlagen in ChatGPT? 3 Checks',
     metaDescription:
-      'Darf Ihr Dealteam Unterlagen aus dem Data Room in ChatGPT oder Claude geben? Was NDA, DSGVO und die Einstellungen des Anbieters verlangen. NL- und EU-Rahmen.',
+      'Ja, wenn drei Dinge geregelt sind: die NDA, ein Auftragsverarbeitungsvertrag und die richtigen Einstellungen. Ein Gratis-Konto reicht meist nicht. Checkliste für Dealteams.',
     shortName: 'Dealunterlagen und KI',
     teaser: 'Was NDA, DSGVO und die Einstellungen des Anbieters verlangen, bevor Unterlagen in ein KI-Tool gehen.',
     eyebrow: 'NDA · DSGVO · Niederländischer und EU-Rahmen',
