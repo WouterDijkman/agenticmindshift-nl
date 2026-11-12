@@ -584,7 +584,7 @@
       "items": [
         {
           "q": "Wat bedoelen jullie met AI due diligence?",
-          "a": "Due diligence op het bedrijf dat u koopt of verkoopt, uitgevoerd met AI. De AI van Factum leest de data room van dat bedrijf, elk document erin. Elke bevinding noemt brondocument en pagina. Het eigen AI-gebruik van het bedrijf is een van de disciplines die Factum dekt. Uw eigen reviewer controleert elke bevinding en tekent af."
+          "a": "Due diligence op het bedrijf dat u koopt of verkoopt, uitgevoerd met AI. De AI van Factum leest de data room van dat bedrijf, elk document erin. Elke bevinding noemt brondocument en vindplaats. Het eigen AI-gebruik van het bedrijf is een van de disciplines die Factum dekt. Uw eigen reviewer controleert elke bevinding en tekent af."
         },
         {
           "q": "Waarom überhaupt AI?",
@@ -719,7 +719,7 @@
         },
         {
           "q": "Kan ik een voorbeeldrapport zien?",
-          "a": "Geen echt. Factum is pre-launch: er is nog geen publieke klant of case study. Het uitgewerkte voorbeeld op de homepage laat het format zien. Het eerste echte dat u ziet, is uw eigen, enkele dagen na de NDA."
+          "a": "Geen echt. Factum is pre-launch: er is nog geen publieke klant of case study. Het uitgewerkte voorbeeld op de homepage laat het format zien. Het eerste echte dat u ziet, is uw eigen, na de NDA."
         },
         {
           "q": "Wie tekent de bevindingen af?",

@@ -584,7 +584,7 @@
       "items": [
         {
           "q": "What do you mean by AI due diligence?",
-          "a": "Due diligence on the company you are buying or selling, carried out with AI. Factum’s AI reads that company’s data room, every document in it. Each finding cites its source document and page. The company’s own use of AI is one of the disciplines Factum covers. Your own reviewer checks each finding and signs off."
+          "a": "Due diligence on the company you are buying or selling, carried out with AI. Factum’s AI reads that company’s data room, every document in it. Each finding cites its source document and location. The company’s own use of AI is one of the disciplines Factum covers. Your own reviewer checks each finding and signs off."
         },
         {
           "q": "Why use AI at all?",
@@ -719,7 +719,7 @@
         },
         {
           "q": "Can I see an example report?",
-          "a": "Not a real one. Factum is pre-launch: there is no public client or case study yet. The worked example on the homepage shows the format. The first real one you see is your own, days after the NDA."
+          "a": "Not a real one. Factum is pre-launch: there is no public client or case study yet. The worked example on the homepage shows the format. The first real one you see is your own, after the NDA."
         },
         {
           "q": "Who signs off the findings?",

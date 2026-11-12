@@ -584,7 +584,7 @@
       "items": [
         {
           "q": "¿Qué significa due diligence con IA en Factum?",
-          "a": "Due diligence sobre la empresa que usted compra o vende, realizada con IA. La IA de Factum lee el data room de esa empresa, cada documento que contiene. Cada hallazgo cita su documento fuente y su página. El uso que la propia empresa hace de la IA es una de las disciplinas que cubre Factum. Su propio revisor comprueba cada hallazgo y lo aprueba."
+          "a": "Due diligence sobre la empresa que usted compra o vende, realizada con IA. La IA de Factum lee el data room de esa empresa, cada documento que contiene. Cada hallazgo cita su documento fuente y su ubicación. El uso que la propia empresa hace de la IA es una de las disciplinas que cubre Factum. Su propio revisor comprueba cada hallazgo y lo aprueba."
         },
         {
           "q": "¿Por qué usar IA?",
@@ -719,7 +719,7 @@
         },
         {
           "q": "¿Puedo ver un informe de ejemplo?",
-          "a": "Uno real, no. Factum está en fase previa al lanzamiento: aún no hay ningún cliente público ni caso de estudio. El ejemplo desarrollado en la página de inicio muestra el formato. El primero real que verá será el suyo, días después del NDA."
+          "a": "Uno real, no. Factum está en fase previa al lanzamiento: aún no hay ningún cliente público ni caso de estudio. El ejemplo desarrollado en la página de inicio muestra el formato. El primero real que verá será el suyo, después del NDA."
         },
         {
           "q": "¿Quién aprueba los hallazgos?",

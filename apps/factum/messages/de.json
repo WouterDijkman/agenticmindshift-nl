@@ -584,7 +584,7 @@
       "items": [
         {
           "q": "Was bedeutet KI-Due-Diligence bei Factum?",
-          "a": "Due Diligence für das Unternehmen, das Sie kaufen oder verkaufen, durchgeführt mit KI. Die KI von Factum liest den Data Room dieses Unternehmens, jedes Dokument darin. Jede Feststellung nennt Quelldokument und Seite. Der eigene KI-Einsatz des Unternehmens ist eine der Disziplinen, die Factum abdeckt. Ihr eigener Prüfer kontrolliert jede Feststellung und gibt sie frei."
+          "a": "Due Diligence für das Unternehmen, das Sie kaufen oder verkaufen, durchgeführt mit KI. Die KI von Factum liest den Data Room dieses Unternehmens, jedes Dokument darin. Jede Feststellung nennt Quelldokument und Fundstelle. Der eigene KI-Einsatz des Unternehmens ist eine der Disziplinen, die Factum abdeckt. Ihr eigener Prüfer kontrolliert jede Feststellung und gibt sie frei."
         },
         {
           "q": "Warum überhaupt KI?",
@@ -719,7 +719,7 @@
         },
         {
           "q": "Kann ich einen Beispielbericht sehen?",
-          "a": "Keinen echten. Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Das ausgearbeitete Beispiel auf der Startseite zeigt das Format. Der erste echte, den Sie sehen, ist Ihr eigener, wenige Tage nach dem NDA."
+          "a": "Keinen echten. Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Das ausgearbeitete Beispiel auf der Startseite zeigt das Format. Der erste echte, den Sie sehen, ist Ihr eigener, nach dem NDA."
         },
         {
           "q": "Wer gibt die Feststellungen frei?",
