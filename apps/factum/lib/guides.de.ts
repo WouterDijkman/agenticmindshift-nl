@@ -252,6 +252,26 @@ export const GUIDES_DE: Record<GuideSlug, Guide> = {
           ]
         },
         {
+            /* Vendor names below are stated only as each vendor describes itself on its
+             own website (checked 12-11-2026). Sources:
+             Datasite Blueflame AI: https://datasite.com/en/products/blueflame-ai
+             Imprima AI due diligence (Smart Index, Smart Review, Smart Summaries,
+               Smart Q&A, Smart Redaction): https://www.imprima.com/ai-due-diligence
+             Drooms AI (auto-structuring to the index, AI Assistant):
+               https://drooms.com/drooms-intelligence/ and https://drooms.com/ai/
+             Ansarada AI-Redact, AI-Sort, Ask AiDA, AI-Smart Q&A:
+               https://www.ansarada.com/data-room/ai-redaction
+               https://www.ansarada.com/data-room/ai-sort
+             Intralinks VDRPro AI Redaction:
+               https://www.intralinks.com/products/virtual-data-room
+             No claim is made about any vendor's quality. */
+            label: 'Beispiele',
+            cells: [
+              'Datasite (Blueflame AI), Imprima, Drooms, Ansarada, Intralinks',
+              'Factum. Juristische und Finanz-KI-Tools decken einen Teil derselben Lektüre ab: siehe unten'
+            ]
+          },
+          {
           label: 'Quellenangabe',
           cells: [
             'Je nach Anbieter und Funktion unterschiedlich',
@@ -266,7 +286,8 @@ export const GUIDES_DE: Record<GuideSlug, Guide> = {
           ]
         }
       ],
-      note: 'Die Funktionen von Data Rooms unterscheiden sich je Anbieter und ändern sich oft. Fragen Sie Ihren Anbieter, was er bietet.'
+      note:
+        'Jeder Anbieter beschreibt seine eigenen Funktionen, und sie ändern sich oft. Manche Data Rooms prüfen inzwischen auch Dokumente im Raum selbst: Imprima beschreibt KI-Vertragsprüfung und Zusammenfassungen, Datasite einen Assistenten, der mögliche Lücken erkennt. Fragen Sie Ihren Anbieter, worauf jede Antwort verweist und wer sie freigibt.'
     },
     sections: [
       {
@@ -290,6 +311,22 @@ export const GUIDES_DE: Record<GuideSlug, Guide> = {
         ]
       },
       {
+          /* Self-descriptions, checked on each vendor's own website 12-11-2026:
+           Kira (Litera), "purpose-built for high-volume, high-stakes review and
+             due diligence", for lawyers: https://www.litera.com/products/kira
+           Harvey, "AI software for legal and professional services", law firms
+             and in-house teams: https://www.harvey.ai/
+           Luminance, contract intelligence platform: https://www.luminance.com/
+           Hebbia, "AI built for the rigor of finance", investors and bankers:
+             https://www.hebbia.com/
+           No claim about their quality or coverage beyond that. */
+          heading: 'Wo passen juristische und Finanz-KI-Tools?',
+          paragraphs: [
+            'Ein Dealteam trifft auch auf KI-Tools, die für einen einzelnen Beruf gebaut sind. Kira, Teil von Litera, beschreibt sich als gebaut für umfangreiche Prüfungen und Due Diligence, für Anwälte. Harvey ist KI-Software für Rechts- und professionelle Dienstleistungen, genutzt von Kanzleien und Rechtsabteilungen. Luminance nennt sich eine Contract-Intelligence-Plattform. Hebbia beschreibt KI, gebaut für Finance, für Investoren und Banker.',
+            'Diese Tools arbeiten mit den Dokumenten und Fragen, die Sie ihnen geben, meist innerhalb einer Disziplin. Factum liest den ganzen Data Room über {disciplines} Disziplinen in einem Durchlauf und gleicht die Disziplinen gegeneinander ab: Das Finanzmodul liest zuerst die rechtlichen Feststellungen, Steuern liest beide. Welches Tool passt, hängt davon ab, wer fragt und was der Deal braucht.'
+          ]
+        },
+        {
         heading: 'Wann brauchen Sie was?',
         bullets: [
           'Sie leiten einen Verkaufsprozess und wollen den Data Room geordnet, geschwärzt und die Fragen im Griff: KI im Data Room.',

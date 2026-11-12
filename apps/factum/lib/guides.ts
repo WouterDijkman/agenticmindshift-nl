@@ -321,6 +321,26 @@ const GUIDES: Record<GuideLocale, Record<GuideSlug, Guide>> = {
             ]
           },
           {
+            /* Vendor names below are stated only as each vendor describes itself on its
+             own website (checked 12-11-2026). Sources:
+             Datasite Blueflame AI: https://datasite.com/en/products/blueflame-ai
+             Imprima AI due diligence (Smart Index, Smart Review, Smart Summaries,
+               Smart Q&A, Smart Redaction): https://www.imprima.com/ai-due-diligence
+             Drooms AI (auto-structuring to the index, AI Assistant):
+               https://drooms.com/drooms-intelligence/ and https://drooms.com/ai/
+             Ansarada AI-Redact, AI-Sort, Ask AiDA, AI-Smart Q&A:
+               https://www.ansarada.com/data-room/ai-redaction
+               https://www.ansarada.com/data-room/ai-sort
+             Intralinks VDRPro AI Redaction:
+               https://www.intralinks.com/products/virtual-data-room
+             No claim is made about any vendor's quality. */
+            label: 'Examples',
+            cells: [
+              'Datasite (Blueflame AI), Imprima, Drooms, Ansarada, Intralinks',
+              'Factum. Legal and finance AI tools cover part of the same reading: see below'
+            ]
+          },
+          {
             label: 'Sourcing',
             cells: [
               'Differs per provider and feature',
@@ -335,7 +355,8 @@ const GUIDES: Record<GuideLocale, Record<GuideSlug, Guide>> = {
             ]
           }
         ],
-        note: 'Data room features differ per provider and change often. Ask yours what it offers.'
+        note:
+        'Each provider describes its own features, and they change often. Some data rooms now also review documents inside the room: Imprima describes AI contract review and summaries, Datasite an assistant that spots potential gaps. Ask yours what each answer cites and who signs it off.'
       },
       sections: [
         {
@@ -356,6 +377,22 @@ const GUIDES: Record<GuideLocale, Record<GuideSlug, Guide>> = {
           paragraphs: [
             'It reads the room for the person who has to judge the target. Factum reads every document in the data room, across {disciplines} disciplines, and holds them against each other: a contract against the revenue it is meant to carry, the management accounts against the annual accounts.',
             'Every finding quotes the supporting passage word for word, with its source document and location, so your reviewer can check it at the source. What should be in the room and is not goes on a separate list.'
+          ]
+        },
+        {
+          /* Self-descriptions, checked on each vendor's own website 12-11-2026:
+           Kira (Litera), "purpose-built for high-volume, high-stakes review and
+             due diligence", for lawyers: https://www.litera.com/products/kira
+           Harvey, "AI software for legal and professional services", law firms
+             and in-house teams: https://www.harvey.ai/
+           Luminance, contract intelligence platform: https://www.luminance.com/
+           Hebbia, "AI built for the rigor of finance", investors and bankers:
+             https://www.hebbia.com/
+           No claim about their quality or coverage beyond that. */
+          heading: 'Where do legal and finance AI tools fit?',
+          paragraphs: [
+            'A deal team also meets AI tools built for one profession. Kira, part of Litera, describes itself as built for high-volume review and due diligence, for lawyers. Harvey is AI software for legal and professional services, used by law firms and in-house teams. Luminance calls itself a contract intelligence platform. Hebbia describes AI built for finance, for investors and bankers.',
+            'These tools work on the documents and questions you give them, mostly within one discipline. Factum reads the whole room across {disciplines} disciplines in one run and holds the disciplines against each other: the financial module reads the legal findings before it starts, tax reads both. Which tool fits depends on who is asking and what the deal needs.'
           ]
         },
         {
@@ -656,6 +693,26 @@ const GUIDES: Record<GuideLocale, Record<GuideSlug, Guide>> = {
             ]
           },
           {
+            /* Vendor names below are stated only as each vendor describes itself on its
+             own website (checked 12-11-2026). Sources:
+             Datasite Blueflame AI: https://datasite.com/en/products/blueflame-ai
+             Imprima AI due diligence (Smart Index, Smart Review, Smart Summaries,
+               Smart Q&A, Smart Redaction): https://www.imprima.com/ai-due-diligence
+             Drooms AI (auto-structuring to the index, AI Assistant):
+               https://drooms.com/drooms-intelligence/ and https://drooms.com/ai/
+             Ansarada AI-Redact, AI-Sort, Ask AiDA, AI-Smart Q&A:
+               https://www.ansarada.com/data-room/ai-redaction
+               https://www.ansarada.com/data-room/ai-sort
+             Intralinks VDRPro AI Redaction:
+               https://www.intralinks.com/products/virtual-data-room
+             No claim is made about any vendor's quality. */
+            label: 'Voorbeelden',
+            cells: [
+              'Datasite (Blueflame AI), Imprima, Drooms, Ansarada, Intralinks',
+              'Factum. Juridische en financiële AI-tools dekken een deel van hetzelfde leeswerk: zie hieronder'
+            ]
+          },
+          {
             label: 'Bronvermelding',
             cells: [
               'Verschilt per aanbieder en functie',
@@ -670,7 +727,8 @@ const GUIDES: Record<GuideLocale, Record<GuideSlug, Guide>> = {
             ]
           }
         ],
-        note: 'Functies van data rooms verschillen per aanbieder en veranderen vaak. Vraag uw aanbieder wat er is.'
+        note:
+        'Elke aanbieder beschrijft zijn eigen functies, en die veranderen vaak. Sommige data rooms beoordelen inmiddels ook stukken in de data room zelf: Imprima beschrijft AI-contractreview en samenvattingen, Datasite een assistent die mogelijke gaten signaleert. Vraag uw aanbieder waar elk antwoord naar verwijst en wie het aftekent.'
       },
       sections: [
         {
@@ -691,6 +749,22 @@ const GUIDES: Record<GuideLocale, Record<GuideSlug, Guide>> = {
           paragraphs: [
             'Het leest de data room voor wie het target moet beoordelen. Factum leest elk document in de data room, over {disciplines} disciplines, en legt ze naast elkaar: een contract naast de omzet die het moet dragen, de managementrapportage naast de jaarrekening.',
             'Elke bevinding citeert de onderbouwende passage letterlijk, met het brondocument en de vindplaats, zodat uw reviewer haar bij de bron kan controleren. Wat in de data room had moeten zitten en ontbreekt, komt op een aparte lijst.'
+          ]
+        },
+        {
+          /* Self-descriptions, checked on each vendor's own website 12-11-2026:
+           Kira (Litera), "purpose-built for high-volume, high-stakes review and
+             due diligence", for lawyers: https://www.litera.com/products/kira
+           Harvey, "AI software for legal and professional services", law firms
+             and in-house teams: https://www.harvey.ai/
+           Luminance, contract intelligence platform: https://www.luminance.com/
+           Hebbia, "AI built for the rigor of finance", investors and bankers:
+             https://www.hebbia.com/
+           No claim about their quality or coverage beyond that. */
+          heading: 'Waar passen juridische en financiële AI-tools?',
+          paragraphs: [
+            'Een dealteam komt ook AI-tools tegen die voor één beroep zijn gebouwd. Kira, onderdeel van Litera, beschrijft zichzelf als gebouwd voor grootschalige review en due diligence, voor advocaten. Harvey is AI-software voor juridische en zakelijke dienstverlening, gebruikt door advocatenkantoren en juridische afdelingen. Luminance noemt zichzelf een contract-intelligenceplatform. Hebbia beschrijft AI gebouwd voor finance, voor investeerders en bankiers.',
+            'Die tools werken met de stukken en vragen die u ze geeft, meestal binnen één discipline. Factum leest de hele data room over {disciplines} disciplines in één ronde en legt de disciplines naast elkaar: de financiële module leest eerst de juridische bevindingen, fiscaal leest beide. Welke tool past, hangt af van wie de vraag stelt en wat de deal nodig heeft.'
           ]
         },
         {
