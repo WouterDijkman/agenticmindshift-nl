@@ -2,11 +2,11 @@
   "meta": {
     "home": {
       "title": "Due diligence com IA: M&A e private equity",
-      "description": "Software de due diligence para compradores e brokers vendedores. Lê todo o data room; cada constatação com documento de origem e localização. O seu revisor aprova."
+      "description": "Due diligence com IA para compradores e brokers vendedores. Lê todo o data room da empresa-alvo; cada constatação com documento de origem e localização. O seu revisor aprova."
     },
     "platform": {
       "title": "Revisão do data room com IA: como funciona",
-      "description": "{modules} módulos de due diligence em {disciplines} disciplinas. Cada constatação cita um documento. Cada output passa por um controlo humano."
+      "description": "Para compradores e brokers vendedores: {modules} módulos de due diligence em {disciplines} disciplinas. Cada constatação cita a sua fonte. Cada output passa por um controlo humano."
     },
     "sprint": {
       "title": "Due diligence para compradores e PE",
@@ -232,8 +232,8 @@
   },
   "home": {
     "hero": {
-      "title": "Due diligence sobre todo o data room, em dias",
-      "lead": "A Factum é software de due diligence com IA para compradores e brokers do lado vendedor. A IA lê cada documento do data room da empresa que está a comprar ou a vender. Recebe cada constatação com o documento de origem e a página. O seu próprio revisor verifica e aprova.",
+      "title": "Due diligence com IA sobre todo o data room",
+      "lead": "Para compradores e brokers do lado vendedor. A IA da Factum lê cada documento do data room da empresa que está a comprar ou a vender. Recebe cada constatação com o documento de origem e a localização. O seu próprio revisor verifica e aprova.",
       "cta": "Partilhe um data room"
     },
     "problem": {

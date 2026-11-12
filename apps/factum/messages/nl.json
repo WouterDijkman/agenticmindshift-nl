@@ -2,11 +2,11 @@
   "meta": {
     "home": {
       "title": "AI due diligence voor M&A en private equity",
-      "description": "Due diligence met kunstmatige intelligentie voor kopers en sell-side brokers. Leest de hele data room; elke bevinding met brondocument en vindplaats. Uw eigen reviewer tekent af."
+      "description": "AI due diligence voor kopers en sell-side brokers. Leest de hele data room van de target; elke bevinding met brondocument en vindplaats. Uw eigen reviewer tekent af."
     },
     "platform": {
       "title": "Data room met kunstmatige intelligentie: zo werkt de review",
-      "description": "{modules} modules voor due diligence, over {disciplines} disciplines. Elke bevinding verwijst naar een document. Elke output passeert een menselijke toets."
+      "description": "Voor kopers en sell-side brokers: {modules} modules voor due diligence, over {disciplines} disciplines. Elke bevinding met bron. Elke output langs een menselijke toets."
     },
     "sprint": {
       "title": "Buy-side due diligence voor PE en kopers",
@@ -232,8 +232,8 @@
   },
   "home": {
     "hero": {
-      "title": "Due diligence op de hele data room, in dagen",
-      "lead": "Factum is software voor AI due diligence, voor kopers en sell-side brokers. De AI leest elk document in de data room van het bedrijf dat u koopt of verkoopt. U krijgt elke bevinding met brondocument en pagina. Uw eigen reviewer controleert en tekent af.",
+      "title": "AI due diligence op de hele data room",
+      "lead": "Voor kopers en sell-side brokers. De AI van Factum leest elk document in de data room van het bedrijf dat u koopt of verkoopt. U krijgt elke bevinding met brondocument en vindplaats. Uw eigen reviewer controleert en tekent af.",
       "cta": "Deel een data room"
     },
     "problem": {

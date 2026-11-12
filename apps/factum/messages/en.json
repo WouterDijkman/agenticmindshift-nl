@@ -2,11 +2,11 @@
   "meta": {
     "home": {
       "title": "AI due diligence for M&A and private equity",
-      "description": "Due diligence software for buyers and sell-side brokers. Reads the whole data room; every finding cites its source document and location. Your own reviewer signs off."
+      "description": "AI due diligence for buyers and sell-side brokers. Reads the whole data room of the target; every finding cites its source document and location. Your reviewer signs off."
     },
     "platform": {
       "title": "AI data room review: how it works",
-      "description": "{modules} due-diligence modules across {disciplines} disciplines. Every finding cites a document. Every output passes a human gate."
+      "description": "For buyers and sell-side brokers: {modules} due-diligence modules across {disciplines} disciplines. Every finding cites its source. Every output passes a human gate."
     },
     "sprint": {
       "title": "Buy-side due diligence for PE and acquirers",
@@ -232,8 +232,8 @@
   },
   "home": {
     "hero": {
-      "title": "Due diligence on the whole data room, in days",
-      "lead": "Factum is AI due diligence software for buyers and sell-side brokers. Its AI reads every document in the data room of the company you are buying or selling. You get each finding with its source document and page. Your own reviewer checks it and signs off.",
+      "title": "AI due diligence on the whole data room",
+      "lead": "For buyers and sell-side brokers. Factum’s AI reads every document in the data room of the company you are buying or selling. You get each finding with its source document and location. Your own reviewer checks it and signs off.",
       "cta": "Share a data room"
     },
     "problem": {
