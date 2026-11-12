@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
-import type { ReactNode } from 'react';
+import { Fragment, type ReactNode } from 'react';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Button from '@/components/ui/Button';
 import AnimatedHeroShell from '@/components/motion/AnimatedHeroShell';
 import JsonLd from '@/components/JsonLd';
 import { getBreadcrumbLd, getPersonLd, PERSON_ID } from '@/lib/jsonld';
+import { factumUrl } from '@/lib/factum';
 import { getAlternates, OG_LOCALES } from '@/lib/hreflang';
 import { sharedOpenGraph } from '@/lib/pageMetadata';
 import { GUIDE_CHROME, getGuide, type Guide } from '@/lib/guides';
@@ -84,6 +85,49 @@ function anchor(heading: string): string {
     .replace(/^-+|-+$/g, '');
 }
 
+/**
+ * The signpost to Factum Capital inside an article (Guide.factum). A hairline
+ * panel in the reading column, so it reads as part of the answer and not as
+ * an advert; the links leave the site like every other Factum link, through
+ * `factumUrl`, with `noopener` and no `noreferrer` (see FactumBanner).
+ */
+function FactumAside({ f, locale, slug }: { f: NonNullable<Guide['factum']>; locale: GuideLocale; slug: GuideSlug }) {
+  return (
+    <aside
+      className="reveal"
+      aria-label={f.heading}
+      style={{
+        border: '1px solid var(--border-medium)',
+        borderRadius: '4px',
+        background: 'var(--bg-elevated)',
+        padding: 'clamp(22px, 3vw, 32px)',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '14px',
+      }}
+    >
+      <p className="eyebrow" style={{ margin: 0 }}>{f.eyebrow}</p>
+      <p className="type-h3" style={{ margin: 0, color: 'var(--text-primary)' }}>{f.heading}</p>
+      <p style={{ ...bodyText, margin: 0 }}>{f.body}</p>
+      <ul style={{ listStyle: 'none', margin: '4px 0 0', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '10px 28px' }}>
+        {f.links.map((l) => (
+          <li key={l.path}>
+            <a
+              href={factumUrl(locale, l.placement, l.path)}
+              target="_blank"
+              rel="noopener"
+              className={`plausible-event-name=Factum+Outbound plausible-event-location=guide-${slug}-${l.placement}`}
+              style={{ fontSize: '1rem', fontWeight: 500, color: 'var(--accent-cta-ink)', textDecoration: 'underline', textUnderlineOffset: '3px' }}
+            >
+              {l.label} <span aria-hidden="true">↗</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  );
+}
+
 function articleLd(slug: GuideSlug, locale: GuideLocale, g: Guide) {
   const url = `${SITE_URL}/${locale}/${slug}`;
   return {
@@ -144,8 +188,9 @@ export default async function GuidePage({ slug, locale }: { slug: GuideSlug; loc
                 ))}
               </ol>
             </details>
-            {g.sections.map((s) => (
-              <div key={s.heading} className="reveal" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            {g.sections.map((s, i) => (
+              <Fragment key={s.heading}>
+              <div className="reveal" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <h2 id={anchor(s.heading)} className="type-h3" style={{ margin: 0, color: 'var(--text-primary)' }}>
                   {s.heading}
                 </h2>
@@ -170,6 +215,8 @@ export default async function GuidePage({ slug, locale }: { slug: GuideSlug; loc
                   <p key={p} style={bodyText}>{rich(p)}</p>
                 ))}
               </div>
+              {g.factum && g.factum.afterSection === i && <FactumAside f={g.factum} locale={locale} slug={slug} />}
+              </Fragment>
             ))}
           </div>
           <nav className="guide-toc" aria-label={c.tocLabel}>

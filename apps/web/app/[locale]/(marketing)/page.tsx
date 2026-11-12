@@ -10,6 +10,7 @@ import GuideLinks from '@/components/GuideLinks';
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
 import JsonLd from '@/components/JsonLd';
 import { getLocalizedFaqItems } from '@/lib/faq';
+import { factumUrl } from '@/lib/factum';
 import { getOrganizationLd, getPersonLd, getProfessionalServiceLd, websiteLd, getFaqLd } from '@/lib/jsonld';
 
 /**
@@ -53,10 +54,28 @@ export default async function HomePage(
   /* The 'wie' item used to splice a link to /over into its answer. That
      question is now the guide section higher up the page, which carries the
      same link on a button, so the special case went with it. */
+  /* 'dd' carries one link out, to Factum's page for acquirers. The JSON-LD
+     above keeps the plain answer, which already names Factum Capital. */
   const accordionItems: AccordionItem[] = faqItems.map((f) => ({
     id: f.id,
     question: f.question,
-    answer: f.answer,
+    answer:
+      f.id === 'dd' ? (
+        <>
+          {f.answer}{' '}
+          <a
+            href={factumUrl(locale, 'faq', '/diligence-sprint')}
+            target="_blank"
+            rel="noopener"
+            className="plausible-event-name=Factum+Outbound plausible-event-location=faq"
+            style={{ color: 'var(--accent-cta-ink)', textDecoration: 'underline', textUnderlineOffset: '3px' }}
+          >
+            {tFaq('dd_link')} <span aria-hidden="true">↗</span>
+          </a>
+        </>
+      ) : (
+        f.answer
+      ),
   }));
 
   const planSteps = [1, 2, 3].map((n) => ({

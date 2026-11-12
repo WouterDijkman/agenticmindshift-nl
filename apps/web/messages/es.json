@@ -123,7 +123,10 @@
       "anders_q": "¿Qué hace diferente a Agentic Mindshift?",
       "anders_a": "Seis años en acquisition finance y financial restructuring. El consejo sale de la práctica de deals; la IA lo acelera. Y la firma se mantiene pequeña: un puñado de socios a la vez.",
       "start_q": "¿Con qué rapidez podemos empezar?",
-      "start_a": "Tras la primera llamada recibe una propuesta en dos días laborables, con alcance, plazos y tarifa. Aceptada, empezamos en siete días."
+      "start_a": "Tras la primera llamada recibe una propuesta en dos días laborables, con alcance, plazos y tarifa. Aceptada, empezamos en siete días.",
+      "dd_q": "¿Hacen también ustedes la due diligence?",
+      "dd_a": "No. Agentic Mindshift asesora sobre la IA en su práctica de operaciones. Para la due diligence de una operación existe Factum Capital, una plataforma aparte que Wouter cofundó. Lee todo el data room y cita cada hallazgo a su documento fuente y su ubicación; su propio revisor da el visto bueno. Factum aún está en prelanzamiento.",
+      "dd_link": "Factum para compradores"
     }
   },
   "contact": {

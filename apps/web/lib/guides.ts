@@ -50,6 +50,19 @@ export interface Guide {
   /** The answer to the page's question, as the first paragraph. */
   answer: string;
   sections: GuideSection[];
+  /**
+   * Optional signpost to Factum Capital inside the article, shown after the
+   * section at index `afterSection`. Links leave this site through
+   * `factumUrl`, so `path` is a Factum path without locale and `placement`
+   * becomes the utm_campaign.
+   */
+  factum?: {
+    afterSection: number;
+    eyebrow: string;
+    heading: string;
+    body: string;
+    links: { label: string; path: string; placement: string }[];
+  };
   helps: { heading: string; bullets: string[]; note: string };
   datePublished: string;
 }
@@ -513,6 +526,20 @@ export const GUIDES: Record<GuideSlug, Record<'nl' | 'en', Guide>> = {
           ],
         },
       ],
+      /* Signpost to Factum after the provider-settings question: the reader with a
+         live deal is the Factum buyer (audit 12-11-2026, A6). Claims from
+         GTM/config/product-facts.md (EU endpoints, zero retention, pseudonymisation,
+         mandatory reviewer sign-off). */
+      factum: {
+        afterSection: 2,
+        eyebrow: 'Gaat het om een lopende deal?',
+        heading: 'Factum Capital',
+        body: 'Een apart due-diligenceplatform dat Wouter mede oprichtte. Het leest de hele data room op EU-endpoints, zonder bewaring bij de modelaanbieder en met pseudonimisering vóór de analyse, en uw eigen reviewer tekent af voordat er iets naar buiten gaat. Nog niet gelanceerd.',
+        links: [
+          { label: 'Hoe Factum met dataroomstukken omgaat', path: '/governance', placement: 'dealstukken-governance' },
+          { label: 'Hoe het platform werkt', path: '/platform', placement: 'dealstukken-platform' },
+        ],
+      },
       helps: {
         heading: 'Hoe Agentic Mindshift helpt',
         bullets: [
@@ -586,6 +613,20 @@ export const GUIDES: Record<GuideSlug, Record<'nl' | 'en', Guide>> = {
           ],
         },
       ],
+      /* Signpost to Factum after the provider-settings question: the reader with a
+         live deal is the Factum buyer (audit 12-11-2026, A6). Claims from
+         GTM/config/product-facts.md (EU endpoints, zero retention, pseudonymisation,
+         mandatory reviewer sign-off). */
+      factum: {
+        afterSection: 2,
+        eyebrow: 'Working on a live deal?',
+        heading: 'Factum Capital',
+        body: 'A separate due diligence platform Wouter co-founded. It reads the whole data room on EU endpoints, with zero retention at the model provider and pseudonymisation before analysis, and your own reviewer signs off before anything leaves. Pre-launch.',
+        links: [
+          { label: 'How Factum handles data room documents', path: '/governance', placement: 'dealstukken-governance' },
+          { label: 'How the platform works', path: '/platform', placement: 'dealstukken-platform' },
+        ],
+      },
       helps: {
         heading: 'How Agentic Mindshift helps',
         bullets: [

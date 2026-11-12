@@ -123,7 +123,10 @@
       "anders_q": "Was unterscheidet Agentic Mindshift?",
       "anders_a": "Sechs Jahre in Acquisition Finance und Financial Restructuring. Die Beratung kommt aus der Dealpraxis; die KI beschleunigt sie. Und das Büro bleibt klein: eine Handvoll Partner gleichzeitig.",
       "start_q": "Wie schnell können wir starten?",
-      "start_a": "Nach dem ersten Gespräch erhalten Sie innerhalb von zwei Werktagen einen Vorschlag mit Umfang, Laufzeit und Honorar. Nach Zusage starten wir innerhalb von sieben Tagen."
+      "start_a": "Nach dem ersten Gespräch erhalten Sie innerhalb von zwei Werktagen einen Vorschlag mit Umfang, Laufzeit und Honorar. Nach Zusage starten wir innerhalb von sieben Tagen.",
+      "dd_q": "Führen Sie auch die Due Diligence selbst durch?",
+      "dd_a": "Nein. Agentic Mindshift berät zu KI in Ihrer Dealpraxis. Für die Due Diligence eines Deals gibt es Factum Capital, eine eigenständige Plattform, die Wouter mitgegründet hat. Sie liest den gesamten Data Room und belegt jede Feststellung mit Quelldokument und Fundstelle; Ihr eigener Prüfer gibt frei. Factum steht noch vor dem Launch.",
+      "dd_link": "Factum für Käufer"
     }
   },
   "contact": {

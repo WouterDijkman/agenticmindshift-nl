@@ -43,7 +43,7 @@ export default function FactumBanner() {
     >
       <div className="container-medium">
         <motion.a
-          href={factumUrl(locale, 'banner')}
+          href={factumUrl(locale, 'banner', '/diligence-sprint')}
           target="_blank"
           rel="noopener"
           className="factum-banner plausible-event-name=Factum+Outbound plausible-event-location=banner"

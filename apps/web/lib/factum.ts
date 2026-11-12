@@ -29,16 +29,22 @@ const FACTUM_ORIGIN = 'https://www.factumcapital.eu';
  * direct traffic.
  *
  * `placement` becomes `utm_campaign` and names the spot on this site the click
- * came from (`footer`, `banner`, `about-bio`). It matches the
+ * came from (`footer`, `banner`, `about-bio`).
+ *
+ * `path` is the Factum page that fits the context, without locale (e.g.
+ * `/diligence-sprint`, `/governance`). Empty means the Factum homepage. Every
+ * link used to land on the homepage, whatever the reader had just read (audit
+ * GTM/ops/geo-seo-audit-2026-11-12.md, M4); only the footer still does, because
+ * it has no context. It matches the
  * `plausible-event-location` on the same link, so the click counted here and
  * the visit counted there carry the same label. Without UTM, and with
  * `noreferrer` on the footer link, every visitor this site sent across showed
  * up on factumcapital.eu as "direct" (audit 12-10-2026, §5).
  */
-export function factumUrl(locale: string, placement = 'site'): string {
-  const base = FACTUM_LOCALES.has(locale)
+export function factumUrl(locale: string, placement = 'site', path = ''): string {
+  const base = (FACTUM_LOCALES.has(locale)
     ? `${FACTUM_ORIGIN}/${locale}`
-    : `${FACTUM_ORIGIN}/en`;
+    : `${FACTUM_ORIGIN}/en`) + path;
   const query = new URLSearchParams({
     utm_source: 'agenticmindshift',
     utm_medium: 'referral',

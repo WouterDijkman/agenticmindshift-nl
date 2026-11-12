@@ -15,7 +15,12 @@ export interface FaqItem {
 // gets here: 'wie' and 'voor-wie' are the guide section and the hero subline,
 // and 'factum' is the banner directly above. An FAQ that re-answers the page
 // is length pretending to be helpfulness.
-export const faqItemIds = ['wat', 'investering', 'anders', 'start'] as const;
+//
+// 'dd' (12-11-2026) answers the one question this site cannot: the due
+// diligence itself. It routes to Factum Capital, a separate platform, so the
+// reader with a deal in hand leaves for the right page (audit
+// GTM/ops/geo-seo-audit-2026-11-12.md §5.4). Last, because it is the exit.
+export const faqItemIds = ['wat', 'investering', 'anders', 'start', 'dd'] as const;
 
 export type FaqItemId = (typeof faqItemIds)[number];
 

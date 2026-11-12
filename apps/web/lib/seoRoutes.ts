@@ -12,7 +12,9 @@ export const PUBLIC_PATHS = [
   "/dealstukken-en-ai"
 ] as const;
 export const LEGACY_PATHS: Readonly<Record<string, string>> = {
-  "/factum-capital": "https://www.factumcapital.eu/{locale}",
+  // The old Factum product page on this site: lands on Factum's own product
+  // page, not its homepage (audit 12-11-2026, M4).
+  "/factum-capital": "https://www.factumcapital.eu/{locale}/platform",
   "/scorecard": "/werkwijze",
   // Old service pages from before the rebuild; Search Console still reported
   // them as 404 on 19-10-2026. The routes they described live on /werkwijze.

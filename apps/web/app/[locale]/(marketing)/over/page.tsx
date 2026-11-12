@@ -104,7 +104,7 @@ export default async function OverPage(
                   {/* Factum has its own site; `Link` would prefix a locale of
                       this one. `factumUrl` carries it across instead. */}
                   <a
-                    href={factumUrl(locale, 'about-bio')}
+                    href={factumUrl(locale, 'about-bio', '/team')}
                     target="_blank"
                     rel="noopener"
                     className="plausible-event-name=Factum+Outbound plausible-event-location=about-bio"

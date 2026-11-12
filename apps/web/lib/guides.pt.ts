@@ -261,6 +261,20 @@ export const GUIDES_PT: Record<GuideSlug, Guide> = {
         ],
       },
     ],
+    /* Signpost to Factum after the provider-settings question: the reader with a
+       live deal is the Factum buyer (audit 12-11-2026, A6). Claims from
+       GTM/config/product-facts.md (EU endpoints, zero retention, pseudonymisation,
+       mandatory reviewer sign-off). */
+    factum: {
+      afterSection: 2,
+      eyebrow: 'Trata-se de uma operação em curso?',
+      heading: 'Factum Capital',
+      body: 'Uma plataforma de due diligence à parte que Wouter cofundou. Lê todo o data room em endpoints da UE, sem retenção no fornecedor do modelo e com pseudonimização antes da análise, e o seu próprio revisor aprova antes de qualquer coisa sair. Ainda em pré-lançamento.',
+      links: [
+        { label: 'Como a Factum trata os documentos do data room', path: '/governance', placement: 'dealstukken-governance' },
+        { label: 'Como funciona a plataforma', path: '/platform', placement: 'dealstukken-platform' },
+      ],
+    },
     helps: {
       heading: 'Como a Agentic Mindshift ajuda',
       bullets: [
