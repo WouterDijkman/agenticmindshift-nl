@@ -11,6 +11,7 @@ import Disclosures from '@/components/Disclosures';
 import { ArrowRight } from '@/components/Icons';
 import { breadcrumbSchema } from '@/lib/jsonld';
 import { getAlternates } from '@/lib/hreflang';
+import { contentLastModified } from '@/lib/seoRoutes';
 import { OG_LOCALES, sharedOpenGraph } from '@/lib/pageMetadata';
 import { DISCIPLINE_COUNT, HARD_BLOCK_COUNT, MODULE_COUNT, SITE_URL, WAVE_COUNT } from '@/lib/site';
 import { GUIDE_CHROME, getGuide, type Guide, type GuideTable } from '@/lib/guides';
@@ -85,7 +86,8 @@ export function guideMetadata(slug: GuideSlug, locale: GuideLocale): Metadata {
       title,
       description,
       url: alternates.canonical,
-      publishedTime: g.datePublished
+      publishedTime: g.datePublished,
+      modifiedTime: contentLastModified(`/${slug}`, locale)
     }
   };
 }
@@ -99,6 +101,7 @@ function articleSchema(slug: GuideSlug, locale: GuideLocale, g: Guide) {
     description: fill(g.metaDescription),
     inLanguage: locale,
     datePublished: g.datePublished,
+    dateModified: contentLastModified(`/${slug}`, locale),
     url,
     mainEntityOfPage: url,
     author: { '@id': `${SITE_URL}/#wouter-dijkman` },
@@ -252,6 +255,12 @@ export default async function GuidePage({ slug, locale }: { slug: GuideSlug; loc
                 </Link>
               </li>
             ))}
+            <li>
+              <Link href="/governance" className="link-quiet">
+                {c.governanceLabel}
+                <ArrowRight />
+              </Link>
+            </li>
           </ul>
         </Reveal>
       </Section>

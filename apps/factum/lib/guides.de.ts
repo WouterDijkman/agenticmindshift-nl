@@ -15,7 +15,8 @@ const PUBLISHED = '2026-10-21';
 export const CHROME_DE: GuideChrome = {
   tocLabel: 'Auf dieser Seite',
   relatedLabel: 'Weiterlesen',
-  guidesLabel: 'Ratgeber'
+  guidesLabel: 'Ratgeber',
+  governanceLabel: 'Wie Ihre Dokumente behandelt werden'
 };
 
 export const GUIDES_DE: Record<GuideSlug, Guide> = {
@@ -385,7 +386,7 @@ export const GUIDES_DE: Record<GuideSlug, Guide> = {
         '{disciplines} Disziplinen in einem Durchgang, zu einem Bericht abgeglichen.',
         'Ihr Team prüft die Feststellungen und gibt in der Plattform frei.'
       ],
-      note: 'Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Recht und Steuern sind auf niederländisches Recht abgestimmt.'
+      note: 'Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Recht und Steuern sind auf niederländisches Recht abgestimmt. Sie wählen einen Anbieter? Nutzen Sie [zehn Fragen an einen Anbieter für KI-Due-Diligence](/ai-due-diligence-vendor-questions). Vor dem Signing: [Red-Flag-Review eines Data Rooms](/red-flag-review). Beim Kauf einer niederländischen BV: [Due Diligence bei einer niederländischen BV](/dutch-bv-due-diligence). Und [wie Ihre Dokumente behandelt werden](/governance).'
     },
     datePublished: '2026-11-08'
   },
@@ -506,7 +507,7 @@ export const GUIDES_DE: Record<GuideSlug, Guide> = {
         'Recht und Steuern auf niederländisches Recht abgestimmt.',
         'Ihr Prüfer gibt in der Plattform frei. Kein Export ohne diese Freigabe.'
       ],
-      note: 'Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Mehr zu [Factum für Käufer](/diligence-sprint) und [wie Ihre Dokumente behandelt werden](/governance).'
+      note: 'Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Mehr zu [Factum für Käufer](/diligence-sprint) und [wie Ihre Dokumente behandelt werden](/governance). Vor dem Signing: [Red-Flag-Review eines Data Rooms](/red-flag-review). Bei der Wahl eines Tools: [zehn Fragen an einen Anbieter für KI-Due-Diligence](/ai-due-diligence-vendor-questions).'
     },
     datePublished: '2026-11-12'
   },
@@ -603,7 +604,140 @@ export const GUIDES_DE: Record<GuideSlug, Guide> = {
         'Eine Liste dessen, was der Verkäufer nie hochgeladen hat, ab dem ersten Durchlauf.',
         'Ihr Prüfer gibt in der Plattform frei.'
       ],
-      note: 'Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Recht und Steuern sind auf niederländisches Recht abgestimmt. Kaufen Sie eine niederländische BV? Siehe [Due Diligence bei einer niederländischen BV](/dutch-bv-due-diligence).'
+      note: 'Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Recht und Steuern sind auf niederländisches Recht abgestimmt. Kaufen Sie eine niederländische BV? Siehe [Due Diligence bei einer niederländischen BV](/dutch-bv-due-diligence). Sie wählen ein Tool? [Zehn Fragen an einen Anbieter für KI-Due-Diligence](/ai-due-diligence-vendor-questions), und [wie Ihre Dokumente behandelt werden](/governance).'
+    },
+    datePublished: '2026-11-12'
+  },
+  /* Käuferleitfaden, offener Lead-Magnet (GTM/ops/geo-seo-audit-2026-11-12.md, Asset 4). */
+  'ai-due-diligence-vendor-questions': {
+    metaTitle: 'Anbieter für KI-Due-Diligence prüfen: 10 Fragen',
+    metaDescription:
+      'Zehn Fragen an jeden Anbieter von KI-gestützter Due Diligence, bevor der Data Room hochgeladen wird: Verarbeitung, Speicherung, NDA, Quellen, Lücken, Freigabe.',
+    shortName: 'Zehn Fragen an einen Anbieter für KI-Due-Diligence',
+    h1: 'Wie prüfen Sie einen Anbieter für KI-gestützte Due Diligence? 10 Fragen',
+    answer:
+      'Fragen Sie, bevor der Data Room hochgeladen wird. Zehn Fragen decken ab, was ein Käufer wissen muss: wo die Dokumente verarbeitet werden, wer sie speichert, ob das NDA es erlaubt, wie jede Feststellung belegt ist, was das Tool nicht gelesen hat, was fehlt, welches Recht es kennt, wer freigibt, was es zur Genauigkeit behauptet und wovon der Preis abhängt. Lassen Sie sich jede Antwort schriftlich geben. Die Liste gilt für jeden Anbieter, auch für uns.',
+    sections: [
+      {
+        heading: '1. Wo werden unsere Dokumente verarbeitet?',
+        paragraphs: [
+          'Dokumente aus dem Data Room sind unter dem NDA vertraulich und enthalten oft personenbezogene Daten im Sinne der DSGVO. Fragen Sie, welche Modellanbieter sie verarbeiten, in welcher Region, und ob diese Region Standard ist oder eine Option, die Sie selbst einschalten müssen.',
+          'Eine gute Antwort nennt die Anbieter und die Region und steht im Auftragsverarbeitungsvertrag.'
+        ]
+      },
+      {
+        heading: '2. Speichert jemand unsere Dokumente oder trainiert damit?',
+        paragraphs: [
+          'Zwei getrennte Fragen. Speichert der Modellanbieter Prompts und Dokumente, und wie lange? Nutzt der Anbieter oder der Modellanbieter sie, um ein Modell zu trainieren?',
+          'Eine gute Antwort nennt die Speicherdauer je Anbieter, schließt Training aus und hält beides im Vertrag fest.'
+        ]
+      },
+      {
+        heading: '3. Erlaubt unser NDA das?',
+        paragraphs: [
+          'Die meisten M&A-NDAs erlauben die Weitergabe nur an benannte Representatives: Mitarbeiter, Berater, Finanzierer. Eine Softwareplattform und ihre Unterauftragsverarbeiter stehen selten auf dieser Liste. Lassen Sie das vor dem ersten Upload von Ihrem Anwalt prüfen.',
+          'Eine gute Antwort: Der Anbieter unterzeichnet ein NDA, bevor ein Dokument bewegt wird, und nennt seine Unterauftragsverarbeiter.'
+        ]
+      },
+      {
+        heading: '4. Auf welcher Ebene nennt jede Feststellung ihre Quelle?',
+        paragraphs: [
+          'Dokument, Seite oder die Passage selbst. Eine Feststellung, die Ihr Prüfer nicht zurückverfolgen kann, muss er neu erarbeiten. Nicht jede Feststellung hat eine zitierbare Passage: Eine Berechnung über eine Tabelle verweist auf das Blatt oder die Zellen, die sie verwendet hat.',
+          'Eine gute Antwort: Jede Feststellung nennt Quelldokument und Fundstelle, mit der belegenden Passage, wo es eine gibt.'
+        ]
+      },
+      {
+        heading: '5. Liest es jedes Dokument oder eine Stichprobe?',
+        paragraphs: [
+          'Manche Tools beantworten Fragen, indem sie die Passagen abrufen, die relevant aussehen. Das ist Suche, und die entscheidende Klausel kann in einem Dokument stehen, das nie geöffnet wurde. Fragen Sie, welcher Teil des Data Rooms gelesen wurde und was mit einer Datei geschieht, die nicht lesbar war: ein Scan, ein gesperrtes PDF, ein defekter Export.',
+          'Eine gute Antwort: Jedes Dokument wird gelesen, und was nicht lesbar war, steht auf einer Liste.'
+        ]
+      },
+      {
+        heading: '6. Sagt es uns, was fehlt?',
+        paragraphs: [
+          'Ein fehlendes Dokument hinterlässt keine Passage, die man zitieren könnte. Ein Tool, das nur liest, was da ist, meldet es also nie. Die Red Flag ist oft der Vertrag, den niemand hochgeladen hat.',
+          'Eine gute Antwort: eine eigene Liste dessen, was ein Käufer erwarten würde und nicht gefunden hat, von einem Menschen geprüft.'
+        ]
+      },
+      {
+        heading: '7. Welche Disziplinen, und welches Recht?',
+        paragraphs: [
+          'Finanzen, Commercial und Operations funktionieren über Grenzen hinweg. Recht und Steuern hängen vom Recht des Targets ab. Fragen Sie, welche Disziplinen in einem Durchlauf enthalten sind, ob sie die Feststellungen der anderen lesen und für welche Rechtsordnungen die rechtliche und steuerliche Analyse gebaut ist.',
+          'Eine gute Antwort nennt die Rechtsordnungen und sagt offen, wo Sie lokale Berater brauchen.'
+        ]
+      },
+      {
+        heading: '8. Wer gibt die Feststellungen frei?',
+        paragraphs: [
+          'KI-Ergebnisse sind ein Entwurf, bis ein Mensch sie annimmt. Fragen Sie, ob etwas ohne Freigabe durch eine benannte Person exportiert werden kann, ob der Anbieter irgendeine Gewähr gibt und ob eine Bank oder ein W&I-Versicherer sich auf das Ergebnis stützen kann.',
+          'Eine gute Antwort nennt die menschliche Freigabe und ist klar zur Reliance. Die meisten Plattformen geben keine Gewähr; das ist in Ordnung, solange sie es sagen.'
+        ]
+      },
+      {
+        heading: '9. Was behauptet der Anbieter zur Genauigkeit, und wer hat sie gemessen?',
+        paragraphs: [
+          'Ein Prozentsatz ohne Methode ist eine Marketingzahl. Fragen Sie, auf welchem Datensatz gemessen wurde, von wem, und ob jemand außerhalb des Anbieters es geprüft hat.',
+          'Eine gute Antwort nennt Methode, Datensatz und Prüfer, oder sagt offen, dass es keine geprüfte Quote gibt.'
+        ]
+      },
+      {
+        heading: '10. Was kostet es, und wovon hängt der Preis ab?',
+        paragraphs: [
+          'Pro Nutzer, pro Dokument, pro Seite oder pro Deal: Das Modell bestimmt, was ein großer oder unordentlicher Data Room Sie kostet. Fragen Sie, was enthalten ist, was extra kostet und was passiert, wenn der Data Room während des Prozesses wächst.',
+          'Eine gute Antwort ist ein Preis für einen vereinbarten Umfang, schriftlich, bevor der Data Room hochgeladen wird.'
+        ]
+      },
+      {
+        heading: 'Wie beantwortet Factum die zehn?',
+        paragraphs: ['Kurz, und mit den Lücken.'],
+        steps: [
+          'Standardmäßig auf EU-Endpunkten, unter einem Auftragsverarbeitungsvertrag.',
+          'Keine Speicherung beim Modellanbieter, der auch nicht mit Ihren Dokumenten trainiert. Pseudonymisierung vor der Analyse. Rechtliche, finanzielle und steuerliche Analyse läuft verpflichtend auf Endpunkten ohne Speicherung.',
+          'Zuerst das NDA. Dokumente bewegen sich erst nach der Unterzeichnung.',
+          'Jede Feststellung nennt Quelldokument und Fundstelle, mit der belegenden Passage, wo es eine gibt.',
+          'Jedes Dokument im Data Room wird gelesen, von {modules} Modulen in {waves} Wellen.',
+          'Eine Liste dessen, was nie eingegangen ist, ab dem ersten Durchlauf.',
+          '{disciplines} Disziplinen in einem Durchlauf. Recht und Steuern sind auf niederländisches Recht abgestimmt; bei einem Target anderswo sollten lokale Berater diese Feststellungen prüfen.',
+          'Ihr eigener Prüfer gibt frei. Kein Export verlässt die Plattform ohne diese Freigabe. Factum unterzeichnet nichts und gibt keine Gewähr.',
+          'Keine geprüfte Genauigkeitsquote. Factum steht vor dem Launch.',
+          'Preis auf Anfrage: ein Preis für den gesamten Umfang, abgestimmt auf Größe und Zustand des Data Rooms.'
+        ],
+        after: [
+          'Mehr dazu, [wie Ihre Dokumente behandelt werden](/governance) und [was KI in der Due Diligence nicht kann](/limits-of-ai).'
+        ]
+      }
+    ],
+    faq: {
+      heading: 'Häufige Fragen',
+      items: [
+        {
+          q: 'Gelten diese Fragen auch für einen virtuellen Data Room mit KI-Funktionen?',
+          a: 'Ja. Die Fragen 1 bis 3 und 8 bis 10 gelten für jedes Tool, das die Dokumente berührt. Die Fragen 4 bis 6 wiegen am schwersten bei einem Tool, das behauptet, die Due-Diligence-Lektüre selbst zu leisten.'
+        },
+        {
+          q: 'Welche Frage ist die wichtigste?',
+          a: 'Frage 3 kommt zeitlich zuerst: Erlaubt das NDA den Upload nicht, spielt der Rest keine Rolle. Danach Frage 8. Wer freigibt, trägt die Feststellungen.'
+        },
+        {
+          q: 'Wie testen wir die Antworten eines Anbieters?',
+          a: 'Lassen Sie ihn einen Deal lesen, den Sie letztes Jahr abgeschlossen haben. Nichts Laufendes wird offengelegt, und Sie können die Feststellungen mit dem vergleichen, was Ihr Team damals gefunden hat.'
+        },
+        {
+          q: 'Ersetzt KI-gestützte Due Diligence unsere Berater?',
+          a: 'Nein. Sie liest den ganzen Data Room und zeigt den Spezialisten, wo sie hinschauen sollten. Die Financial Due Diligence des Wirtschaftsprüfers und die Legal Due Diligence Ihres Anwalts bleiben, was sie sind, und Ihr eigener Prüfer entscheidet, was zählt.'
+        }
+      ]
+    },
+    helps: {
+      heading: 'Wo Factum passt',
+      bullets: [
+        'Für Private Equity und andere Käufer, vor dem bindenden Angebot oder dem Signing.',
+        'Jedes Dokument im Data Room gelesen, jede Feststellung mit Quelldokument und Fundstelle.',
+        'Eine Liste dessen, was der Verkäufer nie hochgeladen hat.',
+        'Ihr Prüfer gibt in der Plattform frei.'
+      ],
+      note: 'Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Der Unterschied zur KI in einem virtuellen Data Room: [KI-Due-Diligence vs. Data-Room-KI](/ai-due-diligence-vs-data-room-ai). Vor dem Signing: [Red-Flag-Review eines Data Rooms](/red-flag-review). Beim Kauf einer niederländischen BV: [Due Diligence bei einer niederländischen BV](/dutch-bv-due-diligence).'
     },
     datePublished: '2026-11-12'
   }

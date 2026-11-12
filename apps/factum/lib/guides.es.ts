@@ -11,7 +11,8 @@ import type { GuideSlug } from './guideRoutes';
 export const CHROME_ES: GuideChrome = {
   tocLabel: 'En esta página',
   relatedLabel: 'Siga leyendo',
-  guidesLabel: 'Guías'
+  guidesLabel: 'Guías',
+  governanceLabel: 'Cómo se tratan sus documentos'
 };
 
 const PUBLISHED = '2026-10-21';
@@ -383,7 +384,7 @@ export const GUIDES_ES: Record<GuideSlug, Guide> = {
         '{disciplines} disciplinas en una sola pasada, conciliadas en un solo informe.',
         'Su equipo revisa los hallazgos y da el visto bueno en la plataforma.'
       ],
-      note: 'Factum está en fase previa al lanzamiento: aún no hay ningún cliente público ni caso de estudio. Legal y fiscal están ajustados al derecho neerlandés.'
+      note: 'Factum está en fase previa al lanzamiento: aún no hay ningún cliente público ni caso de estudio. Legal y fiscal están ajustados al derecho neerlandés. ¿Elige un proveedor? Use [diez preguntas para un proveedor de due diligence con IA](/ai-due-diligence-vendor-questions). Antes de firmar: [revisión de red flags de un data room](/red-flag-review). Si compra una BV neerlandesa: [due diligence de una BV neerlandesa](/dutch-bv-due-diligence). Y [cómo se tratan sus documentos](/governance).'
     },
     datePublished: '2026-11-08'
   },
@@ -504,7 +505,7 @@ export const GUIDES_ES: Record<GuideSlug, Guide> = {
         'Legal y fiscal ajustados al derecho neerlandés.',
         'Su revisor aprueba en la plataforma. Ninguna exportación sale sin esa aprobación.'
       ],
-      note: 'Factum está en fase previa al lanzamiento: aún no hay ningún cliente público ni caso de estudio. Más sobre [Factum para compradores](/diligence-sprint) y [cómo se tratan sus documentos](/governance).'
+      note: 'Factum está en fase previa al lanzamiento: aún no hay ningún cliente público ni caso de estudio. Más sobre [Factum para compradores](/diligence-sprint) y [cómo se tratan sus documentos](/governance). Antes de firmar: [revisión de red flags de un data room](/red-flag-review). Para elegir una herramienta: [diez preguntas para un proveedor de due diligence con IA](/ai-due-diligence-vendor-questions).'
     },
     datePublished: '2026-11-12'
   },
@@ -601,7 +602,140 @@ export const GUIDES_ES: Record<GuideSlug, Guide> = {
         'Una lista de lo que el vendedor nunca subió, desde la primera pasada.',
         'Su revisor aprueba en la plataforma.'
       ],
-      note: 'Factum está en fase previa al lanzamiento: aún no hay ningún cliente público ni caso de estudio. Legal y fiscal están ajustados al derecho neerlandés. ¿Compra una BV neerlandesa? Vea [due diligence de una BV neerlandesa](/dutch-bv-due-diligence).'
+      note: 'Factum está en fase previa al lanzamiento: aún no hay ningún cliente público ni caso de estudio. Legal y fiscal están ajustados al derecho neerlandés. ¿Compra una BV neerlandesa? Vea [due diligence de una BV neerlandesa](/dutch-bv-due-diligence). ¿Elige una herramienta? [Diez preguntas para un proveedor de due diligence con IA](/ai-due-diligence-vendor-questions), y [cómo se tratan sus documentos](/governance).'
+    },
+    datePublished: '2026-11-12'
+  },
+  /* Guía para compradores, lead magnet abierto (GTM/ops/geo-seo-audit-2026-11-12.md, asset 4). */
+  'ai-due-diligence-vendor-questions': {
+    metaTitle: 'Cómo evaluar un proveedor de due diligence con IA: 10 preguntas',
+    metaDescription:
+      'Diez preguntas para cualquier proveedor de due diligence con IA antes de subir el data room: tratamiento, conservación, NDA, fuentes, documentos que faltan, aprobación.',
+    shortName: 'Diez preguntas para un proveedor de due diligence con IA',
+    h1: '¿Cómo evaluar un proveedor de due diligence con IA? 10 preguntas',
+    answer:
+      'Pregunte antes de subir el data room. Diez preguntas cubren lo que un comprador necesita saber: dónde se tratan los documentos, quién los conserva, si el NDA lo permite, cómo se respalda cada hallazgo, qué no leyó la herramienta, qué falta, qué derecho conoce, quién aprueba, qué afirma sobre su precisión y de qué depende el precio. Pida cada respuesta por escrito. La lista sirve para cualquier proveedor, también para nosotros.',
+    sections: [
+      {
+        heading: '1. ¿Dónde se tratan nuestros documentos?',
+        paragraphs: [
+          'Los documentos de un data room son confidenciales bajo el NDA y a menudo contienen datos personales sujetos al RGPD. Pregunte qué proveedores de modelos los tratan, en qué región, y si esa región es la opción por defecto o una que usted tiene que activar.',
+          'Una buena respuesta nombra los proveedores y la región, y figura en el contrato de encargo del tratamiento.'
+        ]
+      },
+      {
+        heading: '2. ¿Alguien conserva nuestros documentos o entrena con ellos?',
+        paragraphs: [
+          'Son dos preguntas distintas. ¿El proveedor del modelo conserva prompts y documentos, y durante cuánto tiempo? ¿El proveedor o el proveedor del modelo los usa para entrenar un modelo?',
+          'Una buena respuesta da el plazo de conservación por proveedor, descarta el entrenamiento y deja ambas cosas en el contrato.'
+        ]
+      },
+      {
+        heading: '3. ¿Lo permite nuestro NDA?',
+        paragraphs: [
+          'La mayoría de los NDA de M&A solo permiten revelar información a representantes designados: empleados, asesores, financiadores. Una plataforma de software y sus subencargados rara vez están en esa lista. Pida a su abogado que lo revise antes de la primera subida.',
+          'Una buena respuesta: el proveedor firma un NDA antes de que se mueva ningún documento y enumera sus subencargados.'
+        ]
+      },
+      {
+        heading: '4. ¿A qué nivel cita cada hallazgo su fuente?',
+        paragraphs: [
+          'Documento, página o el pasaje mismo. Un hallazgo que su revisor no puede rastrear tiene que rehacerse. No todo hallazgo tiene un pasaje que citar: un cálculo sobre una hoja de cálculo remite a la pestaña o a las celdas que utilizó.',
+          'Una buena respuesta: cada hallazgo indica su documento fuente y su ubicación, con el pasaje que lo respalda cuando lo hay.'
+        ]
+      },
+      {
+        heading: '5. ¿Lee todos los documentos o una muestra?',
+        paragraphs: [
+          'Algunas herramientas responden preguntas recuperando los pasajes que parecen relevantes. Eso es búsqueda, y la cláusula que importa puede estar en un documento que nunca se abrió. Pregunte qué parte del data room se leyó y qué ocurre con un archivo que no se pudo leer: un escaneo, un PDF bloqueado, una exportación dañada.',
+          'Una buena respuesta: se lee cada documento, y lo que no se pudo leer figura en una lista.'
+        ]
+      },
+      {
+        heading: '6. ¿Nos dice lo que falta?',
+        paragraphs: [
+          'Un documento ausente no deja ningún pasaje que citar, así que una herramienta que solo lee lo que hay nunca lo señala. La red flag suele ser el contrato que nadie subió.',
+          'Una buena respuesta: una lista aparte de lo que un comprador esperaría y no encontró, revisada por una persona.'
+        ]
+      },
+      {
+        heading: '7. ¿Qué disciplinas, y qué derecho?',
+        paragraphs: [
+          'Lo financiero, lo comercial y lo operativo funcionan en cualquier país. Lo legal y lo fiscal dependen del derecho de la empresa objetivo. Pregunte qué disciplinas entran en una sola ejecución, si leen los hallazgos de las demás y para qué jurisdicciones está construido el análisis legal y fiscal.',
+          'Una buena respuesta nombra las jurisdicciones y dice con claridad dónde necesitará asesores locales.'
+        ]
+      },
+      {
+        heading: '8. ¿Quién aprueba los hallazgos?',
+        paragraphs: [
+          'El resultado de la IA es un borrador hasta que una persona lo acepta. Pregunte si algo puede exportarse sin la aprobación de una persona designada, si el proveedor ofrece alguna garantía y si un banco o una aseguradora de W&I puede basarse en el resultado.',
+          'Una buena respuesta nombra el control humano y es clara sobre la reliance. La mayoría de las plataformas no ofrecen garantía; está bien, siempre que lo digan.'
+        ]
+      },
+      {
+        heading: '9. ¿Qué afirma el proveedor sobre su precisión, y quién la midió?',
+        paragraphs: [
+          'Un porcentaje sin método es una cifra de marketing. Pregunte sobre qué conjunto de datos se midió, quién lo midió y si alguien ajeno al proveedor lo comprobó.',
+          'Una buena respuesta da el método, el conjunto de datos y el auditor, o dice con claridad que no hay una tasa auditada.'
+        ]
+      },
+      {
+        heading: '10. ¿Cuánto cuesta, y de qué depende el precio?',
+        paragraphs: [
+          'Por usuario, por documento, por página o por operación: el modelo determina lo que le costará un data room grande o desordenado. Pregunte qué está incluido, qué es adicional y qué ocurre si el data room crece durante el proceso.',
+          'Una buena respuesta es un precio para un alcance acordado, por escrito, antes de subir el data room.'
+        ]
+      },
+      {
+        heading: '¿Cómo responde Factum a las diez?',
+        paragraphs: ['En breve, y con las lagunas a la vista.'],
+        steps: [
+          'En endpoints de la UE por defecto, con un contrato de encargo del tratamiento.',
+          'Sin conservación en el proveedor del modelo, que tampoco entrena con sus documentos. Seudonimización antes del análisis. El análisis legal, financiero y fiscal se ejecuta obligatoriamente en endpoints sin conservación.',
+          'Primero el NDA. Los documentos solo se mueven después de firmarlo.',
+          'Cada hallazgo indica su documento fuente y su ubicación, con el pasaje que lo respalda cuando lo hay.',
+          'Se lee cada documento del data room, con {modules} módulos en {waves} oleadas.',
+          'Una lista de lo que nunca llegó, desde la primera ejecución.',
+          '{disciplines} disciplinas en una sola ejecución. Lo legal y lo fiscal están ajustados al derecho neerlandés; para una empresa objetivo en otro país, que asesores locales revisen esos hallazgos.',
+          'Su propio revisor aprueba. Ninguna exportación sale de la plataforma sin esa aprobación. Factum no firma nada ni ofrece garantía.',
+          'Ninguna tasa de precisión auditada. Factum está en fase previa al lanzamiento.',
+          'Precio a consultar: un precio para todo el alcance, fijado según el tamaño y el estado del data room.'
+        ],
+        after: [
+          'Más sobre [cómo se tratan sus documentos](/governance) y [lo que la IA no puede hacer en una due diligence](/limits-of-ai).'
+        ]
+      }
+    ],
+    faq: {
+      heading: 'Preguntas frecuentes',
+      items: [
+        {
+          q: '¿Sirven estas preguntas para un data room virtual con funciones de IA?',
+          a: 'Sí. Las preguntas 1 a 3 y 8 a 10 valen para cualquier herramienta que toque los documentos. Las preguntas 4 a 6 pesan más en una herramienta que dice hacer ella misma la lectura de la due diligence.'
+        },
+        {
+          q: '¿Qué pregunta es la más importante?',
+          a: 'La pregunta 3 va primero en el tiempo: si el NDA no permite la subida, lo demás no importa. Después, la pregunta 8. Quien aprueba responde de los hallazgos.'
+        },
+        {
+          q: '¿Cómo ponemos a prueba las respuestas de un proveedor?',
+          a: 'Hágalo trabajar sobre una operación que cerró el año pasado. No se expone nada en curso, y puede comparar los hallazgos con lo que su equipo encontró entonces.'
+        },
+        {
+          q: '¿La due diligence con IA sustituye a nuestros asesores?',
+          a: 'No. Lee todo el data room y muestra a los especialistas dónde mirar. La due diligence financiera del auditor y la due diligence legal de su abogado siguen siendo lo que son, y su propio revisor decide lo que importa.'
+        }
+      ]
+    },
+    helps: {
+      heading: 'Dónde encaja Factum',
+      bullets: [
+        'Para private equity y otros compradores, antes de la oferta vinculante o la firma.',
+        'Cada documento del data room leído, cada hallazgo con su documento fuente y su ubicación.',
+        'Una lista de lo que el vendedor nunca subió.',
+        'Su revisor aprueba en la plataforma.'
+      ],
+      note: 'Factum está en fase previa al lanzamiento: aún no hay ningún cliente público ni caso de estudio. La diferencia con la IA de un data room virtual: [due diligence con IA frente a la IA del data room](/ai-due-diligence-vs-data-room-ai). Antes de firmar: [revisión de red flags de un data room](/red-flag-review). Si compra una BV neerlandesa: [due diligence de una BV neerlandesa](/dutch-bv-due-diligence).'
     },
     datePublished: '2026-11-12'
   }
