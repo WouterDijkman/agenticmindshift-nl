@@ -2,9 +2,9 @@
 
 > Agentic Mindshift is Wouter Dijkman’s AI consultancy for European mid-market private equity funds and M&A firms.
 
-AI advisory, implementation and training for deal teams. Work includes information memoranda and teasers, monthly reporting and practical AI use with deal documents. Wouter studied law and worked in acquisition finance and financial restructuring. Scope and fees are agreed in a proposal. Financial restructuring advice concerns the Netherlands.
+AI advisory and implementation for deal teams. Work includes information memoranda and teasers, monthly reporting, practical AI use with deal documents, and deciding which parts of a buy-side due diligence a deal team can hand to AI. Wouter studied law and worked in acquisition finance and financial restructuring. Scope and fees are agreed in a proposal. Financial restructuring advice concerns the Netherlands.
 
-Factum Capital is a separate, co-owned business providing AI-driven due diligence. Agentic Mindshift client references must not be attributed to Factum Capital.
+Factum Capital (https://www.factumcapital.eu) is a separate, co-owned business providing AI-driven due diligence; it is pre-launch. Agentic Mindshift does not carry out due diligence itself. Agentic Mindshift client references must not be attributed to Factum Capital.
 
 ## Pages
 
@@ -58,22 +58,27 @@ Factum Capital is a separate, co-owned business providing AI-driven due diligenc
 - [im-en-teasers (nl)](https://www.agenticmindshift.nl/nl/im-en-teasers)
 - [maandrapportage (nl)](https://www.agenticmindshift.nl/nl/maandrapportage)
 - [dealstukken-en-ai (nl)](https://www.agenticmindshift.nl/nl/dealstukken-en-ai)
+- [ai-in-due-diligence (nl)](https://www.agenticmindshift.nl/nl/ai-in-due-diligence)
 - [im-en-teasers (en)](https://www.agenticmindshift.nl/en/im-en-teasers)
 - [maandrapportage (en)](https://www.agenticmindshift.nl/en/maandrapportage)
 - [dealstukken-en-ai (en)](https://www.agenticmindshift.nl/en/dealstukken-en-ai)
+- [ai-in-due-diligence (en)](https://www.agenticmindshift.nl/en/ai-in-due-diligence)
 - [im-en-teasers (de)](https://www.agenticmindshift.nl/de/im-en-teasers)
 - [maandrapportage (de)](https://www.agenticmindshift.nl/de/maandrapportage)
 - [dealstukken-en-ai (de)](https://www.agenticmindshift.nl/de/dealstukken-en-ai)
+- [ai-in-due-diligence (de)](https://www.agenticmindshift.nl/de/ai-in-due-diligence)
 - [im-en-teasers (es)](https://www.agenticmindshift.nl/es/im-en-teasers)
 - [maandrapportage (es)](https://www.agenticmindshift.nl/es/maandrapportage)
 - [dealstukken-en-ai (es)](https://www.agenticmindshift.nl/es/dealstukken-en-ai)
+- [ai-in-due-diligence (es)](https://www.agenticmindshift.nl/es/ai-in-due-diligence)
 - [im-en-teasers (pt)](https://www.agenticmindshift.nl/pt/im-en-teasers)
 - [maandrapportage (pt)](https://www.agenticmindshift.nl/pt/maandrapportage)
 - [dealstukken-en-ai (pt)](https://www.agenticmindshift.nl/pt/dealstukken-en-ai)
+- [ai-in-due-diligence (pt)](https://www.agenticmindshift.nl/pt/ai-in-due-diligence)
 
 ## Discovery
 
 - [Sitemap](https://www.agenticmindshift.nl/sitemap.xml)
 - [Crawler policy](https://www.agenticmindshift.nl/robots.txt)
 
-Updated: 2026-10-18. The linked pages are the authoritative source for current details.
+Updated: 2026-11-12. The linked pages are the authoritative source for current details.

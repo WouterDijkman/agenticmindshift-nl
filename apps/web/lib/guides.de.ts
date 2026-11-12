@@ -11,6 +11,11 @@ import type { GuideSlug } from './guideRoutes';
  */
 
 const PUBLISHED = '2026-10-12';
+/* Last revisions: all five locales on 21-10-2026; the Factum signpost on
+   /dealstukken-en-ai on 12-11-2026. */
+const REVISED = '2026-10-21';
+const REVISED_SIGNPOST = '2026-11-12';
+const DD_PUBLISHED = '2026-11-12';
 
 export const CHROME_DE: GuideChrome = {
   tocLabel: 'Auf dieser Seite',
@@ -18,7 +23,7 @@ export const CHROME_DE: GuideChrome = {
   werkwijzeLink: 'Wie ein Mandat abläuft',
   overLink: 'Über Wouter Dijkman',
   moreEyebrow: 'Praxisfragen',
-  moreHeading: 'Drei Praxisfragen zu KI in der Dealarbeit',
+  moreHeading: 'Vier Praxisfragen zu KI in der Dealarbeit',
   readMore: 'Mehr lesen',
 };
 
@@ -125,6 +130,7 @@ export const GUIDES_DE: Record<GuideSlug, Guide> = {
       note: 'Das erste Gespräch dauert zwanzig Minuten und ist unverbindlich.',
     },
     datePublished: PUBLISHED,
+    dateModified: REVISED,
   },
   /* ─────────────────────────────────────────────────────────────────────
      (b) Monthly reporting of a PE portfolio company
@@ -199,6 +205,7 @@ export const GUIDES_DE: Record<GuideSlug, Guide> = {
       note: 'Das erste Gespräch dauert zwanzig Minuten und ist unverbindlich.',
     },
     datePublished: PUBLISHED,
+    dateModified: REVISED,
   },
   /* ─────────────────────────────────────────────────────────────────────
      (c) Deal documents in ChatGPT under an NDA and the GDPR
@@ -206,7 +213,7 @@ export const GUIDES_DE: Record<GuideSlug, Guide> = {
   'dealstukken-en-ai': {
     metaTitle: 'Dürfen NDA-Unterlagen in ChatGPT? 3 Checks',
     metaDescription:
-      'Ja, wenn drei Dinge geregelt sind: die NDA, ein Auftragsverarbeitungsvertrag und die richtigen Einstellungen. Ein Gratis-Konto reicht meist nicht. Checkliste für Dealteams.',
+      'Ja, wenn drei Dinge geregelt sind: NDA, Auftragsverarbeitungsvertrag und die richtigen Einstellungen. Ein Gratis-Konto reicht selten. Checkliste für Dealteams.',
     shortName: 'Dealunterlagen und KI',
     teaser: 'Was NDA, DSGVO und die Einstellungen des Anbieters verlangen, bevor Unterlagen in ein KI-Tool gehen.',
     eyebrow: 'NDA · DSGVO · Niederländischer und EU-Rahmen',
@@ -261,7 +268,7 @@ export const GUIDES_DE: Record<GuideSlug, Guide> = {
         heading: 'Ist das Rechtsberatung?',
         paragraphs: [
           'Nein. Dies ist der allgemeine niederländische und europäische Rahmen. Wouter Dijkman hat Rechtswissenschaften studiert. Jedes NDA und jeder Data Room ist anders. Lassen Sie im Zweifel den Text Ihres NDA und Ihres Auftragsverarbeitungsvertrags von Ihrem eigenen Anwalt prüfen.',
-          'Möchten Sie KI danach wirklich in der Dealarbeit einsetzen? Siehe [IMs und Teaser](/im-en-teasers) und [Monatsreporting](/maandrapportage).',
+          'Möchten Sie KI danach wirklich in der Dealarbeit einsetzen? Siehe [IMs und Teaser](/im-en-teasers) und [Monatsreporting](/maandrapportage). Was ein Dealteam in einer Due Diligence an KI abgeben kann, steht unter [KI in der Buy-side-Due-Diligence](/ai-in-due-diligence).',
         ],
       },
     ],
@@ -289,5 +296,100 @@ export const GUIDES_DE: Record<GuideSlug, Guide> = {
       note: 'Das erste Gespräch dauert zwanzig Minuten und ist unverbindlich. Mehr zum Vorgehen unter [Arbeitsweise](/werkwijze).',
     },
     datePublished: PUBLISHED,
+    dateModified: REVISED_SIGNPOST,
+  },
+  /* ─────────────────────────────────────────────────────────────────────
+     (d) AI in buy-side due diligence (12-11-2026)
+     The adviser's answer to "what can a deal team hand to AI in a DD?"
+     (GTM/ops/geo-seo-audit-2026-11-12.md, M5, §5.3). The last section names
+     Factum Capital in one neutral sentence, with claims only from
+     GTM/config/product-facts.md: whole data room, source cited per finding,
+     the client's own reviewer assesses, pre-launch. No prices, percentages
+     or turnaround times; Factum signs nothing off.
+     ───────────────────────────────────────────────────────────────────── */
+  'ai-in-due-diligence': {
+    metaTitle: 'Was KI in der Buy-side-Due-Diligence kann',
+    metaDescription:
+      'Welche Teile einer Buy-side-Due-Diligence KI lesen kann, welche beim Dealteam bleiben und wie Sie einen Anbieter zuerst an einem abgeschlossenen Deal testen.',
+    shortName: 'KI in der Due Diligence',
+    teaser: 'Welche Teile einer Buy-side-DD Lesearbeit für KI sind und welche bei Ihrem Team bleiben.',
+    eyebrow: 'Buy-side-Due-Diligence · KI · Review',
+    bgChar: 'DD',
+    h1: 'KI in der Buy-side-Due-Diligence: was ein Dealteam an KI abgeben kann und was nicht',
+    answer:
+      'KI kann die Lesearbeit übernehmen: jedes Dokument im Data Room, die Klauseln, Zahlen und Lücken darin, jeweils mit der Seite, von der sie stammen. Das Urteil bleibt beim Dealteam: was eine Feststellung für Preis, Struktur und Kaufvertrag bedeutet und ob Sie unterschreiben. Richten Sie es so ein, dass jede KI-Feststellung ihre Quelle trägt und eine benannte Person in Ihrem Team sie prüft, bevor sie zählt.',
+    sections: [
+      {
+        heading: 'Welche Teile einer Due Diligence sind Lesearbeit, welche Urteil?',
+        paragraphs: [
+          'Die meisten Stunden einer Due Diligence gehen ins Lesen. Diesen Teil kann KI übernehmen.',
+        ],
+        bullets: [
+          'Lesearbeit: Change-of-Control- und Abtretungsklauseln, Exklusivität, Kündigungsfristen und Garantien in den Verträgen.',
+          'Lesearbeit: die Managementzahlen mit dem Jahresabschluss abstimmen und jede Abweichung festhalten.',
+          'Lesearbeit: Arbeitsbedingungen, laufende Ansprüche, Genehmigungen und was im Index des Data Rooms fehlt.',
+          'Urteil: ob eine Feststellung für Preis oder Struktur zählt.',
+          'Urteil: was als Garantie, Freistellung oder Bedingung in den Kaufvertrag kommt.',
+          'Urteil: die Fragen an das Management, die Verhandlung und die Entscheidung zu unterschreiben.',
+        ],
+        after: [
+          'Eine brauchbare Faustregel: Würden zwei sorgfältige Junioren dasselbe notieren, ist es Lesearbeit. Können zwei Partner darüber verschiedener Meinung sein, ist es Urteil.',
+        ],
+      },
+      {
+        heading: 'Was erlauben NDA und DSGVO?',
+        paragraphs: [
+          'Ein Data Room fällt unter ein NDA und enthält fast immer personenbezogene Daten. Bevor Unterlagen in ein KI-Tool gehen, müssen drei Dinge geregelt sein: Das NDA erlaubt die Weitergabe an den Anbieter, es besteht ein Auftragsverarbeitungsvertrag, und die Einstellungen halten Ihre Unterlagen aus dem Modelltraining heraus.',
+          'Die Prüfungen Schritt für Schritt stehen unter [Dealunterlagen in ChatGPT](/dealstukken-en-ai). Die Seite beschreibt den niederländischen und europäischen Rahmen und ist keine Rechtsberatung.',
+        ],
+      },
+      {
+        heading: 'Wie testen Sie einen KI-Anbieter vor einem laufenden Deal?',
+        paragraphs: [
+          'An einem Deal, den Sie bereits abgeschlossen haben. Sie wissen, was in diesem Data Room lag und welche Punkte auftauchten, also können Sie das Ergebnis daran messen.',
+        ],
+        steps: [
+          'Wählen Sie einen abgeschlossenen Deal, dessen Data Room Sie dafür nutzen dürfen, mit geprüftem NDA und geprüfter DSGVO-Lage.',
+          'Notieren Sie, welche Punkte Ihr Team fand, bevor Sie das Ergebnis des Anbieters sehen.',
+          'Lassen Sie den Anbieter den gesamten Data Room durchgehen.',
+          'Vergleichen Sie: Welche Ihrer Punkte fand er, welche fehlten, und was fand er, das Sie nicht hatten?',
+          'Öffnen Sie die Quelle einer Stichprobe von Feststellungen. Steht das Zitat wirklich auf dieser Seite?',
+          'Fragen Sie, wo die Unterlagen verarbeitet und gespeichert werden und wie lange sie aufbewahrt bleiben.',
+        ],
+        after: [
+          'Ihr eigener abgeschlossener Deal ist der fairste Test, weil Sie die Antworten schon kennen.',
+        ],
+      },
+      {
+        heading: 'Wie richten Sie den Review-Schritt in Ihrem Team ein?',
+        bullets: [
+          'Jede Feststellung trägt ihre Quelle: Dokument, Seite und die Passage, auf der sie beruht. Eine Feststellung ohne Quelle zählt nicht.',
+          'Ein benannter Prüfer pro Arbeitsstrang: rechtlich, finanziell, steuerlich, kommerziell.',
+          'Der Prüfer öffnet die Quelle jeder Feststellung, die Preis, Struktur oder Kaufvertrag berühren kann.',
+          'Angenommen, verworfen oder zurückgeschickt: Der Prüfer hält es fest, mit Begründung.',
+          'Nichts geht vor diesem Review an das Investmentkomitee.',
+        ],
+        after: [
+          'Ihre Anwälte und Wirtschaftsprüfer behalten ihre eigene Rolle und unterzeichnen ihre eigenen Berichte. KI ändert, wer die Lesearbeit macht; die Verantwortung bleibt, wo sie war.',
+        ],
+      },
+      {
+        heading: 'Und wenn Sie die Lesearbeit erledigen lassen wollen?',
+        paragraphs: [
+          'Factum Capital, eine eigenständige Due-Diligence-Plattform, die Wouter mitgegründet hat und die noch vor dem Launch steht, liest den gesamten Data Room, belegt jede Feststellung mit ihrer Quelle und überlässt das Urteil Ihrem eigenen Prüfer. [Factum für Käufer](factum:/diligence-sprint)',
+        ],
+      },
+    ],
+    helps: {
+      heading: 'Wie Agentic Mindshift hilft',
+      bullets: [
+        'Wir erfassen mit Ihnen Ihre Due Diligence: welche Teile Lesearbeit sind und welche beim Team bleiben.',
+        'Wir legen die Regeln fest: welche Unterlagen in welches Tool dürfen, mit welchen Einstellungen.',
+        'Wir richten den Review-Schritt ein, damit jede Feststellung geprüft ist, bevor sie zählt.',
+      ],
+      note: 'Das erste Gespräch dauert zwanzig Minuten und ist unverbindlich. Mehr zum Vorgehen unter [Arbeitsweise](/werkwijze).',
+    },
+    datePublished: DD_PUBLISHED,
+    dateModified: DD_PUBLISHED,
   },
 };

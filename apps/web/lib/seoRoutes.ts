@@ -9,7 +9,8 @@ export const PUBLIC_PATHS = [
   "/voorwaarden",
   "/im-en-teasers",
   "/maandrapportage",
-  "/dealstukken-en-ai"
+  "/dealstukken-en-ai",
+  "/ai-in-due-diligence"
 ] as const;
 export const LEGACY_PATHS: Readonly<Record<string, string>> = {
   // The old Factum product page on this site: lands on Factum's own product
@@ -25,4 +26,4 @@ export const LEGACY_PATHS: Readonly<Record<string, string>> = {
 
 // Actual content/metadata revision; update when public content changes.
 // Do not use build time as a content modification date.
-export const CONTENT_LAST_MODIFIED = '2026-10-18';
+export const CONTENT_LAST_MODIFIED = '2026-11-12';

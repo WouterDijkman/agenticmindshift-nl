@@ -3,7 +3,7 @@ import { GUIDE_CHROME, getGuide } from '@/lib/guides';
 import { GUIDE_SLUGS, isGuideLocale } from '@/lib/guideRoutes';
 
 /**
- * The three problem pages, as one clearly titled block. Placed on /werkwijze
+ * The problem pages, as one clearly titled block. Placed on /werkwijze
  * and the homepage, and listed in the footer, so the pages are findable
  * without a header nav item.
  */

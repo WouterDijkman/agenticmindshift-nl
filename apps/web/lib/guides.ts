@@ -4,7 +4,7 @@ import { CHROME_ES, GUIDES_ES } from './guides.es';
 import { CHROME_PT, GUIDES_PT } from './guides.pt';
 
 /**
- * Copy for the three problem pages, in Dutch and English.
+ * Copy for the problem pages, in Dutch and English.
  *
  * Why here and not in messages/*.json: next-intl's catalogues are shared by
  * all five locales and sent whole to the client provider. These pages exist
@@ -65,6 +65,8 @@ export interface Guide {
   };
   helps: { heading: string; bullets: string[]; note: string };
   datePublished: string;
+  /** Last content revision: Article `dateModified` and the sitemap `lastModified`. */
+  dateModified: string;
 }
 
 export interface GuideChrome {
@@ -88,7 +90,7 @@ export const GUIDE_CHROME: Record<GuideLocale, GuideChrome> = {
     werkwijzeLink: 'Hoe een traject verloopt',
     overLink: 'Over Wouter Dijkman',
     moreEyebrow: 'Praktijkvragen',
-    moreHeading: 'Drie praktijkvragen over AI in dealwerk',
+    moreHeading: 'Vier praktijkvragen over AI in dealwerk',
     readMore: 'Lees verder',
   },
   en: {
@@ -97,12 +99,17 @@ export const GUIDE_CHROME: Record<GuideLocale, GuideChrome> = {
     werkwijzeLink: 'How an engagement works',
     overLink: 'About Wouter Dijkman',
     moreEyebrow: 'Practical questions',
-    moreHeading: 'Three practical questions about AI in deal work',
+    moreHeading: 'Four practical questions about AI in deal work',
     readMore: 'Read more',
   },
 };
 
 const PUBLISHED = '2026-10-12';
+/* Last revisions: all five locales on 21-10-2026; the Factum signpost on
+   /dealstukken-en-ai on 12-11-2026. */
+const REVISED = '2026-10-21';
+const REVISED_SIGNPOST = '2026-11-12';
+const DD_PUBLISHED = '2026-11-12';
 
 /* Dutch (the original) and English here; de/es/pt in guides.{de,es,pt}.ts. */
 export const GUIDES: Record<GuideSlug, Record<'nl' | 'en', Guide>> = {
@@ -209,6 +216,7 @@ export const GUIDES: Record<GuideSlug, Record<'nl' | 'en', Guide>> = {
         note: 'Het eerste gesprek duurt twintig minuten en is vrijblijvend.',
       },
       datePublished: PUBLISHED,
+      dateModified: REVISED,
     },
     en: {
       metaTitle: 'One AI workflow for IMs and teasers',
@@ -309,6 +317,7 @@ export const GUIDES: Record<GuideSlug, Record<'nl' | 'en', Guide>> = {
         note: 'The first call takes twenty minutes and comes without obligation.',
       },
       datePublished: PUBLISHED,
+      dateModified: REVISED,
     },
   },
 
@@ -386,6 +395,7 @@ export const GUIDES: Record<GuideSlug, Record<'nl' | 'en', Guide>> = {
         note: 'Het eerste gesprek duurt twintig minuten en is vrijblijvend.',
       },
       datePublished: PUBLISHED,
+      dateModified: REVISED,
     },
     en: {
       metaTitle: 'Monthly portfolio reviews with AI',
@@ -457,6 +467,7 @@ export const GUIDES: Record<GuideSlug, Record<'nl' | 'en', Guide>> = {
         note: 'The first call takes twenty minutes and comes without obligation.',
       },
       datePublished: PUBLISHED,
+      dateModified: REVISED,
     },
   },
 
@@ -467,7 +478,7 @@ export const GUIDES: Record<GuideSlug, Record<'nl' | 'en', Guide>> = {
     nl: {
       metaTitle: 'Mag een NDA-stuk in ChatGPT? Drie checks',
       metaDescription:
-        'Ja, als drie dingen geregeld zijn: de NDA, een verwerkersovereenkomst en de juiste instellingen. Een gratis account haalt die meestal niet. Checklist voor dealteams.',
+        'Ja, als drie dingen geregeld zijn: de NDA, een verwerkersovereenkomst en de juiste instellingen. Een gratis account volstaat zelden. Checklist voor dealteams.',
       shortName: 'Dealstukken en AI',
       teaser: 'Wat de NDA, de AVG en de instellingen van de aanbieder vragen voordat stukken in een AI-tool gaan.',
       eyebrow: 'NDA · AVG · Nederlands en EU-kader',
@@ -522,7 +533,7 @@ export const GUIDES: Record<GuideSlug, Record<'nl' | 'en', Guide>> = {
           heading: 'Is dit juridisch advies?',
           paragraphs: [
             'Nee. Dit is het algemene Nederlandse en Europese kader. Wouter Dijkman heeft rechten gestudeerd. Elke NDA en elke data room is anders. Laat bij twijfel de tekst van uw NDA en uw verwerkersovereenkomst toetsen door uw eigen advocaat.',
-            'Wilt u daarna AI echt in het dealwerk inzetten? Zie [IM’s en teasers](/im-en-teasers) en [Maandrapportage](/maandrapportage).',
+            'Wilt u daarna AI echt in het dealwerk inzetten? Zie [IM’s en teasers](/im-en-teasers) en [Maandrapportage](/maandrapportage). Wat u in een due diligence aan AI kunt overlaten, staat op [AI in buy-side due diligence](/ai-in-due-diligence).',
           ],
         },
       ],
@@ -550,11 +561,12 @@ export const GUIDES: Record<GuideSlug, Record<'nl' | 'en', Guide>> = {
         note: 'Het eerste gesprek duurt twintig minuten en is vrijblijvend. Meer over de aanpak op [Werkwijze](/werkwijze).',
       },
       datePublished: PUBLISHED,
+      dateModified: REVISED_SIGNPOST,
     },
     en: {
       metaTitle: 'Can NDA documents go into ChatGPT? 3 checks',
       metaDescription:
-        'Yes, if three things are in place: the NDA allows it, a data processing agreement, and the right settings. A free account usually fails. Checklist for deal teams.',
+        'Yes, if three things are in place: the NDA allows it, a data processing agreement, and the right settings. A free account rarely does. Checklist for deal teams.',
       shortName: 'Deal documents and AI',
       teaser: 'What the NDA, the GDPR and the provider’s settings require before documents go into an AI tool.',
       eyebrow: 'NDA · GDPR · Dutch and EU frame',
@@ -609,7 +621,7 @@ export const GUIDES: Record<GuideSlug, Record<'nl' | 'en', Guide>> = {
           heading: 'Is this legal advice?',
           paragraphs: [
             'No. This is the general Dutch and EU frame. Wouter Dijkman studied law. Every NDA and every data room is different. In doubt, have your own counsel review the wording of your NDA and your DPA.',
-            'Ready to put AI to work in deal work itself? See [IMs and teasers](/im-en-teasers) and [Monthly reporting](/maandrapportage).',
+            'Ready to put AI to work in deal work itself? See [IMs and teasers](/im-en-teasers) and [Monthly reporting](/maandrapportage). What a deal team can hand to AI in a due diligence is on [AI in buy-side due diligence](/ai-in-due-diligence).',
           ],
         },
       ],
@@ -637,6 +649,189 @@ export const GUIDES: Record<GuideSlug, Record<'nl' | 'en', Guide>> = {
         note: 'The first call takes twenty minutes and comes without obligation. More on the approach under [How we work](/werkwijze).',
       },
       datePublished: PUBLISHED,
+      dateModified: REVISED_SIGNPOST,
+    },
+  },
+
+  /* ─────────────────────────────────────────────────────────────────────
+     (d) AI in buy-side due diligence (12-11-2026)
+     The adviser's answer to "what can a deal team hand to AI in a DD?"
+     (GTM/ops/geo-seo-audit-2026-11-12.md, M5, §5.3). The last section names
+     Factum Capital in one neutral sentence, with claims only from
+     GTM/config/product-facts.md: whole data room, source cited per finding,
+     the client's own reviewer assesses, pre-launch. No prices, percentages
+     or turnaround times; Factum signs nothing off.
+     ───────────────────────────────────────────────────────────────────── */
+  'ai-in-due-diligence': {
+    nl: {
+      metaTitle: 'Wat AI kan in een buy-side due diligence',
+      metaDescription:
+        'Welke delen van een buy-side due diligence AI kan lezen, welke bij het dealteam blijven, en hoe u een leverancier eerst test op een afgeronde deal.',
+      shortName: 'AI in due diligence',
+      teaser: 'Welke delen van een buy-side DD leeswerk zijn voor AI, en welke bij uw team blijven.',
+      eyebrow: 'Buy-side due diligence · AI · review',
+      bgChar: 'DD',
+      h1: 'AI in buy-side due diligence: wat een dealteam aan AI kan overlaten, en wat niet',
+      answer:
+        'AI kan het leeswerk overnemen: elk stuk in de data room, de clausules, cijfers en gaten daarin, elk met de pagina waar het vandaan komt. Het oordeel blijft bij het dealteam: wat een bevinding betekent voor prijs, structuur en koopovereenkomst, en of u tekent. Richt het zo in dat elke AI-bevinding haar bron draagt, en dat een vaste persoon in uw team haar controleert voordat ze telt.',
+      sections: [
+        {
+          heading: 'Welke delen van een due diligence zijn leeswerk, en welke oordeel?',
+          paragraphs: [
+            'De meeste uren in een due diligence gaan op aan lezen. Dat deel kan AI overnemen.',
+          ],
+          bullets: [
+            'Leeswerk: change-of-control- en overdrachtsclausules, exclusiviteit, opzegtermijnen en garanties in de contracten.',
+            'Leeswerk: de managementcijfers aansluiten op de jaarrekening, en elk verschil noteren.',
+            'Leeswerk: arbeidsvoorwaarden, lopende claims, vergunningen, en wat er in de index van de data room ontbreekt.',
+            'Oordeel: of een bevinding ertoe doet voor de prijs of de structuur.',
+            'Oordeel: wat als garantie, vrijwaring of voorwaarde in de koopovereenkomst komt.',
+            'Oordeel: de vragen aan het management, de onderhandeling en het besluit om te tekenen.',
+          ],
+          after: [
+            'Een bruikbare vuistregel: zouden twee zorgvuldige junioren hetzelfde opschrijven, dan is het leeswerk. Kunnen twee partners erover van mening verschillen, dan is het oordeel.',
+          ],
+        },
+        {
+          heading: 'Wat staan de NDA en de AVG toe?',
+          paragraphs: [
+            'Een data room valt onder een NDA en bevat bijna altijd persoonsgegevens. Voordat stukken in een AI-tool gaan, moeten drie dingen geregeld zijn: de NDA staat delen met de aanbieder toe, er ligt een verwerkersovereenkomst, en de instellingen houden uw stukken buiten modeltraining.',
+            'De checks stap voor stap staan op [Dealstukken in ChatGPT](/dealstukken-en-ai). Die pagina beschrijft het Nederlandse en Europese kader en is geen juridisch advies.',
+          ],
+        },
+        {
+          heading: 'Hoe test u een AI-leverancier vóór een lopende deal?',
+          paragraphs: [
+            'Op een deal die u al hebt afgerond. U weet wat er in die data room zat en welke punten naar boven kwamen, dus u kunt de uitkomst daartegen leggen.',
+          ],
+          steps: [
+            'Kies een afgeronde deal waarvan u de data room hiervoor mag gebruiken, met de NDA en de AVG getoetst.',
+            'Schrijf op welke punten uw team vond, voordat u de uitkomst van de leverancier ziet.',
+            'Laat de leverancier de hele data room doorlopen.',
+            'Vergelijk: welke van uw punten vond hij, welke miste hij, en wat vond hij dat u niet had?',
+            'Open de bron van een steekproef van bevindingen. Staat het citaat echt op die pagina?',
+            'Vraag waar de stukken worden verwerkt en opgeslagen, en hoe lang ze bewaard blijven.',
+          ],
+          after: [
+            'Uw eigen afgeronde deal is de eerlijkste test, omdat u de antwoorden al kent.',
+          ],
+        },
+        {
+          heading: 'Hoe richt u de reviewstap in uw team in?',
+          bullets: [
+            'Elke bevinding draagt haar bron: document, pagina en de passage waarop ze rust. Een bevinding zonder bron telt niet.',
+            'Eén vaste reviewer per werkstroom: juridisch, financieel, fiscaal, commercieel.',
+            'De reviewer opent de bron bij elke bevinding die prijs, structuur of koopovereenkomst kan raken.',
+            'Geaccepteerd, verworpen of teruggestuurd: de reviewer legt het vast, met een reden.',
+            'Niets gaat naar het investeringscomité vóór die review.',
+          ],
+          after: [
+            'Uw advocaten en accountants houden hun eigen rol en tekenen hun eigen rapporten. AI verandert wie het leeswerk doet; de verantwoordelijkheid blijft waar ze was.',
+          ],
+        },
+        {
+          heading: 'En als u het leeswerk wilt laten doen?',
+          paragraphs: [
+            'Factum Capital, een apart due-diligenceplatform dat Wouter mede oprichtte en dat nog niet gelanceerd is, leest de hele data room, noemt bij elke bevinding de bron en laat het oordeel aan uw eigen reviewer. [Factum voor kopers](factum:/diligence-sprint)',
+          ],
+        },
+      ],
+      helps: {
+        heading: 'Hoe Agentic Mindshift helpt',
+        bullets: [
+          'We brengen met u uw due diligence in kaart: welke delen leeswerk zijn, en welke bij het team blijven.',
+          'We stellen de regels op: welke stukken in welke tool mogen, met welke instellingen.',
+          'We richten de reviewstap in, zodat elke bevinding is gecontroleerd voordat ze telt.',
+        ],
+        note: 'Het eerste gesprek duurt twintig minuten en is vrijblijvend. Meer over de aanpak op [Werkwijze](/werkwijze).',
+      },
+      datePublished: DD_PUBLISHED,
+      dateModified: DD_PUBLISHED,
+    },
+    en: {
+      metaTitle: 'What AI can do in buy-side due diligence',
+      metaDescription:
+        'Which parts of a buy-side due diligence AI can read, which stay with the deal team, and how to test a vendor on a closed deal first. A practical guide.',
+      shortName: 'AI in due diligence',
+      teaser: 'Which parts of a buy-side DD are reading work for AI, and which stay with your team.',
+      eyebrow: 'Buy-side due diligence · AI · review',
+      bgChar: 'DD',
+      h1: 'AI in buy-side due diligence: what a deal team can hand to AI, and what it cannot',
+      answer:
+        'AI can take on the reading: every document in the data room, the clauses, figures and gaps in it, each with the page it comes from. The judgment stays with the deal team: what a finding means for price, structure and the purchase agreement, and whether to sign. Set it up so every AI finding carries its source, and a named person on your team checks it before it counts.',
+      sections: [
+        {
+          heading: 'Which parts of a due diligence are reading, and which are judgment?',
+          paragraphs: [
+            'Most hours in a due diligence go to reading. That part AI can take on.',
+          ],
+          bullets: [
+            'Reading: change-of-control and assignment clauses, exclusivity, notice periods and guarantees in the contracts.',
+            'Reading: tying the management accounts to the annual accounts, and listing every difference.',
+            'Reading: employment terms, pending claims, permits, and what is missing from the data room index.',
+            'Judgment: whether a finding matters for the price or the structure.',
+            'Judgment: what goes into the purchase agreement as a warranty, an indemnity or a condition.',
+            'Judgment: the questions to management, the negotiation and the decision to sign.',
+          ],
+          after: [
+            'A useful rule of thumb: if two careful juniors would write down the same thing, it is reading. If two partners could disagree about it, it is judgment.',
+          ],
+        },
+        {
+          heading: 'What do the NDA and the GDPR allow?',
+          paragraphs: [
+            'A data room falls under an NDA and almost always holds personal data. Before documents go into an AI tool, three things need to be in place: the NDA allows sharing with the provider, there is a data processing agreement, and the settings keep your documents out of model training.',
+            'The checks, step by step, are on [Deal documents in ChatGPT](/dealstukken-en-ai). That page covers the Dutch and EU frame and is not legal advice.',
+          ],
+        },
+        {
+          heading: 'How do you test an AI vendor before a live deal?',
+          paragraphs: [
+            'On a deal you have already closed. You know what was in that data room and which issues came up, so you can measure the output against it.',
+          ],
+          steps: [
+            'Pick a closed deal whose data room you may use for this, with the NDA and the GDPR checked.',
+            'Write down the issues your team found, before you see the vendor’s output.',
+            'Let the vendor run the whole data room.',
+            'Compare: which of your issues did it find, which did it miss, and what did it find that you did not have?',
+            'Open the source of a sample of findings. Does the quote really stand on that page?',
+            'Ask where the documents are processed and stored, and how long they are kept.',
+          ],
+          after: [
+            'Your own closed deal is the fairest test, because you already know the answers.',
+          ],
+        },
+        {
+          heading: 'How do you set up the review step in your team?',
+          bullets: [
+            'Every finding carries its source: document, page and the passage it rests on. A finding without a source does not count.',
+            'One named reviewer per workstream: legal, financial, tax, commercial.',
+            'The reviewer opens the source of every finding that could touch price, structure or the purchase agreement.',
+            'Accepted, rejected or sent back: the reviewer records it, with a reason.',
+            'Nothing goes to the investment committee before that review.',
+          ],
+          after: [
+            'Your lawyers and accountants keep their own role and sign their own reports. AI changes who does the reading; the responsibility stays where it was.',
+          ],
+        },
+        {
+          heading: 'And if you want the reading done for you?',
+          paragraphs: [
+            'Factum Capital, a separate due diligence platform Wouter co-founded and not yet launched, reads the whole data room, cites the source of every finding and leaves the assessment to your own reviewer. [Factum for acquirers](factum:/diligence-sprint)',
+          ],
+        },
+      ],
+      helps: {
+        heading: 'How Agentic Mindshift helps',
+        bullets: [
+          'We map your due diligence with you: which parts are reading, and which stay with the team.',
+          'We set the rules: which documents may go into which tool, under which settings.',
+          'We set up the review step, so every finding is checked before it counts.',
+        ],
+        note: 'The first call takes twenty minutes and comes without obligation. More on the approach under [How we work](/werkwijze).',
+      },
+      datePublished: DD_PUBLISHED,
+      dateModified: DD_PUBLISHED,
     },
   },
 };

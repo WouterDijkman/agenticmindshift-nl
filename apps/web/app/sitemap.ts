@@ -2,6 +2,7 @@ import { CONTENT_LAST_MODIFIED } from '@/lib/seoRoutes';
 import { MetadataRoute } from 'next';
 import { BASE, LOCALES, getLanguageAlternates } from '@/lib/hreflang';
 import { GUIDE_LOCALES, GUIDE_SLUGS } from '@/lib/guideRoutes';
+import { getGuide } from '@/lib/guides';
 
 /**
  * /scorecard is absent because it no longer exists. The questionnaire was
@@ -32,11 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   // The problem pages, in every locale that has their copy (all five since
-  // 21-10-2026), with alternates for exactly those locales.
+  // 21-10-2026), with alternates for exactly those locales. Each guide carries
+  // its own revision date, the same one its Article JSON-LD states.
   const guides = GUIDE_LOCALES.flatMap((locale) =>
     GUIDE_SLUGS.map((slug) => ({
       url: `${BASE}/${locale}/${slug}`,
-      lastModified: CONTENT_LAST_MODIFIED,
+      lastModified: getGuide(slug, locale).dateModified,
       priority: 0.8,
       changeFrequency: 'monthly' as const,
       alternates: { languages: getLanguageAlternates(`/${slug}`, GUIDE_LOCALES) },

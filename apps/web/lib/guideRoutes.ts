@@ -12,7 +12,9 @@
 export const GUIDE_LOCALES = ['nl', 'en', 'de', 'es', 'pt'] as const;
 export type GuideLocale = (typeof GUIDE_LOCALES)[number];
 
-export const GUIDE_SLUGS = ['im-en-teasers', 'maandrapportage', 'dealstukken-en-ai'] as const;
+// 'ai-in-due-diligence' (12-11-2026): the buy-side question a PE partner asks
+// before he knows tools exist (GTM/ops/geo-seo-audit-2026-11-12.md, M5, §5.3).
+export const GUIDE_SLUGS = ['im-en-teasers', 'maandrapportage', 'dealstukken-en-ai', 'ai-in-due-diligence'] as const;
 export type GuideSlug = (typeof GUIDE_SLUGS)[number];
 
 export function isGuideLocale(locale: string): locale is GuideLocale {

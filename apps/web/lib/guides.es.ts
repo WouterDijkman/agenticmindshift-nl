@@ -16,11 +16,16 @@ export const CHROME_ES: GuideChrome = {
   werkwijzeLink: 'Cómo funciona un encargo',
   overLink: 'Sobre Wouter Dijkman',
   moreEyebrow: 'Preguntas prácticas',
-  moreHeading: 'Tres preguntas prácticas sobre IA en el trabajo de deals',
+  moreHeading: 'Cuatro preguntas prácticas sobre IA en el trabajo de deals',
   readMore: 'Seguir leyendo',
 };
 
 const PUBLISHED = '2026-10-12';
+/* Last revisions: all five locales on 21-10-2026; the Factum signpost on
+   /dealstukken-en-ai on 12-11-2026. */
+const REVISED = '2026-10-21';
+const REVISED_SIGNPOST = '2026-11-12';
+const DD_PUBLISHED = '2026-11-12';
 
 export const GUIDES_ES: Record<GuideSlug, Guide> = {
   /* ─────────────────────────────────────────────────────────────────────
@@ -125,6 +130,7 @@ export const GUIDES_ES: Record<GuideSlug, Guide> = {
       note: 'La primera conversación dura veinte minutos y es sin compromiso.',
     },
     datePublished: PUBLISHED,
+    dateModified: REVISED,
   },
 
   /* ─────────────────────────────────────────────────────────────────────
@@ -200,6 +206,7 @@ export const GUIDES_ES: Record<GuideSlug, Guide> = {
       note: 'La primera conversación dura veinte minutos y es sin compromiso.',
     },
     datePublished: PUBLISHED,
+    dateModified: REVISED,
   },
 
   /* ─────────────────────────────────────────────────────────────────────
@@ -208,7 +215,7 @@ export const GUIDES_ES: Record<GuideSlug, Guide> = {
   'dealstukken-en-ai': {
     metaTitle: '¿Documentos bajo NDA en ChatGPT? 3 controles',
     metaDescription:
-      'Sí, si hay tres cosas resueltas: el NDA lo permite, un contrato de encargo del tratamiento y los ajustes correctos. Una cuenta gratuita no suele bastar. Lista para equipos de deal.',
+      'Sí, si hay tres cosas resueltas: el NDA, un contrato de encargo del tratamiento y los ajustes correctos. Una cuenta gratuita rara vez basta. Lista para equipos de deal.',
     shortName: 'Documentos de deal e IA',
     teaser: 'Lo que exigen el NDA, el RGPD y los ajustes del proveedor antes de subir documentos a una herramienta de IA.',
     eyebrow: 'NDA · RGPD · Marco neerlandés y de la UE',
@@ -263,7 +270,7 @@ export const GUIDES_ES: Record<GuideSlug, Guide> = {
         heading: '¿Es esto asesoramiento jurídico?',
         paragraphs: [
           'No. Es el marco general neerlandés y europeo. Wouter Dijkman estudió Derecho. Cada NDA y cada data room es distinto. En caso de duda, pida a su propio abogado que revise el texto de su NDA y de su contrato de encargo del tratamiento.',
-          '¿Quiere después usar la IA de verdad en el trabajo de deals? Vea [IM y teasers](/im-en-teasers) e [Informe mensual](/maandrapportage).',
+          '¿Quiere después usar la IA de verdad en el trabajo de deals? Vea [IM y teasers](/im-en-teasers) e [Informe mensual](/maandrapportage). Qué puede dejar un equipo de deal a la IA en una due diligence está en [IA en la due diligence de compra](/ai-in-due-diligence).',
         ],
       },
     ],
@@ -291,5 +298,100 @@ export const GUIDES_ES: Record<GuideSlug, Guide> = {
       note: 'La primera conversación dura veinte minutos y es sin compromiso. Más sobre el enfoque en [Metodología](/werkwijze).',
     },
     datePublished: PUBLISHED,
+    dateModified: REVISED_SIGNPOST,
+  },
+  /* ─────────────────────────────────────────────────────────────────────
+     (d) AI in buy-side due diligence (12-11-2026)
+     The adviser's answer to "what can a deal team hand to AI in a DD?"
+     (GTM/ops/geo-seo-audit-2026-11-12.md, M5, §5.3). The last section names
+     Factum Capital in one neutral sentence, with claims only from
+     GTM/config/product-facts.md: whole data room, source cited per finding,
+     the client's own reviewer assesses, pre-launch. No prices, percentages
+     or turnaround times; Factum signs nothing off.
+     ───────────────────────────────────────────────────────────────────── */
+  'ai-in-due-diligence': {
+    metaTitle: 'La IA en la due diligence de compra',
+    metaDescription:
+      'Qué partes de una due diligence de compra puede leer la IA, cuáles quedan en el equipo de deal y cómo probar antes a un proveedor en una operación cerrada.',
+    shortName: 'IA en la due diligence',
+    teaser: 'Qué partes de una DD de compra son trabajo de lectura para la IA y cuáles quedan en su equipo.',
+    eyebrow: 'Due diligence de compra · IA · revisión',
+    bgChar: 'DD',
+    h1: 'IA en la due diligence de compra: qué puede dejar un equipo de deal a la IA, y qué no',
+    answer:
+      'La IA puede asumir la lectura: cada documento del data room, las cláusulas, cifras y lagunas que contiene, cada una con la página de la que procede. El criterio queda en el equipo de deal: qué significa un hallazgo para el precio, la estructura y el contrato de compraventa, y si firmar. Organícelo de modo que cada hallazgo de la IA lleve su fuente y una persona designada de su equipo lo revise antes de que cuente.',
+    sections: [
+      {
+        heading: '¿Qué partes de una due diligence son lectura y cuáles criterio?',
+        paragraphs: [
+          'La mayoría de las horas de una due diligence se van en leer. Esa parte la puede asumir la IA.',
+        ],
+        bullets: [
+          'Lectura: cláusulas de cambio de control y de cesión, exclusividad, plazos de preaviso y garantías en los contratos.',
+          'Lectura: cuadrar las cifras de gestión con las cuentas anuales y anotar cada diferencia.',
+          'Lectura: condiciones laborales, reclamaciones pendientes, licencias y lo que falta en el índice del data room.',
+          'Criterio: si un hallazgo importa para el precio o la estructura.',
+          'Criterio: qué entra en el contrato de compraventa como garantía, indemnidad o condición.',
+          'Criterio: las preguntas a la dirección, la negociación y la decisión de firmar.',
+        ],
+        after: [
+          'Una regla práctica: si dos juniors cuidadosos anotarían lo mismo, es lectura. Si dos socios podrían discrepar, es criterio.',
+        ],
+      },
+      {
+        heading: '¿Qué permiten el NDA y el RGPD?',
+        paragraphs: [
+          'Un data room está sujeto a un NDA y casi siempre contiene datos personales. Antes de que los documentos entren en una herramienta de IA, deben estar resueltas tres cosas: el NDA permite compartir con el proveedor, hay un contrato de encargo del tratamiento y los ajustes mantienen sus documentos fuera del entrenamiento de modelos.',
+          'Los controles, paso a paso, están en [Documentos de deal en ChatGPT](/dealstukken-en-ai). Esa página describe el marco neerlandés y europeo y no es asesoramiento jurídico.',
+        ],
+      },
+      {
+        heading: '¿Cómo probar a un proveedor de IA antes de una operación en curso?',
+        paragraphs: [
+          'En una operación que ya ha cerrado. Usted sabe qué había en ese data room y qué puntos surgieron, así que puede medir el resultado contra eso.',
+        ],
+        steps: [
+          'Elija una operación cerrada cuyo data room pueda usar para esto, con el NDA y el RGPD revisados.',
+          'Anote qué puntos encontró su equipo antes de ver el resultado del proveedor.',
+          'Deje que el proveedor recorra todo el data room.',
+          'Compare: ¿qué puntos suyos encontró, cuáles pasó por alto y qué encontró que usted no tenía?',
+          'Abra la fuente de una muestra de hallazgos. ¿Está la cita de verdad en esa página?',
+          'Pregunte dónde se procesan y almacenan los documentos, y cuánto tiempo se conservan.',
+        ],
+        after: [
+          'Su propia operación cerrada es la prueba más justa, porque ya conoce las respuestas.',
+        ],
+      },
+      {
+        heading: '¿Cómo organizar el paso de revisión en su equipo?',
+        bullets: [
+          'Cada hallazgo lleva su fuente: documento, página y el pasaje en que se basa. Un hallazgo sin fuente no cuenta.',
+          'Un revisor designado por área: legal, financiera, fiscal, comercial.',
+          'El revisor abre la fuente de cada hallazgo que pueda afectar al precio, la estructura o el contrato de compraventa.',
+          'Aceptado, rechazado o devuelto: el revisor lo deja registrado, con un motivo.',
+          'Nada llega al comité de inversión antes de esa revisión.',
+        ],
+        after: [
+          'Sus abogados y auditores mantienen su propio papel y firman sus propios informes. La IA cambia quién hace la lectura; la responsabilidad sigue donde estaba.',
+        ],
+      },
+      {
+        heading: '¿Y si quiere que otro haga la lectura?',
+        paragraphs: [
+          'Factum Capital, una plataforma de due diligence aparte que Wouter cofundó y que aún está en prelanzamiento, lee todo el data room, cita la fuente de cada hallazgo y deja el criterio a su propio revisor. [Factum para compradores](factum:/diligence-sprint)',
+        ],
+      },
+    ],
+    helps: {
+      heading: 'Cómo ayuda Agentic Mindshift',
+      bullets: [
+        'Analizamos con usted su due diligence: qué partes son lectura y cuáles quedan en el equipo.',
+        'Fijamos las reglas: qué documentos pueden ir a qué herramienta, y con qué ajustes.',
+        'Organizamos el paso de revisión, para que cada hallazgo esté revisado antes de que cuente.',
+      ],
+      note: 'La primera conversación dura veinte minutos y es sin compromiso. Más sobre el enfoque en [Metodología](/werkwijze).',
+    },
+    datePublished: DD_PUBLISHED,
+    dateModified: DD_PUBLISHED,
   },
 };

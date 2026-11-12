@@ -40,28 +40,47 @@ export async function guideMetadata(slug: GuideSlug, locale: GuideLocale): Promi
       alternateLocale: GUIDE_LOCALES.filter((l) => l !== locale).map((l) => OG_LOCALES[l]),
       url: alternates.canonical,
       publishedTime: g.datePublished,
+      modifiedTime: g.dateModified,
       authors: [`${SITE_URL}/${locale}/over`],
     },
   };
 }
 
-/** `[label](/path)` → locale-aware links; everything else is plain text. */
-function rich(text: string): ReactNode[] {
+/**
+ * `[label](/path)` → locale-aware links; `[label](factum:/path)` → a link to
+ * that Factum Capital page, through `factumUrl` like every other Factum link
+ * (UTM, `noopener`, no `noreferrer`), with `guide-<slug>` as the campaign.
+ * Everything else is plain text.
+ */
+function rich(text: string, ctx: { locale: GuideLocale; slug: GuideSlug }): ReactNode[] {
   const out: ReactNode[] = [];
-  const re = /\[([^\]]+)\]\((\/[^)]*)\)/g;
+  const re = /\[([^\]]+)\]\(((?:factum:)?\/[^)]*)\)/g;
   let last = 0;
   let m: RegExpExecArray | null;
+  const linkStyle = { color: 'var(--accent-cta-ink)', textDecoration: 'underline', textUnderlineOffset: '3px' } as const;
   while ((m = re.exec(text))) {
     if (m.index > last) out.push(text.slice(last, m.index));
-    out.push(
-      <Link
-        key={m.index}
-        href={m[2]}
-        style={{ color: 'var(--accent-cta-ink)', textDecoration: 'underline', textUnderlineOffset: '3px' }}
-      >
-        {m[1]}
-      </Link>
-    );
+    if (m[2].startsWith('factum:')) {
+      const placement = `guide-${ctx.slug}`;
+      out.push(
+        <a
+          key={m.index}
+          href={factumUrl(ctx.locale, placement, m[2].slice('factum:'.length))}
+          target="_blank"
+          rel="noopener"
+          className={`plausible-event-name=Factum+Outbound plausible-event-location=${placement}`}
+          style={linkStyle}
+        >
+          {m[1]} <span aria-hidden="true">↗</span>
+        </a>
+      );
+    } else {
+      out.push(
+        <Link key={m.index} href={m[2]} style={linkStyle}>
+          {m[1]}
+        </Link>
+      );
+    }
     last = m.index + m[0].length;
   }
   if (last < text.length) out.push(text.slice(last));
@@ -137,6 +156,7 @@ function articleLd(slug: GuideSlug, locale: GuideLocale, g: Guide) {
     description: g.metaDescription,
     inLanguage: locale,
     datePublished: g.datePublished,
+    dateModified: g.dateModified,
     url,
     mainEntityOfPage: url,
     author: { '@id': PERSON_ID },
@@ -149,6 +169,7 @@ export default async function GuidePage({ slug, locale }: { slug: GuideSlug; loc
   const c = GUIDE_CHROME[locale];
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const others = GUIDE_SLUGS.filter((s) => s !== slug);
+  const ctx = { locale, slug };
 
   return (
     <>
@@ -195,24 +216,24 @@ export default async function GuidePage({ slug, locale }: { slug: GuideSlug; loc
                   {s.heading}
                 </h2>
                 {s.paragraphs?.map((p) => (
-                  <p key={p} style={bodyText}>{rich(p)}</p>
+                  <p key={p} style={bodyText}>{rich(p, ctx)}</p>
                 ))}
                 {s.steps && (
                   <ol style={{ ...bodyText, paddingLeft: '1.4em', display: 'flex', flexDirection: 'column', gap: '8px', listStyle: 'decimal' }}>
                     {s.steps.map((b) => (
-                      <li key={b} style={{ paddingLeft: '4px' }}>{rich(b)}</li>
+                      <li key={b} style={{ paddingLeft: '4px' }}>{rich(b, ctx)}</li>
                     ))}
                   </ol>
                 )}
                 {s.bullets && (
                   <ul style={{ ...bodyText, paddingLeft: '1.2em', display: 'flex', flexDirection: 'column', gap: '8px', listStyle: 'disc' }}>
                     {s.bullets.map((b) => (
-                      <li key={b} style={{ paddingLeft: '4px' }}>{rich(b)}</li>
+                      <li key={b} style={{ paddingLeft: '4px' }}>{rich(b, ctx)}</li>
                     ))}
                   </ul>
                 )}
                 {s.after?.map((p) => (
-                  <p key={p} style={bodyText}>{rich(p)}</p>
+                  <p key={p} style={bodyText}>{rich(p, ctx)}</p>
                 ))}
               </div>
               {g.factum && g.factum.afterSection === i && <FactumAside f={g.factum} locale={locale} slug={slug} />}
@@ -265,7 +286,7 @@ export default async function GuidePage({ slug, locale }: { slug: GuideSlug; loc
                 <li key={b}>{b}</li>
               ))}
             </ul>
-            <p style={{ ...bodyText, color: 'var(--text-muted)', marginBottom: '36px' }}>{rich(g.helps.note)}</p>
+            <p style={{ ...bodyText, color: 'var(--text-muted)', marginBottom: '36px' }}>{rich(g.helps.note, ctx)}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
               <Button
                 href={INTAKE_URL}
