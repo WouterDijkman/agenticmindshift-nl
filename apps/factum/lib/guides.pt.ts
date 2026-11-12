@@ -387,5 +387,223 @@ export const GUIDES_PT: Record<GuideSlug, Guide> = {
       note: 'A Factum está em fase anterior ao lançamento: ainda não há nenhum cliente público nem estudo de caso. Jurídico e fiscal estão ajustados ao direito neerlandês.'
     },
     datePublished: '2026-11-08'
+  },
+  'dutch-bv-due-diligence': {
+    metaTitle: 'Due diligence de uma BV neerlandesa: o que o comprador verifica',
+    metaDescription:
+      'Vai comprar uma BV neerlandesa? O que verificar no data room segundo o direito neerlandês: quotas, mudança de controlo, comissão de trabalhadores, pensões, unidade fiscal, ACM e a FDD.',
+    shortName: 'Due diligence de uma BV neerlandesa',
+    h1: 'Due diligence de uma BV neerlandesa: o que verifica o comprador no data room?',
+    answer:
+      'Quando o target é uma sociedade de responsabilidade limitada neerlandesa (besloten vennootschap, BV), o data room tem de responder a perguntas que o direito neerlandês coloca: quem detém realmente as quotas, que contratos sobrevivem à mudança de controlo, o que exigem a comissão de trabalhadores e o plano de pensões, e que posições fiscais vêm com a sociedade. Esta página trata apenas de targets sujeitos ao direito neerlandês. Explica o que um comprador verifica; não é aconselhamento jurídico.',
+    sections: [
+      {
+        heading: 'Quem detém as quotas, e podem ser transmitidas?',
+        bullets: [
+          'Estatutos (statuten): o texto em vigor e qualquer restrição à transmissão (blokkeringsregeling), como um direito de preferência ou um requisito de consentimento.',
+          'Registo de sócios: cada emissão e transmissão desde a constituição, cada uma com a sua escritura notarial. As quotas de uma BV transmitem-se por escritura notarial, por isso uma falha na cadeia de escrituras é uma falha na titularidade.',
+          'Certificados emitidos através de uma fundação (STAK), penhores e usufruto sobre quotas, e quem detém os direitos de voto.',
+          'Acordo parassocial: drag-along e tag-along, good e bad leaver, vetos que sobrevivem à venda.',
+          'Certidões do Registo Comercial (KvK) e do registo de beneficiários efetivos (UBO) que coincidam com o registo de sócios.'
+        ],
+        after: [
+          'Uma escritura em falta ou uma transmissão não registada pode muitas vezes ser corrigida antes da assinatura. Descoberta depois, passa a ser uma discussão sobre garantias.'
+        ]
+      },
+      {
+        heading: 'Que contratos mudam de mãos com a sociedade?',
+        paragraphs: [
+          'Numa compra de quotas os contratos ficam na BV, por isso a pergunta é quais permitem à contraparte resolver ou renegociar quando o controlo muda. Numa compra de ativos cada contrato tem de ser cedido, o que normalmente exige a colaboração da contraparte.'
+        ],
+        bullets: [
+          'Cláusulas de mudança de controlo e de resolução nos maiores contratos com clientes, fornecedores, licenças e arrendamentos.',
+          'Proibições de cessão e cláusulas de exclusividade que vinculariam o grupo do comprador após o closing.',
+          'Financiamento bancário com cláusulas de mudança de controlo e cross-default, e as garantias prestadas ao abrigo dele.',
+          'Garantias prestadas pela BV a favor de sociedades do grupo, incluindo declarações de responsabilidade depositadas no Registo Comercial (403-verklaringen).'
+        ]
+      },
+      {
+        heading: 'O que exigem a comissão de trabalhadores, o pessoal e as pensões?',
+        bullets: [
+          'Comissão de trabalhadores (ondernemingsraad): onde existe, uma mudança de controlo costuma dar-lhe um direito de consulta, e o parecer é pedido enquanto ainda pode influenciar a decisão.',
+          'Sindicatos: consoante a dimensão das empresas envolvidas, o Código de Fusões do SER (SER-Fusiegedragsregels) pode exigir que sejam informados.',
+          'Condições de trabalho: contratos de pessoas-chave, cláusulas de não concorrência, bónus e planos de retenção pagos com a venda, e o contrato coletivo (cao) aplicável.',
+          'Pensões: que plano se aplica, se a participação num fundo de pensões setorial é obrigatória, e em que ponto está o plano na transição da Lei do futuro das pensões (Wet toekomst pensioenen).',
+          'Numa compra de ativos, os trabalhadores transitam por força da lei com as suas condições (overgang van onderneming).'
+        ]
+      },
+      {
+        heading: 'Quando entram a ACM ou outro regulador?',
+        paragraphs: [
+          'Se o volume de negócios das partes ultrapassar os limiares da Lei da Concorrência neerlandesa (Mededingingswet), a operação tem de ser notificada antes do closing à Autoridade para os Consumidores e Mercados (ACM); acima dos limiares europeus, a competência passa para a Comissão Europeia.',
+          'Além disso, adquirir um fornecedor vital ou uma empresa com tecnologia sensível pode exigir uma notificação ao abrigo da lei neerlandesa de controlo de investimentos (Wet Vifo), e uma licença num setor regulado pode exigir o consentimento do regulador. Se algo disto se aplica é uma pergunta para o seu advogado no início do processo, porque define o calendário.'
+        ]
+      },
+      {
+        heading: 'Que posições fiscais vêm com a sociedade?',
+        bullets: [
+          'Unidade fiscal no imposto sobre as sociedades (fiscale eenheid): o target sai da unidade fiscal do vendedor com a venda, com consequências para os prejuízos e para operações anteriores dentro do grupo.',
+          'Unidade fiscal no IVA: cada membro responde solidariamente pelo IVA de toda a unidade durante o período em que pertenceu a ela.',
+          'Liquidações em aberto, inspeções da Administração Fiscal neerlandesa (Belastingdienst) e qualquer ruling ou acordo em que o target se apoie.',
+          'Retenções sobre salários e responsabilidade em cadeia (ketenaansprakelijkheid) quando a empresa trabalha com subempreiteiros ou trabalho temporário.',
+          'Passivos fiscais diferidos que, de outra forma, surgiriam na primeira declaração após o closing.'
+        ]
+      },
+      {
+        heading: 'O que o data room normalmente não mostra?',
+        paragraphs: [
+          'Os documentos que ninguém carregou. Uma escritura notarial de há quinze anos, uma side letter a um contrato de cliente, o parecer da comissão de trabalhadores, o último extrato da entidade gestora das pensões. O que falta não deixa nenhuma passagem para citar, por isso só se nota quando o data room é confrontado com uma lista do que devia lá estar.',
+          'Para o lado do vendedor da mesma lista, veja [a checklist do data room](/data-room-checklist).'
+        ]
+      },
+      {
+        heading: 'Como se relaciona uma leitura com IA de todo o data room com a FDD do auditor?',
+        paragraphs: [
+          'A due diligence financeira (FDD) de uma sociedade de auditoria ou consultoria aprofunda os números: quality of earnings, EBITDA normalizado, dívida líquida e fundo de maneio. Termina num relatório que a sociedade assina, e que um banco ou uma seguradora de W&I pode querer ver.',
+          'A Factum lê cada documento do data room em {disciplines} disciplinas e devolve constatações, cada uma com o seu documento de origem e a sua localização. Não dá qualquer garantia e não assina nada; o seu próprio revisor aprova as constatações para uso próprio. Ao lado de uma FDD, mostra cedo aos especialistas o que o data room contém, o que se contradiz e o que falta, para que as suas horas vão para onde está o risco. A FDD e a due diligence jurídica do seu advogado continuam a ser o que são.',
+          'Como a leitura está ordenada está na [página da plataforma](/platform). Em que difere da IA de um data room virtual está em [Due diligence com IA vs. IA do data room](/ai-due-diligence-vs-data-room-ai).'
+        ]
+      },
+      {
+        heading: 'Como chegam as constatações ao contrato de compra e venda?',
+        paragraphs: [
+          'Uma constatação acaba normalmente num de três lugares do contrato de compra e venda (SPA): o preço, uma indemnização específica por um risco conhecido ou a divulgação face às garantias. Numa apólice de W&I, os riscos que o comprador conhecia antes de assinar ficam normalmente excluídos da cobertura.',
+          'Mais uma razão para ter as constatações cedo e com a sua fonte: o seu advogado pode então decidir, constatação a constatação, onde cada uma pertence. Antes da oferta vinculativa, a [revisão de red flags](/red-flag-review) é a versão curta da mesma leitura.'
+        ]
+      }
+    ],
+    faq: {
+      heading: 'Perguntas frequentes',
+      items: [
+        {
+          q: 'Esta página aplica-se a targets fora dos Países Baixos?',
+          a: 'Não. Trata de targets sujeitos ao direito neerlandês, sobretudo a BV. A leitura financeira, comercial e operacional da Factum funciona em qualquer jurisdição; jurídico e fiscal estão ajustados ao direito neerlandês, por isso para um target noutro país peça a advogados locais que verifiquem essas constatações.'
+        },
+        {
+          q: 'Isto é aconselhamento jurídico?',
+          a: 'Não. Explica o que um comprador costuma verificar no data room de uma BV neerlandesa. Cada operação é diferente; peça ao seu próprio advogado e consultor fiscal que avaliem o target concreto.'
+        },
+        {
+          q: 'A Factum substitui a due diligence financeira do auditor?',
+          a: 'Não. Uma FDD é um relatório assinado de um trabalho à parte, e um banco ou seguradora pode apoiar-se nele. A Factum não dá qualquer garantia. Lê todo o data room em {disciplines} disciplinas ao lado da FDD, e o seu próprio revisor aprova as constatações.'
+        },
+        {
+          q: 'A Factum vê o que falta no data room?',
+          a: 'Sim, numa lista à parte do que um comprador esperaria e não encontrou. Cada ponto passa primeiro pelo seu revisor, porque um documento arquivado dentro de outro pode aparecer como em falta.'
+        },
+        {
+          q: 'Onde são processados os documentos?',
+          a: 'Por defeito em endpoints da UE, sem retenção no fornecedor do modelo e com pseudonimização antes da análise. A análise jurídica, financeira e fiscal corre obrigatoriamente em endpoints sem retenção.'
+        }
+      ]
+    },
+    helps: {
+      heading: 'Onde a Factum encaixa na compra de uma BV neerlandesa',
+      bullets: [
+        'Cada documento do data room lido, com cada constatação a citar o seu documento de origem e a sua localização.',
+        '{disciplines} disciplinas numa só passagem: {modules} módulos em {waves} vagas, em que o financeiro lê as constatações jurídicas e o fiscal lê ambas.',
+        'Jurídico e fiscal ajustados ao direito neerlandês.',
+        'O seu revisor aprova na plataforma. Nenhuma exportação sai sem essa aprovação.'
+      ],
+      note: 'A Factum está em fase anterior ao lançamento: ainda não há nenhum cliente público nem estudo de caso. Mais sobre [a Factum para compradores](/diligence-sprint) e [como os seus documentos são tratados](/governance).'
+    },
+    datePublished: '2026-11-12'
+  },
+  'red-flag-review': {
+    metaTitle: 'Revisão de red flags de um data room antes de assinar',
+    metaDescription:
+      'O que é uma revisão de red flags, que red flags decidem uma operação por disciplina, o que o relatório deve conter e onde falha. Para compradores, antes de assinar.',
+    shortName: 'Revisão de red flags de um data room',
+    h1: 'Revisão de red flags: o que verifica o comprador no data room antes de assinar?',
+    answer:
+      'Uma revisão de red flags lê o data room à procura dos problemas que podem travar a operação ou mexer no preço, e reporta apenas esses. É mais estreita do que uma due diligence completa e chega mais cedo: antes da oferta vinculativa ou da assinatura, quando ainda há tempo para desistir, renegociar ou pedir uma indemnização específica. Um relatório de red flags útil indica em cada ponto a gravidade, e o documento e a localização de onde vem.',
+    sections: [
+      {
+        heading: 'O que é uma revisão de red flags, e em que difere de uma due diligence completa?',
+        paragraphs: [
+          'Uma due diligence completa descreve o target: os números, os contratos, as pessoas e a posição fiscal, num relatório por disciplina. Uma revisão de red flags faz uma única pergunta aos mesmos documentos: o que há aqui que possa deitar a operação abaixo ou mudar o que pagamos? Tudo o resto fica fora do relatório.',
+          'A leitura não fica mais leve. Para encontrar a cláusula que importa, é preciso ler todos os contratos. O que encurta é o relatório.'
+        ]
+      },
+      {
+        heading: 'Que red flags decidem uma operação?',
+        bullets: [
+          'Jurídico: direitos de mudança de controlo e de resolução nos contratos que sustentam as receitas, litígios, garantias prestadas a terceiros, falhas na titularidade das quotas.',
+          'Comercial: concentração de clientes, contratos que terminam ou mudam de preço pouco depois do closing, perda de clientes que a apresentação não mostra.',
+          'Financeiro: ajustamentos ao EBITDA que os documentos não suportam, fundo de maneio que oscila no fecho do ano, dívida e itens equiparados a dívida fora da dívida líquida.',
+          'Fiscal: liquidações em aberto, posições sem ruling, obrigações de uma unidade fiscal de que o target sai.',
+          'RH: pessoas-chave sem contrato ou sem cláusula de não concorrência, bónus pagos com a venda, obrigações de pensões que não estão no balanço.',
+          'Operacional e IA: fornecedores únicos, licenças que não se transmitem, modelos ou dados de que o negócio depende e que não lhe pertencem.'
+        ],
+        after: [
+          'Qual deles é material depende do seu preço, da sua estrutura e do seu apetite pelo risco. Nada disso está no data room.'
+        ]
+      },
+      {
+        heading: 'O que deve conter um relatório de red flags?',
+        paragraphs: [
+          'Por cada ponto: o que é, a sua gravidade, a passagem que o sustenta, palavra por palavra, e o documento e a localização onde está. Depois, a lista do que nunca chegou. Uma constatação sem fonte é uma constatação que o seu revisor tem de refazer.',
+          'Cada constatação da Factum tem os mesmos seis campos: módulo, constatação, excerto literal, gravidade, fonte e localização, e revisão humana.'
+        ]
+      },
+      {
+        heading: 'Onde falha uma revisão de red flags?',
+        bullets: [
+          'Só foi lida uma amostra, e a cláusula que importa está no contrato que ninguém abriu.',
+          'Ninguém verificou o que faltava, e a red flag é o documento que nunca foi carregado.',
+          'As disciplinas foram lidas em separado. Um contrato que termina no próximo ano é ao mesmo tempo um ponto jurídico e um ponto de receitas, e só um relatório o viu.',
+          'As constatações chegam sem fonte, e a equipa não consegue distinguir um problema real de uma má leitura.'
+        ]
+      },
+      {
+        heading: 'Quanto tempo demora?',
+        paragraphs: [
+          'Depende da dimensão e do estado do data room, e da rapidez com que o vendedor responde. Para onde vão os dias, e onde se podem ganhar, está em [quanto tempo demora a due diligence](/due-diligence-timeline).'
+        ]
+      },
+      {
+        heading: 'Como faz a Factum uma revisão de red flags?',
+        paragraphs: [
+          'A sua equipa carrega o data room. {modules} módulos leem-no em {waves} vagas, numa ordem fixa: primeiro comercial, RH, operacional e IA, depois jurídico, depois financeiro, que lê as constatações jurídicas, e por fim fiscal, economia da operação e avaliação. Cada constatação cita a sua fonte. {blocks} bloqueios duros param um rascunho e levam-no ao seu revisor, sem aprovação.',
+          'O seu revisor decide o que é uma red flag para esta operação e aprova; nenhuma exportação sai da plataforma sem essa aprovação. Mais na [página da plataforma](/platform), e sobre a diferença face à IA de um data room virtual em [Due diligence com IA vs. IA do data room](/ai-due-diligence-vs-data-room-ai).'
+        ]
+      }
+    ],
+    faq: {
+      heading: 'Perguntas frequentes',
+      items: [
+        {
+          q: 'A IA consegue fazer sozinha uma revisão de red flags?',
+          a: 'Consegue fazer a leitura: cada documento e cada cláusula, confrontados entre si, com fontes. Não consegue decidir o que é material para a sua operação. Por isso a revisão humana é obrigatória: o seu revisor aprova antes de qualquer coisa sair da plataforma.'
+        },
+        {
+          q: 'Quem assina o relatório de red flags?',
+          a: 'O seu próprio revisor, para uso próprio. A Factum não assina nada e não dá qualquer garantia. Se um banco ou seguradora precisar de um relatório assinado, encomende-o a um consultor; a Factum pode correr ao lado.'
+        },
+        {
+          q: 'Uma revisão de red flags chega antes de assinar?',
+          a: 'Nalgumas operações é o primeiro passo e a due diligence completa vem depois; noutras é o que o calendário permite. Decidem os seus consultores e o seu revisor. A Factum lê todo o data room em ambos os casos.'
+        },
+        {
+          q: 'Funciona para um target fora dos Países Baixos?',
+          a: 'A leitura financeira, comercial e operacional funciona em qualquer jurisdição. Jurídico e fiscal estão ajustados ao direito neerlandês; para um target noutro país, peça a advogados locais que verifiquem essas constatações.'
+        },
+        {
+          q: 'Podemos testar antes de uma operação em curso?',
+          a: 'Sim. Uma operação que fechou no ano passado serve de teste: nada de um processo em curso fica exposto, e pode comparar as constatações com o que a sua equipa encontrou na altura. A Factum está em fase anterior ao lançamento, por isso o primeiro relatório real que verá será o seu.'
+        }
+      ]
+    },
+    helps: {
+      heading: 'Onde a Factum encaixa',
+      bullets: [
+        'Para private equity e outros compradores, antes da oferta vinculativa ou da assinatura.',
+        'Cada documento do data room lido, com cada constatação a citar o seu documento de origem e a sua localização.',
+        'Uma lista do que o vendedor nunca carregou, desde a primeira passagem.',
+        'O seu revisor aprova na plataforma.'
+      ],
+      note: 'A Factum está em fase anterior ao lançamento: ainda não há nenhum cliente público nem estudo de caso. Jurídico e fiscal estão ajustados ao direito neerlandês. Vai comprar uma BV neerlandesa? Veja [due diligence de uma BV neerlandesa](/dutch-bv-due-diligence).'
+    },
+    datePublished: '2026-11-12'
   }
 };

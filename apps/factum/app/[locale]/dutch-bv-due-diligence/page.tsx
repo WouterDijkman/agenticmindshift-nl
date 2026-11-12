@@ -1,0 +1,27 @@
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { setRequestLocale } from 'next-intl/server';
+import GuidePage, { guideMetadata } from '@/components/GuidePage';
+import { GUIDE_LOCALES, isGuideLocale } from '@/lib/guideRoutes';
+
+/* All five locales (lib/guideRoutes.ts). The guard below stays as a
+   safety net for a locale that has no copy yet. */
+
+export function generateStaticParams() {
+  return GUIDE_LOCALES.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata(
+  { params }: { params: Promise<{ locale: string }> }
+): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isGuideLocale(locale)) notFound();
+  return guideMetadata('dutch-bv-due-diligence', locale);
+}
+
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  if (!isGuideLocale(locale)) notFound();
+  setRequestLocale(locale);
+  return <GuidePage slug="dutch-bv-due-diligence" locale={locale} />;
+}

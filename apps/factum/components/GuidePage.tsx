@@ -12,7 +12,7 @@ import { ArrowRight } from '@/components/Icons';
 import { breadcrumbSchema } from '@/lib/jsonld';
 import { getAlternates } from '@/lib/hreflang';
 import { OG_LOCALES, sharedOpenGraph } from '@/lib/pageMetadata';
-import { DISCIPLINE_COUNT, SITE_URL } from '@/lib/site';
+import { DISCIPLINE_COUNT, HARD_BLOCK_COUNT, MODULE_COUNT, SITE_URL, WAVE_COUNT } from '@/lib/site';
 import { GUIDE_CHROME, getGuide, type Guide, type GuideTable } from '@/lib/guides';
 import { GUIDE_LOCALES, GUIDE_SLUGS, type GuideLocale, type GuideSlug } from '@/lib/guideRoutes';
 
@@ -29,9 +29,13 @@ import { GUIDE_LOCALES, GUIDE_SLUGS, type GuideLocale, type GuideSlug } from '@/
 
 const BRAND = 'Factum Capital';
 
-/** `{disciplines}` → the live count from lib/site.ts. */
+/** `{disciplines}`, `{modules}`, `{waves}`, `{blocks}` → the live counts from lib/site.ts. */
 function fill(text: string): string {
-  return text.replaceAll('{disciplines}', String(DISCIPLINE_COUNT));
+  return text
+    .replaceAll('{disciplines}', String(DISCIPLINE_COUNT))
+    .replaceAll('{modules}', String(MODULE_COUNT))
+    .replaceAll('{waves}', String(WAVE_COUNT))
+    .replaceAll('{blocks}', String(HARD_BLOCK_COUNT));
 }
 
 /** `[label](/path)` → locale-aware links; everything else is plain text. */

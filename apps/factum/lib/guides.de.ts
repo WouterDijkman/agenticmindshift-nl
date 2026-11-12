@@ -388,5 +388,223 @@ export const GUIDES_DE: Record<GuideSlug, Guide> = {
       note: 'Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Recht und Steuern sind auf niederländisches Recht abgestimmt.'
     },
     datePublished: '2026-11-08'
+  },
+  'dutch-bv-due-diligence': {
+    metaTitle: 'Due Diligence bei einer niederländischen BV: was ein Käufer prüft',
+    metaDescription:
+      'Kauf einer niederländischen BV? Was Sie im Data Room nach niederländischem Recht prüfen: Anteile, Change of Control, Betriebsrat, Pensionen, Steuereinheit, ACM, und das Verhältnis zur FDD.',
+    shortName: 'Due Diligence bei einer niederländischen BV',
+    h1: 'Due Diligence bei einer niederländischen BV: was prüft ein Käufer im Data Room?',
+    answer:
+      'Ist das Target eine niederländische Gesellschaft mit beschränkter Haftung (besloten vennootschap, BV), muss der Data Room Fragen beantworten, die das niederländische Recht stellt: Wer hält die Anteile tatsächlich, welche Verträge überstehen den Kontrollwechsel, was verlangen Betriebsrat und Pensionsregelung, und welche Steuerpositionen gehen mit der Gesellschaft über. Diese Seite behandelt nur Targets nach niederländischem Recht. Sie beschreibt, was ein Käufer prüft; sie ist keine Rechtsberatung.',
+    sections: [
+      {
+        heading: 'Wer hält die Anteile, und sind sie übertragbar?',
+        bullets: [
+          'Satzung (statuten): der geltende Wortlaut und eine etwaige Übertragungsbeschränkung (blokkeringsregeling), etwa ein Vorkaufsrecht oder ein Zustimmungserfordernis.',
+          'Gesellschafterregister: jede Ausgabe und Übertragung seit der Gründung, jeweils mit notarieller Urkunde. Anteile an einer BV gehen durch notarielle Urkunde über, eine Lücke in der Urkundenkette ist also eine Lücke im Rechtstitel.',
+          'Zertifikate über eine Verwaltungsstiftung (STAK), Pfandrechte und Nießbrauch an Anteilen, und wer die Stimmrechte hält.',
+          'Gesellschaftervereinbarung: Drag-along und Tag-along, Good und Bad Leaver, Vetorechte, die den Verkauf überdauern.',
+          'Auszüge aus dem Handelsregister (KvK) und dem UBO-Register, die zum Gesellschafterregister passen.'
+        ],
+        after: [
+          'Eine fehlende Urkunde oder eine nicht eingetragene Übertragung lässt sich oft vor dem Signing heilen. Nach dem Signing entdeckt, wird daraus eine Diskussion über Garantien.'
+        ]
+      },
+      {
+        heading: 'Welche Verträge gehen mit der Gesellschaft über?',
+        paragraphs: [
+          'Beim Share Deal bleiben die Verträge bei der BV. Die Frage ist dann, welche dem Vertragspartner erlauben, bei einem Kontrollwechsel zu kündigen oder nachzuverhandeln. Beim Asset Deal muss jeder Vertrag übertragen werden, wofür meist die Mitwirkung des Vertragspartners nötig ist.'
+        ],
+        bullets: [
+          'Change-of-Control- und Kündigungsklauseln in den größten Kunden-, Lieferanten-, Lizenz- und Mietverträgen.',
+          'Abtretungsverbote und Exklusivitätsklauseln, die nach dem Closing die Gruppe des Käufers binden würden.',
+          'Bankfinanzierungen mit Change-of-Control- und Cross-Default-Klauseln und die dafür bestellten Sicherheiten.',
+          'Garantien der BV für Gruppengesellschaften, einschließlich Haftungserklärungen beim Handelsregister (403-verklaringen).'
+        ]
+      },
+      {
+        heading: 'Was verlangen Betriebsrat, Mitarbeiter und Pensionen?',
+        bullets: [
+          'Betriebsrat (ondernemingsraad): Wo es einen gibt, löst ein Kontrollwechsel meist ein Beratungsrecht aus, und die Stellungnahme wird eingeholt, solange sie die Entscheidung noch beeinflussen kann.',
+          'Gewerkschaften: Je nach Größe der beteiligten Unternehmen kann der SER-Fusionskodex (SER-Fusiegedragsregels) verlangen, dass sie informiert werden.',
+          'Arbeitsbedingungen: Verträge der Schlüsselpersonen, Wettbewerbsverbote, Bonus- und Halteprämien, die bei einem Verkauf fällig werden, und der anwendbare Tarifvertrag (cao).',
+          'Pensionen: welche Regelung gilt, ob die Teilnahme an einem Branchenpensionsfonds verpflichtend ist, und wo die Regelung beim Übergang nach dem Gesetz über die Zukunft der Renten (Wet toekomst pensioenen) steht.',
+          'Beim Asset Deal gehen die Mitarbeiter kraft Gesetzes mit ihren Arbeitsbedingungen über (overgang van onderneming).'
+        ]
+      },
+      {
+        heading: 'Wann kommen die ACM oder eine andere Aufsicht ins Spiel?',
+        paragraphs: [
+          'Überschreitet der Umsatz der Beteiligten die Schwellen des niederländischen Wettbewerbsgesetzes (Mededingingswet), muss der Zusammenschluss vor dem Closing bei der Behörde für Verbraucher und Märkte (ACM) angemeldet werden; oberhalb der EU-Schwellen übernimmt die Europäische Kommission.',
+          'Daneben kann der Erwerb eines vitalen Anbieters oder eines Unternehmens mit sensibler Technologie eine Anmeldung nach dem niederländischen Investitionsprüfungsgesetz (Wet Vifo) erfordern, und eine Lizenz in einem regulierten Sektor die Zustimmung der Aufsicht. Ob das zutrifft, klären Sie früh mit Ihrem Anwalt, weil es den Zeitplan bestimmt.'
+        ]
+      },
+      {
+        heading: 'Welche Steuerpositionen gehen mit der Gesellschaft über?',
+        bullets: [
+          'Steuerliche Einheit für die Körperschaftsteuer (fiscale eenheid): Das Target verlässt mit dem Verkauf die steuerliche Einheit des Verkäufers, mit Folgen für Verluste und frühere Transaktionen in der Gruppe.',
+          'Steuerliche Einheit für die Umsatzsteuer: Jedes Mitglied haftet gesamtschuldnerisch für die Umsatzsteuer der ganzen Einheit für den Zeitraum seiner Zugehörigkeit.',
+          'Offene Bescheide, Prüfungen durch die niederländische Steuerverwaltung (Belastingdienst) und Rulings oder Absprachen, auf die das Target sich stützt.',
+          'Lohnsteuer und Kettenhaftung (ketenaansprakelijkheid), wo das Unternehmen mit Subunternehmern oder Leiharbeitskräften arbeitet.',
+          'Latente Steuern, die sonst erst in der ersten Steuererklärung nach dem Closing auftauchen.'
+        ]
+      },
+      {
+        heading: 'Was zeigt der Data Room meistens nicht?',
+        paragraphs: [
+          'Die Dokumente, die niemand hochgeladen hat. Eine notarielle Urkunde von vor fünfzehn Jahren, ein Side Letter zu einem Kundenvertrag, die Stellungnahme des Betriebsrats, die letzte Mitteilung des Pensionsträgers. Was fehlt, hinterlässt keine Passage zum Zitieren, es fällt also erst auf, wenn der Data Room neben eine Liste dessen gelegt wird, was da sein sollte.',
+          'Für die Seite des Verkäufers derselben Liste siehe [die Data-Room-Checkliste](/data-room-checklist).'
+        ]
+      },
+      {
+        heading: 'Wie verhält sich eine KI-Lektüre des ganzen Data Rooms zur FDD des Wirtschaftsprüfers?',
+        paragraphs: [
+          'Die Financial Due Diligence (FDD) einer Prüfungs- oder Beratungsgesellschaft geht bei den Zahlen in die Tiefe: Quality of Earnings, bereinigtes EBITDA, Nettoverschuldung und Working Capital. Sie endet in einem Bericht, den die Gesellschaft unterzeichnet und den eine Bank oder ein W&I-Versicherer sehen will.',
+          'Factum liest jedes Dokument im Data Room über {disciplines} Disziplinen und liefert Feststellungen, jede mit Quelldokument und Fundstelle. Es gibt keine Assurance und unterschreibt nichts; Ihr eigener Prüfer gibt die Feststellungen für den eigenen Gebrauch frei. Neben einer FDD zeigt es den Spezialisten früh, was im Data Room liegt, was sich widerspricht und was fehlt, sodass ihre Stunden dorthin gehen, wo das Risiko liegt. Die FDD und die Legal Due Diligence Ihres Anwalts bleiben, was sie sind.',
+          'Wie die Lektüre aufgebaut ist, steht auf [der Plattformseite](/platform). Wie sich das von KI in einem virtuellen Data Room unterscheidet, steht unter [KI-Due-Diligence vs. KI im Data Room](/ai-due-diligence-vs-data-room-ai).'
+        ]
+      },
+      {
+        heading: 'Wie gelangen die Feststellungen in den Kaufvertrag?',
+        paragraphs: [
+          'Eine Feststellung landet meist an einer von drei Stellen im Anteilskaufvertrag (SPA): im Preis, in einer Freistellung für ein bekanntes Risiko oder in der Offenlegung gegenüber den Garantien. Unter einer W&I-Versicherung sind Risiken, die der Käufer vor dem Signing kannte, in der Regel von der Deckung ausgenommen.',
+          'Ein Grund mehr, die Feststellungen früh und mit ihrer Quelle zu haben: Ihr Anwalt kann dann je Feststellung entscheiden, wohin sie gehört. Vor dem bindenden Angebot ist der [Red-Flag-Review](/red-flag-review) die kürzere Fassung derselben Lektüre.'
+        ]
+      }
+    ],
+    faq: {
+      heading: 'Häufige Fragen',
+      items: [
+        {
+          q: 'Gilt diese Seite auch für Targets außerhalb der Niederlande?',
+          a: 'Nein. Sie behandelt Targets nach niederländischem Recht, vor allem die BV. Die finanzielle, kommerzielle und operative Analyse von Factum funktioniert in jeder Rechtsordnung; Recht und Steuern sind auf niederländisches Recht abgestimmt, lassen Sie diese Feststellungen bei einem Target anderswo also von lokalen Anwälten prüfen.'
+        },
+        {
+          q: 'Ist das Rechtsberatung?',
+          a: 'Nein. Die Seite beschreibt, was ein Käufer im Data Room einer niederländischen BV üblicherweise prüft. Jeder Deal ist anders; lassen Sie das konkrete Target von Ihrem eigenen Anwalt und Steuerberater beurteilen.'
+        },
+        {
+          q: 'Ersetzt Factum die Financial Due Diligence des Wirtschaftsprüfers?',
+          a: 'Nein. Eine FDD ist ein unterzeichneter Bericht aus einem eigenen Mandat, auf den sich eine Bank oder ein Versicherer stützen kann. Factum gibt keine Assurance. Es liest den ganzen Data Room über {disciplines} Disziplinen neben der FDD, und Ihr eigener Prüfer gibt die Feststellungen frei.'
+        },
+        {
+          q: 'Sieht Factum, was im Data Room fehlt?',
+          a: 'Ja, als eigene Liste dessen, was ein Käufer erwarten würde und nicht gefunden hat. Jeder Punkt geht zuerst an Ihren Prüfer, weil ein Dokument, das in einer anderen Datei liegt, als fehlend erscheinen kann.'
+        },
+        {
+          q: 'Wo werden die Dokumente verarbeitet?',
+          a: 'Standardmäßig auf EU-Endpunkten, ohne Speicherung beim Modellanbieter und mit Pseudonymisierung vor der Analyse. Recht, Finanzen und Steuern laufen verpflichtend auf Endpunkten ohne Speicherung.'
+        }
+      ]
+    },
+    helps: {
+      heading: 'Wo Factum beim Kauf einer niederländischen BV passt',
+      bullets: [
+        'Jedes Dokument im Data Room gelesen, jede Feststellung mit Quelldokument und Fundstelle.',
+        '{disciplines} Disziplinen in einem Durchlauf: {modules} Module in {waves} Wellen, wobei Finanzen die rechtlichen Feststellungen liest und Steuern beide.',
+        'Recht und Steuern auf niederländisches Recht abgestimmt.',
+        'Ihr Prüfer gibt in der Plattform frei. Kein Export ohne diese Freigabe.'
+      ],
+      note: 'Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Mehr zu [Factum für Käufer](/diligence-sprint) und [wie Ihre Dokumente behandelt werden](/governance).'
+    },
+    datePublished: '2026-11-12'
+  },
+  'red-flag-review': {
+    metaTitle: 'Red-Flag-Review eines Data Rooms vor dem Signing',
+    metaDescription:
+      'Was ein Red-Flag-Review ist, welche Red Flags einen Deal entscheiden, je Disziplin, was der Bericht enthalten muss und wo er scheitert. Für Käufer, vor dem Signing.',
+    shortName: 'Red-Flag-Review eines Data Rooms',
+    h1: 'Red-Flag-Review: was prüft ein Käufer im Data Room vor dem Signing?',
+    answer:
+      'Ein Red-Flag-Review liest den Data Room auf die Punkte, die den Deal stoppen oder den Preis verschieben können, und berichtet nur diese. Er ist schmaler als eine vollständige Due Diligence und kommt früher: vor dem bindenden Angebot oder dem Signing, solange noch Zeit ist auszusteigen, nachzuverhandeln oder eine Freistellung zu verlangen. Ein brauchbarer Red-Flag-Bericht nennt je Punkt den Schweregrad und das Dokument und die Fundstelle, aus denen er stammt.',
+    sections: [
+      {
+        heading: 'Was ist ein Red-Flag-Review, und wie unterscheidet er sich von einer vollständigen Due Diligence?',
+        paragraphs: [
+          'Eine vollständige Due Diligence beschreibt das Target: die Zahlen, die Verträge, die Menschen und die Steuerposition, in einem Bericht je Disziplin. Ein Red-Flag-Review stellt denselben Dokumenten eine Frage: Was hier kann den Deal platzen lassen oder ändern, was wir zahlen? Alles andere bleibt aus dem Bericht.',
+          'Die Lektüre wird dadurch nicht leichter. Um die eine Klausel zu finden, auf die es ankommt, muss jeder Vertrag gelesen werden. Kürzer wird der Bericht.'
+        ]
+      },
+      {
+        heading: 'Welche Red Flags entscheiden einen Deal?',
+        bullets: [
+          'Recht: Change-of-Control- und Kündigungsrechte in den Verträgen, die den Umsatz tragen, Streitigkeiten, Garantien für Dritte, Lücken im Rechtstitel an den Anteilen.',
+          'Kommerziell: Kundenkonzentration, Verträge, die kurz nach dem Closing enden oder neu bepreist werden, Kundenabwanderung, die der Pitch nicht zeigt.',
+          'Finanzen: EBITDA-Bereinigungen, die die Dokumente nicht stützen, Working Capital, das zum Jahresende schwankt, Schulden und schuldähnliche Posten außerhalb der Nettoverschuldung.',
+          'Steuern: offene Bescheide, Positionen ohne Ruling, Verpflichtungen aus einer steuerlichen Einheit, die das Target verlässt.',
+          'HR: Schlüsselpersonen ohne Vertrag oder Wettbewerbsverbot, Boni, die bei einem Verkauf fällig werden, Pensionsverpflichtungen, die nicht in der Bilanz stehen.',
+          'Operativ und KI: einzelne Lieferanten, Lizenzen, die nicht mitgehen, Modelle oder Daten, von denen das Unternehmen abhängt und die ihm nicht gehören.'
+        ],
+        after: [
+          'Welcher Punkt wesentlich ist, hängt von Ihrem Preis, Ihrer Struktur und Ihrer Risikobereitschaft ab. Nichts davon steht im Data Room.'
+        ]
+      },
+      {
+        heading: 'Was gehört in einen Red-Flag-Bericht?',
+        paragraphs: [
+          'Je Punkt: was es ist, wie schwer es wiegt, die belegende Passage im Wortlaut, und das Dokument und die Fundstelle. Danach die Liste dessen, was nie eingegangen ist. Eine Feststellung ohne Quelle ist eine Feststellung, die Ihr Prüfer neu machen muss.',
+          'Jede Feststellung von Factum hat dieselben sechs Felder: Modul, Feststellung, wörtliches Zitat, Schweregrad, Quelle und Fundstelle, und menschliche Prüfung.'
+        ]
+      },
+      {
+        heading: 'Wo scheitert ein Red-Flag-Review?',
+        bullets: [
+          'Es wurde nur eine Stichprobe gelesen, und die entscheidende Klausel steht in dem Vertrag, den niemand geöffnet hat.',
+          'Niemand hat geprüft, was fehlt, und die Red Flag ist das Dokument, das nie hochgeladen wurde.',
+          'Die Disziplinen wurden getrennt gelesen. Ein Vertrag, der nächstes Jahr endet, ist zugleich ein rechtlicher Punkt und ein Umsatzpunkt, und nur ein Bericht hat ihn bemerkt.',
+          'Die Feststellungen kommen ohne Quelle, sodass das Team ein echtes Problem nicht von einem Lesefehler unterscheiden kann.'
+        ]
+      },
+      {
+        heading: 'Wie lange dauert es?',
+        paragraphs: [
+          'Das hängt von Umfang und Zustand des Data Rooms ab und davon, wie schnell der Verkäufer antwortet. Wohin die Tage gehen und wo sie zu gewinnen sind, steht unter [wie lange Due Diligence dauert](/due-diligence-timeline).'
+        ]
+      },
+      {
+        heading: 'Wie führt Factum einen Red-Flag-Review durch?',
+        paragraphs: [
+          'Ihr Team lädt den Data Room hoch. {modules} Module lesen ihn in {waves} Wellen, in fester Reihenfolge: zuerst Kommerziell, HR, Operativ und KI, dann Recht, dann Finanzen, das die rechtlichen Feststellungen liest, dann Steuern, Deal Economics und Bewertung. Jede Feststellung zitiert ihre Quelle. {blocks} harte Blockaden stoppen einen Entwurf und legen ihn Ihrem Prüfer vor, nicht freigegeben.',
+          'Ihr Prüfer entscheidet, was für diesen Deal eine Red Flag ist, und gibt frei; kein Export verlässt die Plattform ohne diese Freigabe. Mehr auf [der Plattformseite](/platform) und zum Unterschied zu KI in einem virtuellen Data Room unter [KI-Due-Diligence vs. KI im Data Room](/ai-due-diligence-vs-data-room-ai).'
+        ]
+      }
+    ],
+    faq: {
+      heading: 'Häufige Fragen',
+      items: [
+        {
+          q: 'Kann KI einen Red-Flag-Review allein durchführen?',
+          a: 'Sie kann die Lektüre übernehmen: jedes Dokument und jede Klausel, gegeneinander abgeglichen, mit Quellen. Sie kann nicht entscheiden, was für Ihren Deal wesentlich ist. Deshalb ist die menschliche Prüfung verpflichtend: Ihr Prüfer gibt frei, bevor etwas die Plattform verlässt.'
+        },
+        {
+          q: 'Wer unterzeichnet den Red-Flag-Bericht?',
+          a: 'Ihr eigener Prüfer, für den eigenen Gebrauch. Factum unterschreibt nichts und gibt keine Assurance. Braucht eine Bank oder ein Versicherer einen unterzeichneten Bericht, beauftragen Sie einen Berater; Factum kann daneben laufen.'
+        },
+        {
+          q: 'Reicht ein Red-Flag-Review vor dem Signing?',
+          a: 'Bei manchen Deals ist er der erste Schritt, und die vollständige Due Diligence folgt; bei anderen ist er das, was der Zeitplan zulässt. Ihre Berater und Ihr Prüfer entscheiden. Factum liest in beiden Fällen den ganzen Data Room.'
+        },
+        {
+          q: 'Funktioniert es für ein Target außerhalb der Niederlande?',
+          a: 'Die finanzielle, kommerzielle und operative Analyse funktioniert in jeder Rechtsordnung. Recht und Steuern sind auf niederländisches Recht abgestimmt; lassen Sie diese Feststellungen bei einem Target anderswo von lokalen Anwälten prüfen.'
+        },
+        {
+          q: 'Können wir es vor einem laufenden Deal testen?',
+          a: 'Ja. Ein Deal, den Sie letztes Jahr abgeschlossen haben, eignet sich als Test: Nichts aus einem laufenden Prozess liegt offen, und Sie können die Feststellungen mit dem vergleichen, was Ihr Team damals gefunden hat. Factum steht vor dem Launch, der erste echte Bericht, den Sie sehen, ist also Ihr eigener.'
+        }
+      ]
+    },
+    helps: {
+      heading: 'Wo Factum passt',
+      bullets: [
+        'Für Private Equity und andere Käufer, vor dem bindenden Angebot oder dem Signing.',
+        'Jedes Dokument im Data Room gelesen, jede Feststellung mit Quelldokument und Fundstelle.',
+        'Eine Liste dessen, was der Verkäufer nie hochgeladen hat, ab dem ersten Durchlauf.',
+        'Ihr Prüfer gibt in der Plattform frei.'
+      ],
+      note: 'Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Recht und Steuern sind auf niederländisches Recht abgestimmt. Kaufen Sie eine niederländische BV? Siehe [Due Diligence bei einer niederländischen BV](/dutch-bv-due-diligence).'
+    },
+    datePublished: '2026-11-12'
   }
 };
