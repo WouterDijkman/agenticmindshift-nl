@@ -723,7 +723,7 @@
         },
         {
           "q": "¿Puedo ver un informe de ejemplo?",
-          "a": "Sí, uno de ejemplo. El informe de ejemplo de este sitio es un informe completo sobre una empresa ficticia: cada hallazgo con su extracto, su gravedad y su documento y página. Se escribió a mano para mostrar el formato. Factum está en fase previa al lanzamiento: aún no hay ningún cliente público ni caso de estudio. El primero real que verá será el suyo, después del NDA."
+          "a": "Uno real, no. Factum está en fase previa al lanzamiento: aún no hay ningún cliente público ni caso de estudio. El ejemplo desarrollado en la página de inicio muestra el formato. El primero real que verá será el suyo, después del NDA."
         },
         {
           "q": "¿Quién aprueba los hallazgos?",

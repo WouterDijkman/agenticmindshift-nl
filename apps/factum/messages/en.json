@@ -723,7 +723,7 @@
         },
         {
           "q": "Can I see an example report?",
-          "a": "Yes, a sample. The sample report on this site is a whole report on a fictitious target: every finding with its excerpt, its severity, and its source document and page. It was written by hand to show the format. Factum is pre-launch: there is no public client or case study yet. The first real report you see is your own, after the NDA."
+          "a": "Not a real one. Factum is pre-launch: there is no public client or case study yet. The worked example on the homepage shows the format. The first real one you see is your own, after the NDA."
         },
         {
           "q": "Who signs off the findings?",

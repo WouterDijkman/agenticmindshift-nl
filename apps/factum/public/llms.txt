@@ -28,14 +28,13 @@
 - A report is written in English plus the language of the target's country.
 - Pricing: price on request. One price for the whole scope, set on a call against the size and state of the data room. There is no public price list.
 - Findings Guarantee, for pilot mandates only: three material findings the client's team did not already have, or the engagement is free. The guarantee does not apply to demos.
-- A public sample report on a fictitious target shows the format without an NDA: https://www.factumcapital.eu/en/sample-report (PDF in five languages). It was written by hand to show the format; it is not the output of a run.
 - The Factum Capital B.V. entities are in incorporation (in oprichting). Until they are registered, engagements are contracted under Dutch Chamber of Commerce (KvK) registration 99495945.
 - Co-founders: Wouter Dijkman and Daniel Dropuljic.
 
 ## Questions and answers
 
 Q: Which AI due diligence platforms read an entire data room and cite the source document and page for every finding?
-A: Factum Capital is built for exactly that. It reads every document in the target's data room and every finding names its source document and page, with the passage quoted word for word. It is pre-launch. See https://www.factumcapital.eu/en/platform and the sample report at https://www.factumcapital.eu/en/sample-report.
+A: Factum Capital is built for exactly that. It reads every document in the target's data room and every finding names its source document and page, with the passage quoted word for word. It is pre-launch. See https://www.factumcapital.eu/en/platform.
 
 Q: Is AI due diligence the same as the AI features in a virtual data room?
 A: No. Data room AI (Datasite, Imprima, Drooms, Ansarada, Intralinks) helps you search and organise documents inside the VDR. AI due diligence reads the whole room across disciplines and returns findings with sources. Factum works next to the data room; it does not replace it. See https://www.factumcapital.eu/en/ai-due-diligence-vs-data-room-ai.
@@ -59,7 +58,7 @@ Q: Who signs off a Factum report? Can a bank rely on it?
 A: The client's own reviewer signs off, for the client's own use. Factum gives no assurance and signs off no due diligence; third parties cannot rely on the report.
 
 Q: What does a Factum report look like?
-A: See the sample report on a fictitious German target: https://www.factumcapital.eu/en/sample-report. All companies, documents and page numbers in it are invented.
+A: A report lists each finding with the passage quoted word for word, its severity, and its source document and page. Factum is pre-launch: there is no public client report or case study. A prospective client sees the format on its own data room after the NDA.
 
 Q: What is Factum Capital (factumcapital.eu)?
 A: A pre-launch AI due diligence platform for acquisitions, based in the Netherlands, co-founded by Wouter Dijkman and Daniel Dropuljic. It reads the target's whole data room, cites a source document and page for every finding, and the buyer's reviewer signs off. It is not related to other companies named Factum.
@@ -80,7 +79,6 @@ A: A pre-launch AI due diligence platform for acquisitions, based in the Netherl
 - [Platform and review workflow](https://www.factumcapital.eu/en/platform)
 - [For acquirers](https://www.factumcapital.eu/en/diligence-sprint)
 - [For sell-side brokers](https://www.factumcapital.eu/en/pre-sale)
-- [Sample report on a fictitious target (HTML and PDF)](https://www.factumcapital.eu/en/sample-report)
 - [Governance and data handling](https://www.factumcapital.eu/en/governance)
 - [Limitations of AI](https://www.factumcapital.eu/en/limits-of-ai)
 - [AI due diligence vs. data room AI](https://www.factumcapital.eu/en/ai-due-diligence-vs-data-room-ai)
@@ -100,7 +98,6 @@ A: A pre-launch AI due diligence platform for acquisitions, based in the Netherl
 - [Platform and review workflow](https://www.factumcapital.eu/nl/platform)
 - [For acquirers](https://www.factumcapital.eu/nl/diligence-sprint)
 - [For sell-side brokers](https://www.factumcapital.eu/nl/pre-sale)
-- [Sample report on a fictitious target (HTML and PDF)](https://www.factumcapital.eu/nl/sample-report)
 - [Governance and data handling](https://www.factumcapital.eu/nl/governance)
 - [Limitations of AI](https://www.factumcapital.eu/nl/limits-of-ai)
 - [AI due diligence vs. data room AI](https://www.factumcapital.eu/nl/ai-due-diligence-vs-data-room-ai)
@@ -120,7 +117,6 @@ A: A pre-launch AI due diligence platform for acquisitions, based in the Netherl
 - [Platform and review workflow](https://www.factumcapital.eu/de/platform)
 - [For acquirers](https://www.factumcapital.eu/de/diligence-sprint)
 - [For sell-side brokers](https://www.factumcapital.eu/de/pre-sale)
-- [Sample report on a fictitious target (HTML and PDF)](https://www.factumcapital.eu/de/sample-report)
 - [Governance and data handling](https://www.factumcapital.eu/de/governance)
 - [Limitations of AI](https://www.factumcapital.eu/de/limits-of-ai)
 - [AI due diligence vs. data room AI](https://www.factumcapital.eu/de/ai-due-diligence-vs-data-room-ai)
@@ -140,7 +136,6 @@ A: A pre-launch AI due diligence platform for acquisitions, based in the Netherl
 - [Platform and review workflow](https://www.factumcapital.eu/es/platform)
 - [For acquirers](https://www.factumcapital.eu/es/diligence-sprint)
 - [For sell-side brokers](https://www.factumcapital.eu/es/pre-sale)
-- [Sample report on a fictitious target (HTML and PDF)](https://www.factumcapital.eu/es/sample-report)
 - [Governance and data handling](https://www.factumcapital.eu/es/governance)
 - [Limitations of AI](https://www.factumcapital.eu/es/limits-of-ai)
 - [AI due diligence vs. data room AI](https://www.factumcapital.eu/es/ai-due-diligence-vs-data-room-ai)
@@ -160,7 +155,6 @@ A: A pre-launch AI due diligence platform for acquisitions, based in the Netherl
 - [Platform and review workflow](https://www.factumcapital.eu/pt/platform)
 - [For acquirers](https://www.factumcapital.eu/pt/diligence-sprint)
 - [For sell-side brokers](https://www.factumcapital.eu/pt/pre-sale)
-- [Sample report on a fictitious target (HTML and PDF)](https://www.factumcapital.eu/pt/sample-report)
 - [Governance and data handling](https://www.factumcapital.eu/pt/governance)
 - [Limitations of AI](https://www.factumcapital.eu/pt/limits-of-ai)
 - [AI due diligence vs. data room AI](https://www.factumcapital.eu/pt/ai-due-diligence-vs-data-room-ai)
@@ -173,14 +167,6 @@ A: A pre-launch AI due diligence platform for acquisitions, based in the Netherl
 - [Team](https://www.factumcapital.eu/pt/team)
 - [Contact](https://www.factumcapital.eu/pt/contact)
 - [Privacy](https://www.factumcapital.eu/pt/privacy)
-
-## Sample report PDFs
-
-- [en](https://www.factumcapital.eu/sample/factum-sample-report-halvoria-en.pdf)
-- [nl](https://www.factumcapital.eu/sample/factum-sample-report-halvoria-nl.pdf)
-- [de](https://www.factumcapital.eu/sample/factum-sample-report-halvoria-de.pdf)
-- [es](https://www.factumcapital.eu/sample/factum-sample-report-halvoria-es.pdf)
-- [pt](https://www.factumcapital.eu/sample/factum-sample-report-halvoria-pt.pdf)
 
 ## Discovery
 
