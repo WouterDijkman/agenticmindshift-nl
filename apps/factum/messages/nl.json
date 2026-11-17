@@ -2,11 +2,11 @@
   "meta": {
     "home": {
       "title": "AI due diligence voor M&A en private equity",
-      "description": "AI due diligence voor kopers en sell-side brokers. Leest de hele data room van de target; elke bevinding met brondocument en vindplaats. Uw eigen reviewer tekent af."
+      "description": "AI due diligence voor overnames: leest de hele data room van de target en noemt bij elke bevinding het brondocument en de pagina. Uw reviewer tekent af."
     },
     "platform": {
       "title": "Data room met kunstmatige intelligentie: zo werkt de review",
-      "description": "Voor kopers en sell-side brokers: {modules} modules voor due diligence, over {disciplines} disciplines. Elke bevinding met bron. Elke output langs een menselijke toets."
+      "description": "Hoe Factum een hele data room leest: {modules} modules over {disciplines} disciplines, bron en pagina bij elke bevinding, menselijke aftekening. Geen code- of cyber-DD."
     },
     "sprint": {
       "title": "Buy-side due diligence voor PE en kopers",
@@ -587,6 +587,10 @@
           "a": "Due diligence op het bedrijf dat u koopt of verkoopt, uitgevoerd met AI. De AI van Factum leest de data room van dat bedrijf, elk document erin. Elke bevinding noemt brondocument en vindplaats. Het eigen AI-gebruik van het bedrijf is een van de disciplines die Factum dekt. Uw eigen reviewer controleert elke bevinding en tekent af."
         },
         {
+          "q": "Doet Factum technische, IT- of cybersecurity due diligence?",
+          "a": "Nee. Factum is AI due diligence op het bedrijf dat u koopt of verkoopt: het leest de data room van dat bedrijf en noemt bij elke bevinding een brondocument en pagina. Het doet geen broncode-review, architectuurbeoordeling, schaalbaarheidstests of cybersecurity-beoordeling, en geen integriteitsscreening of achtergrondonderzoek. De AI-discipline leest wat de stukken zeggen over het eigen AI-gebruik van de target."
+        },
+        {
           "q": "Waarom überhaupt AI?",
           "a": "Het leest elk document in de data room in plaats van een steekproef, en vindt wat het ene document aan het andere verbindt. Het rekenwerk doet code: herberekeningen over de jaarstukken, het LBO-model en de controles voor de verkoopkant draaien zonder taalmodel. Een getal dat het model schrijft en dat in geen geciteerde passage staat, wordt tegengehouden. Mensen beslissen: uw reviewer controleert en tekent af."
         },
@@ -719,7 +723,7 @@
         },
         {
           "q": "Kan ik een voorbeeldrapport zien?",
-          "a": "Geen echt. Factum is pre-launch: er is nog geen publieke klant of case study. Het uitgewerkte voorbeeld op de homepage laat het format zien. Het eerste echte dat u ziet, is uw eigen, na de NDA."
+          "a": "Ja, een voorbeeld. Het voorbeeldrapport op deze site is een volledig rapport op een fictieve target: elke bevinding met citaat, ernst, en brondocument en pagina. Het is met de hand geschreven om het format te laten zien. Factum is pre-launch: er is nog geen publieke klant of case study. Het eerste echte rapport dat u ziet, is uw eigen, na de NDA."
         },
         {
           "q": "Wie tekent de bevindingen af?",
@@ -1261,6 +1265,8 @@
     "controller": "De verwerkingsverantwoordelijke is ingeschreven bij de Kamer van Koophandel onder nummer {kvk}, handelend onder de naam Factum Capital. Deze pagina is een samenvatting in gewone taal."
   },
   "structuredData": {
-    "serviceDescription": "AI due diligence over {disciplines} disciplines, met bronpassages en verplichte aftekening door uw eigen reviewer vóór klantexport. De analyse draait standaard in de EU, met zero retention bij de modelaanbieder. Juridische en fiscale analyse zijn afgestemd op Nederlands recht. Alleen voor pilotmandaten: drie materiële bevindingen die uw team nog niet had, of de opdracht is gratis. De garantie geldt niet voor demo’s."
+    "serviceDescription": "AI due diligence over {disciplines} disciplines, met bronpassages en verplichte aftekening door uw eigen reviewer vóór klantexport. De analyse draait standaard in de EU, met zero retention bij de modelaanbieder. Juridische en fiscale analyse zijn afgestemd op Nederlands recht. Alleen voor pilotmandaten: drie materiële bevindingen die uw team nog niet had, of de opdracht is gratis. De garantie geldt niet voor demo’s. Buiten scope: technische of code due diligence, cybersecurity-beoordelingen en integriteitsscreening.",
+    "organizationDescription": "Factum Capital is een pre-launch AI-due-diligenceplatform voor overnames. Het leest de hele data room van de target, over financieel, commercieel, juridisch, fiscaal, HR, AI, operationeel en waardering, en noemt bij elke bevinding het brondocument en de pagina. De eigen reviewer van de koper controleert en tekent elke bevinding af vóór export. Factum doet geen technische of code due diligence, geen cybersecurity- of IT-beveiligingsbeoordeling en geen integriteitsscreening.",
+    "disambiguatingDescription": "AI-software voor due diligence op een bedrijf dat wordt gekocht of verkocht. Geen aanbieder van cybersecurity, IT-audit of technische due diligence."
   }
 }

@@ -2,11 +2,11 @@
   "meta": {
     "home": {
       "title": "AI due diligence for M&A and private equity",
-      "description": "AI due diligence for buyers and sell-side brokers. Reads the whole data room of the target; every finding cites its source document and location. Your reviewer signs off."
+      "description": "AI due diligence for acquisitions: reads the target’s whole data room and cites the source document and page for every finding. Your reviewer signs off."
     },
     "platform": {
       "title": "AI data room review: how it works",
-      "description": "For buyers and sell-side brokers: {modules} due-diligence modules across {disciplines} disciplines. Every finding cites its source. Every output passes a human gate."
+      "description": "How Factum reads a whole data room: {modules} modules across {disciplines} disciplines, a source and page for every finding, human sign-off. No code or cyber DD."
     },
     "sprint": {
       "title": "Buy-side due diligence for PE and acquirers",
@@ -587,6 +587,10 @@
           "a": "Due diligence on the company you are buying or selling, carried out with AI. Factum’s AI reads that company’s data room, every document in it. Each finding cites its source document and location. The company’s own use of AI is one of the disciplines Factum covers. Your own reviewer checks each finding and signs off."
         },
         {
+          "q": "Does Factum do technical, IT or cybersecurity due diligence?",
+          "a": "No. Factum is AI due diligence on the company you are buying or selling: it reads that company’s data room and cites a source document and page for every finding. It does no source-code review, architecture assessment, scalability testing or cybersecurity assessment, and no integrity screening or background checks. The AI discipline reads what the documents say about the target’s own use of AI."
+        },
+        {
           "q": "Why use AI at all?",
           "a": "It reads every document in the room instead of a sample, and finds what links one document to another. The arithmetic is done by code: recalculations across the statements, the LBO model and the sell-side checks run without the language model. A number the model writes that is in none of the quoted passages is held back. People decide: your reviewer checks and signs off."
         },
@@ -719,7 +723,7 @@
         },
         {
           "q": "Can I see an example report?",
-          "a": "Not a real one. Factum is pre-launch: there is no public client or case study yet. The worked example on the homepage shows the format. The first real one you see is your own, after the NDA."
+          "a": "Yes, a sample. The sample report on this site is a whole report on a fictitious target: every finding with its excerpt, its severity, and its source document and page. It was written by hand to show the format. Factum is pre-launch: there is no public client or case study yet. The first real report you see is your own, after the NDA."
         },
         {
           "q": "Who signs off the findings?",
@@ -1261,6 +1265,8 @@
     "controller": "The controller is registered with the Dutch Chamber of Commerce under number {kvk}, trading as Factum Capital. This page is a plain-language summary."
   },
   "structuredData": {
-    "serviceDescription": "AI due diligence across {disciplines} disciplines, with source passages and a mandatory sign-off by your own reviewer before client export. Analysis runs in the EU by default, with zero retention at the model provider. Legal and tax analysis is tuned to Dutch law. For pilot mandates only: three material findings your team did not already have, or the engagement is free. The guarantee does not apply to demos."
+    "serviceDescription": "AI due diligence across {disciplines} disciplines, with source passages and a mandatory sign-off by your own reviewer before client export. Analysis runs in the EU by default, with zero retention at the model provider. Legal and tax analysis is tuned to Dutch law. For pilot mandates only: three material findings your team did not already have, or the engagement is free. The guarantee does not apply to demos. Out of scope: technical or code due diligence, cybersecurity assessments and integrity screening.",
+    "organizationDescription": "Factum Capital is a pre-launch AI due diligence platform for acquisitions. It reads the target company’s whole data room across financial, commercial, legal, tax, HR, AI, operational and valuation analysis, and cites the source document and page for every finding. The buyer’s own reviewer checks and signs off every finding before export. Factum does not do technical or code due diligence, cybersecurity or IT security assessments, or integrity screening.",
+    "disambiguatingDescription": "AI software for due diligence on a company being bought or sold. Not a cybersecurity, IT audit or technical due diligence provider."
   }
 }

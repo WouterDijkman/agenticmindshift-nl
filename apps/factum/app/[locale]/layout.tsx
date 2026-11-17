@@ -112,7 +112,10 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(
-              siteSchema(locale, meta('home.description'), {
+              siteSchema(locale, {
+                description: structuredData('organizationDescription'),
+                disambiguatingDescription: structuredData('disambiguatingDescription')
+              }, {
                 type: meta('home.title'),
                 description: structuredData('serviceDescription', { disciplines: DISCIPLINE_COUNT })
               })

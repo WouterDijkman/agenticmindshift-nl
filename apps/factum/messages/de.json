@@ -2,11 +2,11 @@
   "meta": {
     "home": {
       "title": "KI-Due-Diligence für M&A und Private Equity",
-      "description": "KI-gestützte Due Diligence für Käufer und Sell-Side-Broker. Liest den ganzen Data Room des Zielunternehmens; jede Feststellung mit Quelldokument und Fundstelle. Ihr Prüfer gibt frei."
+      "description": "KI-gestützte Due Diligence für Übernahmen: liest den ganzen Data Room des Zielunternehmens und nennt zu jeder Feststellung Quelldokument und Seite. Ihr Prüfer gibt frei."
     },
     "platform": {
       "title": "KI-Prüfung des Data Rooms: so läuft sie",
-      "description": "Für Käufer und Sell-Side-Broker: {modules} Due-Diligence-Module über {disciplines} Disziplinen. Jede Feststellung mit Quelle. Jedes Ergebnis passiert eine menschliche Freigabe."
+      "description": "Wie Factum einen ganzen Data Room liest: {modules} Module in {disciplines} Disziplinen, Quelle und Seite zu jeder Feststellung, menschliche Freigabe. Keine Code- oder Cyber-DD."
     },
     "sprint": {
       "title": "Buy-Side-Due-Diligence für PE und Käufer",
@@ -587,6 +587,10 @@
           "a": "Due Diligence für das Unternehmen, das Sie kaufen oder verkaufen, durchgeführt mit KI. Die KI von Factum liest den Data Room dieses Unternehmens, jedes Dokument darin. Jede Feststellung nennt Quelldokument und Fundstelle. Der eigene KI-Einsatz des Unternehmens ist eine der Disziplinen, die Factum abdeckt. Ihr eigener Prüfer kontrolliert jede Feststellung und gibt sie frei."
         },
         {
+          "q": "Macht Factum technische, IT- oder Cybersecurity-Due-Diligence?",
+          "a": "Nein. Factum ist KI-gestützte Due Diligence des Unternehmens, das Sie kaufen oder verkaufen: Es liest dessen Data Room und nennt zu jeder Feststellung ein Quelldokument und eine Seite. Es macht keinen Quellcode-Review, keine Architekturbewertung, keine Skalierbarkeitstests und keine Cybersecurity-Bewertung, auch kein Integritätsscreening und keine Hintergrundprüfung. Die KI-Disziplin liest, was die Unterlagen über den eigenen KI-Einsatz des Zielunternehmens sagen."
+        },
+        {
           "q": "Warum überhaupt KI?",
           "a": "Sie liest jedes Dokument im Data Room statt einer Stichprobe und findet, was ein Dokument mit einem anderen verbindet. Gerechnet wird im Code: Nachrechnungen über die Abschlüsse, das LBO-Modell und die Prüfungen für die Verkäuferseite laufen ohne Sprachmodell. Eine Zahl des Modells, die in keiner zitierten Passage steht, wird zurückgehalten. Menschen entscheiden: Ihr Prüfer kontrolliert und gibt frei."
         },
@@ -719,7 +723,7 @@
         },
         {
           "q": "Kann ich einen Beispielbericht sehen?",
-          "a": "Keinen echten. Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Das ausgearbeitete Beispiel auf der Startseite zeigt das Format. Der erste echte, den Sie sehen, ist Ihr eigener, nach dem NDA."
+          "a": "Ja, ein Beispiel. Der Beispielbericht auf dieser Website ist ein ganzer Bericht zu einem fiktiven Zielunternehmen: jede Feststellung mit Zitat, Schwere sowie Quelldokument und Seite. Er wurde von Hand geschrieben, um das Format zu zeigen. Factum steht vor dem Launch: Es gibt noch keinen öffentlichen Kunden und keine Fallstudie. Der erste echte Bericht, den Sie sehen, ist Ihr eigener, nach dem NDA."
         },
         {
           "q": "Wer gibt die Feststellungen frei?",
@@ -1261,6 +1265,8 @@
     "controller": "Verantwortlicher ist die unter der Nummer {kvk} bei der niederländischen Handelskammer eingetragene Einheit, auftretend unter dem Namen Factum Capital. Diese Seite ist eine Zusammenfassung in einfacher Sprache."
   },
   "structuredData": {
-    "serviceDescription": "KI-Due-Diligence über {disciplines} Disziplinen, mit Quellpassagen und verpflichtender Freigabe durch Ihren eigenen Prüfer vor dem Kundenexport. Die Analyse läuft standardmäßig in der EU, mit Zero Retention beim Modellanbieter. Rechts- und Steueranalyse sind auf niederländisches Recht abgestimmt. Nur für Pilotmandate: drei wesentliche Feststellungen, die Ihr Team noch nicht hatte, oder das Mandat ist kostenlos. Die Garantie gilt nicht für Demos."
+    "serviceDescription": "KI-Due-Diligence über {disciplines} Disziplinen, mit Quellpassagen und verpflichtender Freigabe durch Ihren eigenen Prüfer vor dem Kundenexport. Die Analyse läuft standardmäßig in der EU, mit Zero Retention beim Modellanbieter. Rechts- und Steueranalyse sind auf niederländisches Recht abgestimmt. Nur für Pilotmandate: drei wesentliche Feststellungen, die Ihr Team noch nicht hatte, oder das Mandat ist kostenlos. Die Garantie gilt nicht für Demos. Nicht im Umfang: technische oder Code-Due-Diligence, Cybersecurity-Bewertungen und Integritätsscreening.",
+    "organizationDescription": "Factum Capital ist eine KI-Due-Diligence-Plattform für Übernahmen vor dem Launch. Sie liest den ganzen Data Room des Zielunternehmens in Finanzen, Kommerziell, Recht, Steuern, Personal, KI, Operativ und Bewertung und nennt zu jeder Feststellung Quelldokument und Seite. Der eigene Prüfer des Käufers prüft und gibt jede Feststellung vor dem Export frei. Factum macht keine technische oder Code-Due-Diligence, keine Cybersecurity- oder IT-Sicherheitsbewertung und kein Integritätsscreening.",
+    "disambiguatingDescription": "KI-Software für die Due Diligence eines Unternehmens, das gekauft oder verkauft wird. Kein Anbieter von Cybersecurity, IT-Audit oder technischer Due Diligence."
   }
 }

@@ -2,11 +2,11 @@
   "meta": {
     "home": {
       "title": "Due diligence con IA: M&A y private equity",
-      "description": "Due diligence con IA para compradores y brokers vendedores. Lee todo el data room de la empresa objetivo; cada hallazgo con documento fuente y ubicación. Su revisor lo aprueba."
+      "description": "Due diligence con IA para adquisiciones: lee todo el data room de la empresa objetivo y cita documento y página en cada hallazgo. Su revisor da el visto bueno."
     },
     "platform": {
       "title": "Revisión del data room con IA: así funciona",
-      "description": "Para compradores y brokers vendedores: {modules} módulos de due diligence en {disciplines} disciplinas. Cada hallazgo cita su fuente. Cada entregable pasa por un control humano."
+      "description": "Cómo Factum lee todo un data room: {modules} módulos en {disciplines} disciplinas, fuente y página en cada hallazgo, aprobación humana. Sin DD de código ni ciberseguridad."
     },
     "sprint": {
       "title": "Due diligence para compradores y PE",
@@ -587,6 +587,10 @@
           "a": "Due diligence sobre la empresa que usted compra o vende, realizada con IA. La IA de Factum lee el data room de esa empresa, cada documento que contiene. Cada hallazgo cita su documento fuente y su ubicación. El uso que la propia empresa hace de la IA es una de las disciplinas que cubre Factum. Su propio revisor comprueba cada hallazgo y lo aprueba."
         },
         {
+          "q": "¿Hace Factum due diligence técnica, de TI o de ciberseguridad?",
+          "a": "No. Factum es due diligence con IA sobre la empresa que usted compra o vende: lee el data room de esa empresa y cita un documento y una página en cada hallazgo. No revisa código fuente ni evalúa arquitectura, escalabilidad o ciberseguridad, ni hace screening de integridad o verificaciones de antecedentes. La disciplina de IA lee lo que dicen los documentos sobre el uso de IA de la propia empresa objetivo."
+        },
+        {
           "q": "¿Por qué usar IA?",
           "a": "Lee cada documento del data room en lugar de una muestra, y encuentra lo que conecta un documento con otro. Las cuentas las hace el código: los recálculos entre los estados financieros, el modelo LBO y las comprobaciones del lado vendedor se ejecutan sin el modelo de lenguaje. Una cifra del modelo que no está en ningún pasaje citado se retiene. Las personas deciden: su revisor comprueba y aprueba."
         },
@@ -719,7 +723,7 @@
         },
         {
           "q": "¿Puedo ver un informe de ejemplo?",
-          "a": "Uno real, no. Factum está en fase previa al lanzamiento: aún no hay ningún cliente público ni caso de estudio. El ejemplo desarrollado en la página de inicio muestra el formato. El primero real que verá será el suyo, después del NDA."
+          "a": "Sí, uno de ejemplo. El informe de ejemplo de este sitio es un informe completo sobre una empresa ficticia: cada hallazgo con su extracto, su gravedad y su documento y página. Se escribió a mano para mostrar el formato. Factum está en fase previa al lanzamiento: aún no hay ningún cliente público ni caso de estudio. El primero real que verá será el suyo, después del NDA."
         },
         {
           "q": "¿Quién aprueba los hallazgos?",
@@ -1261,6 +1265,8 @@
     "controller": "El responsable del tratamiento es la entidad inscrita en la Cámara de Comercio neerlandesa con el número {kvk}, que opera bajo el nombre Factum Capital. Esta página es un resumen en lenguaje claro."
   },
   "structuredData": {
-    "serviceDescription": "Due diligence con IA en {disciplines} disciplinas, con pasajes de origen y aprobación obligatoria de su propio revisor antes de exportar al cliente. El análisis se ejecuta por defecto en la UE, con retención cero en el proveedor del modelo. El análisis legal y fiscal está ajustado al derecho neerlandés. Solo para mandatos piloto: tres hallazgos materiales que su equipo aún no tenía, o el encargo es gratuito. La garantía no se aplica a las demos."
+    "serviceDescription": "Due diligence con IA en {disciplines} disciplinas, con pasajes de origen y aprobación obligatoria de su propio revisor antes de exportar al cliente. El análisis se ejecuta por defecto en la UE, con retención cero en el proveedor del modelo. El análisis legal y fiscal está ajustado al derecho neerlandés. Solo para mandatos piloto: tres hallazgos materiales que su equipo aún no tenía, o el encargo es gratuito. La garantía no se aplica a las demos. Fuera del alcance: due diligence técnica o de código, evaluaciones de ciberseguridad y screening de integridad.",
+    "organizationDescription": "Factum Capital es una plataforma de due diligence con IA para adquisiciones, en fase previa al lanzamiento. Lee todo el data room de la empresa objetivo en las áreas financiera, comercial, legal, fiscal, RR. HH., IA, operativa y de valoración, y cita el documento y la página de cada hallazgo. El propio revisor del comprador comprueba y aprueba cada hallazgo antes de exportarlo. Factum no hace due diligence técnica ni de código, ni evaluaciones de ciberseguridad o seguridad informática, ni screening de integridad.",
+    "disambiguatingDescription": "Software de IA para la due diligence de una empresa que se compra o se vende. No es un proveedor de ciberseguridad, auditoría de TI ni due diligence técnica."
   }
 }

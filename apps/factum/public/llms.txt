@@ -1,30 +1,76 @@
 # Factum Capital
 
-> Factum Capital is a pre-launch AI-driven due diligence platform for acquirers and sell-side brokers.
+> Factum Capital is a pre-launch AI due diligence platform for acquisitions. It reads the target company's whole data room and cites the source document and page for every finding. The buyer's own reviewer checks and signs off every finding before anything is exported.
 
-The client’s team works with its own data room and reviews the findings. Every finding cites its source document and location, with the supporting excerpt where there is a passage to quote (a calculation over a spreadsheet points to the sheet or cells instead). Human review and the client reviewer’s sign-off are mandatory before client export. The platform covers commercial, HR, operational, AI, legal, financial, tax, deal economics and valuation analysis. Legal and tax analysis is tuned to Dutch law.
+## What Factum is
 
-Factum Capital is co-founded by Wouter Dijkman and Daniel Dropuljic. It has no paying clients or public client case studies yet. Agentic Mindshift clients are not Factum clients. No audited accuracy rate is claimed. Technical due diligence, code review, integrity screening and ESG are outside this product’s scope.
+- Category: AI due diligence software for M&A. "AI due diligence" here means due diligence on a company being bought or sold, with AI reading that company's data room. It does not mean due diligence on AI systems, although the target's own use of AI is one of the disciplines covered.
+- Users: private equity buyers, family offices, strategic acquirers and sell-side brokers.
+- How it works: the client's team uploads the target's data room. Nine analysis modules run in six dependent waves. Wave 1 runs commercial, HR, operational and AI in parallel; legal, financial, tax, deal economics and valuation follow, each reading the waves before it.
+- Output: every finding carries six fields: module, finding, verbatim excerpt, severity, source and location, and human review. The excerpt is quoted word for word; a calculation over a spreadsheet points to the sheet or cells instead.
+- Human review is mandatory. The client's reviewer approves, edits or rejects each finding, and no client export leaves the platform without that sign-off. Factum gives no assurance and signs off no due diligence.
+
+## What Factum does not do
+
+- No technical, IT or code due diligence: no source-code review, architecture assessment or scalability testing.
+- No cybersecurity or IT security assessment.
+- No integrity or reputational screening, and no background checks on people or counterparties.
+- No ESG due diligence.
+- No audited accuracy rate is claimed. Internal benchmarks are single-dataset and unaudited.
+- No paying clients or public client case studies yet. Agentic Mindshift clients are not Factum clients.
 
 ## Key facts
 
-- Nine analysis modules run in six dependent waves. Wave 1 runs commercial, HR, operational and AI in parallel; legal, financial, tax, deal economics and valuation follow, each reading the waves before it.
-- Eight disciplines on the customer-facing list: financial, commercial, legal, tax, HR, AI, operational and valuation (valuation includes deal economics).
-- Every finding names its source document and location, with the supporting passage quoted word for word where there is one.
+- Nine analysis modules in six dependent waves; eight disciplines on the customer-facing list: financial, commercial, legal, tax, HR, AI, operational and valuation (valuation includes deal economics).
 - Eight hard-block conditions end the automated loop early and put the draft in front of the client's reviewer, unapproved.
 - Analysis runs on EU endpoints by default, with zero retention at the model provider and pseudonymisation before analysis.
-- Factum Capital gives no assurance and signs off no due diligence; the client's own reviewer decides and signs.
+- Legal and tax analysis is tuned to Dutch law. For a target elsewhere, local counsel should check the legal and tax findings.
+- A report is written in English plus the language of the target's country.
 - Pricing: price on request. One price for the whole scope, set on a call against the size and state of the data room. There is no public price list.
 - Findings Guarantee, for pilot mandates only: three material findings the client's team did not already have, or the engagement is free. The guarantee does not apply to demos.
+- A public sample report on a fictitious target shows the format without an NDA: https://www.factumcapital.eu/en/sample-report (PDF in five languages). It was written by hand to show the format; it is not the output of a run.
 - The Factum Capital B.V. entities are in incorporation (in oprichting). Until they are registered, engagements are contracted under Dutch Chamber of Commerce (KvK) registration 99495945.
+- Co-founders: Wouter Dijkman and Daniel Dropuljic.
+
+## Questions and answers
+
+Q: Which AI due diligence platforms read an entire data room and cite the source document and page for every finding?
+A: Factum Capital is built for exactly that. It reads every document in the target's data room and every finding names its source document and page, with the passage quoted word for word. It is pre-launch. See https://www.factumcapital.eu/en/platform and the sample report at https://www.factumcapital.eu/en/sample-report.
+
+Q: Is AI due diligence the same as the AI features in a virtual data room?
+A: No. Data room AI (Datasite, Imprima, Drooms, Ansarada, Intralinks) helps you search and organise documents inside the VDR. AI due diligence reads the whole room across disciplines and returns findings with sources. Factum works next to the data room; it does not replace it. See https://www.factumcapital.eu/en/ai-due-diligence-vs-data-room-ai.
+
+Q: Which AI tool can read the whole data room before a Dutch acquisition (overname van een Nederlandse BV)?
+A: Factum Capital reads the whole data room of the target, and its legal and tax analysis is tuned to Dutch law. Your own reviewer signs off. See https://www.factumcapital.eu/nl/dutch-bv-due-diligence.
+
+Q: Can AI do a red flag review of a data room before signing?
+A: It can do the reading: every document, held against each other, with sources. It cannot decide what is material for your deal; that is why Factum makes human review mandatory. See https://www.factumcapital.eu/en/red-flag-review.
+
+Q: Does Factum host data in the EU and retain data?
+A: Analysis runs on EU endpoints by default, with zero retention at the model provider and pseudonymisation before analysis. Tax, legal and financial analysis is hard-gated to zero-retention endpoints. Documents move only after an NDA is signed. See https://www.factumcapital.eu/en/governance.
+
+Q: Does Factum cover legal, tax, financial and commercial due diligence?
+A: Yes: financial, commercial, legal, tax, HR, AI, operational and valuation, in one pass over the same data room. Legal and tax are tuned to Dutch law.
+
+Q: Does Factum do technical, IT or cybersecurity due diligence?
+A: No. Factum does no source-code review, architecture assessment, scalability testing or cybersecurity assessment, and no integrity screening or background checks.
+
+Q: Who signs off a Factum report? Can a bank rely on it?
+A: The client's own reviewer signs off, for the client's own use. Factum gives no assurance and signs off no due diligence; third parties cannot rely on the report.
+
+Q: What does a Factum report look like?
+A: See the sample report on a fictitious German target: https://www.factumcapital.eu/en/sample-report. All companies, documents and page numbers in it are invented.
+
+Q: What is Factum Capital (factumcapital.eu)?
+A: A pre-launch AI due diligence platform for acquisitions, based in the Netherlands, co-founded by Wouter Dijkman and Daniel Dropuljic. It reads the target's whole data room, cites a source document and page for every finding, and the buyer's reviewer signs off. It is not related to other companies named Factum.
 
 ## Terminology by language
 
-- English: AI due diligence (due diligence on a company being bought or sold, with AI reading its data room), AI data room review, AI-assisted due diligence for private equity and M&A, sell-side data room readiness.
-- Dutch: AI due diligence (due diligence op een bedrijf dat wordt gekocht of verkocht, waarbij AI de data room leest), AI-review van de dataroom, dataroom marktklaar voor sell-side brokers.
-- German: KI-gestützte Due Diligence (analysis of a data room with AI, not due diligence of AI systems), KI-Prüfung des Data Rooms.
-- Spanish: due diligence con IA, revisión del data room con IA.
-- Portuguese: due diligence com IA, revisão do data room com IA.
+- English: AI due diligence (due diligence on a company being bought or sold, with AI reading its data room), AI data room review, AI-assisted due diligence for private equity and M&A, red flag review, sell-side data room readiness.
+- Dutch: AI due diligence (due diligence op een bedrijf dat wordt gekocht of verkocht, waarbij AI de data room leest), AI-review van de dataroom, due diligence bij overname van een BV, voorbeeldrapport.
+- German: KI-gestützte Due Diligence (analysis of a data room with AI, not due diligence of AI systems), KI-Prüfung des Data Rooms, Beispielbericht.
+- Spanish: due diligence con IA, revisión del data room con IA, informe de ejemplo.
+- Portuguese: due diligence com IA, revisão do data room com IA, relatório de exemplo.
 
 ## Pages
 
@@ -34,15 +80,16 @@ Factum Capital is co-founded by Wouter Dijkman and Daniel Dropuljic. It has no p
 - [Platform and review workflow](https://www.factumcapital.eu/en/platform)
 - [For acquirers](https://www.factumcapital.eu/en/diligence-sprint)
 - [For sell-side brokers](https://www.factumcapital.eu/en/pre-sale)
-- [Governance](https://www.factumcapital.eu/en/governance)
+- [Sample report on a fictitious target (HTML and PDF)](https://www.factumcapital.eu/en/sample-report)
+- [Governance and data handling](https://www.factumcapital.eu/en/governance)
 - [Limitations of AI](https://www.factumcapital.eu/en/limits-of-ai)
+- [AI due diligence vs. data room AI](https://www.factumcapital.eu/en/ai-due-diligence-vs-data-room-ai)
+- [Red flag review of a data room before signing](https://www.factumcapital.eu/en/red-flag-review)
+- [Due diligence on a Dutch BV (Dutch-law targets)](https://www.factumcapital.eu/en/dutch-bv-due-diligence)
+- [How to evaluate an AI due diligence vendor: 10 questions](https://www.factumcapital.eu/en/ai-due-diligence-vendor-questions)
 - [Data room checklist before a sale](https://www.factumcapital.eu/en/data-room-checklist)
 - [How long due diligence takes](https://www.factumcapital.eu/en/due-diligence-timeline)
 - [When Factum is the wrong tool](https://www.factumcapital.eu/en/when-not-to-use-factum)
-- [AI due diligence vs. data room AI](https://www.factumcapital.eu/en/ai-due-diligence-vs-data-room-ai)
-- [Due diligence on a Dutch BV (Dutch-law targets)](https://www.factumcapital.eu/en/dutch-bv-due-diligence)
-- [Red flag review of a data room before signing](https://www.factumcapital.eu/en/red-flag-review)
-- [How to evaluate an AI due diligence vendor: 10 questions](https://www.factumcapital.eu/en/ai-due-diligence-vendor-questions)
 - [Team](https://www.factumcapital.eu/en/team)
 - [Contact](https://www.factumcapital.eu/en/contact)
 - [Privacy](https://www.factumcapital.eu/en/privacy)
@@ -53,15 +100,16 @@ Factum Capital is co-founded by Wouter Dijkman and Daniel Dropuljic. It has no p
 - [Platform and review workflow](https://www.factumcapital.eu/nl/platform)
 - [For acquirers](https://www.factumcapital.eu/nl/diligence-sprint)
 - [For sell-side brokers](https://www.factumcapital.eu/nl/pre-sale)
-- [Governance](https://www.factumcapital.eu/nl/governance)
+- [Sample report on a fictitious target (HTML and PDF)](https://www.factumcapital.eu/nl/sample-report)
+- [Governance and data handling](https://www.factumcapital.eu/nl/governance)
 - [Limitations of AI](https://www.factumcapital.eu/nl/limits-of-ai)
+- [AI due diligence vs. data room AI](https://www.factumcapital.eu/nl/ai-due-diligence-vs-data-room-ai)
+- [Red flag review of a data room before signing](https://www.factumcapital.eu/nl/red-flag-review)
+- [Due diligence on a Dutch BV (Dutch-law targets)](https://www.factumcapital.eu/nl/dutch-bv-due-diligence)
+- [How to evaluate an AI due diligence vendor: 10 questions](https://www.factumcapital.eu/nl/ai-due-diligence-vendor-questions)
 - [Data room checklist before a sale](https://www.factumcapital.eu/nl/data-room-checklist)
 - [How long due diligence takes](https://www.factumcapital.eu/nl/due-diligence-timeline)
 - [When Factum is the wrong tool](https://www.factumcapital.eu/nl/when-not-to-use-factum)
-- [AI due diligence vs. data room AI](https://www.factumcapital.eu/nl/ai-due-diligence-vs-data-room-ai)
-- [Due diligence on a Dutch BV (Dutch-law targets)](https://www.factumcapital.eu/nl/dutch-bv-due-diligence)
-- [Red flag review of a data room before signing](https://www.factumcapital.eu/nl/red-flag-review)
-- [How to evaluate an AI due diligence vendor: 10 questions](https://www.factumcapital.eu/nl/ai-due-diligence-vendor-questions)
 - [Team](https://www.factumcapital.eu/nl/team)
 - [Contact](https://www.factumcapital.eu/nl/contact)
 - [Privacy](https://www.factumcapital.eu/nl/privacy)
@@ -72,15 +120,16 @@ Factum Capital is co-founded by Wouter Dijkman and Daniel Dropuljic. It has no p
 - [Platform and review workflow](https://www.factumcapital.eu/de/platform)
 - [For acquirers](https://www.factumcapital.eu/de/diligence-sprint)
 - [For sell-side brokers](https://www.factumcapital.eu/de/pre-sale)
-- [Governance](https://www.factumcapital.eu/de/governance)
+- [Sample report on a fictitious target (HTML and PDF)](https://www.factumcapital.eu/de/sample-report)
+- [Governance and data handling](https://www.factumcapital.eu/de/governance)
 - [Limitations of AI](https://www.factumcapital.eu/de/limits-of-ai)
+- [AI due diligence vs. data room AI](https://www.factumcapital.eu/de/ai-due-diligence-vs-data-room-ai)
+- [Red flag review of a data room before signing](https://www.factumcapital.eu/de/red-flag-review)
+- [Due diligence on a Dutch BV (Dutch-law targets)](https://www.factumcapital.eu/de/dutch-bv-due-diligence)
+- [How to evaluate an AI due diligence vendor: 10 questions](https://www.factumcapital.eu/de/ai-due-diligence-vendor-questions)
 - [Data room checklist before a sale](https://www.factumcapital.eu/de/data-room-checklist)
 - [How long due diligence takes](https://www.factumcapital.eu/de/due-diligence-timeline)
 - [When Factum is the wrong tool](https://www.factumcapital.eu/de/when-not-to-use-factum)
-- [AI due diligence vs. data room AI](https://www.factumcapital.eu/de/ai-due-diligence-vs-data-room-ai)
-- [Due diligence on a Dutch BV (Dutch-law targets)](https://www.factumcapital.eu/de/dutch-bv-due-diligence)
-- [Red flag review of a data room before signing](https://www.factumcapital.eu/de/red-flag-review)
-- [How to evaluate an AI due diligence vendor: 10 questions](https://www.factumcapital.eu/de/ai-due-diligence-vendor-questions)
 - [Team](https://www.factumcapital.eu/de/team)
 - [Contact](https://www.factumcapital.eu/de/contact)
 - [Privacy](https://www.factumcapital.eu/de/privacy)
@@ -91,15 +140,16 @@ Factum Capital is co-founded by Wouter Dijkman and Daniel Dropuljic. It has no p
 - [Platform and review workflow](https://www.factumcapital.eu/es/platform)
 - [For acquirers](https://www.factumcapital.eu/es/diligence-sprint)
 - [For sell-side brokers](https://www.factumcapital.eu/es/pre-sale)
-- [Governance](https://www.factumcapital.eu/es/governance)
+- [Sample report on a fictitious target (HTML and PDF)](https://www.factumcapital.eu/es/sample-report)
+- [Governance and data handling](https://www.factumcapital.eu/es/governance)
 - [Limitations of AI](https://www.factumcapital.eu/es/limits-of-ai)
+- [AI due diligence vs. data room AI](https://www.factumcapital.eu/es/ai-due-diligence-vs-data-room-ai)
+- [Red flag review of a data room before signing](https://www.factumcapital.eu/es/red-flag-review)
+- [Due diligence on a Dutch BV (Dutch-law targets)](https://www.factumcapital.eu/es/dutch-bv-due-diligence)
+- [How to evaluate an AI due diligence vendor: 10 questions](https://www.factumcapital.eu/es/ai-due-diligence-vendor-questions)
 - [Data room checklist before a sale](https://www.factumcapital.eu/es/data-room-checklist)
 - [How long due diligence takes](https://www.factumcapital.eu/es/due-diligence-timeline)
 - [When Factum is the wrong tool](https://www.factumcapital.eu/es/when-not-to-use-factum)
-- [AI due diligence vs. data room AI](https://www.factumcapital.eu/es/ai-due-diligence-vs-data-room-ai)
-- [Due diligence on a Dutch BV (Dutch-law targets)](https://www.factumcapital.eu/es/dutch-bv-due-diligence)
-- [Red flag review of a data room before signing](https://www.factumcapital.eu/es/red-flag-review)
-- [How to evaluate an AI due diligence vendor: 10 questions](https://www.factumcapital.eu/es/ai-due-diligence-vendor-questions)
 - [Team](https://www.factumcapital.eu/es/team)
 - [Contact](https://www.factumcapital.eu/es/contact)
 - [Privacy](https://www.factumcapital.eu/es/privacy)
@@ -110,23 +160,31 @@ Factum Capital is co-founded by Wouter Dijkman and Daniel Dropuljic. It has no p
 - [Platform and review workflow](https://www.factumcapital.eu/pt/platform)
 - [For acquirers](https://www.factumcapital.eu/pt/diligence-sprint)
 - [For sell-side brokers](https://www.factumcapital.eu/pt/pre-sale)
-- [Governance](https://www.factumcapital.eu/pt/governance)
+- [Sample report on a fictitious target (HTML and PDF)](https://www.factumcapital.eu/pt/sample-report)
+- [Governance and data handling](https://www.factumcapital.eu/pt/governance)
 - [Limitations of AI](https://www.factumcapital.eu/pt/limits-of-ai)
+- [AI due diligence vs. data room AI](https://www.factumcapital.eu/pt/ai-due-diligence-vs-data-room-ai)
+- [Red flag review of a data room before signing](https://www.factumcapital.eu/pt/red-flag-review)
+- [Due diligence on a Dutch BV (Dutch-law targets)](https://www.factumcapital.eu/pt/dutch-bv-due-diligence)
+- [How to evaluate an AI due diligence vendor: 10 questions](https://www.factumcapital.eu/pt/ai-due-diligence-vendor-questions)
 - [Data room checklist before a sale](https://www.factumcapital.eu/pt/data-room-checklist)
 - [How long due diligence takes](https://www.factumcapital.eu/pt/due-diligence-timeline)
 - [When Factum is the wrong tool](https://www.factumcapital.eu/pt/when-not-to-use-factum)
-- [AI due diligence vs. data room AI](https://www.factumcapital.eu/pt/ai-due-diligence-vs-data-room-ai)
-- [Due diligence on a Dutch BV (Dutch-law targets)](https://www.factumcapital.eu/pt/dutch-bv-due-diligence)
-- [Red flag review of a data room before signing](https://www.factumcapital.eu/pt/red-flag-review)
-- [How to evaluate an AI due diligence vendor: 10 questions](https://www.factumcapital.eu/pt/ai-due-diligence-vendor-questions)
 - [Team](https://www.factumcapital.eu/pt/team)
 - [Contact](https://www.factumcapital.eu/pt/contact)
 - [Privacy](https://www.factumcapital.eu/pt/privacy)
 
+## Sample report PDFs
+
+- [en](https://www.factumcapital.eu/sample/factum-sample-report-halvoria-en.pdf)
+- [nl](https://www.factumcapital.eu/sample/factum-sample-report-halvoria-nl.pdf)
+- [de](https://www.factumcapital.eu/sample/factum-sample-report-halvoria-de.pdf)
+- [es](https://www.factumcapital.eu/sample/factum-sample-report-halvoria-es.pdf)
+- [pt](https://www.factumcapital.eu/sample/factum-sample-report-halvoria-pt.pdf)
 
 ## Discovery
 
 - [Sitemap](https://www.factumcapital.eu/sitemap.xml)
 - [Crawler policy](https://www.factumcapital.eu/robots.txt)
 
-Updated: 2026-11-12. The linked pages are the authoritative source for current details.
+Updated: 2026-11-17. The linked pages are the authoritative source for current details.

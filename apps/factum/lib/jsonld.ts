@@ -48,14 +48,11 @@ function people() {
       name: 'Wouter Dijkman',
       jobTitle: 'Founder',
       worksFor: { '@id': ORG_ID },
-      // Wouter's own profiles. The LinkedIn profile is a page about him, and
-      // so is the /over page on agenticmindshift.nl (his consultancy), which
-      // is what ties the two sites to one person without claiming the two
-      // companies are the same entity.
-      sameAs: [
-        'https://www.linkedin.com/in/wwdijkman/',
-        'https://www.agenticmindshift.nl/en/over'
-      ]
+      // Wouter's own LinkedIn profile, which exists and ranks. The edge to
+      // agenticmindshift.nl/en/over was removed on 17-11-2026: Factum and
+      // Agentic Mindshift are being fully separated, and the cross-link let
+      // answer engines blend the two (GTM/reports/seo-geo-meting-2026-11-17.md).
+      sameAs: ['https://www.linkedin.com/in/wwdijkman/']
     },
     {
       '@type': 'Person',
@@ -67,7 +64,7 @@ function people() {
   ];
 }
 
-function organization(description: string) {
+function organization(description: string, disambiguatingDescription: string) {
   return {
     '@type': 'Organization',
     '@id': ORG_ID,
@@ -80,7 +77,12 @@ function organization(description: string) {
     // publishing a legal name here would assert a registration that doesn't
     // exist. The bare KvK number below is the one fact that's actually true.
     url: SITE_URL,
+    // A dedicated category statement since 17-11-2026, with the scope limits
+    // spelled out: ChatGPT described Factum's report as covering "technology
+    // and cybersecurity concerns", which the product does not do
+    // (GTM/config/product-facts.md, "Factum does not do").
     description,
+    disambiguatingDescription,
     identifier: {
       '@type': 'PropertyValue',
       name: 'KvK',
@@ -94,6 +96,9 @@ function organization(description: string) {
     // The Factum company page on LinkedIn (URL from Wouter, 13-10-2026). It
     // used to hold Wouter's personal LinkedIn, which says "this organisation
     // is the same thing as that person"; that profile sits on his Person node.
+    // Only profiles that exist: no directory, Wikidata or Crunchbase URL until
+    // that profile is live (GTM/reports/factum-offsite-acties-2026-11-17.md).
+    // Never agenticmindshift.nl: the two companies are separate.
     sameAs: ['https://www.linkedin.com/company/146366099/'],
     // What the organisation is *about*, in the terms a generative engine
     // assembles an answer from. Plain topic strings, not invented facts: each
@@ -159,13 +164,13 @@ function website(locale: string, name: string) {
  */
 export function siteSchema(
   locale: string,
-  description: string,
+  orgCopy: { description: string; disambiguatingDescription: string },
   serviceCopy: { type: string; description: string }
 ) {
   return {
     '@context': 'https://schema.org',
     '@graph': [
-      organization(description),
+      organization(orgCopy.description, orgCopy.disambiguatingDescription),
       website(locale, 'Factum Capital'),
       service(locale, serviceCopy),
       ...people()
