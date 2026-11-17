@@ -25,7 +25,6 @@
 - Eight hard-block conditions end the automated loop early and put the draft in front of the client's reviewer, unapproved.
 - Analysis runs on EU endpoints by default, with zero retention at the model provider and pseudonymisation before analysis.
 - Legal and tax analysis is tuned to Dutch law. For a target elsewhere, local counsel should check the legal and tax findings.
-- A report is written in English plus the language of the target's country.
 - Pricing: price on request. One price for the whole scope, set on a call against the size and state of the data room. There is no public price list.
 - Findings Guarantee, for pilot mandates only: three material findings the client's team did not already have, or the engagement is free. The guarantee does not apply to demos.
 - The Factum Capital B.V. entities are in incorporation (in oprichting). Until they are registered, engagements are contracted under Dutch Chamber of Commerce (KvK) registration 99495945.
@@ -66,10 +65,10 @@ A: A pre-launch AI due diligence platform for acquisitions, based in the Netherl
 ## Terminology by language
 
 - English: AI due diligence (due diligence on a company being bought or sold, with AI reading its data room), AI data room review, AI-assisted due diligence for private equity and M&A, red flag review, sell-side data room readiness.
-- Dutch: AI due diligence (due diligence op een bedrijf dat wordt gekocht of verkocht, waarbij AI de data room leest), AI-review van de dataroom, due diligence bij overname van een BV, voorbeeldrapport.
-- German: KI-gestützte Due Diligence (analysis of a data room with AI, not due diligence of AI systems), KI-Prüfung des Data Rooms, Beispielbericht.
-- Spanish: due diligence con IA, revisión del data room con IA, informe de ejemplo.
-- Portuguese: due diligence com IA, revisão do data room com IA, relatório de exemplo.
+- Dutch: AI due diligence (due diligence op een bedrijf dat wordt gekocht of verkocht, waarbij AI de data room leest), AI-review van de dataroom, due diligence bij overname van een BV.
+- German: KI-gestützte Due Diligence (analysis of a data room with AI, not due diligence of AI systems), KI-Prüfung des Data Rooms.
+- Spanish: due diligence con IA, revisión del data room con IA.
+- Portuguese: due diligence com IA, revisão do data room com IA.
 
 ## Pages
 
